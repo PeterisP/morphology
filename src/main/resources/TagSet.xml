@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TagSet>
+<Attribute LV="Vārdšķira" MarkupPos="0">
+	<Value LV="Lietvārds" Tag="n" DefaultTags="n_____"/>
+	<Value LV="Darbības vārds" Tag="v"/>
+	<Value LV="Īpašības vārds" Tag="a"/>
+	<Value LV="Vietniekvārds" Tag="p"/>
+	<Value LV="Apstākļa vārds" Tag="r"/>
+	<Value LV="Prievārds" Tag="s"/>
+	<Value LV="Saiklis" Tag="c"/>
+	<Value LV="Skaitļa vārds" Tag="m"/>
+	<Value LV="Izsauksmes vārds" Tag="i"/>
+	<Value LV="Saīsinājums" Tag="y"/>
+	<Value LV="Partikula" Tag="q"/>
+	<Value LV="Pieturzīme" Tag="z"/>
+	<Value LV="Reziduālis" Tag="x_"/>
+</Attribute>
+
+<Attribute LV="Lietvārda tips" PartOfSpeech="Lietvārds" MarkupPos="1" Description="Īpašvārds vai sugas vārds?">
+	<Value LV="Īpašvārds" Tag="p"/>
+	<Value LV="Sugas vārds" Tag="c"/>
+</Attribute>
+<Attribute LV="Dzimte" PartOfSpeech="Lietvārds" MarkupPos="2">
+	<Value LV="Vīriešu" Tag="m"/>
+	<Value LV="Sieviešu" Tag="f"/>
+	<Value LV="Nepiemīt"/>
+</Attribute>
+<Attribute LV="Skaitlis" PartOfSpeech="Lietvārds" MarkupPos="3">
+	<Value LV="Vienskaitlis" Tag="s"/>
+	<Value LV="Daudzskaitlis" Tag="p"/>
+	<Value LV="Nepiemīt"/>
+</Attribute>
+<Attribute LV="Skaitlis 2" PartOfSpeech="Lietvārds" MarkupPos="3">
+	<Value LV="Vienskaitlinieks" Tag="v"/>
+	<Value LV="Daudzskaitlinieks" Tag="d"/>
+</Attribute>
+<Attribute LV="Locījums" PartOfSpeech="Lietvārds" MarkupPos="4">
+	<Value LV="Nominatīvs" Tag="n"/>
+	<Value LV="Ģenitīvs" Tag="g"/>
+	<Value LV="Datīvs" Tag="d"/>
+	<Value LV="Akuzatīvs" Tag="a"/>
+	<Value LV="Lokatīvs" Tag="l"/>
+	<Value LV="Vokatīvs" Tag="v"/>
+	<Value LV="Nepiemīt"/>
+</Attribute>
+<Attribute LV="Locījums 2" PartOfSpeech="Lietvārds" MarkupPos="4">
+	<Value LV="Ģenitīvenis" Tag="s"/>
+</Attribute>
+<Attribute LV="Deklinācija" PartOfSpeech="Lietvārds" MarkupPos="5">
+	<Value LV="1" Tag="1"/>
+	<Value LV="2" Tag="2"/>
+	<Value LV="3" Tag="3"/>
+	<Value LV="4" Tag="4"/>
+	<Value LV="5" Tag="5"/>
+	<Value LV="6" Tag="6"/>
+	<Value LV="Atgriezenisks" Tag="r"/>
+	<Value LV="Nepiemīt" Tag="0"/>
+</Attribute>
+
+<Attribute LV="Darbības vārda tips" PartOfSpeech="Darbības vārds" MarkupPos="1" Description="patstāvīgs vai palīg d.v ?">
+	<Value LV="Patstāvīgs darbības vārds" Tag="m"/>
+	<Value LV="Palīgdarbības vārds" Tag="a"/>
+	<Value LV="Modāls" Tag="o"/>
+	<Value LV="Fāzes" Tag="p"/>
+	<Value LV="Izpausmes veida" Tag="e"/>
+	<Value LV="Palīgverbs 'būt'" Tag="c"/>
+	<Value LV="Palīgverbi 'tikt' un 'tapt'" Tag="t"/>
+	<Value LV="'nebūt', 'trūkt' un 'pietikt'" Tag="g"/>
+</Attribute>
+<Attribute LV="Atgriezeniskums" PartOfSpeech="Darbības vārds" MarkupPos="2">
+	<Value LV="Jā" Tag="y"/>
+	<Value LV="Nē" Tag="n"/>
+</Attribute>
+<Attribute LV="Izteiksme" PartOfSpeech="Darbības vārds" MarkupPos="3">
+	<Value LV="Īstenības" Tag="i"/>
+	<Value LV="Atstāstījuma" Tag="r"/>
+	<Value LV="Vēlējuma" Tag="c"/>
+	<Value LV="Vajadzības" Tag="d"/>
+	<Value LV="Pavēles" Tag="m"/>
+	<Value LV="Nenoteiksme" Tag="n"/>
+	<Value LV="Divdabis" Tag="p"/>
+</Attribute>
+<Attribute LV="Laiks" PartOfSpeech="Darbības vārds" MarkupPos="4">
+	<Value LV="Tagadne" Tag="p"/>
+	<Value LV="Pagātne" Tag="s"/>
+	<Value LV="Nākotne" Tag="f"/>
+	<Value LV="Nepiemīt" Tag="0"/>
+</Attribute>
+<Attribute LV="Transitivitāte" PartOfSpeech="Darbības vārds" MarkupPos="5">
+	<Value LV="Pārejošs" Tag="t"/>
+	<Value LV="Nepārejošs" Tag="i"/>
+</Attribute>
+<Attribute LV="Konjugācija" PartOfSpeech="Darbības vārds" MarkupPos="6">
+	<Value LV="1" Tag="1"/>
+	<Value LV="2" Tag="2"/>
+	<Value LV="3" Tag="3"/>
+	<Value LV="Nekārtns" Tag="i"/>
+</Attribute>
+<Attribute LV="Persona" PartOfSpeech="Darbības vārds" MarkupPos="7">
+	<Value LV="1" Tag="1"/>
+	<Value LV="2" Tag="2"/>
+	<Value LV="3" Tag="3"/>
+	<Value LV="Nepiemīt" Tag="0"/>
+</Attribute>
+<Attribute LV="Skaitlis" PartOfSpeech="Darbības vārds" MarkupPos="8">
+	<Value LV="Vienskaitlis" Tag="s"/>
+	<Value LV="Daudzskaitlis" Tag="p"/>
+	<Value LV="Nepiemīt" Tag="0"/>
+</Attribute>
+<Attribute LV="Kārta" PartOfSpeech="Darbības vārds" MarkupPos="9">
+	<Value LV="Darāmā" Tag="a"/>
+	<Value LV="Ciešamā" Tag="p"/>
+	<Value LV="Nepiemīt" Tag="0"/>
+</Attribute>
+<Attribute LV="Noliegums" PartOfSpeech="Darbības vārds" MarkupPos="10">
+	<Value LV="Jā" Tag="y"/>
+	<Value LV="Nē" Tag="n"/>
+</Attribute>
+
+<Attribute LV="Darbības vārda tips" PartOfSpeech="Divdabis" MarkupPos="1" Description="patstāvīgs vai palīg d.v ?">
+	<Value LV="Patstāvīgs darbības vārds" Tag="m"/>
+	<Value LV="Palīgdarbības vārds" Tag="a"/>
+	<Value LV="Modāls" Tag="o"/>
+	<Value LV="Fāzes" Tag="p"/>
+	<Value LV="Izpausmes veida" Tag="e"/>
+	<Value LV="Palīgverbs 'būt'" Tag="c"/>
+	<Value LV="Palīgverbi 'tikt' un 'tapt'" Tag="t"/>
+	<Value LV="'nebūt', 'trūkt' un 'pietikt'" Tag="g"/>
+</Attribute>
+<Attribute LV="Atgriezeniskums" PartOfSpeech="Divdabis" MarkupPos="2">
+	<Value LV="Jā" Tag="y"/>
+	<Value LV="Nē" Tag="n"/>
+</Attribute>
+<Attribute LV="Izteiksme" PartOfSpeech="Divdabis" MarkupPos="3">
+	<Value LV="Īstenības" Tag="i"/>
+	<Value LV="Atstāstījuma" Tag="r"/>
+	<Value LV="Vēlējuma" Tag="c"/>
+	<Value LV="Vajadzības" Tag="d"/>
+	<Value LV="Pavēles" Tag="m"/>
+	<Value LV="Nenoteiksme" Tag="n"/>
+	<Value LV="Divdabis" Tag="p"/>
+</Attribute>
+<Attribute LV="Lokāmība" PartOfSpeech="Divdabis" MarkupPos="4">
+	<Value LV="Lokāms" Tag="d"/>
+	<Value LV="Daļēji lokāms" Tag="p"/>
+	<Value LV="Nelokāms" Tag="u"/>
+</Attribute>
+<Attribute LV="Dzimte" PartOfSpeech="Divdabis" MarkupPos="5">
+	<Value LV="Vīriešu" Tag="m"/>
+	<Value LV="Sieviešu" Tag="f"/>
+	<Value LV="Nepiemīt" Tag="0"/>
+</Attribute>
+<Attribute LV="Skaitlis" PartOfSpeech="Divdabis" MarkupPos="6">
+	<Value LV="Vienskaitlis" Tag="s"/>
+	<Value LV="Daudzskaitlis" Tag="p"/>
+	<Value LV="Nepiemīt" Tag="0"/>
+</Attribute>
+<Attribute LV="Locījums" PartOfSpeech="Divdabis" MarkupPos="7">
+	<Value LV="Nominatīvs" Tag="n"/>
+	<Value LV="Ģenitīvs" Tag="g"/>
+	<Value LV="Datīvs" Tag="d"/>
+	<Value LV="Akuzatīvs" Tag="a"/>
+	<Value LV="Lokatīvs" Tag="l"/>
+	<Value LV="Vokatīvs" Tag="v"/>
+	<Value LV="Nepiemīt" Tag="0"/>
+</Attribute>
+<Attribute LV="Kārta" PartOfSpeech="Divdabis" MarkupPos="8">
+	<Value LV="Darāmā" Tag="a"/>
+	<Value LV="Ciešamā" Tag="p"/>
+	<Value LV="Nepiemīt" Tag="0"/>
+</Attribute>
+<Attribute LV="Laiks" PartOfSpeech="Divdabis" MarkupPos="9">
+	<Value LV="Tagadne" Tag="p"/>
+	<Value LV="Pagātne" Tag="s"/>
+	<Value LV="Nepiemīt" Tag="0"/>
+</Attribute>
+<Attribute LV="Noteiktība" PartOfSpeech="Divdabis" MarkupPos="10">
+	<Value LV="Nenoteiktā" Tag="n"/>
+	<Value LV="Noteiktā" Tag="y"/>
+	<Value LV="Nepiemīt" Tag="0"/>
+</Attribute>
+
+<Attribute LV="Īpašības vārda tips" PartOfSpeech="Īpašības vārds" MarkupPos="1">
+	<Value LV="Kādības" Tag="f"/>
+	<Value LV="Attieksmes" Tag="r"/>
+</Attribute>
+<Attribute LV="Dzimte" PartOfSpeech="Īpašības vārds" MarkupPos="2">
+	<Value LV="Vīriešu" Tag="m"/>
+	<Value LV="Sieviešu" Tag="f"/>
+</Attribute>
+<Attribute LV="Skaitlis" PartOfSpeech="Īpašības vārds" MarkupPos="3">
+	<Value LV="Vienskaitlis" Tag="s"/>
+	<Value LV="Daudzskaitlis" Tag="p"/>
+</Attribute>
+<Attribute LV="Locījums" PartOfSpeech="Īpašības vārds" MarkupPos="4">
+	<Value LV="Nominatīvs" Tag="n"/>
+	<Value LV="Ģenitīvs" Tag="g"/>
+	<Value LV="Datīvs" Tag="d"/>
+	<Value LV="Akuzatīvs" Tag="a"/>
+	<Value LV="Lokatīvs" Tag="l"/>
+	<Value LV="Vokatīvs" Tag="v"/>
+</Attribute>
+<Attribute LV="Noteiktība" PartOfSpeech="Īpašības vārds" MarkupPos="5">
+	<Value LV="Nenoteiktā" Tag="n"/>
+	<Value LV="Noteiktā" Tag="y"/>
+</Attribute>
+<Attribute LV="Pakāpe" PartOfSpeech="Īpašības vārds" MarkupPos="6">
+	<Value LV="Pamata" Tag="p"/>
+	<Value LV="Pārākā" Tag="c"/>
+	<Value LV="Vispārākā" Tag="s"/>
+</Attribute>
+
+<Attribute LV="Vietniekvārda tips" PartOfSpeech="Vietniekvārds" MarkupPos="1">
+	<Value LV="Personu" Tag="p"/>
+	<Value LV="Atgriezeniskie" Tag="x"/>
+	<Value LV="Piederības" Tag="s"/>
+	<Value LV="Norādāmie" Tag="d"/>
+	<Value LV="Nenoteiktie" Tag="i"/>
+	<Value LV="Jautājamie" Tag="q"/>
+	<Value LV="Attieksmes" Tag="r"/>
+	<Value LV="Noteiktie" Tag="d"/>
+</Attribute>
+<Attribute LV="Persona" PartOfSpeech="Vietniekvārds" MarkupPos="2">
+	<Value LV="1" Tag="1"/>
+	<Value LV="2" Tag="2"/>
+	<Value LV="3" Tag="3"/>
+	<Value LV="Nepiemīt" Tag="0"/>
+</Attribute>
+<Attribute LV="Dzimte" PartOfSpeech="Vietniekvārds" MarkupPos="3">
+	<Value LV="Vīriešu" Tag="m"/>
+	<Value LV="Sieviešu" Tag="f"/>
+	<Value LV="Nepiemīt" Tag="0"/>
+</Attribute>
+<Attribute LV="Skaitlis" PartOfSpeech="Vietniekvārds" MarkupPos="4">
+	<Value LV="Vienskaitlis" Tag="s"/>
+	<Value LV="Daudzskaitlis" Tag="p"/>
+	<Value LV="Nepiemīt" Tag="0"/>
+</Attribute>
+<Attribute LV="Locījums" PartOfSpeech="Vietniekvārds" MarkupPos="5">
+	<Value LV="Nominatīvs" Tag="n"/>
+	<Value LV="Ģenitīvs" Tag="g"/>
+	<Value LV="Datīvs" Tag="d"/>
+	<Value LV="Akuzatīvs" Tag="a"/>
+	<Value LV="Lokatīvs" Tag="l"/>
+</Attribute>
+<Attribute LV="Anafora" PartOfSpeech="Vietniekvārds" MarkupPos="6">
+	<Value LV="Aizstāj adjektīvu" Tag="a"/>
+	<Value LV="Aizstāj substantīvu" Tag="s"/>
+	<Value LV="Nepiemīt" Tag="n"/>
+</Attribute>
+
+<Attribute LV="Pakāpe" PartOfSpeech="Apstākļa vārds" MarkupPos="1">
+	<Value LV="Pamata" Tag="p"/>
+	<Value LV="Pārākā" Tag="c"/>
+	<Value LV="Vispārākā" Tag="s"/>
+	<Value LV="Relatīvais" Tag="r"/>
+	<Value LV="Nepiemīt" Tag="0"/>
+</Attribute>
+<Attribute LV="Apstākļa vārda tips" PartOfSpeech="Apstākļa vārds" MarkupPos="2">
+	<Value LV="Mēra" Tag="q"/>
+	<Value LV="Veida" Tag="m"/>
+	<Value LV="Vietas" Tag="p"/>
+	<Value LV="Laika" Tag="t"/>
+	<Value LV="Cēloņa/nolūka" Tag="c"/>
+</Attribute>
+
+<Attribute LV="Novietojums" PartOfSpeech="Prievārds" MarkupPos="1">
+	<Value LV="Pirms" Tag="p"/>
+	<Value LV="Pēc" Tag="t"/>
+</Attribute>
+<Attribute LV="Skaitlis" PartOfSpeech="Prievārds" MarkupPos="2">
+	<Value LV="Vienskaitlis" Tag="s"/>
+	<Value LV="Daudzskaitlis" Tag="p"/>
+</Attribute>
+<Attribute LV="Rekcija" PartOfSpeech="Prievārds" MarkupPos="3">
+	<Value LV="Ģenitīvs" Tag="g"/>
+	<Value LV="Datīvs" Tag="d"/>
+	<Value LV="Akuzatīvs" Tag="a"/>
+	<Value LV="Nepiemīt" Tag="0"/>
+</Attribute>
+<Attribute LV="Vietas apstākļa nozīme" PartOfSpeech="Prievārds" MarkupPos="4">
+	<Value LV="Jā" Tag="y"/>
+	<Value LV="Nē" Tag="n"/>
+</Attribute>
+
+<Attribute LV="Saikļa tips" PartOfSpeech="Saiklis" MarkupPos="1">
+	<Value LV="Sakārtojuma" Tag="c"/>
+	<Value LV="Pakārtojuma" Tag="s"/>
+</Attribute>
+<Attribute LV="Uzbūve" PartOfSpeech="Saiklis" MarkupPos="2">
+	<Value LV="Vienkāršs" Tag="s"/>
+	<Value LV="Salikts" Tag="c"/>
+	<Value LV="Atkārtots" Tag="r"/>
+	<Value LV="Divkāršs" Tag="d"/>
+</Attribute>
+
+<Attribute LV="Skaitļa vārda tips" PartOfSpeech="Skaitļa vārds" MarkupPos="1">
+	<Value LV="Pamata" Tag="c"/>
+	<Value LV="Kārtas" Tag="o"/>
+	<Value LV="Daļskaitlis" Tag="f"/>
+</Attribute>
+<Attribute LV="Uzbūve" PartOfSpeech="Skaitļa vārds" MarkupPos="2">
+	<Value LV="Vienkāršs" Tag="s"/>
+	<Value LV="Salikts" Tag="c"/>
+	<Value LV="Vairākvārdu" Tag="j"/>
+</Attribute>
+<Attribute LV="Dzimte" PartOfSpeech="Skaitļa vārds" MarkupPos="3">
+	<Value LV="Vīriešu" Tag="m"/>
+	<Value LV="Sieviešu" Tag="f"/>
+	<Value LV="Nepiemīt" Tag="0"/>
+</Attribute>
+<Attribute LV="Skaitlis" PartOfSpeech="Skaitļa vārds" MarkupPos="4">
+	<Value LV="Vienskaitlis" Tag="s"/>
+	<Value LV="Daudzskaitlis" Tag="p"/>
+</Attribute>
+<Attribute LV="Locījums" PartOfSpeech="Skaitļa vārds" MarkupPos="5">
+	<Value LV="Nominatīvs" Tag="n"/>
+	<Value LV="Ģenitīvs" Tag="g"/>
+	<Value LV="Datīvs" Tag="d"/>
+	<Value LV="Akuzatīvs" Tag="a"/>
+	<Value LV="Lokatīvs" Tag="l"/>
+	<Value LV="Nepiemīt" Tag="0"/>
+</Attribute>
+<Attribute LV="Skaitļu kārta" PartOfSpeech="Skaitļa vārds" MarkupPos="6">
+	<Value LV="Vieni" Tag="v"/>
+	<Value LV="Padsmiti" Tag="p"/>
+	<Value LV="Desmiti" Tag="d"/>
+	<Value LV="Simti" Tag="s"/>
+	<Value LV="Tūkstoši" Tag="t"/>
+	<Value LV="Miljoni" Tag="m"/>
+	<Value LV="Miljardi" Tag="r"/>
+</Attribute>
+
+<Attribute LV="Uzbūve" PartOfSpeech="Partikula" MarkupPos="1">
+	<Value LV="Vienkāršs" Tag="s"/>
+	<Value LV="Salikts" Tag="c"/>
+</Attribute>
+
+<Attribute LV="Pieturzīmes tips" PartOfSpeech="Pieturzīme" MarkupPos="1">
+	<Value LV="Komats" Tag="c"/>
+	<Value LV="Pēdiņa" Tag="q"/>
+	<Value LV="Punkts" Tag="s"/>
+	<Value LV="Iekava" Tag="b"/>
+	<Value LV="Domuzīme" Tag="d"/>
+	<Value LV="Kols" Tag="o"/>
+	<Value LV="Cita" Tag="x"/>
+</Attribute>
+
+<Attribute LV="Reziduāļa tips" PartOfSpeech="Reziduālis" MarkupPos="1">
+	<Value LV="Vārds svešvalodā" Tag="f"/>
+	<Value LV="Drukas kļūda" Tag="t"/>
+	<Value LV="Skaitlis cipariem" Tag="n"/>
+	<Value LV="Kārtas skaitlis cipariem" Tag="o"/>
+	<Value LV="URL" Tag="u"/>
+	<Value LV="Cits" Tag="x"/>
+</Attribute>
+
+<FreeAttribute LV="Vārdgrupas nr">
+</FreeAttribute>
+<FreeAttribute LV="Leksēmas nr">
+</FreeAttribute>
+<FreeAttribute LV="Galotnes nr">
+</FreeAttribute>
+<FreeAttribute LV="Pamatforma">
+</FreeAttribute>
+<FreeAttribute LV="Avots">
+</FreeAttribute>
+
+</TagSet>
