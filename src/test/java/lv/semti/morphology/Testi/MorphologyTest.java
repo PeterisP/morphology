@@ -884,6 +884,27 @@ public class MorphologyTest {
 		// Guntas reportētie neatpazītie vārdi
 		
 		Word atguvies = locītājs.analyze("atguvies");
-		assertTrue(atguvies.isRecognized());	
+		assertTrue(atguvies.isRecognized());
+
+		Word sizdams = locītājs.analyze("sizdams");
+		assertTrue(sizdams.isRecognized());	
+		
+		Word sēzdamies = locītājs.analyze("sēzdamies");
+		assertTrue(sēzdamies.isRecognized());	
+
+		Word sarūdzis = locītājs.analyze("sarūdzis");
+		assertTrue(sarūdzis.isRecognized());	
+		
+		Word irties = locītājs.analyze("irties");
+		assertTrue(irties.isRecognized());
+		
+		Word tekalēt = locītājs.analyze("tekalēt");
+		assertTrue(tekalēt.isRecognized());
+		
+		Word kļūt = locītājs.analyze("kļūt");
+		assertTrue(kļūt.isRecognized());
+		
+		Word proti = locītājs.analyze("proti");
+		assertTrue(proti.isRecognized());
 	}
 }
