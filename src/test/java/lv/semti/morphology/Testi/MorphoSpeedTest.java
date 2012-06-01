@@ -50,7 +50,8 @@ public class MorphoSpeedTest {
 		locītājs.enablePrefixes = false;
 		locītājs.enableGuessing = false;
 		locītājs.enableAllGuesses = false;
-		locītājs.meklētsalikteņus = false; 
+		locītājs.meklētsalikteņus = false;
+		locītājs.setCacheSize(1);
 		
 		locītājs.analyze("cirvis");
 		
@@ -86,6 +87,7 @@ public class MorphoSpeedTest {
 		locītājs.enableGuessing = true;
 		locītājs.enableAllGuesses = true;
 		locītājs.meklētsalikteņus = true; 
+		locītājs.setCacheSize(1);
 		
 		int skaits = 0;
 		for (int i = 1; i<2000; i++) {

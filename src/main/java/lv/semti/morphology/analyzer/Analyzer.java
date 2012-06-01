@@ -65,6 +65,8 @@ public class Analyzer extends Lexicon {
 	private Pattern p_number = Pattern.compile("\\d+");
 	private Pattern p_ordinal = Pattern.compile("\\d+\\.");
 	private Pattern p_abbrev = Pattern.compile("\\w+\\.");
+	
+	private Cache<String, Word> wordCache = new Cache<String, Word>();
 
 	public Analyzer () throws Exception {
 		super();
@@ -103,6 +105,9 @@ public class Analyzer extends Lexicon {
 	}
 	
 	public Word analyzeLowercase(String word) {
+		Word cacheWord = wordCache.get(word);
+		if (cacheWord != null) return cacheWord;		
+		
 		Word rezultāts = new Word(word);
 		
 		for (Ending ending : getAllEndings().matchedEndings(word)) {
@@ -180,6 +185,7 @@ public class Analyzer extends Lexicon {
 			}
 		} */
 
+		wordCache.put(word, rezultāts);
 		return rezultāts;
 	}
 
@@ -360,8 +366,11 @@ public class Analyzer extends Lexicon {
 		return rezultāts;
 	}
 
+	public void setCacheSize (int maxSize) {
+		wordCache.setSize(maxSize);
+	}
+	
 	public ArrayList <Wordform> generateInflections(Lexeme lexeme)
-
 	//taisīju ne es !!! Madara kods laikam
 	//FIXME - jāpārskata
 	// FIXME - visticamāk ar -īt -ināt nestrādā jo jāapdeito arī MijasLocīšanai f-ja. Un tur vajag testpiemērus salikt, lai ir skaidrība.
