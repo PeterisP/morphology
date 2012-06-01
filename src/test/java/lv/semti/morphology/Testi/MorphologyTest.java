@@ -878,4 +878,12 @@ public class MorphologyTest {
 		assertTrue(ne.isRecognized());	
 		assertEquals("ne", ne.wordforms.get(0).getValue(AttributeNames.i_Lemma));
 	}
+	
+	@Test
+	public void gunta2012mai() {
+		// Guntas reportētie neatpazītie vārdi
+		
+		Word atguvies = locītājs.analyze("atguvies");
+		assertTrue(atguvies.isRecognized());	
+	}
 }
