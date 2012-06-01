@@ -19,6 +19,7 @@ package lv.semti.morphology.Testi;
 import static org.junit.Assert.*;
 
 import java.io.OutputStreamWriter;
+import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
@@ -52,6 +53,7 @@ public class MorphologyTest {
 		locītājs.enableGuessing = false;
 		locītājs.enableAllGuesses = false;
 		locītājs.meklētsalikteņus = false;
+		locītājs.setCacheSize(0);
     }
 	
 	//FIXME - jāpārtaisa uz parametrizētiem testiem...
@@ -223,14 +225,6 @@ public class MorphologyTest {
 	public void ātrums() {
 		long sākums = System.currentTimeMillis();
 		
-		/*
-		locītājs.enableVocative = true;
-		locītājs.enableDiminutive = true;
-		locītājs.enablePrefixes = true;
-		locītājs.enableGuessing = true;
-		locītājs.enableAllGuesses = true;
-		locītājs.meklētsalikteņus = true; */
-		//TODO - settingus iznest kā testam globālu funkciju lai šis setup neietekmē pārējos testus
 		locītājs.enableVocative = true;
 		locītājs.enableDiminutive = true;
 		locītājs.enablePrefixes = false;
@@ -906,5 +900,26 @@ public class MorphologyTest {
 		
 		Word proti = locītājs.analyze("proti");
 		assertTrue(proti.isRecognized());
+	}
+	
+	@Test
+	public void lūzīs() {
+		Word lūzīs = locītājs.analyze("lūzīs");
+		assertTrue(lūzīs.isRecognized());
+		assertEquals("lūzt", lūzīs.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+	}
+	
+	@Test
+	public void ģenerēšana() throws UnsupportedEncodingException {
+		PrintWriter izeja = new PrintWriter(new PrintStream(System.out, true, "UTF8"));
+		List<Wordform> formas = locītājs.generateInflections("lūzt");
+		
+		System.out.println();
+		
+		for (Wordform wf : formas) {
+			System.out.printf("\t%s\t%s\n", wf.getTag(), wf.getToken());
+			//wf.describe(izeja);
+		}
+		izeja.flush();
 	}
 }

@@ -25,10 +25,6 @@ import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.util.LinkedList;
 
-import lv.semti.morphology.Testi.MorphoEvaluate.Etalons;
-import lv.semti.morphology.analyzer.MarkupConverter;
-import lv.semti.morphology.analyzer.Word;
-import lv.semti.morphology.analyzer.Wordform;
 import lv.semti.morphology.attributes.*;
 import lv.semti.morphology.lexicon.*;
 import static org.junit.Assert.*;

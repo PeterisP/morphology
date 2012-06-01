@@ -60,7 +60,7 @@ public class Analyzer extends Lexicon {
     public boolean guessParticibles = true;
     public boolean guessAdjectives = true;
     public boolean enableAllGuesses = false;
-	public boolean guessInflexibeNouns = false;
+	public boolean guessInflexibleNouns = false;
 	
 	private Pattern p_number = Pattern.compile("\\d+");
 	private Pattern p_ordinal = Pattern.compile("\\d+\\.");
@@ -336,7 +336,7 @@ public class Analyzer extends Lexicon {
 
 					if (  (this.guessNouns && ending.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech,AttributeNames.v_Noun) &&							
                             (enableVocative || !variants.isMatchingStrong(AttributeNames.i_Case,AttributeNames.v_Vocative)) &&
-                            (guessInflexibeNouns || !variants.isMatchingStrong(AttributeNames.i_Declension,AttributeNames.v_NA))
+                            (guessInflexibleNouns || !variants.isMatchingStrong(AttributeNames.i_Declension,AttributeNames.v_NA))
                             ) ||
 							(this.guessVerbs && ending.getParadigm().isMatchingWeak(AttributeNames.i_PartOfSpeech,AttributeNames.v_Verb)) ||
                             (this.guessAdjectives && ending.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech,AttributeNames.v_Adjective)) ||
@@ -370,7 +370,18 @@ public class Analyzer extends Lexicon {
 		wordCache.setSize(maxSize);
 	}
 	
-	public ArrayList <Wordform> generateInflections(Lexeme lexeme)
+	public ArrayList<Wordform> generateInflections(String lemma) {
+		ArrayList<Wordform> result = new ArrayList<Wordform>();
+		
+		Word w = this.analyze(lemma);		
+		for (Wordform wf : w.wordforms) {
+			if (wf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(lemma)) 
+				result.addAll(generateInflections(wf.lexeme));
+		}
+		return result;
+	}
+	
+	private ArrayList<Wordform> generateInflections(Lexeme lexeme)
 	//taisīju ne es !!! Madara kods laikam
 	//FIXME - jāpārskata
 	// FIXME - visticamāk ar -īt -ināt nestrādā jo jāapdeito arī MijasLocīšanai f-ja. Un tur vajag testpiemērus salikt, lai ir skaidrība.

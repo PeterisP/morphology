@@ -125,6 +125,7 @@ public abstract class Mijas {
 					break;
 				case 6: // 1. konjugācijas nākotne
 					if (celms.endsWith("dī") || celms.endsWith("tī")) varianti.add(new Variants(celms.substring(0,celms.length()-2)+"s"));
+					if (celms.endsWith("zī")) varianti.add(new Variants(celms.substring(0,celms.length()-1)));
 					else varianti.add(new Variants(celms));
 					break;
 				case 7: // 1. konjugācijas 2. personas tagadne
@@ -326,6 +327,8 @@ public abstract class Mijas {
 						else if (trešāSakne.endsWith("t")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"tī"));
 						else if (trešāSakne.endsWith("s")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"sī"));
 						else varianti.add(new Variants(celms));
+					} else if (celms.endsWith("lūz")) {
+						varianti.add(new Variants(celms+"ī"));
 					}
 					else varianti.add(new Variants(celms));
 					break;

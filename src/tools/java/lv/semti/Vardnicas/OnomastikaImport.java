@@ -31,7 +31,7 @@ public class OnomastikaImport {
 		analizators.enablePrefixes = false;
 		analizators.enableGuessing = false;
 		analizators.meklētsalikteņus = false;
-		analizators.guessInflexibeNouns = true;
+		analizators.guessInflexibleNouns = true;
 
 		BufferedReader ieeja;
 		String vārds;
