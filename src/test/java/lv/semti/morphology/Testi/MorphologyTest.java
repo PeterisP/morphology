@@ -38,7 +38,6 @@ import lv.semti.morphology.lexicon.*;
 
 public class MorphologyTest {
 	private static Analyzer locītājs;
-	//PrintWriter izeja = new PrintWriter(new OutputStreamWriter(System.out, "UTF-8"));
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -911,13 +910,13 @@ public class MorphologyTest {
 	
 	@Test
 	public void ģenerēšana() {
-		List<Wordform> formas = locītājs.generateInflections("rakt");
+		List<Wordform> formas = locītājs.generateInflections("cerēt");
 		
 		System.out.println();
 		
 		for (Wordform wf : formas) {
-			System.out.printf("\t%s\t%s\n", wf.getTag(), wf.getToken());
-			//wf.describe();
+			//System.out.printf("\t%s\t%s\n", wf.getTag(), wf.getToken());
+			wf.describe();
 		}
 	}
 }

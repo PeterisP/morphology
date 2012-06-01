@@ -382,9 +382,6 @@ public class Analyzer extends Lexicon {
 	}
 	
 	private ArrayList<Wordform> generateInflections(Lexeme lexeme)
-	//taisīju ne es !!! Madara kods laikam
-	//FIXME - jāpārskata
-	// FIXME - visticamāk ar -īt -ināt nestrādā jo jāapdeito arī MijasLocīšanai f-ja. Un tur vajag testpiemērus salikt, lai ir skaidrība.
 	{
 		boolean VisPārākāPak = false;
 		String trešāSakne = null, vārds;
@@ -407,11 +404,7 @@ public class Analyzer extends Lexicon {
 		    	ArrayList<Variants> celmi = Mijas.MijasLocīšanai(lexeme.getStem(ending.stemID-1), ending.getMija(), trešāSakne, VisPārākāPak);
 
 		    	for (Variants celms : celmi){
-		    		if (celms.isMatchingStrong("Garā", "ā")) //nepieciešams vārdiem, kas beidzas ar -īt, -ināt
-		    			vārds = celms.celms + ending.getEnding().replace("a", "ā");
-		    			//FIXME - nesaprotu, kāpēc galotne jāmodificē, tur nav tik vienkārši...
-		    			//throw new Error("FIXME");
-		    		else vārds = celms.celms + ending.getEnding();
+		    		vārds = celms.celms + ending.getEnding();
 
 		    		Wordform locījums = new Wordform(vārds, lexeme, ending);
 					locījums.addAttributes(celms);
