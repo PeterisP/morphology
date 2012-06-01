@@ -10,10 +10,23 @@ TECHNICAL REQUIREMENTS
 
 Java SE 1.5 or a later version.
 
-DOCUMENTATION
+BASIC USAGE
 
-API documentation currently is not available, however, two typical use-cases are 
-demonstrated in dist/doc/demo/src/MorphDemo.java
+ Analyzer analyzer = new Analyzer("dist/Lexicon.xml");
+ 
+ // analysis
+ Word result = analyzer.analyze("roku");
+ for (Wordform wf : formas) {
+	wf.describe();
+ }
+
+ // generation of inflections
+ List<Wordform> wordforms = analyzer.generateInflections("rakt");
+ for (Wordform wf : wordforms) {
+	wf.describe();
+ }
+
+Two typical use-cases are demonstrated in dist/doc/demo/src/MorphDemo.java
 
 (c) Institute of Mathematics and Computer Science, University of Latvia, 2005-2012
 Project SemTi-Kamols, http://www.semti-kamols.lv

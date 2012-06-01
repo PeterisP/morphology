@@ -910,16 +910,14 @@ public class MorphologyTest {
 	}
 	
 	@Test
-	public void ģenerēšana() throws UnsupportedEncodingException {
-		PrintWriter izeja = new PrintWriter(new PrintStream(System.out, true, "UTF8"));
-		List<Wordform> formas = locītājs.generateInflections("lūzt");
+	public void ģenerēšana() {
+		List<Wordform> formas = locītājs.generateInflections("rakt");
 		
 		System.out.println();
 		
 		for (Wordform wf : formas) {
 			System.out.printf("\t%s\t%s\n", wf.getTag(), wf.getToken());
-			//wf.describe(izeja);
+			//wf.describe();
 		}
-		izeja.flush();
 	}
 }

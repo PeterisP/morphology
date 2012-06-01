@@ -17,9 +17,11 @@
 package lv.semti.morphology.analyzer;
 
 import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.io.Serializable;
+import java.io.UnsupportedEncodingException;
 import java.io.Writer;
 
 import org.w3c.dom.Node;
@@ -156,5 +158,16 @@ public class Wordform extends AttributeValues implements Serializable{
 	protected void setToken(String newtoken) {
 		token = newtoken;
 		addAttribute(AttributeNames.i_Word, newtoken);
+	}
+
+	public void describe() {
+		PrintWriter izeja;
+		try {
+			izeja = new PrintWriter(new OutputStreamWriter(System.out, "UTF-8"));
+			this.describe(izeja);
+			izeja.flush();
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
 	}
 }
