@@ -19,7 +19,6 @@ package lv.semti.morphology.Testi;
 import static org.junit.Assert.*;
 
 import java.io.OutputStreamWriter;
-import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
@@ -916,7 +915,50 @@ public class MorphologyTest {
 		
 		for (Wordform wf : formas) {
 			//System.out.printf("\t%s\t%s\n", wf.getTag(), wf.getToken());
-			wf.describe();
+			//wf.describe();
 		}
 	}
+	
+	@Test
+	public void ģenerēšanaNezināmiem() {
+		locītājs.enableGuessing = true;
+		locītājs.enableVocative = true;
+		locītājs.guessVerbs = false;
+		locītājs.guessParticibles = false;
+		locītājs.guessAdjectives = false;
+		locītājs.guessInflexibleNouns = true;
+		locītājs.enableAllGuesses = true;
+		
+		List<Wordform> formas = locītājs.generateInflections("Baltaisbrencis");
+		for (Wordform wf : formas) {
+			//System.out.printf("\t%s\t%s\n", wf.getTag(), wf.getToken());
+			//wf.describe();
+		}
+		
+		assertTrue("Valdis".matches("\\p{Lu}.*"));
+		assertTrue("Ādolfs".matches("\\p{Lu}.*"));
+		assertFalse("valdis".matches("\\p{Lu}.*"));
+		assertFalse("ādolfs".matches("\\p{Lu}.*"));
+		
+		Word zolā = locītājs.analyze("Zolā");
+		assertTrue(zolā.isRecognized());
+		
+		formas = locītājs.generateInflections("Zolā");
+		assertTrue(formas.size() > 0);
+	}
+	
+	@Test
+	public void vešana() {
+		Word vešana = locītājs.analyze("vešana");
+		assertTrue(vešana.isRecognized());
+		assertEquals("vest", vešana.wordforms.get(0).getValue(AttributeNames.i_SourceLemma));
+
+		Word vesšana = locītājs.analyze("vesšana");
+		assertFalse(vesšana.isRecognized());
+
+		Word mēzšana = locītājs.analyze("mēzšana");
+		assertFalse(mēzšana.isRecognized());
+	}
+	
+	
 }

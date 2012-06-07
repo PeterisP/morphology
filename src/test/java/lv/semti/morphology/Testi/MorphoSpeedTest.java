@@ -21,7 +21,6 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import lv.semti.morphology.analyzer.*;
-import lv.semti.morphology.lexicon.Ending;
 
 public class MorphoSpeedTest {
 	private static Analyzer locītājs;

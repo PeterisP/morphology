@@ -18,6 +18,7 @@ package lv.semti.morphology.attributes;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.Writer;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Set;
 import java.util.Map.Entry;
@@ -54,6 +55,13 @@ public class AttributeValues implements FeatureStructure, Cloneable {
 	public void addAttributes(AttributeValues newAttributes) {
 		this.attributes.putAll(newAttributes.attributes);
 		//FIXME - a ko tad, ja kautkas konfliktē??
+	}
+	
+	/**
+	 * Remove all attributes except those listed.
+	 */
+	public void filterAttributes(Collection<String> leaveAttributes) {
+		attributes.keySet().retainAll(leaveAttributes);
 	}
 
 	/***

@@ -20,11 +20,17 @@ import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
 
 import lv.semti.morphology.attributes.AttributeNames;
 
 public abstract class Mijas {
 	public static ArrayList<Variants> mijuVarianti (String celms, int mija) {
+		return mijuVarianti(celms, mija, false);
+	}
+	
+	public static ArrayList<Variants> mijuVarianti (String celms, int mija, boolean properName) {
 		// procedūra, kas realizē visas celmu pārmaiņas - līdzskaņu mijas; darbības vārdu formas, utml.
 		// TODO - iznest 'varianti.add(new Variants(... kā miniprocedūriņu.
 		// TODO - iekļaut galotnē(?) kā metodi
@@ -44,6 +50,10 @@ public abstract class Mijas {
 					if (celms.equalsIgnoreCase("vies") || celms.equalsIgnoreCase("vieš") || celms.endsWith("tēt") || celms.endsWith("tēš") ||
 							celms.endsWith("ast") || celms.endsWith("asš") || celms.endsWith("mat") || celms.endsWith("maš") ||
 							celms.endsWith("skat") || celms.endsWith("skaš") || (celms.endsWith("st")&& ! celms.endsWith("kst")) ||	celms.endsWith("sš")) {
+						varianti.add(new Variants(celms));
+					}
+					// Personvārdu mijas - Valdis-Valda; Gatis-Gata.  Vēl ir literatūrā minēts izņēmums -skis -ckis (Čaikovskis, Visockis), taču tiem tāpat viss šķiet ok.
+					else if (properName && (celms.endsWith("t") || celms.endsWith("d"))) {
 						varianti.add(new Variants(celms));
 					}
 					// tagad normālie gadījumi mijām
@@ -221,6 +231,13 @@ public abstract class Mijas {
 						varianti.add(new Variants(celms.substring(0,celms.length()-1)+"d"));
 					}					
 					break;
+				case 16: // 1. konjugācijas "-šana" atvasināšana
+					if (!celms.endsWith("s") && !celms.endsWith("z")) {
+						varianti.add(new Variants(celms));
+						varianti.add(new Variants(celms+"s"));  // nest -> nešana
+						varianti.add(new Variants(celms+"z"));  // mēzt -> mēšana
+					}
+					break;								
 			}
 		} catch (StringIndexOutOfBoundsException e){
 			try {
@@ -234,8 +251,21 @@ public abstract class Mijas {
 
 		return varianti;
 	}
+	
+	private static int syllables(String word) {
+		int counter = 0;
+		boolean in_vowel = false;
+		HashSet<Character> vowels = new HashSet<Character>( Arrays.asList(new Character[] {'a','ā','e','ē','i','ī','o','u','ū'}));
+		
+		for (char c : word.toCharArray()) {
+			if (!in_vowel && vowels.contains(c))
+				counter++;
+			in_vowel = vowels.contains(c);
+		}
+ 		return counter;
+	}
 
-	public static ArrayList<Variants> MijasLocīšanai (String celms, int mija, String trešāSakne, boolean pieliktVisPārākoPak) {
+	public static ArrayList<Variants> MijasLocīšanai (String celms, int mija, String trešāSakne, boolean pieliktVisPārākoPak, boolean properName) {
 		// procedūra, kas realizē visas celmu pārmaiņas - līdzskaņu mijas; darbības vārdu formas, utml.
 		// FIXME - nafig trešo sakni vajag???
 
@@ -249,8 +279,17 @@ public abstract class Mijas {
 				case 1: // lietvārdu līdzskaņu mija
 					if (celms.endsWith("vies") || (celms.endsWith("vieš") && !celms.endsWith("evieš")) || celms.endsWith("tēt") || celms.endsWith("tēš") ||
 							celms.endsWith("ast") || celms.endsWith("asš") || celms.endsWith("mat") || celms.endsWith("maš") ||
-							celms.endsWith("skat") || celms.endsWith("skaš") || (celms.endsWith("st")&& ! celms.endsWith("kst")) ||	celms.endsWith("sš")) {
+							celms.endsWith("skat") || celms.endsWith("skaš") || (celms.endsWith("st") && ! celms.endsWith("kst")) ||	celms.endsWith("sš")) {
 						varianti.add(new Variants(celms));
+					}
+					// Personvārdu mijas - Valdis-Valda; Gatis-Gata.  Vēl ir literatūrā minēts izņēmums -skis -ckis (Čaikovskis, Visockis), taču tiem tāpat viss šķiet ok.
+					else if (properName && celms.endsWith("t") ) {
+						varianti.add(new Variants(celms));
+						if (syllables(celms) > 1) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"š","Mija","t -> š"));
+					}
+					else if (properName && celms.endsWith("d") ) {
+						varianti.add(new Variants(celms));
+						if (syllables(celms) > 1) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"ž","Mija","d -> ž"));
 					}
 					else if (celms.endsWith("s") || celms.endsWith("t")) {
 						if (celms.endsWith("kst"))  varianti.add(new Variants(celms.substring(0,celms.length()-3)+"kš","Mija","kst -> kš"));
@@ -385,6 +424,18 @@ public abstract class Mijas {
 				case 14: // 1. konjugācijas "-is" forma
 					if (celms.endsWith("k")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"c"));
 					else varianti.add(new Variants(celms));
+					break;			
+				case 15: // pūzdams nopūzdamies t,d -> z mija
+					if (celms.endsWith("t")) 
+						varianti.add(new Variants(celms.substring(0,celms.length()-1)+"z"));
+					else if (celms.endsWith("d")) 
+						varianti.add(new Variants(celms.substring(0,celms.length()-1)+"z"));
+					else varianti.add(new Variants(celms));
+					break;
+				case 16: // 1. konjugācijas "-šana" atvasināšana
+					if (celms.endsWith("s") || celms.endsWith("z")) 
+						varianti.add(new Variants(celms.substring(0,celms.length()-1)));    // nest -> nešana
+					else varianti.add(new Variants(celms)); 
 					break;								
 			}
 		} catch (StringIndexOutOfBoundsException e){

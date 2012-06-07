@@ -80,11 +80,26 @@ public class Analyzer extends Lexicon {
 		super(lexiconStream);
 	}
     
+	/* TODO - salikteņu minēšana jāuzaisa 
 	private boolean DerSalikteņaSākumam(Ending ending) {
 		if (ending.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech,AttributeNames.v_Noun))
 			return ending.isMatchingStrong(AttributeNames.i_Case,AttributeNames.v_Genitive);
 
 		return false;
+	} */
+	
+	public void defaultSettings(){
+		enablePrefixes = true;
+		meklētsalikteņus = false;
+		enableGuessing = false;
+		enableDiminutive = true;
+		enableVocative = false;
+		guessNouns = true;
+	    guessVerbs = true;
+	    guessParticibles = true;
+	    guessAdjectives = true;
+	    enableAllGuesses = false;
+		guessInflexibleNouns = false;
 	}
 
 	/**
@@ -375,15 +390,23 @@ public class Analyzer extends Lexicon {
 		
 		Word w = this.analyze(lemma);		
 		for (Wordform wf : w.wordforms) {
-			if (wf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(lemma)) 
-				result.addAll(generateInflections(wf.lexeme));
+			if (wf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(lemma) && !wf.isMatchingStrong(AttributeNames.i_Case, AttributeNames.v_Vocative)) {
+				wf.describe();
+				Lexeme lex = wf.lexeme;
+				if (lex == null) {
+					lex = this.createLexeme(lemma, wf.getEnding().getID(), "generateInflections");
+					if (lemma.matches("\\p{Lu}.*"))
+						lex.addAttribute(AttributeNames.i_NounType, AttributeNames.v_ProperNoun); //FIXME - hack personvārdu 'Valdis' utml locīšanai
+				}
+				result.addAll(generateInflections(lex));
+				return result;
+			}
 		}
 		return result;
 	}
 	
 	private ArrayList<Wordform> generateInflections(Lexeme lexeme)
 	{
-		boolean VisPārākāPak = false;
 		String trešāSakne = null, vārds;
 		//Vārds rezultāts = new Vārds(leksēma.īpašības.Īpašība(IpasibuNosaukumi.i_Pamatforma));
 		ArrayList <Wordform> locījumi =  new ArrayList<Wordform>(1);
@@ -397,11 +420,11 @@ public class Analyzer extends Lexicon {
 			if ( ending.getValue(AttributeNames.i_PartOfSpeech)==null ||
 					ending.getValue(AttributeNames.i_PartOfSpeech).equals(lexeme.getValue(AttributeNames.i_PartOfSpeech)) ||
 					lexeme.getValue(AttributeNames.i_PartOfSpeech) == null) {
-	    		if (ending.isMatchingStrong(AttributeNames.i_Definiteness, AttributeNames.v_Definite)) {
-	    			VisPārākāPak = true;
-	    		}
-	    		else VisPārākāPak = false;
-		    	ArrayList<Variants> celmi = Mijas.MijasLocīšanai(lexeme.getStem(ending.stemID-1), ending.getMija(), trešāSakne, VisPārākāPak);
+				
+				boolean vispārākāPak = ending.isMatchingStrong(AttributeNames.i_Definiteness, AttributeNames.v_Definite);
+				boolean properName = lexeme.isMatchingStrong(AttributeNames.i_NounType, AttributeNames.v_ProperNoun);
+				
+		    	ArrayList<Variants> celmi = Mijas.MijasLocīšanai(lexeme.getStem(ending.stemID-1), ending.getMija(), trešāSakne, vispārākāPak, properName);
 
 		    	for (Variants celms : celmi){
 		    		vārds = celms.celms + ending.getEnding();
