@@ -7,17 +7,13 @@ LICENCE
 This software is licenced under GNU General Public Licence.
 Commercial licencing is available if neccessary, contact us at peteris@ailab.lv.
 
-TECHNICAL REQUIREMENTS
-
-Java SE 1.5 or a later version.
-
 BASIC USAGE
 
  Analyzer analyzer = new Analyzer("dist/Lexicon.xml");
  
  // analysis
  Word result = analyzer.analyze("roku");
- for (Wordform wf : formas) {
+ for (Wordform wf : result) {
 	wf.describe();
  }
 
