@@ -13,6 +13,7 @@
   <property name="test.resources" location="src/test/resources"/>
   <property name="build" location="build"/>
   <property name="dist"  location="dist"/>
+  <property name="lib"   location="lib"/>
 
   <path id="project.class.path">
     <fileset dir="lib">
@@ -51,6 +52,10 @@
       <fileset dir="${test.resources}"/>  -->
     </copy>
   </target>
+	
+  <target name="zip" depends="dist" description="compress distribution files">
+  	<zip destfile="morphology.zip" basedir="." includes="dist/**,lib/**,README" />
+  </target>
 
   <target name="clean"
           description="clean up" >
@@ -59,7 +64,7 @@
     <delete dir="${dist}"/>
   </target>
 
-  <target name="clean-dist" depends="clean,dist"
+  <target name="clean-dist" depends="clean,dist,zip"
           description="clean and generate the distribution" >
   </target>
 

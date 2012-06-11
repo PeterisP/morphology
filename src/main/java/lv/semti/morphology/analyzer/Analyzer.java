@@ -62,8 +62,9 @@ public class Analyzer extends Lexicon {
     public boolean enableAllGuesses = false;
 	public boolean guessInflexibleNouns = false;
 	
-	private Pattern p_number = Pattern.compile("\\d+");
+	private Pattern p_number = Pattern.compile("(\\d+[\\., ])*\\d+([\\.,][-‐‑‒–—―])?");
 	private Pattern p_ordinal = Pattern.compile("\\d+\\.");
+	private Pattern p_fractional = Pattern.compile("\\d+[\\\\/]\\d+");
 	private Pattern p_abbrev = Pattern.compile("\\w+\\.");
 	
 	private Cache<String, Word> wordCache = new Cache<String, Word>();
@@ -108,11 +109,11 @@ public class Analyzer extends Lexicon {
 	 */
 	public Word analyze(String word) {
 		word = word.trim();
-		if (!word.equals(word.toLowerCase())) {
+		if (!word.equals(word.toLowerCase().trim())) {
 			Word rezults = new Word(word);
-			Word lowercase = analyzeLowercase(word.toLowerCase());
+			Word lowercase = analyzeLowercase(word.toLowerCase().trim());
 			for (Wordform vārdforma : lowercase.wordforms) {
-				vārdforma.setToken(word);
+				vārdforma.setToken(word.trim());
 				rezults.addWordform(vārdforma);
 			}
 			return rezults;
@@ -147,6 +148,15 @@ public class Analyzer extends Lexicon {
 
 		if (!rezultāts.isRecognized()) {
 			if (p_number.matcher(word).matches()) {
+				Wordform wf = new Wordform(word);
+				wf.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Residual);
+				wf.addAttribute(AttributeNames.i_ResidualType, AttributeNames.v_Number);
+				wf.addAttribute(AttributeNames.i_Lemma, word);
+				wf.addAttribute(AttributeNames.i_Word, word);
+				rezultāts.addWordform(wf);
+				return rezultāts;
+			}
+			if (p_fractional.matcher(word).matches()) {
 				Wordform wf = new Wordform(word);
 				wf.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Residual);
 				wf.addAttribute(AttributeNames.i_ResidualType, AttributeNames.v_Number);
@@ -355,8 +365,22 @@ public class Analyzer extends Lexicon {
                             ) ||
 							(this.guessVerbs && ending.getParadigm().isMatchingWeak(AttributeNames.i_PartOfSpeech,AttributeNames.v_Verb)) ||
                             (this.guessAdjectives && ending.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech,AttributeNames.v_Adjective)) ||
-                            (this.guessParticibles && variants.isMatchingStrong(AttributeNames.i_Izteiksme,AttributeNames.v_Participle)) )
-                            	rezultāts.wordforms.add(variants);
+                            (this.guessParticibles && variants.isMatchingStrong(AttributeNames.i_Izteiksme,AttributeNames.v_Participle)) 
+                      && (i>0 || variants.isMatchingStrong(AttributeNames.i_Declension,AttributeNames.v_NA)) ) // ja galotnes nav, tad vai nu nelokāms lietvārds vai neatpazīstam. Lai nav verbu bezgalotņu formas minējumos, kas parasti nav pareizās.
+                            	{
+									if (ending.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech,AttributeNames.v_Noun) && 
+											variants.isMatchingStrong(AttributeNames.i_Declension,AttributeNames.v_NA)) {
+										char last = celms.charAt(celms.length()-1);
+ 										if (!(last=='ā' || last == 'e' || last == 'ē' || last == 'i' || last == 'ī' || last == 'o' || last == 'ū')) {  // uzskatam, ka 'godīgi' nelokāmie lietvārdi beidzas tikai ar šiem
+ 											variants.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Residual);
+ 											if (!Character.isDigit(last)) {
+ 												variants.addAttribute(AttributeNames.i_ResidualType, AttributeNames.v_Foreign);
+												//Pieņemam, ka vārdi svešvalodā - 'crawling' utml.
+											} 
+										}
+									}
+									rezultāts.wordforms.add(variants);
+                            	}
 
 				}
 			if (rezultāts.isRecognized() && !enableAllGuesses) break;

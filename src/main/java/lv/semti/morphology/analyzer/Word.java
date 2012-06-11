@@ -48,7 +48,7 @@ public class Word implements Cloneable{
 	private Wordform correctWordform = null;
 
 	public Word (String token) {
-		this.token = token;
+		this.token = token.trim();
 		this.wordforms = new ArrayList<Wordform>(1);
 	}
 

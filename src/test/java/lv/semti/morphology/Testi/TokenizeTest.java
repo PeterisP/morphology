@@ -230,9 +230,9 @@ public class TokenizeTest {
 		assertEquals(3, tokens.size());
 		assertEquals("ftp://www.faili.lv/fails.php?id=215&actions=download", tokens.get(2).getToken());
 		
-		tokens = Splitting.tokenize(locītājs, "Mūsu mājas lapa www.skaitas-vietas.lv");
+		tokens = Splitting.tokenize(locītājs, "Mūsu mājas lapa www.skaistas-vietas.lv");
 		assertEquals(4, tokens.size());
-		assertEquals("www.skaitas-vietas.lv", tokens.get(3).getToken());
+		assertEquals("www.skaistas-vietas.lv", tokens.get(3).getToken());
 	}
 	
 	@Test
@@ -249,6 +249,33 @@ public class TokenizeTest {
 		tokens = Splitting.tokenize(locītājs, "Servera IP adrese ir 132.168.2.102");
 		assertEquals(5, tokens.size());
 		assertEquals("132.168.2.102", tokens.get(4).getToken());
+
+	}
+	
+	@Test
+	public void skaitļi2()
+	{
+		LinkedList<Word> tokens = Splitting.tokenize(locītājs, "Ls 5.- gadā");
+		for (Word w : tokens) {
+			System.out.println(w.getToken());
+		}
+		assertEquals(3, tokens.size());
+		assertEquals("5.-", tokens.get(1).getToken());
+		
+		tokens = Splitting.tokenize(locītājs, "Ls 50.000,-");
+		for (Word w : tokens) {
+			System.out.println(w.getToken());
+		}
+		assertEquals(2, tokens.size());
+		assertEquals("50.000,-", tokens.get(1).getToken());
+
+		tokens = Splitting.tokenize(locītājs, "Cena Ls 0.40. Nākamais");
+		for (Word w : tokens) {
+			System.out.println(w.getToken());
+		}
+		assertEquals(5, tokens.size());
+		assertEquals("Ls", tokens.get(1).getToken());
+		assertEquals("0.40", tokens.get(2).getToken());
 
 	}
 	

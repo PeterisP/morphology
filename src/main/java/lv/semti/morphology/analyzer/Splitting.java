@@ -210,7 +210,8 @@ public class Splitting {
 								new Word(str.substring(progress,i)) :
 								morphoAnalyzer.analyze(str.substring(progress,i)) );
 						tokens.add( (morphoAnalyzer == null) ? 
-								new Word(str.substring(progress,i)) :
+								//new Word(str.substring(progress,i)) :   // FIXME izskatās aizdomīgi
+								new Word(str.substring(i,i+1)) :   
 								morphoAnalyzer.analyze(str.substring(i,i+1)) );
 						inApostrophes=false;
 						statuss=Status.IN_SPACE;

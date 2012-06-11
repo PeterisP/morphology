@@ -53,11 +53,35 @@ public class Trie {
 		root.nextSibling=new node(symbols.UC);
 		root.nextSibling.firstChild=root.firstChild.nextSibling;
 		
-		/* 2
-		 * automāts, kurš atpazīst pamata skaitļus, kārtas skaitļus, 
+		/* 2a
+		 * automāts, kurš atpazīst naudas formā 123,-
+		 */
+		root=new node(symbols.DIGITS);
+		branchList.add(root);
+		root.firstChild=new node(symbols.DIGITS);
+		root.firstChild.firstChild=root.firstChild;
+		root.firstChild.nextSibling=new node(".,");
+		root.firstChild.nextSibling.firstChild=new node("-‐‑‒–—―'");  
+		root.firstChild.nextSibling.firstChild.canEnd=true;
+		root.firstChild.nextSibling.firstChild.nextSibling=root;
+		root.firstChild.nextSibling.nextSibling=new node(" '");
+		root.firstChild.nextSibling.nextSibling.firstChild=root;
+
+		/* 2b 
+		 * atsevišķs automāts kārtas skaitļiem
+		 */
+		root=new node(symbols.DIGITS);
+		branchList.add(root);
+		root.firstChild=new node(symbols.DIGITS);
+		root.firstChild.firstChild=root.firstChild;
+		root.firstChild.nextSibling=new node(".");
+		root.firstChild.nextSibling.canEnd=true;
+
+		/* 2c
+		 * automāts, kurš atpazīst pamata skaitļus 
 		 * skaitļus ar decimālatdalītāju (punktu vai komatu)
 		 * skaitļus ar tūkstošu atdalītāju (komatu vai apostrofu)
-		 * daļsakitļus (/ vai \)
+		 * daļskaitļus (/ vai \)
 		 */
 		root=new node(symbols.DIGITS);
 		branchList.add(root);
@@ -65,12 +89,11 @@ public class Trie {
 		root.firstChild=new node(symbols.DIGITS);
 		root.firstChild.canEnd=true;
 		root.firstChild.firstChild=root.firstChild;
-		root.firstChild.nextSibling=new node(".");
-		root.firstChild.nextSibling.canEnd=true;
+		root.firstChild.nextSibling=new node(".,");
 		root.firstChild.nextSibling.firstChild=root.firstChild;
-		root.firstChild.nextSibling.nextSibling=new node(",/\'");
+		root.firstChild.nextSibling.nextSibling=new node("/\'");
 		root.firstChild.nextSibling.nextSibling.firstChild=root;
-		
+				
 		/* 3
 		 * e-pasta automāts
 		 */

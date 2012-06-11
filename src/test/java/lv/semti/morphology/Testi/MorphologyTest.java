@@ -942,6 +942,7 @@ public class MorphologyTest {
 		
 		Word zolā = locītājs.analyze("Zolā");
 		assertTrue(zolā.isRecognized());
+		assertEquals(AttributeNames.v_Noun, zolā.wordforms.get(0).getValue(AttributeNames.i_PartOfSpeech));
 		
 		formas = locītājs.generateInflections("Zolā");
 		assertTrue(formas.size() > 0);
@@ -960,5 +961,33 @@ public class MorphologyTest {
 		assertFalse(mēzšana.isRecognized());
 	}
 	
-	
+	@Test
+	public void nelokaamie() {
+		locītājs.enableDiminutive = true;
+		locītājs.enablePrefixes = true;
+		locītājs.enableGuessing = true;
+		locītājs.enableAllGuesses = true;
+		locītājs.meklētsalikteņus = true;
+
+		Word vārds = locītājs.analyze("TrrT");
+		assertTrue(vārds.isRecognized());
+		assertEquals("trrt", vārds.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+		
+		vārds = locītājs.analyze("GAIZINAISI-Ā3");
+		assertTrue(vārds.isRecognized());
+		assertEquals("gaizinaisi-ā3", vārds.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+		assertEquals(AttributeNames.v_Residual, vārds.wordforms.get(0).getValue(AttributeNames.i_PartOfSpeech));
+
+		vārds = locītājs.analyze("0.40");
+		assertTrue(vārds.isRecognized());
+		assertEquals("0.40", vārds.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+		assertEquals(AttributeNames.v_Residual, vārds.wordforms.get(0).getValue(AttributeNames.i_PartOfSpeech));
+		assertEquals(AttributeNames.v_Number, vārds.wordforms.get(0).getValue(AttributeNames.i_ResidualType));
+		
+		vārds = locītājs.analyze("6/7");
+		assertTrue(vārds.isRecognized());
+		assertEquals("6/7", vārds.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+		assertEquals(AttributeNames.v_Residual, vārds.wordforms.get(0).getValue(AttributeNames.i_PartOfSpeech));
+		assertEquals(AttributeNames.v_Number, vārds.wordforms.get(0).getValue(AttributeNames.i_ResidualType));
+	}
 }
