@@ -359,13 +359,13 @@ public class Analyzer extends Lexicon {
 						variants.addAttribute(AttributeNames.i_Lemma,
 							 celms + pamatforma.getEnding());
 
-					if (  (this.guessNouns && ending.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech,AttributeNames.v_Noun) &&							
+					if (  ((this.guessNouns && ending.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech,AttributeNames.v_Noun) &&							
                             (enableVocative || !variants.isMatchingStrong(AttributeNames.i_Case,AttributeNames.v_Vocative)) &&
                             (guessInflexibleNouns || !variants.isMatchingStrong(AttributeNames.i_Declension,AttributeNames.v_NA))
                             ) ||
 							(this.guessVerbs && ending.getParadigm().isMatchingWeak(AttributeNames.i_PartOfSpeech,AttributeNames.v_Verb)) ||
                             (this.guessAdjectives && ending.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech,AttributeNames.v_Adjective)) ||
-                            (this.guessParticibles && variants.isMatchingStrong(AttributeNames.i_Izteiksme,AttributeNames.v_Participle)) 
+                            (this.guessParticibles && variants.isMatchingStrong(AttributeNames.i_Izteiksme,AttributeNames.v_Participle))) 
                       && (i>0 || variants.isMatchingStrong(AttributeNames.i_Declension,AttributeNames.v_NA)) ) // ja galotnes nav, tad vai nu nelokāms lietvārds vai neatpazīstam. Lai nav verbu bezgalotņu formas minējumos, kas parasti nav pareizās.
                             	{
 									if (ending.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech,AttributeNames.v_Noun) && 

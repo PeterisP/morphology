@@ -38,6 +38,22 @@ import lv.semti.morphology.lexicon.*;
 public class MorphologyTest {
 	private static Analyzer locītājs;
 
+	private void assertNounInflection(List<Wordform> forms, String number, String nounCase, String gender, String validForm) {
+		boolean found = false;
+		AttributeValues testset = new AttributeValues();
+		testset.addAttribute(AttributeNames.i_Case, nounCase);
+		testset.addAttribute(AttributeNames.i_Number, number);
+		if (!gender.isEmpty()) testset.addAttribute(AttributeNames.i_Gender, gender);
+		
+		for (Wordform wf : forms) {
+			if (wf.isMatchingWeak(testset)) {
+				assertEquals(validForm, wf.getToken());
+				found = true;				
+			}
+		}
+		assertTrue(found);
+	}
+	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 		locītājs = new Analyzer("dist/Lexicon.xml");
@@ -214,6 +230,8 @@ public class MorphologyTest {
 		Word crap = locītājs.analyze("crap");
 		assertFalse(crap.isRecognized());		
 		locītājs.enableGuessing = true;
+		locītājs.enableAllGuesses = true;
+		locītājs.guessInflexibleNouns = true;
 		crap = locītājs.analyze("crap");
 		assertTrue(crap.isRecognized());
 		assertEquals(AttributeNames.v_Ending, crap.wordforms.get(0).getValue(AttributeNames.i_Guess));
@@ -909,14 +927,16 @@ public class MorphologyTest {
 	
 	@Test
 	public void ģenerēšana() {
-		List<Wordform> formas = locītājs.generateInflections("cerēt");
-		
-		System.out.println();
-		
-		for (Wordform wf : formas) {
-			//System.out.printf("\t%s\t%s\n", wf.getTag(), wf.getToken());
-			//wf.describe();
-		}
+		List<Wordform> formas = locītājs.generateInflections("Valdis");
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "valda");
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, "", "valdim");
+			
+		formas = locītājs.generateInflections("Raitis");
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "raita");
+
+		formas = locītājs.generateInflections("cerēt");
+		// TODO - salikt verbiem testpiemērus
+		System.out.println();		
 	}
 	
 	@Test
@@ -928,23 +948,17 @@ public class MorphologyTest {
 		locītājs.guessAdjectives = false;
 		locītājs.guessInflexibleNouns = true;
 		locītājs.enableAllGuesses = true;
-		
-		List<Wordform> formas = locītājs.generateInflections("Baltaisbrencis");
-		for (Wordform wf : formas) {
-			//System.out.printf("\t%s\t%s\n", wf.getTag(), wf.getToken());
-			//wf.describe();
-		}
-		
+
 		assertTrue("Valdis".matches("\\p{Lu}.*"));
 		assertTrue("Ādolfs".matches("\\p{Lu}.*"));
 		assertFalse("valdis".matches("\\p{Lu}.*"));
 		assertFalse("ādolfs".matches("\\p{Lu}.*"));
-		
+				
 		Word zolā = locītājs.analyze("Zolā");
 		assertTrue(zolā.isRecognized());
 		assertEquals(AttributeNames.v_Noun, zolā.wordforms.get(0).getValue(AttributeNames.i_PartOfSpeech));
 		
-		formas = locītājs.generateInflections("Zolā");
+		ArrayList<Wordform> formas = locītājs.generateInflections("Zolā");
 		assertTrue(formas.size() > 0);
 	}
 	
@@ -989,5 +1003,43 @@ public class MorphologyTest {
 		assertEquals("6/7", vārds.wordforms.get(0).getValue(AttributeNames.i_Lemma));
 		assertEquals(AttributeNames.v_Residual, vārds.wordforms.get(0).getValue(AttributeNames.i_PartOfSpeech));
 		assertEquals(AttributeNames.v_Number, vārds.wordforms.get(0).getValue(AttributeNames.i_ResidualType));
+		
+		vārds = locītājs.analyze("....");
+		assertTrue(vārds.isRecognized());
+		for (Wordform wf : vārds.wordforms) {
+			assertEquals("....", wf.getValue(AttributeNames.i_Lemma));
+		}
+	}
+	
+	@Test
+	public void personvārdi_Varis() {
+		// 2012.06.08 sūtītie komentāri par locīšanas defektiem.
+		locītājs.enableGuessing = true;
+		locītājs.enableVocative = true;
+		locītājs.guessVerbs = false;
+		locītājs.guessParticibles = false;
+		locītājs.guessAdjectives = false;
+		locītājs.guessInflexibleNouns = true;
+		locītājs.enableAllGuesses = true;
+		
+		List<Wordform> formas = locītājs.generateInflections("Valdis");
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "valda");
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, "", "valdim");
+		
+		formas = locītājs.generateInflections("Čaikovskis");
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "čaikovska");
+		
+		formas = locītājs.generateInflections("Raitis");
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "raita");
+
+		formas = locītājs.generateInflections("cerēt");
+		// TODO - salikt verbiem testpiemērus
+		System.out.println();		
+	}
+	
+	@Test
+	public void no_iepirkšanās() {
+		Word vārds = locītājs.analyze("no iepirkšanās");
+		assertFalse(vārds.isRecognized());
 	}
 }
