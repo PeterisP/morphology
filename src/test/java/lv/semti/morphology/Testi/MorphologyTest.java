@@ -1041,5 +1041,8 @@ public class MorphologyTest {
 	public void no_iepirkšanās() {
 		Word vārds = locītājs.analyze("no iepirkšanās");
 		assertFalse(vārds.isRecognized());
+		
+		vārds = locītājs.analyze("uz kino");
+		assertFalse(vārds.isRecognized());
 	}
 }
