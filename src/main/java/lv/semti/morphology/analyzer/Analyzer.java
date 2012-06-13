@@ -122,7 +122,7 @@ public class Analyzer extends Lexicon {
 	
 	public Word analyzeLowercase(String word) {
 		Word cacheWord = wordCache.get(word);
-		if (cacheWord != null) return cacheWord;		
+		if (cacheWord != null) return (Word) cacheWord.clone();		
 		
 		Word rezultāts = new Word(word);
 		
@@ -210,7 +210,7 @@ public class Analyzer extends Lexicon {
 			}
 		} */
 
-		wordCache.put(word, rezultāts);
+		wordCache.put(word, (Word) rezultāts.clone());
 		return rezultāts;
 	}
 
@@ -406,6 +406,10 @@ public class Analyzer extends Lexicon {
 
 	public void setCacheSize (int maxSize) {
 		wordCache.setSize(maxSize);
+	}
+	
+	public void clearCache () {
+		wordCache.clear();
 	}
 	
 	public ArrayList<Wordform> generateInflections(String lemma) {

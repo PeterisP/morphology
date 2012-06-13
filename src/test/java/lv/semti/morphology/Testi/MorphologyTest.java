@@ -63,6 +63,7 @@ public class MorphologyTest {
 	public void defaultsettings() { 
 		locītājs.defaultSettings();
 		locītājs.setCacheSize(0);
+		locītājs.clearCache();
     }
 	
 	//FIXME - jāpārtaisa uz parametrizētiem testiem...
@@ -1058,5 +1059,25 @@ public class MorphologyTest {
 		
 		vārds = locītājs.analyze("nocirvis");
 		assertFalse(vārds.isRecognized());
+	}
+	
+	@Test
+	public void cache() {
+		locītājs.setCacheSize(1000);
+		locītājs.enableGuessing = true;
+		locītājs.enableVocative = true;
+		locītājs.guessVerbs = false;
+		locītājs.guessParticibles = false;
+		locītājs.guessAdjectives = false;
+		locītājs.guessInflexibleNouns = true;
+		locītājs.enableAllGuesses = true;
+		
+		Word vārds = locītājs.analyze("sacelt");
+		assertTrue(vārds.isRecognized());
+		assertEquals("sacelt", vārds.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+		
+		vārds = locītājs.analyze("celt");
+		assertTrue(vārds.isRecognized());
+		assertEquals("celt", vārds.wordforms.get(0).getValue(AttributeNames.i_Lemma));
 	}
 }
