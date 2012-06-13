@@ -308,7 +308,7 @@ public class Analyzer extends Lexicon {
 			if (word.startsWith(priedēklis)) {
 				Word bezpriedēkļa = analyze(word.substring(priedēklis.length()));
 				for (Wordform variants : bezpriedēkļa.wordforms)
-					if (variants.getEnding().getParadigm().getValue(AttributeNames.i_Konjugaacija) != null) { // Tikai no verbiem atvasinātās klases 
+					if (variants.getEnding() != null && variants.getEnding().getParadigm() != null && variants.getEnding().getParadigm().getValue(AttributeNames.i_Konjugaacija) != null) { // Tikai no verbiem atvasinātās klases 
 						variants.setToken(word);
 						variants.addAttribute(AttributeNames.i_Source,"priedēkļu atvasināšana");
 						variants.addAttribute(AttributeNames.i_Prefix, priedēklis);

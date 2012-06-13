@@ -1080,4 +1080,11 @@ public class MorphologyTest {
 		assertTrue(vārds.isRecognized());
 		assertEquals("celt", vārds.wordforms.get(0).getValue(AttributeNames.i_Lemma));
 	}
+	
+	@Test
+	public void garbage()
+	{
+		LinkedList<Word> tokens = Splitting.tokenize(locītājs, "rop. KajiHHHH, MocKOBCKan o6\nacTb. Ha- 6epe*Ha« Cr. Pa3MHa, aom J* 17. Kay<5 HaUMeHbUlMHCTB. rop KMeB. yji. »IapKca, >i 3. KhcbckhA aaT. pa6. wy6 mm. Py,a3yTaKa.");
+		assertTrue(tokens.size() > 0);
+	}
 }
