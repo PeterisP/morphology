@@ -237,7 +237,7 @@ public class Analyzer extends Lexicon {
 			}
 			break;
 		case 2: // 1. deklinācijas -š
-		case 8: // 4. deklinācijas -a						
+		case 7: // 4. deklinācijas -a						
 			if (celms.celms.endsWith("iņ")) {
 				String pamatforma = celms.celms.substring(0,celms.celms.length()-2);
 				String pamatforma2 = pamatforma;
@@ -414,8 +414,13 @@ public class Analyzer extends Lexicon {
 		
 		Word w = this.analyze(lemma);		
 		for (Wordform wf : w.wordforms) {
-			if (wf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(lemma) && !wf.isMatchingStrong(AttributeNames.i_Case, AttributeNames.v_Vocative)) {
+			if (wf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(lemma) && !wf.isMatchingStrong(AttributeNames.i_Case, AttributeNames.v_Vocative)) {						
+				System.out.println();
 				wf.describe();
+			}
+		}
+		for (Wordform wf : w.wordforms) {
+			if (wf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(lemma) && !wf.isMatchingStrong(AttributeNames.i_Case, AttributeNames.v_Vocative)) {				
 				Lexeme lex = wf.lexeme;
 				if (lex == null) {
 					lex = this.createLexeme(lemma, wf.getEnding().getID(), "generateInflections");

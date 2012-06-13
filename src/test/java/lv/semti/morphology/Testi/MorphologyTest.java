@@ -1029,12 +1029,27 @@ public class MorphologyTest {
 		formas = locītājs.generateInflections("Čaikovskis");
 		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "čaikovska");
 		
+		formas = locītājs.generateInflections("Cēsis");
+		assertNounInflection(formas, AttributeNames.v_Plural, AttributeNames.v_Genitive, "", "cēsu");
+		
 		formas = locītājs.generateInflections("Raitis");
 		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "raita");
 
-		formas = locītājs.generateInflections("cerēt");
-		// TODO - salikt verbiem testpiemērus
-		System.out.println();		
+		formas = locītājs.generateInflections("Auziņš");
+		assertNounInflection(formas, AttributeNames.v_Plural, AttributeNames.v_Genitive, "", "auziņu");
+
+		formas = locītājs.generateInflections("Ivis");
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "ivja");
+		assertNounInflection(formas, AttributeNames.v_Plural, AttributeNames.v_Genitive, "", "ivju");
+		
+		formas = locītājs.generateInflections("Eglīts");
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "eglīša");
+		
+		formas = locītājs.generateInflections("Švirkste");
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, AttributeNames.v_Feminine, "švirkstes");
+		
+		formas = locītājs.generateInflections("Taļikova");
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, AttributeNames.v_Feminine, "taļikovas");
 	}
 	
 	@Test
