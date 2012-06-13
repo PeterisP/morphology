@@ -61,12 +61,7 @@ public class MorphologyTest {
 	
 	@Before
 	public void defaultsettings() { 
-		locītājs.enableVocative = false;
-		locītājs.enableDiminutive = false;
-		locītājs.enablePrefixes = false;
-		locītājs.enableGuessing = false;
-		locītājs.enableAllGuesses = false;
-		locītājs.meklētsalikteņus = false;
+		locītājs.defaultSettings();
 		locītājs.setCacheSize(0);
     }
 	
@@ -982,6 +977,7 @@ public class MorphologyTest {
 		locītājs.enableGuessing = true;
 		locītājs.enableAllGuesses = true;
 		locītājs.meklētsalikteņus = true;
+		locītājs.guessInflexibleNouns = true;
 
 		Word vārds = locītājs.analyze("TrrT");
 		assertTrue(vārds.isRecognized());
@@ -1058,6 +1054,9 @@ public class MorphologyTest {
 		assertFalse(vārds.isRecognized());
 		
 		vārds = locītājs.analyze("uz kino");
+		assertFalse(vārds.isRecognized());
+		
+		vārds = locītājs.analyze("nocirvis");
 		assertFalse(vārds.isRecognized());
 	}
 }

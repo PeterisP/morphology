@@ -302,14 +302,13 @@ public class Analyzer extends Lexicon {
 
 	private Word guessByPrefix(String word) {
 		Word rezultāts = new Word(word);
+		if (word.contains(" ")) return rezultāts;
 		
 		for (String priedēklis : prefixes)
 			if (word.startsWith(priedēklis)) {
 				Word bezpriedēkļa = analyze(word.substring(priedēklis.length()));
 				for (Wordform variants : bezpriedēkļa.wordforms)
-					if (variants.isMatchingStrong(AttributeNames.i_PartOfSpeech,AttributeNames.v_Noun) ||
-							variants.isMatchingStrong(AttributeNames.i_PartOfSpeech,AttributeNames.v_Verb)) {
-						//variants.addAttribute(AttributeNames.i_Word, word);
+					if (variants.getEnding().getParadigm().getValue(AttributeNames.i_Konjugaacija) != null) { // Tikai no verbiem atvasinātās klases 
 						variants.setToken(word);
 						variants.addAttribute(AttributeNames.i_Source,"priedēkļu atvasināšana");
 						variants.addAttribute(AttributeNames.i_Prefix, priedēklis);
@@ -412,13 +411,14 @@ public class Analyzer extends Lexicon {
 	public ArrayList<Wordform> generateInflections(String lemma) {
 		ArrayList<Wordform> result = new ArrayList<Wordform>();
 		
-		Word w = this.analyze(lemma);		
+		Word w = this.analyze(lemma);
+		/*
 		for (Wordform wf : w.wordforms) {
 			if (wf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(lemma) && !wf.isMatchingStrong(AttributeNames.i_Case, AttributeNames.v_Vocative)) {						
 				System.out.println();
 				wf.describe();
 			}
-		}
+		}*/
 		for (Wordform wf : w.wordforms) {
 			if (wf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(lemma) && !wf.isMatchingStrong(AttributeNames.i_Case, AttributeNames.v_Vocative)) {				
 				Lexeme lex = wf.lexeme;
