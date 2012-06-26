@@ -235,7 +235,7 @@ public class Splitting {
 					if(lastGoodEnd>progress)
 					{
 						tokens.add( (morphoAnalyzer == null) ? 
-								new Word(str.substring(progress,i)) :
+								new Word(str.substring(progress,lastGoodEnd)) :
 								morphoAnalyzer.analyze(str.substring(progress,lastGoodEnd)) );
 						i=lastGoodEnd-1;
 						statuss = Status.IN_SPACE;

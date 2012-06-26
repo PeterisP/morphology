@@ -16,10 +16,20 @@
 package lv.semti.morphology.Testi;
 
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
+import java.util.LinkedList;
+import java.util.List;
+
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import lv.semti.morphology.Testi.MorphoEvaluate.Etalons;
 import lv.semti.morphology.analyzer.*;
 
 public class MorphoSpeedTest {
@@ -111,13 +121,28 @@ public class MorphoSpeedTest {
 	}
 	
 	@Test
-	public void allendings() {
-		/*
-		Ending e1 = locītājs.endingByID(7);  // ''
-		Ending e2 = locītājs.endingByID(1);  // 's'
-		Ending e3 = locītājs.endingByID(6);  // 's'
-		Ending e4 = locītājs.endingByID(10);  // 'iem'
-		*/
-		//TODO - unittest ka allendingi korekti darbojas
+	public void balanced_corpus() throws IOException {
+		BufferedReader ieeja;
+		String rinda;
+						
+		long sākums = System.currentTimeMillis();
+		locītājs.setCacheSize(100000);
+		long skaits = 0;
+		
+		ieeja = new BufferedReader(
+				new InputStreamReader(new FileInputStream("/Users/Pet/Documents/Balanseetais 3.5m/balansetais3.5m.txt"), "UTF-8"));
+		while ((rinda = ieeja.readLine()) != null) {
+			List<Word> tokens = Splitting.tokenize(locītājs, rinda);
+			skaits += tokens.size();	
+			//if (skaits>2000000) break;
+		}		
+
+		long beigas = System.currentTimeMillis();
+		long starpība = beigas - sākums;
+		System.out.printf("3.5m balansētais korpuss ar tokenizāciju: pagāja %d ms\n%d pieprasījumi sekundē\n", starpība, skaits*1000/starpība);
+		System.out.println("\tBenchmark (Pētera iMac)");
+		System.out.printf("\tBez cache - 57sec, 80 000 rq/sec\n");
+		System.out.printf("\tAr cache 10k - 38sec, 120 000 rq/sec\n");
+		System.out.printf("\tAr cache 100k - 27sec, 160 000 rq/sec\n");
 	}
 }

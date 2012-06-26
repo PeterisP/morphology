@@ -255,6 +255,25 @@ public class Word implements Cloneable{
 			return String.format("{\"Vārds\":\"%s\",\"Marķējums\":\"-\",\"Pamatforma\":\"%s\"}", JSONValue.escape(getToken()), JSONValue.escape(getToken()));
 	}
 
+	public String toTabSepsingle(Statistics statistics) { // Čakarīgs formāts haskell-pipe-export ātrdarbībai
+		if (isRecognized()) {
+			/* šis ir tad, ja vajag tikai vienu - ticamāko formu. tā jau varētu atgriezt visu sarakstu. */
+			Wordform maxwf = wordforms.get(0);
+			int maxticamība = -1;
+			for (Wordform wf : wordforms) {  // Paskatamies visus atrastos variantus un ņemam statistiski ticamāko
+				//tag += String.format("%s\t%d\n", wf.getDescription(), MorphoServer.statistics.getTicamība(wf));
+				if (statistics.getEstimate(wf) > maxticamība) {
+					maxticamība = statistics.getEstimate(wf);
+					maxwf = wf;
+				}
+			}
+			//return maxwf.toJSON(); TODO - varbūt arī šo te vajag atgriezt
+			return String.format("%s\t%s\t%s", maxwf.getToken(), maxwf.getTag(), maxwf.getValue(AttributeNames.i_Lemma));
+		} else 
+			return String.format("%s\t-\t%s", getToken(), getToken());
+	}
+
+	
 	public void dataHasChanged() {
 		// FIXME - pagaidām paļaujas, ka kam vajadzēs, tas pats arī izsauks
 		if (tableModel != null)

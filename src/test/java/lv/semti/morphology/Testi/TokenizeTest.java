@@ -294,4 +294,12 @@ public class TokenizeTest {
 		assertEquals(2, tokens.size());
 		assertEquals("iepirkšanās", tokens.get(1).getToken());
 	}
+	
+	@Test
+	public void džilindžers()
+	{
+		LinkedList<Word> tokens = Splitting.tokenize(locītājs, "Dž. Dz. Džilindžers.");
+		assertEquals(4, tokens.size());
+		assertEquals("Dz.", tokens.get(1).getToken());
+	}
 }
