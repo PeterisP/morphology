@@ -302,4 +302,40 @@ public class TokenizeTest {
 		assertEquals(4, tokens.size());
 		assertEquals("Dz.", tokens.get(1).getToken());
 	}
+	
+	@Test
+	public void atstarpes()
+	{
+		LinkedList<Word> tokens = Splitting.tokenize(locītājs, "a t s t a r p e s");
+		assertEquals(1, tokens.size());
+		assertEquals("a t s t a r p e s", tokens.get(0).getToken());
+	}
+	
+	@Test
+	public void atstarpes2()
+	{
+		LinkedList<Word> tokens = Splitting.tokenize(locītājs, "te ir a t s t a r p e s");
+		assertEquals(3, tokens.size());
+		assertEquals("a t s t a r p e s", tokens.get(2).getToken());
+	}
+	
+	@Test
+	public void falseBruteSplit()
+	{
+		LinkedList<Word> tokens = Splitting.tokenize(locītājs, "te ir a t s t a r p e s",false);
+		assertEquals(3, tokens.size());
+		
+		tokens = Splitting.tokenize(locītājs, "kaut gan",false);
+		assertEquals(1, tokens.size());
+	}
+	
+	@Test
+	public void BruteSplit()
+	{
+		LinkedList<Word> tokens = Splitting.tokenize(locītājs, "te ir a t s t a r p e s",true);
+		assertEquals(11, tokens.size());
+		
+		tokens = Splitting.tokenize(locītājs, "kaut gan",true);
+		assertEquals(2, tokens.size());				
+	}
 }

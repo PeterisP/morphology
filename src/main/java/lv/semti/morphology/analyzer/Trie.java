@@ -155,6 +155,17 @@ public class Trie {
 		branchList.add(root);
 		
 		/* 6
+		 * automāts, kurš atpazīsts vārdus ar atstarpēm
+		 * piemērām "a t s t a r p e s"
+		 */
+		root=new node(symbols.LETTER);
+		branchList.add(root);
+		root.firstChild=new node(" ");
+		root.firstChild.firstChild=new node(symbols.LETTER);
+		root.firstChild.firstChild.canEnd=true;
+		root.firstChild.firstChild.firstChild=root.firstChild;
+		
+		/* 7
 		 * automāts, kurš atpazīst virkni 
 		 * no simboliem kuri var atrasties jebkur - burti un cipari
 		 * no simboliem kuri var atrasties tikai vidū - "_-"
@@ -171,6 +182,8 @@ public class Trie {
 		root.firstChild.nextSibling.firstChild=root;
 		root.firstChild.nextSibling.nextSibling=new node("'");
 		root.firstChild.nextSibling.nextSibling.canEnd=true;
+		
+
 		
 		//sagatavojamies pirmajam meklētajam simbolam
 		this.reset();

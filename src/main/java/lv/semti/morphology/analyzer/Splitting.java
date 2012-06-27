@@ -210,7 +210,6 @@ public class Splitting {
 								new Word(str.substring(progress,i)) :
 								morphoAnalyzer.analyze(str.substring(progress,i)) );
 						tokens.add( (morphoAnalyzer == null) ? 
-								//new Word(str.substring(progress,i)) :   // FIXME izskatās aizdomīgi
 								new Word(str.substring(i,i+1)) :   
 								morphoAnalyzer.analyze(str.substring(i,i+1)) );
 						inApostrophes=false;
@@ -275,5 +274,26 @@ public class Splitting {
 		}
 		
 		return tokens;
+	}
+	
+	
+	public static LinkedList<Word> tokenize(Analyzer morphoAnalyzer, String chunk, boolean bruteSplit) {
+		if(bruteSplit)
+		{
+			LinkedList<Word> tokens = new LinkedList<Word>();
+			if (chunk == null) return tokens;
+			String[] parts_of_string = chunk.split(" ");
+			for(String part : parts_of_string) 
+			{
+				tokens.add( (morphoAnalyzer == null) ? 
+						new Word(part) :
+						morphoAnalyzer.analyze(part));
+			}
+			return tokens;
+		}
+		else
+		{
+			return tokenize(morphoAnalyzer, chunk);
+		}
 	}
 }
