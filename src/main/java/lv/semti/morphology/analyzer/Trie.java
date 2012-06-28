@@ -332,9 +332,9 @@ class node  {
 //dažādu simbolu kopu definēšana
 interface symbols
 {
-	public static final String UC="AĀBCČDEĒFGHIĪJKĶLĻMNŅOŌPQRŖSŠTUŪVWXYZŽ";
-	public static final String LC="aābcčdeēfghiījkķlļmnņoōpqrŗsštuūvwxyzž";
-	public static final String LETTER="AĀBCČDEĒFGHIĪJKĶLĻMNŅOŌPQRŖSŠTUŪVWXYZŽaābcčdeēfghiījkķlļmnņoōpqrŗsštuūvwxyzž";
+	public static final String UC="AĀBCČDEĒFGĢHIĪJKĶLĻMNŅOŌPQRŖSŠTUŪVWXYZŽ";
+	public static final String LC="aābcčdeēfgģhiījkķlļmnņoōpqrŗsštuūvwxyzž";
+	public static final String LETTER="AĀBCČDEĒFGĢHIĪJKĶLĻMNŅOŌPQRŖSŠTUŪVWXYZŽaābcčdeēfgģhiījkķlļmnņoōpqrŗsštuūvwxyzž";
 	public static final String DIGITS="0123456789";
 	
 }

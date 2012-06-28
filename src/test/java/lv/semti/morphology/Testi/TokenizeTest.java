@@ -338,4 +338,14 @@ public class TokenizeTest {
 		tokens = Splitting.tokenize(locītājs, "kaut gan",true);
 		assertEquals(2, tokens.size());				
 	}
+	
+	@Test
+	public void NonLV()
+	{
+		LinkedList<Word> tokens = Splitting.tokenize(locītājs, "старик с топором");
+		assertEquals(3, tokens.size());
+		
+		tokens = Splitting.tokenize(locītājs, "München");
+		assertEquals(1, tokens.size());
+	}
 }
