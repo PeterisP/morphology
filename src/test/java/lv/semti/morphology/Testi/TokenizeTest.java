@@ -347,5 +347,15 @@ public class TokenizeTest {
 		
 		tokens = Splitting.tokenize(locītājs, "München");
 		assertEquals(1, tokens.size());
+		
+		tokens = Splitting.tokenize(locītājs, "W. Şiliņs");
+		assertEquals(2, tokens.size());		
+	}
+	
+	@Test
+	public void garbage()
+	{
+		LinkedList<Word> tokens = Splitting.tokenize(locītājs, "rop. KajiHHHH, MocKOBCKan o6\nacTb. Ha- 6epe*Ha« Cr. Pa3MHa, aom J* 17. Kay<5 HaUMeHbUlMHCTB. rop KMeB. yji. »IapKca, >i 3. KhcbckhA aaT. pa6. wy6 mm. Py,a3yTaKa.");
+		assertTrue(tokens.size() > 0);
 	}
 }

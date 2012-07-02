@@ -413,29 +413,51 @@ public class Analyzer extends Lexicon {
 	}
 	
 	public ArrayList<Wordform> generateInflections(String lemma) {
-		ArrayList<Wordform> result = new ArrayList<Wordform>();
+		ArrayList<Wordform> result = generateInflections_TryLemmas(lemma, this.analyze(lemma)); 
 		
-		Word w = this.analyze(lemma);
-		/*
-		for (Wordform wf : w.wordforms) {
-			if (wf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(lemma) && !wf.isMatchingStrong(AttributeNames.i_Case, AttributeNames.v_Vocative)) {						
-				System.out.println();
-				wf.describe();
-			}
-		}*/
+		// If result is null, it means that all the suggested lemma can be (and was) generated from another lemma - i.e. "Dīcis" from "dīkt"; but not from an existing lexicon lemma
+		// We assume that a true lemma was passed by the caller, and we need to generate/guess the wordforms as if the lemma was correct.
+		if (result == null)
+			result = generateInflections_TryLemmas(lemma, this.guessByEnding(lemma));
+
+		// If guessing didn't work, return an empty list
+		if (result == null)
+			result = new ArrayList<Wordform>();
+		
+		return result;
+	}
+
+	private ArrayList<Wordform> generateInflections_TryLemmas(String lemma, Word w) {
 		for (Wordform wf : w.wordforms) {
 			if (wf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(lemma) && !wf.isMatchingStrong(AttributeNames.i_Case, AttributeNames.v_Vocative)) {				
 				Lexeme lex = wf.lexeme;
-				if (lex == null) {
+				if (lex == null || !lex.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(lemma)) {
 					lex = this.createLexeme(lemma, wf.getEnding().getID(), "generateInflections");
 					if (lemma.matches("\\p{Lu}.*"))
 						lex.addAttribute(AttributeNames.i_NounType, AttributeNames.v_ProperNoun); //FIXME - hack personvārdu 'Valdis' utml locīšanai
 				}
-				result.addAll(generateInflections(lex));
+				return generateInflections(lex);
+			}
+			if ( (lemma.endsWith("ais") && lemma.equalsIgnoreCase(wf.getValue(AttributeNames.i_Lemma).substring(0, wf.getValue(AttributeNames.i_Lemma).length()-1)+"ais")) ||
+				 (lemma.endsWith("ā") && wf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(lemma.substring(0, lemma.length()-1)+"a")) ) {
+				// Exception for adjective-based surnames "Lielais", "Platais" etc
+				Lexeme lex = wf.lexeme;
+				if ((lex == null && lemma.endsWith("ais")) || (lex != null && !lex.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(lemma))) {
+					lex = this.createLexeme(lemma, wf.getEnding().getID(), "generateInflections");
+					if (lemma.matches("\\p{Lu}.*"))
+						lex.addAttribute(AttributeNames.i_NounType, AttributeNames.v_ProperNoun); //FIXME - hack personvārdu 'Valdis' utml locīšanai
+				}
+				if (lex == null) continue;
+				ArrayList<Wordform> result = new ArrayList<Wordform>();
+				for (Wordform wf2 : generateInflections(lex)) {
+					if (wf2.isMatchingStrong(AttributeNames.i_Definiteness, AttributeNames.v_Definite) && wf2.isMatchingStrong(AttributeNames.i_Degree, AttributeNames.v_Positive) && wf2.isMatchingWeak(AttributeNames.i_Gender, wf.getValue(AttributeNames.i_Gender))) {
+						result.add(wf2);
+					}
+				}
 				return result;
 			}
 		}
-		return result;
+		return null;
 	}
 	
 	private ArrayList<Wordform> generateInflections(Lexeme lexeme)

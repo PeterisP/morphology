@@ -931,8 +931,7 @@ public class MorphologyTest {
 		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "raita");
 
 		formas = locītājs.generateInflections("cerēt");
-		// TODO - salikt verbiem testpiemērus
-		System.out.println();		
+		// TODO - salikt verbiem testpiemērus			
 	}
 	
 	@Test
@@ -1047,6 +1046,24 @@ public class MorphologyTest {
 		
 		formas = locītājs.generateInflections("Taļikova");
 		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, AttributeNames.v_Feminine, "taļikovas");
+		
+		formas = locītājs.generateInflections("Bērziņš");
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Nominative, AttributeNames.v_Masculine, "bērziņš");
+		
+		formas = locītājs.generateInflections("Dīcis");
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, AttributeNames.v_Masculine, "dīcim");
+
+		formas = locītājs.generateInflections("Asna");
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, AttributeNames.v_Feminine, "asnai");		
+		
+		formas = locītājs.generateInflections("Lielais");
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, AttributeNames.v_Masculine, "lielajam");
+		
+		formas = locītājs.generateInflections("Mazā");
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, AttributeNames.v_Feminine, "mazajai");
+
+		formas = locītājs.generateInflections("Zaļais");
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, AttributeNames.v_Masculine, "zaļajam");		
 	}
 	
 	@Test
@@ -1082,9 +1099,9 @@ public class MorphologyTest {
 	}
 	
 	@Test
-	public void garbage()
-	{
-		LinkedList<Word> tokens = Splitting.tokenize(locītājs, "rop. KajiHHHH, MocKOBCKan o6\nacTb. Ha- 6epe*Ha« Cr. Pa3MHa, aom J* 17. Kay<5 HaUMeHbUlMHCTB. rop KMeB. yji. »IapKca, >i 3. KhcbckhA aaT. pa6. wy6 mm. Py,a3yTaKa.");
-		assertTrue(tokens.size() > 0);
-	}
+	public void mazajai() {
+		Word mazajai = locītājs.analyze("mazajai");
+		assertTrue(mazajai.isRecognized());		
+		assertEquals("maza", mazajai.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+	}	
 }
