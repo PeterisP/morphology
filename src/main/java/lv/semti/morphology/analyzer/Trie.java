@@ -43,38 +43,38 @@ public class Trie {
 		/* 1
 		 * Iniciāļu automāts atpazīst Dz. Dž. UpperCaseLetter.
 		 */
-		root=new node("D");
+		root=new StringNode("D");
 		branchList.add(root);
 		root.canEnd=true;
-		root.firstChild=new node("zžZŽ");
-		root.firstChild.nextSibling=new node(".");
+		root.firstChild=new StringNode("zžZŽ");
+		root.firstChild.nextSibling=new StringNode(".");
 		root.firstChild.nextSibling.canEnd=true;
 		root.firstChild.firstChild=root.firstChild.nextSibling;
-		root.nextSibling=new node(symbols.UC);
+		root.nextSibling=new UCNode();
 		root.nextSibling.firstChild=root.firstChild.nextSibling;
 		
 		/* 2a
 		 * automāts, kurš atpazīst naudas formā 123,-
 		 */
-		root=new node(symbols.DIGITS);
+		root=new DigitNode();
 		branchList.add(root);
-		root.firstChild=new node(symbols.DIGITS);
+		root.firstChild=new DigitNode();
 		root.firstChild.firstChild=root.firstChild;
-		root.firstChild.nextSibling=new node(".,");
-		root.firstChild.nextSibling.firstChild=new node("-‐‑‒–—―'");  
+		root.firstChild.nextSibling=new StringNode(".,");
+		root.firstChild.nextSibling.firstChild=new StringNode("-‐‑‒–—―'");  
 		root.firstChild.nextSibling.firstChild.canEnd=true;
 		root.firstChild.nextSibling.firstChild.nextSibling=root;
-		root.firstChild.nextSibling.nextSibling=new node(" '");
+		root.firstChild.nextSibling.nextSibling=new StringNode(" '");
 		root.firstChild.nextSibling.nextSibling.firstChild=root;
 
 		/* 2b 
 		 * atsevišķs automāts kārtas skaitļiem
 		 */
-		root=new node(symbols.DIGITS);
+		root=new DigitNode();
 		branchList.add(root);
-		root.firstChild=new node(symbols.DIGITS);
+		root.firstChild=new DigitNode();
 		root.firstChild.firstChild=root.firstChild;
-		root.firstChild.nextSibling=new node(".");
+		root.firstChild.nextSibling=new StringNode(".");
 		root.firstChild.nextSibling.canEnd=true;
 
 		/* 2c
@@ -83,29 +83,29 @@ public class Trie {
 		 * skaitļus ar tūkstošu atdalītāju (komatu vai apostrofu)
 		 * daļskaitļus (/ vai \)
 		 */
-		root=new node(symbols.DIGITS);
+		root=new DigitNode();
 		branchList.add(root);
 		root.canEnd=true;
-		root.firstChild=new node(symbols.DIGITS);
+		root.firstChild=new DigitNode();
 		root.firstChild.canEnd=true;
 		root.firstChild.firstChild=root.firstChild;
-		root.firstChild.nextSibling=new node(".,");
+		root.firstChild.nextSibling=new StringNode(".,");
 		root.firstChild.nextSibling.firstChild=root.firstChild;
-		root.firstChild.nextSibling.nextSibling=new node("/\'");
+		root.firstChild.nextSibling.nextSibling=new StringNode("/\'");
 		root.firstChild.nextSibling.nextSibling.firstChild=root;
 				
 		/* 3
 		 * e-pasta automāts
 		 */
-		root=new node(symbols.DIGITS+symbols.LETTER);
+		root=new LetterOrDigitNode();
 		branchList.add(root);
-		root.firstChild=new node(symbols.DIGITS+symbols.LETTER+"_-.");
+		root.firstChild=new LetterOrDigitNode("_-.");
 		root.firstChild.firstChild=root.firstChild;
-		root.firstChild.nextSibling=new node("@");
-		root.firstChild.nextSibling.firstChild=new node(symbols.DIGITS+symbols.LETTER);
+		root.firstChild.nextSibling=new StringNode("@");
+		root.firstChild.nextSibling.firstChild=new LetterOrDigitNode();
 		root.firstChild.nextSibling.firstChild.canEnd=true;
 		root.firstChild.nextSibling.firstChild.firstChild=root.firstChild.nextSibling.firstChild;
-		root.firstChild.nextSibling.firstChild.nextSibling=new node("_-.");
+		root.firstChild.nextSibling.firstChild.nextSibling=new StringNode("_-.");
 		root.firstChild.nextSibling.firstChild.nextSibling.firstChild=root.firstChild.nextSibling.firstChild;
 		
 		/* 4
@@ -116,40 +116,40 @@ public class Trie {
 		 * ikst beigties ar burtu vai ciparu vai simbolu "/"
 		 */
 		
-		root=new node("hH");
+		root=new StringNode("hH");
 		branchList.add(root);
-		root.firstChild=new node("tT");
-		root.firstChild.firstChild=new node("tT");
-		root.firstChild.firstChild.firstChild=new node("pP");
-		root.firstChild.firstChild.firstChild.firstChild=new node(":");
-		root.firstChild.firstChild.firstChild.firstChild.firstChild=new node("/");
-		root.firstChild.firstChild.firstChild.firstChild.firstChild.firstChild=new node("/");
-		root.firstChild.firstChild.firstChild.firstChild.nextSibling=new node("sS");
+		root.firstChild=new StringNode("tT");
+		root.firstChild.firstChild=new StringNode("tT");
+		root.firstChild.firstChild.firstChild=new StringNode("pP");
+		root.firstChild.firstChild.firstChild.firstChild=new StringNode(":");
+		root.firstChild.firstChild.firstChild.firstChild.firstChild=new StringNode("/");
+		root.firstChild.firstChild.firstChild.firstChild.firstChild.firstChild=new StringNode("/");
+		root.firstChild.firstChild.firstChild.firstChild.nextSibling=new StringNode("sS");
 		root.firstChild.firstChild.firstChild.firstChild.firstChild=root.firstChild.firstChild.firstChild.firstChild;
-		root.nextSibling=new node("fF");
-		root.nextSibling.firstChild=new node("tT");
-		root.nextSibling.firstChild.firstChild=new node("pP");
+		root.nextSibling=new StringNode("fF");
+		root.nextSibling.firstChild=new StringNode("tT");
+		root.nextSibling.firstChild.firstChild=new StringNode("pP");
 		root.nextSibling.firstChild.firstChild.firstChild=root.firstChild.firstChild.firstChild.firstChild;
-		root.nextSibling.nextSibling=new node("wW");
-		root.nextSibling.nextSibling.firstChild=new node("wW");
-		root.nextSibling.nextSibling.firstChild.firstChild=new node("wW");
-		root.nextSibling.nextSibling.firstChild.firstChild.firstChild=new node(".");
-		root.nextSibling.nextSibling.firstChild.firstChild.firstChild.firstChild=new node("/"+symbols.DIGITS+symbols.LETTER);
+		root.nextSibling.nextSibling=new StringNode("wW");
+		root.nextSibling.nextSibling.firstChild=new StringNode("wW");
+		root.nextSibling.nextSibling.firstChild.firstChild=new StringNode("wW");
+		root.nextSibling.nextSibling.firstChild.firstChild.firstChild=new StringNode(".");
+		root.nextSibling.nextSibling.firstChild.firstChild.firstChild.firstChild=new LetterOrDigitNode("/");
 		root.nextSibling.nextSibling.firstChild.firstChild.firstChild.firstChild.canEnd=true;
 		root.firstChild.firstChild.firstChild.firstChild.firstChild.firstChild.firstChild=root.nextSibling.nextSibling.firstChild.firstChild.firstChild.firstChild;
 		root=root.nextSibling.nextSibling.firstChild.firstChild.firstChild.firstChild;
-		root.firstChild=new node("/"+symbols.DIGITS+symbols.LETTER);
+		root.firstChild=new LetterOrDigitNode("/");
 		root.firstChild.canEnd=true;
 		root.firstChild.firstChild=root.firstChild;
 		root.firstChild.firstChild.canEnd=true;
-		root.firstChild.firstChild.nextSibling=new node("_-@:?=&%.");
+		root.firstChild.firstChild.nextSibling=new StringNode("_-@:?=&%.");
 		root.firstChild.firstChild.nextSibling.firstChild=root;
 		
 		/* 5
 		 * Ciklojošo pieturzīmju automāts (atpazīst .?!)
 		 */
 		
-		root=new node(".?!");
+		root=new StringNode(".?!");
 		root.canEnd=true;
 		root.firstChild=root;
 		branchList.add(root);
@@ -158,10 +158,10 @@ public class Trie {
 		 * automāts, kurš atpazīsts vārdus ar atstarpēm
 		 * piemērām "a t s t a r p e s"
 		 */
-		root=new node(symbols.LETTER);
+		root=new LetterNode();
 		branchList.add(root);
-		root.firstChild=new node(" ");
-		root.firstChild.firstChild=new node(symbols.LETTER);
+		root.firstChild=new StringNode(" ");
+		root.firstChild.firstChild=new LetterNode();
 		root.firstChild.firstChild.canEnd=true;
 		root.firstChild.firstChild.firstChild=root.firstChild;
 		
@@ -172,15 +172,15 @@ public class Trie {
 		 * no simboliem kuri var atrasties tikai beigās - "'"   
 		 */
 		
-		root=new node(symbols.LETTER+symbols.DIGITS);
+		root=new LetterOrDigitNode();
 		branchList.add(root);
 		root.canEnd=true;
-		root.firstChild=new node(symbols.LETTER+symbols.DIGITS);
+		root.firstChild=new LetterOrDigitNode();
 		root.firstChild.canEnd=true;
 		root.firstChild.firstChild=root.firstChild;
-		root.firstChild.nextSibling=new node("_-");
+		root.firstChild.nextSibling=new StringNode("_-");
 		root.firstChild.nextSibling.firstChild=root;
-		root.firstChild.nextSibling.nextSibling=new node("'");
+		root.firstChild.nextSibling.nextSibling=new StringNode("'");
 		root.firstChild.nextSibling.nextSibling.canEnd=true;
 		
 
@@ -210,7 +210,7 @@ public class Trie {
 			}
 			if(t==null)
 			{
-				t=new node(String.valueOf(s.charAt(i)).toLowerCase()+String.valueOf(s.charAt(i)).toUpperCase());
+				t=new StringNode(String.valueOf(s.charAt(i)).toLowerCase()+String.valueOf(s.charAt(i)).toUpperCase());
 				t.nextSibling=p.firstChild;
 				p.firstChild=t;
 			}
@@ -304,37 +304,61 @@ public class Trie {
 }
 
 class node  {
+	public node firstChild = null;
+	public node nextSibling = null;
+	public boolean canEnd = false;
+	
+	public boolean contain(char c) {
+		return false;
+	}	
+}
+
+class StringNode extends node {
 	public String symbol;
-	public node firstChild;
-	public node nextSibling;
-	public boolean canEnd;
-	public node(String c)
-	{
+	
+	public StringNode(String c)	{
 		symbol=c;
-		firstChild=null;
-		nextSibling=null;
-		canEnd=false;
 	}
 	
-	public boolean contain(char c)
-	{
+	public boolean contain(char c) {
 		return this.symbol.contains(String.valueOf(c));
-	}
-	
-	public node()
-	{
-		symbol=null;
-		firstChild=null;
-		nextSibling=null;
+	}	
+}
+
+class UCNode extends node {
+	public boolean contain(char c) {
+		return Character.isUpperCase(c);
 	}
 }
 
-//dažādu simbolu kopu definēšana
-interface symbols
-{
-	public static final String UC="AĀBCČDEĒFGĢHIĪJKĶLĻMNŅOŌPQRŖSŠTUŪVWXYZŽ";
-	public static final String LC="aābcčdeēfgģhiījkķlļmnņoōpqrŗsštuūvwxyzž";
-	public static final String LETTER="AĀBCČDEĒFGĢHIĪJKĶLĻMNŅOŌPQRŖSŠTUŪVWXYZŽaābcčdeēfgģhiījkķlļmnņoōpqrŗsštuūvwxyzž";
-	public static final String DIGITS="0123456789";
+class LCNode extends node {
+	public boolean contain(char c) {
+		return Character.isLowerCase(c);
+	}
+}
+
+class LetterNode extends node {
+	public boolean contain(char c) {
+		return Character.isLetter(c);
+	}
+}
+
+class DigitNode extends node {
+	public boolean contain(char c) {
+		return Character.isDigit(c);
+	}
+}
+
+class LetterOrDigitNode extends node {
+	public String symbol="";
 	
+	public boolean contain(char c) {
+		return ( Character.isLetterOrDigit(c) || this.symbol.contains(String.valueOf(c)));
+	}
+	
+	public LetterOrDigitNode(String c)	{
+		symbol=c;
+	}
+	
+	public LetterOrDigitNode()	{}
 }

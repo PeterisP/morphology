@@ -256,31 +256,22 @@ public class TokenizeTest {
 	public void skaitļi2()
 	{
 		LinkedList<Word> tokens = Splitting.tokenize(locītājs, "Ls 5.- gadā");
-		for (Word w : tokens) {
-			System.out.println(w.getToken());
-		}
 		assertEquals(3, tokens.size());
 		assertEquals("5.-", tokens.get(1).getToken());
 
 		tokens = Splitting.tokenize(locītājs, "gadā Ls 5.-, pusgadā Ls 3,-");
-		for (Word w : tokens) {
-			System.out.println(w.getToken());
-		}
 		assertEquals(7, tokens.size());
 		assertEquals("5.-", tokens.get(2).getToken());
 		
 		
 		tokens = Splitting.tokenize(locītājs, "Ls 50.000,-");
-		for (Word w : tokens) {
+		/*for (Word w : tokens) {
 			System.out.println(w.getToken());
-		}
+		}*/
 		assertEquals(2, tokens.size());
 		assertEquals("50.000,-", tokens.get(1).getToken());
 
 		tokens = Splitting.tokenize(locītājs, "Cena Ls 0.40. Nākamais");
-		for (Word w : tokens) {
-			System.out.println(w.getToken());
-		}
 		assertEquals(5, tokens.size());
 		assertEquals("Ls", tokens.get(1).getToken());
 		assertEquals("0.40", tokens.get(2).getToken());
