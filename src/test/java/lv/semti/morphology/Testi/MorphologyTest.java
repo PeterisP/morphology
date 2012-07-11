@@ -1103,5 +1103,36 @@ public class MorphologyTest {
 		Word mazajai = locītājs.analyze("mazajai");
 		assertTrue(mazajai.isRecognized());		
 		assertEquals("maza", mazajai.wordforms.get(0).getValue(AttributeNames.i_Lemma));
-	}	
+	}
+	
+	@Test
+	public void personvārdi_Varis2() {
+		// 2012.07.05 sūtītie komentāri par vokatīvu defektiem.
+		locītājs.enableGuessing = true;
+		locītājs.enableVocative = true;
+		locītājs.guessVerbs = false;
+		locītājs.guessParticibles = false;
+		locītājs.guessAdjectives = false;
+		locītājs.guessInflexibleNouns = true;
+		locītājs.enableAllGuesses = true;
+		
+		List<Wordform> formas = locītājs.generateInflections("Pauls");
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "", "paul");
+		
+		formas = locītājs.generateInflections("Laura");
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "", "laura");
+		
+		formas = locītājs.generateInflections("Lauriņa");
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "", "lauriņ");
+
+		formas = locītājs.generateInflections("Made");
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "", "made");		
+
+		formas = locītājs.generateInflections("Kristīnīte");
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "", "kristīnīt"); 
+
+		formas = locītājs.generateInflections("Margrieta");
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "", "margriet"); // principā der abi, ģenerēt tikai vienu
+
+	}
 }

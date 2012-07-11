@@ -355,6 +355,11 @@
 	<Value LV="Cits" Tag="x"/>
 </Attribute>
 
+<Attribute LV="Ģenerēt">
+	<Value LV="Jā"/>
+	<Value LV="Nē"/>
+</Attribute>
+
 <FreeAttribute LV="Vārdgrupas nr">
 </FreeAttribute>
 <FreeAttribute LV="Leksēmas nr">

@@ -238,6 +238,14 @@ public abstract class Mijas {
 						varianti.add(new Variants(celms+"z"));  // mēzt -> mēšana
 					}
 					break;								
+				case 17: // īsā sieviešu dzimtes vokatīva forma "kristīnīt!" "margriet!"
+					if (syllables(celms) >= 2) 
+						varianti.add(new Variants(celms));
+					break;								
+				case 18: // garā sieviešu dzimtes vokatīva forma "laura!" "margrieta!"
+					if (syllables(celms) <= 2 && !celms.endsWith("iņ") && !celms.endsWith("īt")) 
+						varianti.add(new Variants(celms));
+					break;								
 			}
 		} catch (StringIndexOutOfBoundsException e){
 			try {
@@ -267,7 +275,6 @@ public abstract class Mijas {
 
 	public static ArrayList<Variants> MijasLocīšanai (String celms, int mija, String trešāSakne, boolean pieliktVisPārākoPak, boolean properName) {
 		// procedūra, kas realizē visas celmu pārmaiņas - līdzskaņu mijas; darbības vārdu formas, utml.
-		// FIXME - nafig trešo sakni vajag???
 
 		ArrayList<Variants> varianti = new ArrayList<Variants>(1);
 		if (celms.trim().equals("")) return varianti;
@@ -436,6 +443,14 @@ public abstract class Mijas {
 					if (celms.endsWith("s") || celms.endsWith("z")) 
 						varianti.add(new Variants(celms.substring(0,celms.length()-1)));    // nest -> nešana
 					else varianti.add(new Variants(celms)); 
+					break;								
+				case 17: // īsā sieviešu dzimtes vokatīva forma "kristīnīt!" "margriet!"
+					if (syllables(celms) >= 2) 
+						varianti.add(new Variants(celms));
+					break;								
+				case 18: // garā sieviešu dzimtes vokatīva forma "laura!" "margrieta!"
+					if (syllables(celms) < 2 && !celms.endsWith("iņ") && !celms.endsWith("īt")) // NB! te ir < 2 bet pie atpazīšanas <= 2 - ar 2 zilbēm pagaidām atpazīst abus un ģenerē vienu 
+						varianti.add(new Variants(celms));
 					break;								
 			}
 		} catch (StringIndexOutOfBoundsException e){

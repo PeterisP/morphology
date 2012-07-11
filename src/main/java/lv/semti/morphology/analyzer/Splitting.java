@@ -282,10 +282,11 @@ public class Splitting {
 		{
 			LinkedList<Word> tokens = new LinkedList<Word>();
 			if (chunk == null) return tokens;
-			String[] parts_of_string = chunk.split(" ");
+			String[] parts_of_string = chunk.trim().split(" ");
 			for(String part : parts_of_string) 
 			{
-				tokens.add( (morphoAnalyzer == null) ? 
+				if (part.length()>0)
+					tokens.add( (morphoAnalyzer == null) ? 
 						new Word(part) :
 						morphoAnalyzer.analyze(part));
 			}

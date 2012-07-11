@@ -334,7 +334,7 @@ public class Analyzer extends Lexicon {
 	public Word guessByEnding(String word) {
 		Word rezultāts = new Word(word);
 
-		for (int i=word.length()-3; i>=0; i--) { // TODO - duma heiristika, kas vērtē tīri pēc galotņu garuma; vajag pēc statistikas
+		for (int i=word.length()-2; i>=0; i--) { // TODO - duma heiristika, kas vērtē tīri pēc galotņu garuma; vajag pēc statistikas
 			for (Ending ending : getAllEndings().matchedEndings(word))
 				if (ending.getEnding().length()==i) {
 					if (ending.getParadigm().getName().equals("Hardcoded"))
@@ -411,9 +411,19 @@ public class Analyzer extends Lexicon {
 	public void clearCache () {
 		wordCache.clear();
 	}
-	
+
 	public ArrayList<Wordform> generateInflections(String lemma) {
-		ArrayList<Wordform> result = generateInflections_TryLemmas(lemma, this.analyze(lemma)); 
+		return generateInflections(lemma, new AttributeValues());
+	}
+	
+	public ArrayList<Wordform> generateInflections(String lemma, AttributeValues filter) {
+		Word possibilities = this.analyze(lemma);
+		ArrayList<Wordform> unsuitable = new ArrayList<Wordform>();
+		for (Wordform wf : possibilities.wordforms) {
+			if (!wf.isMatchingWeak(filter)) unsuitable.add(wf);
+		}
+		possibilities.wordforms.removeAll(unsuitable);
+		ArrayList<Wordform> result = generateInflections_TryLemmas(lemma, possibilities);
 		
 		// If result is null, it means that all the suggested lemma can be (and was) generated from another lemma - i.e. "Dīcis" from "dīkt"; but not from an existing lexicon lemma
 		// We assume that a true lemma was passed by the caller, and we need to generate/guess the wordforms as if the lemma was correct.
@@ -486,7 +496,8 @@ public class Analyzer extends Lexicon {
 
 		    		Wordform locījums = new Wordform(vārds, lexeme, ending);
 					locījums.addAttributes(celms);
-					locījumi.add(locījums);
+					if (locījums.isMatchingWeak(AttributeNames.i_Generate, AttributeNames.v_Yes))
+						locījumi.add(locījums);
 		    	}
 			}
 		}

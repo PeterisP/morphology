@@ -358,4 +358,22 @@ public class TokenizeTest {
 		LinkedList<Word> tokens = Splitting.tokenize(locītājs, "rop. KajiHHHH, MocKOBCKan o6\nacTb. Ha- 6epe*Ha« Cr. Pa3MHa, aom J* 17. Kay<5 HaUMeHbUlMHCTB. rop KMeB. yji. »IapKca, >i 3. KhcbckhA aaT. pa6. wy6 mm. Py,a3yTaKa.");
 		assertTrue(tokens.size() > 0);
 	}
+	
+	@Test
+	public void spaces()
+	{
+		LinkedList<Word> tokens = Splitting.tokenize(locītājs, " pee pilsata ar wiffu sirgu un mesumu  eelaususchi un eekrittuschi strahdneeki no ");
+		assertEquals(12, tokens.size());
+		
+		tokens = Splitting.tokenize(locītājs, " pee pilsata ar wiffu sirgu un mesumu  eelaususchi un eekrittuschi strahdneeki no ", true);
+		assertEquals(12, tokens.size());
+	}
+	
+	@Test
+	public void vecadruka()
+	{
+		LinkedList<Word> tokens = Splitting.tokenize(locītājs, "şabeedrişka", false);
+		assertEquals(1, tokens.size());
+	}
+	
 }

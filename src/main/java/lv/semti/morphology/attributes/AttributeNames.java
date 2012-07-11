@@ -228,4 +228,6 @@ public class AttributeNames {
 	public static final String i_LexemeID = "Leksēmas nr";
 	public static final String i_EndingID = "Galotnes nr";
 
+	public static final String i_Generate = "Ģenerēt";
+
 }
