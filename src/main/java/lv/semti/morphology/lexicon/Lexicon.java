@@ -20,12 +20,14 @@ import java.util.*;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
 
 import lv.semti.morphology.analyzer.AllEndings;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
 
 /**
  * Satur leksikona datus - leksēmu sarakstu un to locīšanas informāciju
@@ -36,7 +38,7 @@ import org.w3c.dom.NodeList;
  */
 public class Lexicon {
 
-	public final static String DEFAULT_LEXICON_FILE = "Lexicon.xml";
+	public final static String DEFAULT_LEXICON_FILE = "Morphology.xml";
 	private final static String[] DEFAULT_LEXICON_LOCATIONS = {
 		System.getProperty("lv.semti.morphology.lexicon.path"),
 		".", "..", "../..", "resources", "src/main/resources", "dist"};
@@ -48,13 +50,13 @@ public class Lexicon {
 	public ArrayList<Paradigm> paradigms; //TODO - nebūtu jābūt publiskam
 	private AllEndings allEndings = null;
 	protected ArrayList<String> prefixes;
+	private ArrayList<String> corpusFileNames = new ArrayList<String>();
 
 	/**
 	 * Izveido leksikona objektu no XML faila pēc noklusēšanas
 	 *
 	 * @throws Exception	parsēšanas kļūdas
 	 */
-
 	public Lexicon() throws Exception {
 		for (String location : DEFAULT_LEXICON_LOCATIONS) {
 			if (location == null) continue;
@@ -140,7 +142,7 @@ public class Lexicon {
 		DocumentBuilder docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
 		doc = docBuilder.parse(new File(failaVārds));
 
-		init_sub(doc);
+		init_main(doc, new File(failaVārds).getParent());
 	}
 	
 	private void init(InputStream plusma) throws Exception {
@@ -150,13 +152,13 @@ public class Lexicon {
 		DocumentBuilder docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
 		doc = docBuilder.parse(plusma);
 
-		init_sub(doc);
+		init_main(doc, "");
 	}
 	
 	
-	private void init_sub(Document doc) {
+	private void init_main(Document doc, String path) throws Exception {
 		Node node = doc.getDocumentElement();
-		if (!node.getNodeName().equalsIgnoreCase("Lexicon")) throw new Error("Node '" + node.getNodeName() + "' but Lexicon expected!");
+		if (!node.getNodeName().equalsIgnoreCase("Morphology")) throw new Error("Node '" + node.getNodeName() + "' but Morphology expected!");
 
 		Node nodeRevision = node.getAttributes().getNamedItem("revision");
 		if (nodeRevision != null)
@@ -173,6 +175,19 @@ public class Lexicon {
 		for (int i = 0; i < nodes.getLength(); i++) {
 			if (nodes.item(i).getNodeName().equals("Paradigm"))
 				addParadigm(new Paradigm(this, nodes.item(i)));
+			if (nodes.item(i).getNodeName().equals("Corpus")) {
+				Node corpusFileName = nodes.item(i).getAttributes().getNamedItem("FileName");
+				if (corpusFileName != null)
+					corpusFileNames.add(corpusFileName.getTextContent());
+			}
+		}
+		
+		for (String filename : corpusFileNames) {
+			Document doc2 = null;
+			DocumentBuilder docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
+			doc2 = docBuilder.parse(new File(path + java.io.File.separatorChar + filename));
+
+			init_sub(doc2);
 		}
 
 		//TODO - nav īsti smuki šāds hardcoded saraksts.
@@ -193,6 +208,24 @@ public class Lexicon {
 		System.out.println("Lexicon " + (revision != null ? revision : "") + " loaded");
 	}
 
+	private void init_sub(Document doc) throws Exception {
+		Node node = doc.getDocumentElement();
+		if (!node.getNodeName().equalsIgnoreCase("Lexicon")) throw new Error("Node '" + node.getNodeName() + "' but Lexicon expected!");
+	
+		NodeList nodes = node.getChildNodes();
+
+		for (int i = 0; i < nodes.getLength(); i++) {
+			if (nodes.item(i).getNodeName().equals("Paradigm")) {
+				Node n = nodes.item(i).getAttributes().getNamedItem("ID");
+				if (n != null) {
+					int paradigmID = Integer.parseInt(n.getTextContent());
+					Paradigm paradigm = this.paradigmByID(paradigmID);
+					if (paradigm != null) paradigm.addLexemesFromXML(nodes.item(i));
+					else throw new Exception(String.format("When loading subcorpus, cannot find paradigm %d in main morphology", paradigmID));
+				}
+			}
+		}
+	}
 	
 	/**
 	 * Saglabā visus leksikona datus, vārdgrupas un galotnes ieskaitot, XML formātā.
@@ -207,6 +240,8 @@ public class Lexicon {
 	public void toXML(String failaVārds) throws FileNotFoundException,
 	//TODO - būtu nevis faila vārds jāņem, bet outputstream.
 			UnsupportedEncodingException, IOException {
+		System.out.println("Warning! XML saving possibly obsolete after multuple-lexicon changes");
+		
 		File file = new File(failaVārds);
 		File newfile = new File(failaVārds + ".new");
 		File backupfile = new File(failaVārds + ".bak");
@@ -244,6 +279,8 @@ public class Lexicon {
 	 * @throws IOException
 	 */
 	public void toXML(OutputStream plusma) throws IOException {
+		System.out.println("Warning! XML saving possibly obsolete after multuple-lexicon changes");
+		
 		Writer straume = new BufferedWriter(new OutputStreamWriter(plusma, "UTF-8"));
 		straume.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
 		straume.write("<Lexicon revision=\"" + (revision != null ? revision : "") + "\" licence=\"" + (licence != null ? licence : "") + "\">\n");

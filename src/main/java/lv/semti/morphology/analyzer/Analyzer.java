@@ -15,17 +15,6 @@
  *******************************************************************************/
 package lv.semti.morphology.analyzer;
 
-/*
- * Todo -
- * 1) "patīk" nestrādā nezkapēc...
- * 2) sadalīt 3. konjugāciju pa atsevišķām vārdgrupām un likvidēt tās mijas
- *
- *
- *
- *
- * 7) darbīvbasvārdi - austu; ausu
- */
-
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -120,7 +109,7 @@ public class Analyzer extends Lexicon {
 		} else return analyzeLowercase(word);
 	}
 	
-	public Word analyzeLowercase(String word) {
+	private Word analyzeLowercase(String word) {
 		Word cacheWord = wordCache.get(word);
 		if (cacheWord != null) return (Word) cacheWord.clone();		
 		

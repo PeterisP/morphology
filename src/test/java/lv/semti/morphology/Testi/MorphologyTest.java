@@ -55,8 +55,12 @@ public class MorphologyTest {
 	}
 	
 	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
-		locītājs = new Analyzer("dist/Lexicon.xml");
+	public static void setUpBeforeClass() {
+		try {
+			locītājs = new Analyzer("dist/Lexicon.xml");
+		} catch(Exception e) {
+			e.printStackTrace();
+		} 
 	}
 	
 	@Before
@@ -1064,6 +1068,9 @@ public class MorphologyTest {
 
 		formas = locītājs.generateInflections("Zaļais");
 		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, AttributeNames.v_Masculine, "zaļajam");		
+		
+		formas = locītājs.generateInflections("Santis");
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, AttributeNames.v_Masculine, "santa");
 	}
 	
 	@Test
@@ -1133,6 +1140,11 @@ public class MorphologyTest {
 
 		formas = locītājs.generateInflections("Margrieta");
 		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "", "margriet"); // principā der abi, ģenerēt tikai vienu
-
 	}
+	
+	@Test
+	public void leksikoni() {
+		Word pokemons = locītājs.analyze("pokemons");
+		assertTrue(pokemons.isRecognized());		
+	}	
 }

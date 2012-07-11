@@ -38,8 +38,12 @@ public class MorphoEvaluate {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
-		locītājs = new Analyzer("dist/Lexicon.xml");
-		statistics = new Statistics("dist/Statistics.xml");
+		try {
+			locītājs = new Analyzer("dist/Lexicon.xml");
+			statistics = new Statistics("dist/Statistics.xml");
+		} catch(Exception e) {
+			e.printStackTrace();
+		} 
 	}
 	
 	@Before

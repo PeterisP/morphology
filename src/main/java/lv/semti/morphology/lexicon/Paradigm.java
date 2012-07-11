@@ -95,6 +95,20 @@ public class Paradigm extends AttributeValues {
 		}
 	}
 	
+	/***
+	 * Takes an XML-sublexicon node of type 'Paradigm', and takes the Lexeme elements from there
+	 * @param node
+	 */
+	public void addLexemesFromXML(Node node) {
+		if (!node.getNodeName().equalsIgnoreCase("Paradigm")) throw new Error("Node '" + node.getNodeName() + "' but Paradigm expected.");
+
+		NodeList nodes = node.getChildNodes();
+		for (int i = 0; i < nodes.getLength(); i++) {
+			if (nodes.item(i).getNodeName().equals("Lexeme"))
+				addLexeme(new Lexeme(this,nodes.item(i)));
+		}
+	}
+	
 	@Override
 	@SuppressWarnings("unchecked")
 	public Object clone() {
