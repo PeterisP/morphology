@@ -29,8 +29,7 @@ public class TokenizeTest {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
-		//locītājs = new Analyzer("dist/Lexicon.xml");
-		locītājs=null;
+		locītājs = new Analyzer("dist/Lexicon.xml");
 	}
 	
 	@Test
@@ -367,4 +366,20 @@ public class TokenizeTest {
 		assertEquals(1, tokens.size());
 	}
 	
+	@Test
+	public void hmm()
+	{
+		locītājs.enableVocative = true;
+		locītājs.enableDiminutive = true;
+		locītājs.enablePrefixes = true;
+		locītājs.enableGuessing = true;
+		locītājs.enableAllGuesses = true;
+		locītājs.meklētsalikteņus = true; 
+		locītājs.setCacheSize(10000);
+		
+		LinkedList<Word> tokens = Splitting.tokenize(locītājs, "bet za kahdam nam", false);
+		for (Word token : tokens) {
+			assertFalse(token.getToken().length() == 0);
+		}
+	}
 }

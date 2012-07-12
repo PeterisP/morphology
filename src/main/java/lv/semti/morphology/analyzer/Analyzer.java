@@ -295,7 +295,7 @@ public class Analyzer extends Lexicon {
 		
 		for (String priedēklis : prefixes)
 			if (word.startsWith(priedēklis)) {
-				Word bezpriedēkļa = analyze(word.substring(priedēklis.length()));
+				Word bezpriedēkļa = analyzeLowercase(word.substring(priedēklis.length()));
 				for (Wordform variants : bezpriedēkļa.wordforms)
 					if (variants.getEnding() != null && variants.getEnding().getParadigm() != null && variants.getEnding().getParadigm().getValue(AttributeNames.i_Konjugaacija) != null) { // Tikai no verbiem atvasinātās klases 
 						variants.setToken(word);

@@ -331,6 +331,11 @@
 	<Value LV="Miljardi" Tag="r"/>
 </Attribute>
 
+<Attribute LV="Uzbūve" PartOfSpeech="Izsauksmes vārds" MarkupPos="1">
+	<Value LV="Vienkāršs" Tag="s"/>
+	<Value LV="Salikts" Tag="c"/>
+</Attribute>
+
 <Attribute LV="Uzbūve" PartOfSpeech="Partikula" MarkupPos="1">
 	<Value LV="Vienkāršs" Tag="s"/>
 	<Value LV="Salikts" Tag="c"/>

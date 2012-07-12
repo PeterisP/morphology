@@ -134,7 +134,7 @@ public class Lexicon {
 	}
 	
 	private void init(String failaVārds) throws Exception {
-		System.out.println("Loading " + failaVārds);
+		System.err.println("Loading " + failaVārds);
 		
 		this.filename = failaVārds;
 
@@ -146,7 +146,7 @@ public class Lexicon {
 	}
 	
 	private void init(InputStream plusma) throws Exception {
-		System.out.println("Loading the lexicon from an input stream...");
+		System.err.println("Loading the lexicon from an input stream...");
 		
 		Document doc = null;
 		DocumentBuilder docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
@@ -205,7 +205,7 @@ public class Lexicon {
 		prefixes.add("sa");
 		prefixes.add("uz");
 		
-		System.out.println("Lexicon " + (revision != null ? revision : "") + " loaded");
+		System.err.println("Lexicon " + (revision != null ? revision : "") + " loaded");
 	}
 
 	private void init_sub(Document doc) throws Exception {
