@@ -23,6 +23,9 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
 import lv.semti.morphology.analyzer.AllEndings;
+import lv.semti.morphology.analyzer.Mijas;
+import lv.semti.morphology.analyzer.Variants;
+import lv.semti.morphology.attributes.AttributeValues;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
@@ -269,6 +272,41 @@ public class Lexicon {
 	
 	
 	/**
+	 * Saglabā XML formātā apakšleksikona leksēmas
+	 *
+	 * @param failaVārds 	Faila vārds, kurā saglabāt.
+	 * @throws FileNotFoundException
+	 * @throws UnsupportedEncodingException
+	 * @throws IOException
+	 */
+	public void toXML_sub(String failaVārds, String source) throws FileNotFoundException,
+			UnsupportedEncodingException, IOException {	
+		File file = new File(failaVārds);
+		File newfile = new File(failaVārds + ".new");
+		File backupfile = new File(failaVārds + ".bak");
+		
+		Writer straume = new BufferedWriter(new OutputStreamWriter(
+				new FileOutputStream(newfile), "UTF-8"));
+		straume.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
+		straume.write("<Lexicon revision=\"" + (revision != null ? revision : "") + "\" licence=\"" + (licence != null ? licence : "") + "\">\n");
+		for (Paradigm paradigm : paradigms) {
+			paradigm.toXML_sub(straume, source);
+		}
+		straume.write("</Lexicon>");
+		straume.close();
+		
+		// remove old backup file
+		if (backupfile.exists())
+			backupfile.delete();
+		
+		// backup existing file
+		if (file.exists())
+			file.renameTo(backupfile);
+		
+		newfile.renameTo(file);
+	}
+	
+	/**
 	 * Saglabā visus leksikona datus, vārdgrupas un galotnes ieskaitot, XML formātā.
 	 * Teksta kodējums tiek likts UTF-8, un pietiek ar XML 1.0, ja XML parseris ir korekts,
 	 * lai var būt latviešu burti atribūtos.
@@ -366,13 +404,16 @@ public class Lexicon {
 		String stem;
 		try {
 			stem = ending.stem(word.toLowerCase());
+			ArrayList<Variants> celmi = Mijas.mijuVarianti(ending.stem(word.toLowerCase()), ending.getMija());
+			if (celmi.size() == 0) return null; // acīmredzot neder ar miju
+			stem = celmi.get(0).celms;
 		} catch (Exception e) {
 			return null;
 		}
 
 		Lexeme rezults = new Lexeme();
 		rezults.setStemCount(ending.getParadigm().getStems());
-		rezults.setStem(ending.stemID-1, stem);  //FIXME - jāpaskatās, vai tur vajag -1 vai nē
+		rezults.setStem(ending.stemID-1, stem); 
 		ending.getParadigm().addLexeme(rezults);
 
 		rezults.addAttribute("Avots", source);

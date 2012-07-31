@@ -62,6 +62,24 @@ public class Paradigm extends AttributeValues {
 		straume.write("</Paradigm>\n");
 	}
 
+	public void toXML_sub(Writer straume, String source) throws IOException {
+		straume.write("<Paradigm");
+		straume.write(" Stems=\""+String.valueOf(stems)+"\"");
+		straume.write(" ID=\""+String.valueOf(id)+"\"");
+		if (lemmaEnding != null)
+			straume.write(" LemmaEnding=\""+String.valueOf(lemmaEnding.getID())+"\"");
+		straume.write(" Description=\""+description+"\"");
+		straume.write(">\n");
+		super.toXML(straume); // īpašības UzXML
+
+		for (Lexeme leksēma : lexemes) {
+			if (leksēma.isMatchingStrong(AttributeNames.i_Source, source))
+				leksēma.toXML(straume);			
+		}
+
+		straume.write("</Paradigm>\n");		
+	}
+
 	public Paradigm(Lexicon lexicon, Node node) {
 		super(node);
 		if (!node.getNodeName().equalsIgnoreCase("Paradigm")) throw new Error("Node '" + node.getNodeName() + "' but Paradigm expected.");

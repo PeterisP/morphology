@@ -382,4 +382,14 @@ public class TokenizeTest {
 			assertFalse(token.getToken().length() == 0);
 		}
 	}
+	
+	@Test
+	public void simboli()
+	{
+		LinkedList<Word> tokens = Splitting.tokenize(locītājs, "cirvis&", false);
+		assertEquals(2, tokens.size());
+		
+		tokens = Splitting.tokenize(locītājs, "cirvis", false);
+		assertEquals(2, tokens.size());
+	}
 }

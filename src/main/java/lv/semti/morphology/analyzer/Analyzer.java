@@ -23,20 +23,6 @@ import lv.semti.morphology.attributes.AttributeNames;
 import lv.semti.morphology.attributes.AttributeValues;
 import lv.semti.morphology.lexicon.*;
 
-class Variants extends AttributeValues{
-	// variants meklēšanai ar mijām
-	String celms;
-
-	protected Variants (String _celms) {
-		celms = _celms;
-	}
-
-	protected Variants (String _celms, String īpašība, String vērtība) {
-		celms = _celms;
-		addAttribute(īpašība, vērtība );
-	}
-}
-
 public class Analyzer extends Lexicon {
 
 	public boolean enablePrefixes = true;
@@ -381,12 +367,20 @@ public class Analyzer extends Lexicon {
 		// Meklēt variantus, pieņemot, ka ir iedota tieši vārda pamatforma
 		// FIXME - būtu jāapdomā, ko darīt, ja ir iedots substantivizēta darbības vārda vienskaitļa nominatīvs
 		//  ^^ itkā tagad jāiet, bet jātestē
+		// FIXME - daudzskaitlinieki?
 		Word rezultāts = new Word(word);
 		Word varianti = analyze(word);
 
-		for (Wordform vārdforma : varianti.wordforms) {
-			Ending ending = endingByID(Integer.parseInt(vārdforma.getValue("Galotnes nr")));
-			if (ending.getLemmaEnding() == ending)
+		for (Wordform vārdforma : varianti.wordforms) {			
+			Ending ending = vārdforma.getEnding();
+			
+			AttributeValues filter = new AttributeValues();
+			filter.addAttribute(AttributeNames.i_Lemma, word);
+			filter.addAttribute(AttributeNames.i_Lemma, AttributeNames.v_Singular);
+			
+			if ( (ending != null && ending.getLemmaEnding() == ending) ||
+				(vārdforma.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(word) && 
+						(vārdforma.isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum) || vārdforma.isMatchingStrong(AttributeNames.i_CaseSpecial, AttributeNames.v_InflexibleGenitive) )) )
 				rezultāts.addWordform(vārdforma);
 		}
 

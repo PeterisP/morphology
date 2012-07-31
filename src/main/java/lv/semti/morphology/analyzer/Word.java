@@ -179,7 +179,10 @@ public class Word implements Cloneable{
 		return wordforms.get(0).getValue("Vārdšķira");
 	}
 
-	// gets rid of those wordforms that match (weakly) the attributes provided. Destructive!
+	/**
+	 * 	gets rid of those wordforms that match (weakly) the attributes provided. Destructive!
+	 * @param attributes
+	 */
 	public void filterByAttributes(AttributeValues attributes) {
 		ArrayList<Wordform> derīgās = new ArrayList<Wordform>();
 

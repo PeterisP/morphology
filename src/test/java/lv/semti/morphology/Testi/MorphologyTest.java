@@ -327,7 +327,7 @@ public class MorphologyTest {
 		assertTrue(cukurs.isRecognized());		
 		assertEquals("cukurs", cukurs.wordforms.get(0).getValue(AttributeNames.i_Lemma));
 		
-		Word cukuri = locītājs.analyze("cukuri");
+		Word cukuri = locītājs.analyze("cukuriem");
 		assertFalse(cukuri.isRecognized());
 		
 		Word bikses = locītājs.analyze("bikses");
@@ -620,19 +620,19 @@ public class MorphologyTest {
 		// 2012. 10.feb Vienojāmies ar valodniecēm ka deminutīviem lemmas arī ir deminutīvā
 		
 		locītājs.enableDiminutive = true;
-		Word cirvis = locītājs.analyze("cirvītis");
+		Word skapītis = locītājs.analyze("skapītis");
 		Word pļava = locītājs.analyze("pļaviņa");
 		
-		assertTrue(cirvis.isRecognized());
+		assertTrue(skapītis.isRecognized());
 		assertTrue(pļava.isRecognized());
 		
 		boolean irPareizā = false;
-		for (Wordform vārdforma : cirvis.wordforms) {
-			if (vārdforma.getValue(AttributeNames.i_Lemma).equals("cirvītis")) 
+		for (Wordform vārdforma : skapītis.wordforms) {
+			if (vārdforma.getValue(AttributeNames.i_Lemma).equals("skapītis")) 
 				irPareizā = true;			
 		}
 		assertEquals(true, irPareizā);
-		assertEquals(AttributeNames.v_Deminutive, cirvis.wordforms.get(0).getValue(AttributeNames.i_Guess));
+		assertEquals(AttributeNames.v_Deminutive, skapītis.wordforms.get(0).getValue(AttributeNames.i_Guess));
 		
 		irPareizā = false;
 		for (Wordform vārdforma : pļava.wordforms) {
@@ -1144,7 +1144,15 @@ public class MorphologyTest {
 	
 	@Test
 	public void leksikoni() {
-		Word pokemons = locītājs.analyze("pokemons");
+		Word pokemons = locītājs.analyze("Bisjakovs");
 		assertTrue(pokemons.isRecognized());		
-	}	
+	}
+	
+	@Test
+	public void daudzskaitlinieki() {
+		// analyzeLemma nestrādā
+		Word augstpapēžu = locītājs.analyzeLemma("augstpapēžu");
+		assertTrue(augstpapēžu.isRecognized());
+	}
+
 }

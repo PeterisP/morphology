@@ -11,6 +11,7 @@ import lv.semti.morphology.analyzer.Analyzer;
 import lv.semti.morphology.analyzer.Word;
 import lv.semti.morphology.analyzer.Wordform;
 import lv.semti.morphology.attributes.AttributeNames;
+import lv.semti.morphology.attributes.AttributeValues;
 import lv.semti.morphology.lexicon.Lexeme;
 
 public class OnomastikaImport {
@@ -20,9 +21,9 @@ public class OnomastikaImport {
 	 * @throws Exception 
 	 */
 	public static void main(String[] args) throws Exception {
-		PrintWriter izeja = new PrintWriter(new PrintStream(System.out, true, "windows-1257"));
+		PrintWriter izeja = new PrintWriter(new PrintStream(System.out, true, "UTF-8"));
 		
-		Analyzer analizators = new Analyzer("D:\\Lingvistika\\java\\Morphology\\src\\main\\resources\\Lexicon.xml");
+		Analyzer analizators = new Analyzer("dist/Lexicon.xml");
 		analizators.guessNouns = true;
 		analizators.guessParticibles = false;
 		analizators.guessVerbs = false;
@@ -32,29 +33,59 @@ public class OnomastikaImport {
 		analizators.enableGuessing = false;
 		analizators.meklētsalikteņus = false;
 		analizators.guessInflexibleNouns = true;
+		analizators.setCacheSize(0);
 
+		String source = "Onomastica - nepārbaudīts visu vārdu imports";
+		
 		BufferedReader ieeja;
 		String vārds;
 		ieeja = new BufferedReader(
-				new InputStreamReader(new FileInputStream("D:\\Lingvistika\\Onomastika\\uzvardi (A-Z).txt"), "UTF-8"));
+				new InputStreamReader(new FileInputStream("/Users/pet/Dropbox/Resursi/Onomastika jaunā/bezatstarpju visi.txt"), "UTF-8"));
 		
+		int i = 0;
 		while ((vārds = ieeja.readLine()) != null) {
-			vārds = vārds.trim();
+			i++;
+			//if (i>10000) break;
+			
+			vārds = vārds.trim().toLowerCase();
+			String Vārds = vārds.substring(0, 1).toUpperCase() + vārds.substring(1,vārds.length());
 			Word w = analizators.analyzeLemma(vārds);
 			
 			if (irLeksikonā(w)) {
-				//izeja.println("Vārds '" + w.getVārds() + "' jau ir leksikonā!");
+				//izeja.println("Vārds '" + w.getToken() + "' jau ir leksikonā!");
 			} else {
 				
 				w = analizators.guessByEnding(vārds);
 
-				izmestNepareizāsDzimtes(w);
+				izmestNepareizāsParadigmas(w);
+				
+				AttributeValues filtrs_vsk = new AttributeValues();
+				filtrs_vsk.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+
+				AttributeValues filtrs_3 = new AttributeValues();
+				filtrs_3.addAttribute(AttributeNames.i_ParadigmID, "3");
+				
+				AttributeValues filtrs_1 = new AttributeValues();
+				filtrs_1.addAttribute(AttributeNames.i_ParadigmID, "1");
+				
+				boolean irVienskaitlis = false;
+				for (Wordform wf : w.wordforms) {
+					if (wf.isMatchingWeak(AttributeNames.i_Number, AttributeNames.v_Singular)) irVienskaitlis = true;
+				}
+				if (irVienskaitlis)	w.filterByAttributes(filtrs_vsk);
+				else {
+					if (vārds.endsWith("ši") || vārds.endsWith("ži") || vārds.endsWith("či") || vārds.endsWith("šļi") || vārds.endsWith("žļi") || vārds.endsWith("ži") ||
+							vārds.endsWith("ņi") || vārds.endsWith("pji") || vārds.endsWith("pji") || vārds.endsWith("bji") || vārds.endsWith("mji") || vārds.endsWith("vji"))
+						w.filterByAttributes(filtrs_3);
+					else if (vārds.endsWith("i"))
+						w.filterByAttributes(filtrs_1);
+				}
 				
 				if (w.wordforms.size() == 0) {					
-					if (vārds.endsWith("as") || vārds.endsWith("i") || vārds.endsWith("ī") || vārds.endsWith("u")) {
-						Lexeme jaunais = analizators.createLexeme(vārds, 111, "Onomastica - uzvārdi");
+					if (vārds.endsWith("o") || vārds.endsWith("ē")) {
+						Lexeme jaunais = analizators.createLexeme(vārds, 111, source); // Nelokāmie lietvārdi
 						jaunais.addAttribute(AttributeNames.i_NounType, AttributeNames.v_ProperNoun);
-						jaunais.addAttribute(AttributeNames.i_Lemma, vārds);
+						jaunais.addAttribute(AttributeNames.i_Lemma, Vārds);
 						//izeja.println("Pielikām leksikonam vārdu '" + w.getVārds() +"'");
 						//jaunais.describe(izeja);
 						//analizators.analyze(vārds).Aprakstīt(izeja);						
@@ -62,10 +93,14 @@ public class OnomastikaImport {
 						izeja.println("Neuzminējās varianti '" + w.getToken() +"'!");					
 					}
 				} else if (w.wordforms.size() == 1) {					
-					Lexeme jaunais = analizators.createLexeme(vārds, Integer.parseInt(w.wordforms.get(0).getValue(AttributeNames.i_EndingID)),"Onomastica - uzvārdi");
+					Lexeme jaunais = analizators.createLexeme(vārds, w.wordforms.get(0).getEnding().getID(),source);
 					jaunais.addAttribute(AttributeNames.i_NounType, AttributeNames.v_ProperNoun);
-					jaunais.addAttribute(AttributeNames.i_Lemma, vārds);
-					izeja.println("Pielikām leksikonam vārdu '" + w.getToken() +"'");
+					jaunais.addAttribute(AttributeNames.i_Lemma, Vārds);
+					if (w.wordforms.get(0).isMatchingWeak(AttributeNames.i_Number, AttributeNames.v_Plural)) {
+						jaunais.addAttribute(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum);
+					}
+					//izeja.println("Pielikām leksikonam vārdu '" + w.getToken() +"'");
+					//w.print(izeja);
 					//jaunais.describe(izeja);
 					//analizators.analyze(vārds).Aprakstīt(izeja);
 				} else {
@@ -73,23 +108,36 @@ public class OnomastikaImport {
 					w.print(izeja);
 				}
 			}
+			izeja.flush();
 		}
 					
 		izeja.flush();
-		analizators.toXML("D:\\Lingvistika\\java\\Morphology\\src\\main\\resources\\Lexicon2.xml");
+		analizators.toXML_sub("Lexicon_onomastica.xml", source);
 	}
 
-	private static void izmestNepareizāsDzimtes(Word w) {
+	private static void izmestNepareizāsParadigmas(Word w) {
 		LinkedList<Wordform> izmetamie = new LinkedList<Wordform>();
 		for (Wordform wf : w.wordforms) {
 			if (wf.getValue(AttributeNames.i_ParadigmID).equals("4") ||
 				wf.getValue(AttributeNames.i_ParadigmID).equals("5") ||
-				wf.getValue(AttributeNames.i_ParadigmID).equals("7") ||
-				wf.getValue(AttributeNames.i_ParadigmID).equals("9") ||
-				wf.getValue(AttributeNames.i_ParadigmID).equals("11") ||				
-				!wf.isMatchingWeak(AttributeNames.i_Case, AttributeNames.v_Nominative) ||
-				!wf.isMatchingWeak(AttributeNames.i_Number, AttributeNames.v_Singular)
+				wf.getValue(AttributeNames.i_ParadigmID).equals("8") ||
+				wf.getValue(AttributeNames.i_ParadigmID).equals("10") ||
+				wf.getValue(AttributeNames.i_ParadigmID).equals("11") ||
+				wf.getValue(AttributeNames.i_ParadigmID).equals("12") ||				
+				!wf.isMatchingWeak(AttributeNames.i_Case, AttributeNames.v_Nominative)
 				) {
+					izmetamie.add(wf);
+			}
+			
+		}
+		for (Wordform izmetamais : izmetamie)
+			w.wordforms.remove(izmetamais);
+	}
+	
+	private static void izmestDaudzskaitļus(Word w) {
+		LinkedList<Wordform> izmetamie = new LinkedList<Wordform>();
+		for (Wordform wf : w.wordforms) {
+			if ( !wf.isMatchingWeak(AttributeNames.i_Number, AttributeNames.v_Singular)	) {
 					izmetamie.add(wf);
 			}
 			
@@ -100,8 +148,8 @@ public class OnomastikaImport {
 
 	private static boolean irLeksikonā(Word w) {
 		for (Wordform wf : w.wordforms) {
-			if (wf.isMatchingWeak(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun) && wf.isMatchingWeak(AttributeNames.i_NounType, AttributeNames.v_ProperNoun))
-				return true;			
+			if (wf.isMatchingWeak(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun) || wf.isMatchingWeak(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adjective))
+				return true;
 		}
 		return false;
 	}
