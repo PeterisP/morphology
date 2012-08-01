@@ -57,7 +57,7 @@ public class MorphologyTest {
 	@BeforeClass
 	public static void setUpBeforeClass() {
 		try {
-			locītājs = new Analyzer("dist/Lexicon.xml");
+			locītājs = new Analyzer("dist/Lexicon.xml", false);
 		} catch(Exception e) {
 			e.printStackTrace();
 		} 
@@ -620,19 +620,20 @@ public class MorphologyTest {
 		// 2012. 10.feb Vienojāmies ar valodniecēm ka deminutīviem lemmas arī ir deminutīvā
 		
 		locītājs.enableDiminutive = true;
-		Word skapītis = locītājs.analyze("skapītis");
+		Word cirvītis = locītājs.analyze("cirvītis");
 		Word pļava = locītājs.analyze("pļaviņa");
 		
-		assertTrue(skapītis.isRecognized());
+		assertTrue(cirvītis.isRecognized());
 		assertTrue(pļava.isRecognized());
 		
 		boolean irPareizā = false;
-		for (Wordform vārdforma : skapītis.wordforms) {
-			if (vārdforma.getValue(AttributeNames.i_Lemma).equals("skapītis")) 
+		for (Wordform vārdforma : cirvītis.wordforms) {
+			if (vārdforma.getValue(AttributeNames.i_Lemma).equals("cirvītis")) {
 				irPareizā = true;			
+				assertEquals(AttributeNames.v_Deminutive, vārdforma.getValue(AttributeNames.i_Guess));				
+			}
 		}
-		assertEquals(true, irPareizā);
-		assertEquals(AttributeNames.v_Deminutive, skapītis.wordforms.get(0).getValue(AttributeNames.i_Guess));
+		assertEquals(true, irPareizā);		
 		
 		irPareizā = false;
 		for (Wordform vārdforma : pļava.wordforms) {
@@ -1145,7 +1146,7 @@ public class MorphologyTest {
 	@Test
 	public void leksikoni() {
 		Word pokemons = locītājs.analyze("Bisjakovs");
-		assertTrue(pokemons.isRecognized());		
+		assertFalse(pokemons.isRecognized());		
 	}
 	
 	@Test
@@ -1155,4 +1156,21 @@ public class MorphologyTest {
 		assertTrue(augstpapēžu.isRecognized());
 	}
 
+	@Test
+	public void personvārdi_Varis3() {
+		// 2012.07.14 sūtītie komentāri par vokatīvu defektiem.
+		locītājs.enableGuessing = true;
+		locītājs.enableVocative = true;
+		locītājs.guessVerbs = false;
+		locītājs.guessParticibles = false;
+		locītājs.guessAdjectives = false;
+		locītājs.guessInflexibleNouns = true;
+		locītājs.enableAllGuesses = true;
+		
+		List<Wordform> formas = locītājs.generateInflections("Auziņš");
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "", "auziņ");
+		
+		formas = locītājs.generateInflections("Miervaldis");
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "miervalža");
+	}
 }

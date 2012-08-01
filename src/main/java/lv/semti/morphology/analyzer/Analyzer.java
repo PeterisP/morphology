@@ -64,6 +64,14 @@ public class Analyzer extends Lexicon {
 		return false;
 	} */
 	
+	/**
+	 * @param String lexiconFileName - main lexicon file name 
+	 * @param boolean useAuxiliaryLexicons
+	 */
+	public Analyzer(String lexiconFileName, boolean useAuxiliaryLexicons) throws Exception{
+		super(lexiconFileName, useAuxiliaryLexicons);
+	}
+
 	public void defaultSettings(){
 		enablePrefixes = true;
 		meklētsalikteņus = false;
@@ -396,16 +404,23 @@ public class Analyzer extends Lexicon {
 	}
 
 	public ArrayList<Wordform> generateInflections(String lemma) {
-		return generateInflections(lemma, new AttributeValues());
+		return generateInflections(lemma, false);
 	}
 	
-	public ArrayList<Wordform> generateInflections(String lemma, AttributeValues filter) {
+	public ArrayList<Wordform> generateInflections(String lemma, boolean filter) {
 		Word possibilities = this.analyze(lemma);
-		ArrayList<Wordform> unsuitable = new ArrayList<Wordform>();
-		for (Wordform wf : possibilities.wordforms) {
-			if (!wf.isMatchingWeak(filter)) unsuitable.add(wf);
+		
+		if (filter) {
+			ArrayList<Wordform> unsuitable = new ArrayList<Wordform>();
+			for (Wordform wf : possibilities.wordforms) {
+				boolean suitable = false;
+				if (wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun)) suitable = true;
+				if (wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adjective) && wf.isMatchingStrong(AttributeNames.i_Definiteness, AttributeNames.v_Definite)) suitable = true;
+				if (!suitable) unsuitable.add(wf);
+			}
+			possibilities.wordforms.removeAll(unsuitable);
 		}
-		possibilities.wordforms.removeAll(unsuitable);
+		
 		ArrayList<Wordform> result = generateInflections_TryLemmas(lemma, possibilities);
 		
 		// If result is null, it means that all the suggested lemma can be (and was) generated from another lemma - i.e. "Dīcis" from "dīkt"; but not from an existing lexicon lemma

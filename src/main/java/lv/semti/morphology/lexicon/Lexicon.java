@@ -68,14 +68,13 @@ public class Lexicon {
 			if (file.isDirectory()) file = new File(location + "/" + DEFAULT_LEXICON_FILE);
 			System.out.println("Trying to load from '" + file.getCanonicalPath() + "'");
 			if (file.exists() && file.isFile()) {
-				init(file.getCanonicalPath());
+				init(file.getCanonicalPath(), true);
 				return;
 			}
 		}
 		
 		throw new IOException("Can't find '" + DEFAULT_LEXICON_FILE + "'.");
 	}
-	
 	
 	/**
 	 * Izveido leksikona objektu no XML faila
@@ -84,7 +83,18 @@ public class Lexicon {
 	 * @throws Exception	parsēšanas kļūdas
 	 */
 	public Lexicon(String failaVārds) throws Exception {
-		init(failaVārds);
+		init(failaVārds, true);
+	}
+	
+	/**
+	 * Izveido leksikona objektu no XML faila
+	 *
+	 * @param failaVārds	faila vārds, kurā meklēt leksikonu
+	 * @param useAuxiliaryLexicons vai lietot papildvārdnīces 
+	 * @throws Exception	parsēšanas kļūdas
+	 */
+	public Lexicon(String failaVārds, boolean useAuxiliaryLexicons) throws Exception {
+		init(failaVārds, useAuxiliaryLexicons);
 	}
 	
 	/**
@@ -136,7 +146,7 @@ public class Lexicon {
 		allEndings = null;
 	}
 	
-	private void init(String failaVārds) throws Exception {
+	private void init(String failaVārds, boolean useAuxiliaryLexicons) throws Exception {
 		System.err.println("Loading " + failaVārds);
 		
 		this.filename = failaVārds;
@@ -145,7 +155,7 @@ public class Lexicon {
 		DocumentBuilder docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
 		doc = docBuilder.parse(new File(failaVārds));
 
-		init_main(doc, new File(failaVārds).getParent());
+		init_main(doc, new File(failaVārds).getParent(), useAuxiliaryLexicons);
 	}
 	
 	private void init(InputStream plusma) throws Exception {
@@ -155,11 +165,11 @@ public class Lexicon {
 		DocumentBuilder docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
 		doc = docBuilder.parse(plusma);
 
-		init_main(doc, "");
+		init_main(doc, "", false);
 	}
 	
 	
-	private void init_main(Document doc, String path) throws Exception {
+	private void init_main(Document doc, String path, boolean useAuxiliaryLexicons) throws Exception {
 		Node node = doc.getDocumentElement();
 		if (!node.getNodeName().equalsIgnoreCase("Morphology")) throw new Error("Node '" + node.getNodeName() + "' but Morphology expected!");
 
@@ -180,7 +190,11 @@ public class Lexicon {
 				addParadigm(new Paradigm(this, nodes.item(i)));
 			if (nodes.item(i).getNodeName().equals("Corpus")) {
 				Node corpusFileName = nodes.item(i).getAttributes().getNamedItem("FileName");
-				if (corpusFileName != null)
+				Node lexiconType = nodes.item(i).getAttributes().getNamedItem("Type");
+				boolean isCore = false;
+				if (lexiconType != null) isCore = lexiconType.getTextContent().equalsIgnoreCase("core");
+				
+				if (corpusFileName != null && (useAuxiliaryLexicons || isCore))
 					corpusFileNames.add(corpusFileName.getTextContent());
 			}
 		}
