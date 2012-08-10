@@ -68,7 +68,7 @@ public class Splitting {
 	
 	public static boolean isSeperator(char c)
 	{
-		String seperators=" .?:/!,;\"'`´(){}<>«»-[]—‐‑‒–―‘’‚‛“”„‟′″‴‵‶‷‹›‼‽⁈⁉․‥…";
+		String seperators=" .?:/!,;\"'`´(){}<>«»-[]—‐‑‒–―‘’‚‛“”„‟′″‴‵‶‷‹›‼‽⁈⁉․‥…&";
 		return seperators.contains(String.valueOf(c));
 	}
 	
@@ -201,7 +201,7 @@ public class Splitting {
 				break;
 			case IN_WORD:
 				//pārbauda vai ir atrastas potenciālās beigas
-				if(canEndInNextStep==true && Splitting.isSeperator(str.charAt(i)))
+				if(canEndInNextStep==true /*&& Splitting.isSeperator(str.charAt(i))*/)
 				{
 					lastGoodEnd=i;
 					if(str.charAt(i)=='\'' && inApostrophes)
@@ -210,7 +210,6 @@ public class Splitting {
 								new Word(str.substring(progress,i)) :
 								morphoAnalyzer.analyze(str.substring(progress,i)) );
 						tokens.add( (morphoAnalyzer == null) ? 
-								//new Word(str.substring(progress,i)) :   // FIXME izskatās aizdomīgi
 								new Word(str.substring(i,i+1)) :   
 								morphoAnalyzer.analyze(str.substring(i,i+1)) );
 						inApostrophes=false;
@@ -235,7 +234,7 @@ public class Splitting {
 					if(lastGoodEnd>progress)
 					{
 						tokens.add( (morphoAnalyzer == null) ? 
-								new Word(str.substring(progress,i)) :
+								new Word(str.substring(progress,lastGoodEnd)) :
 								morphoAnalyzer.analyze(str.substring(progress,lastGoodEnd)) );
 						i=lastGoodEnd-1;
 						statuss = Status.IN_SPACE;
@@ -275,5 +274,27 @@ public class Splitting {
 		}
 		
 		return tokens;
+	}
+	
+	
+	public static LinkedList<Word> tokenize(Analyzer morphoAnalyzer, String chunk, boolean bruteSplit) {
+		if(bruteSplit)
+		{
+			LinkedList<Word> tokens = new LinkedList<Word>();
+			if (chunk == null) return tokens;
+			String[] parts_of_string = chunk.trim().split(" ");
+			for(String part : parts_of_string) 
+			{
+				if (part.length()>0)
+					tokens.add( (morphoAnalyzer == null) ? 
+						new Word(part) :
+						morphoAnalyzer.analyze(part));
+			}
+			return tokens;
+		}
+		else
+		{
+			return tokenize(morphoAnalyzer, chunk);
+		}
 	}
 }

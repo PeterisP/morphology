@@ -256,35 +256,34 @@ public class TokenizeTest {
 	public void skaitļi2()
 	{
 		LinkedList<Word> tokens = Splitting.tokenize(locītājs, "Ls 5.- gadā");
-		for (Word w : tokens) {
-			System.out.println(w.getToken());
-		}
 		assertEquals(3, tokens.size());
 		assertEquals("5.-", tokens.get(1).getToken());
 
 		tokens = Splitting.tokenize(locītājs, "gadā Ls 5.-, pusgadā Ls 3,-");
-		for (Word w : tokens) {
-			System.out.println(w.getToken());
-		}
 		assertEquals(7, tokens.size());
 		assertEquals("5.-", tokens.get(2).getToken());
 		
 		
 		tokens = Splitting.tokenize(locītājs, "Ls 50.000,-");
-		for (Word w : tokens) {
+		/*for (Word w : tokens) {
 			System.out.println(w.getToken());
-		}
+		}*/
 		assertEquals(2, tokens.size());
 		assertEquals("50.000,-", tokens.get(1).getToken());
 
 		tokens = Splitting.tokenize(locītājs, "Cena Ls 0.40. Nākamais");
-		for (Word w : tokens) {
-			System.out.println(w.getToken());
-		}
 		assertEquals(5, tokens.size());
 		assertEquals("Ls", tokens.get(1).getToken());
 		assertEquals("0.40", tokens.get(2).getToken());
 
+	}
+	
+	@Test
+	public void skaitļi3()
+	{
+		LinkedList<Word> tokens = Splitting.tokenize(locītājs, "0.40.");
+		assertEquals(2, tokens.size());
+		assertEquals("0.40", tokens.get(0).getToken());
 	}
 	
 	@Test
@@ -294,4 +293,130 @@ public class TokenizeTest {
 		assertEquals(2, tokens.size());
 		assertEquals("iepirkšanās", tokens.get(1).getToken());
 	}
+	
+	@Test
+	public void džilindžers()
+	{
+		LinkedList<Word> tokens = Splitting.tokenize(locītājs, "Dž. Dz. Džilindžers.");
+		assertEquals(4, tokens.size());
+		assertEquals("Dz.", tokens.get(1).getToken());
+	}
+	
+	@Test
+	public void atstarpes()
+	{
+		LinkedList<Word> tokens = Splitting.tokenize(locītājs, "a t s t a r p e s");
+		assertEquals(1, tokens.size());
+		assertEquals("a t s t a r p e s", tokens.get(0).getToken());
+	}
+	
+	@Test
+	public void atstarpes2()
+	{
+		LinkedList<Word> tokens = Splitting.tokenize(locītājs, "te ir a t s t a r p e s");
+		assertEquals(3, tokens.size());
+		assertEquals("a t s t a r p e s", tokens.get(2).getToken());
+	}
+	
+	@Test
+	public void falseBruteSplit()
+	{
+		LinkedList<Word> tokens = Splitting.tokenize(locītājs, "te ir a t s t a r p e s",false);
+		assertEquals(3, tokens.size());
+		
+		tokens = Splitting.tokenize(locītājs, "kaut gan",false);
+		assertEquals(1, tokens.size());
+	}
+	
+	@Test
+	public void BruteSplit()
+	{
+		LinkedList<Word> tokens = Splitting.tokenize(locītājs, "te ir a t s t a r p e s",true);
+		assertEquals(11, tokens.size());
+		
+		tokens = Splitting.tokenize(locītājs, "kaut gan",true);
+		assertEquals(2, tokens.size());				
+	}
+	
+	@Test
+	public void NonLV()
+	{
+		LinkedList<Word> tokens = Splitting.tokenize(locītājs, "старик с топором");
+		assertEquals(3, tokens.size());
+		
+		tokens = Splitting.tokenize(locītājs, "München");
+		assertEquals(1, tokens.size());
+		
+		tokens = Splitting.tokenize(locītājs, "W. Şiliņs");
+		assertEquals(2, tokens.size());		
+	}
+	
+	@Test
+	public void garbage()
+	{
+		LinkedList<Word> tokens = Splitting.tokenize(locītājs, "rop. KajiHHHH, MocKOBCKan o6\nacTb. Ha- 6epe*Ha« Cr. Pa3MHa, aom J* 17. Kay<5 HaUMeHbUlMHCTB. rop KMeB. yji. »IapKca, >i 3. KhcbckhA aaT. pa6. wy6 mm. Py,a3yTaKa.");
+		assertTrue(tokens.size() > 0);
+	}
+	
+	@Test
+	public void spaces()
+	{
+		LinkedList<Word> tokens = Splitting.tokenize(locītājs, " pee pilsata ar wiffu sirgu un mesumu  eelaususchi un eekrittuschi strahdneeki no ");
+		assertEquals(12, tokens.size());
+		
+		tokens = Splitting.tokenize(locītājs, " pee pilsata ar wiffu sirgu un mesumu  eelaususchi un eekrittuschi strahdneeki no ", true);
+		assertEquals(12, tokens.size());
+	}
+	
+	@Test
+	public void vecadruka()
+	{
+		LinkedList<Word> tokens = Splitting.tokenize(locītājs, "şabeedrişka", false);
+		assertEquals(1, tokens.size());
+	}
+	
+	@Test
+	public void ampersand()
+	{
+		LinkedList<Word> tokens = Splitting.tokenize(locītājs, "tom&jerry", false);
+		assertEquals(3, tokens.size());
+	}
+	
+	@Test
+	public void A_Upitis()
+	{
+		LinkedList<Word> tokens = Splitting.tokenize(locītājs, "A.Upītis", false);
+		assertEquals(2, tokens.size());
+	}
+	
+	@Test
+	public void Klase()
+	{
+		LinkedList<Word> tokens = Splitting.tokenize(locītājs, "11.c", false);
+		assertEquals(2, tokens.size());
+	}
+	
+	@Test
+	public void Pulkstenis()
+	{
+		LinkedList<Word> tokens;
+		
+		tokens = Splitting.tokenize(locītājs, "00:00", false);
+		assertEquals(1, tokens.size());
+
+		tokens = Splitting.tokenize(locītājs, "23:59", false);
+		assertEquals(1, tokens.size());
+		
+
+		//nekorekti formāti
+		tokens = Splitting.tokenize(locītājs, "24:00", false);
+		assertEquals(3, tokens.size());
+
+		tokens = Splitting.tokenize(locītājs, "13:60", false);
+		assertEquals(3, tokens.size());
+
+		tokens = Splitting.tokenize(locītājs, "25:00", false);
+		assertEquals(3, tokens.size());
+	}
+	
 }
