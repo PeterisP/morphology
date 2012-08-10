@@ -271,6 +271,7 @@
 <Attribute LV="Skaitlis" PartOfSpeech="Prievārds" MarkupPos="2">
 	<Value LV="Vienskaitlis" Tag="s"/>
 	<Value LV="Daudzskaitlis" Tag="p"/>
+	<Value LV="Nepiemīt" Tag="0"/>
 </Attribute>
 <Attribute LV="Rekcija" PartOfSpeech="Prievārds" MarkupPos="3">
 	<Value LV="Ģenitīvs" Tag="g"/>

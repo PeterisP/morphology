@@ -1173,4 +1173,26 @@ public class MorphologyTest {
 		formas = locītājs.generateInflections("Miervaldis");
 		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "miervalža");
 	}
+	
+	
+	@Test
+	public void Laura10Aug()
+	{
+		Word vārds = locītājs.analyze("vienai");
+		assertTrue(vārds.isRecognized());
+		assertEquals("viena", vārds.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+		
+		vārds = locītājs.analyze("pirmajai");
+		assertTrue(vārds.isRecognized());
+		assertEquals("pirmā", vārds.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+		
+		vārds = locītājs.analyze("trešās");
+		assertTrue(vārds.isRecognized());
+		assertEquals("trešā", vārds.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+		
+		vārds = locītājs.analyze("piecsimt");
+		assertTrue(vārds.isRecognized());
+		assertEquals("mcc0p0s", vārds.wordforms.get(0).getTag());
+	}
+
 }

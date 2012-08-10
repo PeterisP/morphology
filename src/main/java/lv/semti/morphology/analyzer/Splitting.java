@@ -68,7 +68,7 @@ public class Splitting {
 	
 	public static boolean isSeperator(char c)
 	{
-		String seperators=" .?:/!,;\"'`´(){}<>«»-[]—‐‑‒–―‘’‚‛“”„‟′″‴‵‶‷‹›‼‽⁈⁉․‥…";
+		String seperators=" .?:/!,;\"'`´(){}<>«»-[]—‐‑‒–―‘’‚‛“”„‟′″‴‵‶‷‹›‼‽⁈⁉․‥…&";
 		return seperators.contains(String.valueOf(c));
 	}
 	
@@ -201,7 +201,7 @@ public class Splitting {
 				break;
 			case IN_WORD:
 				//pārbauda vai ir atrastas potenciālās beigas
-				if(canEndInNextStep==true && Splitting.isSeperator(str.charAt(i)))
+				if(canEndInNextStep==true /*&& Splitting.isSeperator(str.charAt(i))*/)
 				{
 					lastGoodEnd=i;
 					if(str.charAt(i)=='\'' && inApostrophes)

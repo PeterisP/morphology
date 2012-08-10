@@ -30,6 +30,7 @@ public class TokenizeTest {
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 		locītājs = new Analyzer("dist/Lexicon.xml");
+		//locītājs=null;
 	}
 	
 	@Test
@@ -367,29 +368,39 @@ public class TokenizeTest {
 	}
 	
 	@Test
-	public void hmm()
+	public void ampersand()
 	{
-		locītājs.enableVocative = true;
-		locītājs.enableDiminutive = true;
-		locītājs.enablePrefixes = true;
-		locītājs.enableGuessing = true;
-		locītājs.enableAllGuesses = true;
-		locītājs.meklētsalikteņus = true; 
-		locītājs.setCacheSize(10000);
-		
-		LinkedList<Word> tokens = Splitting.tokenize(locītājs, "bet za kahdam nam", false);
-		for (Word token : tokens) {
-			assertFalse(token.getToken().length() == 0);
-		}
+		LinkedList<Word> tokens = Splitting.tokenize(locītājs, "tom&jerry", false);
+		assertEquals(3, tokens.size());
+
+		tokens = Splitting.tokenize(locītājs, "cirvis&", false);
+		assertEquals(2, tokens.size());
 	}
 	
 	@Test
-	public void simboli()
+	public void A_Upitis()
 	{
-		LinkedList<Word> tokens = Splitting.tokenize(locītājs, "cirvis&", false);
+		LinkedList<Word> tokens = Splitting.tokenize(locītājs, "A. Upītis", false);
 		assertEquals(2, tokens.size());
-		
-		tokens = Splitting.tokenize(locītājs, "cirvis", false);
+
+		tokens = Splitting.tokenize(locītājs, "A.Upītis", false);
 		assertEquals(2, tokens.size());
 	}
+	
+	@Test
+	public void Laura10Aug()
+	{
+		LinkedList<Word> tokens = Splitting.tokenize(locītājs, "tikpat kā", false);
+		assertEquals(1, tokens.size());
+		
+		tokens = Splitting.tokenize(locītājs, "11:00", false);
+		assertEquals(1, tokens.size());
+		
+		tokens = Splitting.tokenize(locītājs, "11.00", false);
+		assertEquals(1, tokens.size());
+		
+		tokens = Splitting.tokenize(locītājs, "11.a", false);
+		assertEquals(2, tokens.size());
+	}
+
 }

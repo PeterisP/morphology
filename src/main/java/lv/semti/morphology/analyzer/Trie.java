@@ -13,7 +13,7 @@ public class Trie {
 	
 	
 	public Trie(String filename) {
-		node root;
+		node root,tmp;
 		branchList=new ArrayList<node>();
 		//izveido exception Trie
 		root=new node();
@@ -45,7 +45,6 @@ public class Trie {
 		 */
 		root=new StringNode("D");
 		branchList.add(root);
-		root.canEnd=true;
 		root.firstChild=new StringNode("zžZŽ");
 		root.firstChild.nextSibling=new StringNode(".");
 		root.firstChild.nextSibling.canEnd=true;
@@ -53,46 +52,52 @@ public class Trie {
 		root.nextSibling=new UCNode();
 		root.nextSibling.firstChild=root.firstChild.nextSibling;
 		
-		/* 2a
-		 * automāts, kurš atpazīst naudas formā 123,-
+		/*
+		 * 2 apvienotais 2a+2b+2c automāts
+		 * atpazīst:
+		 *  naudas formā 123,-
+		 * 	pamata skaitļus 
+		 *  kārtas skaitļus
+		 * 	skaitļus ar decimālatdalītāju (punktu vai komatu)
+		 * 	skaitļus ar tūkstošu atdalītāju (komatu vai apostrofu)
+		 * 	daļskaitļus (/ vai \)
 		 */
+		
 		root=new DigitNode();
-		branchList.add(root);
-		root.firstChild=new DigitNode();
-		root.firstChild.firstChild=root.firstChild;
-		root.firstChild.nextSibling=new StringNode(".,");
-		root.firstChild.nextSibling.firstChild=new StringNode("-‐‑‒–—―'");  
-		root.firstChild.nextSibling.firstChild.canEnd=true;
-		root.firstChild.nextSibling.firstChild.nextSibling=root;
-		root.firstChild.nextSibling.nextSibling=new StringNode(" '");
-		root.firstChild.nextSibling.nextSibling.firstChild=root;
-
-		/* 2b 
-		 * atsevišķs automāts kārtas skaitļiem
-		 */
-		root=new DigitNode();
-		branchList.add(root);
-		root.firstChild=new DigitNode();
-		root.firstChild.firstChild=root.firstChild;
-		root.firstChild.nextSibling=new StringNode(".");
-		root.firstChild.nextSibling.canEnd=true;
-
-		/* 2c
-		 * automāts, kurš atpazīst pamata skaitļus 
-		 * skaitļus ar decimālatdalītāju (punktu vai komatu)
-		 * skaitļus ar tūkstošu atdalītāju (komatu vai apostrofu)
-		 * daļskaitļus (/ vai \)
-		 */
-		root=new DigitNode();
-		branchList.add(root);
 		root.canEnd=true;
+		branchList.add(root);
 		root.firstChild=new DigitNode();
 		root.firstChild.canEnd=true;
 		root.firstChild.firstChild=root.firstChild;
-		root.firstChild.nextSibling=new StringNode(".,");
-		root.firstChild.nextSibling.firstChild=root.firstChild;
-		root.firstChild.nextSibling.nextSibling=new StringNode("/\'");
-		root.firstChild.nextSibling.nextSibling.firstChild=root;
+		root.firstChild.nextSibling=new StringNode(".");
+		root.firstChild.nextSibling.canEnd=true;
+		root.firstChild.nextSibling.firstChild=new StringNode("-‐‑‒–—―'");
+		root.firstChild.nextSibling.firstChild.canEnd=true;		
+		root.firstChild.nextSibling.nextSibling=new StringNode(",");
+		root.firstChild.nextSibling.nextSibling.firstChild=new StringNode("-‐‑‒–—―'");
+		root.firstChild.nextSibling.nextSibling.firstChild.canEnd=true;
+		root.firstChild.nextSibling.nextSibling.firstChild.nextSibling=root;
+		root.firstChild.nextSibling.nextSibling.firstChild=root.firstChild.nextSibling.firstChild;
+		root.firstChild.nextSibling.nextSibling.nextSibling=new StringNode(" '/\\");
+		root.firstChild.nextSibling.nextSibling.nextSibling.firstChild=root;
+		
+		tmp=root.firstChild.nextSibling.firstChild;
+		tmp.nextSibling=new DigitNode();
+		tmp=tmp.nextSibling;
+		tmp.canEnd=true;
+		tmp.firstChild=new DigitNode();
+		tmp.firstChild.canEnd=true;
+		tmp.firstChild.firstChild=tmp.firstChild;
+		tmp.firstChild.nextSibling=new StringNode(".,");
+		tmp.firstChild.nextSibling.firstChild=new StringNode("-‐‑‒–—―'");
+		tmp.firstChild.nextSibling.firstChild.canEnd=true;
+		tmp.firstChild.nextSibling.firstChild.nextSibling=tmp;
+		tmp.firstChild.nextSibling.nextSibling=new StringNode(" '/\\");
+		tmp.firstChild.nextSibling.nextSibling.firstChild=tmp;
+		
+
+		
+		
 				
 		/* 3
 		 * e-pasta automāts
