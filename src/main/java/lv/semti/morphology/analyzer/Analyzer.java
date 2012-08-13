@@ -334,6 +334,11 @@ public class Analyzer extends Lexicon {
 					Ending pamatforma = ending.getLemmaEnding();
 					if (ending.getParadigm().getID() == 4 && !(celms.endsWith("n") || celms.endsWith("s")))
 						continue; // der tikai -ss un -ns, kā 'mēness' un 'ūdens'
+					if (ending.getParadigm().getID() == 5 && !celms.endsWith("sun"))
+						continue; // der tikai -suns 
+					if ((ending.getParadigm().isMatchingStrong(AttributeNames.i_Declension, "1") || ending.getParadigm().isMatchingStrong(AttributeNames.i_Declension, "6")) 
+							&& celms.endsWith("a"))
+						continue; // -as nav 1. dekl vārds
 					//TODO te var vēl heiristikas salikt, lai uzlabotu minēšanu - ne katrs burts var būt darbībasvārdam beigās utml
 
 					// FIXME ko ar pārējiem variantiem?? un ko ja nav variantu?
@@ -353,7 +358,7 @@ public class Analyzer extends Lexicon {
 									if (ending.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech,AttributeNames.v_Noun) && 
 											variants.isMatchingStrong(AttributeNames.i_Declension,AttributeNames.v_NA)) {
 										char last = celms.charAt(celms.length()-1);
- 										if (!(last=='ā' || last == 'e' || last == 'ē' || last == 'i' || last == 'ī' || last == 'o' || last == 'ū')) {  // uzskatam, ka 'godīgi' nelokāmie lietvārdi beidzas tikai ar šiem
+ 										if (!(last=='ā' || last == 'e' || last == 'ē' || last == 'i' || last == 'ī' || last == 'o' || last == 'ū' || celms.endsWith("as"))) {  // uzskatam, ka 'godīgi' nelokāmie lietvārdi beidzas tikai ar šiem - klasiski nelokāmie, un lietuviešu Arvydas
  											variants.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Residual);
  											if (!Character.isDigit(last)) {
  												variants.addAttribute(AttributeNames.i_ResidualType, AttributeNames.v_Foreign);

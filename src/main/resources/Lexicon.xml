@@ -208,9 +208,6 @@
 		<Ending ID="51" StemChange="0" Ending="us" StemID="1" LemmaEnding="51">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
 		</Ending>
-		<Ending ID="52" StemChange="0" Ending="us" StemID="1" LemmaEnding="51">
-			<Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs"/>
-		</Ending>
 		<Ending ID="53" StemChange="0" Ending="us" StemID="1" LemmaEnding="51">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Ģenitīvs"/>
 		</Ending>
@@ -222,6 +219,12 @@
 		</Ending>
 		<Ending ID="56" StemChange="0" Ending="ū" StemID="1" LemmaEnding="51">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Lokatīvs"/>
+		</Ending>
+		<Ending ID="52" StemChange="0" Ending="us" StemID="1" LemmaEnding="51">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs" Ģenerēt="Nē"/>
+		</Ending>
+		<Ending ID="1223" StemChange="0" Ending="u" StemID="1" LemmaEnding="51">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 		<Ending ID="57" StemChange="0" Ending="i" StemID="1" LemmaEnding="51">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Nominatīvs"/>
@@ -262,6 +265,9 @@
 		<Ending ID="80" StemChange="18" Ending="a" StemID="1" LemmaEnding="75">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
+		<Ending ID="1160" StemChange="17" Ending="" StemID="1" LemmaEnding="75">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs"/>
+		</Ending>
 		<Ending ID="81" StemChange="0" Ending="as" StemID="1" LemmaEnding="75">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Nominatīvs"/>
 		</Ending>
@@ -279,9 +285,6 @@
 		</Ending>
 		<Ending ID="86" StemChange="0" Ending="as" StemID="1" LemmaEnding="75">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
-		</Ending>
-		<Ending ID="1160" StemChange="17" Ending="" StemID="1" LemmaEnding="75">
-			<Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="8" LemmaEnding="63" Description="Lietvārds 4. deklinācija -a vīr. dz">
@@ -343,6 +346,9 @@
 		<Ending ID="92" StemChange="18" Ending="e" StemID="1" LemmaEnding="87">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
+		<Ending ID="1175" StemChange="17" Ending="" StemID="1" LemmaEnding="87">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs"/>
+		</Ending>
 		<Ending ID="93" StemChange="0" Ending="es" StemID="1" LemmaEnding="87">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Nominatīvs"/>
 		</Ending>
@@ -360,9 +366,6 @@
 		</Ending>
 		<Ending ID="98" StemChange="0" Ending="es" StemID="1" LemmaEnding="87">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
-		</Ending>
-		<Ending ID="1175" StemChange="17" Ending="" StemID="1" LemmaEnding="87">
-			<Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="10" LemmaEnding="1146" Description="Lietvārds 5. deklinācija -e vīr. dz.">

@@ -239,12 +239,14 @@ public abstract class Mijas {
 					}
 					break;								
 				case 17: // īsā sieviešu dzimtes vokatīva forma "kristīnīt!" "margriet!"
-					if (syllables(celms) >= 2) 
+					if (syllables(celms) >= 2 || celms.endsWith("iņ") || celms.endsWith("īt")) 
 						varianti.add(new Variants(celms));
 					break;								
 				case 18: // garā sieviešu dzimtes vokatīva forma "laura!" "margrieta!"
 					if (syllables(celms) <= 2 && !celms.endsWith("iņ") && !celms.endsWith("īt")) 
 						varianti.add(new Variants(celms));
+					if (syllables(celms) > 1 && (celms.endsWith("kāj") || celms.endsWith("māj"))) 
+						varianti.add(new Variants(celms));	
 					break;								
 			}
 		} catch (StringIndexOutOfBoundsException e){
@@ -446,12 +448,15 @@ public abstract class Mijas {
 					else varianti.add(new Variants(celms)); 
 					break;								
 				case 17: // īsā sieviešu dzimtes vokatīva forma "kristīnīt!" "margriet!"
-					if (syllables(celms) >= 2) 
+					if (syllables(celms) >= 2 && 
+					  !(celms.endsWith("kāj") || celms.endsWith("māj")) ) 
 						varianti.add(new Variants(celms));
 					break;								
 				case 18: // garā sieviešu dzimtes vokatīva forma "laura!" "margrieta!"
-					if (syllables(celms) < 2 && !celms.endsWith("iņ") && !celms.endsWith("īt")) // NB! te ir < 2 bet pie atpazīšanas <= 2 - ar 2 zilbēm pagaidām atpazīst abus un ģenerē vienu 
+					if (syllables(celms) < 2) // NB! te ir < 2 bet pie atpazīšanas <= 2 - ar 2 zilbēm pagaidām atpazīst abus un ģenerē vienu 
 						varianti.add(new Variants(celms));
+					if (syllables(celms) > 1 && (celms.endsWith("kāj") || celms.endsWith("māj"))) 
+						varianti.add(new Variants(celms));		
 					break;								
 			}
 		} catch (StringIndexOutOfBoundsException e){
