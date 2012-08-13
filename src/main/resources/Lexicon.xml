@@ -733,7 +733,7 @@
 		<Ending ID="1181" StemChange="13" Ending="s" StemID="1" LemmaEnding="180">
 			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Nominatīvs"/>
 		</Ending>
-		<Ending ID="2018" StemChange="13" Ending="" StemID="1" LemmaEnding="2018">
+		<Ending ID="2018" StemChange="13" Ending="" StemID="1" LemmaEnding="224">
 			<Attributes Vārdšķira="Apstākļa vārds"/>
 		</Ending>
 	</Paradigm>
@@ -1105,7 +1105,7 @@
 		<Ending ID="843" StemChange="0" Ending="ošās" StemID="2" LemmaEnding="711">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Locījums="Vokatīvs" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
 		</Ending>
-		<Ending ID="844" StemChange="0" Ending="oši" StemID="2" LemmaEnding="711">
+		<Ending ID="844" StemChange="0" Ending="oši" StemID="2" LemmaEnding="844">
 			<Attributes Vārdšķira="Apstākļa vārds"/>
 		</Ending>
 		<Ending ID="845" StemChange="0" Ending="ams" StemID="2" LemmaEnding="711">
@@ -1642,7 +1642,7 @@
 		<Ending ID="296" StemChange="0" Ending="jošās" StemID="1" LemmaEnding="225">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Locījums="Vokatīvs" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
 		</Ending>
-		<Ending ID="297" StemChange="0" Ending="joši" StemID="1" LemmaEnding="225">
+		<Ending ID="297" StemChange="0" Ending="joši" StemID="1" LemmaEnding="297">
 			<Attributes Vārdšķira="Apstākļa vārds"/>
 		</Ending>
 		<Ending ID="298" StemChange="0" Ending="jis" StemID="1" LemmaEnding="225">
@@ -2350,7 +2350,7 @@
 		<Ending ID="539" StemChange="2" Ending="ošās" StemID="1" LemmaEnding="468">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Locījums="Vokatīvs" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
 		</Ending>
-		<Ending ID="540" StemChange="2" Ending="oši" StemID="1" LemmaEnding="468">
+		<Ending ID="540" StemChange="2" Ending="oši" StemID="1" LemmaEnding="540">
 			<Attributes Vārdšķira="Apstākļa vārds"/>
 		</Ending>
 		<Ending ID="541" StemChange="0" Ending="jis" StemID="1" LemmaEnding="468">

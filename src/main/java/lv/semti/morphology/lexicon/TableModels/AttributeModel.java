@@ -70,7 +70,7 @@ public class AttributeModel extends AbstractTableModel {
     	switch (col) {
     	case 0 :
     		String vērtība = attributeValues.get(row).getValue();
-    		attributeValues.deleteAttribute(attributeValues.get(row).getKey());
+    		attributeValues.removeAttribute(attributeValues.get(row).getKey());
     		attributeValues.addAttribute(newValue, vērtība);
     		fireTableDataChanged();
     		break;
@@ -83,7 +83,7 @@ public class AttributeModel extends AbstractTableModel {
 
     public void removeRow(int row) {
     	if (attributeValues == null) return;
-    	attributeValues.deleteAttribute(attributeValues.get(row).getKey());
+    	attributeValues.removeAttribute(attributeValues.get(row).getKey());
     	fireTableRowsDeleted(row,row);
     }
 

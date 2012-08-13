@@ -26,10 +26,6 @@ import java.util.HashSet;
 import lv.semti.morphology.attributes.AttributeNames;
 
 public abstract class Mijas {
-	public static ArrayList<Variants> mijuVarianti (String celms, int mija) {
-		return mijuVarianti(celms, mija, false);
-	}
-	
 	public static ArrayList<Variants> mijuVarianti (String celms, int mija, boolean properName) {
 		// procedūra, kas realizē visas celmu pārmaiņas - līdzskaņu mijas; darbības vārdu formas, utml.
 		// TODO - iznest 'varianti.add(new Variants(... kā miniprocedūriņu.

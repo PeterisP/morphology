@@ -68,7 +68,7 @@ public class Splitting {
 	
 	public static boolean isSeperator(char c)
 	{
-		String seperators=" .?:/!,;\"'`´(){}<>«»-[]—‐‑‒–―‘’‚‛“”„‟′″‴‵‶‷‹›‼‽⁈⁉․‥…&";
+		String seperators=" .?:/!,;\"'`´(){}<>«»-[]—‐‑‒–―‘’‚‛“”„‟′″‴‵‶‷‹›‼‽⁈⁉․‥…&•";
 		return seperators.contains(String.valueOf(c));
 	}
 	
@@ -80,7 +80,7 @@ public class Splitting {
 		String seperatorSymbols = ".,!?;:<>()#$%@^&*-~_+={}[]/\\'\"«»„”" +
 			"\u0060\u00b4\u00ab\u00bb\u2018\u2019\u201a\u201b\u201c\u201d" +
 			"\u201e\u201f\u2032\u2033\u2035\u2036\u2010\u2011\u2012\u2013" +
-			"\u2014\u2015"; // Quotation marks and hyphens/horizontal bars.
+			"\u2014\u2015•"; // Quotation marks and hyphens/horizontal bars.
 		if (seperatorSymbols.contains(s)) {
 			return true;
 		}
@@ -103,7 +103,7 @@ public class Splitting {
 	{
 		String seperatorSymbols = "?!;:<>(){}[]/'\\\"~«»„”" +
 			"\u0060\u00b4\u00ab\u00bb\u2018\u2019\u201a\u201b\u201c\u201d" +
-			"\u201e\u201f\u2032\u2033\u2035\u2036"; // Quotation marks.
+			"\u201e\u201f\u2032\u2033\u2035\u2036•"; // Quotation marks.
 		if (seperatorSymbols.contains(s))
 		{
 			return true;

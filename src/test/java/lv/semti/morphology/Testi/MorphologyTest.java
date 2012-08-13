@@ -669,12 +669,7 @@ public class MorphologyTest {
 		Word nenest = locītājs.analyze("nenesāt");
 		assertTrue(nenest.isRecognized());
 		assertEquals("nenest", nenest.wordforms.get(0).getValue(AttributeNames.i_Lemma));
-		assertEquals("nest", nenest.wordforms.get(0).getValue(AttributeNames.i_SourceLemma));
-		
-		Word nevarēt = locītājs.analyze("nevarēt");
-		assertTrue(nevarēt.isRecognized());
-		assertEquals("nevarēt", nevarēt.wordforms.get(0).getValue(AttributeNames.i_Lemma));
-		assertEquals("varēt", nevarēt.wordforms.get(0).getValue(AttributeNames.i_SourceLemma));
+		assertEquals("nest", nenest.wordforms.get(0).getValue(AttributeNames.i_SourceLemma));		
 	}
 	
 	@Test
@@ -807,7 +802,7 @@ public class MorphologyTest {
 		
 		Word plus = locītājs.analyze("+");
 		assertTrue(plus.isRecognized());
-		assertEquals("x_", plus.wordforms.get(0).getTag());
+		assertEquals("xx", plus.wordforms.get(0).getTag());
 	}
 	
 	@Test
@@ -1294,5 +1289,30 @@ public class MorphologyTest {
 		
 		formas = locītājs.generateInflections("rīta");
 		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "", "rīta");
+	}
+	
+	@Test
+	public void laura_Aug13() {
+		// 2012.08.13 Lauras samarķētā atšķirību analīze 
+		List<Wordform> formas = locītājs.generateInflections("Fredis");
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "freda");
+		
+		formas = locītājs.generateInflections("Freda");
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "fredas");
+		
+		
+		Word freda = locītājs.analyze("Freda");		
+		assertTrue(freda.isRecognized());
+		
+		boolean irPareizā = false;
+		for (Wordform vārdforma : freda.wordforms) {
+			if (vārdforma.getValue(AttributeNames.i_Lemma).equals("fredis")) {
+				irPareizā = true;			
+			}
+		}
+		assertEquals(true, irPareizā);
+		
+		Word sia = locītājs.analyze("SIA");		
+		assertTrue(sia.isRecognized());
 	}
 }

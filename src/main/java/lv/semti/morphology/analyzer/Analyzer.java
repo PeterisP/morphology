@@ -94,23 +94,23 @@ public class Analyzer extends Lexicon {
 		word = word.trim();
 		if (!word.equals(word.toLowerCase().trim())) {
 			Word rezults = new Word(word);
-			Word lowercase = analyzeLowercase(word.toLowerCase().trim());
+			Word lowercase = analyzeLowercase(word.toLowerCase().trim(), word.matches("\\p{Lu}.*"));
 			for (Wordform vārdforma : lowercase.wordforms) {
 				vārdforma.setToken(word.trim());
 				rezults.addWordform(vārdforma);
 			}
 			return rezults;
-		} else return analyzeLowercase(word);
+		} else return analyzeLowercase(word, false);
 	}
 	
-	private Word analyzeLowercase(String word) {
+	private Word analyzeLowercase(String word, boolean properName) {
 		Word cacheWord = wordCache.get(word);
 		if (cacheWord != null) return (Word) cacheWord.clone();		
 		
 		Word rezultāts = new Word(word);
 		
 		for (Ending ending : getAllEndings().matchedEndings(word)) {
-			ArrayList<Variants> celmi = Mijas.mijuVarianti(ending.stem(word), ending.getMija());
+			ArrayList<Variants> celmi = Mijas.mijuVarianti(ending.stem(word), ending.getMija(), properName);
 
 			for (Variants celms : celmi) {
 				ArrayList<Lexeme> leksēmas = ending.getEndingLexemes(celms.celms);
@@ -289,7 +289,7 @@ public class Analyzer extends Lexicon {
 		
 		for (String priedēklis : prefixes)
 			if (word.startsWith(priedēklis)) {
-				Word bezpriedēkļa = analyzeLowercase(word.substring(priedēklis.length()));
+				Word bezpriedēkļa = analyzeLowercase(word.substring(priedēklis.length()), false);
 				for (Wordform variants : bezpriedēkļa.wordforms)
 					if (variants.getEnding() != null && variants.getEnding().getParadigm() != null && variants.getEnding().getParadigm().getValue(AttributeNames.i_Konjugaacija) != null) { // Tikai no verbiem atvasinātās klases 
 						variants.setToken(word);
@@ -323,7 +323,7 @@ public class Analyzer extends Lexicon {
 					if (ending.getParadigm().getName().equals("Hardcoded"))
 						continue; // Hardcoded vārdgrupa minēšanai nav aktuāla
 
-					ArrayList<Variants> celmi = Mijas.mijuVarianti(ending.stem(word), ending.getMija());
+					ArrayList<Variants> celmi = Mijas.mijuVarianti(ending.stem(word), ending.getMija(), false);
 					if (celmi.size() == 0) continue; // acīmredzot neder ar miju, ejam uz nākamo galotni.
 					String celms = celmi.get(0).celms;
 

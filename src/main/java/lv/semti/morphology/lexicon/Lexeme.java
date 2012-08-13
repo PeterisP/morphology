@@ -68,13 +68,13 @@ public class Lexeme extends AttributeValues {
 
 		Node n = node.getAttributes().getNamedItem("Stem1");
 		if (n != null)
-			stems.set(0, n.getTextContent());
+			stems.set(0, n.getTextContent().toLowerCase()); // TODO - supports case-sensitive lietām - saīsinājumiem utml
 		n = node.getAttributes().getNamedItem("Stem2");
 		if (n != null)
-			stems.set(1, n.getTextContent());
+			stems.set(1, n.getTextContent().toLowerCase());
 		n = node.getAttributes().getNamedItem("Stem3");
 		if (n != null)
-			stems.set(2, n.getTextContent());
+			stems.set(2, n.getTextContent().toLowerCase());
 		//FIXME - te paļaujas, ka pēc tam pati vārdgrupa 100% izsauks PieliktLeksēmu un sakārtos savus masīvus tādi.
 
 		n = node.getAttributes().getNamedItem("ID");

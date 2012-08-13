@@ -43,7 +43,7 @@ public class AttributeValues implements FeatureStructure, Cloneable {
 		attributes.put(attribute, value);
 	}
 
-	public void deleteAttribute(String attribute) {
+	public void removeAttribute(String attribute) {
 		attributes.remove(attribute);
 	}
 

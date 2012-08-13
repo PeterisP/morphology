@@ -336,6 +336,7 @@ public class MarkupConverter {
 
 			verifyAndSetKamolsAttribute(avs,tag,2,'s',AttributeNames.i_Number,AttributeNames.v_Singular);
 			verifyAndSetKamolsAttribute(avs,tag,2,'p',AttributeNames.i_Number,AttributeNames.v_Plural);
+			verifyAndSetKamolsAttribute(avs,tag,2,'0',AttributeNames.i_Number,AttributeNames.v_NA);
 
 			verifyAndSetKamolsAttribute(avs,tag,3,'g',AttributeNames.i_Rekcija,AttributeNames.v_Genitive);
 			verifyAndSetKamolsAttribute(avs,tag,3,'d',AttributeNames.i_Rekcija,AttributeNames.v_Dative);
@@ -436,7 +437,7 @@ public class MarkupConverter {
 			tag.append("y");
 		} else if (pos.equalsIgnoreCase(AttributeNames.v_Residual)) {
 			tag.setLength(0);
-			tag.append("x_");
+			tag.append("xx");
 			
 			verifyAndSetKamolsAttribute(avs,tag,1,'f',AttributeNames.i_ResidualType,AttributeNames.v_Foreign);
 			verifyAndSetKamolsAttribute(avs,tag,1,'t',AttributeNames.i_ResidualType,AttributeNames.v_Typo);
@@ -700,6 +701,7 @@ public class MarkupConverter {
 			verifyAndSetAVSAttribute(tag,attributes,1,'t',AttributeNames.i_Novietojums,AttributeNames.v_Peec);
 			verifyAndSetAVSAttribute(tag,attributes,2,'s',AttributeNames.i_Number,AttributeNames.v_Singular);
 			verifyAndSetAVSAttribute(tag,attributes,2,'p',AttributeNames.i_Number,AttributeNames.v_Plural);
+			verifyAndSetAVSAttribute(tag,attributes,2,'0',AttributeNames.i_Number,AttributeNames.v_NA);
 			verifyAndSetAVSAttribute(tag,attributes,3,'g',AttributeNames.i_Rekcija,AttributeNames.v_Genitive);
 			verifyAndSetAVSAttribute(tag,attributes,3,'d',AttributeNames.i_Rekcija,AttributeNames.v_Dative);
 			verifyAndSetAVSAttribute(tag,attributes,3,'a',AttributeNames.i_Rekcija,AttributeNames.v_Accusative);
