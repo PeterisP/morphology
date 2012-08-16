@@ -101,7 +101,7 @@ public class MorphoEvaluate {
 			String output = "Neatpazīts";
 			if (w.isRecognized()) {
 				Wordform mainwf = w.wordforms.get(0);
-				int maxticamība = -1;
+				double maxticamība = -1;
 				for (Wordform wf : w.wordforms) {  // Paskatamies visus atrastos variantus un ņemam statistiski ticamāko
 					//tag += String.format("%s\t%d\n", wf.getDescription(), MorphoServer.statistics.getTicamība(wf));
 					filterAV(wf);

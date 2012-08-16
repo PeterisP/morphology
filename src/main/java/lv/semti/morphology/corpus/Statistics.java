@@ -43,6 +43,7 @@ public class Statistics {
 	 * Default filename for statistics file.
 	 */
 	public final static String DEFAULT_STATISTICS_FILE = "Statistics.xml";
+	public double lexemeWeight = 100; //How much lexeme count should be weighed as a multiple of ending count 
 	
 	/**
 	 * Lexeme frequencies, indexed by lexeme IDs.
@@ -144,7 +145,7 @@ public class Statistics {
 	 * @param wordform	wordform to describe.
 	 * @return			lexeme frequency + ending frequency.
 	 */
-	public int getEstimate(AttributeValues wordform) {
+	public double getEstimate(AttributeValues wordform) {
 		int estimate = 1;
 		String endingIdStr = wordform.getValue(AttributeNames.i_EndingID);
 		int endingId = (endingIdStr == null) ? -1 : Integer.parseInt(endingIdStr);
@@ -152,7 +153,7 @@ public class Statistics {
 
 		String lexemeIdStr = wordform.getValue(AttributeNames.i_LexemeID);
 		int lexemeId = (lexemeIdStr == null) ? -1 : Integer.parseInt(lexemeIdStr);
-		if (lexemeFrequency.get(lexemeId) != null) estimate += lexemeFrequency.get(lexemeId);
+		if (lexemeFrequency.get(lexemeId) != null) estimate += lexemeFrequency.get(lexemeId) * lexemeWeight;
 
 		return estimate;
 	}

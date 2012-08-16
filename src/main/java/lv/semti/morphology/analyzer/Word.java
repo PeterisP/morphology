@@ -244,7 +244,7 @@ public class Word implements Cloneable{
 		if (isRecognized()) {
 			/* šis ir tad, ja vajag tikai vienu - ticamāko formu. tā jau varētu atgriezt visu sarakstu. */
 			Wordform maxwf = wordforms.get(0);
-			int maxticamība = -1;
+			double maxticamība = -1;
 			for (Wordform wf : wordforms) {  // Paskatamies visus atrastos variantus un ņemam statistiski ticamāko
 				//tag += String.format("%s\t%d\n", wf.getDescription(), MorphoServer.statistics.getTicamība(wf));
 				if (statistics.getEstimate(wf) > maxticamība) {
@@ -262,7 +262,7 @@ public class Word implements Cloneable{
 		if (isRecognized()) {
 			/* šis ir tad, ja vajag tikai vienu - ticamāko formu. tā jau varētu atgriezt visu sarakstu. */
 			Wordform maxwf = wordforms.get(0);
-			int maxticamība = -1;
+			double maxticamība = -1;
 			for (Wordform wf : wordforms) {  // Paskatamies visus atrastos variantus un ņemam statistiski ticamāko
 				//tag += String.format("%s\t%d\n", wf.getDescription(), MorphoServer.statistics.getTicamība(wf));
 				if (statistics.getEstimate(wf) > maxticamība) {
