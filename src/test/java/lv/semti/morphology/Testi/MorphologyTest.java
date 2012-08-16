@@ -1314,5 +1314,15 @@ public class MorphologyTest {
 		
 		Word sia = locītājs.analyze("SIA");		
 		assertTrue(sia.isRecognized());
+		
+		Word numur = locītājs.analyze("numur");		
+		assertTrue(numur.isRecognized());
+		irPareizā = false;
+		for (Wordform vārdforma : numur.wordforms) {
+			if (vārdforma.getValue(AttributeNames.i_Lemma).equals("numurs") && vārdforma.isMatchingStrong(AttributeNames.i_Case, AttributeNames.v_Nominative)) {
+				irPareizā = true;			
+			}
+		}
+		assertEquals(true, irPareizā);
 	}
 }

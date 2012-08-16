@@ -78,7 +78,7 @@ public class MorphoEvaluate {
 		locītājs.enableVocative = true;
 		locītājs.enableDiminutive = true;
 		locītājs.enablePrefixes = true;
-		locītājs.enableGuessing = true;
+		locītājs.enableGuessing = true; // jāčeko
 		locītājs.enableAllGuesses = false;
 		locītājs.meklētsalikteņus = false; 
 		
@@ -129,12 +129,12 @@ public class MorphoEvaluate {
 					else if (found_match) match++; 
 					else {
 						wrong++;
-						//izeja.print(e.wordform+"\nDer:\t"+e.lemma+"\t"+e.tag+"\n"+output);
+						izeja.print(e.wordform+"\nDer:\t"+e.lemma+"\t"+e.tag+"\n"+output);
 					}
 				}	
 			} else {
 				not_recognized++;
-				izeja.print(e.wordform+"\t"+e.lemma+"\t"+e.tag+"\n");
+				//izeja.print(e.wordform+"\t"+e.lemma+"\t"+e.tag+"\n");
 			}						
 		}
 		
@@ -171,5 +171,14 @@ public class MorphoEvaluate {
 		item.removeAttribute(AttributeNames.i_VerbType);
 		item.removeAttribute(AttributeNames.i_NounType);
 		item.removeAttribute(AttributeNames.i_Declension);
+		
+		item.removeAttribute(AttributeNames.i_Rekcija);
+		
+		if (item.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adverb))
+			item.removeAttribute(AttributeNames.i_Degree);
+		item.removeAttribute(AttributeNames.i_ApstTips);
+		item.removeAttribute(AttributeNames.i_SaikljaTips);
+		item.removeAttribute(AttributeNames.i_SkaitljaTips);
+		item.removeAttribute(AttributeNames.i_Uzbuuve);
 	}
 }

@@ -166,7 +166,7 @@ atkarība	ncfsn4	atkarība
 <s>
 Mūsu	pp10pgn	mēs
 dzīve	ncfsn5	dzīve
-vairs	r0q	vairs
+vairs	r0t	vairs
 nav	vcnipii30ay	nebūt
 iedomājama	vmnpdfsnppn	iedomāt
 bez	spsgn	bez
@@ -349,12 +349,12 @@ tā	pd3msgn	tas
 atkarīgs	afmsnnp	atkarīgs
 un	ccs	un
 nespēj	vonipt130ay	nespēt
-vairs	r0q	vairs
+vairs	r0t	vairs
 atteikties	vmyn0i1000n	atteikties
 ,	zc	,
 turklāt	css	turklāt
 tā	pd3fsnn	tā
-vairs	r0q	vairs
+vairs	r0t	vairs
 nerada	vmnipt330ay	neradīt
 tādu	pd0fsan	tāda
 pašu	pg0fpgn	pati
@@ -4796,7 +4796,7 @@ Varējām	vonist31pan	varēt
 ,	zc	,
 jods	ncmsn1	jods
 ,	zc	,
-apar	vmnmpt12san	apart
+apar	vmnm0t12san	apart
 mani	pp10san	es
 ,	zc	,
 neiet	vmnn0ii000y	neiet
@@ -4901,9 +4901,9 @@ parūpēšos	vmyifi21san	parūpēties
 .	zs	.
 </s>
 <s>
-Tinies	vmympi12san	tīties
+Tinies	vmym0i12san	tīties
 ,	zc	,
-tinies	vmympi12san	tīties
+tinies	vmym0i12san	tīties
 ,	zc	,
 es	pp10snn	es
 pati	pg0fsnn	pati
@@ -5043,7 +5043,7 @@ Ei	is	ei
 Krist	npmsv1	Krists
 ,	zc	,
 nu	qs	nu
-neapvainojies	vmympi22say	neapvainoties
+neapvainojies	vmym0i22say	neapvainoties
 ,	zc	,
 lūdzu	is	lūdzu
 .	zs	.
@@ -5294,7 +5294,7 @@ Lāčplēsis	npmsn2	Lāčplēsis
 </s>
 <s>
 —	zd	—
-Beidz	vmnmpt12san	beigt
+Beidz	vmnm0t12san	beigt
 .	zs	.
 </s>
 <s>
@@ -5318,7 +5318,7 @@ gleznas	ncfpa4	glezna
 .	zs	.
 </s>
 <s>
-Iedomājies	vmympt22san	iedomāties
+Iedomājies	vmym0t22san	iedomāties
 ?	zs	?
 !	zs	!
 </s>
@@ -5465,7 +5465,7 @@ pabučosimies	vmyifi21pan	pabučoties
 .	zs	.
 </s>
 <s>
-Redzi	vmnmpt32san	redzēt
+Redzi	vmnm0t32san	redzēt
 ,	zc	,
 tev	pp20sdn	tu
 nemaz	r0q	nemaz
@@ -5512,7 +5512,7 @@ mātīte	ncfsn5	mātīte
 </s>
 <s>
 —	zd	—
-Nāc	vmnmpi12san	nākt
+Nāc	vmnm0i12san	nākt
 ,	zc	,
 Krist	npmsv1	Krists
 ,	zc	,
@@ -5767,7 +5767,7 @@ Eiropu	npfsa4	Eiropa
 Pirms	sppdy	pirms
 divdesmit	mccmp0d	divdesmit
 diviem	mcsmpdv	divi
-tūkstošiem	ncmpd2	tūkstotis
+tūkstošiem	mcsmpdt	tūkstotis
 gadu	ncmpg1	gads
 Eiropa	npfsn4	Eiropa
 jau	r0t	jau
@@ -5815,9 +5815,9 @@ nolaisties	vmyn0i1000n	nolaisties
 ,	zc	,
 tad	r0t	tad
 —	zd	—
-stiepies	vmympi12san	stiepties
+stiepies	vmym0i12san	stiepties
 ,	zc	,
-velcies	vmympi12san	vilkties
+velcies	vmym0i12san	vilkties
 ,	zc	,
 kā	r0m	kā
 gribi	vonipt32san	gribēt
@@ -5846,7 +5846,7 @@ Jaunieši	ncmpv2	jaunietis
 </s>
 <s>
 —	zd	—
-Palīdziet	vmnmpt32pan	palīdzēt
+Palīdziet	vmnm0t32pan	palīdzēt
 !	zs	!
 </s>
 <s>
@@ -5879,11 +5879,11 @@ Kas	pq000nn	kas
 </s>
 <s>
 —	zd	—
-Paņem	vmnmpt12san	paņemt
+Paņem	vmnm0t12san	paņemt
 laivā	ncfsl4	laiva
 ,	zc	,
 nevaru	vonipt31say	nevarēt
-vairs	r0q	vairs
+vairs	r0t	vairs
 nemaz	r0q	nemaz
 .	zs	.
 </s>
@@ -5895,7 +5895,7 @@ kauliem	ncmpd1	kauls
 .	zs	.
 </s>
 <s>
-Izbrauc	vmnmpt12san	izbraukt
+Izbrauc	vmnm0t12san	izbraukt
 tak	qs	tak
 gaismā	ncfsl4	gaisma
 !	zs	!
@@ -5933,7 +5933,7 @@ sadirbta	vmnpdfsnpsn	sadirbt
 —	zd	—
 Neredzu	vmnipt31say	neredzēt
 ,	zc	,
-palaid	vmnmpt12san	palaist
+palaid	vmnm0t12san	palaist
 tuvāk	rcp	tuvu
 .	zs	.
 </s>
@@ -5986,18 +5986,18 @@ vakar	r0t	vakar
 </s>
 <s>
 —	zd	—
-Beidz	vpnmpt12san	beigt
+Beidz	vpnm0t12san	beigt
 muldēt	vmnn0t3000n	muldēt
 ,	zc	,
-negļuko	vmnmpt22san	negļukot
+negļuko	vmnm0t22san	negļukot
 un	ccs	un
-velies	vmympi12san	velties
+velies	vmym0i12san	velties
 pāri	rrp	pāri
 .	zs	.
 </s>
 <s>
 Ta	qs	ta
-nežvanckājies	vmympi22san	nežvanckāties
+nežvanckājies	vmym0i22san	nežvanckāties
 ,	zc	,
 aiziesim	vmnifi11pan	aiziet
 pa	spsay	pa
@@ -6128,7 +6128,7 @@ hermafrodītisks	armsnnp	hermafrodītisks
 .	zs	.
 </s>
 <s>
-Negribi	vonmpt32say	negribēt
+Negribi	vonm0t32say	negribēt
 noskaidrot	vmnn0t2000n	noskaidrot
 ?	zs	?
 </s>
@@ -6577,7 +6577,7 @@ Tipiski	r0m	tipiski
 —	zd	—
 Par	spsan	par
 ko	pi000an	kas
-lūdz	vmnmpt12san	lūgt
+lūdz	vmnm0t12san	lūgt
 tu	pp20snn	tu
 ?	zs	?
 </s>
@@ -6618,7 +6618,7 @@ uzšķaudīt	vmnn0t3000n	uzšķaudīt
 Par	spsan	par
 Agnesi	npfsa5	Agnese
 vismaz	r0q	vismaz
-aizlūdz	vmnmpt12san	aizlūgt
+aizlūdz	vmnm0t12san	aizlūgt
 .	zs	.
 </s>
 <s>
@@ -6631,7 +6631,7 @@ viļņi	ncmpn2	vilnis
 </s>
 <s>
 —	zd	—
-Nebauro	vmnmpt22say	nebaurot
+Nebauro	vmnm0t22say	nebaurot
 ,	zc	,
 cilvēks	ncmsn1	cilvēks
 guļ	vmnipt330an	gulēt
@@ -6641,7 +6641,7 @@ guļ	vmnipt330an	gulēt
 Totāls	armsnnp	totāls
 drudzis	ncmsn2	drudzis
 ,	zc	,
-patausti	vmnmpt32san	pataustīt
+patausti	vmnm0t32san	pataustīt
 pieri	ncfsa5	piere
 .	zs	.
 </s>
@@ -6790,7 +6790,7 @@ piedod	vmnm0t12san	piedot
 .	zs	.
 </s>
 <s>
-Paņem	vmnmpt12san	paņemt
+Paņem	vmnm0t12san	paņemt
 azotē	ncfsl5	azote
 ,	zc	,
 lūdzu	is	lūdzu
@@ -8350,7 +8350,7 @@ dārgie	afmpvyp	dārgs
 ,	zc	,
 iemīļojat	vmnipt22pan	iemīļot
 ,	zc	,
-māciet	vmnmpt32pan	mācīt
+māciet	vmnm0t32pan	mācīt
 peldēt	vmnn0i3000n	peldēt
 .	zs	.
 </s>
@@ -8478,7 +8478,7 @@ Ei	is	ei
 !	zs	!
 </s>
 <s>
-Turi	vmnmpt32san	turēt
+Turi	vmnm0t32san	turēt
 airus	ncmpa2	airis
 gaisā	ncmsl1	gaiss
 !	zs	!
@@ -9013,7 +9013,7 @@ meitenīt	ncfsv5	meitenīte
 !	zs	!
 </s>
 <s>
-Turies	vmympi32san	turēties
+Turies	vmym0i32san	turēties
 ,	zc	,
 meitenīt	ncfsv5	meitenīte
 !	zs	!
@@ -9041,10 +9041,10 @@ Elīze	npfsv5	Elīze
 !	zs	!
 </s>
 <s>
-Elpo	vmnmpt22san	elpot
+Elpo	vmnm0t22san	elpot
 rāmi	rpm	rāmi
 ,	zc	,
-nedricelējies	vmympi22san	nedricelēties
+nedricelējies	vmym0i22san	nedricelēties
 .	zs	.
 </s>
 <s>
@@ -9094,7 +9094,7 @@ dzīvo	vmnipt22san	dzīvot
 .	zs	.
 </s>
 <s>
-Pagaidi	vmnmpt32san	pagaidīt
+Pagaidi	vmnm0t32san	pagaidīt
 mani	pp10san	es
 ,	zc	,
 es	pp10snn	es
@@ -9521,7 +9521,7 @@ satrenējušies	vmypdmpnasn	satrenēties
 ,	zc	,
 tā	pd3fsnn	tā
 vēl	r0t	vēl
-tikai	r0q	tikai
+tikai	qs	tikai
 sasniedz	vmnipt130an	sasniegt
 savu	ps0fsan	sava
 kulmināciju	ncfsa4	kulminācija
@@ -10583,7 +10583,7 @@ valstīm	ncfpd6	valsts
 Taču	ccs	taču
 tie	pd3mpnn	tas
 ir	vcnipii30an	būt
-tikai	r0q	tikai
+tikai	qs	tikai
 nākotnes	ncfsg5	nākotne
 plāni	afmpnnp	plāns
 .	zs	.
@@ -11729,7 +11729,7 @@ nozarē	ncfsl5	nozare
 kopumā	r0m	kopums
 ,	zc	,
 nevis	ccs	nevis
-tikai	r0q	tikai
+tikai	qs	tikai
 Izglītības	ncfsg4	izglītība
 un	ccs	un
 zinātnes	ncfsg5	zinātne
@@ -14043,7 +14043,7 @@ rezultātā	ncmsl1	rezultāts
 -	zd	-
 par	sppdn	par
 0,6	xn	0,6
-tūkstošiem	ncmpd2	tūkstotis
+tūkstošiem	mcsmpdt	tūkstotis
 .	zs	.
 </s>
 <s>
@@ -14488,7 +14488,7 @@ I	xx	I
 ceturksnī	ncmsl2	ceturksnis
 bija	vcnisii30an	būt
 8,3	xn	8,3
-tūkstoši	ncmpn2	tūkstotis
+tūkstoši	mcsmpnt	tūkstotis
 vai	ccs	vai
 par	sppdn	par
 gandrīz	r0q	gandrīz
@@ -15724,7 +15724,7 @@ lielie	afmpnyp	liels
 Dziesmu	ncfpg4	dziesma
 svētki	ncmpn1	svētki
 notiek	vmnipi130an	notikt
-tikai	r0q	tikai
+tikai	qs	tikai
 reizi	ncfsa5	reize
 4	xn	4
 gados	ncmpl1	gads
@@ -15930,7 +15930,7 @@ pie	spsgy	pie
 latviešu	ncmpg2	latvietis
 tautastērpa	ncmsg1	tautastērps
 der	vmnipi330an	derēt
-tikai	r0q	tikai
+tikai	qs	tikai
 un	ccs	un
 vienīgi	r0m	vienīgi
 melnas	affpnnp	melna
@@ -16056,7 +16056,7 @@ olu	ncfsa4	ola
 skaitījās	vmyisi330an	skaitīties
 nestilīgi	r0m	nestilīgi
 –	zd	–
-nedod	vmnmpti2say	nedot
+nedod	vmnm0ti2say	nedot
 dies	is	dies
 ’	zq	’
 ka	css	ka
@@ -16428,7 +16428,7 @@ izskatījās	voyist330an	izskatīties
 spēcīgāka	affsnnc	spēcīga
 ,	zc	,
 tā ka	csc	tā ka
-tikai	r0q	tikai
+tikai	qs	tikai
 tāpēc	r0c	tāpēc
 vien	qs	vien
 būtu	vcnc0ii00an	būt
@@ -16773,7 +16773,7 @@ spēli	ncfsa5	spēle
 izlasē	ncfsl5	izlase
 varam	vonipt31pan	varēt
 rēķināties	vmyn0i3000n	rēķināties
-tikai	r0q	tikai
+tikai	qs	tikai
 ar	sppdn	ar
 tiem	pd3mpdn	tas
 spēlētājiem	ncmpd1	spēlētājs
@@ -17948,7 +17948,7 @@ un	ccs	un
 tāda	pd0fsnn	tāda
 sievietes	ncfsg5	sieviete
 mētāšanās	ncfsnr	mētāšanās
-vairs	r0q	vairs
+vairs	r0t	vairs
 nav	vcnipii30ay	nebūt
 bijusi	vcnpdfsnasn	būt
 pieņemama	vmnpdfsnppn	pieņemt
@@ -25278,7 +25278,7 @@ uzskatīti	vmnpdmpnpsn	uzskatīt
 demogrāfiskie	armpnyp	demogrāfisks
 faktori	ncmpn1	faktors
 ,	zc	,
-dažkārt	r0q	dažkārt
+dažkārt	r0t	dažkārt
 tos	pd3mpan	tas
 pat	qs	pat
 sašaurinot	vmnpu000000	sašaurināt
@@ -27099,7 +27099,7 @@ narkomānijas	ncfsg4	narkomānija
 ārstēšanai	ncfsd4	ārstēšana
 ,	zc	,
 taču	ccs	taču
-dažkārt	r0q	dažkārt
+dažkārt	r0t	dažkārt
 to	pd3fsan	tā
 lieto	vmnipt230an	lietot
 arī	qs	arī
@@ -27458,7 +27458,7 @@ saņem	vmnipt130an	saņemt
 nosodījumu	ncmsa1	nosodījums
 ,	zc	,
 tas	pd3msnn	tas
-tikai	r0q	tikai
+tikai	qs	tikai
 vairo	vmnipt230an	vairot
 viņa	pp3msgn	viņš
 dusmas	ncfpa4	dusmas
@@ -27601,9 +27601,9 @@ pats	pg0msnn	pats
 .	zs	.
 </s>
 <s>
-Neairē	vmnmpt22say	neairēt
+Neairē	vmnm0t22say	neairēt
 ,	zc	,
-meties	vmympi12san	mesties
+meties	vmym0i12san	mesties
 pār	spsay	pār
 bortu	ncmsa1	borts
 .	zs	.
@@ -27727,7 +27727,7 @@ lāsīte	ncfsn5	lāsīte
 <s>
 Bet	ccs	bet
 ,	zc	,
-redzi	vmnmpt32san	redzēt
+redzi	vmnm0t32san	redzēt
 ,	zc	,
 tas	pd3msnn	tas
 spoks	ncmsn1	spoks
@@ -27756,12 +27756,12 @@ Nodevējs	ncmsv1	nodevējs
 !	zs	!
 </s>
 <s>
-Sodi	vmnmpt32san	sodīt
+Sodi	vmnm0t32san	sodīt
 mani	pp10san	es
 vēl	r0t	vēl
 bargāk	rcm	bargi
 ,	zc	,
-sūti	vmnmpi32san	sūtīt
+sūti	vmnm0i32san	sūtīt
 kaut	qs	kaut
 māgas	ncfsg4	māga
 kataru	ncmsa1	katars
@@ -27769,7 +27769,7 @@ un	ccs	un
 migrēnu	ncfsa4	migrēna
 ,	zc	,
 bet	ccs	bet
-izdari	vmnmpt32san	izdarīt
+izdari	vmnm0t32san	izdarīt
 tā	r0m	tā
 ,	zc	,
 lai	css	lai
@@ -27780,7 +27780,7 @@ negribētos	vonpdmpapsy	negribēt
 </s>
 <s>
 Vai arī	ccs	vai arī
-atpeldini	vmnmpt32san	atpeldināt
+atpeldini	vmnm0t32san	atpeldināt
 kādu	pi0msan	kāds
 groziņu	ncmsa1	groziņš
 ar	spsan	ar
@@ -27801,7 +27801,7 @@ neciešama	vmnpdfsnppn	neciest
 </s>
 <s>
 —	zd	—
-Tiec	vtnmpi12san	tikt
+Tiec	vtnm0i12san	tikt
 galā	r0m	galā
 ar	spsan	ar
 savējo	armsayp	savējs
@@ -28727,10 +28727,10 @@ pagājušajā	vmnpdmslasy	paiet
 gadā	ncmsl1	gads
 -	zd	-
 6,2	xn	6,2
-tūkstoši	ncmpn2	tūkstotis
+tūkstoši	mcsmpnt	tūkstotis
 pret	sppdy	pret
 5,7	xn	5,7
-tūkstošiem	ncmpd2	tūkstotis
+tūkstošiem	mcsmpdt	tūkstotis
 .	zs	.
 </s>
 <s>
@@ -29063,7 +29063,7 @@ sev	px000dn	sevis
 </s>
 <s>
 Dubls	ncmsn1	dubls
-numur	r0m	numur
+numur	ncmsn1	numur
 divi	mcsmpnv	divi
 </s>
 <s>
@@ -29095,7 +29095,7 @@ vai	qs	vai
 to	pd3fsan	tā
 saplēsto	vmnpdfsapsy	saplēst
 krūzīti	ncfsa5	krūzīte
-vairs	r0q	vairs
+vairs	r0t	vairs
 varēs	vonift330an	varēt
 salīmēt	vmnn0t2000n	salīmēt
 ?	zs	?
@@ -29895,7 +29895,7 @@ tendenci	ncfsa5	tendence
 20	xn	20
 –	zd	–
 22	xn	22
-tūkstošu	ncmpg2	tūkstotis
+tūkstošu	mcsmpgt	tūkstotis
 līmenī	ncmsl2	līmenis
 gadā	ncmsl1	gads
 (	zb	(
@@ -29940,7 +29940,7 @@ sevi	px000an	sevis
 ir	vcnipii30an	būt
 atkarīga	affsnnp	atkarīga
 no	sppdy	no
-dažādiem	pi0mpdn	dažāds
+dažādiem	armpdnp	dažāds
 faktoriem	ncmpd1	faktors
 .	zs	.
 </s>
@@ -30369,7 +30369,7 @@ uz	spsay	uz
 katra	pg0msgn	katrs
 stūra	ncmsg2	stūris
 ,	zc	,
-tikai	r0q	tikai
+tikai	qs	tikai
 pastiprina	vmnipt330an	pastiprināt
 vēlmi	ncfsa5	vēlme
 iepirkties	vmyn0i1000n	iepirkties
@@ -30715,7 +30715,7 @@ zinu	vmnipt31san	zināt
 ,	zc	,
 ka	css	ka
 tas	pd3msnn	tas
-tikai	r0q	tikai
+tikai	qs	tikai
 sapnis	ncmsn2	sapnis
 ,	zc	,
 ka	css	ka
@@ -31912,7 +31912,7 @@ tablo	nc_pg0	tablo
 .	zs	.
 </s>
 <s>
-Paskatieties	vmympt32pan	paskatīties
+Paskatieties	vmym0t32pan	paskatīties
 uz	spsay	uz
 tablo	nc___0	tablo
 ...	zs	...

@@ -157,46 +157,38 @@ public class CorpusProcessing {
 			PrintWriter izeja = new PrintWriter(new OutputStreamWriter(System.out, "UTF-8"));
 
 			String rinda;
-			String vārds;
-			String marķējums;
-			String pamatforma;
+			String wordform;
+			String tag;
+			String lemma;
 			int vārdi = 0;
 			int sakrītošie = 0;
 			int derīgie = 0;
 
 		    while ((rinda = ieeja.readLine()) != null) {
 		    	if (rinda.trim().length() == 0) continue;
-		    	vārds = rinda.substring(0, rinda.indexOf("<")).trim();
-		    	if (rinda.contains("[")) {
-		    		marķējums = rinda.substring(rinda.indexOf("["), rinda.lastIndexOf("]")+1).trim();
-		    		marķējums = marķējums.replaceAll("(\\[|\\]|\\,| )","");
-		    		//marķējums = Konvertors.noņemtMarķējumaFormatējumu(marķējums);
-		    	} else {
-		    		marķējums = "";
-		    	}
+		    	if (rinda.contains("<s>") || rinda.contains("</s>")) continue;
+		    	
+		    	String[] parse = rinda.split("\t");
+				wordform = parse[0];
+				lemma = parse[2];
+				tag = parse[1];
+				
+	    		AttributeValues vajadzīgās = MarkupConverter.fromKamolsMarkup(tag);
 
-		    	pamatforma = rinda.substring(rinda.indexOf("'")+1, rinda.indexOf("'", rinda.indexOf("'")+1));
-
-		    	if (vārds.equalsIgnoreCase("prievārdeklis") ||
-		    			vārds.equalsIgnoreCase("nomināls_izteicējs") ||
-		    			vārds.equalsIgnoreCase("modāls_izteicējs") ||
-		    			vārds.equalsIgnoreCase("adverbiāls_izteicējs") ||
-		    			marķējums.equals("") ||
-		    			marķējums.equalsIgnoreCase("x"))
-		    		continue;
-
-	    		AttributeValues vajadzīgās = MarkupConverter.fromKamolsMarkup(marķējums);
-
-		    	Word analīze = analyzer.analyze(vārds);
+		    	Word analīze = analyzer.analyze(wordform);
 		    	boolean vaiKādsSakrīt = false;
 		    	boolean vaiKādsDer = false;
 		    	String marķējumi = "";
 		    	for (Wordform variants : analīze.wordforms) {
 		    		marķējumi = marķējumi + "|" + variants.getTag() + "|";
-		    		if (variants.getTag().equalsIgnoreCase(marķējums)) {
+		    		if (variants.getTag().equalsIgnoreCase(tag)) {
 		    			vaiKādsSakrīt = true;
-		    			statistics.addLexeme(Integer.parseInt(variants.getValue(AttributeNames.i_LexemeID)));
-		    			statistics.addEnding(Integer.parseInt(variants.getValue(AttributeNames.i_EndingID)));
+		    			String lexemeID = variants.getValue(AttributeNames.i_LexemeID);
+		    			if (lexemeID != null)
+		    				statistics.addLexeme(Integer.parseInt(lexemeID));
+		    			String endingID = variants.getValue(AttributeNames.i_LexemeID);
+		    			if (endingID != null)
+		    				statistics.addEnding(Integer.parseInt(endingID));
 		    		}
 
 		    		if (variants.isMatchingWeak(vajadzīgās))
@@ -208,7 +200,7 @@ public class CorpusProcessing {
 		    	if (vaiKādsDer) {
 		    		derīgie++;
 		    	} else {
-		    		izeja.println("vārds: |" + vārds + "|, marķējums: |" + marķējums + "|, pamatforma: |" + pamatforma + "|\nAtrastie marķējumi: " + marķējumi);
+		    		izeja.println("vārds: |" + wordform + "|, marķējums: |" + tag + "|, pamatforma: |" + lemma + "|\nAtrastie marķējumi: " + marķējumi);
 		    	}
 		    }
 		    izeja.printf("Sakrīt %d/%d : %.1f%%\n",sakrītošie,vārdi,100.0*sakrītošie/vārdi);
@@ -225,15 +217,14 @@ public class CorpusProcessing {
 	}
 	
 	public static void main(String[] args) throws Exception {
+		Analyzer analyzer = new Analyzer("dist/Lexicon.xml");
 		if (args.length == 0) {
-			System.out.println("Provide list of filenames to be processed as arguments");
-			return;
+			processCorpus(analyzer, "dist/morfoetalons.txt");
+		} else {
+			for (String filename: args) {
+				processCorpus(analyzer, filename);
+				//TODO - lai statistiku savāc pa visiem failiem kopā vienu
+			}
 		}
-		Analyzer analyzer = new Analyzer();
-		for (String filename: args) {
-			processCorpus(analyzer, filename);
-			//TODO - lai statistiku savāc pa visiem failiem kopā vienu
-		}
-
 	}
 }

@@ -41,7 +41,7 @@ import org.xml.sax.SAXException;
  */
 public class Lexicon {
 
-	public final static String DEFAULT_LEXICON_FILE = "Morphology.xml";
+	public final static String DEFAULT_LEXICON_FILE = "Lexicon.xml";
 	private final static String[] DEFAULT_LEXICON_LOCATIONS = {
 		System.getProperty("lv.semti.morphology.lexicon.path"),
 		".", "..", "../..", "resources", "src/main/resources", "dist"};

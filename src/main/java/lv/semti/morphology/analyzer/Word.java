@@ -276,6 +276,19 @@ public class Word implements Cloneable{
 			return String.format("%s\t-\t%s", getToken(), getToken());
 	}
 
+	public String toTabSep() { // Čakarīgs formāts postagera pitonam
+		if (isRecognized()) {
+			Iterator<Wordform> i = wordforms.iterator();
+			String out = "";
+			while (i.hasNext()) {
+				Wordform wf = i.next();
+				out += String.format("%s\t%s\t%s", wf.getToken(), wf.getTag(), wf.getValue(AttributeNames.i_Lemma));;
+				if (i.hasNext()) out += "\t";
+			}
+			return out;
+		} else 
+			return String.format("%s\t-\t%s", getToken(), getToken());
+	}
 	
 	public void dataHasChanged() {
 		// FIXME - pagaidām paļaujas, ka kam vajadzēs, tas pats arī izsauks
