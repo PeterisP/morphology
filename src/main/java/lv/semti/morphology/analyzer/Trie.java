@@ -52,8 +52,27 @@ public class Trie {
 		root.nextSibling=new UCNode();
 		root.nextSibling.firstChild=root.firstChild.nextSibling;
 		
+		
 		/*
-		 * 2 apvienotais 2a+2b+2c automāts
+		 * 2a automāts atpazīst pulksteni
+		 */
+		
+		root=new StringNode("01");
+		branchList.add(root);
+		root.firstChild=new DigitNode();
+		root.firstChild.firstChild=new StringNode(":");
+		root.firstChild.firstChild.firstChild=new StringNode("012345");
+		root.firstChild.firstChild.firstChild.firstChild=new DigitNode();
+		root.firstChild.firstChild.firstChild.firstChild.canEnd=true;
+		root.nextSibling=new StringNode("2");
+		root.nextSibling.firstChild=new StringNode("0123");
+		root.nextSibling.firstChild.firstChild=root.firstChild.firstChild;
+		
+		
+		
+		
+		/*
+		 * 2b automāts
 		 * atpazīst:
 		 *  naudas formā 123,-
 		 * 	pamata skaitļus 

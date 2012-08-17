@@ -279,6 +279,14 @@ public class TokenizeTest {
 	}
 	
 	@Test
+	public void skaitļi3()
+	{
+		LinkedList<Word> tokens = Splitting.tokenize(locītājs, "0.40.");
+		assertEquals(2, tokens.size());
+		assertEquals("0.40", tokens.get(0).getToken());
+	}
+	
+	@Test
 	public void noiepirkšanās()
 	{
 		LinkedList<Word> tokens = Splitting.tokenize(locītājs, "no iepirkšanās");
@@ -388,6 +396,13 @@ public class TokenizeTest {
 	}
 	
 	@Test
+	public void Klase()
+	{
+		LinkedList<Word> tokens = Splitting.tokenize(locītājs, "11.c", false);
+		assertEquals(2, tokens.size());
+	}
+	
+	@Test
 	public void Laura10Aug()
 	{
 		LinkedList<Word> tokens = Splitting.tokenize(locītājs, "tikpat kā", false);
@@ -403,4 +418,26 @@ public class TokenizeTest {
 		assertEquals(2, tokens.size());
 	}
 
+	public void Pulkstenis()
+	{
+		LinkedList<Word> tokens;
+		
+		tokens = Splitting.tokenize(locītājs, "00:00", false);
+		assertEquals(1, tokens.size());
+
+		tokens = Splitting.tokenize(locītājs, "23:59", false);
+		assertEquals(1, tokens.size());
+		
+
+		//nekorekti formāti
+		tokens = Splitting.tokenize(locītājs, "24:00", false);
+		assertEquals(3, tokens.size());
+
+		tokens = Splitting.tokenize(locītājs, "13:60", false);
+		assertEquals(3, tokens.size());
+
+		tokens = Splitting.tokenize(locītājs, "25:00", false);
+		assertEquals(3, tokens.size());
+	}
+	
 }
