@@ -88,6 +88,7 @@ public class MorphoEvaluate {
 		int match = 0;
 		int not_recognized = 0;
 		int wrong = 0;
+		int pos_correct=0;
 		
 		for (Etalons e : etaloni) {
 			Word w = locītājs.analyze(e.wordform);
@@ -110,6 +111,9 @@ public class MorphoEvaluate {
 						mainwf = wf;
 					}
 				}
+				
+				if (mainwf.getValue(AttributeNames.i_PartOfSpeech).equalsIgnoreCase(etalonaAV.getValue(AttributeNames.i_PartOfSpeech)))
+						pos_correct++;
 				
 				output = "\t" + mainwf.getValue(AttributeNames.i_Lemma) + "\t" + mainwf.getTag() + "\n";
 				if (mainwf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(e.lemma) && mainwf.getTag().equalsIgnoreCase(e.tag))
@@ -150,6 +154,7 @@ public class MorphoEvaluate {
 		System.out.printf("\tDer ne pirmais:\t%4.1f%%\t%d\n", match*100.0/etaloni.size(), match);
 		System.out.printf("\tNekas neder:\t%4.1f%%\t%d\n", wrong*100.0/etaloni.size(), wrong);
 		System.out.printf("\tNeatpazīti:\t%4.1f%%\t%d\n", not_recognized*100.0/etaloni.size(), not_recognized);
+		System.out.printf("\tPareizs POS:\t%4.1f%%\t%d\n", pos_correct*100.0/etaloni.size(), pos_correct);
 		System.out.printf("\nEtalons: Pareizi 65%%+,  Neatpazīti zem 4%%\n");
 	}
 	
