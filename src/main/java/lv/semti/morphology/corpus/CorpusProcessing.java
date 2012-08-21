@@ -186,7 +186,7 @@ public class CorpusProcessing {
 		    			String lexemeID = variants.getValue(AttributeNames.i_LexemeID);
 		    			if (lexemeID != null)
 		    				statistics.addLexeme(Integer.parseInt(lexemeID));
-		    			String endingID = variants.getValue(AttributeNames.i_LexemeID);
+		    			String endingID = variants.getValue(AttributeNames.i_EndingID);
 		    			if (endingID != null)
 		    				statistics.addEnding(Integer.parseInt(endingID));
 		    		}

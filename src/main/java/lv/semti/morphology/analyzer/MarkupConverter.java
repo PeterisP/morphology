@@ -494,7 +494,7 @@ public class MarkupConverter {
 	 */
 	public static AttributeValues fromKamolsMarkup(String tag) {
 		AttributeValues attributes = new AttributeValues();
-		if (tag.equals("")) return attributes;
+		if (tag == null || tag.equals("")) return attributes;
 
 		switch (tag.charAt(0)) {
 		case 'n':
@@ -531,7 +531,7 @@ public class MarkupConverter {
 		case 'v':
 			attributes.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
 
-			if (tag.charAt(3) != 'p') { // nav divdabis
+			if (tag.length()<4 || tag.charAt(3) != 'p') { // nav divdabis
 				verifyAndSetAVSAttribute(tag,attributes,1,'m',AttributeNames.i_VerbType,AttributeNames.v_MainVerb);
 				verifyAndSetAVSAttribute(tag,attributes,1,'a',AttributeNames.i_VerbType,AttributeNames.v_PaliigDv);
 				verifyAndSetAVSAttribute(tag,attributes,1,'o',AttributeNames.i_VerbType,AttributeNames.v_Modaals);

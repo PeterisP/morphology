@@ -206,4 +206,19 @@ public class AttributeValues implements FeatureStructure, Cloneable {
 		attributes.clear();
 	}
 
+	public void removeNonexicalAttributes() {
+		removeAttribute(AttributeNames.i_Transitivity);
+		removeAttribute(AttributeNames.i_VerbType);
+		removeAttribute(AttributeNames.i_NounType);
+		removeAttribute(AttributeNames.i_Declension);
+		
+		removeAttribute(AttributeNames.i_Rekcija);
+		
+		if (isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adverb))
+			removeAttribute(AttributeNames.i_Degree);
+		removeAttribute(AttributeNames.i_ApstTips);
+		removeAttribute(AttributeNames.i_SaikljaTips);
+		removeAttribute(AttributeNames.i_SkaitljaTips);
+		removeAttribute(AttributeNames.i_Uzbuuve);
+	}
 }

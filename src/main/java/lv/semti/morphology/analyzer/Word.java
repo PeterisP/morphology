@@ -171,14 +171,6 @@ public class Word implements Cloneable{
 			variants.addAttribute(attribute, value);
 	}
 
-	// getVārdšķira
-	public String getPartOfSpeech(){
-		// FIXME - vajag uz variantiem skatīties visiem, vispār pēc bezjēdzīgas metodes izskatās
-		if (wordforms.size() <= 0) return "";
-
-		return wordforms.get(0).getValue("Vārdšķira");
-	}
-
 	/**
 	 * 	gets rid of those wordforms that match (weakly) the attributes provided. Destructive!
 	 * @param attributes
@@ -276,18 +268,27 @@ public class Word implements Cloneable{
 			return String.format("%s\t-\t%s", getToken(), getToken());
 	}
 
-	public String toTabSep() { // Čakarīgs formāts postagera pitonam
+	public String toTabSep(Statistics statistics, boolean probabilities) { // Čakarīgs formāts postagera pitonam
 		if (isRecognized()) {
+			double sumTicamība = 0;
+			for (Wordform wf : wordforms) sumTicamība += statistics.getEstimate(wf);
+			if (sumTicamība < 0.001) sumTicamība = 0.001;
+			
 			Iterator<Wordform> i = wordforms.iterator();
 			String out = "";
 			while (i.hasNext()) {
 				Wordform wf = i.next();
 				out += String.format("%s\t%s\t%s", wf.getToken(), wf.getTag(), wf.getValue(AttributeNames.i_Lemma));;
+				if (probabilities) out += String.format("\t%.5f", statistics.getEstimate(wf)/sumTicamība);
 				if (i.hasNext()) out += "\t";
 			}
 			return out;
-		} else 
-			return String.format("%s\t-\t%s", getToken(), getToken());
+		} else {
+			String out = String.format("%s\t-\t%s", getToken(), getToken());
+			if (probabilities) out += "\t1.0";
+			return out;
+		}
+			
 	}
 	
 	public void dataHasChanged() {

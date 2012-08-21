@@ -96,7 +96,7 @@ public class MorphoEvaluate {
 			if (!e.tag.equalsIgnoreCase(MarkupConverter.toKamolsMarkupNoDefaults(etalonaAV))) {
 				System.out.printf("Slikts tags vārdam %s : '%s' -> '%s' \n", e.wordform, e.tag, MarkupConverter.toKamolsMarkupNoDefaults(etalonaAV));
 			}
-			filterAV(etalonaAV);
+			etalonaAV.removeNonexicalAttributes();
 			e.tag = MarkupConverter.toKamolsMarkup(etalonaAV);
 			
 			String output = "Neatpazīts";
@@ -105,7 +105,7 @@ public class MorphoEvaluate {
 				double maxticamība = -1;
 				for (Wordform wf : w.wordforms) {  // Paskatamies visus atrastos variantus un ņemam statistiski ticamāko
 					//tag += String.format("%s\t%d\n", wf.getDescription(), MorphoServer.statistics.getTicamība(wf));
-					filterAV(wf);
+					wf.removeNonexicalAttributes();
 					if (statistics.getEstimate(wf) > maxticamība) {
 						maxticamība = statistics.getEstimate(wf);
 						mainwf = wf;
@@ -171,19 +171,4 @@ public class MorphoEvaluate {
 		}
 	}
 	
-	private void filterAV(AttributeValues item) {
-		item.removeAttribute(AttributeNames.i_Transitivity);
-		item.removeAttribute(AttributeNames.i_VerbType);
-		item.removeAttribute(AttributeNames.i_NounType);
-		item.removeAttribute(AttributeNames.i_Declension);
-		
-		item.removeAttribute(AttributeNames.i_Rekcija);
-		
-		if (item.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adverb))
-			item.removeAttribute(AttributeNames.i_Degree);
-		item.removeAttribute(AttributeNames.i_ApstTips);
-		item.removeAttribute(AttributeNames.i_SaikljaTips);
-		item.removeAttribute(AttributeNames.i_SkaitljaTips);
-		item.removeAttribute(AttributeNames.i_Uzbuuve);
-	}
 }
