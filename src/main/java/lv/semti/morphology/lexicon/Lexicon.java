@@ -202,7 +202,9 @@ public class Lexicon {
 		for (String filename : corpusFileNames) {
 			Document doc2 = null;
 			DocumentBuilder docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-			doc2 = docBuilder.parse(new File(path + java.io.File.separatorChar + filename));
+			String fullname = filename;
+			if (path != null) fullname = path + java.io.File.separatorChar + filename;
+			doc2 = docBuilder.parse(new File(fullname));
 
 			init_sub(doc2);
 		}

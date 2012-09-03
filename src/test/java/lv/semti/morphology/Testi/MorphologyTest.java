@@ -1325,4 +1325,22 @@ public class MorphologyTest {
 		}
 		assertEquals(true, irPareizā);
 	}
+	
+	@Test
+	public void GuntaAug22() {
+	// 2012.08.22 Gunta saka, ka "pazūd" atpazīst kā 2. personas vārdu; tas ir fail 7. mijā
+		Word vārds = locītājs.analyze("ēd");
+		assertTrue(vārds.isRecognized());
+		boolean irPareizā = false;
+		for (Wordform vārdforma : vārds.wordforms) {
+			if (vārdforma.isMatchingStrong(AttributeNames.i_Person, "2")) irPareizā = true;
+		}
+		assertTrue(irPareizā);
+		
+		vārds = locītājs.analyze("pazūd");
+		assertTrue(vārds.isRecognized());
+		for (Wordform vārdforma : vārds.wordforms) {
+			assertFalse(vārdforma.isMatchingStrong(AttributeNames.i_Person, "2"));
+		}
+	}
 }

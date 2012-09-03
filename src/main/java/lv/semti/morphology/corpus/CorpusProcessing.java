@@ -166,7 +166,8 @@ public class CorpusProcessing {
 
 		    while ((rinda = ieeja.readLine()) != null) {
 		    	if (rinda.trim().length() == 0) continue;
-		    	if (rinda.contains("<s>") || rinda.contains("</s>")) continue;
+		    	if (rinda.contains("<s>") || rinda.contains("</s>")) continue;		    	
+		    	//if (vārdi >= 20000) break;
 		    	
 		    	String[] parse = rinda.split("\t");
 				wordform = parse[0];
@@ -200,7 +201,7 @@ public class CorpusProcessing {
 		    	if (vaiKādsDer) {
 		    		derīgie++;
 		    	} else {
-		    		izeja.println("vārds: |" + wordform + "|, marķējums: |" + tag + "|, pamatforma: |" + lemma + "|\nAtrastie marķējumi: " + marķējumi);
+		    		//izeja.println("vārds: |" + wordform + "|, marķējums: |" + tag + "|, pamatforma: |" + lemma + "|\nAtrastie marķējumi: " + marķējumi);
 		    	}
 		    }
 		    izeja.printf("Sakrīt %d/%d : %.1f%%\n",sakrītošie,vārdi,100.0*sakrītošie/vārdi);
@@ -208,7 +209,7 @@ public class CorpusProcessing {
 		    izeja.flush();
 
 			Writer straume = new BufferedWriter(new OutputStreamWriter(
-					new FileOutputStream(Statistics.DEFAULT_STATISTICS_FILE), "UTF-8"));
+					new FileOutputStream("dist/Statistics.xml"), "UTF-8"));
 			statistics.toXML(straume);
 
 		} catch (IOException e) {
@@ -219,7 +220,7 @@ public class CorpusProcessing {
 	public static void main(String[] args) throws Exception {
 		Analyzer analyzer = new Analyzer("dist/Lexicon.xml");
 		if (args.length == 0) {
-			processCorpus(analyzer, "dist/morfoetalons.txt");
+			processCorpus(analyzer, "dist/traindev.txt");
 		} else {
 			for (String filename: args) {
 				processCorpus(analyzer, filename);

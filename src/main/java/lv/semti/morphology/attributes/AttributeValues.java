@@ -206,19 +206,35 @@ public class AttributeValues implements FeatureStructure, Cloneable {
 		attributes.clear();
 	}
 
-	public void removeNonexicalAttributes() {
+	public void removeNonlexicalAttributes() {
 		removeAttribute(AttributeNames.i_Transitivity);
 		removeAttribute(AttributeNames.i_VerbType);
 		removeAttribute(AttributeNames.i_NounType);
 		removeAttribute(AttributeNames.i_Declension);
+		removeAttribute(AttributeNames.i_Konjugaacija);
 		
-		removeAttribute(AttributeNames.i_Rekcija);
-		
-		if (isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adverb))
-			removeAttribute(AttributeNames.i_Degree);
 		removeAttribute(AttributeNames.i_ApstTips);
 		removeAttribute(AttributeNames.i_SaikljaTips);
 		removeAttribute(AttributeNames.i_SkaitljaTips);
+		removeAttribute(AttributeNames.i_AdjectiveType);		
 		removeAttribute(AttributeNames.i_Uzbuuve);
+		removeAttribute(AttributeNames.i_Order);
+		removeAttribute(AttributeNames.i_VvTips);
+		removeAttribute(AttributeNames.i_Noliegums);
+		removeAttribute(AttributeNames.i_VietasApstNoziime);
+		
+		if (isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Preposition)) {			
+			removeAttribute(AttributeNames.i_Novietojums);
+			removeAttribute(AttributeNames.i_Rekcija);
+			removeAttribute(AttributeNames.i_Number);
+		}
+		
+		//par šiem jādomā
+		removeAttribute(AttributeNames.i_Degree);
+		removeAttribute(AttributeNames.i_Reflexive);
+		removeAttribute(AttributeNames.i_Laiks);
+		removeAttribute(AttributeNames.i_Voice);
+
+
 	}
 }

@@ -147,8 +147,8 @@ public abstract class Mijas {
 						if (celms.endsWith("met") || celms.endsWith("cērt")) varianti.add(new Variants(celms));
 					}
 					else if (celms.endsWith("d")) {
-						//varianti.add(new Variants(celms.substring(0,celms.length()-1)+"ž")); // sēžu -> sēdi !!! nav 1. konjug!
-						varianti.add(new Variants(celms)); // ēdu -> ēd
+						//tikai attiecīgajiem vārdiem, pārējiem visiem 2. personas tagadnei jābūt galā -i, piem. 'pazūdi', 'atrodi'
+						if (celms.endsWith("dod") || celms.endsWith("ved") || celms.endsWith("ēd")) varianti.add(new Variants(celms)); 
 					}
 					else if (celms.endsWith("l")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"ļ"));
 					else if (celms.endsWith("m") || celms.endsWith("b") || celms.endsWith("p"))	varianti.add(new Variants(celms+"j"));
