@@ -473,7 +473,7 @@ public class Analyzer extends Lexicon {
 		return null;
 	}
 	
-	private ArrayList<Wordform> generateInflections(Lexeme lexeme)
+	public ArrayList<Wordform> generateInflections(Lexeme lexeme)
 	{
 		String trešāSakne = null, vārds;
 		//Vārds rezultāts = new Vārds(leksēma.īpašības.Īpašība(IpasibuNosaukumi.i_Pamatforma));
@@ -499,8 +499,11 @@ public class Analyzer extends Lexicon {
 
 		    		Wordform locījums = new Wordform(vārds, lexeme, ending);
 					locījums.addAttributes(celms);
-					if (locījums.isMatchingWeak(AttributeNames.i_Generate, AttributeNames.v_Yes))
-						locījumi.add(locījums);
+					boolean validOption = locījums.isMatchingWeak(AttributeNames.i_Generate, AttributeNames.v_Yes);
+					if (locījums.isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum) && locījums.isMatchingStrong(AttributeNames.i_Number, AttributeNames.v_Singular)) validOption = false;
+					if (locījums.isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_SingulareTantum) && locījums.isMatchingStrong(AttributeNames.i_Number, AttributeNames.v_Plural)) validOption = false;
+					if (locījums.isMatchingStrong(AttributeNames.i_CaseSpecial, AttributeNames.v_InflexibleGenitive) && !locījums.isMatchingStrong(AttributeNames.i_Case, AttributeNames.v_Genitive)) validOption = false;
+					if (validOption) locījumi.add(locījums);
 		    	}
 			}
 		}

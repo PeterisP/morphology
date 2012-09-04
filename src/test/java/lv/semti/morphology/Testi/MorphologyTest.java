@@ -39,19 +39,23 @@ public class MorphologyTest {
 	private static Analyzer locītājs;
 
 	private void assertNounInflection(List<Wordform> forms, String number, String nounCase, String gender, String validForm) {
-		boolean found = false;
 		AttributeValues testset = new AttributeValues();
 		testset.addAttribute(AttributeNames.i_Case, nounCase);
 		testset.addAttribute(AttributeNames.i_Number, number);
 		if (!gender.isEmpty()) testset.addAttribute(AttributeNames.i_Gender, gender);
 		
+		assertInflection(forms, testset, validForm);
+	}
+	
+	private void assertInflection(List<Wordform> forms, AttributeValues testset, String validForm) {
+		boolean found = false;
 		for (Wordform wf : forms) {
 			if (wf.isMatchingWeak(testset)) {
 				assertEquals(validForm, wf.getToken());
 				found = true;				
 			}
 		}
-		assertTrue(found);
+		assertTrue(found);		
 	}
 	
 	@BeforeClass
@@ -1342,5 +1346,51 @@ public class MorphologyTest {
 		for (Wordform vārdforma : vārds.wordforms) {
 			assertFalse(vārdforma.isMatchingStrong(AttributeNames.i_Person, "2"));
 		}
+	}
+	
+	@Test
+	public void LocīšanaSep4() {
+	// 2012.09.04 konstatēts, ka lokot dažiem vārdiem nepareizi mijas strādā
+		List<Wordform> formas = locītājs.generateInflections("iemācīties");
+
+		AttributeValues testset = new AttributeValues();		
+		testset.addAttribute(AttributeNames.i_EndingID, "1057");
+		assertInflection(formas, testset, "iemācoties");
+		testset.addAttribute(AttributeNames.i_EndingID, "1027");
+		assertInflection(formas, testset, "jāiemācās");
+		testset.addAttribute(AttributeNames.i_EndingID, "1210");
+		assertInflection(formas, testset, "jāiemācoties");
+				
+		formas = locītājs.generateInflections("mācīt");
+		testset.addAttribute(AttributeNames.i_EndingID, "472");
+		assertInflection(formas, testset, "mācām");
+		testset.addAttribute(AttributeNames.i_EndingID, "474");
+		assertInflection(formas, testset, "māca");
+		testset.addAttribute(AttributeNames.i_EndingID, "487");
+		assertInflection(formas, testset, "jāmāca");
+		testset.addAttribute(AttributeNames.i_EndingID, "1204");
+		assertInflection(formas, testset, "jāmācot");
+		
+		formas = locītājs.generateInflections("mācēt");
+		testset.addAttribute(AttributeNames.i_EndingID, "469");
+		assertInflection(formas, testset, "māku");
+		testset.addAttribute(AttributeNames.i_EndingID, "472");
+		assertInflection(formas, testset, "mākam");		
+		testset.addAttribute(AttributeNames.i_EndingID, "474");
+		assertInflection(formas, testset, "māk");
+		testset.addAttribute(AttributeNames.i_EndingID, "487");
+		assertInflection(formas, testset, "jāmāk");
+		testset.addAttribute(AttributeNames.i_EndingID, "1204");
+		assertInflection(formas, testset, "jāmākot");
+
+		formas = locītājs.generateInflections("gulēt");
+		testset.addAttribute(AttributeNames.i_EndingID, "470");
+		assertInflection(formas, testset, "guli");
+		testset.addAttribute(AttributeNames.i_EndingID, "474");
+		assertInflection(formas, testset, "guļ");
+		testset.addAttribute(AttributeNames.i_EndingID, "493");
+		assertInflection(formas, testset, "guliet");
+		testset.addAttribute(AttributeNames.i_EndingID, "1204");
+		assertInflection(formas, testset, "jāguļot");
 	}
 }

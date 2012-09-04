@@ -26,15 +26,49 @@ import java.util.HashSet;
 import lv.semti.morphology.attributes.AttributeNames;
 
 public abstract class Mijas {
-	public static ArrayList<Variants> mijuVarianti (String celms, int mija, boolean properName) {
+	public static ArrayList<Variants> mijuVarianti (String stem, int stemChange, boolean properName) {
 		// procedūra, kas realizē visas celmu pārmaiņas - līdzskaņu mijas; darbības vārdu formas, utml.
 		// TODO - iznest 'varianti.add(new Variants(... kā miniprocedūriņu.
 		// TODO - iekļaut galotnē(?) kā metodi
 
 		ArrayList<Variants> varianti = new ArrayList<Variants>(1);
-		if (celms.trim().equals("")) return varianti;
+		if (stem.trim().equals("")) return varianti;
+		
+		int mija;
+		String celms;
 
 		try {
+			switch (stemChange) { //TODO - uz normālāku struktūru
+			case 4: // vajadzības izteiksmes jā-
+				if (stem.startsWith("jā")) {
+					celms = stem.substring(2,stem.length());
+					mija = 0;
+				} else return varianti;
+				break;
+			case 5: // vajadzības izteiksme 3. konjugācijai
+				if (stem.startsWith("jā")) {
+					celms = stem.substring(2,stem.length());
+					mija = 9;
+				} else return varianti;
+				break;
+			case 12: // vajadzības izteiksme 3. konjugācijai atgriezeniskai
+				if (stem.startsWith("jā")) {
+					celms = stem.substring(2,stem.length());
+					mija = 8;
+				} else return varianti;
+				break;
+			case 19: // vajadzības_vēlējuma izteiksme 3. konjugācijai (jāmākot)
+				if (stem.startsWith("jā")) {
+					celms = stem.substring(2,stem.length());
+					mija = 2;
+				} else return varianti;
+				break;
+			default:
+				celms = stem;
+				mija = stemChange;
+			}
+			
+			
 			switch (mija) {
 				case 0: varianti.add(new Variants(celms)); break;  // nav mijas
 
@@ -100,34 +134,20 @@ public abstract class Mijas {
 				case 2: //  dv. 3. konjugācijas tagadne, kas noņem celma pēdējo burtu
 					varianti.add(new Variants(celms+"ā"));
 					
-					if (celms.endsWith("k")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"cī")); //sacīt -> saku
+					if (celms.endsWith("sak") || celms.endsWith("slak") || celms.endsWith("slauk") || celms.endsWith("lok") || celms.endsWith("mok") || celms.endsWith("mok") ) 
+						varianti.add(new Variants(celms.substring(0,celms.length()-1)+"cī")); //sacīt -> saku
 					else varianti.add(new Variants(celms+"ī"));
 					
-					if (celms.endsWith("ļ")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"lē")); //gulēt -> guļu
-					else varianti.add(new Variants(celms+"ī"));
-					
-					varianti.add(new Variants(celms+"ē"));
+					if (celms.endsWith("guļ")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"lē")); //gulēt -> guļu
+					else if (celms.endsWith("māk") || celms.endsWith("tek") ) 
+						varianti.add(new Variants(celms.substring(0,celms.length()-1)+"cē")); //mācēt -> māku
+					else varianti.add(new Variants(celms+"ē"));
 					break;
 				case 3: // īpašības vārdiem -āk- un vis-
 					if (celms.endsWith("āk")) {
 						if (celms.startsWith("vis")) varianti.add(new Variants(celms.substring(3,celms.length()-2),AttributeNames.i_Degree,AttributeNames.v_Superlative));
 						else varianti.add(new Variants(celms.substring(0,celms.length()-2),AttributeNames.i_Degree,AttributeNames.v_Comparative));
 					} else varianti.add(new Variants(celms,AttributeNames.i_Degree, AttributeNames.v_Positive));
-					break;
-				case 4: // vajadzības izteiksmes jā-
-					if (celms.startsWith("jā")) {varianti.add(new Variants(celms.substring(2,celms.length())));}
-					break;
-				case 5: // vajadzības izteiksme 3. konjugācijai
-					if (celms.startsWith("jā") & celms.length()>3) {
-						if (celms.endsWith("a")) {
-							if (celms.endsWith("ina")) varianti.add(new Variants(celms.substring(2,celms.length()-1)+"ā"));
-							else if (celms.endsWith("ka")) varianti.add(new Variants(celms.substring(2,celms.length()-2)+"cī")); // "saka"
-							else varianti.add(new Variants(celms.substring(2,celms.length()-1)+"ī"));
-						} else
-							if (celms.endsWith("k")) varianti.add(new Variants(celms.substring(2,celms.length()-1)+"cē")); // "māk->mācēt"
-						    else if (celms.endsWith("ļ")) varianti.add(new Variants(celms.substring(2,celms.length()-1)+"lē")); // "guļ"->"gulēt"
-						    else varianti.add(new Variants(celms.substring(2,celms.length())+"ē"));
-					}
 					break;
 				case 6: // 1. konjugācijas nākotne
 					if (celms.endsWith("dī") || celms.endsWith("tī")) varianti.add(new Variants(celms.substring(0,celms.length()-2)+"s"));
@@ -164,19 +184,24 @@ public abstract class Mijas {
 							|| celms.endsWith("k") || celms.endsWith("g") ))
 						varianti.add(new Variants(celms));
 					break;
-				case 8: // -ams -āms 3. konjugācijai
-
-					if (celms.endsWith("inā")) varianti.add(new Variants(celms)); // vārdam "mainās" ir beigās -inās, bet tam vajag -ā likumu
-					if (celms.endsWith("kā")) varianti.add(new Variants(celms.substring(0,celms.length()-2)+"cī")); //sacīt
+				case 8: // -ams -āms 3. konjugācijai, un arī mēs/jūs formas
+					if (celms.endsWith("inā")) varianti.add(new Variants(celms)); // vārdam "mainās" ir beigās -inās, bet tam vajag -ā likumu 
+					if (celms.endsWith("sakā") || celms.endsWith("slakā") || celms.endsWith("slaukā") || celms.endsWith("lokā") || celms.endsWith("mokā") )
+						varianti.add(new Variants(celms.substring(0,celms.length()-2)+"cī")); //sacīt
 					else if (celms.endsWith("ā")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"ī"));
+					else if (celms.endsWith("māka") || celms.endsWith("teka") ) 
+						varianti.add(new Variants(celms.substring(0,celms.length()-1)+"cē")); //mācēt -> mākam
+					else if (celms.endsWith("guļa")) varianti.add(new Variants(celms.substring(0,celms.length()-2)+"lē")); //gulēt -> guļam
 					else if (celms.endsWith("a")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"ē"));
 					break;
 				case 9: // 3. konjugācija 3. pers. tagadne
 					if (celms.endsWith("vajag")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"dzē"));
 					else if (celms.endsWith("vajadz")) break; //izņēmums - lai korekti ir 'vajadzēt' -> 'vajag'
 					else if (celms.endsWith("ina")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"ā"));
-					else if (celms.endsWith("ka")) varianti.add(new Variants(celms.substring(0,celms.length()-2)+"cī")); // "saka"
-					else if (celms.endsWith("k")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"cē")); // "māk->mācēt"
+					else if (celms.endsWith("saka") || celms.endsWith("slaka") || celms.endsWith("slauka") || celms.endsWith("loka") || celms.endsWith("moka") )
+						varianti.add(new Variants(celms.substring(0,celms.length()-2)+"cī")); //sacīt
+					else if (celms.endsWith("māk") || celms.endsWith("tek") ) 
+						varianti.add(new Variants(celms.substring(0,celms.length()-1)+"cē")); //mācēt -> māku
 					else if (celms.endsWith("ļ")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"lē")); // "guļ"->"gulēt"
 					else if (celms.endsWith("a")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"ī"));
 					else varianti.add(new Variants(celms+"ē")); // if (celms.endsWith("i")) varianti.add(celms.substring(0,celms.length()-1)+"ē");
@@ -193,15 +218,6 @@ public abstract class Mijas {
 					if (celms.endsWith("k")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"c"));
 					if (celms.endsWith("g")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"dz"));
 					//FIXME - g-dz laikam vajag arī 2. un 8. un 9. mijai...
-					break;
-				case 12: // vajadzības izteiksme 3. konjugācijai atgriezeniskai
-					if (celms.startsWith("jā") & celms.length()>3) {
-						if (celms.endsWith("ā")) {
-							if (celms.endsWith("inā")) varianti.add(new Variants(celms.substring(2,celms.length())));
-							else varianti.add(new Variants(celms.substring(2,celms.length()-1)+"ī"));
-						} else if (celms.endsWith("a"))
-							varianti.add(new Variants(celms.substring(2,celms.length()-1)+"ē")); // bija bez -1 pie length. pielabots lai 'atcerēties' -> 'jāatceras' strādātu
-					}
 					break;
 				case 13: // īpašības vārdiem -āk- un vis-, ar š->s nominatīva formā (zaļš -> zaļāks
 					if (celms.endsWith("āk")) {
@@ -244,11 +260,13 @@ public abstract class Mijas {
 					if (syllables(celms) > 1 && (celms.endsWith("kāj") || celms.endsWith("māj"))) 
 						varianti.add(new Variants(celms));	
 					break;								
+				default:
+					System.err.printf("Invalid StemChange ID, stem '%s', stemchange %d\n", celms, mija);
 			}
 		} catch (StringIndexOutOfBoundsException e){
 			try {
 				new PrintStream(System.err, true, "UTF-8").printf(
-						"StringIndexOutOfBounds, celms '%s', mija %d\n", celms, mija);
+						"StringIndexOutOfBounds, celms '%s', mija %d\n", stem, stemChange);
 				e.printStackTrace();
 			} catch (UnsupportedEncodingException e1) {
 				e1.printStackTrace();
@@ -271,13 +289,38 @@ public abstract class Mijas {
  		return counter;
 	}
 
-	public static ArrayList<Variants> MijasLocīšanai (String celms, int mija, String trešāSakne, boolean pieliktVisPārākoPak, boolean properName) {
+	public static ArrayList<Variants> MijasLocīšanai (String stem, int stemChange, String trešāSakne, boolean pieliktVisPārākoPak, boolean properName) {
 		// procedūra, kas realizē visas celmu pārmaiņas - līdzskaņu mijas; darbības vārdu formas, utml.
 
 		ArrayList<Variants> varianti = new ArrayList<Variants>(1);
-		if (celms.trim().equals("")) return varianti;
+		if (stem.trim().equals("")) return varianti;
+		
+		int mija;
+		String celms;
 
 		try {
+			switch (stemChange) { //TODO - uz normālāku struktūru
+			case 4: // vajadzības izteiksmes jā-
+				celms = "jā" + stem;
+				mija = 0;
+				break;
+			case 5: // vajadzības izteiksme 3. konjugācijai
+				celms = "jā" + stem;
+				mija = 9;
+				break;
+			case 12: // vajadzības izteiksme 3. konjugācijai atgriezeniskai
+				celms = "jā" + stem;
+				mija = 8;
+				break;
+			case 19: // vajadzības_vēlējuma izteiksme 3. konjugācijai (jāmākot)
+				celms = "jā" + stem;
+				mija = 2;
+				break;
+			default:
+				celms = stem;
+				mija = stemChange;
+			}			
+			
 			switch (mija) {
 				case 0: varianti.add(new Variants(celms)); break;  // nav mijas
 
@@ -342,29 +385,20 @@ public abstract class Mijas {
 						varianti.add(new Variants(celms));
 					break;
 				case 2: //  dv. 3. konjugācijas tagadne, kas noņem celma pēdējo burtu
-					//varianti.add(new Variants(celms+"ā"))
-					//if (celms.endsWith("ā")) varianti.add(new Variants(celms.substring(0,celms.length()-1)));
-					if (celms.endsWith("cī")) varianti.add(new Variants(celms.substring(0,celms.length()-2)+"k", "Garā", "ā")); //sacīt
+					if (celms.endsWith("sacī") || celms.endsWith("slacī") || celms.endsWith("slaucī") || celms.endsWith("locī") || celms.endsWith("mocī")) 
+						varianti.add(new Variants(celms.substring(0,celms.length()-2)+"k", "Garā", "ā")); //sacīt
+					else if (celms.endsWith("gulē")) varianti.add(new Variants(celms.substring(0,celms.length()-2)+"ļ")); //gulēt -> guļu
+					else if (celms.endsWith("mācē") || celms.endsWith("tecē") ) 
+						varianti.add(new Variants(celms.substring(0,celms.length()-2)+"k")); //mācēt -> māku
 					else if (celms.endsWith("ī") || celms.endsWith("inā"))
 						varianti.add(new Variants(celms.substring(0,celms.length()-1), "Garā", "ā"));
 					else varianti.add(new Variants(celms.substring(0,celms.length()-1)));
-					//varianti.add(new Variants(celms+"ē"));
 					break;
 				case 3: // īpašības vārdiem pieliekam -āk- un vis-
 					varianti.add(new Variants(celms,AttributeNames.i_Degree,AttributeNames.v_Positive));
 					varianti.add(new Variants(celms + "āk",AttributeNames.i_Degree,AttributeNames.v_Comparative));
 					if (pieliktVisPārākoPak)
 						varianti.add(new Variants("vis" + celms + "āk",AttributeNames.i_Degree,AttributeNames.v_Superlative));
-					break;
-				case 4: // vajadzības izteiksmes jā-
-					varianti.add(new Variants("jā" + celms));
-					break;
-				case 5: // vajadzības izteiksme 3. konjugācijai
-					if (celms.endsWith("dā")) varianti.add(new Variants("jā" + celms.substring(0,celms.length()-1)));
-					else if (celms.endsWith("ā")) varianti.add(new Variants("jā" + celms.substring(0,celms.length()-1)+"a"));
-					else if (celms.endsWith("cī")) varianti.add(new Variants("jā" + celms.substring(0,celms.length()-2)+"ka")); // "saka"
-					else if (celms.endsWith("ī")) varianti.add(new Variants("jā" + celms.substring(0,celms.length()-1)+"a"));
-					else varianti.add(new Variants("jā" + celms.substring(0,celms.length()-1)));
 					break;
 				case 6: // 1. konjugācijas nākotne
 					if (celms.endsWith("s")) {
@@ -392,19 +426,26 @@ public abstract class Mijas {
 //impossible  imho					else if (celms.endsWith("ž")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"z"));
 					break;
 				case 8: // -ams -āms 3. konjugācijai
-
 					if (celms.endsWith("inā")) varianti.add(new Variants(celms, "Garā", "ā"));
-					else if (celms.endsWith("cī")) varianti.add(new Variants(celms.substring(0,celms.length()-2)+"kā")); //sacīt
+					if (celms.endsWith("sacī") || celms.endsWith("slacī") || celms.endsWith("slaucī") || celms.endsWith("locī") || celms.endsWith("mocī")) 
+						varianti.add(new Variants(celms.substring(0,celms.length()-2)+"kā", "Garā", "ā")); //sacīt
 					else if (celms.endsWith("ī")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"ā", "Garā", "ā"));
+					else if (celms.endsWith("mācē") || celms.endsWith("tecē") ) 
+						varianti.add(new Variants(celms.substring(0,celms.length()-2)+"ka")); //mācēt -> māk
+					else if (celms.endsWith("gulē")) varianti.add(new Variants(celms.substring(0,celms.length()-2)+"ļa")); //gulēt -> guļam
 					else if (celms.endsWith("ē")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"a"));
 					else varianti.add(new Variants(celms));
 					break;
 				case 9: // 3. konjugācija 3. pers. tagadne
 					if (celms.endsWith("dā")) varianti.add(new Variants(celms.substring(0,celms.length()-1)));
 					else if (celms.endsWith("ā")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"a"));
-					else if (celms.endsWith("cī")) varianti.add(new Variants(celms.substring(0,celms.length()-2)+"ka")); // "saka"
+					else if (celms.endsWith("sacī") || celms.endsWith("slacī") || celms.endsWith("slaucī") || celms.endsWith("locī") || celms.endsWith("mocī")) 
+						varianti.add(new Variants(celms.substring(0,celms.length()-2)+"ka")); // "saka"
 					else if (celms.endsWith("ī")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"a"));
-					else varianti.add(new Variants(celms.substring(0,celms.length()-1))); // if (celms.endsWith("i")) varianti.add(celms.substring(0,celms.length()-1)+"ē");
+					else if (celms.endsWith("mācē") || celms.endsWith("tecē") ) 
+						varianti.add(new Variants(celms.substring(0,celms.length()-2)+"k")); //mācēt -> māk
+					else if (celms.endsWith("gulē")) varianti.add(new Variants(celms.substring(0,celms.length()-2)+"ļ")); //gulēt -> guļ
+					else varianti.add(new Variants(celms.substring(0,celms.length()-1))); 
 					break;
 				case 10: // īpašības vārds -āk- un vis-, -i apstākļa formai
 					varianti.add(new Variants(celms,AttributeNames.i_Degree,AttributeNames.v_Positive));
@@ -417,12 +458,6 @@ public abstract class Mijas {
 					else if (celms.endsWith("dz")) varianti.add(new Variants(celms.substring(0,celms.length()-2)+"g"));
 					else varianti.add(new Variants(celms));
 					//FIXME - g-dz laikam vajag arī 2. un 8. un 9. mijai...
-					break;
-				case 12: // vajadzības izteiksme 3. konjugācijai atgriezeniskai
-					if (celms.endsWith("cī")) varianti.add(new Variants(celms.substring(0,celms.length()-2)+"kā", "Garā", "ā"));
-					else if (celms.endsWith("ī") || celms.endsWith("inā"))
-						varianti.add(new Variants("jā" + celms.substring(0,celms.length()-1)+"ā", "Garā", "ā"));
-					else varianti.add(new Variants("jā" + celms.substring(0,celms.length()-1)+"a"));
 					break;
 				case 13: // īpašības vārdiem -āk-, ar š->s nominatīva formā (zaļš -> zaļāks
 					varianti.add(new Variants(celms+"āk"));
@@ -454,11 +489,13 @@ public abstract class Mijas {
 					if (syllables(celms) > 1 && (celms.endsWith("kāj") || celms.endsWith("māj"))) 
 						varianti.add(new Variants(celms));		
 					break;								
+				default:
+					System.err.printf("Invalid StemChange ID, stem '%s', stemchange %d\n", celms, mija);
 			}
 		} catch (StringIndexOutOfBoundsException e){
 			try {
 				new PrintWriter(new OutputStreamWriter(System.err, "UTF-8")).printf(
-						"StringIndexOutOfBounds, celms '%s', mija %d\n", celms, mija);
+						"StringIndexOutOfBounds, celms '%s', mija %d\n", stem, stemChange);
 				e.printStackTrace();
 			} catch (UnsupportedEncodingException e1) {
 				e1.printStackTrace();

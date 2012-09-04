@@ -2854,7 +2854,7 @@
 		<Ending ID="1201" StemChange="0" Ending="sit" StemID="1" LemmaEnding="468">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Izteiksme="Īstenības" Persona="2" Laiks="Nākotne" Kārta="Darāmā"/>
 		</Ending>
-		<Ending ID="1204" StemChange="5" Ending="ot" StemID="1" LemmaEnding="468">
+		<Ending ID="1204" StemChange="19" Ending="ot" StemID="1" LemmaEnding="468">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Vajadzības" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Darāmā"/>
 		</Ending>
 	</Paradigm>
@@ -3268,7 +3268,7 @@
 		<Ending ID="1207" StemChange="0" Ending="sities" StemID="1" LemmaEnding="1008">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Izteiksme="Īstenības" Persona="2" Laiks="Nākotne" Kārta="Darāmā"/>
 		</Ending>
-		<Ending ID="1210" StemChange="12" Ending="oties" StemID="1" LemmaEnding="1008">
+		<Ending ID="1210" StemChange="19" Ending="oties" StemID="1" LemmaEnding="1008">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Vajadzības" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Darāmā"/>
 		</Ending>
 	</Paradigm>
