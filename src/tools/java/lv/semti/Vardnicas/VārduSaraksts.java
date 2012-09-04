@@ -36,9 +36,9 @@ public class VārduSaraksts {
 		for (Paradigm p : analizators.paradigms)
 			for (Lexeme l : p.lexemes) {
 				//if (p.getID() != 20 /*&& p.getID() != 17*/) continue;
-				if (p.getID() != 15 && p.getID() != 17) continue;
-				if (!l.getStem(0).endsWith("gulē")) continue;
-				//if (!l.getStem(0).endsWith("cā")) continue;
+				if (p.getID() != 17) continue;
+				if (!l.getStem(0).equalsIgnoreCase("vadī")) continue;
+				//if (!l.getStem(0).endsWith("dī")) continue;
 				
 				izeja.println(l.getValue(AttributeNames.i_Lemma));
 				ArrayList<Wordform> formas = analizators.generateInflections(l);

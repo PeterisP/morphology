@@ -1388,9 +1388,39 @@ public class MorphologyTest {
 		assertInflection(formas, testset, "guli");
 		testset.addAttribute(AttributeNames.i_EndingID, "474");
 		assertInflection(formas, testset, "guļ");
-		testset.addAttribute(AttributeNames.i_EndingID, "493");
+		testset.addAttribute(AttributeNames.i_EndingID, "494");
 		assertInflection(formas, testset, "guliet");
 		testset.addAttribute(AttributeNames.i_EndingID, "1204");
 		assertInflection(formas, testset, "jāguļot");
+
+		formas = locītājs.generateInflections("aizgulēties");
+		testset.addAttribute(AttributeNames.i_EndingID, "1009");
+		assertInflection(formas, testset, "aizguļos");
+		
+		formas = locītājs.generateInflections("vajadzēt");
+		testset.addAttribute(AttributeNames.i_EndingID, "469");
+		assertInflection(formas, testset, "vajagu");
+		testset.addAttribute(AttributeNames.i_EndingID, "472");
+		assertInflection(formas, testset, "vajagam");		
+		testset.addAttribute(AttributeNames.i_EndingID, "474");
+		assertInflection(formas, testset, "vajag");
+		testset.addAttribute(AttributeNames.i_EndingID, "487");
+		assertInflection(formas, testset, "jāvajag");
+		testset.addAttribute(AttributeNames.i_EndingID, "1204");
+		assertInflection(formas, testset, "jāvajagot");
+
+		formas = locītājs.generateInflections("mocīt");
+		testset.addAttribute(AttributeNames.i_EndingID, "493");
+		assertInflection(formas, testset, "moki");		
+
+		formas = locītājs.generateInflections("slodzīt");
+		testset.addAttribute(AttributeNames.i_EndingID, "469");
+		assertInflection(formas, testset, "slogu");
+		
+		
+		Word vārds = locītājs.analyze("gulošs");
+		assertTrue(vārds.isRecognized());		
+		vārds = locītājs.analyze("guļošs");
+		assertTrue(vārds.isRecognized());
 	}
 }
