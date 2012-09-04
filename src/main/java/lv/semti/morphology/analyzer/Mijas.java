@@ -167,12 +167,14 @@ public abstract class Mijas {
 					else if (celms.endsWith("t")) {
 						// tikai vārdiem 'mest' un 'cirst'. pārējiem visiem 2. personas tagadnei jābūt galā -i, piem. 'krīti', 'plūsti'
 						if (celms.endsWith("met") || celms.endsWith("cērt")) varianti.add(new Variants(celms));
+						else varianti.add(new Variants(celms.substring(0,celms.length()-1)+"š"));  // pūšu -> pūtis
 					}
 					else if (celms.endsWith("d")) {
 						//tikai attiecīgajiem vārdiem, pārējiem visiem 2. personas tagadnei jābūt galā -i, piem. 'pazūdi', 'atrodi'
 						if (celms.endsWith("dod") || celms.endsWith("ved") || celms.endsWith("ēd")) varianti.add(new Variants(celms)); 
 					}
 					else if (celms.endsWith("l")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"ļ"));
+					else if (celms.endsWith("s")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"š")); // elšu -> elsis
 					else if (celms.endsWith("m") || celms.endsWith("b") || celms.endsWith("p"))	varianti.add(new Variants(celms+"j"));
 					else if (celms.endsWith("c")) {
 						varianti.add(new Variants(celms.substring(0,celms.length()-1)+"k"));  // raku -> racis
@@ -402,7 +404,7 @@ public abstract class Mijas {
 							 || (celms.endsWith("ac") || celms.endsWith("akti") || celms.endsWith("aus") || celms.endsWith("as") ||
 							     celms.endsWith("bals") || celms.endsWith("brokast") || celms.endsWith("cēs") || celms.endsWith("dakt") ||
 							     celms.endsWith("debes") || celms.endsWith("dzelz") || celms.endsWith("kūt") || celms.endsWith("makst") ||
-							     celms.endsWith("pirt") || celms.endsWith("šalt") || celms.endsWith("takt") || celms.endsWith("ut") ||
+							     celms.endsWith("pirt") || celms.endsWith("šalt") || celms.endsWith("takt") || (celms.endsWith("ut") && !celms.endsWith("but"))||
 							     celms.endsWith("valst") || celms.endsWith("vēst") || celms.endsWith("zos") || celms.endsWith("žult") ) )
 						varianti.add(new Variants(celms));
 					break;
@@ -442,7 +444,7 @@ public abstract class Mijas {
 					else varianti.add(new Variants(celms));*/
 
 					if (celms.endsWith("š") && trešāSakne.endsWith("s")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"s"));
-					else if (celms.endsWith("š") && trešāSakne.endsWith("t")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"š"));
+					else if (celms.endsWith("š") && trešāSakne.endsWith("t")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"t"));
 					else if (celms.endsWith("ž")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"d"));
 					else if (celms.endsWith("ļ")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"l"));
 					else if (celms.endsWith("mj") || celms.endsWith("bj") || celms.endsWith("pj"))	varianti.add(new Variants(celms.substring(0,celms.length()-1)));

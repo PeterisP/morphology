@@ -1417,7 +1417,14 @@ public class MorphologyTest {
 		testset.addAttribute(AttributeNames.i_EndingID, "469");
 		assertInflection(formas, testset, "slogu");
 		
+		formas = locītājs.generateInflections("mesties");
+		testset.addAttribute(AttributeNames.i_EndingID, "1072");
+		assertInflection(formas, testset, "mešanās");
 		
+		formas = locītājs.generateInflections("pūsties");
+		testset.addAttribute(AttributeNames.i_EndingID, "1087");
+		assertInflection(formas, testset, "pūties");
+
 		Word vārds = locītājs.analyze("gulošs");
 		assertTrue(vārds.isRecognized());		
 		vārds = locītājs.analyze("guļošs");

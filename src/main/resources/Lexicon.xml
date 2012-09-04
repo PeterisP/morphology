@@ -2882,22 +2882,22 @@
 		<Ending ID="1071" StemChange="6" Ending="šoties" StemID="1" LemmaEnding="1061">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Atstāstījuma" Persona="Nepiemīt" Laiks="Nākotne" Kārta="Darāmā"/>
 		</Ending>
-		<Ending ID="1072" StemChange="0" Ending="šanās" StemID="1" LemmaEnding="1072">
+		<Ending ID="1072" StemChange="16" Ending="šanās" StemID="1" LemmaEnding="1072">
 			<Attributes Vārdšķira="Lietvārds" Skaitlis="Vienskaitlis" Deklinācija="Atgriezenisks" Dzimte="Sieviešu" Locījums="Nominatīvs"/>
 		</Ending>
-		<Ending ID="1073" StemChange="0" Ending="šanās" StemID="1" LemmaEnding="1072">
+		<Ending ID="1073" StemChange="16" Ending="šanās" StemID="1" LemmaEnding="1072">
 			<Attributes Vārdšķira="Lietvārds" Skaitlis="Vienskaitlis" Deklinācija="Atgriezenisks" Dzimte="Sieviešu" Locījums="Ģenitīvs"/>
 		</Ending>
-		<Ending ID="1074" StemChange="0" Ending="šanos" StemID="1" LemmaEnding="1072">
+		<Ending ID="1074" StemChange="16" Ending="šanos" StemID="1" LemmaEnding="1072">
 			<Attributes Vārdšķira="Lietvārds" Skaitlis="Vienskaitlis" Deklinācija="Atgriezenisks" Dzimte="Sieviešu" Locījums="Akuzatīvs"/>
 		</Ending>
-		<Ending ID="1075" StemChange="0" Ending="šanās" StemID="1" LemmaEnding="1072">
+		<Ending ID="1075" StemChange="16" Ending="šanās" StemID="1" LemmaEnding="1072">
 			<Attributes Vārdšķira="Lietvārds" Skaitlis="Daudzskaitlis" Deklinācija="Atgriezenisks" Dzimte="Sieviešu" Locījums="Nominatīvs"/>
 		</Ending>
-		<Ending ID="1076" StemChange="0" Ending="šanos" StemID="1" LemmaEnding="1072">
+		<Ending ID="1076" StemChange="16" Ending="šanos" StemID="1" LemmaEnding="1072">
 			<Attributes Vārdšķira="Lietvārds" Skaitlis="Daudzskaitlis" Deklinācija="Atgriezenisks" Dzimte="Sieviešu" Locījums="Ģenitīvs"/>
 		</Ending>
-		<Ending ID="1077" StemChange="0" Ending="šanās" StemID="1" LemmaEnding="1072">
+		<Ending ID="1077" StemChange="16" Ending="šanās" StemID="1" LemmaEnding="1072">
 			<Attributes Vārdšķira="Lietvārds" Skaitlis="Daudzskaitlis" Deklinācija="Atgriezenisks" Dzimte="Sieviešu" Locījums="Akuzatīvs"/>
 		</Ending>
 		<Ending ID="1078" StemChange="15" Ending="damies" StemID="3" LemmaEnding="1061">
