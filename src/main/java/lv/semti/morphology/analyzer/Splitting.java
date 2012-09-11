@@ -25,8 +25,6 @@ import java.util.LinkedList;
 public class Splitting {
 	// Vārdā, atdalītājā, atstarpē
 	private enum Status {IN_WORD, IN_DELIMITER, IN_SPACE, IN_EXCEPTION};
-	public static Trie automats=new Trie("dist/Exceptions.txt");
-	
 	
 	/**
 	 * Determine, if given string is a chunk delimiter.
@@ -141,10 +139,11 @@ public class Splitting {
 		return isSpace(String.valueOf(c));
 	}
 
-	public static LinkedList<Word> tokenize(Analyzer morphoAnalyzer, String chunk) {
-		
+	public static LinkedList<Word> tokenize(Analyzer morphoAnalyzer, String chunk) {		
 		LinkedList<Word> tokens = new LinkedList<Word>();
 		if (chunk == null) return tokens;
+		
+		Trie automats = morphoAnalyzer.automats;
 
 		// te tiek ciklā doti visi tekstā esošie vārdi uz morfoanalīzi.    
 	    int progress = 0;

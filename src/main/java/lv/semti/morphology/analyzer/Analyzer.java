@@ -15,6 +15,7 @@
  *******************************************************************************/
 package lv.semti.morphology.analyzer;
 
+import java.io.File;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -44,16 +45,55 @@ public class Analyzer extends Lexicon {
 	
 	private Cache<String, Word> wordCache = new Cache<String, Word>();
 
+	public Trie automats;
+		
 	public Analyzer () throws Exception {
 		super();
+
+		String exceptionName = "Exceptions.txt";
+		String path = new File(this.filename).getParent();
+		if (path != null) exceptionName = path + java.io.File.separatorChar + exceptionName;
+		try {
+			automats=new Trie(exceptionName);
+		} catch (Exception e) { 
+			System.err.append(String.format("A1\nLeksikona ceļš:%s\nFolderis:%s\nException ceļš:\n",this.filename,path,exceptionName));
+			e.printStackTrace();
+			automats = new Trie("");
+			System.err.println("Nesanāca ielādēt exceptionus");
+		}
 	}
     
 	public Analyzer (String lexiconFileName) throws Exception {
 		super(lexiconFileName);
+		
+		String exceptionName = "Exceptions.txt";
+		String path = new File(this.filename).getParent();
+		if (path != null) exceptionName = path + java.io.File.separatorChar + exceptionName;
+		try {
+			automats=new Trie(exceptionName);
+		} catch (Exception e) { 
+			System.err.append(String.format("A2\nLeksikona ceļš:%s\nFolderis:%s\nException ceļš:\n",this.filename,path,exceptionName));
+			e.printStackTrace();
+			automats = new Trie("");
+			System.err.println("Nesanāca ielādēt exceptionus");
+		}
 	}
 	
 	public Analyzer (InputStream lexiconStream) throws Exception {
 		super(lexiconStream);
+
+		String exceptionName = "Exceptions.txt";
+		String path = new File(this.filename).getParent();
+		if (path != null) exceptionName = path + java.io.File.separatorChar + exceptionName;
+
+		try {
+			automats=new Trie(exceptionName);
+		} catch (Exception e) { 
+			System.err.append(String.format("A3\nLeksikona ceļš:%s\nFolderis:%s\nException ceļš:\n",this.filename,path,exceptionName));
+			e.printStackTrace();
+			automats = new Trie("");
+			System.err.println("Nesanāca ielādēt exceptionus");
+		}
 	}
     
 	/* TODO - salikteņu minēšana jāuzaisa 
@@ -70,6 +110,11 @@ public class Analyzer extends Lexicon {
 	 */
 	public Analyzer(String lexiconFileName, boolean useAuxiliaryLexicons) throws Exception{
 		super(lexiconFileName, useAuxiliaryLexicons);
+
+		String exceptionName = "Exceptions.txt";
+		String path = new File(lexiconFileName).getParent();
+		if (path != null) exceptionName = path + java.io.File.separatorChar + exceptionName;
+		automats=new Trie(exceptionName);		
 	}
 
 	public void defaultSettings(){

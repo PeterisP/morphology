@@ -12,30 +12,22 @@ public class Trie {
 	
 	
 	
-	public Trie(String filename) {
+	public Trie(String filename) throws IOException {
 		node root,tmp;
 		branchList=new ArrayList<node>();
 		//izveido exception Trie
 		root=new node();
 
-		try
-		{
-			FileInputStream fstream = new FileInputStream(filename);
-	
-			InputStreamReader in = new InputStreamReader(fstream,"UTF-8");
-			BufferedReader br = new BufferedReader(in);
-			String strLine;
-			
-			while ((strLine = br.readLine()) != null)
-			{
-				this.add(strLine, root);
-			}
-		}
-		catch(Exception e)
-		{
-			e.printStackTrace();
-		}
+		FileInputStream fstream = new FileInputStream(filename);
+
+		InputStreamReader in = new InputStreamReader(fstream,"UTF-8");
+		BufferedReader br = new BufferedReader(in);
+		String strLine;
 		
+		while ((strLine = br.readLine()) != null)
+		{
+			this.add(strLine, root);
+		}
 		//pievieno Exception trie brach listam
 		root=root.firstChild;
 		branchList.add(root);

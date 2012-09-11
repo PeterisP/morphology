@@ -153,12 +153,12 @@ public class MorphoEvaluate {
 					else if (found_match) match++; 
 					else {
 						wrong++;
-						//izeja.print(e.wordform+"\nDer:\t"+e.lemma+"\t"+e.tag+"\n"+output);
+						izeja.print(e.wordform+"\nDer:\t"+e.lemma+"\t"+e.tag+"\n"+output);
 					}
 				}	
 			} else {
 				not_recognized++;
-				izeja.print(e.wordform+"\t"+e.lemma+"\t"+e.tag+"\n");
+				//izeja.print(e.wordform+"\t"+e.lemma+"\t"+e.tag+"\n");
 			}						
 		}
 		
@@ -175,7 +175,7 @@ public class MorphoEvaluate {
 		System.out.printf("\tNekas neder:\t%4.1f%%\t%d\n", wrong*100.0/etaloni.size(), wrong);
 		System.out.printf("\tNeatpazīti:\t%4.1f%%\t%d\n", not_recognized*100.0/etaloni.size(), not_recognized);
 		System.out.printf("\tPareizs POS:\t%4.1f%%\t%d\n", pos_correct*100.0/etaloni.size(), pos_correct);		
-		System.out.printf("\nEtalons: Pareizi 65%%+,  Neatpazīti zem 4%%\n");
+		System.out.printf("\nEtalons: Pareizi 85.9%%, Der 87.6%%, Nav vārdnīcā 5.6%%, Neatpazīti zem 2%%\n");
 		
 		System.out.printf("\nStatistika:\n");
 		System.out.printf("\tNav vārdnīcā:\t\t%4.1f%%\t%d\n", oov*100.0/etaloni.size(), oov);

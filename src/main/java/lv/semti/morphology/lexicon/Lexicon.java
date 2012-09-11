@@ -46,7 +46,7 @@ public class Lexicon {
 		System.getProperty("lv.semti.morphology.lexicon.path"),
 		".", "..", "../..", "resources", "src/main/resources", "dist"};
 
-	private String filename;
+	protected String filename;
 	private String revision;
 	private String licence;
 	
