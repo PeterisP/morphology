@@ -1430,4 +1430,32 @@ public class MorphologyTest {
 		vārds = locītājs.analyze("guļošs");
 		assertTrue(vārds.isRecognized());
 	}
+	
+	
+	@Test
+	public void gunta_20120911() {
+		//korpusā vārdi "ness" un "vess" ir marķēti kā verbu "nest" un "vest" formas
+
+		Word vārds = locītājs.analyze("nest");
+		assertTrue(vārds.isRecognized());
+
+		vārds = locītājs.analyze("nesīs");
+		assertTrue(vārds.isRecognized());
+		
+		vārds = locītājs.analyze("vest");
+		assertTrue(vārds.isRecognized());
+		
+		vārds = locītājs.analyze("vedīs");
+		assertTrue(vārds.isRecognized());
+		
+		vārds = locītājs.analyze("vess");
+		assertFalse(vārds.isRecognized());
+		
+		vārds = locītājs.analyze("vesīs");
+		//assertFalse(vārds.isRecognized()); FIXME - tur palīdzētu mijām čekošana, vai uzminētais sakrīt ar izlocīto; vai arī post-processing check par 3o sakni 6. mijai.... 
+		
+		vārds = locītājs.analyze("ness");
+		assertFalse(vārds.isRecognized());
+	}
+
 }

@@ -30,14 +30,14 @@ public class VārduSaraksts {
 	public static void main(String[] args) throws Exception {
 		Analyzer analizators = new Analyzer("dist/Lexicon.xml",false);
 		
-		//PrintWriter izeja = new PrintWriter(new PrintStream(System.out, true, "UTF8"));
-		BufferedWriter izeja = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("vaardi.txt"), "UTF-8"));
+		PrintWriter izeja = new PrintWriter(new PrintStream(System.out, true, "UTF8"));
+		//BufferedWriter izeja = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("vaardi.txt"), "UTF-8"));
 		
 		for (Paradigm p : analizators.paradigms)
 			for (Lexeme l : p.lexemes) {
 				//if (p.getID() != 20 /*&& p.getID() != 17*/) continue;
 				//if (p.getID() != 15) continue;
-				//if (!l.getStem(0).equalsIgnoreCase("iemācī")) continue;
+				if (!l.getStem(0).equalsIgnoreCase("pilnmēnes")) continue;
 				//if (!l.getStem(1).endsWith("š")) continue;
 				
 				//izeja.append(l.getValue(AttributeNames.i_Lemma)+"\n");
@@ -45,10 +45,10 @@ public class VārduSaraksts {
 				for (Wordform forma : formas) {
 					forma.removeNonlexicalAttributes();
 					forma.removeAttribute(AttributeNames.i_LexemeID);
-					forma.removeAttribute(AttributeNames.i_EndingID);
+					//forma.removeAttribute(AttributeNames.i_EndingID);
 					forma.removeAttribute(AttributeNames.i_ParadigmID);
 					forma.removeAttribute(AttributeNames.i_SourceLemma);
-					forma.removeAttribute(AttributeNames.i_Mija);
+					//forma.removeAttribute(AttributeNames.i_Mija);
 					izeja.append(String.format("%s\t%s\n",forma.getToken(),forma.toJSON()));
 				}
 				//break;
