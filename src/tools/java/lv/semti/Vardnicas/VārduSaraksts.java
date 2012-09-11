@@ -36,15 +36,15 @@ public class VārduSaraksts {
 		for (Paradigm p : analizators.paradigms)
 			for (Lexeme l : p.lexemes) {
 				//if (p.getID() != 20 /*&& p.getID() != 17*/) continue;
-				//if (p.getID() != 15) continue;
-				if (!l.getStem(0).equalsIgnoreCase("pilnmēnes")) continue;
-				//if (!l.getStem(1).endsWith("š")) continue;
+				//if (p.getID() != 1) continue;
+				//if (!l.getStem(0).equalsIgnoreCase("pilnmēnes")) continue;
+				if (!l.getStem(0).contains("o")) continue;
 				
 				//izeja.append(l.getValue(AttributeNames.i_Lemma)+"\n");
 				ArrayList<Wordform> formas = analizators.generateInflections(l);
 				for (Wordform forma : formas) {
 					forma.removeNonlexicalAttributes();
-					forma.removeAttribute(AttributeNames.i_LexemeID);
+					//forma.removeAttribute(AttributeNames.i_LexemeID);
 					//forma.removeAttribute(AttributeNames.i_EndingID);
 					forma.removeAttribute(AttributeNames.i_ParadigmID);
 					forma.removeAttribute(AttributeNames.i_SourceLemma);
