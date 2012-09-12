@@ -36,11 +36,12 @@ public class VārduSaraksts {
 		for (Paradigm p : analizators.paradigms)
 			for (Lexeme l : p.lexemes) {
 				//if (p.getID() != 20 /*&& p.getID() != 17*/) continue;
-				//if (p.getID() != 1) continue;
+				if (p.getID() != 15) continue;
 				//if (!l.getStem(0).equalsIgnoreCase("pilnmēnes")) continue;
-				if (!l.getStem(0).contains("o")) continue;
+				if (!l.getStem(1).endsWith("š")) continue;
 				
 				//izeja.append(l.getValue(AttributeNames.i_Lemma)+"\n");
+				izeja.append(l.getStem(1)+"\n");
 				ArrayList<Wordform> formas = analizators.generateInflections(l);
 				for (Wordform forma : formas) {
 					forma.removeNonlexicalAttributes();
@@ -49,7 +50,7 @@ public class VārduSaraksts {
 					forma.removeAttribute(AttributeNames.i_ParadigmID);
 					forma.removeAttribute(AttributeNames.i_SourceLemma);
 					//forma.removeAttribute(AttributeNames.i_Mija);
-					izeja.append(String.format("%s\t%s\n",forma.getToken(),forma.toJSON()));
+					//izeja.append(String.format("%s\t%s\n",forma.getToken(),forma.toJSON()));
 				}
 				//break;
 			}

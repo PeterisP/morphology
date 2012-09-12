@@ -157,17 +157,16 @@ public abstract class Mijas {
 					else if (!celms.endsWith("d") && !celms.endsWith("t") && !celms.endsWith("s") && !celms.endsWith("z")) varianti.add(new Variants(celms));
 					break;
 				case 7: // 1. konjugācijas 2. personas tagadne
-					if (celms.endsWith("pi") || celms.endsWith("di") || celms.endsWith("ti"))
-						varianti.add(new Variants(celms.substring(0,celms.length()-1)));
-					
 					if (celms.endsWith("s")) {
-						varianti.add(new Variants(celms.substring(0,celms.length()-1)+"š"));   //? gribētos piemēru
+						varianti.add(new Variants(celms.substring(0,celms.length()-1)+"š"));   //pievēršu -> pievērs
 						varianti.add(new Variants(celms));   //  atnest -> atnes
 					}
+					else if (celms.endsWith("odi") || celms.endsWith("ūdi") || celms.endsWith("opi") || celms.endsWith("ūpi") || celms.endsWith("oti") || celms.endsWith("ūti") || celms.endsWith("īti") || celms.endsWith("sti")) 
+						varianti.add(new Variants(celms.substring(0,celms.length()-1)));
 					else if (celms.endsWith("t")) {
 						// tikai vārdiem 'mest' un 'cirst'. pārējiem visiem 2. personas tagadnei jābūt galā -i, piem. 'krīti', 'plūsti'
 						if (celms.endsWith("met") || celms.endsWith("cērt")) varianti.add(new Variants(celms));
-						else varianti.add(new Variants(celms.substring(0,celms.length()-1)+"š"));  // pūšu -> pūtis
+						else varianti.add(new Variants(celms.substring(0,celms.length()-1)+"š"));  // pūšu -> pūt, ciešu -> ciet
 					}
 					else if (celms.endsWith("d")) {
 						//tikai attiecīgajiem vārdiem, pārējiem visiem 2. personas tagadnei jābūt galā -i, piem. 'pazūdi', 'atrodi'
@@ -439,18 +438,17 @@ public abstract class Mijas {
 					else varianti.add(new Variants(celms));
 					break;
 				case 7: // 1. konjugācijas 2. personas tagadne
-					/*if (celms.endsWith("pi") || celms.endsWith("di") || celms.endsWith("ti"))
-						varianti.add(new Variants(celms.substring(0,celms.length()-1)));
-					else varianti.add(new Variants(celms));*/
-
 					if (celms.endsWith("š") && trešāSakne.endsWith("s")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"s"));
 					else if (celms.endsWith("š") && trešāSakne.endsWith("t")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"t"));
+					else if (celms.endsWith("od") || celms.endsWith("ūd") || celms.endsWith("op") || celms.endsWith("ūp") || celms.endsWith("ot") || celms.endsWith("ūt") || celms.endsWith("īt") || celms.endsWith("st")) 
+						varianti.add(new Variants(celms+"i"));
 					else if (celms.endsWith("ž")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"d"));
 					else if (celms.endsWith("ļ")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"l"));
 					else if (celms.endsWith("mj") || celms.endsWith("bj") || celms.endsWith("pj"))	varianti.add(new Variants(celms.substring(0,celms.length()-1)));
 					else if (celms.endsWith("k")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"c"));
 					else if (celms.endsWith("g")) varianti.add(new Variants(celms.substring(0,celms.length()-2)+"dz"));
 //impossible  imho					else if (celms.endsWith("ž")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"z"));
+					else varianti.add(new Variants(celms));
 					break;
 				case 8: // -ams -āms 3. konjugācijai
 					if (celms.endsWith("inā")) varianti.add(new Variants(celms, "Garā", "ā"));

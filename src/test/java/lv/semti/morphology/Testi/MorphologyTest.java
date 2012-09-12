@@ -1458,4 +1458,30 @@ public class MorphologyTest {
 		assertFalse(vārds.isRecognized());
 	}
 
+	
+	@Test
+	public void pazūdi() {
+		// 2012.09.12 konstatēts ka mija pareizi neloka šo formu
+		Word vārds = locītājs.analyze("pazūdi");		
+		assertTrue(vārds.isRecognized());
+		
+		boolean irPareizā = false;
+		for (Wordform vārdforma : vārds.wordforms) {
+			if (vārdforma.getValue(AttributeNames.i_EndingID).equals("790")) {
+				irPareizā = true;			
+			}
+		}
+		assertEquals(true, irPareizā);
+		
+		List<Wordform> formas = locītājs.generateInflections("pazust");
+
+		AttributeValues testset = new AttributeValues();		
+		testset.addAttribute(AttributeNames.i_EndingID, "790");
+		assertInflection(formas, testset, "pazūdi");
+		
+		formas = locītājs.generateInflections("atrast");
+		testset.addAttribute(AttributeNames.i_EndingID, "790");
+		assertInflection(formas, testset, "atrodi");		
+	}
+	
 }
