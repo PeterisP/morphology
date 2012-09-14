@@ -28,7 +28,7 @@ import lv.semti.morphology.lexicon.*;
 public class VārduSaraksts {
 
 	public static void main(String[] args) throws Exception {
-		Analyzer analizators = new Analyzer("dist/Lexicon.xml",false);
+		Analyzer analizators = new Analyzer("dist/Lexicon.xml",true);
 		
 		PrintWriter izeja = new PrintWriter(new PrintStream(System.out, true, "UTF8"));
 		//BufferedWriter izeja = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("vaardi.txt"), "UTF-8"));
@@ -36,12 +36,12 @@ public class VārduSaraksts {
 		for (Paradigm p : analizators.paradigms)
 			for (Lexeme l : p.lexemes) {
 				//if (p.getID() != 20 /*&& p.getID() != 17*/) continue;
-				if (p.getID() != 15) continue;
+				if (p.getID() != 1) continue;
 				//if (!l.getStem(0).equalsIgnoreCase("pilnmēnes")) continue;
-				if (!l.getStem(1).endsWith("š")) continue;
+				if (!l.getStem(0).endsWith("i")) continue;
 				
-				//izeja.append(l.getValue(AttributeNames.i_Lemma)+"\n");
-				izeja.append(l.getStem(1)+"\n");
+				izeja.append(l.getValue(AttributeNames.i_Lemma)+"\n");
+				//izeja.append(l.getStem(1)+"\n");
 				ArrayList<Wordform> formas = analizators.generateInflections(l);
 				for (Wordform forma : formas) {
 					forma.removeNonlexicalAttributes();

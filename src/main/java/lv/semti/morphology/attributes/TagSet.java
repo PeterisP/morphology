@@ -71,7 +71,11 @@ public class TagSet {
 			try {
 				ref = new TagSet();
 			} catch (Exception e) {
-				e.printStackTrace();
+				try {
+					ref = new TagSet("TagSet.xml");
+				} catch (Exception e2) {
+					e.printStackTrace();
+				}
 			} 
 		}
 		return ref;
@@ -115,11 +119,12 @@ public class TagSet {
 	}
 
 	public Object[] getAllowedValues(String attributeName, String language) {
-		LinkedList<AttributeValue> result = new LinkedList<AttributeValue>();
+		LinkedList<String> result = new LinkedList<String>();
 		LinkedList<Attribute> attrs = getAttribute(attributeName, language); 
 		for (Attribute a : attrs) {
-			result.addAll( a.getAllowedValues(language) );	
-			//FIXME - jāizņem dublikāti
+			for (AttributeValue av : a.getAllowedValues(language)) {
+				if (!result.contains(av.value)) result.add(av.value);
+			}
 		}
 		return result.toArray();
 	}

@@ -12278,6 +12278,12 @@
     <Lexeme ID="28259" Stem1="apakš">
       <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="apakš"/>
     </Lexeme>
+    <Lexeme ID="50739" Stem1="priekš">
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="apakš"/>
+    </Lexeme>
+    <Lexeme ID="50740" Stem1="priekš">
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="apakš"/>
+    </Lexeme>    
     <Lexeme ID="28260" Stem1="pēc">
       <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="pēc"/>
     </Lexeme>
