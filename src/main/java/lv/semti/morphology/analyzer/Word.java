@@ -235,33 +235,30 @@ public class Word implements Cloneable{
 	public String toJSONsingle(Statistics statistics) {
 		if (isRecognized()) {
 			/* šis ir tad, ja vajag tikai vienu - ticamāko formu. tā jau varētu atgriezt visu sarakstu. */
-			Wordform maxwf = wordforms.get(0);
-			double maxticamība = -1;
-			for (Wordform wf : wordforms) {  // Paskatamies visus atrastos variantus un ņemam statistiski ticamāko
-				//tag += String.format("%s\t%d\n", wf.getDescription(), MorphoServer.statistics.getTicamība(wf));
-				if (statistics.getEstimate(wf) > maxticamība) {
-					maxticamība = statistics.getEstimate(wf);
-					maxwf = wf;
-				}
-			}
+			Wordform maxwf = getBestWordform(statistics);
 			//return maxwf.toJSON(); TODO - varbūt arī šo te vajag atgriezt
 			return String.format("{\"Vārds\":\"%s\",\"Marķējums\":\"%s\",\"Pamatforma\":\"%s\"}", JSONValue.escape(maxwf.getToken()), JSONValue.escape(maxwf.getTag()), JSONValue.escape(maxwf.getValue(AttributeNames.i_Lemma)));
 		} else 
 			return String.format("{\"Vārds\":\"%s\",\"Marķējums\":\"-\",\"Pamatforma\":\"%s\"}", JSONValue.escape(getToken()), JSONValue.escape(getToken()));
 	}
 
+	public Wordform getBestWordform(Statistics statistics) {
+		if (wordforms.size() == 0) return null;
+		Wordform maxwf = wordforms.get(0);
+		double maxticamība = -1;
+		for (Wordform wf : wordforms) {  // Paskatamies visus atrastos variantus un ņemam statistiski ticamāko
+			//tag += String.format("%s\t%d\n", wf.getDescription(), MorphoServer.statistics.getTicamība(wf));
+			if (statistics.getEstimate(wf) > maxticamība) {
+				maxticamība = statistics.getEstimate(wf);
+				maxwf = wf;
+			}
+		}
+		return maxwf;
+	}
+
 	public String toTabSepsingle(Statistics statistics) { // Čakarīgs formāts haskell-pipe-export ātrdarbībai
 		if (isRecognized()) {
-			/* šis ir tad, ja vajag tikai vienu - ticamāko formu. tā jau varētu atgriezt visu sarakstu. */
-			Wordform maxwf = wordforms.get(0);
-			double maxticamība = -1;
-			for (Wordform wf : wordforms) {  // Paskatamies visus atrastos variantus un ņemam statistiski ticamāko
-				//tag += String.format("%s\t%d\n", wf.getDescription(), MorphoServer.statistics.getTicamība(wf));
-				if (statistics.getEstimate(wf) > maxticamība) {
-					maxticamība = statistics.getEstimate(wf);
-					maxwf = wf;
-				}
-			}
+			Wordform maxwf = getBestWordform(statistics);
 			//return maxwf.toJSON(); TODO - varbūt arī šo te vajag atgriezt
 			return String.format("%s\t%s\t%s", maxwf.getToken(), maxwf.getTag(), maxwf.getValue(AttributeNames.i_Lemma));
 		} else 
