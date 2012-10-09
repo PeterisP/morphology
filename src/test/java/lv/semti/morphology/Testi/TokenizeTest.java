@@ -418,6 +418,7 @@ public class TokenizeTest {
 		assertEquals(2, tokens.size());
 	}
 
+	@Test
 	public void Pulkstenis()
 	{
 		LinkedList<Word> tokens;
@@ -440,4 +441,18 @@ public class TokenizeTest {
 		assertEquals(3, tokens.size());
 	}
 	
+	@Test
+	public void alacarte(){
+		LinkedList<Word> tokens = Splitting.tokenize(locītājs, "a la");
+		assertEquals(2, tokens.size());
+		assertEquals("a", tokens.get(0).getToken());
+		assertEquals("la", tokens.get(1).getToken());
+		
+		tokens = Splitting.tokenize(locītājs, "Lampiņa a la art deco ar plastmasas kupolu.");
+		assertEquals(9, tokens.size());
+		assertEquals("a", tokens.get(1).getToken());
+		assertEquals("la", tokens.get(2).getToken());
+		assertEquals("art", tokens.get(3).getToken());
+	}
 }
+ 
