@@ -433,6 +433,7 @@ public class Lexicon {
 		ending.getParadigm().addLexeme(rezults);
 
 		rezults.addAttribute("Avots", source);
+		clearCache();
 		return rezults;
 	}
 
@@ -477,4 +478,9 @@ public class Lexicon {
 		}
 		return result;
 	}
+	
+	/**
+	 * Clears cache, if any.
+	 */
+	public void clearCache () {} 
 }
