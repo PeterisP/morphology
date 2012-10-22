@@ -90,7 +90,10 @@ public class Word implements Cloneable{
 			kopija.token = this.token;
 			kopija.wordforms = new ArrayList<Wordform>();
 			for (Wordform vārdforma : wordforms) {
-				kopija.wordforms.add((Wordform) vārdforma.clone());
+				Wordform klons = (Wordform) vārdforma.clone();
+				kopija.wordforms.add(klons);
+				if (this.getCorrectWordform() == vārdforma)
+					kopija.setCorrectWordform(klons);
 			}
 			return kopija;
         } catch (CloneNotSupportedException e) {
