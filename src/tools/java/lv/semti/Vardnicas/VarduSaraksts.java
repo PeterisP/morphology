@@ -25,7 +25,7 @@ import lv.semti.morphology.analyzer.*;
 import lv.semti.morphology.attributes.AttributeNames;
 import lv.semti.morphology.lexicon.*;
 
-public class VārduSaraksts {
+public class VarduSaraksts {
 
 	public static void main(String[] args) throws Exception {
 		Analyzer analizators = new Analyzer("dist/Lexicon.xml",true);
