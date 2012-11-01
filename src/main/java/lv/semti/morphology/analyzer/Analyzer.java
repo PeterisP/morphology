@@ -332,9 +332,17 @@ public class Analyzer extends Lexicon {
 		Word rezultāts = new Word(word);
 		if (word.contains(" ")) return rezultāts;
 		
+		boolean vajadzība = false;
+		if (word.startsWith("jā")) {
+			vajadzība = true;
+			word = word.substring(2);
+		}
+		
 		for (String priedēklis : prefixes)
 			if (word.startsWith(priedēklis)) {
-				Word bezpriedēkļa = analyzeLowercase(word.substring(priedēklis.length()), false);
+				String cut_word = word.substring(priedēklis.length());
+				if (vajadzība) cut_word = "jā" + cut_word;
+				Word bezpriedēkļa = analyzeLowercase(cut_word, false);
 				for (Wordform variants : bezpriedēkļa.wordforms)
 					if (variants.getEnding() != null && variants.getEnding().getParadigm() != null && variants.getEnding().getParadigm().getValue(AttributeNames.i_Konjugaacija) != null) { // Tikai no verbiem atvasinātās klases 
 						variants.setToken(word);

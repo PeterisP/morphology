@@ -1483,5 +1483,27 @@ public class MorphologyTest {
 		testset.addAttribute(AttributeNames.i_EndingID, "790");
 		assertInflection(formas, testset, "atrodi");		
 	}
-	
+
+	@Test
+	public void vajadzības_minēšana() {
+		locītājs.enablePrefixes = true;
+		
+		//Priedēkļu atvasināšana nestrādā, ja ir vajadzības izteiksme
+		
+		Word vārds = locītājs.analyze("rakt");
+		assertTrue(vārds.isRecognized());	
+		assertEquals("rakt", vārds.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+		
+		vārds = locītājs.analyze("aizrakt");
+		assertTrue(vārds.isRecognized());	
+		assertEquals("aizrakt", vārds.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+		
+		vārds = locītājs.analyze("jārok");
+		assertTrue(vārds.isRecognized());	
+		assertEquals("rakt", vārds.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+		
+		vārds = locītājs.analyze("jāaizrok");
+		assertTrue(vārds.isRecognized());	
+		assertEquals("aizrakt", vārds.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+	}
 }
