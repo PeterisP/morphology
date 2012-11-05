@@ -159,7 +159,7 @@ public class TagSet {
 			return values;
 		}
 		String pos = av_pos.value;
-		if (pos.equalsIgnoreCase(AttributeNames.v_Verb) && tag.charAt(3) == 'p') {
+		if (pos.equalsIgnoreCase(AttributeNames.v_Verb) && tag.length() > 3 && tag.charAt(3) == 'p') {
 			pos = AttributeNames.v_Participle;
 		}
 		postag.addValue(values, tag.charAt(0));
@@ -167,7 +167,7 @@ public class TagSet {
 		for (Attribute attribute : attributes) 
 			if (attribute instanceof FixedAttribute) {
 				FixedAttribute fattribute = (FixedAttribute) attribute;
-				if (fattribute.matchPos(pos)) 
+				if (fattribute.matchPos(pos) && fattribute.markupPos < tag.length()) 
 					fattribute.addValue(values, tag.charAt(fattribute.markupPos));
 			}
 		
@@ -182,6 +182,7 @@ public class TagSet {
 		if (postag == null) return "-"; //FIXME - neesmu droshs ka "-" ir pareizaakais variants
 		String result = postag.markValue(values, "");
 		String pos = values.getValue(AttributeNames.i_PartOfSpeech);
+		if (pos == null) return "-"; //FIXME - neesmu droshs ka "-" ir pareizaakais variants
 		if (pos.equalsIgnoreCase(AttributeNames.v_Verb) && values.isMatchingStrong(AttributeNames.i_Izteiksme, AttributeNames.v_Participle)) {
 			pos = AttributeNames.v_Participle;
 		}

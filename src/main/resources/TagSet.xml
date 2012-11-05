@@ -218,7 +218,7 @@
 	<Value LV="Nenoteiktie" Tag="i"/>
 	<Value LV="Jautājamie" Tag="q"/>
 	<Value LV="Attieksmes" Tag="r"/>
-	<Value LV="Noteiktie" Tag="d"/>
+	<Value LV="Noteiktie" Tag="g"/>
 </Attribute>
 <Attribute LV="Persona" PartOfSpeech="Vietniekvārds" MarkupPos="2">
 	<Value LV="1" Tag="1"/>
@@ -243,7 +243,11 @@
 	<Value LV="Akuzatīvs" Tag="a"/>
 	<Value LV="Lokatīvs" Tag="l"/>
 </Attribute>
-<Attribute LV="Anafora" PartOfSpeech="Vietniekvārds" MarkupPos="6">
+<Attribute LV="Noliegums" PartOfSpeech="Vietniekvārds" MarkupPos="6">
+	<Value LV="Jā" Tag="y"/>
+	<Value LV="Nē" Tag="n"/>
+</Attribute>
+<Attribute LV="Anafora" PartOfSpeech="Vietniekvārds" MarkupPos="7">
 	<Value LV="Aizstāj adjektīvu" Tag="a"/>
 	<Value LV="Aizstāj substantīvu" Tag="s"/>
 	<Value LV="Nepiemīt" Tag="n"/>

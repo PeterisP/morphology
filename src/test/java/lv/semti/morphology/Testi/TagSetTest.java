@@ -23,8 +23,12 @@ import java.io.OutputStreamWriter;
 import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
+import java.util.List;
 
+import lv.semti.morphology.analyzer.MarkupConverter;
 import lv.semti.morphology.attributes.*;
 import lv.semti.morphology.lexicon.*;
 import static org.junit.Assert.*;
@@ -58,20 +62,22 @@ public class TagSetTest {
 		TagSet tags = TagSet.getTagSet();
 		PrintWriter izeja = new PrintWriter(new OutputStreamWriter(System.out, "UTF-8"));
 		
+		List<String> testcases = Arrays.asList("sppdn","vmnifi30an","zc");
+		
 		Lexicon lexicon = null;
 		try {
-			lexicon = new Lexicon("dist/Lexicon.xml");
-/*			
-			tags.fromKamolsMarkup("ncmsn2").describe(izeja);			
-			izeja.println();
-			izeja.println(tags.toKamolsMarkup(tags.fromKamolsMarkup("ncmsn2")));
-			izeja.println();
+			//lexicon = new Lexicon("dist/Lexicon.xml");
+			
+			for (String testcase : testcases) {
+				String result = MarkupConverter.toKamolsMarkup(MarkupConverter.fromKamolsMarkup(testcase));
+				if (!testcase.equalsIgnoreCase(result)) {
+					tags.fromKamolsMarkup(testcase).describe(izeja);			
+					izeja.println();
+					izeja.printf("%s\n%s\n",testcase,result);
+					izeja.println();					
+				}
+			}
 
-			tags.fromKamolsMarkup("vmnpdmsnasn").describe(izeja);
-			izeja.println();
-			izeja.println(tags.toKamolsMarkup(tags.fromKamolsMarkup("vmnpdmsnasn")));
-			izeja.println();
-*/
 			izeja.flush();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -118,8 +124,8 @@ public class TagSetTest {
 		Etalons(String rinda) {
 			String[] parse = rinda.split("\t");
 			wordform = parse[0];
-			lemma = parse[1];
-			tag = parse[2];
+			tag = parse[1];
+			lemma = parse[2];			
 		}
 	}
 	
