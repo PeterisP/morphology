@@ -517,7 +517,8 @@ public abstract class Mijas {
 						varianti.add(new Variants(celms));
 					break;								
 				case 18: // garā sieviešu dzimtes vokatīva forma "laura!" "margrieta!"
-					if (syllables(celms) < 2) // NB! te ir < 2 bet pie atpazīšanas <= 2 - ar 2 zilbēm pagaidām atpazīst abus un ģenerē vienu 
+					if (syllables(celms) < 2 || // NB! te ir < 2 bet pie atpazīšanas <= 2 - ar 2 zilbēm pagaidām atpazīst abus un ģenerē vienu
+						!(celms.endsWith("ij") || celms.endsWith("īn") || celms.endsWith("īt") || celms.endsWith("ān") || celms.endsWith("iņ") || celms.endsWith("ēn") || celms.endsWith("niec") || celms.endsWith("āj")) )	
 						varianti.add(new Variants(celms));
 					if (syllables(celms) > 1 && (celms.endsWith("kāj") || celms.endsWith("māj"))) 
 						varianti.add(new Variants(celms));		

@@ -52,11 +52,27 @@ public class MorphologyTest {
 		for (Wordform wf : forms) {
 			if (wf.isMatchingWeak(testset)) {
 				assertEquals(validForm, wf.getToken());
-				found = true;				
+				found = true;
+				break;
 			}
 		}
 		assertTrue(found);		
 	}
+
+	private void describe(List<Wordform> formas) {
+		PrintWriter izeja;
+		try {
+			izeja = new PrintWriter(new OutputStreamWriter(System.out, "UTF-8"));
+			for (Wordform forma : formas)  {
+				forma.describe(izeja);
+				izeja.println();
+			}
+			izeja.flush();
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}	
 	
 	@BeforeClass
 	public static void setUpBeforeClass() {
@@ -1139,7 +1155,7 @@ public class MorphologyTest {
 		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "", "kristīnīt"); 
 
 		formas = locītājs.generateInflections("Margrieta");
-		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "", "margriet"); // principā der abi, ģenerēt tikai vienu
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "", "margrieta"); // principā der gan viens, gan otrs, ģenerē arī abus, bet 'margrieta' ir pirmais
 	}
 	
 	@Test
@@ -1270,6 +1286,18 @@ public class MorphologyTest {
 		
 		formas = locītājs.generateInflections("Garkāje");
 		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "", "garkāje");
+		
+		formas = locītājs.generateInflections("Zeidmane");
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "", "zeidmane");
+		
+		formas = locītājs.generateInflections("Kreice");
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "", "kreice");
+		
+		formas = locītājs.generateInflections("Kreija");
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "", "kreija");
+		
+		formas = locītājs.generateInflections("Kreitenberga");
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "", "kreitenberga");
 		
 		//Nav norealizēts: Par salikteņiem Ja salikteņa 2.  daļa atsevišķi kvalificējas īsajai formai, tad arī saliktenis kvalificējas īsajai formai. 
 	}
