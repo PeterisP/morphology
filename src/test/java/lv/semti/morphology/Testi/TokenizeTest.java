@@ -454,5 +454,13 @@ public class TokenizeTest {
 		assertEquals("la", tokens.get(2).getToken());
 		assertEquals("art", tokens.get(3).getToken());
 	}
+	
+	@Test
+	public void hm() {
+		LinkedList<Word> tokens = Splitting.tokenize(locītājs, "H&M boss");
+		assertEquals(4, tokens.size());
+		assertEquals("M", tokens.get(2).getToken());
+		assertEquals("boss", tokens.get(3).getToken());		
+	}
 }
  

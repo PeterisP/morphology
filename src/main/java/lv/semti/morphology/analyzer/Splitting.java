@@ -200,7 +200,15 @@ public class Splitting {
 				break;
 			case IN_WORD:
 				//pārbauda vai ir atrastas potenciālās beigas
-				if(canEndInNextStep==true /*&& Splitting.isSeperator(str.charAt(i))*/)
+		        if(canEndInNextStep==true && 
+			            (
+			              (
+			                Splitting.isSeperator(str.charAt(i)) && Character.isLetter((i>0 ? str.charAt(i-1) : 0))
+			              ) 
+			              ||  
+			              !Character.isLetter((i>0 ? str.charAt(i-1) : 0) )     
+			            )
+			          )
 				{
 					lastGoodEnd=i;
 					if(str.charAt(i)=='\'' && inApostrophes)
