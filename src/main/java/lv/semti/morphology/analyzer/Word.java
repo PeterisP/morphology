@@ -264,8 +264,8 @@ public class Word implements Cloneable{
 		AttributeValues av = MarkupConverter.fromKamolsMarkup(answerTag);
 		for (Wordform wf : this.wordforms) {
 			if (wf.isMatchingWeak(av)) {
-				if (complain && result != null) 
-					System.err.printf("Multiple valid word(lemma) options for word %s tag %s: %s and %s\n", this.getToken(), answerTag, wf.getTag(), result.getTag());
+				//if (complain && result != null) 
+				//	System.err.printf("Multiple valid word(lemma) options for word %s tag %s: %s and %s\n", this.getToken(), answerTag, wf.getTag(), result.getTag());
 				result = wf;
 			}
 		}
@@ -277,6 +277,10 @@ public class Word implements Cloneable{
 			result.addAttribute(AttributeNames.i_Lemma, this.getToken()); //FIXME - most likely wrong lemma, guesser should be used to obtain a realistic one
 			if (complain) System.err.printf("Tagger chose a tag that's not one of analysis options for word %s tag %s\n", this.getToken(), answerTag);
 		}
+		if (result.getValue(AttributeNames.i_Lemma).equalsIgnoreCase("nav") || result.getValue(AttributeNames.i_Lemma).equalsIgnoreCase("nenāk")) {
+			result.describe();
+		}
+
 		
 		return result;
 	}

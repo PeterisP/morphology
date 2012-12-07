@@ -917,6 +917,24 @@
     <Lexeme ID="50655" Stem1="tals">
       <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Talsi"/>
     </Lexeme>
+    <Lexeme ID="49543" Stem1="maģistrant">
+      <Attributes Pamatforma="maģistrants"/>
+    </Lexeme>
+    <Lexeme ID="49543" Stem1="doktorant">
+      <Attributes Pamatforma="doktorants"/>
+    </Lexeme>
+    <Lexeme ID="49545" Stem1="sūd">
+      <Attributes Pamatforma="sūds"/>
+    </Lexeme>
+    <Lexeme ID="49546" Stem1="liellop">
+      <Attributes Pamatforma="liellops"/>
+    </Lexeme>
+    <Lexeme ID="49550" Stem1="pīling">
+      <Attributes Pamatforma="pīlings"/>
+    </Lexeme>
+    <Lexeme ID="49553" Stem1="bioprodukt">
+      <Attributes Pamatforma="bioprodukts"/>
+    </Lexeme>
   </Paradigm>
   <Paradigm Stems="1" ID="2" LemmaEnding="14" Description="Lietvārds 1. deklinācija -š">
     <Attributes Vārdšķira="Lietvārds" Deklinācija="1" Dzimte="Vīriešu"/>
@@ -949,6 +967,9 @@
     </Lexeme>
     <Lexeme ID="13559" Stem1="pirmstermiņ">
       <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="pirmstermiņa"/>
+    </Lexeme>
+    <Lexeme ID="49549" Stem1="pirkstiņ">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="pirkstiņš"/>
     </Lexeme>
   </Paradigm>
   <Paradigm Stems="1" ID="3" LemmaEnding="27" Description="Lietvārds 2. deklinācija -is">
@@ -1383,7 +1404,13 @@
       <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Uģis"/>
     </Lexeme>
     <Lexeme ID="50660" Stem1="ēķ">
-      <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Uģis"/>
+      <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Ēķis"/>
+    </Lexeme>
+    <Lexeme ID="49548" Stem1="čal">
+      <Attributes Pamatforma="čalis"/>
+    </Lexeme>
+    <Lexeme ID="49552" Stem1="ļuļķ">
+      <Attributes Pamatforma="ļuļķis"/>
     </Lexeme>
   </Paradigm>
   <Paradigm Stems="1" ID="4" LemmaEnding="39" Description="Lietvārds 2. deklinācija -s (piem, mēness)">
@@ -3797,6 +3824,9 @@
     <Lexeme ID="50257" Stem1="leo">
       <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Leo" Avots="Onomastica - cilvēkvārdi"/>
     </Lexeme>
+    <Lexeme ID="50257" Stem1="sanī">
+      <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Sanī"/>
+    </Lexeme>
   </Paradigm>
   <Paradigm Stems="1" ID="13" LemmaEnding="135" Description="Īpašības vārdi ar -s">
     <Attributes Vārdšķira="Īpašības vārds"/>
@@ -3973,6 +4003,15 @@
     </Lexeme>
     <Lexeme ID="50640" Stem1="jokain">
       <Attributes Īpašības_vārda_tips="Kādības" Pamatforma="jokains"/>
+    </Lexeme>
+    <Lexeme ID="49554" Stem1="izteikt">
+      <Attributes Īpašības_vārda_tips="Kādības" Pamatforma="izteikts"/>
+    </Lexeme>
+    <Lexeme ID="49555" Stem1="ekonomisk">
+      <Attributes Īpašības_vārda_tips="Kādības" Pamatforma="ekonomisks"/>
+    </Lexeme>
+    <Lexeme ID="49556" Stem1="sociāls">
+      <Attributes Īpašības_vārda_tips="Kādības" Pamatforma="sociāls"/>
     </Lexeme>
   </Paradigm>
   <Paradigm Stems="1" ID="14" LemmaEnding="180" Description="Īpašības vārdi ar -š">
@@ -4621,6 +4660,9 @@
     </Lexeme>
     <Lexeme ID="24073" Stem1="mes" Stem2="met" Stem3="met">
       <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="mest"/>
+    </Lexeme>
+    <Lexeme ID="49547" Stem1="pārmes" Stem2="pārmet" Stem3="pārmet">
+      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="pārmest"/>
     </Lexeme>
     <Lexeme ID="24074" Stem1="mē" Stem2="mēj" Stem3="mēj">
       <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="mēt"/>
@@ -13114,6 +13156,12 @@
     </Lexeme>
     <Lexeme ID="50699" Stem1="lūdzu">
       <Attributes Vārdšķira="Izsauksmes vārds" Uzbūve="Vienkāršs" Pamatforma="lūdzu"/>
+    </Lexeme>
+    <Lexeme ID="49544" Stem1="paldies">
+      <Attributes Vārdšķira="Izsauksmes vārds" Uzbūve="Vienkāršs" Pamatforma="paldies"/>
+    </Lexeme>
+    <Lexeme ID="49551" Stem1="pavei">
+      <Attributes Vārdšķira="Izsauksmes vārds" Uzbūve="Vienkāršs" Pamatforma="pavei"/>
     </Lexeme>
     <Lexeme ID="50497" Stem1="u.c.">
       <Attributes Vārdšķira="Saīsinājums" Pamatforma="u.c."/>

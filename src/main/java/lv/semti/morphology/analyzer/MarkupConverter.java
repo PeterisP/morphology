@@ -46,10 +46,9 @@ public class MarkupConverter {
 		StringBuilder res = toKamolsMarkup(avs, defaulti);
 		if (res.length() < 1) return res.toString();
 		
-		if (res.charAt(0) == 'v' && res.charAt(1) == '_') res.setCharAt(1, 'm');
-		if (res.charAt(0) == 'p' && res.charAt(6) == '_') res.setCharAt(6, 'n');
-		if (res.charAt(0) == 'v' && res.charAt(3) != 'p' && res.charAt(10) == '_')
-			res.setCharAt(10, 'n');
+		// if (res.charAt(0) == 'v' && res.charAt(1) == '_') res.setCharAt(1, 'm'); PP 2012.12.07 - nezinu kāpēc tas te ir, bet tas čakarē tagošanu (jo tagsvm.... neatbilst nevienam varēt vai būt verbam)
+		// if (res.charAt(0) == 'p' && res.charAt(6) == '_') res.setCharAt(6, 'n'); 
+		// if (res.charAt(0) == 'v' && res.charAt(3) != 'p' && res.charAt(10) == '_')	res.setCharAt(10, 'n');
 		return res.toString();
 	}
 	
