@@ -258,6 +258,28 @@ public class Word implements Cloneable{
 		}
 		return maxwf;
 	}
+	
+	public Wordform getMatchingWordform(String answerTag, boolean complain) {
+		Wordform result = null;
+		AttributeValues av = MarkupConverter.fromKamolsMarkup(answerTag);
+		for (Wordform wf : this.wordforms) {
+			if (wf.isMatchingWeak(av)) {
+				if (complain && result != null) 
+					System.err.printf("Multiple valid word(lemma) options for word %s tag %s: %s and %s\n", this.getToken(), answerTag, wf.getTag(), result.getTag());
+				result = wf;
+			}
+		}
+		
+		if (result == null) {
+			result = new Wordform(this.getToken());
+			result.addAttributes(av);
+			result.addAttribute(AttributeNames.i_Source, "CMM tagger guess");
+			result.addAttribute(AttributeNames.i_Lemma, this.getToken()); //FIXME - most likely wrong lemma, guesser should be used to obtain a realistic one
+			if (complain) System.err.printf("Tagger chose a tag that's not one of analysis options for word %s tag %s\n", this.getToken(), answerTag);
+		}
+		
+		return result;
+	}
 
 	public String toTabSepsingle(Statistics statistics) { // Čakarīgs formāts haskell-pipe-export ātrdarbībai
 		if (isRecognized()) {
