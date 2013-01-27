@@ -13,7 +13,7 @@
 	<Value LV="Saīsinājums" Tag="y"/>
 	<Value LV="Partikula" Tag="q"/>
 	<Value LV="Pieturzīme" Tag="z"/>
-	<Value LV="Reziduālis" Tag="x_"/>
+	<Value LV="Reziduālis" Tag="x"/>
 </Attribute>
 
 <Attribute LV="Lietvārda tips" PartOfSpeech="Lietvārds" MarkupPos="1" Description="Īpašvārds vai sugas vārds?">
@@ -23,12 +23,12 @@
 <Attribute LV="Dzimte" PartOfSpeech="Lietvārds" MarkupPos="2">
 	<Value LV="Vīriešu" Tag="m"/>
 	<Value LV="Sieviešu" Tag="f"/>
-	<Value LV="Nepiemīt"/>
+	<Value LV="Nepiemīt" Tag="0"/>
 </Attribute>
 <Attribute LV="Skaitlis" PartOfSpeech="Lietvārds" MarkupPos="3">
 	<Value LV="Vienskaitlis" Tag="s"/>
 	<Value LV="Daudzskaitlis" Tag="p"/>
-	<Value LV="Nepiemīt"/>
+	<Value LV="Nepiemīt" Tag="0"/>
 </Attribute>
 <Attribute LV="Skaitlis 2" PartOfSpeech="Lietvārds" MarkupPos="3">
 	<Value LV="Vienskaitlinieks" Tag="v"/>
@@ -41,7 +41,7 @@
 	<Value LV="Akuzatīvs" Tag="a"/>
 	<Value LV="Lokatīvs" Tag="l"/>
 	<Value LV="Vokatīvs" Tag="v"/>
-	<Value LV="Nepiemīt"/>
+	<Value LV="Nepiemīt" Tag="0"/>
 </Attribute>
 <Attribute LV="Locījums 2" PartOfSpeech="Lietvārds" MarkupPos="4">
 	<Value LV="Ģenitīvenis" Tag="s"/>
