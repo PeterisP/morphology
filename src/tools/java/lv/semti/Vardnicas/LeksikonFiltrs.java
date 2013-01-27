@@ -25,12 +25,15 @@ public class LeksikonFiltrs {
 	 * @throws Exception 
 	 */
 	public static void main(String[] args) throws Exception {
-		Analyzer analizators = new Analyzer("dist/Lexicon_valerijs.xml");
+		Analyzer analizators = new Analyzer("dist/Lexicon_only_valerijs.xml");
 		analizators.setCacheSize(0);
 		
-		filterLexicon(analizators, 10);
-					
-		analizators.toXML("Lexicon_minified.xml");
+		int [] limits = {35000, 25000, 15000, 5000};
+		
+		for (int limit:limits) {
+			filterLexicon(analizators, limit);					
+			analizators.toXML(String.format("Lexicon_valerijs_%d.xml", limit));
+		}
 	}
 	
 	private static void filterLexicon(Lexicon lexicon, int limit) {
