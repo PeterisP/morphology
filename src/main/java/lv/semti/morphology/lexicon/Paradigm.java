@@ -62,6 +62,7 @@ public class Paradigm extends AttributeValues {
 		straume.write("</Paradigm>\n");
 	}
 
+	/* saglabaa apakshleksikonaa tikai taas lekseemas, kuraam source sakriit ar noraadiito */
 	public void toXML_sub(Writer straume, String source) throws IOException {
 		straume.write("<Paradigm");
 		straume.write(" Stems=\""+String.valueOf(stems)+"\"");

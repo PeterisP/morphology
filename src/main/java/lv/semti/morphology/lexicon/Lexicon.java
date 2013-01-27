@@ -288,7 +288,7 @@ public class Lexicon {
 	
 	
 	/**
-	 * Saglabā XML formātā apakšleksikona leksēmas
+	 * Saglabā XML formātā apakšleksikona leksēmas - tikai taas, kuraam source sakriit ar noraadiito
 	 *
 	 * @param failaVārds 	Faila vārds, kurā saglabāt.
 	 * @throws FileNotFoundException
