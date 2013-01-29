@@ -40,25 +40,25 @@ public abstract class Mijas {
 		try {
 			switch (stemChange) { //TODO - uz normālāku struktūru
 			case 4: // vajadzības izteiksmes jā-
-				if (stem.startsWith("jā")) {
+				if (stem.startsWith("jā") && stem.length() >= 4) {
 					celms = stem.substring(2,stem.length());
 					mija = 0;
 				} else return varianti;
 				break;
 			case 5: // vajadzības izteiksme 3. konjugācijai
-				if (stem.startsWith("jā")) {
+				if (stem.startsWith("jā") && stem.length() >= 4) {
 					celms = stem.substring(2,stem.length());
 					mija = 9;
 				} else return varianti;
 				break;
 			case 12: // vajadzības izteiksme 3. konjugācijai atgriezeniskai
-				if (stem.startsWith("jā")) {
+				if (stem.startsWith("jā") && stem.length() >= 4) {
 					celms = stem.substring(2,stem.length());
 					mija = 8;
 				} else return varianti;
 				break;
 			case 19: // vajadzības_vēlējuma izteiksme 3. konjugācijai (jāmākot)
-				if (stem.startsWith("jā")) {
+				if (stem.startsWith("jā") && stem.length() >= 4) {
 					celms = stem.substring(2,stem.length());
 					mija = 20;
 				} else return varianti;
@@ -146,14 +146,14 @@ public abstract class Mijas {
 					else varianti.add(new Variants(celms+"ē"));
 					break;
 				case 3: // īpašības vārdiem -āk- un vis-
-					if (celms.endsWith("āk")) {
+					if (celms.endsWith("āk") && celms.length() > 3) {
 						if (celms.startsWith("vis")) varianti.add(new Variants(celms.substring(3,celms.length()-2),AttributeNames.i_Degree,AttributeNames.v_Superlative));
 						else varianti.add(new Variants(celms.substring(0,celms.length()-2),AttributeNames.i_Degree,AttributeNames.v_Comparative));
 					} else varianti.add(new Variants(celms,AttributeNames.i_Degree, AttributeNames.v_Positive));
 					break;
 				case 6: // 1. konjugācijas nākotne
 					if (celms.endsWith("dī") || celms.endsWith("tī") || celms.endsWith("sī")) varianti.add(new Variants(celms.substring(0,celms.length()-2)+"s"));
-					else if (celms.endsWith("zī")) varianti.add(new Variants(celms.substring(0,celms.length()-1))); // šis laikam ir īpaši lūzt exception
+					else if (celms.endsWith("zī")) varianti.add(new Variants(celms.substring(0,celms.length()-1))); // lūzt, griezt
 					else if (!celms.endsWith("d") && !celms.endsWith("t") && !celms.endsWith("s") && !celms.endsWith("z")) varianti.add(new Variants(celms));
 					break;
 				case 7: // 1. konjugācijas 2. personas tagadne
@@ -306,7 +306,8 @@ public abstract class Mijas {
 			for (Variants locītais : atpakaļlocīti) {
 				if (locītais.celms.equalsIgnoreCase(stem)) atrasts = true;
 			}
-			if (!atrasts && (stemChange == 1 || stemChange == 7 || stemChange == 9 || stemChange == 20)) { //FIXME - varbūt performance dēļ tikai šiem stemChange ir jāloka varianti
+			
+			if (!atrasts && Arrays.asList(1,2,7,8,9,17,20).contains(stemChange)) { //FIXME - varbūt performance dēļ tikai šiem stemChange ir jāloka varianti
 				//System.err.printf("Celmam '%s' ar miju %d sanāca '%s' - noraidījām dēļ atpakaļlocīšanas verifikācijas.\n", stem, stemChange, variants.celms);
 			} else {
 				labieVarianti.add(variants);
@@ -324,7 +325,7 @@ public abstract class Mijas {
 			}			
 		}
 		
-		return varianti;
+		return labieVarianti;
 	}
 	
 	private static int syllables(String word) {
@@ -460,7 +461,7 @@ public abstract class Mijas {
 						else if (trešāSakne.endsWith("t")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"tī"));
 						else if (trešāSakne.endsWith("s")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"sī"));
 						else varianti.add(new Variants(celms));
-					} else if (celms.endsWith("lūz")) {
+					} else if (celms.endsWith("z")) {
 						varianti.add(new Variants(celms+"ī"));
 					}
 					else varianti.add(new Variants(celms));

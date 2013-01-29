@@ -1485,7 +1485,6 @@ public class MorphologyTest {
 		vārds = locītājs.analyze("ness");
 		assertFalse(vārds.isRecognized());
 	}
-
 	
 	@Test
 	public void pazūdi() {
@@ -1547,11 +1546,34 @@ public class MorphologyTest {
 		Word vārds = locītājs.analyze("māc");
 		assertTrue(vārds.isRecognized());	
 		assertEquals("mākt", vārds.wordforms.get(0).getValue(AttributeNames.i_Lemma));
-		/*for (Wordform forma : vārds.wordforms) {
-			forma.describe();
-			System.out.println();
-		}*/
+//		for (Wordform forma : vārds.wordforms) {
+//			forma.describe();
+//			System.out.println();
+//		}
 		assertEquals(3, vārds.wordforms.size());
+		
+		List<Wordform> formas = locītājs.generateInflections("pļaut");		
+		AttributeValues testset = new AttributeValues();
+		testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+		testset.addAttribute(AttributeNames.i_Person, "3");
+		testset.addAttribute(AttributeNames.i_Izteiksme, AttributeNames.v_Iisteniibas);
+		testset.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Tagadne);
+		assertInflection(formas, testset, "pļauj");
+
+		testset.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Pagaatne);
+		assertInflection(formas, testset, "pļāva");
+		
+		formas = locītājs.generateInflections("kļaut");
+		testset.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Tagadne);
+		assertInflection(formas, testset, "kļauj");
+		testset.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Pagaatne);
+		assertInflection(formas, testset, "kļāva");
+		
+		formas = locītājs.generateInflections("iekļaut");
+		testset.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Tagadne);
+		assertInflection(formas, testset, "iekļauj");
+		testset.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Pagaatne);
+		assertInflection(formas, testset, "iekļāva");
 	}
 	
 	@Test

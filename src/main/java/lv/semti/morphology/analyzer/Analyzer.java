@@ -174,7 +174,7 @@ public class Analyzer extends Lexicon {
 
 		filterUnacceptable(rezultāts); // izmetam tos variantus, kas nav īsti pieļaujami - vienskaitliniekus daudzskaitlī, vokatīvus ja tos negrib
 
-		if (!rezultāts.isRecognized()) {
+		if (!rezultāts.isRecognized()) {  //Hardcoded izņēmumi (ar regex) kas atpazīst ciparus, kārtas skaitļus utml
 			if (p_number.matcher(word).matches()) {
 				Wordform wf = new Wordform(word);
 				wf.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Residual);
@@ -501,6 +501,10 @@ public class Analyzer extends Lexicon {
 					lex = this.createLexeme(lemma, wf.getEnding().getID(), "generateInflections");
 					if (lemma.matches("\\p{Lu}.*"))
 						lex.addAttribute(AttributeNames.i_NounType, AttributeNames.v_ProperNoun); //FIXME - hack personvārdu 'Valdis' utml locīšanai
+					if (wf.getEnding().getParadigm().getStems() > 1 && wf.getValue(AttributeNames.i_Prefix) != null) { // Priedēkļu atvasināšanai priedēklis jāpieliek arī pārējiem celmiem
+						lex.setStem(1, wf.getValue(AttributeNames.i_Prefix) + wf.lexeme.getStem(1));
+						lex.setStem(2, wf.getValue(AttributeNames.i_Prefix) + wf.lexeme.getStem(2));
+					}
 				}
 				return generateInflections(lex);
 			}
