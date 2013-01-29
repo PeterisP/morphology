@@ -4631,9 +4631,6 @@
     <Lexeme ID="24064" Stem1="līg" Stem2="līgst" Stem3="līg">
       <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="līgt"/>
     </Lexeme>
-    <Lexeme ID="24065" Stem1="pielīs" Stem2="pielīž" Stem3="pielīd">
-      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="pielīst"/>
-    </Lexeme>
     <Lexeme ID="24331" Stem1="pielīs" Stem2="pielien" Stem3="pielīd">
       <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="pielīst"/>
     </Lexeme>
@@ -4933,9 +4930,6 @@
     </Lexeme>
     <Lexeme ID="24165" Stem1="strēb" Stem2="strebj" Stem3="strēb">
       <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="strēbt"/>
-    </Lexeme>
-    <Lexeme ID="24461" Stem1="strēb" Stem2="strēbj" Stem3="strēb">
-      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="strēbt"/>
     </Lexeme>
     <Lexeme ID="24166" Stem1="stum" Stem2="stumj" Stem3="stūm">
       <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="stumt"/>

@@ -239,7 +239,7 @@ public abstract class Mijas {
 						varianti.add(new Variants(celms.substring(0,celms.length()-1)+"c"));  // veicu -> veicis
 					} 
 					else if (celms.endsWith("dz")) {
-						varianti.add(new Variants(celms.substring(0,celms.length()-2)+"g")); // ? kautkam ir bijis
+						varianti.add(new Variants(celms.substring(0,celms.length()-2)+"g")); // sarūgu -> sarūdzis
 						varianti.add(new Variants(celms)); // lūdzu -> lūdzis
 					}
 					else varianti.add(new Variants(celms));
@@ -296,6 +296,34 @@ public abstract class Mijas {
 			}
 		}
 
+		//verifikācija, vai variantu izlokot tiešām sanāk tas kas vajag. Varbūt ir slikts, jo čakarē performanci? TODO - performance check
+		ArrayList<Variants> labieVarianti = new ArrayList<Variants>(varianti.size());
+		for (Variants variants : varianti) {
+			String trešāSakne = stem;
+			if (stemChange == 6 && trešāSakne.endsWith("ī")) trešāSakne = trešāSakne.substring(0,trešāSakne.length()-1);
+			ArrayList<Variants> atpakaļlocīti = MijasLocīšanai(variants.celms, stemChange, trešāSakne, variants.isMatchingStrong(AttributeNames.i_Degree, AttributeNames.v_Superlative), properName);
+			boolean atrasts = false;
+			for (Variants locītais : atpakaļlocīti) {
+				if (locītais.celms.equalsIgnoreCase(stem)) atrasts = true;
+			}
+			if (!atrasts && (stemChange == 1 || stemChange == 7 || stemChange == 9 || stemChange == 20)) { //FIXME - varbūt performance dēļ tikai šiem stemChange ir jāloka varianti
+				//System.err.printf("Celmam '%s' ar miju %d sanāca '%s' - noraidījām dēļ atpakaļlocīšanas verifikācijas.\n", stem, stemChange, variants.celms);
+			} else {
+				labieVarianti.add(variants);
+				
+				if (!atrasts && stemChange != 18) { //debuginfo.     FIXME - 18. mijā neierobežojam, jo tur ir nesimetrija - vokatīvu silvij! atpazīstam bet neģenerējam
+					System.err.printf("Celms '%s' ar miju %d sanāca '%s'. Bet atpakaļ lokot:\n", stem, stemChange, variants.celms);
+					for (Variants locītais : atpakaļlocīti) {
+						System.err.printf("\t'%s'\n", locītais.celms);
+					}
+					if (varianti.size() <= 1) System.err.printf("\tCitu variantu nav.\n");
+					else for (Variants variants2 : varianti) {
+						if (variants != variants2) System.err.printf("\tVēl variants : '%s'\n", variants.celms); 
+					}
+				}				
+			}			
+		}
+		
 		return varianti;
 	}
 	
@@ -494,9 +522,12 @@ public abstract class Mijas {
 					break;
 				case 13: // īpašības vārdiem -āk-, ar š->s nominatīva formā (zaļš -> zaļāks
 					varianti.add(new Variants(celms+"āk"));
+					if (pieliktVisPārākoPak)
+						varianti.add(new Variants("vis" + celms + "āk",AttributeNames.i_Degree,AttributeNames.v_Superlative));
 					break;	
 				case 14: // 1. konjugācijas "-is" forma
 					if (celms.endsWith("k")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"c"));
+					if (celms.endsWith("g")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"dz"));
 					else varianti.add(new Variants(celms));
 					break;			
 				case 15: // pūzdams nopūzdamies t,d -> z mija

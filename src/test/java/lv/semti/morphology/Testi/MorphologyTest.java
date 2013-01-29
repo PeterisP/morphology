@@ -1338,7 +1338,7 @@ public class MorphologyTest {
 		
 		boolean irPareizā = false;
 		for (Wordform vārdforma : freda.wordforms) {
-			if (vārdforma.getValue(AttributeNames.i_Lemma).equals("fredis")) {
+			if (vārdforma.getValue(AttributeNames.i_Lemma).equals("Fredis")) {
 				irPareizā = true;			
 			}
 		}
@@ -1541,5 +1541,47 @@ public class MorphologyTest {
 		assertTrue(vārds.isRecognized());	
 		assertEquals("izkust", vārds.wordforms.get(0).getValue(AttributeNames.i_Lemma));
 	}
+
+	@Test
+	public void normunds20130128() {
+		Word vārds = locītājs.analyze("māc");
+		assertTrue(vārds.isRecognized());	
+		assertEquals("mākt", vārds.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+		/*for (Wordform forma : vārds.wordforms) {
+			forma.describe();
+			System.out.println();
+		}*/
+		assertEquals(3, vārds.wordforms.size());
+	}
 	
+	@Test
+	public void vienādās_nenoteiksmes() {
+		Paradigm pirmā = locītājs.paradigmByID(15);
+		Paradigm otrā = locītājs.paradigmByID(16);
+		Paradigm trešā = locītājs.paradigmByID(17);
+		LinkedList<Lexeme> leksēmas = new LinkedList<Lexeme>();
+		leksēmas.addAll(pirmā.lexemes);
+		leksēmas.addAll(otrā.lexemes);
+		leksēmas.addAll(trešā.lexemes);
+		for (Lexeme lex : leksēmas) {
+			LinkedList<Lexeme> alternatīvas = new LinkedList<Lexeme>();
+			ArrayList<Lexeme> xx = pirmā.getLexemesByStem().get(0).get(lex.getStem(0)); 
+			if (xx != null) alternatīvas.addAll(xx);
+			xx = otrā.getLexemesByStem().get(0).get(lex.getStem(0)); 
+			if (xx != null) alternatīvas.addAll(xx);
+			xx = trešā.getLexemesByStem().get(0).get(lex.getStem(0)); 
+			if (xx != null) alternatīvas.addAll(xx);
+			for (Lexeme alternatīva : alternatīvas) {
+				if (lex.getID() < alternatīva.getID()) {
+					if (lex.getParadigm() != alternatīva.getParadigm()) {
+						//System.out.printf("%st: %s un %s konjugācijas\n", lex.getStem(0), lex.getParadigm().getValue(AttributeNames.i_Konjugaacija), alternatīva.getParadigm().getValue(AttributeNames.i_Konjugaacija));
+					}
+					if (lex.getParadigm() == pirmā && alternatīva.getParadigm() == pirmā && (!lex.getStem(1).equalsIgnoreCase(alternatīva.getStem(1)) || !lex.getStem(2).equalsIgnoreCase(alternatīva.getStem(2)))) {
+						//System.out.printf("%st: %su %su vai %su %su\n", lex.getStem(0), lex.getStem(1), lex.getStem(2), alternatīva.getStem(1), alternatīva.getStem(2));						
+					}
+				}				
+			}
+		}
+	}
+
 }

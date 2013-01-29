@@ -429,6 +429,8 @@ public class TokenizeTest {
 		tokens = Splitting.tokenize(locītājs, "23:59", false);
 		assertEquals(1, tokens.size());
 		
+		tokens = Splitting.tokenize(locītājs, "23:59:59", false);
+		assertEquals(1, tokens.size());		
 
 		//nekorekti formāti
 		tokens = Splitting.tokenize(locītājs, "24:00", false);
@@ -468,6 +470,24 @@ public class TokenizeTest {
 		// bugreport, ka slikti strādā, ja ir newline tikai starp tokeniem
 		LinkedList<Word> tokens = Splitting.tokenize(locītājs, "\"Pillar\" dubulto pārdošanas apjomus\n2013.gada 28.janvāris.");
 		assertEquals(11, tokens.size());
+	}
+
+	@Test
+	public void datumi()
+	{
+		LinkedList<Word> tokens;
+		
+		tokens = Splitting.tokenize(locītājs, "2009-12-14", false); // ISO standarts
+		assertEquals(1, tokens.size());
+	}
+	
+	@Test
+	public void dzīvokļnumuri()
+	{
+		LinkedList<Word> tokens;
+		
+		tokens = Splitting.tokenize(locītājs, "16A", false); 
+		assertEquals(1, tokens.size());
 	}
 
 }
