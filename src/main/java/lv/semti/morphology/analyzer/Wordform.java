@@ -69,7 +69,10 @@ public class Wordform extends AttributeValues implements Serializable{
 		// FIXME šis 'if' būtu jāsaprot un jāsakārto - lai ir sakarīgi, bet nesalauž specgadījumus ('vairāk' -> pamatforma 'daudz' utml)
 		if (pamatformasEnding != null && !(ending.getParadigm().getID() == 25 || ending.getParadigm().getID() == 29 || ending.getParadigm().getID() == 21)
 				&& !fixed_stem) {
-			String pamatforma = lexeme.getStem(pamatformasEnding.stemID - 1) + pamatformasEnding.getEnding();			
+			String pamatforma = lexeme.getStem(pamatformasEnding.stemID - 1) + pamatformasEnding.getEnding();	
+			if (lexeme.isMatchingStrong(AttributeNames.i_NounType, AttributeNames.v_ProperNoun)) {
+				pamatforma = Character.toUpperCase(pamatforma.charAt(0)) + pamatforma.substring(1);
+			}
 			addAttribute(AttributeNames.i_Lemma, pamatforma );
 			// jo var pamatforma atšķirties no leksēmas pamatformas, piem. "otrās" pamatforma ir "otrā" nevis "otrais".
 			// TODO - varbūt vienkārši dažām paradigmām vai galotnēm vajag karodziņu par to, ka jāģenerē pamatforma no jauna?
