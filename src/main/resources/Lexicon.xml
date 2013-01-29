@@ -739,7 +739,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="3" ID="15" LemmaEnding="711" Description="Darbības vārdi 1. konjugācija tiešie">
-		<Attributes Konjugācija="1" Atgriezeniskums="Nē"/>
+		<Attributes Konjugācija="1" Atgriezeniskums="Nē" Noliegums="Nē"/>
 		<Ending ID="711" StemChange="0" Ending="t" StemID="1" LemmaEnding="711">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Nenoteiksme" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
 		</Ending>
@@ -1444,7 +1444,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="16" LemmaEnding="225" Description="Darbības vārdi 2. konjugācija tiešie">
-		<Attributes Konjugācija="2" Atgriezeniskums="Nē"/>
+		<Attributes Konjugācija="2" Atgriezeniskums="Nē" Noliegums="Nē"/>
 		<Ending ID="225" StemChange="0" Ending="t" StemID="1" LemmaEnding="225">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Nenoteiksme" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
 		</Ending>
@@ -2152,7 +2152,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="17" LemmaEnding="468" Description="Darbības vārdi 3. konjugācija tiešie">
-		<Attributes Konjugācija="3" Atgriezeniskums="Nē"/>
+		<Attributes Konjugācija="3" Atgriezeniskums="Nē" Noliegums="Nē"/>
 		<Ending ID="468" StemChange="0" Ending="t" StemID="1" LemmaEnding="468">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Nenoteiksme" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
 		</Ending>
@@ -2860,7 +2860,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="3" ID="18" LemmaEnding="1061" Description="Darbības vārdi 1. konjugācija atgriezeniskie">
-		<Attributes Konjugācija="1" Atgriezeniskums="Jā"/>
+		<Attributes Konjugācija="1" Atgriezeniskums="Jā" Noliegums="Nē"/>
 		<Ending ID="1061" StemChange="0" Ending="ties" StemID="1" LemmaEnding="1061">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Nenoteiksme" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
 		</Ending>
@@ -2998,7 +2998,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="19" LemmaEnding="955" Description="Darbības vārdi 2. konjugācija atgriezeniski">
-		<Attributes Konjugācija="2" Atgriezeniskums="Jā"/>
+		<Attributes Konjugācija="2" Atgriezeniskums="Jā" Noliegums="Nē"/>
 		<Ending ID="955" StemChange="0" Ending="ties" StemID="1" LemmaEnding="955">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Nenoteiksme" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
 		</Ending>
@@ -3136,7 +3136,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="20" LemmaEnding="1008" Description="Darbības vārdi 3. konjugācija atgriezeniski">
-		<Attributes Konjugācija="3" Atgriezeniskums="Jā"/>
+		<Attributes Konjugācija="3" Atgriezeniskums="Jā" Noliegums="Nē"/>
 		<Ending ID="1008" StemChange="0" Ending="ties" StemID="1" LemmaEnding="1008">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Nenoteiksme" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
 		</Ending>

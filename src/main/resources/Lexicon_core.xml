@@ -917,22 +917,22 @@
     <Lexeme ID="50655" Stem1="tals">
       <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Talsi"/>
     </Lexeme>
-    <Lexeme ID="49543" Stem1="maģistrant">
+    <Lexeme ID="50742" Stem1="maģistrant">
       <Attributes Pamatforma="maģistrants"/>
     </Lexeme>
-    <Lexeme ID="49543" Stem1="doktorant">
+    <Lexeme ID="50744" Stem1="doktorant">
       <Attributes Pamatforma="doktorants"/>
     </Lexeme>
-    <Lexeme ID="49545" Stem1="sūd">
+    <Lexeme ID="50756" Stem1="sūd">
       <Attributes Pamatforma="sūds"/>
     </Lexeme>
-    <Lexeme ID="49546" Stem1="liellop">
+    <Lexeme ID="50757" Stem1="liellop">
       <Attributes Pamatforma="liellops"/>
     </Lexeme>
-    <Lexeme ID="49550" Stem1="pīling">
+    <Lexeme ID="50750" Stem1="pīling">
       <Attributes Pamatforma="pīlings"/>
     </Lexeme>
-    <Lexeme ID="49553" Stem1="bioprodukt">
+    <Lexeme ID="50753" Stem1="bioprodukt">
       <Attributes Pamatforma="bioprodukts"/>
     </Lexeme>
   </Paradigm>
@@ -968,7 +968,7 @@
     <Lexeme ID="13559" Stem1="pirmstermiņ">
       <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="pirmstermiņa"/>
     </Lexeme>
-    <Lexeme ID="49549" Stem1="pirkstiņ">
+    <Lexeme ID="50749" Stem1="pirkstiņ">
       <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="pirkstiņš"/>
     </Lexeme>
   </Paradigm>
@@ -1406,10 +1406,10 @@
     <Lexeme ID="50660" Stem1="ēķ">
       <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Ēķis"/>
     </Lexeme>
-    <Lexeme ID="49548" Stem1="čal">
+    <Lexeme ID="50748" Stem1="čal">
       <Attributes Pamatforma="čalis"/>
     </Lexeme>
-    <Lexeme ID="49552" Stem1="ļuļķ">
+    <Lexeme ID="50752" Stem1="ļuļķ">
       <Attributes Pamatforma="ļuļķis"/>
     </Lexeme>
   </Paradigm>
@@ -3815,8 +3815,8 @@
     <Lexeme ID="50138" Stem1="bruno">
       <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Bruno" Avots="Onomastica - cilvēkvārdi"/>
     </Lexeme>
-    <Lexeme ID="50172" Stem1="rodrīgo">
-      <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Rodrīgo" Avots="Onomastica - cilvēkvārdi"/>
+    <Lexeme ID="50172" Stem1="rodrigo">
+      <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Rodrigo" Avots="Onomastica - cilvēkvārdi"/>
     </Lexeme>
     <Lexeme ID="50252" Stem1="oto">
       <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Oto" Avots="Onomastica - cilvēkvārdi"/>
@@ -3824,7 +3824,7 @@
     <Lexeme ID="50257" Stem1="leo">
       <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Leo" Avots="Onomastica - cilvēkvārdi"/>
     </Lexeme>
-    <Lexeme ID="50257" Stem1="sanī">
+    <Lexeme ID="50741" Stem1="sanī">
       <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Sanī"/>
     </Lexeme>
   </Paradigm>
@@ -4004,13 +4004,13 @@
     <Lexeme ID="50640" Stem1="jokain">
       <Attributes Īpašības_vārda_tips="Kādības" Pamatforma="jokains"/>
     </Lexeme>
-    <Lexeme ID="49554" Stem1="izteikt">
+    <Lexeme ID="50854" Stem1="izteikt">
       <Attributes Īpašības_vārda_tips="Kādības" Pamatforma="izteikts"/>
     </Lexeme>
-    <Lexeme ID="49555" Stem1="ekonomisk">
+    <Lexeme ID="50855" Stem1="ekonomisk">
       <Attributes Īpašības_vārda_tips="Kādības" Pamatforma="ekonomisks"/>
     </Lexeme>
-    <Lexeme ID="49556" Stem1="sociāls">
+    <Lexeme ID="50856" Stem1="sociāls">
       <Attributes Īpašības_vārda_tips="Kādības" Pamatforma="sociāls"/>
     </Lexeme>
   </Paradigm>
@@ -7808,7 +7808,7 @@
     <Lexeme ID="28768" Stem1="vel" Stem2="veļ" Stem3="vēl">
       <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="velties"/>
     </Lexeme>
-    <Lexeme ID="49542" Stem1="ļau" Stem2="ļauj" Stem3="ļāv">
+    <Lexeme ID="50743" Stem1="ļau" Stem2="ļauj" Stem3="ļāv">
       <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="ļauties"/>
     </Lexeme>
     <Lexeme ID="26280" Stem1="skrie" Stem2="skrien" Stem3="skrēj">
@@ -13160,7 +13160,7 @@
     <Lexeme ID="49544" Stem1="paldies">
       <Attributes Vārdšķira="Izsauksmes vārds" Uzbūve="Vienkāršs" Pamatforma="paldies"/>
     </Lexeme>
-    <Lexeme ID="49551" Stem1="pavei">
+    <Lexeme ID="50751" Stem1="pavei">
       <Attributes Vārdšķira="Izsauksmes vārds" Uzbūve="Vienkāršs" Pamatforma="pavei"/>
     </Lexeme>
     <Lexeme ID="50497" Stem1="u.c.">
@@ -13724,7 +13724,7 @@
     <Lexeme ID="28320" Stem1="nebijušām">
       <Attributes Vārdšķira="Darbības vārds" Locījums="Datīvs" Laiks="Pagātne" Pamatforma="nebūt" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Noteiktā" Darbības_vārda_tips="Patstāvīgs darbības vārds" Dzimte="Sieviešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
     </Lexeme>
-    <Lexeme ID="49546" Stem1="nebijušām">
+    <Lexeme ID="50746" Stem1="nebijušām">
       <Attributes Vārdšķira="Darbības vārds" Locījums="Datīvs" Laiks="Pagātne" Pamatforma="nebūt" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="'nebūt', 'trūkt' un 'pietikt'" Dzimte="Sieviešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
     </Lexeme>
     <Lexeme ID="28321" Stem1="neesošus">
@@ -13733,7 +13733,7 @@
     <Lexeme ID="28322" Stem1="neesošus">
       <Attributes Vārdšķira="Darbības vārds" Locījums="Akuzatīvs" Laiks="Tagadne" Pamatforma="nebūt" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Noteiktā" Darbības_vārda_tips="Patstāvīgs darbības vārds" Dzimte="Vīriešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
     </Lexeme>
-    <Lexeme ID="49547" Stem1="neesošus">
+    <Lexeme ID="50747" Stem1="neesošus">
       <Attributes Vārdšķira="Darbības vārds" Locījums="Akuzatīvs" Laiks="Tagadne" Pamatforma="nebūt" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="'nebūt', 'trūkt' un 'pietikt'" Dzimte="Vīriešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
     </Lexeme>
     <Lexeme ID="28323" Stem1="nebijušās">

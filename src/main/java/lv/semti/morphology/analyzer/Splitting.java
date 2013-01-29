@@ -18,6 +18,8 @@ package lv.semti.morphology.analyzer;
 
 import java.util.LinkedList;
 
+import lv.semti.morphology.attributes.AttributeNames;
+
 /**
  * Tools for detecting chunk and token bounds.
  * When you edit this, please, update tokenize.pl in Chunker, too!
@@ -27,8 +29,20 @@ public class Splitting {
 	private enum Status {IN_WORD, IN_DELIMITER, IN_SPACE, IN_EXCEPTION};
 	
 	/**
-	 * Determine, if given string is a chunk delimiter.
+	 * Determine, if given word should split a chunk (ends a sentence, like a period or exclamation mark)
 	 */
+	public static boolean isChunkCloser(Word word) {
+		return word.hasAttribute(AttributeNames.i_PieturziimesTips, AttributeNames.v_Punkts); // pieņemam, ka tikai 'zs' tags ir teikuma beigas - tur ir punkts, jautājumzīme, izsaukumzīme, daudzpunkte un to kombinācijas/variācijas.
+	}
+	
+	/**
+	 * Determine, if given word should split a chunk (starts a sentence, like opening square bracket)
+	 */
+	public static boolean isChunkOpener(Word word) {
+		String separatorSymbols = "<({['\"";
+		return separatorSymbols.contains(word.getToken());
+	}
+	
 	public static boolean isChunkSeperator(String s)
 	{
 		String seperatorSymbols = ".!?;:<>(){}[]/\n"; //komata te nav
@@ -139,6 +153,9 @@ public class Splitting {
 		return isSpace(String.valueOf(c));
 	}
 
+	/*
+	 * Tokenizes the string (sentence?) and runs morphoanalysis on each word.
+	 */
 	public static LinkedList<Word> tokenize(Analyzer morphoAnalyzer, String chunk) {		
 		LinkedList<Word> tokens = new LinkedList<Word>();
 		if (chunk == null) return tokens;
@@ -149,6 +166,9 @@ public class Splitting {
 	    int progress = 0;
 	    //bug fix - pievonata beigās whitespace
 		String str = chunk+" ";
+		str = str.replace('\n', ' ');
+		str = str.replace('\r', ' ');
+		str = str.replace('\t', ' ');
 		boolean inApostrophes=false;
 		Status statuss = Status.IN_SPACE;
 		
@@ -304,4 +324,6 @@ public class Splitting {
 			return tokenize(morphoAnalyzer, chunk);
 		}
 	}
+
+
 }

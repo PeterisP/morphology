@@ -1534,4 +1534,12 @@ public class MorphologyTest {
 		assertTrue(vārds.isRecognized());	
 		assertEquals("aizrakt", vārds.wordforms.get(0).getValue(AttributeNames.i_Lemma));
 	}
+	
+	@Test
+	public void divdabju_pārākās_formas() {
+		Word vārds = locītājs.analyze("visizkusušākais");
+		assertTrue(vārds.isRecognized());	
+		assertEquals("izkust", vārds.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+	}
+	
 }

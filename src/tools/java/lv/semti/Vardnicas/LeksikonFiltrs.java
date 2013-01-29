@@ -25,7 +25,7 @@ public class LeksikonFiltrs {
 	 * @throws Exception 
 	 */
 	public static void main(String[] args) throws Exception {
-		Analyzer analizators = new Analyzer("dist/Lexicon_only_valerijs.xml");
+		Analyzer analizators = new Analyzer("dist/Lexicon.xml",false);
 		analizators.setCacheSize(0);
 		
 		int [] limits = {35000, 25000, 15000, 5000};
@@ -45,6 +45,7 @@ public class LeksikonFiltrs {
 		}
 		Random rand = new Random();
 		
+		System.out.println(count);
 		for (;count > limit;count--) {
 			int randomNr = rand.nextInt(allLexemes.size());
 			Lexeme randomLexeme = allLexemes.get( randomNr );

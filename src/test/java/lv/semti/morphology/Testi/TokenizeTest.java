@@ -462,5 +462,13 @@ public class TokenizeTest {
 		assertEquals("M", tokens.get(2).getToken());
 		assertEquals("boss", tokens.get(3).getToken());		
 	}
+	
+	@Test
+	public void laura20130129() {
+		// bugreport, ka slikti strādā, ja ir newline tikai starp tokeniem
+		LinkedList<Word> tokens = Splitting.tokenize(locītājs, "\"Pillar\" dubulto pārdošanas apjomus\n2013.gada 28.janvāris.");
+		assertEquals(11, tokens.size());
+	}
+
 }
  
