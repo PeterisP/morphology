@@ -229,5 +229,9 @@ public class AttributeNames {
 	public static final String i_EndingID = "Galotnes nr";
 
 	public static final String i_Generate = "Ģenerēt";
+	
+	// Vērtības, kuras īslaicīgi piekabina vārda objektam, lai GUI to īpaši atzīmētu
+	public static final String i_Recommended = "Rādīt zaļu - čunkera rekomendācija";
+	public static final String i_Tagged = "Tagera rekomendācija";
 
 }
