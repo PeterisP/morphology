@@ -227,7 +227,7 @@ public abstract class Mijas {
 					if (celms.endsWith("g")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"dz"));
 					//FIXME - g-dz laikam vajag arī 2. un 8. un 9. mijai...
 					break;
-				case 13: // īpašības vārdiem -āk- un vis-, ar š->s nominatīva formā (zaļš -> zaļāks
+				case 13: // īpašības vārdiem -āk- un vis-, ar š->s nominatīva formā (zaļš -> zaļāks)
 					if (celms.endsWith("āk")) {
 						if (celms.startsWith("vis")) varianti.add(new Variants(celms.substring(3,celms.length()-2),AttributeNames.i_Degree,AttributeNames.v_Superlative));
 						else varianti.add(new Variants(celms.substring(0,celms.length()-2),AttributeNames.i_Degree,AttributeNames.v_Comparative));
@@ -271,7 +271,7 @@ public abstract class Mijas {
 				case 20: //  dv. 3. konjugācijas tagadne 1. personai un vajadzībai - atšķiras no 2. mijas tikai vārdam 'gulēt'
 					varianti.add(new Variants(celms+"ā"));
 					
-					if (celms.endsWith("sak") || celms.endsWith("slak") || celms.endsWith("slauk") || celms.endsWith("lok") || celms.endsWith("mok") || celms.endsWith("mok") ) 
+					if (celms.endsWith("sak") || celms.endsWith("slak") || celms.endsWith("slauk") || celms.endsWith("lok") || celms.endsWith("mok") ) 
 						varianti.add(new Variants(celms.substring(0,celms.length()-1)+"cī")); //sacīt -> saku
 					else if (celms.endsWith("slog") || celms.endsWith("raug") || celms.endsWith("ļog") )
 						varianti.add(new Variants(celms.substring(0,celms.length()-1)+"dzī")); //slodzīt -> slogu
@@ -307,12 +307,12 @@ public abstract class Mijas {
 				if (locītais.celms.equalsIgnoreCase(stem)) atrasts = true;
 			}
 			
-			if (!atrasts && Arrays.asList(1,2,7,8,9,17,20).contains(stemChange)) { //FIXME - varbūt performance dēļ tikai šiem stemChange ir jāloka varianti
+			if (!atrasts && Arrays.asList(1,2,7,8,9,17).contains(stemChange)) { //FIXME - varbūt performance dēļ tikai šiem stemChange ir jāloka varianti
 				//System.err.printf("Celmam '%s' ar miju %d sanāca '%s' - noraidījām dēļ atpakaļlocīšanas verifikācijas.\n", stem, stemChange, variants.celms);
 			} else {
 				labieVarianti.add(variants);
 				
-				if (!atrasts && stemChange != 18) { //debuginfo.     FIXME - 18. mijā neierobežojam, jo tur ir nesimetrija - vokatīvu silvij! atpazīstam bet neģenerējam
+				if (!atrasts && stemChange != 18 && stemChange != 20) { //debuginfo.     FIXME - 18. mijā neierobežojam, jo tur ir nesimetrija - vokatīvu silvij! atpazīstam bet neģenerējam. 20. mijā ir arī alternatīvas - guļošs un gulošs
 					System.err.printf("Celms '%s' ar miju %d sanāca '%s'. Bet atpakaļ lokot:\n", stem, stemChange, variants.celms);
 					for (Variants locītais : atpakaļlocīti) {
 						System.err.printf("\t'%s'\n", locītais.celms);

@@ -59,6 +59,7 @@ public class MorphologyTest {
 		assertTrue(found);		
 	}
 
+	@SuppressWarnings("unused")
 	private void describe(List<Wordform> formas) {
 		PrintWriter izeja;
 		try {
@@ -1606,4 +1607,37 @@ public class MorphologyTest {
 		}
 	}
 
+	@Test
+	public void personvārdi_Varis6() {
+		// 2013.02.05 Vara komentāri
+		locītājs.enableGuessing = true;
+		locītājs.enableVocative = true;
+		locītājs.guessVerbs = false;
+		locītājs.guessParticibles = false;
+		locītājs.guessAdjectives = false;
+		locītājs.guessInflexibleNouns = true;
+		locītājs.enableAllGuesses = true;
+		
+		List<Wordform> formas = locītājs.generateInflections("Edvards");
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "edvarda");
+		
+		formas = locītājs.generateInflections("Ludis");
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "luda");
+		
+		formas = locītājs.generateInflections("Krists");
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, "", "kristam");
+		
+		formas = locītājs.generateInflections("Staņislava");
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, AttributeNames.v_Feminine, "staņislavai");
+		
+		formas = locītājs.generateInflections("Raisa");
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, AttributeNames.v_Feminine, "raisai");
+		
+		formas = locītājs.generateInflections("Alberta");
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, AttributeNames.v_Feminine, "albertai");
+		
+		formas = locītājs.generateInflections("Gunta");
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, AttributeNames.v_Feminine, "guntai");		
+	}
+	
 }

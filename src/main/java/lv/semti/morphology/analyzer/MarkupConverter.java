@@ -268,7 +268,6 @@ public class MarkupConverter {
 			tag.setLength(0);
 			if (defaults)
 				tag.append("pp1msnn");
-			//else tag.append("p_____n");
 			else tag.append("p______");
 
 			verifyAndSetKamolsAttribute(avs,tag,1,'p',AttributeNames.i_VvTips,AttributeNames.v_Personu);
@@ -824,6 +823,8 @@ public class MarkupConverter {
 				sb.append("[" + chars.charAt(i) + "]");  
 			else sb.append(chars.charAt(i));
 		}
+		if ((chars.startsWith("p") && chars.length() < 8) ) // tagi tagad saīsināti, compatibility ar veco čunkeri
+			sb.append(",[0]"); 
 		sb.append(']');
 	}
 
@@ -833,38 +834,44 @@ public class MarkupConverter {
 	 * @param word			Word to be converted.
 	 * @param toolgenerated	how the source for this word should be identified
 	 * 						- 'tool' or 'guess'/'dict'.
-	 * 						Nobody remembers the practical consequences.
+	 * 						Nobody remembers the practical consequences. :)
 	 * 						Probably this is used, when deciding whether to
 	 * 						delete these records from A-table before rechunking.
 	 * @return	transformed result.
 	 */
-	public static String WordToChunkerFormat(Word word, boolean toolgenerated) {
+	public static String wordToChunkerFormat(Word word, boolean toolgenerated) {
 		if (!word.isRecognized())
 			return ("[]");
 
 		StringBuilder sb = new StringBuilder();
 		sb.append('[');
 		
-		Iterator<Wordform> i = word.wordforms.iterator();
-		while (i.hasNext()) {
-			if (sb.length() > 1)
-				sb.append(',');
-			Wordform vf = i.next();
-			String kamolsMarkup = vf.getTag();
-			sb.append('[');
-			sb.append("'").append(prologEscape(word.getToken())).append("',");
-			if (kamolsMarkup != null) 
-				MarkupConverter.charsToPrologList(kamolsMarkup, sb);			
-			else sb.append("[]");
-			sb.append(",'").append(prologEscape(vf.getValue(AttributeNames.i_Lemma))).append("',");
-			sb.append(toolgenerated ? "tool" : (vf.isMatchingStrong(AttributeNames.i_Source, "minējums pēc galotnes") ? "guess" : "dict"));
-			sb.append(",'").append(prologEscape(vf.getValue("Nozīme 1"))).append("'");
-			sb.append(']');
-		}
+		if (word.getCorrectWordform() != null) {
+			wordformToChunkerFormat(word.getToken(), toolgenerated, sb, word.getCorrectWordform());
+		} else
+			for (Wordform vf : word.wordforms) {
+				if (sb.length() > 1)
+					sb.append(',');
+				wordformToChunkerFormat(word.getToken(), toolgenerated, sb, vf);
+			}
 		
 		sb.append(']');
 		
 		return sb.toString();
+	}
+
+	private static void wordformToChunkerFormat(String token,
+			boolean toolgenerated, StringBuilder sb, Wordform vf) {
+		String kamolsMarkup = vf.getTag();
+		sb.append('[');
+		sb.append("'").append(prologEscape(token)).append("',");
+		if (kamolsMarkup != null) 
+			MarkupConverter.charsToPrologList(kamolsMarkup, sb);			
+		else sb.append("[]");
+		sb.append(",'").append(prologEscape(vf.getValue(AttributeNames.i_Lemma))).append("',");
+		sb.append(toolgenerated ? "tool" : (vf.isMatchingStrong(AttributeNames.i_Source, "minējums pēc galotnes") ? "guess" : "dict"));
+		sb.append(",'").append(prologEscape(vf.getValue("Nozīme 1"))).append("'");
+		sb.append(']');
 	}
 	
 	/**
