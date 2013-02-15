@@ -35,13 +35,11 @@ import lv.semti.morphology.corpus.Statistics;
 
 public class MorphoEvaluate {
 	private static Analyzer locītājs;
-	private static Statistics statistics;
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 		try {
 			locītājs = new Analyzer("dist/Lexicon.xml");
-			statistics = new Statistics("dist/Statistics.xml");
 		} catch(Exception e) {
 			e.printStackTrace();
 		} 
@@ -124,8 +122,9 @@ public class MorphoEvaluate {
 				for (Wordform wf : w.wordforms) {  // Paskatamies visus atrastos variantus un ņemam statistiski ticamāko
 					//tag += String.format("%s\t%d\n", wf.getDescription(), MorphoServer.statistics.getTicamība(wf));
 					wf.removeNonlexicalAttributes();
-					if (statistics.getEstimate(wf) > maxticamība) {
-						maxticamība = statistics.getEstimate(wf);
+					double estimate = Statistics.getStatistics().getEstimate(wf);
+					if (estimate > maxticamība) {
+						maxticamība = estimate;
 						mainwf = wf;
 					}
 				}

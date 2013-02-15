@@ -42,7 +42,7 @@ public class Statistics {
 	/**
 	 * Default filename for statistics file.
 	 */
-	public final static String DEFAULT_STATISTICS_FILE = "Statistics.xml";
+	public final static String DEFAULT_STATISTICS_FILE = "dist/Statistics.xml";
 	public double lexemeWeight = 1000; //How much lexeme count should be weighed as a multiple of ending count 
 	
 	/**
@@ -98,6 +98,26 @@ public class Statistics {
 		stream.flush();
 	}
 
+	private static Statistics singleton;
+	
+	public static Statistics getStatistics() {
+		if (singleton == null)
+			singleton = new Statistics();
+		return singleton;
+	}
+	
+	public static Statistics getStatistics(String fileName) {
+		if (singleton == null)
+			try {
+				singleton = new Statistics(fileName);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		return singleton;
+	}
+
+	
 	/**
 	 * Create empty statistics object.
 	 */
@@ -109,7 +129,7 @@ public class Statistics {
 	 * Create statistics object from XML file.
 	 * @param fileName	input file.
 	 */
-	public Statistics(String fileName)
+	private Statistics(String fileName)
 	throws SAXException, IOException, ParserConfigurationException {
 
 		Document doc = null;

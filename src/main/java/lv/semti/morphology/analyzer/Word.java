@@ -235,24 +235,25 @@ public class Word implements Cloneable{
 		return out;
 	}
 	
-	public String toJSONsingle(Statistics statistics) {
+	public String toJSONsingle() {
 		if (isRecognized()) {
 			/* šis ir tad, ja vajag tikai vienu - ticamāko formu. tā jau varētu atgriezt visu sarakstu. */
-			Wordform maxwf = getBestWordform(statistics);
+			Wordform maxwf = getBestWordform();
 			//return maxwf.toJSON(); TODO - varbūt arī šo te vajag atgriezt
 			return String.format("{\"Vārds\":\"%s\",\"Marķējums\":\"%s\",\"Pamatforma\":\"%s\"}", JSONValue.escape(maxwf.getToken()), JSONValue.escape(maxwf.getTag()), JSONValue.escape(maxwf.getValue(AttributeNames.i_Lemma)));
 		} else 
 			return String.format("{\"Vārds\":\"%s\",\"Marķējums\":\"-\",\"Pamatforma\":\"%s\"}", JSONValue.escape(getToken()), JSONValue.escape(getToken()));
 	}
 
-	public Wordform getBestWordform(Statistics statistics) {
+	public Wordform getBestWordform() {
 		if (wordforms.size() == 0) return null;
 		Wordform maxwf = wordforms.get(0);
 		double maxticamība = -1;
 		for (Wordform wf : wordforms) {  // Paskatamies visus atrastos variantus un ņemam statistiski ticamāko
 			//tag += String.format("%s\t%d\n", wf.getDescription(), MorphoServer.statistics.getTicamība(wf));
-			if (statistics.getEstimate(wf) > maxticamība) {
-				maxticamība = statistics.getEstimate(wf);
+			double estimate = Statistics.getStatistics().getEstimate(wf);
+			if (estimate > maxticamība) {
+				maxticamība = estimate;
 				maxwf = wf;
 			}
 		}
@@ -262,11 +263,16 @@ public class Word implements Cloneable{
 	public Wordform getMatchingWordform(String answerTag, boolean complain) {
 		Wordform result = null;
 		AttributeValues av = MarkupConverter.fromKamolsMarkup(answerTag);
+		double maxticamība = -1;
 		for (Wordform wf : this.wordforms) {
 			if (wf.isMatchingWeak(av)) {
-				//if (complain && result != null) 
-				//	System.err.printf("Multiple valid word(lemma) options for word %s tag %s: %s and %s\n", this.getToken(), answerTag, wf.getTag(), result.getTag());
-				result = wf;
+				double estimate = Statistics.getStatistics().getEstimate(wf);
+				if (estimate > maxticamība) {
+					maxticamība = estimate;
+					result = wf;
+				}
+//				if (complain && result != null) 
+//					System.err.printf("Multiple valid word(lemma) options for word %s tag %s: %s and %s\n", this.getToken(), answerTag, wf.getTag(), result.getTag());
 			}
 		}
 		
@@ -285,19 +291,19 @@ public class Word implements Cloneable{
 		return result;
 	}
 
-	public String toTabSepsingle(Statistics statistics) { // Čakarīgs formāts haskell-pipe-export ātrdarbībai
+	public String toTabSepsingle() { // Čakarīgs formāts haskell-pipe-export ātrdarbībai
 		if (isRecognized()) {
-			Wordform maxwf = getBestWordform(statistics);
+			Wordform maxwf = getBestWordform();
 			//return maxwf.toJSON(); TODO - varbūt arī šo te vajag atgriezt
 			return String.format("%s\t%s\t%s", maxwf.getToken(), maxwf.getTag(), maxwf.getValue(AttributeNames.i_Lemma));
 		} else 
 			return String.format("%s\t-\t%s", getToken(), getToken());
 	}
 
-	public String toTabSep(Statistics statistics, boolean probabilities) { // Čakarīgs formāts postagera pitonam
+	public String toTabSep(boolean probabilities) { // Čakarīgs formāts postagera pitonam
 		if (isRecognized()) {
 			double sumTicamība = 0;
-			for (Wordform wf : wordforms) sumTicamība += statistics.getEstimate(wf);
+			for (Wordform wf : wordforms) sumTicamība += Statistics.getStatistics().getEstimate(wf);
 			if (sumTicamība < 0.001) sumTicamība = 0.001;
 			
 			Iterator<Wordform> i = wordforms.iterator();
@@ -305,7 +311,7 @@ public class Word implements Cloneable{
 			while (i.hasNext()) {
 				Wordform wf = i.next();
 				out += String.format("%s\t%s\t%s", wf.getToken(), wf.getTag(), wf.getValue(AttributeNames.i_Lemma));;
-				if (probabilities) out += String.format("\t%.5f", statistics.getEstimate(wf)/sumTicamība);
+				if (probabilities) out += String.format("\t%.5f", Statistics.getStatistics().getEstimate(wf)/sumTicamība);
 				if (i.hasNext()) out += "\t";
 			}
 			return out;

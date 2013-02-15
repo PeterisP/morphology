@@ -1640,4 +1640,23 @@ public class MorphologyTest {
 		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, AttributeNames.v_Feminine, "guntai");		
 	}
 	
+	@Test
+	public void gunta19dec_3() {
+		// Guntas sūdzības pa skype 2012.12.19 - retās deklinācijas
+		locītājs.enableGuessing = true;
+		locītājs.enableVocative = true;
+		locītājs.guessVerbs = false;
+		locītājs.guessParticibles = false;
+		locītājs.guessAdjectives = false;
+		locītājs.guessInflexibleNouns = true;
+		locītājs.enableAllGuesses = true;
+		
+		Word vārds = locītājs.analyze("ragus");
+		assertTrue(vārds.isRecognized());	
+		assertEquals("rags", vārds.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+			
+		vārds = locītājs.analyze("dermatovenerologi");
+		assertTrue(vārds.isRecognized());	
+		assertEquals("dermatovenerologs", vārds.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+	}
 }
