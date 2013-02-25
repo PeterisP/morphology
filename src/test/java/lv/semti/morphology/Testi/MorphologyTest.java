@@ -1659,4 +1659,31 @@ public class MorphologyTest {
 		assertTrue(vārds.isRecognized());	
 		assertEquals("dermatovenerologs", vārds.wordforms.get(0).getValue(AttributeNames.i_Lemma));
 	}
+	
+	@Test
+	public void normunds_2013feb25() {
+		List<Wordform> formas = locītājs.generateInflections("dziedāt");
+		AttributeValues testset = new AttributeValues();
+		testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+		testset.addAttribute(AttributeNames.i_Person, "1");
+		testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Plural);
+		testset.addAttribute(AttributeNames.i_Izteiksme, AttributeNames.v_Iisteniibas);
+		testset.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Tagadne);
+		assertInflection(formas, testset, "dziedam");
+		
+		testset.removeAttribute(AttributeNames.i_Number);
+		testset.addAttribute(AttributeNames.i_Person, "3");
+		assertInflection(formas, testset, "dzied");
+		
+		Word vārds = locītājs.analyze("dziedam");
+		assertTrue(vārds.isRecognized());	
+		assertEquals("dziedāt", vārds.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+		
+		vārds = locītājs.analyze("dzied");
+		assertTrue(vārds.isRecognized());	
+		assertEquals("dziedāt", vārds.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+		
+		vārds = locītājs.analyze("dziedām");
+		assertFalse(vārds.isRecognized());
+	}
 }

@@ -198,7 +198,10 @@ public abstract class Mijas {
 						varianti.add(new Variants(celms.substring(0,celms.length()-1)+"cē")); //mācēt -> mākam
 					else if (celms.endsWith("guļa")) varianti.add(new Variants(celms.substring(0,celms.length()-2)+"lē")); //gulēt -> guļam
 					else if (celms.endsWith("vajaga")) varianti.add(new Variants(celms.substring(0,celms.length()-2)+"dzē")); //vajadzēt -> vajag
-					else if (celms.endsWith("a")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"ē"));
+					else if (celms.endsWith("a")) {
+						varianti.add(new Variants(celms.substring(0,celms.length()-1)+"ē"));
+						varianti.add(new Variants(celms.substring(0,celms.length()-1)+"ā"));
+					}
 					break;
 				case 9: // 3. konjugācija 3. pers. tagadne
 					if (celms.endsWith("vajadz")) break; //izņēmums - lai korekti ir 'vajadzēt' -> 'vajag'
@@ -212,7 +215,10 @@ public abstract class Mijas {
 					else if (celms.endsWith("guļ")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"lē")); // "guļ"->"gulēt"
 					else if (celms.endsWith("vajag")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"dzē")); //vajadzēt -> vajag
 					else if (celms.endsWith("a")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"ī"));
-					else varianti.add(new Variants(celms+"ē")); // if (celms.endsWith("i")) varianti.add(celms.substring(0,celms.length()-1)+"ē");
+					else {
+						varianti.add(new Variants(celms+"ē")); // if (celms.endsWith("i")) varianti.add(celms.substring(0,celms.length()-1)+"ē");
+						varianti.add(new Variants(celms+"ā"));
+					}
 					break;
 				case 10: // īpašības vārds -āk- un vis-, -i apstākļa formai
 					if (celms.endsWith("i")) varianti.add(new Variants(celms.substring(0,celms.length()-1),AttributeNames.i_Degree, AttributeNames.v_Positive));
@@ -492,6 +498,7 @@ public abstract class Mijas {
 					else if (celms.endsWith("vajadzē")) 
 						varianti.add(new Variants(celms.substring(0,celms.length()-3)+"ga")); //vajadzēt -> vajag					
 					else if (celms.endsWith("ē")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"a"));
+					else if (celms.endsWith("ā")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"a"));
 					else varianti.add(new Variants(celms));
 					break;
 				case 9: // 3. konjugācija 3. pers. tagadne
