@@ -479,6 +479,12 @@ public class TokenizeTest {
 		
 		tokens = Splitting.tokenize(locītājs, "2009-12-14", false); // ISO standarts
 		assertEquals(1, tokens.size());
+
+		tokens = Splitting.tokenize(locītājs, "2009.12.14", false); // Ar . kā seperatoru
+		assertEquals(1, tokens.size());
+
+		tokens = Splitting.tokenize(locītājs, "9999.99.99", false); // By design
+		assertEquals(1, tokens.size());
 	}
 	
 	@Test

@@ -56,11 +56,41 @@ public class Trie {
 		root.firstChild.firstChild.firstChild=new StringNode("012345");
 		root.firstChild.firstChild.firstChild.firstChild=new DigitNode();
 		root.firstChild.firstChild.firstChild.firstChild.canEnd=true;
+		root.firstChild.firstChild.firstChild.firstChild.firstChild=root.firstChild.firstChild;
 		root.nextSibling=new StringNode("2");
 		root.nextSibling.firstChild=new StringNode("0123");
 		root.nextSibling.firstChild.firstChild=root.firstChild.firstChild;
 		
+		/*
+		 * 2aa atpazīst datumu ISO formāta 2009-12-14 (patiesībā /[0-9][0-9][0-9][0-9][\-.][0-9][0-9][\-.][0-9][0-9]/)
+		 */
 		
+		root=new DigitNode();
+		branchList.add(root);
+		root.firstChild=new DigitNode();
+		root.firstChild.firstChild=new DigitNode();
+		root.firstChild.firstChild.firstChild=new DigitNode();
+		root.firstChild.firstChild.firstChild.firstChild=new StringNode("-.");
+		root=root.firstChild.firstChild.firstChild.firstChild;
+		root.firstChild=new DigitNode();
+		root.firstChild.firstChild=new DigitNode();
+		root.firstChild.firstChild.firstChild=new StringNode("-.");
+		root=root.firstChild.firstChild.firstChild;
+		root.firstChild=new DigitNode();
+		root.firstChild.firstChild=new DigitNode();
+		root.firstChild.firstChild.canEnd=true;
+		
+		
+		/*
+		 * 2aaa atapzīst mājas numurus ( /[0-9]+[A-Z]/)
+		 */
+		
+		root=new DigitNode();
+		branchList.add(root);
+		root.firstChild=new DigitNode();
+		root.firstChild.firstChild=root.firstChild;
+		root.firstChild.nextSibling=new LetterNode();
+		root.firstChild.nextSibling.canEnd=true;
 		
 		
 		/*
@@ -105,6 +135,7 @@ public class Trie {
 		tmp.firstChild.nextSibling.firstChild.nextSibling=tmp;
 		tmp.firstChild.nextSibling.nextSibling=new StringNode(" '/\\");
 		tmp.firstChild.nextSibling.nextSibling.firstChild=tmp;
+		
 		
 
 		
