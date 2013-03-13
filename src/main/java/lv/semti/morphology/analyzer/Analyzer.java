@@ -465,32 +465,46 @@ public class Analyzer extends Lexicon {
 		return generateInflections(lemma, false);
 	}
 	
-	public ArrayList<Wordform> generateInflections(String lemma, boolean filter) {
+	public ArrayList<Wordform> generateInflections(String lemma, boolean nouns_only) {
+		return generateInflections(lemma, nouns_only, new AttributeValues());
+	}
+	
+	public ArrayList<Wordform> generateInflections(String lemma, boolean nouns_only, AttributeValues filter) {
 		Word possibilities = this.analyze(lemma);
 		
-		if (filter) {
-			ArrayList<Wordform> unsuitable = new ArrayList<Wordform>();
-			for (Wordform wf : possibilities.wordforms) {
-				boolean suitable = false;
-				if (wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun)) suitable = true;
-				if (wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adjective) && wf.isMatchingStrong(AttributeNames.i_Definiteness, AttributeNames.v_Definite)) suitable = true;
-				if (!suitable) unsuitable.add(wf);
-			}
-			possibilities.wordforms.removeAll(unsuitable);
-		}
+		if (nouns_only) filterInflectionPossibilities(filter, possibilities);		
 		
 		ArrayList<Wordform> result = generateInflections_TryLemmas(lemma, possibilities);
 		
 		// If result is null, it means that all the suggested lemma can be (and was) generated from another lemma - i.e. "Dīcis" from "dīkt"; but not from an existing lexicon lemma
 		// We assume that a true lemma was passed by the caller, and we need to generate/guess the wordforms as if the lemma was correct.
-		if (result == null)
-			result = generateInflections_TryLemmas(lemma, this.guessByEnding(lemma));
+		if (result == null) {
+			possibilities = this.guessByEnding(lemma);
+			if (nouns_only) filterInflectionPossibilities(filter, possibilities);		
+			
+			result = generateInflections_TryLemmas(lemma, possibilities);			
+		}			
 
 		// If guessing didn't work, return an empty list
 		if (result == null)
 			result = new ArrayList<Wordform>();
 		
 		return result;
+	}
+	
+	// removes possibilities that aren't nouns/substantivised adjectives, and don't match the filter
+	private void filterInflectionPossibilities(AttributeValues filter, Word possibilities) {
+		ArrayList<Wordform> unsuitable = new ArrayList<Wordform>();
+		for (Wordform wf : possibilities.wordforms) {
+			boolean suitable = false;
+			if (wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun)) suitable = true;
+			if (wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adjective) && wf.isMatchingStrong(AttributeNames.i_Definiteness, AttributeNames.v_Definite)) suitable = true;
+			
+			if (!wf.isMatchingWeak(filter)) suitable = false; //filter overrides everythign
+			
+			if (!suitable) unsuitable.add(wf);
+		}
+		possibilities.wordforms.removeAll(unsuitable);
 	}
 
 	private ArrayList<Wordform> generateInflections_TryLemmas(String lemma, Word w) {
