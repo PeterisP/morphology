@@ -14,6 +14,9 @@
  *     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *******************************************************************************/
 package lv.semti.Vardnicas;
+import java.io.BufferedWriter;
+import java.io.FileOutputStream;
+import java.io.OutputStreamWriter;
 import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -27,17 +30,17 @@ public class VarduSaraksts {
 	public static void main(String[] args) throws Exception {
 		Analyzer analizators = new Analyzer("dist/Lexicon.xml",true);
 		
-		PrintWriter izeja = new PrintWriter(new PrintStream(System.out, true, "UTF8"));
-		//BufferedWriter izeja = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("vaardi.txt"), "UTF-8"));
+		//PrintWriter izeja = new PrintWriter(new PrintStream(System.out, true, "UTF8"));
+		BufferedWriter izeja = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("vaardi.txt"), "UTF-8"));
 		
 		for (Paradigm p : analizators.paradigms)
 			for (Lexeme l : p.lexemes) {
 				//if (p.getID() != 20 /*&& p.getID() != 17*/) continue;
-				if (p.getID() != 1) continue;
+				//if (p.getID() != 1) continue;
 				//if (!l.getStem(0).equalsIgnoreCase("pilnmēnes")) continue;
-				if (!l.getStem(0).endsWith("i")) continue;
+				//if (!l.getStem(0).endsWith("i")) continue;
 				
-				izeja.append(l.getValue(AttributeNames.i_Lemma)+"\n");
+				//izeja.append(l.getValue(AttributeNames.i_Lemma)+"\n");
 				//izeja.append(l.getStem(1)+"\n");
 				ArrayList<Wordform> formas = analizators.generateInflections(l);
 				for (Wordform forma : formas) {
@@ -48,8 +51,10 @@ public class VarduSaraksts {
 					forma.removeAttribute(AttributeNames.i_SourceLemma);
 					//forma.removeAttribute(AttributeNames.i_Mija);
 					//izeja.append(String.format("%s\t%s\n",forma.getToken(),forma.toJSON()));
+					izeja.append(String.format("%s\n",forma.getToken()));
 				}
 				//break;
+				 
 			}
 	
 		izeja.flush();

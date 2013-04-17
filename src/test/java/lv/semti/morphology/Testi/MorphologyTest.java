@@ -1721,10 +1721,22 @@ public class MorphologyTest {
 		
 		formas = locītājs.generateInflections("Liepa", true, filter);
 		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, "", "liepam");
+
+		formas = locītājs.generateInflections("Lielais", true, filter);
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, AttributeNames.v_Masculine, "lielajam");
+		
+		formas = locītājs.generateInflections("Valdīšana", true, filter);
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, AttributeNames.v_Masculine, "valdīšanam");
 		
 		filter.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Feminine);
 		formas = locītājs.generateInflections("Dzelzs", true, filter);	
 		//for (Wordform forma:formas) forma.describe();		
 		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, "", "dzelzij");
+		
+		formas = locītājs.generateInflections("Mazā", true, filter);
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, AttributeNames.v_Feminine, "mazajai");
+		
+		formas = locītājs.generateInflections("Valdīšana", true, filter);
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, AttributeNames.v_Feminine, "valdīšanai");		
 	}
 }

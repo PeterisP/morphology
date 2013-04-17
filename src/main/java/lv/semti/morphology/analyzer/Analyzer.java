@@ -472,7 +472,7 @@ public class Analyzer extends Lexicon {
 	public ArrayList<Wordform> generateInflections(String lemma, boolean nouns_only, AttributeValues filter) {
 		Word possibilities = this.analyze(lemma);
 		
-		if (nouns_only) filterInflectionPossibilities(filter, possibilities);		
+		if (nouns_only) filterInflectionPossibilities(filter, possibilities.wordforms);		
 		
 		ArrayList<Wordform> result = generateInflections_TryLemmas(lemma, possibilities);
 		
@@ -480,7 +480,7 @@ public class Analyzer extends Lexicon {
 		// We assume that a true lemma was passed by the caller, and we need to generate/guess the wordforms as if the lemma was correct.
 		if (result == null) {
 			possibilities = this.guessByEnding(lemma);
-			if (nouns_only) filterInflectionPossibilities(filter, possibilities);		
+			if (nouns_only) filterInflectionPossibilities(filter, possibilities.wordforms);		
 			
 			result = generateInflections_TryLemmas(lemma, possibilities);			
 		}			
@@ -489,22 +489,24 @@ public class Analyzer extends Lexicon {
 		if (result == null)
 			result = new ArrayList<Wordform>();
 		
+		if (nouns_only) filterInflectionPossibilities(filter, result);
+		
 		return result;
 	}
 	
 	// removes possibilities that aren't nouns/substantivised adjectives, and don't match the filter
-	private void filterInflectionPossibilities(AttributeValues filter, Word possibilities) {
+	private void filterInflectionPossibilities(AttributeValues filter, ArrayList<Wordform> possibilities) {
 		ArrayList<Wordform> unsuitable = new ArrayList<Wordform>();
-		for (Wordform wf : possibilities.wordforms) {
+		for (Wordform wf : possibilities) {
 			boolean suitable = false;
 			if (wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun)) suitable = true;
 			if (wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adjective) && wf.isMatchingStrong(AttributeNames.i_Definiteness, AttributeNames.v_Definite)) suitable = true;
 			
-			if (!wf.isMatchingWeak(filter)) suitable = false; //filter overrides everythign
+			if (!wf.isMatchingWeak(filter)) suitable = false; //filter overrides everything
 			
 			if (!suitable) unsuitable.add(wf);
 		}
-		possibilities.wordforms.removeAll(unsuitable);
+		possibilities.removeAll(unsuitable);
 	}
 
 	private ArrayList<Wordform> generateInflections_TryLemmas(String lemma, Word w) {
