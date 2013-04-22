@@ -1739,4 +1739,45 @@ public class MorphologyTest {
 		formas = locītājs.generateInflections("Valdīšana", true, filter);
 		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, AttributeNames.v_Feminine, "valdīšanai");		
 	}
+
+	@Test
+	public void varis20130317() {
+		locītājs.enableGuessing = true;
+		locītājs.enableVocative = true;
+		locītājs.guessVerbs = false;
+		locītājs.guessParticibles = false;
+		locītājs.guessAdjectives = false;
+		locītājs.guessInflexibleNouns = true;
+		locītājs.enableAllGuesses = true;
+		
+		assertTrue("Biezā".matches("\\p{Lu}.*"));
+		assertTrue("BIEZĀ".matches("\\p{Lu}.*"));
+		
+		List<Wordform> formas = locītājs.generateInflections("Biezā", true); 
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, "", "biezajai");
+		
+		formas = locītājs.generateInflections("BIEZĀ", true); 
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, "", "biezajai");
+		
+		AttributeValues filter = new AttributeValues();
+		filter.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Feminine);	
+		formas = locītājs.generateInflections("VĪTOLA", true, filter); 
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, "", "vītolai");
+		
+		formas = locītājs.generateInflections("BAGĀTĀ", true, filter);
+		assertTrue(formas.size() > 0);
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, "", "bagātajai");
+		
+		formas = locītājs.generateInflections("Vītola", true, filter); 
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, "", "vītolai");
+
+		filter.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Masculine);	
+		formas = locītājs.generateInflections("Kirill", true); 
+		assertTrue(formas.size() > 0);
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, "", "kirill");
+		
+		formas = locītājs.generateInflections("Andrej", true); 
+		assertTrue(formas.size() > 0);
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, "", "andrej");
+	}
 }

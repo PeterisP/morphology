@@ -376,7 +376,7 @@ public class Analyzer extends Lexicon {
 					if (ending.getParadigm().getName().equals("Hardcoded"))
 						continue; // Hardcoded vārdgrupa minēšanai nav aktuāla
 
-					ArrayList<Variants> celmi = Mijas.mijuVarianti(ending.stem(word), ending.getMija(), false);
+					ArrayList<Variants> celmi = Mijas.mijuVarianti(ending.stem(word), ending.getMija(), false); //FIXME - te var būt arī propername... tikai kā tā info līdz šejienei nonāks?
 					if (celmi.size() == 0) continue; // acīmredzot neder ar miju, ejam uz nākamo galotni.
 					String celms = celmi.get(0).celms;
 
@@ -415,7 +415,7 @@ public class Analyzer extends Lexicon {
  											variants.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Residual);
  											if (!Character.isDigit(last)) {
  												variants.addAttribute(AttributeNames.i_ResidualType, AttributeNames.v_Foreign);
-												//Pieņemam, ka vārdi svešvalodā - 'crawling' utml.
+												//Pieņemam, ka vārdi svešvalodā - 'crawling' 'Kirill' utml.
 											} 
 										}
 									}
@@ -479,7 +479,7 @@ public class Analyzer extends Lexicon {
 		// If result is null, it means that all the suggested lemma can be (and was) generated from another lemma - i.e. "Dīcis" from "dīkt"; but not from an existing lexicon lemma
 		// We assume that a true lemma was passed by the caller, and we need to generate/guess the wordforms as if the lemma was correct.
 		if (result == null) {
-			possibilities = this.guessByEnding(lemma);
+			possibilities = this.guessByEnding(lemma.toLowerCase());
 			if (nouns_only) filterInflectionPossibilities(filter, possibilities.wordforms);		
 			
 			result = generateInflections_TryLemmas(lemma, possibilities);			
@@ -501,8 +501,9 @@ public class Analyzer extends Lexicon {
 			boolean suitable = false;
 			if (wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun)) suitable = true;
 			if (wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adjective) && wf.isMatchingStrong(AttributeNames.i_Definiteness, AttributeNames.v_Definite)) suitable = true;
+			if (wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Residual) && wf.isMatchingStrong(AttributeNames.i_ResidualType, AttributeNames.v_Foreign)) suitable = true; // visādi Vadim, Kirill utml
 			
-			if (!wf.isMatchingWeak(filter)) suitable = false; //filter overrides everything
+			if (!wf.isMatchingWeak(filter) && !wf.isMatchingStrong(AttributeNames.i_ResidualType, AttributeNames.v_Foreign) && !wf.isMatchingStrong(AttributeNames.i_Declension, AttributeNames.v_NA)) suitable = false; //filter overrides everything except inflexible stuff
 			
 			if (!suitable) unsuitable.add(wf);
 		}
@@ -524,11 +525,11 @@ public class Analyzer extends Lexicon {
 				}
 				return generateInflections(lex);
 			}
-			if ( (lemma.endsWith("ais") && lemma.equalsIgnoreCase(wf.getValue(AttributeNames.i_Lemma).substring(0, wf.getValue(AttributeNames.i_Lemma).length()-1)+"ais")) ||
-				 (lemma.endsWith("ā") && wf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(lemma.substring(0, lemma.length()-1)+"a")) ) {
+			if ( (lemma.toLowerCase().endsWith("ais") && lemma.equalsIgnoreCase(wf.getValue(AttributeNames.i_Lemma).substring(0, wf.getValue(AttributeNames.i_Lemma).length()-1)+"ais")) ||
+				 (lemma.toLowerCase().endsWith("ā") && wf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(lemma.substring(0, lemma.length()-1)+"a")) ) {
 				// Exception for adjective-based surnames "Lielais", "Platais" etc
 				Lexeme lex = wf.lexeme;
-				if ((lex == null && lemma.endsWith("ais")) || (lex != null && !lex.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(lemma))) {
+				if ((lex == null && lemma.toLowerCase().endsWith("ais")) || (lex != null && !lex.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(lemma))) {
 					lex = this.createLexeme(lemma, wf.getEnding().getID(), "generateInflections");
 					if (lemma.matches("\\p{Lu}.*"))
 						lex.addAttribute(AttributeNames.i_NounType, AttributeNames.v_ProperNoun); //FIXME - hack personvārdu 'Valdis' utml locīšanai
