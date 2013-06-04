@@ -282,6 +282,7 @@ public class Word implements Cloneable{
 			result.addAttribute(AttributeNames.i_Source, "CMM tagger guess");
 			result.addAttribute(AttributeNames.i_Lemma, this.getToken()); //FIXME - most likely wrong lemma, guesser should be used to obtain a realistic one
 			if (complain) System.err.printf("Tagger chose a tag that's not one of analysis options for word %s tag %s\n", this.getToken(), answerTag);
+			if (complain) this.addWordform(result); //FIXME - nav īsti atbilstošs complain
 		}
 		if (result.getValue(AttributeNames.i_Lemma).equalsIgnoreCase("nav") || result.getValue(AttributeNames.i_Lemma).equalsIgnoreCase("nenāk")) {
 			result.describe();
