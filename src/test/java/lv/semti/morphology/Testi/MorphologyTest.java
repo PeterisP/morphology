@@ -1796,5 +1796,38 @@ public class MorphologyTest {
 		Word mazgāšanās = locītājs.analyze("mazgāšanos");
 		assertTrue(mazgāšanās.isRecognized());		
 		assertEquals("ncfsar", mazgāšanās.getBestWordform().getTag());
+		
+		locītājs.enableGuessing = true;
+		Word izpaudusies = locītājs.analyze("izpaudusies");
+		assertTrue(izpaudusies.isRecognized());	
+	}
+	
+	@Test
+	public void gunta_20130605() {
+		// LVK2013 Korpuss saka, ka verba "attiecas" lemma ir "attiecties"
+		Word attiecas = locītājs.analyze("attiecas");
+		assertTrue(attiecas.isRecognized());
+		assertEquals("attiekties", attiecas.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+
+		Word esošo = locītājs.analyze("esošo");
+		assertTrue(esošo.isRecognized());
+		assertEquals("būt", esošo.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+		
+		Word mācās = locītājs.analyze("mācās");
+		assertTrue(mācās.isRecognized());
+		boolean found = false;
+		for (Wordform wf : mācās.wordforms) {
+			if (wf.isMatchingStrong(AttributeNames.i_Lemma, "mācīties")) found = true;
+		}
+		assertTrue(found);
+
+		Word acīmredzot = locītājs.analyze("acīmredzot");
+		assertTrue(acīmredzot.isRecognized());
+		assertEquals("acīmredzot", acīmredzot.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+
+		Word lielākoties = locītājs.analyze("lielākoties");
+		assertTrue(lielākoties.isRecognized());
+		assertEquals("lielākoties", lielākoties.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+
 	}
 }

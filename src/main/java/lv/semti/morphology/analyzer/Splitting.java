@@ -17,6 +17,7 @@
 package lv.semti.morphology.analyzer;
 
 import java.util.LinkedList;
+import java.util.List;
 
 import lv.semti.morphology.attributes.AttributeNames;
 
@@ -34,50 +35,7 @@ public class Splitting {
 	public static boolean isChunkCloser(Word word) {
 		return word.hasAttribute(AttributeNames.i_PieturziimesTips, AttributeNames.v_Punkts); // pieņemam, ka tikai 'zs' tags ir teikuma beigas - tur ir punkts, jautājumzīme, izsaukumzīme, daudzpunkte un to kombinācijas/variācijas.
 	}
-	
-	/**
-	 * Determine, if given word should split a chunk (starts a sentence, like opening square bracket)
-	 */
-	public static boolean isChunkOpener(Word word) {
-		String separatorSymbols = "<({['\"";
-		return separatorSymbols.contains(word.getToken());
-	}
-	
-	public static boolean isChunkSeperator(String s)
-	{
-		String seperatorSymbols = ".!?;:<>(){}[]/\n"; //komata te nav
-		if (seperatorSymbols.contains(s)) {
-			return true;
-		}
-		return false;
-	}
-
-	/**
-	 * Determine, if given char is a chunk delimiter.
-	 */
-	public static boolean isChunkSeperator(char c)
-	{
-		return isChunkSeperator(String.valueOf(c));
-	}
-	
-	public static boolean isChunkOpener(String s)
-	{
-		String seperatorSymbols = "<({['\"";
-		if (seperatorSymbols.contains(s)) {
-			return true;
-		}
-		return false;
-	}
-
-	public static boolean isChunkCloser(String s)
-	{
-		String seperatorSymbols = ">)}]'\"";
-		if (seperatorSymbols.contains(s)) {
-			return true;
-		}
-		return false;
-	}
-	
+		
 	public static boolean isSeperator(char c)
 	{
 		String seperators=" .?:/!,;\"'`´(){}<>«»-[]—‐‑‒–―‘’‚‛“”„‟′″‴‵‶‷‹›‼‽⁈⁉․‥…&•";
@@ -85,55 +43,7 @@ public class Splitting {
 	}
 	
 	/**
-	 * Determine, if given string is a punctuation mark.
-	 */
-	public static boolean isTokenSeperator(String s)
-	{
-		String seperatorSymbols = ".,!?;:<>()#$%@^&*-~_+={}[]/\\'\"«»„”" +
-			"\u0060\u00b4\u00ab\u00bb\u2018\u2019\u201a\u201b\u201c\u201d" +
-			"\u201e\u201f\u2032\u2033\u2035\u2036\u2010\u2011\u2012\u2013" +
-			"\u2014\u2015•"; // Quotation marks and hyphens/horizontal bars.
-		if (seperatorSymbols.contains(s)) {
-			return true;
-		}
-		return false;
-	}
-	
-	/**
-	 * Determine, if given char is a punctuation mark.
-	 */
-	public static boolean isTokenSeperator(char c)
-	{
-		return isTokenSeperator(String.valueOf(c));
-	}
-	
-	/**
-	 * Determine, if given string is a punctuation mark (each punctuation mark
-	 * of this kind forms separate token).
-	 */
-	public static boolean isSingleTokenSeperator(String s)
-	{
-		String seperatorSymbols = "?!;:<>(){}[]/'\\\"~«»„”" +
-			"\u0060\u00b4\u00ab\u00bb\u2018\u2019\u201a\u201b\u201c\u201d" +
-			"\u201e\u201f\u2032\u2033\u2035\u2036•"; // Quotation marks.
-		if (seperatorSymbols.contains(s))
-		{
-			return true;
-		}
-		return false;
-	}
-	
-	/**
-	 * Determine, if given char is a punctuation mark (each punctuation
-	 * mark of this kind forms separate token).
-	 */
-	public static boolean isSingleTokenSeperator(char c)
-	{
-		return isSingleTokenSeperator(String.valueOf(c));
-	}	
-
-	/**
-	 * Determine, if given string is a whitespace char (space, tab, newline).
+	 * Determine if given string is a whitespace char (space, tab, newline).
 	 */
 	public static boolean isSpace(String s)
 	{
@@ -146,7 +56,7 @@ public class Splitting {
 	}
 
 	/**
-	 * Determine, if given char is a whitespace char (space, tab, newline).
+	 * Determine if given char is a whitespace char (space, tab, newline).
 	 */
 	public static boolean isSpace(char c)
 	{
@@ -297,6 +207,13 @@ public class Splitting {
 	}
 	
 	
+	/***
+	 * Tokenizes some text (usually a sentence)
+	 * @param morphoAnalyzer
+	 * @param chunk
+	 * @param bruteSplit
+	 * @return
+	 */
 	public static LinkedList<Word> tokenize(Analyzer morphoAnalyzer, String chunk, boolean bruteSplit) {
 		if(bruteSplit)
 		{
@@ -316,6 +233,31 @@ public class Splitting {
 		{
 			return tokenize(morphoAnalyzer, chunk);
 		}
+	}
+
+	/***
+	 * Tokenizes a paragraph, and splits it into sentences.
+	 * @param morphoAnalyzer
+	 * @param paragraph
+	 * @return
+	 */
+	public static LinkedList<LinkedList<Word>> tokenizeSentences(
+			Analyzer morphoAnalyzer, String paragraph) {
+		LinkedList<LinkedList<Word>> result = new LinkedList<LinkedList<Word>>();
+		
+		List<Word> tokens = Splitting.tokenize(morphoAnalyzer, paragraph);
+		LinkedList<Word> sentence = new LinkedList<Word>();
+		for (Word word : tokens) {
+			sentence.add(word);
+			if (Splitting.isChunkCloser(word)) { // does this token look like end of sentence				
+				result.add(sentence);
+				sentence = new LinkedList<Word>();
+			}
+		}
+		
+		if (!sentence.isEmpty()) 
+			result.add(sentence);
+		return result;
 	}
 
 
