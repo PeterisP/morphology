@@ -179,42 +179,35 @@ public class Splitting {
 			switch (statuss) {
 			case IN_SPACE:
 				if (!Splitting.isSpace(str.charAt(i))) {
-					if(str.charAt(i)=='\'')
+					
+					if (str.charAt(i)=='\'') inApostrophes=true;
+
+					//atjauno automāta stāvokli
+					automats.reset();
+					//atrod pirmo derīgo zaru
+					automats.findNextBranch(str.charAt(i));
+					
+					if(automats.status()>0) //pārbauda vai atrada meklēto simbolu
 					{
-						tokens.add( (morphoAnalyzer == null) ? 
-								new Word("'") :
-								morphoAnalyzer.analyze("'") );
-						inApostrophes=true;
-					}
-					else
-					{
-						//atjauno automāta stāvokli
-						automats.reset();
-						//atrod pirmo derīgo zaru
-						automats.findNextBranch(str.charAt(i));
-						
-						if(automats.status()>0) //pārbauda vai atrada meklēto simbolu
+						//ja atrada
+						statuss=Status.IN_WORD;
+						progress=i;
+						//pārbauda vai ar to var arī virkne beigties
+						if(automats.status()==2)
 						{
-							//ja atrada
-							statuss=Status.IN_WORD;
-							progress=i;
-							//pārbauda vai ar to var arī virkne beigties
-							if(automats.status()==2)
-							{
-								canEndInNextStep=true;
-							}
-							else
-							{
-								canEndInNextStep=false;
-							}
+							canEndInNextStep=true;
 						}
 						else
 						{
-							//ja neatrada, pievieno simbolu rezultātam
-							tokens.add( (morphoAnalyzer == null) ? 
-									new Word(str.substring(i,i+1)) :
-									morphoAnalyzer.analyze(str.substring(i,i+1)) );
+							canEndInNextStep=false;
 						}
+					}
+					else
+					{
+						//ja neatrada, pievieno simbolu rezultātam
+						tokens.add( (morphoAnalyzer == null) ? 
+								new Word(str.substring(i,i+1)) :
+								morphoAnalyzer.analyze(str.substring(i,i+1)) );
 					}
 				}
 				break;

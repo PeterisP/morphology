@@ -23,6 +23,7 @@ import java.io.PrintWriter;
 import java.io.Serializable;
 import java.io.UnsupportedEncodingException;
 import java.io.Writer;
+import java.util.ArrayList;
 
 import org.w3c.dom.Node;
 
@@ -46,11 +47,12 @@ public class Wordform extends AttributeValues implements Serializable{
 		this.token = token;
 		this.lexeme = lexeme;
 		this.ending = ending;
+		Paradigm paradigm = ending.getParadigm();
 		
 		addAttribute(AttributeNames.i_Word, token);
 		addAttribute(AttributeNames.i_Mija, Integer.toString(ending.getMija()));
-		addAttributes(ending.getParadigm());
-		addAttribute(AttributeNames.i_ParadigmID, Integer.toString(ending.getParadigm().getID()));
+		addAttributes(paradigm);
+		addAttribute(AttributeNames.i_ParadigmID, Integer.toString(paradigm.getID()));
 		addAttributes(ending);
 		addAttribute(AttributeNames.i_EndingID, Integer.toString(ending.getID()));
 		
@@ -67,9 +69,16 @@ public class Wordform extends AttributeValues implements Serializable{
 		
 		Ending pamatformasEnding = ending.getLemmaEnding();
 		// FIXME šis 'if' būtu jāsaprot un jāsakārto - lai ir sakarīgi, bet nesalauž specgadījumus ('vairāk' -> pamatforma 'daudz' utml)
-		if (pamatformasEnding != null && !(ending.getParadigm().getID() == 25 || ending.getParadigm().getID() == 29 || ending.getParadigm().getID() == 21)
+		if (pamatformasEnding != null && !(paradigm.getID() == 25 || paradigm.getID() == 29 || paradigm.getID() == 21)
 				&& !fixed_stem) {
-			String pamatforma = lexeme.getStem(pamatformasEnding.stemID - 1) + pamatformasEnding.getEnding();	
+			String trešāSakne = null; 
+			if (paradigm.getStems() == 3) trešāSakne = lexeme.getStem(2);
+			String celms = lexeme.getStem(pamatformasEnding.stemID-1);
+			ArrayList<Variants> celmi = Mijas.MijasLocīšanai(celms, pamatformasEnding.getMija(), trešāSakne, false, this.isMatchingStrong(AttributeNames.i_NounType, AttributeNames.v_ProperNoun));
+			
+			if (celmi.size()>0) celms = celmi.get(0).celms; // FIXME - nav objektīva pamata ņemt tieši pirmo, netīri
+			
+			String pamatforma = celms + pamatformasEnding.getEnding();	
 			if (lexeme.isMatchingStrong(AttributeNames.i_NounType, AttributeNames.v_ProperNoun)) {
 				pamatforma = Character.toUpperCase(pamatforma.charAt(0)) + pamatforma.substring(1);
 			}

@@ -13046,6 +13046,9 @@
     <Lexeme ID="27205" Stem1="»">
       <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="»"/>
     </Lexeme>
+    <Lexeme ID="50758" Stem1="''">
+      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="''"/>
+    </Lexeme>
     <Lexeme ID="27206" Stem1="-">
       <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Domuzīme" Pamatforma="-"/>
     </Lexeme>

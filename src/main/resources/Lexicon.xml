@@ -894,40 +894,40 @@
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Locījums="Vokatīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Ciešamā"/>
 		</Ending>
 		<Ending ID="768" StemChange="16" Ending="šana" StemID="1" LemmaEnding="768">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Nominatīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Lietvārda_tips="Sugas vārds" Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Nominatīvs"/>
 		</Ending>
 		<Ending ID="769" StemChange="16" Ending="šanas" StemID="1" LemmaEnding="768">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Ģenitīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Lietvārda_tips="Sugas vārds" Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Ģenitīvs"/>
 		</Ending>
 		<Ending ID="770" StemChange="16" Ending="šanai" StemID="1" LemmaEnding="768">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Datīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Lietvārda_tips="Sugas vārds" Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Datīvs"/>
 		</Ending>
 		<Ending ID="771" StemChange="16" Ending="šanu" StemID="1" LemmaEnding="768">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Akuzatīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Lietvārda_tips="Sugas vārds" Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Akuzatīvs"/>
 		</Ending>
 		<Ending ID="772" StemChange="16" Ending="šanā" StemID="1" LemmaEnding="768">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Lokatīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Lietvārda_tips="Sugas vārds" Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Lokatīvs"/>
 		</Ending>
 		<Ending ID="773" StemChange="16" Ending="šana" StemID="1" LemmaEnding="768">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Vokatīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Lietvārda_tips="Sugas vārds" Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Vokatīvs"/>
 		</Ending>
 		<Ending ID="775" StemChange="16" Ending="šanas" StemID="1" LemmaEnding="768">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Nominatīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Lietvārda_tips="Sugas vārds" Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Nominatīvs"/>
 		</Ending>
 		<Ending ID="776" StemChange="16" Ending="šanu" StemID="1" LemmaEnding="768">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Ģenitīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Lietvārda_tips="Sugas vārds" Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Ģenitīvs"/>
 		</Ending>
 		<Ending ID="777" StemChange="16" Ending="šanām" StemID="1" LemmaEnding="768">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Datīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Lietvārda_tips="Sugas vārds" Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Datīvs"/>
 		</Ending>
 		<Ending ID="778" StemChange="16" Ending="šanas" StemID="1" LemmaEnding="768">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Akuzatīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Lietvārda_tips="Sugas vārds" Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Akuzatīvs"/>
 		</Ending>
 		<Ending ID="779" StemChange="16" Ending="šanās" StemID="1" LemmaEnding="768">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Lokatīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Lietvārda_tips="Sugas vārds" Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Lokatīvs"/>
 		</Ending>
 		<Ending ID="780" StemChange="16" Ending="šanas" StemID="1" LemmaEnding="768">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Vokatīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Lietvārda_tips="Sugas vārds" Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Vokatīvs"/>
 		</Ending>
 		<Ending ID="781" StemChange="15" Ending="dams" StemID="3" LemmaEnding="711">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Noteiktība="Nepiemīt" Izteiksme="Divdabis" Dzimte="Vīriešu" Locījums="Nominatīvs" Lokāmība="Daļēji lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
@@ -2048,80 +2048,41 @@
 		<Ending ID="432" StemChange="0" Ending="tās" StemID="1" LemmaEnding="225">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Locījums="Vokatīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Ciešamā"/>
 		</Ending>
-		<Ending ID="434" StemChange="0" Ending="jiens" StemID="1" LemmaEnding="225">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Locījums="Nominatīvs"/>
-		</Ending>
-		<Ending ID="435" StemChange="0" Ending="jiena" StemID="1" LemmaEnding="225">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Locījums="Ģenitīvs"/>
-		</Ending>
-		<Ending ID="436" StemChange="0" Ending="jienam" StemID="1" LemmaEnding="225">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Locījums="Datīvs"/>
-		</Ending>
-		<Ending ID="437" StemChange="0" Ending="jienu" StemID="1" LemmaEnding="225">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Locījums="Akuzatīvs"/>
-		</Ending>
-		<Ending ID="438" StemChange="0" Ending="jienā" StemID="1" LemmaEnding="225">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Locījums="Lokatīvs"/>
-		</Ending>
-		<Ending ID="439" StemChange="0" Ending="jiens" StemID="1" LemmaEnding="225">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Locījums="Vokatīvs"/>
-		</Ending>
-		<Ending ID="440" StemChange="0" Ending="jien" StemID="1" LemmaEnding="225">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Locījums="Vokatīvs"/>
-		</Ending>
-		<Ending ID="441" StemChange="0" Ending="jieni" StemID="1" LemmaEnding="225">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Daudzskaitlis" Dzimte="Vīriešu" Locījums="Nominatīvs"/>
-		</Ending>
-		<Ending ID="442" StemChange="0" Ending="jienu" StemID="1" LemmaEnding="225">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Daudzskaitlis" Dzimte="Vīriešu" Locījums="Ģenitīvs"/>
-		</Ending>
-		<Ending ID="443" StemChange="0" Ending="jieniem" StemID="1" LemmaEnding="225">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Daudzskaitlis" Dzimte="Vīriešu" Locījums="Datīvs"/>
-		</Ending>
-		<Ending ID="444" StemChange="0" Ending="jienus" StemID="1" LemmaEnding="225">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Daudzskaitlis" Dzimte="Vīriešu" Locījums="Akuzatīvs"/>
-		</Ending>
-		<Ending ID="445" StemChange="0" Ending="jienos" StemID="1" LemmaEnding="225">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Daudzskaitlis" Dzimte="Vīriešu" Locījums="Lokatīvs"/>
-		</Ending>
-		<Ending ID="446" StemChange="0" Ending="jieni" StemID="1" LemmaEnding="225">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Daudzskaitlis" Dzimte="Vīriešu" Locījums="Vokatīvs"/>
-		</Ending>
 		<Ending ID="447" StemChange="0" Ending="šana" StemID="1" LemmaEnding="447">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Nominatīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Lietvārda_tips="Sugas vārds" Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Nominatīvs"/>
 		</Ending>
 		<Ending ID="448" StemChange="0" Ending="šanas" StemID="1" LemmaEnding="447">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Ģenitīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Lietvārda_tips="Sugas vārds" Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Ģenitīvs"/>
 		</Ending>
 		<Ending ID="449" StemChange="0" Ending="šanai" StemID="1" LemmaEnding="447">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Datīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Lietvārda_tips="Sugas vārds" Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Datīvs"/>
 		</Ending>
 		<Ending ID="450" StemChange="0" Ending="šanu" StemID="1" LemmaEnding="447">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Akuzatīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Lietvārda_tips="Sugas vārds" Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Akuzatīvs"/>
 		</Ending>
 		<Ending ID="451" StemChange="0" Ending="šanā" StemID="1" LemmaEnding="447">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Lokatīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Lietvārda_tips="Sugas vārds" Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Lokatīvs"/>
 		</Ending>
 		<Ending ID="452" StemChange="0" Ending="šana" StemID="1" LemmaEnding="447">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Vokatīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Lietvārda_tips="Sugas vārds" Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Vokatīvs"/>
 		</Ending>
 		<Ending ID="454" StemChange="0" Ending="šanas" StemID="1" LemmaEnding="447">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Nominatīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Lietvārda_tips="Sugas vārds" Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Nominatīvs"/>
 		</Ending>
 		<Ending ID="455" StemChange="0" Ending="šanu" StemID="1" LemmaEnding="447">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Ģenitīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Lietvārda_tips="Sugas vārds" Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Ģenitīvs"/>
 		</Ending>
 		<Ending ID="456" StemChange="0" Ending="šanām" StemID="1" LemmaEnding="447">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Datīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Lietvārda_tips="Sugas vārds" Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Datīvs"/>
 		</Ending>
 		<Ending ID="457" StemChange="0" Ending="šanas" StemID="1" LemmaEnding="447">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Akuzatīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Lietvārda_tips="Sugas vārds" Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Akuzatīvs"/>
 		</Ending>
 		<Ending ID="458" StemChange="0" Ending="šanās" StemID="1" LemmaEnding="447">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Lokatīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Lietvārda_tips="Sugas vārds" Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Lokatīvs"/>
 		</Ending>
 		<Ending ID="459" StemChange="0" Ending="šanas" StemID="1" LemmaEnding="447">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Vokatīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Lietvārda_tips="Sugas vārds" Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Vokatīvs"/>
 		</Ending>
 		<Ending ID="460" StemChange="0" Ending="dams" StemID="1" LemmaEnding="225">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Noteiktība="Nepiemīt" Izteiksme="Divdabis" Dzimte="Vīriešu" Locījums="Nominatīvs" Lokāmība="Daļēji lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
@@ -2756,80 +2717,41 @@
 		<Ending ID="675" StemChange="0" Ending="tās" StemID="1" LemmaEnding="468">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Locījums="Vokatīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Ciešamā"/>
 		</Ending>
-		<Ending ID="677" StemChange="0" Ending="jiens" StemID="1" LemmaEnding="468">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Locījums="Nominatīvs"/>
-		</Ending>
-		<Ending ID="678" StemChange="0" Ending="jiena" StemID="1" LemmaEnding="468">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Locījums="Ģenitīvs"/>
-		</Ending>
-		<Ending ID="679" StemChange="0" Ending="jienam" StemID="1" LemmaEnding="468">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Locījums="Datīvs"/>
-		</Ending>
-		<Ending ID="680" StemChange="0" Ending="jienu" StemID="1" LemmaEnding="468">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Locījums="Akuzatīvs"/>
-		</Ending>
-		<Ending ID="681" StemChange="0" Ending="jienā" StemID="1" LemmaEnding="468">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Locījums="Lokatīvs"/>
-		</Ending>
-		<Ending ID="682" StemChange="0" Ending="jiens" StemID="1" LemmaEnding="468">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Locījums="Vokatīvs"/>
-		</Ending>
-		<Ending ID="683" StemChange="0" Ending="jien" StemID="1" LemmaEnding="468">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Locījums="Vokatīvs"/>
-		</Ending>
-		<Ending ID="684" StemChange="0" Ending="jieni" StemID="1" LemmaEnding="468">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Daudzskaitlis" Dzimte="Vīriešu" Locījums="Nominatīvs"/>
-		</Ending>
-		<Ending ID="685" StemChange="0" Ending="jienu" StemID="1" LemmaEnding="468">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Daudzskaitlis" Dzimte="Vīriešu" Locījums="Ģenitīvs"/>
-		</Ending>
-		<Ending ID="686" StemChange="0" Ending="jieniem" StemID="1" LemmaEnding="468">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Daudzskaitlis" Dzimte="Vīriešu" Locījums="Datīvs"/>
-		</Ending>
-		<Ending ID="687" StemChange="0" Ending="jienus" StemID="1" LemmaEnding="468">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Daudzskaitlis" Dzimte="Vīriešu" Locījums="Akuzatīvs"/>
-		</Ending>
-		<Ending ID="688" StemChange="0" Ending="jienos" StemID="1" LemmaEnding="468">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Daudzskaitlis" Dzimte="Vīriešu" Locījums="Lokatīvs"/>
-		</Ending>
-		<Ending ID="689" StemChange="0" Ending="jieni" StemID="1" LemmaEnding="468">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Daudzskaitlis" Dzimte="Vīriešu" Locījums="Vokatīvs"/>
-		</Ending>
 		<Ending ID="690" StemChange="0" Ending="šana" StemID="1" LemmaEnding="690">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Nominatīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Lietvārda_tips="Sugas vārds" Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Nominatīvs"/>
 		</Ending>
 		<Ending ID="691" StemChange="0" Ending="šanas" StemID="1" LemmaEnding="690">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Ģenitīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Lietvārda_tips="Sugas vārds" Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Ģenitīvs"/>
 		</Ending>
 		<Ending ID="692" StemChange="0" Ending="šanai" StemID="1" LemmaEnding="690">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Datīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Lietvārda_tips="Sugas vārds" Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Datīvs"/>
 		</Ending>
 		<Ending ID="693" StemChange="0" Ending="šanu" StemID="1" LemmaEnding="690">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Akuzatīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Lietvārda_tips="Sugas vārds" Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Akuzatīvs"/>
 		</Ending>
 		<Ending ID="694" StemChange="0" Ending="šanā" StemID="1" LemmaEnding="690">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Lokatīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Lietvārda_tips="Sugas vārds" Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Lokatīvs"/>
 		</Ending>
 		<Ending ID="695" StemChange="0" Ending="šana" StemID="1" LemmaEnding="690">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Vokatīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Lietvārda_tips="Sugas vārds" Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Vokatīvs"/>
 		</Ending>
 		<Ending ID="697" StemChange="0" Ending="šanas" StemID="1" LemmaEnding="690">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Nominatīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Lietvārda_tips="Sugas vārds" Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Nominatīvs"/>
 		</Ending>
 		<Ending ID="698" StemChange="0" Ending="šanu" StemID="1" LemmaEnding="690">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Ģenitīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Lietvārda_tips="Sugas vārds" Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Ģenitīvs"/>
 		</Ending>
 		<Ending ID="699" StemChange="0" Ending="šanām" StemID="1" LemmaEnding="690">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Datīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Lietvārda_tips="Sugas vārds" Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Datīvs"/>
 		</Ending>
 		<Ending ID="700" StemChange="0" Ending="šanas" StemID="1" LemmaEnding="690">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Akuzatīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Lietvārda_tips="Sugas vārds" Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Akuzatīvs"/>
 		</Ending>
 		<Ending ID="701" StemChange="0" Ending="šanās" StemID="1" LemmaEnding="690">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Lokatīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Lietvārda_tips="Sugas vārds" Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Lokatīvs"/>
 		</Ending>
 		<Ending ID="702" StemChange="0" Ending="šanas" StemID="1" LemmaEnding="690">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Vokatīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Lietvārda_tips="Sugas vārds" Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Vokatīvs"/>
 		</Ending>
 		<Ending ID="703" StemChange="0" Ending="dams" StemID="1" LemmaEnding="468">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Noteiktība="Nepiemīt" Izteiksme="Divdabis" Dzimte="Vīriešu" Locījums="Nominatīvs" Lokāmība="Daļēji lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
@@ -2883,22 +2805,22 @@
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Atstāstījuma" Persona="Nepiemīt" Laiks="Nākotne" Kārta="Darāmā"/>
 		</Ending>
 		<Ending ID="1072" StemChange="16" Ending="šanās" StemID="1" LemmaEnding="1072">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Vienskaitlis" Deklinācija="Atgriezenisks" Dzimte="Sieviešu" Locījums="Nominatīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Lietvārda_tips="Sugas vārds" Skaitlis="Vienskaitlis" Deklinācija="Atgriezenisks" Dzimte="Sieviešu" Locījums="Nominatīvs"/>
 		</Ending>
 		<Ending ID="1073" StemChange="16" Ending="šanās" StemID="1" LemmaEnding="1072">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Vienskaitlis" Deklinācija="Atgriezenisks" Dzimte="Sieviešu" Locījums="Ģenitīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Lietvārda_tips="Sugas vārds" Skaitlis="Vienskaitlis" Deklinācija="Atgriezenisks" Dzimte="Sieviešu" Locījums="Ģenitīvs"/>
 		</Ending>
 		<Ending ID="1074" StemChange="16" Ending="šanos" StemID="1" LemmaEnding="1072">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Vienskaitlis" Deklinācija="Atgriezenisks" Dzimte="Sieviešu" Locījums="Akuzatīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Lietvārda_tips="Sugas vārds" Skaitlis="Vienskaitlis" Deklinācija="Atgriezenisks" Dzimte="Sieviešu" Locījums="Akuzatīvs"/>
 		</Ending>
 		<Ending ID="1075" StemChange="16" Ending="šanās" StemID="1" LemmaEnding="1072">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Daudzskaitlis" Deklinācija="Atgriezenisks" Dzimte="Sieviešu" Locījums="Nominatīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Lietvārda_tips="Sugas vārds" Skaitlis="Daudzskaitlis" Deklinācija="Atgriezenisks" Dzimte="Sieviešu" Locījums="Nominatīvs"/>
 		</Ending>
 		<Ending ID="1076" StemChange="16" Ending="šanos" StemID="1" LemmaEnding="1072">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Daudzskaitlis" Deklinācija="Atgriezenisks" Dzimte="Sieviešu" Locījums="Ģenitīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Lietvārda_tips="Sugas vārds" Skaitlis="Daudzskaitlis" Deklinācija="Atgriezenisks" Dzimte="Sieviešu" Locījums="Ģenitīvs"/>
 		</Ending>
 		<Ending ID="1077" StemChange="16" Ending="šanās" StemID="1" LemmaEnding="1072">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Daudzskaitlis" Deklinācija="Atgriezenisks" Dzimte="Sieviešu" Locījums="Akuzatīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Lietvārda_tips="Sugas vārds" Skaitlis="Daudzskaitlis" Deklinācija="Atgriezenisks" Dzimte="Sieviešu" Locījums="Akuzatīvs"/>
 		</Ending>
 		<Ending ID="1078" StemChange="15" Ending="damies" StemID="3" LemmaEnding="1061">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Noteiktība="Nepiemīt" Izteiksme="Divdabis" Dzimte="Vīriešu" Locījums="Nominatīvs" Lokāmība="Daļēji lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
@@ -3096,22 +3018,22 @@
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Locījums="Akuzatīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
 		</Ending>
 		<Ending ID="994" StemChange="0" Ending="šanās" StemID="1" LemmaEnding="994">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Vienskaitlis" Deklinācija="Atgriezenisks" Dzimte="Sieviešu" Locījums="Nominatīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Lietvārda_tips="Sugas vārds" Skaitlis="Vienskaitlis" Deklinācija="Atgriezenisks" Dzimte="Sieviešu" Locījums="Nominatīvs"/>
 		</Ending>
 		<Ending ID="995" StemChange="0" Ending="šanās" StemID="1" LemmaEnding="994">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Vienskaitlis" Deklinācija="Atgriezenisks" Dzimte="Sieviešu" Locījums="Ģenitīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Lietvārda_tips="Sugas vārds" Skaitlis="Vienskaitlis" Deklinācija="Atgriezenisks" Dzimte="Sieviešu" Locījums="Ģenitīvs"/>
 		</Ending>
 		<Ending ID="996" StemChange="0" Ending="šanos" StemID="1" LemmaEnding="994">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Vienskaitlis" Deklinācija="Atgriezenisks" Dzimte="Sieviešu" Locījums="Akuzatīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Lietvārda_tips="Sugas vārds" Skaitlis="Vienskaitlis" Deklinācija="Atgriezenisks" Dzimte="Sieviešu" Locījums="Akuzatīvs"/>
 		</Ending>
 		<Ending ID="997" StemChange="0" Ending="šanās" StemID="1" LemmaEnding="994">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Daudzskaitlis" Deklinācija="Atgriezenisks" Dzimte="Sieviešu" Locījums="Nominatīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Lietvārda_tips="Sugas vārds" Skaitlis="Daudzskaitlis" Deklinācija="Atgriezenisks" Dzimte="Sieviešu" Locījums="Nominatīvs"/>
 		</Ending>
 		<Ending ID="998" StemChange="0" Ending="šanos" StemID="1" LemmaEnding="994">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Daudzskaitlis" Deklinācija="Atgriezenisks" Dzimte="Sieviešu" Locījums="Ģenitīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Lietvārda_tips="Sugas vārds" Skaitlis="Daudzskaitlis" Deklinācija="Atgriezenisks" Dzimte="Sieviešu" Locījums="Ģenitīvs"/>
 		</Ending>
 		<Ending ID="999" StemChange="0" Ending="šanās" StemID="1" LemmaEnding="994">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Daudzskaitlis" Deklinācija="Atgriezenisks" Dzimte="Sieviešu" Locījums="Akuzatīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Lietvārda_tips="Sugas vārds" Skaitlis="Daudzskaitlis" Deklinācija="Atgriezenisks" Dzimte="Sieviešu" Locījums="Akuzatīvs"/>
 		</Ending>
 		<Ending ID="1000" StemChange="0" Ending="damies" StemID="1" LemmaEnding="955">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Noteiktība="Nepiemīt" Izteiksme="Divdabis" Dzimte="Vīriešu" Locījums="Nominatīvs" Lokāmība="Daļēji lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
@@ -3234,22 +3156,22 @@
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Locījums="Akuzatīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
 		</Ending>
 		<Ending ID="1047" StemChange="0" Ending="šanās" StemID="1" LemmaEnding="1047">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Vienskaitlis" Deklinācija="Atgriezenisks" Dzimte="Sieviešu" Locījums="Nominatīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Lietvārda_tips="Sugas vārds" Skaitlis="Vienskaitlis" Deklinācija="Atgriezenisks" Dzimte="Sieviešu" Locījums="Nominatīvs"/>
 		</Ending>
 		<Ending ID="1048" StemChange="0" Ending="šanās" StemID="1" LemmaEnding="1047">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Vienskaitlis" Deklinācija="Atgriezenisks" Dzimte="Sieviešu" Locījums="Ģenitīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Lietvārda_tips="Sugas vārds" Skaitlis="Vienskaitlis" Deklinācija="Atgriezenisks" Dzimte="Sieviešu" Locījums="Ģenitīvs"/>
 		</Ending>
 		<Ending ID="1049" StemChange="0" Ending="šanos" StemID="1" LemmaEnding="1047">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Vienskaitlis" Deklinācija="Atgriezenisks" Dzimte="Sieviešu" Locījums="Akuzatīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Lietvārda_tips="Sugas vārds" Skaitlis="Vienskaitlis" Deklinācija="Atgriezenisks" Dzimte="Sieviešu" Locījums="Akuzatīvs"/>
 		</Ending>
 		<Ending ID="1050" StemChange="0" Ending="šanās" StemID="1" LemmaEnding="1047">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Daudzskaitlis" Deklinācija="Atgriezenisks" Dzimte="Sieviešu" Locījums="Nominatīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Lietvārda_tips="Sugas vārds" Skaitlis="Daudzskaitlis" Deklinācija="Atgriezenisks" Dzimte="Sieviešu" Locījums="Nominatīvs"/>
 		</Ending>
 		<Ending ID="1051" StemChange="0" Ending="šanos" StemID="1" LemmaEnding="1047">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Daudzskaitlis" Deklinācija="Atgriezenisks" Dzimte="Sieviešu" Locījums="Ģenitīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Lietvārda_tips="Sugas vārds" Skaitlis="Daudzskaitlis" Deklinācija="Atgriezenisks" Dzimte="Sieviešu" Locījums="Ģenitīvs"/>
 		</Ending>
 		<Ending ID="1052" StemChange="0" Ending="šanās" StemID="1" LemmaEnding="1047">
-			<Attributes Vārdšķira="Lietvārds" Skaitlis="Daudzskaitlis" Deklinācija="Atgriezenisks" Dzimte="Sieviešu" Locījums="Akuzatīvs"/>
+			<Attributes Vārdšķira="Lietvārds" Lietvārda_tips="Sugas vārds" Skaitlis="Daudzskaitlis" Deklinācija="Atgriezenisks" Dzimte="Sieviešu" Locījums="Akuzatīvs"/>
 		</Ending>
 		<Ending ID="1053" StemChange="0" Ending="damies" StemID="1" LemmaEnding="1008">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Noteiktība="Nepiemīt" Izteiksme="Divdabis" Dzimte="Vīriešu" Locījums="Nominatīvs" Lokāmība="Daļēji lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
@@ -3451,7 +3373,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="25" LemmaEnding="2011" Description="Vietniekvārdi">
-		<Attributes Vārdšķira="Vietniekvārds"/>
+		<Attributes Vārdšķira="Vietniekvārds" Noliegums="Nē"/>
 		<Ending ID="2011" StemChange="0" Ending="" StemID="1" LemmaEnding="2011">
 			<Attributes/>
 		</Ending>

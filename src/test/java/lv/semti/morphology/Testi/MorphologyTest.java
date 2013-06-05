@@ -1780,4 +1780,21 @@ public class MorphologyTest {
 		assertTrue(formas.size() > 0);
 		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, "", "andrej");
 	}
+	
+	@Test
+	public void laura_20130605() {
+		// Vietniekvārdiem neieliek pēdējo pozīciju tagā (noliegumu); -šana atvasinātās formas nav ok
+		Word viņš = locītājs.analyze("viņš");
+		assertTrue(viņš.isRecognized());		
+		assertEquals("pp3msnn", viņš.wordforms.get(0).getTag());
+		
+		Word ciršana = locītājs.analyze("ciršana");
+		assertTrue(ciršana.isRecognized());		
+		assertEquals("ncfsn4", ciršana.wordforms.get(0).getTag());
+		assertEquals("ciršana", ciršana.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+		
+		Word mazgāšanās = locītājs.analyze("mazgāšanos");
+		assertTrue(mazgāšanās.isRecognized());		
+		assertEquals("ncfsar", mazgāšanās.getBestWordform().getTag());
+	}
 }

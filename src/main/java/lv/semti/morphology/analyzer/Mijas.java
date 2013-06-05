@@ -360,8 +360,16 @@ public abstract class Mijas {
  		return counter;
 	}
 
+	/***
+	 * procedūra, kas realizē visas celmu pārmaiņas - līdzskaņu mijas; darbības vārdu formas, utml.
+	 * @param stem
+	 * @param stemChange
+	 * @param trešāSakne
+	 * @param pieliktVisPārākoPak
+	 * @param properName
+	 * @return masīvs ar variantiem - FIXME - principā vajadzētu būt vienam; izņēmums ir pārākās/vispārākās formas
+	 */
 	public static ArrayList<Variants> MijasLocīšanai (String stem, int stemChange, String trešāSakne, boolean pieliktVisPārākoPak, boolean properName) {
-		// procedūra, kas realizē visas celmu pārmaiņas - līdzskaņu mijas; darbības vārdu formas, utml.
 
 		ArrayList<Variants> varianti = new ArrayList<Variants>(1);
 		if (stem.trim().equals("")) return varianti;

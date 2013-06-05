@@ -496,5 +496,14 @@ public class TokenizeTest {
 		assertEquals(1, tokens.size());
 	}
 
+	@Test
+	public void apostrofpēdiņas()
+	{
+		LinkedList<Word> tokens;
+		
+		tokens = Splitting.tokenize(locītājs, "''", false); 
+		assertEquals(1, tokens.size());
+	}
+
 }
  
