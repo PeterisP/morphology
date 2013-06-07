@@ -23,6 +23,9 @@ import java.util.HashMap;
 import java.util.Set;
 import java.util.Map.Entry;
 
+import lv.semti.morphology.analyzer.MarkupConverter;
+import lv.semti.morphology.analyzer.Wordform;
+
 import org.json.simple.JSONValue;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -202,10 +205,30 @@ public class AttributeValues implements FeatureStructure, Cloneable {
 		//irok
 	}
 
+	/**
+	 * Creates a new set of AttributeValues, initializing the contents from a source AV object
+	 * @param source
+	 */
+	public AttributeValues(AttributeValues source) {
+		this.addAttributes(source);
+	}
+
 	public void clear() {
 		attributes.clear();
 	}
+	
+	/**
+	 * Returns Semti-Kamols style positional morphosyntactic markup tag of this set of attributes
+	 * @return
+	 */
+	public String getTag() {
+		return MarkupConverter.toKamolsMarkup(this);
+	}	
 
+	/**
+	 * Removes a set of attributes that are considered not target of POS/morphotagging; mainly lexical features. 
+	 * TODO - confusing name of function?
+	 */
 	public void removeNonlexicalAttributes() {
 		removeAttribute(AttributeNames.i_Transitivity);
 		removeAttribute(AttributeNames.i_VerbType);
@@ -225,8 +248,8 @@ public class AttributeValues implements FeatureStructure, Cloneable {
 		
 		if (isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Preposition)) {			
 			removeAttribute(AttributeNames.i_Novietojums);
-			removeAttribute(AttributeNames.i_Rekcija);
-			removeAttribute(AttributeNames.i_Number);
+			removeAttribute(AttributeNames.i_Rekcija);  // FIXME - may be needed
+			removeAttribute(AttributeNames.i_Number);   // FIXME - may be needed
 		}
 		
 		//par šiem jādomā

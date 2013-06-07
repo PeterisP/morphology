@@ -52,7 +52,6 @@ public class Wordform extends AttributeValues implements Serializable{
 		addAttribute(AttributeNames.i_Word, token);
 		addAttribute(AttributeNames.i_Mija, Integer.toString(ending.getMija()));
 		addAttributes(paradigm);
-		addAttribute(AttributeNames.i_ParadigmID, Integer.toString(paradigm.getID()));
 		addAttributes(ending);
 		addAttribute(AttributeNames.i_EndingID, Integer.toString(ending.getID()));
 		
@@ -143,10 +142,6 @@ public class Wordform extends AttributeValues implements Serializable{
 		addAttribute(AttributeNames.i_Tag, MarkupConverter.toKamolsMarkup(this));
 	}*/
 	
-	public String getTag() {
-		return MarkupConverter.toKamolsMarkup(this);
-	}
-
 	@Override
 	public void toXML (Writer stream) throws IOException {
 		stream.write("<Vārdforma");
