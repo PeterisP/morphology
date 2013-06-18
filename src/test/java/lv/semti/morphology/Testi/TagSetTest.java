@@ -23,41 +23,43 @@ import java.io.OutputStreamWriter;
 import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
-import javax.xml.parsers.ParserConfigurationException;
-
+import lv.semti.morphology.analyzer.Analyzer;
 import lv.semti.morphology.analyzer.MarkupConverter;
+import lv.semti.morphology.analyzer.Word;
 import lv.semti.morphology.attributes.*;
 import lv.semti.morphology.lexicon.*;
 import static org.junit.Assert.*;
 
+import org.junit.BeforeClass;
 import org.junit.Test;
-import org.xml.sax.SAXException;
 
 public class TagSetTest {
-
+	private static Analyzer locītājs;
+	
+	@BeforeClass
+	public static void setUpBeforeClass() {
+		try {
+			locītājs = new Analyzer("dist/Lexicon.xml", false);
+		} catch(Exception e) {
+			e.printStackTrace();
+		} 
+	}
+	
 	@Test
 	public void leksikons() {
 		TagSet īpv = TagSet.getTagSet();
 		
-		Lexicon lexicon = null;
-		try {
-			lexicon = new Lexicon("dist/Lexicon.xml");
-			for (Paradigm vārdgrupa : lexicon.paradigms) {
-				assertEquals(String.format("Nevalidējas vārdgrupa %d", vārdgrupa.getID()), null, īpv.validate(vārdgrupa, "LV"));
-				for (Lexeme leksēma : vārdgrupa.lexemes)
-					assertEquals(String.format("Nevalidējas leksēma %d", leksēma.getID()),  null, īpv.validate(leksēma, "LV"));
-				for (Ending ending : vārdgrupa.endings)
-					assertEquals(String.format("Nevalidējas galotne %d", ending.getID()), null, īpv.validate(ending, "LV"));			
-			}
-			
-		} catch (Exception e) {
-			fail();       
-		}						
+		for (Paradigm vārdgrupa : locītājs.paradigms) {
+			assertEquals(String.format("Nevalidējas vārdgrupa %d", vārdgrupa.getID()), null, īpv.validate(vārdgrupa, "LV"));
+			for (Lexeme leksēma : vārdgrupa.lexemes)
+				assertEquals(String.format("Nevalidējas leksēma %d", leksēma.getID()),  null, īpv.validate(leksēma, "LV"));
+			for (Ending ending : vārdgrupa.endings)
+				assertEquals(String.format("Nevalidējas galotne %d", ending.getID()), null, īpv.validate(ending, "LV"));			
+		}
 	}
 	
 	@Test
@@ -139,10 +141,19 @@ public class TagSetTest {
 		TagSet semti = TagSet.getTagSet();
 		TagSet tilde = new TagSet("dist/TagSet_Tilde.xml");
 		
-		assertEquals("N-msn---------n-----------f-", tilde.toTag(semti.fromTag("npmsn2")));
+		assertEquals("N-msn---------n-------------", tilde.toTag(semti.fromTag("npmsn2"))); //TODO - nečeko capital letters fīčas
 //					  N-msn------------s----------
 //					  0123456789012345678901234567			
 	}
 	
-	
+	@Test
+	public void tildes_output_analīzei() throws Exception {
+		TagSet tilde = new TagSet("dist/TagSet_Tilde.xml");
+		
+		Word jānis = locītājs.analyze("Jānis");
+		
+		assertEquals("N-msn---------n-----------f-", tilde.toTag(jānis.getBestWordform()));
+//					  N-msn------------s----------
+//					  0123456789012345678901234567			
+	}
 }

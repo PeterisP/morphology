@@ -146,10 +146,10 @@
 	<Value LV="Sakārtojuma" Tag="c"/>
 	<Value LV="Pakārtojuma" Tag="s"/>
 </Attribute>
-<Attribute LV="Usage of capital letters ??" MarkupPos="26">
-	<Value LV="Lowercase ??" Tag="l"/>
-	<Value LV="Firstupper ??" Tag="f"/>
-	<Value LV="Allupper ??" Tag="u"/>
+<Attribute LV="Lielo burtu lietojums" MarkupPos="26">
+	<Value LV="Mazie burti" Tag="l"/>
+	<Value LV="Sākas ar lielo burtu" Tag="f"/>
+	<Value LV="Rakstīts ar lielajiem burtiem" Tag="u"/>
 </Attribute>
 <Attribute LV="Pieturzīmes tips" MarkupPos="27">
 	<Value LV="Punkts" Tag="."/>

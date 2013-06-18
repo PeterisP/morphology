@@ -140,9 +140,13 @@ public class Analyzer extends Lexicon {
 		word = word.trim();
 		if (!word.equals(word.toLowerCase().trim())) {
 			Word rezults = new Word(word);
-			Word lowercase = analyzeLowercase(word.toLowerCase().trim(), word.matches("\\p{Lu}.*"));
+			String lettercase = AttributeNames.v_Lowercase;
+			if (word.matches("\\p{Lu}.*")) lettercase = AttributeNames.v_FirstUpper;
+			if (word.matches("(\\p{Lu})*")) lettercase = AttributeNames.v_AllUpper;
+			Word lowercase = analyzeLowercase(word.toLowerCase().trim(), word.matches("\\p{Lu}.*"));			
 			for (Wordform vārdforma : lowercase.wordforms) {
 				vārdforma.setToken(word.trim());
+				vārdforma.addAttribute(AttributeNames.i_CapitalLetters, lettercase);
 				rezults.addWordform(vārdforma);
 			}
 			return rezults;
