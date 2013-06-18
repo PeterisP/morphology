@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TagSet Structure="Positional">
+<Attribute LV="Vārdšķira" MarkupPos="0">
+	<Value LV="Lietvārds" Tag="n"/>
+	<Value LV="Darbības vārds" Tag="v"/>
+	<Value LV="Īpašības vārds" Tag="a"/>
+	<Value LV="Vietniekvārds" Tag="p"/>
+	<Value LV="Apstākļa vārds" Tag="r"/>
+	<Value LV="Divdabis" Tag="g"/>
+	<Value LV="Skaitļa vārds" Tag="m"/>
+	<Value LV="Izsauksmes vārds" Tag="i"/>
+	<Value LV="Partikula" Tag="q"/>
+	<Value LV="Prievārds" Tag="s"/>	
+	<Value LV="Saiklis" Tag="c"/>
+	<Value LV="Saīsinājums" Tag="y"/>	
+	<Value LV="Pieturzīme" Tag="t"/>
+
+		<Value LV="Reziduālis" Tag="?"/>
+		<Value LV="Cipars ???" Tag="d"/>
+
+</Attribute>
+<Attribute LV="Laiks" MarkupPos="1">
+	<Value LV="Tagadne" Tag="p"/>
+	<Value LV="Pagātne" Tag="s"/>
+	<Value LV="Nākotne" Tag="f"/>
+</Attribute>
+<Attribute LV="Dzimte" MarkupPos="2">
+	<Value LV="Vīriešu" Tag="m"/>
+	<Value LV="Sieviešu" Tag="f"/>
+</Attribute>
+<Attribute LV="Skaitlis" MarkupPos="3">
+	<Value LV="Vienskaitlis" Tag="s"/>
+	<Value LV="Daudzskaitlis" Tag="p"/>
+</Attribute>
+<Attribute LV="Locījums" MarkupPos="4">
+	<Value LV="Nominatīvs" Tag="n"/>
+	<Value LV="Ģenitīvs" Tag="g"/>
+	<Value LV="Datīvs" Tag="d"/>
+	<Value LV="Akuzatīvs" Tag="a"/>
+	<Value LV="Lokatīvs" Tag="l"/>
+	<Value LV="Vokatīvs" Tag="v"/>
+</Attribute>
+<Attribute LV="Pakāpe" MarkupPos="5">
+	<Value LV="Pamata" Tag="p"/>
+	<Value LV="Pārākā" Tag="c"/>
+	<Value LV="Vispārākā" Tag="s"/>
+</Attribute>
+<Attribute LV="Persona" MarkupPos="6">
+	<Value LV="1" Tag="1"/>
+	<Value LV="2" Tag="2"/>
+	<Value LV="3" Tag="3"/>
+</Attribute>
+<Attribute LV="Noteiktība" MarkupPos="7">
+	<Value LV="Nenoteiktā" Tag="n"/>
+	<Value LV="Noteiktā" Tag="y"/>
+</Attribute>
+<Attribute LV="Skaitļa vārda tips" MarkupPos="8">
+	<Value LV="Pamata" Tag="c"/>
+	<Value LV="Kārtas" Tag="o"/>
+
+		<Value LV="Daļskaitlis" Tag="?"/>
+
+</Attribute>
+<Attribute LV="Izteiksme" MarkupPos="9">
+	<Value LV="Īstenības" Tag="i"/>
+	<Value LV="Pavēles" Tag="m"/>
+	<Value LV="Vēlējuma" Tag="s"/>
+	<Value LV="Atstāstījuma" Tag="q"/>
+	<Value LV="Vajadzības" Tag="d"/>
+	<Value LV="Nenoteiksme" Tag="n"/>
+	
+		<Value LV="Divdabis" Tag="?"/>
+
+</Attribute>
+<Attribute LV="Kārta" MarkupPos="11">
+	<Value LV="Darāmā" Tag="a"/>
+	<Value LV="Ciešamā" Tag="p"/>
+</Attribute>
+<Attribute LV="Vietniekvārda tips" MarkupPos="12">
+	<Value LV="Personu" Tag="p"/>
+	<Value LV="Atgriezeniskie" Tag="x"/>
+	<Value LV="Piederības" Tag="s"/>
+	<Value LV="Norādāmie" Tag="d"/>
+	<Value LV="Nenoteiktie" Tag="i"/>
+	<Value LV="Jautājamie" Tag="q"/>
+	<Value LV="Attieksmes" Tag="r"/>
+	<Value LV="Noteiktie" Tag="g"/>
+
+		<Value LV="Emphatic ??" Tag="m"/>
+		<Value LV="Negativepron ??" Tag="z"/>
+
+</Attribute>
+<Attribute LV="Lokāmība" MarkupPos="13">
+
+		<Value LV="Lokāms" Tag="?"/>
+
+	<Value LV="Daļēji lokāms" Tag="l"/>
+	<Value LV="Nelokāms" Tag="n"/>
+</Attribute>
+<Attribute LV="Deminutīvs ??" MarkupPos="14">
+
+		<Value LV="Ir deminutīvs ?? " Tag="y"/>
+		<Value LV="Nav deminutīvs ?? " Tag="n"/>
+
+</Attribute>
+<Attribute LV="Atgriezeniskums" MarkupPos="15">
+	<Value LV="Jā" Tag="y"/>
+	<Value LV="Nē" Tag="n"/>
+</Attribute>
+<Attribute LV="Noliegums" MarkupPos="16">
+	<Value LV="Jā" Tag="y"/>
+
+		<Value LV="Nē" Tag="?"/>
+
+</Attribute>
+<Attribute LV="Skaitlis" PartOfSpeech="Prievārds" MarkupPos="17">
+	<Value LV="Vienskaitlis" Tag="s"/>
+	<Value LV="Daudzskaitlis" Tag="p"/>
+</Attribute>
+<Attribute LV="Rekcija" MarkupPos="18">
+	<Value LV="Ģenitīvs" Tag="g"/>
+	<Value LV="Datīvs" Tag="d"/>
+	<Value LV="Akuzatīvs" Tag="a"/>
+</Attribute>
+<Attribute LV="Novietojums" MarkupPos="19">
+	<Value LV="Pirms" Tag="p"/>
+	<Value LV="Pēc" Tag="t"/>
+</Attribute>
+<Attribute LV="Darbības vārda tips" MarkupPos="20">
+	<Value LV="Palīgdarbības vārds" Tag="1"/>
+	<Value LV="Palīgverbs 'būt'" Tag="2"/>
+	<Value LV="Modāls" Tag="3"/>
+	<Value LV="'nebūt', 'trūkt' un 'pietikt'" Tag="4"/>
+
+		<Value LV="Palīgverbi 'tikt' un 'tapt'" Tag="6"/>
+		<Value LV="Patstāvīgs darbības vārds" Tag="?"/>
+		<Value LV="Fāzes" Tag="?"/>
+		<Value LV="Izpausmes veida" Tag="?"/>
+</Attribute>
+<Attribute LV="Apstākļa vārda tips" MarkupPos="21">
+		<Value LV="Mēra" Tag="g"/>
+		<Value LV="Veida" Tag="?"/>
+		<Value LV="Vietas" Tag="?"/>
+		<Value LV="Laika" Tag="?"/>
+		<Value LV="Cēloņa/nolūka" Tag="?"/>
+</Attribute>
+<Attribute LV="Saikļa tips" MarkupPos="22">
+	<Value LV="Sakārtojuma" Tag="c"/>
+	<Value LV="Pakārtojuma" Tag="s"/>
+</Attribute>
+<Attribute LV="Usage of capital letters ??" MarkupPos="26">
+	<Value LV="Lowercase ??" Tag="l"/>
+	<Value LV="Firstupper ??" Tag="f"/>
+	<Value LV="Allupper ??" Tag="u"/>
+</Attribute>
+<Attribute LV="Pieturzīmes tips" MarkupPos="27">
+	<Value LV="Punkts" Tag="."/>
+	<Value LV="Komats" Tag=","/>
+	<Value LV="Domuzīme" Tag="-"/>
+	<Value LV="Kols" Tag=":"/>
+	
+		<Value LV="Question ??" Tag="?"/>
+		<Value LV="Exclamation ??" Tag="!"/>
+		<Value LV="emdash ??" Tag="?"/>
+		<Value LV="dash ??" Tag="!"/>
+		<Value LV="percent ??" Tag="%"/>
+		<Value LV="obracket ??" Tag="("/>
+		<Value LV="cbracket ??" Tag=")"/>
+
+	<Value LV="Pēdiņa" Tag="?"/>
+	<Value LV="Iekava" Tag="?"/>
+	<Value LV="Cita" Tag="?"/>
+</Attribute>
+
+<FreeAttribute LV="Vārdgrupas nr">
+</FreeAttribute>
+<FreeAttribute LV="Leksēmas nr">
+</FreeAttribute>
+<FreeAttribute LV="Galotnes nr">
+</FreeAttribute>
+<FreeAttribute LV="Pamatforma">
+</FreeAttribute>
+<FreeAttribute LV="Avots">
+</FreeAttribute>
+
+</TagSet>

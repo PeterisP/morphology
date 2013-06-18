@@ -59,10 +59,11 @@ public class TagSetTest {
 	
 	@Test
 	public void convert_basic() throws UnsupportedEncodingException {
+		// validates if MarkupConverter can convert simple tags to AV's and back again, keeping all info
 		TagSet tags = TagSet.getTagSet();
 		PrintWriter izeja = new PrintWriter(new OutputStreamWriter(System.out, "UTF-8"));
 		
-		List<String> testcases = Arrays.asList("sppdn","vmnifi30an","zc");
+		List<String> testcases = Arrays.asList("sppdn","vmnift330an","zc");
 		
 		Lexicon lexicon = null;
 		try {
@@ -70,8 +71,9 @@ public class TagSetTest {
 			
 			for (String testcase : testcases) {
 				String result = MarkupConverter.toKamolsMarkup(MarkupConverter.fromKamolsMarkup(testcase));
+				assertEquals(testcase, result);
 				if (!testcase.equalsIgnoreCase(result)) {
-					tags.fromKamolsMarkup(testcase).describe(izeja);			
+					tags.fromTag(testcase).describe(izeja);			
 					izeja.println();
 					izeja.printf("%s\n%s\n",testcase,result);
 					izeja.println();					
@@ -103,8 +105,8 @@ public class TagSetTest {
 		TagSet tags = TagSet.getTagSet();
 
 		for (Etalons e : etaloni) {
-			AttributeValues av = tags.fromKamolsMarkup(e.tag);
-			String converted = tags.toKamolsMarkup(av);
+			AttributeValues av = tags.fromTag(e.tag);
+			String converted = tags.toTag(av);
 			
 			if (!e.tag.equalsIgnoreCase(converted)) {
 				izeja.println(e.wordform+"\t"+e.tag+"\n\t"+converted+"\n");
