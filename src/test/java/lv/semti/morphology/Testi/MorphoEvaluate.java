@@ -18,11 +18,15 @@ package lv.semti.morphology.Testi;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintStream;
 import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
+import java.util.Collections;
 import java.util.LinkedList;
+import java.util.List;
 
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -55,20 +59,19 @@ public class MorphoEvaluate {
 		locītājs.meklētsalikteņus = false;
     }	
 	
+	//@Test
+	public void testFile2012() throws IOException{
+		LinkedList<Etalons> etaloni = readVertEtalons("dist/test.txt");
+		evaluate(etaloni);
+	}
+	
 	@Test
-	public void evaluate() throws IOException {
-		BufferedReader ieeja;
-		String rinda;
-		ieeja = new BufferedReader(
-				new InputStreamReader(new FileInputStream("dist/test.txt"), "UTF-8"));
-		
-		LinkedList<Etalons> etaloni = new LinkedList<Etalons>();
-		
-		while ((rinda = ieeja.readLine()) != null) {
-			if (rinda.contains("<s>") || rinda.contains("</s>")) continue;
-			etaloni.add(new Etalons(rinda));
-		}
-		
+	public void testFile2013May() throws IOException{
+		LinkedList<Etalons> etaloni = readCONLLEtalons("dist/morfoetalons.conll");
+		evaluate(etaloni);
+	}
+	
+	public void evaluate(LinkedList<Etalons> etaloni) throws IOException{				
 		PrintWriter izeja = new PrintWriter(new PrintStream(System.out, true, "UTF8"));
 		
 		long sākums = System.currentTimeMillis();
@@ -92,6 +95,8 @@ public class MorphoEvaluate {
 		int ambiguous=0;
 		int wfcount=0;
 		int ambig_wfcount=0;
+		
+		List<String> mistakes = new LinkedList<String>();
 		
 		for (Etalons e : etaloni) {
 			Word w = locītājs.analyze(e.wordform);
@@ -144,21 +149,26 @@ public class MorphoEvaluate {
 					output = "";
 					for (Wordform wf : w.wordforms) {
 						if (wf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(e.lemma) && wf.getTag().equalsIgnoreCase(e.tag)) found = true;
-//						if (wf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(e.lemma) && wf.isMatchingWeak(MarkupConverter.fromKamolsMarkup(e.tag))) found_match=true;
-						if (wf.isMatchingWeak(MarkupConverter.fromKamolsMarkup(e.tag))) found_match=true;
-						output += "\t" + wf.getValue(AttributeNames.i_Lemma) + "\t" + wf.getTag() + "\n";
+						if (wf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(e.lemma) && wf.isMatchingWeak(MarkupConverter.fromKamolsMarkup(e.tag))) found_match=true;
+						//if (wf.isMatchingWeak(MarkupConverter.fromKamolsMarkup(e.tag))) found_match=true;
+						output += "\t\t" + wf.getValue(AttributeNames.i_Lemma) + "\t" + wf.getTag() + "\n";
 					}
 					if (found) one_of_options++;
 					else if (found_match) match++; 
 					else {
 						wrong++;
-						izeja.print(e.wordform+"\nDer:\t"+e.lemma+"\t"+e.tag+"\n"+output);
+						mistakes.add(e.wordform+"\nKorpusā:\t"+e.lemma+"\t"+e.tag+"\n"+output);
 					}
 				}	
 			} else {
 				not_recognized++;
-				//izeja.print(e.wordform+"\t"+e.lemma+"\t"+e.tag+"\n");
+				mistakes.add("Nav variantu :( \t"+e.wordform+"\t"+e.lemma+"\t"+e.tag+"\n");
 			}						
+		}
+		
+		Collections.sort(mistakes);
+		for (String mistake:mistakes){
+			izeja.println(mistake);
 		}
 		
 		long beigas = System.currentTimeMillis();
@@ -184,17 +194,63 @@ public class MorphoEvaluate {
 		System.out.printf("\tVariantu skaits tiem, kas daudznozīmīgi:\t%4.2f\n", ambig_wfcount*1.0/ambiguous);
 		
 	}
-	
-	class Etalons {
+
+	private LinkedList<Etalons> readVertEtalons(String filename)
+			throws IOException {
+		BufferedReader ieeja;
+		String rinda;
+		ieeja = new BufferedReader(
+				new InputStreamReader(new FileInputStream(filename), "UTF-8"));
+		
+		LinkedList<Etalons> etaloni = new LinkedList<Etalons>();
+		
+		while ((rinda = ieeja.readLine()) != null) {
+			if (rinda.contains("<s>") || rinda.contains("</s>") || rinda.isEmpty()) continue;
+			etaloni.add(Etalons.loadVert(rinda));
+		}		
+		ieeja.close();
+		
+		return etaloni;
+	}
+
+	private LinkedList<Etalons> readCONLLEtalons(String filename) throws IOException {
+		BufferedReader ieeja;
+		String rinda;
+		ieeja = new BufferedReader(
+				new InputStreamReader(new FileInputStream(filename), "UTF-8"));
+		
+		LinkedList<Etalons> etaloni = new LinkedList<Etalons>();
+		
+		while ((rinda = ieeja.readLine()) != null) {
+			if (rinda.contains("<s>") || rinda.contains("</s>") || rinda.isEmpty()) continue;
+			etaloni.add(Etalons.loadCONLL(rinda));
+		}		
+		ieeja.close();
+		
+		return etaloni;	}
+
+
+	static class Etalons {
 		String wordform;
 		String lemma;
 		String tag;
 		
-		Etalons(String rinda) {
+		static Etalons loadVert(String rinda) {
+			Etalons etalons = new Etalons();
 			String[] parse = rinda.split("\t");
-			wordform = parse[0];
-			lemma = parse[2];
-			tag = parse[1];
+			etalons.wordform = parse[0];
+			etalons.lemma = parse[2];
+			etalons.tag = parse[1];
+			return etalons;
+		}
+
+		static Etalons loadCONLL(String rinda) {
+			Etalons etalons = new Etalons();
+			String[] parse = rinda.split("\t");
+			etalons.wordform = parse[1].replace('_', ' ');
+			etalons.lemma = parse[2].replace('_', ' ');
+			etalons.tag = parse[4];
+			return etalons;
 		}
 	}
 	

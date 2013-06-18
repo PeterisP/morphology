@@ -2,6 +2,9 @@
 <Lexicon revision="$Revision: 950 $" licence="Copyright 2008-2009 Institute of Mathematics and Computer Science, University of Latvia. This file is part of the SemTi-Kamols Chunker, see http://www.semti-kamols.lv/  This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program. If not, see http://www.gnu.org/licenses/.">
   <Paradigm Stems="1" ID="1" LemmaEnding="1" Description="Lietvārds 1. deklinācija -s">
     <Attributes Vārdšķira="Lietvārds" Deklinācija="1" Dzimte="Vīriešu"/>
+    <Lexeme ID="50848" Stem1="plān">
+      <Attributes Lietvārda_tips="Sugas vārds"/>
+    </Lexeme>
     <Lexeme ID="2" Stem1="papilduztur">
       <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="papilduzturs"/>
     </Lexeme>
@@ -1487,10 +1490,10 @@
     <Lexeme ID="50183" Stem1="mik">
       <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Mikus" Avots="Onomastica - cilvēkvārdi"/>
     </Lexeme>
-    <Lexeme ID="50817" Stem1="jēz">
+    <Lexeme ID="50853" Stem1="jēz">
       <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Jēzus"/>
     </Lexeme>
-    <Lexeme ID="50818" Stem1="krist">
+    <Lexeme ID="50865" Stem1="krist">
       <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Kristus"/>
     </Lexeme>
   </Paradigm>
@@ -4013,8 +4016,14 @@
     <Lexeme ID="50855" Stem1="ekonomisk">
       <Attributes Īpašības_vārda_tips="Kādības" Pamatforma="ekonomisks"/>
     </Lexeme>
-    <Lexeme ID="50856" Stem1="sociāls">
+    <Lexeme ID="50856" Stem1="sociāl">
       <Attributes Īpašības_vārda_tips="Kādības" Pamatforma="sociāls"/>
+    </Lexeme>
+    <Lexeme ID="50849" Stem1="nekustam">
+      <Attributes Īpašības_vārda_tips="Kādības"/>
+    </Lexeme>
+    <Lexeme ID="50852" Stem1="rūgt">
+      <Attributes Īpašības_vārda_tips="Kādības"/>
     </Lexeme>
   </Paradigm>
   <Paradigm Stems="1" ID="14" LemmaEnding="180" Description="Īpašības vārdi ar -š">
@@ -4216,6 +4225,9 @@
     </Lexeme>
     <Lexeme ID="23932" Stem1="ietver" Stem2="ietver" Stem3="ietvēr">
       <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="ietvert"/>
+    </Lexeme>
+    <Lexeme ID="50863" Stem1="uztver" Stem2="uztver" Stem3="uztvēr">
+      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds"/>
     </Lexeme>
     <Lexeme ID="23933" Stem1="iekār" Stem2="iekar" Stem3="iekār">
       <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="iekārt"/>
@@ -5945,6 +5957,9 @@
     <Lexeme ID="26468" Stem1="atlik" Stem2="atliek" Stem3="atlik">
       <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="atlikt"/>
     </Lexeme>
+    <Lexeme ID="50844" Stem1="uzlik" Stem2="uzliek" Stem3="uzlik">
+      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds"/>
+    </Lexeme>
     <Lexeme ID="26470" Stem1="iznāk" Stem2="iznāk" Stem3="iznāc">
       <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Izpausmes veida" Pamatforma="iznākt"/>
     </Lexeme>
@@ -6096,6 +6111,9 @@
       <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="iziet"/>
     </Lexeme>
     <Lexeme ID="49637" Stem1="aizie" Stem2="aizej" Stem3="aizgāj">
+      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="aiziet"/>
+    </Lexeme>
+    <Lexeme ID="50817" Stem1="pārie" Stem2="pārej" Stem3="pārgāj">
       <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="aiziet"/>
     </Lexeme>
     <Lexeme ID="28758" Stem1="slēg" Stem2="slēdz" Stem3="slēdz">
@@ -7817,6 +7835,12 @@
     <Lexeme ID="50762" Stem1="urb" Stem2="urbj" Stem3="urb">
       <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds"/>
     </Lexeme>
+    <Lexeme ID="50868" Stem1="kāp" Stem2="kāpj" Stem3="kāp">
+      <Attributes Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="kāpties"/>
+    </Lexeme>    
+    <Lexeme ID="50869" Stem1="atkāp" Stem2="atkāpj" Stem3="atkāp">
+      <Attributes Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="kāpties"/>
+    </Lexeme>    
   </Paradigm>
   <Paradigm Stems="1" ID="19" LemmaEnding="955" Description="Darbības vārdi 2. konjugācija atgriezeniski">
     <Attributes Konjugācija="2" Atgriezeniskums="Jā"/>
@@ -10247,6 +10271,24 @@
     <Lexeme ID="50730" Stem1="teju">
       <Attributes Pamatforma="teju"/>
     </Lexeme>
+    <Lexeme ID="50862" Stem1="virsū">
+      <Attributes Apstākļa_vārda_tips="Vietas" Pakāpe="Relatīvais"/>
+    </Lexeme>
+    <Lexeme ID="50845" Stem1="tātad">
+      <Attributes Apstākļa_vārda_tips="Cēloņa/nolūka"/>
+    </Lexeme>
+    <Lexeme ID="50846" Stem1="tāpat">
+      <Attributes Apstākļa_vārda_tips="Veida"/>
+    </Lexeme>
+    <Lexeme ID="50850" Stem1="tupu">
+      <Attributes Apstākļa_vārda_tips="Veida"/>
+    </Lexeme>
+    <Lexeme ID="50851" Stem1="rāpu">
+      <Attributes Apstākļa_vārda_tips="Veida"/>
+    </Lexeme>
+    <Lexeme ID="50866" Stem1="pirms">
+      <Attributes Apstākļa_vārda_tips="Laika"/>
+    </Lexeme>
   </Paradigm>
   <Paradigm Stems="1" ID="22" LemmaEnding="1102" Description="Kārtas skaitļa vārdi">
     <Attributes Vārdšķira="Skaitļa vārds" Skaitļa_vārda_tips="Kārtas" Uzbūve="Vienkāršs" Noteiktība="Noteiktā"/>
@@ -12560,6 +12602,9 @@
     <Lexeme ID="27387" Stem1="kā arī">
       <Attributes Saikļa_tips="Sakārtojuma" Uzbūve="Divkāršs" Pamatforma="kā arī"/>
     </Lexeme>
+    <Lexeme ID="50858" Stem1="tā arī">
+      <Attributes Saikļa_tips="Sakārtojuma" Uzbūve="Divkāršs" Pamatforma="tā arī"/>
+    </Lexeme>
     <Lexeme ID="27388" Stem1="bet arī">
       <Attributes Saikļa_tips="Sakārtojuma" Uzbūve="Divkāršs" Pamatforma="bet arī"/>
     </Lexeme>
@@ -12839,6 +12884,9 @@
     <Lexeme ID="28311" Stem1="tā">
       <Attributes Uzbūve="Vienkāršs" Pamatforma="tā"/>
     </Lexeme>
+    <Lexeme ID="50847" Stem1="tā arī">
+      <Attributes Uzbūve="Salikts" Pamatforma="tā arī"/>
+    </Lexeme>
     <Lexeme ID="49609" Stem1="tiešām">
       <Attributes Uzbūve="Vienkāršs" Pamatforma="tiešām"/>
     </Lexeme>
@@ -12934,6 +12982,9 @@
     </Lexeme>
     <Lexeme ID="50811" Stem1="acīmredzot">
       <Attributes Uzbūve="Vienkāršs" Pamatforma="acīmredzot"/>
+    </Lexeme>    
+    <Lexeme ID="50867" Stem1="aha">
+      <Attributes Uzbūve="Vienkāršs"/>
     </Lexeme>    
   </Paradigm>
   <Paradigm Stems="1" ID="29" LemmaEnding="1158" Description="Hardcoded">
@@ -13154,6 +13205,39 @@
     <Lexeme ID="50751" Stem1="pavei">
       <Attributes Vārdšķira="Izsauksmes vārds" Uzbūve="Vienkāršs" Pamatforma="pavei"/>
     </Lexeme>
+    <Lexeme ID="50819" Stem1="aha">
+      <Attributes Vārdšķira="Izsauksmes vārds" Uzbūve="Vienkāršs"/>
+    </Lexeme>    
+    <Lexeme ID="50821" Stem1="fui">
+      <Attributes Vārdšķira="Izsauksmes vārds" Uzbūve="Vienkāršs"/>
+    </Lexeme>    
+    <Lexeme ID="50829" Stem1="ha">
+      <Attributes Vārdšķira="Izsauksmes vārds" Uzbūve="Vienkāršs"/>
+    </Lexeme>    
+    <Lexeme ID="50822" Stem1="ha-ha">
+      <Attributes Vārdšķira="Izsauksmes vārds" Uzbūve="Vienkāršs"/>
+    </Lexeme>    
+    <Lexeme ID="50823" Stem1="ha-ha-ha">
+      <Attributes Vārdšķira="Izsauksmes vārds" Uzbūve="Vienkāršs"/>
+    </Lexeme>    
+    <Lexeme ID="50826" Stem1="bļin">
+      <Attributes Vārdšķira="Izsauksmes vārds" Uzbūve="Vienkāršs"/>
+    </Lexeme>    
+    <Lexeme ID="50827" Stem1="bļaģ">
+      <Attributes Vārdšķira="Izsauksmes vārds" Uzbūve="Vienkāršs"/>
+    </Lexeme>    
+    <Lexeme ID="50828" Stem1="bļa">
+      <Attributes Vārdšķira="Izsauksmes vārds" Uzbūve="Vienkāršs"/>
+    </Lexeme>    
+    <Lexeme ID="50841" Stem1="vot">
+      <Attributes Vārdšķira="Izsauksmes vārds" Uzbūve="Vienkāršs"/>
+    </Lexeme>    
+    <Lexeme ID="50842" Stem1="še">
+      <Attributes Vārdšķira="Izsauksmes vārds" Uzbūve="Vienkāršs"/>
+    </Lexeme>    
+    <Lexeme ID="50843" Stem1="redz">
+      <Attributes Vārdšķira="Izsauksmes vārds" Uzbūve="Vienkāršs"/>
+    </Lexeme>    
     <Lexeme ID="50497" Stem1="u.c.">
       <Attributes Vārdšķira="Saīsinājums" Pamatforma="u.c."/>
     </Lexeme>
@@ -13631,6 +13715,36 @@
     <Lexeme ID="50733" Stem1="ONAP">
       <Attributes Vārdšķira="Saīsinājums" Pamatforma="ONAP"/>
     </Lexeme>
+    <Lexeme ID="50820" Stem1="EK">
+      <Attributes Vārdšķira="Saīsinājums" Pamatforma="EK"/>
+    </Lexeme>
+    <Lexeme ID="50830" Stem1="LETA">
+      <Attributes Vārdšķira="Saīsinājums"/>
+    </Lexeme>
+    <Lexeme ID="50831" Stem1="KNAB">
+      <Attributes Vārdšķira="Saīsinājums"/>
+    </Lexeme>
+    <Lexeme ID="50832" Stem1="LNB">
+      <Attributes Vārdšķira="Saīsinājums"/>
+    </Lexeme>
+    <Lexeme ID="50833" Stem1="LLC">
+      <Attributes Vārdšķira="Saīsinājums"/>
+    </Lexeme>
+    <Lexeme ID="50834" Stem1="LLP">
+      <Attributes Vārdšķira="Saīsinājums"/>
+    </Lexeme>
+    <Lexeme ID="50835" Stem1="LNNK">
+      <Attributes Vārdšķira="Saīsinājums"/>
+    </Lexeme>
+    <Lexeme ID="50836" Stem1="OECD">
+      <Attributes Vārdšķira="Saīsinājums"/>
+    </Lexeme>
+    <Lexeme ID="50837" Stem1="VK">
+      <Attributes Vārdšķira="Saīsinājums"/>
+    </Lexeme>
+    <Lexeme ID="50838" Stem1="FKTK">
+      <Attributes Vārdšķira="Saīsinājums"/>
+    </Lexeme>
     <Lexeme ID="50608" Stem1="=">
       <Attributes Vārdšķira="Reziduālis" Pamatforma="="/>
     </Lexeme>
@@ -13690,6 +13804,21 @@
     </Lexeme>
     <Lexeme ID="50710" Stem1="•">
       <Attributes Vārdšķira="Reziduālis" Pamatforma="•"/>
+    </Lexeme>
+    <Lexeme ID="50824" Stem1="&amp;">
+      <Attributes Vārdšķira="Reziduālis"/>
+    </Lexeme>
+    <Lexeme ID="50825" Stem1="***">
+      <Attributes Vārdšķira="Reziduālis"/>
+    </Lexeme>
+    <Lexeme ID="50864" Stem1="fuck">
+      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Vārds svešvalodā"/>
+    </Lexeme>
+    <Lexeme ID="50839" Stem1="company">
+      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Vārds svešvalodā"/>
+    </Lexeme>
+    <Lexeme ID="50840" Stem1="fund">
+      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Vārds svešvalodā"/>
     </Lexeme>
     <Lexeme ID="28313" Stem1="trīstūkstoš">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši" Pamatforma="trīstūkstoš"/>
@@ -13975,6 +14104,9 @@
     </Lexeme>
     <Lexeme ID="50706" Stem1="aiziet">
       <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Nē" Pamatforma="aiziet" Laiks="Tagadne" Kārta="Darāmā"/>
+    </Lexeme>
+    <Lexeme ID="50818" Stem1="pāriet">
+      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Nē" Pamatforma="pāriet" Laiks="Tagadne" Kārta="Darāmā"/>
     </Lexeme>
     <Lexeme ID="28398" Stem1="bijušos">
       <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Palīgverbs 'būt'" Locījums="Lokatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
@@ -15268,6 +15400,24 @@
     </Lexeme>
     <Lexeme ID="43548" Stem1="bordo">
       <Attributes Pamatforma="bordo" Vārdšķira="Īpašības vārds" Lokāmība="Nelokāms" Īpašības_vārda_tips="Attieksmes"/>
+    </Lexeme>
+    <Lexeme ID="50870" Stem1="milzu">
+      <Attributes Vārdšķira="Īpašības vārds" Lokāmība="Nelokāms" Īpašības_vārda_tips="Attieksmes"/>
+    </Lexeme>
+    <Lexeme ID="50871" Stem1="pagaidu">
+      <Attributes Vārdšķira="Īpašības vārds" Lokāmība="Nelokāms" Īpašības_vārda_tips="Attieksmes"/>
+    </Lexeme>
+    <Lexeme ID="50872" Stem1="bezstrīdus">
+      <Attributes Vārdšķira="Īpašības vārds" Lokāmība="Nelokāms" Īpašības_vārda_tips="Attieksmes"/>
+    </Lexeme>
+    <Lexeme ID="50873" Stem1="piespiedu">
+      <Attributes Vārdšķira="Īpašības vārds" Lokāmība="Nelokāms" Īpašības_vārda_tips="Attieksmes"/>
+    </Lexeme>
+    <Lexeme ID="50874" Stem1="papildu">
+      <Attributes Vārdšķira="Īpašības vārds" Lokāmība="Nelokāms" Īpašības_vārda_tips="Attieksmes"/>
+    </Lexeme>
+    <Lexeme ID="50875" Stem1="pāris">
+      <Attributes Vārdšķira="Īpašības vārds" Lokāmība="Nelokāms" Īpašības_vārda_tips="Attieksmes"/>
     </Lexeme>
     <Lexeme ID="50722" Stem1="numur">
       <Attributes Pamatforma="numurs" Vārdšķira="Lietvārds" Locījums="Nominatīvs" Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Lietvārda_tips="Sugas vārds"/>

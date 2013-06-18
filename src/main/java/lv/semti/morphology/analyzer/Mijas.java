@@ -174,7 +174,7 @@ public abstract class Mijas {
 					}
 					else if (celms.endsWith("l")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"ļ"));
 					else if (celms.endsWith("s")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"š")); // elšu -> elsis
-					else if (celms.endsWith("m") || celms.endsWith("b") || celms.endsWith("p"))	varianti.add(new Variants(celms+"j"));
+					else if (!celms.endsWith("ņem") && (celms.endsWith("m") || celms.endsWith("b") || celms.endsWith("p")))	varianti.add(new Variants(celms+"j")); //stumju -> stum
 					else if (celms.endsWith("c")) {
 						varianti.add(new Variants(celms.substring(0,celms.length()-1)+"k"));  // raku -> racis
 						varianti.add(new Variants(celms.substring(0,celms.length()-1)+"c"));  // veicu -> veicis

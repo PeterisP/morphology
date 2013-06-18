@@ -42,6 +42,7 @@ public class Analyzer extends Lexicon {
 	private Pattern p_ordinal = Pattern.compile("\\d+\\.");
 	private Pattern p_fractional = Pattern.compile("\\d+[\\\\/]\\d+");
 	private Pattern p_abbrev = Pattern.compile("\\w+\\.");
+	private Pattern p_url = Pattern.compile("[\\.\\w]+\\.(lv|com|org)");
 	
 	private Cache<String, Word> wordCache = new Cache<String, Word>();
 
@@ -205,6 +206,15 @@ public class Analyzer extends Lexicon {
 			if (p_abbrev.matcher(word).matches()) {
 				Wordform wf = new Wordform(word);
 				wf.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Abbreviation);
+				wf.addAttribute(AttributeNames.i_Lemma, word);
+				wf.addAttribute(AttributeNames.i_Word, word);
+				rezultāts.addWordform(wf);
+				return rezultāts;
+			}
+			if (p_url.matcher(word).matches()) {
+				Wordform wf = new Wordform(word);
+				wf.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Residual);
+				wf.addAttribute(AttributeNames.i_ResidualType, AttributeNames.v_URI);
 				wf.addAttribute(AttributeNames.i_Lemma, word);
 				wf.addAttribute(AttributeNames.i_Word, word);
 				rezultāts.addWordform(wf);

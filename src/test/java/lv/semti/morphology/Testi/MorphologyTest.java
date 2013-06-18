@@ -1830,4 +1830,56 @@ public class MorphologyTest {
 		assertEquals("lielākoties", lielākoties.wordforms.get(0).getValue(AttributeNames.i_Lemma));
 
 	}
+	
+	/**
+	 * Korpusa analīze - vārdi, kuriem analizators neiedeva nevienu sakarīgu variantu
+	 */
+	@Test
+	public void korpuss_20130605() {
+		Word ņem = locītājs.analyze("ņem");
+		assertTrue(ņem.isRecognized());
+		assertEquals("ņemt", ņem.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+		
+		List<Wordform> formas = locītājs.generateInflections("ņemt");
+		AttributeValues testset = new AttributeValues();
+		testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+		testset.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Tagadne);
+		testset.addAttribute(AttributeNames.i_Person, "2");
+		testset.addAttribute(AttributeNames.i_Izteiksme, AttributeNames.v_Iisteniibas);
+		assertInflection(formas, testset, "ņem");
+		
+		boolean found = false;
+		for (Wordform wf : ņem.wordforms) {
+			if (wf.isMatchingStrong(AttributeNames.i_Person, "2")) found = true;
+		}
+		assertTrue(found);
+		
+		formas = locītājs.generateInflections("pāriet");
+		testset.addAttribute(AttributeNames.i_Person, "3");
+		assertInflection(formas, testset, "pāriet");		
+	}
+	
+	@Test
+	public void korpuss_20130606() {
+		Word acs = locītājs.analyze("acs");
+		assertTrue(acs.isRecognized());
+		assertEquals("acs", acs.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+		assertEquals(AttributeNames.v_Feminine, acs.wordforms.get(0).getValue(AttributeNames.i_Gender));	
+		
+		List<Wordform> formas = locītājs.generateInflections("atkāpties");
+		describe(formas);
+		AttributeValues testset = new AttributeValues();
+		testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+		testset.addAttribute(AttributeNames.i_Person, "2");
+		testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+		testset.addAttribute(AttributeNames.i_Izteiksme, AttributeNames.v_Paveeles);		
+		assertInflection(formas, testset, "atkāpies");
+	}
+	
+	@Test
+	public void uri() {
+		Word url = locītājs.analyze("www.pillar.lv");
+		assertTrue(url.isRecognized());
+		assertEquals("xu", url.wordforms.get(0).getTag());		
+	}
 }
