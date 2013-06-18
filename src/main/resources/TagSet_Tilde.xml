@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TagSet Structure="Positional">
 <Attribute LV="Vārdšķira" MarkupPos="0">
-	<Value LV="Lietvārds" Tag="n"/>
-	<Value LV="Darbības vārds" Tag="v"/>
-	<Value LV="Īpašības vārds" Tag="a"/>
-	<Value LV="Vietniekvārds" Tag="p"/>
-	<Value LV="Apstākļa vārds" Tag="r"/>
-	<Value LV="Divdabis" Tag="g"/>
-	<Value LV="Skaitļa vārds" Tag="m"/>
-	<Value LV="Izsauksmes vārds" Tag="i"/>
-	<Value LV="Partikula" Tag="q"/>
-	<Value LV="Prievārds" Tag="s"/>	
-	<Value LV="Saiklis" Tag="c"/>
-	<Value LV="Saīsinājums" Tag="y"/>	
-	<Value LV="Pieturzīme" Tag="t"/>
+	<Value LV="Lietvārds" Tag="N" DefaultTags="----------------------------"/>
+	<Value LV="Darbības vārds" Tag="V" DefaultTags="----------------------------"/>
+	<Value LV="Īpašības vārds" Tag="A" DefaultTags="----------------------------"/>
+	<Value LV="Vietniekvārds" Tag="P" DefaultTags="----------------------------"/>
+	<Value LV="Apstākļa vārds" Tag="R" DefaultTags="----------------------------"/>
+	<Value LV="Divdabis" Tag="G" DefaultTags="----------------------------"/>
+	<Value LV="Skaitļa vārds" Tag="M" DefaultTags="----------------------------"/>
+	<Value LV="Izsauksmes vārds" Tag="I" DefaultTags="----------------------------"/>
+	<Value LV="Partikula" Tag="Q" DefaultTags="----------------------------"/>
+	<Value LV="Prievārds" Tag="S" DefaultTags="----------------------------"/>	
+	<Value LV="Saiklis" Tag="C" DefaultTags="----------------------------"/>
+	<Value LV="Saīsinājums" Tag="Y" DefaultTags="----------------------------"/>	
+	<Value LV="Pieturzīme" Tag="T" DefaultTags="----------------------------"/>
 
 		<Value LV="Reziduālis" Tag="?"/>
-		<Value LV="Cipars ???" Tag="d"/>
+		<Value LV="Cipars ???" Tag="D"/>
 
 </Attribute>
 <Attribute LV="Laiks" MarkupPos="1">
@@ -97,11 +97,9 @@
 	<Value LV="Daļēji lokāms" Tag="l"/>
 	<Value LV="Nelokāms" Tag="n"/>
 </Attribute>
-<Attribute LV="Deminutīvs ??" MarkupPos="14">
-
-		<Value LV="Ir deminutīvs ?? " Tag="y"/>
-		<Value LV="Nav deminutīvs ?? " Tag="n"/>
-
+<Attribute LV="Deminutīvs" MarkupPos="14">
+	<Value LV="Jā" Tag="y"/>
+	<Value LV="Nē" Tag="n"/>
 </Attribute>
 <Attribute LV="Atgriezeniskums" MarkupPos="15">
 	<Value LV="Jā" Tag="y"/>

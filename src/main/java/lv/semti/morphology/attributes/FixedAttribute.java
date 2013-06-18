@@ -95,8 +95,13 @@ class FixedAttribute extends Attribute {
 			values.addAttribute(this.attributeLV, tagValue.value);
 	}
 
+	/**
+	 * Checks if this attribute is valid for the part of speech
+	 * @param value
+	 * @return
+	 */
 	public boolean matchPos(String value) {
-		if (partOfSpeech == null) return false;
+		if (partOfSpeech == null) return (markupPos >= 0);
 		return partOfSpeech.equalsIgnoreCase(value);
 	}
 

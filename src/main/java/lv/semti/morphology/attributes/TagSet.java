@@ -43,7 +43,7 @@ public class TagSet {
 	private static TagSet ref; //Reference uz singletonu
 	
 	private LinkedList<Attribute> attributes = new LinkedList<Attribute> ();
-	private enum structureTypes {POSITIONAL, POS_BASED, POS_BASED_SEMTI}; // Tag structure. Positional - one feature per position. POS-based - list depends on part of speech. POS-based Semti - special exception for SemtiKamols legacy tags
+	private enum structureTypes {POSITIONAL_TILDE, POS_BASED, POS_BASED_SEMTI}; // Tag structure. Positional - one feature per position with exceptions for Tilde format. POS-based - list depends on part of speech. POS-based Semti - special exception for SemtiKamols legacy tags
 	private structureTypes structure = structureTypes.POS_BASED_SEMTI;
 
 	private TagSet() throws SAXException, IOException, ParserConfigurationException {
@@ -68,7 +68,7 @@ public class TagSet {
 		if (!node.getNodeName().equalsIgnoreCase("TagSet")) throw new Error("Node " + node.getNodeName() + ", but TagSet was expected");
 		Node structureNode = node.getAttributes().getNamedItem("Structure");
 		if (structureNode != null) {
-			if (structureNode.getTextContent().equalsIgnoreCase("Positional")) structure = structureTypes.POSITIONAL;
+			if (structureNode.getTextContent().equalsIgnoreCase("Positional")) structure = structureTypes.POSITIONAL_TILDE;
 			if (structureNode.getTextContent().equalsIgnoreCase("POS based")) structure = structureTypes.POS_BASED;
 		}
 
@@ -82,6 +82,10 @@ public class TagSet {
 		}
 	}
 	
+	/**
+	 * Singleton reference - returns the tagset if it exists; if not, loads it from the default locations
+	 * @return
+	 */
 	public static synchronized TagSet getTagSet(){
 		if (ref == null) { // Ja nav vēl ielasīts, ielasam no faila
 			try {
@@ -183,7 +187,7 @@ public class TagSet {
 		for (Attribute attribute : attributes) 
 			if (attribute instanceof FixedAttribute) {
 				FixedAttribute fattribute = (FixedAttribute) attribute;
-				if ((structure == structureTypes.POSITIONAL || fattribute.matchPos(pos)) && fattribute.markupPos < tag.length()) 
+				if (fattribute.matchPos(pos) && fattribute.markupPos < tag.length()) 
 					fattribute.addValue(values, tag.charAt(fattribute.markupPos));
 			}
 		
@@ -195,9 +199,11 @@ public class TagSet {
 	 * @param values
 	 * @return
 	 */
-	public String toTag(AttributeValues values) {
+	public String toTag(AttributeValues values) {		
 		String result = "";
-		String pos = "";
+		String pos = values.getValue(AttributeNames.i_PartOfSpeech);;
+		if (pos == null) return "-"; //FIXME - neesmu droshs ka "-" ir pareizaakais variants
+
 		if (structure == structureTypes.POS_BASED || structure == structureTypes.POS_BASED_SEMTI) {
 			LinkedList<Attribute> posoptions = getAttribute(AttributeNames.i_PartOfSpeech, "LV");
 			assert (posoptions.size()==1) : "Tagset.xml jābūt tieši 1 elementam 'Vārdšķira'";
@@ -205,18 +211,24 @@ public class TagSet {
 			
 			assert postag != null;
 			result = postag.markValue(values, "");
-			pos = values.getValue(AttributeNames.i_PartOfSpeech);
-			if (pos == null) return "-"; //FIXME - neesmu droshs ka "-" ir pareizaakais variants
 			if (structure == structureTypes.POS_BASED_SEMTI && pos.equalsIgnoreCase(AttributeNames.v_Verb) && values.isMatchingStrong(AttributeNames.i_Izteiksme, AttributeNames.v_Participle)) {
 				// Semti kamola tagseta exception - divdabis norādīts izteiksmē
 				pos = AttributeNames.v_Participle;
 			}
 		}
 		
+		if (structure == structureTypes.POSITIONAL_TILDE) {
+			values = new AttributeValues(values);
+			if (pos.equalsIgnoreCase(AttributeNames.v_Noun)) {
+				if (values.getValue(AttributeNames.i_Deminutive) != null) values.addAttribute(AttributeNames.i_Deminutive, AttributeNames.v_Yes);
+					else values.addAttribute(AttributeNames.i_Deminutive, AttributeNames.v_No);
+			}
+		}
+		
 		for (Attribute attribute : attributes) 
 			if (attribute instanceof FixedAttribute) {
 				FixedAttribute fattribute = (FixedAttribute) attribute;
-				if (structure == structureTypes.POSITIONAL || fattribute.matchPos(pos))
+				if (fattribute.matchPos(pos))
 					result = fattribute.markValue(values, result);
 			}
 		

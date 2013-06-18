@@ -28,12 +28,15 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
+import javax.xml.parsers.ParserConfigurationException;
+
 import lv.semti.morphology.analyzer.MarkupConverter;
 import lv.semti.morphology.attributes.*;
 import lv.semti.morphology.lexicon.*;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+import org.xml.sax.SAXException;
 
 public class TagSetTest {
 
@@ -130,5 +133,16 @@ public class TagSetTest {
 			lemma = parse[2];			
 		}
 	}
+
+	@Test
+	public void tildes_konvertors() throws Exception {
+		TagSet semti = TagSet.getTagSet();
+		TagSet tilde = new TagSet("dist/TagSet_Tilde.xml");
+		
+		assertEquals("N-msn---------n-----------f-", tilde.toTag(semti.fromTag("npmsn2")));
+//					  N-msn------------s----------
+//					  0123456789012345678901234567			
+	}
+	
 	
 }
