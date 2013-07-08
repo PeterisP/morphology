@@ -102,7 +102,7 @@ public class MorphoEvaluate {
 			Word w = locītājs.analyze(e.wordform);
 			AttributeValues etalonaAV = MarkupConverter.fromKamolsMarkup(e.tag);
 			if (!e.tag.equalsIgnoreCase(MarkupConverter.toKamolsMarkupNoDefaults(etalonaAV))) {
-				System.out.printf("Slikts tags vārdam %s : '%s' -> '%s' \n", e.wordform, e.tag, MarkupConverter.toKamolsMarkupNoDefaults(etalonaAV));
+				System.out.printf("Slikts tags vārdam %s : '%s' -> '%s' \t\t%s\n", e.wordform, e.tag, MarkupConverter.toKamolsMarkupNoDefaults(etalonaAV), e.id);
 			}
 			etalonaAV.removeNonlexicalAttributes();
 			e.tag = MarkupConverter.toKamolsMarkup(etalonaAV);
@@ -157,12 +157,12 @@ public class MorphoEvaluate {
 					else if (found_match) match++; 
 					else {
 						wrong++;
-						mistakes.add(e.wordform+"\nKorpusā:\t"+e.lemma+"\t"+e.tag+"\n"+output);
+						mistakes.add(e.wordform+"\nKorpusā:\t"+e.lemma+"\t"+e.tag+"\t\t(" + e.id + ")\n"+output);
 					}
 				}	
 			} else {
 				not_recognized++;
-				mistakes.add("Nav variantu :( \t"+e.wordform+"\t"+e.lemma+"\t"+e.tag+"\n");
+				mistakes.add("Nav variantu :( \t"+e.wordform+"\t"+e.lemma+"\t"+e.tag+"\t\t"+e.id+"\n");
 			}						
 		}
 		
@@ -234,13 +234,15 @@ public class MorphoEvaluate {
 		String wordform;
 		String lemma;
 		String tag;
+		String id;
 		
 		static Etalons loadVert(String rinda) {
 			Etalons etalons = new Etalons();
 			String[] parse = rinda.split("\t");
-			etalons.wordform = parse[0];
-			etalons.lemma = parse[2];
+			etalons.wordform = parse[0];			
 			etalons.tag = parse[1];
+			etalons.lemma = parse[2];
+			if (parse.length > 3) etalons.id = parse[3]; //some but not all vert files will have a 4th row containing the ID of the word in corpus
 			return etalons;
 		}
 
