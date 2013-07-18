@@ -508,6 +508,25 @@ public class Analyzer extends Lexicon {
 		return result;
 	}
 	
+	// generate all forms if the paradigm # is known
+	// TODO - needs support for extra features (plural nouns, fixed-genitives, etc)
+	public ArrayList<Wordform> generateInflections(String lemma, int paradigm) {
+		Paradigm p = this.paradigmByID(paradigm);
+		
+		if (p.getStems() > 1)  // For 1st conjugation verbs, lemma is not enough info to inflect properly
+			return generateInflections(lemma); // Assume that it will be in current lexicon.. 
+		
+		if (!lemma.endsWith(p.getLemmaEnding().getEnding())) {
+			//FIXME - should check for plural nouns, etc
+		}
+		
+		Lexeme l = this.createLexeme(lemma, p.getLemmaEnding().getID(), "temp"); 
+		ArrayList<Wordform> result = generateInflections(l);		
+		p.removeLexeme(l); // To not pollute the in-memory lexicon
+		
+		return result;
+	}
+	
 	// removes possibilities that aren't nouns/substantivised adjectives, and don't match the filter
 	private void filterInflectionPossibilities(AttributeValues filter, ArrayList<Wordform> possibilities) {
 		ArrayList<Wordform> unsuitable = new ArrayList<Wordform>();
