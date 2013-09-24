@@ -41,7 +41,7 @@ public class Wordform extends AttributeValues implements Serializable{
 	private static final long serialVersionUID = 1L;
 	private String token;
 	private transient Ending ending;
-	transient Lexeme lexeme;
+	public transient Lexeme lexeme;
 		
 	public Wordform (String token, Lexeme lexeme, Ending ending) {
 		this.token = token;
