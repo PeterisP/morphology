@@ -36,7 +36,7 @@ public class Paradigm extends AttributeValues {
 	public ArrayList <Ending> endings = new ArrayList <Ending>();  //FIXME - nevajag iisti buut public
 	private Ending lemmaEnding = null;  // kura no galotnēm uzskatāma par pamatformu
 	private int stems = 1;      // cik saknes ir šai vārdgrupai (tipiski 1; darbībasvārdiem 3)
-	private String description = "";
+	public String description = "";
 
 	public Paradigm (Lexicon lexicon) {
 		this.lexicon = lexicon;
