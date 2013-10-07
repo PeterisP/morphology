@@ -1,19 +1,9 @@
 package lv.semti.Vardnicas;
 
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.InputStreamReader;
-import java.io.PrintStream;
-import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.Random;
 
 import lv.semti.morphology.analyzer.Analyzer;
-import lv.semti.morphology.analyzer.Word;
-import lv.semti.morphology.analyzer.Wordform;
-import lv.semti.morphology.attributes.AttributeNames;
-import lv.semti.morphology.attributes.AttributeValues;
 import lv.semti.morphology.lexicon.Lexeme;
 import lv.semti.morphology.lexicon.Lexicon;
 import lv.semti.morphology.lexicon.Paradigm;

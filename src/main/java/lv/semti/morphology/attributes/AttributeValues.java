@@ -24,7 +24,6 @@ import java.util.Set;
 import java.util.Map.Entry;
 
 import lv.semti.morphology.analyzer.MarkupConverter;
-import lv.semti.morphology.analyzer.Wordform;
 
 import org.json.simple.JSONValue;
 import org.w3c.dom.Node;

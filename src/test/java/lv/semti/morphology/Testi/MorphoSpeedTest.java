@@ -18,18 +18,14 @@ package lv.semti.morphology.Testi;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
-import java.util.LinkedList;
 import java.util.List;
 
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import lv.semti.morphology.Testi.MorphoEvaluate.Etalons;
 import lv.semti.morphology.analyzer.*;
 
 public class MorphoSpeedTest {
@@ -144,5 +140,6 @@ public class MorphoSpeedTest {
 		System.out.printf("\tBez cache - 57sec, 80 000 rq/sec\n");
 		System.out.printf("\tAr cache 10k - 38sec, 120 000 rq/sec\n");
 		System.out.printf("\tAr cache 100k - 27sec, 160 000 rq/sec\n");
+		ieeja.close();
 	}
 }

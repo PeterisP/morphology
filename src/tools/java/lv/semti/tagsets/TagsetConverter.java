@@ -6,7 +6,6 @@ import java.io.InputStreamReader;
 import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
-import java.util.LinkedList;
 
 import lv.semti.morphology.attributes.AttributeValues;
 import lv.semti.morphology.attributes.TagSet;
@@ -40,7 +39,7 @@ public class TagsetConverter {
 			String converted = outputTags.toTag(av);
 			izeja.println(wordform+"\t"+tag+"\n\t"+converted+"\n");
 		}
-			
+		ieeja.close();
 		izeja.close();
 	}
 	

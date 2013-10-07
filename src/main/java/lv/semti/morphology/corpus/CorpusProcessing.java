@@ -133,6 +133,8 @@ public class CorpusProcessing {
 		}
 
 		izeja.flush();
+		izeja.close();
+		ieeja.close();
 	}
 
 	/**

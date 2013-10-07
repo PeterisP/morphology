@@ -234,7 +234,7 @@ public class Trie {
 		
 		//sagatavojamies pirmajam meklētajam simbolam
 		this.reset();
-		
+		br.close();
 	}
 	
 	public void add(String s, node root)

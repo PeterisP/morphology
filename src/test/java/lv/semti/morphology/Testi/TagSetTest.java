@@ -121,6 +121,7 @@ public class TagSetTest {
 		}
 		
 		izeja.flush();
+		ieeja.close();
 	}
 	
 	class Etalons {

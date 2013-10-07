@@ -15,8 +15,6 @@
  *******************************************************************************/
 package lv.semti.morphology.analyzer;
 
-import java.util.Iterator;
-
 import lv.semti.morphology.attributes.*;
 
 /**

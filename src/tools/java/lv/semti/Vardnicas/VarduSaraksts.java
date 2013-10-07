@@ -17,8 +17,6 @@ package lv.semti.Vardnicas;
 import java.io.BufferedWriter;
 import java.io.FileOutputStream;
 import java.io.OutputStreamWriter;
-import java.io.PrintStream;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 
 import lv.semti.morphology.analyzer.*;

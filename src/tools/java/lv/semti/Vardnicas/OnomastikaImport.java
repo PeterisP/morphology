@@ -112,6 +112,8 @@ public class OnomastikaImport {
 		}
 					
 		izeja.flush();
+		izeja.close();
+		ieeja.close();
 		analizators.toXML_sub("Lexicon_onomastica.xml", source);
 	}
 
