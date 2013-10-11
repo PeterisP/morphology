@@ -182,6 +182,7 @@ public class Analyzer extends Lexicon {
 		if (!rezultāts.isRecognized()) {  //Hardcoded izņēmumi (ar regex) kas atpazīst ciparus, kārtas skaitļus utml
 			if (p_number.matcher(word).matches()) {
 				Wordform wf = new Wordform(word);
+				wf.setEnding(this.endingByID(1158)); // FIXME - hardkodēts numurs hardcoded vārdu galotnei
 				wf.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Residual);
 				wf.addAttribute(AttributeNames.i_ResidualType, AttributeNames.v_Number);
 				wf.addAttribute(AttributeNames.i_Lemma, word);
@@ -191,6 +192,7 @@ public class Analyzer extends Lexicon {
 			}
 			if (p_fractional.matcher(word).matches()) {
 				Wordform wf = new Wordform(word);
+				wf.setEnding(this.endingByID(1158)); // FIXME - hardkodēts numurs hardcoded vārdu galotnei
 				wf.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Residual);
 				wf.addAttribute(AttributeNames.i_ResidualType, AttributeNames.v_Number);
 				wf.addAttribute(AttributeNames.i_Lemma, word);
@@ -200,6 +202,7 @@ public class Analyzer extends Lexicon {
 			}
 			if (p_ordinal.matcher(word).matches()) {
 				Wordform wf = new Wordform(word);
+				wf.setEnding(this.endingByID(1158)); // FIXME - hardkodēts numurs hardcoded vārdu galotnei
 				wf.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Residual);
 				wf.addAttribute(AttributeNames.i_ResidualType, AttributeNames.v_Ordinal);
 				wf.addAttribute(AttributeNames.i_Lemma, word);
@@ -209,6 +212,7 @@ public class Analyzer extends Lexicon {
 			}
 			if (p_abbrev.matcher(word).matches()) {
 				Wordform wf = new Wordform(word);
+				wf.setEnding(this.endingByID(1158)); // FIXME - hardkodēts numurs hardcoded vārdu galotnei
 				wf.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Abbreviation);
 				wf.addAttribute(AttributeNames.i_Lemma, word);
 				wf.addAttribute(AttributeNames.i_Word, word);
@@ -217,6 +221,7 @@ public class Analyzer extends Lexicon {
 			}
 			if (p_url.matcher(word).matches()) {
 				Wordform wf = new Wordform(word);
+				wf.setEnding(this.endingByID(1158)); // FIXME - hardkodēts numurs hardcoded vārdu galotnei
 				wf.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Residual);
 				wf.addAttribute(AttributeNames.i_ResidualType, AttributeNames.v_URI);
 				wf.addAttribute(AttributeNames.i_Lemma, word);
