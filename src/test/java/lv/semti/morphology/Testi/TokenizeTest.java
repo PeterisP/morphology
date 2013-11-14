@@ -513,5 +513,20 @@ public class TokenizeTest {
 				, false); 
 		assertEquals(1, tokens.size());		
 	}
+	
+	@Test
+	public void sentences() {
+		LinkedList<LinkedList<Word>> sentences;
+		sentences = Splitting.tokenizeSentences(locītājs, "Vīrs ar cirvi.");
+		assertEquals(1, sentences.size());
+		
+		sentences = Splitting.tokenizeSentences(locītājs, "Saule lec. Sniegs snieg.");
+		assertEquals(2, sentences.size());
+		
+		sentences = Splitting.tokenizeSentences(locītājs, "Nosaukums: SIA \"Evopipes\"Nozares: cauruļu ražošanaAdrese: Langervaldes iela 2A, Jelgava, LV-3002, Latvija             Telefons: 63094300Internets: http://www.evopipes.lv <h1>Uzņēmuma apraksts</h1>2005.gadā tika dibināts uzņēmums SIA \"Modulex - Invest Jelgava\" ar  mērķi attīstīt cauruļu ražotnes projektu Latvijā, Jelgavā. 2008.gada  beigās uzņēmums tika pārdēvēts par SIA \"Evopipes\" ar mērķi zīmolu virzīt  starptautiskā tirgū. Uzņēmums sērijveidā ražo produkciju elektroinstalācijām,  elektrokabeļu aizsardzībai, telekomunikācijas kabeļu aizsardzībai,  aukstā ūdens apgādes sistēmu izveidošanai, apkures sistēmu izveidošanai,  gāzes apgādei, ēku kanalizācijai, sadzīves notekūdeņu kanalizācijai,  lietus notekūdeņu kanalizācijai, laukumu un ēku pamatu drenāžai.&nbsp;<h1>Finanšu rādītāji</h1><table border=\"0\"><tbody><tr><td> </td><td>2011 <br /></td><td>2010 <br /></td><td> </td><td> </td><td> </td></tr><tr><td> Apgrozījums (tūkst. Ls)<br /></td><td>9 370.000<br /></td><td>5 900.000<br /></td><td> </td><td> </td><td> </td></tr><tr><td>Peļņa/zaudējumi (tūkst. Ls) <br /></td><td> 532.468</td><td>- 1 300.000<br /></td><td> </td><td> </td><td> </td></tr></tbody></table><br /><br />");
+		assertEquals(9, sentences.size());
+		for (LinkedList<Word> sentence : sentences)
+			System.out.println(sentence.size());
+	}
 }
  
