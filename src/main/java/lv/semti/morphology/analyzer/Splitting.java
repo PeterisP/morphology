@@ -250,7 +250,8 @@ public class Splitting {
 		for (Word word : tokens) {
 			sentence.add(word);
 			if (Splitting.isChunkCloser(word) || // does this token look like end of sentence
-				(sentence.size() >= 50 && (word.hasAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Punctuation) || word.getToken().startsWith("<")) ) ) { 				
+				(sentence.size() >= 50 && (word.hasAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Punctuation) || word.getToken().startsWith("<")) )
+				|| sentence.size() > 100) { 				
 				result.add(sentence);
 				sentence = new LinkedList<Word>();
 			}

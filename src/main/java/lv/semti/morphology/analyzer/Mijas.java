@@ -88,11 +88,10 @@ public abstract class Mijas {
 					}
 					// tagad normālie gadījumi mijām
 					else if (celms.endsWith("š")) {
-						if (celms.endsWith("kš"))  varianti.add(new Variants(celms.substring(0,celms.length()-2)+"kst","Mija","kst -> kš"));
-						else {
-							varianti.add(new Variants(celms.substring(0,celms.length()-1)+"s","Mija","s -> š"));
-							varianti.add(new Variants(celms.substring(0,celms.length()-1)+"t","Mija","t -> š"));
-						}
+						if (celms.endsWith("kš"))
+							varianti.add(new Variants(celms.substring(0,celms.length()-2)+"kst","Mija","kst -> kš"));
+						varianti.add(new Variants(celms.substring(0,celms.length()-1)+"s","Mija","s -> š"));
+						varianti.add(new Variants(celms.substring(0,celms.length()-1)+"t","Mija","t -> š"));
 					}
 					else if (celms.endsWith("ž")) {
 						varianti.add(new Variants(celms.substring(0,celms.length()-1)+"z","Mija","z -> ž"));
@@ -103,6 +102,7 @@ public abstract class Mijas {
 					else if (celms.endsWith("ļ")) {
 						if (celms.endsWith("šļ")) {varianti.add(new Variants(celms.substring(0,celms.length()-2)+"sl","Mija","sl -> šļ"));}
 						else if (celms.endsWith("žļ")) {varianti.add(new Variants(celms.substring(0,celms.length()-2)+"zl","Mija","zl -> žļ"));}
+						else if (celms.endsWith("ļļ")) {varianti.add(new Variants(celms.substring(0,celms.length()-2)+"ll","Mija","ll -> ļļ"));}
 						else varianti.add(new Variants(celms.substring(0,celms.length()-1)+"l","Mija","l -> ļ"));
 					}
 					else if (celms.endsWith("ņ")) {

@@ -13628,6 +13628,7 @@
     <Lexeme ID="50677" Stem1="kult.">
       <Attributes Vārdšķira="Saīsinājums" Pamatforma="kult."/>
     </Lexeme>
+    <Lexeme Stem1="fak."> <Attributes Vārdšķira="Saīsinājums" Pamatforma="fak."/> </Lexeme>
     <Lexeme ID="50679" Stem1="izglīt.">
       <Attributes Vārdšķira="Saīsinājums" Pamatforma="izglīt."/>
     </Lexeme>
@@ -13703,6 +13704,10 @@
     <Lexeme ID="50726" Stem1="LLU">
       <Attributes Vārdšķira="Saīsinājums" Pamatforma="LLU"/>
     </Lexeme>
+    <Lexeme Stem1="LLA"> <Attributes Vārdšķira="Saīsinājums" Pamatforma="LLA"/> </Lexeme>
+    <Lexeme Stem1="LVA"> <Attributes Vārdšķira="Saīsinājums" Pamatforma="LVA"/> </Lexeme>
+    <Lexeme Stem1="LVS"> <Attributes Vārdšķira="Saīsinājums" Pamatforma="LVS"/> </Lexeme>
+    <Lexeme Stem1="RPIS"> <Attributes Vārdšķira="Saīsinājums" Pamatforma="RPIS"/> </Lexeme>
     <Lexeme ID="50727" Stem1="LZP">
       <Attributes Vārdšķira="Saīsinājums" Pamatforma="LZP"/>
     </Lexeme>
