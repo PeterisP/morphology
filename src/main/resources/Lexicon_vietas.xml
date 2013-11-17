@@ -99,6 +99,12 @@
       <Lexeme Stem1="mākoņkaln"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Mākoņkalns" Avots="LĢIS"/> </Lexeme>
       <Lexeme Stem1="rožkaln"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Rožkalns" Avots="LĢIS"/> </Lexeme>
 
+      <Lexeme Stem1="māršal"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Māršals" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="zālaman"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Zālamans" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="vatikān"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Vatikāns" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="saūd"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Saūds" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="emirāt"> <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="emirāts" Avots="wiki"/> </Lexeme>
+
       <Lexeme Stem1="zosēn"> <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Zosēni" Avots="LĢIS"/> </Lexeme>
       <Lexeme Stem1="sokolk"> <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Sokolki" Avots="LĢIS"/> </Lexeme>
       <Lexeme Stem1="stružān"> <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Stružāni" Avots="LĢIS"/> </Lexeme>
@@ -683,7 +689,6 @@
       <Lexeme Stem1="puš"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Puša" Avots="LĢIS"/> </Lexeme>
       <Lexeme Stem1="trikāt"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Trikāta" Avots="LĢIS"/> </Lexeme>
       <Lexeme Stem1="valāt"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Valāta" Avots="LĢIS"/> </Lexeme>
-      <Lexeme Stem1="amat"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Amata" Avots="LĢIS"/> </Lexeme>
       <Lexeme Stem1="ramat"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Ramata" Avots="LĢIS"/> </Lexeme>
       <Lexeme Stem1="kaunat"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Kaunata" Avots="LĢIS"/> </Lexeme>
       <Lexeme Stem1="neret"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Nereta" Avots="LĢIS"/> </Lexeme>
@@ -821,6 +826,217 @@
       <Lexeme Stem1="medņev"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Medņeva" Avots="LĢIS"/> </Lexeme>
       <Lexeme Stem1="rušon"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Rušona" Avots="LĢIS"/> </Lexeme>
       <Lexeme Stem1="veselav"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Veselava" Avots="LĢIS"/> </Lexeme>
+
+      <Lexeme Stem1="kub"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Kuba" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="ahmedabad"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Ahmedabada" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="haiderābād"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Haiderābāda" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="čad"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Čada" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="rijād"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Rijāda" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="kanād"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Kanāda" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="grenad"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Grenada" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="ugand"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Uganda" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="ruand"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Ruanda" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="svazilend"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Svazilenda" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="antigv"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Antigva" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="barbud"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Barbuda" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="čitagong"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Čitagonga" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="honkong"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Honkonga" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="tong"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Tonga" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="luksemburg"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Luksemburga" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="sanktpēterburg"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Sanktpēterburga" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="mumbaj"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Mumbaja" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="šanhaj"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Šanhaja" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="čenaj"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Čenaja" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="paragvaj"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Paragvaja" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="urugvaj"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Urugvaja" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="gvinej"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Gvineja" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="papua-jaungvinej"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Papua-Jaungvineja" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="brunej"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Bruneja" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="korej"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Koreja" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="dienvidkorej"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Dienvidkoreja" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="ziemeļkorej"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Ziemeļkoreja" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="eritrej"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Eritreja" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="saūda arābij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Saūda Arābija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="lībij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Lībija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="namībij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Namībija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="gambij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Gambija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="zambij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Zambija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="kolumbij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Kolumbija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="serbij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Serbija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="vācij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Vācija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="maurīcij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Maurīcija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="francij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Francija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="turcij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Turcija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="indij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Indija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="norvēģij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Norvēģija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="beļģij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Beļģija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="čehij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Čehija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="slovākij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Slovākija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="grieķij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Grieķija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="tokij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Tokija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="somālij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Somālija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="austrālij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Austrālija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="itālij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Itālija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="brazīlij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Brazīlija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="mongolij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Mongolija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="polij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Polija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="somij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Somija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="albānij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Albānija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="dānij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Dānija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="jordānij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Jordānija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="rumānij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Rumānija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="spānij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Spānija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="anglij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Anglija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="skotij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Skotija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="vels"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Velsa" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="lielbritānij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Lielbritānija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="mauritānij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Mauritānija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="tanzānij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Tanzānija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="kenij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Kenija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="armēnij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Armēnija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="slovēnij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Slovēnija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="igaunij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Igaunija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="etiopij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Etiopija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="bulgārij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Bulgārija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="ungārij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Ungārija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="zviedrij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Zviedrija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="aleksandrij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Aleksandrija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="libērij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Libērija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="nigērij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Nigērija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="īrij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Īrija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="sīrij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Sīrija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="alžīrij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Alžīrija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="austrij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Austrija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="tunisij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Tunisija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="sentlūsij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Sentlūsija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="horvātij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Horvātija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="džibutij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Džibutija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="malāvij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Malāvija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="krievij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Krievija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="baltkrievij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Baltkrievija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="maldīvij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Maldīvija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="bolīvij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Bolīvija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="latvij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Latvija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="indonēzij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Indonēzija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="mikronēzij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Mikronēzija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="malaizij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Malaizija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="gruzij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Gruzija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="dak"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Daka" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="irāk"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Irāka" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="jamaik"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Jamaika" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="mozambik"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Mozambika" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="centrālāfrik"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Centrālāfrika" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="dienvidāfrik"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Dienvidāfrika" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="maķedonij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Maķedonija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="dominik"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Dominika" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="kostarik"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Kostarika" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="meksik"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Meksika" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="šrilank"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Šrilanka" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="bangkok"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Bangkoka" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="marok"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Maroka" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="ņujork"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Ņujorka" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="senegāl"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Senegāla" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="gvatemal"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Gvatemala" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="nepāl"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Nepāla" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="izraēl"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Izraēla" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="venecuēl"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Venecuēla" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="angol"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Angola" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="stambul"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Stambula" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="seul"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Seula" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="jokoham"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Jokohama" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="panam"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Panama" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="surinam"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Surinama" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="vjetnam"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Vjetnama" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="lim"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Lima" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="mjanm"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Mjanma" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="libān"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Libāna" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="sudān"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Sudāna" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="dienvidsudān"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Dienvidsudāna" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="gan"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Gana" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="uhaņ"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Uhaņa" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="gajān"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Gajāna" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="šeņjan"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Šeņjana" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="dominikān"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Dominikāna" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="omān"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Omāna" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="japān"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Japāna" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="teherān"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Teherāna" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="irān"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Irāna" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="kazahstān"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Kazahstāna" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="pakistān"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Pakistāna" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="uzbekistān"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Uzbekistāna" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="tadžikistān"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Tadžikistāna" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="afganistān"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Afganistāna" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="turkmenistān"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Turkmenistāna" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="kirgizstān"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Kirgizstāna" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="butān"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Butāna" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="botsvan"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Botsvana" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="azerbaidžān"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Azerbaidžāna" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="abidžan"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Abidžana" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="jemen"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Jemena" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="ukrain"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Ukraina" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="bahrein"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Bahreina" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="lihtenštein"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Lihtenšteina" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="čuncjin"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Čuncjina" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="ķīn"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Ķīna" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="pekin"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Pekina" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="hošimin"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Hošimina" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="benin"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Benina" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="argentīn"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Argentīna" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="bosnij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Bosnija" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="hercegovin"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Hercegovina" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="tjandziņ"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Tjandziņa" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="gabon"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Gabona" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="london"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Londona" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="jangon"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Jangona" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="kamerūn"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Kamerūna" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="samo"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Samoa" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="ankar"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Ankara" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="madagaskar"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Madagaskara" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="katar"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Katara" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="kotdivuār"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Kotdivuāra" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="nigēr"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Nigēra" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="kair"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Kaira" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="ekvador"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Ekvadora" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="salvador"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Salvadora" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="andor"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Andora" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="lahor"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Lahora" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="austrumtimor"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Austrumtimora" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="kipr"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Kipra" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="singapūr"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Singapūra" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="honduras"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Hondurasa" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="kinšas"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Kinšasa" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="bangladeš"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Bangladeša" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="sentkits"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Sentkitsa" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="nevis"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Nevisa" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="laos"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Laosa" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="barbados"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Barbadosa" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="lagos"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Lagosa" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="losandželos"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Losandželosa" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="kalkāt"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Kalkāta" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="kuveit"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Kuveita" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="malt"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Malta" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="bogot"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Bogota" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="džakart"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Džakarta" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="maskav"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Maskava" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="gvineja-bisav"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Gvineja-Bisava" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="nikaragv"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Nikaragva" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="moldov"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Moldova" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="lietuv"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Lietuva" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="kambodž"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Kambodža" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="beliz"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Beliza" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="trinidād"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Trinidāda" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="sentvinsent"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Sentvinsenta" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="amerik"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Amerika" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="viļņ"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Viļņa" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="kauņ"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Kauņa" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="tallin"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Tallina" Avots="wiki"/> </Lexeme>
+
+      <Lexeme Stem1="seišel"> <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Seišelas" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="komor"> <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Komoras" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="baham"> <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Bahamas" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="grenadīn"> <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Grenadīnas" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="filipīn"> <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Filipīnas" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="kanārij"> <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Kanārijas" Avots="wiki"/> </Lexeme>
 
       <Lexeme Stem1="virb"> <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Virbas" Avots="LĢIS"/> </Lexeme>
       <Lexeme Stem1="lēd"> <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Lēdas" Avots="LĢIS"/> </Lexeme>
@@ -1214,6 +1430,21 @@
       <Lexeme Stem1="zvārd"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Zvārde" Avots="LĢIS"/> </Lexeme>
       <Lexeme Stem1="medz"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Medze" Avots="LĢIS"/> </Lexeme>
 
+      <Lexeme Stem1="šveic"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Šveice" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="bagdād"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Bagdāde" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="jaunzēland"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Jaunzēlande" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="nīderland"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Nīderlande" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="īsland"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Īslande" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="kaboverd"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Kaboverde" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="portugāl"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Portugāle" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="čīl"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Čīle" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="taizem"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Taizeme" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="melnkaln"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Melnkalne" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="sjerraleon"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Sjerraleone" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="ēģipt"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Ēģipte" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="zimbabv"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Zimbabve" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="santom"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Santome" Avots="wiki"/> </Lexeme>
+
       <Lexeme Stem1="pried"> <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Priedes" Avots="LĢIS"/> </Lexeme>
       <Lexeme Stem1="dzelm"> <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Dzelmes" Avots="LĢIS"/> </Lexeme>
       <Lexeme Stem1="grēn"> <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Grēnes" Avots="LĢIS"/> </Lexeme>
@@ -1246,6 +1477,33 @@
   </Paradigm>
   <Paradigm Stems="1" ID="12" LemmaEnding="111" Description="Nelokāmie lietvārdi">
     <Attributes Vārdšķira="Lietvārds" Deklinācija="Nepiemīt"/>
-      <Lexeme Stem1="līg"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Līgo" Avots="LĢIS"/> </Lexeme>
+      <Lexeme Stem1="līgo"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Līgo" Avots="LĢIS"/> </Lexeme>
+
+      <Lexeme Stem1="karači"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Karači" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="burundi"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Burundi" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="mali"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Mali" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="deli"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Deli" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="prinsipi"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Prinsipi" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="kiribati"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Kiribati" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="haiti"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Haiti" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="fidži"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Fidži" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="tobāgo"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Tobāgo" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="kongo"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Kongo" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="togo"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Togo" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="monako"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Monako" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="mehiko"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Mehiko" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="sanmarīno"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Sanmarīno" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="riodežaneiro"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Riodežaneiro" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="burkinafaso"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Burkinafaso" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="lesoto"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Lesoto" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="kongo"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Kongo" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="palau"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Palau" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="tuvalu"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Tuvalu" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="sanpaulu"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Sanpaulu" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="guandžou"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Guandžou" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="peru"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Peru" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="nauru"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Nauru" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="bengalūru"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Bengalūru" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="vanuatu"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Vanuatu" Avots="wiki"/> </Lexeme>
   </Paradigm>  
 </Lexicon>

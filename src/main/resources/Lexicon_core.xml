@@ -1391,6 +1391,9 @@
     <Lexeme ID="50659" Stem1="uģ">
       <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Uģis"/>
     </Lexeme>
+    <Lexeme Stem1="lud">
+      <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Ludis"/>
+    </Lexeme>
     <Lexeme ID="50660" Stem1="ēķ">
       <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Ēķis"/>
     </Lexeme>
@@ -3232,6 +3235,12 @@
     </Lexeme>
     <Lexeme ID="50338" Stem1="ilgon">
       <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Ilgona" Avots="Onomastica - cilvēkvārdi"/>
+    </Lexeme>
+    <Lexeme Stem1="ingun">
+      <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Inguna"/>
+    </Lexeme>
+    <Lexeme Stem1="sudrab">
+      <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Sudraba"/>
     </Lexeme>
     <Lexeme ID="50736" Stem1="čur">
       <Attributes Pamatforma="čura"/>
@@ -13708,6 +13717,8 @@
     <Lexeme Stem1="LVA"> <Attributes Vārdšķira="Saīsinājums" Pamatforma="LVA"/> </Lexeme>
     <Lexeme Stem1="LVS"> <Attributes Vārdšķira="Saīsinājums" Pamatforma="LVS"/> </Lexeme>
     <Lexeme Stem1="RPIS"> <Attributes Vārdšķira="Saīsinājums" Pamatforma="RPIS"/> </Lexeme>
+    <Lexeme Stem1="DR"> <Attributes Vārdšķira="Saīsinājums" Pamatforma="DR"/> </Lexeme>
+    <Lexeme Stem1="USA"> <Attributes Vārdšķira="Saīsinājums" Pamatforma="USA"/> </Lexeme>
     <Lexeme ID="50727" Stem1="LZP">
       <Attributes Vārdšķira="Saīsinājums" Pamatforma="LZP"/>
     </Lexeme>
