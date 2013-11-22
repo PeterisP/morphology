@@ -29,6 +29,8 @@ public class Splitting {
 	// Vārdā, atdalītājā, atstarpē
 	private enum Status {IN_WORD, IN_DELIMITER, IN_SPACE, IN_EXCEPTION};
 	
+	public static int DEFAULT_SENTENCE_LENGTH_CAP = 50;
+	
 	/**
 	 * Determine, if given word should split a chunk (ends a sentence, like a period or exclamation mark)
 	 */
@@ -235,6 +237,10 @@ public class Splitting {
 		}
 	}
 
+	public static LinkedList<LinkedList<Word>> tokenizeSentences(
+			Analyzer morphoAnalyzer, String paragraph) {
+		return tokenizeSentences(morphoAnalyzer, paragraph, DEFAULT_SENTENCE_LENGTH_CAP);
+	}
 	/***
 	 * Tokenizes a paragraph, and splits it into sentences.
 	 * @param morphoAnalyzer
@@ -242,7 +248,7 @@ public class Splitting {
 	 * @return
 	 */
 	public static LinkedList<LinkedList<Word>> tokenizeSentences(
-			Analyzer morphoAnalyzer, String paragraph) {
+		 	Analyzer morphoAnalyzer, String paragraph, int lengthCap) {
 		LinkedList<LinkedList<Word>> result = new LinkedList<LinkedList<Word>>();
 		
 		List<Word> tokens = Splitting.tokenize(morphoAnalyzer, paragraph);
@@ -250,8 +256,8 @@ public class Splitting {
 		for (Word word : tokens) {
 			sentence.add(word);
 			if (Splitting.isChunkCloser(word) || // does this token look like end of sentence
-				(sentence.size() >= 50 && (word.hasAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Punctuation) || word.getToken().startsWith("<")) )
-				|| sentence.size() > 60) { 				
+				(sentence.size() >= lengthCap-5 && (word.hasAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Punctuation) || word.getToken().startsWith("<")) )
+				|| sentence.size() > lengthCap) { 		// hard limit		
 				result.add(sentence);
 				sentence = new LinkedList<Word>();
 			}
