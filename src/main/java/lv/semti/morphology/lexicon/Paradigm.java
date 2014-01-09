@@ -16,6 +16,7 @@
 package lv.semti.morphology.lexicon;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.io.Writer;
 import java.util.HashMap;
 import java.util.ArrayList;
@@ -32,8 +33,9 @@ public class Paradigm extends AttributeValues {
 		= new ArrayList <HashMap <String, ArrayList<Lexeme>>>();
 		// 1-3 hashmapi, kuros pēc saknes var atrast tai atbilstošās leksēmas
 		// vajadzētu to (un to apstaigājošās funkcijas) iznest kā klasi)
-	public ArrayList <Lexeme> lexemes = new ArrayList <Lexeme>();  //FIXME - nevajag iisti buut public
-	public ArrayList <Ending> endings = new ArrayList <Ending>();  //FIXME - nevajag iisti buut public
+	public HashMap <Integer, Lexeme> lexemesByID = new HashMap <Integer, Lexeme>(); //FIXME - nevajag iisti buut public, vajag tikai read-only iterēt
+	public ArrayList <Lexeme> lexemes = new ArrayList <Lexeme>();  //FIXME - nevajag iisti buut public, vajag tikai read-only iterēt
+	public ArrayList <Ending> endings = new ArrayList <Ending>();  //FIXME - nevajag iisti buut public, vajag tikai read-only iterēt
 	private Ending lemmaEnding = null;  // kura no galotnēm uzskatāma par pamatformu
 	private int stems = 1;      // cik saknes ir šai vārdgrupai (tipiski 1; darbībasvārdiem 3)
 	public String description = "";
@@ -163,8 +165,16 @@ public class Paradigm extends AttributeValues {
 		lexeme.setParadigm(this);
 
 		if (lexeme.getID() == 0) {
-			lexeme.setID( lexicon.maxLexemeID() + 1 );
+			lexeme.setID( lexicon.newLexemeID());
+		} else {
+			Lexeme duplicatetest = lexemesByID.get(lexeme.getID());
+			if (duplicatetest != null) {
+				System.err.println("Lexemes with duplicate IDs:");
+				duplicatetest.describe(new PrintWriter(System.err));
+				lexeme.describe(new PrintWriter(System.err));
+			}
 		}
+		lexemesByID.put(lexeme.getID(), lexeme);
 
 		lexeme.setStemCount(stems);
 
@@ -186,6 +196,7 @@ public class Paradigm extends AttributeValues {
 	public void removeLexeme (Lexeme leksēma) {
 		// ja nebūs tādas leksēmas, tad nekas arī nenotiks
 		lexemes.remove(leksēma);
+		lexemesByID.remove(leksēma.getID());
 		for (int i = 0; i < stems; i++) {
 			ArrayList<Lexeme> esošās = lexemesByStem.get(i).get(leksēma.getStem(i));
 			if (esošās != null) {

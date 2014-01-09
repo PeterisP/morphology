@@ -31,7 +31,7 @@ public class TezaursImport {
 		
 		Analyzer analizators = new Analyzer("dist/Lexicon.xml");
 		analizators.guessNouns = true;
-		analizators.guessParticibles = false;
+		analizators.guessParticiples = false;
 		analizators.guessVerbs = false;
 		analizators.guessAdjectives = false;
 		analizators.enableDiminutive = false;

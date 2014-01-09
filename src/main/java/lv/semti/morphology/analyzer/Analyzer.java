@@ -17,9 +17,11 @@ package lv.semti.morphology.analyzer;
 
 import java.io.File;
 import java.io.InputStream;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.regex.Pattern;
+
 import lv.semti.morphology.attributes.AttributeNames;
 import lv.semti.morphology.attributes.AttributeValues;
 import lv.semti.morphology.lexicon.*;
@@ -33,7 +35,7 @@ public class Analyzer extends Lexicon {
 	public boolean enableVocative = false;
 	public boolean guessNouns = true;
     public boolean guessVerbs = true;
-    public boolean guessParticibles = true;
+    public boolean guessParticiples = false;
     public boolean guessAdjectives = true;
     public boolean enableAllGuesses = false;
 	public boolean guessInflexibleNouns = false;
@@ -43,7 +45,7 @@ public class Analyzer extends Lexicon {
 	private Pattern p_fractional = Pattern.compile("\\d+[\\\\/]\\d+");
 	private Pattern p_abbrev = Pattern.compile("\\w+\\.");
 	private Pattern p_url = Pattern.compile("[\\.\\w]+\\.(lv|com|org)");
-	
+		
 	private Cache<String, Word> wordCache = new Cache<String, Word>();
 
 	public Trie automats;
@@ -126,10 +128,26 @@ public class Analyzer extends Lexicon {
 		enableVocative = false;
 		guessNouns = true;
 	    guessVerbs = true;
-	    guessParticibles = true;
+	    guessParticiples = true;
 	    guessAdjectives = true;
 	    enableAllGuesses = false;
 		guessInflexibleNouns = false;
+	}
+	
+	public void describe(PrintWriter pipe) {
+		pipe.format("enableGuessing:\t%b\n", enableGuessing);
+		pipe.format("enablePrefixes:\t%b\n", enablePrefixes);
+		pipe.format("enableDiminutive:\t%b\n", enableDiminutive);
+		pipe.format("enableVocative:\t%b\n", enableVocative);
+		pipe.format("enableAllGuesses:\t%b\n", enableAllGuesses);
+		pipe.format("meklētsalikteņus:\t%b\n", meklētsalikteņus);
+		pipe.format("guessNouns:\t\t%b\n", guessNouns);
+		pipe.format("guessVerbs:\t\t%b\n", guessVerbs);
+		pipe.format("guessParticibles:\t%b\n", guessParticiples);
+		pipe.format("guessAdjectives:\t%b\n", guessAdjectives);
+		pipe.format("guessInflexibleNouns:\t%b\n", guessInflexibleNouns);
+	
+		pipe.flush();
 	}
 
 	/**
@@ -138,29 +156,34 @@ public class Analyzer extends Lexicon {
 	 */
 	public Word analyze(String word) {
 		word = word.trim();
+		
+		Word cacheWord = wordCache.get(word);
+		if (cacheWord != null) return (Word) cacheWord.clone();		
+				
+		Word rezults = new Word(word);
 		if (!word.equals(word.toLowerCase().trim())) {
-			Word rezults = new Word(word);
 			String lettercase = AttributeNames.v_Lowercase;
-			if (word.matches("\\p{Lu}.*")) lettercase = AttributeNames.v_FirstUpper;
-			if (word.matches("(\\p{Lu})*")) lettercase = AttributeNames.v_AllUpper;
-			Word lowercase = analyzeLowercase(word.toLowerCase().trim(), word.matches("\\p{Lu}.*"));			
+			if (p_firstcap.matcher(word).matches()) lettercase = AttributeNames.v_FirstUpper;
+			if (p_allcaps.matcher(word).matches()) lettercase = AttributeNames.v_AllUpper;
+			Word lowercase = analyzeLowercase(word.toLowerCase().trim(), word);			
 			for (Wordform vārdforma : lowercase.wordforms) {
 				vārdforma.setToken(word.trim());
 				vārdforma.addAttribute(AttributeNames.i_CapitalLetters, lettercase);
 				rezults.addWordform(vārdforma);
 			}
-			return rezults;
-		} else return analyzeLowercase(word, false);
+		} else { 
+			rezults = analyzeLowercase(word, word);
+		}
+		
+		wordCache.put(word, (Word) rezults.clone());
+		return rezults;
 	}
 	
-	private Word analyzeLowercase(String word, boolean properName) {
-		Word cacheWord = wordCache.get(word);
-		if (cacheWord != null) return (Word) cacheWord.clone();		
-		
+	private Word analyzeLowercase(String word, String originalWord) {
 		Word rezultāts = new Word(word);
 		
 		for (Ending ending : getAllEndings().matchedEndings(word)) {
-			ArrayList<Variants> celmi = Mijas.mijuVarianti(ending.stem(word), ending.getMija(), properName);
+			ArrayList<Variants> celmi = Mijas.mijuVarianti(ending.stem(word), ending.getMija(), p_firstcap.matcher(originalWord).matches());
 
 			for (Variants celms : celmi) {
 				ArrayList<Lexeme> leksēmas = ending.getEndingLexemes(celms.celms);
@@ -173,7 +196,7 @@ public class Analyzer extends Lexicon {
 					}
 
 				if (leksēmas == null && enableDiminutive) 
-					guessDeminutive(word, rezultāts, ending, celms);
+					guessDeminutive(word, rezultāts, ending, celms, originalWord);
 			}
 		}
 
@@ -243,7 +266,7 @@ public class Analyzer extends Lexicon {
 				} */
 
 		if (!rezultāts.isRecognized() && enableGuessing )
-			rezultāts = guessByEnding(word);
+			rezultāts = guessByEnding(word, originalWord);
 
 		/*for (Wordform variants : rezultāts.wordforms) {
 			variants.addAttribute(AttributeNames.i_Tag, MarkupConverter.toKamolsMarkup(variants));
@@ -257,12 +280,11 @@ public class Analyzer extends Lexicon {
 			}
 		} */
 
-		wordCache.put(word, (Word) rezultāts.clone());
 		return rezultāts;
 	}
 
 	private void guessDeminutive(String word, Word rezultāts, Ending ending,
-			Variants celms) {
+			Variants celms, String originalWord) {
 		switch (ending.getParadigm().getID()) {
 		// FIXME - neforšs hack, paļaujamies uz 'maģiskiem' vārdgrupu numuriem
 		case 3: // 2. deklinācijas -is
@@ -278,7 +300,9 @@ public class Analyzer extends Lexicon {
 						variants.addAttribute(AttributeNames.i_Source,"pamazināmo formu atvasināšana");
 						variants.addAttribute(AttributeNames.i_SourceLemma, leksēma.getValue(AttributeNames.i_Lemma));
 						variants.addAttribute(AttributeNames.i_Guess, AttributeNames.v_Deminutive);
-						variants.addAttribute(AttributeNames.i_Lemma, leksēma.getStem(0) + "īt" + ending.getLemmaEnding().getEnding());
+						String lemma = leksēma.getStem(0) + "īt" + ending.getLemmaEnding().getEnding();
+						lemma = recapitalize(lemma, originalWord);
+						variants.addAttribute(AttributeNames.i_Lemma, lemma);
 						rezultāts.addWordform(variants);										
 					}
 			}
@@ -314,7 +338,9 @@ public class Analyzer extends Lexicon {
 						variants.addAttribute(AttributeNames.i_Source,"pamazināmo formu atvasināšana");
 						variants.addAttribute(AttributeNames.i_SourceLemma, leksēma.getValue(AttributeNames.i_Lemma));
 						variants.addAttribute(AttributeNames.i_Guess, AttributeNames.v_Deminutive);
-						variants.addAttribute(AttributeNames.i_Lemma, pamatforma + "iņ" + ending.getLemmaEnding().getEnding());
+						String lemma = pamatforma + "iņ" + ending.getLemmaEnding().getEnding();
+						lemma = recapitalize(lemma, originalWord);
+						variants.addAttribute(AttributeNames.i_Lemma, lemma);
 						
 						rezultāts.addWordform(variants);										
 					}
@@ -361,7 +387,7 @@ public class Analyzer extends Lexicon {
 			if (word.startsWith(priedēklis)) {
 				String cut_word = word.substring(priedēklis.length());
 				if (vajadzība) cut_word = "jā" + cut_word;
-				Word bezpriedēkļa = analyzeLowercase(cut_word, false);
+				Word bezpriedēkļa = analyzeLowercase(cut_word, cut_word);
 				for (Wordform variants : bezpriedēkļa.wordforms)
 					if (variants.getEnding() != null && variants.getEnding().getParadigm() != null && variants.getEnding().getParadigm().getValue(AttributeNames.i_Konjugaacija) != null) { // Tikai no verbiem atvasinātās klases 
 						variants.setToken(word);
@@ -386,7 +412,7 @@ public class Analyzer extends Lexicon {
 		vārds.dataHasChanged();
 	}
 
-	public Word guessByEnding(String word) {
+	public Word guessByEnding(String word, String originalWord) {
 		Word rezultāts = new Word(word);
 
 		for (int i=word.length()-2; i>=0; i--) { // TODO - duma heiristika, kas vērtē tīri pēc galotņu garuma; vajag pēc statistikas
@@ -414,9 +440,13 @@ public class Analyzer extends Lexicon {
 					//TODO te var vēl heiristikas salikt, lai uzlabotu minēšanu - ne katrs burts var būt darbībasvārdam beigās utml
 
 					// FIXME ko ar pārējiem variantiem?? un ko ja nav variantu?
-					if (pamatforma != null)
-						variants.addAttribute(AttributeNames.i_Lemma,
-							 celms + pamatforma.getEnding());
+					if (pamatforma != null) {
+						// Izdomājam korektu lemmu
+						String lemma = celms + pamatforma.getEnding();
+						lemma = recapitalize(lemma, originalWord);	
+						
+						variants.addAttribute(AttributeNames.i_Lemma, lemma);
+					}
 
 					if (  ((this.guessNouns && ending.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech,AttributeNames.v_Noun) &&							
                             (enableVocative || !variants.isMatchingStrong(AttributeNames.i_Case,AttributeNames.v_Vocative)) &&
@@ -424,7 +454,7 @@ public class Analyzer extends Lexicon {
                             ) ||
 							(this.guessVerbs && ending.getParadigm().isMatchingWeak(AttributeNames.i_PartOfSpeech,AttributeNames.v_Verb)) ||
                             (this.guessAdjectives && ending.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech,AttributeNames.v_Adjective)) ||
-                            (this.guessParticibles && variants.isMatchingStrong(AttributeNames.i_Izteiksme,AttributeNames.v_Participle))) 
+                            (this.guessParticiples && variants.isMatchingStrong(AttributeNames.i_Izteiksme,AttributeNames.v_Participle))) 
                       && (i>0 || variants.isMatchingStrong(AttributeNames.i_Declension,AttributeNames.v_NA)) ) // ja galotnes nav, tad vai nu nelokāms lietvārds vai neatpazīstam. Lai nav verbu bezgalotņu formas minējumos, kas parasti nav pareizās.
                             	{
 									if (ending.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech,AttributeNames.v_Noun) && 
@@ -489,6 +519,14 @@ public class Analyzer extends Lexicon {
 	}
 	
 	public ArrayList<Wordform> generateInflections(String lemma, boolean nouns_only, AttributeValues filter) {
+		//Vispirms, pārbaudam specgadījumu - dubultuzvārdus
+		if (p_doublesurname.matcher(lemma).matches()) {
+			int hyphen = lemma.indexOf("-");
+			ArrayList<Wordform> inflections1 = generateInflections(lemma.substring(0, hyphen), nouns_only, filter);
+			ArrayList<Wordform> inflections2 = generateInflections(lemma.substring(hyphen+1, lemma.length()), nouns_only, filter);
+			return mergeInflections(inflections1, inflections2, "-");
+		}
+		
 		Word possibilities = this.analyze(lemma);
 		
 		if (nouns_only) filterInflectionPossibilities(filter, possibilities.wordforms);		
@@ -498,7 +536,7 @@ public class Analyzer extends Lexicon {
 		// If result is null, it means that all the suggested lemma can be (and was) generated from another lemma - i.e. "Dīcis" from "dīkt"; but not from an existing lexicon lemma
 		// We assume that a true lemma was passed by the caller, and we need to generate/guess the wordforms as if the lemma was correct.
 		if (result == null) {
-			possibilities = this.guessByEnding(lemma.toLowerCase());
+			possibilities = this.guessByEnding(lemma.toLowerCase(), lemma);
 			if (nouns_only) filterInflectionPossibilities(filter, possibilities.wordforms);		
 			
 			result = generateInflections_TryLemmas(lemma, possibilities);			
@@ -513,6 +551,88 @@ public class Analyzer extends Lexicon {
 		return result;
 	}
 	
+	// Ņemam divas locījumu kopas un apvienojam vienā .... pašreiz pielietojums tikai dubultuzvārdiem, pēc tam varbūt vēl kaut kur (frāzes?)
+	private ArrayList<Wordform> mergeInflections(
+			ArrayList<Wordform> inflections1, ArrayList<Wordform> inflections2,
+			String concatenator) {		
+		ArrayList<Wordform> result = new ArrayList<Wordform>();
+		
+
+		if (inflections1.size() <= 1) {
+			// Specgadījums - pirmais ir nelokāms
+			String fixedtoken = "???";
+			String fixedlemma = "???";
+			if (inflections1.size() > 0) {
+				fixedtoken = inflections1.get(0).getToken();
+				fixedlemma = inflections1.get(0).getValue(AttributeNames.i_Lemma);
+			}
+			
+			for (Wordform otrā : inflections2) {
+				Wordform apvienojums = (Wordform) otrā.clone(); // Pamatinfo no otrās daļas, jo tā itkā ir gramatiski dominējoša
+				apvienojums.setToken(fixedtoken + concatenator + apvienojums.getToken());
+				apvienojums.addAttribute(AttributeNames.i_Lemma, fixedlemma + concatenator + apvienojums.getValue(AttributeNames.i_Lemma));
+				// TODO - vēl kautkas?
+				result.add(apvienojums);
+			}
+		} else if (inflections2.size() <= 1) {
+			// Specgadījums - otrais ir nelokāms
+			String fixedtoken = "???";
+			String fixedlemma = "???";
+			if (inflections2.size() > 0) {
+				fixedtoken = inflections2.get(0).getToken();
+				fixedlemma = inflections2.get(0).getValue(AttributeNames.i_Lemma);
+			}
+			
+			for (Wordform pirmā : inflections1) {
+				Wordform apvienojums = (Wordform) pirmā.clone(); // Pamatinfo no otrās daļas, jo tā itkā ir gramatiski dominējoša
+				apvienojums.setToken(apvienojums.getToken() + concatenator + fixedtoken);
+				apvienojums.addAttribute(AttributeNames.i_Lemma, apvienojums.getValue(AttributeNames.i_Lemma) + concatenator + fixedlemma);
+				// TODO - vēl kautkas?
+				result.add(apvienojums);
+			}
+		} else {
+			// Normālais gadījums, kad vajag prātīgi apvienot
+			
+			for (Wordform pirmā : inflections1) {				
+				AttributeValues filter = new AttributeValues();
+				// Pieņemam, ka te tikai lietvārdi apgrozīsies
+				filter.addAttribute(AttributeNames.i_Case, pirmā.getValue(AttributeNames.i_Case));
+				filter.addAttribute(AttributeNames.i_Number, pirmā.getValue(AttributeNames.i_Number));
+				ArrayList<Wordform> possibilities = (ArrayList<Wordform>) inflections2.clone(); 
+				filterInflectionPossibilities(filter, possibilities);
+				if (possibilities.size() == 0) {
+					// Debuginfo
+					System.err.println("Problēma ar dubultuzvārdu locīšanu - nesanāca dabūt atbilstošu 'pārīti' šim te pirmās daļas locījumam");
+					pirmā.describe(new PrintWriter(System.err));
+					System.err.println(".. no šīs te kopas otrās daļas locījumu");
+					for (Wordform otrā : inflections2) {
+						otrā.describe(new PrintWriter(System.err));
+						System.err.println("  --");
+					}					
+				} else {
+					if ((!pirmā.isMatchingStrong(AttributeNames.i_Case, AttributeNames.v_Vocative) && possibilities.size() > 1) || possibilities.size() > 2) {
+						// Debuginfo
+						System.err.println("Problēma ar dubultuzvārdu locīšanu - par daudz atbilstošu 'pārīšu' šim te pirmās daļas locījumam");
+						pirmā.describe(new PrintWriter(System.err));
+						System.err.println(".. no šīs te kopas otrās daļas locījumu");
+						for (Wordform otrā : inflections2) {
+							otrā.describe(new PrintWriter(System.err));
+							System.err.println("  --");
+						}					
+					}	
+					
+					Wordform apvienojums = (Wordform) possibilities.get(0).clone(); // Pamatinfo no otrās daļas, jo tā itkā ir gramatiski dominējoša
+					apvienojums.setToken(pirmā.getToken() + concatenator + apvienojums.getToken());
+					apvienojums.addAttribute(AttributeNames.i_Lemma, pirmā.getValue(AttributeNames.i_Lemma) + concatenator + apvienojums.getValue(AttributeNames.i_Lemma));
+					// TODO - vēl kautkas?
+					result.add(apvienojums);
+				}			
+			}
+		}
+		
+		return result;
+	}
+
 	// generate all forms if the paradigm # is known
 	// TODO - needs support for extra features (plural nouns, fixed-genitives, etc)
 	public ArrayList<Wordform> generateInflections(String lemma, int paradigm) {
@@ -526,7 +646,7 @@ public class Analyzer extends Lexicon {
 		}
 		
 		Lexeme l = this.createLexeme(lemma, p.getLemmaEnding().getID(), "temp"); 
-		ArrayList<Wordform> result = generateInflections(l);		
+		ArrayList<Wordform> result = generateInflections(l, lemma);		
 		p.removeLexeme(l); // To not pollute the in-memory lexicon
 		
 		return result;
@@ -553,17 +673,17 @@ public class Analyzer extends Lexicon {
 			if (wf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(lemma) && !wf.isMatchingStrong(AttributeNames.i_Case, AttributeNames.v_Vocative)) {				
 				Lexeme lex = wf.lexeme;
 				if (lex == null || !lex.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(lemma)) {
-					lex = this.createLexeme(lemma, wf.getEnding().getID(), "generateInflections");
+					lex = this.createLexeme(lemma, wf.getEnding().getID(), "generateInflections");				
 					if (lex.getValue(AttributeNames.i_PartOfSpeech) == null)
 						lex.addAttribute(AttributeNames.i_PartOfSpeech, wf.getValue(AttributeNames.i_PartOfSpeech)); // Hardcoded vārdšķirai lai ir POS - saīsinājumi utml
-					if (lemma.matches("\\p{Lu}.*"))
+					if (p_firstcap.matcher(lemma).matches())
 						lex.addAttribute(AttributeNames.i_NounType, AttributeNames.v_ProperNoun); //FIXME - hack personvārdu 'Valdis' utml locīšanai
 					if (wf.getEnding().getParadigm().getStems() > 1 && wf.lexeme != null && wf.getValue(AttributeNames.i_Prefix) != null) { // Priedēkļu atvasināšanai priedēklis jāpieliek arī pārējiem celmiem
 						lex.setStem(1, wf.getValue(AttributeNames.i_Prefix) + wf.lexeme.getStem(1));
 						lex.setStem(2, wf.getValue(AttributeNames.i_Prefix) + wf.lexeme.getStem(2));
 					}
 				}
-				return generateInflections(lex);
+				return generateInflections(lex, lemma);
 			}
 			if ( (lemma.toLowerCase().endsWith("ais") && lemma.equalsIgnoreCase(wf.getValue(AttributeNames.i_Lemma).substring(0, wf.getValue(AttributeNames.i_Lemma).length()-1)+"ais")) ||
 				 (lemma.toLowerCase().endsWith("ā") && wf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(lemma.substring(0, lemma.length()-1)+"a")) ) {
@@ -571,12 +691,12 @@ public class Analyzer extends Lexicon {
 				Lexeme lex = wf.lexeme;
 				if ((lex == null && lemma.toLowerCase().endsWith("ais")) || (lex != null && !lex.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(lemma))) {
 					lex = this.createLexeme(lemma, wf.getEnding().getID(), "generateInflections");
-					if (lemma.matches("\\p{Lu}.*"))
+					if (p_firstcap.matcher(lemma).matches())
 						lex.addAttribute(AttributeNames.i_NounType, AttributeNames.v_ProperNoun); //FIXME - hack personvārdu 'Valdis' utml locīšanai
 				}
 				if (lex == null) continue;
 				ArrayList<Wordform> result = new ArrayList<Wordform>();
-				for (Wordform wf2 : generateInflections(lex)) {
+				for (Wordform wf2 : generateInflections(lex, lemma)) {
 					if (wf2.isMatchingStrong(AttributeNames.i_Definiteness, AttributeNames.v_Definite) && wf2.isMatchingStrong(AttributeNames.i_Degree, AttributeNames.v_Positive) && wf2.isMatchingWeak(AttributeNames.i_Gender, wf.getValue(AttributeNames.i_Gender))) {
 						result.add(wf2);
 					}
@@ -587,7 +707,7 @@ public class Analyzer extends Lexicon {
 		return null;
 	}
 	
-	public ArrayList<Wordform> generateInflections(Lexeme lexeme)
+	public ArrayList<Wordform> generateInflections(Lexeme lexeme, String lemma)
 	{
 		String trešāSakne = null, vārds;
 		//Vārds rezultāts = new Vārds(leksēma.īpašības.Īpašība(IpasibuNosaukumi.i_Pamatforma));
@@ -597,7 +717,7 @@ public class Analyzer extends Lexicon {
 		if (lexeme.getParadigm().getStems() == 3) {
 			trešāSakne = lexeme.getStem(2);
 		}
-
+		
 		for (Ending ending : lexeme.getParadigm().endings){
 			if ( ending.getValue(AttributeNames.i_PartOfSpeech)==null ||
 					ending.getValue(AttributeNames.i_PartOfSpeech).equals(lexeme.getValue(AttributeNames.i_PartOfSpeech)) ||
@@ -610,6 +730,7 @@ public class Analyzer extends Lexicon {
 
 		    	for (Variants celms : celmi){
 		    		vārds = celms.celms + ending.getEnding();
+		    		vārds = recapitalize(vārds, lemma);
 
 		    		Wordform locījums = new Wordform(vārds, lexeme, ending);
 					locījums.addAttributes(celms);

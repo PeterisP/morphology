@@ -17,6 +17,7 @@ package lv.semti.morphology.lexicon;
 
 import java.io.*;
 import java.util.*;
+import java.util.regex.Pattern;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -24,6 +25,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import lv.semti.morphology.analyzer.AllEndings;
 import lv.semti.morphology.analyzer.Mijas;
 import lv.semti.morphology.analyzer.Variants;
+import lv.semti.morphology.attributes.AttributeNames;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
@@ -48,11 +50,16 @@ public class Lexicon {
 	private String revision;
 	private String licence;
 	
-	public ArrayList<Paradigm> paradigms; //TODO - nebūtu jābūt publiskam
+	public ArrayList<Paradigm> paradigms; //TODO - nebūtu jābūt publiskam, vajag tikai read-only iterēt
 	private AllEndings allEndings = null;
 	protected ArrayList<String> prefixes;
 	private ArrayList<String> corpusFileNames = new ArrayList<String>();
 
+	// Vārdu lielo/mazo burtu nošķiršana
+	protected Pattern p_firstcap = Pattern.compile("\\p{Lu}.*");
+	protected Pattern p_allcaps = Pattern.compile("(\\p{Lu})*");
+	protected Pattern p_doublesurname = Pattern.compile("\\p{Lu}.+-\\p{Lu}.+");
+	
 	/**
 	 * Izveido leksikona objektu no XML faila pēc noklusēšanas
 	 *
@@ -378,29 +385,27 @@ public class Lexicon {
 	 * @return		atrastā leksēma, vai arī null, ja nav atrasts.
 	 */
 	public Lexeme lexemeByID(int nr) {
-		// TODO - kā ar dubultid čekošanu?
 		Lexeme rezults = null;
-		for (Paradigm vārdgrupa : paradigms) {
-			for (Lexeme leksēma : vārdgrupa.lexemes)
-				if (leksēma.getID() == nr)
-					rezults = leksēma;
+		for (Paradigm paradigm : paradigms) {
+			if (paradigm.lexemesByID.get(nr) != null) {
+				// TODO - hmm, nepamanīs ja ir vienādi ID dažādās paradigmās
+				rezults = paradigm.lexemesByID.get(nr);
+			}
 		}
 		return rezults;
 	}
 
 	/**
-	 * Atrod leksikonā lielāko šobrīd esošo leksēmas numuru
+	 * Iedod jaunu unikālu leksēmas numuru
 	 *
-	 * @return	lielākais leksēmas numurs, vai 0, ja nav nevienas leksēmas.
+	 * @return	jauns leksēmas numurs
 	 */
-	public int maxLexemeID() {
-		int result = 0;
-		for (Paradigm paradigm : paradigms) {
-			for (Lexeme lexeme : paradigm.lexemes)
-				if (lexeme.getID() > result)
-					result = lexeme.getID();
-		}
-		return result;
+	int lexeme_id_counter = 1000000; 
+	public int newLexemeID() {
+		lexeme_id_counter += 1;
+		while (lexemeByID(lexeme_id_counter) != null)
+			lexeme_id_counter += 1; // ja nu ir ielādēts jau kāds virs miljona, tad būs lēni bet vismaz korekti
+		return lexeme_id_counter;
 	}
 
 	/**
@@ -428,9 +433,12 @@ public class Lexicon {
 		Lexeme rezults = new Lexeme();
 		rezults.setStemCount(ending.getParadigm().getStems());
 		rezults.setStem(ending.stemID-1, stem); 
-		ending.getParadigm().addLexeme(rezults);
+		ending.getParadigm().addLexeme(rezults); // Šajā brīdī arī autoģenerējas lemma
+		String lemma = rezults.getValue(AttributeNames.i_Lemma);
+		lemma = recapitalize(lemma, word);
+		rezults.addAttribute(AttributeNames.i_Lemma, lemma);
 
-		rezults.addAttribute("Avots", source);
+		rezults.addAttribute(AttributeNames.i_Source, source);
 		clearCache();
 		return rezults;
 	}
@@ -480,5 +488,19 @@ public class Lexicon {
 	/**
 	 * Clears cache, if any.
 	 */
-	public void clearCache () {} 
+	public void clearCache () {}
+
+	public String recapitalize(String word, String originalWord) {
+		if (p_firstcap.matcher(originalWord).matches())
+			word = word.substring(0, 1).toUpperCase() + word.substring(1,word.length());
+		if (p_allcaps.matcher(originalWord).matches())
+			word = word.toUpperCase();
+		if (p_doublesurname.matcher(originalWord).matches()) {
+			int otrslielais = word.indexOf("-")+1;
+			if (otrslielais > -1) // nočekojam gadījumam ja nu originalWord'ā ir '-' bet lemmā nav
+				word = word.substring(0, otrslielais) + word.substring(otrslielais, otrslielais+1).toUpperCase() + word.substring(otrslielais+1,word.length());
+		}
+		return word;
+	}
+
 }

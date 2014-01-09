@@ -33,7 +33,7 @@ public class Valerijtests {
 		Valerijformats īpašībasVārdi = new Valerijformats("I:\\Gvarvins\\darbagalds\\Morphology\\src\\tools\\resources\\valerijs\\adjectives.txt");
 		Analyzer analizators = new Analyzer("I:\\Gvarvins\\darbagalds\\Morphology\\src\\main\\resources\\Leksikons_tukshs.xml");
 		analizators.guessNouns = false;
-		analizators.guessParticibles = false;
+		analizators.guessParticiples = false;
 		analizators.guessVerbs = false;
 		analizators.guessAdjectives = true;
 		analizators.enableDiminutive = false;

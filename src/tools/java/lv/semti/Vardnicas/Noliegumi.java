@@ -33,7 +33,7 @@ public class Noliegumi {
 				
 		Analyzer analizators = new Analyzer("dist\\Lexicon.xml");
 		analizators.guessNouns = false;
-		analizators.guessParticibles = false;
+		analizators.guessParticiples = false;
 		analizators.guessVerbs = false;
 		analizators.guessAdjectives = true;
 		analizators.enableDiminutive = false;

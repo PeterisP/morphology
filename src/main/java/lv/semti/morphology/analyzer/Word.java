@@ -337,4 +337,9 @@ public class Word implements Cloneable{
 		return results;
 	}
 
+	public void describe(PrintWriter pipe) {
+		for (Wordform wf : wordforms)
+			wf.describe(pipe);
+	}
+
 }

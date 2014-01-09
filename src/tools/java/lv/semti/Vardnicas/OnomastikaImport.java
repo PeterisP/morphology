@@ -25,7 +25,7 @@ public class OnomastikaImport {
 		
 		Analyzer analizators = new Analyzer("dist/Lexicon.xml");
 		analizators.guessNouns = true;
-		analizators.guessParticibles = false;
+		analizators.guessParticiples = false;
 		analizators.guessVerbs = false;
 		analizators.guessAdjectives = false;
 		analizators.enableDiminutive = false;
@@ -55,7 +55,7 @@ public class OnomastikaImport {
 				//izeja.println("Vārds '" + w.getToken() + "' jau ir leksikonā!");
 			} else {
 				
-				w = analizators.guessByEnding(vārds);
+				w = analizators.guessByEnding(vārds, Vārds);
 
 				izmestNepareizāsParadigmas(w);
 				

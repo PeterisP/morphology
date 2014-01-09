@@ -40,7 +40,7 @@ public class VarduSaraksts {
 				
 				//izeja.append(l.getValue(AttributeNames.i_Lemma)+"\n");
 				//izeja.append(l.getStem(1)+"\n");
-				ArrayList<Wordform> formas = analizators.generateInflections(l);
+				ArrayList<Wordform> formas = analizators.generateInflections(l, l.getValue(AttributeNames.i_Lemma));
 				for (Wordform forma : formas) {
 					forma.removeNonlexicalAttributes();
 					//forma.removeAttribute(AttributeNames.i_LexemeID);
