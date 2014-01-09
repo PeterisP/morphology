@@ -27,6 +27,7 @@ Two typical use-cases are demonstrated in dist/doc/demo/src/MorphDemo.java
 INSTALLATION
   
  Download morphology.zip distribution file and unzip. Include dist/morphology.jar. Store the required libraries and Lexicon.xml in a location accessible to your application.
+ The package should build with ant or as an Eclipse project (NB! Eclipse must open the source as UTF-8 encoded, or it won't compile).
 
 LICENCE
 
