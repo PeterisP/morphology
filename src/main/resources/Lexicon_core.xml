@@ -917,6 +917,9 @@
     <Lexeme ID="50341" Stem1="silvestr">
       <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Silvestrs" Avots="Onomastica - cilvēkvārdi"/>
     </Lexeme>
+    <Lexeme Stem1="jēkab">
+      <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Jēkabs"/>
+    </Lexeme>
     <Lexeme ID="50655" Stem1="tals">
       <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Talsi"/>
     </Lexeme>
@@ -1104,7 +1107,7 @@
       <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="marsietis"/>
     </Lexeme>
     <Lexeme ID="27243" Stem1="pēter">
-      <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="pēteris"/>
+      <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Pēteris"/>
     </Lexeme>
     <Lexeme ID="27273" Stem1="pundurpapagailīt">
       <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="pundurpapagailītis"/>
@@ -3235,9 +3238,6 @@
     </Lexeme>
     <Lexeme ID="50338" Stem1="ilgon">
       <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Ilgona" Avots="Onomastica - cilvēkvārdi"/>
-    </Lexeme>
-    <Lexeme Stem1="ingun">
-      <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Inguna"/>
     </Lexeme>
     <Lexeme Stem1="sudrab">
       <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Sudraba"/>
@@ -6123,7 +6123,7 @@
       <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="aiziet"/>
     </Lexeme>
     <Lexeme ID="50817" Stem1="pārie" Stem2="pārej" Stem3="pārgāj">
-      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="aiziet"/>
+      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="pāriet"/>
     </Lexeme>
     <Lexeme ID="28758" Stem1="slēg" Stem2="slēdz" Stem3="slēdz">
       <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="slēgt"/>
@@ -7848,7 +7848,7 @@
       <Attributes Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="kāpties"/>
     </Lexeme>    
     <Lexeme ID="50869" Stem1="atkāp" Stem2="atkāpj" Stem3="atkāp">
-      <Attributes Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="kāpties"/>
+      <Attributes Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="atkāpties"/>
     </Lexeme>    
   </Paradigm>
   <Paradigm Stems="1" ID="19" LemmaEnding="955" Description="Darbības vārdi 2. konjugācija atgriezeniski">

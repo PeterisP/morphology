@@ -478,11 +478,7 @@
     <Lexeme Stem1="kursīt"> <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Kursīši" Avots="LĢIS"/> </Lexeme>
     <Lexeme Stem1="matīs"> <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Matīši" Avots="LĢIS"/> </Lexeme>
     <Lexeme Stem1="martis"> <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Martiši" Avots="LĢIS"/> </Lexeme>
-    <Lexeme Stem1="beks"> <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Bekši" Avots="LĢIS"/> </Lexeme>
     <Lexeme Stem1="breks"> <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Brekši" Avots="LĢIS"/> </Lexeme>
-    <Lexeme Stem1="ģiks"> <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Ģikši" Avots="LĢIS"/> </Lexeme>
-    <Lexeme Stem1="sērmūks"> <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Sērmūkši" Avots="LĢIS"/> </Lexeme>
-    <Lexeme Stem1="ņuks"> <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Ņukši" Avots="LĢIS"/> </Lexeme>
     <Lexeme Stem1="als"> <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Alši" Avots="LĢIS"/> </Lexeme>
     <Lexeme Stem1="irs"> <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Irši" Avots="LĢIS"/> </Lexeme>
     <Lexeme Stem1="virs"> <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Virši" Avots="LĢIS"/> </Lexeme>
@@ -1488,7 +1484,6 @@
       <Lexeme Stem1="haiti"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Haiti" Avots="wiki"/> </Lexeme>
       <Lexeme Stem1="fidži"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Fidži" Avots="wiki"/> </Lexeme>
       <Lexeme Stem1="tobāgo"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Tobāgo" Avots="wiki"/> </Lexeme>
-      <Lexeme Stem1="kongo"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Kongo" Avots="wiki"/> </Lexeme>
       <Lexeme Stem1="togo"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Togo" Avots="wiki"/> </Lexeme>
       <Lexeme Stem1="monako"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Monako" Avots="wiki"/> </Lexeme>
       <Lexeme Stem1="mehiko"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Mehiko" Avots="wiki"/> </Lexeme>
