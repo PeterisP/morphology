@@ -1946,5 +1946,11 @@ public class MorphologyTest {
 		
 		formas = locītājs.generateInflections("Freiberga-Žverelo", true);
 		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "Freibergas-Žverelo");
+		
+		formas = locītājs.generateInflections("Rīga-Best", true);
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "Rīgas-Best");
+		
+		formas = locītājs.generateInflections("Best-Rīga", true);
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "Best-Rīgas");
 	}
 }

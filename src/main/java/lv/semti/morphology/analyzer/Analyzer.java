@@ -524,7 +524,8 @@ public class Analyzer extends Lexicon {
 			int hyphen = lemma.indexOf("-");
 			ArrayList<Wordform> inflections1 = generateInflections(lemma.substring(0, hyphen), nouns_only, filter);
 			ArrayList<Wordform> inflections2 = generateInflections(lemma.substring(hyphen+1, lemma.length()), nouns_only, filter);
-			return mergeInflections(inflections1, inflections2, "-");
+			if (inflections1.size()>0 && inflections2.size()>0) // FIXME - nelokāmie uzvārdi varbūt sakarīgāk jāprocesē?
+				return mergeInflections(inflections1, inflections2, "-");
 		}
 		
 		Word possibilities = this.analyze(lemma);
@@ -532,10 +533,11 @@ public class Analyzer extends Lexicon {
 		if (nouns_only) filterInflectionPossibilities(filter, possibilities.wordforms);		
 		
 		ArrayList<Wordform> result = generateInflections_TryLemmas(lemma, possibilities);
+		if (nouns_only && result != null) filterInflectionPossibilities(filter, result);
 		
 		// If result is null, it means that all the suggested lemma can be (and was) generated from another lemma - i.e. "Dīcis" from "dīkt"; but not from an existing lexicon lemma
 		// We assume that a true lemma was passed by the caller, and we need to generate/guess the wordforms as if the lemma was correct.
-		if (result == null) {
+		if (result == null || result.size()==0) {
 			possibilities = this.guessByEnding(lemma.toLowerCase(), lemma);
 			if (nouns_only) filterInflectionPossibilities(filter, possibilities.wordforms);		
 			
@@ -545,8 +547,6 @@ public class Analyzer extends Lexicon {
 		// If guessing didn't work, return an empty list
 		if (result == null)
 			result = new ArrayList<Wordform>();
-		
-		if (nouns_only) filterInflectionPossibilities(filter, result);
 		
 		return result;
 	}
