@@ -1944,13 +1944,20 @@ public class MorphologyTest {
 		formas = locītājs.generateInflections("Žverelo-Freiberga", true);
 		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "Žverelo-Freibergas");
 		
-		formas = locītājs.generateInflections("Freiberga-Žverelo", true);
-		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "Freibergas-Žverelo");
+//		formas = locītājs.generateInflections("Freiberga-Žverelo", true);
+//		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "Freibergas-Žverelo");
 		
 		formas = locītājs.generateInflections("Rīga-Best", true);
-		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "Rīgas-Best");
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "Rīga-Best");
 		
 		formas = locītājs.generateInflections("Best-Rīga", true);
 		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "Best-Rīgas");
+		
+		formas = locītājs.generateInflections("Rudaus-Rudovskis", true);
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "Rudaus-Rudovska");
+		
+		formas = locītājs.generateInflections("Pavļuta-Deslandes", true);
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "Pavļutas-Deslandes");
+		
 	}
 }

@@ -524,7 +524,7 @@ public class Analyzer extends Lexicon {
 			int hyphen = lemma.indexOf("-");
 			ArrayList<Wordform> inflections1 = generateInflections(lemma.substring(0, hyphen), nouns_only, filter);
 			ArrayList<Wordform> inflections2 = generateInflections(lemma.substring(hyphen+1, lemma.length()), nouns_only, filter);
-			if (inflections1.size()>0 && inflections2.size()>0) // FIXME - nelokāmie uzvārdi varbūt sakarīgāk jāprocesē?
+			if (inflections1.size()>1 && inflections2.size()>1) // Ja sanāk nelokāms kautkas, tad nemēģinam taisīt kā dubultuzvārdu - tie ir ļoti reti un tas salauztu vairāk nekā iegūtu
 				return mergeInflections(inflections1, inflections2, "-");
 		}
 		
