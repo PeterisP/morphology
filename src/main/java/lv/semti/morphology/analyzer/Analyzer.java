@@ -602,23 +602,23 @@ public class Analyzer extends Lexicon {
 				filterInflectionPossibilities(filter, possibilities);
 				if (possibilities.size() == 0) {
 					// Debuginfo
-					System.err.println("Problēma ar dubultuzvārdu locīšanu - nesanāca dabūt atbilstošu 'pārīti' šim te pirmās daļas locījumam");
-					pirmā.describe(new PrintWriter(System.err));
-					System.err.println(".. no šīs te kopas otrās daļas locījumu");
-					for (Wordform otrā : inflections2) {
-						otrā.describe(new PrintWriter(System.err));
-						System.err.println("  --");
-					}					
+//					System.err.println("Problēma ar dubultuzvārdu locīšanu - nesanāca dabūt atbilstošu 'pārīti' šim te pirmās daļas locījumam");
+//					pirmā.describe(new PrintWriter(System.err));
+//					System.err.println(".. no šīs te kopas otrās daļas locījumu");
+//					for (Wordform otrā : inflections2) {
+//						otrā.describe(new PrintWriter(System.err));
+//						System.err.println("  --");
+//					}					
 				} else {
 					if ((!pirmā.isMatchingStrong(AttributeNames.i_Case, AttributeNames.v_Vocative) && possibilities.size() > 1) || possibilities.size() > 2) {
 						// Debuginfo
-						System.err.println("Problēma ar dubultuzvārdu locīšanu - par daudz atbilstošu 'pārīšu' šim te pirmās daļas locījumam");
-						pirmā.describe(new PrintWriter(System.err));
-						System.err.println(".. no šīs te kopas otrās daļas locījumu");
-						for (Wordform otrā : inflections2) {
-							otrā.describe(new PrintWriter(System.err));
-							System.err.println("  --");
-						}					
+//						System.err.println("Problēma ar dubultuzvārdu locīšanu - par daudz atbilstošu 'pārīšu' šim te pirmās daļas locījumam");
+//						pirmā.describe(new PrintWriter(System.err));
+//						System.err.println(".. no šīs te kopas otrās daļas locījumu");
+//						for (Wordform otrā : inflections2) {
+//							otrā.describe(new PrintWriter(System.err));
+//							System.err.println("  --");
+//						}					
 					}	
 					
 					Wordform apvienojums = (Wordform) possibilities.get(0).clone(); // Pamatinfo no otrās daļas, jo tā itkā ir gramatiski dominējoša
