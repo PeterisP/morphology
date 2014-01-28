@@ -528,5 +528,15 @@ public class TokenizeTest {
 		for (LinkedList<Word> sentence : sentences)
 			System.out.println(sentence.size());
 	}
+
+	@Test
+	public void nonbreakingspace() {
+		LinkedList<Word> tokens;
+		
+		System.out.println("a b\u00A0c");
+		tokens = Splitting.tokenize(locītājs, "a b\u00A0c", false);
+		System.out.println(tokens.get(1).getToken());
+		assertEquals(2, tokens.size());
+	}
 }
  

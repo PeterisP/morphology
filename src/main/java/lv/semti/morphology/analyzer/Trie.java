@@ -136,11 +136,6 @@ public class Trie {
 		tmp.firstChild.nextSibling.nextSibling=new StringNode(" '/\\");
 		tmp.firstChild.nextSibling.nextSibling.firstChild=tmp;
 		
-		
-
-		
-		
-				
 		/* 3
 		 * e-pasta automāts
 		 */
@@ -225,13 +220,11 @@ public class Trie {
 		root.firstChild=new LetterOrDigitNode();
 		root.firstChild.canEnd=true;
 		root.firstChild.firstChild=root.firstChild;
-		root.firstChild.nextSibling=new StringNode("_-");
+		root.firstChild.nextSibling=new StringNode("_-\u00A0");
 		root.firstChild.nextSibling.firstChild=root;
 		root.firstChild.nextSibling.nextSibling=new StringNode("'");
 		root.firstChild.nextSibling.nextSibling.canEnd=true;
-		
-
-		
+			
 		//sagatavojamies pirmajam meklētajam simbolam
 		this.reset();
 		br.close();

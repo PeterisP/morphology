@@ -38,10 +38,10 @@ public class Splitting {
 		return word.hasAttribute(AttributeNames.i_PieturziimesTips, AttributeNames.v_Punkts); // pieņemam, ka tikai 'zs' tags ir teikuma beigas - tur ir punkts, jautājumzīme, izsaukumzīme, daudzpunkte un to kombinācijas/variācijas.
 	}
 		
-	public static boolean isSeperator(char c)
+	public static boolean isSeparator(char c)
 	{
-		String seperators=" .?:/!,;\"'`´(){}<>«»-[]—‐‑‒–―‘’‚‛“”„‟′″‴‵‶‷‹›‼‽⁈⁉․‥…&•";
-		return seperators.contains(String.valueOf(c));
+		String separators=" .?:/!,;\"'`´(){}<>«»-[]—‐‑‒–―‘’‚‛“”„‟′″‴‵‶‷‹›‼‽⁈⁉․‥…&•";
+		return separators.contains(String.valueOf(c));
 	}
 	
 	/**
@@ -49,8 +49,8 @@ public class Splitting {
 	 */
 	public static boolean isSpace(String s)
 	{
-		String seperatorSymbols = " \t\n\r";
-		if (seperatorSymbols.contains(s))
+		String separatorSymbols = " \t\n\r";
+		if (separatorSymbols.contains(s))
 		{
 			return true;
 		}
@@ -91,31 +91,18 @@ public class Splitting {
 			switch (statuss) {
 			case IN_SPACE:
 				if (!Splitting.isSpace(str.charAt(i))) {
-					
 					if (str.charAt(i)=='\'') inApostrophes=true;
 
-					//atjauno automāta stāvokli
-					automats.reset();
-					//atrod pirmo derīgo zaru
-					automats.findNextBranch(str.charAt(i));
+					automats.reset(); //atjauno automāta stāvokli
+					automats.findNextBranch(str.charAt(i)); //atrod pirmo derīgo zaru
 					
-					if(automats.status()>0) //pārbauda vai atrada meklēto simbolu
-					{
+					if(automats.status()>0) { //pārbauda vai atrada meklēto simbolu
 						//ja atrada
 						statuss=Status.IN_WORD;
 						progress=i;
 						//pārbauda vai ar to var arī virkne beigties
-						if(automats.status()==2)
-						{
-							canEndInNextStep=true;
-						}
-						else
-						{
-							canEndInNextStep=false;
-						}
-					}
-					else
-					{
+						canEndInNextStep = (automats.status()==2);
+					} else {
 						//ja neatrada, pievieno simbolu rezultātam
 						tokens.add( (morphoAnalyzer == null) ? 
 								new Word(str.substring(i,i+1)) :
@@ -127,17 +114,12 @@ public class Splitting {
 				//pārbauda vai ir atrastas potenciālās beigas
 		        if(canEndInNextStep==true && 
 			            (
-			              (
-			                Splitting.isSeperator(str.charAt(i)) && Character.isLetter((i>0 ? str.charAt(i-1) : 0))
-			              ) 
-			              ||  
-			              !Character.isLetter((i>0 ? str.charAt(i-1) : 0) )     
-			            )
-			          )
+			              ( Splitting.isSeparator(str.charAt(i)) && Character.isLetter((i>0 ? str.charAt(i-1) : 0))  ) 
+			              || !Character.isLetter((i>0 ? str.charAt(i-1) : 0) )     
+			            ) )
 				{
 					lastGoodEnd=i;
-					if(str.charAt(i)=='\'' && inApostrophes)
-					{
+					if(str.charAt(i)=='\'' && inApostrophes) {
 						tokens.add( (morphoAnalyzer == null) ? 
 								new Word(str.substring(progress,i)) :
 								morphoAnalyzer.analyze(str.substring(progress,i)) );
@@ -152,42 +134,29 @@ public class Splitting {
 				canEndInNextStep=false;
 				
 				//mēģina atrast nākamo simbolu automātā
-				if (automats.findNext(str.charAt(i))>0) //ja atrada 
-				{
+				if (automats.findNext(str.charAt(i))>0) { //ja atrada 
 					//pārbauda vai ar to var arī virkne beigties
-					if(automats.status()==2)
-					{
+					if (automats.status()==2)
 						canEndInNextStep=true;
-					}
-				} 
-				else  
-				{
+				} else {
 					//ja neatrada, pārbauda vai darbības laikā tika atrasta potenciālā beigu pozīcija
-					if(lastGoodEnd>progress)
-					{
+					if (lastGoodEnd>progress) {
 						tokens.add( (morphoAnalyzer == null) ? 
 								new Word(str.substring(progress,lastGoodEnd)) :
 								morphoAnalyzer.analyze(str.substring(progress,lastGoodEnd)) );
 						i=lastGoodEnd-1;
 						statuss = Status.IN_SPACE;
-					}
-					else
-					{
+					} else {
 						i=progress;
 						//mēgina atrast nākamo derīgo zaru
 						automats.nextBranch();
 						automats.findNextBranch(str.charAt(i));
-						if(automats.status()>0) //pārbauda vai atrada meklēto simbolu
-						{							
+						if(automats.status()>0) { //pārbauda vai atrada meklēto simbolu
 							//pārbauda vai ar to var arī virkne beigties
 							if(automats.status()==2)
-							{
 								canEndInNextStep=true;
-							}
-						}
-						else
-						{
-							//ja neatrada, pievieno simbolu rezultātam
+						} else {
+							//ja neatrada, pievieno simbolu rezultātam un pēc tam dosies meklēt jauno sākumu
 							tokens.add( (morphoAnalyzer == null) ? 
 									new Word(str.substring(i,i+1)) :
 									morphoAnalyzer.analyze(str.substring(i,i+1)) );
@@ -196,9 +165,10 @@ public class Splitting {
 					}
 				}				
 				break;
-
 			}
-		}
+		} // for i..
+		
+		
 		if (statuss == Status.IN_WORD) { 
 			tokens.add( (morphoAnalyzer == null) ? 
 					new Word(str.substring(progress,str.length())) :

@@ -40,7 +40,7 @@ public class Analyzer extends Lexicon {
     public boolean enableAllGuesses = false;
 	public boolean guessInflexibleNouns = false;
 	
-	private Pattern p_number = Pattern.compile("(\\d+[\\., ])*\\d+([\\.,][-‐‑‒–—―])?");
+	private Pattern p_number = Pattern.compile("[\\d\\., ]*\\d+([\\.,][-‐‑‒–—―])?");
 	private Pattern p_ordinal = Pattern.compile("\\d+\\.");
 	private Pattern p_fractional = Pattern.compile("\\d+[\\\\/]\\d+");
 	private Pattern p_abbrev = Pattern.compile("\\w+\\.");
