@@ -12,7 +12,7 @@ BASIC USAGE
  
  // analysis
  Word result = analyzer.analyze("roku");
- for (Wordform wf : result) {
+ for (Wordform wf : result.wordforms) {
 	wf.describe();
  }
 
