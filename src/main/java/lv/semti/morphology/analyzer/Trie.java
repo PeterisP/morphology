@@ -10,27 +10,29 @@ public class Trie {
 	private ArrayList<node> branchList;
 	private boolean isFirst;
 	
-	
-	
 	public Trie(String filename) throws IOException {
+		this(filename != null && !filename.isEmpty() ? new FileInputStream(filename) : null);
+	}
+	
+	public Trie(InputStream fstream) throws IOException {
 		node root,tmp;
 		branchList=new ArrayList<node>();
 		//izveido exception Trie
 		root=new node();
 
-		FileInputStream fstream = new FileInputStream(filename);
-
-		InputStreamReader in = new InputStreamReader(fstream,"UTF-8");
-		BufferedReader br = new BufferedReader(in);
-		String strLine;
-		
-		while ((strLine = br.readLine()) != null)
-		{
-			this.add(strLine, root);
+		if (fstream != null) {
+			InputStreamReader in = new InputStreamReader(fstream,"UTF-8");
+			BufferedReader br = new BufferedReader(in);
+			String strLine;
+			while ((strLine = br.readLine()) != null) {
+				this.add(strLine, root);
+			}
+			br.close();
+			
+			//pievieno Exception trie brach listam
+			root=root.firstChild;
+			branchList.add(root);
 		}
-		//pievieno Exception trie brach listam
-		root=root.firstChild;
-		branchList.add(root);
 		
 		/* 1
 		 * Iniciāļu automāts atpazīst Dz. Dž. UpperCaseLetter.
@@ -227,7 +229,6 @@ public class Trie {
 			
 		//sagatavojamies pirmajam meklētajam simbolam
 		this.reset();
-		br.close();
 	}
 	
 	public void add(String s, node root)
