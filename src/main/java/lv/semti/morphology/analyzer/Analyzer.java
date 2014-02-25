@@ -98,6 +98,18 @@ public class Analyzer extends Lexicon {
 			System.err.println("Nesanāca ielādēt exceptionus");
 		}
 	}
+	
+	public Analyzer (InputStream lexiconStream, InputStream[] auxiliaryLexiconStreams, InputStream exceptionStream) throws Exception {
+		super(lexiconStream, auxiliaryLexiconStreams);
+
+		try {
+			automats=new Trie(exceptionStream);
+		} catch (Exception e) { 
+			e.printStackTrace();
+			System.err.println("Nesanāca ielādēt exceptionus");
+			automats = new Trie("");
+		}
+	}
     
 	/* TODO - salikteņu minēšana jāuzaisa 
 	private boolean DerSalikteņaSākumam(Ending ending) {

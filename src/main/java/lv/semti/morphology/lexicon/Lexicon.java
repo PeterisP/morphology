@@ -112,6 +112,10 @@ public class Lexicon {
 		init(plusma);
 	}
 	
+	public Lexicon(InputStream stream, InputStream[] auxiliaryLexicons) throws Exception {
+		init(stream, auxiliaryLexicons);
+	}
+	
 	/**
 	 * @return null, if the lexicon is read from an input stream.
 	 */
@@ -173,8 +177,27 @@ public class Lexicon {
 		init_main(doc, "", false);
 	}
 	
+	private void init(InputStream stream, InputStream[] auxiliaryLexicons) throws Exception {
+		System.err.println("Loading the lexicon from an input stream...");
+		
+		Document doc = null;
+		DocumentBuilder docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
+		doc = docBuilder.parse(stream);
+
+		init_main(doc, "", false, false);
+		
+		for (InputStream lexicon : auxiliaryLexicons) {
+			docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
+			Document doc2 = docBuilder.parse(lexicon);
+			init_sub(doc2);
+		}
+	}
 	
 	private void init_main(Document doc, String path, boolean useAuxiliaryLexicons) throws Exception {
+		init_main(doc, path, useAuxiliaryLexicons, true);
+	}
+	
+	private void init_main(Document doc, String path, boolean useAuxiliaryLexicons, boolean useCore) throws Exception {
 		Node node = doc.getDocumentElement();
 		if (!node.getNodeName().equalsIgnoreCase("Morphology")) throw new Error("Node '" + node.getNodeName() + "' but Morphology expected!");
 
@@ -199,7 +222,7 @@ public class Lexicon {
 				boolean isCore = false;
 				if (lexiconType != null) isCore = lexiconType.getTextContent().equalsIgnoreCase("core");
 				
-				if (corpusFileName != null && (useAuxiliaryLexicons || isCore))
+				if (corpusFileName != null && (useAuxiliaryLexicons || (isCore && useCore)))
 					corpusFileNames.add(corpusFileName.getTextContent());
 			}
 		}
