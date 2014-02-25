@@ -421,7 +421,7 @@ public class Analyzer extends Lexicon {
 		vārds.wordforms.clear();
 		for (Wordform vārdforma : jaunais.wordforms)
 			vārds.wordforms.add(vārdforma);
-		vārds.dataHasChanged();
+		vārds.notifyObservers();
 	}
 
 	public Word guessByEnding(String word, String originalWord) {

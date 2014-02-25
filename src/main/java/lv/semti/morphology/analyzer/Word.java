@@ -21,8 +21,7 @@ import java.io.PrintWriter;
 import java.io.Writer;
 import java.util.ArrayList;
 import java.util.Iterator;
-
-//import javax.swing.table.AbstractTableModel;
+import java.util.Observable;
 
 import org.json.simple.JSONValue;
 import org.w3c.dom.Node;
@@ -38,13 +37,10 @@ import lv.semti.morphology.corpus.Statistics;
  * 
  * @author Pēteris Paikens
  */
-public class Word implements Cloneable{
+public class Word extends Observable implements Cloneable{
 
 	private String token;
 	public ArrayList<Wordform> wordforms = new ArrayList<Wordform>();
-	//FIXME - derētu jau privāts
-	//private AbstractTableModel tableModel = null;
-	//TODO - moš korektāk ar listeneriem (notifaijeriem?!)
 	private Wordform correctWordform = null;
 
 	public Word (String token) {
@@ -73,10 +69,6 @@ public class Word implements Cloneable{
 			wordforms.add(new Wordform(node));
 		} else throw new Error("Node " + node.getNodeName() + " nav ne Vārds, ne Vārdforma");
 	}
-
-	//public void setTableModel(AbstractTableModel model) {
-		//this.tableModel = model;
-	//}
 
 	@Override
 	public String toString() {
@@ -209,10 +201,6 @@ public class Word implements Cloneable{
 	}
 
 	public void toXML(Writer stream) throws IOException {
-//		private String vārds;
-//		public ArrayList<Vārdforma> vardformas;
-//		private Vārdforma pareizāVārdforma = null;
-
 		stream.write("<Vārds");
 		stream.write(" vārds=\"" + token.replace("\"", "&quot;") + "\"");
 		if (correctWordform != null)
@@ -324,12 +312,6 @@ public class Word implements Cloneable{
 			
 	}
 	
-	public void dataHasChanged() {
-		// FIXME - pagaidām paļaujas, ka kam vajadzēs, tas pats arī izsauks
-		//if (tableModel != null)
-			//tableModel.fireTableDataChanged();
-	}
-
 	public boolean hasAttribute(String attribute, String value){
 		boolean results = false;
 		for (Wordform vārdforma : wordforms)
