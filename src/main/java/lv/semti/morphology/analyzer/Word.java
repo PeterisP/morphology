@@ -22,7 +22,7 @@ import java.io.Writer;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-import javax.swing.table.AbstractTableModel;
+//import javax.swing.table.AbstractTableModel;
 
 import org.json.simple.JSONValue;
 import org.w3c.dom.Node;
@@ -43,7 +43,7 @@ public class Word implements Cloneable{
 	private String token;
 	public ArrayList<Wordform> wordforms = new ArrayList<Wordform>();
 	//FIXME - derētu jau privāts
-	private AbstractTableModel tableModel = null;
+	//private AbstractTableModel tableModel = null;
 	//TODO - moš korektāk ar listeneriem (notifaijeriem?!)
 	private Wordform correctWordform = null;
 
@@ -74,9 +74,9 @@ public class Word implements Cloneable{
 		} else throw new Error("Node " + node.getNodeName() + " nav ne Vārds, ne Vārdforma");
 	}
 
-	public void setTableModel(AbstractTableModel model) {
-		this.tableModel = model;
-	}
+	//public void setTableModel(AbstractTableModel model) {
+		//this.tableModel = model;
+	//}
 
 	@Override
 	public String toString() {
@@ -326,8 +326,8 @@ public class Word implements Cloneable{
 	
 	public void dataHasChanged() {
 		// FIXME - pagaidām paļaujas, ka kam vajadzēs, tas pats arī izsauks
-		if (tableModel != null)
-			tableModel.fireTableDataChanged();
+		//if (tableModel != null)
+			//tableModel.fireTableDataChanged();
 	}
 
 	public boolean hasAttribute(String attribute, String value){
