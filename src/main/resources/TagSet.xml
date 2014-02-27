@@ -59,7 +59,6 @@
 
 <Attribute LV="Darbības vārda tips" PartOfSpeech="Darbības vārds" MarkupPos="1" Description="patstāvīgs vai palīg d.v ?">
 	<Value LV="Patstāvīgs darbības vārds" Tag="m"/>
-	<Value LV="Palīgdarbības vārds" Tag="a"/>
 	<Value LV="Modāls" Tag="o"/>
 	<Value LV="Fāzes" Tag="p"/>
 	<Value LV="Izpausmes veida" Tag="e"/>

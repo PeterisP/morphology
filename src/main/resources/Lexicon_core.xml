@@ -6063,7 +6063,7 @@
       <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbi 'tikt' un 'tapt'" Pamatforma="tapt"/>
     </Lexeme>
     <Lexeme ID="26601" Stem1="palik" Stem2="paliek" Stem3="palik">
-      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgdarbības vārds" Pamatforma="palikt"/>
+      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbi 'tikt' un 'tapt'" Pamatforma="palikt"/>
     </Lexeme>
     <Lexeme ID="27246" Stem1="aizskrie" Stem2="aizskrej" Stem3="aizskrēj">
       <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="aizskriet"/>
@@ -10650,10 +10650,10 @@
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Nepiemīt" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Ģenitīvs" Vietniekvārda_tips="Noteiktie" Pamatforma="pati"/>
     </Lexeme>
     <Lexeme ID="27477" Stem1="tais">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tā"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tā"/>
     </Lexeme>
     <Lexeme ID="27478" Stem1="tais">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tas"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tas"/>
     </Lexeme>
     <Lexeme ID="27479" Stem1="taviem">
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Nepiemīt" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Datīvs" Vietniekvārda_tips="Piederības" Pamatforma="tavs"/>
@@ -10737,7 +10737,7 @@
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Nepiemīt" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Datīvs" Vietniekvārda_tips="Noteiktie" Pamatforma="pati"/>
     </Lexeme>
     <Lexeme ID="27512" Stem1="šajos">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šis"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šis"/>
     </Lexeme>
     <Lexeme ID="27513" Stem1="man">
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Nepiemīt" Dzimte="Nepiemīt" Persona="1" Locījums="Datīvs" Vietniekvārda_tips="Personu" Pamatforma="es"/>
@@ -10758,7 +10758,7 @@
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Nepiemīt" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Nominatīvs" Vietniekvārda_tips="Nenoteiktie" Pamatforma="kurš"/>
     </Lexeme>
     <Lexeme ID="27523" Stem1="tajos">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tas"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tas"/>
     </Lexeme>
     <Lexeme ID="27524" Stem1="kuru">
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Nepiemīt" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Ģenitīvs" Vietniekvārda_tips="Jautājamie" Pamatforma="kura"/>
@@ -10950,13 +10950,13 @@
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Nepiemīt" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Lokatīvs" Vietniekvārda_tips="Piederības" Pamatforma="mana"/>
     </Lexeme>
     <Lexeme ID="27610" Stem1="šai">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="3" Locījums="Datīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šī"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Datīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šī"/>
     </Lexeme>
     <Lexeme ID="27611" Stem1="šai">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šī"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šī"/>
     </Lexeme>
     <Lexeme ID="27612" Stem1="šai">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šis"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šis"/>
     </Lexeme>
     <Lexeme ID="27615" Stem1="manām">
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Nepiemīt" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Datīvs" Vietniekvārda_tips="Piederības" Pamatforma="mana"/>
@@ -10971,10 +10971,10 @@
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Nepiemīt" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Ģenitīvs" Vietniekvārda_tips="Noteiktie" Pamatforma="visa"/>
     </Lexeme>
     <Lexeme ID="27620" Stem1="šī">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="3" Locījums="Nominatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šī"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Nominatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šī"/>
     </Lexeme>
     <Lexeme ID="27621" Stem1="šī">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="3" Locījums="Ģenitīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šis"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Ģenitīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šis"/>
     </Lexeme>
     <Lexeme ID="27623" Stem1="ikkuras">
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Nepiemīt" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Ģenitīvs" Vietniekvārda_tips="Noteiktie" Pamatforma="ikkura"/>
@@ -11025,7 +11025,7 @@
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Nepiemīt" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Ģenitīvs" Vietniekvārda_tips="Nenoteiktie" Pamatforma="jebkāds"/>
     </Lexeme>
     <Lexeme ID="27649" Stem1="šā">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="3" Locījums="Ģenitīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šis"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Ģenitīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šis"/>
     </Lexeme>
     <Lexeme ID="27650" Stem1="jūsu">
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Nepiemīt" Dzimte="Nepiemīt" Persona="2" Locījums="Ģenitīvs" Vietniekvārda_tips="Personu" Pamatforma="jūs"/>
@@ -11118,10 +11118,10 @@
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Nepiemīt" Dzimte="Vīriešu" Persona="Nepiemīt" Noliegums="Jā" Locījums="Lokatīvs" Vietniekvārda_tips="Nenoteiktie" Pamatforma="neviens"/>
     </Lexeme>
     <Lexeme ID="27694" Stem1="tajā">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tā"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tā"/>
     </Lexeme>
     <Lexeme ID="27695" Stem1="tajā">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tas"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tas"/>
     </Lexeme>
     <Lexeme ID="27696" Stem1="nekā">
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Nepiemīt" Dzimte="Vīriešu" Persona="Nepiemīt" Noliegums="Jā" Locījums="Ģenitīvs" Vietniekvārda_tips="Nenoteiktie" Pamatforma="nekas"/>
@@ -11211,7 +11211,7 @@
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Nepiemīt" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Akuzatīvs" Vietniekvārda_tips="Piederības" Pamatforma="tavs"/>
     </Lexeme>
     <Lexeme ID="27735" Stem1="tām">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="3" Locījums="Datīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tā"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Datīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tā"/>
     </Lexeme>
     <Lexeme ID="27738" Stem1="nekādai">
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Nepiemīt" Dzimte="Sieviešu" Persona="Nepiemīt" Noliegums="Jā" Locījums="Datīvs" Vietniekvārda_tips="Nenoteiktie" Pamatforma="nekāda"/>
@@ -11220,13 +11220,13 @@
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Nepiemīt" Dzimte="Sieviešu" Persona="Nepiemīt" Noliegums="Jā" Locījums="Ģenitīvs" Vietniekvārda_tips="Nenoteiktie" Pamatforma="neviena"/>
     </Lexeme>
     <Lexeme ID="27741" Stem1="tās">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="3" Locījums="Akuzatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tā"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Akuzatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tā"/>
     </Lexeme>
     <Lexeme ID="27742" Stem1="tās">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="3" Locījums="Nominatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tā"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Nominatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tā"/>
     </Lexeme>
     <Lexeme ID="27743" Stem1="tās">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="3" Locījums="Ģenitīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tā"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Ģenitīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tā"/>
     </Lexeme>
     <Lexeme ID="27745" Stem1="tavs">
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Nepiemīt" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Nominatīvs" Vietniekvārda_tips="Piederības" Pamatforma="tavs"/>
@@ -11274,22 +11274,22 @@
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Nepiemīt" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Datīvs" Vietniekvārda_tips="Attieksmes" Pamatforma="kāda"/>
     </Lexeme>
     <Lexeme ID="27774" Stem1="šinīs">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šī"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šī"/>
     </Lexeme>
     <Lexeme ID="27775" Stem1="šinīs">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šis"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šis"/>
     </Lexeme>
     <Lexeme ID="27776" Stem1="šo">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="3" Locījums="Ģenitīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šī"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Ģenitīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šī"/>
     </Lexeme>
     <Lexeme ID="27777" Stem1="šo">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="3" Locījums="Akuzatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šī"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Akuzatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šī"/>
     </Lexeme>
     <Lexeme ID="27778" Stem1="šo">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="3" Locījums="Ģenitīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šis"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Ģenitīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šis"/>
     </Lexeme>
     <Lexeme ID="27779" Stem1="šo">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="3" Locījums="Akuzatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šis"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Akuzatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šis"/>
     </Lexeme>
     <Lexeme ID="27780" Stem1="kāds">
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Nepiemīt" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Nominatīvs" Vietniekvārda_tips="Nenoteiktie" Pamatforma="kāds"/>
@@ -11301,10 +11301,10 @@
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Nepiemīt" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Nominatīvs" Vietniekvārda_tips="Attieksmes" Pamatforma="kāds"/>
     </Lexeme>
     <Lexeme ID="27783" Stem1="tanī">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tā"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tā"/>
     </Lexeme>
     <Lexeme ID="27784" Stem1="tanī">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tas"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tas"/>
     </Lexeme>
     <Lexeme ID="27785" Stem1="kādu">
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Nepiemīt" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Ģenitīvs" Vietniekvārda_tips="Nenoteiktie" Pamatforma="kāda"/>
@@ -11370,16 +11370,16 @@
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Nepiemīt" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Nominatīvs" Vietniekvārda_tips="Noteiktie" Pamatforma="pati"/>
     </Lexeme>
     <Lexeme ID="27808" Stem1="šinī">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šī"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šī"/>
     </Lexeme>
     <Lexeme ID="27809" Stem1="šinī">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šis"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šis"/>
     </Lexeme>
     <Lexeme ID="27810" Stem1="mūsu">
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Nepiemīt" Dzimte="Nepiemīt" Persona="1" Locījums="Ģenitīvs" Vietniekvārda_tips="Personu" Pamatforma="mēs"/>
     </Lexeme>
     <Lexeme ID="27812" Stem1="šajās">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šī"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šī"/>
     </Lexeme>
     <Lexeme ID="27813" Stem1="viņai">
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Nepiemīt" Dzimte="Sieviešu" Persona="3" Locījums="Datīvs" Vietniekvārda_tips="Personu" Pamatforma="viņa"/>
@@ -11430,10 +11430,10 @@
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj adjektīvu" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Datīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tāds"/>
     </Lexeme>
     <Lexeme ID="27839" Stem1="šais">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šī"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šī"/>
     </Lexeme>
     <Lexeme ID="27840" Stem1="šais">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šis"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šis"/>
     </Lexeme>
     <Lexeme ID="27841" Stem1="katrai">
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Nepiemīt" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Datīvs" Vietniekvārda_tips="Noteiktie" Pamatforma="katra"/>
@@ -11460,25 +11460,25 @@
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Nepiemīt" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Lokatīvs" Vietniekvārda_tips="Piederības" Pamatforma="tavs"/>
     </Lexeme>
     <Lexeme ID="27854" Stem1="šīs">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="3" Locījums="Akuzatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šī"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Akuzatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šī"/>
     </Lexeme>
     <Lexeme ID="27855" Stem1="šīs">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="3" Locījums="Nominatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šī"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Nominatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šī"/>
     </Lexeme>
     <Lexeme ID="27856" Stem1="šīs">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="3" Locījums="Ģenitīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šī"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Ģenitīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šī"/>
     </Lexeme>
     <Lexeme ID="27858" Stem1="jebkuram">
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Nepiemīt" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Datīvs" Vietniekvārda_tips="Nenoteiktie" Pamatforma="jebkurš"/>
     </Lexeme>
     <Lexeme ID="27859" Stem1="tanīs">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tā"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tā"/>
     </Lexeme>
     <Lexeme ID="27860" Stem1="tanīs">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tas"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tas"/>
     </Lexeme>
     <Lexeme ID="27861" Stem1="šīm">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="3" Locījums="Datīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šī"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Datīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šī"/>
     </Lexeme>
     <Lexeme ID="27862" Stem1="kādos">
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Nepiemīt" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Lokatīvs" Vietniekvārda_tips="Nenoteiktie" Pamatforma="kāds"/>
@@ -11595,16 +11595,16 @@
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Nepiemīt" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Lokatīvs" Vietniekvārda_tips="Piederības" Pamatforma="sava"/>
     </Lexeme>
     <Lexeme ID="27928" Stem1="to">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="3" Locījums="Ģenitīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tā"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Ģenitīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tā"/>
     </Lexeme>
     <Lexeme ID="27929" Stem1="to">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="3" Locījums="Akuzatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tā"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Akuzatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tā"/>
     </Lexeme>
     <Lexeme ID="27930" Stem1="to">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="3" Locījums="Ģenitīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tas"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Ģenitīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tas"/>
     </Lexeme>
     <Lexeme ID="27931" Stem1="to">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="3" Locījums="Akuzatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tas"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Akuzatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tas"/>
     </Lexeme>
     <Lexeme ID="27933" Stem1="tādā">
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj adjektīvu" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tāda"/>
@@ -11628,7 +11628,7 @@
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Nepiemīt" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Akuzatīvs" Vietniekvārda_tips="Noteiktie" Pamatforma="pats"/>
     </Lexeme>
     <Lexeme ID="27940" Stem1="šos">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="3" Locījums="Akuzatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šis"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Akuzatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šis"/>
     </Lexeme>
     <Lexeme ID="27943" Stem1="jūs">
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Nepiemīt" Dzimte="Nepiemīt" Persona="2" Locījums="Akuzatīvs" Vietniekvārda_tips="Personu" Pamatforma="jūs"/>
@@ -11694,22 +11694,22 @@
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Nepiemīt" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Nominatīvs" Vietniekvārda_tips="Noteiktie" Pamatforma="pats"/>
     </Lexeme>
     <Lexeme ID="27972" Stem1="tajās">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tā"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tā"/>
     </Lexeme>
     <Lexeme ID="27973" Stem1="viss">
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Nepiemīt" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Nominatīvs" Vietniekvārda_tips="Noteiktie" Pamatforma="viss"/>
     </Lexeme>
     <Lexeme ID="27974" Stem1="šām">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="3" Locījums="Datīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šī"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Datīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šī"/>
     </Lexeme>
     <Lexeme ID="27975" Stem1="šādi">
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj adjektīvu" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Nominatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šāds"/>
     </Lexeme>
     <Lexeme ID="27976" Stem1="šās">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="3" Locījums="Nominatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šī"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Nominatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šī"/>
     </Lexeme>
     <Lexeme ID="27977" Stem1="šās">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="3" Locījums="Ģenitīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šī"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Ģenitīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šī"/>
     </Lexeme>
     <Lexeme ID="27980" Stem1="tavus">
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Nepiemīt" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Akuzatīvs" Vietniekvārda_tips="Piederības" Pamatforma="tavs"/>
@@ -11724,10 +11724,10 @@
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Nepiemīt" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Nominatīvs" Vietniekvārda_tips="Noteiktie" Pamatforma="viss"/>
     </Lexeme>
     <Lexeme ID="27984" Stem1="šajā">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šī"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šī"/>
     </Lexeme>
     <Lexeme ID="27985" Stem1="šajā">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šis"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šis"/>
     </Lexeme>
     <Lexeme ID="27986" Stem1="šādu">
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj adjektīvu" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Ģenitīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šāda"/>
@@ -11772,7 +11772,7 @@
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj adjektīvu" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Ģenitīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šāds"/>
     </Lexeme>
     <Lexeme ID="28011" Stem1="tos">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="3" Locījums="Akuzatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tas"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Akuzatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tas"/>
     </Lexeme>
     <Lexeme ID="28012" Stem1="viņā">
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Nepiemīt" Dzimte="Sieviešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Personu" Pamatforma="viņa"/>
@@ -11805,13 +11805,13 @@
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Nepiemīt" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Datīvs" Vietniekvārda_tips="Noteiktie" Pamatforma="ikviena"/>
     </Lexeme>
     <Lexeme ID="28033" Stem1="tai">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="3" Locījums="Datīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tā"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Datīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tā"/>
     </Lexeme>
     <Lexeme ID="28034" Stem1="tai">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tā"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tā"/>
     </Lexeme>
     <Lexeme ID="28035" Stem1="tai">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tas"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tas"/>
     </Lexeme>
     <Lexeme ID="28036" Stem1="cits">
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Nepiemīt" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Nominatīvs" Vietniekvārda_tips="Nenoteiktie" Pamatforma="cits"/>
@@ -11829,7 +11829,7 @@
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Nepiemīt" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Akuzatīvs" Vietniekvārda_tips="Nenoteiktie" Pamatforma="cits"/>
     </Lexeme>
     <Lexeme ID="28041" Stem1="tie">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="3" Locījums="Nominatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tas"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Nominatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tas"/>
     </Lexeme>
     <Lexeme ID="28043" Stem1="dažos">
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Nepiemīt" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Lokatīvs" Vietniekvārda_tips="Nenoteiktie" Pamatforma="dažs"/>
@@ -11901,7 +11901,7 @@
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Nepiemīt" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Akuzatīvs" Vietniekvārda_tips="Piederības" Pamatforma="mans"/>
     </Lexeme>
     <Lexeme ID="28090" Stem1="tiem">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="3" Locījums="Datīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tas"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Datīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tas"/>
     </Lexeme>
     <Lexeme ID="28091" Stem1="mans">
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Nepiemīt" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Nominatīvs" Vietniekvārda_tips="Piederības" Pamatforma="mans"/>
@@ -11910,13 +11910,13 @@
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Nepiemīt" Dzimte="Vīriešu" Persona="Nepiemīt" Noliegums="Jā" Locījums="Lokatīvs" Vietniekvārda_tips="Nenoteiktie" Pamatforma="nekāds"/>
     </Lexeme>
     <Lexeme ID="28093" Stem1="tas">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="3" Locījums="Nominatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tas"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Nominatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tas"/>
     </Lexeme>
     <Lexeme ID="28095" Stem1="citi">
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Nepiemīt" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Nominatīvs" Vietniekvārda_tips="Nenoteiktie" Pamatforma="cits"/>
     </Lexeme>
     <Lexeme ID="28096" Stem1="tam">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="3" Locījums="Datīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tas"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Datīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tas"/>
     </Lexeme>
     <Lexeme ID="28098" Stem1="jebkuru">
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Nepiemīt" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Ģenitīvs" Vietniekvārda_tips="Nenoteiktie" Pamatforma="jebkura"/>
@@ -11997,7 +11997,7 @@
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Nepiemīt" Dzimte="Vīriešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Personu" Pamatforma="viņš"/>
     </Lexeme>
     <Lexeme ID="28133" Stem1="šiem">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="3" Locījums="Datīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šis"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Datīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šis"/>
     </Lexeme>
     <Lexeme ID="28134" Stem1="kurās">
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Nepiemīt" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Lokatīvs" Vietniekvārda_tips="Jautājamie" Pamatforma="kura"/>
@@ -12069,7 +12069,7 @@
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Nepiemīt" Dzimte="Nepiemīt" Persona="2" Locījums="Datīvs" Vietniekvārda_tips="Personu" Pamatforma="tu"/>
     </Lexeme>
     <Lexeme ID="28162" Stem1="šie">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="3" Locījums="Nominatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šis"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Nominatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šis"/>
     </Lexeme>
     <Lexeme ID="28163" Stem1="kuras">
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Nepiemīt" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Akuzatīvs" Vietniekvārda_tips="Jautājamie" Pamatforma="kura"/>
@@ -12102,7 +12102,7 @@
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Nepiemīt" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Datīvs" Vietniekvārda_tips="Noteiktie" Pamatforma="pats"/>
     </Lexeme>
     <Lexeme ID="28174" Stem1="šim">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="3" Locījums="Datīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šis"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Datīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šis"/>
     </Lexeme>
     <Lexeme ID="28181" Stem1="visus">
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Nepiemīt" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Akuzatīvs" Vietniekvārda_tips="Noteiktie" Pamatforma="viss"/>
@@ -12123,7 +12123,7 @@
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Nepiemīt" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Akuzatīvs" Vietniekvārda_tips="Nenoteiktie" Pamatforma="dažs"/>
     </Lexeme>
     <Lexeme ID="28187" Stem1="šis">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="3" Locījums="Nominatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šis"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Nominatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šis"/>
     </Lexeme>
     <Lexeme ID="28188" Stem1="ikkurā">
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Nepiemīt" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Lokatīvs" Vietniekvārda_tips="Noteiktie" Pamatforma="ikkura"/>
@@ -12153,10 +12153,10 @@
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Nepiemīt" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Datīvs" Vietniekvārda_tips="Piederības" Pamatforma="tavs"/>
     </Lexeme>
     <Lexeme ID="28206" Stem1="tā">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="3" Locījums="Nominatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tā"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Nominatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tā"/>
     </Lexeme>
     <Lexeme ID="28207" Stem1="tā">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="3" Locījums="Ģenitīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tas"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Ģenitīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tas"/>
     </Lexeme>
     <Lexeme ID="28208" Stem1="pašās">
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Nepiemīt" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Lokatīvs" Vietniekvārda_tips="Noteiktie" Pamatforma="pati"/>
@@ -12203,12 +12203,6 @@
     <Lexeme ID="28736" Stem1="ko">
       <Attributes Skaitlis="Nepiemīt" Dzimte="Nepiemīt" Persona="Nepiemīt" Locījums="Akuzatīvs" Vietniekvārda_tips="Nenoteiktie" Pamatforma="kas"/>
     </Lexeme>
-    <Lexeme ID="28737" Stem1="viņš">
-      <Attributes Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Persona="3" Locījums="Nominatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="viņš"/>
-    </Lexeme>
-    <Lexeme ID="28738" Stem1="viņa">
-      <Attributes Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Persona="3" Locījums="Ģenitīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="viņš"/>
-    </Lexeme>
     <Lexeme ID="28739" Stem1="viņam">
       <Attributes Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Persona="3" Locījums="Datīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="viņš"/>
     </Lexeme>
@@ -12218,27 +12212,6 @@
     <Lexeme ID="28741" Stem1="viņā">
       <Attributes Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="viņš"/>
     </Lexeme>
-    <Lexeme ID="28742" Stem1="viņi">
-      <Attributes Skaitlis="Daudzskaitlis" Dzimte="Vīriešu" Persona="3" Locījums="Nominatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="viņš"/>
-    </Lexeme>
-    <Lexeme ID="28744" Stem1="viņiem">
-      <Attributes Skaitlis="Daudzskaitlis" Dzimte="Vīriešu" Persona="3" Locījums="Datīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="viņš"/>
-    </Lexeme>
-    <Lexeme ID="28743" Stem1="viņu">
-      <Attributes Skaitlis="Daudzskaitlis" Dzimte="Vīriešu" Persona="3" Locījums="Ģenitīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="viņš"/>
-    </Lexeme>
-    <Lexeme ID="28745" Stem1="viņus">
-      <Attributes Skaitlis="Daudzskaitlis" Dzimte="Vīriešu" Persona="3" Locījums="Akuzatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="viņš"/>
-    </Lexeme>
-    <Lexeme ID="28746" Stem1="viņos">
-      <Attributes Skaitlis="Daudzskaitlis" Dzimte="Vīriešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="viņš"/>
-    </Lexeme>
-    <Lexeme ID="28747" Stem1="viņa">
-      <Attributes Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Persona="3" Locījums="Nominatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="viņa"/>
-    </Lexeme>
-    <Lexeme ID="28748" Stem1="viņas">
-      <Attributes Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Persona="3" Locījums="Ģenitīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="viņa"/>
-    </Lexeme>
     <Lexeme ID="28749" Stem1="viņai">
       <Attributes Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Persona="3" Locījums="Datīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="viņa"/>
     </Lexeme>
@@ -12247,21 +12220,6 @@
     </Lexeme>
     <Lexeme ID="28751" Stem1="viņā">
       <Attributes Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="viņa"/>
-    </Lexeme>
-    <Lexeme ID="28752" Stem1="viņas">
-      <Attributes Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Persona="3" Locījums="Nominatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="viņa"/>
-    </Lexeme>
-    <Lexeme ID="28753" Stem1="viņu">
-      <Attributes Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Persona="3" Locījums="Ģenitīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="viņa"/>
-    </Lexeme>
-    <Lexeme ID="28754" Stem1="viņām">
-      <Attributes Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Persona="3" Locījums="Datīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="viņa"/>
-    </Lexeme>
-    <Lexeme ID="28755" Stem1="viņas">
-      <Attributes Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Persona="3" Locījums="Akuzatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="viņa"/>
-    </Lexeme>
-    <Lexeme ID="28756" Stem1="viņās">
-      <Attributes Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="viņa"/>
     </Lexeme>
   </Paradigm>
   <Paradigm Stems="1" ID="26" LemmaEnding="1196" Description="Prievārdi">
