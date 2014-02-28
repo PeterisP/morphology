@@ -51,7 +51,7 @@ bojā	r0c	bojā	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p10s2w4
 atomkarš	ncmsn1	atomkarš	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p10s2w6
 vai	ccs	vai	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p10s2w7
 kaut	qs	kaut	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p10s2w8
-kas	pi3msnn	kas	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p10s2w9
+kas	pi0msnn	kas	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p10s2w9
 tāds	pd0msnn	tāds	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p10s2w10
 .	zs	.	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p10s2w11
 </s>
@@ -75,7 +75,7 @@ Nokaitināja	vmnist330an	nokaitināt	m-AndraNeiburga-StumStum2004_0025-0244_Stum
 viņš	pp3msnn	viņš	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p20s1w2
 mani	pp10san	es	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p20s1w3
 ar	spsan	ar	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p20s1w4
-to	pd3fsan	tā	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p20s1w5
+to	pd0fsan	tā	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p20s1w5
 dzīves	ncfsg5	dzīve	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p20s1w6
 jēgu	ncfsa4	jēga	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p20s1w7
 vakar	r0t	vakar	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p20s1w8
@@ -86,14 +86,14 @@ Nu	qs	nu	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p25s1w1
 -	zd	-	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p25s1w2
 zināt	vmnn0t3000n	zināt	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p25s1w3
 taču	qs	taču	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p25s1w4
-to	pd3msan	tas	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p25s1w5
+to	pd0msan	tas	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p25s1w5
 veco	afmsayp	vecs	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p25s1w6
 teicienu	ncmsa1	teiciens	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p25s1w7
 :	zo	:	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p25s1w8
 kas	pr000nn	kas	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p25s1w9
 meklē	vmnipt230an	meklēt	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p25s1w10
 ,	zc	,	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p25s1w11
-tas	pd3msnn	tas	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p25s1w12
+tas	pd0msnn	tas	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p25s1w12
 atrod	vmnipt130an	atrast	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p25s1w13
 ?	zs	?	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p25s1w14
 </s>
@@ -114,7 +114,7 @@ varu	vmnipt31san	varēt	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p37s1w2
 .	zs	.	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p37s1w3
 </s>
 <s>
-A	qs	a	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p39s2w1
+A	ccs	a	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p39s2w1
 ko	pr000an	kas	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p39s2w2
 nevaru	vmnipt31say	nevarēt	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p39s2w3
 ,	zc	,	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p39s2w4
@@ -161,9 +161,9 @@ atdzisīs	vmnifi130an	atdzist	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p7
 <s>
 Nu	is	nu	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p80s1w1
 ,	zc	,	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p80s1w2
-to	pd3msan	tas	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p80s1w3
+to	pd0msan	tas	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p80s1w3
 tik	qs	tik	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p80s1w4
-šim	pd3msdn	šis	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p80s1w5
+šim	pd0msdn	šis	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p80s1w5
 vajadzēja	vmnist330an	vajadzēt	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p80s1w6
 .	zs	.	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p80s1w7
 </s>
@@ -192,7 +192,7 @@ jūru	ncfsa4	jūra	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p84s5w8
 Labāk	rcm	labi	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p86s3w1
 lai	qs	lai	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p86s3w2
 ātrāk	rct	ātri	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p86s3w3
-tas	pd3msnn	tas	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p86s3w4
+tas	pd0msnn	tas	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p86s3w4
 viss	pg0msnn	viss	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p86s3w5
 beidzas	vmyipi130an	beigties	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p86s3w6
 .	zs	.	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p86s3w7
@@ -226,7 +226,7 @@ kāda	pi0fsnn	kāda	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p107s4w3
 ?	zs	?	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p107s4w4
 </s>
 <s>
-Tas	pd3msnn	tas	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p108s4w1
+Tas	pd0msnn	tas	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p108s4w1
 tā	r0m	tā	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p108s4w2
 -	zd	-	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p108s4w3
 kā	r0m	kā	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p108s4w4
@@ -283,7 +283,7 @@ cūkpriežu	ncfpg5	cūkpriede	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p1
 puduri	ncmpn2	puduris	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p130s3w12
 ,	zc	,	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p130s3w13
 mežs	ncmsn1	mežs	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p130s3w14
-otrpus	sppdy	otrpus	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p130s3w15
+otrpus	spsdy	otrpus	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p130s3w15
 ceļam	ncmsd1	ceļš	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p130s3w16
 ,	zc	,	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p130s3w17
 lielās	affpnyp	liela	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p130s3w18
@@ -378,7 +378,7 @@ Un	ccs	un	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p154s8w1
 tad	r0t	tad	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p154s8w2
 spoli	ncfsa5	spole	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p154s8w3
 izmantos	vmnift230an	izmantot	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p154s8w4
-kā	ccs	kā	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p154s8w5
+kā	css	kā	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p154s8w5
 galdu	ncmsa1	galds	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p154s8w6
 .	zs	.	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p154s8w7
 </s>
@@ -386,7 +386,7 @@ galdu	ncmsa1	galds	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p154s8w6
 Es	pp10snn	es	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p159s4w1
 lietoju	vmnipt21san	lietot	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p159s4w2
 tikai	qs	tikai	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p159s4w3
-tos	pd3mpan	tas	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p159s4w4
+tos	pd0mpan	tas	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p159s4w4
 vārdus	ncmpa1	vārds	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p159s4w5
 ,	zc	,	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p159s4w6
 kuri	pr0mpnn	kurš	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p159s4w7
@@ -495,7 +495,7 @@ atstumt	vmnn0t1000n	atstumt	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p208
 <s>
 Tu	pp20snn	tu	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p213s3w1
 jau	qs	jau	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p213s3w2
-tā	pd3fsnn	tā	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p213s3w3
+tā	pd0fsnn	tā	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p213s3w3
 gudrā	affsnyp	gudra	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p213s3w4
 .	zs	.	m-AndraNeiburga-StumStum2004_0025-0244_StumStum-p213s3w5
 </s>
@@ -565,7 +565,7 @@ galda	ncmsg1	galds	m-AndraNeiburga-StumStum2004_0263-0431_PieBlakusGaldinja-p19s
 <s>
 Viņa	pp3fsnn	viņa	m-AndraNeiburga-StumStum2004_0263-0431_PieBlakusGaldinja-p26s1w1
 apsēdās	vmyist130an	apsēsties	m-AndraNeiburga-StumStum2004_0263-0431_PieBlakusGaldinja-p26s1w2
-tam	pd3msdn	tas	m-AndraNeiburga-StumStum2004_0263-0431_PieBlakusGaldinja-p26s1w3
+tam	pd0msdn	tas	m-AndraNeiburga-StumStum2004_0263-0431_PieBlakusGaldinja-p26s1w3
 pretim	r0p	pretim	m-AndraNeiburga-StumStum2004_0263-0431_PieBlakusGaldinja-p26s1w4
 ,	zc	,	m-AndraNeiburga-StumStum2004_0263-0431_PieBlakusGaldinja-p26s1w5
 uz	spsgy	uz	m-AndraNeiburga-StumStum2004_0263-0431_PieBlakusGaldinja-p26s1w6
@@ -686,7 +686,7 @@ par	spsan	par	m-AndraNeiburga-StumStum2004_0263-0431_PieBlakusGaldinja-p69s2w4
 milzīgu	afmsanp	milzīgs	m-AndraNeiburga-StumStum2004_0263-0431_PieBlakusGaldinja-p69s2w5
 pārsteigumu	ncmsa1	pārsteigums	m-AndraNeiburga-StumStum2004_0263-0431_PieBlakusGaldinja-p69s2w6
 ,	zc	,	m-AndraNeiburga-StumStum2004_0263-0431_PieBlakusGaldinja-p69s2w7
-šai	pd3fsln	šī	m-AndraNeiburga-StumStum2004_0263-0431_PieBlakusGaldinja-p69s2w8
+šai	pd0fsln	šī	m-AndraNeiburga-StumStum2004_0263-0431_PieBlakusGaldinja-p69s2w8
 vietā	ncfsl4	vieta	m-AndraNeiburga-StumStum2004_0263-0431_PieBlakusGaldinja-p69s2w9
 -	zd	-	m-AndraNeiburga-StumStum2004_0263-0431_PieBlakusGaldinja-p69s2w10
 uzsildītā	vmnpdmslpsn	uzsildīt	m-AndraNeiburga-StumStum2004_0263-0431_PieBlakusGaldinja-p69s2w11
@@ -790,7 +790,7 @@ viņš	pp3msnn	viņš	m-AndraNeiburga-StumStum2004_0263-0431_PieBlakusGaldinja-p
 jau	qs	jau	m-AndraNeiburga-StumStum2004_0263-0431_PieBlakusGaldinja-p95s3w3
 pats	pg0msnn	pats	m-AndraNeiburga-StumStum2004_0263-0431_PieBlakusGaldinja-p95s3w4
 man	pp10sdn	es	m-AndraNeiburga-StumStum2004_0263-0431_PieBlakusGaldinja-p95s3w5
-to	pd3msan	tas	m-AndraNeiburga-StumStum2004_0263-0431_PieBlakusGaldinja-p95s3w6
+to	pd0msan	tas	m-AndraNeiburga-StumStum2004_0263-0431_PieBlakusGaldinja-p95s3w6
 dāvināja	vmnist330an	dāvināt	m-AndraNeiburga-StumStum2004_0263-0431_PieBlakusGaldinja-p95s3w7
 ,	zc	,	m-AndraNeiburga-StumStum2004_0263-0431_PieBlakusGaldinja-p95s3w8
 kad	r0t	kad	m-AndraNeiburga-StumStum2004_0263-0431_PieBlakusGaldinja-p95s3w9
@@ -823,7 +823,7 @@ sevi	px000an	sevis	m-AndraNeiburga-StumStum2004_0263-0431_PieBlakusGaldinja-p104
 .	zs	.	m-AndraNeiburga-StumStum2004_0263-0431_PieBlakusGaldinja-p104s1w7
 </s>
 <s>
-Tas	pd3msnn	tas	m-AndraNeiburga-StumStum2004_0263-0431_PieBlakusGaldinja-p107s1w1
+Tas	pd0msnn	tas	m-AndraNeiburga-StumStum2004_0263-0431_PieBlakusGaldinja-p107s1w1
 bija	vcnisii30an	būt	m-AndraNeiburga-StumStum2004_0263-0431_PieBlakusGaldinja-p107s1w2
 ļoti	r0q	ļoti	m-AndraNeiburga-StumStum2004_0263-0431_PieBlakusGaldinja-p107s1w3
 parasts	afmsnnp	parasts	m-AndraNeiburga-StumStum2004_0263-0431_PieBlakusGaldinja-p107s1w4
@@ -844,7 +844,7 @@ likās	vmyisi130an	likties	m-AndraNeiburga-StumStum2004_0263-0431_PieBlakusGaldi
 ka	css	ka	m-AndraNeiburga-StumStum2004_0263-0431_PieBlakusGaldinja-p107s1w19
 es	pp10snn	es	m-AndraNeiburga-StumStum2004_0263-0431_PieBlakusGaldinja-p107s1w20
 viņai	pp3fsdn	viņa	m-AndraNeiburga-StumStum2004_0263-0431_PieBlakusGaldinja-p107s1w21
-to	pd3msan	tas	m-AndraNeiburga-StumStum2004_0263-0431_PieBlakusGaldinja-p107s1w22
+to	pd0msan	tas	m-AndraNeiburga-StumStum2004_0263-0431_PieBlakusGaldinja-p107s1w22
 varētu	vonc0t300an	varēt	m-AndraNeiburga-StumStum2004_0263-0431_PieBlakusGaldinja-p107s1w23
 izstāstīt	vmnn0t3000n	izstāstīt	m-AndraNeiburga-StumStum2004_0263-0431_PieBlakusGaldinja-p107s1w24
 labāk	rcm	labi	m-AndraNeiburga-StumStum2004_0263-0431_PieBlakusGaldinja-p107s1w25
@@ -937,7 +937,7 @@ neatskatoties	vmypu000000	neatskatīties	m-AndraNeiburga-StumStum2004_2460-2724_
 Par	spsan	par	m-AndraNeiburga-StumStum2004_2460-2724_TaadiVakari-p44s1w1
 ko	pq000an	kas	m-AndraNeiburga-StumStum2004_2460-2724_TaadiVakari-p44s1w2
 man	pp10sdn	es	m-AndraNeiburga-StumStum2004_2460-2724_TaadiVakari-p44s1w3
-tas	pd3msnn	tas	m-AndraNeiburga-StumStum2004_2460-2724_TaadiVakari-p44s1w4
+tas	pd0msnn	tas	m-AndraNeiburga-StumStum2004_2460-2724_TaadiVakari-p44s1w4
 ,	zc	,	m-AndraNeiburga-StumStum2004_2460-2724_TaadiVakari-p44s1w5
 es	pp10snn	es	m-AndraNeiburga-StumStum2004_2460-2724_TaadiVakari-p44s1w6
 domāju	vmnipt21san	domāt	m-AndraNeiburga-StumStum2004_2460-2724_TaadiVakari-p44s1w7
@@ -980,7 +980,7 @@ pateikt	vmnn0t1000n	pateikt	m-AndraNeiburga-StumStum2004_2460-2724_TaadiVakari-p
 kas	pr000nn	kas	m-AndraNeiburga-StumStum2004_2460-2724_TaadiVakari-p59s6w26
 gan	qs	gan	m-AndraNeiburga-StumStum2004_2460-2724_TaadiVakari-p59s6w27
 ir	vcnipii30an	būt	m-AndraNeiburga-StumStum2004_2460-2724_TaadiVakari-p59s6w28
-tas	pd3msnn	tas	m-AndraNeiburga-StumStum2004_2460-2724_TaadiVakari-p59s6w29
+tas	pd0msnn	tas	m-AndraNeiburga-StumStum2004_2460-2724_TaadiVakari-p59s6w29
 ,	zc	,	m-AndraNeiburga-StumStum2004_2460-2724_TaadiVakari-p59s6w30
 kādēļ	r0c	kādēļ	m-AndraNeiburga-StumStum2004_2460-2724_TaadiVakari-p59s6w31
 mirt	vmnn0i1000n	mirt	m-AndraNeiburga-StumStum2004_2460-2724_TaadiVakari-p59s6w32
@@ -1261,7 +1261,7 @@ tobrīd	r0t	tobrīd	m-AndraNeiburga-StumStum2004_2460-2724_TaadiVakari-p169s1w15
 nezinu	vmnipt11say	nezināt	m-AndraNeiburga-StumStum2004_2460-2724_TaadiVakari-p169s1w16
 ,	zc	,	m-AndraNeiburga-StumStum2004_2460-2724_TaadiVakari-p169s1w17
 ka	css	ka	m-AndraNeiburga-StumStum2004_2460-2724_TaadiVakari-p169s1w18
-tā	pd3fsnn	tā	m-AndraNeiburga-StumStum2004_2460-2724_TaadiVakari-p169s1w19
+tā	pd0fsnn	tā	m-AndraNeiburga-StumStum2004_2460-2724_TaadiVakari-p169s1w19
 ir	vcnipii30an	būt	m-AndraNeiburga-StumStum2004_2460-2724_TaadiVakari-p169s1w20
 pēdējā	arfsnyp	pēdēja	m-AndraNeiburga-StumStum2004_2460-2724_TaadiVakari-p169s1w21
 ,	zc	,	m-AndraNeiburga-StumStum2004_2460-2724_TaadiVakari-p169s1w22
@@ -1284,7 +1284,7 @@ niknumu	ncmsa1	niknums	m-AndraNeiburga-StumStum2004_2460-2724_TaadiVakari-p169s1
 Reiz	r0t	reiz	m-AndraNeiburga-StumStum2004_2460-2724_TaadiVakari-p177s3w1
 viņš	pp3msnn	viņš	m-AndraNeiburga-StumStum2004_2460-2724_TaadiVakari-p177s3w2
 lūdza	vmnist130an	lūgt	m-AndraNeiburga-StumStum2004_2460-2724_TaadiVakari-p177s3w3
-to	pd3fsan	tā	m-AndraNeiburga-StumStum2004_2460-2724_TaadiVakari-p177s3w4
+to	pd0fsan	tā	m-AndraNeiburga-StumStum2004_2460-2724_TaadiVakari-p177s3w4
 paglabāt	vmnn0t2000n	paglabāt	m-AndraNeiburga-StumStum2004_2460-2724_TaadiVakari-p177s3w5
 .	zs	.	m-AndraNeiburga-StumStum2004_2460-2724_TaadiVakari-p177s3w6
 </s>
@@ -1490,7 +1490,7 @@ apturēt	vmnn0t3000n	apturēt	m-c34-p38s47w13
 ,	zc	,	m-c34-p38s47w14
 taču	ccs	taču	m-c34-p38s47w15
 pilnībā	r0q	pilnībā	m-c34-p38s47w16
-to	pd3fsan	tā	m-c34-p38s47w17
+to	pd0fsan	tā	m-c34-p38s47w17
 izārstēt	vmnn0t2000n	izārstēt	m-c34-p38s47w18
 nav	vcnipii30ay	nebūt	m-c34-p38s47w19
 iespējams	armsnnp	iespējams	m-c34-p38s47w20
@@ -1599,7 +1599,7 @@ Jā	qs	jā	m-c34-p84s108w1
 </s>
 <s>
 Kādēļ	r0c	kādēļ	m-c34-p86s110w1
-šīs	pd3fpnn	šī	m-c34-p86s110w2
+šīs	pd0fpnn	šī	m-c34-p86s110w2
 nodarbes	ncfpn5	nodarbe	m-c34-p86s110w3
 izraisa	vonipt330an	izraisīt	m-c34-p86s110w4
 atkarību	ncfsa4	atkarība	m-c34-p86s110w5
@@ -1673,7 +1673,7 @@ ievietošana	ncfsn4	ievietošana	m-c34-p118s147w9
 un	ccs	un	m-c34-p118s147w10
 barošana	ncfsn4	barošana	m-c34-p118s147w11
 caur	spsay	caur	m-c34-p118s147w12
-to	pd3fsan	to	m-c34-p118s147w13
+to	pd0fsan	to	m-c34-p118s147w13
 )	zb	)	m-c34-p118s147w14
 var	vonipt330an	varēt	m-c34-p118s147w15
 novest	vmnn0t1000n	novest	m-c34-p118s147w16
@@ -1685,7 +1685,7 @@ rezultāta	ncmsg1	rezultāts	m-c34-p118s147w20
 pacients	ncmsn1	pacients	m-c34-p118s147w22
 var	vonipt330an	varēt	m-c34-p118s147w23
 uztvert	vmnn0t1000n	uztvert	m-c34-p118s147w24
-šo	pd3fsan	šī	m-c34-p118s147w25
+šo	pd0fsan	šī	m-c34-p118s147w25
 procedūru	ncfsa4	procedūra	m-c34-p118s147w26
 kā	css	kā	m-c34-p118s147w27
 varmācības	ncfsg4	varmācība	m-c34-p118s147w28
@@ -1705,7 +1705,7 @@ par	spsan	par	m-c34-p163s169w10
 slimību	ncfsa4	slimība	m-c34-p163s169w11
 ,	zc	,	m-c34-p163s169w12
 jo	css	jo	m-c34-p163s169w13
-tai	pd3fsdn	tā	m-c34-p163s169w14
+tai	pd0fsdn	tā	m-c34-p163s169w14
 ir	vcnipii30an	būt	m-c34-p163s169w15
 noteiktas	affpnnp	noteikta	m-c34-p163s169w16
 pazīmes	ncfpn5	pazīme	m-c34-p163s169w17
@@ -1713,7 +1713,7 @@ pazīmes	ncfpn5	pazīme	m-c34-p163s169w17
 paredzama	vmnpdfsnppn	paredzēt	m-c34-p163s169w19
 gaita	ncfsn4	gaita	m-c34-p163s169w20
 un	ccs	un	m-c34-p163s169w21
-tā	pd3fsnn	tā	m-c34-p163s169w22
+tā	pd0fsnn	tā	m-c34-p163s169w22
 ir	vcnipii30an	būt	m-c34-p163s169w23
 hroniska	arfsnnp	hroniska	m-c34-p163s169w24
 .	zs	.	m-c34-p163s169w25
@@ -1723,7 +1723,7 @@ Bet	ccs	bet	m-c34-p167s179w1
 jāatceras	vmyd0t300an	atcerēties	m-c34-p167s179w2
 ,	zc	,	m-c34-p167s179w3
 ka	css	ka	m-c34-p167s179w4
-tas	pd3msnn	tas	m-c34-p167s179w5
+tas	pd0msnn	tas	m-c34-p167s179w5
 nevar	vonipt330ay	nevarēt	m-c34-p167s179w6
 turpināties	vmyn0i3000n	turpināties	m-c34-p167s179w7
 bezgalīgi	r0t	bezgalīgi	m-c34-p167s179w8
@@ -1845,7 +1845,7 @@ ir	vcnipii30an	būt	m-c34-p172s199w7
 kādas	pi0fpnn	kāda	m-c34-p172s199w8
 problēmas	ncfpn4	problēma	m-c34-p172s199w9
 un	ccs	un	m-c34-p172s199w10
-tā	pd3fsnn	tā	m-c34-p172s199w11
+tā	pd0fsnn	tā	m-c34-p172s199w11
 ir	vcnipii30an	būt	m-c34-p172s199w12
 saistīta	vmnpdfsnpsn	saistīt	m-c34-p172s199w13
 ar	spsan	ar	m-c34-p172s199w14
@@ -1857,7 +1857,7 @@ iekšējā	arfsnyp	iekšēja	m-c34-p172s199w19
 cilvēka	ncmsg1	cilvēks	m-c34-p172s199w20
 būtība	ncfsn4	būtība	m-c34-p172s199w21
 neatbilst	vmnipt130ay	neatbilst	m-c34-p172s199w22
-tam	pd3msdn	tas	m-c34-p172s199w23
+tam	pd0msdn	tas	m-c34-p172s199w23
 ,	zc	,	m-c34-p172s199w24
 ko	pr000an	kas	m-c34-p172s199w25
 viņš	pp3msnn	viņš	m-c34-p172s199w26
@@ -1910,7 +1910,7 @@ ir	vcnipii30an	būt	m-c34-p182s215w4
 ļoti	r0q	ļoti	m-c34-p182s215w5
 aktīvi	afmpnnp	aktīvs	m-c34-p182s215w6
 ,	zc	,	m-c34-p182s215w7
-tanī	pd3msln	tas	m-c34-p182s215w8
+tanī	pd0msln	tas	m-c34-p182s215w8
 pat	qs	pat	m-c34-p182s215w9
 laikā	ncmsl1	laiks	m-c34-p182s215w10
 arī	qs	arī	m-c34-p182s215w11
@@ -1975,7 +1975,7 @@ biezumiem	ncmpd1	biezums	m-c60-p3s2w8
 .	zs	.	m-c60-p3s2w9
 </s>
 <s>
-Tā	pd3msgn	tas	m-c60-p5s3w1
+Tā	pd0msgn	tas	m-c60-p5s3w1
 laika	ncmsg1	laiks	m-c60-p5s3w2
 kino	nc__g0	kino	m-c60-p5s3w3
 tuvplāni	ncmpn1	tuvplāns	m-c60-p5s3w4
@@ -1999,7 +1999,7 @@ pieaudzēšana	ncfsn4	pieaudzēšana	m-c60-p9s1w2
 –	zd	–	m-c60-p9s1w3
 </s>
 <s>
-Tas	pd3msnn	tas	m-c60-p13s3w1
+Tas	pd0msnn	tas	m-c60-p13s3w1
 ir	vcnipii30an	būt	m-c60-p13s3w2
 ērti	rpm	ērti	m-c60-p13s3w3
 un	ccs	un	m-c60-p13s3w4
@@ -2020,7 +2020,7 @@ attīrāt	vmnipt32pan	attīrīt	m-c60-p17s2w10
 organismu	ncmsa1	organisms	m-c60-p17s2w11
 un	ccs	un	m-c60-p17s2w12
 ļaujat	vmnipt12pan	ļaut	m-c60-p17s2w13
-tam	pd3msdn	tas	m-c60-p17s2w14
+tam	pd0msdn	tas	m-c60-p17s2w14
 brīvi	rpm	brīvi	m-c60-p17s2w15
 elpot	vmnn0t2000n	elpot	m-c60-p17s2w16
 .	zs	.	m-c60-p17s2w17
@@ -2125,13 +2125,13 @@ Teicu	vmnipt11san	teikt	m-d62-JaanisEinfelds-Melis-p19s2w1
 Gribu	vonipt31san	gribēt	m-d62-JaanisEinfelds-Melis-p19s2w4
 gulēt	vmnn0t3000n	gulēt	m-d62-JaanisEinfelds-Melis-p19s2w5
 uz	spsgy	uz	m-d62-JaanisEinfelds-Melis-p19s2w6
-viņas	pd3fsgn	viņa	m-d62-JaanisEinfelds-Melis-p19s2w7
+viņas	pp3fsgn	viņa	m-d62-JaanisEinfelds-Melis-p19s2w7
 muguras	ncfsg4	mugura	m-d62-JaanisEinfelds-Melis-p19s2w8
 !	zs	!	m-d62-JaanisEinfelds-Melis-p19s2w9
 "	zq	"	m-d62-JaanisEinfelds-Melis-p19s2w10
 </s>
 <s>
-Tas	pd3msnn	tas	m-d62-JaanisEinfelds-Melis-p24s2w1
+Tas	pd0msnn	tas	m-d62-JaanisEinfelds-Melis-p24s2w1
 viss	pg0msnn	viss	m-d62-JaanisEinfelds-Melis-p24s2w2
 ?	zs	?	m-d62-JaanisEinfelds-Melis-p24s2w3
 "	zq	"	m-d62-JaanisEinfelds-Melis-p24s2w4
@@ -2161,7 +2161,7 @@ tumšu	affsanp	tumša	m-d62-JaanisEinfelds-Melis-p33s11w15
 ,	zc	,	m-d62-JaanisEinfelds-Melis-p33s11w16
 ka	css	ka	m-d62-JaanisEinfelds-Melis-p33s11w17
 sarkans	afmsnnp	sarkans	m-d62-JaanisEinfelds-Melis-p33s11w18
-tas	pd3msnn	tas	m-d62-JaanisEinfelds-Melis-p33s11w19
+tas	pd0msnn	tas	m-d62-JaanisEinfelds-Melis-p33s11w19
 gandrīz	r0q	gandrīz	m-d62-JaanisEinfelds-Melis-p33s11w20
 vai	qs	vai	m-d62-JaanisEinfelds-Melis-p33s11w21
 nebija	vcnisii30ay	nebūt	m-d62-JaanisEinfelds-Melis-p33s11w22
@@ -2233,7 +2233,7 @@ Mani	pp10san	mani	m-d76-p6s20w11
 zinu	vmnipt31san	zināt	m-d76-p6s20w13
 ,	zc	,	m-d76-p6s20w14
 ka	css	ka	m-d76-p6s20w15
-tas	pd3msnn	tas	m-d76-p6s20w16
+tas	pd0msnn	tas	m-d76-p6s20w16
 tikai	qs	tikai	m-d76-p6s20w17
 sapnis	ncmsn2	sapnis	m-d76-p6s20w18
 ,	zc	,	m-d76-p6s20w19
@@ -2263,7 +2263,7 @@ Mēs	pp10pnn	mēs	m-d76-p9s47w1
 kas	pr000nn	kas	m-d76-p9s47w3
 reiz	r0t	reiz	m-d76-p9s47w4
 būsim	vcnifii1pan	būt	m-d76-p9s47w5
-tie	pd3mpnn	tas	m-d76-p9s47w6
+tie	pd0mpnn	tas	m-d76-p9s47w6
 labākie	afmpnyc	labs	m-d76-p9s47w7
 !	zs	!	m-d76-p9s47w8
 </s>
@@ -2297,7 +2297,7 @@ ir	vmnipii30an	būt	m-d76-p14s76w3
 ?	zs	?	m-d76-p14s76w4
 </s>
 <s>
-Tas	pd3msnn	tas	m-d76-p20s102w1
+Tas	pd0msnn	tas	m-d76-p20s102w1
 nu	qs	nu	m-d76-p20s102w2
 ir	vcnipii30an	būt	m-d76-p20s102w3
 pārītis	ncmsn2	pāris	m-d76-p20s102w4
@@ -2317,7 +2317,7 @@ laivā	ncfsl4	laiva	m-d76-p20s104w10
 ,	zc	,	m-d76-p20s104w11
 ja	css	ja	m-d76-p20s104w12
 līdz	spsdy	līdz	m-d76-p20s104w13
-tam	pd3msdn	tas	m-d76-p20s104w14
+tam	pd0msdn	tas	m-d76-p20s104w14
 viens	mcsmsnv	viens	m-d76-p20s104w15
 otru	mosmsav	otrs	m-d76-p20s104w16
 nepārmetīs	vmnift130ay	nepārmest	m-d76-p20s104w17
@@ -2545,7 +2545,7 @@ bail	r0m	bail	m-d76-p83s336w3
 .	zs	.	m-d76-p83s336w4
 </s>
 <s>
-Tas	pd3msnn	tas	m-d76-p84s341w1
+Tas	pd0msnn	tas	m-d76-p84s341w1
 ir	vcnipii30an	būt	m-d76-p84s341w2
 plats	afmsnnp	plats	m-d76-p84s341w3
 un	ccs	un	m-d76-p84s341w4
@@ -2638,7 +2638,7 @@ ka	css	ka	m-d76-p84s368w6
 nekad	r0t	nekad	m-d76-p84s368w7
 nekad	r0t	nekad	m-d76-p84s368w8
 nekad	r0t	nekad	m-d76-p84s368w9
-šis	pd3msnn	šis	m-d76-p84s368w10
+šis	pd0msnn	šis	m-d76-p84s368w10
 mirklis	ncmsn2	mirklis	m-d76-p84s368w11
 nepaies	vmnifii30ay	nepaiet	m-d76-p84s368w12
 .	zs	.	m-d76-p84s368w13
@@ -2973,15 +2973,15 @@ bibliotēkas	ncfpa4	bibliotēka	m-DIENA_intervija_20130128-p39s1w9
 Mēs	pp10pnn	mēs	m-DIENA_intervija_20130128-p40s2w1
 Eiropā	npfsl4	Eiropa	m-DIENA_intervija_20130128-p40s2w2
 noslēdzam	vmnipt11pan	noslēgt	m-DIENA_intervija_20130128-p40s2w3
-to	pd3mpgn	tas	m-DIENA_intervija_20130128-p40s2w4
+to	pd0mpgn	tas	m-DIENA_intervija_20130128-p40s2w4
 būvēšanas	ncfsg4	būvēšana	m-DIENA_intervija_20130128-p40s2w5
 loku	ncmsa1	loks	m-DIENA_intervija_20130128-p40s2w6
 .	zs	.	m-DIENA_intervija_20130128-p40s2w7
 </s>
 <s>
-Tie	pd3mpnn	tas	m-DIENA_intervija_20130128-p40s6w1
+Tie	pd0mpnn	tas	m-DIENA_intervija_20130128-p40s6w1
 bija	vcnisii30an	būt	m-DIENA_intervija_20130128-p40s6w2
-tie	pd3mpnn	tas	m-DIENA_intervija_20130128-p40s6w3
+tie	pd0mpnn	tas	m-DIENA_intervija_20130128-p40s6w3
 20	xn	20	m-DIENA_intervija_20130128-p40s6w4
 gadi	ncmpn1	gads	m-DIENA_intervija_20130128-p40s6w5
 ,	zc	,	m-DIENA_intervija_20130128-p40s6w6
@@ -3143,7 +3143,7 @@ attiecībā	ncfsl4	attiecība	m-jrc32002L0074-lv-p1s1w34
 uz	spsay	uz	m-jrc32002L0074-lv-p1s1w35
 darbinieku	ncmpg1	darbinieks	m-jrc32002L0074-lv-p1s1w36
 aizsardzību	ncfsa4	aizsardzība	m-jrc32002L0074-lv-p1s1w37
-to	pd3mpgn	tas	m-jrc32002L0074-lv-p1s1w38
+to	pd0mpgn	tas	m-jrc32002L0074-lv-p1s1w38
 darba	ncmsg1	darbs	m-jrc32002L0074-lv-p1s1w39
 devēja	ncmsg1	devējs	m-jrc32002L0074-lv-p1s1w40
 maksātnespējas	ncfsg4	maksātnespēja	m-jrc32002L0074-lv-p1s1w41
@@ -3158,7 +3158,7 @@ EEZ	y	EEZ	m-jrc32002L0074-lv-p1s1w47
 <s>
 IR	vcnipii30an	būt	m-jrc32002L0074-lv-p24s1w1
 PIEŅĒMUŠI	vmnpdmpnasn	pieņemt	m-jrc32002L0074-lv-p24s1w2
-ŠO	pd3fsan	šī	m-jrc32002L0074-lv-p24s1w3
+ŠO	pd0fsan	šī	m-jrc32002L0074-lv-p24s1w3
 DIREKTĪVU	ncfsa4	direktīva	m-jrc32002L0074-lv-p24s1w4
 .	zs	.	m-jrc32002L0074-lv-p24s1w5
 </s>
@@ -3254,7 +3254,7 @@ Audžuģimeņu	ncfpg5	audžuģimene	m-KasjaunsLv_20120925-p1s1w8
 biedrību	ncfsa4	biedrība	m-KasjaunsLv_20120925-p1s1w9
 </s>
 <s>
-Veidos	vmnift23pan	veidot	m-Latv_Veestn_p133-p1s1w1
+Veidos	vmnift230an	veidot	m-Latv_Veestn_p133-p1s1w1
 judikatūras	ncfsg4	judikatūra	m-Latv_Veestn_p133-p1s1w2
 datubāzi	ncfsa5	datubāze	m-Latv_Veestn_p133-p1s1w3
 </s>
@@ -3267,7 +3267,7 @@ domām	ncfpd4	doma	m-Latv_Veestn_p133-p9s20w5
 ,	zc	,	m-Latv_Veestn_p133-p9s20w6
 šāda	pd0fsnn	šāda	m-Latv_Veestn_p133-p9s20w7
 cenzūra	ncfsn4	cenzūra	m-Latv_Veestn_p133-p9s20w8
-sekmēs	vmnift23san	sekmēt	m-Latv_Veestn_p133-p9s20w9
+sekmēs	vmnift230an	sekmēt	m-Latv_Veestn_p133-p9s20w9
 personas	ncfsg4	persona	m-Latv_Veestn_p133-p9s20w10
 datu	ncmpg1	dats	m-Latv_Veestn_p133-p9s20w11
 aizsardzību	ncfsa4	aizsardzība	m-Latv_Veestn_p133-p9s20w12
@@ -3288,7 +3288,7 @@ procesa	ncmsg1	process	m-Latv_Veestn_p134-p13s20w4
 panta	ncmsg1	pants	m-Latv_Veestn_p134-p13s20w7
 pirmajā	mosfslv	pirmā	m-Latv_Veestn_p134-p13s20w8
 daļā	ncfsl4	daļa	m-Latv_Veestn_p134-p13s20w9
-tiek	vtnipi13san	tikt	m-Latv_Veestn_p134-p13s20w10
+tiek	vtnipi130an	tikt	m-Latv_Veestn_p134-p13s20w10
 noteikts	vmnpdmsnpsn	noteikt	m-Latv_Veestn_p134-p13s20w11
 ,	zc	,	m-Latv_Veestn_p134-p13s20w12
 ka	css	ka	m-Latv_Veestn_p134-p13s20w13
@@ -3296,7 +3296,7 @@ pagaidu	armsanp	pagaidu	m-Latv_Veestn_p134-p13s20w14
 noregulējumu	ncmsa1	noregulējums	m-Latv_Veestn_p134-p13s20w15
 citu	pi0fpgn	cita	m-Latv_Veestn_p134-p13s20w16
 starpā	ncfsl4	starpa	m-Latv_Veestn_p134-p13s20w17
-var	vonipt33san	varēt	m-Latv_Veestn_p134-p13s20w18
+var	vonipt330an	varēt	m-Latv_Veestn_p134-p13s20w18
 piemērot	vmnn0t2000n	piemērot	m-Latv_Veestn_p134-p13s20w19
 gadījumā	ncmsl1	gadījums	m-Latv_Veestn_p134-p13s20w20
 ,	zc	,	m-Latv_Veestn_p134-p13s20w21
@@ -3331,7 +3331,7 @@ otro	mosfsav	otrā	m-Latv_Veestn_p134-p21s37w10
 daļu	ncfsa4	daļa	m-Latv_Veestn_p134-p21s37w11
 pagaidu	armsanp	pagaidu	m-Latv_Veestn_p134-p21s37w12
 noregulējumu	ncmsa1	noregulējums	m-Latv_Veestn_p134-p21s37w13
-var	vonipt33san	varēt	m-Latv_Veestn_p134-p21s37w14
+var	vonipt330an	varēt	m-Latv_Veestn_p134-p21s37w14
 piemērot	vmnn0t2000n	piemērot	m-Latv_Veestn_p134-p21s37w15
 jebkurā	pi0fsln	jebkura	m-Latv_Veestn_p134-p21s37w16
 lietas	ncfsg4	lieta	m-Latv_Veestn_p134-p21s37w17
@@ -3373,9 +3373,9 @@ tikai	qs	tikai	m-Latv_Veestn_p134-p29s47w20
 tādēļ	r0c	tādēļ	m-Latv_Veestn_p134-p29s47w21
 ,	zc	,	m-Latv_Veestn_p134-p29s47w22
 ka	css	ka	m-Latv_Veestn_p134-p29s47w23
-pastāv	vmnipi33san	pastāvēt	m-Latv_Veestn_p134-p29s47w24
+pastāv	vmnipi330an	pastāvēt	m-Latv_Veestn_p134-p29s47w24
 iespēja	ncfsn4	iespēja	m-Latv_Veestn_p134-p29s47w25
-to	pd3msan	tas	m-Latv_Veestn_p134-p29s47w26
+to	pd0msan	tas	m-Latv_Veestn_p134-p29s47w26
 piemērot	vmnn0t2000n	piemērot	m-Latv_Veestn_p134-p29s47w27
 ,	zc	,	m-Latv_Veestn_p134-p29s47w28
 neskatoties	vmypu000000	neskatīties	m-Latv_Veestn_p134-p29s47w29
@@ -3398,19 +3398,19 @@ ierobežojumi	ncmpn1	ierobežojums	m-Latv_Veestn_p135-p1s1w3
 <s>
 Līdz	css	līdz	m-Latv_Veestn_p135-p7s20w1
 ar	spsan	ar	m-Latv_Veestn_p135-p7s20w2
-to	pd3msan	tas	m-Latv_Veestn_p135-p7s20w3
+to	pd0msan	tas	m-Latv_Veestn_p135-p7s20w3
 lietas	ncfsg4	lieta	m-Latv_Veestn_p135-p7s20w4
 iznākums	ncmsn1	iznākums	m-Latv_Veestn_p135-p7s20w5
 tiesai	ncfsd4	tiesa	m-Latv_Veestn_p135-p7s20w6
-ir	vcnipii3san	būt	m-Latv_Veestn_p135-p7s20w7
+ir	vcnipii30an	būt	m-Latv_Veestn_p135-p7s20w7
 skaidrs	afmsnnp	skaidrs	m-Latv_Veestn_p135-p7s20w8
 .	zs	.	m-Latv_Veestn_p135-p7s20w9
 </s>
 <s>
-Iztirzājamā	vmnpdfslppy	iztirzāt	m-Latv_Veestn_p135-p13s37w1
+Iztirzājamā	vmnpdfslppn	iztirzāt	m-Latv_Veestn_p135-p13s37w1
 lietā	ncfsl4	lieta	m-Latv_Veestn_p135-p13s37w2
 tiesa	ncfsn4	tiesa	m-Latv_Veestn_p135-p13s37w3
-analizē	vmnipt23san	analizēt	m-Latv_Veestn_p135-p13s37w4
+analizē	vmnipt230an	analizēt	m-Latv_Veestn_p135-p13s37w4
 tikai	qs	tikai	m-Latv_Veestn_p135-p13s37w5
 DL	y	DL	m-Latv_Veestn_p135-p13s37w6
 109.	xo	109.	m-Latv_Veestn_p135-p13s37w7
@@ -3419,7 +3419,7 @@ pirmo	mosfsav	pirmā	m-Latv_Veestn_p135-p13s37w10
 daļu	ncfsa4	daļa	m-Latv_Veestn_p135-p13s37w11
 ,	zc	,	m-Latv_Veestn_p135-p13s37w12
 bet	ccs	bet	m-Latv_Veestn_p135-p13s37w13
-neskata	vmnipt33say	neskatīt	m-Latv_Veestn_p135-p13s37w14
+neskata	vmnipt330ay	neskatīt	m-Latv_Veestn_p135-p13s37w14
 situāciju	ncfsa4	situācija	m-Latv_Veestn_p135-p13s37w15
 DL	y	DL	m-Latv_Veestn_p135-p13s37w16
 48.	xo	48.	m-Latv_Veestn_p135-p13s37w17
@@ -3428,8 +3428,8 @@ kontekstā	ncmsl1	konteksts	m-Latv_Veestn_p135-p13s37w20
 .	zs	.	m-Latv_Veestn_p135-p13s37w21
 </s>
 <s>
-To	pd3msan	tas	m-Latv_Veestn_p135-p15s47w1
-pierāda	vmnipt33san	pierādīt	m-Latv_Veestn_p135-p15s47w2
+To	pd0msan	tas	m-Latv_Veestn_p135-p15s47w1
+pierāda	vmnipt330an	pierādīt	m-Latv_Veestn_p135-p15s47w2
 arī	qs	arī	m-Latv_Veestn_p135-p15s47w3
 EKT	y	EKT	m-Latv_Veestn_p135-p15s47w4
 noteiktais	vmnpdmsnpsy	noteikt	m-Latv_Veestn_p135-p15s47w5
@@ -3438,19 +3438,19 @@ princips	ncmsn1	princips	m-Latv_Veestn_p135-p15s47w6
 ka	css	ka	m-Latv_Veestn_p135-p15s47w8
 pierādīšanas	ncfsg4	pierādīšana	m-Latv_Veestn_p135-p15s47w9
 pienākums	ncmsn1	pienākums	m-Latv_Veestn_p135-p15s47w10
-pārceļas	vmyipt13san	pārcelties	m-Latv_Veestn_p135-p15s47w11
+pārceļas	vmyipt130an	pārcelties	m-Latv_Veestn_p135-p15s47w11
 uz	spsay	uz	m-Latv_Veestn_p135-p15s47w12
 atbildētāju	ncmsa1	atbildētājs	m-Latv_Veestn_p135-p15s47w13
 ,	zc	,	m-Latv_Veestn_p135-p15s47w14
 ja	css	ja	m-Latv_Veestn_p135-p15s47w15
 prasītājs	ncmsn1	prasītājs	m-Latv_Veestn_p135-p15s47w16
-var	vonipt33san	varēt	m-Latv_Veestn_p135-p15s47w17
+var	vonipt330an	varēt	m-Latv_Veestn_p135-p15s47w17
 norādīt	vmnn0t3000n	norādīt	m-Latv_Veestn_p135-p15s47w18
 uz	sppdy	uz	m-Latv_Veestn_p135-p15s47w19
 faktiem	ncmpd1	fakts	m-Latv_Veestn_p135-p15s47w20
 ,	zc	,	m-Latv_Veestn_p135-p15s47w21
 kas	pr000nn	kas	m-Latv_Veestn_p135-p15s47w22
-liecina	vmnipt33san	liecināt	m-Latv_Veestn_p135-p15s47w23
+liecina	vmnipt330an	liecināt	m-Latv_Veestn_p135-p15s47w23
 par	spsan	par	m-Latv_Veestn_p135-p15s47w24
 prima	xf	prima	m-Latv_Veestn_p135-p15s47w25
 facie	xf	facie	m-Latv_Veestn_p135-p15s47w26
@@ -3465,7 +3465,7 @@ no	spsgy	no	m-Latv_Veestn_p135-p15s47w37
 pirmā	mosmsgv	pirmais	m-Latv_Veestn_p135-p15s47w38
 acu	ncfpg6	acs	m-Latv_Veestn_p135-p15s47w39
 uzmetiena	ncmsg1	uzmetiens	m-Latv_Veestn_p135-p15s47w40
-liecina	vmnipt33san	liecināt	m-Latv_Veestn_p135-p15s47w41
+liecina	vmnipt330an	liecināt	m-Latv_Veestn_p135-p15s47w41
 par	spsan	par	m-Latv_Veestn_p135-p15s47w42
 diskrimināciju	ncfsa4	diskriminācija	m-Latv_Veestn_p135-p15s47w43
 ,	zc	,	m-Latv_Veestn_p135-p15s47w44
@@ -3473,7 +3473,7 @@ bet	ccs	bet	m-Latv_Veestn_p135-p15s47w45
 kas	pr000nn	kas	m-Latv_Veestn_p135-p15s47w46
 tālākajā	affslys	tāla	m-Latv_Veestn_p135-p15s47w47
 gaitā	ncfsl4	gaita	m-Latv_Veestn_p135-p15s47w48
-ir	vcnipii3pan	būt	m-Latv_Veestn_p135-p15s47w49
+ir	vcnipii30an	būt	m-Latv_Veestn_p135-p15s47w49
 pārbaudāmi	vmnpdmpnppn	pārbaudīt	m-Latv_Veestn_p135-p15s47w50
 rūpīgāk	rcm	rūpīgi	m-Latv_Veestn_p135-p15s47w51
 .	zs	.	m-Latv_Veestn_p135-p15s47w52
@@ -3484,19 +3484,19 @@ Latvijas	npfsg4	Latvija	m-Latv_Veestn_p136-p1s1w2
 -	zd	-	m-Latv_Veestn_p136-p1s1w3
 Krievijas	npfsg4	Krievija	m-Latv_Veestn_p136-p1s1w4
 robežlīgums	ncmsn1	robežlīgums	m-Latv_Veestn_p136-p1s1w5
-atbilst	vmnipt13san	atbilst	m-Latv_Veestn_p136-p1s1w6
+atbilst	vmnipt130an	atbilst	m-Latv_Veestn_p136-p1s1w6
 Satversmei	ncfsd5	satversme	m-Latv_Veestn_p136-p1s1w7
 </s>
 <s>
 Aivars	npmsn1	Aivars	m-Latv_Veestn_p136-p7s20w1
 Borovkovs	npmsn1	Borovkovs	m-Latv_Veestn_p136-p7s20w2
-uzsvēra	vmnist13san	uzsvērt	m-Latv_Veestn_p136-p7s20w3
+uzsvēra	vmnist130an	uzsvērt	m-Latv_Veestn_p136-p7s20w3
 ,	zc	,	m-Latv_Veestn_p136-p7s20w4
 ka	css	ka	m-Latv_Veestn_p136-p7s20w5
 tiesas	ncfsg4	tiesa	m-Latv_Veestn_p136-p7s20w6
 procesa	ncmsg1	process	m-Latv_Veestn_p136-p7s20w7
 izspēles	ncfpn5	izspēle	m-Latv_Veestn_p136-p7s20w8
-ir	vcnipii3san	būt	m-Latv_Veestn_p136-p7s20w9
+ir	vcnipii30an	būt	m-Latv_Veestn_p136-p7s20w9
 laba	affsnnp	laba	m-Latv_Veestn_p136-p7s20w10
 iespēja	ncfsn4	iespēja	m-Latv_Veestn_p136-p7s20w11
 topošajiem	vmnpdmpdapy	tapt	m-Latv_Veestn_p136-p7s20w12
@@ -3517,7 +3517,7 @@ pārsvaru	ncmsa1	pārsvars	m-Latv_Veestn_p136-p10s37w7
 par	sppdn	par	m-Latv_Veestn_p136-p10s37w8
 izspēļu	ncfpg5	izspēle	m-Latv_Veestn_p136-p10s37w9
 uzvarētājiem	ncmpd1	uzvarētājs	m-Latv_Veestn_p136-p10s37w10
-atzina	vmnist13pan	atzīt	m-Latv_Veestn_p136-p10s37w11
+atzina	vmnist130an	atzīt	m-Latv_Veestn_p136-p10s37w11
 Mārtiņu	npmsa1	Mārtiņš	m-Latv_Veestn_p136-p10s37w12
 Pēdāju	npmsa1	Pēdājs	m-Latv_Veestn_p136-p10s37w13
 ,	zc	,	m-Latv_Veestn_p136-p10s37w14
@@ -3532,7 +3532,7 @@ Ginteru	npmsa1	Ginters	m-Latv_Veestn_p136-p10s37w19
 Tāpat	qs	tāpat	m-Latv_Veestn_p136-p13s47w1
 arī	qs	arī	m-Latv_Veestn_p136-p13s47w2
 tiesneši	ncmpn2	tiesnesis	m-Latv_Veestn_p136-p13s47w3
-izteica	vmnist13pan	izteikt	m-Latv_Veestn_p136-p13s47w4
+izteica	vmnist130an	izteikt	m-Latv_Veestn_p136-p13s47w4
 daudzus	afmpanp	daudzs	m-Latv_Veestn_p136-p13s47w5
 novēlējumus	ncmpa1	novēlējums	m-Latv_Veestn_p136-p13s47w6
 un	ccs	un	m-Latv_Veestn_p136-p13s47w7
@@ -3571,11 +3571,11 @@ panta	ncmsg1	pants	m-Latv_Veestn_p137-p10s20w9a
 daļa	ncfsn4	daļa	m-Latv_Veestn_p137-p10s20w12
 ,	zc	,	m-Latv_Veestn_p137-p10s20w13
 kura	pr0fsnn	kura	m-Latv_Veestn_p137-p10s20w14
-nosaka	vmnipt33san	nosacīt	m-Latv_Veestn_p137-p10s20w15
+nosaka	vmnipt330an	nosacīt	m-Latv_Veestn_p137-p10s20w15
 pieteikuma	ncmsg1	pieteikums	m-Latv_Veestn_p137-p10s20w16
 saturu	ncmsa1	saturs	m-Latv_Veestn_p137-p10s20w17
 ,	zc	,	m-Latv_Veestn_p137-p10s20w18
-to	pd3fpgn	tā	m-Latv_Veestn_p137-p10s20w19
+to	pd0fpgn	tā	m-Latv_Veestn_p137-p10s20w19
 sastāvdaļu	ncfpg4	sastāvdaļa	m-Latv_Veestn_p137-p10s20w20
 vidū	ncmsl3	vidus	m-Latv_Veestn_p137-p10s20w21
 minot	vmnpu000000	minēt	m-Latv_Veestn_p137-p10s20w22
@@ -3602,7 +3602,7 @@ izdevumus	ncmpa1	izdevums	m-Latv_Veestn_p137-p10s20w42
 .	zs	.	m-Latv_Veestn_p137-p10s20w43
 </s>
 <s>
-Ir	vcnipii3pan	būt	m-Latv_Veestn_p137-p13s37w1
+Ir	vcnipii30an	būt	m-Latv_Veestn_p137-p13s37w1
 jāatzīmē	vmnd0t200an	atzīmēt	m-Latv_Veestn_p137-p13s37w2
 ,	zc	,	m-Latv_Veestn_p137-p13s37w3
 ka	css	ka	m-Latv_Veestn_p137-p13s37w4
@@ -3613,7 +3613,7 @@ CPL	y	CPL	m-Latv_Veestn_p137-p13s37w5
 panta	ncmsg1	pants	m-Latv_Veestn_p137-p13s37w8a
 1.	xo	1.	m-Latv_Veestn_p137-p13s37w9
 daļa	ncfsn4	daļa	m-Latv_Veestn_p137-p13s37w11
-garantē	vmnipt23san	garantēt	m-Latv_Veestn_p137-p13s37w12
+garantē	vmnipt230an	garantēt	m-Latv_Veestn_p137-p13s37w12
 brīdinājuma	ncmsg1	brīdinājums	m-Latv_Veestn_p137-p13s37w13
 izsniegšanu	ncfsa4	izsniegšana	m-Latv_Veestn_p137-p13s37w14
 parādniekam	ncmsd1	parādnieks	m-Latv_Veestn_p137-p13s37w15
@@ -3622,7 +3622,7 @@ parakstu	ncmsa1	paraksts	m-Latv_Veestn_p137-p13s37w17
 ,	zc	,	m-Latv_Veestn_p137-p13s37w18
 kas	pr000nn	kas	m-Latv_Veestn_p137-p13s37w19
 konceptuāli	r0m	konceptuāli	m-Latv_Veestn_p137-p13s37w20
-aizsargā	vmnipt33san	aizsargāt	m-Latv_Veestn_p137-p13s37w21
+aizsargā	vmnipt330an	aizsargāt	m-Latv_Veestn_p137-p13s37w21
 viņa	pp3msgn	viņš	m-Latv_Veestn_p137-p13s37w22
 intereses	ncfpa5	interese	m-Latv_Veestn_p137-p13s37w23
 no	sppdy	no	m-Latv_Veestn_p137-p13s37w24
@@ -3637,12 +3637,12 @@ savukārt	r0c	savukārt	m-Latv_Veestn_p137-p13s37w32
 panta	ncmsg1	pants	m-Latv_Veestn_p137-p13s37w33
 2.	xo	2.	m-Latv_Veestn_p137-p13s37w34
 daļa	ncfsn4	daļa	m-Latv_Veestn_p137-p13s37w36
-garantē	vmnipt23san	garantēt	m-Latv_Veestn_p137-p13s37w37
+garantē	vmnipt230an	garantēt	m-Latv_Veestn_p137-p13s37w37
 parādnieka	ncmsg1	parādnieks	m-Latv_Veestn_p137-p13s37w38
 interešu	ncfpg5	interese	m-Latv_Veestn_p137-p13s37w39
 aizsardzību	ncfsa4	aizsardzība	m-Latv_Veestn_p137-p13s37w40
 arī	qs	arī	m-Latv_Veestn_p137-p13s37w41
-tā	pd3msgn	tas	m-Latv_Veestn_p137-p13s37w42
+tā	pd0msgn	tas	m-Latv_Veestn_p137-p13s37w42
 juridiskās	arfsgyp	juridisks	m-Latv_Veestn_p137-p13s37w43
 adreses	ncfsg5	adrese	m-Latv_Veestn_p137-p13s37w44
 vai	ccs	vai	m-Latv_Veestn_p137-p13s37w45
@@ -3655,19 +3655,19 @@ gadījumā	ncmsl1	gadījums	m-Latv_Veestn_p137-p13s37w48
 Praksē	ncfsl5	prakse	m-Latv_Veestn_p137-p16s47w1
 vēl	qs	vēl	m-Latv_Veestn_p137-p16s47w2
 joprojām	r0t	joprojām	m-Latv_Veestn_p137-p16s47w3
-ir	vcnipii3san	būt	m-Latv_Veestn_p137-p16s47w4
+ir	vcnipii30an	būt	m-Latv_Veestn_p137-p16s47w4
 sastopami	vmnpdmpnppn	sastapt	m-Latv_Veestn_p137-p16s47w5
 gadījumi	ncmpn1	gadījums	m-Latv_Veestn_p137-p16s47w6
 ,	zc	,	m-Latv_Veestn_p137-p16s47w7
 kad	r0t	kad	m-Latv_Veestn_p137-p16s47w8
 tiesas	ncfpn4	tiesa	m-Latv_Veestn_p137-p16s47w9
-ir	vcnipii3san	būt	m-Latv_Veestn_p137-p16s47w10
+ir	vcnipii30an	būt	m-Latv_Veestn_p137-p16s47w10
 pieprasījušas	vmnpdfpnasn	pieprasīt	m-Latv_Veestn_p137-p16s47w11
 parāda	ncmsg1	parāds	m-Latv_Veestn_p137-p16s47w12
 aprēķinu	ncmsa1	aprēķins	m-Latv_Veestn_p137-p16s47w13
 ,	zc	,	m-Latv_Veestn_p137-p16s47w14
 pamatojot	vmnpu000000	pamatot	m-Latv_Veestn_p137-p16s47w15
-to	pd3msan	tas	m-Latv_Veestn_p137-p16s47w16
+to	pd0msan	tas	m-Latv_Veestn_p137-p16s47w16
 ar	sppdn	ar	m-Latv_Veestn_p137-p16s47w17
 šaubām	ncfpd4	šauba	m-Latv_Veestn_p137-p16s47w18
 par	spsan	par	m-Latv_Veestn_p137-p16s47w19
@@ -3675,7 +3675,7 @@ parāda	ncmsg1	parāds	m-Latv_Veestn_p137-p16s47w20
 apmēru	ncmsa1	apmērs	m-Latv_Veestn_p137-p16s47w21
 ,	zc	,	m-Latv_Veestn_p137-p16s47w22
 vai	ccs	vai	m-Latv_Veestn_p137-p16s47w23
-ir	vcnipii3san	būt	m-Latv_Veestn_p137-p16s47w24
+ir	vcnipii30an	būt	m-Latv_Veestn_p137-p16s47w24
 pieprasījušas	vmnpdfpnasn	pieprasīt	m-Latv_Veestn_p137-p16s47w25
 papildu	armpanp	papildu	m-Latv_Veestn_p137-p16s47w26
 pierādījumus	ncmpa1	pierādījums	m-Latv_Veestn_p137-p16s47w27
@@ -3696,7 +3696,7 @@ robežas	ncfpa4	robeža	m-Latv_Veestn_p137-p16s47w41
 .	zs	.	m-Latv_Veestn_p137-p16s47w42
 </s>
 <s>
-Nav	vmnipii3pay	nebūt	m-Latv_Veestn_p138-p1s1w1
+Nav	vmnipii30ay	nebūt	m-Latv_Veestn_p138-p1s1w1
 šaubu	ncfpg4	šauba	m-Latv_Veestn_p138-p1s1w2
 par	spsan	par	m-Latv_Veestn_p138-p1s1w3
 Latvijas	npfsg4	Latvija	m-Latv_Veestn_p138-p1s1w4
@@ -3715,7 +3715,7 @@ saucam	vmnipt11pan	saukt	m-Latv_Veestn_p138-p7s20w8
 par	spsan	par	m-Latv_Veestn_p138-p7s20w9
 Abreni	npfsa5	Abrene	m-Latv_Veestn_p138-p7s20w10
 ,	zc	,	m-Latv_Veestn_p138-p7s20w11
-paliek	vanipi13pan	palikt	m-Latv_Veestn_p138-p7s20w12
+paliek	vanipi130an	palikt	m-Latv_Veestn_p138-p7s20w12
 robežas	ncfsg4	robeža	m-Latv_Veestn_p138-p7s20w13
 otrā	mcsfslv	otrā	m-Latv_Veestn_p138-p7s20w14
 pusē	ncfsl5	puse	m-Latv_Veestn_p138-p7s20w15
@@ -3727,7 +3727,7 @@ teritorijā	ncfsl4	teritorija	m-Latv_Veestn_p138-p7s20w19
 </s>
 <s>
 Ko	pq000an	kas	m-Latv_Veestn_p139-p1s1w1
-sagaidām	vmnipt33pan	sagaidīt	m-Latv_Veestn_p139-p1s1w2
+sagaidām	vmnipt330an	sagaidīt	m-Latv_Veestn_p139-p1s1w2
 no	spsgy	no	m-Latv_Veestn_p139-p1s1w3
 pirmā	mosmsgv	pirmais	m-Latv_Veestn_p139-p1s1w4
 tiesībsarga	ncmsg1	tiesībsargs	m-Latv_Veestn_p139-p1s1w5
@@ -3737,13 +3737,13 @@ tiesībsarga	ncmsg1	tiesībsargs	m-Latv_Veestn_p139-p1s1w5
 Jurista	ncmsg1	jurists	m-Latv_Veestn_p139-p12s20w2
 Vārds	ncmsn1	vārds	m-Latv_Veestn_p139-p12s20w3
 "	zq	"	m-Latv_Veestn_p139-p12s20w4
-jautā	vmnipt23san	jautāt	m-Latv_Veestn_p139-p12s20w5
+jautā	vmnipt230an	jautāt	m-Latv_Veestn_p139-p12s20w5
 :	zo	:	m-Latv_Veestn_p139-p12s20w6
 </s>
 <s>
 Cilvēcība	ncfsn4	cilvēcība	m-Latv_Veestn_p139-p23s37w1
-ir	vcnipii3san	būt	m-Latv_Veestn_p139-p23s37w2
-tā	pd3fsnn	tā	m-Latv_Veestn_p139-p23s37w3
+ir	vcnipii30an	būt	m-Latv_Veestn_p139-p23s37w2
+tā	pd0fsnn	tā	m-Latv_Veestn_p139-p23s37w3
 R.	y	R.	m-Latv_Veestn_p139-p23s37w4
 Apsīša	npmsg2	Apsītis	m-Latv_Veestn_p139-p23s37w6
 iezīme	ncfsn5	iezīme	m-Latv_Veestn_p139-p23s37w7
@@ -3752,7 +3752,7 @@ kas	pr000nn	kas	m-Latv_Veestn_p139-p23s37w9
 šajā	pd0msln	šis	m-Latv_Veestn_p139-p23s37w10
 darbā	ncmsl1	darbs	m-Latv_Veestn_p139-p23s37w11
 viņam	pp3msdn	viņš	m-Latv_Veestn_p139-p23s37w12
-varētu	vonipt33san	varēt	m-Latv_Veestn_p139-p23s37w13
+varētu	vonipt330an	varēt	m-Latv_Veestn_p139-p23s37w13
 ļoti	r0q	ļoti	m-Latv_Veestn_p139-p23s37w14
 palīdzēt	vmnn0t3000n	palīdzēt	m-Latv_Veestn_p139-p23s37w15
 .	zs	.	m-Latv_Veestn_p139-p23s37w16
@@ -3774,7 +3774,7 @@ būtu	vcnc0ii00an	būt	m-Latv_Veestn_p139-p29s47w14
 jāpievērš	vmnd0t100an	pievērt	m-Latv_Veestn_p139-p29s47w15
 uzmanība	ncfsn4	uzmanība	m-Latv_Veestn_p139-p29s47w16
 ,	zc	,	m-Latv_Veestn_p139-p29s47w17
-ir	vcnipii3san	būt	m-Latv_Veestn_p139-p29s47w18
+ir	vcnipii30an	būt	m-Latv_Veestn_p139-p29s47w18
 Tiesībsarga	ncmsg1	Tiesībsargs	m-Latv_Veestn_p139-p29s47w19
 institūcijas	ncfsg4	institūcija	m-Latv_Veestn_p139-p29s47w20
 kapacitātes	ncfsg5	kapacitāte	m-Latv_Veestn_p139-p29s47w21
@@ -3788,7 +3788,7 @@ ar	sppdn	ar	m-Latv_Veestn_p139-p29s47w28
 tās	pd0fsgn	tā	m-Latv_Veestn_p139-p29s47w29
 partneriem	ncmpd2	partneris	m-Latv_Veestn_p139-p29s47w30
 ,	zc	,	m-Latv_Veestn_p139-p29s47w31
-to	pd3mpgn	tas	m-Latv_Veestn_p139-p29s47w32
+to	pd0mpgn	tas	m-Latv_Veestn_p139-p29s47w32
 skaitā	ncmsl1	skaits	m-Latv_Veestn_p139-p29s47w33
 arī	ccs	arī	m-Latv_Veestn_p139-p29s47w34
 Tieslietu	ncfpg4	Tieslieta	m-Latv_Veestn_p139-p29s47w35
@@ -3816,24 +3816,24 @@ tiesībsargs	ncmsn1	tiesībsargs	m-Latv_Veestn_p139-p35s63w17
 "	zq	"	m-Latv_Veestn_p139-p35s63w18
 ,	zc	,	m-Latv_Veestn_p139-p35s63w19
 jo	css	jo	m-Latv_Veestn_p139-p35s63w20
-tas	pd3msnn	tas	m-Latv_Veestn_p139-p35s63w21
+tas	pd0msnn	tas	m-Latv_Veestn_p139-p35s63w21
 mums	pp10pdn	mēs	m-Latv_Veestn_p139-p35s63w22
 vismaz	r0q	vismaz	m-Latv_Veestn_p139-p35s63w23
 kaut	qs	kaut	m-Latv_Veestn_p139-p35s63w24
 ko	pr000an	kas	m-Latv_Veestn_p139-p35s63w25
-izsaka	vmnipt33san	izsacīt	m-Latv_Veestn_p139-p35s63w26
+izsaka	vmnipt330an	izsacīt	m-Latv_Veestn_p139-p35s63w26
 ,	zc	,	m-Latv_Veestn_p139-p35s63w27
 turpretim	ccs	turpretim	m-Latv_Veestn_p139-p35s63w28
 ombuds	ncmsn1	ombuds	m-Latv_Veestn_p139-p35s63w29
-nenozīmē	vmnipt23say	nenozīmēt	m-Latv_Veestn_p139-p35s63w30
+nenozīmē	vmnipt230ay	nenozīmēt	m-Latv_Veestn_p139-p35s63w30
 neko	pi0msan	nekas	m-Latv_Veestn_p139-p35s63w31
 .	zs	.	m-Latv_Veestn_p139-p35s63w32
 </s>
 <s>
 Proti	qs	Proti	m-Latv_Veestn_p139-p40s71w1
 ,	zc	,	m-Latv_Veestn_p139-p40s71w2
-tā	pd3fsnn	tā	m-Latv_Veestn_p139-p40s71w3
-būs	vcnifii3san	būt	m-Latv_Veestn_p139-p40s71w4
+tā	pd0fsnn	tā	m-Latv_Veestn_p139-p40s71w3
+būs	vcnifii30an	būt	m-Latv_Veestn_p139-p40s71w4
 persona	ncfsn4	persona	m-Latv_Veestn_p139-p40s71w5
 ,	zc	,	m-Latv_Veestn_p139-p40s71w6
 kas	pr000nn	kas	m-Latv_Veestn_p139-p40s71w7
@@ -3841,7 +3841,7 @@ tieši	rpm	tieši	m-Latv_Veestn_p139-p40s71w8
 ar	spsan	ar	m-Latv_Veestn_p139-p40s71w9
 savu	ps0fsan	sava	m-Latv_Veestn_p139-p40s71w10
 autoritāti	ncfsa5	autoritāte	m-Latv_Veestn_p139-p40s71w11
-centīsies	voyift13san	censties	m-Latv_Veestn_p139-p40s71w12
+centīsies	voyift130an	censties	m-Latv_Veestn_p139-p40s71w12
 panākt	vmnn0t1000n	panākt	m-Latv_Veestn_p139-p40s71w13
 cilvēktiesību	ncfpg4	cilvēktiesība	m-Latv_Veestn_p139-p40s71w14
 problēmu	ncfpg4	problēma	m-Latv_Veestn_p139-p40s71w15
@@ -3852,7 +3852,7 @@ rezultātu	ncmsa1	rezultāts	m-Latv_Veestn_p139-p40s71w18
 </s>
 <s>
 Tai	pd0fsdn	tā	m-Latv_Veestn_p139-p41s76w1
-nav	vcnipii3say	nebūt	m-Latv_Veestn_p139-p41s76w2
+nav	vcnipii30ay	nebūt	m-Latv_Veestn_p139-p41s76w2
 nekādu	pi0fpgy	nekāda	m-Latv_Veestn_p139-p41s76w3
 izpildvaras	ncfsg4	izpildvara	m-Latv_Veestn_p139-p41s76w4
 vai	ccs	vai	m-Latv_Veestn_p139-p41s76w5
@@ -3873,7 +3873,7 @@ demokrātiskajās	affplyp	demokrātiska	m-Latv_Veestn_p139-p41s76w19
 valstīs	ncfpl6	valsts	m-Latv_Veestn_p139-p41s76w20
 šie	pd0mpnn	šis	m-Latv_Veestn_p139-p41s76w21
 ieteikumi	ncmpn1	ieteikums	m-Latv_Veestn_p139-p41s76w22
-tiek	vtnipi13pan	tikt	m-Latv_Veestn_p139-p41s76w23
+tiek	vtnipi130an	tikt	m-Latv_Veestn_p139-p41s76w23
 īstenoti	vmnpdmpnpsn	īstenot	m-Latv_Veestn_p139-p41s76w24
 ,	zc	,	m-Latv_Veestn_p139-p41s76w25
 balstoties	vmypu000000	balstīties	m-Latv_Veestn_p139-p41s76w26
@@ -4092,7 +4092,7 @@ attīstība	ncfsn4	attīstība	m-Latv_Veestn_p143-p16s63w13
 .	zs	.	m-Latv_Veestn_p143-p16s63w14
 </s>
 <s>
-Tā	pd3fsnn	tā	m-Latv_Veestn_p143-p18s71w1
+Tā	pd0fsnn	tā	m-Latv_Veestn_p143-p18s71w1
 netiek	vtnipt130ay	netikt	m-Latv_Veestn_p143-p18s71w2
 atrisināta	vmnpdfsnpsn	atrisināt	m-Latv_Veestn_p143-p18s71w3
 ,	zc	,	m-Latv_Veestn_p143-p18s71w4
@@ -4241,7 +4241,7 @@ vērtību	ncfsa4	vērtība	m-Latv_Veestn_p145-p19s20w21
 ,	zc	,	m-Latv_Veestn_p145-p19s20w22
 maksājot	vmnpu000000	maksāt	m-Latv_Veestn_p145-p19s20w23
 par	spsan	par	m-Latv_Veestn_p145-p19s20w24
-to	pd3msan	tas	m-Latv_Veestn_p145-p19s20w25
+to	pd0msan	tas	m-Latv_Veestn_p145-p19s20w25
 privatizācijas	ncfsg4	privatizācija	m-Latv_Veestn_p145-p19s20w26
 sertifikātos	ncmpl1	sertifikāts	m-Latv_Veestn_p145-p19s20w27
 ,	zc	,	m-Latv_Veestn_p145-p19s20w28
@@ -4391,7 +4391,7 @@ veidojums	ncmsn1	veidojums	m-Latv_Veestn_p146-p10s37w29
 .	zs	.	m-Latv_Veestn_p146-p10s37w30
 </s>
 <s>
-Tas	pd3msnn	tas	m-Latv_Veestn_p146-p12s47w1
+Tas	pd0msnn	tas	m-Latv_Veestn_p146-p12s47w1
 liek	vmnipt130an	likt	m-Latv_Veestn_p146-p12s47w2
 domāt	vmnn0t2000n	domāt	m-Latv_Veestn_p146-p12s47w3
 ,	zc	,	m-Latv_Veestn_p146-p12s47w4
@@ -4477,7 +4477,7 @@ depo	ncmpg0	depo	m-Latv_Veestn_p147-p11s37w7
 tīkla	ncmsg1	tīkls	m-Latv_Veestn_p147-p11s37w8
 pilnveidošana	ncfsn4	pilnveidošana	m-Latv_Veestn_p147-p11s37w9
 ,	zc	,	m-Latv_Veestn_p147-p11s37w10
-to	pd3mpgn	tas	m-Latv_Veestn_p147-p11s37w11
+to	pd0mpgn	tas	m-Latv_Veestn_p147-p11s37w11
 skaitu	ncmsa1	skaits	m-Latv_Veestn_p147-p11s37w12
 palielinot	vmnpu000000	palielināt	m-Latv_Veestn_p147-p11s37w13
 no	sppdy	no	m-Latv_Veestn_p147-p11s37w14
@@ -4589,7 +4589,7 @@ sniedz	vmnipt130an	sniegt	m-Latv_Veestn_p148-p12s20w11
 nepatiesas	affpanp	nepatiesa	m-Latv_Veestn_p148-p12s20w12
 ziņas	ncfpa4	ziņa	m-Latv_Veestn_p148-p12s20w13
 ,	zc	,	m-Latv_Veestn_p148-p12s20w14
-tas	pd3msnn	tas	m-Latv_Veestn_p148-p12s20w15
+tas	pd0msnn	tas	m-Latv_Veestn_p148-p12s20w15
 var	vonipt330an	varēt	m-Latv_Veestn_p148-p12s20w16
 beigties	vmyn0i1000n	beigties	m-Latv_Veestn_p148-p12s20w17
 pat	qs	pat	m-Latv_Veestn_p148-p12s20w18
@@ -4642,7 +4642,7 @@ e-paraksta	ncmsg1	e-paraksts	m-Latv_Veestn_p149-p8s20w5
 izmantošanu	ncfsa4	izmantošana	m-Latv_Veestn_p149-p8s20w8
 un	ccs	un	m-Latv_Veestn_p149-p8s20w9
 lai	css	lai	m-Latv_Veestn_p149-p8s20w10
-tā	pd3msgn	tas	m-Latv_Veestn_p149-p8s20w11
+tā	pd0msgn	tas	m-Latv_Veestn_p149-p8s20w11
 lietotāju	ncmpg1	lietotājs	m-Latv_Veestn_p149-p8s20w12
 kļūtu	vtnc0t100an	kļūt	m-Latv_Veestn_p149-p8s20w13
 arvien	r0t	arvien	m-Latv_Veestn_p149-p8s20w14
@@ -4654,7 +4654,7 @@ piedāvāt	vmnn0t2000n	piedāvāt	m-Latv_Veestn_p149-p8s20w19
 iespējas	ncfpa4	iespēja	m-Latv_Veestn_p149-p8s20w20
 ,	zc	,	m-Latv_Veestn_p149-p8s20w21
 kur	r0p	kur	m-Latv_Veestn_p149-p8s20w22
-šo	pd3msan	šis	m-Latv_Veestn_p149-p8s20w23
+šo	pd0msan	šis	m-Latv_Veestn_p149-p8s20w23
 jauno	afmsayp	jauns	m-Latv_Veestn_p149-p8s20w24
 rīku	ncmsa1	rīks	m-Latv_Veestn_p149-p8s20w25
 izmantot	vmnn0t2000n	izmantot	m-Latv_Veestn_p149-p8s20w26
@@ -4697,7 +4697,7 @@ māju	ncfpg4	māja	m-Latv_Veestn_p150-p1s1w6
 atjaunošanu	ncfsa4	atjaunošana	m-Latv_Veestn_p150-p1s1w7
 </s>
 <s>
-Tā	pd3fsnn	tā	m-Latv_Veestn_p150-p10s20w1
+Tā	pd0fsnn	tā	m-Latv_Veestn_p150-p10s20w1
 norādīja	vmnist330an	norādīt	m-Latv_Veestn_p150-p10s20w2
 ,	zc	,	m-Latv_Veestn_p150-p10s20w3
 ka	css	ka	m-Latv_Veestn_p150-p10s20w4
@@ -4705,7 +4705,7 @@ pašvaldība	ncfsn4	pašvaldība	m-Latv_Veestn_p150-p10s20w5
 var	vonipt330an	varēt	m-Latv_Veestn_p150-p10s20w6
 palielināt	vmnn0t3000n	palielināt	m-Latv_Veestn_p150-p10s20w7
 vienīgi	qs	vienīgi	m-Latv_Veestn_p150-p10s20w8
-tai	pd3fsdn	tā	m-Latv_Veestn_p150-p10s20w9
+tai	pd0fsdn	tā	m-Latv_Veestn_p150-p10s20w9
 piederošo	vmnpdmpgapy	piederēt	m-Latv_Veestn_p150-p10s20w10
 dzīvokļu	ncmpg2	dzīvoklis	m-Latv_Veestn_p150-p10s20w11
 īres	ncfsg5	īre	m-Latv_Veestn_p150-p10s20w12
@@ -4734,7 +4734,7 @@ atsevišķi	r0m	atsevišķi	m-Latv_Veestn_p150-p10s20w33
 </s>
 <s>
 "	zq	"	m-Latv_Veestn_p150-p18s37w1
-Tas	pd3msnn	tas	m-Latv_Veestn_p150-p18s37w2
+Tas	pd0msnn	tas	m-Latv_Veestn_p150-p18s37w2
 bija	vcnisii30an	būt	m-Latv_Veestn_p150-p18s37w3
 jādara	vmnd0t300an	darīt	m-Latv_Veestn_p150-p18s37w4
 jau	r0t	jau	m-Latv_Veestn_p150-p18s37w5
@@ -4760,7 +4760,7 @@ palielinājušās	vmnpdfpnasy	palielināties	m-Latv_Veestn_p150-p18s37w24
 tādēļ	r0c	tādēļ	m-Latv_Veestn_p150-p18s37w26
 labākais	afmsnyc	labs	m-Latv_Veestn_p150-p18s37w27
 laiks	ncmsn1	laiks	m-Latv_Veestn_p150-p18s37w28
-šiem	pd3mpdn	šis	m-Latv_Veestn_p150-p18s37w29
+šiem	pd0mpdn	šis	m-Latv_Veestn_p150-p18s37w29
 darbiem	ncmpd1	darbs	m-Latv_Veestn_p150-p18s37w30
 ir	vcnipii30an	būt	m-Latv_Veestn_p150-p18s37w31
 nokavēts	vmnpdmsnpsn	nokavēt	m-Latv_Veestn_p150-p18s37w32
@@ -4778,7 +4778,7 @@ norādīja	vmnist330an	norādīt	m-Latv_Veestn_p150-p25s47w5
 ,	zc	,	m-Latv_Veestn_p150-p25s47w6
 ka	css	ka	m-Latv_Veestn_p150-p25s47w7
 diez vai	qc	diez vai	m-Latv_Veestn_p150-p25s47w8
-šo	pd3fsan	šī	m-Latv_Veestn_p150-p25s47w10
+šo	pd0fsan	šī	m-Latv_Veestn_p150-p25s47w10
 likumu	ncmsa1	likums	m-Latv_Veestn_p150-p25s47w11
 izdosies	veyifi230an	izdoties	m-Latv_Veestn_p150-p25s47w12
 pieņemt	vmnn0t1000n	pieņemt	m-Latv_Veestn_p150-p25s47w13
@@ -4787,7 +4787,7 @@ pieņemt	vmnn0t1000n	pieņemt	m-Latv_Veestn_p150-p25s47w13
 jo	css	jo	m-Latv_Veestn_p150-p25s47w16
 Saeimā	ncfsl4	saeima	m-Latv_Veestn_p150-p25s47w17
 par	spsan	par	m-Latv_Veestn_p150-p25s47w18
-to	pd3msan	tas	m-Latv_Veestn_p150-p25s47w19
+to	pd0msan	tas	m-Latv_Veestn_p150-p25s47w19
 gaidāmas	vmnpdfpnppn	gaidīt	m-Latv_Veestn_p150-p25s47w20
 asas	affpnnp	asa	m-Latv_Veestn_p150-p25s47w21
 diskusijas	ncfpn4	diskusija	m-Latv_Veestn_p150-p25s47w22
@@ -4828,7 +4828,7 @@ atšķīrās	vmyisi130an	atšķirties	m-Latv_Veestn_p151-p6s20w24
 viņu	pp3mpgn	viņš	m-Latv_Veestn_p151-p6s20w25
 priekšstati	ncmpn1	priekšstats	m-Latv_Veestn_p151-p6s20w26
 par	spsan	par	m-Latv_Veestn_p151-p6s20w27
-to	pd3msan	tas	m-Latv_Veestn_p151-p6s20w28
+to	pd0msan	tas	m-Latv_Veestn_p151-p6s20w28
 ,	zc	,	m-Latv_Veestn_p151-p6s20w29
 kādam	pr0msdn	kāds	m-Latv_Veestn_p151-p6s20w30
 būtu	vcnc0ii00an	būt	m-Latv_Veestn_p151-p6s20w31
@@ -4891,7 +4891,7 @@ sadarboties	vmyn0i2000n	sadarboties	m-Latv_Veestn_p151-p11s47w20
 galvenokārt	r0m	galvenokārt	m-Latv_Veestn_p151-p11s47w21
 bija	vcnisii30an	būt	m-Latv_Veestn_p151-p11s47w22
 ieinteresēti	armpnnp	ieinteresēts	m-Latv_Veestn_p151-p11s47w23
-tie	pd3mpnn	tas	m-Latv_Veestn_p151-p11s47w24
+tie	pd0mpnn	tas	m-Latv_Veestn_p151-p11s47w24
 vācieši	ncmpn2	vācietis	m-Latv_Veestn_p151-p11s47w25
 ,	zc	,	m-Latv_Veestn_p151-p11s47w26
 kas	pr000nn	kas	m-Latv_Veestn_p151-p11s47w27
@@ -4908,7 +4908,7 @@ Vācijā	npfsl4	Vācija	m-Latv_Veestn_p151-p11s47w36
 </s>
 <s>
 Taču	qs	taču	m-Latv_Veestn_p151-p12s63w1
-tas	pd3msnn	tas	m-Latv_Veestn_p151-p12s63w2
+tas	pd0msnn	tas	m-Latv_Veestn_p151-p12s63w2
 izraisītu	vmnc0t300an	izraisīt	m-Latv_Veestn_p151-p12s63w3
 neērtības	ncfsg4	neērtība	m-Latv_Veestn_p151-p12s63w4
 sajūtu	ncfsa4	sajūta	m-Latv_Veestn_p151-p12s63w5
@@ -4921,14 +4921,14 @@ otru	mcsmsav	otrs	m-Latv_Veestn_p151-p12s63w10
 </s>
 <s>
 Latvijā	npfsl4	Latvija	m-Latv_Veestn_p151-p13s71w1
-šīs	pd3fpan	šī	m-Latv_Veestn_p151-p13s71w2
+šīs	pd0fpan	šī	m-Latv_Veestn_p151-p13s71w2
 Bībeles	ncfpa5	bībele	m-Latv_Veestn_p151-p13s71w3
 tika	vtnisi130an	tikt	m-Latv_Veestn_p151-p13s71w4
 atstātas	vmnpdfpnpsn	atstāt	m-Latv_Veestn_p151-p13s71w5
-tiem	pd3mpdn	tas	m-Latv_Veestn_p151-p13s71w6
+tiem	pd0mpdn	tas	m-Latv_Veestn_p151-p13s71w6
 ,	zc	,	m-Latv_Veestn_p151-p13s71w7
 kas	pr000nn	kas	m-Latv_Veestn_p151-p13s71w8
-tās	pd3fpan	tā	m-Latv_Veestn_p151-p13s71w9
+tās	pd0fpan	tā	m-Latv_Veestn_p151-p13s71w9
 vēlējās	voyist230an	vēlēties	m-Latv_Veestn_p151-p13s71w10
 iegūt	vmnn0t1000n	iegūt	m-Latv_Veestn_p151-p13s71w11
 savā	ps0msln	savs	m-Latv_Veestn_p151-p13s71w12
@@ -4945,7 +4945,7 @@ veido	vmnipt230an	veidot	m-Latv_Veestn_p152-p1s1w2
 personības	ncfpn4	personība	m-Latv_Veestn_p152-p1s1w3
 </s>
 <s>
-Tā	pd3fsnn	tā	m-Latv_Veestn_p152-p9s20w1
+Tā	pd0fsnn	tā	m-Latv_Veestn_p152-p9s20w1
 ir	vcnipii30an	būt	m-Latv_Veestn_p152-p9s20w2
 kāda	pi0fsnn	kāda	m-Latv_Veestn_p152-p9s20w3
 mūsdienu	ncfpg4	mūsdienas	m-Latv_Veestn_p152-p9s20w4
@@ -4983,7 +4983,7 @@ kādi	pi0mpnn	kāds	m-Latv_Veestn_p152-p27s63w4
 ceļi	ncmpn1	ceļš	m-Latv_Veestn_p152-p27s63w5
 ,	zc	,	m-Latv_Veestn_p152-p27s63w6
 kā	r0m	kā	m-Latv_Veestn_p152-p27s63w7
-to	pd3msan	tas	m-Latv_Veestn_p152-p27s63w8
+to	pd0msan	tas	m-Latv_Veestn_p152-p27s63w8
 varētu	vonc0t300an	varēt	m-Latv_Veestn_p152-p27s63w9
 izdarīt	vmnn0t3000n	izdarīt	m-Latv_Veestn_p152-p27s63w10
 ,	zc	,	m-Latv_Veestn_p152-p27s63w11
@@ -4997,7 +4997,7 @@ visi	pg0mpnn	viss	m-Latv_Veestn_p152-p27s63w18
 .	zs	.	m-Latv_Veestn_p152-p27s63w19
 </s>
 <s>
-Tās	pd3fpnn	tā	m-Latv_Veestn_p152-p31s71w1
+Tās	pd0fpnn	tā	m-Latv_Veestn_p152-p31s71w1
 ir	vcnipii30an	būt	m-Latv_Veestn_p152-p31s71w2
 divas	mcsfpnv	divas	m-Latv_Veestn_p152-p31s71w3
 dažādas	arfpnnp	dažāda	m-Latv_Veestn_p152-p31s71w4
@@ -5045,7 +5045,7 @@ režisors	ncmsn1	režisors	m-Latv_Veestn_p152-p44s102w11
 <s>
 Bet	ccs	bet	m-Latv_Veestn_p152-p45s104w1
 būtībā	ncfsl4	būtība	m-Latv_Veestn_p152-p45s104w2
-tās	pd3fpnn	tā	m-Latv_Veestn_p152-p45s104w3
+tās	pd0fpnn	tā	m-Latv_Veestn_p152-p45s104w3
 ir	vcnipii30an	būt	m-Latv_Veestn_p152-p45s104w4
 dažādas	arfpnnp	dažāda	m-Latv_Veestn_p152-p45s104w5
 profesijas	ncfpn4	profesija	m-Latv_Veestn_p152-p45s104w6
@@ -5132,7 +5132,7 @@ apguvi	ncfsa5	apguve	m-Latv_Veestn_p153-p17s37w17
 .	zs	.	m-Latv_Veestn_p153-p17s37w18
 </s>
 <s>
-Tas	pd3msnn	tas	m-Latv_Veestn_p153-p22s47w1
+Tas	pd0msnn	tas	m-Latv_Veestn_p153-p22s47w1
 darīts	vmnpdmsnpsn	darīt	m-Latv_Veestn_p153-p22s47w2
 tādēļ	r0c	tādēļ	m-Latv_Veestn_p153-p22s47w3
 ,	zc	,	m-Latv_Veestn_p153-p22s47w4
@@ -5155,7 +5155,7 @@ kritēriji	ncmpn1	kritērijs	m-Latv_Veestn_p153-p31s63w2
 Mazu	afmpgnp	mazs	m-Latv_Veestn_p153-p33s71w1
 projektu	ncmpg1	projekts	m-Latv_Veestn_p153-p33s71w2
 gadījumos	ncmpl1	gadījums	m-Latv_Veestn_p153-p33s71w3
-šī	pd3fsnn	šī	m-Latv_Veestn_p153-p33s71w4
+šī	pd0fsnn	šī	m-Latv_Veestn_p153-p33s71w4
 metode	ncfsn5	metode	m-Latv_Veestn_p153-p33s71w5
 varētu	vonc0t300an	varēt	m-Latv_Veestn_p153-p33s71w6
 saglabāties	vmyn0i2000n	saglabāties	m-Latv_Veestn_p153-p33s71w7
@@ -5233,7 +5233,7 @@ procentiem	ncmpd1	procents	m-Latv_Veestn_p154-p16s37w15
 </s>
 <s>
 Pēc	sppdy	pēc	m-Latv_Veestn_p154-p18s47w1
-tam	pd3msdn	tas	m-Latv_Veestn_p154-p18s47w2
+tam	pd0msdn	tas	m-Latv_Veestn_p154-p18s47w2
 viņš	pp3msnn	viņš	m-Latv_Veestn_p154-p18s47w3
 atrod	vmnipt130an	atrast	m-Latv_Veestn_p154-p18s47w4
 augstākas	affsgnc	augsta	m-Latv_Veestn_p154-p18s47w5
@@ -5253,7 +5253,7 @@ laiku	ncmsa1	laiks	m-Latv_Veestn_p154-p25s63w4
 lai	css	lai	m-Latv_Veestn_p154-p25s63w6
 atgūtos	vmnpdmpapsy	atgūt	m-Latv_Veestn_p154-p25s63w7
 no	sppdy	no	m-Latv_Veestn_p154-p25s63w8
-šiem	pd3mpdn	šis	m-Latv_Veestn_p154-p25s63w9
+šiem	pd0mpdn	šis	m-Latv_Veestn_p154-p25s63w9
 satricinājumiem	ncmpd1	satricinājums	m-Latv_Veestn_p154-p25s63w10
 .	zs	.	m-Latv_Veestn_p154-p25s63w11
 </s>
@@ -5487,7 +5487,7 @@ Jeļcins	npmsn1	Jeļcins	m-Latv_Veestn_p155-p30s108w16
 </s>
 <s>
 Es	pp10snn	es	m-Latv_Veestn_p155-p30s110w1
-to	pd3msan	tas	m-Latv_Veestn_p155-p30s110w2
+to	pd0msan	tas	m-Latv_Veestn_p155-p30s110w2
 atdošu	vmnift11san	atdot	m-Latv_Veestn_p155-p30s110w3
 savai	ps0fsdn	sava	m-Latv_Veestn_p155-p30s110w4
 sievai	ncfsd4	sieva	m-Latv_Veestn_p155-p30s110w5
@@ -5545,6 +5545,29 @@ pašvaldības	ncfsg4	pašvaldība	m-LETA_20120606-p1s1w9
 aģentūrās	ncfpl4	aģentūra	m-LETA_20120606-p1s1w10
 </s>
 <s>
+"	zq	"	m-LETA_20121016-p1s1w1
+Baltijas	npfsg4	Baltija	m-LETA_20121016-p1s1w2
+ceļam	ncmsd1	ceļš	m-LETA_20121016-p1s1w3
+"	zq	"	m-LETA_20121016-p1s1w4
+atklās	vmnift130an	atklāt	m-LETA_20121016-p1s1w5
+UNESCO	y	UNESCO	m-LETA_20121016-p1s1w6
+atpazīstamības	ncfsg4	atpazīstamība	m-LETA_20121016-p1s1w7
+zīmi	ncfsa5	zīme	m-LETA_20121016-p1s1w8
+</s>
+<s>
+LZA	y	LZA	m-LETA_20121219-p1s1w1
+notiks	vmnifi130an	notikt	m-LETA_20121219-p1s1w2
+Literatūras	ncfsg4	literatūra	m-LETA_20121219-p1s1w3
+,	zc	,	m-LETA_20121219-p1s1w4
+folkloras	ncfsg4	folklora	m-LETA_20121219-p1s1w5
+un	ccs	un	m-LETA_20121219-p1s1w6
+mākslas	ncfsg4	māksla	m-LETA_20121219-p1s1w7
+institūta	ncmsg1	institūts	m-LETA_20121219-p1s1w8
+grāmatu	ncfpg4	grāmata	m-LETA_20121219-p1s1w9
+atvēršanas	ncfsg4	atvēršana	m-LETA_20121219-p1s1w10
+svētki	ncmdn1	svētki	m-LETA_20121219-p1s1w11
+</s>
+<s>
 Par	spsan	par	m-LETA_20130121-p1s1w1
 ST	y	ST	m-LETA_20130121-p1s1w2
 priekšsēdētāju	ncmsa1	priekšsēdētājs	m-LETA_20130121-p1s1w3
@@ -5584,7 +5607,7 @@ personām	ncfpd4	persona	m-LETA_20130128-p12s1w12
 .	zs	.	m-LETA_20130128-p12s1w13
 </s>
 <s>
-Šajā	pd3fsln	šī	m-LETA_20130128-p19s2w1
+Šajā	pd0fsln	šī	m-LETA_20130128-p19s2w1
 izdalītajā	vmnpdfslpsy	izdalīt	m-LETA_20130128-p19s2w2
 lietā	ncfsl4	lieta	m-LETA_20130128-p19s2w3
 apsūdzības	ncfpn4	apsūdzība	m-LETA_20130128-p19s2w4
@@ -5597,11 +5620,64 @@ Stalažam	npmsd1	Stalažs	m-LETA_20130128-p19s2w10
 .	zs	.	m-LETA_20130128-p19s2w11
 </s>
 <s>
+No	spsgy	no	m-LETA_20130215-p1s1w1
+Gaismas	npfsg4	Gaisma	m-LETA_20130215-p1s1w2
+pils	ncfsg6	pils	m-LETA_20130215-p1s1w3
+līdz	spsdy	līdz	m-LETA_20130215-p1s1w4
+Stendāla	npmsg1	Stendāls	m-LETA_20130215-p1s1w5
+rokrakstam	ncmsd1	rokraksts	m-LETA_20130215-p1s1w6
+:	zo	:	m-LETA_20130215-p1s1w7
+Itālijas	npfsg4	Itālija	m-LETA_20130215-p1s1w8
+vēstnieks	ncmsn1	vēstnieks	m-LETA_20130215-p1s1w9
+viesojas	vmyipi230an	viesoties	m-LETA_20130215-p1s1w10
+Nacionālajā	arfslyp	nacionāla	m-LETA_20130215-p1s1w11
+bibliotēkā	ncfsl4	bibliotēka	m-LETA_20130215-p1s1w12
+</s>
+<s>
+signe.valtina@lnb.lv	xx	signe.valtina@lnb.lv	m-LETA_20130215-p13s1w1
+</s>
+<s>
 Mūžībā	ncfsl4	mūžība	m-LETA_20130228_Ziedonis-p1s1w1
 aizgājis	vmnpdmsnasn	aiziet	m-LETA_20130228_Ziedonis-p1s1w2
 dzejnieks	ncmsn1	dzejnieks	m-LETA_20130228_Ziedonis-p1s1w3
 Imants	npmsn1	Imants	m-LETA_20130228_Ziedonis-p1s1w4
 Ziedonis	npmsn2	Ziedonis	m-LETA_20130228_Ziedonis-p1s1w5
+</s>
+<s>
+Finanšu	ncfdg5	finanses	m-LETA_20130305-p1s1w1
+ministrs	ncmsn1	ministrs	m-LETA_20130305-p1s1w2
+piedalīsies	vmyifi330an	piedalīties	m-LETA_20130305-p1s1w3
+ECOFIN	y	ECOFIN	m-LETA_20130305-p1s1w4
+sanāksmē	ncfsl5	sanāksme	m-LETA_20130305-p1s1w5
+Briselē	npfsl5	brisele	m-LETA_20130305-p1s1w6
+</s>
+<s>
+FM	y	FM	m-LETA_20130311-p1s1w1
+:	zo	:	m-LETA_20130311-p1s1w2
+IKP	y	IKP	m-LETA_20130311-p1s1w3
+pieaugums	ncmsn1	pieaugums	m-LETA_20130311-p1s1w4
+ir	vcnipii30an	būt	m-LETA_20130311-p1s1w5
+izcils	afmsnnp	izcils	m-LETA_20130311-p1s1w6
+sasniegums	ncmsn1	sasniegums	m-LETA_20130311-p1s1w7
+</s>
+<s>
+Savukārt	r0c	savukārt	m-LETA_20130311-p9s4w1
+valdības	ncfsg4	valdība	m-LETA_20130311-p9s4w2
+galapatēriņš	ncmsn1	galapatēriņš	m-LETA_20130311-p9s4w3
+samazinājies	vmypdmsnasn	samazināties	m-LETA_20130311-p9s4w4
+par	sppdn	par	m-LETA_20130311-p9s4w5
+3,8	xn	3,8	m-LETA_20130311-p9s4w6
+%	xx	%	m-LETA_20130311-p9s4w7
+.	zs	.	m-LETA_20130311-p9s4w8
+</s>
+<s>
+Finanšu	ncfdg5	finanses	m-LETA_20130321-p1s1w1
+ministrs	ncmsn1	ministrs	m-LETA_20130321-p1s1w2
+dodas	vmyipti30an	doties	m-LETA_20130321-p1s1w3
+reģionālajā	arfslyp	reģionāla	m-LETA_20130321-p1s1w4
+vizītē	ncfsl5	vizīte	m-LETA_20130321-p1s1w5
+uz	sppdy	uz	m-LETA_20130321-p1s1w6
+Ādažiem	npmdd2	Ādaži	m-LETA_20130321-p1s1w7
 </s>
 <s>
 Dienas	ncfsg4	diena	m-LETA_anotaacija_01_20130211-p1s1w1
@@ -5727,7 +5803,7 @@ pasaules	ncfsg5	pasaule	m-LETA_intervija_02_20130211-p1s1w11
 <s>
 Protams	vmnpdmsnppn	prast	m-LETA_intervija_02_20130211-p8s2w1
 ,	zc	,	m-LETA_intervija_02_20130211-p8s2w2
-tas	pd3msnn	tas	m-LETA_intervija_02_20130211-p8s2w3
+tas	pd0msnn	tas	m-LETA_intervija_02_20130211-p8s2w3
 ir	vcnipii30an	būt	m-LETA_intervija_02_20130211-p8s2w4
 saistīts	vmnpdmsnpsn	saistīt	m-LETA_intervija_02_20130211-p8s2w5
 ar	sppdn	ar	m-LETA_intervija_02_20130211-p8s2w6
@@ -5736,11 +5812,11 @@ iekārtu	ncfpg4	iekārta	m-LETA_intervija_02_20130211-p8s2w8
 attīstību	ncfsa4	attīstība	m-LETA_intervija_02_20130211-p8s2w9
 ,	zc	,	m-LETA_intervija_02_20130211-p8s2w10
 ar	sppdn	ar	m-LETA_intervija_02_20130211-p8s2w11
-to	pd3msan	tas	m-LETA_intervija_02_20130211-p8s2w12
+to	pd0msan	tas	m-LETA_intervija_02_20130211-p8s2w12
 ,	zc	,	m-LETA_intervija_02_20130211-p8s2w13
 ka	css	ka	m-LETA_intervija_02_20130211-p8s2w14
 uz	sppdy	uz	m-LETA_intervija_02_20130211-p8s2w15
-šīm	pd3fpdn	šī	m-LETA_intervija_02_20130211-p8s2w16
+šīm	pd0fpdn	šī	m-LETA_intervija_02_20130211-p8s2w16
 iekārtām	ncfpd4	iekārta	m-LETA_intervija_02_20130211-p8s2w17
 parādās	vmyipi330an	parādīties	m-LETA_intervija_02_20130211-p8s2w18
 skārienjūtīgas	arfpnnp	skārienjūtīga	m-LETA_intervija_02_20130211-p8s2w19
@@ -5844,7 +5920,7 @@ nesagaida	vmnipt330ay	nesagaidīt	m-LETA_intervija_02_20130211-p30s4w8
 ,	zc	,	m-LETA_intervija_02_20130211-p30s4w9
 ka	css	ka	m-LETA_intervija_02_20130211-p30s4w10
 visi	pg0mpnn	viss	m-LETA_intervija_02_20130211-p30s4w11
-to	pd3msan	tas	m-LETA_intervija_02_20130211-p30s4w12
+to	pd0msan	tas	m-LETA_intervija_02_20130211-p30s4w12
 izmantos	vmnift230an	izmantot	m-LETA_intervija_02_20130211-p30s4w13
 .	zs	.	m-LETA_intervija_02_20130211-p30s4w14
 </s>
@@ -5858,7 +5934,7 @@ virzienos	ncmpl1	virziens	m-LETA_intervija_02_20130211-p37s1w3
 Esam	vcnipii1pan	būt	m-LETA_intervija_02_20130211-p37s3w1
 sertificēts	vmnpdmsnpsn	sertificēt	m-LETA_intervija_02_20130211-p37s3w2
 partneris	ncmsn2	partneris	m-LETA_intervija_02_20130211-p37s3w3
-šajā	pd3msln	šis	m-LETA_intervija_02_20130211-p37s3w4
+šajā	pd0msln	šis	m-LETA_intervija_02_20130211-p37s3w4
 jomā	ncfsl4	joma	m-LETA_intervija_02_20130211-p37s3w5
 .	zs	.	m-LETA_intervija_02_20130211-p37s3w6
 </s>
@@ -5894,7 +5970,7 @@ daudzums	ncmsn1	daudzums	m-LETA_intervija_02_20130211-p45s1w3
 pieaugs	vmnifi130an	pieaugt	m-LETA_intervija_02_20130211-p45s1w4
 ,	zc	,	m-LETA_intervija_02_20130211-p45s1w5
 un	ccs	un	m-LETA_intervija_02_20130211-p45s1w6
-tas	pd3msnn	tas	m-LETA_intervija_02_20130211-p45s1w7
+tas	pd0msnn	tas	m-LETA_intervija_02_20130211-p45s1w7
 izraisīs	vmnift330an	izraisīt	m-LETA_intervija_02_20130211-p45s1w8
 otru	mcsmsav	otrs	m-LETA_intervija_02_20130211-p45s1w9
 lietu	ncfsa4	lieta	m-LETA_intervija_02_20130211-p45s1w10
@@ -5998,7 +6074,7 @@ kurināmais	vmnpdmsnppy	kurināt	m-LETA_intervija_06_20130208-p17s2w18
 <s>
 Eiropā	npfsl4	Eiropa	m-LETA_intervija_06_20130208-p21s3w1
 jau	r0t	jau	m-LETA_intervija_06_20130208-p21s3w2
-šo	pd3fsan	šī	m-LETA_intervija_06_20130208-p21s3w3
+šo	pd0fsan	šī	m-LETA_intervija_06_20130208-p21s3w3
 izejvielu	ncfdg4	izejvielas	m-LETA_intervija_06_20130208-p21s3w4
 visi	pg0mpnn	viss	m-LETA_intervija_06_20130208-p21s3w5
 ražo	vmnipt230an	ražot	m-LETA_intervija_06_20130208-p21s3w6
@@ -6021,7 +6097,7 @@ līdzfinansējums	ncmsn1	līdzfinansējums	m-LETA_intervija_06_20130208-p23s4w12
 </s>
 <s>
 Par	spsan	par	m-LETA_intervija_06_20130208-p25s3w1
-šo	pd3msan	šis	m-LETA_intervija_06_20130208-p25s3w2
+šo	pd0msan	šis	m-LETA_intervija_06_20130208-p25s3w2
 projektu	ncmsa1	projekts	m-LETA_intervija_06_20130208-p25s3w3
 sākām	vpnist11pan	sākt	m-LETA_intervija_06_20130208-p25s3w4
 domāt	vmnn0t2000n	domāt	m-LETA_intervija_06_20130208-p25s3w5
@@ -6125,7 +6201,7 @@ projektam	ncmsd1	projekts	m-LETA_intervija_20_20130129-p1s1w11
 Vai	qs	vai	m-LETA_intervija_20_20130129-p14s1w1
 līdz	r0c	līdz	m-LETA_intervija_20_20130129-p14s1w2
 ar	spsan	ar	m-LETA_intervija_20_20130129-p14s1w3
-to	pd3msan	tas	m-LETA_intervija_20_20130129-p14s1w4
+to	pd0msan	tas	m-LETA_intervija_20_20130129-p14s1w4
 esat	vcnipii2pan	būt	m-LETA_intervija_20_20130129-p14s1w5
 nolēmis	vmnpdmsnasn	nolemt	m-LETA_intervija_20_20130129-p14s1w6
 nekandidēt	vmnn0i2000y	nekandidēt	m-LETA_intervija_20_20130129-p14s1w7
@@ -6232,20 +6308,20 @@ tapšanas	ncfsg4	tapšana	m-LETA_Latvijas_Aviize_20121122-p7s2w2
 laikā	ncmsl1	laiks	m-LETA_Latvijas_Aviize_20121122-p7s2w3
 ,	zc	,	m-LETA_Latvijas_Aviize_20121122-p7s2w4
 izlasot	vmnpu000000	izlasīt	m-LETA_Latvijas_Aviize_20121122-p7s2w5
-tās	pd3fpan	tā	m-LETA_Latvijas_Aviize_20121122-p7s2w6
+tās	pd0fpan	tā	m-LETA_Latvijas_Aviize_20121122-p7s2w6
 ievadu	ncmsa1	ievads	m-LETA_Latvijas_Aviize_20121122-p7s2w7
 ,	zc	,	m-LETA_Latvijas_Aviize_20121122-p7s2w8
 licies	vmypdmsnasn	likties	m-LETA_Latvijas_Aviize_20121122-p7s2w9
 ,	zc	,	m-LETA_Latvijas_Aviize_20121122-p7s2w10
 ka	css	ka	m-LETA_Latvijas_Aviize_20121122-p7s2w11
-tai	pd3fsdn	tā	m-LETA_Latvijas_Aviize_20121122-p7s2w12
+tai	pd0fsdn	tā	m-LETA_Latvijas_Aviize_20121122-p7s2w12
 pietrūks	vgnifi130an	pietrūkt	m-LETA_Latvijas_Aviize_20121122-p7s2w13
 dziļuma	ncmsg1	dziļums	m-LETA_Latvijas_Aviize_20121122-p7s2w14
 ,	zc	,	m-LETA_Latvijas_Aviize_20121122-p7s2w15
 ka	css	ka	m-LETA_Latvijas_Aviize_20121122-p7s2w16
 tā	pd0fsnn	tā	m-LETA_Latvijas_Aviize_20121122-p7s2w17
 būs	vcnifii30an	būt	m-LETA_Latvijas_Aviize_20121122-p7s2w18
-par	sp?0n	par	m-LETA_Latvijas_Aviize_20121122-p7s2w19
+par	sp00n	par	m-LETA_Latvijas_Aviize_20121122-p7s2w19
 daudz	rpq	daudz	m-LETA_Latvijas_Aviize_20121122-p7s2w20
 virspusēja	arfsnnp	virspusēja	m-LETA_Latvijas_Aviize_20121122-p7s2w21
 un	ccs	un	m-LETA_Latvijas_Aviize_20121122-p7s2w22
@@ -6375,6 +6451,23 @@ Lattelecom	npmsg0	null	m-LETA_NraLv_20130124-p1s1w8
 padomē	ncfsl5	padome	m-LETA_NraLv_20130124-p1s1w10
 </s>
 <s>
+Notiks	vmnifi130an	notikt	m-LETA_reliize_20121108-p1s1w1
+Andra	npmsg2	Andris	m-LETA_reliize_20121108-p1s1w2
+Vilka	npmsg1	Vilks	m-LETA_reliize_20121108-p1s1w3
+grāmatas	ncfsg4	grāmata	m-LETA_reliize_20121108-p1s1w4
+"	zq	"	m-LETA_reliize_20121108-p1s1w5
+Grūtupa	npmsg1	Grūtups	m-LETA_reliize_20121108-p1s1w6
+fenomens	ncmsn1	fenomens	m-LETA_reliize_20121108-p1s1w7
+"	zq	"	m-LETA_reliize_20121108-p1s1w8
+atvēršanas	ncfsg4	atvēršana	m-LETA_reliize_20121108-p1s1w9
+svētki	ncmdn1	svētki	m-LETA_reliize_20121108-p1s1w10
+</s>
+<s>
+SIA	y	SIA	m-LETA_reliize_20121108-p9s1w1
+Jānis	npmsn2	Jānis	m-LETA_reliize_20121108-p9s1w2
+Roze	npmsn5	Roze	m-LETA_reliize_20121108-p9s1w3
+</s>
+<s>
 "	zq	"	m-LETA_reliize_20130128-p1s1w1
 Pillar	xf	pillar	m-LETA_reliize_20130128-p1s1w2
 "	zq	"	m-LETA_reliize_20130128-p1s1w3
@@ -6401,7 +6494,7 @@ aptuveni	r0m	aptuveni	m-LETA_reliize_20130128-p11s1w14
 miljoni	mcsmpnm	miljons	m-LETA_reliize_20130128-p11s1w16
 eiro	n___g0	eiro	m-LETA_reliize_20130128-p11s1w17
 ;	zc	;	m-LETA_reliize_20130128-p11s1w18
-tas	pd3msnn	tas	m-LETA_reliize_20130128-p11s1w19
+tas	pd0msnn	tas	m-LETA_reliize_20130128-p11s1w19
 ir	vcnipii30an	būt	m-LETA_reliize_20130128-p11s1w20
 viens	mcsmsnv	viens	m-LETA_reliize_20130128-p11s1w21
 no	sppdy	no	m-LETA_reliize_20130128-p11s1w22
@@ -6485,7 +6578,7 @@ iestāšanos	ncfsar	iestāšanās	m-p1094-p1s1w7
 </s>
 <s>
 Tā	r0m	tā	m-p1094-p9s20w1
-viņa	pd3fsnn	viņa	m-p1094-p9s20w2
+viņa	pp3fsnn	viņa	m-p1094-p9s20w2
 arī	qs	arī	m-p1094-p9s20w3
 devās	vmyist130an	doties	m-p1094-p9s20w4
 kalnos	ncmpl1	kalns	m-p1094-p9s20w5
@@ -6527,7 +6620,7 @@ zāles	ncfsg5	zāle	m-p1299-p1s1w6
 pamati	ncmpn1	pamats	m-p1299-p1s1w7
 ,	zc	,	m-p1299-p1s1w8
 bet	ccs	bet	m-p1299-p1s1w9
-tajos	pd3mpln	tas	m-p1299-p1s1w10
+tajos	pd0mpln	tas	m-p1299-p1s1w10
 –	zd	–	m-p1299-p1s1w11
 kapsula	ncfsn4	kapsula	m-p1299-p1s1w12
 ar	spsan	ar	m-p1299-p1s1w13
@@ -6542,7 +6635,7 @@ bukletu	ncmsa1	buklets	m-p1299-p1s1w21
 .	zs	.	m-p1299-p1s1w22
 </s>
 <s>
-To	pd3msan	tas	m-p1396-p1s1w1
+To	pd0msan	tas	m-p1396-p1s1w1
 vien	qs	vien	m-p1396-p1s1w2
 dzirdam	vmnipt31pan	dzirdēt	m-p1396-p1s1w3
 ,	zc	,	m-p1396-p1s1w4
@@ -6563,7 +6656,7 @@ izvēlējāties	vmyisi32pan	izvēlēties	m-p1396-p14s20w6
 un	ccs	un	m-p1396-p14s20w8
 cik	r0q	cik	m-p1396-p14s20w9
 jums	pp20pdn	jūs	m-p1396-p14s20w10
-to	pd3fpgn	tā	m-p1396-p14s20w11
+to	pd0fpgn	tā	m-p1396-p14s20w11
 ir	vmnipii30an	būt	m-p1396-p14s20w12
 ?	zs	?	m-p1396-p14s20w13
 </s>
@@ -6584,7 +6677,7 @@ dzīvoklī	ncmsl2	dzīvoklis	m-p1927-p1s1w12
 lai	css	lai	m-p1927-p1s1w14
 pārliecinātos	vmyc0i300an	pārliecināties	m-p1927-p1s1w15
 par	spsan	par	m-p1927-p1s1w16
-tā	pd3msgn	tas	m-p1927-p1s1w17
+tā	pd0msgn	tas	m-p1927-p1s1w17
 raksturu	ncmsa1	raksturs	m-p1927-p1s1w18
 un	ccs	un	m-p1927-p1s1w19
 īpatnībām	ncfpd4	īpatnība	m-p1927-p1s1w20
@@ -6683,7 +6776,7 @@ degvielu	ncfsa4	degviela	m-p1966-p1s1w17
 un	ccs	un	m-p1966-p1s1w19
 līdz	r0m	līdz	m-p1966-p1s1w20
 ar	spsan	ar	m-p1966-p1s1w21
-to	pd3msan	tas	m-p1966-p1s1w22
+to	pd0msan	tas	m-p1966-p1s1w22
 degvielai	ncfsd4	degviela	m-p1966-p1s1w23
 ar	spsan	ar	m-p1966-p1s1w24
 lielāku	afmsanc	liels	m-p1966-p1s1w25
@@ -6954,7 +7047,7 @@ hipotētiski	r0m	hipotētiski	m-p2790-p6s20w2
 bet	ccs	bet	m-p2790-p6s20w4
 pagājušajā	vmnpdmslasy	paiet	m-p2790-p6s20w5
 gadā	ncmsl1	gads	m-p2790-p6s20w6
-šī	pd3fsnn	šī	m-p2790-p6s20w7
+šī	pd0fsnn	šī	m-p2790-p6s20w7
 bija	vcnisii30an	būt	m-p2790-p6s20w8
 reāla	arfsnnp	reāla	m-p2790-p6s20w9
 situācija	ncfsn4	situācija	m-p2790-p6s20w10
@@ -7048,7 +7141,7 @@ var	vonipt330an	varēt	m-p2926-p1s1w4
 būt	vmnn0t1000n	būt	m-p2926-p1s1w5
 futbolā	ncmsl1	futbols	m-p2926-p1s1w6
 ,	zc	,	m-p2926-p1s1w7
-tas	pd3msnn	tas	m-p2926-p1s1w8
+tas	pd0msnn	tas	m-p2926-p1s1w8
 ir	vcnipii30an	būt	m-p2926-p1s1w9
 rezultāts	ncmsn1	rezultāts	m-p2926-p1s1w10
 uz	spsgy	uz	m-p2926-p1s1w11
@@ -7101,7 +7194,7 @@ citādākas	arfpnnc	citāda	m-p3297-p7s37w16
 <s>
 Kā	r0m	kā	m-p3297-p9s47w1
 nodrošināt	vmnn0t3000n	nodrošināt	m-p3297-p9s47w2
-to	pd3msan	tas	m-p3297-p9s47w3
+to	pd0msan	tas	m-p3297-p9s47w3
 ,	zc	,	m-p3297-p9s47w4
 ka	css	ka	m-p3297-p9s47w5
 otrajā	mosfslv	otrā	m-p3297-p9s47w6
@@ -7127,7 +7220,7 @@ kā	css	kā	m-p3297-p11s71w7
 mēnesis	ncmsn2	mēnesis	m-p3297-p11s71w8
 vai	ccs	vai	m-p3297-p11s71w9
 divi	mcsmpnv	divi	m-p3297-p11s71w10
-šajā	pd3msln	šis	m-p3297-p11s71w11
+šajā	pd0msln	šis	m-p3297-p11s71w11
 gadījumā	ncmsl1	gadījums	m-p3297-p11s71w12
 ir	vcnipii30an	būt	m-p3297-p11s71w13
 tikai	r0q	tikai	m-p3297-p11s71w14
@@ -7166,7 +7259,7 @@ ka	css	ka	m-p3297-p13s102w10
 tieši	qs	tieši	m-p3297-p13s102w11
 sievietes	ncfpn5	sieviete	m-p3297-p13s102w12
 ir	vcnipii30an	būt	m-p3297-p13s102w13
-tās	pd3fpnn	tā	m-p3297-p13s102w14
+tās	pd0fpnn	tā	m-p3297-p13s102w14
 ,	zc	,	m-p3297-p13s102w15
 kas	pr000nn	kas	m-p3297-p13s102w16
 aiziet	vmnipii30an	aiziet	m-p3297-p13s102w17
@@ -7230,7 +7323,7 @@ laulībā	ncfsl4	laulība	m-p3297-p18s147w7
 <s>
 Viņam	pp3msdn	viņš	m-p3297-p22s169w1
 nav	vcnipii30ay	nebūt	m-p3297-p22s169w2
-tie	pd3mpnn	tas	m-p3297-p22s169w3
+tie	pd0mpnn	tas	m-p3297-p22s169w3
 bērni	ncmpn1	bērns	m-p3297-p22s169w4
 jāmīl	vmnd0t300an	mīlēt	m-p3297-p22s169w5
 .	zs	.	m-p3297-p22s169w6
@@ -7323,7 +7416,7 @@ nav	vcnipii30ay	nebūt	m-p3297-p26s215w7
 tikušas	vtnpdfpnasn	tikt	m-p3297-p26s215w8
 ātrā	xt	ātrā	m-p3297-p26s215w9
 no	spsgy	no	m-p3297-p26s215w10
-šīs	pd3fsgn	šī	m-p3297-p26s215w11
+šīs	pd0fsgn	šī	m-p3297-p26s215w11
 pusaudžu	ncmpg2	pusaudzis	m-p3297-p26s215w12
 ticības	ncfsg4	ticība	m-p3297-p26s215w13
 ,	zc	,	m-p3297-p26s215w14
@@ -7347,7 +7440,7 @@ var	vonipt330an	varēt	m-p3297-p27s219w3
 atšķirt	vmnn0t1000n	atšķirt	m-p3297-p27s219w4
 konfliktu	ncmsa1	konflikts	m-p3297-p27s219w5
 no	spsgy	no	m-p3297-p27s219w6
-tā	pd3msgn	tas	m-p3297-p27s219w7
+tā	pd0msgn	tas	m-p3297-p27s219w7
 ,	zc	,	m-p3297-p27s219w8
 ka	css	ka	m-p3297-p27s219w9
 tu	pp20snn	tu	m-p3297-p27s219w10
@@ -7356,7 +7449,7 @@ attiecībās	ncfdl4	attiecības	m-p3297-p27s219w11
 </s>
 <s>
 Reizēm	r0q	reizēm	m-p3297-p28s249w1
-tās	pd3fpnn	tā	m-p3297-p28s249w2
+tās	pd0fpnn	tā	m-p3297-p28s249w2
 rodas	vmyipi130an	rasties	m-p3297-p28s249w3
 arī	qs	arī	m-p3297-p28s249w4
 ļoti	r0q	ļoti	m-p3297-p28s249w5
@@ -7454,7 +7547,7 @@ sāk	vpnipt130an	sākt	m-SofijasPasaule1996_11-18_EedenesDaarzs-p7s1w7
 briest	vmnn0i1000n	briest	m-SofijasPasaule1996_11-18_EedenesDaarzs-p7s1w8
 un	ccs	un	m-SofijasPasaule1996_11-18_EedenesDaarzs-p7s1w9
 augt	vmnn0i1000n	augt	m-SofijasPasaule1996_11-18_EedenesDaarzs-p7s1w10
-šajā	pd3msln	šis	m-SofijasPasaule1996_11-18_EedenesDaarzs-p7s1w11
+šajā	pd0msln	šis	m-SofijasPasaule1996_11-18_EedenesDaarzs-p7s1w11
 gadalaikā	ncmsl1	gadalaiks	m-SofijasPasaule1996_11-18_EedenesDaarzs-p7s1w12
 ?	zs	?	m-SofijasPasaule1996_11-18_EedenesDaarzs-p7s1w13
 </s>
@@ -7470,7 +7563,7 @@ ne	ccr	ne	m-SofijasPasaule1996_11-18_EedenesDaarzs-p14s2w8
 paraksta	ncmsg1	paraksts	m-SofijasPasaule1996_11-18_EedenesDaarzs-p14s2w9
 ,	zc	,	m-SofijasPasaule1996_11-18_EedenesDaarzs-p14s2w10
 tikai	qs	tikai	m-SofijasPasaule1996_11-18_EedenesDaarzs-p14s2w11
-šie	pd3mpnn	šis	m-SofijasPasaule1996_11-18_EedenesDaarzs-p14s2w12
+šie	pd0mpnn	šis	m-SofijasPasaule1996_11-18_EedenesDaarzs-p14s2w12
 trīs	mcsfpnv	trīs	m-SofijasPasaule1996_11-18_EedenesDaarzs-p14s2w13
 ar	spsan	ar	m-SofijasPasaule1996_11-18_EedenesDaarzs-p14s2w14
 roku	ncfsa4	roka	m-SofijasPasaule1996_11-18_EedenesDaarzs-p14s2w15
@@ -7485,7 +7578,7 @@ zīme	ncfsn5	zīme	m-SofijasPasaule1996_11-18_EedenesDaarzs-p14s2w22
 </s>
 <s>
 Pēc	sppdy	pēc	m-SofijasPasaule1996_11-18_EedenesDaarzs-p18s4w1
-tam	pd3msdn	tas	m-SofijasPasaule1996_11-18_EedenesDaarzs-p18s4w2
+tam	pd0msdn	tas	m-SofijasPasaule1996_11-18_EedenesDaarzs-p18s4w2
 viņa	pp3fsnn	viņa	m-SofijasPasaule1996_11-18_EedenesDaarzs-p18s4w3
 savā	ps0msln	savs	m-SofijasPasaule1996_11-18_EedenesDaarzs-p18s4w4
 īpašumā	ncmsl1	īpašums	m-SofijasPasaule1996_11-18_EedenesDaarzs-p18s4w5
@@ -7551,7 +7644,7 @@ matu	ncmpg1	mats	m-SofijasPasaule1996_11-18_EedenesDaarzs-p33s6w8
 <s>
 Arī	qs	arī	m-SofijasPasaule1996_11-18_EedenesDaarzs-p48s2w1
 par	spsan	par	m-SofijasPasaule1996_11-18_EedenesDaarzs-p48s2w2
-šo	pd3msan	šis	m-SofijasPasaule1996_11-18_EedenesDaarzs-p48s2w3
+šo	pd0msan	šis	m-SofijasPasaule1996_11-18_EedenesDaarzs-p48s2w3
 jautājumu	ncmsa1	jautājums	m-SofijasPasaule1996_11-18_EedenesDaarzs-p48s2w4
 kaķim	ncmsd2	kaķis	m-SofijasPasaule1996_11-18_EedenesDaarzs-p48s2w5
 nebija	vgnisii30ay	nebūt	m-SofijasPasaule1996_11-18_EedenesDaarzs-p48s2w6
@@ -7582,7 +7675,7 @@ Bet	ccs	bet	m-SofijasPasaule1996_11-18_EedenesDaarzs-p50s3w1
 bija	vcnisii30an	būt	m-SofijasPasaule1996_11-18_EedenesDaarzs-p50s3w2
 gandrīz	r0q	gandrīz	m-SofijasPasaule1996_11-18_EedenesDaarzs-p50s3w3
 neiespējami	r0m	neiespējami	m-SofijasPasaule1996_11-18_EedenesDaarzs-p50s3w4
-to	pd3msan	tas	m-SofijasPasaule1996_11-18_EedenesDaarzs-p50s3w5
+to	pd0msan	tas	m-SofijasPasaule1996_11-18_EedenesDaarzs-p50s3w5
 izdarīt	vmnn0t3000n	izdarīt	m-SofijasPasaule1996_11-18_EedenesDaarzs-p50s3w6
 .	zs	.	m-SofijasPasaule1996_11-18_EedenesDaarzs-p50s3w7
 </s>
@@ -7602,7 +7695,7 @@ stāvoklī	ncmsl2	stāvoklis	m-SofijasPasaule1996_11-18_EedenesDaarzs-p50s5w11
 ka	css	ka	m-SofijasPasaule1996_11-18_EedenesDaarzs-p50s5w13
 kādu	pi0fsan	kāda	m-SofijasPasaule1996_11-18_EedenesDaarzs-p50s5w14
 dienu	ncfsa4	diena	m-SofijasPasaule1996_11-18_EedenesDaarzs-p50s5w15
-viņas	pd3fsgn	viņa	m-SofijasPasaule1996_11-18_EedenesDaarzs-p50s5w16
+viņas	pp3fsgn	viņa	m-SofijasPasaule1996_11-18_EedenesDaarzs-p50s5w16
 vairs	r0t	vairs	m-SofijasPasaule1996_11-18_EedenesDaarzs-p50s5w17
 nemaz	r0q	nemaz	m-SofijasPasaule1996_11-18_EedenesDaarzs-p50s5w18
 nebūs	vgnifii30ay	nebūt	m-SofijasPasaule1996_11-18_EedenesDaarzs-p50s5w19
@@ -7622,7 +7715,7 @@ dzīvība	ncfsn4	dzīvība	m-SofijasPasaule1996_11-18_EedenesDaarzs-p50s5w32
 .	zs	.	m-SofijasPasaule1996_11-18_EedenesDaarzs-p50s5w33
 </s>
 <s>
-To	pd3msan	tas	m-SofijasPasaule1996_11-18_EedenesDaarzs-p57s3w1
+To	pd0msan	tas	m-SofijasPasaule1996_11-18_EedenesDaarzs-p57s3w1
 taču	qs	taču	m-SofijasPasaule1996_11-18_EedenesDaarzs-p57s3w2
 īsti	r0c	īsti	m-SofijasPasaule1996_11-18_EedenesDaarzs-p57s3w3
 nezina	vmnipt330ay	nezināt	m-SofijasPasaule1996_11-18_EedenesDaarzs-p57s3w4
@@ -7671,8 +7764,8 @@ ar	spsan	ar	m-SofijasPasaule1996_11-18_EedenesDaarzs-p71s1w16
 slēdzienu	ncmsa1	slēdziens	m-SofijasPasaule1996_11-18_EedenesDaarzs-p71s1w17
 ,	zc	,	m-SofijasPasaule1996_11-18_EedenesDaarzs-p71s1w18
 ka	css	ka	m-SofijasPasaule1996_11-18_EedenesDaarzs-p71s1w19
-tas	pd3msnn	tas	m-SofijasPasaule1996_11-18_EedenesDaarzs-p71s1w20
-šai	pd3fsdn	šī	m-SofijasPasaule1996_11-18_EedenesDaarzs-p71s1w21
+tas	pd0msnn	tas	m-SofijasPasaule1996_11-18_EedenesDaarzs-p71s1w20
+šai	pd0fsdn	šī	m-SofijasPasaule1996_11-18_EedenesDaarzs-p71s1w21
 problēmai	ncfsd4	problēma	m-SofijasPasaule1996_11-18_EedenesDaarzs-p71s1w22
 tomēr	qs	tomēr	m-SofijasPasaule1996_11-18_EedenesDaarzs-p71s1w23
 bija	vcnisii30an	būt	m-SofijasPasaule1996_11-18_EedenesDaarzs-p71s1w24
@@ -7701,7 +7794,7 @@ reizi	ncfsa5	reize	m-SofijasPasaule1996_11-18_EedenesDaarzs-p78s1w8
 </s>
 <s>
 Uz	spsgy	uz	m-SofijasPasaule1996_11-18_EedenesDaarzs-p79s5w1
-tās	pd3fsgn	tā	m-SofijasPasaule1996_11-18_EedenesDaarzs-p79s5w2
+tās	pd0fsgn	tā	m-SofijasPasaule1996_11-18_EedenesDaarzs-p79s5w2
 bija	vmnisii30an	būt	m-SofijasPasaule1996_11-18_EedenesDaarzs-p79s5w3
 norvēģu	ncmpg2	norvēģis	m-SofijasPasaule1996_11-18_EedenesDaarzs-p79s5w4
 pastmarkas	ncfpn4	pastmarka	m-SofijasPasaule1996_11-18_EedenesDaarzs-p79s5w5
@@ -7753,7 +7846,7 @@ kad	r0t	kad	m-SofijasPasaule1996_11-18_EedenesDaarzs-p88s1w15
 skaidrāk	rcm	skaidri	m-SofijasPasaule1996_11-18_EedenesDaarzs-p88s1w16
 par	spsan	par	m-SofijasPasaule1996_11-18_EedenesDaarzs-p88s1w17
 skaidru	afmsanp	skaidrs	m-SofijasPasaule1996_11-18_EedenesDaarzs-p88s1w18
-to	pd3fsan	tā	m-SofijasPasaule1996_11-18_EedenesDaarzs-p88s1w19
+to	pd0fsan	tā	m-SofijasPasaule1996_11-18_EedenesDaarzs-p88s1w19
 vajadzēja	vmnist330an	vajadzēt	m-SofijasPasaule1996_11-18_EedenesDaarzs-p88s1w20
 sūtīt	vmnn0t3000n	sūtīt	m-SofijasPasaule1996_11-18_EedenesDaarzs-p88s1w21
 uz	spsay	uz	m-SofijasPasaule1996_11-18_EedenesDaarzs-p88s1w22
@@ -7766,7 +7859,7 @@ Interesanti	rpm	interesanti	m-SofijasPasaule1996_11-18_EedenesDaarzs-p88s3w1
 ,	zc	,	m-SofijasPasaule1996_11-18_EedenesDaarzs-p88s3w2
 kādā	pr0msln	kāds	m-SofijasPasaule1996_11-18_EedenesDaarzs-p88s3w3
 veidā	ncmsl1	veids	m-SofijasPasaule1996_11-18_EedenesDaarzs-p88s3w4
-tas	pd3msnn	tas	m-SofijasPasaule1996_11-18_EedenesDaarzs-p88s3w5
+tas	pd0msnn	tas	m-SofijasPasaule1996_11-18_EedenesDaarzs-p88s3w5
 varēja	vonist330an	varēt	m-SofijasPasaule1996_11-18_EedenesDaarzs-p88s3w6
 «	zq	«	m-SofijasPasaule1996_11-18_EedenesDaarzs-p88s3w7
 būt	vmnn0ii000n	būt	m-SofijasPasaule1996_11-18_EedenesDaarzs-p88s3w8
@@ -7838,7 +7931,7 @@ saspraudi	ncfsa5	saspraude	m-SofijasPasaule1996_19-29_Cilindrs-p29s1w12
 <s>
 Ja	css	ja	m-SofijasPasaule1996_19-29_Cilindrs-p35s2w1
 mēs	pp10pnn	mēs	m-SofijasPasaule1996_19-29_Cilindrs-p35s2w2
-to	pd3msan	tas	m-SofijasPasaule1996_19-29_Cilindrs-p35s2w3
+to	pd0msan	tas	m-SofijasPasaule1996_19-29_Cilindrs-p35s2w3
 vaicāsim	vmnift21pan	vaicāt	m-SofijasPasaule1996_19-29_Cilindrs-p35s2w4
 kādam	pi0msdn	kāds	m-SofijasPasaule1996_19-29_Cilindrs-p35s2w5
 ,	zc	,	m-SofijasPasaule1996_19-29_Cilindrs-p35s2w6
@@ -7858,7 +7951,7 @@ pārtika	ncfsn4	pārtika	m-SofijasPasaule1996_19-29_Cilindrs-p35s2w16
 Bet	ccs	bet	m-SofijasPasaule1996_19-29_Cilindrs-p36s6w1
 bez	spsgn	bez	m-SofijasPasaule1996_19-29_Cilindrs-p36s6w2
 visa	pg0msgn	viss	m-SofijasPasaule1996_19-29_Cilindrs-p36s6w3
-tā	pd3msgn	tas	m-SofijasPasaule1996_19-29_Cilindrs-p36s6w4
+tā	pd0msgn	tas	m-SofijasPasaule1996_19-29_Cilindrs-p36s6w4
 cilvēkiem	ncmpd1	cilvēks	m-SofijasPasaule1996_19-29_Cilindrs-p36s6w5
 ir	vcnipii30an	būt	m-SofijasPasaule1996_19-29_Cilindrs-p36s6w6
 vajadzīgs	afmsnnp	vajadzīgs	m-SofijasPasaule1996_19-29_Cilindrs-p36s6w7
@@ -7927,7 +8020,7 @@ mēs	pp10pnn	mēs	m-SofijasPasaule1996_19-29_Cilindrs-p54s3w2
 jautājam	vmnipt21pan	jautāt	m-SofijasPasaule1996_19-29_Cilindrs-p54s3w3
 tieši	r0c	tieši	m-SofijasPasaule1996_19-29_Cilindrs-p54s3w4
 par	spsan	par	m-SofijasPasaule1996_19-29_Cilindrs-p54s3w5
-to	pd3msan	tas	m-SofijasPasaule1996_19-29_Cilindrs-p54s3w6
+to	pd0msan	tas	m-SofijasPasaule1996_19-29_Cilindrs-p54s3w6
 :	zo	:	m-SofijasPasaule1996_19-29_Cilindrs-p54s3w7
 kā	r0m	kā	m-SofijasPasaule1996_19-29_Cilindrs-p54s3w8
 brīnumdaris	ncmsn2	brīnumdaris	m-SofijasPasaule1996_19-29_Cilindrs-p54s3w9
@@ -7985,7 +8078,7 @@ aploksni	ncfsa5	aploksne	m-SofijasPasaule1996_19-29_Cilindrs-p70s1w7
 un	ccs	un	m-SofijasPasaule1996_19-29_Cilindrs-p70s1w8
 izņēma	vmnist130an	izņemt	m-SofijasPasaule1996_19-29_Cilindrs-p70s1w9
 no	spsgy	no	m-SofijasPasaule1996_19-29_Cilindrs-p70s1w10
-tās	pd3fsgn	tā	m-SofijasPasaule1996_19-29_Cilindrs-p70s1w11
+tās	pd0fsgn	tā	m-SofijasPasaule1996_19-29_Cilindrs-p70s1w11
 vairākas	pi0fpan	vairākas	m-SofijasPasaule1996_19-29_Cilindrs-p70s1w12
 ar	spsan	ar	m-SofijasPasaule1996_19-29_Cilindrs-p70s1w13
 mašīnu	ncfsa4	mašīna	m-SofijasPasaule1996_19-29_Cilindrs-p70s1w14
@@ -8016,7 +8109,7 @@ gadījumā	ncmsl1	gadījums	m-SofijasPasaule1996_19-29_Cilindrs-p81s1w5
 Varbūt	qs	varbūt	m-SofijasPasaule1996_19-29_Cilindrs-p82s5w1
 ,	zc	,	m-SofijasPasaule1996_19-29_Cilindrs-p82s5w2
 ka	css	ka	m-SofijasPasaule1996_19-29_Cilindrs-p82s5w3
-tas	pd3msnn	tas	m-SofijasPasaule1996_19-29_Cilindrs-p82s5w4
+tas	pd0msnn	tas	m-SofijasPasaule1996_19-29_Cilindrs-p82s5w4
 notiek	vmnipi130an	notikt	m-SofijasPasaule1996_19-29_Cilindrs-p82s5w5
 tieši	r0c	tieši	m-SofijasPasaule1996_19-29_Cilindrs-p82s5w6
 pastaigas	ncfsg4	pastaiga	m-SofijasPasaule1996_19-29_Cilindrs-p82s5w7
@@ -8109,21 +8202,21 @@ moris	ncmsn2	moris	m-SofijasPasaule1996_19-29_Cilindrs-p89s3w34
 <s>
 (	zb	(	m-SofijasPasaule1996_19-29_Cilindrs-p93s2w1
 Ievēro	vmnm0t22san	ievērot	m-SofijasPasaule1996_19-29_Cilindrs-p93s2w2
-to	pd3msan	tas	m-SofijasPasaule1996_19-29_Cilindrs-p93s2w3
+to	pd0msan	tas	m-SofijasPasaule1996_19-29_Cilindrs-p93s2w3
 labi	rpm	labi	m-SofijasPasaule1996_19-29_Cilindrs-p93s2w4
 !	zs	!	m-SofijasPasaule1996_19-29_Cilindrs-p93s2w5
 )	zb	)	m-SofijasPasaule1996_19-29_Cilindrs-p93s2w6
 </s>
 <s>
 Tomass	npmsn1	Tomass	m-SofijasPasaule1996_19-29_Cilindrs-p93s4w1
-to	pd3msan	tas	m-SofijasPasaule1996_19-29_Cilindrs-p93s4w2
+to	pd0msan	tas	m-SofijasPasaule1996_19-29_Cilindrs-p93s4w2
 nav	vcnipii30ay	nebūt	m-SofijasPasaule1996_19-29_Cilindrs-p93s4w3
 apguvis	vmnpdmsnasn	apgūt	m-SofijasPasaule1996_19-29_Cilindrs-p93s4w4
 .	zs	.	m-SofijasPasaule1996_19-29_Cilindrs-p93s4w5
 </s>
 <s>
 Arī	qs	arī	m-SofijasPasaule1996_19-29_Cilindrs-p94s3w1
-tā	pd3fsnn	tā	m-SofijasPasaule1996_19-29_Cilindrs-p94s3w2
+tā	pd0fsnn	tā	m-SofijasPasaule1996_19-29_Cilindrs-p94s3w2
 brīvi	r0c	brīvi	m-SofijasPasaule1996_19-29_Cilindrs-p94s3w3
 lidinās	vmyipi330an	lidināties	m-SofijasPasaule1996_19-29_Cilindrs-p94s3w4
 !	zs	!	m-SofijasPasaule1996_19-29_Cilindrs-p94s3w5
@@ -8131,7 +8224,7 @@ lidinās	vmyipi330an	lidināties	m-SofijasPasaule1996_19-29_Cilindrs-p94s3w4
 <s>
 Visādā	arfslnp	visāda	m-SofijasPasaule1996_19-29_Cilindrs-p102s6w1
 ziņā	ncfsl4	ziņa	m-SofijasPasaule1996_19-29_Cilindrs-p102s6w2
-tam	pd3msdn	tas	m-SofijasPasaule1996_19-29_Cilindrs-p102s6w3
+tam	pd0msdn	tas	m-SofijasPasaule1996_19-29_Cilindrs-p102s6w3
 ir	vcnipii30an	būt	m-SofijasPasaule1996_19-29_Cilindrs-p102s6w4
 jābūt	vcnd0ii00an	būt	m-SofijasPasaule1996_19-29_Cilindrs-p102s6w5
 kaut	qs	kaut	m-SofijasPasaule1996_19-29_Cilindrs-p102s6w6
@@ -8350,7 +8443,7 @@ nebija	vgnisii30ay	nebūt	m-Teikumi_001-297-p199s1w2
 lielāku	afmpgnc	liels	m-Teikumi_001-297-p199s1w3
 svētku	ncmdg1	svētki	m-Teikumi_001-297-p199s1w4
 par	sppdn	par	m-Teikumi_001-297-p199s1w5
-šiem	pd3mpdn	šis	m-Teikumi_001-297-p199s1w6
+šiem	pd0mpdn	šis	m-Teikumi_001-297-p199s1w6
 pavasara	ncmsg2	pavasaris	m-Teikumi_001-297-p199s1w7
 piknikiem	ncmpd1	pikniks	m-Teikumi_001-297-p199s1w8
 .	zs	.	m-Teikumi_001-297-p199s1w9
@@ -8383,7 +8476,7 @@ vienlaikus	r0t	vienlaikus	m-Teikumi_001-297-p213s1w8
 </s>
 <s>
 Pa	spsay	pa	m-Teikumi_001-297-p215s1w1
-šo	pd3fsan	šī	m-Teikumi_001-297-p215s1w2
+šo	pd0fsan	šī	m-Teikumi_001-297-p215s1w2
 garlaicīgo	affsayp	garlaicīga	m-Teikumi_001-297-p215s1w3
 zemes	ncfsg5	zeme	m-Teikumi_001-297-p215s1w4
 šļuru	ncfsa4	šļuru	m-Teikumi_001-297-p215s1w5
@@ -8482,7 +8575,7 @@ un	ccs	un	m-VakaraZinjas_20121012-p1s1w22
 atraktīva	affsnnp	atraktīva	m-VakaraZinjas_20121012-p1s1w23
 ,	zc	,	m-VakaraZinjas_20121012-p1s1w24
 taču	ccs	taču	m-VakaraZinjas_20121012-p1s1w25
-tajā	pd3msln	tas	m-VakaraZinjas_20121012-p1s1w26
+tajā	pd0msln	tas	m-VakaraZinjas_20121012-p1s1w26
 pašā	pg0msln	pats	m-VakaraZinjas_20121012-p1s1w27
 laikā	ncmsl1	laiks	m-VakaraZinjas_20121012-p1s1w28
 arī	qs	arī	m-VakaraZinjas_20121012-p1s1w29
@@ -8533,7 +8626,7 @@ barības	ncfsg4	barība	m-z25-p10s20w36
 līdzekļiem	ncmpd2	līdzeklis	m-z25-p10s20w37
 ,	zc	,	m-z25-p10s20w38
 raksturojot	vmnpu000000	raksturot	m-z25-p10s20w39
-to	pd3mpgn	tas	m-z25-p10s20w40
+to	pd0mpgn	tas	m-z25-p10s20w40
 ķīmisko	armsayp	ķīmisks	m-z25-p10s20w41
 sastāvu	ncmsa1	sastāvs	m-z25-p10s20w42
 un	ccs	un	m-z25-p10s20w43
@@ -8599,7 +8692,7 @@ Kaugers	npmsn1	Kaugers	m-z25-p10s20w110
 </s>
 <s>
 Aktīvi	rpm	aktīvi	m-z25-p16s37w1
-šajos	pd3mpln	šis	m-z25-p16s37w2
+šajos	pd0mpln	šis	m-z25-p16s37w2
 pasākumos	ncmpl1	pasākums	m-z25-p16s37w3
 iesaistījās	vmyist330an	iesaistīties	m-z25-p16s37w4
 zinātniskās	arfsgyp	zinātniska	m-z25-p16s37w5
@@ -8695,7 +8788,7 @@ mikrofloras	ncfsg4	mikroflora	m-z25-p34s63w7
 mijiedarbības	ncfsg4	mijiedarbība	m-z25-p34s63w8
 noskaidrošana	ncfsn4	noskaidrošana	m-z25-p34s63w9
 ar	sppdn	ar	m-z25-p34s63w10
-šīs	pd3fsgn	šī	m-z25-p34s63w11
+šīs	pd0fsgn	šī	m-z25-p34s63w11
 masas	ncfsg4	masa	m-z25-p34s63w12
 skābējamības	ncfsg4	skābējamība	m-z25-p34s63w13
 rādītājiem	ncmpd1	rādītājs	m-z25-p34s63w14
@@ -8800,7 +8893,7 @@ apakšstaciju	ncfpg4	apakšstacija	m-z29-p34s37w23
 optimālo	armsayp	optimāls	m-z29-p34s37w24
 izvietojumu	ncmsa1	izvietojums	m-z29-p34s37w25
 ,	zc	,	m-z29-p34s37w26
-to	pd3mpgn	tas	m-z29-p34s37w27
+to	pd0mpgn	tas	m-z29-p34s37w27
 jaudas	ncfsg4	jauda	m-z29-p34s37w28
 un	ccs	un	m-z29-p34s37w29
 elektroapgādes	ncfsg5	elektroapgāde	m-z29-p34s37w30
@@ -8824,7 +8917,7 @@ noslodzi	ncfsa5	noslodze	m-z29-p35s37w48
 .	zs	.	m-z29-p35s37w49
 </s>
 <s>
-Šajā	pd3msln	šis	m-z29-p39s47w1
+Šajā	pd0msln	šis	m-z29-p39s47w1
 gadījumā	ncmsl1	gadījums	m-z29-p39s47w2
 multikriteriālā	arfsnyp	multikriteriāla	m-z29-p39s47w3
 analīze	ncfsn5	analīze	m-z29-p39s47w4
@@ -8924,7 +9017,7 @@ demogrāfiskie	armpnyp	demogrāfisks	m-z46-p7s2w6
 faktori	ncmpn1	faktors	m-z46-p7s2w7
 ,	zc	,	m-z46-p7s2w8
 dažkārt	r0t	dažkārt	m-z46-p7s2w9
-tos	pd3mpan	tas	m-z46-p7s2w10
+tos	pd0mpan	tas	m-z46-p7s2w10
 pat	qs	pat	m-z46-p7s2w11
 sašaurinot	vmnpu000000	sašaurināt	m-z46-p7s2w12
 līdz	spsdy	līdz	m-z46-p7s2w13
@@ -8944,7 +9037,7 @@ ir	vcnipii30an	būt	m-z46-p9s3w5
 nenoliedzama	vmnpdfsnppn	nenoliegt	m-z46-p9s3w6
 ,	zc	,	m-z46-p9s3w7
 un	ccs	un	m-z46-p9s3w8
-tas	pd3msnn	tas	m-z46-p9s3w9
+tas	pd0msnn	tas	m-z46-p9s3w9
 varētu	vonc0t300an	varēt	m-z46-p9s3w10
 būt	vcnn0ii000n	būt	m-z46-p9s3w11
 bijis	vcnpdmsnasn	būt	m-z46-p9s3w12
@@ -8963,7 +9056,7 @@ ekonometrisko	armsayp	ekonometrisks	m-z46-p9s3w24
 modeli	ncmsa2	modelis	m-z46-p9s3w25
 un	ccs	un	m-z46-p9s3w26
 aplūkot	vmnn0t2000n	aplūkot	m-z46-p9s3w27
-to	pd3msan	tas	m-z46-p9s3w28
+to	pd0msan	tas	m-z46-p9s3w28
 kā	css	kā	m-z46-p9s3w29
 funkciju	ncfsa4	funkcija	m-z46-p9s3w30
 no	spsgy	no	m-z46-p9s3w31
@@ -9010,13 +9103,13 @@ izglītībai	ncfsd4	izglītība	m-z46-p12s1w25
 .	zs	.	m-z46-p12s1w26
 </s>
 <s>
-Tas	pd3msnn	tas	m-z46-p15s4w1
+Tas	pd0msnn	tas	m-z46-p15s4w1
 noved	vmnipt130an	novest	m-z46-p15s4w2
 pie	spsgy	pie	m-z46-p15s4w3
-tā	pd3msgn	tas	m-z46-p15s4w4
+tā	pd0msgn	tas	m-z46-p15s4w4
 ,	zc	,	m-z46-p15s4w5
 ka	css	ka	m-z46-p15s4w6
-šajās	pd3fpln	šī	m-z46-p15s4w7
+šajās	pd0fpln	šī	m-z46-p15s4w7
 teritorijās	ncfpl4	teritorija	m-z46-p15s4w8
 ir	vcnipii30an	būt	m-z46-p15s4w9
 mazāka	affsnnc	maza	m-z46-p15s4w10
