@@ -22,6 +22,7 @@ import java.util.LinkedList;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import lv.semti.morphology.analyzer.*;
+import lv.semti.morphology.attributes.AttributeNames;
 
 public class TokenizeTest {
 	private static Analyzer locītājs;
@@ -525,18 +526,24 @@ public class TokenizeTest {
 		
 		sentences = Splitting.tokenizeSentences(locītājs, "Nosaukums: SIA \"Evopipes\"Nozares: cauruļu ražošanaAdrese: Langervaldes iela 2A, Jelgava, LV-3002, Latvija             Telefons: 63094300Internets: http://www.evopipes.lv <h1>Uzņēmuma apraksts</h1>2005.gadā tika dibināts uzņēmums SIA \"Modulex - Invest Jelgava\" ar  mērķi attīstīt cauruļu ražotnes projektu Latvijā, Jelgavā. 2008.gada  beigās uzņēmums tika pārdēvēts par SIA \"Evopipes\" ar mērķi zīmolu virzīt  starptautiskā tirgū. Uzņēmums sērijveidā ražo produkciju elektroinstalācijām,  elektrokabeļu aizsardzībai, telekomunikācijas kabeļu aizsardzībai,  aukstā ūdens apgādes sistēmu izveidošanai, apkures sistēmu izveidošanai,  gāzes apgādei, ēku kanalizācijai, sadzīves notekūdeņu kanalizācijai,  lietus notekūdeņu kanalizācijai, laukumu un ēku pamatu drenāžai.&nbsp;<h1>Finanšu rādītāji</h1><table border=\"0\"><tbody><tr><td> </td><td>2011 <br /></td><td>2010 <br /></td><td> </td><td> </td><td> </td></tr><tr><td> Apgrozījums (tūkst. Ls)<br /></td><td>9 370.000<br /></td><td>5 900.000<br /></td><td> </td><td> </td><td> </td></tr><tr><td>Peļņa/zaudējumi (tūkst. Ls) <br /></td><td> 532.468</td><td>- 1 300.000<br /></td><td> </td><td> </td><td> </td></tr></tbody></table><br /><br />");
 		assertEquals(10, sentences.size());
-		for (LinkedList<Word> sentence : sentences)
-			System.out.println(sentence.size());
 	}
 
 	@Test
 	public void nonbreakingspace() {
-		LinkedList<Word> tokens;
-		
-		System.out.println("a b\u00A0c");
+		LinkedList<Word> tokens;		
 		tokens = Splitting.tokenize(locītājs, "a b\u00A0c", false);
-		System.out.println(tokens.get(1).getToken());
 		assertEquals(2, tokens.size());
+	}
+	
+	@Test
+	public void year_numerals() {
+		LinkedList<Word> tokens;		
+		tokens = Splitting.tokenize(locītājs, "1995.gads", false);
+		assertEquals(2, tokens.size());
+		assertTrue(tokens.get(0).isRecognized());	
+		assertEquals(1, tokens.get(0).wordformsCount());
+		assertEquals(AttributeNames.v_Ordinal, tokens.get(0).wordforms.get(0).getValue(AttributeNames.i_ResidualType)); // ordinal number
+		assertEquals("xo", tokens.get(0).wordforms.get(0).getTag());
 	}
 }
  

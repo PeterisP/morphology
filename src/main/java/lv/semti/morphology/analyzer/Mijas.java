@@ -302,6 +302,10 @@ public abstract class Mijas {
 					
 					break;
 				*/
+				case 22: // jaundzimušais -> jaundzimusī
+					if (celms.endsWith("us")) 
+						varianti.add(new Variants(celms.substring(0,celms.length()-2)+"uš"));
+					break;
 				default:
 					System.err.printf("Invalid StemChange ID, stem '%s', stemchange %d\n", celms, mija);
 			}
@@ -596,6 +600,10 @@ public abstract class Mijas {
 					else if (celms.endsWith("ī") || celms.endsWith("inā"))
 						varianti.add(new Variants(celms.substring(0,celms.length()-1), "Garā", "ā"));
 					else varianti.add(new Variants(celms.substring(0,celms.length()-1)));
+					break;				
+				case 22: // jaundzimušais -> jaundzimusī
+					if (celms.endsWith("uš")) 
+						varianti.add(new Variants(celms.substring(0,celms.length()-2)+"us"));
 					break;
 				default:
 					System.err.printf("Invalid StemChange ID, stem '%s', stemchange %d\n", celms, mija);

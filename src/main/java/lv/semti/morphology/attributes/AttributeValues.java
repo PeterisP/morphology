@@ -230,7 +230,7 @@ public class AttributeValues implements FeatureStructure, Cloneable {
 	 */
 	public void removeNonlexicalAttributes() {
 		removeAttribute(AttributeNames.i_Transitivity);
-		removeAttribute(AttributeNames.i_VerbType);
+		//removeAttribute(AttributeNames.i_VerbType);
 		removeAttribute(AttributeNames.i_NounType);
 		removeAttribute(AttributeNames.i_Declension);
 		removeAttribute(AttributeNames.i_Konjugaacija);
@@ -241,14 +241,14 @@ public class AttributeValues implements FeatureStructure, Cloneable {
 		removeAttribute(AttributeNames.i_AdjectiveType);		
 		removeAttribute(AttributeNames.i_Uzbuuve);
 		removeAttribute(AttributeNames.i_Order);
-		removeAttribute(AttributeNames.i_VvTips);
+		//removeAttribute(AttributeNames.i_VvTips);
 		removeAttribute(AttributeNames.i_Noliegums);
 		removeAttribute(AttributeNames.i_VietasApstNoziime);
 		
 		if (isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Preposition)) {			
 			removeAttribute(AttributeNames.i_Novietojums);
-			removeAttribute(AttributeNames.i_Rekcija);  // FIXME - may be needed
-			removeAttribute(AttributeNames.i_Number);   // FIXME - may be needed
+			//removeAttribute(AttributeNames.i_Rekcija);  // FIXME - may be needed
+			//removeAttribute(AttributeNames.i_Number);   // FIXME - may be needed
 		}
 		
 		//par šiem jādomā

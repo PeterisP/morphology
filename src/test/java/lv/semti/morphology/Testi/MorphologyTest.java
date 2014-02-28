@@ -509,7 +509,7 @@ public class MorphologyTest {
 		// pie 'viņi' un 'viņiem' atrod vārdu ar pamatformu 'Vilis'
 		Word viņi = locītājs.analyze("viņi");
 		assertTrue(viņi.isRecognized());		
-		assertEquals(2, viņi.wordformsCount());
+		assertEquals(1, viņi.wordformsCount());
 	}
 	
 	@Test
@@ -1959,5 +1959,59 @@ public class MorphologyTest {
 		formas = locītājs.generateInflections("Pavļuta-Deslandes", true);
 		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "Pavļutas-Deslandes");
 		
+	}
+	
+	@Test
+	public void jaundzimushais() {
+		Word w = locītājs.analyze("jaundzimušajam");
+		assertTrue(w.isRecognized());
+		assertEquals(AttributeNames.v_Adjective, w.wordforms.get(0).getValue(AttributeNames.i_PartOfSpeech));
+		assertEquals("jaundzimušais", w.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+		assertEquals(AttributeNames.v_Definite, w.wordforms.get(0).getValue(AttributeNames.i_Definiteness));
+
+		w = locītājs.analyze("jaundzimusī");
+		assertTrue(w.isRecognized());
+		assertEquals(AttributeNames.v_Adjective, w.wordforms.get(0).getValue(AttributeNames.i_PartOfSpeech));
+		assertEquals("jaundzimusī", w.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+		
+		w = locītājs.analyze("galvenajam");
+		assertTrue(w.isRecognized());
+		assertEquals(AttributeNames.v_Adjective, w.wordforms.get(0).getValue(AttributeNames.i_PartOfSpeech));
+		assertEquals("galvenais", w.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+	}
+	
+	@Test
+	public void guessinglimits() {
+		locītājs.enableGuessing = true;
+		locītājs.enableVocative = false;
+		locītājs.guessVerbs = false;
+		locītājs.guessNouns = true;
+		locītājs.enableAllGuesses = true;
+		locītājs.describe(new PrintWriter(System.out));
+		Word w = locītājs.analyze("xxxbs");		
+		assertTrue(w.isRecognized());
+		
+		w = locītājs.analyze("xxxes");
+		w.describe(new PrintWriter(System.out));
+		for (Wordform wf : w.wordforms) {
+			assertFalse(wf.isMatchingStrong(AttributeNames.i_Declension, "1"));
+		}
+	}
+	
+	@Test
+	public void izskanjas() {
+		locītājs.enableGuessing = true;
+		locītājs.enableVocative = false;
+		locītājs.guessVerbs = true;
+		locītājs.enableAllGuesses = true;
+		
+		Word austrumlatvija = locītājs.analyze("Austrumlatvija");
+		assertTrue(austrumlatvija.isRecognized());
+		austrumlatvija.describe(new PrintWriter(System.out));		
+
+		Word w = locītājs.analyze("mirušais");
+		assertTrue(w.isRecognized());
+		w.describe(new PrintWriter(System.out));		
+	
 	}
 }

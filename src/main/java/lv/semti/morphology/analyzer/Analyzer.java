@@ -430,28 +430,27 @@ public class Analyzer extends Lexicon {
 		for (int i=word.length()-2; i>=0; i--) { // TODO - duma heiristika, kas vērtē tīri pēc galotņu garuma; vajag pēc statistikas
 			for (Ending ending : getAllEndings().matchedEndings(word))
 				if (ending.getEnding().length()==i) {
-					if (ending.getParadigm().getName().equals("Hardcoded"))
-						continue; // Hardcoded vārdgrupa minēšanai nav aktuāla
+					Paradigm p = ending.getParadigm();
+					if (p.getName().equals("Hardcoded"))
+						continue; // Hardcoded vārdgrupa minēšanai nav aktuāla					
 
 					ArrayList<Variants> celmi = Mijas.mijuVarianti(ending.stem(word), ending.getMija(), false); //FIXME - te var būt arī propername... tikai kā tā info līdz šejienei nonāks?
 					if (celmi.size() == 0) continue; // acīmredzot neder ar miju, ejam uz nākamo galotni.
 					String celms = celmi.get(0).celms;
+					
+					if (!p.allowedGuess(celms))
+						continue;
+					if (p.getID() == 5 && !celms.endsWith("sun"))
+						continue; // der tikai -suns salikteņi
+					//TODO - varbūt drīzāk whitelist datos - pie paradigmas karodziņu, ka tā ir atvērta un tajā drīkst minēt?
+					//TODO te var vēl heiristikas salikt, lai uzlabotu minēšanu - ne katrs burts var būt darbībasvārdam beigās utml
 
 					Wordform variants = new Wordform(word, null, ending);
 					variants.addAttribute(AttributeNames.i_Source,"minējums pēc galotnes");
 					variants.addAttribute(AttributeNames.i_Guess, AttributeNames.v_Ending);
 
-					Ending pamatforma = ending.getLemmaEnding();
-					if (ending.getParadigm().getID() == 4 && !(celms.endsWith("n") || celms.endsWith("s")))
-						continue; // der tikai -ss un -ns, kā 'mēness' un 'ūdens'
-					if (ending.getParadigm().getID() == 5 && !celms.endsWith("sun"))
-						continue; // der tikai -suns 
-					if ((ending.getParadigm().isMatchingStrong(AttributeNames.i_Declension, "1") || ending.getParadigm().isMatchingStrong(AttributeNames.i_Declension, "6")) 
-							&& celms.endsWith("a"))
-						continue; // -as nav 1. dekl vārds
-					//TODO te var vēl heiristikas salikt, lai uzlabotu minēšanu - ne katrs burts var būt darbībasvārdam beigās utml
-
 					// FIXME ko ar pārējiem variantiem?? un ko ja nav variantu?
+					Ending pamatforma = ending.getLemmaEnding();					
 					if (pamatforma != null) {
 						// Izdomājam korektu lemmu
 						String lemma = celms + pamatforma.getEnding();

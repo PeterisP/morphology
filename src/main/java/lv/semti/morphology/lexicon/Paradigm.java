@@ -38,6 +38,7 @@ public class Paradigm extends AttributeValues {
 	public ArrayList <Ending> endings = new ArrayList <Ending>();  //FIXME - nevajag iisti buut public, vajag tikai read-only iterēt
 	private Ending lemmaEnding = null;  // kura no galotnēm uzskatāma par pamatformu
 	private int stems = 1;      // cik saknes ir šai vārdgrupai (tipiski 1; darbībasvārdiem 3)
+	private char[] allowedGuessEndings = {};
 	public String description = "";
 
 	public Paradigm (Lexicon lexicon) {
@@ -109,6 +110,10 @@ public class Paradigm extends AttributeValues {
 		n = node.getAttributes().getNamedItem("LemmaEnding");
 		if (n != null)
 			this.setLemmaEnding(Integer.parseInt(n.getTextContent()));
+		
+		n = node.getAttributes().getNamedItem("AllowedGuessEndings");
+		if (n != null)
+			this.setAllowedGuessEndings(n.getTextContent());
 
 		for (int i = 0; i < nodes.getLength(); i++) {
 			if (nodes.item(i).getNodeName().equals("Lexeme"))
@@ -116,6 +121,10 @@ public class Paradigm extends AttributeValues {
 		}
 	}
 	
+	private void setAllowedGuessEndings(String textContent) {
+		this.allowedGuessEndings = textContent.toCharArray();
+	}
+
 	/***
 	 * Takes an XML-sublexicon node of type 'Paradigm', and takes the Lexeme elements from there
 	 * @param node
@@ -264,5 +273,14 @@ public class Paradigm extends AttributeValues {
 	public ArrayList<HashMap<String, ArrayList<Lexeme>>> getLexemesByStem() {
 		//TODO - jāprotektē
 		return lexemesByStem;
+	}
+
+	// Verifies if this stem is a valid stem for this paradigm, based on the last letter(s?) of that stem 
+	public boolean allowedGuess(String stem) {
+		if (allowedGuessEndings.length == 0) return true; // FIXME - workaround until all paradigms have this data filled
+		char lastchar = stem.charAt(stem.length()-1);
+		for (char c : allowedGuessEndings) 
+			if (c==lastchar) return true;
+		return false;
 	}
 }
