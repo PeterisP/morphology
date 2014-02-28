@@ -985,7 +985,6 @@
       <Lexeme Stem1="london"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Londona" Avots="wiki"/> </Lexeme>
       <Lexeme Stem1="jangon"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Jangona" Avots="wiki"/> </Lexeme>
       <Lexeme Stem1="kamerūn"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Kamerūna" Avots="wiki"/> </Lexeme>
-      <Lexeme Stem1="samo"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Samoa" Avots="wiki"/> </Lexeme>
       <Lexeme Stem1="ankar"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Ankara" Avots="wiki"/> </Lexeme>
       <Lexeme Stem1="madagaskar"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Madagaskara" Avots="wiki"/> </Lexeme>
       <Lexeme Stem1="katar"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Katara" Avots="wiki"/> </Lexeme>
@@ -1475,6 +1474,7 @@
     <Attributes Vārdšķira="Lietvārds" Deklinācija="Nepiemīt"/>
       <Lexeme Stem1="līgo"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Līgo" Avots="LĢIS"/> </Lexeme>
 
+      <Lexeme Stem1="samo"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Samoa" Avots="wiki"/> </Lexeme>
       <Lexeme Stem1="karači"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Karači" Avots="wiki"/> </Lexeme>
       <Lexeme Stem1="burundi"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Burundi" Avots="wiki"/> </Lexeme>
       <Lexeme Stem1="mali"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Mali" Avots="wiki"/> </Lexeme>
