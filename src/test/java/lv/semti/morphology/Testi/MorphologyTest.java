@@ -2012,6 +2012,18 @@ public class MorphologyTest {
 		Word w = locītājs.analyze("mirušais");
 		assertTrue(w.isRecognized());
 		w.describe(new PrintWriter(System.out));		
+	}
 	
+	@Test
+	/**
+	 * 2014-03-31 bug - autocreated lexemes from generateInflections pollute future analysis results
+	 */
+	public void inflect_garbage_collection(){
+		locītājs.generateInflections("Bulduri");
+		Word bulduri = locītājs.analyze("Bulduri");
+		assertTrue(bulduri.isRecognized());		
+		for (Wordform wf : bulduri.wordforms) {
+			assertEquals("bulduris", wf.getValue(AttributeNames.i_Lemma));
+		}
 	}
 }

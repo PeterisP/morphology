@@ -679,7 +679,7 @@ public class Analyzer extends Lexicon {
 		possibilities.removeAll(unsuitable);
 	}
 
-	private ArrayList<Wordform> generateInflections_TryLemmas(String lemma, Word w) {
+	private ArrayList<Wordform> generateInflections_TryLemmas(String lemma, Word w) {		
 		for (Wordform wf : w.wordforms) {
 			if (wf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(lemma) && !wf.isMatchingStrong(AttributeNames.i_Case, AttributeNames.v_Vocative)) {				
 				Lexeme lex = wf.lexeme;
@@ -694,7 +694,10 @@ public class Analyzer extends Lexicon {
 						lex.setStem(2, wf.getValue(AttributeNames.i_Prefix) + wf.lexeme.getStem(2));
 					}
 				}
-				return generateInflections(lex, lemma);
+				ArrayList<Wordform> result = generateInflections(lex, lemma);
+				if (lex.isMatchingStrong(AttributeNames.i_Source, "generateInflections"))
+					lex.getParadigm().removeLexeme(lex);
+				return result;
 			}
 			if ( (lemma.toLowerCase().endsWith("ais") && lemma.equalsIgnoreCase(wf.getValue(AttributeNames.i_Lemma).substring(0, wf.getValue(AttributeNames.i_Lemma).length()-1)+"ais")) ||
 				 (lemma.toLowerCase().endsWith("ā") && wf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(lemma.substring(0, lemma.length()-1)+"a")) ) {
@@ -712,6 +715,8 @@ public class Analyzer extends Lexicon {
 						result.add(wf2);
 					}
 				}
+				if (lex.isMatchingStrong(AttributeNames.i_Source, "generateInflections"))
+					lex.getParadigm().removeLexeme(lex);
 				return result;
 			}
 		}

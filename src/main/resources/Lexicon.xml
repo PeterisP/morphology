@@ -448,7 +448,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="12" LemmaEnding="111" Description="Nelokāmie lietvārdi" AllowedGuessEndings="aeilmnostuāēīū">
+	<Paradigm Stems="1" ID="12" LemmaEnding="111" Description="Nelokāmie lietvārdi">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="Nepiemīt"/>
 		<Ending ID="111" StemChange="0" Ending="" StemID="1" LemmaEnding="111">
 			<Attributes/>
