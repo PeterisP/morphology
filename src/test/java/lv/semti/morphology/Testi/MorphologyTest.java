@@ -2026,4 +2026,49 @@ public class MorphologyTest {
 			assertEquals("bulduris", wf.getValue(AttributeNames.i_Lemma));
 		}
 	}
+	
+	@Test
+	/**
+	 * LETA lietvārdu locījumu pārbaude - nekorektas mijas 6. dekl
+	 */
+	public void mijas6dekl(){
+		locītājs.enableGuessing = true;
+		locītājs.enableVocative = true;
+		locītājs.guessVerbs = false;
+		locītājs.guessParticiples = false;
+		locītājs.guessAdjectives = false;
+		locītājs.guessInflexibleNouns = true;
+		locītājs.enableAllGuesses = true;
+		
+		List<Wordform> formas = locītājs.generateInflections("acs", true);
+		assertNounInflection(formas, AttributeNames.v_Plural, AttributeNames.v_Genitive, "", "acu");
+		
+		formas = locītājs.generateInflections("auss", true);
+		assertNounInflection(formas, AttributeNames.v_Plural, AttributeNames.v_Genitive, "", "ausu");
+		formas = locītājs.generateInflections("kūts", true);
+		assertNounInflection(formas, AttributeNames.v_Plural, AttributeNames.v_Genitive, "", "kūtu");
+		formas = locītājs.generateInflections("zoss", true);
+		assertNounInflection(formas, AttributeNames.v_Plural, AttributeNames.v_Genitive, "", "zosu");
+	}
+	
+	
+	@Test
+	/**
+	 * LETA lietvārdu locījumu pārbaude - defaultajai formai lokot jābūt ar galotni
+	 */
+	public void vokatiivi(){
+		locītājs.enableGuessing = true;
+		locītājs.enableVocative = true;
+		locītājs.guessVerbs = false;
+		locītājs.guessParticiples = false;
+		locītājs.guessAdjectives = false;
+		locītājs.guessInflexibleNouns = true;
+		locītājs.enableAllGuesses = true;
+		
+		List<Wordform> formas = locītājs.generateInflections("koks", true);
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "", "koks");
+		
+		formas = locītājs.generateInflections("paziņa", true);
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "", "paziņa");
+	}
 }
