@@ -2071,4 +2071,29 @@ public class MorphologyTest {
 		formas = locītājs.generateInflections("paziņa", true);
 		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "", "paziņa");
 	}
+	
+	
+	@Test
+	/**
+	 * LETA lietvārdu locījumu pārbaude - citi gljuki
+	 */
+	public void gljuki20140401(){
+		locītājs.enableGuessing = true;
+		locītājs.enableVocative = true;
+		locītājs.guessVerbs = false;
+		locītājs.guessParticiples = false;
+		locītājs.guessAdjectives = false;
+		locītājs.guessInflexibleNouns = true;
+		locītājs.enableAllGuesses = true;
+		
+		List<Wordform> formas = locītājs.generateInflections("mēness", true);
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "mēness");
+		
+		formas = locītājs.generateInflections("auss", true);
+		assertNounInflection(formas, AttributeNames.v_Plural, AttributeNames.v_Genitive, "", "ausu");
+		formas = locītājs.generateInflections("kūts", true);
+		assertNounInflection(formas, AttributeNames.v_Plural, AttributeNames.v_Genitive, "", "kūtu");
+		formas = locītājs.generateInflections("zoss", true);
+		assertNounInflection(formas, AttributeNames.v_Plural, AttributeNames.v_Genitive, "", "zosu");
+	}
 }
