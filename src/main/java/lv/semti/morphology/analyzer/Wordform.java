@@ -54,6 +54,7 @@ public class Wordform extends AttributeValues implements Serializable{
 		addAttributes(paradigm);
 		addAttributes(ending);
 		addAttribute(AttributeNames.i_EndingID, Integer.toString(ending.getID()));
+		addAttribute(AttributeNames.i_ParadigmID, Integer.toString(paradigm.getID()));
 		
 		Boolean fixed_stem; 
 		if (lexeme != null) {

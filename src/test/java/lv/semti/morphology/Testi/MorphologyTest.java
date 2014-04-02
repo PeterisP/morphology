@@ -2049,6 +2049,12 @@ public class MorphologyTest {
 		assertNounInflection(formas, AttributeNames.v_Plural, AttributeNames.v_Genitive, "", "kūtu");
 		formas = locītājs.generateInflections("zoss", true);
 		assertNounInflection(formas, AttributeNames.v_Plural, AttributeNames.v_Genitive, "", "zosu");
+		formas = locītājs.generateInflections("dakts", true);
+		assertNounInflection(formas, AttributeNames.v_Plural, AttributeNames.v_Genitive, "", "daktu");
+		formas = locītājs.generateInflections("šalts", true);
+		assertNounInflection(formas, AttributeNames.v_Plural, AttributeNames.v_Genitive, "", "šaltu");
+		formas = locītājs.generateInflections("maksts", true);
+		assertNounInflection(formas, AttributeNames.v_Plural, AttributeNames.v_Genitive, "", "makstu");
 	}
 	
 	
@@ -2088,12 +2094,7 @@ public class MorphologyTest {
 		
 		List<Wordform> formas = locītājs.generateInflections("mēness", true);
 		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "mēness");
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "", "mēnes");
 		
-		formas = locītājs.generateInflections("auss", true);
-		assertNounInflection(formas, AttributeNames.v_Plural, AttributeNames.v_Genitive, "", "ausu");
-		formas = locītājs.generateInflections("kūts", true);
-		assertNounInflection(formas, AttributeNames.v_Plural, AttributeNames.v_Genitive, "", "kūtu");
-		formas = locītājs.generateInflections("zoss", true);
-		assertNounInflection(formas, AttributeNames.v_Plural, AttributeNames.v_Genitive, "", "zosu");
 	}
 }
