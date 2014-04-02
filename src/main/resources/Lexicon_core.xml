@@ -3269,6 +3269,81 @@
     <Lexeme ID="8796" Stem1="koļ">
       <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="koļa"/>
     </Lexeme>
+    <Lexeme Stem1="pļāp">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="pļāpa"/>
+    </Lexeme>
+    <Lexeme Stem1="gulšņ">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="gulšņa"/>
+    </Lexeme>
+    <Lexeme Stem1="žūp">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="žūpa"/>
+    </Lexeme>
+    <Lexeme Stem1="guļav">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="guļava"/>
+    </Lexeme>
+    <Lexeme Stem1="muldoņ">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="muldoņa"/>
+    </Lexeme>
+    <Lexeme Stem1="nelg">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="nelga"/>
+    </Lexeme>
+    <Lexeme Stem1="nepraš">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="nepraša"/>
+    </Lexeme>
+    <Lexeme Stem1="tūļ">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="tūļa"/>
+    </Lexeme>
+    <Lexeme Stem1="īgņ">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="īgņa"/>
+    </Lexeme>
+    <Lexeme Stem1="glūņ">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="glūņa"/>
+    </Lexeme>
+    <Lexeme Stem1="iztapoņ">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="iztapoņa"/>
+    </Lexeme>
+    <Lexeme Stem1="plikadīd">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="plikadīda"/>
+    </Lexeme>
+    <Lexeme Stem1="plukat">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="plukata"/>
+    </Lexeme>
+    <Lexeme Stem1="varmāk">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="varmāka"/>
+    </Lexeme>
+    <Lexeme Stem1="plusk">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="pluska"/>
+    </Lexeme>
+    <Lexeme Stem1="žūp">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="žūpa"/>
+    </Lexeme>
+    <Lexeme Stem1="ložņ">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="ložņa"/>
+    </Lexeme>
+    <Lexeme Stem1="čamm">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="čamma"/>
+    </Lexeme>
+    <Lexeme Stem1="gremž">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="gremža"/>
+    </Lexeme>
+    <Lexeme Stem1="roklaiž">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="roklaiža"/>
+    </Lexeme>
+    <Lexeme Stem1="zaķapastal">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="zaķapastala"/>
+    </Lexeme>
+    <Lexeme Stem1="zaķpastal">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="zaķpastala"/>
+    </Lexeme>
+    <Lexeme Stem1="utubung">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="utubunga"/>
+    </Lexeme>
+    <Lexeme Stem1="muļļ">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="muļļa"/>
+    </Lexeme>
+    <Lexeme Stem1="aitasgalv">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="aitasgalv"/>
+    </Lexeme>
   </Paradigm>
   <Paradigm Stems="1" ID="9" LemmaEnding="87" Description="Lietvārds 5. deklinācija -e siev. dz">
     <Attributes Vārdšķira="Lietvārds" Deklinācija="5" Dzimte="Sieviešu"/>
@@ -3646,6 +3721,18 @@
     <Attributes Vārdšķira="Lietvārds" Deklinācija="5" Dzimte="Vīriešu"/>
     <Lexeme ID="27245" Stem1="sinēv">
       <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="sinēve"/>
+    </Lexeme>
+    <Lexeme Stem1="bend">
+      <Attributes Pamatforma="bende"/>
+    </Lexeme>
+    <Lexeme Stem1="balamut">
+      <Attributes Pamatforma="balamute"/>
+    </Lexeme>
+    <Lexeme Stem1="miegamic">
+      <Attributes Pamatforma="miegamice"/>
+    </Lexeme>
+    <Lexeme Stem1="aunapier">
+      <Attributes Pamatforma="aunapiere"/>
     </Lexeme>
   </Paradigm>
   <Paradigm Stems="1" ID="11" LemmaEnding="99" Description="Lietvārds 6. deklinācijā -s">

@@ -144,7 +144,10 @@
 		<Ending ID="43" StemChange="0" Ending="ī" StemID="1" LemmaEnding="39">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Lokatīvs"/>
 		</Ending>
-		<Ending ID="44" StemChange="0" Ending="" StemID="1" LemmaEnding="39">
+		<Ending ID="44" StemChange="0" Ending="" StemID="1" LemmaEnding="39" Ģenerēt="Nē">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs"/>
+		</Ending>
+		<Ending ID="1224" StemChange="0" Ending="s" StemID="1" LemmaEnding="39">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 		<Ending ID="45" StemChange="1" Ending="i" StemID="1" LemmaEnding="39">
