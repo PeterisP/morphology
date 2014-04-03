@@ -7838,6 +7838,15 @@
     <Lexeme ID="26602" Stem1="apsēs" Stem2="apsēž" Stem3="apsēd">
       <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="apsēsties"/>
     </Lexeme>
+    <Lexeme Stem1="teik" Stem2="teic" Stem3="teic">
+      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="teikt"/>
+    </Lexeme>
+    <Lexeme Stem1="pieteik" Stem2="pieteic" Stem3="pieteic">
+      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="pieteikt"/>
+    </Lexeme>
+    <Lexeme Stem1="pārteik" Stem2="pārteic" Stem3="pārteic">
+      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="pārteikt"/>
+    </Lexeme>
     <Lexeme ID="26603" Stem1="do" Stem2="dod" Stem3="dev">
       <Attributes Konjugācija="Nekārtns" Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="doties"/>
     </Lexeme>
