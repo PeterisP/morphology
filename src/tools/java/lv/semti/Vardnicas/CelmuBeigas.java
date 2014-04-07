@@ -66,7 +66,7 @@ public class CelmuBeigas {
 		//List<Integer> paradigmids = Arrays.asList(1,2,3); //TODO - salikt visus
 		List<Integer> paradigmids = Arrays.asList(21); 
 		for (int pid : paradigmids) {
-			Counter<String> counts = new Counter<>();
+			Counter<String> counts = new Counter<String>();
 			for (char c : "aābcčdeēfgģhiījkķlļmnņoprsštuūvzž".toCharArray()) {
 				counts.put(String.valueOf(c), 0);
 			}
