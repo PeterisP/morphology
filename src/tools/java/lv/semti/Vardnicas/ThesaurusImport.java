@@ -20,11 +20,12 @@ import lv.semti.morphology.analyzer.Word;
 import lv.semti.morphology.analyzer.Wordform;
 import lv.semti.morphology.attributes.AttributeNames;
 
-public class TezaursImport {
+public class ThesaurusImport {
 
 	/**
-	 * @param args
-	 * @throws Exception 
+	 * 
+	 * @param args File name expected as first argument.
+	 * @throws Exception
 	 */
 	public static void main(String[] args) throws Exception {
 		PrintWriter izeja = new PrintWriter(new PrintStream(System.out, true, "UTF-8"));
@@ -42,19 +43,21 @@ public class TezaursImport {
 		analizators.setCacheSize(0);
 		ThesaurusEntry.analyzer = analizators;
 		
-		String tezaura_fails = "/Users/pet/Dropbox/Resursi/Tezaurs/Skaidrojosa Vardnica.xml";
+		//String thesaurusFile = "/Users/pet/Dropbox/Resursi/Tezaurs/Skaidrojosa Vardnica.xml";
+		String thesaurusFile = args[0];
 		DocumentBuilder docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-		Document doc = docBuilder.parse(new File(tezaura_fails));
+		Document doc = docBuilder.parse(new File(thesaurusFile));
 		
 		Node node = doc.getDocumentElement();
-		if (!node.getNodeName().equalsIgnoreCase("tezaurs")) throw new Error("Node '" + node.getNodeName() + "' but tezaurs expected!");
+		if (!node.getNodeName().equalsIgnoreCase("tezaurs"))
+			throw new Error("Node '" + node.getNodeName() + "' but tezaurs expected!");
 		
 		List<ThesaurusEntry> entries = new LinkedList<ThesaurusEntry>();
 		
-		NodeList thesaurus_entries = node.getChildNodes(); // Thesaurus entries
-		for (int i = 0; i < thesaurus_entries.getLength(); i++) {
-			if (thesaurus_entries.item(i).getNodeName().equals("s")) {
-				ThesaurusEntry entry = new ThesaurusEntry(thesaurus_entries.item(i));
+		NodeList thesaurusEntries = node.getChildNodes(); // Thesaurus entries
+		for (int i = 0; i < thesaurusEntries.getLength(); i++) {
+			if (thesaurusEntries.item(i).getNodeName().equals("s")) {
+				ThesaurusEntry entry = new ThesaurusEntry(thesaurusEntries.item(i));
 				if (entry.source == null || entry.source.contains("LLVV")) //TODO - temporary restriction, focus on LLVV first
 					entries.add(entry);
 			}
@@ -150,7 +153,7 @@ public class TezaursImport {
 		*/
 	}
 
-	private static void count_gram(List<ThesaurusEntry> entries) {
+	private static void countGram(List<ThesaurusEntry> entries) {
 		HashMap<String, Integer> counter = new HashMap<String, Integer>();
 		for (ThesaurusEntry entry : entries) {
 			//if (entry.getParadigm() != 0) continue; // counting only those we don't understand
@@ -168,8 +171,11 @@ public class TezaursImport {
 		}
 	}
 
-	private static void izmestNepareizāsParadigmas(Word w) {
-		LinkedList<Wordform> izmetamie = new LinkedList<Wordform>();
+	/**
+	 * Remove rare paradigms that should not be guessed.
+	 */
+	private static void removeRareParadigms(Word w) {
+		LinkedList<Wordform> forRemoval = new LinkedList<Wordform>();
 		for (Wordform wf : w.wordforms) {
 			if (wf.getValue(AttributeNames.i_ParadigmID).equals("4") ||
 				wf.getValue(AttributeNames.i_ParadigmID).equals("5") ||
@@ -177,31 +183,30 @@ public class TezaursImport {
 				wf.getValue(AttributeNames.i_ParadigmID).equals("10") ||
 				wf.getValue(AttributeNames.i_ParadigmID).equals("11") ||
 				wf.getValue(AttributeNames.i_ParadigmID).equals("12") ||				
-				!wf.isMatchingWeak(AttributeNames.i_Case, AttributeNames.v_Nominative)
-				) {
-					izmetamie.add(wf);
+				!wf.isMatchingWeak(AttributeNames.i_Case, AttributeNames.v_Nominative))
+			{
+					forRemoval.add(wf);
 			}
 			
 		}
-		for (Wordform izmetamais : izmetamie)
-			w.wordforms.remove(izmetamais);
+		for (Wordform removeMe : forRemoval)
+			w.wordforms.remove(removeMe);
 	}
-	
-	private static void izmestDaudzskaitļus(Word w) {
-		LinkedList<Wordform> izmetamie = new LinkedList<Wordform>();
+	// No-one remembers the motivation.
+	private static void removePlurals(Word w) {
+		LinkedList<Wordform> forRemoval = new LinkedList<Wordform>();
 		for (Wordform wf : w.wordforms) {
-			if ( !wf.isMatchingWeak(AttributeNames.i_Number, AttributeNames.v_Singular)	) {
-					izmetamie.add(wf);
-			}
-			
+			if (!wf.isMatchingWeak(AttributeNames.i_Number, AttributeNames.v_Singular))
+					forRemoval.add(wf);
 		}
-		for (Wordform izmetamais : izmetamie)
-			w.wordforms.remove(izmetamais);
+		for (Wordform removeMe : forRemoval)
+			w.wordforms.remove(removeMe);
 	}
 
-	private static boolean irLeksikonā(Word w) {
+	private static boolean isInLexicon(Word w) {
 		for (Wordform wf : w.wordforms) {
-			if (wf.isMatchingWeak(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun) || wf.isMatchingWeak(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adjective))
+			if (wf.isMatchingWeak(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun) ||
+				wf.isMatchingWeak(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adjective))
 				return true;
 		}
 		return false;

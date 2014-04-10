@@ -19,7 +19,7 @@ package lv.semti.morphology.attributes;
  *
  * @author Pēteris Paikens
  *
- * Satur konstantes īpašību nosaukumiem un pieļaujamajiem variantiem.
+ * Constants: attribute names and allowed values.
  */
 public class AttributeNames {
 	//FIXME - šeit jāpaliek tikai tām īpašībām, uz kurām nez kāpēc kodā pa tiešo atsaucas ārpus MarkejumaKonventora
