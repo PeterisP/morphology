@@ -176,10 +176,10 @@ public class ThesaurusEntry
 		//{
 		//	if (e.hasParadigm()) return true;
 		//}
-		if (derivs != null) for (Header h : derivs)
+		
+		if (derivs != null) for (Header d : derivs)
 		{
-			//if (h.hasParadigm()) return true;
-			if (!h.hasParadigm()) res = false;
+			if (!d.hasParadigm()) res = false;
 		}
 		return res;
 	}
@@ -220,18 +220,26 @@ public class ThesaurusEntry
 			}
 		}//*/
 		
+		s.append(", \"Senses\":");
+		s.append(Utils.objectsToJSON(senses));
+		
+		if (phrases != null)
+		{
+			s.append(", \"Phrases\":");
+			s.append(Utils.objectsToJSON(phrases));
+		}
+		
+		if (derivs != null)
+		{
+			s.append(", \"Derivatives\":");
+			s.append(Utils.objectsToJSON(derivs));
+		}
+		
 		if (sources != null && !sources.isEmpty())
 		{
 			s.append(",");
 			s.append(sources.toJSON());
-		}
-		
-		s.append(", \"Senses\":");
-		s.append(Utils.objectsToJSON(senses));
-		
-		s.append(", \"Phrases\":");
-		s.append(Utils.objectsToJSON(phrases));
-		
+		}		
 		s.append('}');
 		return s.toString();
 	}
@@ -372,6 +380,7 @@ public class ThesaurusEntry
 			res.put("priev.", "Prievārds");
 			res.put("skait.", "Skaitļa vārds");
 			res.put("vietn.", "Vietniekvārds");
+			res.put("vietniekv.", "Vietniekvārds");
 			res.put("vispārin.", "Vispārināmais vietniekvārds");
 			res.put("saīs.", "Saīsinājums");
 
@@ -431,6 +440,7 @@ public class ThesaurusEntry
 			res.put("fiziol.", "Fizioloģija");
 			res.put("fizk.", "Fiziskā kultūra un sports");
 			res.put("folkl.", "Folklora");
+			res.put("ģenēt.", "Ģenētika");
 			res.put("ģeogr.", "Ģeogrāfija");
 			res.put("ģeol.", "Ģeoloģija");
 			res.put("ģeom.", "Ģeometrija");
@@ -439,6 +449,7 @@ public class ThesaurusEntry
 			res.put("jur.", "Jurisprudence");
 			res.put("jūrn.", "Jūrniecība");
 			res.put("kap.", "Attiecas uz kapitālistisko iekārtu, kapitālistisko sabiedrību");
+			res.put("kardioloģijā", "Kardioloģija");
 			res.put("kul.", "Kulinārija");
 			res.put("ķīm.", "Ķīmija");
 			res.put("lauks.", "Lauksaimniecība");
@@ -456,9 +467,11 @@ public class ThesaurusEntry
 			res.put("pol.", "Politika");
 			res.put("poligr.", "Poligrāfija");
 			res.put("psih.", "Psiholoģija");
+			res.put("oftalmoloģijā", "Oftalmoloģija");
 			res.put("ornit.", "Ornitoloģija");
 			res.put("rel.", "Reliģija");
 			res.put("tehn.", "Tehnika");
+			res.put("telek.", "Telekomunikācijas");
 			res.put("tekst.", "Tekstilrūpniecība");
 			res.put("val.", "Valodniecība");
 			res.put("vet.", "Veterinārija");
@@ -473,6 +486,7 @@ public class ThesaurusEntry
 			res.put("iron.", "Ironiska ekspresīvā nokrāsa");
 			res.put("hum.", "Humoristiska ekspresīvā nokrāsa");
 			res.put("vienk.", "Vienkāršrunas stilistiskā nokrāsa");
+			res.put("pārn.", "Pārnestā nozīmē");
 			res.put("nevēl.", "Nevēlams"); // TODO - nevēlamos, neliterāros un žargonus apvienot??
 			res.put("nelit.", "Neliterārs");
 			res.put("žarg.", "Žargonvārds");
@@ -557,12 +571,13 @@ public class ThesaurusEntry
 		private void parseGram()
 		{
 			String correctedGram = correctOCRErrors(orig);
-			String[] subGrams = correctedGram.split("\\s*;\\s*");
-			leftovers = new LinkedList<LinkedList<String>> ();
 			
 			// First process ending patterns, usually located in the beginning
 			// of the grammar string.
-			// TODO
+			correctedGram = processWithPatterns(correctedGram);
+			
+			String[] subGrams = correctedGram.split("\\s*;\\s*");
+			leftovers = new LinkedList<LinkedList<String>> ();
 			
 			// Process each semicolon-separated substring.
 			for (String subGram : subGrams)	
@@ -589,6 +604,106 @@ public class ThesaurusEntry
 			paradigmFromFlags();
 			
 			cleanupLeftovers();
+		}
+		
+		// TODO is lemma ending check necessary?
+		private String processWithPatterns(String gramText)
+		{
+			gramText = gramText.trim();
+			String pattern = "";
+			
+			if (gramText.startsWith("-a, v.")) // abats
+			{
+				pattern = "-a, v.";
+				paradigm.add(1);
+				flags.add("Vīriešu dzimte");
+				flags.add("Lietvārds");
+			}
+			
+			if (gramText.startsWith("-ņa, v.")) // abesīnis
+			{
+				pattern = "-ņa, v.";
+				paradigm.add(3);
+				flags.add("Vīriešu dzimte");
+				flags.add("Lietvārds");
+			}
+			
+			if (gramText.startsWith("-šā, v.")) // abesīnietis
+			{
+				pattern = "-šā, v.";
+				paradigm.add(3);
+				flags.add("Vīriešu dzimte");
+				flags.add("Lietvārds");
+			}			
+			else if (gramText.startsWith("-as, s.")) //ābele
+			{
+				pattern = "-as, s.";
+				paradigm.add(7);
+				flags.add("Sieviešu dzimte");
+				flags.add("Lietvārds");
+			}
+			
+			else if (gramText.startsWith("-es, dsk. ģen. -ču, s.")) //ābece
+			{
+				pattern = "-es, dsk. ģen. -ču, s.";
+				paradigm.add(9);
+				flags.add("Sieviešu dzimte");
+				flags.add("Lietvārds");
+			}
+			else if (gramText.startsWith("-es, dsk. ģen. -ļu, s.")) //ābele
+			{
+				pattern = "-es, dsk. ģen. -ļu, s.";
+				paradigm.add(9);
+				flags.add("Sieviešu dzimte");
+				flags.add("Lietvārds");
+			}
+			else if (gramText.startsWith("-es, dsk. ģen. -šu, s.")) //abate
+			{
+				pattern = "-es, dsk. ģen. -šu, s.";
+				paradigm.add(9);
+				flags.add("Sieviešu dzimte");
+				flags.add("Lietvārds");
+			}
+			else if (gramText.startsWith("-es, dsk. ģen. -ņu, s.")) //ābolaine
+			{
+				pattern = "-es, dsk. ģen. -ņu, s.";
+				paradigm.add(9);
+				flags.add("Sieviešu dzimte");
+				flags.add("Lietvārds");
+			}
+			else if (gramText.startsWith("-es, dsk. ģen. -žu, s.")) //ābolmaize
+			{
+				pattern = "-es, dsk. ģen. -žu, s.";
+				paradigm.add(9);
+				flags.add("Sieviešu dzimte");
+				flags.add("Lietvārds");
+			}
+			else if (gramText.startsWith("-es, dsk. ģen. -stu, s.")) //abolicioniste
+			{
+				pattern = "-es, dsk. ģen. -stu, s.";
+				paradigm.add(9);
+				flags.add("Sieviešu dzimte");
+				flags.add("Lietvārds");
+			}
+			
+			else if (gramText.startsWith("-ais; s. -a, -ā;")) //abējāds
+			{
+				pattern = "-ais; s. -a, -ā;";
+				paradigm.add(14);
+				flags.add("Īpašības vārds");
+			}
+			
+			else if (gramText.startsWith("-ēju, -ē, -ē, pag. -eju;")) //abonēt
+			{
+				pattern = "-ēju, -ē, -ē, pag. -eju;";
+				paradigm.add(16);
+				flags.add("Darbības vārds");
+			}
+
+			
+			
+			String res = gramText.substring(pattern.length());
+			return res;
 		}
 		
 		private void paradigmFromFlags()
@@ -750,8 +865,9 @@ public class ThesaurusEntry
 			if (printOrig && orig != null && orig.length() > 0)
 			{
 				if (hasPrev) res.append(", ");
-				res.append("\"Original\":");
+				res.append("\"Original\":\"");
 				res.append(JSONObject.escape(orig));
+				res.append("\"");
 				hasPrev = true;
 			}
 			
@@ -1392,7 +1508,7 @@ public class ThesaurusEntry
 		}
 	}//*/
 	
-	private static class Utils
+	public static class Utils
 	{
 		public static <E extends HasToJSON> String objectsToJSON(Iterable<E> l)
 		{
@@ -1417,8 +1533,10 @@ public class ThesaurusEntry
 			Iterator<E> i = l.iterator();
 			while (i.hasNext())
 			{
+				res.append("\"");
 				res.append(JSONObject.escape(i.next().toString()));
 				if (i.hasNext()) res.append(", ");
+				res.append("\"");
 			}
 			res.append("]");			
 			return res.toString();

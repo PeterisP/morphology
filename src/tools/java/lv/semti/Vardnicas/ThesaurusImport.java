@@ -82,6 +82,7 @@ public class ThesaurusImport {
 					//if (entry.head.gram != null
 					//		&& entry.head.gram.paradigm != null
 					//		&& !entry.head.gram.paradigm.isEmpty())
+					
 					if (entry.hasParadigm() && !entry.hasUnparsedGram())
 						goodOut.write(entry.toJSON() + "\n");
 					else
