@@ -542,7 +542,7 @@ public class ThesaurusEntry
 		
 		public boolean hasParadigm()
 		{
-			return paradigm.isEmpty();
+			return !paradigm.isEmpty();
 		}
 		
 		/**
@@ -551,7 +551,7 @@ public class ThesaurusEntry
 		public boolean hasUnparsedGram()
 		{
 			//cleanupLeftovers();		// What is better - unexpected side effects or not working, when used incorrectly?
-			return leftovers.isEmpty();
+			return !leftovers.isEmpty();
 		}
 		
 		private void parseGram()
@@ -585,9 +585,28 @@ public class ThesaurusEntry
 				leftovers.add(toDo);
 			}
 			
-			// TODO: get paradigm from flags.
+			// Try to deduce paradigm from flags.
+			paradigmFromFlags();
 			
 			cleanupLeftovers();
+		}
+		
+		private void paradigmFromFlags()
+		{
+			if (flags.contains("Apstākļa vārds")) paradigm.add(21);
+			if (flags.contains("Partikula")) paradigm.add(28);
+			if (flags.contains("Prievārds")) paradigm.add(26);
+			
+			if (flags.contains("Izsauksmes vārds")) paradigm.add(29); // Hardcoded
+			if (flags.contains("Saīsinājums")) paradigm.add(29); // Hardcoded
+			
+			if (flags.contains("Vietniekvārds")) paradigm.add(25);
+			if (flags.contains("Jautājamais vietniekvārds")) paradigm.add(25);
+			if (flags.contains("Noliedzamais vietniekvārds")) paradigm.add(25);
+			if (flags.contains("Norādāmais vietniekvārds")) paradigm.add(25);
+			if (flags.contains("Noteicamais vietniekvārds")) paradigm.add(25);
+			if (flags.contains("Piederības vietniekvārds")) paradigm.add(25);
+			if (flags.contains("Vispārināmais vietniekvārds")) paradigm.add(25);
 		}
 		
 		/**
@@ -884,7 +903,8 @@ public class ThesaurusEntry
 		public boolean hasParadigm()
 		{
 			if (grammar == null) return false;
-			if (grammar.hasParadigm()) return true;
+			return grammar.hasParadigm();
+			//if (grammar.hasParadigm()) return true;
 			//for (Phrase e : examples)
 			//{
 			//	if (e.hasParadigm()) return true;
@@ -893,7 +913,7 @@ public class ThesaurusEntry
 			//{
 			//	if (s.hasParadigm()) return true;
 			//}
-			return false;
+			//return false;
 		}
 		
 		public boolean hasUnparsedGram()
