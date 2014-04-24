@@ -76,7 +76,8 @@ public class ThesaurusImport {
 			if (sNode.getNodeName().equals("s"))
 			{
 				ThesaurusEntry entry = new ThesaurusEntry(sNode);
-				if (entry.sources == null || entry.sources.s.contains("LLVV")) //TODO - temporary restriction, focus on LLVV first
+				if (!entry.inBlacklist() &&
+					(entry.sources == null || entry.sources.s.contains("LLVV"))) //TODO - temporary restriction, focus on LLVV first
 				{
 					//entries.add(entry);
 					//if (entry.head.gram != null

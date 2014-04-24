@@ -87,7 +87,7 @@ public class ThesaurusEntry
 				System.err.printf("Entry - s - field %s not processed\n", fieldname);
 		}
 		
-		if (inBlacklist()) return;
+		//if (inBlacklist()) return;
 		
 		if (head == null)
 			System.err.printf("Thesaurus entry without a lemma/header :(\n");	
@@ -126,10 +126,10 @@ public class ThesaurusEntry
 		}		
 	}	
 
-	private boolean inBlacklist()
+	public boolean inBlacklist()
 	{
 		if (sources == null || !sources.s.contains("LLVV")) return true; // FIXME - temporary restriction to focus on LLVV first
-		return blacklist.contains(head.lemma);
+		return blacklist.contains(head.lemma.l);
 	}
 	
 	/**
@@ -146,9 +146,10 @@ public class ThesaurusEntry
 					new InputStreamReader(
 					new FileInputStream("blacklist.txt"), "UTF-8"));
 			String rinda;
-			while ((rinda = ieeja.readLine()) != null) {
-				if (rinda.contains("<s>") || rinda.contains("</s>") || rinda.isEmpty())
-					continue;
+			while ((rinda = ieeja.readLine()) != null)
+			{
+				//if (rinda.contains("<s>") || rinda.contains("</s>") || rinda.isEmpty())
+				//	continue;
 				blist.add(rinda.trim());
 			}		
 			ieeja.close();
@@ -499,6 +500,7 @@ public class ThesaurusEntry
 			res.put("tikai vsk.", "Tikai vienskaitlī");
 			res.put("parasti dsk.", "Parasti daudzskaitlī");		
 			res.put("tikai dsk.", "Tikai daudzskaitlī");
+			res.put("parasti 3. pers.", "Parasti 3. personā");			
 			res.put("pareti.", "Pareti");
 			res.put("pareti", "Pareti");
 			res.put("reti.", "Reti");
@@ -610,8 +612,12 @@ public class ThesaurusEntry
 		private String processWithPatterns(String gramText)
 		{
 			gramText = gramText.trim();
+			//if (!gramText.contains("-")) return gramText;
+			//String beggining = gramText.substring(0, gramText.indexOf('-'));
+			//gramText = gramText.substring(gramText.indexOf('-'));
 			String pattern = "";
 			
+			// Paradigm 1: Lietvārds 1. deklinācija -s
 			if (gramText.startsWith("-a, v.")) // abats
 			{
 				pattern = "-a, v.";
@@ -620,22 +626,31 @@ public class ThesaurusEntry
 				flags.add("Lietvārds");
 			}
 			
-			if (gramText.startsWith("-ņa, v.")) // abesīnis
+			// Paradigm 3: Lietvārds 2. deklinācija -is
+			else if (gramText.startsWith("-ņa, v.")) // abesīnis
 			{
 				pattern = "-ņa, v.";
 				paradigm.add(3);
 				flags.add("Vīriešu dzimte");
 				flags.add("Lietvārds");
 			}
-			
-			if (gramText.startsWith("-šā, v.")) // abesīnietis
+			else if (gramText.startsWith("-šā, v.")) // abesīnietis
 			{
 				pattern = "-šā, v.";
 				paradigm.add(3);
 				flags.add("Vīriešu dzimte");
 				flags.add("Lietvārds");
-			}			
-			else if (gramText.startsWith("-as, s.")) //ābele
+			}
+			else if (gramText.startsWith("-šā, v.")) // abesīnietis
+			{
+				pattern = "-šā, v.";
+				paradigm.add(3);
+				flags.add("Vīriešu dzimte");
+				flags.add("Lietvārds");
+			}
+			
+			// Paradigm 7: Lietvārds 4. deklinācija -a siev. dz.
+			else if (gramText.startsWith("-as, s.")) //aberācija
 			{
 				pattern = "-as, s.";
 				paradigm.add(7);
@@ -643,6 +658,7 @@ public class ThesaurusEntry
 				flags.add("Lietvārds");
 			}
 			
+			// Paradigm 7: Lietvārds 5. deklinācija -a siev. dz.
 			else if (gramText.startsWith("-es, dsk. ģen. -ču, s.")) //ābece
 			{
 				pattern = "-es, dsk. ģen. -ču, s.";
@@ -685,7 +701,15 @@ public class ThesaurusEntry
 				flags.add("Sieviešu dzimte");
 				flags.add("Lietvārds");
 			}
+			else if (gramText.startsWith("-es, s.")) //aizture
+			{
+				pattern = "-es, s.";
+				paradigm.add(9);
+				flags.add("Sieviešu dzimte");
+				flags.add("Lietvārds");
+			}
 			
+			// Paradigm 14: Īpašības vārdi ar -s
 			else if (gramText.startsWith("-ais; s. -a, -ā;")) //abējāds
 			{
 				pattern = "-ais; s. -a, -ā;";
@@ -693,15 +717,111 @@ public class ThesaurusEntry
 				flags.add("Īpašības vārds");
 			}
 			
+			// Paradigm 15: Darbības vārdi 1. konjugācija tiešie
+			else if (gramText.startsWith("parasti 3. pers., -šalc, pag. -šalca;")) //aizšalkt
+			{
+				pattern = "parasti 3. pers., -šalc, pag. -šalca;";
+				paradigm.add(15);
+				flags.add("Darbības vārds");
+				flags.add("Parasti 3. personā");
+				flags.add("Locīt kā \"šalkt\"");
+			}
+			else if (gramText.startsWith("parasti 3. pers., -tūkst, pag. -tūka;")) //aiztūkt
+			{
+				pattern = "parasti 3. pers., -tūkst, pag. -tūka;";
+				paradigm.add(15);
+				flags.add("Darbības vārds");
+				flags.add("Parasti 3. personā");
+				flags.add("Locīt kā \"tūkt\"");
+			}
+			else if (gramText.startsWith("-tupstu, -tupsti, -tupst, pag. -tupu;")) //aiztupt
+			{
+				pattern = "-tupstu, -tupsti, -tupst, pag. -tupu;";
+				paradigm.add(15);
+				flags.add("Darbības vārds");
+				flags.add("Locīt kā \"tupt\"");
+				//TODO check paralel forms.
+			}	
+			else if (gramText.startsWith("-tveru, -tver, -tver, pag. -tvēru;")) //aiztvert
+			{
+				pattern = "-tveru, -tver, -tver, pag. -tvēru;";
+				paradigm.add(15);
+				flags.add("Darbības vārds");
+				flags.add("Locīt kā \"tvert\"");
+			}
+			
+			
+			// Paradigm 16: Darbības vārdi 2. konjugācija tiešie
+			else if (gramText.startsWith("parasti 3. pers., -o , pag. -oja;")) //aizšalkot
+			{
+				pattern = "parasti 3. pers., -o , pag. -oja;";
+				paradigm.add(16);
+				flags.add("Darbības vārds");
+				flags.add("Parasti 3. personā");
+			}
 			else if (gramText.startsWith("-ēju, -ē, -ē, pag. -eju;")) //abonēt
 			{
 				pattern = "-ēju, -ē, -ē, pag. -eju;";
 				paradigm.add(16);
 				flags.add("Darbības vārds");
 			}
+			else if (gramText.startsWith("-oju, -o, -o, pag. -oju;")) //aiztuntuļot
+			{
+				pattern = "-oju, -o, -o, pag. -oju;";
+				paradigm.add(16);
+				flags.add("Darbības vārds");
+			}			
 
 			
 			
+			// Paradigm 17: Darbības vārdi 3. konjugācija tiešie
+			else if (gramText.startsWith("-turu, -turi, -tur, pag. -turēju;")) //aizturēt
+			{
+				pattern = "-turu, -turi, -tur, pag. -turēju;";
+				paradigm.add(16);
+				flags.add("Darbības vārds");
+				flags.add("Locīt kā \"turēt\"");
+			}
+			else if (gramText.startsWith("-u, -i, -a, pag. -īju;")) //aizsūtīt
+			{
+				pattern = "-u, -i, -a, pag. -īju;";
+				paradigm.add(17);
+				flags.add("Darbības vārds");
+			}
+			else if (gramText.startsWith("-inu, -ini, -ina, pag. -ināju;")) //aizsvilināt
+			{
+				pattern = "-inu, -ini, -ina, pag. -ināju;";
+				paradigm.add(17);
+				flags.add("Darbības vārds");
+			}
+			
+			// Paradigm 18: Darbības vārdi 1. konjugācija atgriezeniski
+			else if (gramText.startsWith("parasti 3. pers., -šalcas, pag. -šalcās;")) //aizšalkties
+			{
+				pattern = "parasti 3. pers., -šalcas, pag. -šalcās;";
+				paradigm.add(18);
+				flags.add("Darbības vārds");
+				flags.add("Parasti 3. personā");
+				flags.add("Locīt kā \"šalkties\"");
+			}
+			else if (gramText.startsWith("-tupstos, -tupsties, -tupstas, pag. -tupos;")) //aiztupties
+			{
+				pattern = "-tupstos, -tupsties, -tupstas, pag. -tupos;";
+				paradigm.add(18);
+				flags.add("Darbības vārds");
+				flags.add("Locīt kā \"tupties\"");
+				//TODO check paralel forms.
+			}
+			
+			// Paradigm 19: Darbības vārdi 2. konjugācija atgriezeniski
+			else if (gramText.startsWith("-ojos, -ojies, -ojas, pag. -ojos.")) // aiztuntuļoties
+			{
+				pattern = "-ojos, -ojies, -ojas, pag. -ojos.";
+				paradigm.add(19);
+				flags.add("Darbības vārds");				
+			}
+			
+			//String res = beggining + gramText.substring(pattern.length());
 			String res = gramText.substring(pattern.length());
 			return res;
 		}
