@@ -49,6 +49,7 @@ public class ThesaurusImport {
 		//String thesaurusFile = "/Users/pet/Dropbox/Resursi/Tezaurs/Skaidrojosa Vardnica.xml";
 		String thesaurusFile = args[0];
 		String goodOutputFile = "tezaurs-good.json";
+		String noParadigm = "tezaurs-noParadigm.json";
 		String badOutputFile = "tezaurs-bad.json";
 		//if (args.length > 1) outputFile = args[1];
 		
@@ -64,6 +65,8 @@ public class ThesaurusImport {
 		// Output.
 		BufferedWriter goodOut = new BufferedWriter(new OutputStreamWriter(
 				new FileOutputStream(goodOutputFile), "UTF-8"));
+		BufferedWriter noParadigmOut = new BufferedWriter(new OutputStreamWriter(
+				new FileOutputStream(noParadigm), "UTF-8"));
 		BufferedWriter badOut = new BufferedWriter(new OutputStreamWriter(
 				new FileOutputStream(badOutputFile), "UTF-8"));
 		
@@ -82,6 +85,8 @@ public class ThesaurusImport {
 					//entries.add(entry);
 					if (entry.hasParadigm() && !entry.hasUnparsedGram())
 						goodOut.write(entry.toJSON() + "\n");
+					else if (!entry.hasParadigm() && !entry.hasUnparsedGram())
+						noParadigmOut.write(entry.toJSON() + "\n");
 					else
 					{
 						badOut.write(entry.toJSON() + "\n");
@@ -92,6 +97,7 @@ public class ThesaurusImport {
 			else if (!sNode.getNodeName().equals("#text")) // Text nodes here are ignored.
 			{
 				goodOut.close();
+				noParadigmOut.close();
 				badOut.close();				
 				throw new Error("Node '" + sNode.getNodeName() + "' but s (šķirklis) expected!");
 			}
@@ -99,6 +105,7 @@ public class ThesaurusImport {
 		}
 		
 		goodOut.close();
+		noParadigmOut.close();
 		badOut.close();
 		
 		//count_gram(entries); //FIXME - te nečeko papildus gram info (piem, v.; novec. nerāda jo tas jau ir atpazīts...

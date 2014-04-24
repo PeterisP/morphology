@@ -384,6 +384,16 @@ public class ThesaurusEntry
 			res.put("vietniekv.", "Vietniekvārds");
 			res.put("vispārin.", "Vispārināmais vietniekvārds");
 			res.put("saīs.", "Saīsinājums");
+			
+			res.put("priev. ar ģen.", "Prievārds");
+			res.put("priev. ar ģen.", "Lieto ar ģenetīvu");
+			res.put("ar ģen.", "Prievārds"); // It seems that without additional comments this is used for prepositions only
+			res.put("ar ģen.", "Lieto ar ģenetīvu");			
+			res.put("priev. ar dat.", "Prievārds");
+			res.put("priev. ar dat.", "Lieto ar datīvu");
+			
+			res.put("persv.", "Personvārds");
+			res.put("vietv.", "Vietvārds");
 
 			res.put("akuz.", "Akuzatīvs");
 			res.put("dat.", "Datīvs");
@@ -460,6 +470,7 @@ public class ThesaurusEntry
 			res.put("literat.", "Literatūrzinātne");
 			res.put("loģ.", "Loģika");
 			res.put("mat.", "Matemātika");
+			res.put("matem.", "Matemātika");	//unverified
 			res.put("med.", "Medicīna");
 			res.put("medn.", "Medniecība");
 			res.put("meteorol.", "Meteoroloģija");
@@ -478,9 +489,12 @@ public class ThesaurusEntry
 			res.put("tehn.", "Tehnika");
 			res.put("telek.", "Telekomunikācijas");
 			res.put("tekst.", "Tekstilrūpniecība");
+			res.put("tekstilr.", "Tekstilrūpniecība");	//unverified
 			res.put("val.", "Valodniecība");
 			res.put("vet.", "Veterinārija");
 			res.put("zool.", "Zooloģija");
+			
+			res.put("it.", "No itāļu valodas"); //Muz, unverified 
 			
 			res.put("apv.", "Apvidvārds");
 			res.put("novec.", "Novecojis"); //TODO - Novecojis, vēsturisks un neaktuāls apvienot??		
@@ -997,6 +1011,10 @@ public class ThesaurusEntry
 			if (flags.contains("Noteicamais vietniekvārds")) paradigm.add(25);
 			if (flags.contains("Piederības vietniekvārds")) paradigm.add(25);
 			if (flags.contains("Vispārināmais vietniekvārds")) paradigm.add(25);
+
+			if (flags.contains("No itāļu valodas")) paradigm.add(12); // Nelokāmie lietvārdi
+
+			if (flags.contains("Priedēklis")) paradigm.add(0); //Prefixes are not words.
 		}
 		
 		/**
