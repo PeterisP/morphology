@@ -362,7 +362,7 @@ public class ThesaurusEntry
 			HashMap<String, String> res = new HashMap<String, String>();
 			
 			// TODO Sort out this mess.
-			// Source: LLVV.
+			// Source: LLVV, data.
 			
 			res.put("adj.", "Īpašības vārds");
 			res.put("apst.", "Apstākļa vārds");
@@ -500,7 +500,8 @@ public class ThesaurusEntry
 			res.put("tikai vsk.", "Tikai vienskaitlī");
 			res.put("parasti dsk.", "Parasti daudzskaitlī");		
 			res.put("tikai dsk.", "Tikai daudzskaitlī");
-			res.put("parasti 3. pers.", "Parasti 3. personā");			
+			res.put("parasti 3. pers.", "Parasti 3. personā");
+			res.put("lietv. nozīmē.", "Lietvārda nozīmē");
 			res.put("pareti.", "Pareti");
 			res.put("pareti", "Pareti");
 			res.put("reti.", "Reti");
@@ -634,20 +635,27 @@ public class ThesaurusEntry
 				flags.add("Vīriešu dzimte");
 				flags.add("Lietvārds");
 			}
-			else if (gramText.startsWith("-šā, v.")) // abesīnietis
+			else if (gramText.startsWith("-ša, v.")) // abrkasis
+			{
+				pattern = "-ša, v.";
+				paradigm.add(3);
+				flags.add("Vīriešu dzimte");
+				flags.add("Lietvārds");
+			}
+			else if (gramText.startsWith("-ļa, v.")) // acumirklis
+			{
+				pattern = "-ļa, v.";
+				paradigm.add(3);
+				flags.add("Vīriešu dzimte");
+				flags.add("Lietvārds");
+			}
+			/*else if (gramText.startsWith("-šā, v.")) // abesīnietis
 			{
 				pattern = "-šā, v.";
 				paradigm.add(3);
 				flags.add("Vīriešu dzimte");
 				flags.add("Lietvārds");
-			}
-			else if (gramText.startsWith("-šā, v.")) // abesīnietis
-			{
-				pattern = "-šā, v.";
-				paradigm.add(3);
-				flags.add("Vīriešu dzimte");
-				flags.add("Lietvārds");
-			}
+			}//*/
 			
 			// Paradigm 7: Lietvārds 4. deklinācija -a siev. dz.
 			else if (gramText.startsWith("-as, s.")) //aberācija
@@ -658,7 +666,7 @@ public class ThesaurusEntry
 				flags.add("Lietvārds");
 			}
 			
-			// Paradigm 7: Lietvārds 5. deklinācija -a siev. dz.
+			// Paradigm 9: Lietvārds 5. deklinācija -a siev. dz.
 			else if (gramText.startsWith("-es, dsk. ģen. -ču, s.")) //ābece
 			{
 				pattern = "-es, dsk. ģen. -ču, s.";
@@ -701,6 +709,13 @@ public class ThesaurusEntry
 				flags.add("Sieviešu dzimte");
 				flags.add("Lietvārds");
 			}
+			else if (gramText.startsWith("-es, s., dsk. ģen. -bju,")) //acetilsalicilskābe
+			{
+				pattern = "-es, s., dsk. ģen. -bju,";
+				paradigm.add(9);
+				flags.add("Sieviešu dzimte");
+				flags.add("Lietvārds");
+			}
 			else if (gramText.startsWith("-es, s.")) //aizture
 			{
 				pattern = "-es, s.";
@@ -713,6 +728,12 @@ public class ThesaurusEntry
 			else if (gramText.startsWith("-ais; s. -a, -ā;")) //abējāds
 			{
 				pattern = "-ais; s. -a, -ā;";
+				paradigm.add(14);
+				flags.add("Īpašības vārds");
+			}
+			else if (gramText.startsWith("-ais; s. -a, -ā.")) //acains
+			{
+				pattern = "-ais; s. -a, -ā.";
 				paradigm.add(14);
 				flags.add("Īpašības vārds");
 			}
@@ -749,7 +770,13 @@ public class ThesaurusEntry
 				flags.add("Darbības vārds");
 				flags.add("Locīt kā \"tvert\"");
 			}
-			
+			else if (gramText.startsWith("-griežu, -griez, -griež, pag. -griezu")) //apgriezt
+			{
+				pattern = "-griežu, -griez, -griež, pag. -griezu";
+				paradigm.add(15);
+				flags.add("Darbības vārds");
+				flags.add("Locīt kā \"griezt\"");
+			}			
 			
 			// Paradigm 16: Darbības vārdi 2. konjugācija tiešie
 			else if (gramText.startsWith("parasti 3. pers., -o , pag. -oja;")) //aizšalkot
@@ -759,9 +786,22 @@ public class ThesaurusEntry
 				flags.add("Darbības vārds");
 				flags.add("Parasti 3. personā");
 			}
-			else if (gramText.startsWith("-ēju, -ē, -ē, pag. -eju;")) //abonēt
+			else if (gramText.startsWith("parasti 3. pers., -ē, pag. -ēja;")) //adsorbēt
 			{
-				pattern = "-ēju, -ē, -ē, pag. -eju;";
+				pattern = "parasti 3. pers., -ē, pag. -ēja";
+				paradigm.add(16);
+				flags.add("Darbības vārds");
+				flags.add("Parasti 3. personā");
+			}
+			else if (gramText.startsWith("-oju, -o, -o, -ojam, -ojat, pag. -oju; -ojām, -ojāt; pav. -o, -ojiet,")) //acot
+			{
+				pattern = "-oju, -o, -o, -ojam, -ojat, pag. -oju; -ojām, -ojāt; pav. -o, -ojiet,";
+				paradigm.add(16);
+				flags.add("Darbības vārds");
+			}
+			else if (gramText.startsWith("-ēju, -ē, -ē, pag. -ēju;")) //absolutizēt
+			{
+				pattern = "-ēju, -ē, -ē, pag. -ēju;";
 				paradigm.add(16);
 				flags.add("Darbības vārds");
 			}
@@ -778,7 +818,7 @@ public class ThesaurusEntry
 			else if (gramText.startsWith("-turu, -turi, -tur, pag. -turēju;")) //aizturēt
 			{
 				pattern = "-turu, -turi, -tur, pag. -turēju;";
-				paradigm.add(16);
+				paradigm.add(17);
 				flags.add("Darbības vārds");
 				flags.add("Locīt kā \"turēt\"");
 			}
@@ -814,13 +854,31 @@ public class ThesaurusEntry
 			}
 			
 			// Paradigm 19: Darbības vārdi 2. konjugācija atgriezeniski
+			else if (gramText.startsWith("parasti 3. pers., -ējas, pag. -ējās;")) //absorbēties
+			{
+				pattern = "parasti 3. pers., -ējas, pag. -ējās;";
+				paradigm.add(19);
+				flags.add("Darbības vārds");
+				flags.add("Parasti 3. personā");
+			}
 			else if (gramText.startsWith("-ojos, -ojies, -ojas, pag. -ojos.")) // aiztuntuļoties
 			{
 				pattern = "-ojos, -ojies, -ojas, pag. -ojos.";
 				paradigm.add(19);
 				flags.add("Darbības vārds");				
 			}
-			
+			else if (gramText.startsWith("-ojos, -ojies, -ojas, pag. -ojos;")) // apgrēkoties
+			{
+				pattern = "-ojos, -ojies, -ojas, pag. -ojos;";
+				paradigm.add(19);
+				flags.add("Darbības vārds");				
+			}
+			else if (gramText.startsWith("-ējos, -ējies, -ējas, pag. -ējos;")) // abstrahēties
+			{
+				pattern = "-ējos, -ējies, -ējas, pag. -ējos;";
+				paradigm.add(19);
+				flags.add("Darbības vārds");				
+			}			
 			//String res = beggining + gramText.substring(pattern.length());
 			String res = gramText.substring(pattern.length());
 			return res;
@@ -856,60 +914,6 @@ public class ThesaurusEntry
 		}
 		
 		/**
-		 * Checks if gramText contains the target, taking into account
-		 * delimiters.
-		 * @param gramText - where to search
-		 * @param target - what to search.
-		 * @return - true if target found.
-		 */
-/*		private static boolean gramContains(String gramText, String target)
-		{
-			if (gramText==null || gramText.length() < 2) return false;
-			//TODO - regexp varētu te būt ātrāki, ja nu ātrdarbība kļūst par sāpi
-			return gramText.trim().equalsIgnoreCase(target)
-				|| gramText.endsWith(", " + target)
-				|| gramText.endsWith("; " + target)
-				|| gramText.endsWith(": " + target)
-				|| gramText.startsWith(target + ", ")
-				|| gramText.startsWith(target + "; ")
-				|| gramText.contains(", " + target + ",")
-				|| gramText.contains(", " + target + ";")
-				|| gramText.contains("; " + target + ",")
-				|| gramText.contains("; " + target + ";");
-		}*/
-		
-		/**
-		 * Removes the target from gramText to consider it as processed, taking
-		 * into account delimiters.
-		 * @param gramText - where to remove
-		 * @param target - what to remove
-		 * @return cleaned gramText.
-		 */
-/*		private String removeFromGram(String gramText, String target)
-		{
-			if (gramText == null || gramText.trim().equals("")) return gramText;
-			if (gramText.trim().equals(target))
-				gramText="";
-			else if (gramText.endsWith(", " + target)
-					|| gramText.endsWith("; " + target)
-					|| gramText.endsWith(": " + target))
-				gramText = gramText.substring(0, gramText.length() - target.length() - 2);
-			else if (gramText.startsWith(target + ", ")
-					|| gramText.startsWith(target + "; "))
-				gramText = gramText.substring(target.length() + 2);
-			else if (gramText.contains(", " + target + ","))
-				gramText = gramText.replace(", " + target + ",", ",");
-			else if (gramText.contains(", " + target + ";"))
-				gramText = gramText.replace(", " + target + ";", ";");
-			else if (gramText.contains("; " + target + ";"))
-				gramText = gramText.replace("; " + target + ";" , ";");
-			else if (gramText.contains("; " + target + ","))
-				gramText = gramText.replace("; " + target + "," , ";");
-			return gramText.trim();
-		}*/
-
-		
-		/**
 		 * Hopefully, this method will be empty for final data ;)
 		 */
 		private String correctOCRErrors(String gramText)
@@ -929,6 +933,13 @@ public class ThesaurusEntry
 			gramText = gramText.replace(" māt.", " mat.");
 			gramText = gramText.replace("vsk..", "vsk.");
 			gramText = gramText.replace("vsk .", "vsk.");
+			
+			gramText = gramText.replace("-ēju, -ē, -ē, pag. -eju;", "-ēju, -ē, -ē, pag. -ēju;"); // abonēt
+			gramText = gramText.replace("parasti 3. pers., -ē, pag. -eja", "parasti 3. pers., -ē, pag. -ēja"); // absorbēt
+			gramText = gramText.replace("-ais; s. -a: -ā;", "-ais; s. -a, -ā;"); // apgrēcīgs
+			
+			//Inconsequences in data
+			//gramText = gramText.replace("-ā.;", "-ā;");
 
 			return gramText;
 			
@@ -1453,180 +1464,6 @@ public class ThesaurusEntry
 		s.append(']');
 		return s.toString();
 	}
-
-	/**
-	 * Do the one-time initialization of lookup data.
-	 */
-/*	private void initStatics() {
-		blacklist = new HashSet<String>();
-		BufferedReader ieeja;
-		// Removed temporarily as too specific.
-		/*
-		try {
-			ieeja = new BufferedReader(
-					new InputStreamReader(
-					new FileInputStream("/Users/pet/Dropbox/Resursi/Tezaurs/SV errors.txt"), "UTF-8"));
-			String rinda;
-			while ((rinda = ieeja.readLine()) != null) {
-				if (rinda.contains("<s>") || rinda.contains("</s>") || rinda.isEmpty())
-					continue;
-				blacklist.add(rinda.trim());
-			}		
-			ieeja.close();
-		} catch (Exception e) {} //TODO - any IO issues ignored
-		*/
-		
-/*		gramFlags = new HashMap<String,String>();
-		
-		// Katram šim pārītim pārbaudīs 'gram' lauku un ja atradīs, tad ieliks
-		// gramFlags sarakstā / izvāks no gram.
-		//TODO - saskaitīt šos flagus, varbūt daļu apvienot (medicīnas, bioloģijas apakšjomas)
-		gramFlags.put("anat.", "Anatomija");
-		gramFlags.put("arheol.", "Arheoloģija");
-		gramFlags.put("arhit.", "Arhitektūra");
-		gramFlags.put("astr.", "Astronomija");
-		gramFlags.put("av.", "Aviācija");
-		gramFlags.put("biol.", "Bioloģija");
-		gramFlags.put("biškop.", "Biškopība");
-		gramFlags.put("bot.", "Botānika");
-		gramFlags.put("būvn.", "Būvniecība");
-		gramFlags.put("ekon.", "Ekonomika");
-		gramFlags.put("el.", "Elektrotehnika");
-		gramFlags.put("etn.", "Etnogrāfija");
-		gramFlags.put("farm.", "Farmakoloģija");
-		gramFlags.put("filoz.", "Filozofija");	
-		gramFlags.put("fin.", "Finansu termins");
-		gramFlags.put("fiz.", "Fizika");
-		gramFlags.put("fiziol.", "Fizioloģija");
-		gramFlags.put("fizk.", "Fiziskā kultūra un sports");
-		gramFlags.put("folkl.", "Folklora");
-		gramFlags.put("ģeogr.", "Ģeogrāfija");
-		gramFlags.put("ģeol.", "Ģeoloģija");
-		gramFlags.put("ģeom.", "Ģeometrija");
-		gramFlags.put("hidrotehn.", "Hidrotehnika");
-		gramFlags.put("inf.", "Informātika");
-		gramFlags.put("jur.", "Jurisprudence");
-		gramFlags.put("jūrn.", "Jūrniecība");
-		gramFlags.put("kap.", "Attiecas uz kapitālistisko iekārtu, kapitālistisko sabiedrību");
-		gramFlags.put("kul.", "Kulinārija");
-		gramFlags.put("ķīm.", "Ķīmija");
-		gramFlags.put("lauks.", "Lauksaimniecība");
-		gramFlags.put("literat.", "Literatūrzinātne");
-		gramFlags.put("loģ.", "Loģika");
-		gramFlags.put("mat.", "Matemātika");
-		gramFlags.put("māt.", "Matemātika"); //FIXME - typo pirmavotā
-		gramFlags.put("med.", "Medicīna");
-		gramFlags.put("medn.", "Medniecība");
-		gramFlags.put("meteorol.", "Meteoroloģija");
-		gramFlags.put("mežs.", "Mežsaimniecība");
-		gramFlags.put("mil.", "Militārās zinātnes");
-		gramFlags.put("min.", "Mineraloģija");
-		gramFlags.put("mit.", "Mitoloģija");
-		gramFlags.put("mūz.", "Mūzika");
-		gramFlags.put("pol.", "Politika");
-		gramFlags.put("poligr.", "Poligrāfija");
-		gramFlags.put("psih.", "Psiholoģija");
-		gramFlags.put("ornit.", "Ornitoloģija");
-		gramFlags.put("rel.", "Reliģija");
-		gramFlags.put("tehn.", "Tehnika");
-		gramFlags.put("tekst.", "Tekstilrūpniecība");
-		gramFlags.put("val.", "Valodniecība");
-		gramFlags.put("vet.", "Veterinārija");
-		gramFlags.put("zool.", "Zooloģija");
-		
-		gramFlags.put("apv.", "Apvidvārds");
-		gramFlags.put("novec.", "Novecojis"); //TODO - Novecojis, vēsturisks un neaktuāls apvienot??		
-		gramFlags.put("vēst.", "Vēsturisks");
-		gramFlags.put("neakt.", "Neaktuāls");
-		gramFlags.put("poēt.", "Poētiska stilistiskā nokrāsa");
-		gramFlags.put("niev.", "Nievīga ekspresīvā nokrāsa");
-		gramFlags.put("iron.", "Ironiska ekspresīvā nokrāsa");
-		gramFlags.put("hum.", "Humoristiska ekspresīvā nokrāsa");
-		gramFlags.put("vienk.", "Vienkāršrunas stilistiskā nokrāsa");
-		gramFlags.put("nevēl.", "Nevēlams"); // TODO - nevēlamos, neliterāros un žargonus apvienot??
-		gramFlags.put("nelit.", "Neliterārs");
-		gramFlags.put("žarg.", "Žargonvārds");
-		gramFlags.put("sar.", "Sarunvaloda");
-		
-		//TODO - šos drīzāk kā atsevišķu komentāru lauku(s)
-		gramFlags.put("parasti vsk.", "Parasti vienskaitlī");
-		gramFlags.put("parasti vsk..", "Parasti vienskaitlī"); //FIXME - typo pirmavotā
-		gramFlags.put("parasti vsk .", "Parasti vienskaitlī"); //FIXME - typo pirmavotā
-		gramFlags.put("-parasti vsk.", "Parasti vienskaitlī"); //FIXME - typo pirmavotā
-		gramFlags.put("parasti vsk", "Parasti vienskaitlī");
-		gramFlags.put("par. vsk.", "Parasti vienskaitlī");
-		gramFlags.put("tikai vsk.", "Tikai vienskaitlī");
-		gramFlags.put("vsk.", "Vienskaitlī");
-		gramFlags.put("parasti dsk.", "Parasti daudzskaitlī");		
-		gramFlags.put("tikai dsk.", "Tikai daudzskaitlī");
-		gramFlags.put("pareti.", "Pareti");
-		gramFlags.put("pareti", "Pareti");
-		gramFlags.put("reti.", "Reti");
-		gramFlags.put("reti", "Reti");
-		gramFlags.put("retāk", "Retāk");
-		
-		truegramPatterns = new LinkedList<Pattern>();
-		truegramPatterns.add(Pattern.compile("^(.*)(vokatīvs [^ ,;:]+)(.*)$"));
-		truegramPatterns.add(Pattern.compile("^(.*)(bieži lok\\.: [^ ,;:]+)(.*)$"));
-		truegramPatterns.add(Pattern.compile("^(.*)(parasti lok\\.: [^ ,;:]+)(.*)$"));
-		truegramPatterns.add(Pattern.compile("^(.*)(parasti vsk\\. lok\\.: [^ ,;:]+)(.*)$"));
-		truegramPatterns.add(Pattern.compile("^(.*)(parasti ģen\\.: [^ ,;:]+)(.*)$"));
-		truegramPatterns.add(Pattern.compile("^(.*)(pamata skait(\\.|ļa vārds) lietv(\\.|ārda) nozīmē\\.?)(.*)$"));
-		truegramPatterns.add(Pattern.compile("^(.*)(\\(?parasti folkl\\.(\\)\\.)?)(.*)$"));
-		truegramPatterns.add(Pattern.compile("^(.*)(parasti saistītā valodā\\.)(.*)$"));
-		truegramPatterns.add(Pattern.compile("^(.*)(apst\\. nozīmē)(.*)$"));
-		truegramPatterns.add(Pattern.compile("^(.*)(\\(vācu \"krava\"\\))(.*)$"));
-	}//*/
-	
-/*	private void setGram(String textContent) {
-		if (gram != null)
-			System.err.printf("Duplicate info for field 'gram' : '%s' and '%s'", gram, textContent);
-		gram = textContent;
-		originalGram = textContent;
-		
-		if (gram.endsWith(";,")) //TODO - typo pirmavotā
-			gram = gram.substring(0,gram.length()-2);
-		
-		if (gram.endsWith(";") || gram.endsWith(",")) //TODO - typo pirmavotā
-			gram = gram.substring(0,gram.length()-1);
-		
-		gram = gram.replace("lietv. -a", "lietv., -a"); //TODO - typo pirmavotā
-		gram = gram.replace(";novec", "; novec"); //TODO - typo pirmavotā
-		gram = gram.replace("novec. (", "novec.; ("); //TODO - typo pirmavotā
-		gram = gram.replace("parasti vsk. med.", "parasti vsk., med."); //TODO - typo pirmavotā
-		
-		if (gramFlags == null) initStatics();
-				
-		// katram gram_flags pārītim pārbaudīs 'gram' lauku un ja atradīs, tad
-		// ieliks Flags sarakstā / izvāks no gram.
-		for (Entry<String, String> entry : gramFlags.entrySet()) {
-			if (gramContains(entry.getKey())) {			
-				flags.add(entry.getValue());
-				removeGram(entry.getKey());
-			}			
-		}		
-		
-		if (truegramPatterns == null) initStatics();
-		for (Pattern p : truegramPatterns) {
-			Matcher m = p.matcher(gram); 
-			if (m.matches()) {
-				String extract = m.replaceAll("$2");
-				if (trueGram != null) {
-					//System.err.printf("Duplicate info for field 'Truegram' : '%s' and '%s'\n", true_gram, extract);
-					trueGram = trueGram+"; "+extract;
-				} else trueGram = extract;
-				removeGram(extract);
-			}					
-		}
-		
-		//FIXME - laižam vēlreiz, jo dažas dīvainas kombinācijas (koli iekavas utml) tikai tad iztīra...
-		for (Entry<String, String> entry : gramFlags.entrySet()) {
-			if (gramContains(entry.getKey())) {			
-				flags.add(entry.getValue());
-				removeGram(entry.getKey());
-			}			
-		}
-	}//*/
 	
 	public static class Utils
 	{
@@ -1655,8 +1492,8 @@ public class ThesaurusEntry
 			{
 				res.append("\"");
 				res.append(JSONObject.escape(i.next().toString()));
-				if (i.hasNext()) res.append(", ");
 				res.append("\"");
+				if (i.hasNext()) res.append(", ");
 			}
 			res.append("]");			
 			return res.toString();

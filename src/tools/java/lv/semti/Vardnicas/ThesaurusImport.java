@@ -80,10 +80,6 @@ public class ThesaurusImport {
 					(entry.sources == null || entry.sources.s.contains("LLVV"))) //TODO - temporary restriction, focus on LLVV first
 				{
 					//entries.add(entry);
-					//if (entry.head.gram != null
-					//		&& entry.head.gram.paradigm != null
-					//		&& !entry.head.gram.paradigm.isEmpty())
-					
 					if (entry.hasParadigm() && !entry.hasUnparsedGram())
 						goodOut.write(entry.toJSON() + "\n");
 					else
@@ -99,7 +95,7 @@ public class ThesaurusImport {
 				badOut.close();				
 				throw new Error("Node '" + sNode.getNodeName() + "' but s (šķirklis) expected!");
 			}
-			if (badCount > 1000) break;	//Temporary.
+			if (badCount >= 1000) break;	//Temporary.
 		}
 		
 		goodOut.close();
