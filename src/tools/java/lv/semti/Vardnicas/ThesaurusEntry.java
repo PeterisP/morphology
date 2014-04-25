@@ -675,7 +675,7 @@ public class ThesaurusEntry
 				if (lemma.matches(".*[ģjķr]is")) paradigm.add(3);
 				else
 				{
-					if (lemma.matches(".*[aeiou]s") || lemma.matches(".*[^sš]"))
+					if (lemma.matches(".*[aeiouāēīōū]s") || lemma.matches(".*[^sš]"))
 						System.err.printf("Problem matching \"%s\" with paradigms 1, 2, 3\n", lemma);
 					
 					if (lemma.endsWith("š")) paradigm.add(2);
@@ -690,7 +690,7 @@ public class ThesaurusEntry
 				if (lemma.matches(".*[ģjķr]is")) paradigm.add(3);
 				else
 				{
-					if (lemma.matches(".*[aeiou]s") || lemma.matches(".*[^sš]"))
+					if (lemma.matches(".*[aeiouāēīōū]s") || lemma.matches(".*[^sš]"))
 						System.err.printf("Problem matching \"%s\" with paradigms 1, 2, 3\n", lemma);
 					
 					if (lemma.endsWith("š")) paradigm.add(2);
@@ -725,18 +725,18 @@ public class ThesaurusEntry
 				if (!lemma.endsWith("lis") && !lemma.endsWith("ls"))
 					System.err.printf("Problem matching \"%s\" with paradigm 3, 5\n", lemma);
 				if (lemma.endsWith("ls")) paradigm.add(5);
-				paradigm.add(3);
+				else paradigm.add(3);
 				flags.add("Vīriešu dzimte");
 				flags.add("Lietvārds");
 			}
-			
-			// Paradigm 3: Lietvārds 2. deklinācija -is
-			else if (gramText.startsWith("-ša, v.")) // abrkasis
+			else if (gramText.startsWith("-ša, v.")) // abrkasis, lemess
 			{
 				newBegin = "-ša, v.".length();
-				if (!lemma.endsWith("sis") && !lemma.endsWith("tis") && !lemma.endsWith("šis"))
+				if (!lemma.endsWith("sis") && !lemma.endsWith("tis")
+						&& !lemma.endsWith("šis") && !lemma.endsWith("ss"))
 					System.err.printf("Problem matching \"%s\" with paradigm 3\n", lemma);
-				paradigm.add(3);
+				if (lemma.endsWith("ss")) paradigm.add(5);
+				else paradigm.add(3);
 				flags.add("Vīriešu dzimte");
 				flags.add("Lietvārds");
 			}
@@ -744,12 +744,14 @@ public class ThesaurusEntry
 
 			
 			// Paradigm 7: Lietvārds 4. deklinācija -a siev. dz.
-			else if (gramText.startsWith("-as, s.")) //aberācija
+			// Paradigm 11: Lietvārds 6. deklinācija -s siev. dz.
+			else if (gramText.startsWith("-as, s.")) //aberācija, milns
 			{
 				newBegin = "-as, s.".length();
-				if (!lemma.endsWith("a"))
-					System.err.printf("Problem matching \"%s\" with paradigm 7\n", lemma);
-				paradigm.add(7);
+				if (!lemma.endsWith("a") && !lemma.matches(".*[^aeiouāēīōū]s"))
+					System.err.printf("Problem matching \"%s\" with paradigm 7, 11\n", lemma);
+				if (lemma.endsWith("s")) paradigm.add(11);
+				else paradigm.add(7);
 				flags.add("Sieviešu dzimte");
 				flags.add("Lietvārds");
 			}
@@ -1143,6 +1145,57 @@ public class ThesaurusEntry
 				flags.add("Darbības vārds");				
 			}
 			
+			// Paradigm 30: jaundzimušais, pēdējais
+			else if (gramText.startsWith("-šā, v. -šās, s.")) //iereibušais
+			{
+				newBegin = "-šā, v. -šās, s.".length();
+				if (!lemma.endsWith("ušais"))
+					System.err.printf("Problem matching \"%s\" with paradigm 30\n", lemma);
+				paradigm.add(30);
+				flags.add("Īpašības vārds");			
+				flags.add("Lietvārds");			
+			}
+			else if (gramText.startsWith("-ā, v.")) //pirmdzimtais
+			{
+				newBegin = "-ā, v.".length();
+				if (!lemma.endsWith("ais"))
+					System.err.printf("Problem matching \"%s\" with paradigm 30\n", lemma);
+				paradigm.add(30);
+				flags.add("Vīriešu dzimte");
+				flags.add("Lietvārds");	
+				flags.add("Īpašības vārds");	
+			}
+			else if (gramText.startsWith("-ās, s.")) //pirmdzimtā
+			{
+				newBegin = "-ās, s.".length();
+				if (!lemma.endsWith("ā") && !lemma.endsWith("šanās"))
+					System.err.printf("Problem matching \"%s\" with paradigms 30, -šanās\n", lemma);
+				if (lemma.endsWith("šanās"))
+				{
+					paradigm.add(0);
+					flags.add("Atgriezeniskais lietvārds");	
+				}
+				else 
+				{
+					paradigm.add(30);
+					flags.add("Īpašības vārds");	
+				}
+				flags.add("Sieviešu dzimte");
+				flags.add("Lietvārds");	
+			}
+			
+			// Paradigm Unknown: Atgriezeniskie lietvārdi -šanās
+			else if (gramText.startsWith("ģen. -ās, akuz. -os, instr. -os, dsk. -ās, ģen. -os, akuz. -ās, s.")) //aizbildināšanās
+			{
+				newBegin = "ģen. -ās, akuz. -os, instr. -os, dsk. -ās, ģen. -os, akuz. -ās, s.".length();
+				if (!lemma.endsWith("šanās"))
+					System.err.printf("Problem matching \"%s\" with paradigm -šanās\n", lemma);
+				paradigm.add(0);
+				flags.add("Sieviešu dzimte");
+				flags.add("Lietvārds");	
+				flags.add("Atgriezeniskais lietvārds");	
+			}			
+			
 			return gramText.substring(newBegin);
 		}
 		
@@ -1207,7 +1260,7 @@ public class ThesaurusEntry
 			gramText = gramText.replace("-ēju, -ē, -ē, pag. -eju;", "-ēju, -ē, -ē, pag. -ēju;"); //abonēt
 			gramText = gramText.replace("parasti 3. pers., -ē, pag. -eja;", "parasti 3. pers., -ē, pag. -ēja;"); //absorbēt
 			gramText = gramText.replace("-ais; s. -a: -ā;", "-ais; s. -a, -ā;"); //apgrēcīgs
-			gramText = gramText.replace("-šā, v.", "-ša, v."); //abesīnietis, ābolītis
+			//gramText = gramText.replace("-šā, v.", "-ša, v."); //abesīnietis, ābolītis, iereibušais
 			gramText = gramText.replace("parasti 3. pers., -ējas, pag. -ejās;", "parasti 3. pers., -ējas, pag. -ējās;"); //adaptēties
 			
 			//Inconsequences in data
