@@ -79,9 +79,9 @@ public class ThesaurusImport {
 			if (sNode.getNodeName().equals("s"))
 			{
 				ThesaurusEntry entry = new ThesaurusEntry(sNode);
-				if (!entry.inBlacklist() &&
-					(entry.sources == null || entry.sources.s.contains("LLVV"))) //TODO - temporary restriction, focus on LLVV first
-				{
+				//if (!entry.inBlacklist() &&
+				//	(entry.sources == null || entry.sources.s.contains("LLVV"))) //TODO - temporary restriction, focus on LLVV first
+				//{
 					//entries.add(entry);
 					if (entry.hasParadigm() && !entry.hasUnparsedGram())
 						goodOut.write(entry.toJSON() + "\n");
@@ -92,7 +92,7 @@ public class ThesaurusImport {
 						badOut.write(entry.toJSON() + "\n");
 						badCount++;
 					}
-				}
+				//}
 			}
 			else if (!sNode.getNodeName().equals("#text")) // Text nodes here are ignored.
 			{
@@ -101,7 +101,7 @@ public class ThesaurusImport {
 				badOut.close();				
 				throw new Error("Node '" + sNode.getNodeName() + "' but s (šķirklis) expected!");
 			}
-			if (badCount >= 1000) break;	//Temporary.
+			//if (badCount >= 1000) break;	//Temporary.
 		}
 		
 		goodOut.close();

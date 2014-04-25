@@ -672,11 +672,11 @@ public class ThesaurusEntry
 			if (gramText.startsWith("lietv. -a, v.")) // aerobs
 			{
 				newBegin = "lietv. -a, v.".length();
-				if (lemma.matches(".*[ķr]is")) paradigm.add(3);
+				if (lemma.matches(".*[ģjķr]is")) paradigm.add(3);
 				else
 				{
 					if (lemma.matches(".*[aeiou]s") || lemma.matches(".*[^sš]"))
-						System.err.printf("Problem matching \"%s\" with paradigms 1, 2\n");
+						System.err.printf("Problem matching \"%s\" with paradigms 1, 2, 3\n", lemma);
 					
 					if (lemma.endsWith("š")) paradigm.add(2);
 					else paradigm.add(1);
@@ -687,11 +687,11 @@ public class ThesaurusEntry
 			else if (gramText.startsWith("-a, v.")) // abats, akustiķis
 			{
 				newBegin = "-a, v.".length();
-				if (lemma.matches(".*[ķr]is")) paradigm.add(3);
+				if (lemma.matches(".*[ģjķr]is")) paradigm.add(3);
 				else
 				{
 					if (lemma.matches(".*[aeiou]s") || lemma.matches(".*[^sš]"))
-						System.err.printf("Problem matching \"%s\" with paradigms 1, 2\n");
+						System.err.printf("Problem matching \"%s\" with paradigms 1, 2, 3\n", lemma);
 					
 					if (lemma.endsWith("š")) paradigm.add(2);
 					else paradigm.add(1);
@@ -701,34 +701,46 @@ public class ThesaurusEntry
 				flags.add("Lietvārds");
 			}
 			
+			// Paradigm 2: Lietvārds 1. deklinācija -š
 			// Paradigm 3: Lietvārds 2. deklinācija -is
+			// Paradigm 5: Lietvārds 2. deklinācija -suns
 			else if (gramText.startsWith("-ņa, v.")) // abesīnis
 			{
 				newBegin = "-ņa, v.".length();
-				if (!lemma.endsWith("nis"))
-					System.err.printf("Problem matching \"%s\" with paradigm 3\n", lemma);
+				if (!lemma.endsWith("nis") && !lemma.endsWith("ņš") && !lemma.endsWith("suns"))
+					System.err.printf("Problem matching \"%s\" with paradigms 2, 3, 5\n", lemma);
+				
+				if (lemma.endsWith("suns")) paradigm.add(5);
+				else if (lemma.endsWith("ņš")) paradigm.add(2);
+				else paradigm.add(3);
+				flags.add("Vīriešu dzimte");
+				flags.add("Lietvārds");
+			}
+			
+			// Paradigm 3: Lietvārds 2. deklinācija -is
+			// Paradigm 5: Lietvārds 2. deklinācija -suns
+			else if (gramText.startsWith("-ļa, v.")) // acumirklis, durkls
+			{
+				newBegin = "-ļa, v.".length();
+				if (!lemma.endsWith("lis") && !lemma.endsWith("ls"))
+					System.err.printf("Problem matching \"%s\" with paradigm 3, 5\n", lemma);
+				if (lemma.endsWith("ls")) paradigm.add(5);
 				paradigm.add(3);
 				flags.add("Vīriešu dzimte");
 				flags.add("Lietvārds");
 			}
+			
+			// Paradigm 3: Lietvārds 2. deklinācija -is
 			else if (gramText.startsWith("-ša, v.")) // abrkasis
 			{
 				newBegin = "-ša, v.".length();
-				if (!lemma.endsWith("sis") && !lemma.endsWith("tis"))
+				if (!lemma.endsWith("sis") && !lemma.endsWith("tis") && !lemma.endsWith("šis"))
 					System.err.printf("Problem matching \"%s\" with paradigm 3\n", lemma);
 				paradigm.add(3);
 				flags.add("Vīriešu dzimte");
 				flags.add("Lietvārds");
 			}
-			else if (gramText.startsWith("-ļa, v.")) // acumirklis
-			{
-				newBegin = "-ļa, v.".length();
-				if (!lemma.endsWith("lis"))
-					System.err.printf("Problem matching \"%s\" with paradigm 3\n", lemma);
-				paradigm.add(3);
-				flags.add("Vīriešu dzimte");
-				flags.add("Lietvārds");
-			}
+
 
 			
 			// Paradigm 7: Lietvārds 4. deklinācija -a siev. dz.
@@ -746,7 +758,7 @@ public class ThesaurusEntry
 			else if (gramText.startsWith("-es, dsk. ģen. -ču, s.")) //ābece
 			{
 				newBegin = "-es, dsk. ģen. -ču, s.".length();
-				if (!lemma.endsWith("ce"))
+				if (!lemma.endsWith("ce") && !lemma.endsWith("če"))
 					System.err.printf("Problem matching \"%s\" with paradigm 9\n", lemma);
 				paradigm.add(9);
 				flags.add("Sieviešu dzimte");
@@ -763,7 +775,7 @@ public class ThesaurusEntry
 			}
 			else if (gramText.startsWith("-es, dsk. ģen. -šu, s.")) //abate
 			{
-				if (!lemma.endsWith("te") && !lemma.endsWith("se"))
+				if (!lemma.endsWith("te") && !lemma.endsWith("se") && !lemma.endsWith("še"))
 					System.err.printf("Problem matching \"%s\" with paradigm 9\n", lemma);
 				newBegin = "-es, dsk. ģen. -šu, s.".length();
 				paradigm.add(9);
