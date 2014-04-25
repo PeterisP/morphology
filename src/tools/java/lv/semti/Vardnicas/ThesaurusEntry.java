@@ -356,10 +356,10 @@ public class ThesaurusEntry
 		/**
 		 * Known abbreviations and their de-abbreviations.
 		 */
-		public static HashMap<String, String> knownAbbr = generateKnownAbbr();
-		private static HashMap<String, String> generateKnownAbbr()
+		public static FlagMap knownAbbr = generateKnownAbbr();
+		private static FlagMap generateKnownAbbr()
 		{
-			HashMap<String, String> res = new HashMap<String, String>();
+			FlagMap res = new FlagMap();
 			
 			// TODO Sort out this mess.
 			// Source: LLVV, data.
@@ -485,7 +485,7 @@ public class ThesaurusEntry
 			res.put("poligr.", "Poligrāfija");
 			res.put("psih.", "Psiholoģija");
 			res.put("rel.", "Reliģija");
-			res.put("social.", "Socioloģija"); // Svešvārdu vārdnīca
+			res.put("sociol.", "Socioloģija"); // Svešvārdu vārdnīca
 			res.put("tehn.", "Tehnika");
 			res.put("telek.", "Telekomunikācijas");
 			res.put("tekst.", "Tekstilrūpniecība");
@@ -494,7 +494,7 @@ public class ThesaurusEntry
 			res.put("vet.", "Veterinārija");
 			res.put("zool.", "Zooloģija");
 			
-			res.put("it.", "No itāļu valodas"); //Muz, unverified 
+			res.put("it.", "No itāļu valodas"); //Muz			
 			
 			res.put("apv.", "Apvidvārds");
 			res.put("novec.", "Novecojis"); //TODO - Novecojis, vēsturisks un neaktuāls apvienot??		
@@ -611,7 +611,7 @@ public class ThesaurusEntry
 				{
 					gramElem = gramElem.trim();
 					if (knownAbbr.containsKey(gramElem))
-						flags.add(knownAbbr.get(gramElem));
+						flags.addAll(knownAbbr.getAll(gramElem));
 					else if (!gramElem.equals(""))
 						toDo.add(gramElem);	
 				}
@@ -1012,7 +1012,7 @@ public class ThesaurusEntry
 			if (flags.contains("Piederības vietniekvārds")) paradigm.add(25);
 			if (flags.contains("Vispārināmais vietniekvārds")) paradigm.add(25);
 
-			if (flags.contains("No itāļu valodas")) paradigm.add(12); // Nelokāmie lietvārdi
+			if (flags.contains("No itāļu valodas")) paradigm.add(29); // Vārdi svešvalodā
 
 			if (flags.contains("Priedēklis")) paradigm.add(0); //Prefixes are not words.
 		}
@@ -1667,6 +1667,37 @@ public class ThesaurusEntry
 			}
 			return res;
 		}
+	}
+	
+	/**
+	 * Multimap for grammar flags. Incomplete interface, might need additional
+	 * methods later.
+	 */
+	public static class FlagMap
+	{
+		private HashMap<String, HashSet<String>> map = new HashMap<String, HashSet<String>>();
+		
+		public void put (String key, String value)
+		{
+			HashSet<String> values = new HashSet<String>();
+			if (map.containsKey(key))
+			{
+				values = map.get(key);
+			}
+			values.add(value);
+			map.put(key, values);
+		}
+		
+		public HashSet<String> getAll(String key)
+		{
+			return map.get(key);
+		}
+		
+		public boolean containsKey(String key)
+		{
+			return map.containsKey(key);
+		}
+		
 	}
 	
 	public static interface HasToJSON
