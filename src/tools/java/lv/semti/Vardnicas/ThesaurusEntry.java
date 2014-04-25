@@ -28,8 +28,6 @@ import org.w3c.dom.NodeList;
 public class ThesaurusEntry
 {
 	
-	//Lemma lemma;
-	//Gram grammar;
 	Sources sources;
 
 	/**
@@ -68,22 +66,33 @@ public class ThesaurusEntry
 	// Reads data of a single thesaurus entry from the XML format
 	public ThesaurusEntry(Node sNode)
 	{
-		NodeList fields = sNode.getChildNodes(); 
+		NodeList fields = sNode.getChildNodes();
+		LinkedList<Node> postponed = new LinkedList<Node>();
 		for (int i = 0; i < fields.getLength(); i++)
 		{
 			Node field = fields.item(i);
 			String fieldname = field.getNodeName();
 			if (fieldname.equals("v")) // word info
+			{
+				if (head != null)
+					System.err.printf("Entry \"%s\" contains more than one \'v\'\n", head.lemma.text);
 				head = new Header (field);
-			else if (fieldname.equals("avots")) // source
+			}
+			else if (!fieldname.equals("#text")) // Text nodes here are ignored.
+				postponed.add(field);
+		}
+		for (Node field : postponed)
+		{
+			String fieldname = field.getNodeName();
+			if (fieldname.equals("avots")) // source
 				sources = new Sources (field);
 			else if (fieldname.equals("g_n")) // all senses
-				senses = Utils.loadSenses(field);
+				senses = Utils.loadSenses(field, head.lemma.text);
 			else if (fieldname.equals("g_fraz")) //phraseological forms
-				phrases = Utils.loadPhrases(field, "fraz");
+				phrases = Utils.loadPhrases(field, head.lemma.text, "fraz");
 			else if (fieldname.equals("g_de")) //derived forms
 				loadDerivs(field);
-			else if (!fieldname.equals("#text")) // Text nodes here are ignored.
+			else
 				System.err.printf("Entry - s - field %s not processed\n", fieldname);
 		}
 		
@@ -129,7 +138,7 @@ public class ThesaurusEntry
 	public boolean inBlacklist()
 	{
 		if (sources == null || !sources.s.contains("LLVV")) return true; // FIXME - temporary restriction to focus on LLVV first
-		return blacklist.contains(head.lemma.l);
+		return blacklist.contains(head.lemma.text);
 	}
 	
 	/**
@@ -267,21 +276,33 @@ public class ThesaurusEntry
 		
 		public Header (Node vNode)
 		{
-			NodeList fields = vNode.getChildNodes(); 
+			NodeList fields = vNode.getChildNodes();
+			LinkedList<Node> postponed = new LinkedList<Node>();
 			for (int i = 0; i < fields.getLength(); i++)
 			{
 				Node field = fields.item(i);
 				String fieldname = field.getNodeName();
 				if (fieldname.equals("vf")) // lemma
+				{
+					if (lemma != null)
+						System.err.printf("vf with lemma \"%s\" contains more than one \'vf\'\n", lemma.text);
 					lemma = new Lemma(field);
-				else if (fieldname.equals("gram")) // grammar
-					gram = new Gram (field);
+				}
 				else if (!fieldname.equals("#text")) // Text nodes here are ignored.
-					System.err.printf(
-						"v entry field %s not processed\n", fieldname);
+					postponed.add(field);
 			}
 			if (lemma == null)
-				System.err.printf("Thesaurus v-entry without a lemma :(\n");				
+				System.err.printf("Thesaurus v-entry without a lemma :(\n");
+			
+			for (Node field : postponed)
+			{
+				String fieldname = field.getNodeName();
+				if (fieldname.equals("gram")) // grammar
+					gram = new Gram (field, lemma.text);
+				else System.err.printf(
+						"v entry field %s not processed\n", fieldname);				
+			}
+				
 		}
 		
 		public boolean hasParadigm()
@@ -320,26 +341,26 @@ public class ThesaurusEntry
 	 */
 	public static class Lemma implements HasToJSON
 	{
-		public String l;
+		public String text;
 		
-		public Lemma () { l = null; }
-		public Lemma (Node vfNode) { l = vfNode.getTextContent(); }
+		public Lemma () { text = null; }
+		public Lemma (Node vfNode) { text = vfNode.getTextContent(); }
 		
 		/**
 		 *  Set lemma and check if the information isn't already filled, to
 		 *  detect possible overwritten data.
 		 */
 		public void set(String lemmaText) {
-			if (l != null)
+			if (text != null)
 				System.err.printf(
-					"Duplicate info for field 'lemma' : '%s' and '%s'", l,
+					"Duplicate info for field 'lemma' : '%s' and '%s'", text,
 					lemmaText);
-			l = lemmaText;
+			text = lemmaText;
 		}
 		
 		public String toJSON()
 		{
-			return String.format("\"Lemma\":\"%s\"", JSONObject.escape(l));
+			return String.format("\"Lemma\":\"%s\"", JSONObject.escape(text));
 		}
 	}
 	
@@ -556,23 +577,27 @@ public class ThesaurusEntry
 			leftovers = null;
 			paradigm = null;
 		}
-		
-		public Gram (Node gramNode)
+		/**
+		 * @param lemma is used for grammar parsing.
+		 */
+		public Gram (Node gramNode, String lemma)
 		{
 			orig = gramNode.getTextContent();
 			leftovers = null;
 			flags = new HashSet<String> ();
 			paradigm = new HashSet<Integer>();
-			parseGram();
+			parseGram(lemma);
 		}
-		
-		public void set (String gramText)
+		/**
+		 * @param lemma is used for grammar parsing.
+		 */
+		public void set (String gramText, String lemma)
 		{
 			orig = gramText;
 			leftovers = null;
 			flags = new HashSet<String> ();
 			paradigm = new HashSet<Integer>();
-			parseGram();
+			parseGram(lemma);
 		}
 		
 		public boolean hasParadigm()
@@ -589,13 +614,16 @@ public class ThesaurusEntry
 			return !leftovers.isEmpty();
 		}
 		
-		private void parseGram()
+		/**
+		 * @param lemma is used for grammar parsing.
+		 */
+		private void parseGram(String lemma)
 		{
 			String correctedGram = correctOCRErrors(orig);
 			
 			// First process ending patterns, usually located in the beginning
 			// of the grammar string.
-			correctedGram = processWithPatterns(correctedGram);
+			correctedGram = processWithPatterns(correctedGram, lemma);
 			
 			String[] subGrams = correctedGram.split("\\s*;\\s*");
 			leftovers = new LinkedList<LinkedList<String>> ();
@@ -627,8 +655,10 @@ public class ThesaurusEntry
 			cleanupLeftovers();
 		}
 		
-		// TODO is lemma ending check necessary?
-		private String processWithPatterns(String gramText)
+		/**
+		 * @param lemma is used for grammar parsing.
+		 */
+		private String processWithPatterns(String gramText, String lemma)
 		{
 			gramText = gramText.trim();
 			//if (!gramText.contains("-")) return gramText;
@@ -637,17 +667,36 @@ public class ThesaurusEntry
 			int newBegin = 0;
 			
 			// Paradigm 1: Lietvārds 1. deklinācija -s
+			// Paradigm 2: Lietvārds 1. deklinācija -š
+			// Paradigm 3: Lietvārds 2. deklinācija -is (ja nav miju)
 			if (gramText.startsWith("lietv. -a, v.")) // aerobs
 			{
 				newBegin = "lietv. -a, v.".length();
-				paradigm.add(1);
+				if (lemma.matches(".*[ķr]is")) paradigm.add(3);
+				else
+				{
+					if (lemma.matches(".*[aeiou]s") || lemma.matches(".*[^sš]"))
+						System.err.printf("Problem matching \"%s\" with paradigms 1, 2\n");
+					
+					if (lemma.endsWith("š")) paradigm.add(2);
+					else paradigm.add(1);
+				}
 				flags.add("Vīriešu dzimte");
 				flags.add("Lietvārds");
 			}
-			else if (gramText.startsWith("-a, v.")) // abats
+			else if (gramText.startsWith("-a, v.")) // abats, akustiķis
 			{
 				newBegin = "-a, v.".length();
-				paradigm.add(1);
+				if (lemma.matches(".*[ķr]is")) paradigm.add(3);
+				else
+				{
+					if (lemma.matches(".*[aeiou]s") || lemma.matches(".*[^sš]"))
+						System.err.printf("Problem matching \"%s\" with paradigms 1, 2\n");
+					
+					if (lemma.endsWith("š")) paradigm.add(2);
+					else paradigm.add(1);
+				}
+				
 				flags.add("Vīriešu dzimte");
 				flags.add("Lietvārds");
 			}
@@ -656,6 +705,8 @@ public class ThesaurusEntry
 			else if (gramText.startsWith("-ņa, v.")) // abesīnis
 			{
 				newBegin = "-ņa, v.".length();
+				if (!lemma.endsWith("nis"))
+					System.err.printf("Problem matching \"%s\" with paradigm 3\n", lemma);
 				paradigm.add(3);
 				flags.add("Vīriešu dzimte");
 				flags.add("Lietvārds");
@@ -663,6 +714,8 @@ public class ThesaurusEntry
 			else if (gramText.startsWith("-ša, v.")) // abrkasis
 			{
 				newBegin = "-ša, v.".length();
+				if (!lemma.endsWith("sis") && !lemma.endsWith("tis"))
+					System.err.printf("Problem matching \"%s\" with paradigm 3\n", lemma);
 				paradigm.add(3);
 				flags.add("Vīriešu dzimte");
 				flags.add("Lietvārds");
@@ -670,22 +723,20 @@ public class ThesaurusEntry
 			else if (gramText.startsWith("-ļa, v.")) // acumirklis
 			{
 				newBegin = "-ļa, v.".length();
+				if (!lemma.endsWith("lis"))
+					System.err.printf("Problem matching \"%s\" with paradigm 3\n", lemma);
 				paradigm.add(3);
 				flags.add("Vīriešu dzimte");
 				flags.add("Lietvārds");
 			}
-			/*else if (gramText.startsWith("-šā, v.")) // abesīnietis
-			{
-				pattern = "-šā, v.";
-				paradigm.add(3);
-				flags.add("Vīriešu dzimte");
-				flags.add("Lietvārds");
-			}//*/
+
 			
 			// Paradigm 7: Lietvārds 4. deklinācija -a siev. dz.
 			else if (gramText.startsWith("-as, s.")) //aberācija
 			{
 				newBegin = "-as, s.".length();
+				if (!lemma.endsWith("a"))
+					System.err.printf("Problem matching \"%s\" with paradigm 7\n", lemma);
 				paradigm.add(7);
 				flags.add("Sieviešu dzimte");
 				flags.add("Lietvārds");
@@ -695,6 +746,8 @@ public class ThesaurusEntry
 			else if (gramText.startsWith("-es, dsk. ģen. -ču, s.")) //ābece
 			{
 				newBegin = "-es, dsk. ģen. -ču, s.".length();
+				if (!lemma.endsWith("ce"))
+					System.err.printf("Problem matching \"%s\" with paradigm 9\n", lemma);
 				paradigm.add(9);
 				flags.add("Sieviešu dzimte");
 				flags.add("Lietvārds");
@@ -702,12 +755,16 @@ public class ThesaurusEntry
 			else if (gramText.startsWith("-es, dsk. ģen. -ļu, s.")) //ābele
 			{
 				newBegin = "-es, dsk. ģen. -ļu, s.".length();
+				if (!lemma.endsWith("le"))
+					System.err.printf("Problem matching \"%s\" with paradigm 9\n", lemma);
 				paradigm.add(9);
 				flags.add("Sieviešu dzimte");
 				flags.add("Lietvārds");
 			}
 			else if (gramText.startsWith("-es, dsk. ģen. -šu, s.")) //abate
 			{
+				if (!lemma.endsWith("te") && !lemma.endsWith("se"))
+					System.err.printf("Problem matching \"%s\" with paradigm 9\n", lemma);
 				newBegin = "-es, dsk. ģen. -šu, s.".length();
 				paradigm.add(9);
 				flags.add("Sieviešu dzimte");
@@ -716,6 +773,8 @@ public class ThesaurusEntry
 			else if (gramText.startsWith("-es, dsk. ģen. -ņu, s.")) //ābolaine
 			{
 				newBegin = "-es, dsk. ģen. -ņu, s.".length();
+				if (!lemma.endsWith("ne"))
+					System.err.printf("Problem matching \"%s\" with paradigm 9\n", lemma);
 				paradigm.add(9);
 				flags.add("Sieviešu dzimte");
 				flags.add("Lietvārds");
@@ -723,6 +782,8 @@ public class ThesaurusEntry
 			else if (gramText.startsWith("-es, dsk. ģen. -žu, s.")) //ābolmaize
 			{
 				newBegin = "-es, dsk. ģen. -žu, s.".length();
+				if (!lemma.endsWith("ze") && !lemma.endsWith("de"))
+					System.err.printf("Problem matching \"%s\" with paradigm 9\n", lemma);
 				paradigm.add(9);
 				flags.add("Sieviešu dzimte");
 				flags.add("Lietvārds");
@@ -730,12 +791,17 @@ public class ThesaurusEntry
 			else if (gramText.startsWith("-es, dsk. ģen. -ru, s.")) //administratore
 			{
 				newBegin = "-es, dsk. ģen. -ru, s.".length();
+				if (!lemma.endsWith("re"))
+					System.err.printf("Problem matching \"%s\" with paradigm 9\n", lemma);
 				paradigm.add(9);
 				flags.add("Sieviešu dzimte");
 				flags.add("Lietvārds");
-			}			else if (gramText.startsWith("-es, dsk. ģen. -stu, s.")) //abolicioniste
+			}
+			else if (gramText.startsWith("-es, dsk. ģen. -stu, s.")) //abolicioniste
 			{
 				newBegin = "-es, dsk. ģen. -stu, s.".length();
+				if (!lemma.endsWith("ste"))
+					System.err.printf("Problem matching \"%s\" with paradigm 9\n", lemma);
 				paradigm.add(9);
 				flags.add("Sieviešu dzimte");
 				flags.add("Lietvārds");
@@ -743,6 +809,8 @@ public class ThesaurusEntry
 			else if (gramText.matches("-es, s\\., dsk\\. ģen\\. -bju[,;.].*")) //acetilsalicilskābe
 			{
 				newBegin = "-es, s., dsk. ģen. -bju,".length();
+				if (!lemma.endsWith("be"))
+					System.err.printf("Problem matching \"%s\" with paradigm 9\n", lemma);
 				paradigm.add(9);
 				flags.add("Sieviešu dzimte");
 				flags.add("Lietvārds");
@@ -750,6 +818,8 @@ public class ThesaurusEntry
 			else if (gramText.matches("-es, dsk\\. ģen\\. -ru[;.]")) //ādere
 			{
 				newBegin = "-es, dsk. ģen. -ru;".length();
+				if (!lemma.endsWith("re"))
+					System.err.printf("Problem matching \"%s\" with paradigm 9\n", lemma);
 				paradigm.add(9);
 				flags.add("Sieviešu dzimte");
 				flags.add("Lietvārds");
@@ -757,22 +827,31 @@ public class ThesaurusEntry
 			else if (gramText.startsWith("-es, s.")) //aizture
 			{
 				newBegin = "-es, s.".length();
+				if (!lemma.endsWith("e"))
+					System.err.printf("Problem matching \"%s\" with paradigm 9\n", lemma);
 				paradigm.add(9);
 				flags.add("Sieviešu dzimte");
 				flags.add("Lietvārds");
 			}
 			
-			// Paradigm 14: Īpašības vārdi ar -s
-			else if (gramText.matches("īp\\. v\\. -ais; s\\. -a, -ā[;.].*")) //abējāds, acains
+			// Paradigm 13: Īpašības vārdi ar -s
+			// Paradigm 14: Īpašības vārdi ar -š
+			else if (gramText.matches("īp\\. v\\. -ais; s\\. -a, -ā[;.].*")) //aerobs
 			{
 				newBegin = "īp. v. -ais; s. -a, -ā;".length();
-				paradigm.add(14);
+				if (lemma.matches(".*[^sš]"))
+					System.err.printf("Problem matching \"%s\" with paradigms 13, 14\n", lemma);
+				if (lemma.endsWith("š")) paradigm.add(14);
+				else paradigm.add(13);
 				flags.add("Īpašības vārds");
 			}
 			else if (gramText.matches("-ais; s\\. -a, -ā[;.].*")) //abējāds, acains
 			{
 				newBegin = "-ais; s. -a, -ā;".length();
-				paradigm.add(14);
+				if (lemma.matches(".*[^sš]"))
+					System.err.printf("Problem matching \"%s\" with paradigms 13, 14\n", lemma);
+				if (lemma.endsWith("š")) paradigm.add(14);
+				else paradigm.add(13);
 				flags.add("Īpašības vārds");
 			}
 			
@@ -780,6 +859,8 @@ public class ThesaurusEntry
 			else if (gramText.matches("parasti 3\\. pers\\., -šalc, pag\\. -šalca[;.].*")) //aizšalkt
 			{
 				newBegin = "parasti 3. pers., -šalc, pag. -šalca;".length();
+				if (!lemma.endsWith("šalkt"))
+					System.err.printf("Problem matching \"%s\" with paradigm 15\n", lemma);
 				paradigm.add(15);
 				flags.add("Darbības vārds");
 				flags.add("Parasti 3. personā");
@@ -788,6 +869,8 @@ public class ThesaurusEntry
 			else if (gramText.matches("parasti 3\\. pers\\., -tūkst, pag\\. -tūka[;.].*")) //aiztūkt
 			{
 				newBegin = "parasti 3. pers., -tūkst, pag. -tūka;".length();
+				if (!lemma.endsWith("tūkt"))
+					System.err.printf("Problem matching \"%s\" with paradigm 15\n", lemma);
 				paradigm.add(15);
 				flags.add("Darbības vārds");
 				flags.add("Parasti 3. personā");
@@ -796,6 +879,8 @@ public class ThesaurusEntry
 			else if (gramText.matches("-eju, -ej, -iet, pag\\. -gāju[.;].*")) //apiet
 			{
 				newBegin = "-eju, -ej, -iet, pag. -gāju.".length();
+				if (!lemma.endsWith("iet"))
+					System.err.printf("Problem matching \"%s\" with paradigm 15\n", lemma);
 				paradigm.add(15);
 				flags.add("Darbības vārds");
 				flags.add("Locīt kā \"iet\"");
@@ -803,6 +888,8 @@ public class ThesaurusEntry
 			else if (gramText.matches("-tupstu, -tupsti, -tupst, pag\\. -tupu[;.].*")) //aiztupt
 			{
 				newBegin = "-tupstu, -tupsti, -tupst, pag. -tupu;".length();
+				if (!lemma.endsWith("tupt"))
+					System.err.printf("Problem matching \"%s\" with paradigm 15\n", lemma);
 				paradigm.add(15);
 				flags.add("Darbības vārds");
 				flags.add("Locīt kā \"tupt\"");
@@ -811,6 +898,8 @@ public class ThesaurusEntry
 			else if (gramText.matches("-tveru, -tver, -tver, pag\\. -tvēru[;.].*")) //aiztvert
 			{
 				newBegin = "-tveru, -tver, -tver, pag. -tvēru;".length();
+				if (!lemma.endsWith("tvert"))
+					System.err.printf("Problem matching \"%s\" with paradigm 15\n", lemma);
 				paradigm.add(15);
 				flags.add("Darbības vārds");
 				flags.add("Locīt kā \"tvert\"");
@@ -818,6 +907,8 @@ public class ThesaurusEntry
 			else if (gramText.matches("-griežu, -griez, -griež, pag\\. -griezu[;.].*")) //apgriezt
 			{
 				newBegin = "-griežu, -griez, -griež, pag. -griezu;".length();
+				if (!lemma.endsWith("griezt"))
+					System.err.printf("Problem matching \"%s\" with paradigm 15\n", lemma);
 				paradigm.add(15);
 				flags.add("Darbības vārds");
 				flags.add("Locīt kā \"griezt\"");
@@ -825,6 +916,8 @@ public class ThesaurusEntry
 			else if (gramText.matches("-ģiedu, -ģied, -ģied, pag\\. -gidu[;.].*")) //apģist
 			{
 				newBegin = "-ģiedu, -ģied, -ģied, pag. -gidu;".length();
+				if (!lemma.endsWith("ģist"))
+					System.err.printf("Problem matching \"%s\" with paradigm 15\n", lemma);
 				paradigm.add(15);
 				flags.add("Darbības vārds");
 				flags.add("Locīt kā \"ģist\"");
@@ -832,6 +925,8 @@ public class ThesaurusEntry
 			else if (gramText.matches("-klāju, -klāj, -klāj, pag\\. -klāju[;.].*")) //apklāt
 			{
 				newBegin = "-klāju, -klāj, -klāj, pag. -klāju;".length();
+				if (!lemma.endsWith("klāt"))
+					System.err.printf("Problem matching \"%s\" with paradigm 15\n", lemma);
 				paradigm.add(15);
 				flags.add("Darbības vārds");
 				flags.add("Locīt kā \"klāt\"");
@@ -839,6 +934,8 @@ public class ThesaurusEntry
 			else if (gramText.matches("-kauju, -kauj, -kauj, pag\\. -kāvu[;.].*")) //apkaut
 			{
 				newBegin = "-kauju, -kauj, -kauj, pag. -kāvu;".length();
+				if (!lemma.endsWith("kaut"))
+					System.err.printf("Problem matching \"%s\" with paradigm 15\n", lemma);
 				paradigm.add(15);
 				flags.add("Darbības vārds");
 				flags.add("Locīt kā \"kaut\"");
@@ -848,6 +945,8 @@ public class ThesaurusEntry
 			else if (gramText.matches("parasti 3\\. pers\\., -o , pag\\. -oja[;.].*")) //aizšalkot
 			{
 				newBegin = "parasti 3. pers., -o , pag. -oja;".length();
+				if (!lemma.endsWith("ot"))
+					System.err.printf("Problem matching \"%s\" with paradigm 16\n", lemma);
 				paradigm.add(16);
 				flags.add("Darbības vārds");
 				flags.add("Parasti 3. personā");
@@ -855,6 +954,8 @@ public class ThesaurusEntry
 			else if (gramText.matches("parasti 3\\. pers\\., -ē, pag\\. -ēja[;.].*")) //adsorbēt
 			{
 				newBegin = "parasti 3. pers., -ē, pag. -ēja".length();
+				if (!lemma.endsWith("ēt"))
+					System.err.printf("Problem matching \"%s\" with paradigm 16\n", lemma);
 				paradigm.add(16);
 				flags.add("Darbības vārds");
 				flags.add("Parasti 3. personā");
@@ -862,18 +963,24 @@ public class ThesaurusEntry
 			else if (gramText.matches("-oju, -o, -o, -ojam, -ojat, pag\\. -oju; -ojām, -ojāt; pav\\. -o, -ojiet[,;.].*")) //acot
 			{
 				newBegin = "-oju, -o, -o, -ojam, -ojat, pag. -oju; -ojām, -ojāt; pav. -o, -ojiet,".length();
+				if (!lemma.endsWith("ot"))
+					System.err.printf("Problem matching \"%s\" with paradigm 16\n", lemma);
 				paradigm.add(16);
 				flags.add("Darbības vārds");
 			}
 			else if (gramText.matches("-ēju, -ē, -ē, pag\\. -ēju[;.].*")) //absolutizēt
 			{
 				newBegin = "-ēju, -ē, -ē, pag. -ēju;".length();
+				if (!lemma.endsWith("ēt"))
+					System.err.printf("Problem matching \"%s\" with paradigm 16\n", lemma);
 				paradigm.add(16);
 				flags.add("Darbības vārds");
 			}
 			else if (gramText.matches("-oju, -o, -o, pag\\. -oju[;.].*")) //aiztuntuļot
 			{
 				newBegin = "-oju, -o, -o, pag. -oju;".length();
+				if (!lemma.endsWith("ot"))
+					System.err.printf("Problem matching \"%s\" with paradigm 16\n", lemma);
 				paradigm.add(16);
 				flags.add("Darbības vārds");
 			}			
@@ -882,6 +989,8 @@ public class ThesaurusEntry
 			else if (gramText.matches("-turu, -turi, -tur, pag\\. -turēju[;.].*")) //aizturēt
 			{
 				newBegin = "-turu, -turi, -tur, pag. -turēju;".length();
+				if (!lemma.endsWith("turēt"))
+					System.err.printf("Problem matching \"%s\" with paradigm 17\n", lemma);
 				paradigm.add(17);
 				flags.add("Darbības vārds");
 				flags.add("Locīt kā \"turēt\"");
@@ -889,12 +998,16 @@ public class ThesaurusEntry
 			else if (gramText.matches("-u, -i, -a, pag\\. -īju[;.].*")) //aizsūtīt
 			{
 				newBegin = "-u, -i, -a, pag. -īju;".length();
+				if (!lemma.endsWith("īt"))
+					System.err.printf("Problem matching \"%s\" with paradigm 17\n", lemma);
 				paradigm.add(17);
 				flags.add("Darbības vārds");
 			}
 			else if (gramText.matches("-inu, -ini, -ina, pag\\. -ināju[;.].*")) //aizsvilināt
 			{
 				newBegin = "-inu, -ini, -ina, pag. -ināju;".length();
+				if (!lemma.endsWith("ināt"))
+					System.err.printf("Problem matching \"%s\" with paradigm 17\n", lemma);
 				paradigm.add(17);
 				flags.add("Darbības vārds");
 			}
@@ -903,6 +1016,8 @@ public class ThesaurusEntry
 			else if (gramText.matches("parasti 3\\. pers\\., -šalcas, pag\\. -šalcās[;.].*")) //aizšalkties
 			{
 				newBegin = "parasti 3. pers., -šalcas, pag. -šalcās;".length();
+				if (!lemma.endsWith("šalkties"))
+					System.err.printf("Problem matching \"%s\" with paradigm 18\n", lemma);
 				paradigm.add(18);
 				flags.add("Darbības vārds");
 				flags.add("Parasti 3. personā");
@@ -911,6 +1026,8 @@ public class ThesaurusEntry
 			else if (gramText.matches("-ejos, -ejos, -ietas, pag\\. -gājos[;.].*")) //apieties
 			{
 				newBegin = "-ejos, -ejos, -ietas, pag. -gājos;".length();
+				if (!lemma.endsWith("ieties"))
+					System.err.printf("Problem matching \"%s\" with paradigm 18\n", lemma);
 				paradigm.add(18);
 				flags.add("Darbības vārds");
 				flags.add("Locīt kā \"ieties\"");
@@ -918,6 +1035,8 @@ public class ThesaurusEntry
 			else if (gramText.matches("-tupstos, -tupsties, -tupstas, pag\\. -tupos[;.].*")) //aiztupties
 			{
 				newBegin = "-tupstos, -tupsties, -tupstas, pag. -tupos;".length();
+				if (!lemma.endsWith("tupties"))
+					System.err.printf("Problem matching \"%s\" with paradigm 18\n", lemma);
 				paradigm.add(18);
 				flags.add("Darbības vārds");
 				flags.add("Locīt kā \"tupties\"");
@@ -926,6 +1045,8 @@ public class ThesaurusEntry
 			else if (gramText.matches("-ģiedos, -ģiedies, -ģiedas, pag\\. -gidos[;.].*")) //apģisties
 			{
 				newBegin = "-ģiedos, -ģiedies, -ģiedas, pag. -gidos;".length();
+				if (!lemma.endsWith("ģisties"))
+					System.err.printf("Problem matching \"%s\" with paradigm 18\n", lemma);
 				paradigm.add(18);
 				flags.add("Darbības vārds");
 				flags.add("Locīt kā \"ģisties\"");
@@ -933,6 +1054,8 @@ public class ThesaurusEntry
 			else if (gramText.matches("-klājos, -klājies, -klājas, pag\\. -klājos[;.].*")) //apklāties
 			{
 				newBegin = "-klājos, -klājies, -klājas, pag. -klājos.".length();
+				if (!lemma.endsWith("klāties"))
+					System.err.printf("Problem matching \"%s\" with paradigm 18\n", lemma);
 				paradigm.add(18);
 				flags.add("Darbības vārds");
 				flags.add("Locīt kā \"klāties\"");
@@ -940,6 +1063,8 @@ public class ThesaurusEntry
 			else if (gramText.matches("-karos, -karies, -karas, pag\\. -kāros[.;].*")) //apkārties
 			{
 				newBegin = "-karos, -karies, -karas, pag. -kāros.".length();
+				if (!lemma.endsWith("kārties"))
+					System.err.printf("Problem matching \"%s\" with paradigm 18\n", lemma);
 				paradigm.add(18);
 				flags.add("Darbības vārds");
 				flags.add("Locīt kā \"kārties\"");
@@ -949,6 +1074,8 @@ public class ThesaurusEntry
 			else if (gramText.matches("parasti 3\\. pers\\., -ējas, pag\\. -ējās[;.].*")) //absorbēties
 			{
 				newBegin = "parasti 3. pers., -ējas, pag. -ējās;".length();
+				if (!lemma.endsWith("ēties"))
+					System.err.printf("Problem matching \"%s\" with paradigm 19\n", lemma);
 				paradigm.add(19);
 				flags.add("Darbības vārds");
 				flags.add("Parasti 3. personā");
@@ -956,18 +1083,24 @@ public class ThesaurusEntry
 			else if (gramText.matches("-ējos, -ējies, -ējas, -ējamies, -ējaties, pag\\. -ējos, -ējāmies, -ējāties; pav\\. -ējies, -ējieties[.;].*")) //adverbiēties
 			{
 				newBegin = "-ējos, -ējies, -ējas, -ējamies, -ējaties, pag. -ējos, -ējāmies, -ējāties; pav. -ējies, -ējieties;".length();
+				if (!lemma.endsWith("ēties"))
+					System.err.printf("Problem matching \"%s\" with paradigm 19\n", lemma);
 				paradigm.add(19);
 				flags.add("Darbības vārds");				
 			}
 			else if (gramText.matches("-ojos, -ojies, -ojas, pag\\. -ojos[.;].*")) //aiztuntuļoties, apgrēkoties
 			{
 				newBegin = "-ojos, -ojies, -ojas, pag. -ojos.".length();
+				if (!lemma.endsWith("oties"))
+					System.err.printf("Problem matching \"%s\" with paradigm 19\n", lemma);
 				paradigm.add(19);
 				flags.add("Darbības vārds");				
 			}
 			else if (gramText.matches("-ējos, -ējies, -ējas, pag\\. -ējos[;.].*")) //abstrahēties
 			{
 				newBegin = "-ējos, -ējies, -ējas, pag. -ējos;".length();
+				if (!lemma.endsWith("ēties"))
+					System.err.printf("Problem matching \"%s\" with paradigm 19\n", lemma);
 				paradigm.add(19);
 				flags.add("Darbības vārds");				
 			}
@@ -976,18 +1109,24 @@ public class ThesaurusEntry
 			else if (gramText.matches("-os, -ies, -ās, pag\\. -ījos[;.].*")) //apklausīties
 			{
 				newBegin = "-os, -ies, -ās, pag. -ījos;".length();
+				if (!lemma.endsWith("īties"))
+					System.err.printf("Problem matching \"%s\" with paradigm 20\n", lemma);
 				paradigm.add(20);
 				flags.add("Darbības vārds");				
 			}
 			else if (gramText.matches("-inos, -inies, -inās, pag\\. -inājos[;.].*")) //apklaušināties
 			{
 				newBegin = "-inos, -inies, -inās, pag. -inājos;".length();
+				if (!lemma.endsWith("ināties"))
+					System.err.printf("Problem matching \"%s\" with paradigm 20\n", lemma);
 				paradigm.add(20);
 				flags.add("Darbības vārds");				
 			}
 			else if (gramText.matches("-os, -ies, -as, pag\\. -ējos[;.].*")) //apkaunēties
 			{
 				newBegin = "-os, -ies, -as, pag. -ējos;".length();
+				if (!lemma.endsWith("ēties"))
+					System.err.printf("Problem matching \"%s\" with paradigm 20\n", lemma);
 				paradigm.add(20);
 				flags.add("Darbības vārds");				
 			}
@@ -1229,7 +1368,10 @@ public class ThesaurusEntry
 			subsenses = null;
 		}
 		
-		public Sense (Node nNode)
+		/**
+		 * @param lemma is used for grammar parsing.
+		 */
+		public Sense (Node nNode, String lemma)
 		{
 			NodeList fields = nNode.getChildNodes(); 
 			for (int i = 0; i < fields.getLength(); i++)
@@ -1237,7 +1379,7 @@ public class ThesaurusEntry
 				Node field = fields.item(i);
 				String fieldname = field.getNodeName();
 				if (fieldname.equals("gram"))
-					grammar = new Gram (field);
+					grammar = new Gram (field, lemma);
 				else if (fieldname.equals("d"))
 				{
 					NodeList defFields = field.getChildNodes();
@@ -1256,9 +1398,9 @@ public class ThesaurusEntry
 					}
 				}
 				else if (fieldname.equals("g_piem"))
-					examples = Utils.loadPhrases(field, "piem");
+					examples = Utils.loadPhrases(field, lemma, "piem");
 				else if (fieldname.equals("g_an"))
-					subsenses = Utils.loadSenses(field);
+					subsenses = Utils.loadSenses(field, lemma);
 				else if (!fieldname.equals("#text")) // Text nodes here are ignored.
 					System.err.printf("n entry field %s not processed\n", fieldname);
 			}
@@ -1388,7 +1530,7 @@ public class ThesaurusEntry
 			subsenses = null;
 		}
 
-		public Phrase (Node piemNode)
+		public Phrase (Node piemNode, String lemma)
 		{
 			text = null;
 			grammar = null;
@@ -1400,11 +1542,11 @@ public class ThesaurusEntry
 				if (fieldname.equals("t"))
 					text = field.getTextContent();
 				else if (fieldname.equals("gram"))
-					grammar = new Gram (field);
+					grammar = new Gram (field, lemma);
 				else if (fieldname.equals("n"))
 				{
 					if (subsenses == null) subsenses = new LinkedList<Sense>();
-					subsenses.add(new Sense (field));
+					subsenses.add(new Sense (field, lemma));
 				}
 				else if (!fieldname.equals("#text")) // Text nodes here are ignored.
 					System.err.printf("piem entry field %s not processed\n", fieldname);
@@ -1625,8 +1767,9 @@ public class ThesaurusEntry
 		 * Reads the information about the (multiple) word senses for that entry.
 		 * NB! they may have their own 'gram.' entries, not sure how best to
 		 * reconcile.
+		 * @param lemma is used for grammar parsing.
 		 */
-		public static LinkedList<Sense> loadSenses(Node allSenses)
+		public static LinkedList<Sense> loadSenses(Node allSenses, String lemma)
 		{
 			//if (senses == null) senses = new LinkedList<Sense>();
 			LinkedList<Sense> res = new LinkedList<Sense>();
@@ -1638,7 +1781,7 @@ public class ThesaurusEntry
 				// We're ignoring the number of the senses - it's in "nr" field, we
 				//assume (not tested) that it matches the order in file
 				if (sense.getNodeName().equals("n"))
-					res.add(new Sense(sense));
+					res.add(new Sense(sense, lemma));
 				else if (!sense.getNodeName().equals("#text")) // Text nodes here are ignored.
 					System.err.printf(
 						"%s entry field %s not processed, expected only 'n'.\n",
@@ -1648,10 +1791,11 @@ public class ThesaurusEntry
 		}
 		
 		/**
-		 *  Load contents of g_fraz or g_piem field into LinkedList.
+		 * Load contents of g_fraz or g_piem field into LinkedList.
+		 * @param lemma is used for grammar parsing.
 		 */
 		public static LinkedList<Phrase> loadPhrases(
-				Node allPhrases, String subElemName)
+				Node allPhrases, String lemma, String subElemName)
 		{
 			LinkedList<Phrase> res = new LinkedList<Phrase>();
 			NodeList phraseNodes = allPhrases.getChildNodes(); 
@@ -1659,7 +1803,7 @@ public class ThesaurusEntry
 			{
 				Node phrase = phraseNodes.item(i);
 				if (phrase.getNodeName().equals(subElemName))
-					res.add(new Phrase(phrase));
+					res.add(new Phrase(phrase, lemma));
 				else if (!phrase.getNodeName().equals("#text")) // Text nodes here are ignored.
 					System.err.printf(
 						"%s entry field %s not processed, expected only '%s'.\n",
