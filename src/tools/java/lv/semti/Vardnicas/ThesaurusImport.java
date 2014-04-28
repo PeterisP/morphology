@@ -1,5 +1,8 @@
 package lv.semti.Vardnicas;
 
+import java.io.BufferedWriter;
+import java.io.OutputStreamWriter;
+import java.io.FileOutputStream;
 import java.io.File;
 import java.io.PrintStream;
 import java.io.PrintWriter;
@@ -28,7 +31,7 @@ public class ThesaurusImport {
 	 * @throws Exception
 	 */
 	public static void main(String[] args) throws Exception {
-		PrintWriter izeja = new PrintWriter(new PrintStream(System.out, true, "UTF-8"));
+		//PrintWriter output = new PrintWriter(new PrintStream(System.out, true, "UTF-8"));
 		
 		Analyzer analizators = new Analyzer("dist/Lexicon.xml");
 		analizators.guessNouns = true;
@@ -41,35 +44,69 @@ public class ThesaurusImport {
 		analizators.meklētsalikteņus = false;
 		analizators.guessInflexibleNouns = true;
 		analizators.setCacheSize(0);
-		ThesaurusEntry.analyzer = analizators;
+		//ThesaurusEntry.analyzer = analizators;
 		
 		//String thesaurusFile = "/Users/pet/Dropbox/Resursi/Tezaurs/Skaidrojosa Vardnica.xml";
 		String thesaurusFile = args[0];
+		String goodOutputFile = "tezaurs-good.json";
+		String noParadigm = "tezaurs-noParadigm.json";
+		String badOutputFile = "tezaurs-bad.json";
+		//if (args.length > 1) outputFile = args[1];
+		
+		// Load Thesaurus file.
 		DocumentBuilder docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
 		Document doc = docBuilder.parse(new File(thesaurusFile));
-		
 		Node node = doc.getDocumentElement();
 		if (!node.getNodeName().equalsIgnoreCase("tezaurs"))
 			throw new Error("Node '" + node.getNodeName() + "' but tezaurs expected!");
 		
-		List<ThesaurusEntry> entries = new LinkedList<ThesaurusEntry>();
+		//List<ThesaurusEntry> entries = new LinkedList<ThesaurusEntry>();
 		
+		// Output.
+		BufferedWriter goodOut = new BufferedWriter(new OutputStreamWriter(
+				new FileOutputStream(goodOutputFile), "UTF-8"));
+		BufferedWriter noParadigmOut = new BufferedWriter(new OutputStreamWriter(
+				new FileOutputStream(noParadigm), "UTF-8"));
+		BufferedWriter badOut = new BufferedWriter(new OutputStreamWriter(
+				new FileOutputStream(badOutputFile), "UTF-8"));
+		
+		// Process each node.
 		NodeList thesaurusEntries = node.getChildNodes(); // Thesaurus entries
-		for (int i = 0; i < thesaurusEntries.getLength(); i++) {
-			if (thesaurusEntries.item(i).getNodeName().equals("s")) {
-				ThesaurusEntry entry = new ThesaurusEntry(thesaurusEntries.item(i));
-				if (entry.source == null || entry.source.contains("LLVV")) //TODO - temporary restriction, focus on LLVV first
-					entries.add(entry);
+		int badCount = 0;
+		for (int i = 0; i < thesaurusEntries.getLength(); i++)
+		{
+			Node sNode = thesaurusEntries.item(i);
+			if (sNode.getNodeName().equals("s"))
+			{
+				ThesaurusEntry entry = new ThesaurusEntry(sNode);
+				//if (!entry.inBlacklist() &&
+				//	(entry.sources == null || entry.sources.s.contains("LLVV"))) //TODO - temporary restriction, focus on LLVV first
+				//{
+					//entries.add(entry);
+					if (entry.hasParadigm() && !entry.hasUnparsedGram())
+						goodOut.write(entry.toJSON() + "\n");
+					else if (!entry.hasParadigm() && !entry.hasUnparsedGram())
+						noParadigmOut.write(entry.toJSON() + "\n");
+					else
+					{
+						badOut.write(entry.toJSON() + "\n");
+						badCount++;
+					}
+				//}
 			}
-			else throw new Error("Node '" + node.getNodeName() + "' but s (šķirklis) expected!");
-			if (i>1000) break;
-		}		
-		
-		for (ThesaurusEntry entry : entries) {
-			if (entry.paradigm != 0) {
-				System.out.println(entry.toJSON());
+			else if (!sNode.getNodeName().equals("#text")) // Text nodes here are ignored.
+			{
+				goodOut.close();
+				noParadigmOut.close();
+				badOut.close();				
+				throw new Error("Node '" + sNode.getNodeName() + "' but s (šķirklis) expected!");
 			}
+			//if (badCount >= 1000) break;	//Temporary.
 		}
+		
+		goodOut.close();
+		noParadigmOut.close();
+		badOut.close();
 		
 		//count_gram(entries); //FIXME - te nečeko papildus gram info (piem, v.; novec. nerāda jo tas jau ir atpazīts...
 		
@@ -153,7 +190,7 @@ public class ThesaurusImport {
 		*/
 	}
 
-	private static void countGram(List<ThesaurusEntry> entries) {
+/*	private static void countGram(List<ThesaurusEntry> entries) {
 		HashMap<String, Integer> counter = new HashMap<String, Integer>();
 		for (ThesaurusEntry entry : entries) {
 			//if (entry.getParadigm() != 0) continue; // counting only those we don't understand
@@ -169,7 +206,7 @@ public class ThesaurusImport {
 			if (count.getValue() > 100) // arbitrary cutoff to show important stuff 
 				System.out.printf("%s:\t%d\n", count.getKey(), count.getValue());
 		}
-	}
+	}//*/
 
 	/**
 	 * Remove rare paradigms that should not be guessed.
