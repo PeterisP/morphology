@@ -17,6 +17,7 @@
 package lv.semti.morphology.analyzer;
 
 import java.io.IOException;
+import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.io.Writer;
 import java.util.ArrayList;
@@ -125,6 +126,7 @@ public class Word extends Observable implements Cloneable{
 	}
 	
 	public void addWordform (Wordform wordform){
+		wordform.setToken(this.token);
 		wordforms.add(wordform);
 	}
 
@@ -322,6 +324,10 @@ public class Word extends Observable implements Cloneable{
 	public void describe(PrintWriter pipe) {
 		for (Wordform wf : wordforms)
 			wf.describe(pipe);
+	}
+
+	public void describe(PrintStream out) {
+		this.describe(new PrintWriter(out));
 	}
 
 }

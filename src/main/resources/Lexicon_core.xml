@@ -1253,6 +1253,9 @@
     <Lexeme Stem1="jēkab">
       <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Jēkabs"/>
     </Lexeme>
+    <Lexeme Stem1="blau">
+      <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Blaus"/>
+    </Lexeme>
     <Lexeme ID="50655" Stem1="tals">
       <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Talsi"/>
     </Lexeme>
@@ -1486,6 +1489,9 @@
     </Lexeme>
     <Lexeme ID="49659" Stem1="rein">
       <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Reinis" Avots="Onomastica - cilvēkvārdi"/>
+    </Lexeme>
+    <Lexeme Stem1="fred">
+      <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Fredis" Avots="Onomastica - cilvēkvārdi"/>
     </Lexeme>
     <Lexeme ID="49663" Stem1="ār">
       <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Āris" Avots="Onomastica - cilvēkvārdi"/>
@@ -3252,8 +3258,12 @@
   <Paradigm Stems="1" ID="8" LemmaEnding="63" Description="Lietvārds 4. deklinācija -a vīr. dz">
     <Attributes Vārdšķira="Lietvārds" Deklinācija="4" Dzimte="Vīriešu"/>
     <Lexeme ID="8788" Stem1="jehov">
-      <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="jehova"/>
+      <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Jehova"/>
     </Lexeme>
+    <Lexeme Stem1="kambal">
+      <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Kambala"/>
+    </Lexeme>
+    <Lexeme Stem1="dirb"><Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Dirba"/></Lexeme>
     <Lexeme ID="8792" Stem1="aizmārš">
       <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="aizmārša"/>
     </Lexeme>
@@ -3720,8 +3730,10 @@
   <Paradigm Stems="1" ID="10" LemmaEnding="1146" Description="Lietvārds 5. deklinācija -e vīr. dz.">
     <Attributes Vārdšķira="Lietvārds" Deklinācija="5" Dzimte="Vīriešu"/>
     <Lexeme ID="27245" Stem1="sinēv">
-      <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="sinēve"/>
+      <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Sinēve"/>
     </Lexeme>
+    <Lexeme Stem1="drull"><Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Drulle"/></Lexeme>
+    <Lexeme Stem1="mott"><Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Motte"/></Lexeme>
     <Lexeme Stem1="bend">
       <Attributes Pamatforma="bende"/>
     </Lexeme>
@@ -3934,6 +3946,12 @@
     </Lexeme>
     <Lexeme ID="50741" Stem1="sanī">
       <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Sanī"/>
+    </Lexeme>
+    <Lexeme Stem1="žverelo">
+      <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Žverelo"/>
+    </Lexeme>
+    <Lexeme Stem1="Rudaus">
+      <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Rudaus"/>
     </Lexeme>
   </Paradigm>
   <Paradigm Stems="1" ID="13" LemmaEnding="135" Description="Īpašības vārdi ar -s">
