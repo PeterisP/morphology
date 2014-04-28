@@ -1094,6 +1094,15 @@ public class ThesaurusEntry
 				flags.add("Darbības vārds");
 				flags.add("Parasti 3. personā");
 			}
+			else if (gramText.matches("parasti 3\\. pers\\., -ojas, pag\\. -ojās[;.].*")) //daudzkāršoties
+			{
+				newBegin = "parasti 3. pers., -ojas, pag. -ojās.".length();
+				if (!lemma.endsWith("oties"))
+					System.err.printf("Problem matching \"%s\" with paradigm 19\n", lemma);
+				paradigm.add(19);
+				flags.add("Darbības vārds");
+				flags.add("Parasti 3. personā");
+			}			
 			else if (gramText.matches("-ējos, -ējies, -ējas, -ējamies, -ējaties, pag\\. -ējos, -ējāmies, -ējāties; pav\\. -ējies, -ējieties[.;].*")) //adverbiēties
 			{
 				newBegin = "-ējos, -ējies, -ējas, -ējamies, -ējaties, pag. -ējos, -ējāmies, -ējāties; pav. -ējies, -ējieties;".length();
@@ -1144,6 +1153,17 @@ public class ThesaurusEntry
 				paradigm.add(20);
 				flags.add("Darbības vārds");				
 			}
+
+			// Paradigm 25: Vietniekvārdi
+			else if (gramText.matches("ģen\\. -kā, dat\\. -kam, akuz\\., instr\\. -ko[.;].*")) //apkārties
+			{
+				newBegin = "ģen. -kā, dat. -kam, akuz., instr. -ko;".length();
+				if (!lemma.endsWith("kas"))
+					System.err.printf("Problem matching \"%s\" with paradigm 25\n", lemma);
+				paradigm.add(25);
+				flags.add("Vietniekvārds");
+				flags.add("Locīt kā \"kas\"");
+			}		
 			
 			// Paradigm 30: jaundzimušais, pēdējais
 			else if (gramText.startsWith("-šā, v. -šās, s.")) //iereibušais
