@@ -16,6 +16,7 @@
 package lv.semti.morphology.attributes;
 
 import java.io.IOException;
+import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.io.Writer;
 import java.util.Collection;
@@ -32,6 +33,10 @@ import org.w3c.dom.NodeList;
 //TODO - būtu vienkārši jāinherito HashMap<String, String>
 public class AttributeValues implements FeatureStructure, Cloneable {
 	protected HashMap<String, String> attributes = new HashMap<String, String>();
+	
+	public void describe(PrintStream pipe) {
+		this.describe(new PrintWriter(pipe));
+	}
 	
 	public void describe(PrintWriter pipe) {
 		for (Entry<String,String> īpašība : attributes.entrySet()) {

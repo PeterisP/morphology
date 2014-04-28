@@ -1399,7 +1399,7 @@ public class MorphologyTest {
 	}
 	
 	@Test
-	public void LocīšanaSep4() {
+	public void InflectionSep4() {
 	// 2012.09.04 konstatēts, ka lokot dažiem vārdiem nepareizi mijas strādā
 		List<Wordform> formas = locītājs.generateInflections("iemācīties");
 

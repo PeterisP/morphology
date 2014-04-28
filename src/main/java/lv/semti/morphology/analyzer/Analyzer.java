@@ -199,20 +199,24 @@ public class Analyzer extends Lexicon {
 
 			for (Variants celms : celmi) {
 				ArrayList<Lexeme> leksēmas = ending.getEndingLexemes(celms.celms);
-				if (leksēmas != null)
+				boolean foundSomethingHere = false;
+				if (leksēmas != null) 					
 					for (Lexeme leksēma : leksēmas) {
 						Wordform variants = new Wordform(word, leksēma, ending);
 						variants.addAttributes(celms);
 						variants.addAttribute(AttributeNames.i_Guess, AttributeNames.v_NoGuess);
-						rezultāts.addWordform(variants);
-					}
+						if (this.isAcceptable(variants)) { // izmetam tos variantus, kas nav īsti pieļaujami - vienskaitliniekus daudzskaitlī, vokatīvus ja tos negrib
+							rezultāts.addWordform(variants);
+							foundSomethingHere = true;
+						}
+					}				
 
-				if (leksēmas == null && enableDiminutive) 
+				if (!foundSomethingHere && enableDiminutive) 
 					guessDeminutive(word, rezultāts, ending, celms, originalWord);
 			}
 		}
 
-		filterUnacceptable(rezultāts); // izmetam tos variantus, kas nav īsti pieļaujami - vienskaitliniekus daudzskaitlī, vokatīvus ja tos negrib
+		
 
 		if (!rezultāts.isRecognized()) {  //Hardcoded izņēmumi (ar regex) kas atpazīst ciparus, kārtas skaitļus utml
 			if (p_number.matcher(word).matches()) {
@@ -360,29 +364,23 @@ public class Analyzer extends Lexicon {
 		}
 	}
 
-	private void filterUnacceptable(Word rezultāts) {
-		LinkedList<Wordform> izmetamie = new LinkedList<Wordform>();
-		for (Wordform variants : rezultāts.wordforms)
-			if (!enableVocative && rezultāts.wordformsCount()>1 && variants.isMatchingStrong(AttributeNames.i_Case,AttributeNames.v_Vocative))
-				izmetamie.add(variants); 			// ja negribam vokatīvus, un ir arī citi iespējami varianti, tad šādu variantu nepieliekam.
+	private boolean isAcceptable(Wordform variants) {
+		if (!enableVocative && variants.isMatchingStrong(AttributeNames.i_Case,AttributeNames.v_Vocative))
+			return false;
 
-		for (Wordform variants : rezultāts.wordforms)
-			if (variants.isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum) &&
-					!variants.isMatchingWeak(AttributeNames.i_Number, AttributeNames.v_Plural))
-				izmetamie.add(variants);
+		if (variants.isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum) &&
+				!variants.isMatchingWeak(AttributeNames.i_Number, AttributeNames.v_Plural))
+			return false;
 
-		for (Wordform variants : rezultāts.wordforms)
-			if (variants.isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_SingulareTantum) &&
-					!variants.isMatchingWeak(AttributeNames.i_Number, AttributeNames.v_Singular))
-				izmetamie.add(variants);
+		if (variants.isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_SingulareTantum) &&
+				!variants.isMatchingWeak(AttributeNames.i_Number, AttributeNames.v_Singular))
+			return false;
 
-		for (Wordform variants : rezultāts.wordforms)
-			if (variants.isMatchingStrong(AttributeNames.i_CaseSpecial, AttributeNames.v_InflexibleGenitive) &&
-					!variants.isMatchingWeak(AttributeNames.i_Case, AttributeNames.v_Genitive))
-				izmetamie.add(variants);
-
-		for (Wordform izmetamais : izmetamie)
-			rezultāts.wordforms.remove(izmetamais);
+		if (variants.isMatchingStrong(AttributeNames.i_CaseSpecial, AttributeNames.v_InflexibleGenitive) &&
+				!variants.isMatchingWeak(AttributeNames.i_Case, AttributeNames.v_Genitive))
+			return false;
+		
+		return true;
 	}
 
 	private Word guessByPrefix(String word) {
@@ -535,24 +533,34 @@ public class Analyzer extends Lexicon {
 		//Vispirms, pārbaudam specgadījumu - dubultuzvārdus
 		if (p_doublesurname.matcher(lemma).matches()) {
 			int hyphen = lemma.indexOf("-");
-			ArrayList<Wordform> inflections1 = generateInflections(lemma.substring(0, hyphen), nouns_only, filter);
-			ArrayList<Wordform> inflections2 = generateInflections(lemma.substring(hyphen+1, lemma.length()), nouns_only, filter);
-			if (inflections1.size()>1 && inflections2.size()>1) // Ja sanāk nelokāms kautkas, tad nemēģinam taisīt kā dubultuzvārdu - tie ir ļoti reti un tas salauztu vairāk nekā iegūtu
+			AttributeValues part_filter = new AttributeValues(filter); // relax filter conditions for the first part, as it can have different endings than the whole compound surname
+			part_filter.removeAttribute(AttributeNames.i_Lemma);
+			ArrayList<Wordform> inflections2 = generateInflections(lemma.substring(hyphen+1, lemma.length()), nouns_only, part_filter);
+			part_filter.removeAttribute(AttributeNames.i_Declension);
+			part_filter.removeAttribute(AttributeNames.i_ParadigmID);
+			if (part_filter.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Residual)) {
+				part_filter.removeAttribute(AttributeNames.i_PartOfSpeech);
+				part_filter.removeAttribute(AttributeNames.i_ResidualType);
+			}
+			ArrayList<Wordform> inflections1 = generateInflections(lemma.substring(0, hyphen), nouns_only, part_filter);
+			
+			if ( (inflections1.size()>1 && inflections2.size()>1) // Ja sanāk nelokāms kautkas, tad nemēģinam taisīt kā dubultuzvārdu - tie ir ļoti reti un tas salauztu vairāk nekā iegūtu
+					|| lemma.substring(0, hyphen).equalsIgnoreCase("pavļuta")) 
 				return mergeInflections(inflections1, inflections2, "-");
 		}
 		
 		Word possibilities = this.analyze(lemma);
 		
-		if (nouns_only) filterInflectionPossibilities(filter, possibilities.wordforms);		
+		filterInflectionPossibilities(nouns_only, filter, possibilities.wordforms);		
 		
 		ArrayList<Wordform> result = generateInflections_TryLemmas(lemma, possibilities);
-		if (nouns_only && result != null) filterInflectionPossibilities(filter, result);
+		if (result != null) filterInflectionPossibilities(nouns_only, filter, result);
 		
 		// If result is null, it means that all the suggested lemma can be (and was) generated from another lemma - i.e. "Dīcis" from "dīkt"; but not from an existing lexicon lemma
 		// We assume that a true lemma was passed by the caller, and we need to generate/guess the wordforms as if the lemma was correct.
 		if (result == null || result.size()==0) {
 			possibilities = this.guessByEnding(lemma.toLowerCase(), lemma);
-			if (nouns_only) filterInflectionPossibilities(filter, possibilities.wordforms);		
+			filterInflectionPossibilities(nouns_only, filter, possibilities.wordforms);		
 			
 			result = generateInflections_TryLemmas(lemma, possibilities);			
 		}			
@@ -612,7 +620,7 @@ public class Analyzer extends Lexicon {
 				filter.addAttribute(AttributeNames.i_Case, pirmā.getValue(AttributeNames.i_Case));
 				filter.addAttribute(AttributeNames.i_Number, pirmā.getValue(AttributeNames.i_Number));
 				ArrayList<Wordform> possibilities = (ArrayList<Wordform>) inflections2.clone(); 
-				filterInflectionPossibilities(filter, possibilities);
+				filterInflectionPossibilities(true, filter, possibilities);
 				if (possibilities.size() == 0) {
 					// Debuginfo
 //					System.err.println("Problēma ar dubultuzvārdu locīšanu - nesanāca dabūt atbilstošu 'pārīti' šim te pirmās daļas locījumam");
@@ -666,10 +674,10 @@ public class Analyzer extends Lexicon {
 	}
 	
 	// removes possibilities that aren't nouns/substantivised adjectives, and don't match the filter
-	private void filterInflectionPossibilities(AttributeValues filter, ArrayList<Wordform> possibilities) {
+	private void filterInflectionPossibilities(boolean nouns_only, AttributeValues filter, ArrayList<Wordform> possibilities) {
 		ArrayList<Wordform> unsuitable = new ArrayList<Wordform>();
 		for (Wordform wf : possibilities) {
-			boolean suitable = false;
+			boolean suitable = ! nouns_only; // if nouns_only, then we want to test for partofspeech, if not, then okay by default
 			if (wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun)) suitable = true;
 			if (wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adjective) && wf.isMatchingStrong(AttributeNames.i_Definiteness, AttributeNames.v_Definite)) suitable = true;
 			if (wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Residual) && wf.isMatchingStrong(AttributeNames.i_ResidualType, AttributeNames.v_Foreign)) suitable = true; // visādi Vadim, Kirill utml
