@@ -390,6 +390,8 @@ public class ThesaurusEntry
 			res.put("divd.", "Divdabis");
 			res.put("Divd.", "Divdabis");
 			res.put("divd.", "Divdabis");
+			res.put("interj.", "Izauksmes vārds");
+			res.put("īp. v.", "Īpašības vārds");
 			res.put("izsauk.", "Izsauksmes vārds");
 			res.put("jaut.", "Jautājamais vietniekvārds");
 			res.put("lietv.", "Lietvārds");
@@ -453,6 +455,7 @@ public class ThesaurusEntry
 			res.put("refl.", "Refleksīvs darbības vārds");
 			res.put("Refl.", "Refleksīvs darbības vārds");
 
+			res.put("aeron.", "Aeronautika");	// ?
 			res.put("anat.", "Anatomija");
 			res.put("arheol.", "Arheoloģija");
 			res.put("arhit.", "Arhitektūra");
@@ -462,6 +465,8 @@ public class ThesaurusEntry
 			res.put("biškop.", "Biškopība");
 			res.put("bot.", "Botānika");
 			res.put("būvn.", "Būvniecība");
+			res.put("ek.", "Ekonomika");
+			res.put("ekol.", "Ekoloģija");		// ?
 			res.put("ekon.", "Ekonomika");
 			res.put("el.", "Elektrotehnika");
 			res.put("etn.", "Etnogrāfija");
@@ -483,17 +488,22 @@ public class ThesaurusEntry
 			res.put("jūrn.", "Jūrniecība");
 			res.put("kap.", "Attiecas uz kapitālistisko iekārtu, kapitālistisko sabiedrību");
 			res.put("kardioloģijā", "Kardioloģija");
+			res.put("kart.", "Kartogrāfija");		// ?
 			res.put("kibern.", "Kibernētika");
+			res.put("kokapstr.", "Kokapstrāde");	// ?
 			res.put("kul.", "Kulinārija");
 			res.put("ķīm.", "Ķīmija");
 			res.put("lauks.", "Lauksaimniecība");
-			res.put("lauks. tehn.", "Lauksaimniecības tehnika"); //KW, unverified
+			res.put("lauks. tehn.", "Lauksaimniecības tehnika");	// ?
 			res.put("literat.", "Literatūrzinātne");
 			res.put("loģ.", "Loģika");
 			res.put("mat.", "Matemātika");
-			res.put("matem.", "Matemātika");	//unverified
+			res.put("matem.", "Matemātika");
 			res.put("med.", "Medicīna");
 			res.put("medn.", "Medniecība");
+			res.put("met.", "Meteoroloģija");		// ?
+			res.put("metal.", "Metalurģija");
+			res.put("metāl.", "Metālapstrāde");		// ?
 			res.put("meteorol.", "Meteoroloģija");
 			res.put("mežs.", "Mežsaimniecība");
 			res.put("mil.", "Militārās zinātnes");
@@ -508,6 +518,7 @@ public class ThesaurusEntry
 			res.put("rel.", "Reliģija");
 			res.put("sociol.", "Socioloģija"); // Svešvārdu vārdnīca
 			res.put("tehn.", "Tehnika");
+			res.put("tehnol.", "Tehnoloģija");
 			res.put("telek.", "Telekomunikācijas");
 			res.put("tekst.", "Tekstilrūpniecība");
 			res.put("tekstilr.", "Tekstilrūpniecība");	//unverified
@@ -515,7 +526,16 @@ public class ThesaurusEntry
 			res.put("vet.", "Veterinārija");
 			res.put("zool.", "Zooloģija");
 			
-			res.put("it.", "No itāļu valodas"); //Muz			
+			res.put("fr.", "Franču");
+			res.put("fr.", "Vārds svešvalodā");
+			res.put("gr.", "Grieķu");
+			res.put("gr.", "Vārds svešvalodā");
+			res.put("it.", "Itāliešu"); //Muz
+			res.put("it.", "Vārds svešvalodā");
+			res.put("lat.", "Latīņu");
+			res.put("lat.", "Vārds svešvalodā");
+			res.put("sengr.", "Sengrieķu");
+			res.put("sengr.", "Vārds svešvalodā");
 			
 			res.put("apv.", "Apvidvārds");
 			res.put("novec.", "Novecojis"); //TODO - Novecojis, vēsturisks un neaktuāls apvienot??		
@@ -533,6 +553,7 @@ public class ThesaurusEntry
 			res.put("sar.", "Sarunvaloda");
 			
 			//TODO - šos drīzāk kā atsevišķu komentāru lauku(s)
+			res.put("arī vsk.", "Arī vienskaitlī");		// Ļaunums.
 			res.put("parasti vsk.", "Parasti vienskaitlī");
 			res.put("parasti vsk", "Parasti vienskaitlī");
 			res.put("par. vsk.", "Parasti vienskaitlī");
@@ -650,7 +671,7 @@ public class ThesaurusEntry
 			}
 			
 			// Try to deduce paradigm from flags.
-			paradigmFromFlags();
+			paradigmFromFlags(lemma);
 			
 			cleanupLeftovers();
 		}
@@ -820,18 +841,18 @@ public class ThesaurusEntry
 				flags.add("Sieviešu dzimte");
 				flags.add("Lietvārds");
 			}
-			else if (gramText.matches("-es, s\\., dsk\\. ģen\\. -bju[,;.].*")) //acetilsalicilskābe
+			else if (gramText.matches("-es, s\\., dsk\\. ģen\\. -bju([;,.].*)?")) //acetilsalicilskābe
 			{
-				newBegin = "-es, s., dsk. ģen. -bju,".length();
+				newBegin = "-es, s., dsk. ģen. -bju".length();
 				if (!lemma.endsWith("be"))
 					System.err.printf("Problem matching \"%s\" with paradigm 9\n", lemma);
 				paradigm.add(9);
 				flags.add("Sieviešu dzimte");
 				flags.add("Lietvārds");
 			}
-			else if (gramText.matches("-es, dsk\\. ģen\\. -ru[;.]")) //ādere
+			else if (gramText.matches("-es, dsk\\. ģen\\. -ru([;,.].*)?")) //ādere
 			{
-				newBegin = "-es, dsk. ģen. -ru;".length();
+				newBegin = "-es, dsk. ģen. -ru".length();
 				if (!lemma.endsWith("re"))
 					System.err.printf("Problem matching \"%s\" with paradigm 9\n", lemma);
 				paradigm.add(9);
@@ -850,18 +871,18 @@ public class ThesaurusEntry
 			
 			// Paradigm 13: Īpašības vārdi ar -s
 			// Paradigm 14: Īpašības vārdi ar -š
-			else if (gramText.matches("īp\\. v\\. -ais; s\\. -a, -ā[;.].*")) //aerobs
+			else if (gramText.matches("īp\\. v\\. -ais; s\\. -a, -ā([;,.].*)?")) //aerobs
 			{
-				newBegin = "īp. v. -ais; s. -a, -ā;".length();
-				if (lemma.matches(".*[^sš]"))
+				newBegin = "īp. v. -ais; s. -a, -ā".length();
+				if (lemma.matches(".*[^sš]") || lemma.matches(".*[aeiouāēīōū][sš]"))
 					System.err.printf("Problem matching \"%s\" with paradigms 13, 14\n", lemma);
 				if (lemma.endsWith("š")) paradigm.add(14);
 				else paradigm.add(13);
 				flags.add("Īpašības vārds");
 			}
-			else if (gramText.matches("-ais; s\\. -a, -ā[;.].*")) //abējāds, acains
+			else if (gramText.matches("-ais; s\\. -a, -ā([;,.].*)?")) //abējāds, acains
 			{
-				newBegin = "-ais; s. -a, -ā;".length();
+				newBegin = "-ais; s. -a, -ā".length();
 				if (lemma.matches(".*[^sš]"))
 					System.err.printf("Problem matching \"%s\" with paradigms 13, 14\n", lemma);
 				if (lemma.endsWith("š")) paradigm.add(14);
@@ -870,9 +891,9 @@ public class ThesaurusEntry
 			}
 			
 			// Paradigm 15: Darbības vārdi 1. konjugācija tiešie
-			else if (gramText.matches("parasti 3\\. pers\\., -šalc, pag\\. -šalca[;.].*")) //aizšalkt
+			else if (gramText.matches("parasti 3\\. pers\\., -šalc, pag\\. -šalca([;,.].*)?")) //aizšalkt
 			{
-				newBegin = "parasti 3. pers., -šalc, pag. -šalca;".length();
+				newBegin = "parasti 3. pers., -šalc, pag. -šalca".length();
 				if (!lemma.endsWith("šalkt"))
 					System.err.printf("Problem matching \"%s\" with paradigm 15\n", lemma);
 				paradigm.add(15);
@@ -880,9 +901,9 @@ public class ThesaurusEntry
 				flags.add("Parasti 3. personā");
 				flags.add("Locīt kā \"šalkt\"");
 			}
-			else if (gramText.matches("parasti 3\\. pers\\., -tūkst, pag\\. -tūka[;.].*")) //aiztūkt
+			else if (gramText.matches("parasti 3\\. pers\\., -tūkst, pag\\. -tūka([;,.].*)?")) //aiztūkt
 			{
-				newBegin = "parasti 3. pers., -tūkst, pag. -tūka;".length();
+				newBegin = "parasti 3. pers., -tūkst, pag. -tūka".length();
 				if (!lemma.endsWith("tūkt"))
 					System.err.printf("Problem matching \"%s\" with paradigm 15\n", lemma);
 				paradigm.add(15);
@@ -890,18 +911,18 @@ public class ThesaurusEntry
 				flags.add("Parasti 3. personā");
 				flags.add("Locīt kā \"tūkt\"");
 			}
-			else if (gramText.matches("-eju, -ej, -iet, pag\\. -gāju[.;].*")) //apiet
+			else if (gramText.matches("-eju, -ej, -iet, pag\\. -gāju([.,;].*)?")) //apiet
 			{
-				newBegin = "-eju, -ej, -iet, pag. -gāju.".length();
+				newBegin = "-eju, -ej, -iet, pag. -gāju".length();
 				if (!lemma.endsWith("iet"))
 					System.err.printf("Problem matching \"%s\" with paradigm 15\n", lemma);
 				paradigm.add(15);
 				flags.add("Darbības vārds");
 				flags.add("Locīt kā \"iet\"");
 			}
-			else if (gramText.matches("-tupstu, -tupsti, -tupst, pag\\. -tupu[;.].*")) //aiztupt
+			else if (gramText.matches("-tupstu, -tupsti, -tupst, pag\\. -tupu([;,.].*)?")) //aiztupt
 			{
-				newBegin = "-tupstu, -tupsti, -tupst, pag. -tupu;".length();
+				newBegin = "-tupstu, -tupsti, -tupst, pag. -tupu".length();
 				if (!lemma.endsWith("tupt"))
 					System.err.printf("Problem matching \"%s\" with paradigm 15\n", lemma);
 				paradigm.add(15);
@@ -909,45 +930,45 @@ public class ThesaurusEntry
 				flags.add("Locīt kā \"tupt\"");
 				//TODO check paralel forms.
 			}	
-			else if (gramText.matches("-tveru, -tver, -tver, pag\\. -tvēru[;.].*")) //aiztvert
+			else if (gramText.matches("-tveru, -tver, -tver, pag\\. -tvēru([;,.].*)?")) //aiztvert
 			{
-				newBegin = "-tveru, -tver, -tver, pag. -tvēru;".length();
+				newBegin = "-tveru, -tver, -tver, pag. -tvēru".length();
 				if (!lemma.endsWith("tvert"))
 					System.err.printf("Problem matching \"%s\" with paradigm 15\n", lemma);
 				paradigm.add(15);
 				flags.add("Darbības vārds");
 				flags.add("Locīt kā \"tvert\"");
 			}
-			else if (gramText.matches("-griežu, -griez, -griež, pag\\. -griezu[;.].*")) //apgriezt
+			else if (gramText.matches("-griežu, -griez, -griež, pag\\. -griezu([;,.].*)?")) //apgriezt
 			{
-				newBegin = "-griežu, -griez, -griež, pag. -griezu;".length();
+				newBegin = "-griežu, -griez, -griež, pag. -griezu".length();
 				if (!lemma.endsWith("griezt"))
 					System.err.printf("Problem matching \"%s\" with paradigm 15\n", lemma);
 				paradigm.add(15);
 				flags.add("Darbības vārds");
 				flags.add("Locīt kā \"griezt\"");
 			}
-			else if (gramText.matches("-ģiedu, -ģied, -ģied, pag\\. -gidu[;.].*")) //apģist
+			else if (gramText.matches("-ģiedu, -ģied, -ģied, pag\\. -gidu([;,.].*)?")) //apģist
 			{
-				newBegin = "-ģiedu, -ģied, -ģied, pag. -gidu;".length();
+				newBegin = "-ģiedu, -ģied, -ģied, pag. -gidu".length();
 				if (!lemma.endsWith("ģist"))
 					System.err.printf("Problem matching \"%s\" with paradigm 15\n", lemma);
 				paradigm.add(15);
 				flags.add("Darbības vārds");
 				flags.add("Locīt kā \"ģist\"");
 			}
-			else if (gramText.matches("-klāju, -klāj, -klāj, pag\\. -klāju[;.].*")) //apklāt
+			else if (gramText.matches("-klāju, -klāj, -klāj, pag\\. -klāju([;,.].*)?")) //apklāt
 			{
-				newBegin = "-klāju, -klāj, -klāj, pag. -klāju;".length();
+				newBegin = "-klāju, -klāj, -klāj, pag. -klāju".length();
 				if (!lemma.endsWith("klāt"))
 					System.err.printf("Problem matching \"%s\" with paradigm 15\n", lemma);
 				paradigm.add(15);
 				flags.add("Darbības vārds");
 				flags.add("Locīt kā \"klāt\"");
 			}
-			else if (gramText.matches("-kauju, -kauj, -kauj, pag\\. -kāvu[;.].*")) //apkaut
+			else if (gramText.matches("-kauju, -kauj, -kauj, pag\\. -kāvu([;,.].*)?")) //apkaut
 			{
-				newBegin = "-kauju, -kauj, -kauj, pag. -kāvu;".length();
+				newBegin = "-kauju, -kauj, -kauj, pag. -kāvu".length();
 				if (!lemma.endsWith("kaut"))
 					System.err.printf("Problem matching \"%s\" with paradigm 15\n", lemma);
 				paradigm.add(15);
@@ -956,16 +977,16 @@ public class ThesaurusEntry
 			}			
 
 			// Paradigm 16: Darbības vārdi 2. konjugācija tiešie
-			else if (gramText.matches("parasti 3\\. pers\\., -o , pag\\. -oja[;.].*")) //aizšalkot
+			else if (gramText.matches("parasti 3\\. pers\\., -o , pag\\. -oja([;,.].*)?")) //aizšalkot
 			{
-				newBegin = "parasti 3. pers., -o , pag. -oja;".length();
+				newBegin = "parasti 3. pers., -o , pag. -oja".length();
 				if (!lemma.endsWith("ot"))
 					System.err.printf("Problem matching \"%s\" with paradigm 16\n", lemma);
 				paradigm.add(16);
 				flags.add("Darbības vārds");
 				flags.add("Parasti 3. personā");
 			}
-			else if (gramText.matches("parasti 3\\. pers\\., -ē, pag\\. -ēja[;.].*")) //adsorbēt
+			else if (gramText.matches("parasti 3\\. pers\\., -ē, pag\\. -ēja([;,.].*)?")) //adsorbēt
 			{
 				newBegin = "parasti 3. pers., -ē, pag. -ēja".length();
 				if (!lemma.endsWith("ēt"))
@@ -974,25 +995,33 @@ public class ThesaurusEntry
 				flags.add("Darbības vārds");
 				flags.add("Parasti 3. personā");
 			}
-			else if (gramText.matches("-oju, -o, -o, -ojam, -ojat, pag\\. -oju; -ojām, -ojāt; pav\\. -o, -ojiet[,;.].*")) //acot
+			else if (gramText.matches("-oju, -o, -o, -ojam, -ojat, pag\\. -oju; -ojām, -ojāt; pav\\. -o, -ojiet([,;.].*)?")) //acot
 			{
-				newBegin = "-oju, -o, -o, -ojam, -ojat, pag. -oju; -ojām, -ojāt; pav. -o, -ojiet,".length();
+				newBegin = "-oju, -o, -o, -ojam, -ojat, pag. -oju; -ojām, -ojāt; pav. -o, -ojiet".length();
 				if (!lemma.endsWith("ot"))
 					System.err.printf("Problem matching \"%s\" with paradigm 16\n", lemma);
 				paradigm.add(16);
 				flags.add("Darbības vārds");
 			}
-			else if (gramText.matches("-ēju, -ē, -ē, pag\\. -ēju[;.].*")) //absolutizēt
+			else if (gramText.matches("-ēju, -ē, -ē, -ējam, -ējat, pag\\. -ēju, -ējām, -ējāt; pav\\. -ē, -ējiet([,;.].*)?")) //adverbializēt
 			{
-				newBegin = "-ēju, -ē, -ē, pag. -ēju;".length();
+				newBegin = "-ēju, -ē, -ē, -ējam, -ējat, pag. -ēju, -ējām, -ējāt; pav. -ē, -ējiet".length();
 				if (!lemma.endsWith("ēt"))
 					System.err.printf("Problem matching \"%s\" with paradigm 16\n", lemma);
 				paradigm.add(16);
 				flags.add("Darbības vārds");
 			}
-			else if (gramText.matches("-oju, -o, -o, pag\\. -oju[;.].*")) //aiztuntuļot
+			else if (gramText.matches("-ēju, -ē, -ē, pag\\. -ēju([;,.].*)?")) //absolutizēt
 			{
-				newBegin = "-oju, -o, -o, pag. -oju;".length();
+				newBegin = "-ēju, -ē, -ē, pag. -ēju".length();
+				if (!lemma.endsWith("ēt"))
+					System.err.printf("Problem matching \"%s\" with paradigm 16\n", lemma);
+				paradigm.add(16);
+				flags.add("Darbības vārds");
+			}
+			else if (gramText.matches("-oju, -o, -o, pag\\. -oju([;,.].*)?")) //aiztuntuļot
+			{
+				newBegin = "-oju, -o, -o, pag. -oju".length();
 				if (!lemma.endsWith("ot"))
 					System.err.printf("Problem matching \"%s\" with paradigm 16\n", lemma);
 				paradigm.add(16);
@@ -1000,26 +1029,26 @@ public class ThesaurusEntry
 			}			
 
 			// Paradigm 17: Darbības vārdi 3. konjugācija tiešie
-			else if (gramText.matches("-turu, -turi, -tur, pag\\. -turēju[;.].*")) //aizturēt
+			else if (gramText.matches("-turu, -turi, -tur, pag\\. -turēju([;,.].*)?")) //aizturēt
 			{
-				newBegin = "-turu, -turi, -tur, pag. -turēju;".length();
+				newBegin = "-turu, -turi, -tur, pag. -turēju".length();
 				if (!lemma.endsWith("turēt"))
 					System.err.printf("Problem matching \"%s\" with paradigm 17\n", lemma);
 				paradigm.add(17);
 				flags.add("Darbības vārds");
 				flags.add("Locīt kā \"turēt\"");
 			}
-			else if (gramText.matches("-u, -i, -a, pag\\. -īju[;.].*")) //aizsūtīt
+			else if (gramText.matches("-u, -i, -a, pag\\. -īju([;,.].*)?")) //aizsūtīt
 			{
-				newBegin = "-u, -i, -a, pag. -īju;".length();
+				newBegin = "-u, -i, -a, pag. -īju".length();
 				if (!lemma.endsWith("īt"))
 					System.err.printf("Problem matching \"%s\" with paradigm 17\n", lemma);
 				paradigm.add(17);
 				flags.add("Darbības vārds");
 			}
-			else if (gramText.matches("-inu, -ini, -ina, pag\\. -ināju[;.].*")) //aizsvilināt
+			else if (gramText.matches("-inu, -ini, -ina, pag\\. -ināju([;,.].*)?")) //aizsvilināt
 			{
-				newBegin = "-inu, -ini, -ina, pag. -ināju;".length();
+				newBegin = "-inu, -ini, -ina, pag. -ināju".length();
 				if (!lemma.endsWith("ināt"))
 					System.err.printf("Problem matching \"%s\" with paradigm 17\n", lemma);
 				paradigm.add(17);
@@ -1027,9 +1056,9 @@ public class ThesaurusEntry
 			}
 			
 			// Paradigm 18: Darbības vārdi 1. konjugācija atgriezeniski
-			else if (gramText.matches("parasti 3\\. pers\\., -šalcas, pag\\. -šalcās[;.].*")) //aizšalkties
+			else if (gramText.matches("parasti 3\\. pers\\., -šalcas, pag\\. -šalcās([;,.].*)?")) //aizšalkties
 			{
-				newBegin = "parasti 3. pers., -šalcas, pag. -šalcās;".length();
+				newBegin = "parasti 3. pers., -šalcas, pag. -šalcās".length();
 				if (!lemma.endsWith("šalkties"))
 					System.err.printf("Problem matching \"%s\" with paradigm 18\n", lemma);
 				paradigm.add(18);
@@ -1037,18 +1066,18 @@ public class ThesaurusEntry
 				flags.add("Parasti 3. personā");
 				flags.add("Locīt kā \"šalkties\"");
 			}
-			else if (gramText.matches("-ejos, -ejos, -ietas, pag\\. -gājos[;.].*")) //apieties
+			else if (gramText.matches("-ejos, -ejos, -ietas, pag\\. -gājos([;,.].*)?")) //apieties
 			{
-				newBegin = "-ejos, -ejos, -ietas, pag. -gājos;".length();
+				newBegin = "-ejos, -ejos, -ietas, pag. -gājos".length();
 				if (!lemma.endsWith("ieties"))
 					System.err.printf("Problem matching \"%s\" with paradigm 18\n", lemma);
 				paradigm.add(18);
 				flags.add("Darbības vārds");
 				flags.add("Locīt kā \"ieties\"");
 			}
-			else if (gramText.matches("-tupstos, -tupsties, -tupstas, pag\\. -tupos[;.].*")) //aiztupties
+			else if (gramText.matches("-tupstos, -tupsties, -tupstas, pag\\. -tupos([;,.].*)?")) //aiztupties
 			{
-				newBegin = "-tupstos, -tupsties, -tupstas, pag. -tupos;".length();
+				newBegin = "-tupstos, -tupsties, -tupstas, pag. -tupos".length();
 				if (!lemma.endsWith("tupties"))
 					System.err.printf("Problem matching \"%s\" with paradigm 18\n", lemma);
 				paradigm.add(18);
@@ -1056,27 +1085,27 @@ public class ThesaurusEntry
 				flags.add("Locīt kā \"tupties\"");
 				//TODO check paralel forms.
 			}
-			else if (gramText.matches("-ģiedos, -ģiedies, -ģiedas, pag\\. -gidos[;.].*")) //apģisties
+			else if (gramText.matches("-ģiedos, -ģiedies, -ģiedas, pag\\. -gidos([;,.].*)?")) //apģisties
 			{
-				newBegin = "-ģiedos, -ģiedies, -ģiedas, pag. -gidos;".length();
+				newBegin = "-ģiedos, -ģiedies, -ģiedas, pag. -gidos".length();
 				if (!lemma.endsWith("ģisties"))
 					System.err.printf("Problem matching \"%s\" with paradigm 18\n", lemma);
 				paradigm.add(18);
 				flags.add("Darbības vārds");
 				flags.add("Locīt kā \"ģisties\"");
 			}
-			else if (gramText.matches("-klājos, -klājies, -klājas, pag\\. -klājos[;.].*")) //apklāties
+			else if (gramText.matches("-klājos, -klājies, -klājas, pag\\. -klājos([;,.].*)?")) //apklāties
 			{
-				newBegin = "-klājos, -klājies, -klājas, pag. -klājos.".length();
+				newBegin = "-klājos, -klājies, -klājas, pag. -klājos".length();
 				if (!lemma.endsWith("klāties"))
 					System.err.printf("Problem matching \"%s\" with paradigm 18\n", lemma);
 				paradigm.add(18);
 				flags.add("Darbības vārds");
 				flags.add("Locīt kā \"klāties\"");
 			}
-			else if (gramText.matches("-karos, -karies, -karas, pag\\. -kāros[.;].*")) //apkārties
+			else if (gramText.matches("-karos, -karies, -karas, pag\\. -kāros([.,;].*)?")) //apkārties
 			{
-				newBegin = "-karos, -karies, -karas, pag. -kāros.".length();
+				newBegin = "-karos, -karies, -karas, pag. -kāros".length();
 				if (!lemma.endsWith("kārties"))
 					System.err.printf("Problem matching \"%s\" with paradigm 18\n", lemma);
 				paradigm.add(18);
@@ -1085,43 +1114,43 @@ public class ThesaurusEntry
 			}
 			
 			// Paradigm 19: Darbības vārdi 2. konjugācija atgriezeniski
-			else if (gramText.matches("parasti 3\\. pers\\., -ējas, pag\\. -ējās[;.].*")) //absorbēties
+			else if (gramText.matches("parasti 3\\. pers\\., -ējas, pag\\. -ējās([;,.].*)?")) //absorbēties
 			{
-				newBegin = "parasti 3. pers., -ējas, pag. -ējās;".length();
+				newBegin = "parasti 3. pers., -ējas, pag. -ējās".length();
 				if (!lemma.endsWith("ēties"))
 					System.err.printf("Problem matching \"%s\" with paradigm 19\n", lemma);
 				paradigm.add(19);
 				flags.add("Darbības vārds");
 				flags.add("Parasti 3. personā");
 			}
-			else if (gramText.matches("parasti 3\\. pers\\., -ojas, pag\\. -ojās[;.].*")) //daudzkāršoties
+			else if (gramText.matches("parasti 3\\. pers\\., -ojas, pag\\. -ojās([;,.].*)?")) //daudzkāršoties
 			{
-				newBegin = "parasti 3. pers., -ojas, pag. -ojās.".length();
+				newBegin = "parasti 3. pers., -ojas, pag. -ojās".length();
 				if (!lemma.endsWith("oties"))
 					System.err.printf("Problem matching \"%s\" with paradigm 19\n", lemma);
 				paradigm.add(19);
 				flags.add("Darbības vārds");
 				flags.add("Parasti 3. personā");
 			}			
-			else if (gramText.matches("-ējos, -ējies, -ējas, -ējamies, -ējaties, pag\\. -ējos, -ējāmies, -ējāties; pav\\. -ējies, -ējieties[.;].*")) //adverbiēties
+			else if (gramText.matches("-ējos, -ējies, -ējas, -ējamies, -ējaties, pag\\. -ējos, -ējāmies, -ējāties; pav\\. -ējies, -ējieties([.,;].*)?")) //adverbiēties
 			{
-				newBegin = "-ējos, -ējies, -ējas, -ējamies, -ējaties, pag. -ējos, -ējāmies, -ējāties; pav. -ējies, -ējieties;".length();
+				newBegin = "-ējos, -ējies, -ējas, -ējamies, -ējaties, pag. -ējos, -ējāmies, -ējāties; pav. -ējies, -ējieties".length();
 				if (!lemma.endsWith("ēties"))
 					System.err.printf("Problem matching \"%s\" with paradigm 19\n", lemma);
 				paradigm.add(19);
 				flags.add("Darbības vārds");				
 			}
-			else if (gramText.matches("-ojos, -ojies, -ojas, pag\\. -ojos[.;].*")) //aiztuntuļoties, apgrēkoties
+			else if (gramText.matches("-ojos, -ojies, -ojas, pag\\. -ojos([.,;].*)?")) //aiztuntuļoties, apgrēkoties
 			{
-				newBegin = "-ojos, -ojies, -ojas, pag. -ojos.".length();
+				newBegin = "-ojos, -ojies, -ojas, pag. -ojos".length();
 				if (!lemma.endsWith("oties"))
 					System.err.printf("Problem matching \"%s\" with paradigm 19\n", lemma);
 				paradigm.add(19);
 				flags.add("Darbības vārds");				
 			}
-			else if (gramText.matches("-ējos, -ējies, -ējas, pag\\. -ējos[;.].*")) //abstrahēties
+			else if (gramText.matches("-ējos, -ējies, -ējas, pag\\. -ējos([;,.].*)?")) //abstrahēties
 			{
-				newBegin = "-ējos, -ējies, -ējas, pag. -ējos;".length();
+				newBegin = "-ējos, -ējies, -ējas, pag. -ējos".length();
 				if (!lemma.endsWith("ēties"))
 					System.err.printf("Problem matching \"%s\" with paradigm 19\n", lemma);
 				paradigm.add(19);
@@ -1129,25 +1158,25 @@ public class ThesaurusEntry
 			}
 			
 			// Paradigm 20: Darbības vārdi 3. konjugācija atgriezeniski
-			else if (gramText.matches("-os, -ies, -ās, pag\\. -ījos[;.].*")) //apklausīties
+			else if (gramText.matches("-os, -ies, -ās, pag\\. -ījos([;,.].*)?")) //apklausīties
 			{
-				newBegin = "-os, -ies, -ās, pag. -ījos;".length();
+				newBegin = "-os, -ies, -ās, pag. -ījos".length();
 				if (!lemma.endsWith("īties"))
 					System.err.printf("Problem matching \"%s\" with paradigm 20\n", lemma);
 				paradigm.add(20);
 				flags.add("Darbības vārds");				
 			}
-			else if (gramText.matches("-inos, -inies, -inās, pag\\. -inājos[;.].*")) //apklaušināties
+			else if (gramText.matches("-inos, -inies, -inās, pag\\. -inājos([;,.].*)?")) //apklaušināties
 			{
-				newBegin = "-inos, -inies, -inās, pag. -inājos;".length();
+				newBegin = "-inos, -inies, -inās, pag. -inājos".length();
 				if (!lemma.endsWith("ināties"))
 					System.err.printf("Problem matching \"%s\" with paradigm 20\n", lemma);
 				paradigm.add(20);
 				flags.add("Darbības vārds");				
 			}
-			else if (gramText.matches("-os, -ies, -as, pag\\. -ējos[;.].*")) //apkaunēties
+			else if (gramText.matches("-os, -ies, -as, pag\\. -ējos([;,.].*)?")) //apkaunēties
 			{
-				newBegin = "-os, -ies, -as, pag. -ējos;".length();
+				newBegin = "-os, -ies, -as, pag. -ējos".length();
 				if (!lemma.endsWith("ēties"))
 					System.err.printf("Problem matching \"%s\" with paradigm 20\n", lemma);
 				paradigm.add(20);
@@ -1155,9 +1184,9 @@ public class ThesaurusEntry
 			}
 
 			// Paradigm 25: Vietniekvārdi
-			else if (gramText.matches("ģen\\. -kā, dat\\. -kam, akuz\\., instr\\. -ko[.;].*")) //apkārties
+			else if (gramText.matches("ģen\\. -kā, dat\\. -kam, akuz\\., instr\\. -ko([.,;].*)?")) //apkārties
 			{
-				newBegin = "ģen. -kā, dat. -kam, akuz., instr. -ko;".length();
+				newBegin = "ģen. -kā, dat. -kam, akuz., instr. -ko".length();
 				if (!lemma.endsWith("kas"))
 					System.err.printf("Problem matching \"%s\" with paradigm 25\n", lemma);
 				paradigm.add(25);
@@ -1216,17 +1245,35 @@ public class ThesaurusEntry
 				flags.add("Atgriezeniskais lietvārds");	
 			}			
 			
-			return gramText.substring(newBegin);
+			String res = gramText.substring(newBegin);
+			if (res.matches("[.,;].*")) res = res.substring(1);
+			return res;
 		}
 		
-		private void paradigmFromFlags()
+		/**
+		 * @param lemma is used for paradigm detection in cases where endings
+		 * matter.
+		 */
+		private void paradigmFromFlags(String lemma)
 		{
+			if (flags.contains("Īpašības vārds") )
+			{
+				if (!lemma.endsWith("ais") && (lemma.matches(".*[^sšā]")
+						|| lemma.matches(".*[aeiouāēīōū][sš]")))
+					System.err.printf("Problem matching \"%s\" with paradigms 13, 14, 30 by flags\n", lemma);
+				if (lemma.endsWith("ais") || lemma.endsWith("ā")) paradigm.add(30);
+				if (lemma.endsWith("s")) paradigm.add(13);
+				if (lemma.endsWith("š")) paradigm.add(14);
+				
+			}
+			
 			if (flags.contains("Apstākļa vārds")) paradigm.add(21);
 			if (flags.contains("Partikula")) paradigm.add(28);
 			if (flags.contains("Prievārds")) paradigm.add(26);
 			
 			if (flags.contains("Izsauksmes vārds")) paradigm.add(29); // Hardcoded
 			if (flags.contains("Saīsinājums")) paradigm.add(29); // Hardcoded
+			if (flags.contains("Vārds svešvalodā")) paradigm.add(29);
 			
 			if (flags.contains("Vietniekvārds")) paradigm.add(25);
 			if (flags.contains("Jautājamais vietniekvārds")) paradigm.add(25);
@@ -1235,8 +1282,6 @@ public class ThesaurusEntry
 			if (flags.contains("Noteicamais vietniekvārds")) paradigm.add(25);
 			if (flags.contains("Piederības vietniekvārds")) paradigm.add(25);
 			if (flags.contains("Vispārināmais vietniekvārds")) paradigm.add(25);
-
-			if (flags.contains("No itāļu valodas")) paradigm.add(29); // Vārdi svešvalodā
 
 			if (flags.contains("Priedēklis")) paradigm.add(0); //Prefixes are not words.
 		}
