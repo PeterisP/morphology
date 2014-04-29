@@ -3484,4 +3484,46 @@
 			<Attributes Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>
+	<Paradigm Stems="1" ID="31" LemmaEnding="2044" Description="Lietvārds 3. deklinācija -us sieviešu dzimtei (uzvārdiem)" AllowedGuessEndings="!">
+		<Attributes Vārdšķira="Lietvārds" Deklinācija="3" Dzimte="Sieviešu"/>
+		<Ending ID="2044" StemChange="0" Ending="us" StemID="1">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
+		</Ending>
+		<Ending ID="2045" StemChange="0" Ending="us" StemID="1">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Ģenitīvs"/>
+		</Ending>
+		<Ending ID="2046" StemChange="0" Ending="ui" StemID="1">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Datīvs"/>
+		</Ending>
+		<Ending ID="2047" StemChange="0" Ending="u" StemID="1">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Akuzatīvs"/>
+		</Ending>
+		<Ending ID="2048" StemChange="0" Ending="ū" StemID="1">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Lokatīvs"/>
+		</Ending>
+		<Ending ID="2049" StemChange="0" Ending="us" StemID="1">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs" Ģenerēt="Nē"/>
+		</Ending>
+		<Ending ID="2050" StemChange="0" Ending="u" StemID="1">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs"/>
+		</Ending>
+		<Ending ID="2051" StemChange="0" Ending="i" StemID="1">
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Nominatīvs"/>
+		</Ending>
+		<Ending ID="2052" StemChange="0" Ending="u" StemID="1">
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Ģenitīvs"/>
+		</Ending>
+		<Ending ID="2053" StemChange="0" Ending="ūm" StemID="1">
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Datīvs"/>
+		</Ending>
+		<Ending ID="2054" StemChange="0" Ending="us" StemID="1">
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Akuzatīvs"/>
+		</Ending>
+		<Ending ID="2055" StemChange="0" Ending="os" StemID="1">
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Lokatīvs"/>
+		</Ending>
+		<Ending ID="2056" StemChange="0" Ending="i" StemID="1">
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
+		</Ending>
+	</Paradigm>
 </Morphology>

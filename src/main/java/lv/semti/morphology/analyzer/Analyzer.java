@@ -437,7 +437,7 @@ public class Analyzer extends Lexicon {
 					String celms = celmi.get(0).celms;
 					
 					if (!p.allowedGuess(celms))
-						if (p_firstcap.matcher(originalWord).matches() && (p.getID() == 8 || p.getID() == 10))
+						if (p_firstcap.matcher(originalWord).matches() && (p.getID() == 8 || p.getID() == 10 || p.getID() == 31 ))
 						{} // Ja ir īpašvārds ar -a -e galotni, tad mēģina arī vīriešu dzimtes variantus uzvārdiem
 						else continue; // citos gadījumos, ja beigu burti izskatās neadekvāti tam, kas leksikonā pie paradigmas norādīts - tad neminam.
 					if (p.getID() == 5 && !celms.endsWith("sun"))

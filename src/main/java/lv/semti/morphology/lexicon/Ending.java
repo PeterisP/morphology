@@ -130,6 +130,8 @@ public class Ending extends AttributeValues {
 	}
 
 	public Ending getLemmaEnding() {
+		if (this.lemmaEnding == null) 
+			return this.paradigm.getLemmaEnding();
 		return lemmaEnding;
 	}
 
