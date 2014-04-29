@@ -15548,4 +15548,7 @@
     <Lexeme Stem1="malēj"/>
     <Lexeme Stem1="pēdēj"/>
   </Paradigm>
+  <Paradigm Stems="1" ID="31" LemmaEnding="2044" Description="Lietvārds 3. deklinācija -us sieviešu dzimtei (uzvārdiem)" AllowedGuessEndings="!">
+  </Paradigm>
+
 </Lexicon>
