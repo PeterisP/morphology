@@ -390,7 +390,7 @@ public class ThesaurusEntry
 			res.put("divd.", "Divdabis");
 			res.put("Divd.", "Divdabis");
 			res.put("divd.", "Divdabis");
-			res.put("interj.", "Izauksmes vārds");
+			res.put("interj.", "Izsauksmes vārds");
 			res.put("īp. v.", "Īpašības vārds");
 			res.put("izsauk.", "Izsauksmes vārds");
 			res.put("jaut.", "Jautājamais vietniekvārds");
@@ -407,6 +407,11 @@ public class ThesaurusEntry
 			res.put("vietniekv.", "Vietniekvārds");
 			res.put("vispārin.", "Vispārināmais vietniekvārds");
 			res.put("saīs.", "Saīsinājums");
+			res.put("simb.", "Saīsinājums");	// ?
+			res.put("salikteņu pirmā daļa.", "Salikteņu daļa");
+			res.put("salikteņu pirmā daļa", "Salikteņu daļa");
+			res.put("salikteņu daļa.", "Salikteņu daļa");
+			res.put("salikteņu daļa", "Salikteņu daļa");
 			
 			res.put("priev. ar ģen.", "Prievārds");
 			res.put("priev. ar ģen.", "Lieto ar ģenetīvu");
@@ -439,6 +444,7 @@ public class ThesaurusEntry
 			
 			res.put("s.", "Sieviešu dzimte");
 			res.put("v.", "Vīriešu dzimte");
+			res.put("kopdz.", "Kopdzimtes vārds");
 			
 			res.put("intrans.", "Intransitīvs"); //???
 			res.put("trans.", "Transitīvs"); //???
@@ -449,7 +455,7 @@ public class ThesaurusEntry
 			res.put("atgr.", "Atgriezensisks (vietniekvārds?)");
 			res.put("dem.", "Deminutīvs");
 			res.put("Dem.", "Deminutīvs");
-			res.put("imperf.", "Imperfekta forma"); //???
+			res.put("imperf.", "Imperfektīva forma"); //???
 			res.put("nelok.", "Nelokāms vārds");
 			res.put("Nol.", "Noliegums"); // Check with other sources!
 			res.put("refl.", "Refleksīvs darbības vārds");
@@ -482,6 +488,8 @@ public class ThesaurusEntry
 			res.put("ģeogr.", "Ģeogrāfija");
 			res.put("ģeol.", "Ģeoloģija");
 			res.put("ģeom.", "Ģeometrija");
+			res.put("grāmatv.", "Grāmatvedība");
+			res.put("hidr.", "Hidroloģija");
 			res.put("hidrotehn.", "Hidrotehnika");
 			res.put("inf.", "Informātika");
 			res.put("jur.", "Jurisprudence");
@@ -497,6 +505,7 @@ public class ThesaurusEntry
 			res.put("lauks. tehn.", "Lauksaimniecības tehnika");	// ?
 			res.put("literat.", "Literatūrzinātne");
 			res.put("loģ.", "Loģika");
+			res.put("lopk.", "Lopkopība");
 			res.put("mat.", "Matemātika");
 			res.put("matem.", "Matemātika");
 			res.put("med.", "Medicīna");
@@ -505,6 +514,7 @@ public class ThesaurusEntry
 			res.put("metal.", "Metalurģija");
 			res.put("metāl.", "Metālapstrāde");		// ?
 			res.put("meteorol.", "Meteoroloģija");
+			res.put("mež.", "Mežsaimniecība");		// ?	
 			res.put("mežs.", "Mežsaimniecība");
 			res.put("mil.", "Militārās zinātnes");
 			res.put("min.", "Mineraloģija");
@@ -516,18 +526,23 @@ public class ThesaurusEntry
 			res.put("poligr.", "Poligrāfija");
 			res.put("psih.", "Psiholoģija");
 			res.put("rel.", "Reliģija");
-			res.put("sociol.", "Socioloģija"); // Svešvārdu vārdnīca
+			res.put("social.", "Socioloģija");	// ?
+			res.put("sociol.", "Socioloģija");
 			res.put("tehn.", "Tehnika");
 			res.put("tehnol.", "Tehnoloģija");
 			res.put("telek.", "Telekomunikācijas");
 			res.put("tekst.", "Tekstilrūpniecība");
-			res.put("tekstilr.", "Tekstilrūpniecība");	//unverified
+			res.put("tekstilr.", "Tekstilrūpniecība");	// ?
 			res.put("val.", "Valodniecība");
 			res.put("vet.", "Veterinārija");
 			res.put("zool.", "Zooloģija");
 			
+			res.put("arābu", "Arābu");
+			res.put("arābu", "Vārds svešvalodā");			
 			res.put("fr.", "Franču");
 			res.put("fr.", "Vārds svešvalodā");
+			res.put("grieķu", "Grieķu");
+			res.put("grieķu", "Vārds svešvalodā");
 			res.put("gr.", "Grieķu");
 			res.put("gr.", "Vārds svešvalodā");
 			res.put("it.", "Itāliešu"); //Muz
@@ -551,6 +566,7 @@ public class ThesaurusEntry
 			res.put("nelit.", "Neliterārs");
 			res.put("žarg.", "Žargonvārds");
 			res.put("sar.", "Sarunvaloda");
+			res.put("vulg.", "Vulgārisms");	// ?
 			
 			//TODO - šos drīzāk kā atsevišķu komentāru lauku(s)
 			res.put("arī vsk.", "Arī vienskaitlī");		// Ļaunums.
@@ -1284,6 +1300,7 @@ public class ThesaurusEntry
 			if (flags.contains("Vispārināmais vietniekvārds")) paradigm.add(25);
 
 			if (flags.contains("Priedēklis")) paradigm.add(0); //Prefixes are not words.
+			if (flags.contains("Salikteņu daļa")) paradigm.add(0); //Prefixes are not words.
 		}
 		
 		/**
