@@ -106,6 +106,7 @@ public class ThesaurusEntry
 		}
 		
 		homId = ((org.w3c.dom.Element)sNode).getAttribute("i");
+		if ("".equals(homId)) homId = null;
 		
 		//if (inBlacklist()) return;
 		
@@ -241,7 +242,7 @@ public class ThesaurusEntry
 			}
 		}//*/
 		
-		if (homId != null && !homId.equals(""))
+		if (homId != null)
 		{
 			s.append(", \"ID\":\"");
 			s.append(JSONObject.escape(homId.toString()));
@@ -367,6 +368,7 @@ public class ThesaurusEntry
 		
 		public Lemma ()
 		{
+			
 			text = null;
 			pronunciation = null;
 		}
@@ -374,6 +376,12 @@ public class ThesaurusEntry
 		{
 			text = vfNode.getTextContent();
 			pronunciation = ((org.w3c.dom.Element)vfNode).getAttribute("ru");
+			if ("".equals(pronunciation)) pronunciation = null;
+			if (pronunciation == null) return;
+			if (pronunciation.startsWith("["))
+				pronunciation = pronunciation.substring(1);
+			if (pronunciation.endsWith("]"))
+				pronunciation = pronunciation.substring(0, pronunciation.length() - 1);
 		}
 		
 		/**
@@ -392,7 +400,7 @@ public class ThesaurusEntry
 		{
 			StringBuilder res = new StringBuilder();
 			res.append(String.format("\"Lemma\":\"%s\"", JSONObject.escape(text)));
-			if (pronunciation != null && !pronunciation.equals(""))
+			if (pronunciation != null)
 			{
 				res.append(", \"Pronunciation\":\"");
 				res.append(JSONObject.escape(pronunciation.toString()));
@@ -1599,6 +1607,7 @@ public class ThesaurusEntry
 					System.err.printf("n entry field %s not processed\n", fieldname);
 			}
 			ordNumber = ((org.w3c.dom.Element)nNode).getAttribute("nr");
+			if ("".equals(ordNumber)) ordNumber = null;
 		}
 		
 		/**
@@ -1642,7 +1651,7 @@ public class ThesaurusEntry
 			res.append("\"Sense\":{");
 			boolean hasPrev = false;
 			
-			if (ordNumber != null && !ordNumber.equals(""))
+			if (ordNumber != null)
 			{
 				res.append("\"SenseID\":\"");
 				res.append(JSONObject.escape(ordNumber.toString()));
