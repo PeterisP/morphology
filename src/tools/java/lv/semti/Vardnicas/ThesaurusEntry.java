@@ -971,6 +971,17 @@ public class ThesaurusEntry
 				flags.add("Lietvārds");
 			}
 			
+			// Paradigm 11: Lietvārds 6. deklinācija -s
+			else if (gramText.matches("-ts, -šu([;,.].*)?")) //abonentpults
+			{
+				newBegin = "-ts, -šu".length();
+				if (!lemma.endsWith("ts"))
+					System.err.printf("Problem matching \"%s\" with paradigm 11\n", lemma);
+				paradigm.add(11);
+				flags.add("Sieviešu dzimte");
+				flags.add("Lietvārds");
+			}
+			
 			// Paradigm 32: Lietvārds 6. deklinācija - ļaudis.
 			else if (gramText.startsWith("-žu, v.")) //ļaudis
 			{
@@ -982,8 +993,11 @@ public class ThesaurusEntry
 				flags.add("Šķirkļavārds daudzskaitlī");
 				flags.add("Lietvārds");
 				// TODO Daudzskaitlinieks?
-			}	
+			}
 			
+			
+			
+			// Risky - is prefix of other rule.
 			// Paradigm 9: Lietvārds 5. deklinācija -e siev. dz.
 			else if (gramText.matches("-žu([;,.].*)?")) //abioģenēze, ablumozes, akolāde, nematodes
 			{
