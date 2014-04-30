@@ -19,6 +19,7 @@ import lv.semti.morphology.attributes.AttributeNames;
 import lv.semti.morphology.lexicon.Paradigm;
 
 import org.json.simple.JSONObject;
+import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
@@ -27,28 +28,35 @@ import org.w3c.dom.NodeList;
  */
 public class ThesaurusEntry
 {
-	
-	Sources sources;
+	/**
+	 * i field.
+	 */
+	public String homId;
+
+	/**
+	 * avots field.
+	 */
+	public Sources sources;
 
 	/**
 	 * Lemma and all-entry related grammar information.
 	 */
-	Header head;
+	public Header head;
 
 	/**
 	 * g_n (nozīmju grupa) field.
 	 */
-	LinkedList<Sense> senses;
+	public LinkedList<Sense> senses;
 	
 	/**
 	 * g_fraz (frazeoloģismu grupa) field.
 	 */
-	LinkedList<Phrase> phrases;
+	public LinkedList<Phrase> phrases;
 	
 	/**
 	 * g_de (atvasinājumu grupa) field.
 	 */
-	LinkedList<Header> derivs;
+	public LinkedList<Header> derivs;
 	
 	/**
 	 * Lemmas identifying entries currently ignored. See also inBlacklist().
@@ -61,6 +69,7 @@ public class ThesaurusEntry
 		sources = null;
 		senses = null;
 		phrases = null;
+		homId = null;
 	}
 	
 	// Reads data of a single thesaurus entry from the XML format
@@ -95,6 +104,8 @@ public class ThesaurusEntry
 			else
 				System.err.printf("Entry - s - field %s not processed\n", fieldname);
 		}
+		
+		homId = ((org.w3c.dom.Element)sNode).getAttribute("i");
 		
 		//if (inBlacklist()) return;
 		
@@ -230,6 +241,13 @@ public class ThesaurusEntry
 			}
 		}//*/
 		
+		if (homId != null && !homId.equals(""))
+		{
+			s.append(", \"ID\":\"");
+			s.append(JSONObject.escape(homId.toString()));
+			s.append("\"");
+		}
+		
 		s.append(", \"Senses\":");
 		s.append(Utils.objectsToJSON(senses));
 		
@@ -268,6 +286,7 @@ public class ThesaurusEntry
 		 */
 		public Gram gram;
 		
+		
 		public Header ()
 		{
 			lemma = null;
@@ -301,8 +320,7 @@ public class ThesaurusEntry
 					gram = new Gram (field, lemma.text);
 				else System.err.printf(
 						"v entry field %s not processed\n", fieldname);				
-			}
-				
+			}				
 		}
 		
 		public boolean hasParadigm()
@@ -342,9 +360,21 @@ public class ThesaurusEntry
 	public static class Lemma implements HasToJSON
 	{
 		public String text;
+		/**
+		 * ru (runa) field, optional here.
+		 */
+		public String pronunciation;
 		
-		public Lemma () { text = null; }
-		public Lemma (Node vfNode) { text = vfNode.getTextContent(); }
+		public Lemma ()
+		{
+			text = null;
+			pronunciation = null;
+		}
+		public Lemma (Node vfNode)
+		{
+			text = vfNode.getTextContent();
+			pronunciation = ((org.w3c.dom.Element)vfNode).getAttribute("ru");
+		}
 		
 		/**
 		 *  Set lemma and check if the information isn't already filled, to
@@ -360,7 +390,15 @@ public class ThesaurusEntry
 		
 		public String toJSON()
 		{
-			return String.format("\"Lemma\":\"%s\"", JSONObject.escape(text));
+			StringBuilder res = new StringBuilder();
+			res.append(String.format("\"Lemma\":\"%s\"", JSONObject.escape(text)));
+			if (pronunciation != null && !pronunciation.equals(""))
+			{
+				res.append(", \"Pronunciation\":\"");
+				res.append(JSONObject.escape(pronunciation.toString()));
+				res.append("\"");
+			}
+			return res.toString();
 		}
 	}
 	
@@ -1495,7 +1533,15 @@ public class ThesaurusEntry
 		 */
 		public Gram grammar;
 		
+		/**
+		 * d (definīcija) field.
+		 */
 		public Definition def;
+		
+		/**
+		 * id field.
+		 */
+		public String ordNumber;
 		
 		/**
 		 * g_piem (piemēru grupa) field, optional here.
@@ -1513,6 +1559,7 @@ public class ThesaurusEntry
 			def = null;
 			examples = null;
 			subsenses = null;
+			ordNumber = null;
 		}
 		
 		/**
@@ -1551,6 +1598,7 @@ public class ThesaurusEntry
 				else if (!fieldname.equals("#text")) // Text nodes here are ignored.
 					System.err.printf("n entry field %s not processed\n", fieldname);
 			}
+			ordNumber = ((org.w3c.dom.Element)nNode).getAttribute("nr");
 		}
 		
 		/**
@@ -1593,6 +1641,14 @@ public class ThesaurusEntry
 			
 			res.append("\"Sense\":{");
 			boolean hasPrev = false;
+			
+			if (ordNumber != null && !ordNumber.equals(""))
+			{
+				res.append("\"SenseID\":\"");
+				res.append(JSONObject.escape(ordNumber.toString()));
+				res.append("\"");
+				hasPrev = true;
+			}
 			
 			if (grammar != null)
 			{
