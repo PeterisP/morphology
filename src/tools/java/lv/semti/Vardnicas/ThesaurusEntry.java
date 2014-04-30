@@ -1536,7 +1536,7 @@ public class ThesaurusEntry
 		/**
 		 * d (definīcija) field.
 		 */
-		public Definition def;
+		public Gloss gloss;
 		
 		/**
 		 * id field.
@@ -1556,7 +1556,7 @@ public class ThesaurusEntry
 		public Sense ()
 		{
 			grammar = null;
-			def = null;
+			gloss = null;
 			examples = null;
 			subsenses = null;
 			ordNumber = null;
@@ -1576,19 +1576,19 @@ public class ThesaurusEntry
 					grammar = new Gram (field, lemma);
 				else if (fieldname.equals("d"))
 				{
-					NodeList defFields = field.getChildNodes();
-					for (int j = 0; j < defFields.getLength(); j++)
+					NodeList glossFields = field.getChildNodes();
+					for (int j = 0; j < glossFields.getLength(); j++)
 					{
-						Node defField = defFields.item(j);
-						String defFieldname = defField.getNodeName();
-						if (defFieldname.equals("t"))
+						Node glossField = glossFields.item(j);
+						String glossFieldname = glossField.getNodeName();
+						if (glossFieldname.equals("t"))
 						{
-							if (def != null)
+							if (gloss != null)
 								System.err.println("d entry contains more than one \'t\'");
-							def = new Definition (defField);
+							gloss = new Gloss (glossField);
 						}
-						else if (!defFieldname.equals("#text")) // Text nodes here are ignored.
-							System.err.printf("d entry field %s not processed\n", defFieldname);
+						else if (!glossFieldname.equals("#text")) // Text nodes here are ignored.
+							System.err.printf("d entry field %s not processed\n", glossFieldname);
 					}
 				}
 				else if (fieldname.equals("g_piem"))
@@ -1657,10 +1657,10 @@ public class ThesaurusEntry
 				hasPrev = true;
 			}
 			
-			if (def != null)
+			if (gloss != null)
 			{
 				if (hasPrev) res.append(", ");
-				res.append(def.toJSON());
+				res.append(gloss.toJSON());
 				hasPrev = true;
 			}
 			
@@ -1688,21 +1688,21 @@ public class ThesaurusEntry
 	/**
 	 * d (definīcija) field.
 	 */
-	public static class Definition implements HasToJSON
+	public static class Gloss implements HasToJSON
 	{
 		/**
 		 * t (teksts) field.
 		 */
 		public String text = null;
 		
-		public Definition (Node dNode)
+		public Gloss (Node dNode)
 		{
 			text = dNode.getTextContent();
 		}
 		
 		public String toJSON()
 		{
-			return String.format("\"Definition\":\"%s\"", JSONObject.escape(text));			
+			return String.format("\"Gloss\":\"%s\"", JSONObject.escape(text));			
 		}
 	}
 	
