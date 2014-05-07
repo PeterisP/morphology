@@ -150,7 +150,7 @@ public class ThesaurusEntry
 
 	public boolean inBlacklist()
 	{
-		if (sources == null || !sources.s.contains("LLVV")) return true; // FIXME - temporary restriction to focus on LLVV first
+		//if (sources == null || !sources.s.contains("LLVV")) return true; // FIXME - temporary restriction to focus on LLVV first
 		return blacklist.contains(head.lemma.text);
 	}
 	
@@ -489,6 +489,8 @@ public class ThesaurusEntry
 			res.put("simb.", "Saīsinājums");	// ?
 			res.put("salikteņu pirmā daļa.", "Salikteņu daļa");
 			res.put("salikteņu pirmā daļa", "Salikteņu daļa");
+			res.put("salikteņa pirmā daļa.", "Salikteņu daļa");
+			res.put("salikteņa pirmā daļa", "Salikteņu daļa");
 			res.put("salikteņu daļa.", "Salikteņu daļa");
 			res.put("salikteņu daļa", "Salikteņu daļa");
 			
