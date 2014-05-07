@@ -1644,6 +1644,26 @@ public class ThesaurusEntry
 				// TODO Daudzskaitlinieks?
 			}
 			
+			// Paradigm 1: Lietvārds 1. deklinācija -s
+			// Paradigm 9: Lietvārds 5. deklinācija -e siev. dz.
+			else if (gramText.matches("s\\. -te, -šu([;.].*)?")) //abstinents
+			{
+				newBegin = "s. -te, -šu".length();
+				if (lemma.endsWith("ts"))
+				{
+					paradigm.add(1);
+					altLemmas.put(9, new Lemma(lemma.substring(0, lemma.length() - 1) + "e"));
+					flags.add("Lietvārds");
+					flags.add("Vīriešu dzimte");
+				}
+				else
+				{
+					System.err.printf("Problem matching \"%s\" with paradigm 1 & 5\n", lemma);
+					newBegin = 0;
+				}
+				// TODO Daudzskaitlinieks?
+			}
+			
 			// Paradigm 13: Īpašības vārdi ar -s
 			// Paradigm 14: Īpašības vārdi ar -š
 			else if (gramText.matches("īp\\. v\\. -ais; s\\. -a, -ā([;,.].*)?")) //aerobs
