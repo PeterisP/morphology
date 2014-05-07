@@ -447,10 +447,12 @@ public class ThesaurusEntry
 		public LinkedList<LinkedList<String>> leftovers;
 		public HashSet<Integer> paradigm;
 		/**
-		 * If grammar contains aditional information about lemmas, it is
-		 * collected here. Mapping from paradigms to lemmas.
+		 * If grammar contains additional information about lemmas, it is
+		 * collected here. Mapping from paradigms to lemma-flagset tuples.
+		 * Flag set contains only flags for which alternate lemma differs from
+		 * general flags given in "flags" field in this grammar.
 		 */
-		public MappingSet<Integer, Lemma> altLemmas;
+		public MappingSet<Integer, Tuple<Lemma, HashSet<String>>> altLemmas;
 		
 		/**
 		 * Known abbreviations and their de-abbreviations.
@@ -741,7 +743,7 @@ public class ThesaurusEntry
 		private void parseGram(String lemma)
 		{
 			String correctedGram = correctOCRErrors(orig);
-			altLemmas = new MappingSet<Integer, Lemma>();
+			altLemmas = new MappingSet<Integer, Tuple<Lemma, HashSet<String>>>();
 			
 			// First process ending patterns, usually located in the beginning
 			// of the grammar string.
@@ -805,8 +807,11 @@ public class ThesaurusEntry
 				newBegin = matcher.group(1).length();
 				Lemma altLemma = new Lemma(matcher.group(2));
 				altLemma.pronunciation = matcher.group(3);
+				HashSet<String> altParams = new HashSet<String> ();
+				altParams.add("Šķirkļavārds vienskaitlī");
+				altLemmas.put(1, new Tuple<Lemma, HashSet<String>>(altLemma, altParams));
+				
 				paradigm.add(1);
-				altLemmas.put(1, altLemma);
 				flags.add("Vīriešu dzimte");
 				flags.add("Lietvārds");
 				flags.add("Šķirkļavārds daudzskaitlī");
@@ -817,9 +822,11 @@ public class ThesaurusEntry
 				gramText.startsWith("-ņu, vsk. "+ lemma.substring(0, lemma.length() - 2) + "ņš, -ņa, v.")) // dižtauriņi: -ņu, vsk. dižtauriņš, -ņa, v.
 			{
 				newBegin = ("-ņu, vsk. "+ lemma.substring(0, lemma.length() - 2) + "ņš, -ņa, v.").length();
-				String altLemma = lemma.substring(0, lemma.length() - 2) + "ņš";
+				Lemma altLemma = new Lemma (lemma.substring(0, lemma.length() - 2) + "ņš");
+				HashSet<String> altParams = new HashSet<String> ();
+				altParams.add("Šķirkļavārds vienskaitlī");
+				altLemmas.put(2, new Tuple<Lemma, HashSet<String>>(altLemma, altParams));
 				paradigm.add(2);
-				altLemmas.put(2, new Lemma(altLemma));
 				flags.add("Vīriešu dzimte");
 				flags.add("Lietvārds");
 				flags.add("Šķirkļavārds daudzskaitlī");
@@ -829,9 +836,11 @@ public class ThesaurusEntry
 				gramText.startsWith("-ņu, vsk. "+ lemma.substring(0, lemma.length() - 2)+"nis, -ņa, v.")) // aizvirtņi: -ņu, vsk. aizvirtnis, -ņa, v.
 			{
 				newBegin = ("-ņu, vsk. "+ lemma.substring(0, lemma.length() - 2)+"nis, -ņa, v.").length();
-				String altLemma = lemma.substring(0, lemma.length() - 2) + "nis";
+				Lemma altLemma = new Lemma(lemma.substring(0, lemma.length() - 2) + "nis");
+				HashSet<String> altParams = new HashSet<String> ();
+				altParams.add("Šķirkļavārds vienskaitlī");
+				altLemmas.put(3, new Tuple<Lemma, HashSet<String>>(altLemma, altParams));
 				paradigm.add(3);
-				altLemmas.put(3, new Lemma(altLemma));
 				flags.add("Vīriešu dzimte");
 				flags.add("Lietvārds");
 				flags.add("Šķirkļavārds daudzskaitlī");
@@ -840,9 +849,11 @@ public class ThesaurusEntry
 				gramText.startsWith("-ņu, vsk. "+ lemma.substring(0, lemma.length() - 3)+"lnis, -ļņa, v.")) // starpviļņi: -ņu, vsk. starpvilnis, -ļņa, v.
 			{
 				newBegin = ("-ņu, vsk. "+ lemma.substring(0, lemma.length() - 3)+"lnis, -ļņa, v.").length();
-				String altLemma = lemma.substring(0, lemma.length() - 3) + "lnis";
+				Lemma altLemma = new Lemma (lemma.substring(0, lemma.length() - 3) + "lnis");
+				HashSet<String> altParams = new HashSet<String> ();
+				altParams.add("Šķirkļavārds vienskaitlī");
+				altLemmas.put(3, new Tuple<Lemma, HashSet<String>>(altLemma, altParams));
 				paradigm.add(3);
-				altLemmas.put(3, new Lemma(altLemma));
 				flags.add("Vīriešu dzimte");
 				flags.add("Lietvārds");
 				flags.add("Šķirkļavārds daudzskaitlī");
@@ -851,9 +862,11 @@ public class ThesaurusEntry
 				gramText.startsWith("-u, vsk. " + lemma + "s, -ja, v.")) // airkāji: -u, vsk. airkājis, -ja, v.
 			{
 				newBegin = ("-u, vsk. " + lemma + "s, -ja, v.").length();
-				String altLemma = lemma + "s";
+				Lemma altLemma = new Lemma (lemma + "s");
+				HashSet<String> altParams = new HashSet<String> ();
+				altParams.add("Šķirkļavārds vienskaitlī");
+				altLemmas.put(3, new Tuple<Lemma, HashSet<String>>(altLemma, altParams));
 				paradigm.add(3);
-				altLemmas.put(3, new Lemma(altLemma));
 				flags.add("Vīriešu dzimte");
 				flags.add("Lietvārds");
 				flags.add("Šķirkļavārds daudzskaitlī");
@@ -864,9 +877,11 @@ public class ThesaurusEntry
 				gramText.startsWith("-u, vsk. " + lemma.substring(0, lemma.length() - 1) + "s -a, v.")) // abinieki: -u, vsk. abinieks -a, v.
 			{
 				newBegin = ("-u, vsk. " + lemma.substring(0, lemma.length() - 1) + "s -a, v.").length();
-				String altLemma = lemma.substring(0, lemma.length() - 1) + "s";
+				Lemma altLemma = new Lemma(lemma.substring(0, lemma.length() - 1) + "s");
+				HashSet<String> altParams = new HashSet<String> ();
+				altParams.add("Šķirkļavārds vienskaitlī");
+				altLemmas.put(1, new Tuple<Lemma, HashSet<String>>(altLemma, altParams));
 				paradigm.add(1);
-				altLemmas.put(1, new Lemma(altLemma));
 				flags.add("Vīriešu dzimte");
 				flags.add("Lietvārds");
 				flags.add("Šķirkļavārds daudzskaitlī");
@@ -875,9 +890,11 @@ public class ThesaurusEntry
 				gramText.startsWith("-u, vsk. " + lemma.substring(0, lemma.length() - 1) + "s, -a, v.")) // aizkari: -u, vsk. aizkars, -a, v.
 			{
 				newBegin = ("-u, vsk. " + lemma.substring(0, lemma.length() - 1) + "s, -a, v.").length();
-				String altLemma = lemma.substring(0, lemma.length() - 1) + "s";
+				Lemma altLemma = new Lemma (lemma.substring(0, lemma.length() - 1) + "s");
+				HashSet<String> altParams = new HashSet<String> ();
+				altParams.add("Šķirkļavārds vienskaitlī");
+				altLemmas.put(1, new Tuple<Lemma, HashSet<String>>(altLemma, altParams));
 				paradigm.add(1);
-				altLemmas.put(1, new Lemma(altLemma));
 				flags.add("Vīriešu dzimte");
 				flags.add("Lietvārds");
 				flags.add("Šķirkļavārds daudzskaitlī");
@@ -1651,8 +1668,13 @@ public class ThesaurusEntry
 				newBegin = "s. -te, -šu".length();
 				if (lemma.endsWith("ts"))
 				{
+					Lemma altLemma = new Lemma (lemma.substring(0, lemma.length() - 1) + "e");
+					HashSet<String> altParams = new HashSet<String> ();
+					altParams.add("Sieviešu dzimte");
+					altParams.add("Cita paradigma");
+					altLemmas.put(9, new Tuple<Lemma, HashSet<String>>(altLemma, altParams));
+					
 					paradigm.add(1);
-					altLemmas.put(9, new Lemma(lemma.substring(0, lemma.length() - 1) + "e"));
 					flags.add("Lietvārds");
 					flags.add("Vīriešu dzimte");
 				}
@@ -2608,8 +2630,23 @@ public class ThesaurusEntry
 					{
 						res.append("\"");
 						res.append(JSONObject.escape(next.toString()));
-						res.append("\":");
-						res.append(Utils.objectsToJSON(altLemmas.getAll(next)));
+						res.append("\":[");
+						Iterator<Tuple<Lemma, HashSet<String>>> flagIt = altLemmas.getAll(next).iterator();
+						while (flagIt.hasNext())
+						{
+							Tuple<Lemma, HashSet<String>> alt = flagIt.next();
+							res.append("{\"Lemma\":");
+							res.append(alt.first.toJSON());
+							if (alt.second != null && !alt.second.isEmpty())
+							{
+								res.append(", \"Flags\":");
+								res.append(Utils.simplesToJSON(alt.second));
+							}
+							res.append("}");
+							if (flagIt.hasNext()) res.append(", ");
+						}
+						
+						res.append("]");
 						if (it.hasNext()) res.append(", ");
 					}
 				}
@@ -3220,6 +3257,42 @@ public class ThesaurusEntry
 						allPhrases.getNodeName(), phrase.getNodeName(), subElemName);
 			}
 			return res;
+		}
+	}
+	
+	/**
+	 * Ordered tuple.
+	 */
+	public static class Tuple<E, F>
+	{
+		public E first;
+		public F second;
+		
+		public Tuple (E e, F f)
+		{
+			first = e;
+			second = f;
+		}
+		
+		// This is needed for putting Lemmas in hash structures (hasmaps, hashsets).
+		@Override
+		public boolean equals (Object o)
+		{
+			if (o == null) return false;
+			if (this.getClass() != o.getClass()) return false;
+			if ((first == null && ((Tuple)o).first == null || first != null && first.equals(((Tuple)o).first))
+					&& (second == null && ((Tuple)o).second == null
+					|| second != null && second.equals(((Tuple)o).second)))
+				return true;
+			else return false;
+		}
+		
+		// This is needed for putting Lemmas in hash structures (hasmaps, hashsets).
+		@Override
+		public int hashCode()
+		{
+			return 2719 *(first == null ? 1 : first.hashCode())
+					+ (second == null ? 1 : second.hashCode());
 		}
 	}
 	
