@@ -369,10 +369,14 @@ public class ThesaurusEntry
 		
 		public Lemma ()
 		{
-			
 			text = null;
 			pronunciation = null;
 		}
+		public Lemma (String lemma)
+		{
+			text = lemma;
+			pronunciation = null;
+		}		
 		public Lemma (Node vfNode)
 		{
 			text = vfNode.getTextContent();
@@ -397,16 +401,38 @@ public class ThesaurusEntry
 			text = lemmaText;
 		}
 		
+		// This is needed for putting Lemmas in hash structures (hasmaps, hashsets).
+		@Override
+		public boolean equals (Object o)
+		{
+			if (o == null) return false;
+			if (this.getClass() != o.getClass()) return false;
+			if ((text == null && ((Lemma)o).text == null || text != null && text.equals(((Lemma)o).text))
+					&& (pronunciation == null && ((Lemma)o).pronunciation == null
+					|| pronunciation != null && pronunciation.equals(((Lemma)o).pronunciation)))
+				return true;
+			else return false;
+		}
+		
+		// This is needed for putting Lemmas in hash structures (hasmaps, hashsets).
+		@Override
+		public int hashCode()
+		{
+			return 1721 *(text == null ? 1 : text.hashCode())
+					+ (pronunciation == null ? 1 : pronunciation.hashCode());
+		}
+		
 		public String toJSON()
 		{
 			StringBuilder res = new StringBuilder();
-			res.append(String.format("\"Lemma\":\"%s\"", JSONObject.escape(text)));
+			res.append(String.format("{\"Lemma\":\"%s\"", JSONObject.escape(text)));
 			if (pronunciation != null)
 			{
 				res.append(", \"Pronunciation\":\"");
 				res.append(JSONObject.escape(pronunciation.toString()));
 				res.append("\"");
 			}
+			res.append('}');
 			return res.toString();
 		}
 	}
@@ -424,15 +450,15 @@ public class ThesaurusEntry
 		 * If grammar contains aditional information about lemmas, it is
 		 * collected here. Mapping from paradigms to lemmas.
 		 */
-		public MappingSet<Integer> altLemmas;
+		public MappingSet<Integer, Lemma> altLemmas;
 		
 		/**
 		 * Known abbreviations and their de-abbreviations.
 		 */
-		public static MappingSet<String> knownAbbr = generateKnownAbbr();
-		private static MappingSet<String> generateKnownAbbr()
+		public static MappingSet<String, String> knownAbbr = generateKnownAbbr();
+		private static MappingSet<String, String> generateKnownAbbr()
 		{
-			MappingSet<String> res = new MappingSet<String>();
+			MappingSet<String, String> res = new MappingSet<String, String>();
 			
 			// TODO Sort out this mess.
 			// Source: LLVV, data.
@@ -713,7 +739,7 @@ public class ThesaurusEntry
 		private void parseGram(String lemma)
 		{
 			String correctedGram = correctOCRErrors(orig);
-			altLemmas = new MappingSet<Integer>();
+			altLemmas = new MappingSet<Integer, Lemma>();
 			
 			// First process ending patterns, usually located in the beginning
 			// of the grammar string.
@@ -765,14 +791,47 @@ public class ThesaurusEntry
 			int newBegin = 0;
 			
 			// Complicated rules: grammar contains lemma variation spelled out.
-			// Paradigm 3: Lietvārds 2. deklinācija -is
+			// Paradigm 1: Lietvārds 1. deklinācija -s
+			// Super-complicated case: pronunciation included.
+			if (lemma.endsWith("di") &&
+				gramText.matches("(-u, vsk\\. (\\Q" + lemma.substring(0, lemma.length() - 1)
+						+ "s\\E) \\[([^\\]]*?)\\] -a, v\\.)(.*)?")) // ābeļziedi: -u, vsk. ābeļzieds [a^be`ļzie^c] -a, v.
+			{
+				Pattern pattern = Pattern.compile("(-u, vsk\\. (\\Q"
+						+ lemma.substring(0, lemma.length() - 1)
+						+ "s\\E) \\[([^\\]]*?)\\] -a, v\\.)(.*)?");
+				Matcher matcher = pattern.matcher(gramText);
+				if (!matcher.matches()) 
+					System.err.printf("Problem matching \"%s\" with \"ābeļzieds\" rule\n", lemma);
+				newBegin = matcher.group(1).length();
+				Lemma altLemma = new Lemma(matcher.group(2));
+				altLemma.pronunciation = matcher.group(3);
+				paradigm.add(1);
+				altLemmas.put(1, altLemma);
+				flags.add("Vīriešu dzimte");
+				flags.add("Lietvārds");
+				flags.add("Šķirkļavārds daudzskaitlī");
+			}
+			// Paradigm 2: Lietvārds 1. deklinācija -š
 			if (lemma.endsWith("ņi") &&
+				gramText.startsWith("-ņu, vsk. "+ lemma.substring(0, lemma.length() - 2) + "ņš, -ņa, v.")) // dižtauriņi: -ņu, vsk. dižtauriņš, -ņa, v.
+			{
+				newBegin = ("-ņu, vsk. "+ lemma.substring(0, lemma.length() - 2) + "ņš, -ņa, v.").length();
+				String altLemma = lemma.substring(0, lemma.length() - 2) + "ņš";
+				paradigm.add(2);
+				altLemmas.put(2, new Lemma(altLemma));
+				flags.add("Vīriešu dzimte");
+				flags.add("Lietvārds");
+				flags.add("Šķirkļavārds daudzskaitlī");
+			}
+			// Paradigm 3: Lietvārds 2. deklinācija -is
+			else if (lemma.endsWith("ņi") &&
 				gramText.startsWith("-ņu, vsk. "+ lemma.substring(0, lemma.length() - 2)+"nis, -ņa, v.")) // aizvirtņi: -ņu, vsk. aizvirtnis, -ņa, v.
 			{
 				newBegin = ("-ņu, vsk. "+ lemma.substring(0, lemma.length() - 2)+"nis, -ņa, v.").length();
-				String altLemma = lemma.substring(0, lemma.length() - 2);
+				String altLemma = lemma.substring(0, lemma.length() - 2) + "nis";
 				paradigm.add(3);
-				altLemmas.put(3, altLemma);
+				altLemmas.put(3, new Lemma(altLemma));
 				flags.add("Vīriešu dzimte");
 				flags.add("Lietvārds");
 				flags.add("Šķirkļavārds daudzskaitlī");
@@ -781,21 +840,9 @@ public class ThesaurusEntry
 				gramText.startsWith("-ņu, vsk. "+ lemma.substring(0, lemma.length() - 2)+"nis, -ļņa, v.")) // starpviļņi: -ņu, vsk. starpvilnis, -ļņa, v.
 			{
 				newBegin = ("-ņu, vsk. "+ lemma.substring(0, lemma.length() - 2)+"nis, -ļņa, v.").length();
-				String altLemma = lemma.substring(0, lemma.length() - 2);
+				String altLemma = lemma.substring(0, lemma.length() - 2) + "nis";
 				paradigm.add(3);
-				altLemmas.put(3, altLemma);
-				flags.add("Vīriešu dzimte");
-				flags.add("Lietvārds");
-				flags.add("Šķirkļavārds daudzskaitlī");
-			}
-			// Paradigm 2: Lietvārds 1. deklinācija -š
-			else if (lemma.endsWith("ņi") &&
-				gramText.startsWith("-ņu, vsk. "+ lemma.substring(0, lemma.length() - 2)+"ņš, -ņa, v.")) // dižtauriņi: -ņu, vsk. dižtauriņš, -ņa, v.
-			{
-				newBegin = ("-ņu, vsk. "+ lemma.substring(0, lemma.length() - 2)+"ņš, -ņa, v.").length();
-				String altLemma = lemma.substring(0, lemma.length() - 2);
-				paradigm.add(2);
-				altLemmas.put(2, altLemma);
+				altLemmas.put(3, new Lemma(altLemma));
 				flags.add("Vīriešu dzimte");
 				flags.add("Lietvārds");
 				flags.add("Šķirkļavārds daudzskaitlī");
@@ -901,13 +948,61 @@ public class ThesaurusEntry
 				paradigm.add(1);
 				paradigm.add(2);
 				paradigm.add(3);
-				paradigm.add(4);
 				paradigm.add(5);
 				flags.add("Vīriešu dzimte");
 				flags.add("Lietvārds");
 				flags.add("Neviennozīmīga paradigma");
 			}
-			
+			else if (gramText.startsWith("-u, v.")) // abesīņi, abhāzi, ādgrauži, adigejieši, adžāri, alimenti, angļi, antinukloni, apakšbrunči
+			{
+				newBegin = "-u, v.".length();
+				if (lemma.endsWith("nieki") || lemma.endsWith("umi")
+						|| lemma.endsWith("otāji"))
+				{
+					paradigm.add(1);
+				}
+				else
+				{
+					if (lemma.matches(".*[ņš]i"))	// akmeņi, mēneši etc.
+					{
+						paradigm.add(1);
+						paradigm.add(2);
+						paradigm.add(3);
+						paradigm.add(4);
+						paradigm.add(5);
+					}
+					else if (lemma.matches(".*[vpm]ji"))	// looks like these are predefined sound changes always
+					{
+						paradigm.add(3);
+						paradigm.add(5);
+					}
+					else if (lemma.matches(".*[bgkhrstčģķļž]i"))	// can't determine if there is sound change (t - tēti, s - viesi)
+					{
+						paradigm.add(1);
+						paradigm.add(2);
+						paradigm.add(3);
+						paradigm.add(5);
+					}
+					else if (lemma.matches(".*[cdlmnpvz]i")
+							|| lemma.matches(".*[aeiouāēīōū]ji"))	// there is no sound change
+					{
+						paradigm.add(1);
+						paradigm.add(2);
+					}
+					else 
+					{
+						System.err.printf("Problem matching \"%s\" with paradigms 1-5\n", lemma);
+						paradigm.add(1);
+						paradigm.add(2);
+						paradigm.add(3);
+						paradigm.add(4);
+						paradigm.add(5);						
+					}
+					flags.add("Neviennozīmīga paradigma");
+				}
+				flags.add("Vīriešu dzimte");
+				flags.add("Lietvārds");
+			}			
 			// Paradigm 7: Lietvārds 4. deklinācija -a siev. dz.
 			// Paradigm 11: Lietvārds 6. deklinācija -s siev. dz.
 			else if (gramText.startsWith("-as, s.")) //aberācija, milns
@@ -1193,7 +1288,32 @@ public class ThesaurusEntry
 				else paradigm.add(13);
 				flags.add("Īpašības vārds");
 			}
-						
+			// Paradigm 13-14: plural forms
+			else if (gramText.startsWith("s. -as; adj.")) //abēji 2
+			{
+				newBegin = "s. -as; adj.".length();
+				if (!lemma.endsWith("i"))
+					System.err.printf("Problem matching \"%s\" with paradigms 13-14\n", lemma);
+				paradigm.add(13);
+				paradigm.add(14);
+				flags.add("Īpašības vārds");
+				flags.add("Šķirkļavārds daudzskaitlī");
+				flags.add("Neviennozīmīga paradigma");
+			}
+			else if (gramText.startsWith("s. -as; tikai dsk.")) //abēji 1
+			{
+				// This exception is on purpose! this way "tikai dsk." is later
+				// transformed to appropriate flag.
+				newBegin = "s. -as;".length();
+				if (!lemma.endsWith("i"))
+					System.err.printf("Problem matching \"%s\" with paradigms 13-14\n", lemma);
+				paradigm.add(13);
+				paradigm.add(14);
+				flags.add("Īpašības vārds");
+				flags.add("Šķirkļavārds daudzskaitlī");
+				flags.add("Neviennozīmīga paradigma");
+			}
+			
 			// Paradigm 15: Darbības vārdi 1. konjugācija tiešie
 			else if (gramText.matches("parasti 3\\. pers\\., -šalc, pag\\. -šalca([;,.].*)?")) //aizšalkt
 			{
@@ -1682,9 +1802,8 @@ public class ThesaurusEntry
 					{
 						res.append("\"");
 						res.append(JSONObject.escape(next.toString()));
-						res.append("\":{");
-						res.append(Utils.simplesToJSON(altLemmas.getAll(next)));
-						res.append("}");
+						res.append("\":");
+						res.append(Utils.objectsToJSON(altLemmas.getAll(next)));
 						if (it.hasNext()) res.append(", ");
 					}
 				}
@@ -2302,13 +2421,13 @@ public class ThesaurusEntry
 	 * Limited use multimap. Incomplete interface, might need additional
 	 * methods later.
 	 */
-	public static class MappingSet<K>
+	public static class MappingSet<K, V>
 	{
-		private HashMap<K, HashSet<String>> map = new HashMap<K, HashSet<String>>();
+		private HashMap<K, HashSet<V>> map = new HashMap<K, HashSet<V>>();
 		
-		public void put (K key, String value)
+		public void put (K key, V value)
 		{
-			HashSet<String> values = new HashSet<String>();
+			HashSet<V> values = new HashSet<V>();
 			if (map.containsKey(key))
 			{
 				values = map.get(key);
@@ -2317,7 +2436,7 @@ public class ThesaurusEntry
 			map.put(key, values);
 		}
 		
-		public HashSet<String> getAll(K key)
+		public HashSet<V> getAll(K key)
 		{
 			return map.get(key);
 		}
