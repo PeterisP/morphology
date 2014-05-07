@@ -64,7 +64,7 @@ public class CelmuBeigas {
 		
 		PrintWriter izeja = new PrintWriter(new PrintStream(System.out));
 		//List<Integer> paradigmids = Arrays.asList(1,2,3); //TODO - salikt visus
-		List<Integer> paradigmids = Arrays.asList(21); 
+		List<Integer> paradigmids = Arrays.asList(3); 
 		for (int pid : paradigmids) {
 			Counter<String> counts = new Counter<String>();
 			for (char c : "aābcčdeēfgģhiījkķlļmnņoprsštuūvzž".toCharArray()) {
@@ -74,7 +74,7 @@ public class CelmuBeigas {
 			Paradigm p = analizators.paradigmByID(pid);
 			for (Lexeme l : p.lexemes) {
 				String beigas = l.getStem(0).substring(l.getStem(0).length()-1);
-				if (beigas.equals("š") || beigas.equals("ū") || beigas.equals("ž"))
+				if (beigas.equals("g"))
 					l.describe(izeja);
 				counts.add(beigas);
 			}

@@ -408,7 +408,7 @@ public abstract class Mijas {
 				case 0: varianti.add(new Variants(celms)); break;  // nav mijas
 
 				case 1: // lietvārdu līdzskaņu mija
-					if (celms.endsWith("vies") || (celms.endsWith("vieš") && !celms.endsWith("evieš")) || celms.equalsIgnoreCase("cēs") || celms.endsWith("tēt") || celms.endsWith("tēš") ||
+					if ( (celms.endsWith("vies") && !celms.endsWith("kvies")) || (celms.endsWith("vieš") && !celms.endsWith("evieš")) || celms.equalsIgnoreCase("cēs") || celms.endsWith("tēt") || celms.endsWith("tēš") ||
 							celms.endsWith("ast") || celms.endsWith("asš") || celms.endsWith("mat") || celms.endsWith("maš") ||
 							celms.endsWith("skat") || celms.endsWith("skaš") || (celms.endsWith("st") && ! celms.endsWith("kst")) || celms.endsWith("sš")
 							 // acs, auss, utml siev. dz. izņēmumi

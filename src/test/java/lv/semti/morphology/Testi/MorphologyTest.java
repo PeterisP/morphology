@@ -2077,7 +2077,16 @@ public class MorphologyTest {
 		formas = locītājs.generateInflections("paziņa", true);
 		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "", "paziņa");
 	}
-	
+
+	@Test
+	public void kviesis() {
+		Word w = locītājs.analyze("kvieši");
+		assertTrue(w.isRecognized());
+		assertEquals("kviesis", w.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+
+		List<Wordform> formas = locītājs.generateInflections("kviesis", true);
+		assertNounInflection(formas, AttributeNames.v_Plural, AttributeNames.v_Genitive, "", "kviešu");
+	}
 	
 	@Test
 	/**
