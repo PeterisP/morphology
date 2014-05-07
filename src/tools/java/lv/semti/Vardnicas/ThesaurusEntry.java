@@ -837,10 +837,10 @@ public class ThesaurusEntry
 				flags.add("Šķirkļavārds daudzskaitlī");
 			}
 			else if (lemma.endsWith("ņi") &&
-				gramText.startsWith("-ņu, vsk. "+ lemma.substring(0, lemma.length() - 2)+"nis, -ļņa, v.")) // starpviļņi: -ņu, vsk. starpvilnis, -ļņa, v.
+				gramText.startsWith("-ņu, vsk. "+ lemma.substring(0, lemma.length() - 3)+"lnis, -ļņa, v.")) // starpviļņi: -ņu, vsk. starpvilnis, -ļņa, v.
 			{
-				newBegin = ("-ņu, vsk. "+ lemma.substring(0, lemma.length() - 2)+"nis, -ļņa, v.").length();
-				String altLemma = lemma.substring(0, lemma.length() - 2) + "nis";
+				newBegin = ("-ņu, vsk. "+ lemma.substring(0, lemma.length() - 3)+"lnis, -ļņa, v.").length();
+				String altLemma = lemma.substring(0, lemma.length() - 3) + "lnis";
 				paradigm.add(3);
 				altLemmas.put(3, new Lemma(altLemma));
 				flags.add("Vīriešu dzimte");
@@ -2076,6 +2076,21 @@ public class ThesaurusEntry
 					newBegin = 0;
 				}
 			}		
+			else if (gramText.startsWith("s. -as; vietniekv."))		// abi
+			{
+				newBegin = "s. -as; vietniekv.".length();
+				if (lemma.endsWith("i"))
+				{
+					paradigm.add(25);
+					flags.add("Šķirkļavārds daudzskaitlī");
+				}
+				else
+				{
+					System.err.printf("Problem matching \"%s\" with paradigm 25\n", lemma);
+					newBegin = 0;
+				}
+				flags.add("Vietniekvārds");
+			}
 			
 			// Paradigm 30: jaundzimušais, pēdējais
 			else if (gramText.startsWith("-šā, v. -šās, s.")) //iereibušais
