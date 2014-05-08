@@ -470,7 +470,6 @@ public class ThesaurusEntry
 			res.put("apst.", "Apstākļa vārds");
 			res.put("divd.", "Divdabis");
 			res.put("Divd.", "Divdabis");
-			res.put("divd.", "Divdabis");
 			res.put("interj.", "Izsauksmes vārds");
 			res.put("īp. v.", "Īpašības vārds");
 			res.put("izsauk.", "Izsauksmes vārds");
@@ -485,7 +484,7 @@ public class ThesaurusEntry
 			res.put("priev.", "Prievārds");
 			res.put("skait.", "Skaitļa vārds");
 			res.put("vietn.", "Vietniekvārds");
-			res.put("vietniekv.", "Vietniekvārds");
+			res.put("vietniekv.", "Vietniekvārds");	// ?
 			res.put("vispārin.", "Vispārināmais vietniekvārds");
 			res.put("saīs.", "Saīsinājums");
 			res.put("simb.", "Saīsinājums");	// ?
@@ -529,20 +528,23 @@ public class ThesaurusEntry
 			res.put("v.", "Vīriešu dzimte");
 			res.put("kopdz.", "Kopdzimte");
 			
-			res.put("intrans.", "Intransitīvs"); //???
-			res.put("trans.", "Transitīvs"); //???
+			res.put("intrans.", "Nepārejošs");
+			res.put("trans.", "Pārejošs");
+			// TODO vai šie vienmēr ir darbības vārdi?
 
 			res.put("konj.", "Konjugācija");
 			res.put("pers.", "Persona");
 
-			res.put("atgr.", "Atgriezensisks (vietniekvārds?)");
+			//res.put("atgr.", "Atgriezensisks (vietniekvārds?)"); //not present
 			res.put("dem.", "Deminutīvs");
 			res.put("Dem.", "Deminutīvs");
 			res.put("imperf.", "Imperfektīva forma"); //???
 			res.put("nelok.", "Nelokāms vārds");
 			res.put("Nol.", "Noliegums"); // Check with other sources!
-			res.put("refl.", "Refleksīvs darbības vārds");
-			res.put("Refl.", "Refleksīvs darbības vārds");
+			res.put("refl.", "Refleksīvs");
+			res.put("refl.", "Darbības vārds");			
+			res.put("Refl.", "Refleksīvs");
+			res.put("Refl.", "Darbības vārds");			
 
 			res.put("aeron.", "Aeronautika");	// ?
 			res.put("anat.", "Anatomija");
@@ -561,12 +563,12 @@ public class ThesaurusEntry
 			res.put("etn.", "Etnogrāfija");
 			res.put("farm.", "Farmakoloģija");
 			res.put("filoz.", "Filozofija");	
-			res.put("fin.", "Finansu termins");
+			res.put("fin.", "Finanses");
 			res.put("fiz.", "Fizika");
 			res.put("fiziol.", "Fizioloģija");
 			res.put("fizk.", "Fiziskā kultūra un sports");
 			res.put("folkl.", "Folklora");
-			res.put("ģenēt.", "Ģenētika");
+			res.put("ģenēt.", "Ģenētika");	// ?
 			res.put("ģeod.", "Ģeodēzija");
 			res.put("ģeogr.", "Ģeogrāfija");
 			res.put("ģeol.", "Ģeoloģija");
@@ -590,7 +592,7 @@ public class ThesaurusEntry
 			res.put("loģ.", "Loģika");
 			res.put("lopk.", "Lopkopība");
 			res.put("mat.", "Matemātika");
-			res.put("matem.", "Matemātika");
+			res.put("matem.", "Matemātika");	// ?
 			res.put("med.", "Medicīna");
 			res.put("medn.", "Medniecība");
 			res.put("met.", "Meteoroloģija");		// ?
@@ -613,7 +615,7 @@ public class ThesaurusEntry
 			res.put("sociol.", "Socioloģija");
 			res.put("tehn.", "Tehnika");
 			res.put("tehnol.", "Tehnoloģija");
-			res.put("telek.", "Telekomunikācijas");
+			res.put("telek.", "Telekomunikācijas");	// ?
 			res.put("tekst.", "Tekstilrūpniecība");
 			res.put("tekstilr.", "Tekstilrūpniecība");	// ?
 			res.put("val.", "Valodniecība");
@@ -636,8 +638,8 @@ public class ThesaurusEntry
 			res.put("sengr.", "Vārds svešvalodā");
 			
 			res.put("apv.", "Apvidvārds");
-			res.put("novec.", "Novecojis"); //TODO - Novecojis, vēsturisks un neaktuāls apvienot??		
 			res.put("vēst.", "Vēsturisks");
+			res.put("novec.", "Novecojis");		
 			res.put("neakt.", "Neaktuāls");
 			res.put("poēt.", "Poētiska stilistiskā nokrāsa");
 			res.put("niev.", "Nievīga ekspresīvā nokrāsa");
