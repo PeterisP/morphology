@@ -662,7 +662,10 @@ public class ThesaurusEntry
 			res.put("parasti dsk.", "Parasti daudzskaitlī");		
 			res.put("tikai dsk.", "Tikai daudzskaitlī");
 			res.put("parasti 3. pers.", "Parasti 3. personā");
+			res.put("subst. noz.", "Lietvārda nozīmē");
 			res.put("lietv. nozīmē.", "Lietvārda nozīmē");
+			res.put("ar not. gal.", "Ar noteikto galotni");
+			res.put("dial. (augšzemnieku)", "Agušzemnieku dialekts");	// Unique.
 			res.put("pareti.", "Pareti");
 			res.put("pareti", "Pareti");
 			res.put("reti.", "Reti");
@@ -791,396 +794,383 @@ public class ThesaurusEntry
 		private String processWithPatterns(String gramText, String lemma)
 		{
 			gramText = gramText.trim();
-			int newBegin = 0;
+			int newBegin = -1;
+			
+			// Blocks of rules.
+			
+			newBegin = firstConjDirVerbRules(gramText, lemma);
+			if (newBegin == -1) newBegin = secondConjDirVerbRules(gramText, lemma);
+			if (newBegin == -1) newBegin = thirdConjDirVerbRules(gramText, lemma);
+			
+			if (newBegin == -1) newBegin = firstConjRefVerbRules(gramText, lemma);
+			if (newBegin == -1) newBegin = secondConjRefVerbRules(gramText, lemma);
+			if (newBegin == -1) newBegin = thirdConjRefVerbRules(gramText, lemma);
 			
 			// Complicated rules: grammar contains lemma variation spelled out.
-			// Super-complicated case: pronunciation included.
-			// Paradigm 1: Lietvārds 1. deklinācija -s
-			if (lemma.endsWith("di") &&
-				gramText.matches("(-u, vsk\\. (\\Q" + lemma.substring(0, lemma.length() - 1)
-						+ "s\\E) \\[([^\\]]*?)\\] -a, v\\.)(.*)?")) // ābeļziedi: -u, vsk. ābeļzieds [a^be`ļzie^c] -a, v.
+			if (newBegin == -1)
 			{
-				Pattern pattern = Pattern.compile("(-u, vsk\\. (\\Q"
-						+ lemma.substring(0, lemma.length() - 1)
-						+ "s\\E) \\[([^\\]]*?)\\] -a, v\\.)(.*)?");
-				Matcher matcher = pattern.matcher(gramText);
-				if (!matcher.matches()) 
-					System.err.printf("Problem matching \"%s\" with \"ābeļzieds\" rule\n", lemma);
-				newBegin = matcher.group(1).length();
-				Lemma altLemma = new Lemma(matcher.group(2));
-				altLemma.pronunciation = matcher.group(3);
-				HashSet<String> altParams = new HashSet<String> ();
-				altParams.add("Šķirkļavārds vienskaitlī");
-				altLemmas.put(1, new Tuple<Lemma, HashSet<String>>(altLemma, altParams));
-				
-				paradigm.add(1);
-				flags.add("Vīriešu dzimte");
-				flags.add("Lietvārds");
-				flags.add("Šķirkļavārds daudzskaitlī");
-			}
-			// Complicated rules: grammar contains lemma variation spelled out.
-			// Paradigm 2: Lietvārds 1. deklinācija -š
-			else if (lemma.endsWith("ņi") &&
-				gramText.startsWith("-ņu, vsk. "+ lemma.substring(0, lemma.length() - 2) + "ņš, -ņa, v.")) // dižtauriņi: -ņu, vsk. dižtauriņš, -ņa, v.
-			{
-				newBegin = ("-ņu, vsk. "+ lemma.substring(0, lemma.length() - 2) + "ņš, -ņa, v.").length();
-				Lemma altLemma = new Lemma (lemma.substring(0, lemma.length() - 2) + "ņš");
-				HashSet<String> altParams = new HashSet<String> ();
-				altParams.add("Šķirkļavārds vienskaitlī");
-				altLemmas.put(2, new Tuple<Lemma, HashSet<String>>(altLemma, altParams));
-				paradigm.add(2);
-				flags.add("Vīriešu dzimte");
-				flags.add("Lietvārds");
-				flags.add("Šķirkļavārds daudzskaitlī");
-			}
-			// Paradigm 3: Lietvārds 2. deklinācija -is
-			else if (lemma.endsWith("ņi") &&
-				gramText.startsWith("-ņu, vsk. "+ lemma.substring(0, lemma.length() - 2)+"nis, -ņa, v.")) // aizvirtņi: -ņu, vsk. aizvirtnis, -ņa, v.
-			{
-				newBegin = ("-ņu, vsk. "+ lemma.substring(0, lemma.length() - 2)+"nis, -ņa, v.").length();
-				Lemma altLemma = new Lemma(lemma.substring(0, lemma.length() - 2) + "nis");
-				HashSet<String> altParams = new HashSet<String> ();
-				altParams.add("Šķirkļavārds vienskaitlī");
-				altLemmas.put(3, new Tuple<Lemma, HashSet<String>>(altLemma, altParams));
-				paradigm.add(3);
-				flags.add("Vīriešu dzimte");
-				flags.add("Lietvārds");
-				flags.add("Šķirkļavārds daudzskaitlī");
-			}
-			else if (lemma.endsWith("ņi") &&
-				gramText.startsWith("-ņu, vsk. "+ lemma.substring(0, lemma.length() - 3)+"lnis, -ļņa, v.")) // starpviļņi: -ņu, vsk. starpvilnis, -ļņa, v.
-			{
-				newBegin = ("-ņu, vsk. "+ lemma.substring(0, lemma.length() - 3)+"lnis, -ļņa, v.").length();
-				Lemma altLemma = new Lemma (lemma.substring(0, lemma.length() - 3) + "lnis");
-				HashSet<String> altParams = new HashSet<String> ();
-				altParams.add("Šķirkļavārds vienskaitlī");
-				altLemmas.put(3, new Tuple<Lemma, HashSet<String>>(altLemma, altParams));
-				paradigm.add(3);
-				flags.add("Vīriešu dzimte");
-				flags.add("Lietvārds");
-				flags.add("Šķirkļavārds daudzskaitlī");
-			}
-			else if (lemma.endsWith("ji") &&
-				gramText.startsWith("-u, vsk. " + lemma + "s, -ja, v.")) // airkāji: -u, vsk. airkājis, -ja, v.
-			{
-				newBegin = ("-u, vsk. " + lemma + "s, -ja, v.").length();
-				Lemma altLemma = new Lemma (lemma + "s");
-				HashSet<String> altParams = new HashSet<String> ();
-				altParams.add("Šķirkļavārds vienskaitlī");
-				altLemmas.put(3, new Tuple<Lemma, HashSet<String>>(altLemma, altParams));
-				paradigm.add(3);
-				flags.add("Vīriešu dzimte");
-				flags.add("Lietvārds");
-				flags.add("Šķirkļavārds daudzskaitlī");
-			}
-			
-			// Paradigm 1: Lietvārds 1. deklinācija -s
-			else if (lemma.endsWith("i") &&
-				gramText.startsWith("-u, vsk. " + lemma.substring(0, lemma.length() - 1) + "s -a, v.")) // abinieki: -u, vsk. abinieks -a, v.
-			{
-				newBegin = ("-u, vsk. " + lemma.substring(0, lemma.length() - 1) + "s -a, v.").length();
-				Lemma altLemma = new Lemma(lemma.substring(0, lemma.length() - 1) + "s");
-				HashSet<String> altParams = new HashSet<String> ();
-				altParams.add("Šķirkļavārds vienskaitlī");
-				altLemmas.put(1, new Tuple<Lemma, HashSet<String>>(altLemma, altParams));
-				paradigm.add(1);
-				flags.add("Vīriešu dzimte");
-				flags.add("Lietvārds");
-				flags.add("Šķirkļavārds daudzskaitlī");
-			}		
-			else if (lemma.endsWith("i") &&
-				gramText.startsWith("-u, vsk. " + lemma.substring(0, lemma.length() - 1) + "s, -a, v.")) // aizkari: -u, vsk. aizkars, -a, v.
-			{
-				newBegin = ("-u, vsk. " + lemma.substring(0, lemma.length() - 1) + "s, -a, v.").length();
-				Lemma altLemma = new Lemma (lemma.substring(0, lemma.length() - 1) + "s");
-				HashSet<String> altParams = new HashSet<String> ();
-				altParams.add("Šķirkļavārds vienskaitlī");
-				altLemmas.put(1, new Tuple<Lemma, HashSet<String>>(altLemma, altParams));
-				paradigm.add(1);
-				flags.add("Vīriešu dzimte");
-				flags.add("Lietvārds");
-				flags.add("Šķirkļavārds daudzskaitlī");
-			}			
-			
-			// Paradigm 1: Lietvārds 1. deklinācija -s
-			// Paradigm 2: Lietvārds 1. deklinācija -š
-			else if (gramText.startsWith("lietv. -a, v.")) // aerobs 
-			{
-				newBegin = "lietv. -a, v.".length();
-				//if (lemma.matches(".*[ģjķr]is")) paradigm.add(3);
-				//else
-				//{
-					//if (lemma.matches(".*[aeiouāēīōū]s") || lemma.matches(".*[^sš]"))
-					//	System.err.printf("Problem matching \"%s\" with paradigms 1, 2, 3\n", lemma);
+				// Super-complicated case: pronunciation included.			
+				// Paradigm 1: Lietvārds 1. deklinācija -s
+				if (lemma.endsWith("di") &&
+					gramText.matches("(-u, vsk\\. (\\Q" + lemma.substring(0, lemma.length() - 1)
+							+ "s\\E) \\[([^\\]]*?)\\] -a, v\\.)(.*)?")) // ābeļziedi: -u, vsk. ābeļzieds [a^be`ļzie^c] -a, v.
+				{
+					Pattern pattern = Pattern.compile("(-u, vsk\\. (\\Q"
+							+ lemma.substring(0, lemma.length() - 1)
+							+ "s\\E) \\[([^\\]]*?)\\] -a, v\\.)(.*)?");
+					Matcher matcher = pattern.matcher(gramText);
+					if (!matcher.matches()) 
+						System.err.printf("Problem matching \"%s\" with \"ābeļzieds\" rule\n", lemma);
+					newBegin = matcher.group(1).length();
+					Lemma altLemma = new Lemma(matcher.group(2));
+					altLemma.pronunciation = matcher.group(3);
+					HashSet<String> altParams = new HashSet<String> ();
+					altParams.add("Šķirkļavārds vienskaitlī");
+					altLemmas.put(1, new Tuple<Lemma, HashSet<String>>(altLemma, altParams));
 					
-					if (lemma.endsWith("š")) paradigm.add(2);
-					else if (lemma.matches(".*[^aeiouāēīōū]s")) paradigm.add(1);
+					paradigm.add(1);
+					flags.add("Vīriešu dzimte");
+					flags.add("Lietvārds");
+					flags.add("Šķirkļavārds daudzskaitlī");
+				}
+
+				// Paradigm 2: Lietvārds 1. deklinācija -š
+				else if (lemma.endsWith("ņi") &&
+					gramText.startsWith("-ņu, vsk. "+ lemma.substring(0, lemma.length() - 2) + "ņš, -ņa, v.")) // dižtauriņi: -ņu, vsk. dižtauriņš, -ņa, v.
+				{
+					newBegin = ("-ņu, vsk. "+ lemma.substring(0, lemma.length() - 2) + "ņš, -ņa, v.").length();
+					Lemma altLemma = new Lemma (lemma.substring(0, lemma.length() - 2) + "ņš");
+					HashSet<String> altParams = new HashSet<String> ();
+					altParams.add("Šķirkļavārds vienskaitlī");
+					altLemmas.put(2, new Tuple<Lemma, HashSet<String>>(altLemma, altParams));
+					paradigm.add(2);
+					flags.add("Vīriešu dzimte");
+					flags.add("Lietvārds");
+					flags.add("Šķirkļavārds daudzskaitlī");
+				}
+				// Paradigm 3: Lietvārds 2. deklinācija -is
+				else if (lemma.endsWith("ņi") &&
+					gramText.startsWith("-ņu, vsk. "+ lemma.substring(0, lemma.length() - 2)+"nis, -ņa, v.")) // aizvirtņi: -ņu, vsk. aizvirtnis, -ņa, v.
+				{
+					newBegin = ("-ņu, vsk. "+ lemma.substring(0, lemma.length() - 2)+"nis, -ņa, v.").length();
+					Lemma altLemma = new Lemma(lemma.substring(0, lemma.length() - 2) + "nis");
+					HashSet<String> altParams = new HashSet<String> ();
+					altParams.add("Šķirkļavārds vienskaitlī");
+					altLemmas.put(3, new Tuple<Lemma, HashSet<String>>(altLemma, altParams));
+					paradigm.add(3);
+					flags.add("Vīriešu dzimte");
+					flags.add("Lietvārds");
+					flags.add("Šķirkļavārds daudzskaitlī");
+				}
+				else if (lemma.endsWith("ņi") &&
+					gramText.startsWith("-ņu, vsk. "+ lemma.substring(0, lemma.length() - 3)+"lnis, -ļņa, v.")) // starpviļņi: -ņu, vsk. starpvilnis, -ļņa, v.
+				{
+					newBegin = ("-ņu, vsk. "+ lemma.substring(0, lemma.length() - 3)+"lnis, -ļņa, v.").length();
+					Lemma altLemma = new Lemma (lemma.substring(0, lemma.length() - 3) + "lnis");
+					HashSet<String> altParams = new HashSet<String> ();
+					altParams.add("Šķirkļavārds vienskaitlī");
+					altLemmas.put(3, new Tuple<Lemma, HashSet<String>>(altLemma, altParams));
+					paradigm.add(3);
+					flags.add("Vīriešu dzimte");
+					flags.add("Lietvārds");
+					flags.add("Šķirkļavārds daudzskaitlī");
+				}
+				else if (lemma.endsWith("ji") &&
+					gramText.startsWith("-u, vsk. " + lemma + "s, -ja, v.")) // airkāji: -u, vsk. airkājis, -ja, v.
+				{
+					newBegin = ("-u, vsk. " + lemma + "s, -ja, v.").length();
+					Lemma altLemma = new Lemma (lemma + "s");
+					HashSet<String> altParams = new HashSet<String> ();
+					altParams.add("Šķirkļavārds vienskaitlī");
+					altLemmas.put(3, new Tuple<Lemma, HashSet<String>>(altLemma, altParams));
+					paradigm.add(3);
+					flags.add("Vīriešu dzimte");
+					flags.add("Lietvārds");
+					flags.add("Šķirkļavārds daudzskaitlī");
+				}
+			}
+			
+			if (newBegin == -1) newBegin = esEndingPluralGenUEndingFemRules(gramText, lemma);
+
+			if (newBegin == -1)
+			{
+				// Paradigm 1: Lietvārds 1. deklinācija -s
+				if (lemma.endsWith("i") &&
+					gramText.startsWith("-u, vsk. " + lemma.substring(0, lemma.length() - 1) + "s -a, v.")) // abinieki: -u, vsk. abinieks -a, v.
+				{
+					newBegin = ("-u, vsk. " + lemma.substring(0, lemma.length() - 1) + "s -a, v.").length();
+					Lemma altLemma = new Lemma(lemma.substring(0, lemma.length() - 1) + "s");
+					HashSet<String> altParams = new HashSet<String> ();
+					altParams.add("Šķirkļavārds vienskaitlī");
+					altLemmas.put(1, new Tuple<Lemma, HashSet<String>>(altLemma, altParams));
+					paradigm.add(1);
+					flags.add("Vīriešu dzimte");
+					flags.add("Lietvārds");
+					flags.add("Šķirkļavārds daudzskaitlī");
+				}		
+				else if (lemma.endsWith("i") &&
+					gramText.startsWith("-u, vsk. " + lemma.substring(0, lemma.length() - 1) + "s, -a, v.")) // aizkari: -u, vsk. aizkars, -a, v.
+				{
+					newBegin = ("-u, vsk. " + lemma.substring(0, lemma.length() - 1) + "s, -a, v.").length();
+					Lemma altLemma = new Lemma (lemma.substring(0, lemma.length() - 1) + "s");
+					HashSet<String> altParams = new HashSet<String> ();
+					altParams.add("Šķirkļavārds vienskaitlī");
+					altLemmas.put(1, new Tuple<Lemma, HashSet<String>>(altLemma, altParams));
+					paradigm.add(1);
+					flags.add("Vīriešu dzimte");
+					flags.add("Lietvārds");
+					flags.add("Šķirkļavārds daudzskaitlī");
+				}			
+				
+				// Paradigm 1: Lietvārds 1. deklinācija -s
+				// Paradigm 2: Lietvārds 1. deklinācija -š
+				else if (gramText.startsWith("lietv. -a, v.")) // aerobs 
+				{
+					newBegin = "lietv. -a, v.".length();
+					//if (lemma.matches(".*[ģjķr]is")) paradigm.add(3);
+					//else
+					//{
+						//if (lemma.matches(".*[aeiouāēīōū]s") || lemma.matches(".*[^sš]"))
+						//	System.err.printf("Problem matching \"%s\" with paradigms 1, 2, 3\n", lemma);
+						
+						if (lemma.endsWith("š")) paradigm.add(2);
+						else if (lemma.matches(".*[^aeiouāēīōū]s")) paradigm.add(1);
+						else
+						{
+							System.err.printf("Problem matching \"%s\" with paradigms 1, 2, 3\n", lemma);
+							newBegin = 0;
+						}
+					//}
+					flags.add("Vīriešu dzimte");
+					flags.add("Lietvārds");
+				}
+				else if (gramText.startsWith("vsk. -a, v.")) // acteks
+				{
+					newBegin = "vsk. -a, v.".length();
+					
+					if (lemma.endsWith("š"))
+					{
+						paradigm.add(2);
+						flags.add("Lietvārds");
+					}
+					else if (lemma.matches(".*[^aeiouāēīōū]s"))
+					{
+						paradigm.add(1);
+						flags.add("Lietvārds");
+					}
+					else
+					{
+						System.err.printf("Problem matching \"%s\" with paradigms 1, 2\n", lemma);
+						newBegin = 0;
+					}
+					flags.add("Vīriešu dzimte");
+					flags.add("Vienskaitlis");
+				}
+				
+				// Paradigm 1: Lietvārds 1. deklinācija -s
+				// Paradigm 2: Lietvārds 1. deklinācija -š
+				// Paradigm 3: Lietvārds 2. deklinācija -is (ja nav miju)
+				else if (gramText.startsWith("-a, v.")) // abats, akustiķis
+				{
+					newBegin = "-a, v.".length();
+					if (lemma.matches(".*[ģjķr]is"))
+					{
+						paradigm.add(3);
+						flags.add("Lietvārds");
+						
+					}
+					else if (lemma.endsWith("š"))
+					{
+						paradigm.add(2);
+						flags.add("Lietvārds");
+					}
+					else if (lemma.matches(".*[^aeiouāēīōū]s"))
+					{
+						paradigm.add(1);
+						flags.add("Lietvārds");
+					}
 					else
 					{
 						System.err.printf("Problem matching \"%s\" with paradigms 1, 2, 3\n", lemma);
 						newBegin = 0;
 					}
-				//}
-				flags.add("Vīriešu dzimte");
-				flags.add("Lietvārds");
-			}
-			else if (gramText.startsWith("vsk. -a, v.")) // acteks
-			{
-				newBegin = "vsk. -a, v.".length();
-				
-				if (lemma.endsWith("š"))
-				{
-					paradigm.add(2);
-					flags.add("Lietvārds");
+					flags.add("Vīriešu dzimte");
 				}
-				else if (lemma.matches(".*[^aeiouāēīōū]s"))
+				else if (gramText.matches("-ra[,;] v.(.*)?")) // airis, mūrniekmeistars
 				{
-					paradigm.add(1);
-					flags.add("Lietvārds");
+					newBegin = "-ra, v.".length();
+					if (lemma.endsWith("ris"))
+					{
+						paradigm.add(3);
+						flags.add("Lietvārds");
+					}
+					else if (lemma.endsWith("rs"))
+					{
+						paradigm.add(1);
+						flags.add("Lietvārds");
+					}
+					else
+					{
+						System.err.printf("Problem matching \"%s\" with paradigm 3\n", lemma);
+						newBegin = 0;
+					}
+					flags.add("Vīriešu dzimte");
 				}
-				else
+							
+				// Paradigm 2: Lietvārds 1. deklinācija -š
+				// Paradigm 3: Lietvārds 2. deklinācija -is
+				// Paradigm 5: Lietvārds 2. deklinācija -suns
+				else if (gramText.startsWith("-ņa, v.")) // abesīnis
 				{
-					System.err.printf("Problem matching \"%s\" with paradigms 1, 2\n", lemma);
-					newBegin = 0;
-				}
-				flags.add("Vīriešu dzimte");
-				flags.add("Vienskaitlis");
-			}
-			
-			// Paradigm 1: Lietvārds 1. deklinācija -s
-			// Paradigm 2: Lietvārds 1. deklinācija -š
-			// Paradigm 3: Lietvārds 2. deklinācija -is (ja nav miju)
-			else if (gramText.startsWith("-a, v.")) // abats, akustiķis
-			{
-				newBegin = "-a, v.".length();
-				if (lemma.matches(".*[ģjķr]is"))
-				{
-					paradigm.add(3);
-					flags.add("Lietvārds");
+					newBegin = "-ņa, v.".length();
 					
+					if (lemma.endsWith("suns"))
+					{
+						paradigm.add(5);
+						flags.add("Lietvārds");
+					}
+					else if (lemma.endsWith("ņš"))
+					{
+						paradigm.add(2);
+						flags.add("Lietvārds");
+					}
+					else if (lemma.endsWith("nis"))
+					{
+						paradigm.add(3);
+						flags.add("Lietvārds");
+					}
+					else
+					{
+						System.err.printf("Problem matching \"%s\" with paradigms 2, 3, 5\n", lemma);
+						newBegin = 0;
+					}
+					flags.add("Vīriešu dzimte");
 				}
-				else if (lemma.endsWith("š"))
+				else if (gramText.startsWith("-ņa, dsk. ģen. -ņu, v.")) // bizmanis
 				{
-					paradigm.add(2);
-					flags.add("Lietvārds");
+					newBegin = "-ņa, dsk. ģen. -ņu, v.".length();
+					
+					if (lemma.endsWith("nis"))
+					{
+						paradigm.add(3);
+						flags.add("Lietvārds");
+					}
+					else
+					{
+						System.err.printf("Problem matching \"%s\" with paradigms 3\n", lemma);
+						newBegin = 0;
+					}
+					flags.add("Vīriešu dzimte");
 				}
-				else if (lemma.matches(".*[^aeiouāēīōū]s"))
-				{
-					paradigm.add(1);
-					flags.add("Lietvārds");
-				}
-				else
-				{
-					System.err.printf("Problem matching \"%s\" with paradigms 1, 2, 3\n", lemma);
-					newBegin = 0;
-				}
-				flags.add("Vīriešu dzimte");
-			}
-			else if (gramText.matches("-ra[,;] v.(.*)?")) // airis, mūrniekmeistars
-			{
-				newBegin = "-ra, v.".length();
-				if (lemma.endsWith("ris"))
-				{
-					paradigm.add(3);
-					flags.add("Lietvārds");
-				}
-				else if (lemma.endsWith("rs"))
-				{
-					paradigm.add(1);
-					flags.add("Lietvārds");
-				}
-				else
-				{
-					System.err.printf("Problem matching \"%s\" with paradigm 3\n", lemma);
-					newBegin = 0;
-				}
-				flags.add("Vīriešu dzimte");
-			}
-						
-			// Paradigm 2: Lietvārds 1. deklinācija -š
-			// Paradigm 3: Lietvārds 2. deklinācija -is
-			// Paradigm 5: Lietvārds 2. deklinācija -suns
-			else if (gramText.startsWith("-ņa, v.")) // abesīnis
-			{
-				newBegin = "-ņa, v.".length();
 				
-				if (lemma.endsWith("suns"))
+				// Paradigm 3: Lietvārds 2. deklinācija -is
+				// Paradigm 5: Lietvārds 2. deklinācija -suns
+				else if (gramText.startsWith("-ļa, v.")) // acumirklis, durkls
 				{
-					paradigm.add(5);
-					flags.add("Lietvārds");
+					newBegin = "-ļa, v.".length();
+					if (lemma.endsWith("ls"))
+					{
+						paradigm.add(5);
+						flags.add("Lietvārds");
+					}
+					else if (lemma.endsWith("lis"))
+					{
+						paradigm.add(3);
+						flags.add("Lietvārds");
+					}
+					else
+					{
+						System.err.printf("Problem matching \"%s\" with paradigm 3, 5\n", lemma);
+						newBegin = 0;
+					}
+					flags.add("Vīriešu dzimte");
 				}
-				else if (lemma.endsWith("ņš"))
+				else if (gramText.startsWith("-ša, v.")) // abrkasis, lemess
 				{
-					paradigm.add(2);
-					flags.add("Lietvārds");
+					newBegin = "-ša, v.".length();
+					if (lemma.endsWith("ss"))
+					{
+						paradigm.add(5);
+						flags.add("Lietvārds");
+					}
+					else if (lemma.matches(".*[stš]is"))
+					{
+						paradigm.add(3);
+						flags.add("Lietvārds");
+					}
+					else
+					{
+						System.err.printf("Problem matching \"%s\" with paradigm 3, 5\n", lemma);
+						newBegin = 0;
+					}
+					flags.add("Vīriešu dzimte");
 				}
-				else if (lemma.endsWith("nis"))
+				else if (gramText.startsWith("-ķa, v.")) // agnostiķis
 				{
-					paradigm.add(3);
-					flags.add("Lietvārds");
+					newBegin = "-ķa, v.".length();
+					if (lemma.matches(".*[ķ]is"))
+					{
+						paradigm.add(3);
+						flags.add("Lietvārds");
+					}
+					else
+					{
+						System.err.printf("Problem matching \"%s\" with paradigm 3\n", lemma);
+						newBegin = 0;
+					}
+					flags.add("Vīriešu dzimte");
 				}
-				else
+				else if (gramText.startsWith("-pja, v.")) // aitkopis
 				{
-					System.err.printf("Problem matching \"%s\" with paradigms 2, 3, 5\n", lemma);
-					newBegin = 0;
+					newBegin = "-pja, v.".length();
+					if (lemma.endsWith("pis"))
+					{
+						paradigm.add(3);
+						flags.add("Lietvārds");
+					}
+					else
+					{
+						System.err.printf("Problem matching \"%s\" with paradigm 3\n", lemma);
+						newBegin = 0;
+					}
+					flags.add("Vīriešu dzimte");
 				}
-				flags.add("Vīriešu dzimte");
-			}
-			else if (gramText.startsWith("-ņa, dsk. ģen. -ņu, v.")) // bizmanis
-			{
-				newBegin = "-ņa, dsk. ģen. -ņu, v.".length();
+				else if (gramText.startsWith("-žņa, v.")) // aizbāznis
+				{
+					newBegin = "-žņa, v.".length();
+					if (lemma.endsWith("znis"))
+					{
+						paradigm.add(3);
+						flags.add("Lietvārds");
+					}
+					else
+					{
+						System.err.printf("Problem matching \"%s\" with paradigm 3\n", lemma);
+						newBegin = 0;
+					}
+					flags.add("Vīriešu dzimte");
+				}
+				else if (gramText.startsWith("-ža, vsk.")) // ādgrauzis
+				{
+					newBegin = "-ža, vsk.".length();
+					if (lemma.matches(".*[zd]is"))
+					{
+						paradigm.add(3);
+						flags.add("Lietvārds");
+					}
+					else
+					{
+						System.err.printf("Problem matching \"%s\" with paradigm 3\n", lemma);
+						newBegin = 0;
+					}
+					flags.add("Vīriešu dzimte");
+				}
 				
-				if (lemma.endsWith("nis"))
+				// Paradigm 1-5: plural forms
+				else if (gramText.startsWith("-ņu, v.")) // bretoņi
 				{
-					paradigm.add(3);
-					flags.add("Lietvārds");
-				}
-				else
-				{
-					System.err.printf("Problem matching \"%s\" with paradigms 3\n", lemma);
-					newBegin = 0;
-				}
-				flags.add("Vīriešu dzimte");
-			}
-			
-			// Paradigm 3: Lietvārds 2. deklinācija -is
-			// Paradigm 5: Lietvārds 2. deklinācija -suns
-			else if (gramText.startsWith("-ļa, v.")) // acumirklis, durkls
-			{
-				newBegin = "-ļa, v.".length();
-				if (lemma.endsWith("ls"))
-				{
-					paradigm.add(5);
-					flags.add("Lietvārds");
-				}
-				else if (lemma.endsWith("lis"))
-				{
-					paradigm.add(3);
-					flags.add("Lietvārds");
-				}
-				else
-				{
-					System.err.printf("Problem matching \"%s\" with paradigm 3, 5\n", lemma);
-					newBegin = 0;
-				}
-				flags.add("Vīriešu dzimte");
-			}
-			else if (gramText.startsWith("-ša, v.")) // abrkasis, lemess
-			{
-				newBegin = "-ša, v.".length();
-				if (lemma.endsWith("ss"))
-				{
-					paradigm.add(5);
-					flags.add("Lietvārds");
-				}
-				else if (lemma.matches(".*[stš]is"))
-				{
-					paradigm.add(3);
-					flags.add("Lietvārds");
-				}
-				else
-				{
-					System.err.printf("Problem matching \"%s\" with paradigm 3, 5\n", lemma);
-					newBegin = 0;
-				}
-				flags.add("Vīriešu dzimte");
-			}
-			else if (gramText.startsWith("-ķa, v.")) // agnostiķis
-			{
-				newBegin = "-ķa, v.".length();
-				if (lemma.matches(".*[ķ]is"))
-				{
-					paradigm.add(3);
-					flags.add("Lietvārds");
-				}
-				else
-				{
-					System.err.printf("Problem matching \"%s\" with paradigm 3\n", lemma);
-					newBegin = 0;
-				}
-				flags.add("Vīriešu dzimte");
-			}
-			else if (gramText.startsWith("-pja, v.")) // aitkopis
-			{
-				newBegin = "-pja, v.".length();
-				if (lemma.endsWith("pis"))
-				{
-					paradigm.add(3);
-					flags.add("Lietvārds");
-				}
-				else
-				{
-					System.err.printf("Problem matching \"%s\" with paradigm 3\n", lemma);
-					newBegin = 0;
-				}
-				flags.add("Vīriešu dzimte");
-			}
-			else if (gramText.startsWith("-ža, vsk.")) // ādgrauzis
-			{
-				newBegin = "-ža, vsk.".length();
-				if (lemma.matches(".*[zd]is"))
-				{
-					paradigm.add(3);
-					flags.add("Lietvārds");
-				}
-				else
-				{
-					System.err.printf("Problem matching \"%s\" with paradigm 3\n", lemma);
-					newBegin = 0;
-				}
-				flags.add("Vīriešu dzimte");
-			}
-			
-			// Paradigm 1-5: plural forms
-			else if (gramText.startsWith("-ņu, v.")) // bretoņi
-			{
-				newBegin = "-ņu, v.".length();
-				if (lemma.endsWith("ņi"))
-				{
-					paradigm.add(1);
-					paradigm.add(2);
-					paradigm.add(3);
-					paradigm.add(5);
-					flags.add("Lietvārds");
-					flags.add("Neviennozīmīga paradigma");
-				}
-				else
-				{
-					System.err.printf("Problem matching \"%s\" with paradigms 1-5\n", lemma);
-					newBegin = 0;
-				}
-				flags.add("Vīriešu dzimte");
-			}
-			else if (gramText.startsWith("-u, v.")) // abesīņi, abhāzi, ādgrauži, adigejieši, adžāri, alimenti, angļi, antinukloni, apakšbrunči
-			{
-				newBegin = "-u, v.".length();
-				if (lemma.endsWith("nieki") || lemma.endsWith("umi")
-						|| lemma.endsWith("otāji"))
-				{
-					paradigm.add(1);
-					flags.add("Lietvārds");
-				}
-				else
-				{
-					if (lemma.matches(".*[ņš]i"))	// akmeņi, mēneši etc.
-					{
-						paradigm.add(1);
-						paradigm.add(2);
-						paradigm.add(3);
-						paradigm.add(4);
-						paradigm.add(5);
-						flags.add("Lietvārds");
-						flags.add("Neviennozīmīga paradigma");
-					}
-					else if (lemma.matches(".*[vpm]ji"))	// looks like these are predefined sound changes always
-					{
-						paradigm.add(3);
-						paradigm.add(5);
-						flags.add("Lietvārds");
-						flags.add("Neviennozīmīga paradigma");
-					}
-					else if (lemma.matches(".*[bgkhrstčģķļž]i")
-							|| lemma.matches(".*[aeiouāēīōū]ji"))	// can't determine if there is sound change (t - tēti, s - viesi, j - airkāji)
+					newBegin = "-ņu, v.".length();
+					if (lemma.endsWith("ņi"))
 					{
 						paradigm.add(1);
 						paradigm.add(2);
@@ -1189,67 +1179,720 @@ public class ThesaurusEntry
 						flags.add("Lietvārds");
 						flags.add("Neviennozīmīga paradigma");
 					}
-					else if (lemma.matches(".*[cdlmnpvz]i"))	// there is no sound change
-					{
-						paradigm.add(1);
-						paradigm.add(2);
-						flags.add("Lietvārds");
-						flags.add("Neviennozīmīga paradigma");
-					}
-					else 
+					else
 					{
 						System.err.printf("Problem matching \"%s\" with paradigms 1-5\n", lemma);
-						newBegin = 0;						
+						newBegin = 0;
+					}
+					flags.add("Vīriešu dzimte");
+				}
+				else if (gramText.startsWith("-u, v.")) // abesīņi, abhāzi, ādgrauži, adigejieši, adžāri, alimenti, angļi, antinukloni, apakšbrunči
+				{
+					newBegin = "-u, v.".length();
+					if (lemma.endsWith("nieki") || lemma.endsWith("umi")
+							|| lemma.endsWith("otāji"))
+					{
+						paradigm.add(1);
+						flags.add("Lietvārds");
+					}
+					else
+					{
+						if (lemma.matches(".*[ņš]i"))	// akmeņi, mēneši etc.
+						{
+							paradigm.add(1);
+							paradigm.add(2);
+							paradigm.add(3);
+							paradigm.add(4);
+							paradigm.add(5);
+							flags.add("Lietvārds");
+							flags.add("Neviennozīmīga paradigma");
+						}
+						else if (lemma.matches(".*[vpm]ji"))	// looks like these are predefined sound changes always
+						{
+							paradigm.add(3);
+							paradigm.add(5);
+							flags.add("Lietvārds");
+							flags.add("Neviennozīmīga paradigma");
+						}
+						else if (lemma.matches(".*[bgkhrstčģķļž]i")
+								|| lemma.matches(".*[aeiouāēīōū]ji"))	// can't determine if there is sound change (t - tēti, s - viesi, j - airkāji)
+						{
+							paradigm.add(1);
+							paradigm.add(2);
+							paradigm.add(3);
+							paradigm.add(5);
+							flags.add("Lietvārds");
+							flags.add("Neviennozīmīga paradigma");
+						}
+						else if (lemma.matches(".*[cdlmnpvz]i"))	// there is no sound change
+						{
+							paradigm.add(1);
+							paradigm.add(2);
+							flags.add("Lietvārds");
+							flags.add("Neviennozīmīga paradigma");
+						}
+						else 
+						{
+							System.err.printf("Problem matching \"%s\" with paradigms 1-5\n", lemma);
+							newBegin = 0;						
+						}
+					}
+					flags.add("Vīriešu dzimte");
+				}			
+				
+				// Paradigm 7: Lietvārds 4. deklinācija -a siev. dz.
+				// Paradigm 8: Lietvārds 4. deklinācija -a vīr. dz.
+				else if (gramText.startsWith("ģen. -as, v. dat. -am, s. dat. -ai, kopdz."))
+				{
+					newBegin = "ģen. -as, v. dat. -am, s. dat. -ai, kopdz.".length();
+					if (lemma.endsWith("a"))
+					{
+						paradigm.add(7);
+						paradigm.add(8);
+						flags.add("Lietvārds");
+					}
+					else
+					{
+						System.err.printf("Problem matching \"%s\" with paradigm 7, 8\n", lemma);
+						newBegin = 0;
+					}
+					flags.add("Kopdzimte");
+				}
+				
+				// Paradigm 7: Lietvārds 4. deklinācija -a siev. dz.
+				// Paradigm 11: Lietvārds 6. deklinācija -s siev. dz.
+				else if (gramText.startsWith("-as, s.")) //aberācija, milns
+				{
+					newBegin = "-as, s.".length();
+					if (lemma.matches(".*[^aeiouāēīōū]s"))
+					{
+						paradigm.add(11);
+						flags.add("Lietvārds");
+					} 
+					else if (lemma.endsWith("a"))
+					{
+						paradigm.add(7);
+						flags.add("Lietvārds");
+					}
+					else
+					{
+						System.err.printf("Problem matching \"%s\" with paradigm 7, 11\n", lemma);
+						newBegin = 0;
+					}
+					flags.add("Sieviešu dzimte");
+				}
+				
+				
+
+				// Paradigm 9: Lietvārds 5. deklinācija -e siev. dz.
+				else if (gramText.matches("-es, s\\., dsk\\. ģen\\. -bju([;,.].*)?")) //acetilsalicilskābe
+				{
+					newBegin = "-es, s., dsk. ģen. -bju".length();
+					if (lemma.endsWith("be"))
+					{
+						paradigm.add(9);
+						flags.add("Lietvārds");
+					}
+					else
+					{
+						System.err.printf("Problem matching \"%s\" with paradigm 9\n", lemma);
+						newBegin = 0;
+					}
+					flags.add("Sieviešu dzimte");
+				}
+				else if (gramText.matches("-es, dsk\\. ģen\\. -ru([;,.].*)?")) //ādere
+				{
+					newBegin = "-es, dsk. ģen. -ru".length();
+					if (lemma.endsWith("re"))
+					{
+						paradigm.add(9);
+						flags.add("Lietvārds");
+					}
+					else
+					{
+						System.err.printf("Problem matching \"%s\" with paradigm 9\n", lemma);
+						newBegin = 0;
+					}
+					flags.add("Sieviešu dzimte");
+				}
+				else if (gramText.startsWith("-es, s.")) //aizture
+				{
+					newBegin = "-es, s.".length();
+					if (lemma.endsWith("e"))
+					{
+						paradigm.add(9);
+						flags.add("Lietvārds");
+					}
+					else
+					{
+						System.err.printf("Problem matching \"%s\" with paradigm 9\n", lemma);
+						newBegin = 0;
+					}
+					flags.add("Sieviešu dzimte");
+				}
+				
+				// Paradigm 7: Lietvārds 4. deklinācija -a siev. dz.
+				// Paradigm 9: Lietvārds 5. deklinācija -e siev. dz.
+				//  Paradigm 11: Lietvārds 6. deklinācija -s
+				else if (gramText.startsWith("-šu, s.")) //ahajiete, aizkulises, bikses, klaušas
+				{
+					newBegin = "-šu, s.".length();
+					if (lemma.endsWith("te"))
+					{
+						paradigm.add(9);
+						flags.add("Lietvārds");
+					}
+					else if (lemma.endsWith("šas"))
+					{
+						paradigm.add(7);
+						flags.add("Šķirkļavārds daudzskaitlī");
+						flags.add("Lietvārds");
+					}
+					else if (lemma.endsWith("tis"))
+					{
+						paradigm.add(11);
+						flags.add("Šķirkļavārds daudzskaitlī");
+						flags.add("Lietvārds");
+					}
+					else if (lemma.matches(".*[st]es"))
+					{
+						paradigm.add(9);
+						flags.add("Šķirkļavārds daudzskaitlī");
+						flags.add("Lietvārds");
+					}
+					else
+					{
+						System.err.printf("Problem matching \"%s\" with paradigm 7, 9\n", lemma);
+						newBegin = 0;
+					}
+					flags.add("Sieviešu dzimte");
+				}
+				else if (gramText.startsWith("-žu, s.")) //mirādes, graizes, bažas
+				{
+					newBegin = "-žu, s.".length();
+					if (lemma.endsWith("žas"))
+					{
+						paradigm.add(7);
+						flags.add("Šķirkļavārds daudzskaitlī");
+						flags.add("Lietvārds");
+					}
+					else if (lemma.matches(".*[dz]es"))
+					{
+						paradigm.add(9);
+						flags.add("Šķirkļavārds daudzskaitlī");
+						flags.add("Lietvārds");
+					}
+					else
+					{
+						System.err.printf("Problem matching \"%s\" with paradigm 7, 9\n", lemma);
+						newBegin = 0;
+					}
+					flags.add("Sieviešu dzimte");
+				}
+				else if (gramText.startsWith("-ņu, s.")) //acenes, iemaņas
+				{
+					newBegin = "-ņu, s.".length();
+					if (lemma.endsWith("ņas"))
+					{
+						paradigm.add(7);
+						flags.add("Lietvārds");
+						flags.add("Šķirkļavārds daudzskaitlī");
+					}
+					else if (lemma.endsWith("nes"))
+					{
+						paradigm.add(9);
+						flags.add("Lietvārds");
+						flags.add("Šķirkļavārds daudzskaitlī");
+					}
+					else
+					{
+						System.err.printf("Problem matching \"%s\" with paradigm 7, 9\n", lemma);
+						newBegin = 0;
+					}
+					flags.add("Sieviešu dzimte");
+				}
+				else if (gramText.startsWith("-u, s.")) // aijas, zeķes
+				{
+					newBegin = "-u, s.".length();
+					if (lemma.endsWith("as"))
+					{
+						paradigm.add(7);
+						flags.add("Lietvārds");
+						flags.add("Šķirkļavārds daudzskaitlī");
+					}
+					else if (lemma.endsWith("a"))
+					{
+						paradigm.add(7);
+						flags.add("Lietvārds");
+					}
+					else if (lemma.matches(".*[ķ]es"))
+					{
+						paradigm.add(9);
+						flags.add("Lietvārds");
+						flags.add("Šķirkļavārds daudzskaitlī");
+					}
+					else
+					{
+						System.err.printf("Problem matching \"%s\" with paradigm 7, 9\n", lemma);
+						newBegin = 0;
+					}
+					flags.add("Sieviešu dzimte");
+				}
+				
+				// Paradigm 9: Lietvārds 5. deklinācija -e siev. dz.
+				else if (gramText.startsWith("-ļu, s.")) //bailes
+				{
+					newBegin = "-ļu, s.".length();
+					if (lemma.endsWith("les"))
+					{
+						paradigm.add(9);
+						flags.add("Šķirkļavārds daudzskaitlī");
+						flags.add("Lietvārds");
+					}
+					else
+					{
+						System.err.printf("Problem matching \"%s\" with paradigm 9\n", lemma);
+						newBegin = 0;
+					}
+					flags.add("Sieviešu dzimte");
+				}
+				
+				// Paradigm 11: Lietvārds 6. deklinācija -s
+				else if (gramText.startsWith("-valsts, dsk. ģen. -valstu, s.")) //agrārvalsts
+				{
+					newBegin = "-valsts, dsk. ģen. -valstu, s.".length();
+					if (lemma.endsWith("valsts"))
+					{
+						paradigm.add(11);
+						flags.add("Lietvārds");					
+					}
+					else
+					{
+						System.err.printf("Problem matching \"%s\" with paradigm 11\n", lemma);
+						newBegin = 0;
+					}
+					flags.add("Sieviešu dzimte");
+				}
+				else if (gramText.matches("-ts, -šu([;,.].*)?")) //abonentpults
+				{
+					newBegin = "-ts, -šu".length();
+					if (lemma.endsWith("ts"))
+					{
+						paradigm.add(11);
+						flags.add("Lietvārds");
+					}
+					else
+					{
+						System.err.printf("Problem matching \"%s\" with paradigm 11\n", lemma);
+						newBegin = 0;
+					}
+					flags.add("Sieviešu dzimte");
+				}
+				else if (gramText.matches("-vs, -vju([;,.].*)?")) //adatzivs
+				{
+					newBegin = "-vs, -vju".length();
+					if (lemma.endsWith("vs"))
+					{
+						paradigm.add(11);
+						flags.add("Lietvārds");
+					}
+					else
+					{
+						System.err.printf("Problem matching \"%s\" with paradigm 11\n", lemma);
+						newBegin = 0;
+					}
+					flags.add("Sieviešu dzimte");
+				}
+				
+				// Paradigm 9: Lietvārds 5. deklinācija -e siev. dz.
+				// Paradigm 11: Lietvārds 6. deklinācija -s
+				else if (gramText.startsWith("dsk. ģen. -ņu, s.")) //ādmine, bākuguns, bārkšsaknes
+				{
+					newBegin = "dsk. ģen. -ņu, s.".length();
+					if (lemma.endsWith("ns"))
+					{
+						paradigm.add(11);
+						flags.add("Lietvārds");
+					}
+					else if (lemma.endsWith("nes"))
+					{
+						paradigm.add(9);
+						flags.add("Lietvārds");
+						flags.add("Šķirkļavārds daudzskaitlī");
+					}
+					else if (lemma.endsWith("ne"))
+					{
+						paradigm.add(9);
+						flags.add("Lietvārds");
+					}
+					else
+					{
+						System.err.printf("Problem matching \"%s\" with paradigm 9, 11\n", lemma);
+						newBegin = 0;
+					}
+					flags.add("Sieviešu dzimte");
+				}
+	
+				
+				// Paradigm 32: Lietvārds 6. deklinācija - ļaudis.
+				else if (gramText.startsWith("-žu, v.")) //ļaudis
+				{
+					newBegin = "-žu, v.".length();
+					if (lemma.endsWith("ļaudis"))
+					{
+						paradigm.add(11);
+						flags.add("Šķirkļavārds daudzskaitlī");
+						flags.add("Lietvārds");
+					}
+					else
+					{
+						System.err.printf("Problem matching \"%s\" with paradigm 32\n", lemma);
+						newBegin = 0;
+					}
+					flags.add("Vīriešu dzimte");					
+					// TODO Daudzskaitlinieks?
+				}
+				
+				// Grammar includes endings for otherl lemma variants. 
+				// Paradigm 1: Lietvārds 1. deklinācija -s
+				// Paradigm 9: Lietvārds 5. deklinācija -e siev. dz.
+				else if (gramText.matches("s\\. -te, -šu([;.].*)?")) //abstinents
+				{
+					newBegin = "s. -te, -šu".length();
+					if (lemma.endsWith("ts"))
+					{
+						Lemma altLemma = new Lemma (lemma.substring(0, lemma.length() - 1) + "e");
+						HashSet<String> altParams = new HashSet<String> ();
+						altParams.add("Sieviešu dzimte");
+						altParams.add("Cita paradigma");
+						altLemmas.put(9, new Tuple<Lemma, HashSet<String>>(altLemma, altParams));
+						
+						paradigm.add(1);
+						flags.add("Lietvārds");
+						flags.add("Vīriešu dzimte");
+					}
+					else
+					{
+						System.err.printf("Problem matching \"%s\" with paradigm 1 & 5\n", lemma);
+						newBegin = 0;
 					}
 				}
-				flags.add("Vīriešu dzimte");
-			}			
-			
-			// Paradigm 7: Lietvārds 4. deklinācija -a siev. dz.
-			// Paradigm 8: Lietvārds 4. deklinācija -a vīr. dz.
-			else if (gramText.startsWith("ģen. -as, v. dat. -am, s. dat. -ai, kopdz."))
-			{
-				newBegin = "ģen. -as, v. dat. -am, s. dat. -ai, kopdz.".length();
-				if (lemma.endsWith("a"))
+	
+				// Paradigm 1: Lietvārds 3. deklinācija -s
+				// Paradigm 9: Lietvārds 5. deklinācija -e siev. dz.
+				else if (gramText.matches("-ķa; s\\. -ķe -ķu([;.].*)?")) //agonistiķis
 				{
-					paradigm.add(7);
-					paradigm.add(8);
-					flags.add("Lietvārds");
+					newBegin = "-ķa; s. -ķe -ķu".length();
+					if (lemma.endsWith("ķis"))
+					{
+						Lemma altLemma = new Lemma (lemma.substring(0, lemma.length() - 2) + "e");
+						HashSet<String> altParams = new HashSet<String> ();
+						altParams.add("Sieviešu dzimte");
+						altParams.add("Cita paradigma");
+						altLemmas.put(9, new Tuple<Lemma, HashSet<String>>(altLemma, altParams));
+						
+						paradigm.add(2);
+						flags.add("Lietvārds");
+						flags.add("Vīriešu dzimte");
+					}
+					else
+					{
+						System.err.printf("Problem matching \"%s\" with paradigm 3 & 5\n", lemma);
+						newBegin = 0;
+					}
 				}
-				else
+				
+				// Grammar includes endings for otherl lemma variants. 			
+				// Paradigm 13: Īpašības vārdi ar -s
+				// Paradigm 14: Īpašības vārdi ar -š
+				else if (gramText.matches("īp\\. v\\. -ais; s\\. -a, -ā([;,.].*)?")) //aerobs
 				{
-					System.err.printf("Problem matching \"%s\" with paradigm 7, 8\n", lemma);
-					newBegin = 0;
+					newBegin = "īp. v. -ais; s. -a, -ā".length();
+					if (lemma.matches(".*[^aeiouāēīōū]š"))
+					{
+						paradigm.add(14);
+						flags.add("Īpašības vārds");
+					}
+					else if (lemma.matches(".*[^aeiouāēīōū]s"))
+					{
+						paradigm.add(13);
+						flags.add("Īpašības vārds");
+					}
+					else
+					{
+						System.err.printf("Problem matching \"%s\" with paradigms 13, 14\n", lemma);
+						newBegin = 0;
+					}
 				}
-				flags.add("Kopdzimte");
+				else if (gramText.matches("-ais[;,] s\\. -a, -ā([;,.].*)?")) //abējāds, acains, agāms
+				{
+					newBegin = "-ais; s. -a, -ā".length();
+					if (lemma.matches(".*[^aeiouāēīōū]š"))
+					{
+						paradigm.add(14);
+						flags.add("Īpašības vārds");
+					}
+					else if (lemma.matches(".*[^aeiouāēīōū]s"))
+					{
+						paradigm.add(13);
+						flags.add("Īpašības vārds");
+					}
+					else
+					{
+						System.err.printf("Problem matching \"%s\" with paradigms 13, 14\n", lemma);
+						newBegin = 0;
+					}
+				}
+				
+				// Paradigm 13-14: plural forms
+				else if (gramText.startsWith("s. -as; adj.")) //abēji 2
+				{
+					newBegin = "s. -as; adj.".length();
+					if (lemma.endsWith("i"))
+					{
+						paradigm.add(13);
+						paradigm.add(14);
+						flags.add("Īpašības vārds");
+						flags.add("Šķirkļavārds daudzskaitlī");
+						flags.add("Neviennozīmīga paradigma");
+					}
+					else
+					{
+						System.err.printf("Problem matching \"%s\" with paradigms 13-14\n", lemma);
+						newBegin = 0;
+					}
+	
+				}
+				else if (gramText.startsWith("s. -as; tikai dsk.")) //abēji 1
+				{
+					// This exception is on purpose! this way "tikai dsk." is later
+					// transformed to appropriate flag.
+					newBegin = "s. -as;".length();
+					if (lemma.endsWith("i"))
+					{
+						paradigm.add(13);
+						paradigm.add(14);
+						flags.add("Īpašības vārds");
+						flags.add("Šķirkļavārds daudzskaitlī");
+						flags.add("Neviennozīmīga paradigma");
+					}
+					else
+					{
+						System.err.printf("Problem matching \"%s\" with paradigms 13-14\n", lemma);
+						newBegin = 0;
+					}
+				}
+				
+				
+
+				
+				// Paradigm 25: Vietniekvārdi
+				else if (gramText.matches("ģen\\. -kā, dat\\. -kam, akuz\\., instr\\. -ko([.,;].*)?")) //apkārties
+				{
+					newBegin = "ģen. -kā, dat. -kam, akuz., instr. -ko".length();
+					if (lemma.endsWith("kas"))
+					{
+						paradigm.add(25);
+						flags.add("Vietniekvārds");
+						flags.add("Locīt kā \"kas\"");
+					}
+					else
+					{
+						System.err.printf("Problem matching \"%s\" with paradigm 25\n", lemma);
+						newBegin = 0;
+					}
+				}		
+				else if (gramText.startsWith("s. -as; vietniekv."))		// abi
+				{
+					newBegin = "s. -as; vietniekv.".length();
+					if (lemma.endsWith("i"))
+					{
+						paradigm.add(25);
+						flags.add("Šķirkļavārds daudzskaitlī");
+					}
+					else
+					{
+						System.err.printf("Problem matching \"%s\" with paradigm 25\n", lemma);
+						newBegin = 0;
+					}
+					flags.add("Vietniekvārds");
+				}
+				
+				// Paradigm 30: jaundzimušais, pēdējais
+				else if (gramText.startsWith("-šā, v. -šās, s.")) //iereibušais
+				{
+					newBegin = "-šā, v. -šās, s.".length();
+					if (lemma.endsWith("ušais"))
+					{
+						paradigm.add(30);
+						flags.add("Īpašības vārds");			
+						flags.add("Lietvārds");	
+					}
+					else
+					{
+						System.err.printf("Problem matching \"%s\" with paradigm 30\n", lemma);
+						newBegin = 0;
+					}
+				}
+				else if (gramText.startsWith("-ā, v.")) //pirmdzimtais
+				{
+					newBegin = "-ā, v.".length();
+					if (lemma.endsWith("ais"))
+					{
+						paradigm.add(30);
+						flags.add("Īpašības vārds");			
+						flags.add("Lietvārds");	
+					}
+					else
+					{
+						System.err.printf("Problem matching \"%s\" with paradigm 30\n", lemma);
+						newBegin = 0;
+					}
+					flags.add("Vīriešu dzimte");
+				}
+				else if (gramText.startsWith("-ās, s.")) //pirmdzimtā
+				{
+					newBegin = "-ās, s.".length();
+					if (lemma.endsWith("šanās"))
+					{
+						paradigm.add(0);
+						flags.add("Atgriezeniskais lietvārds");
+						flags.add("Lietvārds");	
+	
+					}
+					else if (lemma.endsWith("ā"))
+					{
+						paradigm.add(30);
+						flags.add("Īpašības vārds");
+						flags.add("Lietvārds");	
+					}
+					else
+					{
+						System.err.printf("Problem matching \"%s\" with paradigms 30, -šanās\n", lemma);
+						newBegin = 0;
+					}
+					flags.add("Sieviešu dzimte");
+				}
+				else if (gramText.matches("s. -ā([.;].*)?")) //agrākais
+				{
+					newBegin = "s. -ā".length();
+					if (lemma.endsWith("ais"))
+					{
+						paradigm.add(30);
+						flags.add("Īpašības vārds");					
+					}
+					else
+					{
+						System.err.printf("Problem matching \"%s\" with paradigm 30\n", lemma);
+						newBegin = 0;
+					}
+				}
+				
+				// Paradigm Unknown: Atgriezeniskie lietvārdi -šanās
+				else if (gramText.startsWith("ģen. -ās, akuz. -os, instr. -os, dsk. -ās, ģen. -os, akuz. -ās, s.")) //aizbildināšanās
+				{
+					newBegin = "ģen. -ās, akuz. -os, instr. -os, dsk. -ās, ģen. -os, akuz. -ās, s.".length();
+					if (lemma.endsWith("šanās"))
+					{
+						paradigm.add(0);
+						flags.add("Lietvārds");	
+						flags.add("Atgriezeniskais lietvārds");
+					}
+					else
+					{
+						System.err.printf("Problem matching \"%s\" with paradigm -šanās\n", lemma);
+						newBegin = 0;
+					}
+					flags.add("Sieviešu dzimte");
+				}			
+	
+				// === Risky rules =================================================
+				// These rules matches prefix of some other rule.
+	
+				// Paradigm 9: Lietvārds 5. deklinācija -e siev. dz.
+				else if (gramText.matches("-žu([;.].*)?")) //abioģenēze, ablumozes, akolāde, nematodes
+				{
+					newBegin = "-žu".length();
+					if (lemma.matches(".*[dz]es"))
+					{
+						paradigm.add(9);
+						flags.add("Lietvārds");
+						flags.add("Sieviešu dzimte");
+						flags.add("Šķirkļavārds daudzskaitlī");
+					}
+					else if (lemma.matches(".*[dz]e"))
+					{
+						paradigm.add(9);
+						flags.add("Lietvārds");
+						flags.add("Sieviešu dzimte");
+					}
+					else
+					{
+						System.err.printf("Problem matching \"%s\" with paradigm 9\n", lemma);
+						newBegin = 0;
+					}
+				}
+				else if (gramText.matches("-ņu([;.].*)?")) //agrene, aizlaidnes
+				{
+					newBegin = "-ņu".length();
+					if (lemma.endsWith("nes"))
+					{
+						paradigm.add(9);
+						flags.add("Lietvārds");
+						flags.add("Sieviešu dzimte");
+						flags.add("Šķirkļavārds daudzskaitlī");
+					}
+					else if (lemma.endsWith("ne"))
+					{
+						paradigm.add(9);
+						flags.add("Lietvārds");
+						flags.add("Sieviešu dzimte");
+					}
+					else
+					{
+						System.err.printf("Problem matching \"%s\" with paradigm 9\n", lemma);
+						newBegin = 0;
+					}
+				}
+				
+				// Paradigm 3: Lietvārds 2. deklinācija -is
+				else if (gramText.matches("-ņa([;,.].*)?")) //ābolainis
+				{
+					newBegin = "-ņa".length();
+					if (lemma.endsWith("nis"))
+					{
+						paradigm.add(3);
+						flags.add("Lietvārds");
+						flags.add("Vīriešu dzimte");
+					}
+					else
+					{
+						System.err.printf("Problem matching \"%s\" with paradigm 3\n", lemma);
+						newBegin = 0;
+					}
+				}
 			}
 			
-			// Paradigm 7: Lietvārds 4. deklinācija -a siev. dz.
-			// Paradigm 11: Lietvārds 6. deklinācija -s siev. dz.
-			else if (gramText.startsWith("-as, s.")) //aberācija, milns
-			{
-				newBegin = "-as, s.".length();
-				if (lemma.matches(".*[^aeiouāēīōū]s"))
-				{
-					paradigm.add(11);
-					flags.add("Lietvārds");
-				} 
-				else if (lemma.endsWith("a"))
-				{
-					paradigm.add(7);
-					flags.add("Lietvārds");
-				}
-				else
-				{
-					System.err.printf("Problem matching \"%s\" with paradigm 7, 11\n", lemma);
-					newBegin = 0;
-				}
-				flags.add("Sieviešu dzimte");
-			}
-			
-			
+			if (newBegin > 0) gramText = gramText.substring(newBegin);
+			if (gramText.matches("[.,;].*")) gramText = gramText.substring(1);
+			return gramText;
+		}
+		
+		/**
+		 * Paradigm 9: Lietvārds 5. deklinācija -e siev. dz.
+		 * Rules in form "-es, dsk. ģen. -ču, s.".
+		 * This function is seperated out for readability from
+		 * {@link #processWithPatterns(String, String)} as currently these rules
+		 * for verbs are long and highly specific and, thus, do not conflict
+		 * with other rules.
+		 * @return new begining for gram string if one of these rulles matched,
+		 * -1 otherwise.
+		 */
+		private int esEndingPluralGenUEndingFemRules (String gramText, String lemma)
+		{
+			int newBegin = -1;
 			// Paradigm 9: Lietvārds 5. deklinācija -e siev. dz.
-			else if (gramText.startsWith("-es, dsk. ģen. -ču, s.")) //ābece
+			if (gramText.startsWith("-es, dsk. ģen. -ču, s.")) //ābece
 			{
 				newBegin = "-es, dsk. ģen. -ču, s.".length();
 				if (lemma.matches(".*[cč]e"))
@@ -1429,346 +2072,25 @@ public class ThesaurusEntry
 				}
 				flags.add("Sieviešu dzimte");
 			}
-			else if (gramText.matches("-es, s\\., dsk\\. ģen\\. -bju([;,.].*)?")) //acetilsalicilskābe
-			{
-				newBegin = "-es, s., dsk. ģen. -bju".length();
-				if (lemma.endsWith("be"))
-				{
-					paradigm.add(9);
-					flags.add("Lietvārds");
-				}
-				else
-				{
-					System.err.printf("Problem matching \"%s\" with paradigm 9\n", lemma);
-					newBegin = 0;
-				}
-				flags.add("Sieviešu dzimte");
-			}
-			else if (gramText.matches("-es, dsk\\. ģen\\. -ru([;,.].*)?")) //ādere
-			{
-				newBegin = "-es, dsk. ģen. -ru".length();
-				if (lemma.endsWith("re"))
-				{
-					paradigm.add(9);
-					flags.add("Lietvārds");
-				}
-				else
-				{
-					System.err.printf("Problem matching \"%s\" with paradigm 9\n", lemma);
-					newBegin = 0;
-				}
-				flags.add("Sieviešu dzimte");
-			}
-			else if (gramText.startsWith("-es, s.")) //aizture
-			{
-				newBegin = "-es, s.".length();
-				if (lemma.endsWith("e"))
-				{
-					paradigm.add(9);
-					flags.add("Lietvārds");
-				}
-				else
-				{
-					System.err.printf("Problem matching \"%s\" with paradigm 9\n", lemma);
-					newBegin = 0;
-				}
-				flags.add("Sieviešu dzimte");
-			}
-			
-			// Paradigm 7: Lietvārds 4. deklinācija -a siev. dz.
-			// Paradigm 9: Lietvārds 5. deklinācija -e siev. dz.
-			else if (gramText.startsWith("-žu, s.")) //mirādes, graizes, bažas
-			{
-				newBegin = "-žu, s.".length();
-				if (lemma.endsWith("žas"))
-				{
-					paradigm.add(7);
-					flags.add("Šķirkļavārds daudzskaitlī");
-					flags.add("Lietvārds");
-				}
-				else if (lemma.matches(".*[dz]es"))
-				{
-					paradigm.add(9);
-					flags.add("Šķirkļavārds daudzskaitlī");
-					flags.add("Lietvārds");
-				}
-				else
-				{
-					System.err.printf("Problem matching \"%s\" with paradigm 7, 9\n", lemma);
-					newBegin = 0;
-				}
-				flags.add("Sieviešu dzimte");
-			}
-			else if (gramText.startsWith("-ņu, s.")) //acenes, iemaņas
-			{
-				newBegin = "-ņu, s.".length();
-				if (lemma.endsWith("ņas"))
-				{
-					paradigm.add(7);
-					flags.add("Lietvārds");
-					flags.add("Šķirkļavārds daudzskaitlī");
-				}
-				else if (lemma.endsWith("nes"))
-				{
-					paradigm.add(9);
-					flags.add("Lietvārds");
-					flags.add("Šķirkļavārds daudzskaitlī");
-				}
-				else
-				{
-					System.err.printf("Problem matching \"%s\" with paradigm 7, 9\n", lemma);
-					newBegin = 0;
-				}
-				flags.add("Sieviešu dzimte");
-			}
-			else if (gramText.startsWith("-u, s.")) // aijas, zeķes
-			{
-				newBegin = "-u, s.".length();
-				if (lemma.endsWith("as"))
-				{
-					paradigm.add(7);
-					flags.add("Lietvārds");
-					flags.add("Šķirkļavārds daudzskaitlī");
-				}
-				else if (lemma.endsWith("a"))
-				{
-					paradigm.add(7);
-					flags.add("Lietvārds");
-				}
-				else if (lemma.matches(".*[ķ]es"))
-				{
-					paradigm.add(9);
-					flags.add("Lietvārds");
-					flags.add("Šķirkļavārds daudzskaitlī");
-				}
-				else
-				{
-					System.err.printf("Problem matching \"%s\" with paradigm 7, 9\n", lemma);
-					newBegin = 0;
-				}
-				flags.add("Sieviešu dzimte");
-			}
-			
-			// Paradigm 9: Lietvārds 5. deklinācija -e siev. dz.
-			else if (gramText.startsWith("-ļu, s.")) //bailes
-			{
-				newBegin = "-ļu, s.".length();
-				if (lemma.endsWith("les"))
-				{
-					paradigm.add(9);
-					flags.add("Šķirkļavārds daudzskaitlī");
-					flags.add("Lietvārds");
-				}
-				else
-				{
-					System.err.printf("Problem matching \"%s\" with paradigm 9\n", lemma);
-					newBegin = 0;
-				}
-				flags.add("Sieviešu dzimte");
-			}
-			
-			// Paradigm 11: Lietvārds 6. deklinācija -s
-			else if (gramText.startsWith("-valsts, dsk. ģen. -valstu, s.")) //agrārvalsts
-			{
-				newBegin = "-valsts, dsk. ģen. -valstu, s.".length();
-				if (lemma.endsWith("valsts"))
-				{
-					paradigm.add(11);
-					flags.add("Lietvārds");					
-				}
-				else
-				{
-					System.err.printf("Problem matching \"%s\" with paradigm 11\n", lemma);
-					newBegin = 0;
-				}
-				flags.add("Sieviešu dzimte");
-			}
-			else if (gramText.matches("-ts, -šu([;,.].*)?")) //abonentpults
-			{
-				newBegin = "-ts, -šu".length();
-				if (lemma.endsWith("ts"))
-				{
-					paradigm.add(11);
-					flags.add("Lietvārds");
-				}
-				else
-				{
-					System.err.printf("Problem matching \"%s\" with paradigm 11\n", lemma);
-					newBegin = 0;
-				}
-				flags.add("Sieviešu dzimte");
-			}
-			else if (gramText.matches("-vs, -vju([;,.].*)?")) //adatzivs
-			{
-				newBegin = "-vs, -vju".length();
-				if (lemma.endsWith("vs"))
-				{
-					paradigm.add(11);
-					flags.add("Lietvārds");
-				}
-				else
-				{
-					System.err.printf("Problem matching \"%s\" with paradigm 11\n", lemma);
-					newBegin = 0;
-				}
-				flags.add("Sieviešu dzimte");
-			}
-			
-			// Paradigm 9: Lietvārds 5. deklinācija -e siev. dz.
-			// Paradigm 11: Lietvārds 6. deklinācija -s
-			else if (gramText.startsWith("dsk. ģen. -ņu, s.")) //ādmine, bākuguns, bārkšsaknes
-			{
-				newBegin = "dsk. ģen. -ņu, s.".length();
-				if (lemma.endsWith("ns"))
-				{
-					paradigm.add(11);
-					flags.add("Lietvārds");
-				}
-				else if (lemma.endsWith("nes"))
-				{
-					paradigm.add(9);
-					flags.add("Lietvārds");
-					flags.add("Šķirkļavārds daudzskaitlī");
-				}
-				else if (lemma.endsWith("ne"))
-				{
-					paradigm.add(9);
-					flags.add("Lietvārds");
-				}
-				else
-				{
-					System.err.printf("Problem matching \"%s\" with paradigm 9, 11\n", lemma);
-					newBegin = 0;
-				}
-				flags.add("Sieviešu dzimte");
-			}
-
-			
-			// Paradigm 32: Lietvārds 6. deklinācija - ļaudis.
-			else if (gramText.startsWith("-žu, v.")) //ļaudis
-			{
-				newBegin = "-žu, v.".length();
-				if (lemma.endsWith("ļaudis"))
-				{
-					paradigm.add(11);
-					flags.add("Šķirkļavārds daudzskaitlī");
-					flags.add("Lietvārds");
-				}
-				else
-				{
-					System.err.printf("Problem matching \"%s\" with paradigm 32\n", lemma);
-					newBegin = 0;
-				}
-				flags.add("Vīriešu dzimte");					
-				// TODO Daudzskaitlinieks?
-			}
-			
-			// Paradigm 1: Lietvārds 1. deklinācija -s
-			// Paradigm 9: Lietvārds 5. deklinācija -e siev. dz.
-			else if (gramText.matches("s\\. -te, -šu([;.].*)?")) //abstinents
-			{
-				newBegin = "s. -te, -šu".length();
-				if (lemma.endsWith("ts"))
-				{
-					Lemma altLemma = new Lemma (lemma.substring(0, lemma.length() - 1) + "e");
-					HashSet<String> altParams = new HashSet<String> ();
-					altParams.add("Sieviešu dzimte");
-					altParams.add("Cita paradigma");
-					altLemmas.put(9, new Tuple<Lemma, HashSet<String>>(altLemma, altParams));
-					
-					paradigm.add(1);
-					flags.add("Lietvārds");
-					flags.add("Vīriešu dzimte");
-				}
-				else
-				{
-					System.err.printf("Problem matching \"%s\" with paradigm 1 & 5\n", lemma);
-					newBegin = 0;
-				}
-				// TODO Daudzskaitlinieks?
-			}
-			
-			// Paradigm 13: Īpašības vārdi ar -s
-			// Paradigm 14: Īpašības vārdi ar -š
-			else if (gramText.matches("īp\\. v\\. -ais; s\\. -a, -ā([;,.].*)?")) //aerobs
-			{
-				newBegin = "īp. v. -ais; s. -a, -ā".length();
-				if (lemma.matches(".*[^aeiouāēīōū]š"))
-				{
-					paradigm.add(14);
-					flags.add("Īpašības vārds");
-				}
-				else if (lemma.matches(".*[^aeiouāēīōū]s"))
-				{
-					paradigm.add(13);
-					flags.add("Īpašības vārds");
-				}
-				else
-				{
-					System.err.printf("Problem matching \"%s\" with paradigms 13, 14\n", lemma);
-					newBegin = 0;
-				}
-			}
-			else if (gramText.matches("-ais[;,] s\\. -a, -ā([;,.].*)?")) //abējāds, acains, agāms
-			{
-				newBegin = "-ais; s. -a, -ā".length();
-				if (lemma.matches(".*[^aeiouāēīōū]š"))
-				{
-					paradigm.add(14);
-					flags.add("Īpašības vārds");
-				}
-				else if (lemma.matches(".*[^aeiouāēīōū]s"))
-				{
-					paradigm.add(13);
-					flags.add("Īpašības vārds");
-				}
-				else
-				{
-					System.err.printf("Problem matching \"%s\" with paradigms 13, 14\n", lemma);
-					newBegin = 0;
-				}
-			}
-			// Paradigm 13-14: plural forms
-			else if (gramText.startsWith("s. -as; adj.")) //abēji 2
-			{
-				newBegin = "s. -as; adj.".length();
-				if (lemma.endsWith("i"))
-				{
-					paradigm.add(13);
-					paradigm.add(14);
-					flags.add("Īpašības vārds");
-					flags.add("Šķirkļavārds daudzskaitlī");
-					flags.add("Neviennozīmīga paradigma");
-				}
-				else
-				{
-					System.err.printf("Problem matching \"%s\" with paradigms 13-14\n", lemma);
-					newBegin = 0;
-				}
-
-			}
-			else if (gramText.startsWith("s. -as; tikai dsk.")) //abēji 1
-			{
-				// This exception is on purpose! this way "tikai dsk." is later
-				// transformed to appropriate flag.
-				newBegin = "s. -as;".length();
-				if (lemma.endsWith("i"))
-				{
-					paradigm.add(13);
-					paradigm.add(14);
-					flags.add("Īpašības vārds");
-					flags.add("Šķirkļavārds daudzskaitlī");
-					flags.add("Neviennozīmīga paradigma");
-				}
-				else
-				{
-					System.err.printf("Problem matching \"%s\" with paradigms 13-14\n", lemma);
-					newBegin = 0;
-				}
-			}
-			
+			return newBegin;
+		}
+		
+		/**
+		 * Paradigm 15: Darbības vārdi 1. konjugācija tiešie
+		 * Rules in form "parasti 3. pers., -šalc, pag. -šalca" and
+		 * "-tupstu, -tupsti, -tupst, pag. -tupu".
+		 * This function is seperated out for readability from
+		 * {@link #processWithPatterns(String, String)} as currently these rules
+		 * for verbs are long and highly specific and, thus, do not conflict
+		 * with other rules.
+		 * @return new begining for gram string if one of these rulles matched,
+		 * -1 otherwise.
+		 */
+		private int firstConjDirVerbRules (String gramText, String lemma)
+		{
+			int newBegin = -1;
 			// Paradigm 15: Darbības vārdi 1. konjugācija tiešie
-			else if (gramText.matches("parasti 3\\. pers\\., -šalc, pag\\. -šalca([;,.].*)?")) //aizšalkt
+			if (gramText.matches("parasti 3\\. pers\\., -šalc, pag\\. -šalca([;,.].*)?")) //aizšalkt
 			{
 				newBegin = "parasti 3. pers., -šalc, pag. -šalca".length();
 				if (lemma.endsWith("šalkt"))
@@ -1967,11 +2289,74 @@ public class ThesaurusEntry
 					newBegin = 0;
 				}
 			}
-
-			// Paradigm 16: Darbības vārdi 2. konjugācija tiešie
-			else if (gramText.matches("parasti 3\\. pers\\., -o , pag\\. -oja([;,.].*)?")) //aizšalkot
+			else if (gramText.matches("-bāžu, -bāz, -bāž, pag\\. -bāzu([;,.].*)?")) //aizbāzt
 			{
-				newBegin = "parasti 3. pers., -o , pag. -oja".length();
+				newBegin = "-bāžu, -bāz, -bāž, pag. -bāzu".length();
+				if (lemma.endsWith("bāzt"))
+				{
+					paradigm.add(15);
+					flags.add("Darbības vārds");
+					flags.add("Locīt kā \"bāzt\"");
+				}
+				else
+				{
+					System.err.printf("Problem matching \"%s\" with paradigm 15\n", lemma);
+					newBegin = 0;
+				}
+			}
+			else if (gramText.matches("-bēgu, -bēdz, -bēg, pag\\. -bēgu([;,.].*)?")) //aizbēgt
+			{
+				newBegin = "-bēgu, -bēdz, -bēg, pag. -bēgu".length();
+				if (lemma.endsWith("bēgt"))
+				{
+					paradigm.add(15);
+					flags.add("Darbības vārds");
+					flags.add("Locīt kā \"bēgt\"");
+				}
+				else
+				{
+					System.err.printf("Problem matching \"%s\" with paradigm 15\n", lemma);
+					newBegin = 0;
+				}
+			}
+			else if (gramText.matches("-beru, -ber, -ber, pag. -bēru([;,.].*)?")) //aizbērt
+			{
+				newBegin = "-beru, -ber, -ber, pag. -bēru".length();
+				if (lemma.endsWith("bērt"))
+				{
+					paradigm.add(15);
+					flags.add("Darbības vārds");
+					flags.add("Locīt kā \"bērt\"");
+				}
+				else
+				{
+					System.err.printf("Problem matching \"%s\" with paradigm 15\n", lemma);
+					newBegin = 0;
+				}
+			}
+
+			return newBegin;
+		}
+		
+		/**
+		 * Paradigm 16: Darbības vārdi 2. konjugācija tiešie
+		 * Rules in form "parasti 3. pers., -o, pag. -oja",
+		 * "-oju, -o, -o, -ojam, -ojat, pag. -oju; -ojām, -ojāt; pav. -o, -ojiet"
+		 * and "-ēju, -ē, -ē, pag. -ēju".
+		 * This function is seperated out for readability from
+		 * {@link #processWithPatterns(String, String)} as currently these rules
+		 * for verbs are long and highly specific and, thus, do not conflict
+		 * with other rules.
+		 * @return new begining for gram string if one of these rulles matched,
+		 * -1 otherwise.
+		 */
+		private int secondConjDirVerbRules (String gramText, String lemma)
+		{
+			int newBegin = -1;
+			// Paradigm 16: Darbības vārdi 2. konjugācija tiešie
+			if (gramText.matches("parasti 3\\. pers\\., -o, pag\\. -oja([;,.].*)?")) //aizšalkot, aizbangot
+			{
+				newBegin = "parasti 3. pers., -o, pag. -oja".length();
 				if (lemma.endsWith("ot"))
 				{
 					paradigm.add(16);
@@ -2069,9 +2454,24 @@ public class ThesaurusEntry
 					newBegin = 0;
 				}
 			}
-
+			return newBegin;
+		}
+		
+		/**
+		 * Paradigm 17: Darbības vārdi 3. konjugācija tiešie
+		 * Rules in form "-u, -i, -a, pag. -īju"
+		 * This function is seperated out for readability from
+		 * {@link #processWithPatterns(String, String)} as currently these rules
+		 * for verbs are long and highly specific and, thus, do not conflict
+		 * with other rules.
+		 * @return new begining for gram string if one of these rulles matched,
+		 * -1 otherwise.
+		 */
+		private int thirdConjDirVerbRules (String gramText, String lemma)
+		{
+			int newBegin = -1;
 			// Paradigm 17: Darbības vārdi 3. konjugācija tiešie
-			else if (gramText.matches("-turu, -turi, -tur, pag\\. -turēju([;,.].*)?")) //aizturēt
+			if (gramText.matches("-turu, -turi, -tur, pag\\. -turēju([;,.].*)?")) //aizturēt
 			{
 				newBegin = "-turu, -turi, -tur, pag. -turēju".length();
 				if (lemma.endsWith("turēt"))
@@ -2113,9 +2513,25 @@ public class ThesaurusEntry
 					newBegin = 0;
 				}
 			}
-			
+			return newBegin;			
+		}
+
+		/**
+		 * Paradigm 18: Darbības vārdi 1. konjugācija atgriezeniski
+		 * Rules in form "parasti 3. pers., -šalcas, pag. -šalcās" and
+		 * "-tupstos, -tupsties, -tupstas, pag. -tupos".
+		 * This function is seperated out for readability from
+		 * {@link #processWithPatterns(String, String)} as currently these rules
+		 * for verbs are long and highly specific and, thus, do not conflict
+		 * with other rules.
+		 * @return new begining for gram string if one of these rulles matched,
+		 * -1 otherwise.
+		 */
+		private int firstConjRefVerbRules (String gramText, String lemma)
+		{
+			int newBegin = -1;
 			// Paradigm 18: Darbības vārdi 1. konjugācija atgriezeniski
-			else if (gramText.matches("parasti 3\\. pers\\., -šalcas, pag\\. -šalcās([;,.].*)?")) //aizšalkties
+			if (gramText.matches("parasti 3\\. pers\\., -šalcas, pag\\. -šalcās([;,.].*)?")) //aizšalkties
 			{
 				newBegin = "parasti 3. pers., -šalcas, pag. -šalcās".length();
 				if (lemma.endsWith("šalkties"))
@@ -2207,9 +2623,26 @@ public class ThesaurusEntry
 					newBegin = 0;
 				}
 			}
-			
+			return newBegin;
+		}
+		
+		/**
+		 * Paradigm 19: Darbības vārdi 2. konjugācija atgriezeniski
+		 * Rules in form "parasti 3. pers., -ējas, pag. -ējās",
+		 * "-ējos, -ējies, -ējas, -ējamies, -ējaties, pag. -ējos, -ējāmies, -ējāties; pav. -ējies, -ējieties",
+		 *  and "-ojos, -ojies, -ojas, pag. -ojos".
+		 * This function is seperated out for readability from
+		 * {@link #processWithPatterns(String, String)} as currently these rules
+		 * for verbs are long and highly specific and, thus, do not conflict
+		 * with other rules.
+		 * @return new begining for gram string if one of these rulles matched,
+		 * -1 otherwise.
+		 */
+		private int secondConjRefVerbRules (String gramText, String lemma)
+		{
+			int newBegin = -1;
 			// Paradigm 19: Darbības vārdi 2. konjugācija atgriezeniski
-			else if (gramText.matches("parasti 3\\. pers\\., -ējas, pag\\. -ējās([;,.].*)?")) //absorbēties
+			if (gramText.matches("parasti 3\\. pers\\., -ējas, pag\\. -ējās([;,.].*)?")) //absorbēties
 			{
 				newBegin = "parasti 3. pers., -ējas, pag. -ējās".length();
 				if (lemma.endsWith("ēties"))
@@ -2281,8 +2714,39 @@ public class ThesaurusEntry
 					newBegin = 0;
 				}
 			}
-			
+			return newBegin;
+		}
+		
+		/**
+		 * Paradigm 20: Darbības vārdi 3. konjugācija atgriezeniski
+		 * Rules in form "parasti 3. pers., -ās, pag. -ījās" and
+		 * "-os, -ies, -ās, pag. -ījos".
+		 * This function is seperated out for readability from
+		 * {@link #processWithPatterns(String, String)} as currently these rules
+		 * for verbs are long and highly specific and, thus, do not conflict
+		 * with other rules.
+		 * @return new begining for gram string if one of these rulles matched,
+		 * -1 otherwise.
+		 */
+		private int thirdConjRefVerbRules (String gramText, String lemma)
+		{
+			int newBegin = -1;
 			// Paradigm 20: Darbības vārdi 3. konjugācija atgriezeniski
+			if (gramText.matches("parasti 3\\. pers\\., -ās, pag\\. -ījās([;,.].*)?")) //aizbīdīties
+			{
+				newBegin = "parasti 3. pers., -ās, pag. -ījās".length();
+				if (lemma.endsWith("īties"))
+				{
+					paradigm.add(20);
+					flags.add("Darbības vārds");
+				}
+				else
+				{
+					System.err.printf("Problem matching \"%s\" with paradigm 20\n", lemma);
+					newBegin = 0;
+				}
+				flags.add("Parasti 3. personā");
+			}
 			else if (gramText.matches("-os, -ies, -ās, pag\\. -ījos([;,.].*)?")) //apklausīties
 			{
 				newBegin = "-os, -ies, -ās, pag. -ījos".length();
@@ -2325,196 +2789,7 @@ public class ThesaurusEntry
 					newBegin = 0;
 				}
 			}
-
-			// Paradigm 25: Vietniekvārdi
-			else if (gramText.matches("ģen\\. -kā, dat\\. -kam, akuz\\., instr\\. -ko([.,;].*)?")) //apkārties
-			{
-				newBegin = "ģen. -kā, dat. -kam, akuz., instr. -ko".length();
-				if (lemma.endsWith("kas"))
-				{
-					paradigm.add(25);
-					flags.add("Vietniekvārds");
-					flags.add("Locīt kā \"kas\"");
-				}
-				else
-				{
-					System.err.printf("Problem matching \"%s\" with paradigm 25\n", lemma);
-					newBegin = 0;
-				}
-			}		
-			else if (gramText.startsWith("s. -as; vietniekv."))		// abi
-			{
-				newBegin = "s. -as; vietniekv.".length();
-				if (lemma.endsWith("i"))
-				{
-					paradigm.add(25);
-					flags.add("Šķirkļavārds daudzskaitlī");
-				}
-				else
-				{
-					System.err.printf("Problem matching \"%s\" with paradigm 25\n", lemma);
-					newBegin = 0;
-				}
-				flags.add("Vietniekvārds");
-			}
-			
-			// Paradigm 30: jaundzimušais, pēdējais
-			else if (gramText.startsWith("-šā, v. -šās, s.")) //iereibušais
-			{
-				newBegin = "-šā, v. -šās, s.".length();
-				if (lemma.endsWith("ušais"))
-				{
-					paradigm.add(30);
-					flags.add("Īpašības vārds");			
-					flags.add("Lietvārds");	
-				}
-				else
-				{
-					System.err.printf("Problem matching \"%s\" with paradigm 30\n", lemma);
-					newBegin = 0;
-				}
-			}
-			else if (gramText.startsWith("-ā, v.")) //pirmdzimtais
-			{
-				newBegin = "-ā, v.".length();
-				if (lemma.endsWith("ais"))
-				{
-					paradigm.add(30);
-					flags.add("Īpašības vārds");			
-					flags.add("Lietvārds");	
-				}
-				else
-				{
-					System.err.printf("Problem matching \"%s\" with paradigm 30\n", lemma);
-					newBegin = 0;
-				}
-				flags.add("Vīriešu dzimte");
-			}
-			else if (gramText.startsWith("-ās, s.")) //pirmdzimtā
-			{
-				newBegin = "-ās, s.".length();
-				if (lemma.endsWith("šanās"))
-				{
-					paradigm.add(0);
-					flags.add("Atgriezeniskais lietvārds");
-					flags.add("Lietvārds");	
-
-				}
-				else if (lemma.endsWith("ā"))
-				{
-					paradigm.add(30);
-					flags.add("Īpašības vārds");
-					flags.add("Lietvārds");	
-				}
-				else
-				{
-					System.err.printf("Problem matching \"%s\" with paradigms 30, -šanās\n", lemma);
-					newBegin = 0;
-				}
-				flags.add("Sieviešu dzimte");
-			}
-			else if (gramText.matches("s. -ā([.;].*)?")) //agrākais
-			{
-				newBegin = "s. -ā".length();
-				if (lemma.endsWith("ais"))
-				{
-					paradigm.add(30);
-					flags.add("Īpašības vārds");					
-				}
-				else
-				{
-					System.err.printf("Problem matching \"%s\" with paradigm 30\n", lemma);
-					newBegin = 0;
-				}
-			}
-			
-			// Paradigm Unknown: Atgriezeniskie lietvārdi -šanās
-			else if (gramText.startsWith("ģen. -ās, akuz. -os, instr. -os, dsk. -ās, ģen. -os, akuz. -ās, s.")) //aizbildināšanās
-			{
-				newBegin = "ģen. -ās, akuz. -os, instr. -os, dsk. -ās, ģen. -os, akuz. -ās, s.".length();
-				if (lemma.endsWith("šanās"))
-				{
-					paradigm.add(0);
-					flags.add("Lietvārds");	
-					flags.add("Atgriezeniskais lietvārds");
-				}
-				else
-				{
-					System.err.printf("Problem matching \"%s\" with paradigm -šanās\n", lemma);
-					newBegin = 0;
-				}
-				flags.add("Sieviešu dzimte");
-			}			
-
-			// === Risky rules =================================================
-			// These rules matches prefix of some other rule.
-
-			// Paradigm 9: Lietvārds 5. deklinācija -e siev. dz.
-			else if (gramText.matches("-žu([;.].*)?")) //abioģenēze, ablumozes, akolāde, nematodes
-			{
-				newBegin = "-žu".length();
-				if (lemma.matches(".*[dz]es"))
-				{
-					paradigm.add(9);
-					flags.add("Lietvārds");
-					flags.add("Sieviešu dzimte");
-					flags.add("Šķirkļavārds daudzskaitlī");
-				}
-				else if (lemma.matches(".*[dz]e"))
-				{
-					paradigm.add(9);
-					flags.add("Lietvārds");
-					flags.add("Sieviešu dzimte");
-				}
-				else
-				{
-					System.err.printf("Problem matching \"%s\" with paradigm 9\n", lemma);
-					newBegin = 0;
-				}
-			}
-			else if (gramText.matches("-ņu([;.].*)?")) //agrene, aizlaidnes
-			{
-				newBegin = "-ņu".length();
-				if (lemma.endsWith("nes"))
-				{
-					paradigm.add(9);
-					flags.add("Lietvārds");
-					flags.add("Sieviešu dzimte");
-					flags.add("Šķirkļavārds daudzskaitlī");
-				}
-				else if (lemma.endsWith("ne"))
-				{
-					paradigm.add(9);
-					flags.add("Lietvārds");
-					flags.add("Sieviešu dzimte");
-				}
-				else
-				{
-					System.err.printf("Problem matching \"%s\" with paradigm 9\n", lemma);
-					newBegin = 0;
-				}
-			}
-			
-			// Paradigm 3: Lietvārds 2. deklinācija -is
-			else if (gramText.matches("-ņa([;,.].*)?")) //ābolainis
-			{
-				newBegin = "-ņa".length();
-				if (lemma.endsWith("nis"))
-				{
-					paradigm.add(3);
-					flags.add("Lietvārds");
-					flags.add("Vīriešu dzimte");
-				}
-				else
-				{
-					System.err.printf("Problem matching \"%s\" with paradigm 3\n", lemma);
-					newBegin = 0;
-				}
-			}
-			
-			String res = gramText.substring(newBegin);
-			if (res.matches("[.,;].*")) res = res.substring(1);
-			return res;
+			return newBegin;
 		}
 		
 		/**
