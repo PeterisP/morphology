@@ -2926,138 +2926,53 @@ public class ThesaurusEntry
 		{
 			int newBegin = -1;
 			// Paradigm 20: Darbības vārdi 3. konjugācija atgriezeniski
-			if (gramText.matches("parasti 3\\. pers\\., -brikšķas, pag\\. -brikšķējās([;,.].*)?")) //aizbrikšķēties
-			{
-				newBegin = "parasti 3. pers., -brikšķas, pag. -brikšķējās".length();
-				if (lemma.endsWith("brikšķēties"))
-				{
-					paradigm.add(20);
-					flags.add("Darbības vārds");
-				}
-				else
-				{
-					System.err.printf("Problem matching \"%s\" with paradigm 20\n", lemma);
-					newBegin = 0;
-				}
-				flags.add("Parasti 3. personā");
-			}
-			else if (gramText.matches("parasti 3\\. pers\\., -brikšas, pag. -brikšējās([;,.].*)?")) //aizbrikšēties
-			{
-				newBegin = "parasti 3. pers., -brikšas, pag. -brikšējās".length();
-				if (lemma.endsWith("brikšēties"))
-				{
-					paradigm.add(20);
-					flags.add("Darbības vārds");
-				}
-				else
-				{
-					System.err.printf("Problem matching \"%s\" with paradigm 20\n", lemma);
-					newBegin = 0;
-				}
-				flags.add("Parasti 3. personā");
-			}
-			else if (gramText.matches("parasti 3\\. pers\\., -brīkšķas, pag\\. -brīkšķējās([;,.].*)?")) //aizbrīkšķēties
-			{
-				newBegin = "parasti 3. pers., -brīkšķas, pag. -brīkšķējās".length();
-				if (lemma.endsWith("brīkšķēties"))
-				{
-					paradigm.add(20);
-					flags.add("Darbības vārds");
-				}
-				else
-				{
-					System.err.printf("Problem matching \"%s\" with paradigm 20\n", lemma);
-					newBegin = 0;
-				}
-				flags.add("Parasti 3. personā");
-			}
-			else if (gramText.matches("parasti 3\\. pers\\., -brīkšas, pag\\. -brīkšējās([;,.].*)?")) //aizbrīkšēties
-			{
-				newBegin = "parasti 3. pers., -brīkšas, pag. -brīkšējās".length();
-				if (lemma.endsWith("brīkšēties"))
-				{
-					paradigm.add(20);
-					flags.add("Darbības vārds");
-				}
-				else
-				{
-					System.err.printf("Problem matching \"%s\" with paradigm 20\n", lemma);
-					newBegin = 0;
-				}
-				flags.add("Parasti 3. personā");
-			}
-			else if (gramText.matches("parasti 3\\. pers\\., -ās, pag\\. -ījās([;,.].*)?")) //aizbīdīties
-			{
-				newBegin = "parasti 3. pers., -ās, pag. -ījās".length();
-				if (lemma.endsWith("īties"))
-				{
-					paradigm.add(20);
-					flags.add("Darbības vārds");
-				}
-				else
-				{
-					System.err.printf("Problem matching \"%s\" with paradigm 20\n", lemma);
-					newBegin = 0;
-				}
-				flags.add("Parasti 3. personā");
-			}
-			else if (gramText.matches("parasti 3\\. pers\\., -inās, pag\\. -inājās([;,.].*)?")) //aizbubināties
-			{
-				newBegin = "parasti 3. pers., -inās, pag. -inājās".length();
-				if (lemma.endsWith("ināties"))
-				{
-					paradigm.add(20);
-					flags.add("Darbības vārds");
-				}
-				else
-				{
-					System.err.printf("Problem matching \"%s\" with paradigm 20\n", lemma);
-					newBegin = 0;
-				}
-				flags.add("Parasti 3. personā");
-			}
-			else  if (gramText.matches("-os, -ies, -ās, pag\\. -ījos([;,.].*)?")) //apklausīties
-			{
-				newBegin = "-os, -ies, -ās, pag. -ījos".length();
-				if (lemma.endsWith("īties"))
-				{
-					paradigm.add(20);
-					flags.add("Darbības vārds");
-				}
-				else
-				{
-					System.err.printf("Problem matching \"%s\" with paradigm 20\n", lemma);
-					newBegin = 0;
-				}
-			}
-			else if (gramText.matches("-inos, -inies, -inās, pag\\. -inājos([;,.].*)?")) //apklaušināties
-			{
-				newBegin = "-inos, -inies, -inās, pag. -inājos".length();
-				if (lemma.endsWith("ināties"))
-				{
-					paradigm.add(20);
-					flags.add("Darbības vārds");
-				}
-				else
-				{
-					System.err.printf("Problem matching \"%s\" with paradigm 20\n", lemma);
-					newBegin = 0;
-				}
-			}
-			else if (gramText.matches("-os, -ies, -as, pag\\. -ējos([;,.].*)?")) //apkaunēties
-			{
-				newBegin = "-os, -ies, -as, pag. -ējos".length();
-				if (lemma.endsWith("ēties"))
-				{
-					paradigm.add(20);
-					flags.add("Darbības vārds");
-				}
-				else
-				{
-					System.err.printf("Problem matching \"%s\" with paradigm 20\n", lemma);
-					newBegin = 0;
-				}
-			}
+			newBegin = simpleRule(
+					"parasti 3. pers., -brikšķas, pag. -brikšķējās",
+					"brikšķēties", 20,
+					new String[] {"Darbības vārds"},
+					new String[] {"Parasti 3. personā"},
+					gramText, lemma); //aizbrikšķēties
+			if (newBegin == -1) newBegin = simpleRule(
+					"parasti 3. pers., -brikšas, pag. -brikšējās",
+					"brikšēties", 20,
+					new String[] {"Darbības vārds"},
+					new String[] {"Parasti 3. personā"},
+					gramText, lemma); //aizbrikšēties
+			if (newBegin == -1) newBegin = simpleRule(
+					"parasti 3. pers., -brīkšķas, pag. -brīkšķējās",
+					"brīkšķēties", 20,
+					new String[] {"Darbības vārds"},
+					new String[] {"Parasti 3. personā"},
+					gramText, lemma); //aizbrīkšķēties
+			if (newBegin == -1) newBegin = simpleRule(
+					"parasti 3. pers., -brīkšas, pag. -brīkšējās",
+					"brīkšēties", 20,
+					new String[] {"Darbības vārds"},
+					new String[] {"Parasti 3. personā"},
+					gramText, lemma); //aizbrīkšēties
+			if (newBegin == -1) newBegin = simpleRule(
+					"parasti 3. pers., -ās, pag. -ījās", "īties", 20,
+					new String[] {"Darbības vārds"},
+					new String[] {"Parasti 3. personā"},
+					gramText, lemma); //aizbīdīties
+			if (newBegin == -1) newBegin = simpleRule(
+					"parasti 3. pers., -inās, pag. -inājās", "ināties", 20,
+					new String[] {"Darbības vārds"},
+					new String[] {"Parasti 3. personā"},
+					gramText, lemma); //aizbubināties
+			if (newBegin == -1) newBegin = simpleRule(
+					"-os, -ies, -ās, pag. -ījos", "īties", 20,
+					new String[] {"Darbības vārds"},
+					null, gramText, lemma); //apklausīties
+			if (newBegin == -1) newBegin = simpleRule(
+					"-inos, -inies, -inās, pag. -inājos", "ināties", 20,
+					new String[] {"Darbības vārds"},
+					null, gramText, lemma); //apklaušināties
+			if (newBegin == -1) newBegin = simpleRule(
+					"-os, -ies, -as, pag. -ējos", "ēties", 20,
+					new String[] {"Darbības vārds"},
+					null, gramText, lemma); //apkaunēties
+
 			return newBegin;
 		}
 		
