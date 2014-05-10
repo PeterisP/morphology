@@ -2747,21 +2747,6 @@ public class ThesaurusEntry
 				}
 				flags.add("Parasti 3. personā");
 			}
-			else if (gramText.matches("parasti 3. pers., -blākš, pag. -blākšēja([;,.].*)?")) //aizblākšēt
-			{
-				newBegin = "parasti 3. pers., -blākš, pag. -blākšēja".length();
-				if (lemma.endsWith("blākšēt"))
-				{
-					paradigm.add(17);
-					flags.add("Darbības vārds");
-				}
-				else
-				{
-					System.err.printf("Problem matching \"%s\" with paradigm 17\n", lemma);
-					newBegin = 0;
-				}
-				flags.add("Parasti 3. personā");
-			}
 			else if (gramText.matches("-turu, -turi, -tur, pag\\. -turēju([;,.].*)?")) //aizturēt
 			{
 				newBegin = "-turu, -turi, -tur, pag. -turēju".length();
