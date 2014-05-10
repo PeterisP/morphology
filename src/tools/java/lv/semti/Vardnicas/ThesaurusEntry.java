@@ -665,8 +665,11 @@ public class ThesaurusEntry
 			res.put("parasti dsk.", "Parasti daudzskaitlī");		
 			res.put("tikai dsk.", "Tikai daudzskaitlī");
 			res.put("parasti 3. pers.", "Parasti 3. personā");
+			res.put("parasti saliktajos laikos", "Parasti saliktajos laikos");
+			res.put("parasti saliktajos laikos.", "Parasti saliktajos laikos");
 			res.put("subst. noz.", "Lietvārda nozīmē");
 			res.put("lietv. nozīmē.", "Lietvārda nozīmē");
+			res.put("īp. nozīmē.", "Īpašības vārda nozīmē");
 			res.put("ar not. gal.", "Ar noteikto galotni");
 			res.put("dial. (augšzemnieku)", "Agušzemnieku dialekts");	// Unique.
 			res.put("pareti.", "Pareti");
@@ -2247,6 +2250,37 @@ public class ThesaurusEntry
 					new String[] {"Parasti 3. personā"},
 					gramText, lemma); //aizbrukt
 			if (newBegin == -1) newBegin = simpleRule(
+					"parasti 3. pers., -deg, pag. -dega", "degt", 15,
+					new String[] {"Darbības vārds", "Locīt kā \"degt\""},
+					new String[] {"Parasti 3. personā"},
+					gramText, lemma); //aizdegt 2
+			if (newBegin == -1) newBegin = simpleRule(
+					"parasti 3. pers., -dim, pag. -dima", "dimt", 15,
+					new String[] {"Darbības vārds", "Locīt kā \"dimt\""},
+					new String[] {"Parasti 3. personā"},
+					gramText, lemma); //aizdimt
+			if (newBegin == -1) newBegin = simpleRule(
+					"parasti 3. pers., -dip, pag. -dipa", "dipt", 15,
+					new String[] {"Darbības vārds", "Locīt kā \"dipt\""},
+					new String[] {"Parasti 3. personā"},
+					gramText, lemma); //aizdipt
+			if (newBegin == -1) newBegin = simpleRule(
+					"parasti 3. pers., -dūc, pag. -dūca", "dūkt", 15,
+					new String[] {"Darbības vārds", "Locīt kā \"dūkt\""},
+					new String[] {"Parasti 3. personā"},
+					gramText, lemma); //aizdūkt
+			if (newBegin == -1) newBegin = simpleRule(
+					"parasti 3. pers., -dzeļ, pag. -dzēla", "dzelt", 15,
+					new String[] {"Darbības vārds", "Locīt kā \"dzelt\""},
+					new String[] {"Parasti 3. personā"},
+					gramText, lemma); //aizdzelt
+			if (newBegin == -1) newBegin = simpleRule(
+					"parasti 3. pers., -dzīst, pag. -dzija", "dzīt", 15,
+					new String[] {"Darbības vārds", "Locīt kā \"dzīt\""},
+					new String[] {"Parasti 3. personā"},
+					gramText, lemma); //aizdzīt 2
+			
+			if (newBegin == -1) newBegin = simpleRule(
 					"-eju, -ej, -iet, pag. -gāju", "iet", 15,
 					new String[] {"Darbības vārds", "Locīt kā \"iet\""},
 					null, gramText, lemma); //apiet
@@ -2315,6 +2349,47 @@ public class ThesaurusEntry
 					"-cērtu, -cērt, -cērt, pag. -cirtu", "cirst", 15,
 					new String[] {"Darbības vārds", "Locīt kā \"cirst\""},
 					null, gramText, lemma); //aizcirst
+			if (newBegin == -1) newBegin = simpleRule(
+					"-dabūju, -dabū, -dabū, pag. -dabūju", "dabūt", 15,
+					new String[] {"Darbības vārds", "Locīt kā \"dabūt\""},
+					null, gramText, lemma); //aizdabūt
+			if (newBegin == -1) newBegin = simpleRule(
+					"-dedzu, -dedz, -dedz, pag. -dedzu", "degt", 15,
+					new String[] {"Darbības vārds", "Locīt kā \"degt\""},
+					null, gramText, lemma); //aizdegt 1
+			if (newBegin == -1) newBegin = simpleRule(
+					"-diebju, -dieb, -diebj, pag. -diebu", "diebt", 15,
+					new String[] {"Darbības vārds", "Locīt kā \"diebt\""},
+					null, gramText, lemma); //aizdiebt
+			if (newBegin == -1) newBegin = simpleRule(
+					"-diedzu, -diedz, -diedz, pag. -diedzu", "diegt", 15,
+					new String[] {"Darbības vārds", "Locīt kā \"diegt\""},
+					null, gramText, lemma); //aizdiegt 1
+			if (newBegin == -1) newBegin = simpleRule(
+					"-dodu, -dod, -dod, pag. -devu", "dot", 15,
+					new String[] {"Darbības vārds", "Locīt kā \"dot\""},
+					null, gramText, lemma); //aizdot
+			if (newBegin == -1) newBegin = simpleRule(
+					"-drāžu, -drāz, -drāž, pag. -drāzu", "drāzt", 15,
+					new String[] {"Darbības vārds", "Locīt kā \"drāzt\""},
+					null, gramText, lemma); //aizdrāzt
+			if (newBegin == -1) newBegin = simpleRule(
+					"-duru, -dur, -dur, pag. -dūru", "durt", 15,
+					new String[] {"Darbības vārds", "Locīt kā \"durt\""},
+					null, gramText, lemma); //aizdurt
+			if (newBegin == -1) newBegin = simpleRule(
+					"-dzeru, -dzer, -dzer, pag. -dzēru", "dzert", 15,
+					new String[] {"Darbības vārds", "Locīt kā \"dzert\""},
+					null, gramText, lemma); //aizdzert
+			if (newBegin == -1) newBegin = simpleRule(
+					"-dzenu, -dzen, -dzen, pag. -dzinu", "dzīt", 15,
+					new String[] {"Darbības vārds", "Locīt kā \"dzīt\""},
+					null, gramText, lemma); //aizdzīt 1
+			if (newBegin == -1) newBegin = simpleRule(
+					"-ēdu, -ēd, -ēd, pag. -ēdu", "ēst", 15,
+					new String[] {"Darbības vārds", "Locīt kā \"ēst\""},
+					null, gramText, lemma); //aizēst
+			
 			if (newBegin == -1) newBegin = simpleRule(
 					"-tveru, -tver, -tver, pag. -tvēru", "tvert", 15,
 					new String[] {"Darbības vārds", "Locīt kā \"tvert\""},
@@ -2399,6 +2474,39 @@ public class ThesaurusEntry
 					new String[] {"Parasti 3. personā"},
 					gramText, lemma); //aizblākšķēt
 			if (newBegin == -1) newBegin = simpleRule(
+					"parasti 3. pers., -čab, pag. -čabēja", "čabēt", 17,
+					new String[] {"Darbības vārds"},
+					new String[] {"Parasti 3. personā"},
+					gramText, lemma); //aizčabēt
+			if (newBegin == -1) newBegin = simpleRule(
+					"parasti 3. pers., -čaukst, pag. -čaukstēja", "čaukstēt", 17,
+					new String[] {"Darbības vārds"},
+					new String[] {"Parasti 3. personā"},
+					gramText, lemma); //aizčaukstēt
+			if (newBegin == -1) newBegin = simpleRule(
+					"parasti 3. pers., -dārd, pag. -dārdēja", "dārdēt", 17,
+					new String[] {"Darbības vārds"},
+					new String[] {"Parasti 3. personā"},
+					gramText, lemma); //aizdārdēt
+			if (newBegin == -1) newBegin = simpleRule(
+					"parasti 3. pers., -dimd, pag. -dimdēja", "dimdēt", 17,
+					new String[] {"Darbības vārds"},
+					new String[] {"Parasti 3. personā"},
+					gramText, lemma); //aizdimdēt
+			if (newBegin == -1) newBegin = simpleRule(
+					"parasti 3. pers., -dip, pag. -dipēja", "dipēt", 17,
+					new String[] {"Darbības vārds"},
+					new String[] {"Parasti 3. personā"},
+					gramText, lemma); //aizdipēt
+			
+			if (newBegin == -1) newBegin = simpleRule(
+					"parasti 3. pers., -ina, pag. -ināja", "ināt", 17,
+					new String[] {"Darbības vārds"},
+					new String[] {"Parasti 3. personā"},
+					gramText, lemma); //aizducināt
+			
+			
+			if (newBegin == -1) newBegin = simpleRule(
 					"-turu, -turi, -tur, pag. -turēju", "turēt", 17,
 					new String[] {"Darbības vārds"},
 					null, gramText, lemma); //aizturēt
@@ -2434,6 +2542,12 @@ public class ThesaurusEntry
 					new String[] {"Darbības vārds", "Locīt kā \"šalkties\""},
 					new String[] {"Parasti 3. personā"},
 					gramText, lemma); //aizšalkties
+			if (newBegin == -1) newBegin = simpleRule(
+					"parasti 3. pers., -dūcas, pag. -dūcās", "dūkties", 18,
+					new String[] {"Darbības vārds", "Locīt kā \"dūkties\""},
+					new String[] {"Parasti 3. personā"},
+					gramText, lemma); //aizdūkties
+			
 			if (newBegin == -1) newBegin = simpleRule(
 					"-ejos, -ejos, -ietas, pag. -gājos", "ieties", 18,
 					new String[] {"Darbības vārds", "Locīt kā \"ieties\""},
@@ -2471,6 +2585,15 @@ public class ThesaurusEntry
 					"-cērtos, -cērties, -cērtas, pag. -cirtos", "cirsties", 18,
 					new String[] {"Darbības vārds", "Locīt kā \"cirsties\""},
 					null, gramText, lemma); //aizcirsties
+			if (newBegin == -1) newBegin = simpleRule(
+					"-degos, -dedzies, -degas, pag. -degos", "degties", 18,
+					new String[] {"Darbības vārds", "Locīt kā \"degties\""},
+					null, gramText, lemma); //aizdegties
+			if (newBegin == -1) newBegin = simpleRule(
+					"-drāžos, -drāzies, -drāžas, pag. -drāzos", "drāzties", 18,
+					new String[] {"Darbības vārds", "Locīt kā \"drāzties\""},
+					null, gramText, lemma); //aizdrāzties
+			
 			return newBegin;
 		}
 		
@@ -2513,6 +2636,10 @@ public class ThesaurusEntry
 					"-ējos, -ējies, -ējas, pag. -ējos", "ēties", 19,
 					new String[] {"Darbības vārds"}, null,
 					gramText, lemma); //abstrahēties
+			if (newBegin == -1) newBegin = simpleRule(
+					"-ājos, -ājies, -ājas, pag. -ājos", "āties", 19,
+					new String[] {"Darbības vārds"}, null,
+					gramText, lemma); //aizdomāties
 			return newBegin;
 		}
 		
@@ -2556,15 +2683,43 @@ public class ThesaurusEntry
 					new String[] {"Parasti 3. personā"},
 					gramText, lemma); //aizbrīkšēties
 			if (newBegin == -1) newBegin = simpleRule(
+					"parasti 3. pers., -čabas, pag. -čabējās", "čabēties", 20,
+					new String[] {"Darbības vārds"},
+					new String[] {"Parasti 3. personā"},
+					gramText, lemma); //aizčabēties
+			if (newBegin == -1) newBegin = simpleRule(
+					"parasti 3. pers., -čaukstas, pag. -čaukstējās",
+					"čaukstēties", 20,
+					new String[] {"Darbības vārds"},
+					new String[] {"Parasti 3. personā"},
+					gramText, lemma); //aizčaukstēties
+			if (newBegin == -1) newBegin = simpleRule(
+					"parasti 3. pers., -dārdas, pag. -dārdējās", "dārdēties", 20,
+					new String[] {"Darbības vārds"},
+					new String[] {"Parasti 3. personā"},
+					gramText, lemma); //aizdārdēties
+			if (newBegin == -1) newBegin = simpleRule(
+					"parasti 3. pers., -drebas, pag. -drebējās", "drebēties", 20,
+					new String[] {"Darbības vārds"},
+					new String[] {"Parasti 3. personā"},
+					gramText, lemma); //aizdrebēties
+			
+			if (newBegin == -1) newBegin = simpleRule(
 					"parasti 3. pers., -ās, pag. -ījās", "īties", 20,
 					new String[] {"Darbības vārds"},
 					new String[] {"Parasti 3. personā"},
-					gramText, lemma); //aizbīdīties
+					gramText, lemma); //aizbīdīties			
 			if (newBegin == -1) newBegin = simpleRule(
 					"parasti 3. pers., -inās, pag. -inājās", "ināties", 20,
 					new String[] {"Darbības vārds"},
 					new String[] {"Parasti 3. personā"},
 					gramText, lemma); //aizbubināties
+			if (newBegin == -1) newBegin = simpleRule(
+					"parasti 3. pers., -as, pag. -ējās", "ēties", 20,
+					new String[] {"Darbības vārds"},
+					new String[] {"Parasti 3. personā"},
+					gramText, lemma); //aizčiepstēties
+			
 			if (newBegin == -1) newBegin = simpleRule(
 					"-os, -ies, -ās, pag. -ījos", "īties", 20,
 					new String[] {"Darbības vārds"},
