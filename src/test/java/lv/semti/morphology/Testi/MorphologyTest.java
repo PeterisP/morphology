@@ -2106,4 +2106,21 @@ public class MorphologyTest {
 		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "", "mēnes");
 		
 	}
+	
+	@Test
+	/**
+	 * Treat out-of-vocabulary acronyms as not flexive - e.g. NATO, FMS, IMS etc 
+	 */
+	public void acronyms() {
+		locītājs.enableGuessing = true;
+		locītājs.enableVocative = true;
+		locītājs.guessVerbs = false;
+		locītājs.guessParticiples = false;
+		locītājs.guessAdjectives = false;
+		locītājs.guessInflexibleNouns = true;
+		locītājs.enableAllGuesses = true;
+		
+		List<Wordform> formas = locītājs.generateInflections("FMS", true);
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "FMS");
+	}
 }

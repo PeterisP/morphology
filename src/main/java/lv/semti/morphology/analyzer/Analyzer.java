@@ -44,6 +44,7 @@ public class Analyzer extends Lexicon {
 	private Pattern p_ordinal = Pattern.compile("\\d+\\.");
 	private Pattern p_fractional = Pattern.compile("\\d+[\\\\/]\\d+");
 	private Pattern p_abbrev = Pattern.compile("\\w+\\.");
+	private Pattern p_acronym = Pattern.compile("(\\p{Lu}){2,5}"); // all caps, repeated 2-5 times
 	private Pattern p_url = Pattern.compile("[\\.\\w]+\\.(lv|com|org)");
 		
 	private Cache<String, Word> wordCache = new Cache<String, Word>();
@@ -216,8 +217,6 @@ public class Analyzer extends Lexicon {
 			}
 		}
 
-		
-
 		if (!rezultāts.isRecognized()) {  //Hardcoded izņēmumi (ar regex) kas atpazīst ciparus, kārtas skaitļus utml
 			if (p_number.matcher(word).matches()) {
 				Wordform wf = new Wordform(word);
@@ -255,6 +254,20 @@ public class Analyzer extends Lexicon {
 				wf.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Abbreviation);
 				wf.addAttribute(AttributeNames.i_Lemma, word);
 				wf.addAttribute(AttributeNames.i_Word, word);
+				rezultāts.addWordform(wf);
+				return rezultāts;
+			}
+			if (enableGuessing && p_acronym.matcher(originalWord).matches()) { // Treating all short allcaps words as acronyms is a form of guessing, since it's not safe and makes a brave assumption about such outofvocabulary words
+				Wordform wf = new Wordform(originalWord);
+				Paradigm p = this.paradigmByID(12); // FIXME - hardkodēts numurs nelokāmo lietvārdu paradigmai
+				Ending e = p.getLemmaEnding();
+				wf.setEnding(e);
+				wf.addAttribute(AttributeNames.i_Word, word);
+				wf.addAttribute(AttributeNames.i_Lemma, word);
+				wf.addAttributes(p);
+				wf.addAttributes(e);
+				wf.addAttribute(AttributeNames.i_EndingID, Integer.toString(e.getID()));
+				wf.addAttribute(AttributeNames.i_ParadigmID, Integer.toString(p.getID()));
 				rezultāts.addWordform(wf);
 				return rezultāts;
 			}
