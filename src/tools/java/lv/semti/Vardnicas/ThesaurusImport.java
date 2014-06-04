@@ -79,9 +79,8 @@ public class ThesaurusImport {
 			if (sNode.getNodeName().equals("s"))
 			{
 				ThesaurusEntry entry = new ThesaurusEntry(sNode);
-				//if (!entry.inBlacklist() &&
-				//	(entry.sources == null || entry.sources.s.contains("LLVV"))) //TODO - temporary restriction, focus on LLVV first
-				//{
+				if (!entry.inBlacklist())	// Blacklisted entries are not included in output logs.
+				{
 					//entries.add(entry);
 					if (entry.hasParadigm() && !entry.hasUnparsedGram())
 						goodOut.write(entry.toJSON() + "\n");
@@ -92,7 +91,7 @@ public class ThesaurusImport {
 						badOut.write(entry.toJSON() + "\n");
 						badCount++;
 					}
-				//}
+				}
 			}
 			else if (!sNode.getNodeName().equals("#text")) // Text nodes here are ignored.
 			{
