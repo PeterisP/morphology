@@ -274,7 +274,7 @@ public class Word extends Observable implements Cloneable{
 			if (complain) System.err.printf("Tagger chose a tag that's not one of analysis options for word %s tag %s\n", this.getToken(), answerTag);
 			if (complain) this.addWordform(result); //FIXME - nav īsti atbilstošs complain
 		}
-		if (result.getValue(AttributeNames.i_Lemma).equalsIgnoreCase("nav") || result.getValue(AttributeNames.i_Lemma).equalsIgnoreCase("nenāk")) {
+		if (complain && (result.getValue(AttributeNames.i_Lemma).equalsIgnoreCase("nav") || result.getValue(AttributeNames.i_Lemma).equalsIgnoreCase("nenāk"))) {
 			result.describe();
 		}
 
