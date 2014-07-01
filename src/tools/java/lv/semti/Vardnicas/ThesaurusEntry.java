@@ -427,14 +427,13 @@ public class ThesaurusEntry
 		public String toJSON()
 		{
 			StringBuilder res = new StringBuilder();
-			res.append(String.format("{\"Lemma\":\"%s\"", JSONObject.escape(text)));
+			res.append(String.format("\"Lemma\":\"%s\"", JSONObject.escape(text)));
 			if (pronunciation != null)
 			{
 				res.append(", \"Pronunciation\":\"");
 				res.append(JSONObject.escape(pronunciation.toString()));
 				res.append("\"");
 			}
-			res.append('}');
 			return res.toString();
 		}
 	}
@@ -2855,7 +2854,7 @@ public class ThesaurusEntry
 						while (flagIt.hasNext())
 						{
 							Tuple<Lemma, HashSet<String>> alt = flagIt.next();
-							res.append("{\"Lemma\":");
+							res.append("{");
 							res.append(alt.first.toJSON());
 							if (alt.second != null && !alt.second.isEmpty())
 							{
@@ -3103,7 +3102,6 @@ public class ThesaurusEntry
 		{
 			StringBuilder res = new StringBuilder();
 			
-			res.append("\"Sense\":{");
 			boolean hasPrev = false;
 			
 			if (ordNumber != null)
@@ -3144,7 +3142,6 @@ public class ThesaurusEntry
 				hasPrev = true;
 			}
 			
-			res.append("}");
 			return res.toString();
 		}
 	}
@@ -3405,7 +3402,9 @@ public class ThesaurusEntry
 			Iterator<E> i = l.iterator();
 			while (i.hasNext())
 			{
+				res.append("{");
 				res.append(i.next().toJSON());
+				res.append("}");
 				if (i.hasNext()) res.append(", ");
 			}
 			res.append("]");			
@@ -3559,6 +3558,7 @@ public class ThesaurusEntry
 	
 	public static interface HasToJSON
 	{
+		// Returns only the inside of object - without enclosing { }
 		public String toJSON();
 	}
 }
