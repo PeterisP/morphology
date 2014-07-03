@@ -3,6 +3,7 @@
 	<Corpus FileName="Lexicon_core.xml" Type="core"/>
 	<Corpus FileName="Lexicon_valerijs.xml" Type="core"/>
 	<Corpus FileName="Lexicon_vietas.xml" Type="core"/>
+	<Corpus FileName="Lexicon_sv.xml" Type="core"/>
 	<Corpus FileName="Lexicon_onomastica.xml" Type="aux"/>
 	<Paradigm Stems="1" ID="1" LemmaEnding="1" Description="Lietvārds 1. deklinācija -s" AllowedGuessEndings="bcdfghjklmnprstvzčģķļņšž">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="1" Dzimte="Vīriešu"/>

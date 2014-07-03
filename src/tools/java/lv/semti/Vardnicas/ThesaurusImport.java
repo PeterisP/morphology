@@ -6,6 +6,8 @@ import java.io.FileOutputStream;
 import java.io.File;
 import java.io.PrintStream;
 import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -51,6 +53,8 @@ public class ThesaurusImport {
 		String goodOutputFile = "tezaurs-good.json";
 		String noParadigm = "tezaurs-noParadigm.json";
 		String badOutputFile = "tezaurs-bad.json";
+		String newLexiconFile = "Lexicon_sv.xml";
+		String importSource = "Imports no Tezaura SV " + new SimpleDateFormat("yyyy-MM-dd").format(new Date());
 		//if (args.length > 1) outputFile = args[1];
 		
 		// Load Thesaurus file.
@@ -73,39 +77,38 @@ public class ThesaurusImport {
 		// Process each node.
 		NodeList thesaurusEntries = node.getChildNodes(); // Thesaurus entries
 		int badCount = 0;
-		for (int i = 0; i < thesaurusEntries.getLength(); i++)
-		{
+		for (int i = 0; i < thesaurusEntries.getLength(); i++) {
 			Node sNode = thesaurusEntries.item(i);
-			if (sNode.getNodeName().equals("s"))
-			{
+			if (sNode.getNodeName().equals("s")) {
 				ThesaurusEntry entry = new ThesaurusEntry(sNode);
-				if (!entry.inBlacklist())	// Blacklisted entries are not included in output logs.
-				{
+				if (!entry.inBlacklist()) { // Blacklisted entries are not included in output logs.			
 					//entries.add(entry);
-					if (entry.hasParadigm() && !entry.hasUnparsedGram())
-						goodOut.write(entry.toJSON() + "\n");
-					else if (!entry.hasParadigm() && !entry.hasUnparsedGram())
+					if (entry.hasParadigm() && !entry.hasUnparsedGram()) {
+						// Looks good, let's write it to all the proper outpur
+						goodOut.write(entry.toJSON() + "\n");						
+						entry.addToLexicon(analizators, importSource);
+					} else if (!entry.hasParadigm() && !entry.hasUnparsedGram())
 						noParadigmOut.write(entry.toJSON() + "\n");
-					else
-					{
+					else {
 						badOut.write(entry.toJSON() + "\n");
 						badCount++;
 					}
 				}
 			}
-			else if (!sNode.getNodeName().equals("#text")) // Text nodes here are ignored.
-			{
+			else if (!sNode.getNodeName().equals("#text")) { // Text nodes here are ignored.
 				goodOut.close();
 				noParadigmOut.close();
 				badOut.close();				
 				throw new Error("Node '" + sNode.getNodeName() + "' but s (šķirklis) expected!");
 			}
-			//if (badCount >= 1000) break;	//Temporary.
+			//if (badCount >= 40) break;	//Temporary.
 		}
 		
 		goodOut.close();
 		noParadigmOut.close();
 		badOut.close();
+		
+		analizators.toXML_sub(newLexiconFile, importSource);
 		
 		//count_gram(entries); //FIXME - te nečeko papildus gram info (piem, v.; novec. nerāda jo tas jau ir atpazīts...
 		

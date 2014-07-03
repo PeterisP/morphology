@@ -51,9 +51,9 @@ public class Lexeme extends AttributeValues {
 		pipe.write("<Lexeme");
 		pipe.write(" ID=\""+String.valueOf(id)+"\"");
 		for (int i=0;i<stems.size();i++) {
-			if (stems.get(i).equals("\""))
-				pipe.write(" Stem"+String.valueOf(i+1)+"=\"&quot;\"");
-			else pipe.write(" Stem"+String.valueOf(i+1)+"=\""+stems.get(i)+"\"");
+			String stem = stems.get(i);
+			stem = stem.replace("\"", "&quot;").replace("&", "&amp;");
+			pipe.write(" Stem"+String.valueOf(i+1)+"=\""+stem+"\"");
 		}
 		pipe.write(">");
 		super.toXML(pipe); // īpašības UzXML

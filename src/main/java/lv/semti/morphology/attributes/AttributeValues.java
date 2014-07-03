@@ -133,9 +133,9 @@ public class AttributeValues implements FeatureStructure, Cloneable {
 	public void toXML (Writer straume) throws IOException {
 		straume.write("<Attributes");
 		for (Entry<String,String> pāris : attributes.entrySet()) {
-			String īpašība = pāris.getKey().replace(" ", "_").replace("\"", "&quot;");
+			String īpašība = pāris.getKey().replace(" ", "_").replace("\"", "&quot;").replace("&", "&amp;");
 			if (īpašība.equals("")) continue;
-			String vērtība = pāris.getValue().replace("\"", "&quot;");
+			String vērtība = pāris.getValue().replace("\"", "&quot;").replace("&", "&amp;");
 			straume.write(" "+īpašība+"=\""+vērtība+"\"");
 		}
 		straume.write("/>");

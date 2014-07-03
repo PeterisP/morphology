@@ -502,12 +502,13 @@ public class Analyzer extends Lexicon {
 		return rezultāts;
 	}
 
+	/**
+	 * Performs morphological analysis, assuming that we know explicitly that the form is a lemma
+	 * @param word
+	 * @return
+	 */
 	public Word analyzeLemma(String word) {
-		// Meklēt variantus, pieņemot, ka ir iedota tieši vārda pamatforma
-		// FIXME - būtu jāapdomā, ko darīt, ja ir iedots substantivizēta darbības vārda vienskaitļa nominatīvs
-		//  ^^ itkā tagad jāiet, bet jātestē
-		// FIXME - daudzskaitlinieki?
-		Word rezultāts = new Word(word);
+		Word result = new Word(word);
 		Word varianti = analyze(word);
 
 		for (Wordform vārdforma : varianti.wordforms) {			
@@ -520,10 +521,10 @@ public class Analyzer extends Lexicon {
 			if ( (ending != null && ending.getLemmaEnding() == ending) ||
 				(vārdforma.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(word) && 
 						(vārdforma.isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum) || vārdforma.isMatchingStrong(AttributeNames.i_CaseSpecial, AttributeNames.v_InflexibleGenitive) )) )
-				rezultāts.addWordform(vārdforma);
+				result.addWordform(vārdforma);
 		}
 
-		return rezultāts;
+		return result;
 	}
 
 	public void setCacheSize (int maxSize) {
