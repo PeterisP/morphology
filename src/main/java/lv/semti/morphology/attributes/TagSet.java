@@ -26,6 +26,8 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
+import lv.semti.morphology.analyzer.Wordform;
+
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -101,6 +103,7 @@ public class TagSet {
 		return ref;
 	}
 
+	// returns multiple attributes because there are attributes overlapping names but different properties, for example, "Uzbūve" differs depending on part of speech 
 	private LinkedList<Attribute> getAttribute(String attributeName, String language){
 		LinkedList<Attribute> result = new LinkedList<Attribute>();
 		for (Attribute attribute : attributes) {
@@ -142,8 +145,8 @@ public class TagSet {
 		LinkedList<String> result = new LinkedList<String>();
 		LinkedList<Attribute> attrs = getAttribute(attributeName, language); 
 		for (Attribute a : attrs) {
-			for (AttributeValue av : a.getAllowedValues(language)) {
-				if (!result.contains(av.value)) result.add(av.value);
+			for (String av : a.getAllowedValues(language)) {
+				if (!result.contains(av)) result.add(av);
 			}
 		}
 		return result.toArray();
@@ -163,6 +166,9 @@ public class TagSet {
 	 * Decode the markup tag to internal attribute-value structure.
 	 */
 	public AttributeValues fromTag(String tag) {
+		return fromTag(tag, "LV");
+	}
+	public AttributeValues fromTag(String tag, String language) {
 		AttributeValues values = new AttributeValues();
 		if (tag.equals("")) return values;
 		
@@ -178,17 +184,17 @@ public class TagSet {
 			System.out.println("nesapratu pos tagam '"+tag+"'");
 			return values;
 		}
-		String pos = av_pos.value;
+		String pos = av_pos.valueLV;
 		if (structure == structureTypes.POS_BASED_SEMTI && pos.equalsIgnoreCase(AttributeNames.v_Verb) && tag.length() > 3 && tag.charAt(3) == 'p') {
 			pos = AttributeNames.v_Participle;
 		}
-		postag.addValue(values, tag.charAt(0)); //FIXME - hardcoded, maybe shouldn't be
+		postag.addValue(values, tag.charAt(0), language); //FIXME - hardcoded, maybe shouldn't be
 		
 		for (Attribute attribute : attributes) 
 			if (attribute instanceof FixedAttribute) {
 				FixedAttribute fattribute = (FixedAttribute) attribute;
 				if (fattribute.matchPos(pos) && fattribute.markupPos < tag.length()) 
-					fattribute.addValue(values, tag.charAt(fattribute.markupPos));
+					fattribute.addValue(values, tag.charAt(fattribute.markupPos), language);
 			}
 		
 		return values;
@@ -199,9 +205,9 @@ public class TagSet {
 	 * @param values
 	 * @return
 	 */
-	public String toTag(AttributeValues values) {		
+	public String toTag(AttributeValues values) {	//TODO - valodu ņemt vērā?	
 		String result = "";
-		String pos = values.getValue(AttributeNames.i_PartOfSpeech);;
+		String pos = values.getValue(AttributeNames.i_PartOfSpeech);
 		if (pos == null) return "-"; //FIXME - neesmu droshs ka "-" ir pareizaakais variants
 
 		if (structure == structureTypes.POS_BASED || structure == structureTypes.POS_BASED_SEMTI) {
@@ -231,6 +237,30 @@ public class TagSet {
 				if (fattribute.matchPos(pos))
 					result = fattribute.markValue(values, result);
 			}
+		
+		return result;
+	}
+
+	public AttributeValues toEnglish(AttributeValues latvian) {
+		AttributeValues result = new AttributeValues();
+		String pos = latvian.getValue(AttributeNames.i_PartOfSpeech);
+		if (structure == structureTypes.POS_BASED_SEMTI && AttributeNames.v_Verb.equalsIgnoreCase(pos) && latvian.isMatchingStrong(AttributeNames.i_Izteiksme, AttributeNames.v_Participle)) {
+			// Semti kamola tagseta exception - divdabis norādīts izteiksmē
+			pos = AttributeNames.v_Participle;
+		}
+		
+		for (Entry<String, String> e : latvian.entrySet()) { // Apskatam visus atribūtus, kas ir padoti
+			for (Attribute attribute : getAttribute(e.getKey(), "LV")) { // atrodam TagSet tos, kas šim atribūta atslēgai varētu atbilst
+				// FIXME - ja atribūts nav tagset.xml, tad šeit tas klusiņām pazudīs
+				if (attribute instanceof FixedAttribute) { // ja ir fiksētais, mēģinam tulkot gan atslēgu, gan vērtību
+					FixedAttribute fattribute = (FixedAttribute) attribute;
+					if (fattribute.partOfSpeech == null || fattribute.matchPos(pos)) // ja neatbilst POS, tad šis Attribute objekts nav īstais
+						result.addAttribute(fattribute.attributeEN, fattribute.toEnglish(e.getValue())); // paprasam tam EN atslēgu + vērtības tulkojumu
+ 				} else { // ja nav fiksētais, mēģinam tulkot tikai atslēgu
+ 					result.addAttribute(attribute.attributeEN, e.getValue());
+ 				}
+			}
+		}
 		
 		return result;
 	}

@@ -367,6 +367,13 @@
 	<Value LV="Nē" EN="No"/>
 </Attribute>
 
+<Attribute LV="Minēšana" EN="Derivation">
+	<Value LV="Nav" EN="From lexicon"/>
+	<Value LV="Deminutīvu atvasināšana" EN="Deminutive derivation"/>
+	<Value LV="Priedēkļu atvasināšana" EN="Prefix derivation"/>
+	<Value LV="Minēšana pēc galotnes" EN="Guess based on endings"/>
+</Attribute>
+
 <FreeAttribute LV="Vārdgrupas nr" EN="Paradigm ID">
 </FreeAttribute>
 <FreeAttribute LV="Leksēmas nr" EN="Lexeme ID">
@@ -376,6 +383,10 @@
 <FreeAttribute LV="Pamatforma" EN="Lemma">
 </FreeAttribute>
 <FreeAttribute LV="Avots" EN="Source"> 
+</FreeAttribute>
+<FreeAttribute LV="Vārds" EN="Wordform"> 
+</FreeAttribute>
+<FreeAttribute LV="Avota pamatforma" EN="Lexicon entry lemma"> 
 </FreeAttribute>
 
 </TagSet>

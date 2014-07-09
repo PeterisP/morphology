@@ -18,6 +18,7 @@ package lv.semti.morphology.attributes;
 import java.io.IOException;
 import java.io.Writer;
 import java.util.LinkedList;
+import java.util.List;
 
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -43,21 +44,13 @@ class FixedAttribute extends Attribute {
 			this.markupPos = Integer.parseInt(n.getTextContent());
 		
 		NodeList nodes = node.getChildNodes();
-		for (int i = 0; i < nodes.getLength(); i++)
-			if (nodes.item(i).getNodeName().equals("Value")) {
-				Node lv = nodes.item(i).getAttributes().getNamedItem("LV");
-				if (lv != null) {
-					AttributeValue v = new AttributeValue(lv.getTextContent());
-					
-					Node tag = nodes.item(i).getAttributes().getNamedItem("Tag");
-					if (tag != null) v.markupTag = tag.getTextContent().charAt(0);
-					
-					Node defaults = nodes.item(i).getAttributes().getNamedItem("DefaultTags");
-					if (defaults != null) v.defaultTags = defaults.getTextContent();
-					
-					allowedValues.add(v);
-				}
+		for (int i = 0; i < nodes.getLength(); i++) {
+			Node value = nodes.item(i);
+			if (value.getNodeName().equals("Value")) {
+				AttributeValue v = new AttributeValue(value);
+				allowedValues.add(v);
 			}
+		}
 	}
 	
 	protected void toXMLData(Writer straume) throws IOException {
@@ -73,8 +66,15 @@ class FixedAttribute extends Attribute {
 	}
 
 	@Override
-	public LinkedList<AttributeValue> getAllowedValues(String language) {
-		return allowedValues;
+	public List<String> getAllowedValues(String language) {
+		LinkedList<String> result = new LinkedList<String>();
+		for (AttributeValue av: allowedValues) {
+			if (language.equalsIgnoreCase("LV"))
+				result.add(av.valueLV);
+			if (language.equalsIgnoreCase("EN"))
+				result.add(av.valueEN);
+		}
+		return result;
 	}
 
 	@Override
@@ -89,10 +89,14 @@ class FixedAttribute extends Attribute {
 		return null;
 	}
 
-	public void addValue(AttributeValues values, char tag) {
+	public void addValue(AttributeValues values, char tag, String language) {
 		AttributeValue tagValue = getTagValue(tag);
-		if (tagValue != null)
-			values.addAttribute(this.attributeLV, tagValue.value);
+		if (tagValue != null) {
+			if (language.equalsIgnoreCase("LV"))
+				values.addAttribute(this.attributeLV, tagValue.valueLV);
+			if (language.equalsIgnoreCase("EN"))
+				values.addAttribute(this.attributeEN, tagValue.valueEN);
+		}
 	}
 
 	/**
@@ -107,10 +111,10 @@ class FixedAttribute extends Attribute {
 
 	public String markValue(AttributeValues values, String tag) {
 		if (markupPos<0) return tag;
-		String value = values.getValue(this.attributeLV);
+		String value = values.getValue(this.attributeLV); //FIXME - EN atribūti?
 		AttributeValue the_av = null;
 		for (AttributeValue av : allowedValues) 
-			if (av.value.equalsIgnoreCase(value))
+			if (av.valueLV.equalsIgnoreCase(value))
 				the_av = av;
 		if (the_av == null) return tag;
 		
@@ -123,26 +127,57 @@ class FixedAttribute extends Attribute {
 		
 		return result.toString();
 	}
+
+	/**
+	 * Finds the appropriate english translation of a LV value for this attribute
+	 * @param valueLV
+	 * @return The translation, or null if it's not found
+	 */
+	public String toEnglish(String valueLV) {
+		for (AttributeValue option : allowedValues) 
+			if (option.valueLV.equalsIgnoreCase(valueLV)) 
+				return option.valueEN;
+		return null;
+	}
 }
 
 class AttributeValue {
-	String value;
+	String valueLV="_missing_";
+	String valueEN="_missing_";
 	char markupTag=' ';
 	String defaultTags = null;
 	
-	protected AttributeValue(String value) {
-		this.value = value;
+	protected AttributeValue(Node value) {
+		Node lv = value.getAttributes().getNamedItem("LV");
+		if (lv != null) 
+			this.valueLV = lv.getTextContent();
+			
+		Node en = value.getAttributes().getNamedItem("EN");
+		if (en != null) 
+			this.valueEN = en.getTextContent();
+
+		Node tag = value.getAttributes().getNamedItem("Tag");
+		if (tag != null)
+			this.markupTag = tag.getTextContent().charAt(0);
+			
+		Node defaults = value.getAttributes().getNamedItem("DefaultTags");
+		if (defaults != null)
+			this.defaultTags = defaults.getTextContent();
 	}
 	
 	protected String getXml() {
-		if (markupTag == ' ')
-			return "<Value LV=\"" + value + "\"/>\n";
-		if (defaultTags == null)
-			return "<Value LV=\"" + value + "\" Tag=\"" + markupTag + "\"/>\n";
-		return "<Value LV=\"" + value + "\" Tag=\"" + markupTag + "\" DefaultTags=\"" + defaultTags + "\"/>\n";
+		StringBuilder sb = new StringBuilder("<Value LV=\"" + valueLV + "\"");
+		if (!valueEN.equalsIgnoreCase("_missing"))
+			sb.append(" EN=\"" + valueEN + "\"");
+		if (markupTag != ' ')
+			sb.append(" Tag=\"" + markupTag + "\"");
+		if (defaultTags != null)
+			sb.append(" DefaultTags=\"" + defaultTags + "\"");
+		sb.append("/>\n");
+		return sb.toString();
 	}
 	
 	protected boolean accept(String compareTo) {
-		return value.equalsIgnoreCase(compareTo);
+		return valueLV.equalsIgnoreCase(compareTo); //FIXME - EN valoda ?
 	}
 }
