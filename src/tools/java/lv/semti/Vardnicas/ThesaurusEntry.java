@@ -365,14 +365,14 @@ public class ThesaurusEntry
 				Lexeme l = analizators.createLexemeFromParadigm(lemma, paradigmID, importSource);
 				if (l == null) throw new Exception(String.format("createLexemeFromParadigm nofailoja uz %s / %d", lemma, paradigmID));
 				if (l.getParadigmID() == 29) { // Hardcoded unflexible words
+					l.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Residual);
 					if (this.gram.flags.contains("Saīsinājums"))
-						l.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Abbreviation);
+						l.addAttribute(AttributeNames.i_ResidualType, AttributeNames.v_Abbreviation);
 					else if (this.gram.flags.contains("Vārds svešvalodā"))
-						l.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Foreign); 
+						l.addAttribute(AttributeNames.i_ResidualType, AttributeNames.v_Foreign); 
 					else if (this.gram.flags.contains("Izsauksmes vārds"))
-						l.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Interjection); 
-					else
-						l.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Residual);
+						l.addAttribute(AttributeNames.i_ResidualType, AttributeNames.v_Interjection); 
+					
 				}
 				//System.out.printf("Jess %s\n", lemma);
 			} catch (Exception e) {
