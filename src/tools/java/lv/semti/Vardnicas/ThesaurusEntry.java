@@ -1138,7 +1138,7 @@ public class ThesaurusEntry
 				
 				// Paradigm 7: Lietvārds 4. deklinācija -a siev. dz.
 				// Paradigm 11: Lietvārds 6. deklinācija -s siev. dz.
-				else if (gramText.startsWith("-as, s.")) //aberācija, milns
+				else if (gramText.startsWith("-as, s.")) //aberācija, milns, najādas
 				{
 					newBegin = "-as, s.".length();
 					if (lemma.matches(".*[^aeiouāēīōū]s"))
@@ -1149,6 +1149,12 @@ public class ThesaurusEntry
 					else if (lemma.endsWith("a"))
 					{
 						paradigm.add(7);
+						flags.add("Lietvārds");
+					}
+					else if (lemma.matches(".*[^aeiouāēīōū]as"))
+					{
+						paradigm.add(7);
+						flags.add("Šķirkļavārds daudzskaitlī");
 						flags.add("Lietvārds");
 					}
 					else
@@ -1659,13 +1665,19 @@ public class ThesaurusEntry
 				}
 				flags.add("Sieviešu dzimte");
 			}
-			else if (gramText.startsWith("-es, dsk. ģen. -pju, s.")) //aitkope
+			else if (gramText.startsWith("-es, dsk. ģen. -pju, s.")) //aitkope, tūsklapes
 			{
 				newBegin = "-es, dsk. ģen. -pju, s.".length();
 				if (lemma.endsWith("pe"))
 				{
 					paradigm.add(9);
 					flags.add("Lietvārds");
+				}
+				else if (lemma.endsWith("pes"))
+				{
+					paradigm.add(9);
+					flags.add("Lietvārds");
+					flags.add("Šķirkļavārds daudzskaitlī");
 				}
 				else
 				{
@@ -1758,6 +1770,11 @@ public class ThesaurusEntry
 					flags.add("Lietvārds");
 					flags.add("Šķirkļavārds daudzskaitlī");
 				}
+				else if (lemma.endsWith("ne"))
+				{
+					paradigm.add(9);
+					flags.add("Lietvārds");
+				}
 				else if (lemma.endsWith("nes"))
 				{
 					paradigm.add(9);
@@ -1822,6 +1839,7 @@ public class ThesaurusEntry
 		 * Paradigm 1: Lietvārds 1. deklinācija -s
 		 * Paradigm 2: Lietvārds 1. deklinācija -š
 		 * Paradigm 3: Lietvārds 2. deklinācija -is
+		 * Paradigm 4: Lietvārds 2. deklinācija -s (nom. == ģen.)
 		 * Paradigm 5: Lietvārds 2. deklinācija -suns
 		 * Rules in form "-ļa, v." and "-a, v.".
 		 * This function is seperated out for readability from
@@ -1984,8 +2002,8 @@ public class ThesaurusEntry
 				}
 				flags.add("Vīriešu dzimte");
 			}
-			// Paradigms 1, 2, 3 (ja nav miju)
-			else if (gramText.startsWith("-a, v.")) // abats, akustiķis
+			// Paradigms: 1, 2, 3 (if no sound changes), 1-5 (if plural)
+			else if (gramText.startsWith("-a, v.")) // abats, akustiķis, sparguļi, skostiņi
 			{
 				newBegin = "-a, v.".length();
 				if (lemma.matches(".*[ģjķr]is"))
@@ -2003,6 +2021,27 @@ public class ThesaurusEntry
 				{
 					paradigm.add(1);
 					flags.add("Lietvārds");
+				}
+				else if (lemma.matches(".*[ņ]i"))
+				{
+					paradigm.add(1);
+					paradigm.add(2);
+					paradigm.add(3);
+					paradigm.add(4);
+					paradigm.add(5);
+					flags.add("Lietvārds");
+					flags.add("Šķirkļavārds daudzskaitlī");
+					flags.add("Neviennozīmīga paradigma");
+				}
+				else if (lemma.matches(".*[ļ]i"))
+				{
+					paradigm.add(1);
+					paradigm.add(2);
+					paradigm.add(3);
+					paradigm.add(5);
+					flags.add("Lietvārds");
+					flags.add("Šķirkļavārds daudzskaitlī");
+					flags.add("Neviennozīmīga paradigma");
 				}
 				else
 				{
