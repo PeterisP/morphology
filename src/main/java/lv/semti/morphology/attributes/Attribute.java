@@ -18,6 +18,7 @@ package lv.semti.morphology.attributes;
 import java.io.IOException;
 import java.io.Writer;
 import java.util.LinkedList;
+import java.util.List;
 
 import org.w3c.dom.Node;
 
@@ -61,5 +62,5 @@ abstract class Attribute {
 	protected abstract void toXMLData(Writer straume) throws IOException;
 	public abstract boolean isAllowed(String value);
 
-	public abstract LinkedList<AttributeValue> getAllowedValues(String language);
+	public abstract List<String> getAllowedValues(String language);
 }

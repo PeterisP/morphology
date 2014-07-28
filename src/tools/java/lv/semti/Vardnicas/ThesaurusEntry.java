@@ -19,6 +19,7 @@ import lv.semti.morphology.analyzer.Analyzer;
 import lv.semti.morphology.analyzer.Word;
 import lv.semti.morphology.analyzer.Wordform;
 import lv.semti.morphology.attributes.AttributeNames;
+import lv.semti.morphology.lexicon.Lexeme;
 import lv.semti.morphology.lexicon.Paradigm;
 
 import org.json.simple.JSONObject;
@@ -66,15 +67,6 @@ public class ThesaurusEntry
 	 */
 	private static HashSet<String> blacklist = initBlacklist();
 
-	public ThesaurusEntry()
-	{
-		head = null;
-		sources = null;
-		senses = null;
-		phrases = null;
-		homId = null;
-	}
-	
 	// Reads data of a single thesaurus entry from the XML format
 	public ThesaurusEntry(Node sNode)
 	{
@@ -356,6 +348,39 @@ public class ThesaurusEntry
 			return res.toString();
 		}
 		
+		
+		public void addToLexicon(Analyzer analizators, String importSource) {
+			try {
+				String lemma = this.lemma.text;
+				Word w = analizators.analyzeLemma(lemma);
+				if (w.isRecognized()) 
+					return; //throw new Exception(String.format("Vārds %s jau ir leksikonā", lemma));
+				
+				if (this.gram == null) throw new Exception(String.format("Vārdam %s nav gramatikas", lemma));
+				if (this.gram.paradigm == null) throw new Exception(String.format("Vārdam %s nav atrastas paradigmas", lemma));
+				HashSet<Integer> paradigms = this.gram.paradigm;
+				if (paradigms.size() != 1) throw new Exception(String.format("Vārdam %s ir %d paradigmas", lemma, paradigms.size()));
+				int paradigmID = paradigms.iterator().next();
+							
+				Lexeme l = analizators.createLexemeFromParadigm(lemma, paradigmID, importSource);
+				if (l == null) throw new Exception(String.format("createLexemeFromParadigm nofailoja uz %s / %d", lemma, paradigmID));
+				if (l.getParadigmID() == 29) { // Hardcoded unflexible words
+					l.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Residual);
+					if (this.gram.flags.contains("Saīsinājums"))
+						l.addAttribute(AttributeNames.i_ResidualType, AttributeNames.v_Abbreviation);
+					else if (this.gram.flags.contains("Vārds svešvalodā"))
+						l.addAttribute(AttributeNames.i_ResidualType, AttributeNames.v_Foreign); 
+					else if (this.gram.flags.contains("Izsauksmes vārds"))
+						l.addAttribute(AttributeNames.i_ResidualType, AttributeNames.v_Interjection); 
+					
+				}
+				//System.out.printf("Jess %s\n", lemma);
+			} catch (Exception e) {
+				System.err.printf("Nesanāca ielikt leksēmu :(%s\n",e.getMessage());
+				if (e.getMessage() == null) e.printStackTrace();
+			}
+		}
+
 	}
 
 	/**
@@ -427,14 +452,13 @@ public class ThesaurusEntry
 		public String toJSON()
 		{
 			StringBuilder res = new StringBuilder();
-			res.append(String.format("{\"Lemma\":\"%s\"", JSONObject.escape(text)));
+			res.append(String.format("\"Lemma\":\"%s\"", JSONObject.escape(text)));
 			if (pronunciation != null)
 			{
 				res.append(", \"Pronunciation\":\"");
 				res.append(JSONObject.escape(pronunciation.toString()));
 				res.append("\"");
 			}
-			res.append('}');
 			return res.toString();
 		}
 	}
@@ -2894,7 +2918,7 @@ public class ThesaurusEntry
 						while (flagIt.hasNext())
 						{
 							Tuple<Lemma, HashSet<String>> alt = flagIt.next();
-							res.append("{\"Lemma\":");
+							res.append("{");
 							res.append(alt.first.toJSON());
 							if (alt.second != null && !alt.second.isEmpty())
 							{
@@ -3142,7 +3166,6 @@ public class ThesaurusEntry
 		{
 			StringBuilder res = new StringBuilder();
 			
-			res.append("\"Sense\":{");
 			boolean hasPrev = false;
 			
 			if (ordNumber != null)
@@ -3183,7 +3206,6 @@ public class ThesaurusEntry
 				hasPrev = true;
 			}
 			
-			res.append("}");
 			return res.toString();
 		}
 	}
@@ -3444,7 +3466,9 @@ public class ThesaurusEntry
 			Iterator<E> i = l.iterator();
 			while (i.hasNext())
 			{
+				res.append("{");
 				res.append(i.next().toJSON());
+				res.append("}");
 				if (i.hasNext()) res.append(", ");
 			}
 			res.append("]");			
@@ -3598,6 +3622,15 @@ public class ThesaurusEntry
 	
 	public static interface HasToJSON
 	{
+		// Returns only the inside of object - without enclosing { }
 		public String toJSON();
 	}
+
+	public void addToLexicon(Analyzer analizators, String importSource) {
+		this.head.addToLexicon(analizators, importSource);
+		if (this.derivs != null)
+			for (Header h : this.derivs)
+				h.addToLexicon(analizators, importSource);		
+	}
+
 }

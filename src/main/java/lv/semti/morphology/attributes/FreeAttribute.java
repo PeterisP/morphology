@@ -18,6 +18,7 @@ package lv.semti.morphology.attributes;
 import java.io.IOException;
 import java.io.Writer;
 import java.util.LinkedList;
+import java.util.List;
 
 import org.w3c.dom.Node;
 /**
@@ -45,7 +46,7 @@ class FreeAttribute extends Attribute {
 	}
 
 	@Override
-	public LinkedList<AttributeValue> getAllowedValues(String language) {
+	public List<String> getAllowedValues(String language) {
 		return null;
 	}
 

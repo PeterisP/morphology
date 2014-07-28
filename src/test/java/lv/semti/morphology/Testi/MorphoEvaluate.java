@@ -133,7 +133,7 @@ public class MorphoEvaluate {
 				}
 				
 				if (mainwf.getValue(AttributeNames.i_PartOfSpeech).equalsIgnoreCase(etalonaAV.getValue(AttributeNames.i_PartOfSpeech)))
-						pos_correct++;
+					pos_correct++;
 				
 				output = "\t" + mainwf.getValue(AttributeNames.i_Lemma) + "\t" + mainwf.getTag() + "\n";
 				if (mainwf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(e.lemma) && mainwf.getTag().equalsIgnoreCase(e.tag))

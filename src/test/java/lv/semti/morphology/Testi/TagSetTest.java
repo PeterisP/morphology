@@ -157,4 +157,20 @@ public class TagSetTest {
 //					  N-msn------------s----------
 //					  0123456789012345678901234567			
 	}
+	
+	@Test
+	public void english() {
+		TagSet tags = TagSet.getTagSet();
+		
+		Word cirvis = locītājs.analyze("cirvis");
+		assertTrue(cirvis.getBestWordform().isMatchingStrong("Locījums", "Nominatīvs"));
+		assertTrue(cirvis.getBestWordform().isMatchingStrong("Vārds", "cirvis"));
+		cirvis.getBestWordform().describe();
+		AttributeValues english = tags.toEnglish(cirvis.getBestWordform());
+		System.out.println("----------------");
+		english.describe();
+		assertTrue(english.isMatchingStrong("Case", "Nominative"));
+		assertTrue(english.isMatchingStrong("Wordform", "cirvis"));
+	}
+
 }

@@ -432,22 +432,24 @@ public class Lexicon {
 	}
 
 	/**
-	 * Izveido jaunu leksēmu ar norādītajiem parameteriem, un pievieno to leksikonam.
-	 * Gadījumā, ja jaunā vārdgrupa ir daudzsakņu, tad pievienos tikai aktuālo sakni, bet pārējās saknes būs tukšas.
+	 * Creates a new lexeme based on a wordform with a known ending ID, and appends it to the lexicon
+	 * NB! If the paradigm needs multiple lemmas (1st conjugation verbs) then only the lemma of this wordform will be added, and the other lemmas will be empty and need to be filled later
 	 *
-	 * @param word			pilns jaunais pievienojamais vārds
-	 * @param endingNr	numurs galotnei, kas ir vārda beigās
-	 * @param source			teksts, kas tiks pielikts īpašībā Avots
-	 * @return				jaunizveidotā leksēma, vai null, ja nevar izveidot
+	 * @param word		full wordform of the word to be added
+	 * @param endingID	ID of the ending
+	 * @param source	Description field of the lexeme source
+	 * @return			The created lexeme or NULL if it couldn't be created
 	 */
-	public Lexeme createLexeme(String word, int endingNr, String source) {
+	public Lexeme createLexeme(String word, int endingID, String source) {
+		//System.out.printf("Inserting lexeme %s with ending %d\n", word, endingID);
 	//FIXME - vajadzētu galotnes objektu, nevis numuru.
-		Ending ending = endingByID(endingNr);
+		Ending ending = endingByID(endingID);
 		String stem;
 		try {
 			stem = ending.stem(word.toLowerCase());
 			ArrayList<Variants> celmi = Mijas.mijuVarianti(ending.stem(word.toLowerCase()), ending.getMija(), word.matches("\\p{Lu}.*"));
 			if (celmi.size() == 0) return null; // acīmredzot neder ar miju
+			// FIXME ! Nevajadzētu te būt iespējai uz null!
 			stem = celmi.get(0).celms;
 		} catch (Exception e) {
 			return null;
@@ -456,7 +458,7 @@ public class Lexicon {
 		Lexeme rezults = new Lexeme();
 		rezults.setStemCount(ending.getParadigm().getStems());
 		rezults.setStem(ending.stemID-1, stem); 
-		ending.getParadigm().addLexeme(rezults); // Šajā brīdī arī autoģenerējas lemma
+		ending.getParadigm().addLexeme(rezults); // At this moment the actual lemma is generated
 		String lemma = rezults.getValue(AttributeNames.i_Lemma);
 		lemma = recapitalize(lemma, word);
 		rezults.addAttribute(AttributeNames.i_Lemma, lemma);
@@ -464,6 +466,33 @@ public class Lexicon {
 		rezults.addAttribute(AttributeNames.i_Source, source);
 		clearCache();
 		return rezults;
+	}
+	
+	/**
+	 * Creates a new lexeme based on a wordform with a known paradigm ID, and appends it to the lexicon
+	 * NB! If the paradigm needs multiple lemmas (1st conjugation verbs) then only the lemma of this wordform will be added, and the other lemmas will be empty and need to be filled later
+	 *
+	 * @param word		full wordform of the word to be added
+	 * @param paradigmID	ID of the paradigm
+	 * @param source	Description field of the lexeme source
+	 * @return			The created lexeme or NULL if it couldn't be created
+	 */
+	public Lexeme createLexemeFromParadigm(String word, int paradigmID, String source) {
+		Paradigm p = this.paradigmByID(paradigmID);
+		if (word.endsWith(p.getLemmaEnding().getEnding())) // If we've been passed the appropriate lemma already 
+			return this.createLexeme(word, p.getLemmaEnding().getID(), source);
+		
+		// if there's some other wordform, then we'll try to find it. 
+		// TODO - this assumes that the lemma will be the same regardless of which wordform we choose. Maybe that's not true for some stemchanges.
+		for (Ending e : p.endings) {
+			if (e.isMatchingStrong(AttributeNames.i_Case, AttributeNames.v_Vocative))
+				continue;
+			if (word.endsWith(e.getEnding()))
+				return this.createLexeme(word, e.getID(), source);
+		}
+		
+		System.err.printf("Couldn't create lexeme %s with paradigm %d\n", word, paradigmID);
+		return null;
 	}
 
 	/**
