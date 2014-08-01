@@ -248,7 +248,7 @@ public class AttributeValues implements FeatureStructure, Cloneable {
 	 */
 	public void removeNonlexicalAttributes() {
 		removeAttribute(AttributeNames.i_Transitivity);
-		//removeAttribute(AttributeNames.i_VerbType);
+		removeAttribute(AttributeNames.i_VerbType);
 		removeAttribute(AttributeNames.i_NounType);
 		removeAttribute(AttributeNames.i_Declension);
 		removeAttribute(AttributeNames.i_Konjugaacija);
