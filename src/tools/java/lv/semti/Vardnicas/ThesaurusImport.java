@@ -4,14 +4,11 @@ import java.io.BufferedWriter;
 import java.io.OutputStreamWriter;
 import java.io.FileOutputStream;
 import java.io.File;
-import java.io.PrintStream;
-import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.LinkedList;
-import java.util.List;
-import java.util.Map.Entry;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -33,9 +30,16 @@ public class ThesaurusImport {
 	 * @throws Exception
 	 */
 	public static void main(String[] args) throws Exception {
-		//PrintWriter output = new PrintWriter(new PrintStream(System.out, true, "UTF-8"));
+		//String thesaurusFile = "/Users/pet/Dropbox/Resursi/Tezaurs/Skaidrojosa Vardnica.xml";
+		String thesaurusFile = args[0];
+		String goodOutputFile = "tezaurs-good.json";
+		String noParadigm = "tezaurs-noParadigm.json";
+		String badOutputFile = "tezaurs-bad.json";
+		String newLexiconFile = "Lexicon_sv.xml";
+		String importSource = "Imports no Tezaura SV " + new SimpleDateFormat("yyyy-MM-dd").format(new Date());
+		//if (args.length > 1) outputFile = args[1];
 		
-		Analyzer analizators = new Analyzer("dist/Lexicon.xml");
+		Analyzer analizators = new Analyzer("dist/Lexicon.xml", new ArrayList<String>(Arrays.asList(newLexiconFile)));
 		analizators.guessNouns = true;
 		analizators.guessParticiples = false;
 		analizators.guessVerbs = false;
@@ -47,15 +51,6 @@ public class ThesaurusImport {
 		analizators.guessInflexibleNouns = true;
 		analizators.setCacheSize(0);
 		//ThesaurusEntry.analyzer = analizators;
-		
-		//String thesaurusFile = "/Users/pet/Dropbox/Resursi/Tezaurs/Skaidrojosa Vardnica.xml";
-		String thesaurusFile = args[0];
-		String goodOutputFile = "tezaurs-good.json";
-		String noParadigm = "tezaurs-noParadigm.json";
-		String badOutputFile = "tezaurs-bad.json";
-		String newLexiconFile = "Lexicon_sv.xml";
-		String importSource = "Imports no Tezaura SV " + new SimpleDateFormat("yyyy-MM-dd").format(new Date());
-		//if (args.length > 1) outputFile = args[1];
 		
 		// Load Thesaurus file.
 		DocumentBuilder docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
@@ -184,11 +179,7 @@ public class ThesaurusImport {
 					w.print(izeja);
 				}
 			}
-			izeja.flush();
-		}
-					
-		izeja.flush();
-		analizators.toXML_sub("Lexicon_onomastica.xml", source);
+		}					
 		*/
 	}
 

@@ -16,6 +16,7 @@
 package lv.semti.morphology.analyzer;
 
 import java.io.File;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -51,9 +52,24 @@ public class Analyzer extends Lexicon {
 
 	public Trie automats;
 		
+	/**
+	 * Construct the morphological analyzer object by loading the lexicon from either the default location, a specified file name or an inputstream.
+	 * @throws Exception
+	 */
 	public Analyzer () throws Exception {
 		super();
+		loadExceptionFile();
+	}
+	public Analyzer (String lexiconFileName) throws Exception {
+		super(lexiconFileName);
+		loadExceptionFile();
+	}	
+	public Analyzer (InputStream lexiconStream) throws Exception {
+		super(lexiconStream);
+		loadExceptionFile();
+	}
 
+	private void loadExceptionFile() throws IOException {
 		String exceptionName = "Exceptions.txt";
 		String path = new File(this.filename).getParent();
 		if (path != null) exceptionName = path + java.io.File.separatorChar + exceptionName;
@@ -67,38 +83,6 @@ public class Analyzer extends Lexicon {
 		}
 	}
     
-	public Analyzer (String lexiconFileName) throws Exception {
-		super(lexiconFileName);
-		
-		String exceptionName = "Exceptions.txt";
-		String path = new File(this.filename).getParent();
-		if (path != null) exceptionName = path + java.io.File.separatorChar + exceptionName;
-		try {
-			automats=new Trie(exceptionName);
-		} catch (Exception e) { 
-			System.err.append(String.format("A2\nLeksikona ceļš:%s\nFolderis:%s\nException ceļš:\n",this.filename,path,exceptionName));
-			e.printStackTrace();
-			automats = new Trie("");
-			System.err.println("Nesanāca ielādēt exceptionus");
-		}
-	}
-	
-	public Analyzer (InputStream lexiconStream) throws Exception {
-		super(lexiconStream);
-
-		String exceptionName = "Exceptions.txt";
-		String path = new File(this.filename).getParent();
-		if (path != null) exceptionName = path + java.io.File.separatorChar + exceptionName;
-
-		try {
-			automats=new Trie(exceptionName);
-		} catch (Exception e) { 
-			System.err.append(String.format("A3\nLeksikona ceļš:%s\nFolderis:%s\nException ceļš:\n",this.filename,path,exceptionName));
-			e.printStackTrace();
-			automats = new Trie("");
-			System.err.println("Nesanāca ielādēt exceptionus");
-		}
-	}
 	
 	public Analyzer (InputStream lexiconStream, InputStream[] auxiliaryLexiconStreams, InputStream exceptionStream) throws Exception {
 		super(lexiconStream, auxiliaryLexiconStreams);
@@ -126,11 +110,17 @@ public class Analyzer extends Lexicon {
 	 */
 	public Analyzer(String lexiconFileName, boolean useAuxiliaryLexicons) throws Exception{
 		super(lexiconFileName, useAuxiliaryLexicons);
+		loadExceptionFile();
+	}
 
-		String exceptionName = "Exceptions.txt";
-		String path = new File(lexiconFileName).getParent();
-		if (path != null) exceptionName = path + java.io.File.separatorChar + exceptionName;
-		automats=new Trie(exceptionName);		
+	/**
+	 * Loads the analyzer lexicon from the specified file, but excludes a blacklist of sub-lexicons when doing so
+	 * @param lexiconFileName filename of the core lexicon
+	 * @param blacklist  list of sub-lexicon file names to skip from loading
+	 */
+	public Analyzer(String lexiconFileName, ArrayList<String> blacklist) throws Exception{
+		super(lexiconFileName, blacklist);
+		loadExceptionFile();
 	}
 
 	public void defaultSettings(){

@@ -11,6 +11,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map.Entry;
 import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -349,21 +350,34 @@ public class ThesaurusEntry
 		}
 		
 		
-		public void addToLexicon(Analyzer analizators, String importSource) {
-			try {
-				String lemma = this.lemma.text;
+		public void addToLexicon(Analyzer analizators, String importSource, Sources sources) {
+			if (this.gram != null && this.gram.flags.contains("Apvidvārds"))
+				return; // Apvidvārdus neieliekam 'labajā' leksikonā
+			String lemma = this.lemma.text;
+			
+			try {								
 				Word w = analizators.analyzeLemma(lemma);
 				if (w.isRecognized()) 
 					return; //throw new Exception(String.format("Vārds %s jau ir leksikonā", lemma));
-				
+
 				if (this.gram == null) throw new Exception(String.format("Vārdam %s nav gramatikas", lemma));
 				if (this.gram.paradigm == null) throw new Exception(String.format("Vārdam %s nav atrastas paradigmas", lemma));
 				HashSet<Integer> paradigms = this.gram.paradigm;
 				if (paradigms.size() != 1) throw new Exception(String.format("Vārdam %s ir %d paradigmas", lemma, paradigms.size()));
 				int paradigmID = paradigms.iterator().next();
-							
+				if (paradigmID == 0) // 0 ir tās, kuras nav saprastas 
+					throw new Exception(String.format("Vārdam %s 0 paradigma - nesaprasts", lemma));
+				
 				Lexeme l = analizators.createLexemeFromParadigm(lemma, paradigmID, importSource);
 				if (l == null) throw new Exception(String.format("createLexemeFromParadigm nofailoja uz %s / %d", lemma, paradigmID));
+				if (this.gram != null) 
+					l.addAttributes(this.gram.describeFlags());
+				if (sources != null) 
+					l.addAttribute("Pirmavots", sources.describeSources());
+				
+				if (lemma.equalsIgnoreCase("pirmāks")) 
+					throw new Exception("'pirmāks' - īpaši slikts vārds");
+				
 				if (l.getParadigmID() == 29) { // Hardcoded unflexible words
 					l.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Residual);
 					if (this.gram.flags.contains("Saīsinājums"))
@@ -376,7 +390,7 @@ public class ThesaurusEntry
 				}
 				//System.out.printf("Jess %s\n", lemma);
 			} catch (Exception e) {
-				System.err.printf("Nesanāca ielikt leksēmu :(%s\n",e.getMessage());
+				System.err.printf("Nesanāca ielikt leksēmu :( %s\n",e.getMessage());
 				if (e.getMessage() == null) e.printStackTrace();
 			}
 		}
@@ -522,9 +536,9 @@ public class ThesaurusEntry
 			res.put("salikteņu daļa", "Salikteņu daļa");
 			
 			res.put("priev. ar ģen.", "Prievārds");
-			res.put("priev. ar ģen.", "Lieto ar ģenetīvu");
+			res.put("priev. ar ģen.", "Lieto ar ģenitīvu");
 			res.put("ar ģen.", "Prievārds"); // It seems that without additional comments this is used for prepositions only
-			res.put("ar ģen.", "Lieto ar ģenetīvu");			
+			res.put("ar ģen.", "Lieto ar ģenitīvu");			
 			res.put("priev. ar dat.", "Prievārds");
 			res.put("priev. ar dat.", "Lieto ar datīvu");
 			
@@ -537,7 +551,6 @@ public class ThesaurusEntry
 			res.put("instr.", "Instrumentālis");
 			res.put("lok.", "Lokatīvs");
 			res.put("nom.", "Nominatīvs");
-
 
 			res.put("divsk.", "Divskaitlis"); // Do we really still have one of these?!
 			res.put("dsk.", "Daudzskaitlis");
@@ -705,8 +718,75 @@ public class ThesaurusEntry
 			return res;
 		}
 		
+		/* Semantic groups of flags, to be translated as descriptive fields */
+		
+		// Redundant - duplicates the better structured information in morphology data 
+		public static Set<String> redundant = new HashSet<>(Arrays.asList("Vārds svešvalodā", "Saīsinājums", "Apstākļa vārds", "Prievārds", "Partikula", "Darbības vārds", "Īpašības vārds", "Lietvārds", "Izsauksmes vārds", "Vienskaitlis", "Daudzskaitlis", "Vīriešu dzimte", "Sieviešu dzimte", "Refleksīvs", "Šķirkļavārds daudzskaitlī", "Šķirkļavārds vienskaitlī"));
+		
+		// Foreign language names
+		public static Set<String> languages = new HashSet<>(Arrays.asList("Arābu","Latīņu","Franču","Grieķu","Sengrieķu","Itāliešu"));
+		
+		// Domains / topics
+		public static Set<String> domains = new HashSet<>(Arrays.asList(
+				"Aeronautika","Anatomija","Arheoloģija","Arhitektūra","Astronomija","Aviācija","Bioloģija","Biškopība","Botānika","Būvniecība",
+				"Ekonomika","Ekoloģija","Ekonomika","Elektrotehnika","Etnogrāfija","Farmakoloģija","Filozofija","Finanses","Fizika","Fizioloģija",
+				"Fiziskā kultūra un sports","Folklora","Ģenētika","Ģeodēzija","Ģeogrāfija","Ģeoloģija","Ģeometrija","Grāmatvedība","Hidroloģija",
+				"Hidrotehnika","Informātika","Jurisprudence","Jūrniecība","Attiecas uz kapitālistisko iekārtu, kapitālistisko sabiedrību","Kardioloģija",
+				"Kartogrāfija","Kibernētika","Kokapstrāde","Kulinārija","Ķīmija","Lauksaimniecība","Lauksaimniecības tehnika","Literatūrzinātne",
+				"Loģika","Lopkopība","Matemātika","Matemātika","Medicīna","Medniecība","Meteoroloģija","Metalurģija","Metālapstrāde","Meteoroloģija",
+				"Mežniecība","Mežrūpniecība","Mežsaimniecība","Militārās zinātnes","Mineraloģija","Mitoloģija","Mūzika","Oftalmoloģija","Ornitoloģija",
+				"Politika","Poligrāfija","Psiholoģija","Reliģija","Socioloģija","Socioloģija","Tehnika","Tehnoloģija","Telekomunikācijas",
+				"Tekstilrūpniecība","Tekstilrūpniecība","Valodniecība","Veterinārija","Zooloģija"));
+		
+		// Miscellaneous notes
+		public static Set<String> notes = new HashSet<>(Arrays.asList("Parasti vienskaitlī", "Tikai vienskaitlī", "Parasti daudzskaitlī", "Tikai daudzskaitlī", "Parasti 3. personā", "Lieto ar datīvu", "Parasti saliktajos laikos"));
+		
+		// Style / usage
+		public static Set<String> style = new HashSet<>(Arrays.asList("Nievīga ekspresīvā nokrāsa", "Poētiska stilistiskā nokrāsa", "Vienkāršrunas stilistiskā nokrāsa", "Ironiska ekspresīvā nokrāsa", "Humoristiska ekspresīvā nokrāsa"));
+		public static Set<String> usage = new HashSet<>(Arrays.asList("Sarunvaloda", "Žargonvārds", "Vulgārisms", "Novecojis", "Vēsturisks", "Nevēlams"));
+		public static Set<String> frequency = new HashSet<>(Arrays.asList("Pareti", "Reti", "Retāk", "Neaktuāls"));
+		
+		public static Set<String> proper = new HashSet<>(Arrays.asList("Vietvārds"));
+		
+		public HashMap<String, String> describeFlags() {
+			HashMap<String, Set<String>> mappings = new HashMap<>();
+			mappings.put("Valoda",languages);
+			mappings.put("Nozare",domains);
+			mappings.put("Piezīmes",notes);
+			mappings.put("Stils",style);
+			mappings.put("Lietojums",usage);
+			mappings.put("Biežums",frequency);
+			mappings.put("Īpašvārda veids",proper);
+			
+			HashMap<String, String> description = new HashMap<>();
+			flagloop: for (String flag : this.flags) {
+				if (redundant.contains(flag)) continue;
+				if (flag.equalsIgnoreCase("Pārejošs") || flag.equalsIgnoreCase("Nepārejošs")) { 
+					description.put(AttributeNames.i_Transitivity, flag);
+					continue;
+				}
+				
+				if (flag.startsWith("Locīt kā")) { 
+					description.put("Locīšana", flag);
+					continue;
+				}
+
+				
+				for (Entry<String, Set<String>> e : mappings.entrySet()) {
+					if (e.getValue().contains(flag)) {   // ja flags ir šajā vārdu sarakstā tad...
+						if (description.get(e.getKey()) != null) // paskatamies vai neatkārtojas description key vērtība
+							System.err.printf("Dubultojas flagi: %s un %s\n", flag, description.get(e.getKey()));
+						description.put(e.getKey(), flag); // un ieliekam to flagu iekš description ar attiecīgo atslēgu
+						continue flagloop;
+					}
+				}
+				System.out.printf("Nesaprasts flags '%s'\n", flag);
+			}
+			return description;
+		}
+
 		/**
-		 * Patterns for identifying (true) grammatical information.
+		 * Patterns for identifying (true, explicitly listed) grammatical information.
 		 */
 		public static LinkedList<Pattern> knownPatterns = generateKnownPatterns();
 		private static LinkedList<Pattern> generateKnownPatterns()
@@ -2986,11 +3066,37 @@ public class ThesaurusEntry
 		public String orig;
 		public LinkedList<String> s;
 		
+		/**
+		 * Mapping of source dictionary codes to their full names 
+		 */
+		public static HashMap<String, String> sourceDictionaries = generateSourceDictionaries();
+		private static HashMap<String, String> generateSourceDictionaries()
+		{
+			HashMap<String, String> res = new HashMap<>();
+//			res.put("adj.", "Īpašības vārds");
+//			res.put("adv.", "Apstākļa vārds");
+//			res.put("apst.", "Apstākļa vārds");
+//			res.put("divd.", "Divdabis");
+			// FIXME - te jāliek atšifrējumi
+			return res;
+		}
+		
 		public Sources ()
 		{
 			orig = null; s = null;
 		}
 		
+		public String describeSources() {
+			StringBuilder result = new StringBuilder();
+			boolean hasPrev = false;
+			for (String source : this.s) {
+				if (hasPrev) result.append(", ");
+				result.append(source);  // FIXME - te jāatšifrē avotu kodi, kad Spektors iedos tabulu
+				hasPrev = true;
+			}
+			return result.toString();
+		}
+
 		public Sources (Node avotsNode)
 		{
 			orig = avotsNode.getTextContent();
@@ -3627,10 +3733,10 @@ public class ThesaurusEntry
 	}
 
 	public void addToLexicon(Analyzer analizators, String importSource) {
-		this.head.addToLexicon(analizators, importSource);
+		this.head.addToLexicon(analizators, importSource, this.sources);
 		if (this.derivs != null)
 			for (Header h : this.derivs)
-				h.addToLexicon(analizators, importSource);		
+				h.addToLexicon(analizators, importSource, this.sources);		
 	}
 
 }
