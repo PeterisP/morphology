@@ -2123,4 +2123,38 @@ public class MorphologyTest {
 		List<Wordform> formas = locītājs.generateInflections("FMS", true);
 		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "FMS");
 	}
+	
+	@Test 
+	/**
+	 * 2014.08.01 Bug with verb stem changes -> rakt -> *rakis (racis); *rakiens (raciens)
+	 */
+	public void rakiens() {
+		Word w = locītājs.analyze("racis");
+		assertTrue(w.isRecognized());
+		assertEquals("rakt", w.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+		
+		w = locītājs.analyze("rakis");
+		assertFalse(w.isRecognized());
+		
+		w = locītājs.analyze("veicis");  // lai nesalauž šo
+		assertTrue(w.isRecognized());
+		assertEquals("veikt", w.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+		
+		List<Wordform> formas = locītājs.generateInflections("rakt", true);
+		AttributeValues testset = new AttributeValues();
+		testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
+		testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Nominative);
+		testset.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Masculine);
+		testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+		assertInflection(formas, testset, "raciens");
+	}
+	
+	@Test
+	/**
+	 * Local dialectal words from thesaurus (http://tezaurs.lv/sv) should not be in default lexicon
+	 */
+	public void apvidvārdi() {
+		Word w = locītājs.analyze("īstāis");
+		assertFalse(w.isRecognized());
+	}
 }

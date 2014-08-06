@@ -94,12 +94,12 @@ public class Lexicon {
 	/**
 	 * Izveido leksikona objektu no XML faila
 	 *
-	 * @param failaVārds	faila vārds, kurā meklēt leksikonu
+	 * @param lexiconFileName	faila vārds, kurā meklēt leksikonu
 	 * @param useAuxiliaryLexicons vai lietot papildvārdnīces 
 	 * @throws Exception	parsēšanas kļūdas
 	 */
-	public Lexicon(String failaVārds, boolean useAuxiliaryLexicons) throws Exception {
-		init(failaVārds, useAuxiliaryLexicons);
+	public Lexicon(String lexiconFileName, boolean useAuxiliaryLexicons) throws Exception {
+		init(lexiconFileName, useAuxiliaryLexicons);
 	}
 	
 	/**
@@ -116,6 +116,10 @@ public class Lexicon {
 		init(stream, auxiliaryLexicons);
 	}
 	
+	public Lexicon(String lexiconFileName, ArrayList<String> blacklist) throws Exception{
+		init(lexiconFileName, blacklist);
+	}
+
 	/**
 	 * @return null, if the lexicon is read from an input stream.
 	 */
@@ -166,7 +170,16 @@ public class Lexicon {
 
 		init_main(doc, new File(failaVārds).getParent(), useAuxiliaryLexicons);
 	}
-	
+	private void init(String failaVārds, ArrayList<String> blacklist) throws Exception {
+		System.err.println("Loading " + failaVārds);	
+		this.filename = failaVārds;
+		Document doc = null;
+		DocumentBuilder docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
+		doc = docBuilder.parse(new File(failaVārds));
+
+		init_main(doc, new File(failaVārds).getParent(), blacklist);
+	}	
+
 	private void init(InputStream plusma) throws Exception {
 		System.err.println("Loading the lexicon from an input stream...");
 		
@@ -184,7 +197,7 @@ public class Lexicon {
 		DocumentBuilder docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
 		doc = docBuilder.parse(stream);
 
-		init_main(doc, "", false, false);
+		init_main(doc, "", false, false, null);
 		
 		for (InputStream lexicon : auxiliaryLexicons) {
 			docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
@@ -194,10 +207,14 @@ public class Lexicon {
 	}
 	
 	private void init_main(Document doc, String path, boolean useAuxiliaryLexicons) throws Exception {
-		init_main(doc, path, useAuxiliaryLexicons, true);
+		init_main(doc, path, useAuxiliaryLexicons, true, null);
 	}
 	
-	private void init_main(Document doc, String path, boolean useAuxiliaryLexicons, boolean useCore) throws Exception {
+	private void init_main(Document doc, String path, ArrayList<String> blacklist) throws Exception{
+		init_main(doc, path, true, true, blacklist);		
+	}
+	
+	private void init_main(Document doc, String path, boolean useAuxiliaryLexicons, boolean useCore, ArrayList<String> blacklist) throws Exception {
 		Node node = doc.getDocumentElement();
 		if (!node.getNodeName().equalsIgnoreCase("Morphology")) throw new Error("Node '" + node.getNodeName() + "' but Morphology expected!");
 
@@ -228,6 +245,7 @@ public class Lexicon {
 		}
 		
 		for (String filename : corpusFileNames) {
+			if (blacklist != null && blacklist.contains(filename)) continue; //FIXME - case sensitivity?
 			Document doc2 = null;
 			DocumentBuilder docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
 			String fullname = filename;
@@ -477,8 +495,15 @@ public class Lexicon {
 	 * @param source	Description field of the lexeme source
 	 * @return			The created lexeme or NULL if it couldn't be created
 	 */
-	public Lexeme createLexemeFromParadigm(String word, int paradigmID, String source) {
+	public Lexeme createLexemeFromParadigm(String word, int paradigmID, String source) throws Exception{
 		Paradigm p = this.paradigmByID(paradigmID);
+		if (p==null)
+			throw new Exception(String.format("createLexemeFromParadigm - invalid paradigm id %d passed for lexeme %s", paradigmID, word));
+		if (word==null)
+			throw new Exception("createLexemeFromParadigm - null lexeme string passed");
+		if (p.getLemmaEnding()==null)
+			throw new Exception(String.format("createLexemeFromParadigm - null lemma ending at paradigm id %d for lexeme %s", paradigmID, word));
+		
 		if (word.endsWith(p.getLemmaEnding().getEnding())) // If we've been passed the appropriate lemma already 
 			return this.createLexeme(word, p.getLemmaEnding().getID(), source);
 		
@@ -491,8 +516,7 @@ public class Lexicon {
 				return this.createLexeme(word, e.getID(), source);
 		}
 		
-		System.err.printf("Couldn't create lexeme %s with paradigm %d\n", word, paradigmID);
-		return null;
+		throw new Exception(String.format("createLexemeFromParadigm - couldn't create lexeme %s with paradigm %d", word, paradigmID));
 	}
 
 	/**

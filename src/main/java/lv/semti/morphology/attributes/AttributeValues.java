@@ -248,7 +248,7 @@ public class AttributeValues implements FeatureStructure, Cloneable {
 	 */
 	public void removeNonlexicalAttributes() {
 		removeAttribute(AttributeNames.i_Transitivity);
-		//removeAttribute(AttributeNames.i_VerbType);
+		removeAttribute(AttributeNames.i_VerbType);
 		removeAttribute(AttributeNames.i_NounType);
 		removeAttribute(AttributeNames.i_Declension);
 		removeAttribute(AttributeNames.i_Konjugaacija);
@@ -274,7 +274,30 @@ public class AttributeValues implements FeatureStructure, Cloneable {
 		removeAttribute(AttributeNames.i_Reflexive);
 		removeAttribute(AttributeNames.i_Laiks);
 		removeAttribute(AttributeNames.i_Voice);
-
-
 	}
+	
+	public void removeTechnicalAttributes() {
+		removeAttribute(AttributeNames.i_LexemeID);
+		removeAttribute(AttributeNames.i_EndingID);
+		removeAttribute(AttributeNames.i_ParadigmID);
+		removeAttribute(AttributeNames.i_Source);
+		removeAttribute(AttributeNames.i_Word);
+		removeAttribute(AttributeNames.i_Mija);
+		removeAttribute(AttributeNames.i_Guess);
+		removeAttribute(AttributeNames.i_Generate);
+		removeAttribute(AttributeNames.i_Konjugaacija);
+		removeAttribute(AttributeNames.i_Declension);
+	}
+
+	public StringBuilder pipeDelimitedEntries() {
+		StringBuilder s = new StringBuilder();
+		for (Entry<String, String> entry : this.entrySet()) { // visi attributevalue paariishi
+			 s.append(entry.getKey().replace(' ', '_'));
+			 s.append('=');
+			 s.append(entry.getValue().replace(' ', '_'));
+			 s.append('|');
+		}
+		return s;
+	}
+
 }

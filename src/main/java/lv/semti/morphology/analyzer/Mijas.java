@@ -330,7 +330,7 @@ public abstract class Mijas {
 				if (locītais.celms.equalsIgnoreCase(stem)) atrasts = true;
 			}
 			
-			if (!atrasts && Arrays.asList(1,2,5,7,8,9,17).contains(stemChange)) { //FIXME - varbūt performance dēļ tikai šiem stemChange ir jāloka varianti
+			if (!atrasts && Arrays.asList(1,2,5,7,8,9,14,17).contains(stemChange)) { //FIXME - varbūt performance dēļ tikai šiem stemChange ir jāloka varianti
 				// System.err.printf("Celmam '%s' ar miju %d sanāca '%s' - noraidījām dēļ atpakaļlocīšanas verifikācijas.\n", stem, stemChange, variants.celms);
 			} else {
 				labieVarianti.add(variants);
@@ -561,7 +561,7 @@ public abstract class Mijas {
 					break;	
 				case 14: // 1. konjugācijas "-is" forma
 					if (celms.endsWith("k")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"c"));
-					if (celms.endsWith("g")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"dz"));
+					else if (celms.endsWith("g")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"dz"));
 					else varianti.add(new Variants(celms));
 					break;			
 				case 15: // pūzdams nopūzdamies t,d -> z mija
