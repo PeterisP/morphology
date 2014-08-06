@@ -109,6 +109,7 @@ public class Gram  implements HasToJSON
 		res.put("kopdz.", "Kopdzimte");
 		
 		res.put("intrans.", "Nepārejošs");
+		res.put("intr.", "Nepārejošs");
 		res.put("trans.", "Pārejošs");
 		// TODO vai šie vienmēr ir darbības vārdi?
 
@@ -364,6 +365,7 @@ public class Gram  implements HasToJSON
 		// Process each semicolon-separated substring.
 		for (String subGram : subGrams)	
 		{
+			subGram = processWithNoSemicolonPatterns(subGram, lemma);
 			String[] gramElems = subGram.split("\\s*,\\s*");
 			LinkedList<String> toDo = new LinkedList<String> ();
 			
@@ -1116,15 +1118,15 @@ public class Gram  implements HasToJSON
 		// Alternative form processing.
 		if (gramText.matches("parasti divd\\. formā: (\\w+)")) //aizdzert->aizdzerts
 		{
-			Matcher m = Pattern.compile("parasti divd\\. formā: (\\w+)([.;].*)?").matcher(gramText);
+			Matcher m = Pattern.compile("(parasti divd\\. formā: (\\w+))([.;].*)?").matcher(gramText);
 			m.matches();
-			String newLemma = m.group(1);
+			String newLemma = m.group(2);
 			Lemma altLemma = new Lemma (newLemma);
 			HashSet<String> altParams = new HashSet<String> ();
 			altParams.add("Divdabis");
 			altParams.add("Cita paradigma");
 			
-			newBegin = ("parasti divd. formā: " + newLemma).length();
+			newBegin = m.group(1).length();
 			if (newLemma.endsWith("ts")) // aizdzert->aizdzerts
 			{
 				altParams.add("Lokāmais ciešamās kārtas pagātnes divdabis (-ts, -ta)");
@@ -1158,7 +1160,95 @@ public class Gram  implements HasToJSON
 						newLemma, lemma);
 				newBegin = 0;
 			}
+		} else if (gramText.matches("bieži lok\\.: (\\w+)")) // agrums->agrumā
+		{
+			Matcher m = Pattern.compile("(bieži lok\\.: (\\w+))([.;].*)?").matcher(gramText);
+			newBegin = m.group(1).length();
+			flags.add("Bieži lokatīva formā");
 		}
+		
+		if (newBegin > 0) gramText = gramText.substring(newBegin);
+		return gramText;
+	}
+	
+	/**
+	 * This method contains collection of patterns with no semicolon in them -
+	 * these patterns can be applied to grammar segmented on ';', but not
+	 * segmented on ','. Only patterns found in data are
+	 * given. Thus,e.g., if there was no plural-only nouns with ending -ļas,
+	 * then there is no rule for processing such words (at least in most
+	 * cases).
+	 * @param lemma is used for grammar parsing.
+	 * @return leftovers (unprocessed part of string)
+	 */
+	private String processWithNoSemicolonPatterns(String gramText, String lemma)
+	{
+		gramText = gramText.trim();
+		int newBegin = -1;
+		
+		// Alternative form processing.
+		if (gramText.matches("parasti divd\\. formā: (\\w+), (\\w+)")) //aizelsties->aizelsies, aizelsdamies
+		{
+			Matcher m = Pattern.compile("(parasti divd\\. formā: (\\w+), (\\w+))([.;].*)?")
+					.matcher(gramText);
+			m.matches();
+			String[] newLemmas = {m.group(2), m.group(3)};
+			newBegin = m.group(1).length();
+			for (String newLemma : newLemmas)
+			{
+				Lemma altLemma = new Lemma (newLemma);
+				HashSet<String> altParams = new HashSet<String> ();
+				altParams.add("Divdabis");
+				altParams.add("Cita paradigma");
+				
+				if (newLemma.endsWith("ts")) // noliegt->noliegts
+				{
+					altParams.add("Lokāmais ciešamās kārtas pagātnes divdabis (-ts, -ta)");
+					altLemmas.put(0, new Tuple<Lemma, HashSet<String>>(altLemma, altParams));
+					
+					flags.add("Darbības vārds");
+					flags.add("Parasti divdabja formā");
+					flags.add("Parasti lokāmā ciešamās kārtas pagātnes divdabja formā");
+				}
+				else if (newLemma.endsWith("is") || newLemma.endsWith("ies")) // aizelsties->aizelsies
+				{
+					altParams.add("Lokāmais darāmās kārtas pagātnes divdabis (-is, -usi, -ies, -usies)");
+					altLemmas.put(0, new Tuple<Lemma, HashSet<String>>(altLemma, altParams));
+					
+					flags.add("Darbības vārds");
+					flags.add("Parasti divdabja formā");
+					flags.add("Parasti lokāmā darāmās kārtas pagātnes divdabja formā");
+				}
+				else if (newLemma.endsWith("ams") || newLemma.endsWith("āms")) // noliegt->noliedzams
+				{
+					altParams.add("Lokāmais ciešamās kārtas tagadnes divdabis (-ams, -ama, -āms, -āma)");
+					altLemmas.put(0, new Tuple<Lemma, HashSet<String>>(altLemma, altParams));
+					
+					flags.add("Darbības vārds");
+					flags.add("Parasti divdabja formā");
+					flags.add("Parasti lokāmā ciešamās kārtas tagadnes divdabja formā");
+				}
+				else if (newLemma.endsWith("damies")) //aizelsties->aizelsdamies
+				{
+					altParams.add("Daļēji lokāmais divdabis (-dams, -dama, -damies, -damās)");
+					altLemmas.put(0, new Tuple<Lemma, HashSet<String>>(altLemma, altParams));
+					
+					flags.add("Darbības vārds");
+					flags.add("Parasti divdabja formā");
+					flags.add("Parasti daļēji lokāmā divdabja formā");
+				}
+				else
+				{
+					System.err.printf("Problem matching \"%s\" in entry \"%s\" with paradigm 0 (Divdabis)\n",
+							newLemma, lemma);
+					newBegin = 0;
+				}
+			}
+			}
+			
+			
+			
+
 		if (newBegin > 0) gramText = gramText.substring(newBegin);
 		return gramText;
 	}
@@ -2051,32 +2141,17 @@ public class Gram  implements HasToJSON
 				new String[] {"Darbības vārds", "Locīt kā \"dzīt\""},
 				new String[] {"Parasti 3. personā"},
 				gramText, lemma); //aizdzīt 2
+		if (newBegin == -1) newBegin = simpleRule(
+				"3. pers. -guldz, pag. -guldza", "gulgt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"gulgt\""},
+				new String[] {"Parasti 3. personā"},
+				gramText, lemma); //aizgulgt
 		
 		if (newBegin == -1) newBegin = simpleRule(
-				"-eju, -ej, -iet, pag. -gāju", "iet", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"iet\""},
-				null, gramText, lemma); //apiet
-		if (newBegin == -1) newBegin = simpleRule(
 				"-tupstu, -tupsti, -tupst, pag. -tupu", "tupt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"tupt\""},
+				new String[] {"Darbības vārds", "Locīt kā \"tupt\"", "Paralēlās formas"},
 				null, gramText, lemma); //aiztupt
 				// TODO tupu/tupstu
-		if (newBegin == -1) newBegin = simpleRule(
-				"-griežu, -griez, -griež, pag. -griezu", "griezt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"griezt\""},
-				null, gramText, lemma); //apgriezt
-		if (newBegin == -1) newBegin = simpleRule(
-				"-ģiedu, -ģied, -ģied, pag. -gidu", "ģist", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"ģist\""},
-				null, gramText, lemma); //apģist
-		if (newBegin == -1) newBegin = simpleRule(
-				"-klāju, -klāj, -klāj, pag. -klāju", "klāt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"klāt\""},
-				null, gramText, lemma); //apklāt
-		if (newBegin == -1) newBegin = simpleRule(
-				"-kauju, -kauj, -kauj, pag. -kāvu", "kaut", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"kaut\""},
-				null, gramText, lemma); //apkaut
 		if (newBegin == -1) newBegin = simpleRule(
 				"-aru, -ar, -ar, pag. -aru", "art", 15,
 				new String[] {"Darbības vārds", "Locīt kā \"art\""},
@@ -2161,11 +2236,57 @@ public class Gram  implements HasToJSON
 				"-ēdu, -ēd, -ēd, pag. -ēdu", "ēst", 15,
 				new String[] {"Darbības vārds", "Locīt kā \"ēst\""},
 				null, gramText, lemma); //aizēst
+		if (newBegin == -1) newBegin = simpleRule(
+				"-gāžu, -gāz, -gāž, pag. -gāzu", "gāzt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"gāzt\""},
+				null, gramText, lemma); //aizgāzt
+		if (newBegin == -1) newBegin = simpleRule(
+				"-glaužu, -glaud, -glauž, pag. -glaudu", "glaust", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"glaust\""},
+				null, gramText, lemma); //aizglaust
+		if (newBegin == -1) newBegin = simpleRule(
+				"-grābju, -grāb, -grābj, pag. -grābu", "grābt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"grābt\""},
+				null, gramText, lemma); //aizgrābt
+		if (newBegin == -1) newBegin = simpleRule(
+				"-graužu, -grauz, -grauž, pag. -grauzu", "grauzt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"grauzt\""},
+				null, gramText, lemma); //aizgrauzt
+		if (newBegin == -1) newBegin = simpleRule(
+				"-griežu, -griez, -griež, pag. -griezu", "griezt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"griezt\""},
+				null, gramText, lemma); //aizgriezt 2
+		if (newBegin == -1) newBegin = simpleRule(
+				"-gulstu, -gulsti, -gulst, pag. -gūlu, arī -gulu", "gult", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"gult\""},
+				null, gramText, lemma); //aizgult
 		
 		if (newBegin == -1) newBegin = simpleRule(
 				"-tveru, -tver, -tver, pag. -tvēru", "tvert", 15,
 				new String[] {"Darbības vārds", "Locīt kā \"tvert\""},
 				null, gramText, lemma); //aiztvert
+		
+		if (newBegin == -1) newBegin = simpleRule(
+				"-griežu, -griez, -griež, pag. -griezu", "griezt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"griezt\""},
+				null, gramText, lemma); //apgriezt
+		if (newBegin == -1) newBegin = simpleRule(
+				"-ģiedu, -ģied, -ģied, pag. -gidu", "ģist", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"ģist\""},
+				null, gramText, lemma); //apģist
+		if (newBegin == -1) newBegin = simpleRule(
+				"-eju, -ej, -iet, pag. -gāju", "iet", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"iet\""},
+				null, gramText, lemma); //apiet
+		if (newBegin == -1) newBegin = simpleRule(
+				"-klāju, -klāj, -klāj, pag. -klāju", "klāt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"klāt\""},
+				null, gramText, lemma); //apklāt
+		if (newBegin == -1) newBegin = simpleRule(
+				"-kauju, -kauj, -kauj, pag. -kāvu", "kaut", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"kaut\""},
+				null, gramText, lemma); //apkaut
+		
 		return newBegin;
 	}
 	
@@ -2279,18 +2400,41 @@ public class Gram  implements HasToJSON
 				new String[] {"Darbības vārds"},
 				new String[] {"Parasti 3. personā"},
 				gramText, lemma); //aizdunēt
+		if (newBegin == -1) newBegin = simpleRule(
+				"parasti 3. pers., -džinkst, pag. -džinkstēja", "džinkstēt", 17,
+				new String[] {"Darbības vārds"},
+				new String[] {"Parasti 3. personā"},
+				gramText, lemma); //aizdžinkstēt
+		if (newBegin == -1) newBegin = simpleRule(
+				"parasti 3. pers., -grab, pag. -grabēja", "grabēt", 17,
+				new String[] {"Darbības vārds"},
+				new String[] {"Parasti 3. personā"},
+				gramText, lemma); //aizgrabēt
 		
+		if (newBegin == -1) newBegin = simpleRule(
+				"parasti 3. pers., -ī, pag. -īja", "īt", 17,
+				new String[] {"Darbības vārds"},
+				new String[] {"Parasti 3. personā"},
+				gramText, lemma); //aizdzirkstīt
 		if (newBegin == -1) newBegin = simpleRule(
 				"parasti 3. pers., -ina, pag. -ināja", "ināt", 17,
 				new String[] {"Darbības vārds"},
 				new String[] {"Parasti 3. personā"},
 				gramText, lemma); //aizducināt
 
-		
+		if (newBegin == -1) newBegin = simpleRule(
+				"-dziedu, -dziedi, -dzied, pag. -dziedāju", "dziedāt", 17,
+				new String[] {"Darbības vārds"},
+				null, gramText, lemma); //aizdziedāt
+		if (newBegin == -1) newBegin = simpleRule(
+				"-guļu, -guli, -guļ, pag. -gulēju", "gulēt", 17,
+				new String[] {"Darbības vārds"},
+				null, gramText, lemma); //aizgulēt
 		if (newBegin == -1) newBegin = simpleRule(
 				"-turu, -turi, -tur, pag. -turēju", "turēt", 17,
 				new String[] {"Darbības vārds"},
 				null, gramText, lemma); //aizturēt
+		
 		if (newBegin == -1) newBegin = simpleRule(
 				"-u, -i, -a, pag. -īju", "īt", 17,
 				new String[] {"Darbības vārds"},
@@ -2333,6 +2477,31 @@ public class Gram  implements HasToJSON
 				new String[] {"Darbības vārds", "Locīt kā \"durties\""},
 				new String[] {"Parasti 3. personā"},
 				gramText, lemma); //aizdurties
+		if (newBegin == -1) newBegin = simpleRule(
+				"parasti 3. pers., -gāžas, pag. -gāzās", "gāzties", 18,
+				new String[] {"Darbības vārds", "Locīt kā \"gāzties\""},
+				new String[] {"Parasti 3. personā"},
+				gramText, lemma); //aizgāzties
+		if (newBegin == -1) newBegin = simpleRule(
+				"parasti 3. pers., -graužas, pag. -grauzās", "grauzties", 18,
+				new String[] {"Darbības vārds", "Locīt kā \"grauzties\""},
+				new String[] {"Parasti 3. personā"},
+				gramText, lemma); //aizgrauzties
+		if (newBegin == -1) newBegin = simpleRule(
+				"parasti 3. pers., -griežas, pag. -griezās", "griezties", 18,
+				new String[] {"Darbības vārds", "Locīt kā \"griezties\""},
+				new String[] {"Parasti 3. personā"},
+				gramText, lemma); //aizgriezties 2
+		if (newBegin == -1) newBegin = simpleRule(
+				"parasti 3. pers., -grimst, pag. -grima", "grimt", 18,
+				new String[] {"Darbības vārds", "Locīt kā \"grimt\""},
+				new String[] {"Parasti 3. personā"},
+				gramText, lemma); //aizgrimt
+		if (newBegin == -1) newBegin = simpleRule(
+				"parasti 3. pers., -grūst, pag. -gruva", "grūt", 18,
+				new String[] {"Darbības vārds", "Locīt kā \"grūt\""},
+				new String[] {"Parasti 3. personā"},
+				gramText, lemma); //aizgrūt
 		
 		if (newBegin == -1) newBegin = simpleRule(
 				"-ejos, -ejos, -ietas, pag. -gājos", "ieties", 18,
@@ -2340,7 +2509,7 @@ public class Gram  implements HasToJSON
 				null, gramText, lemma); //apieties
 		if (newBegin == -1) newBegin = simpleRule(
 				"-tupstos, -tupsties, -tupstas, pag. -tupos", "tupties", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"tupties\""},
+				new String[] {"Darbības vārds", "Locīt kā \"tupties\"", "Paralēlās formas"},
 				null, gramText, lemma); //aiztupties
 				//TODO check paralel forms.
 		if (newBegin == -1) newBegin = simpleRule(
@@ -2379,6 +2548,28 @@ public class Gram  implements HasToJSON
 				"-drāžos, -drāzies, -drāžas, pag. -drāzos", "drāzties", 18,
 				new String[] {"Darbības vārds", "Locīt kā \"drāzties\""},
 				null, gramText, lemma); //aizdrāzties
+		if (newBegin == -1) newBegin = simpleRule(
+				"-elšos, -elsies, -elšas, pag. -elsos", "elsties", 18,
+				new String[] {"Darbības vārds", "Locīt kā \"elsties\""},
+				null, gramText, lemma); //aizelsties
+		if (newBegin == -1) newBegin = simpleRule(
+				"-gārdzos, -gārdzies, -gārdzas, pag. -gārdzos", "gārgties", 18,
+				new String[] {"Darbības vārds", "Locīt kā \"gārgties\""},
+				null, gramText, lemma); //aizgārgties
+		if (newBegin == -1) newBegin = simpleRule(
+				"-griežos, -griezies, -griežas, pag. -griezos", "griezties", 18,
+				new String[] {"Darbības vārds", "Locīt kā \"griezties\""},
+				null, gramText, lemma); //aizgriezties 1
+		if (newBegin == -1) newBegin = simpleRule(
+				"-grūžu, -grūd, -grūž, pag. -grūdu", "grūst", 18,
+				new String[] {"Darbības vārds", "Locīt kā \"grūst\""},
+				null, gramText, lemma); //aizgrūst
+		if (newBegin == -1) newBegin = simpleRule(
+				"-gulstu, -gulsti, -gulst, pag. -gūlu, arī -gulu", "gult", 18,
+				new String[] {"Darbības vārds", "Locīt kā \"gult\""},
+				null, gramText, lemma); //aizgult
+				
+		
 		
 		return newBegin;
 	}
@@ -2489,6 +2680,11 @@ public class Gram  implements HasToJSON
 				new String[] {"Darbības vārds"},
 				new String[] {"Parasti 3. personā"},
 				gramText, lemma); //aizdrebēties
+		if (newBegin == -1) newBegin = simpleRule(
+				"parasti 3. pers., -grābās, pag. -grābējās", "aizgrabēties", 20,
+				new String[] {"Darbības vārds"},
+				new String[] {"Parasti 3. personā"},
+				gramText, lemma); //aizgrabēties
 		
 		if (newBegin == -1) newBegin = simpleRule(
 				"parasti 3. pers., -ās, pag. -ījās", "īties", 20,
@@ -2505,6 +2701,19 @@ public class Gram  implements HasToJSON
 				new String[] {"Darbības vārds"},
 				new String[] {"Parasti 3. personā"},
 				gramText, lemma); //aizčiepstēties
+		
+		if (newBegin == -1) newBegin = simpleRule(
+				"-dziedos, -dziedies, -dziedas, pag. -dziedājos", "dziedāties", 20,
+				new String[] {"Darbības vārds"},
+				null, gramText, lemma); //aizdziedāties
+		if (newBegin == -1) newBegin = simpleRule(
+				"-dzenos, -dzenies, -dzenas, pag. -dzinos", "dzīties", 20,
+				new String[] {"Darbības vārds"},
+				null, gramText, lemma); //aizdzīties
+		if (newBegin == -1) newBegin = simpleRule(
+				"-guļos, -gulies, -guļas, pag. -gulējos", "gulēties", 20,
+				new String[] {"Darbības vārds"},
+				null, gramText, lemma); //aizgulēties
 		
 		if (newBegin == -1) newBegin = simpleRule(
 				"-os, -ies, -ās, pag. -ījos", "īties", 20,

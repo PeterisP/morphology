@@ -40,17 +40,23 @@ public class ThesaurusImport {
 		String newLexiconFile = "Lexicon_sv.xml";
 		String importSource = "Imports no Tezaura SV " + new SimpleDateFormat("yyyy-MM-dd").format(new Date());
 
-		Analyzer analizators = new Analyzer("dist/Lexicon.xml", new ArrayList<String>(Arrays.asList(newLexiconFile)));
-		analizators.guessNouns = true;
-		analizators.guessParticiples = false;
-		analizators.guessVerbs = false;
-		analizators.guessAdjectives = false;
-		analizators.enableDiminutive = false;
-		analizators.enablePrefixes = false;
-		analizators.enableGuessing = false;
-		analizators.meklētsalikteņus = false;
-		analizators.guessInflexibleNouns = true;
-		analizators.setCacheSize(0);
+		Analyzer analizators = null;
+		if (addToLexicon)
+		{
+			analizators = new Analyzer("dist/Lexicon.xml",
+					new ArrayList<String>(Arrays.asList(newLexiconFile)));
+			analizators.guessNouns = true;
+			analizators.guessParticiples = false;
+			analizators.guessVerbs = false;
+			analizators.guessAdjectives = false;
+			analizators.enableDiminutive = false;
+			analizators.enablePrefixes = false;
+			analizators.enableGuessing = false;
+			analizators.meklētsalikteņus = false;
+			analizators.guessInflexibleNouns = true;
+			analizators.setCacheSize(0);
+		}
+		
 		// Load Thesaurus file.
 		DocumentBuilder docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
 		Document doc = docBuilder.parse(new File(thesaurusFile));

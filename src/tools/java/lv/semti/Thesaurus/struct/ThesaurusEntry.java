@@ -359,7 +359,7 @@ public class ThesaurusEntry
 	/**
 	 *  Formats a list of inflections as an JSON array.
 	 */
-	private static Object formatInflections(ArrayList<Wordform> inflections) {
+/*	private static Object formatInflections(ArrayList<Wordform> inflections) {
 		StringBuilder s = new StringBuilder();
 		s.append('[');
 		
@@ -377,7 +377,7 @@ public class ThesaurusEntry
 		}
 		s.append(']');
 		return s.toString();
-	}
+	}//*/
 	
 	public void addToLexicon(Analyzer analizators, String importSource) {
 		this.head.addToLexicon(analizators, importSource);
