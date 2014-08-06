@@ -4,21 +4,17 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
-import java.util.List;
 
 import lv.semti.Thesaurus.utils.Loaders;
 import lv.semti.Thesaurus.utils.JSONUtils;
 import lv.semti.morphology.analyzer.Analyzer;
 import lv.semti.morphology.analyzer.Wordform;
 import lv.semti.morphology.attributes.AttributeNames;
-import lv.semti.morphology.lexicon.Paradigm;
 
 import org.json.simple.JSONObject;
-import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 

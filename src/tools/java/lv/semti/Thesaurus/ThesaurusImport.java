@@ -33,15 +33,12 @@ public class ThesaurusImport {
 	 * @throws Exception
 	 */
 	public static void main(String[] args) throws Exception {
-		//String thesaurusFile = "/Users/pet/Dropbox/Resursi/Tezaurs/Skaidrojosa Vardnica.xml";
 		String thesaurusFile = args[0];
 		String goodOutputFile = "tezaurs-good.json";
 		String noParadigm = "tezaurs-noParadigm.json";
 		String badOutputFile = "tezaurs-bad.json";
 		String newLexiconFile = "Lexicon_sv.xml";
 		String importSource = "Imports no Tezaura SV " + new SimpleDateFormat("yyyy-MM-dd").format(new Date());
-		//if (args.length > 1) outputFile = args[1];
-		
 
 		Analyzer analizators = new Analyzer("dist/Lexicon.xml", new ArrayList<String>(Arrays.asList(newLexiconFile)));
 		analizators.guessNouns = true;
@@ -108,65 +105,5 @@ public class ThesaurusImport {
 		
 		if (addToLexicon) analizators.toXML_sub(newLexiconFile, importSource);
 	}
-
-/*	private static void countGram(List<ThesaurusEntry> entries) {
-		HashMap<String, Integer> counter = new HashMap<String, Integer>();
-		for (ThesaurusEntry entry : entries) {
-			//if (entry.getParadigm() != 0) continue; // counting only those we don't understand
-			//String key = entry.original_gram + "\t" + entry.gram;
-			String key = entry.gram;
-			Integer count = counter.get(key);
-			if (count == null) count = 0;
-			count+=1;
-			counter.put(key, count);
-		}
-		
-		for (Entry<String, Integer> count : counter.entrySet()) {
-			if (count.getValue() > 100) // arbitrary cutoff to show important stuff 
-				System.out.printf("%s:\t%d\n", count.getKey(), count.getValue());
-		}
-	}//*/
-
-	/**
-	 * Remove rare paradigms that should not be guessed.
-	 */
-
-/*	private static void removeRareParadigms(Word w) {
-		LinkedList<Wordform> forRemoval = new LinkedList<Wordform>();
-		for (Wordform wf : w.wordforms) {
-			if (wf.getValue(AttributeNames.i_ParadigmID).equals("4") ||
-				wf.getValue(AttributeNames.i_ParadigmID).equals("5") ||
-				wf.getValue(AttributeNames.i_ParadigmID).equals("8") ||
-				wf.getValue(AttributeNames.i_ParadigmID).equals("10") ||
-				wf.getValue(AttributeNames.i_ParadigmID).equals("11") ||
-				wf.getValue(AttributeNames.i_ParadigmID).equals("12") ||				
-				!wf.isMatchingWeak(AttributeNames.i_Case, AttributeNames.v_Nominative))
-			{
-					forRemoval.add(wf);
-			}
-			
-		}
-		for (Wordform removeMe : forRemoval)
-			w.wordforms.remove(removeMe);
-	}
-	// No-one remembers the motivation.
-	private static void removePlurals(Word w) {
-		LinkedList<Wordform> forRemoval = new LinkedList<Wordform>();
-		for (Wordform wf : w.wordforms) {
-			if (!wf.isMatchingWeak(AttributeNames.i_Number, AttributeNames.v_Singular))
-					forRemoval.add(wf);
-		}
-		for (Wordform removeMe : forRemoval)
-			w.wordforms.remove(removeMe);
-	}
-
-	private static boolean isInLexicon(Word w) {
-		for (Wordform wf : w.wordforms) {
-			if (wf.isMatchingWeak(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun) ||
-				wf.isMatchingWeak(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adjective))
-				return true;
-		}
-		return false;
-	} //*/
 
 }
