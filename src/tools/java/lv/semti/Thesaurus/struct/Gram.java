@@ -131,6 +131,7 @@ public class Gram  implements HasToJSON
 		res.put("anat.", "Anatomija");
 		res.put("arheol.", "Arheoloģija");
 		res.put("arhit.", "Arhitektūra");
+		res.put("arh.", "Arhitektūra");
 		res.put("astr.", "Astronomija");
 		res.put("av.", "Aviācija");
 		res.put("biol.", "Bioloģija");
@@ -164,6 +165,7 @@ public class Gram  implements HasToJSON
 		res.put("kardioloģijā", "Kardioloģija");
 		res.put("kart.", "Kartogrāfija");		// ?
 		res.put("kibern.", "Kibernētika");
+		res.put("kino", "Kinematogrāfija");
 		res.put("kokapstr.", "Kokapstrāde");	// ?
 		res.put("kul.", "Kulinārija");
 		res.put("ķīm.", "Ķīmija");
@@ -200,6 +202,7 @@ public class Gram  implements HasToJSON
 		res.put("telek.", "Telekomunikācijas");	// ?
 		res.put("tekst.", "Tekstilrūpniecība");
 		res.put("tekstilr.", "Tekstilrūpniecība");	// ?
+		res.put("TV", "Televīzija");
 		res.put("val.", "Valodniecība");
 		res.put("vet.", "Veterinārija");
 		res.put("zool.", "Zooloģija");
@@ -351,13 +354,7 @@ public class Gram  implements HasToJSON
 		
 		// First process ending patterns, usually located in the beginning
 		// of the grammar string.
-		String newCorrectedGram = processBeginingWithPatterns(correctedGram, lemma);
-		//while (!newCorrectedGram.equals(correctedGram))
-		//{
-		//	correctedGram = newCorrectedGram;
-		//	newCorrectedGram = processWithPatterns(correctedGram, lemma);
-		//}
-		correctedGram = newCorrectedGram;
+		correctedGram = processBeginingWithPatterns(correctedGram, lemma);
 		
 		String[] subGrams = correctedGram.split("\\s*;\\s*");
 		leftovers = new LinkedList<LinkedList<String>> ();
@@ -412,14 +409,17 @@ public class Gram  implements HasToJSON
 		int newBegin = -1;
 		
 		// Blocks of rules.
-		
-		newBegin = firstConjDirVerbRules(gramText, lemma);
+		if (newBegin == -1) newBegin = firstConjDirVerb3PersRules(gramText, lemma);
+		if (newBegin == -1) newBegin = firstConjDirVerbAllPersRules(gramText, lemma);
 		if (newBegin == -1) newBegin = secondConjDirVerbRules(gramText, lemma);
-		if (newBegin == -1) newBegin = thirdConjDirVerbRules(gramText, lemma);
+		if (newBegin == -1) newBegin = thirdConjDir3PersVerbRules(gramText, lemma);
+		if (newBegin == -1) newBegin = thirdConjDirAllPersVerbRules(gramText, lemma);
 		
-		if (newBegin == -1) newBegin = firstConjRefVerbRules(gramText, lemma);
+		if (newBegin == -1) newBegin = firstConjRef3PersVerbRules(gramText, lemma);
+		if (newBegin == -1) newBegin = firstConjRefAllPersVerbRules(gramText, lemma);
 		if (newBegin == -1) newBegin = secondConjRefVerbRules(gramText, lemma);
-		if (newBegin == -1) newBegin = thirdConjRefVerbRules(gramText, lemma);
+		if (newBegin == -1) newBegin = thirdConjRef3PersVerbRules(gramText, lemma);
+		if (newBegin == -1) newBegin = thirdConjRefAllPersVerbRules(gramText, lemma);
 		
 		// Complicated rules: grammar contains lemma variation spelled out.
 		if (newBegin == -1)
@@ -1254,7 +1254,7 @@ public class Gram  implements HasToJSON
 	}
 	
 	/**
-	 * Simple rule - tries to match grammar text to given pattern and lemma
+	 * Simple rule - tries to match grammar text to given string and lemma
 	 * ending. If matched, adds a single paradigm.
 	 * @param pattern	Unescaped ending string grammar text must begin with
 	 * 					to apply this rule.
@@ -1278,6 +1278,51 @@ public class Gram  implements HasToJSON
 		if (gramText.matches("\\Q" + pattern + "\\E([;,.].*)?"))
 		{
 			newBegin = pattern.length();
+			if (lemma.endsWith(requiredEnding))
+			{
+				paradigm.add(paradigmId);
+				if (positiveFlags != null)
+					flags.addAll(Arrays.asList(positiveFlags));
+			}
+			else
+			{
+				System.err.printf("Problem matching \"%s\" with paradigm %s\n", lemma, paradigmId);
+				newBegin = 0;
+			}
+			if (alwaysFlags != null) flags.addAll(Arrays.asList(alwaysFlags));
+		}
+		return newBegin;
+	}
+	
+	/**
+	 * The same as simple rule, but hyperns ar optional. It tries to match
+	 * grammar text to given pattern and lemma ending. If matched, adds a single
+	 * paradigm.
+	 * @param pattern	Unescaped ending string grammar text must begin with
+	 * 					to apply this rule.
+	 * @param requiredEnding	Required ending for the lemma to apply this
+	 * 							rule.
+	 * @param paradigmId	Paradigm ID to set if rule matched.
+	 * @param positiveFlags	These flags are added if rule and lemma ending
+	 * 						matched.
+	 * @param alwaysFlags	These flags are added if rule matched.
+	 * @param gramText	Grammar string currently being processed.
+	 * @param lemma		Lemma string for this header.
+	 * @return New begining for gram string if one of these rulles matched,
+	 * -1 otherwise.
+	 */
+	private int simpleRuleOptHyperns (
+			String pattern, String requiredEnding, int paradigmId,
+			String[] positiveFlags, String[] alwaysFlags,
+			String gramText, String lemma)
+	{
+		int newBegin = -1;
+		pattern.replace("-", "\\E-?\\Q");
+		pattern = "(\\Q" + pattern + "\\E)([;,.].*)?";
+		Matcher m = Pattern.compile(pattern).matcher(gramText);
+		if (m.matches())
+		{
+			newBegin = m.group(1).length();
 			if (lemma.endsWith(requiredEnding))
 			{
 				paradigm.add(paradigmId);
@@ -2068,8 +2113,7 @@ public class Gram  implements HasToJSON
 	
 	/**
 	 * Paradigm 15: Darbības vārdi 1. konjugācija tiešie
-	 * Rules in form "parasti 3. pers., -šalc, pag. -šalca" and
-	 * "-tupstu, -tupsti, -tupst, pag. -tupu".
+	 * Rules in form "parasti 3. pers., -šalc, pag. -šalca".
 	 * This function is seperated out for readability from
 	 * {@link #processBeginingWithPatterns(String, String)} as currently these rules
 	 * for verbs are long and highly specific and, thus, do not conflict
@@ -2077,219 +2121,315 @@ public class Gram  implements HasToJSON
 	 * @return new begining for gram string if one of these rulles matched,
 	 * -1 otherwise.
 	 */
-	private int firstConjDirVerbRules (String gramText, String lemma)
+	private int firstConjDirVerb3PersRules (String gramText, String lemma)
 	{
 		int newBegin = -1;
-		// Paradigm 15: Darbības vārdi 1. konjugācija tiešie
-		newBegin = simpleRule(
-				"parasti 3. pers., -šalc, pag. -šalca", "šalkt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"šalkt\""},
-				new String[] {"Parasti 3. personā"},
-				gramText, lemma); //aizšalkt
-		if (newBegin == -1) newBegin = simpleRule(
-				"parasti 3. pers., -tūkst, pag. -tūka", "tūkt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"tūkt\""},
-				new String[] {"Parasti 3. personā"},
-				gramText, lemma); //aiztūkt
-		if (newBegin == -1) newBegin = simpleRule(
+		// Rules ordered alphabetically by verb infinitive.
+		// A
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
 				"parasti 3. pers., -aug, pag. -auga", "augt", 15,
 				new String[] {"Darbības vārds", "Locīt kā \"augt\""},
 				new String[] {"Parasti 3. personā"},
 				gramText, lemma); //aizaugt
-		if (newBegin == -1) newBegin = simpleRule(
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
 				"parasti 3. pers., -aust, pag. -ausa", "aust", 15,
 				new String[] {"Darbības vārds", "Locīt kā \"aust\" (kā gaisma)"},
 				new String[] {"Parasti 3. personā"},
 				gramText, lemma); //aizaust 1
-		if (newBegin == -1) newBegin = simpleRule(
+		// B
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
 				"parasti 3. pers., -birst, pag. -bira", "birt", 15,
 				new String[] {"Darbības vārds", "Locīt kā \"birt\""},
 				new String[] {"Parasti 3. personā"},
 				gramText, lemma); //aizbirt
-		if (newBegin == -1) newBegin = simpleRule(
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
 				"parasti 3. pers., -brūk, pag. -bruka", "brukt", 15,
 				new String[] {"Darbības vārds", "Locīt kā \"brukt\""},
 				new String[] {"Parasti 3. personā"},
 				gramText, lemma); //aizbrukt
-		if (newBegin == -1) newBegin = simpleRule(
+		// C
+		// D
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
 				"parasti 3. pers., -deg, pag. -dega", "degt", 15,
 				new String[] {"Darbības vārds", "Locīt kā \"degt\""},
 				new String[] {"Parasti 3. personā"},
 				gramText, lemma); //aizdegt 2
-		if (newBegin == -1) newBegin = simpleRule(
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
 				"parasti 3. pers., -dim, pag. -dima", "dimt", 15,
 				new String[] {"Darbības vārds", "Locīt kā \"dimt\""},
 				new String[] {"Parasti 3. personā"},
 				gramText, lemma); //aizdimt
-		if (newBegin == -1) newBegin = simpleRule(
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
 				"parasti 3. pers., -dip, pag. -dipa", "dipt", 15,
 				new String[] {"Darbības vārds", "Locīt kā \"dipt\""},
 				new String[] {"Parasti 3. personā"},
 				gramText, lemma); //aizdipt
-		if (newBegin == -1) newBegin = simpleRule(
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
 				"parasti 3. pers., -dūc, pag. -dūca", "dūkt", 15,
 				new String[] {"Darbības vārds", "Locīt kā \"dūkt\""},
 				new String[] {"Parasti 3. personā"},
 				gramText, lemma); //aizdūkt
-		if (newBegin == -1) newBegin = simpleRule(
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
 				"parasti 3. pers., -dzeļ, pag. -dzēla", "dzelt", 15,
 				new String[] {"Darbības vārds", "Locīt kā \"dzelt\""},
 				new String[] {"Parasti 3. personā"},
 				gramText, lemma); //aizdzelt
-		if (newBegin == -1) newBegin = simpleRule(
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
 				"parasti 3. pers., -dzīst, pag. -dzija", "dzīt", 15,
 				new String[] {"Darbības vārds", "Locīt kā \"dzīt\""},
 				new String[] {"Parasti 3. personā"},
 				gramText, lemma); //aizdzīt 2
-		if (newBegin == -1) newBegin = simpleRule(
+		// E, F
+		// G
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"parasti 3. pers., -grimst, pag. -grima", "grimt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"grimt\""},
+				new String[] {"Parasti 3. personā"},
+				gramText, lemma); //aizgrimt
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"parasti 3. pers., -grūst, pag. -gruva", "grūt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"grūt\""},
+				new String[] {"Parasti 3. personā"},
+				gramText, lemma); //aizgrūt
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
 				"3. pers. -guldz, pag. -guldza", "gulgt", 15,
 				new String[] {"Darbības vārds", "Locīt kā \"gulgt\""},
 				new String[] {"Parasti 3. personā"},
 				gramText, lemma); //aizgulgt
-		
-		if (newBegin == -1) newBegin = simpleRule(
+		// H
+		// I
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"parasti 3. pers., -irst, pag. -ira", "irt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"irt\" (kā audums)"},
+				new String[] {"Parasti 3. personā"},
+				gramText, lemma); //irt 2
+		// J
+		// K
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"parasti 3. pers., -kalst, pag. -kalta", "kalst", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"kalst\""},
+				new String[] {"Parasti 3. personā"},
+				gramText, lemma); //aizkalst
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"parasti 3. pers., -kauc, pag. -kauca", "kaukt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"kaukt\""},
+				new String[] {"Parasti 3. personā"},
+				gramText, lemma); //aizkaukt
+		// L, M, N, O, P, R
+		// S, Š
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"parasti 3. pers., -šalc, pag. -šalca", "šalkt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"šalkt\""},
+				new String[] {"Parasti 3. personā"},
+				gramText, lemma); //aizšalkt
+		// T
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"parasti 3. pers., -tūkst, pag. -tūka", "tūkt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"tūkt\""},
+				new String[] {"Parasti 3. personā"},
+				gramText, lemma); //aiztūkt
+		// U, V, Z
+		return newBegin;
+	}
+	
+	/**
+	 * Paradigm 15: Darbības vārdi 1. konjugācija tiešie
+	 * Rules in form "-tupstu, -tupsti, -tupst, pag. -tupu".
+	 * This function is seperated out for readability from
+	 * {@link #processBeginingWithPatterns(String, String)} as currently these rules
+	 * for verbs are long and highly specific and, thus, do not conflict
+	 * with other rules.
+	 * @return new begining for gram string if one of these rulles matched,
+	 * -1 otherwise.
+	 */
+	private int firstConjDirVerbAllPersRules (String gramText, String lemma)
+	{
+		int newBegin = -1;
+		// Rules ordered alphabetically by verb infinitive.
+		// A
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-aru, -ar, -ar, pag. -aru", "art", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"art\""},
+				null, gramText, lemma); //aizart
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-aužu, -aud, -auž, pag. -audu", "aust", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"aust\" (kā zirneklis)"},
+				null, gramText, lemma); //aizaust 2
+		// B
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-bāžu, -bāz, -bāž, pag. -bāzu", "bāzt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"bāzt\""},
+				null, gramText, lemma); //aizbāzt
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-bēgu, -bēdz, -bēg, pag. -bēgu", "bēgt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"bēgt\""},
+				null, gramText, lemma); //aizbēgt
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-beru, -ber, -ber, pag. -bēru", "bērt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"bērt\""},
+				null, gramText, lemma); //aizbērt
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-bilstu, -bilsti, -bilst, pag. -bildu", "bilst", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"bilst\""},
+				null, gramText, lemma); //aizbilst
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-braucu, -brauc, -brauc, pag. -braucu", "braukt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"braukt\""},
+				null, gramText, lemma); //aizbraukt
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-brāžu, -brāz, -brāž, pag. -brāzu", "brāzt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"brāzt\""},
+				null, gramText, lemma); //aizbrāzt
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-brienu, -brien, -brien, pag. -bridu", "brist", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"brist\""},
+				null, gramText, lemma); //aizbrist
+		// C
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-ceļu, -cel, -ceļ, pag. -cēlu", "celt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"celt\""},
+				null, gramText, lemma); //aizcelt
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-cērtu, -cērt, -cērt, pag. -cirtu", "cirst", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"cirst\""},
+				null, gramText, lemma); //aizcirst
+		// D
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-dedzu, -dedz, -dedz, pag. -dedzu", "degt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"degt\""},
+				null, gramText, lemma); //aizdegt 1
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-diebju, -dieb, -diebj, pag. -diebu", "diebt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"diebt\""},
+				null, gramText, lemma); //aizdiebt
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-diedzu, -diedz, -diedz, pag. -diedzu", "diegt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"diegt\""},
+				null, gramText, lemma); //aizdiegt 1
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-dodu, -dod, -dod, pag. -devu", "dot", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"dot\""},
+				null, gramText, lemma); //aizdot
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-drāžu, -drāz, -drāž, pag. -drāzu", "drāzt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"drāzt\""},
+				null, gramText, lemma); //aizdrāzt
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-duru, -dur, -dur, pag. -dūru", "durt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"durt\""},
+				null, gramText, lemma); //aizdurt
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-dzeru, -dzer, -dzer, pag. -dzēru", "dzert", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"dzert\""},
+				null, gramText, lemma); //aizdzert
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-dzenu, -dzen, -dzen, pag. -dzinu", "dzīt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"dzīt\""},
+				null, gramText, lemma); //aizdzīt 1
+		// E
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-ēdu, -ēd, -ēd, pag. -ēdu", "ēst", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"ēst\""},
+				null, gramText, lemma); //aizēst
+		// F
+		// G
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-gāžu, -gāz, -gāž, pag. -gāzu", "gāzt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"gāzt\""},
+				null, gramText, lemma); //aizgāzt
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-glaužu, -glaud, -glauž, pag. -glaudu", "glaust", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"glaust\""},
+				null, gramText, lemma); //aizglaust
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-grābju, -grāb, -grābj, pag. -grābu", "grābt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"grābt\""},
+				null, gramText, lemma); //aizgrābt
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-graužu, -grauz, -grauž, pag. -grauzu", "grauzt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"grauzt\""},
+				null, gramText, lemma); //aizgrauzt
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-griežu, -griez, -griež, pag. -griezu", "griezt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"griezt\""},
+				null, gramText, lemma); //aizgriezt 2
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-grūžu, -grūd, -grūž, pag. -grūdu", "grūst", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"grūst\""},
+				null, gramText, lemma); //aizgrūst
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-gulstu, -gulsti, -gulst, pag. -gūlu, arī -gulu", "gult", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"gult\"", "Paralēlās formas"},
+				null, gramText, lemma); //aizgult
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-gūstu, -gūsti, -gūst, pag. -guvu", "gūt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"gūt\""},
+				null, gramText, lemma); //aizgūt
+		// Ģ
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-ģiedu, -ģied, -ģied, pag. -gidu", "ģist", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"ģist\""},
+				null, gramText, lemma); //apģist
+		// H
+		// I
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-eju, -ej, -iet, pag. -gāju", "iet", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"iet\""},
+				null, gramText, lemma); //apiet
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-iru, -ir, -ir, pag. -īru", "irt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"irt\" (kā ar airiem)"},
+				null, gramText, lemma); //aizirt 1
+		// J
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-jāju, -jāj, -jāj, pag. -jāju", "jāt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"jāt\""},
+				null, gramText, lemma); //aizjāt
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-jožu, -joz, -jož, pag. -jozu", "jozt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"jozt\""},
+				null, gramText, lemma); //aizjozt 1, 2
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-jūdzu, -jūdz, -jūdz, pag. -jūdzu", "jūgt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"jūgt\""},
+				null, gramText, lemma); //aizjūgt
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-jumju, -jum, -jumj, pag. -jūmu, arī -jumu", "jumt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"jumt\"", "Paralēlās formas"},
+				null, gramText, lemma); //aizjumt
+		// K
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-kāpju, -kāp, -kāpj, pag. -kāpu", "kāpt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"kāpt\""},
+				null, gramText, lemma); //aizkāpt
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-karu, -kar, -kar, pag. -kāru", "kārt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"kārt\""},
+				null, gramText, lemma); //aizkārt
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-kauju, -kauj, -kauj, pag. -kāvu", "kaut", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"kaut\""},
+				null, gramText, lemma); //apkaut
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-klāju, -klāj, -klāj, pag. -klāju", "klāt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"klāt\""},
+				null, gramText, lemma); //apklāt
+		// L, M, N, O, P, R, S
+		// T
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
 				"-tupstu, -tupsti, -tupst, pag. -tupu", "tupt", 15,
 				new String[] {"Darbības vārds", "Locīt kā \"tupt\"", "Paralēlās formas"},
 				null, gramText, lemma); //aiztupt
 				// TODO tupu/tupstu
-		if (newBegin == -1) newBegin = simpleRule(
-				"-aru, -ar, -ar, pag. -aru", "art", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"art\""},
-				null, gramText, lemma); //aizart
-		if (newBegin == -1) newBegin = simpleRule(
-				"-aužu, -aud, -auž, pag. -audu", "aust", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"aust\" (kā zirneklis)"},
-				null, gramText, lemma); //aizaust 2
-		if (newBegin == -1) newBegin = simpleRule(
-				"-bāžu, -bāz, -bāž, pag. -bāzu", "bāzt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"bāzt\""},
-				null, gramText, lemma); //aizbāzt
-		if (newBegin == -1) newBegin = simpleRule(
-				"-bēgu, -bēdz, -bēg, pag. -bēgu", "bēgt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"bēgt\""},
-				null, gramText, lemma); //aizbēgt
-		if (newBegin == -1) newBegin = simpleRule(
-				"-beru, -ber, -ber, pag. -bēru", "bērt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"bērt\""},
-				null, gramText, lemma); //aizbērt
-		if (newBegin == -1) newBegin = simpleRule(
-				"-bilstu, -bilsti, -bilst, pag. -bildu", "bilst", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"bilst\""},
-				null, gramText, lemma); //aizbilst
-		if (newBegin == -1) newBegin = simpleRule(
-				"-braucu, -brauc, -brauc, pag. -braucu", "braukt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"braukt\""},
-				null, gramText, lemma); //aizbraukt
-		if (newBegin == -1) newBegin = simpleRule(
-				"-brāžu, -brāz, -brāž, pag. -brāzu", "brāzt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"brāzt\""},
-				null, gramText, lemma); //aizbrāzt
-		if (newBegin == -1) newBegin = simpleRule(
-				"-brienu, -brien, -brien, pag. -bridu", "brist", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"brist\""},
-				null, gramText, lemma); //aizbrist
-		if (newBegin == -1) newBegin = simpleRule(
-				"-ceļu, -cel, -ceļ, pag. -cēlu", "celt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"celt\""},
-				null, gramText, lemma); //aizcelt
-		if (newBegin == -1) newBegin = simpleRule(
-				"-cērtu, -cērt, -cērt, pag. -cirtu", "cirst", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"cirst\""},
-				null, gramText, lemma); //aizcirst
-		if (newBegin == -1) newBegin = simpleRule(
-				"-dabūju, -dabū, -dabū, pag. -dabūju", "dabūt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"dabūt\""},
-				null, gramText, lemma); //aizdabūt
-		if (newBegin == -1) newBegin = simpleRule(
-				"-dedzu, -dedz, -dedz, pag. -dedzu", "degt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"degt\""},
-				null, gramText, lemma); //aizdegt 1
-		if (newBegin == -1) newBegin = simpleRule(
-				"-diebju, -dieb, -diebj, pag. -diebu", "diebt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"diebt\""},
-				null, gramText, lemma); //aizdiebt
-		if (newBegin == -1) newBegin = simpleRule(
-				"-diedzu, -diedz, -diedz, pag. -diedzu", "diegt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"diegt\""},
-				null, gramText, lemma); //aizdiegt 1
-		if (newBegin == -1) newBegin = simpleRule(
-				"-dodu, -dod, -dod, pag. -devu", "dot", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"dot\""},
-				null, gramText, lemma); //aizdot
-		if (newBegin == -1) newBegin = simpleRule(
-				"-drāžu, -drāz, -drāž, pag. -drāzu", "drāzt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"drāzt\""},
-				null, gramText, lemma); //aizdrāzt
-		if (newBegin == -1) newBegin = simpleRule(
-				"-duru, -dur, -dur, pag. -dūru", "durt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"durt\""},
-				null, gramText, lemma); //aizdurt
-		if (newBegin == -1) newBegin = simpleRule(
-				"-dzeru, -dzer, -dzer, pag. -dzēru", "dzert", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"dzert\""},
-				null, gramText, lemma); //aizdzert
-		if (newBegin == -1) newBegin = simpleRule(
-				"-dzenu, -dzen, -dzen, pag. -dzinu", "dzīt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"dzīt\""},
-				null, gramText, lemma); //aizdzīt 1
-		if (newBegin == -1) newBegin = simpleRule(
-				"-ēdu, -ēd, -ēd, pag. -ēdu", "ēst", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"ēst\""},
-				null, gramText, lemma); //aizēst
-		if (newBegin == -1) newBegin = simpleRule(
-				"-gāžu, -gāz, -gāž, pag. -gāzu", "gāzt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"gāzt\""},
-				null, gramText, lemma); //aizgāzt
-		if (newBegin == -1) newBegin = simpleRule(
-				"-glaužu, -glaud, -glauž, pag. -glaudu", "glaust", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"glaust\""},
-				null, gramText, lemma); //aizglaust
-		if (newBegin == -1) newBegin = simpleRule(
-				"-grābju, -grāb, -grābj, pag. -grābu", "grābt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"grābt\""},
-				null, gramText, lemma); //aizgrābt
-		if (newBegin == -1) newBegin = simpleRule(
-				"-graužu, -grauz, -grauž, pag. -grauzu", "grauzt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"grauzt\""},
-				null, gramText, lemma); //aizgrauzt
-		if (newBegin == -1) newBegin = simpleRule(
-				"-griežu, -griez, -griež, pag. -griezu", "griezt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"griezt\""},
-				null, gramText, lemma); //aizgriezt 2
-		if (newBegin == -1) newBegin = simpleRule(
-				"-gulstu, -gulsti, -gulst, pag. -gūlu, arī -gulu", "gult", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"gult\""},
-				null, gramText, lemma); //aizgult
-		
-		if (newBegin == -1) newBegin = simpleRule(
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
 				"-tveru, -tver, -tver, pag. -tvēru", "tvert", 15,
 				new String[] {"Darbības vārds", "Locīt kā \"tvert\""},
 				null, gramText, lemma); //aiztvert
-		
-		if (newBegin == -1) newBegin = simpleRule(
-				"-griežu, -griez, -griež, pag. -griezu", "griezt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"griezt\""},
-				null, gramText, lemma); //apgriezt
-		if (newBegin == -1) newBegin = simpleRule(
-				"-ģiedu, -ģied, -ģied, pag. -gidu", "ģist", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"ģist\""},
-				null, gramText, lemma); //apģist
-		if (newBegin == -1) newBegin = simpleRule(
-				"-eju, -ej, -iet, pag. -gāju", "iet", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"iet\""},
-				null, gramText, lemma); //apiet
-		if (newBegin == -1) newBegin = simpleRule(
-				"-klāju, -klāj, -klāj, pag. -klāju", "klāt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"klāt\""},
-				null, gramText, lemma); //apklāt
-		if (newBegin == -1) newBegin = simpleRule(
-				"-kauju, -kauj, -kauj, pag. -kāvu", "kaut", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"kaut\""},
-				null, gramText, lemma); //apkaut
+		// U, V, Z
 		
 		return newBegin;
 	}
-	
+
 	/**
 	 * Paradigm 16: Darbības vārdi 2. konjugācija tiešie
 	 * Rules in form "parasti 3. pers., -o, pag. -oja",
@@ -2306,7 +2446,6 @@ public class Gram  implements HasToJSON
 	{
 		int newBegin = -1;
 		// Paradigm 16: Darbības vārdi 2. konjugācija tiešie
-		
 		newBegin = simpleRule(
 				"parasti 3. pers., -o, pag. -oja", "ot", 16,
 				new String[] {"Darbības vārds"},
@@ -2317,6 +2456,12 @@ public class Gram  implements HasToJSON
 				new String[] {"Darbības vārds"},
 				new String[] {"Parasti 3. personā"},
 				gramText, lemma); //adsorbēt
+		
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-dabūju, -dabū, -dabū, pag. -dabūju", "dabūt", 16,
+				new String[] {"Darbības vārds"},
+				null, gramText, lemma); //aizdabūt
+		
 		if (newBegin == -1) newBegin = simpleRule(
 				"-oju, -o, -o, -ojam, -ojat, pag. -oju; -ojām, -ojāt; pav. -o, -ojiet",
 				"ot", 16,
@@ -2348,7 +2493,7 @@ public class Gram  implements HasToJSON
 	
 	/**
 	 * Paradigm 17: Darbības vārdi 3. konjugācija tiešie
-	 * Rules in form "-u, -i, -a, pag. -īju"
+	 * Rules in form "parasti 3. pers., -blākš, pag. -blākšēja"
 	 * This function is seperated out for readability from
 	 * {@link #processBeginingWithPatterns(String, String)} as currently these rules
 	 * for verbs are long and highly specific and, thus, do not conflict
@@ -2356,61 +2501,75 @@ public class Gram  implements HasToJSON
 	 * @return new begining for gram string if one of these rulles matched,
 	 * -1 otherwise.
 	 */
-	private int thirdConjDirVerbRules (String gramText, String lemma)
+	private int thirdConjDir3PersVerbRules (String gramText, String lemma)
 	{
 		int newBegin = -1;
-		// Paradigm 17: Darbības vārdi 3. konjugācija tiešie
-		newBegin = simpleRule(
+		// Verb-specific rules.
+		// Rules ordered alphabetically by verb infinitive.
+		// A
+		// B
+		newBegin = simpleRuleOptHyperns(
 				"parasti 3. pers., -blākš, pag. -blākšēja", "blākšēt", 17,
 				new String[] {"Darbības vārds"},
 				new String[] {"Parasti 3. personā"},
 				gramText, lemma); //aizblākšēt
-		if (newBegin == -1) newBegin = simpleRule(
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
 				"parasti 3. pers., -blākšķ, pag. -blākšķēja", "blākšķēt", 17,
 				new String[] {"Darbības vārds"},
 				new String[] {"Parasti 3. personā"},
 				gramText, lemma); //aizblākšķēt
-		if (newBegin == -1) newBegin = simpleRule(
+		// C, Č
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
 				"parasti 3. pers., -čab, pag. -čabēja", "čabēt", 17,
 				new String[] {"Darbības vārds"},
 				new String[] {"Parasti 3. personā"},
 				gramText, lemma); //aizčabēt
-		if (newBegin == -1) newBegin = simpleRule(
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
 				"parasti 3. pers., -čaukst, pag. -čaukstēja", "čaukstēt", 17,
 				new String[] {"Darbības vārds"},
 				new String[] {"Parasti 3. personā"},
 				gramText, lemma); //aizčaukstēt
-		if (newBegin == -1) newBegin = simpleRule(
+		// D
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
 				"parasti 3. pers., -dārd, pag. -dārdēja", "dārdēt", 17,
 				new String[] {"Darbības vārds"},
 				new String[] {"Parasti 3. personā"},
 				gramText, lemma); //aizdārdēt
-		if (newBegin == -1) newBegin = simpleRule(
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
 				"parasti 3. pers., -dimd, pag. -dimdēja", "dimdēt", 17,
 				new String[] {"Darbības vārds"},
 				new String[] {"Parasti 3. personā"},
 				gramText, lemma); //aizdimdēt
-		if (newBegin == -1) newBegin = simpleRule(
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
 				"parasti 3. pers., -dip, pag. -dipēja", "dipēt", 17,
 				new String[] {"Darbības vārds"},
 				new String[] {"Parasti 3. personā"},
 				gramText, lemma); //aizdipēt
-		if (newBegin == -1) newBegin = simpleRule(
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
 				"parasti 3. pers., -dun, pag. -dunēja", "dunēt", 17,
 				new String[] {"Darbības vārds"},
 				new String[] {"Parasti 3. personā"},
 				gramText, lemma); //aizdunēt
-		if (newBegin == -1) newBegin = simpleRule(
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
 				"parasti 3. pers., -džinkst, pag. -džinkstēja", "džinkstēt", 17,
 				new String[] {"Darbības vārds"},
 				new String[] {"Parasti 3. personā"},
 				gramText, lemma); //aizdžinkstēt
-		if (newBegin == -1) newBegin = simpleRule(
+		// E, F
+		// G
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
 				"parasti 3. pers., -grab, pag. -grabēja", "grabēt", 17,
 				new String[] {"Darbības vārds"},
 				new String[] {"Parasti 3. personā"},
 				gramText, lemma); //aizgrabēt
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"parasti 3. pers., -gurkst, pag. -gurkstēja", "gurkstēt", 17,
+				new String[] {"Darbības vārds"},
+				new String[] {"Parasti 3. personā"},
+				gramText, lemma); //aizgurkstēt
+		// H, I, J, K, L, M, N, O, P, R, S, T, U, V, Z
 		
+		// Generic ending rules.
 		if (newBegin == -1) newBegin = simpleRule(
 				"parasti 3. pers., -ī, pag. -īja", "īt", 17,
 				new String[] {"Darbības vārds"},
@@ -2422,19 +2581,38 @@ public class Gram  implements HasToJSON
 				new String[] {"Parasti 3. personā"},
 				gramText, lemma); //aizducināt
 
-		if (newBegin == -1) newBegin = simpleRule(
+		return newBegin;
+	}
+	
+	/**
+	 * Paradigm 17: Darbības vārdi 3. konjugācija tiešie
+	 * Rules in form "-dziedu, -dziedi, -dzied, pag. -dziedāju" and
+	 * "-u, -i, -a, pag. -īju".
+	 * This function is seperated out for readability from
+	 * {@link #processBeginingWithPatterns(String, String)} as currently these rules
+	 * for verbs are long and highly specific and, thus, do not conflict
+	 * with other rules.
+	 * @return new begining for gram string if one of these rulles matched,
+	 * -1 otherwise.
+	 */
+	private int thirdConjDirAllPersVerbRules (String gramText, String lemma)
+	{
+		int newBegin = -1;
+		// Verb-specific rules.
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
 				"-dziedu, -dziedi, -dzied, pag. -dziedāju", "dziedāt", 17,
 				new String[] {"Darbības vārds"},
 				null, gramText, lemma); //aizdziedāt
-		if (newBegin == -1) newBegin = simpleRule(
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
 				"-guļu, -guli, -guļ, pag. -gulēju", "gulēt", 17,
 				new String[] {"Darbības vārds"},
 				null, gramText, lemma); //aizgulēt
-		if (newBegin == -1) newBegin = simpleRule(
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
 				"-turu, -turi, -tur, pag. -turēju", "turēt", 17,
 				new String[] {"Darbības vārds"},
 				null, gramText, lemma); //aizturēt
 		
+		// Generic ending rules.
 		if (newBegin == -1) newBegin = simpleRule(
 				"-u, -i, -a, pag. -īju", "īt", 17,
 				new String[] {"Darbības vārds"},
@@ -2443,13 +2621,12 @@ public class Gram  implements HasToJSON
 				"-inu, -ini, -ina, pag. -ināju", "ināt", 17,
 				new String[] {"Darbības vārds"},
 				null, gramText, lemma); //aizsvilināt
-		return newBegin;			
+		return newBegin;
 	}
 
 	/**
 	 * Paradigm 18: Darbības vārdi 1. konjugācija atgriezeniski
-	 * Rules in form "parasti 3. pers., -šalcas, pag. -šalcās" and
-	 * "-tupstos, -tupsties, -tupstas, pag. -tupos".
+	 * Rules in form "parasti 3. pers., -šalcas, pag. -šalcās".
 	 * This function is seperated out for readability from
 	 * {@link #processBeginingWithPatterns(String, String)} as currently these rules
 	 * for verbs are long and highly specific and, thus, do not conflict
@@ -2457,27 +2634,25 @@ public class Gram  implements HasToJSON
 	 * @return new begining for gram string if one of these rulles matched,
 	 * -1 otherwise.
 	 */
-	private int firstConjRefVerbRules (String gramText, String lemma)
+	private int firstConjRef3PersVerbRules (String gramText, String lemma)
 	{
 		int newBegin = -1;
-		
-		// Paradigm 18: Darbības vārdi 1. konjugācija atgriezeniski
-		newBegin = simpleRule(
-				"parasti 3. pers., -šalcas, pag. -šalcās", "šalkties", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"šalkties\""},
-				new String[] {"Parasti 3. personā"},
-				gramText, lemma); //aizšalkties
+		// Rules ordered alphabetically by verb infinitive.
+		// A, B, C
+		// D
 		if (newBegin == -1) newBegin = simpleRule(
 				"parasti 3. pers., -dūcas, pag. -dūcās", "dūkties", 18,
 				new String[] {"Darbības vārds", "Locīt kā \"dūkties\""},
 				new String[] {"Parasti 3. personā"},
 				gramText, lemma); //aizdūkties
-		if (newBegin == -1) newBegin = simpleRule(
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
 				"parasti 3. pers., -duras, pag. -dūrās", "durties", 18,
 				new String[] {"Darbības vārds", "Locīt kā \"durties\""},
 				new String[] {"Parasti 3. personā"},
 				gramText, lemma); //aizdurties
-		if (newBegin == -1) newBegin = simpleRule(
+		// E, F
+		// G
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
 				"parasti 3. pers., -gāžas, pag. -gāzās", "gāzties", 18,
 				new String[] {"Darbības vārds", "Locīt kā \"gāzties\""},
 				new String[] {"Parasti 3. personā"},
@@ -2487,44 +2662,47 @@ public class Gram  implements HasToJSON
 				new String[] {"Darbības vārds", "Locīt kā \"grauzties\""},
 				new String[] {"Parasti 3. personā"},
 				gramText, lemma); //aizgrauzties
-		if (newBegin == -1) newBegin = simpleRule(
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
 				"parasti 3. pers., -griežas, pag. -griezās", "griezties", 18,
 				new String[] {"Darbības vārds", "Locīt kā \"griezties\""},
 				new String[] {"Parasti 3. personā"},
 				gramText, lemma); //aizgriezties 2
+		// H, I, J
+		// K
 		if (newBegin == -1) newBegin = simpleRule(
-				"parasti 3. pers., -grimst, pag. -grima", "grimt", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"grimt\""},
+				"parasti 3. pers., -kaucas, pag. -kaucās", "kaukties", 18,
+				new String[] {"Darbības vārds", "Locīt kā \"kaukties\""},
 				new String[] {"Parasti 3. personā"},
-				gramText, lemma); //aizgrimt
+				gramText, lemma); //aizkaukties
+		// L, M, N, O, P, R
+		// S, Š
 		if (newBegin == -1) newBegin = simpleRule(
-				"parasti 3. pers., -grūst, pag. -gruva", "grūt", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"grūt\""},
+				"parasti 3. pers., -šalcas, pag. -šalcās", "šalkties", 18,
+				new String[] {"Darbības vārds", "Locīt kā \"šalkties\""},
 				new String[] {"Parasti 3. personā"},
-				gramText, lemma); //aizgrūt
-		
-		if (newBegin == -1) newBegin = simpleRule(
-				"-ejos, -ejos, -ietas, pag. -gājos", "ieties", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"ieties\""},
-				null, gramText, lemma); //apieties
-		if (newBegin == -1) newBegin = simpleRule(
-				"-tupstos, -tupsties, -tupstas, pag. -tupos", "tupties", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"tupties\"", "Paralēlās formas"},
-				null, gramText, lemma); //aiztupties
-				//TODO check paralel forms.
-		if (newBegin == -1) newBegin = simpleRule(
-				"-ģiedos, -ģiedies, -ģiedas, pag. -gidos", "ģisties", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"ģisties\""},
-				null, gramText, lemma); //apģisties
-		if (newBegin == -1) newBegin = simpleRule(
-				"-klājos, -klājies, -klājas, pag. -klājos", "klāties", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"klāties\""},
-				null, gramText, lemma); //apklāties
-		if (newBegin == -1) newBegin = simpleRule(
-				"-karos, -karies, -karas, pag. -kāros", "kārties", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"kārties\""},
-				null, gramText, lemma); //apkārties
-		if (newBegin == -1) newBegin = simpleRule(
+				gramText, lemma); //aizšalkties
+		// T, U, V, Z
+		return newBegin;
+	}
+	
+
+	/**
+	 * Paradigm 18: Darbības vārdi 1. konjugācija atgriezeniski
+	 * Rules in form "-tupstos, -tupsties, -tupstas, pag. -tupos".
+	 * This function is seperated out for readability from
+	 * {@link #processBeginingWithPatterns(String, String)} as currently these rules
+	 * for verbs are long and highly specific and, thus, do not conflict
+	 * with other rules.
+	 * @return new begining for gram string if one of these rulles matched,
+	 * -1 otherwise.
+	 */
+	private int firstConjRefAllPersVerbRules (String gramText, String lemma)
+	{
+		int newBegin = -1;
+		// Rules ordered alphabetically by verb infinitive.
+		// A
+		// B
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
 				"-brāžos, -brāzies, -brāžas, pag. -brāžos", "brāzties", 18,
 				new String[] {"Darbības vārds", "Locīt kā \"brāzties\""},
 				null, gramText, lemma); //aizbrāzties
@@ -2532,45 +2710,84 @@ public class Gram  implements HasToJSON
 				"-brēcos, -brēcies, -brēcas, pag. -brēcos", "brēkties", 18,
 				new String[] {"Darbības vārds", "Locīt kā \"brēkties\""},
 				null, gramText, lemma); //aizbrēkties
-		if (newBegin == -1) newBegin = simpleRule(
+		// C
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
 				"-ciešos, -cieties, -ciešas, pag. -cietos", "ciesties", 18,
 				new String[] {"Darbības vārds", "Locīt kā \"ciesties\""},
 				null, gramText, lemma); //aizciesties
-		if (newBegin == -1) newBegin = simpleRule(
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
 				"-cērtos, -cērties, -cērtas, pag. -cirtos", "cirsties", 18,
 				new String[] {"Darbības vārds", "Locīt kā \"cirsties\""},
 				null, gramText, lemma); //aizcirsties
+		// D
 		if (newBegin == -1) newBegin = simpleRule(
 				"-degos, -dedzies, -degas, pag. -degos", "degties", 18,
 				new String[] {"Darbības vārds", "Locīt kā \"degties\""},
 				null, gramText, lemma); //aizdegties
-		if (newBegin == -1) newBegin = simpleRule(
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
 				"-drāžos, -drāzies, -drāžas, pag. -drāzos", "drāzties", 18,
 				new String[] {"Darbības vārds", "Locīt kā \"drāzties\""},
 				null, gramText, lemma); //aizdrāzties
+		// E
 		if (newBegin == -1) newBegin = simpleRule(
 				"-elšos, -elsies, -elšas, pag. -elsos", "elsties", 18,
 				new String[] {"Darbības vārds", "Locīt kā \"elsties\""},
 				null, gramText, lemma); //aizelsties
+		// F, 
+		// G
 		if (newBegin == -1) newBegin = simpleRule(
 				"-gārdzos, -gārdzies, -gārdzas, pag. -gārdzos", "gārgties", 18,
 				new String[] {"Darbības vārds", "Locīt kā \"gārgties\""},
 				null, gramText, lemma); //aizgārgties
-		if (newBegin == -1) newBegin = simpleRule(
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
 				"-griežos, -griezies, -griežas, pag. -griezos", "griezties", 18,
 				new String[] {"Darbības vārds", "Locīt kā \"griezties\""},
 				null, gramText, lemma); //aizgriezties 1
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"--gulstos, -gulsties, -gulstas, arī -guļos, -gulies, -guļas, pag. -gūlos, arī -gulos", "gulties", 18,
+				new String[] {"Darbības vārds", "Locīt kā \"gulties\"", "Paralēlās formas"},
+				null, gramText, lemma); //aizgulties
 		if (newBegin == -1) newBegin = simpleRule(
-				"-grūžu, -grūd, -grūž, pag. -grūdu", "grūst", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"grūst\""},
-				null, gramText, lemma); //aizgrūst
+				"-gūstos, -gūsties, -gūstas, pag. -guvos", "gūties", 18,
+				new String[] {"Darbības vārds", "Locīt kā \"gūties\""},
+				null, gramText, lemma); //aizgūties
+		// Ģ,
 		if (newBegin == -1) newBegin = simpleRule(
-				"-gulstu, -gulsti, -gulst, pag. -gūlu, arī -gulu", "gult", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"gult\""},
-				null, gramText, lemma); //aizgult
-				
-		
-		
+				"-ģiedos, -ģiedies, -ģiedas, pag. -gidos", "ģisties", 18,
+				new String[] {"Darbības vārds", "Locīt kā \"ģisties\""},
+				null, gramText, lemma); //apģisties
+		// H
+		// I
+		if (newBegin == -1) newBegin = simpleRule(
+				"-ejos, -ejos, -ietas, pag. -gājos", "ieties", 18,
+				new String[] {"Darbības vārds", "Locīt kā \"ieties\""},
+				null, gramText, lemma); //apieties
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-iros, -iries, -iras, pag. -īros", "irties", 18,
+				new String[] {"Darbības vārds", "Locīt kā \"irties\" (kā ar airiem)"},
+				null, gramText, lemma); //aizirties
+		// J
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-jūdzos, -jūdzies, -jūdzas, pag. -jūdzos", "jūgties", 18,
+				new String[] {"Darbības vārds", "Locīt kā \"jūgties\""},
+				null, gramText, lemma); //aizjūgties
+		// K
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-karos, -karies, -karas, pag. -kāros", "kārties", 18,
+				new String[] {"Darbības vārds", "Locīt kā \"kārties\""},
+				null, gramText, lemma); //apkārties
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-klājos, -klājies, -klājas, pag. -klājos", "klāties", 18,
+				new String[] {"Darbības vārds", "Locīt kā \"klāties\""},
+				null, gramText, lemma); //apklāties
+		// L, M, N, O, P, R, S
+		// T
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-tupstos, -tupsties, -tupstas, pag. -tupos", "tupties", 18,
+				new String[] {"Darbības vārds", "Locīt kā \"tupties\"", "Paralēlās formas"},
+				null, gramText, lemma); //aiztupties
+				//TODO check paralel forms.
+		// U, V, Z
 		return newBegin;
 	}
 	
@@ -2600,6 +2817,7 @@ public class Gram  implements HasToJSON
 				new String[] {"Darbības vārds"},
 				new String[] {"Parasti 3. personā"},
 				gramText, lemma); //daudzkāršoties
+		
 		if (newBegin == -1) newBegin = simpleRule(
 				"-ējos, -ējies, -ējas, -ējamies, -ējaties, pag. -ējos, -ējāmies, -ējāties; pav. -ējies, -ējieties",
 				"ēties", 19,
@@ -2631,11 +2849,14 @@ public class Gram  implements HasToJSON
 	 * @return new begining for gram string if one of these rulles matched,
 	 * -1 otherwise.
 	 */
-	private int thirdConjRefVerbRules (String gramText, String lemma)
+	private int thirdConjRef3PersVerbRules (String gramText, String lemma)
 	{
 		int newBegin = -1;
-		// Paradigm 20: Darbības vārdi 3. konjugācija atgriezeniski
-		newBegin = simpleRule(
+		// Verb-specific rules.
+		// Rules ordered alphabetically by verb infinitive.
+		// A
+		// B
+		if (newBegin == -1) newBegin = simpleRule(
 				"parasti 3. pers., -brikšķas, pag. -brikšķējās",
 				"brikšķēties", 20,
 				new String[] {"Darbības vārds"},
@@ -2659,6 +2880,7 @@ public class Gram  implements HasToJSON
 				new String[] {"Darbības vārds"},
 				new String[] {"Parasti 3. personā"},
 				gramText, lemma); //aizbrīkšēties
+		// C, Č
 		if (newBegin == -1) newBegin = simpleRule(
 				"parasti 3. pers., -čabas, pag. -čabējās", "čabēties", 20,
 				new String[] {"Darbības vārds"},
@@ -2670,6 +2892,7 @@ public class Gram  implements HasToJSON
 				new String[] {"Darbības vārds"},
 				new String[] {"Parasti 3. personā"},
 				gramText, lemma); //aizčaukstēties
+		// D
 		if (newBegin == -1) newBegin = simpleRule(
 				"parasti 3. pers., -dārdas, pag. -dārdējās", "dārdēties", 20,
 				new String[] {"Darbības vārds"},
@@ -2680,53 +2903,81 @@ public class Gram  implements HasToJSON
 				new String[] {"Darbības vārds"},
 				new String[] {"Parasti 3. personā"},
 				gramText, lemma); //aizdrebēties
+		// E, F
+		// G
 		if (newBegin == -1) newBegin = simpleRule(
-				"parasti 3. pers., -grābās, pag. -grābējās", "aizgrabēties", 20,
+				"parasti 3. pers., -grābās, pag. -grābējās", "grabēties", 20,
 				new String[] {"Darbības vārds"},
 				new String[] {"Parasti 3. personā"},
 				gramText, lemma); //aizgrabēties
-		
 		if (newBegin == -1) newBegin = simpleRule(
-				"parasti 3. pers., -ās, pag. -ījās", "īties", 20,
+				"parasti 3. pers., -gurkstas, pag. -gurkstējās", "gurkstēties", 20,
 				new String[] {"Darbības vārds"},
 				new String[] {"Parasti 3. personā"},
-				gramText, lemma); //aizbīdīties			
+				gramText, lemma); //aizgurkstēties
+		// H, I, J, K, L, M, N, O, P, R, S, T, U, V, Z
+		
+		// Generic ending rules.
+		if (newBegin == -1) newBegin = simpleRule(
+				"parasti 3. pers., -as, pag. -ējās", "ēties", 20,
+				new String[] {"Darbības vārds"},
+				new String[] {"Parasti 3. personā"},
+				gramText, lemma); //aizčiepstēties
 		if (newBegin == -1) newBegin = simpleRule(
 				"parasti 3. pers., -inās, pag. -inājās", "ināties", 20,
 				new String[] {"Darbības vārds"},
 				new String[] {"Parasti 3. personā"},
 				gramText, lemma); //aizbubināties
 		if (newBegin == -1) newBegin = simpleRule(
-				"parasti 3. pers., -as, pag. -ējās", "ēties", 20,
+				"parasti 3. pers., -ās, pag. -ījās", "īties", 20,
 				new String[] {"Darbības vārds"},
 				new String[] {"Parasti 3. personā"},
-				gramText, lemma); //aizčiepstēties
-		
+				gramText, lemma); //aizbīdīties
+		return newBegin;
+	}
+	
+	/**
+	 * Paradigm 20: Darbības vārdi 3. konjugācija atgriezeniski
+	 * Rules in form "parasti 3. pers., -ās, pag. -ījās" and
+	 * "-os, -ies, -ās, pag. -ījos".
+	 * This function is seperated out for readability from
+	 * {@link #processBeginingWithPatterns(String, String)} as currently these rules
+	 * for verbs are long and highly specific and, thus, do not conflict
+	 * with other rules.
+	 * @return new begining for gram string if one of these rulles matched,
+	 * -1 otherwise.
+	 */
+	private int thirdConjRefAllPersVerbRules (String gramText, String lemma)
+	{
+		int newBegin = -1;
+		// Verb-specific rules.
 		if (newBegin == -1) newBegin = simpleRule(
 				"-dziedos, -dziedies, -dziedas, pag. -dziedājos", "dziedāties", 20,
 				new String[] {"Darbības vārds"},
 				null, gramText, lemma); //aizdziedāties
-		if (newBegin == -1) newBegin = simpleRule(
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
 				"-dzenos, -dzenies, -dzenas, pag. -dzinos", "dzīties", 20,
 				new String[] {"Darbības vārds"},
 				null, gramText, lemma); //aizdzīties
-		if (newBegin == -1) newBegin = simpleRule(
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
 				"-guļos, -gulies, -guļas, pag. -gulējos", "gulēties", 20,
 				new String[] {"Darbības vārds"},
 				null, gramText, lemma); //aizgulēties
 		
+		// Generic ending rules.
 		if (newBegin == -1) newBegin = simpleRule(
-				"-os, -ies, -ās, pag. -ījos", "īties", 20,
+				"-os, -ies, -as, pag. -ējos", "ēties", 20,
 				new String[] {"Darbības vārds"},
-				null, gramText, lemma); //apklausīties
+				null, gramText, lemma); //apkaunēties
 		if (newBegin == -1) newBegin = simpleRule(
 				"-inos, -inies, -inās, pag. -inājos", "ināties", 20,
 				new String[] {"Darbības vārds"},
 				null, gramText, lemma); //apklaušināties
 		if (newBegin == -1) newBegin = simpleRule(
-				"-os, -ies, -as, pag. -ējos", "ēties", 20,
+				"-os, -ies, -ās, pag. -ījos", "īties", 20,
 				new String[] {"Darbības vārds"},
-				null, gramText, lemma); //apkaunēties
+				null, gramText, lemma); //apklausīties
+		
 		return newBegin;
 	}
 	
@@ -2779,34 +3030,20 @@ public class Gram  implements HasToJSON
 	 */
 	private String correctOCRErrors(String gramText)
 	{
-		//if (gramText.endsWith(";,"))
-		//	gramText = gramText.substring(0,gramText.length()-2);
-		
-		//if (gramText.endsWith(";") || gramText.endsWith(","))
-		//	gramText = gramText.substring(0,gramText.length()-1);
-		
-		//gramText = gramText.replace("lietv. -a", "lietv., -a");
-		gramText = gramText.replace(";novec", "; novec");
-		//gramText = gramText.replace("novec. (", "novec.; (");
-		//gramText = gramText.replace("parasti vsk. med.", "parasti vsk., med.");
-		
-		gramText = gramText.replaceAll("^māt\\.", "mat\\.");
-		gramText = gramText.replace(" māt.", " mat.");
-		gramText = gramText.replace("vsk..", "vsk.");
-		gramText = gramText.replace("vsk .", "vsk.");
-		gramText = gramText.replaceAll("^gen\\.", "ģen\\.");
-		gramText = gramText.replace(" gen.", " ģen.");
-		gramText = gramText.replaceAll("^trans;", "trans\\.;");
-		gramText = gramText.replace(" trans;", " trans.;");
-		
-		gramText = gramText.replace("-ēju, -ē, -ē, pag. -eju;", "-ēju, -ē, -ē, pag. -ēju;"); //abonēt
-		gramText = gramText.replace("parasti 3. pers., -ē, pag. -eja;", "parasti 3. pers., -ē, pag. -ēja;"); //absorbēt
-		gramText = gramText.replace("-ais; s. -a: -ā;", "-ais; s. -a, -ā;"); //apgrēcīgs
-		//gramText = gramText.replace("-šā, v.", "-ša, v."); //abesīnietis, ābolītis, iereibušais
-		gramText = gramText.replace("parasti 3. pers., -ējas, pag. -ejās;", "parasti 3. pers., -ējas, pag. -ējās;"); //adaptēties
-		
 		//Inconsequences in data
-		//gramText = gramText.replace("-ā.;", "-ā;");
+				
+		//gramText = gramText.replaceAll("^māt\\.", "mat\\.");
+		//gramText = gramText.replace(" māt.", " mat.");
+		//gramText = gramText.replace("vsk..", "vsk.");
+		//gramText = gramText.replace("vsk .", "vsk.");
+		//gramText = gramText.replaceAll("^gen\\.", "ģen\\.");
+		//gramText = gramText.replace(" gen.", " ģen.");
+		//gramText = gramText.replaceAll("^trans;", "trans\\.;");
+		//gramText = gramText.replace(" trans;", " trans.;");
+		
+		//gramText = gramText.replace("-ais; s. -a: -ā;", "-ais; s. -a, -ā;"); //apgrēcīgs
+		
+		
 
 		return gramText;
 		
