@@ -710,6 +710,21 @@ public class Gram  implements HasToJSON
 				}
 				flags.add("Sieviešu dzimte");
 			}
+			else if (gramText.matches("-es, dsk\\. ģen\\. -šņu([;,.].*)?")) //aizkrāsne
+			{
+				newBegin = "-es, dsk. ģen. -šņu".length();
+				if (lemma.matches(".*[šs][nņ]e"))
+				{
+					paradigm.add(9);
+					flags.add("Lietvārds");
+				}
+				else
+				{
+					System.err.printf("Problem matching \"%s\" with paradigm 9\n", lemma);
+					newBegin = 0;
+				}
+				flags.add("Sieviešu dzimte");
+			}
 			else if (gramText.startsWith("-es, s.")) //aizture
 			{
 				newBegin = "-es, s.".length();
@@ -1074,6 +1089,27 @@ public class Gram  implements HasToJSON
 					newBegin = 0;
 				}
 			}
+			else if (gramText.matches("-ušais; s. -usi\\, -usī([.;].*)?")) //aizkūpis
+			{
+				newBegin = "-ušais; s. -usi, -usī".length();
+				if (lemma.matches(".*[cdjlmprstv]is"))
+				{
+					Lemma altLemma = new Lemma (lemma.substring(0, lemma.length() - 3) + "usi");
+					HashSet<String> altParams = new HashSet<String> ();
+					altParams.add("Sieviešu dzimte");
+					altLemmas.put(0, new Tuple<Lemma, HashSet<String>>(altLemma, altParams));
+					
+					paradigm.add(0);
+					flags.add("Divdabis");
+					flags.add("Lokāmais darāmās kārtas pagātnes divdabis (-is, -usi, -ies, -usies)");
+					flags.add("Vīriešu dzimte");
+				}
+				else
+				{
+					System.err.printf("Problem matching \"%s\" with paradigm 0 (Divdabis)\n", lemma);
+					newBegin = 0;
+				}
+			}
 
 		}
 		
@@ -1088,7 +1124,13 @@ public class Gram  implements HasToJSON
 		// These rules matches prefix of some other rule.
 		if (newBegin == -1) newBegin = singleEndingOnlyRules(gramText, lemma);
 		
-		if (newBegin > 0) gramText = gramText.substring(newBegin);
+		if (newBegin > 0 && newBegin <= gramText.length())
+			gramText = gramText.substring(newBegin);
+		else if (newBegin > gramText.length())
+		{
+			System.err.printf("Problem with processing lemma \"%s\" and grammar \"%s\": obtained cut index \"%d\"",
+					lemma, gramText, newBegin);
+		}
 		if (gramText.matches("[.,;].*")) gramText = gramText.substring(1);
 		return gramText;
 	}
@@ -1238,10 +1280,7 @@ public class Gram  implements HasToJSON
 					newBegin = 0;
 				}
 			}
-			}
-			
-			
-			
+		}
 
 		if (newBegin > 0) gramText = gramText.substring(newBegin);
 		return gramText;
@@ -1381,21 +1420,6 @@ public class Gram  implements HasToJSON
 		{
 			newBegin = "-es, dsk. ģen. -šu, s.".length();
 			if (lemma.matches(".*[tsš]e"))
-			{
-				paradigm.add(9);
-				flags.add("Lietvārds");
-			}
-			else
-			{
-				System.err.printf("Problem matching \"%s\" with paradigm 9\n", lemma);
-				newBegin = 0;
-			}
-			flags.add("Sieviešu dzimte");
-		}
-		else if (gramText.startsWith("-es, dsk. ģen. -šņu, s.")) //aizkrāsne
-		{
-			newBegin = "-es, dsk. ģen. -šņu, s.".length();
-			if (lemma.matches(".*[šs][nņ]e"))
 			{
 				paradigm.add(9);
 				flags.add("Lietvārds");
@@ -2260,7 +2284,38 @@ public class Gram  implements HasToJSON
 				new String[] {"Darbības vārds", "Locīt kā \"knābt\""},
 				new String[] {"Parasti 3. personā"},
 				gramText, lemma); //aizknābt
-		// L, M, N, O, P, R
+		if (newBegin == -1) newBegin = simpleRule(
+				"parasti 3. pers., -kvēpst, pag. -kvēpa", "kvēpt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"kvēpt\""},
+				new String[] {"Parasti 3. personā"},
+				gramText, lemma); //aizkvēpt
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"parasti 3. pers., -kviec, pag. -kvieca", "kviekt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"kviekt\""},
+				new String[] {"Parasti 3. personā"},
+				gramText, lemma); //aizkviekt
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"parasti 3. pers., -ķep, pag. -ķepa", "ķept", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"ķept\""},
+				new String[] {"Parasti 3. personā"},
+				gramText, lemma); //aizķept
+		// L
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"parasti 3. pers., -līkst, pag. -līka", "līkt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"līkt\""},
+				new String[] {"Parasti 3. personā"},
+				gramText, lemma); //aizlīkt
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"parasti 3. pers., -līp, pag. -lipa", "lipt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"lipt\""},
+				new String[] {"Parasti 3. personā"},
+				gramText, lemma); //aizlipt
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"parasti 3. pers., -līst, pag. -lija", "līt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"līt\""},
+				new String[] {"Parasti 3. personā"},
+				gramText, lemma); //aizlīt
+		// M, N, O, P, R
 		// S, Š
 		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
 				"parasti 3. pers., -šalc, pag. -šalca", "šalkt", 15,
@@ -2483,7 +2538,61 @@ public class Gram  implements HasToJSON
 				"-krāpju, -krāp, -krāpj, pag. -krāpu", "krāpt", 15,
 				new String[] {"Darbības vārds", "Locīt kā \"krāpt\""},
 				null, gramText, lemma); //aizkrāpt
-		// L, M, N, O, P, R, S
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-krauju, -krauj, -krauj, pag. -krāvu", "kraut", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"kraut\""},
+				null, gramText, lemma); //aizkraut
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-krītu, -krīti, -krīt, pag. -kritu", "krist", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"krist\""},
+				null, gramText, lemma); //aizkrist
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-kuru, -kur, -kur, pag. -kūru", "kurt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"kurt\""},
+				null, gramText, lemma); //aizkurt
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-kūstu, -kusti, -kūst, pag. -kusu", "kust", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"kust\""},
+				null, gramText, lemma); //aizkust
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-ķeru, -ķer, -ķer, pag. -ķēru", "ķert", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"ķert\""},
+				null, gramText, lemma); //aizķert
+		// L
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-laižu, -laid, -laiž, pag. -laidu", "laist", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"laist\""},
+				null, gramText, lemma); //aizlaist
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-laužu, -lauz, -lauž, pag. -lauzu", "lauzt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"lauzt\""},
+				null, gramText, lemma); //aizlauzt
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-lecu, -lec, -lec, pag. -lēcu", "lēkt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"lēkt\""},
+				null, gramText, lemma); //aizlēkt
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-liedzu, -liedz, -liedz, pag. -liedzu", "liegt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"liegt\""},
+				null, gramText, lemma); //aizliegt
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-leju, -lej, -lej, pag. -lēju", "liet", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"liet\""},
+				null, gramText, lemma); //aizliet
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-lieku, -liec, -liek, pag. -liku", "likt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"likt\""},
+				null, gramText, lemma); //aizlikt
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-lienu, -lien, -lien, pag. -līdu", "līst", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"līst\""},
+				null, gramText, lemma); //aizlīst
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-lobju, -lob, -lobj, pag. -lobu", "lobt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"lobt\""},
+				null, gramText, lemma); //aizlobt
+		
+		// M, N, O, P, R, S
 		// T
 		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
 				"-tupstu, -tupsti, -tupst, pag. -tupu", "tupt", 15,
@@ -2515,6 +2624,12 @@ public class Gram  implements HasToJSON
 	{
 		int newBegin = -1;
 		// Paradigm 16: Darbības vārdi 2. konjugācija tiešie
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"parasti 3. pers., -kūko, pag. -kūkoja", "kūkot", 16,
+				new String[] {"Darbības vārds"},
+				new String[] {"Parasti 3. personā"},
+				gramText, lemma); //aizkūkot
+		
 		if (newBegin == -1) newBegin = simpleRule(
 				"parasti 3. pers., -ā, pag. -āja", "āt", 16,
 				new String[] {"Darbības vārds"},
@@ -2659,6 +2774,11 @@ public class Gram  implements HasToJSON
 				new String[] {"Darbības vārds"},
 				new String[] {"Parasti 3. personā"},
 				gramText, lemma); //aizklaudzēt
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"parasti 3. pers., -kūp, pag. -kūpēja", "kūpēt", 17,
+				new String[] {"Darbības vārds"},
+				new String[] {"Parasti 3. personā"},
+				gramText, lemma); //aizkūpēt
 		// L, M, N, O, P, R, S, T, U, V, Z
 		
 		// Generic ending rules.
@@ -2703,6 +2823,10 @@ public class Gram  implements HasToJSON
 				"-klimstu, -klimsti, -klimst, pag. -klimstēju", "klimstēt", 17,
 				new String[] {"Darbības vārds"},
 				null, gramText, lemma); //aizklimstēt
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-kustu, -kusti, -kust, pag. -kustēju", "kustēt", 17,
+				new String[] {"Darbības vārds"},
+				null, gramText, lemma); //aizkustēt
 		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
 				"-turu, -turi, -tur, pag. -turēju", "turēt", 17,
 				new String[] {"Darbības vārds"},
@@ -2884,7 +3008,36 @@ public class Gram  implements HasToJSON
 				"-krācos, -krācies, -krācas, pag. -krācos", "krākties", 18,
 				new String[] {"Darbības vārds", "Locīt kā \"krākties\""},
 				null, gramText, lemma); //aizkrākties
-		// L, M, N, O, P, R, S
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-kuļos, -kulies, -kuļas, pag. -kūlos", "kulties", 18,
+				new String[] {"Darbības vārds", "Locīt kā \"kulties\""},
+				null, gramText, lemma); //aizkulties
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-ķēros, -ķeries, -ķeras, pag. -ķēros", "ķerties", 18,
+				new String[] {"Darbības vārds", "Locīt kā \"ķerties\""},
+				null, gramText, lemma); //aizķerties
+		// L
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-laižos, -laidies, -laižas, pag. -laidos", "laisties", 18,
+				new String[] {"Darbības vārds", "Locīt kā \"laisties\""},
+				null, gramText, lemma); //aizlaisties
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-laužos, -lauzies, -laužas, pag. -lauzās", "lauzties", 18,
+				new String[] {"Darbības vārds", "Locīt kā \"lauzties\""},
+				null, gramText, lemma); //aizlauzties
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-liedzos, -liedzies, -liedzas, pag. -liedzos", "liegties", 18,
+				new String[] {"Darbības vārds", "Locīt kā \"liegties\""},
+				null, gramText, lemma); //aizliegties
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-liecos, -liecies, -liecas, pag. -liecos", "liekties", 18,
+				new String[] {"Darbības vārds", "Locīt kā \"liekties\""},
+				null, gramText, lemma); //aizliekties
+		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
+				"-liekos, -liecies, -liekas, pag. -likos", "likties", 18,
+				new String[] {"Darbības vārds", "Locīt kā \"likties\""},
+				null, gramText, lemma); //aizlikties
+		// M, N, O, P, R, S
 		// T
 		if (newBegin == -1) newBegin = simpleRuleOptHyperns(
 				"-tupstos, -tupsties, -tupstas, pag. -tupos", "tupties", 18,
@@ -3091,6 +3244,16 @@ public class Gram  implements HasToJSON
 				new String[] {"Darbības vārds"},
 				new String[] {"Parasti 3. personā"},
 				gramText, lemma); //aizkrakšķēties
+		if (newBegin == -1) newBegin = simpleRule(
+				"parasti 3. pers., -kurkstas, pag. -kurkstējās", "kurkstēties", 20,
+				new String[] {"Darbības vārds"},
+				new String[] {"Parasti 3. personā"},
+				gramText, lemma); //aizkurkstēties
+		if (newBegin == -1) newBegin = simpleRule(
+				"parasti 3. pers., -kurkšķas, pag. -kurkšķējās", "kurkšķēties", 20,
+				new String[] {"Darbības vārds"},
+				new String[] {"Parasti 3. personā"},
+				gramText, lemma); //aizkurkšķēties
 		// L, M, N, O, P, R, S, T, U, V, Z
 		
 		// Generic ending rules.
@@ -3139,6 +3302,10 @@ public class Gram  implements HasToJSON
 				"-guļos, -gulies, -guļas, pag. -gulējos", "gulēties", 20,
 				new String[] {"Darbības vārds"},
 				null, gramText, lemma); //aizgulēties
+		if (newBegin == -1) newBegin = simpleRule(
+				"-kustos, -kusties, -kustas, pag. -kustējos", "kustēties", 20,
+				new String[] {"Darbības vārds"},
+				null, gramText, lemma); //aizkustēties
 		
 		// Generic ending rules.
 		if (newBegin == -1) newBegin = simpleRule(
