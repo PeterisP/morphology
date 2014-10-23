@@ -1,5 +1,7 @@
 /*******************************************************************************
- * Copyright 2008, 2009 Institute of Mathematics and Computer Science, University of Latvia; Author: Pēteris Paikens
+ * Copyright 2008, 2009, 2014 Institute of Mathematics and Computer Science, University of Latvia
+ * Author: Pēteris Paikens
+ * 
  *     This program is free software: you can redistribute it and/or modify
  *     it under the terms of the GNU General Public License as published by
  *     the Free Software Foundation, either version 3 of the License, or
@@ -2147,6 +2149,50 @@ public class MorphologyTest {
 		testset.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Masculine);
 		testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
 		assertInflection(formas, testset, "raciens");
+	}
+	
+	@Test 
+	/**
+	 * 2014.08.25 Bug with verb stem changes
+	 */
+	public void lecdams() {
+		Word w = locītājs.analyze("lekdams");
+		assertTrue(w.isRecognized());
+		assertEquals("lekt", w.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+		
+		w = locītājs.analyze("lecdams");
+		assertFalse(w.isRecognized());
+		
+		List<Wordform> formas = locītājs.generateInflections("lekt", true);
+		AttributeValues testset = new AttributeValues();
+		testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
+		testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Nominative);
+		testset.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Masculine);
+		testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+		assertInflection(formas, testset, "lekdams");
+	}
+	
+	@Test 
+	/**
+	 * 2014.08.25 Bug with verb 'līt'
+	 */
+	public void līstiiet() {
+		Word w = locītājs.analyze("līstiet");
+		assertTrue(w.isRecognized());
+		assertEquals("līt", w.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+		
+		w = locītājs.analyze("līstiiet");
+		assertFalse(w.isRecognized());
+		
+		// un vēl "lijdams" http://ezis.ailab.lv:8182/inflect/en/l%C4%ABt
+		
+		List<Wordform> formas = locītājs.generateInflections("lekt", true);
+		AttributeValues testset = new AttributeValues();
+		testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
+		testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Nominative);
+		testset.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Masculine);
+		testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+		assertInflection(formas, testset, "lekdams");
 	}
 	
 	@Test

@@ -1,5 +1,7 @@
 /*******************************************************************************
- * Copyright 2012 Institute of Mathematics and Computer Science, University of Latvia; Author: Pēteris Paikens
+ * Copyright 2012, 2014 Institute of Mathematics and Computer Science, University of Latvia
+ * Author: Pēteris Paikens
+ * 
  *     This program is free software: you can redistribute it and/or modify
  *     it under the terms of the GNU General Public License as published by
  *     the Free Software Foundation, either version 3 of the License, or
