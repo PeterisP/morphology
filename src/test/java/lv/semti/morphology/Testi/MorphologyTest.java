@@ -2203,4 +2203,17 @@ public class MorphologyTest {
 		Word w = locītājs.analyze("īstāis");
 		assertFalse(w.isRecognized());
 	}
+	
+	@Test
+	/**
+	 * In case if there is any ambiguity between a normal word and a lexeme flagged as rare, the rare option should be excluded completely by default ('ar' -> 'art'; 'ir' -> 'irt')
+	 */
+	public void retie() {
+		Word w = locītājs.analyze("aršana");
+		assertTrue(w.isRecognized());
+		
+		w = locītājs.analyze("ar");
+		for (Wordform wf : w.wordforms)
+			assertFalse(wf.isMatchingStrong(AttributeNames.i_Lemma, "art"));
+	}
 }

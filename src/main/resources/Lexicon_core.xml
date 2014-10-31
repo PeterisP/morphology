@@ -2151,7 +2151,7 @@
       <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="attraukt"/>
     </Lexeme>
     <Lexeme ID="23939" Stem1="ar" Stem2="ar" Stem3="ar">
-      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="art"/>
+      <Attributes Biežums="Reti" Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="art"/>
     </Lexeme>
     <Lexeme ID="23940" Stem1="atpazī" Stem2="atpazīst" Stem3="atpazin">
       <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="atpazīt"/>
@@ -2364,7 +2364,7 @@
       <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="iepazīt"/>
     </Lexeme>
     <Lexeme ID="24293" Stem1="ir" Stem2="irst" Stem3="ir">
-      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="irt"/>
+      <Attributes Biežums="Reti" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="irt"/>
     </Lexeme>
     <Lexeme ID="24004" Stem1="jā" Stem2="jāj" Stem3="jāj">
       <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="jāt"/>

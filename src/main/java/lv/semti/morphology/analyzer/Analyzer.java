@@ -23,6 +23,7 @@ import java.io.InputStream;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.regex.Pattern;
 
 import lv.semti.morphology.attributes.AttributeNames;
@@ -42,6 +43,7 @@ public class Analyzer extends Lexicon {
     public boolean guessAdjectives = true;
     public boolean enableAllGuesses = false;
 	public boolean guessInflexibleNouns = false;
+	public boolean removeRareWords = true;
 	
 	private Pattern p_number = Pattern.compile("[\\d\\., ]*\\d+([\\.,][-‐‑‒–—―])?");
 	private Pattern p_ordinal = Pattern.compile("\\d+\\.");
@@ -185,7 +187,7 @@ public class Analyzer extends Lexicon {
 	}
 	
 	private Word analyzeLowercase(String word, String originalWord) {
-		Word rezultāts = new Word(word);
+		Word result = new Word(word);
 		
 		for (Ending ending : getAllEndings().matchedEndings(word)) {
 			ArrayList<Variants> celmi = Mijas.mijuVarianti(ending.stem(word), ending.getMija(), p_firstcap.matcher(originalWord).matches());
@@ -199,17 +201,33 @@ public class Analyzer extends Lexicon {
 						variants.addAttributes(celms);
 						variants.addAttribute(AttributeNames.i_Guess, AttributeNames.v_NoGuess);
 						if (this.isAcceptable(variants)) { // izmetam tos variantus, kas nav īsti pieļaujami - vienskaitliniekus daudzskaitlī, vokatīvus ja tos negrib
-							rezultāts.addWordform(variants);
+							result.addWordform(variants);
 							foundSomethingHere = true;
 						}
 					}				
 
 				if (!foundSomethingHere && enableDiminutive) 
-					guessDeminutive(word, rezultāts, ending, celms, originalWord);
+					guessDeminutive(word, result, ending, celms, originalWord);
 			}
 		}
+		
+		if (result.isRecognized() && removeRareWords) {
+			boolean hasNonrareOption = false;
+			for (Wordform wf : result.wordforms)
+				if (!wf.isMatchingStrong(AttributeNames.i_Frequency, AttributeNames.v_Rare))
+					hasNonrareOption = true;
+			
+			
+			if (hasNonrareOption) {
+				List<Wordform> to_remove = new LinkedList<Wordform>();
+				for (Wordform wf : result.wordforms)
+					if (wf.isMatchingStrong(AttributeNames.i_Frequency, AttributeNames.v_Rare))
+						to_remove.add(wf);
+				result.wordforms.removeAll(to_remove);
+			}			
+		}
 
-		if (!rezultāts.isRecognized()) {  //Hardcoded izņēmumi (ar regex) kas atpazīst ciparus, kārtas skaitļus utml
+		if (!result.isRecognized()) {  //Hardcoded izņēmumi (ar regex) kas atpazīst ciparus, kārtas skaitļus utml
 			if (p_number.matcher(word).matches()) {
 				Wordform wf = new Wordform(word);
 				wf.setEnding(this.endingByID(1158)); // FIXME - hardkodēts numurs hardcoded vārdu galotnei
@@ -217,8 +235,8 @@ public class Analyzer extends Lexicon {
 				wf.addAttribute(AttributeNames.i_ResidualType, AttributeNames.v_Number);
 				wf.addAttribute(AttributeNames.i_Lemma, word);
 				wf.addAttribute(AttributeNames.i_Word, word);
-				rezultāts.addWordform(wf);
-				return rezultāts;
+				result.addWordform(wf);
+				return result;
 			}
 			if (p_fractional.matcher(word).matches()) {
 				Wordform wf = new Wordform(word);
@@ -227,8 +245,8 @@ public class Analyzer extends Lexicon {
 				wf.addAttribute(AttributeNames.i_ResidualType, AttributeNames.v_Number);
 				wf.addAttribute(AttributeNames.i_Lemma, word);
 				wf.addAttribute(AttributeNames.i_Word, word);
-				rezultāts.addWordform(wf);
-				return rezultāts;
+				result.addWordform(wf);
+				return result;
 			}
 			if (p_ordinal.matcher(word).matches()) {
 				Wordform wf = new Wordform(word);
@@ -237,8 +255,8 @@ public class Analyzer extends Lexicon {
 				wf.addAttribute(AttributeNames.i_ResidualType, AttributeNames.v_Ordinal);
 				wf.addAttribute(AttributeNames.i_Lemma, word);
 				wf.addAttribute(AttributeNames.i_Word, word);
-				rezultāts.addWordform(wf);
-				return rezultāts;
+				result.addWordform(wf);
+				return result;
 			}
 			if (p_abbrev.matcher(word).matches()) {
 				Wordform wf = new Wordform(word);
@@ -246,8 +264,8 @@ public class Analyzer extends Lexicon {
 				wf.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Abbreviation);
 				wf.addAttribute(AttributeNames.i_Lemma, word);
 				wf.addAttribute(AttributeNames.i_Word, word);
-				rezultāts.addWordform(wf);
-				return rezultāts;
+				result.addWordform(wf);
+				return result;
 			}
 			if (enableGuessing && p_acronym.matcher(originalWord).matches()) { // Treating all short allcaps words as acronyms is a form of guessing, since it's not safe and makes a brave assumption about such outofvocabulary words
 				Wordform wf = new Wordform(originalWord);
@@ -260,8 +278,8 @@ public class Analyzer extends Lexicon {
 				wf.addAttributes(e);
 				wf.addAttribute(AttributeNames.i_EndingID, Integer.toString(e.getID()));
 				wf.addAttribute(AttributeNames.i_ParadigmID, Integer.toString(p.getID()));
-				rezultāts.addWordform(wf);
-				return rezultāts;
+				result.addWordform(wf);
+				return result;
 			}
 			if (p_url.matcher(word).matches()) {
 				Wordform wf = new Wordform(word);
@@ -270,13 +288,13 @@ public class Analyzer extends Lexicon {
 				wf.addAttribute(AttributeNames.i_ResidualType, AttributeNames.v_URI);
 				wf.addAttribute(AttributeNames.i_Lemma, word);
 				wf.addAttribute(AttributeNames.i_Word, word);
-				rezultāts.addWordform(wf);
-				return rezultāts;
+				result.addWordform(wf);
+				return result;
 			}
 		}
 		
-		if (!rezultāts.isRecognized() && enablePrefixes )
-			rezultāts = guessByPrefix(word);
+		if (!result.isRecognized() && enablePrefixes )
+			result = guessByPrefix(word);
 /*
 		if (!rezultāts.isRecognized() && meklētsalikteņus )
 			for (Ending ending : allEndings())
@@ -286,8 +304,8 @@ public class Analyzer extends Lexicon {
 					}
 				} */
 
-		if (!rezultāts.isRecognized() && enableGuessing )
-			rezultāts = guessByEnding(word, originalWord);
+		if (!result.isRecognized() && enableGuessing )
+			result = guessByEnding(word, originalWord);
 
 		/*for (Wordform variants : rezultāts.wordforms) {
 			variants.addAttribute(AttributeNames.i_Tag, MarkupConverter.toKamolsMarkup(variants));
@@ -301,7 +319,7 @@ public class Analyzer extends Lexicon {
 			}
 		} */
 
-		return rezultāts;
+		return result;
 	}
 
 	private void guessDeminutive(String word, Word rezultāts, Ending ending,
