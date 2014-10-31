@@ -323,6 +323,7 @@ public class Word extends Observable implements Cloneable{
 	}
 
 	public void describe(PrintWriter pipe) {
+		pipe.println(this.token);
 		for (Wordform wf : wordforms)
 			wf.describe(pipe);
 	}

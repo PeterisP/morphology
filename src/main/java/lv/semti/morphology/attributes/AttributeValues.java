@@ -54,6 +54,7 @@ public class AttributeValues implements FeatureStructure, Cloneable {
 	}
 	
 	public void describe(PrintWriter pipe) {
+		pipe.printf("\t%s\n", this.getTag());
 		for (Entry<String,String> īpašība : attributes.entrySet()) {
 			pipe.format("\t\t%s = %s%n", īpašība.getKey(),īpašība.getValue());
 		}
