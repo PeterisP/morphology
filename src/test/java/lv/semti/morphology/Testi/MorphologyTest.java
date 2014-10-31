@@ -2216,4 +2216,20 @@ public class MorphologyTest {
 		for (Wordform wf : w.wordforms)
 			assertFalse(wf.isMatchingStrong(AttributeNames.i_Lemma, "art"));
 	}
+	
+	@Test
+	public void turlais() {
+		locītājs.enableGuessing = true;
+		locītājs.enableVocative = true;
+		locītājs.guessVerbs = false;
+		locītājs.guessParticiples = false;
+		locītājs.guessInflexibleNouns = true;
+		locītājs.enableAllGuesses = true;
+
+		Word w = locītājs.guessByEnding("turlais", "Turlais");
+		assertTrue(w.isRecognized());
+		w.describe(System.out);
+		for (Wordform wf : w.wordforms)
+			assertFalse(wf.isMatchingStrong(AttributeNames.i_Lemma, "art"));
+	}
 }
