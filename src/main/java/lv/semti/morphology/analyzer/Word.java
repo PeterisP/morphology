@@ -254,6 +254,13 @@ public class Word extends Observable implements Cloneable{
 	public Wordform getMatchingWordform(String answerTag, boolean complain) {
 		Wordform result = null;
 		AttributeValues av = MarkupConverter.fromKamolsMarkup(answerTag);
+		
+		//FIXME - hardcoded workaround tagera kļūdai
+		if (this.getToken().endsWith("ais") && av.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adjective) 
+										    && av.isMatchingStrong(AttributeNames.i_Definiteness, AttributeNames.v_Indefinite)) {
+			av.addAttribute(AttributeNames.i_Definiteness, AttributeNames.v_Definite);
+		}
+		
 		double maxticamība = -1;
 		for (Wordform wf : this.wordforms) {
 			if (wf.isMatchingWeak(av)) {
