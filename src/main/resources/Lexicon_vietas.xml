@@ -303,6 +303,14 @@
       <Lexeme Stem1="krīv"> <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Krīvi" Avots="LĢIS"/> </Lexeme>
       <Lexeme Stem1="balv"> <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Balvi" Avots="LĢIS"/> </Lexeme>
       <Lexeme Stem1="grikšān"> <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Grikšāni" Avots="LĢIS"/> </Lexeme>
+      <Lexeme Stem1="buldur"> <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Bulduri" Avots="Pēteris, Jūrmalas daļas"/> </Lexeme>
+      <Lexeme Stem1="dzintar"> <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Dzintari" Avots="Pēteris, Jūrmalas daļas"/> </Lexeme>
+      <Lexeme Stem1="jaundubult"> <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Jaundubulti" Avots="Pēteris, Jūrmalas daļas"/> </Lexeme>
+      <Lexeme Stem1="pumpur"> <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Pumpuri" Avots="Pēteris, Jūrmalas daļas"/> </Lexeme>
+      <Lexeme Stem1="melluž"> <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Melluži" Avots="Pēteris, Jūrmalas daļas"/> </Lexeme>
+      <Lexeme Stem1="asar"> <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Asari" Avots="Pēteris, Jūrmalas daļas"/> </Lexeme>
+      <Lexeme Stem1="vaivar"> <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Vaivari" Avots="Pēteris, Jūrmalas daļas"/> </Lexeme>
+      <Lexeme Stem1="ķemer"> <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Ķemeri" Avots="Pēteris, Jūrmalas daļas"/> </Lexeme>
   </Paradigm>
   <Paradigm Stems="1" ID="2" LemmaEnding="14" Description="Lietvārds 1. deklinācija -š">
     <Attributes Vārdšķira="Lietvārds" Deklinācija="1" Dzimte="Vīriešu"/>
