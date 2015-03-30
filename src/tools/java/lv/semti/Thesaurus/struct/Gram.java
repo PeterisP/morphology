@@ -60,6 +60,12 @@ public class Gram  implements HasToJSON
 	 */
 	public static final SimpleRule[] simpleRulesDirect =
 	{
+		/* Paradigm Unknown: Atgriezeniskie lietvārdi -šanās
+		 */
+		new SimpleRule("ģen. -ās, akuz. -os, instr. -os, dsk. -ās, ģen. -os, akuz. -ās, s.", "šanās", 0,
+				new String[] {"Lietvārds", "Atgriezeniskais lietvārds"},
+				new String[] {"Sieviešu dzimte"}), //aizbildināšanās
+		
 		/* Paradigm 15: Darbības vārdi 1. konjugācija tiešie + parasti 3. pers.
 		 * Rules in form "parasti 3. pers., -šalc, pag. -šalca".
 		 * Rules ordered alphabetically by verb infinitive. 
@@ -411,7 +417,7 @@ public class Gram  implements HasToJSON
 				new String[] {"Darbības vārds", "Locīt kā \"dzelt\""},
 				new String[] {"Parasti 3. personā"}), //aizdzelt
 		new SimpleRule("parasti 3. pers., -dzīst, pag. -dzija", "dzīt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"dzīt\""},
+				new String[] {"Darbības vārds", "Locīt kā \"dzīt\" (kā ievainojumi)"},
 				new String[] {"Parasti 3. personā"}), //aizdzīt 2
 		// E, F, G
 		new SimpleRule("parasti 3. pers., -grimst, pag. -grima", "grimt", 15,
@@ -460,7 +466,24 @@ public class Gram  implements HasToJSON
 		new SimpleRule("parasti 3. pers., -milst, pag. -milza", "milzt", 15,
 				new String[] {"Darbības vārds", "Locīt kā \"milzt\""},
 				new String[] {"Parasti 3. personā"}), //aizmilzt
-		// N, O, P, R, S, Š
+		// N, Ņ
+		new SimpleRule("parasti 3. pers., -ņirb, pag. -ņirba", "ņirbt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"ņirbt\""},
+				new String[] {"Parasti 3. personā"}), //aizņirbt
+		// O, P
+		new SimpleRule("parasti 3. pers., -pampst, pag. -pampa", "pampt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"pampt\""},
+				new String[] {"Parasti 3. personā"}), //aizpampt
+		new SimpleRule("parasti 3. pers., -plaukst, pag. -plauka", "plaukt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"plaukt\""},
+				new String[] {"Parasti 3. personā"}), //aizplaukt
+		new SimpleRule("parasti 3. pers., -plīst, pag. -plīsa", "plīst", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"plīst\""},
+				new String[] {"Parasti 3. personā"}), //aizplīst
+		new SimpleRule("parasti 3. pers., -plūst, pag. -plūda", "plūst", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"plūst\""},
+				new String[] {"Parasti 3. personā"}), //aizplūst
+		// R, S, Š
 		new SimpleRule("parasti 3. pers., -šalc, pag. -šalca", "šalkt", 15,
 				new String[] {"Darbības vārds", "Locīt kā \"šalkt\""},
 				new String[] {"Parasti 3. personā"}), //aizšalkt
@@ -533,7 +556,7 @@ public class Gram  implements HasToJSON
 				new String[] {"Darbības vārds", "Locīt kā \"dzert\""},
 				null), //aizdzert
 		new SimpleRule("-dzenu, -dzen, -dzen, pag. -dzinu", "dzīt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"dzīt\""},
+				new String[] {"Darbības vārds", "Locīt kā \"dzīt\" (kā lopus)"},
 				null), //aizdzīt 1
 		// E
 		new SimpleRule("-ēdu, -ēd, -ēd, pag. -ēdu", "ēst", 15,
@@ -701,7 +724,33 @@ public class Gram  implements HasToJSON
 		new SimpleRule("-ņemu, -ņem, -ņem, pag. -ņēmu", "ņemt", 15,
 				new String[] {"Darbības vārds", "Locīt kā \"ņemt\""},
 				null), //aizņemt
-		// O, P, R, S, T
+		// O, P
+		new SimpleRule("-pinu, -pin, -pin, pag. -pinu", "pīt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"pīt\""},
+				null), //aizpīt
+		new SimpleRule("-ploku, -ploc, -plok, pag. -plaku", "plakt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"plakt\""},
+				null), //aizplakt
+		new SimpleRule("-plēšu, -plēs, -plēš, pag. plēsu", "plēst", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"plēst\""},
+				null), //aizplēst
+		new SimpleRule("-plešu, -plet, -pleš, pag. -pletu, arī -plētu", "plest", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"plest\"", "Paralēlās formas"},
+				null), //aizplest
+		new SimpleRule("-plūcu, -plūc, -plūc, pag. -plūcu", "plūkt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"plūkt\""},
+				null), //aizplūkt
+		new SimpleRule("-pļauju, -pļauj, -pļauj, pag. -pļāvu", "pļaut", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"pļaut\""},
+				null), //aizpļaut
+		new SimpleRule("-pūšu, -pūt, -pūš, pag. -pūtu", "pūst", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"pūst\""},
+				null), //aizpūst
+		// R
+		new SimpleRule("-roku, -roc, -rok, pag. -raku", "rakt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"rakt\""},
+				null), //aizrakt
+		// S, T
 		new SimpleRule("-tupstu, -tupsti, -tupst, pag. -tupu", "tupt", 15,
 				new String[] {"Darbības vārds", "Locīt kā \"tupt\"", "Paralēlās formas"},
 				null), //aiztupt
@@ -732,8 +781,7 @@ public class Gram  implements HasToJSON
 		 * Rules ordered alphabetically by verb infinitive.
 		 */
 		// Verb-specific rules.
-		// A
-		// B
+		// A, B
 		new SimpleRule("parasti 3. pers., -blākš, pag. -blākšēja", "blākšēt", 17,
 				new String[] {"Darbības vārds"},
 				new String[] {"Parasti 3. personā"}), //aizblākšēt
@@ -763,16 +811,14 @@ public class Gram  implements HasToJSON
 		new SimpleRule("parasti 3. pers., -džinkst, pag. -džinkstēja", "džinkstēt", 17,
 				new String[] {"Darbības vārds"},
 				new String[] {"Parasti 3. personā"}), //aizdžinkstēt
-		// E, F
-		// G
+		// E, F, G
 		new SimpleRule("parasti 3. pers., -grab, pag. -grabēja", "grabēt", 17,
 				new String[] {"Darbības vārds"},
 				new String[] {"Parasti 3. personā"}), //aizgrabēt
 		new SimpleRule("parasti 3. pers., -gurkst, pag. -gurkstēja", "gurkstēt", 17,
 				new String[] {"Darbības vārds"},
 				new String[] {"Parasti 3. personā"}), //aizgurkstēt
-		// H, I, J
-		// K
+		// H, I, J, K
 		new SimpleRule("parasti 3. pers., -klab, pag, -klabēja", "klabēt", 17,
 				new String[] {"Darbības vārds"},
 				new String[] {"Parasti 3. personā"}), //aizklabēt
@@ -785,32 +831,53 @@ public class Gram  implements HasToJSON
 		new SimpleRule("parasti 3. pers., -kūp, pag. -kūpēja", "kūpēt", 17,
 				new String[] {"Darbības vārds"},
 				new String[] {"Parasti 3. personā"}), //aizkūpēt
-		// L
-		// M
+		// L, M
 		new SimpleRule("parasti 3. pers., -mirdz, pag. -mirdzēja (retāk -mirdza, 1. konj.)", "mirdzēt", 17,
 				new String[] {"Darbības vārds", "Paralēlās formas"},
 				new String[] {"Parasti 3. personā"}), //aizmirdzēt
-		// N, O, P, R, S, T, U, V, Z
+		// N, Ņ
+		new SimpleRule("parasti 3. pers., -ņirb, pag. -ņirbēja", "ņirbēt", 17,
+				new String[] {"Darbības vārds"},
+				new String[] {"Parasti 3. personā"}), //aizņirbēt
+		// O, P
+		new SimpleRule("parasti 3. pers., -pelē, arī -pel, pag. -pelēja", "pelēt", 17,
+				new String[] {"Darbības vārds", "Paralēlās formas"},
+				new String[] {"Parasti 3. personā"}), //aizpelēt
+		new SimpleRule("parasti 3. pers., -pil, pag. -pilēja", "pilēt", 17,
+				new String[] {"Darbības vārds"},
+				new String[] {"Parasti 3. personā"}), //aizpilēt
+		// R, S, T, U, V, Z
 				
 		/* Paradigm 17: Darbības vārdi 3. konjugācija tiešie
 		 * Rules in form "-dziedu, -dziedi, -dzied, pag. -dziedāju" and
 		 * "-u, -i, -a, pag. -īju".
 		 */
 		// Verb-specific rules.
+		// A, B, C, D
 		new SimpleRule("-dziedu, -dziedi, -dzied, pag. -dziedāju", "dziedāt", 17,
 				new String[] {"Darbības vārds"}, null), //aizdziedāt
+		// E, F, G
 		new SimpleRule("-guļu, -guli, -guļ, pag. -gulēju", "gulēt", 17,
 				new String[] {"Darbības vārds"}, null), //aizgulēt
+		// H, I, J, K
 		new SimpleRule("-klimstu, -klimsti, -klimst, pag. -klimstēju", "klimstēt", 17,
 				new String[] {"Darbības vārds"}, null), //aizklimstēt
 		new SimpleRule("-kustu, -kusti, -kust, pag. -kustēju", "kustēt", 17,
 				new String[] {"Darbības vārds"}, null), //aizkustēt
+		// L
 		new SimpleRule("-loku, -loki, -loka, pag. -locīju", "locīt", 17,
 				new String[] {"Darbības vārds"}, null), //aizlocīt
+		// M
 		new SimpleRule("-moku, -moki, -moka, arī -mocu, -moci, -moca, pag. -mocīju", "mocīt", 17,
 				new String[] {"Darbības vārds", "Paralēlās formas"}, null), //aizmocīt
+		// N, O, P
+		new SimpleRule("-peldu, -peldi, -peld, pag. -peldēju", "peldēt", 17,
+				new String[] {"Darbības vārds"}, null), //aizpeldēt
+				
+		// R, S, T
 		new SimpleRule("-turu, -turi, -tur, pag. -turēju", "turēt", 17,
 				new String[] {"Darbības vārds"}, null), //aizturēt
+		// U, V, Z
 		
 		/* Paradigm 18: Darbības vārdi 1. konjugācija atgriezeniski
 		 * Rules in form "parasti 3. pers., -šalcas, pag. -šalcās".
@@ -827,7 +894,11 @@ public class Gram  implements HasToJSON
 		new SimpleRule("parasti 3. pers., -griežas, pag. -griezās", "griezties", 18,
 				new String[] {"Darbības vārds", "Locīt kā \"griezties\""},
 				new String[] {"Parasti 3. personā"}), //aizgriezties 2
-		// H, I, J, K, L, M, N, O, P, R, S, T, U, V, Z
+		// H, I, J, K, L, M, N, O, P
+		new SimpleRule("parasti 3. pers., -plešas, pag. -pletās, arī -plētās", "plesties", 18,
+				new String[] {"Darbības vārds", "Locīt kā \"plesties\"", "Paralēlās formas"},
+				new String[] {"Parasti 3. personā"}), //aizplesties
+		// R, S, T, U, V, Z
 
 		/* Paradigm 18: Darbības vārdi 1. konjugācija atgriezeniski
 		 * Rules in form "-tupstos, -tupsties, -tupstas, pag. -tupos".
@@ -896,18 +967,18 @@ public class Gram  implements HasToJSON
 		new SimpleRule("-metos, -meties, -metas, pag. -metos", "mesties", 18,
 				new String[] {"Darbības vārds", "Locīt kā \"mesties\""},
 				null), //aizmesties
-		new SimpleRule("-minos, -minies, -minas, pag. -minos", "mīties", 15,
+		new SimpleRule("-minos, -minies, -minas, pag. -minos", "mīties", 18,
 				new String[] {"Darbības vārds", "Locīt kā \"mīties\" (kā pedāļus)"},
 				null), //aizmīties
-		new SimpleRule("-mijos, -mijies, -mijas, pag. -mijos", "mīties", 15,
+		new SimpleRule("-mijos, -mijies, -mijas, pag. -mijos", "mīties", 18,
 				new String[] {"Darbības vārds", "Locīt kā \"mīties\" (kā naudu)"},
 				null), //?
 		// N
-		new SimpleRule("-nesos, -nesies, -nesas, pag. -nesos", "nesties", 15,
+		new SimpleRule("-nesos, -nesies, -nesas, pag. -nesos", "nesties", 18,
 				new String[] {"Darbības vārds", "Locīt kā \"nesties\""},
 				null), //aiznesties
 		// Ņ
-		new SimpleRule("-ņemos, -ņemies, -ņemas, pag. -ņemos", "ņemties", 15,
+		new SimpleRule("-ņemos, -ņemies, -ņemas, pag. -ņemos", "ņemties", 18,
 				new String[] {"Darbības vārds", "Locīt kā \"ņemties\""},
 				null), //aizņemties		
 		// O, P, R, S, T
@@ -927,7 +998,9 @@ public class Gram  implements HasToJSON
 				new String[] {"Darbības vārds"}, null), //aizdzīties
 		new SimpleRule(
 				"-mokos, -mokies, -mokās, arī -mocos, -mocies, -mocās, pag. -mocījos", "mocīties", 20,
-				new String[] {"Darbības vārds", "Paralēlās formas"}, null) //aizmocīties
+				new String[] {"Darbības vārds", "Paralēlās formas"}, null), //aizmocīties
+		new SimpleRule("-peros, -peries, -peras, pag. -pēros", "pērties", 20,
+				new String[] {"Darbības vārds"}, null) //aizpērties
 	};
 	/**
 	 * Known abbreviations and their de-abbreviations.
@@ -1440,26 +1513,8 @@ public class Gram  implements HasToJSON
 		if (newBegin == -1)
 		{
 			// Long, specific patterns.
-			// Paradigm Unknown: Atgriezeniskie lietvārdi -šanās
-			if (gramText.startsWith("ģen. -ās, akuz. -os, instr. -os, dsk. -ās, ģen. -os, akuz. -ās, s.")) //aizbildināšanās
-			{
-				newBegin = "ģen. -ās, akuz. -os, instr. -os, dsk. -ās, ģen. -os, akuz. -ās, s.".length();
-				if (lemma.endsWith("šanās"))
-				{
-					paradigm.add(0);
-					flags.add("Lietvārds");	
-					flags.add("Atgriezeniskais lietvārds");
-				}
-				else
-				{
-					System.err.printf("Problem matching \"%s\" with paradigm -šanās\n", lemma);
-					newBegin = 0;
-				}
-				flags.add("Sieviešu dzimte");
-			}
-			
 			// Paradigm 25: Vietniekvārdi
-			else if (gramText.matches("ģen\\. -kā, dat\\. -kam, akuz\\., instr\\. -ko([.,;].*)?")) //daudzkas
+			if (gramText.matches("ģen\\. -kā, dat\\. -kam, akuz\\., instr\\. -ko([.,;].*)?")) //daudzkas
 			{
 				newBegin = "ģen. -kā, dat. -kam, akuz., instr. -ko".length();
 				if (lemma.endsWith("kas"))
