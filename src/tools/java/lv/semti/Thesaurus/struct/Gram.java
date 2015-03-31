@@ -17,7 +17,6 @@
  *******************************************************************************/
 package lv.semti.Thesaurus.struct;
 
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -28,7 +27,7 @@ import lv.semti.Thesaurus.utils.HasToJSON;
 import lv.semti.Thesaurus.utils.MappingSet;
 import lv.semti.Thesaurus.utils.Tuple;
 import lv.semti.Thesaurus.utils.JSONUtils;
-
+import lv.semti.Thesaurus.struct.gramlogic.*;
 
 import org.json.simple.JSONObject;
 import org.w3c.dom.Node;
@@ -58,21 +57,13 @@ public class Gram  implements HasToJSON
 	 * rules are long and highly specific and, thus, do not conflict
 	 * with other rules.
 	 */
-	public static final SimpleRule[] simpleRulesDirect =
+	public static final Rule[] simpleRulesDirect =
 	{
 		/* Paradigm Unknown: Atgriezeniskie lietvārdi -šanās
 		 */
 		new SimpleRule("ģen. -ās, akuz. -os, instr. -os, dsk. -ās, ģen. -os, akuz. -ās, s.", "šanās", 0,
 				new String[] {"Lietvārds", "Atgriezeniskais lietvārds"},
 				new String[] {"Sieviešu dzimte"}), //aizbildināšanās
-		
-		/* Paradigm 15: Darbības vārdi 1. konjugācija tiešie + parasti 3. pers.
-		 * Rules in form "parasti 3. pers., -šalc, pag. -šalca".
-		 * Rules ordered alphabetically by verb infinitive. 
-		 */
-		new SimpleRule("parasti 3. pers., -kvēpst, pag. -kvēpa", "kvēpt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"kvēpt\""},
-				new String[] {"Parasti 3. personā"}), //aizkvēpt
 		
 		/* Paradigm 16: Darbības vārdi 2. konjugācija tiešie
 		 * Rules in form "parasti 3. pers., -o, pag. -oja",
@@ -93,14 +84,7 @@ public class Gram  implements HasToJSON
 				new String[] {"Darbības vārds"}, null), //acot
 		new SimpleRule(	"-ēju, -ē, -ē, -ējam, -ējat, pag. -ēju, -ējām, -ējāt; pav. -ē, -ējiet", "ēt", 16,
 				new String[] {"Darbības vārds"}, null), //adverbializēt
-		new SimpleRule("-āju, -ā, -ā, pag. -āju", "āt", 16,
-				new String[] {"Darbības vārds"}, null), //aijāt
-		new SimpleRule("-ēju, -ē, -ē, pag. -ēja", "ēt", 16,
-				new String[] {"Darbības vārds"}, null), //aizdelverēt
-		new SimpleRule("-ēju, -ē, -ē, pag. -ēju", "ēt", 16,
-				new String[] {"Darbības vārds"}, null), //absolutizēt
-		new SimpleRule("-oju, -o, -o, pag. -oju", "ot", 16,
-				new String[] {"Darbības vārds"}, null), //aiztuntuļot
+
 				
 		/* Paradigm 17: Darbības vārdi 3. konjugācija tiešie
 		 * Rules in form "parasti 3. pers., -blākš, pag. -blākšēja"
@@ -366,7 +350,7 @@ public class Gram  implements HasToJSON
 	 * rules are long and highly specific and, thus, do not conflict
 	 * with other rules.
 	 */
-	public static final SimpleRule[] simpleRulesOptHyperns =
+	public static final Rule[] simpleRulesOptHyperns =
 	{
 		/* Paradigm 11: Lietvārds 6. deklinācija -s
 		 * Rules in form "-valsts, dsk. ģen. -valstu, s.", i.e containing full 6th
@@ -443,6 +427,9 @@ public class Gram  implements HasToJSON
 		new SimpleRule("parasti 3. pers., -knābj, pag. -knāba", "knābt", 15,
 				new String[] {"Darbības vārds", "Locīt kā \"knābt\""},
 				new String[] {"Parasti 3. personā"}), //aizknābt
+		new SimpleRule("parasti 3. pers., -kvēpst, pag. -kvēpa", "kvēpt", 15,
+				new String[] {"Darbības vārds", "Locīt kā \"kvēpt\""},
+				new String[] {"Parasti 3. personā"}), //aizkvēpt
 		new SimpleRule("parasti 3. pers., -kviec, pag. -kvieca", "kviekt", 15,
 				new String[] {"Darbības vārds", "Locīt kā \"kviekt\""},
 				new String[] {"Parasti 3. personā"}), //aizkviekt
@@ -609,7 +596,7 @@ public class Gram  implements HasToJSON
 				new String[] {"Darbības vārds", "Locīt kā \"jūgt\""},
 				null), //aizjūgt
 		new SimpleRule("-jumju, -jum, -jumj, pag. -jūmu, arī -jumu", "jumt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"jumt\"", "Paralēlās formas"},
+				new String[] {"Darbības vārds", "Locīt kā \"jumt\"", },
 				null), //aizjumt
 		// K
 		new SimpleRule("-kāpju, -kāp, -kāpj, pag. -kāpu", "kāpt", 15,
@@ -735,7 +722,7 @@ public class Gram  implements HasToJSON
 				new String[] {"Darbības vārds", "Locīt kā \"plēst\""},
 				null), //aizplēst
 		new SimpleRule("-plešu, -plet, -pleš, pag. -pletu, arī -plētu", "plest", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"plest\"", "Paralēlās formas"},
+				new String[] {"Darbības vārds", "Locīt kā \"plest\"", },
 				null), //aizplest
 		new SimpleRule("-plūcu, -plūc, -plūc, pag. -plūcu", "plūkt", 15,
 				new String[] {"Darbības vārds", "Locīt kā \"plūkt\""},
@@ -1002,256 +989,12 @@ public class Gram  implements HasToJSON
 		new SimpleRule("-peros, -peries, -peras, pag. -pēros", "pērties", 20,
 				new String[] {"Darbības vārds"}, null) //aizpērties
 	};
+	
 	/**
 	 * Known abbreviations and their de-abbreviations.
 	 */
-	public static MappingSet<String, String> knownAbbr = generateKnownAbbr();
-	private static MappingSet<String, String> generateKnownAbbr()
-	{
-		MappingSet<String, String> res = new MappingSet<String, String>();
-		
-		// TODO Sort out this mess.
-		// Source: LLVV, data.
-		
-		res.put("adj.", "Īpašības vārds");
-		res.put("adv.", "Apstākļa vārds");
-		res.put("apst.", "Apstākļa vārds");
-		res.put("divd.", "Divdabis");
-		res.put("Divd.", "Divdabis");
-		res.put("interj.", "Izsauksmes vārds");
-		res.put("īp. v.", "Īpašības vārds");
-		res.put("īp.", "Īpašības vārds");
-		res.put("izsauk.", "Izsauksmes vārds");
-		res.put("jaut.", "Jautājamais vietniekvārds");
-		res.put("lietv.", "Lietvārds");
-		res.put("noliedz.", "Noliedzamais vietniekvārds");
-		res.put("norād.", "Norādāmais vietniekvārds");
-		res.put("noteic.", "Noteicamais vietniekvārds");
-		res.put("part.", "Partikula");
-		res.put("pieder.", "Piederības vietniekvārds");
-		res.put("pried.", "Priedēklis"); // Specific processing needed.
-		res.put("priev.", "Prievārds");
-		res.put("skait.", "Skaitļa vārds");
-		res.put("vietn.", "Vietniekvārds");
-		res.put("vietniekv.", "Vietniekvārds");	// ?
-		res.put("vispārin.", "Vispārināmais vietniekvārds");
-		res.put("saīs.", "Saīsinājums");
-		res.put("simb.", "Saīsinājums");	// ?
-		res.put("salikteņu pirmā daļa.", "Salikteņu daļa");
-		res.put("salikteņu pirmā daļa", "Salikteņu daļa");
-		res.put("salikteņa pirmā daļa.", "Salikteņu daļa");
-		res.put("salikteņa pirmā daļa", "Salikteņu daļa");
-		res.put("salikteņu daļa.", "Salikteņu daļa");
-		res.put("salikteņu daļa", "Salikteņu daļa");
-		
-		res.put("priev. ar ģen.", "Prievārds");
-		res.put("priev. ar ģen.", "Lieto ar ģenetīvu");
-		res.put("ar ģen.", "Prievārds"); // It seems that without additional comments this is used for prepositions only
-		res.put("ar ģen.", "Lieto ar ģenetīvu");			
-		res.put("priev. ar dat.", "Prievārds");
-		res.put("priev. ar dat.", "Lieto ar datīvu");
-		
-		res.put("persv.", "Personvārds");
-		res.put("vietv.", "Vietvārds");
+	public static  MappingSet<String, String> knownAbbr = AbbrMap.getAbbrMap();
 
-		res.put("akuz.", "Akuzatīvs");
-		res.put("dat.", "Datīvs");
-		res.put("ģen.", "Ģenitīvs");
-		res.put("instr.", "Instrumentālis");
-		res.put("lok.", "Lokatīvs");
-		res.put("nom.", "Nominatīvs");
-
-
-		res.put("divsk.", "Divskaitlis"); // Do we really still have one of these?!
-		res.put("dsk.", "Daudzskaitlis");
-		res.put("vsk.", "Vienskaitlis");
-		
-		res.put("nāk.", "Nākotne");
-		res.put("pag.", "Pagātne");
-		res.put("tag.", "Tagadne");
-		
-		res.put("nenot.", "Nenoteiktā galotne");
-		res.put("not.", "Noteiktā galotne");
-		
-		res.put("s.", "Sieviešu dzimte");
-		res.put("v.", "Vīriešu dzimte");
-		res.put("kopdz.", "Kopdzimte");
-		
-		res.put("intrans.", "Nepārejošs");
-		res.put("intr.", "Nepārejošs");
-		res.put("trans.", "Pārejošs");
-		// TODO vai šie vienmēr ir darbības vārdi?
-
-		res.put("konj.", "Konjugācija");
-		res.put("pers.", "Persona");
-
-		//res.put("atgr.", "Atgriezensisks (vietniekvārds?)"); //not present
-		res.put("dem.", "Deminutīvs");
-		res.put("Dem.", "Deminutīvs");
-		res.put("imperf.", "Imperfektīva forma"); //???
-		res.put("nelok.", "Nelokāms vārds");
-		res.put("Nol.", "Noliegums"); // Check with other sources!
-		res.put("refl.", "Refleksīvs");
-		res.put("refl.", "Darbības vārds");			
-		res.put("Refl.", "Refleksīvs");
-		res.put("Refl.", "Darbības vārds");			
-
-		res.put("aeron.", "Aeronautika");	// ?
-		res.put("agr.", "Agronomija");
-		res.put("anat.", "Anatomija");
-		res.put("arheol.", "Arheoloģija");
-		res.put("arhit.", "Arhitektūra");
-		res.put("arh.", "Arhitektūra");
-		res.put("astr.", "Astronomija");
-		res.put("av.", "Aviācija");
-		res.put("biol.", "Bioloģija");
-		res.put("biškop.", "Biškopība");
-		res.put("bot.", "Botānika");
-		res.put("būvn.", "Būvniecība");
-		res.put("ek.", "Ekonomika");
-		res.put("ekol.", "Ekoloģija");		// ?
-		res.put("ekon.", "Ekonomika");
-		res.put("el.", "Elektrotehnika");
-		res.put("etn.", "Etnogrāfija");
-		res.put("farm.", "Farmakoloģija");
-		res.put("filoz.", "Filozofija");	
-		res.put("fin.", "Finanses");
-		res.put("fiz.", "Fizika");
-		res.put("fiziol.", "Fizioloģija");
-		res.put("fizk.", "Fiziskā kultūra un sports");
-		res.put("folkl.", "Folklora");
-		res.put("ģenēt.", "Ģenētika");	// ?
-		res.put("ģeod.", "Ģeodēzija");
-		res.put("ģeogr.", "Ģeogrāfija");
-		res.put("ģeol.", "Ģeoloģija");
-		res.put("ģeom.", "Ģeometrija");
-		res.put("grāmatv.", "Grāmatvedība");
-		res.put("hidr.", "Hidroloģija");
-		res.put("hidrotehn.", "Hidrotehnika");
-		res.put("inf.", "Informātika");
-		res.put("jur.", "Jurisprudence");
-		res.put("jūrn.", "Jūrniecība");
-		res.put("kap.", "Attiecas uz kapitālistisko iekārtu, kapitālistisko sabiedrību");
-		res.put("kardioloģijā", "Kardioloģija");
-		res.put("kart.", "Kartogrāfija");		// ?
-		res.put("kibern.", "Kibernētika");
-		res.put("kino", "Kinematogrāfija");
-		res.put("kokapstr.", "Kokapstrāde");	// ?
-		res.put("kul.", "Kulinārija");
-		res.put("ķīm.", "Ķīmija");
-		res.put("lauks.", "Lauksaimniecība");
-		res.put("lauks. tehn.", "Lauksaimniecības tehnika");	// ?
-		res.put("literat.", "Literatūrzinātne");
-		res.put("loģ.", "Loģika");
-		res.put("lopk.", "Lopkopība");
-		res.put("mat.", "Matemātika");
-		res.put("matem.", "Matemātika");	// ?
-		res.put("med.", "Medicīna");
-		res.put("medn.", "Medniecība");
-		res.put("met.", "Meteoroloģija");		// ?
-		res.put("metal.", "Metalurģija");
-		res.put("metāl.", "Metālapstrāde");		// ?
-		res.put("meteorol.", "Meteoroloģija");
-		res.put("mež.", "Mežniecība");		// ?
-		res.put("mežr.", "Mežrūpniecība");
-		res.put("mežs.", "Mežsaimniecība");
-		res.put("mil.", "Militārās zinātnes");
-		res.put("min.", "Mineraloģija");
-		res.put("mit.", "Mitoloģija");
-		res.put("mūz.", "Mūzika");
-		res.put("oftalmoloģijā", "Oftalmoloģija");
-		res.put("ornit.", "Ornitoloģija");
-		res.put("pol.", "Politika");
-		res.put("poligr.", "Poligrāfija");
-		res.put("psih.", "Psiholoģija");
-		res.put("rel.", "Reliģija");
-		res.put("social.", "Socioloģija");	// ?
-		res.put("sociol.", "Socioloģija");
-		res.put("tehn.", "Tehnika");
-		res.put("tehnol.", "Tehnoloģija");
-		res.put("telek.", "Telekomunikācijas");	// ?
-		res.put("tekst.", "Tekstilrūpniecība");
-		res.put("tekstilr.", "Tekstilrūpniecība");	// ?
-		res.put("TV", "Televīzija");
-		res.put("val.", "Valodniecība");
-		res.put("vet.", "Veterinārija");
-		res.put("zool.", "Zooloģija");
-		
-		res.put("arābu", "Arābu");
-		res.put("arābu", "Vārds svešvalodā");
-		res.put("arābu val.", "Arābu");
-		res.put("arābu val.", "Vārds svešvalodā");
-		res.put("vācu val.", "Vācu");
-		res.put("vācu val.", "Vārds svešvalodā");
-		res.put("fr.", "Franču");
-		res.put("fr.", "Vārds svešvalodā");
-		res.put("grieķu", "Grieķu");
-		res.put("grieķu", "Vārds svešvalodā");
-		res.put("gr.", "Grieķu");
-		res.put("gr.", "Vārds svešvalodā");
-		res.put("it.", "Itāliešu"); //Muz
-		res.put("it.", "Vārds svešvalodā");
-		res.put("lat.", "Latīņu");
-		res.put("lat.", "Vārds svešvalodā");
-		res.put("liet.", "Lietuviešu");
-		res.put("liet.", "Vārds svešvalodā");
-		res.put("sengr.", "Sengrieķu");
-		res.put("sengr.", "Vārds svešvalodā");
-		
-		res.put("dial. (augšzemnieku)", "Agušzemnieku");	// Unique.
-		res.put("dial. (augšzemnieku)", "Dialekts");	// Unique.
-		res.put("latg.", "Latgaliešu");
-		res.put("latg.", "Dialekts");
-		
-		res.put("apv.", "Apvidvārds");
-		res.put("vēst.", "Vēsturisks");
-		res.put("novec.", "Novecojis");		
-		res.put("neakt.", "Neaktuāls");
-		res.put("poēt.", "Poētiska stilistiskā nokrāsa");
-		res.put("niev.", "Nievīga ekspresīvā nokrāsa");
-		res.put("iron.", "Ironiska ekspresīvā nokrāsa");
-		res.put("hum.", "Humoristiska ekspresīvā nokrāsa");
-		res.put("vienk.", "Vienkāršrunas stilistiskā nokrāsa");
-		res.put("pārn.", "Pārnestā nozīmē");
-		res.put("nevēl.", "Nevēlams"); // TODO - nevēlamos, neliterāros un žargonus apvienot??
-		res.put("nelit.", "Neliterārs");
-		res.put("žarg.", "Žargonvārds");
-		res.put("sar.", "Sarunvaloda");
-		res.put("vulg.", "Vulgārisms");	// ?
-		
-		//TODO - šos drīzāk kā atsevišķu komentāru lauku(s)
-		res.put("arī vsk.", "Arī vienskaitlī");		// Ļaunums.
-		res.put("parasti vsk.", "Parasti vienskaitlī");
-		res.put("parasti vsk", "Parasti vienskaitlī");
-		res.put("par. vsk.", "Parasti vienskaitlī");
-		res.put("tikai vsk.", "Tikai vienskaitlī");
-		res.put("parasti dsk.", "Parasti daudzskaitlī");		
-		res.put("tikai dsk.", "Tikai daudzskaitlī");
-		res.put("parasti 3. pers.", "Parasti 3. personā");
-		res.put("parasti saliktajos laikos", "Parasti saliktajos laikos");
-		res.put("parasti saliktajos laikos.", "Parasti saliktajos laikos");
-		res.put("parasti nenoteiksmē", "Parasti nenoteiksmē");
-		res.put("parasti nenoteiksmē", "Darbības vārds");
-		res.put("parasti pavēles formā", "Parasti pavēles izteiksmē");
-		res.put("parasti pavēles formā", "Darbības vārds");
-		res.put("parasti pavēles formā.", "Parasti pavēles izteiksmē");
-		res.put("parasti pavēles formā.", "Darbības vārds");
-		res.put("nelok.", "Nelokāms");
-		res.put("subst. noz.", "Lietvārda nozīmē");
-		res.put("lietv. nozīmē.", "Lietvārda nozīmē");
-		res.put("īp. nozīmē.", "Īpašības vārda nozīmē");
-		res.put("ar not. gal.", "Ar noteikto galotni");
-		res.put("ar lielo sākumburtu", "Ar lielo sākumburtu");
-		res.put("pareti.", "Pareti");
-		res.put("pareti", "Pareti");
-		res.put("reti.", "Reti");
-		res.put("reti", "Reti");
-		res.put("retāk", "Retāk");
-		
-		res.put("hip.", "Hipotēze");
-		
-		return res;
-	}
 	
 	/*/*
 	 * Patterns for identifying (true) grammatical information.
@@ -1385,12 +1128,12 @@ public class Gram  implements HasToJSON
 		int newBegin = -1;
 		
 		// Blocks of rules.
-		for (SimpleRule s : simpleRulesDirect)
+		for (Rule s : simpleRulesDirect)
 		{
 			if (newBegin != -1) break;
 			newBegin = s.applyDirect(gramText, lemma, paradigm, flags);
 		}
-		for (SimpleRule s : simpleRulesOptHyperns)
+		for (Rule s : simpleRulesOptHyperns)
 		{
 			if (newBegin != -1) break;
 			newBegin = s.applyOptHyperns(gramText, lemma, paradigm, flags);
@@ -3182,122 +2925,6 @@ public class Gram  implements HasToJSON
 		
 		res.append("}");
 		return res.toString();
-	}
-	
-	/**
-	 * Simple rule - tries to match grammar text to given string and lemma
-	 * ending. If matched, adds a single paradigm.
-	 * @author Lauma
-	 *
-	 */
-	public static class SimpleRule
-	{
-		/**
-		 * Unescaped ending string grammar text must begin with to apply this
-		 * rule.
-		 */
-		protected final String pattern;
-		/**
-		 * Required ending for the lemma to apply this rule.
-		 */
-		protected final String requiredEnding;
-		/**
-		 * Paradigm ID to set if rule matched.
-		 */
-		protected final int paradigmId;
-		/**
-		 * These flags are added if rule pattern and lemma ending matched.
-		 */
-		protected final String[] positiveFlags;
-		/**
-		 * These flags are added if rule pattern matched.
-		 */
-		protected final String[] alwaysFlags;
-
-		public SimpleRule(String pattern, String requiredEnding, int paradigmId,
-				String[] positiveFlags, String[] alwaysFlags)
-		{
-			this.pattern = pattern;
-			this.requiredEnding = requiredEnding;
-			this.paradigmId = paradigmId;
-			this.positiveFlags = positiveFlags;
-			this.alwaysFlags = alwaysFlags;
-		}
-		
-		/**
-		 * Apply rule as-is - no magic whatsoever.
-		 * @param gramText			Grammar string currently being processed.
-		 * @param lemma				Lemma string for this header.
-		 * @param paradigmCollector	Map, where paradigm will be added, if rule
-		 * 							matches.
-		 * @param flagCollectoer	Map, where flags will be added, if rule
-		 * 							matches.
-		 * @return New begining for gram string if one of these rulles matched,
-		 * -1 otherwise.
-		 */
-		public int applyDirect (
-				String gramText, String lemma,
-				HashSet<Integer> paradigmCollector,
-				HashSet<String> flagCollector)
-		{
-			int newBegin = -1;
-			if (gramText.matches("\\Q" + pattern + "\\E([;,.].*)?"))
-			{
-				newBegin = pattern.length();
-				if (lemma.endsWith(requiredEnding))
-				{
-					paradigmCollector.add(paradigmId);
-					if (positiveFlags != null)
-						flagCollector.addAll(Arrays.asList(positiveFlags));
-				}
-				else
-				{
-					System.err.printf("Problem matching \"%s\" with paradigm %s\n", lemma, paradigmId);
-					newBegin = 0;
-				}
-				if (alwaysFlags != null) flagCollector.addAll(Arrays.asList(alwaysFlags));
-			}
-			return newBegin;
-		}
-		
-		/**
-		 * Apply rule, but with hyperns in pattern are optional.
-		 * @param gramText			Grammar string currently being processed.
-		 * @param lemma				Lemma string for this header.
-		 * @param paradigmCollector	Map, where paradigm will be added, if rule
-		 * 							matches.
-		 * @param flagCollectoer	Map, where flags will be added, if rule
-		 * 							matches.
-		 * @return New begining for gram string if one of these rulles matched,
-		 * -1 otherwise.
-		 */
-		public int applyOptHyperns (
-				String gramText, String lemma,
-				HashSet<Integer> paradigmCollector,
-				HashSet<String> flagCollector)
-		{
-			int newBegin = -1;
-			String regExpPattern = pattern.replace("-", "\\E-?\\Q");
-			regExpPattern = "(\\Q" + regExpPattern + "\\E)([;,.].*)?";
-			Matcher m = Pattern.compile(regExpPattern).matcher(gramText);
-			if (m.matches())
-			{
-				newBegin = m.group(1).length();
-				if (lemma.endsWith(requiredEnding))
-				{
-					paradigmCollector.add(paradigmId);
-					if (positiveFlags != null)
-						flagCollector.addAll(Arrays.asList(positiveFlags));
-				}
-				else
-				{
-					System.err.printf("Problem matching \"%s\" with paradigm %s\n", lemma, paradigmId);
-					newBegin = 0;
-				}
-				if (alwaysFlags != null) flagCollector.addAll(Arrays.asList(alwaysFlags));
-			}
-			return newBegin;
-		}
 	}
 	
 }
