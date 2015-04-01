@@ -27,7 +27,7 @@ public class VerbRule implements Rule
 	 * 						matched
 	 * @param alwaysFlags	flags to set if rule pattern matched
 	 */
-	public VerbRule(String patternBegin, String patternEnding,
+	public VerbRule(String patternBegin, String patternEnd,
 			String lemmaEnding, int paradigmId,
 			String[] positiveFlags, String[] alwaysFlags)
 	{
@@ -38,10 +38,22 @@ public class VerbRule implements Rule
 			alwaysFlags3p[alwaysFlags3p.length-1] = "Parasti 3. personā";
 		}
 		else alwaysFlags3p = new String[] {"Parasti 3. personā"};
-		
-		allPersonRule = new SimpleRule(patternBegin.trim() + " " + patternEnding.trim(),
+		String begin = patternBegin.trim();
+		String end = patternEnd.trim();
+		String allPersonPattern = begin + " " + end;
+		String thirdPersonPattern;
+		if (end.endsWith("u"))
+			thirdPersonPattern = "parasti 3. pers., " + end.substring(0, end.length()-1) + "a";
+		else if (end.endsWith("os"))
+			thirdPersonPattern = "parasti 3. pers., " + end.substring(0, end.length()-1) + "ās";
+		else
+		{
+			System.err.printf("Could not figure out third-person-only rule for grammar pattern \"%s\"\n", allPersonPattern);
+			thirdPersonPattern = allPersonPattern;
+		}
+		allPersonRule = new SimpleRule(allPersonPattern,
 				lemmaEnding, paradigmId, positiveFlags, alwaysFlags);
-		thirdPersonRule = new SimpleRule("parasti 3. pers., " + patternEnding.trim(),
+		thirdPersonRule = new SimpleRule(thirdPersonPattern,
 				lemmaEnding, paradigmId, positiveFlags, alwaysFlags3p);
 	}
 	
