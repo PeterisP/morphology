@@ -68,14 +68,10 @@ public class Gram  implements HasToJSON
 		/* Paradigm 16: Darbības vārdi 2. konjugācija tiešie
 		 */
 		// Rules for both all person and third-person-only cases.
-		new VerbRule("-āju, -ā,", "-ā, pag. -āju", "āt", 16,
-				new String[] {"Darbības vārds"}, null), //aijāt, aizkābāt
-		new VerbRule(	"-ēju, -ē,", "-ē, pag. -ēju", "ēt", 16,
-				new String[] {"Darbības vārds"}, null), //abonēt, adsorbēt
-		new VerbRule(	"-īju, -ī,", "-ī, pag. -īju", "īt", 16,
-				new String[] {"Darbības vārds"}, null), //apšķibīt, aizdzirkstīt
-		new VerbRule(	"-oju, -o,", "-o, pag. -oju", "ot", 16,
-				new String[] {"Darbības vārds"}, null), //aizalvot, aizbangot
+		VerbRule.secondConjDir("-āju, -ā,", "-ā, pag. -āju", "āt"), //aijāt, aizkābāt
+		VerbRule.secondConjDir("-ēju, -ē,", "-ē, pag. -ēju", "ēt"), //abonēt, adsorbēt
+		VerbRule.secondConjDir("-īju, -ī,", "-ī, pag. -īju", "īt"), //apšķibīt, aizdzirkstīt
+		VerbRule.secondConjDir("-oju, -o,", "-o, pag. -oju", "ot"), //aizalvot, aizbangot
 
 		// Single-case rules.
 		new SimpleRule(	"-ēju, -ē, -ē, -ējam, -ējat, pag. -ēju, -ējām, -ējāt; pav. -ē, -ējiet", "ēt", 16,
@@ -87,10 +83,8 @@ public class Gram  implements HasToJSON
 		/* Paradigm 17: Darbības vārdi 3. konjugācija tiešie
 		 */
 		// Rules for both all person and third-person-only cases.
-		new VerbRule("-u, -i,", "-a, pag. -īju", "īt", 17,
-				new String[] {"Darbības vārds"}, null), //aizsūtīt
-		new VerbRule("-inu, -ini,", "-ina, pag. -ināju", "ināt", 17,
-				new String[] {"Darbības vārds"}, null), //aizsvilināt
+		VerbRule.thirdConjDir("-u, -i,", "-a, pag. -īju", "īt"), //aizsūtīt
+		VerbRule.thirdConjDir("-inu, -ini,", "-ina, pag. -ināju", "ināt"), //aizsvilināt
 				
 		// Single-case rules.
 		new SimpleRule("parasti 3. pers., -ina, pag. -ināja", "ināt", 17,
@@ -101,13 +95,108 @@ public class Gram  implements HasToJSON
 		/* Paradigm 18: Darbības vārdi 1. konjugācija atgriezeniski
 		 */
 		// Rules for both all person and third-person-only cases.
+		
+
+		/* Paradigm 18: Darbības vārdi 1. konjugācija atgriezeniski
+		 */
+		// Rules for both all person and third-person-only cases.
+		// Verb-specific rules ordered alphabetically by verb infinitive.
+		// A, B
+		new VerbRule("-brēcos, -brēcies,", "-brēcas, pag. -brēcos", "brēkties", 18,
+				new String[] {"Darbības vārds", "Locīt kā \"brēkties\""},
+				null),  //aizbrēkties
+		// C, D
+		new VerbRule("-degos, -dedzies,", "-degas, pag. -degos", "degties", 18,
+				new String[] {"Darbības vārds", "Locīt kā \"degties\""},
+				null), //aizdegties
+		// E
+		new VerbRule("-elšos, -elsies,", "-elšas, pag. -elsos", "elsties", 18,
+				new String[] {"Darbības vārds", "Locīt kā \"elsties\""},
+				null), //aizelsties	
+		// F, G
+		new VerbRule("-gārdzos, -gārdzies,", "-gārdzas, pag. -gārdzos", "gārgties", 18,
+				new String[] {"Darbības vārds", "Locīt kā \"gārgties\""},
+				null), //aizgārgties
+		new VerbRule("-gūstos, -gūsties,", "-gūstas, pag. -guvos", "gūties", 18,
+				new String[] {"Darbības vārds", "Locīt kā \"gūties\""},
+				null), //aizgūties
+		// Ģ,
+		new VerbRule("-ģiedos, -ģiedies,", "-ģiedas, pag. -gidos", "ģisties", 18,
+				new String[] {"Darbības vārds", "Locīt kā \"ģisties\""},
+				null), //apģisties
+		// H, I
+		new VerbRule("-ejos, -ejos,", "-ietas, pag. -gājos", "ieties", 18,
+				new String[] {"Darbības vārds", "Locīt kā \"ieties\""},
+				null), //apieties
+		// J, K
+		new VerbRule("-kliedzos, -kliedzies,", "-kliedzas, pag. -kliedzos", "kliegties", 18,
+				new String[] {"Darbības vārds", "Locīt kā \"kliegties\""},
+				null), //aizkliegties
+		new VerbRule("-krācos, -krācies,", "-krācas, pag. -krācos", "krākties", 18,
+				new String[] {"Darbības vārds", "Locīt kā \"krākties\""},
+				null), //aizkrākties
+		// L, M
 		new VerbRule("-mirstos, -mirsties,", "-mirstas, pag. -mirsos", "mirsties", 18,
 				new String[] {"Darbības vārds", "Locīt kā \"mirsties\""},
-				null), //aizmirsties
+				null), //aizmirsties	
+		// N, O, P, R, S, T, U, V, Z
 		
-				
-		/* Paradigm 20: Darbības vārdi 3. konjugācija atgriezeniski
+		// Single-case rules.
+		// Verb-specific rules ordered alphabetically by verb infinitive.
+		// A, B, C, D
+		new SimpleRule("parasti 3. pers., -dūcas, pag. -dūcās", "dūkties", 18,
+				new String[] {"Darbības vārds", "Locīt kā \"dūkties\""},
+				new String[] {"Parasti 3. personā"}),  //aizdūkties
+		// E, F, G, H, I, J, K
+		new SimpleRule("parasti 3. pers., -kaucas, pag. -kaucās", "kaukties", 18,
+				new String[] {"Darbības vārds", "Locīt kā \"kaukties\""},
+				new String[] {"Parasti 3. personā"}), //aizkaukties
+		// L, M, N, O, P, R, S, Š
+		new SimpleRule("parasti 3. pers., -šalcas, pag. -šalcās", "šalkties", 18,
+				new String[] {"Darbības vārds", "Locīt kā \"šalkties\""},
+				new String[] {"Parasti 3. personā"}), //aizšalkties
+		// T, U, V, Z
+		
+		
+		/* Paradigm 19: Darbības vārdi 2. konjugācija atgriezeniski
 		 */
+		// Rules for both all person and third-person-only cases.
+		new VerbRule("-ojos, -ojies,", "-ojas, pag. -ojos", "oties", 19,
+				new String[] {"Darbības vārds"}, null), //aiztuntuļoties, apgrēkoties
+		new VerbRule("-ējos, -ējies,", "-ējas, pag. -ējos", "ēties", 19,
+				new String[] {"Darbības vārds"}, null), //abstrahēties
+		new VerbRule("-ājos, -ājies,", "-ājas, pag. -ājos", "āties", 19,
+				new String[] {"Darbības vārds"}, null), //aizdomāties
+		
+		// Single-case rules.
+		new SimpleRule("parasti 3. pers., -ējas, pag. -ējās", "ēties", 19,
+				new String[] {"Darbības vārds"},
+				new String[] {"Parasti 3. personā"}), //absorbēties
+		new SimpleRule("parasti 3. pers., -ojas, pag. -ojās", "oties", 19,
+				new String[] {"Darbības vārds"},
+				new String[] {"Parasti 3. personā"}), //daudzkāršoties
+			
+		new SimpleRule("-ējos, -ējies, -ējas, -ējamies, -ējaties, pag. -ējos, -ējāmies, -ējāties; pav. -ējies, -ējieties", "ēties", 19,
+				new String[] {"Darbības vārds"}, null), //adverbiēties
+				
+		
+		/* Paradigm 20: Darbības vārdi 3. konjugācija atgriezeniski
+		 * Rules in form "parasti 3. pers., -ās, pag. -ījās" and
+		 * "-os, -ies, -ās, pag. -ījos".
+		 */
+		// Rules for both all person and third-person-only cases.
+		new VerbRule("-os, -ies,", "-as, pag. -ējos", "ēties", 20,
+				new String[] {"Darbības vārds"}, null), //apkaunēties, aizņaudēties
+		new VerbRule("-inos, -inies,", "-inās, pag. -inājos", "ināties", 20,
+				new String[] {"Darbības vārds"}, null), //apklaušināties
+		new VerbRule("-os, -ies,", "-ās, pag. -ījos", "īties", 20,
+				new String[] {"Darbības vārds"}, null), //apklausīties	
+		
+		new VerbRule("-dziedos, -dziedies,", "-dziedas, pag. -dziedājos", "dziedāties", 20,
+				new String[] {"Darbības vārds"}, null), //aizdziedāties
+		new VerbRule("-guļos, -gulies,", "-guļas, pag. -gulējos", "gulēties", 20,
+				new String[] {"Darbības vārds"}, null), //aizgulēties
+
 		// Single-case rules.
 		// Generic ending rules.
 		new SimpleRule("parasti 3. pers., -as, pag. -ējās", "ēties", 20,
@@ -207,105 +296,8 @@ public class Gram  implements HasToJSON
 		// L, M
 		new SimpleRule("parasti 3. pers., -mirdzas, pag. -mirdzējās", "mirdzēties", 20,
 				new String[] {"Darbības vārds"},
-				new String[] {"Parasti 3. personā"}), //aizmirdzēties
-		//N, O, P, R, S, T, U, V, Z
-
-		/* Paradigm 18: Darbības vārdi 1. konjugācija atgriezeniski
-		 */
-		// Rules for both all person and third-person-only cases.
-		// Verb-specific rules ordered alphabetically by verb infinitive.
-		// A, B
-		new VerbRule("-brēcos, -brēcies,", "-brēcas, pag. -brēcos", "brēkties", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"brēkties\""},
-				null),  //aizbrēkties
-		// C, D
-		new VerbRule("-degos, -dedzies,", "-degas, pag. -degos", "degties", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"degties\""},
-				null), //aizdegties
-		// E
-		new VerbRule("-elšos, -elsies,", "-elšas, pag. -elsos", "elsties", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"elsties\""},
-				null), //aizelsties	
-		// F, G
-		new VerbRule("-gārdzos, -gārdzies,", "-gārdzas, pag. -gārdzos", "gārgties", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"gārgties\""},
-				null), //aizgārgties
-		new VerbRule("-gūstos, -gūsties,", "-gūstas, pag. -guvos", "gūties", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"gūties\""},
-				null), //aizgūties
-		// Ģ,
-		new VerbRule("-ģiedos, -ģiedies,", "-ģiedas, pag. -gidos", "ģisties", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"ģisties\""},
-				null), //apģisties
-		// H, I
-		new VerbRule("-ejos, -ejos,", "-ietas, pag. -gājos", "ieties", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"ieties\""},
-				null), //apieties
-		// J, K
-		new VerbRule("-kliedzos, -kliedzies,", "-kliedzas, pag. -kliedzos", "kliegties", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"kliegties\""},
-				null), //aizkliegties
-		new VerbRule("-krācos, -krācies,", "-krācas, pag. -krācos", "krākties", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"krākties\""},
-				null), //aizkrākties
-		// L, M, N, O, P, R, S, T, U, V, Z
-		
-		// Single-case rules.
-		// Verb-specific rules ordered alphabetically by verb infinitive.
-		// A, B, C, D
-		new SimpleRule("parasti 3. pers., -dūcas, pag. -dūcās", "dūkties", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"dūkties\""},
-				new String[] {"Parasti 3. personā"}),  //aizdūkties
-		// E, F, G, H, I, J, K
-		new SimpleRule("parasti 3. pers., -kaucas, pag. -kaucās", "kaukties", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"kaukties\""},
-				new String[] {"Parasti 3. personā"}), //aizkaukties
-		// L, M, N, O, P, R, S, Š
-		new SimpleRule("parasti 3. pers., -šalcas, pag. -šalcās", "šalkties", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"šalkties\""},
-				new String[] {"Parasti 3. personā"}), //aizšalkties
-		// T, U, V, Z
-		
-		
-		/* Paradigm 19: Darbības vārdi 2. konjugācija atgriezeniski
-		 */
-		// Rules for both all person and third-person-only cases.
-		new VerbRule("-ojos, -ojies,", "-ojas, pag. -ojos", "oties", 19,
-				new String[] {"Darbības vārds"}, null), //aiztuntuļoties, apgrēkoties
-		new VerbRule("-ējos, -ējies,", "-ējas, pag. -ējos", "ēties", 19,
-				new String[] {"Darbības vārds"}, null), //abstrahēties
-		new VerbRule("-ājos, -ājies,", "-ājas, pag. -ājos", "āties", 19,
-				new String[] {"Darbības vārds"}, null), //aizdomāties
-		
-		// Single-case rules.
-		new SimpleRule("parasti 3. pers., -ējas, pag. -ējās", "ēties", 19,
-				new String[] {"Darbības vārds"},
-				new String[] {"Parasti 3. personā"}), //absorbēties
-		new SimpleRule("parasti 3. pers., -ojas, pag. -ojās", "oties", 19,
-				new String[] {"Darbības vārds"},
-				new String[] {"Parasti 3. personā"}), //daudzkāršoties
-			
-		new SimpleRule("-ējos, -ējies, -ējas, -ējamies, -ējaties, pag. -ējos, -ējāmies, -ējāties; pav. -ējies, -ējieties", "ēties", 19,
-				new String[] {"Darbības vārds"}, null), //adverbiēties
-				
-		
-		/* Paradigm 20: Darbības vārdi 3. konjugācija atgriezeniski
-		 * Rules in form "parasti 3. pers., -ās, pag. -ījās" and
-		 * "-os, -ies, -ās, pag. -ījos".
-		 */
-		// Rules for both all person and third-person-only cases.
-		new VerbRule("-os, -ies,", "-as, pag. -ējos", "ēties", 20,
-				new String[] {"Darbības vārds"}, null), //apkaunēties, aizņaudēties
-		new VerbRule("-inos, -inies,", "-inās, pag. -inājos", "ināties", 20,
-				new String[] {"Darbības vārds"}, null), //apklaušināties
-		new VerbRule("-os, -ies,", "-ās, pag. -ījos", "īties", 20,
-				new String[] {"Darbības vārds"}, null), //apklausīties	
-		
-		new VerbRule("-dziedos, -dziedies,", "-dziedas, pag. -dziedājos", "dziedāties", 20,
-				new String[] {"Darbības vārds"}, null), //aizdziedāties
-		new VerbRule("-guļos, -gulies,", "-guļas, pag. -gulējos", "gulēties", 20,
-				new String[] {"Darbības vārds"}, null), //aizgulēties
-		
+				new String[] {"Parasti 3. personā"}) //aizmirdzēties
+		//N, O, P, R, S, T, U, V, Z	
 	};
 	
 	/**
@@ -334,229 +326,140 @@ public class Gram  implements HasToJSON
 		/* Paradigm 15: Darbības vārdi 1. konjugācija tiešie + parasti 3. pers.
 		 */
 		// Rules for both all person and third-person-only cases.
-		// Verb-specific rules ordered alphabetically by verb infinitive.
-		// A
-		new VerbRule("-aru, -ar,", "-ar, pag. -aru", "art", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"art\""}, null), //aizart
-		new VerbRule("-augu, -audz,", "-aug, pag. -augu", "augt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"augt\""}, null), //ieaugt, aizaugt
+		// Verbs with infinitive homoforms:
 		new VerbRule("-aužu, -aud,", "-auž, pag. -audu", "aust", 15,
 				new String[] {"Darbības vārds", "Locīt kā \"aust\" (kā zirneklis)"},
 				null), //aizaust 2
-		// B
-		new VerbRule("-bāžu, -bāz,", "-bāž, pag. -bāzu", "bāzt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"bāzt\""}, null), //aizbāzt
-		new VerbRule("-bēgu, -bēdz,", "-bēg, pag. -bēgu", "bēgt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"bēgt\""}, null), //aizbēgt
-		new VerbRule("-beru, -ber,", "-ber, pag. -bēru", "bērt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"bērt\""}, null), //aizbērt
-		new VerbRule("-bilstu, -bilsti,", "-bilst, pag. -bildu", "bilst", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"bilst\""}, null), //aizbilst
-		new VerbRule("-birstu, -birsti,", "-birst, pag. -biru", "birt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"birt\""}, null), //apbirt, aizbirt
-		new VerbRule("-braucu, -brauc,", "-brauc, pag. -braucu", "braukt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"braukt\""}, null), //aizbraukt
-		new VerbRule("-brāžu, -brāz,", "-brāž, pag. -brāzu", "brāzt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"brāzt\""}, null), //aizbrāzt
-		new VerbRule("-brienu, -brien,", "-brien, pag. -bridu", "brist", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"brist\""}, null), //aizbrist
-		// C
-		new VerbRule("-ceļu, -cel,", "-ceļ, pag. -cēlu", "celt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"celt\""}, null), //aizcelt
-		new VerbRule("-cērtu, -cērt,", "-cērt, pag. -cirtu", "cirst", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"cirst\""}, null), //aizcirst				
-		// D
 		new VerbRule("-dedzu, -dedz,", "-dedz, pag. -dedzu", "degt", 15,
 				new String[] {"Darbības vārds", "Locīt kā \"degt\" (kādu citu)"},
 				null), //aizdegt 1
 		new VerbRule("-degu, -dedz,", "-deg, pag. -degu", "degt", 15,
 				new String[] {"Darbības vārds", "Locīt kā \"degt\" (pašam)"},
 				null), //apdegt, aizdegt 2
-		new VerbRule("-diebju, -dieb,", "-diebj, pag. -diebu", "diebt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"diebt\""}, null), //aizdiebt
-		new VerbRule("-diedzu, -diedz,", "-diedz, pag. -diedzu", "diegt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"diegt\""}, null), //aizdiegt 1,2
-		new VerbRule("-dodu, -dod,", "-dod, pag. -devu", "dot", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"dot\""}, null), //aizdot
-		new VerbRule("-drāžu, -drāz,", "-drāž, pag. -drāzu", "drāzt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"drāzt\""}, null), //aizdrāzt
-		new VerbRule("-duru, -dur,", "-dur, pag. -dūru", "durt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"durt\""}, null), //aizdurt
-		new VerbRule("-dūcu, -dūc,", "-dūc, pag. -dūcu", "dūkt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"dūkt\""}, null), //atdūkt, aizdūkt
-		new VerbRule("-dzeļu, -dzel,", "-dzeļ, pag. -dzēlu", "dzelt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"dzelt\""}, null), //atdzelt, aizdzelt
 		new VerbRule("-dzenu, -dzen,", "-dzen, pag. -dzinu", "dzīt", 15,
 				new String[] {"Darbības vārds", "Locīt kā \"dzīt\" (kā lopus)"},
 				null), //aizdzīt 1	
-		new VerbRule("-dzeru, -dzer,", "-dzer, pag. -dzēru", "dzert", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"dzert\""}, null), //aizdzert
-		// E
-		new VerbRule("-ēdu, -ēd,", "-ēd, pag. -ēdu", "ēst", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"ēst\""}, null), //aizēst
-		// F, G
-		new VerbRule("-gāžu, -gāz,", "-gāž, pag. -gāzu", "gāzt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"gāzt\""}, null), //aizgāzt
-		new VerbRule("-glaužu, -glaud,", "-glauž, pag. -glaudu", "glaust", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"glaust\""}, null), //aizglaust
-		new VerbRule("-grābju, -grāb,", "-grābj, pag. -grābu", "grābt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"grābt\""}, null), //aizgrābt
-		new VerbRule("-graužu, -grauz,", "-grauž, pag. -grauzu", "grauzt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"grauzt\""}, null), //aizgrauzt
-		new VerbRule("-griežu, -griez,", "-griež, pag. -griezu", "griezt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"griezt\""}, null), //aizgriezt 2
-		new VerbRule("-grimstu, -grimsti,", "-grimst, pag. -grimu", "grimt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"grimt\""}, null), //atgrimt, aizgrimt
-		new VerbRule("-grūžu, -grūd,", "-grūž, pag. -grūdu", "grūst", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"grūst\""}, null), //aizgrūst
-		new VerbRule("-gūstu, -gūsti,", "-gūst, pag. -guvu", "gūt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"gūt\""}, null), //aizgūt
-		// Ģ
-		new VerbRule("-ģiedu, -ģied,", "-ģied, pag. -gidu", "ģist", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"ģist\""}, null), //apģist
-		// H, I
-		new VerbRule("-eju, -ej,", "-iet, pag. -gāju", "iet", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"iet\""}, null), //apiet
 		new VerbRule("-iru, -ir,", "-ir, pag. -īru", "irt", 15,
 				new String[] {"Darbības vārds", "Locīt kā \"irt\" (kā ar airiem)"},
 				null), //aizirt 1
-		// J
-		new VerbRule("-jāju, -jāj,", "-jāj, pag. -jāju", "jāt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"jāt\""}, null), //aizjāt
-		new VerbRule("-jožu, -joz,", "-jož, pag. -jozu", "jozt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"jozt\""}, null), //aizjozt 1, 2
-		new VerbRule("-jūdzu, -jūdz,", "-jūdz, pag. -jūdzu", "jūgt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"jūgt\""}, null), //aizjūgt
-		// K
-		new VerbRule("-kalstu, -kalsti,", "-kalst, pag. -kaltu", "kalst", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"kalst\""}, null), //izkalst, aizkalst
-		new VerbRule("-kāpju, -kāp,", "-kāpj, pag. -kāpu", "kāpt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"kāpt\""}, null), //aizkāpt
-		new VerbRule("-karu, -kar,", "-kar, pag. -kāru", "kārt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"kārt\""}, null), //aizkārt
-		new VerbRule(">-kaucu, -kauc,", "-kauc, pag. -kaucu", "kaukt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"kaukt\""}, null), //izkaukt, aizkaukt
-		new VerbRule("-kauju, -kauj,", "-kauj, pag. -kāvu", "kaut", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"kaut\""}, null), //apkaut
-		new VerbRule("-klāju, -klāj,", "-klāj, pag. -klāju", "klāt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"klāt\""}, null), //apklāt
-		new VerbRule("-kliedzu, -kliedz,", "-kliedz, pag. -kliedzu", "kliegt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"kliegt\""}, null), //aizkliegt
-		new VerbRule("-klimstu, -klimsti,", "-klimst, pag. -klimtu", "klimst", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"klimst\""}, null), //aizklimst
-		new VerbRule("-klīstu, -klīsti,", "-klīst, pag. -klīdu", "klīst", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"klīst\""}, null), //aizklīst
-		new VerbRule("-kļūstu, -kļūsti,", "-kļūst, pag. -kļuvu", "kļūt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"kļūt\""}, null), //aizkļūt
-		new VerbRule("-knābju, -knāb,", "-knābj, pag. -knābu", "knābt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"knābt\""}, null), //uzknābt, aizknābt
-		new VerbRule("-kožu, -kod,", "-kož, pag. -kodu", "kost", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"kost\""}, null), //aizkost
-		new VerbRule("-krāpju, -krāp,", "-krāpj, pag. -krāpu", "krāpt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"krāpt\""}, null), //aizkrāpt
-		new VerbRule("-krauju, -krauj,", "-krauj, pag. -krāvu", "kraut", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"kraut\""}, null), //aizkraut
-		new VerbRule("-krītu, -krīti,", "-krīt, pag. -kritu", "krist", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"krist\""}, null), //aizkrist
-		new VerbRule("-kuru, -kur,", "-kur, pag. -kūru", "kurt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"kurt\""}, null), //aizkurt
-		new VerbRule("-kūstu, -kusti,", "-kūst, pag. -kusu", "kust", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"kust\""}, null), //aizkust
-		new VerbRule("-kvēpstu, -kvēpsti,", "-kvēpst, pag. -kvēpu", "kvēpt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"kvēpt\""}, null), //apkvēpt, aizkvēpt
-		// Ķ
-		new VerbRule("-ķepu, -ķep,", "-ķep, pag. -ķepu", "ķept", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"ķept\""}, null), //apķept, aizķept
-		new VerbRule("-ķeru, -ķer,", "-ķer, pag. -ķēru", "ķert", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"ķert\""}, null), //aizķert
-		// L
-		new VerbRule("-laižu, -laid,", "-laiž, pag. -laidu", "laist", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"laist\""}, null), //aizlaist
-		new VerbRule("-laužu, -lauz,", "-lauž, pag. -lauzu", "lauzt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"lauzt\""}, null), //aizlauzt
-		new VerbRule("-lecu, -lec,", "-lec, pag. -lēcu", "lēkt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"lēkt\""}, null), //aizlēkt
-		new VerbRule("-liedzu, -liedz,", "-liedz, pag. -liedzu", "liegt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"liegt\""}, null), //aizliegt
-		new VerbRule("-liecu, -liec,", "-liec, pag. -liecu", "liekt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"liekt\""}, null), //aizliekt
-		new VerbRule("-leju, -lej,", "-lej, pag. -lēju", "liet", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"liet\""}, null), //aizliet
-		new VerbRule("-lieku, -liec,", "-liek, pag. -liku", "likt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"likt\""}, null), //aizlikt
-		new VerbRule("-līpu, -līpi,", "-līp, pag. -lipu", "lipt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"lipt\""}, null), //aplipt, aizlipt
-		new VerbRule("-līkstu, -līksti,", "-līkst, pag. -līku", "līkt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"līkt\""}, null), //nolīkt, aizlīkt
-		new VerbRule("-lienu, -lien,", "-lien, pag. -līdu", "līst", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"līst\""}, null), //aizlīst
-		new VerbRule("-līstu, -līsti,", "-līst, pag. -liju", "līt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"līt\""}, null), //aplīt, aizlīt
-		new VerbRule("-lobju, -lob,", "-lobj, pag. -lobu", "lobt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"lobt\""}, null), //aizlobt
-		new VerbRule("-lūdzu, -lūdz,", "-lūdz, pag. -lūdzu", "lūgt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"lūgt\""}, null), //aizlūgt
-		new VerbRule("-lūstu, -lūsti,", "-lūst, pag. -lūzu", "lūzt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"lūzt\""}, null), //aizlūzt, aizlūzt			
-		// M
-		new VerbRule("-metu, -met,", "-met, pag. -metu", "mest", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"mest\""}, null), //aizmest
-		new VerbRule("-mēžu, -mēz,", "-mēž, pag. -mēzu", "mēzt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"mēzt\""}, null), //aizmēzt
-		new VerbRule("-miedzu, -miedz,", "-miedz, pag. -miedzu", "miegt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"miegt\""}, null), //aizmiegt
-		new VerbRule("-miegu, -miedz,", "-mieg, pag. -migu", "migt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"migt\""}, null), //aizmigt
-		new VerbRule("-mirstu, -mirsti,", "-mirst, pag. -mirsu", "mirst", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"mirst\""}, 	null), //aizmirst
 		new VerbRule("-minu, -min,", "-min, pag. -minu", "mīt", 15,
 				new String[] {"Darbības vārds", "Locīt kā \"mīt\" (kā pedāļus)"},
 				null), //aizmīt 1
 		new VerbRule("-miju, -mij,", "-mij, pag. -miju", "mīt", 15,
 				new String[] {"Darbības vārds", "Locīt kā \"mīt\" (kā naudu)"},
 				null), //aizmīt 2
-		new VerbRule("-mūku, -mūc,", "-mūk, pag. -muku", "mukt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"mukt\""}, null), //aizmukt
+				
+		// Verb-specific rules ordered alphabetically by verb infinitive.
+		// A
+		VerbRule.firstConjDir("-aru, -ar,", "-ar, pag. -aru", "art"), //aizart
+		VerbRule.firstConjDir("-augu, -audz,", "-aug, pag. -augu", "augt"), //ieaugt, aizaugt
+		// B
+		VerbRule.firstConjDir("-bāžu, -bāz,", "-bāž, pag. -bāzu", "bāzt"), //aizbāzt
+		VerbRule.firstConjDir("-bēgu, -bēdz,", "-bēg, pag. -bēgu", "bēgt"), //aizbēgt
+		VerbRule.firstConjDir("-beru, -ber,", "-ber, pag. -bēru", "bērt"), //aizbērt
+		VerbRule.firstConjDir("-bilstu, -bilsti,", "-bilst, pag. -bildu", "bilst"), //aizbilst
+		VerbRule.firstConjDir("-birstu, -birsti,", "-birst, pag. -biru", "birt"), //apbirt, aizbirt
+		VerbRule.firstConjDir("-braucu, -brauc,", "-brauc, pag. -braucu", "braukt"), //aizbraukt
+		VerbRule.firstConjDir("-brāžu, -brāz,", "-brāž, pag. -brāzu", "brāzt"), //aizbrāzt
+		VerbRule.firstConjDir("-brienu, -brien,", "-brien, pag. -bridu", "brist"), //aizbrist
+		// C
+		VerbRule.firstConjDir("-ceļu, -cel,", "-ceļ, pag. -cēlu", "celt"), //aizcelt
+		VerbRule.firstConjDir("-cērtu, -cērt,", "-cērt, pag. -cirtu", "cirst"), //aizcirst				
+		// D
+		VerbRule.firstConjDir("-diebju, -dieb,", "-diebj, pag. -diebu", "diebt"), //aizdiebt
+		VerbRule.firstConjDir("-diedzu, -diedz,", "-diedz, pag. -diedzu", "diegt"), //aizdiegt 1,2
+		VerbRule.firstConjDir("-dodu, -dod,", "-dod, pag. -devu", "dot"), //aizdot
+		VerbRule.firstConjDir("-drāžu, -drāz,", "-drāž, pag. -drāzu", "drāzt"), //aizdrāzt
+		VerbRule.firstConjDir("-duru, -dur,", "-dur, pag. -dūru", "durt"), //aizdurt
+		VerbRule.firstConjDir("-dūcu, -dūc,", "-dūc, pag. -dūcu", "dūkt"), //atdūkt, aizdūkt
+		VerbRule.firstConjDir("-dzeļu, -dzel,", "-dzeļ, pag. -dzēlu", "dzelt"), //atdzelt, aizdzelt
+		VerbRule.firstConjDir("-dzeru, -dzer,", "-dzer, pag. -dzēru", "dzert"), //aizdzert
+		// E
+		VerbRule.firstConjDir("-ēdu, -ēd,", "-ēd, pag. -ēdu", "ēst"), //aizēst
+		// F, G
+		VerbRule.firstConjDir("-gāžu, -gāz,", "-gāž, pag. -gāzu", "gāzt"), //aizgāzt
+		VerbRule.firstConjDir("-glaužu, -glaud,", "-glauž, pag. -glaudu", "glaust"), //aizglaust
+		VerbRule.firstConjDir("-grābju, -grāb,", "-grābj, pag. -grābu", "grābt"), //aizgrābt
+		VerbRule.firstConjDir("-graužu, -grauz,", "-grauž, pag. -grauzu", "grauzt"), //aizgrauzt
+		VerbRule.firstConjDir("-griežu, -griez,", "-griež, pag. -griezu", "griezt"), //aizgriezt 1, 2
+		VerbRule.firstConjDir("-grimstu, -grimsti,", "-grimst, pag. -grimu", "grimt"), //atgrimt, aizgrimt
+		VerbRule.firstConjDir("-grūžu, -grūd,", "-grūž, pag. -grūdu", "grūst"), //aizgrūst
+		VerbRule.firstConjDir("-gūstu, -gūsti,", "-gūst, pag. -guvu", "gūt"), //aizgūt
+		// Ģ
+		VerbRule.firstConjDir("-ģiedu, -ģied,", "-ģied, pag. -gidu", "ģist"), //apģist
+		// H, I
+		VerbRule.firstConjDir("-eju, -ej,", "-iet, pag. -gāju", "iet"), //apiet
+		// J
+		VerbRule.firstConjDir("-jāju, -jāj,", "-jāj, pag. -jāju", "jāt"), //aizjāt
+		VerbRule.firstConjDir("-jožu, -joz,", "-jož, pag. -jozu", "jozt"), //aizjozt 1, 2
+		VerbRule.firstConjDir("-jūdzu, -jūdz,", "-jūdz, pag. -jūdzu", "jūgt"), //aizjūgt
+		// K
+		VerbRule.firstConjDir("-kalstu, -kalsti,", "-kalst, pag. -kaltu", "kalst"), //izkalst, aizkalst
+		VerbRule.firstConjDir("-kāpju, -kāp,", "-kāpj, pag. -kāpu", "kāpt"), //aizkāpt
+		VerbRule.firstConjDir("-karu, -kar,", "-kar, pag. -kāru", "kārt"), //aizkārt
+		VerbRule.firstConjDir("-kaucu, -kauc,", "-kauc, pag. -kaucu", "kaukt"), //izkaukt, aizkaukt
+		VerbRule.firstConjDir("-kauju, -kauj,", "-kauj, pag. -kāvu", "kaut"), //apkaut
+		VerbRule.firstConjDir("-klāju, -klāj,", "-klāj, pag. -klāju", "klāt"), //apklāt
+		VerbRule.firstConjDir("-kliedzu, -kliedz,", "-kliedz, pag. -kliedzu", "kliegt"), //aizkliegt
+		VerbRule.firstConjDir("-klimstu, -klimsti,", "-klimst, pag. -klimtu", "klimst"), //aizklimst
+		VerbRule.firstConjDir("-klīstu, -klīsti,", "-klīst, pag. -klīdu", "klīst"), //aizklīst
+		VerbRule.firstConjDir("-kļūstu, -kļūsti,", "-kļūst, pag. -kļuvu", "kļūt"), //aizkļūt
+		VerbRule.firstConjDir("-knābju, -knāb,", "-knābj, pag. -knābu", "knābt"), //uzknābt, aizknābt
+		VerbRule.firstConjDir("-kožu, -kod,", "-kož, pag. -kodu", "kost"), //aizkost
+		VerbRule.firstConjDir("-krāpju, -krāp,", "-krāpj, pag. -krāpu", "krāpt"), //aizkrāpt
+		VerbRule.firstConjDir("-krauju, -krauj,", "-krauj, pag. -krāvu", "kraut"), //aizkraut
+		VerbRule.firstConjDir("-krītu, -krīti,", "-krīt, pag. -kritu", "krist"), //aizkrist
+		VerbRule.firstConjDir("-kuru, -kur,", "-kur, pag. -kūru", "kurt"), //aizkurt
+		VerbRule.firstConjDir("-kūstu, -kusti,", "-kūst, pag. -kusu", "kust"), //aizkust
+		VerbRule.firstConjDir("-kvēpstu, -kvēpsti,", "-kvēpst, pag. -kvēpu", "kvēpt"), //apkvēpt, aizkvēpt
+		// Ķ
+		VerbRule.firstConjDir("-ķepu, -ķep,", "-ķep, pag. -ķepu", "ķept"), //apķept, aizķept
+		VerbRule.firstConjDir("-ķeru, -ķer,", "-ķer, pag. -ķēru", "ķert"), //aizķert
+		// L
+		VerbRule.firstConjDir("-laižu, -laid,", "-laiž, pag. -laidu", "laist"), //aizlaist
+		VerbRule.firstConjDir("-laužu, -lauz,", "-lauž, pag. -lauzu", "lauzt"), //aizlauzt
+		VerbRule.firstConjDir("-lecu, -lec,", "-lec, pag. -lēcu", "lēkt"), //aizlēkt
+		VerbRule.firstConjDir("-liedzu, -liedz,", "-liedz, pag. -liedzu", "liegt"), //aizliegt
+		VerbRule.firstConjDir("-liecu, -liec,", "-liec, pag. -liecu", "liekt"), //aizliekt
+		VerbRule.firstConjDir("-leju, -lej,", "-lej, pag. -lēju", "liet"), //aizliet
+		VerbRule.firstConjDir("-lieku, -liec,", "-liek, pag. -liku", "likt"), //aizlikt
+		VerbRule.firstConjDir("-līpu, -līpi,", "-līp, pag. -lipu", "lipt"), //aplipt, aizlipt
+		VerbRule.firstConjDir("-līkstu, -līksti,", "-līkst, pag. -līku", "līkt"), //nolīkt, aizlīkt
+		VerbRule.firstConjDir("-lienu, -lien,", "-lien, pag. -līdu", "līst"), //aizlīst
+		VerbRule.firstConjDir("-līstu, -līsti,", "-līst, pag. -liju", "līt"), //aplīt, aizlīt
+		VerbRule.firstConjDir("-lobju, -lob,", "-lobj, pag. -lobu", "lobt"), //aizlobt
+		VerbRule.firstConjDir("-lūdzu, -lūdz,", "-lūdz, pag. -lūdzu", "lūgt"), //aizlūgt
+		VerbRule.firstConjDir("-lūstu, -lūsti,", "-lūst, pag. -lūzu", "lūzt"), //aizlūzt, aizlūzt			
+		// M
+		VerbRule.firstConjDir("-metu, -met,", "-met, pag. -metu", "mest"), //aizmest
+		VerbRule.firstConjDir("-mēžu, -mēz,", "-mēž, pag. -mēzu", "mēzt"), //aizmēzt
+		VerbRule.firstConjDir("-miedzu, -miedz,", "-miedz, pag. -miedzu", "miegt"), //aizmiegt
+		VerbRule.firstConjDir("-miegu, -miedz,", "-mieg, pag. -migu", "migt"), //aizmigt
+		VerbRule.firstConjDir("-mirstu, -mirsti,", "-mirst, pag. -mirsu", "mirst"), //aizmirst
+		VerbRule.firstConjDir("-mūku, -mūc,", "-mūk, pag. -muku", "mukt"), //aizmukt
 		// N
-		new VerbRule("-nesu, -nes,", "-nes, pag. -nesu", "nest", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"nest\""}, null), //aiznest
-		new VerbRule("-nirstu, -nirsti,", "-nirst, pag. -niru", "nirt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"nirt\""}, null), //aiznirt
+		VerbRule.firstConjDir("-nesu, -nes,", "-nes, pag. -nesu", "nest"), //aiznest
+		VerbRule.firstConjDir("-nirstu, -nirsti,", "-nirst, pag. -niru", "nirt"), //aiznirt
 		// Ņ
-		new VerbRule("-ņemu, -ņem,", "-ņem, pag. -ņēmu", "ņemt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"ņemt\""}, null), //aizņemt
+		VerbRule.firstConjDir("-ņemu, -ņem,", "-ņem, pag. -ņēmu", "ņemt"), //aizņemt
 		// O, P
-		new VerbRule("-pampstu, -pampsti,", "-pampst, pag. -pampu", "pampt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"pampt\""}, null), //nopampt, aizpampt
-		new VerbRule("-pinu, -pin,", "-pin, pag. -pinu", "pīt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"pīt\""}, null), //aizpīt
-		new VerbRule("-ploku, -ploc,", "-plok, pag. -plaku", "plakt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"plakt\""}, null), //aizplakt
-		new VerbRule("-plaukstu, -plauksti,", "-plaukst, pag. -plauku", "plaukt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"plaukt\""}, null), //atplaukt, aizplaukt
-		new VerbRule("-plēšu, -plēs,", "-plēš, pag. plēsu", "plēst", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"plēst\""}, null), //aizplēst
-		new VerbRule("-plīstu, -plīsti,", "-plīst, pag. -plīsu", "plīst", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"plīst\""}, null), //applīst, aizplīst
-		new VerbRule("-plūcu, -plūc,", "-plūc, pag. -plūcu", "plūkt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"plūkt\""}, null), //aizplūkt
-		new VerbRule("-plūstu, -plūsti,", "-plūst, pag. -plūdu", "plūst", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"plūst\""}, null), //applūst, aizplūst
-		new VerbRule("-pļauju, -pļauj,", "-pļauj, pag. -pļāvu", "pļaut", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"pļaut\""}, null), //aizpļaut
-		new VerbRule("-pūšu, -pūt,", "-pūš, pag. -pūtu", "pūst", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"pūst\""}, null), //aizpūst
+		VerbRule.firstConjDir("-pampstu, -pampsti,", "-pampst, pag. -pampu", "pampt"), //nopampt, aizpampt
+		VerbRule.firstConjDir("-pinu, -pin,", "-pin, pag. -pinu", "pīt"), //aizpīt
+		VerbRule.firstConjDir("-ploku, -ploc,", "-plok, pag. -plaku", "plakt"), //aizplakt
+		VerbRule.firstConjDir("-plaukstu, -plauksti,", "-plaukst, pag. -plauku", "plaukt"), //atplaukt, aizplaukt
+		VerbRule.firstConjDir("-plēšu, -plēs,", "-plēš, pag. plēsu", "plēst"), //aizplēst
+		VerbRule.firstConjDir("-plīstu, -plīsti,", "-plīst, pag. -plīsu", "plīst"), //applīst, aizplīst
+		VerbRule.firstConjDir("-plūcu, -plūc,", "-plūc, pag. -plūcu", "plūkt"), //aizplūkt
+		VerbRule.firstConjDir("-plūstu, -plūsti,", "-plūst, pag. -plūdu", "plūst"), //applūst, aizplūst
+		VerbRule.firstConjDir("-pļauju, -pļauj,", "-pļauj, pag. -pļāvu", "pļaut"), //aizpļaut
+		VerbRule.firstConjDir("-pūšu, -pūt,", "-pūš, pag. -pūtu", "pūst"), //aizpūst
 		// R
-		new VerbRule("-roku, -roc,", "-rok, pag. -raku", "rakt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"rakt\""}, null), //aizrakt
+		VerbRule.firstConjDir("-roku, -roc,", "-rok, pag. -raku", "rakt"), //aizrakt
 		// S, Š
-		new VerbRule("-šalcu, -šalc,", "-šalc, pag. -šalcu", "šalkt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"šalkt\""}, null), //pašalkt, aizšalkt
+		VerbRule.firstConjDir("-šalcu, -šalc,", "-šalc, pag. -šalcu", "šalkt"), //pašalkt, aizšalkt
 		// T
-		new VerbRule("-tūkstu, -tūksti,", "-tūkst; pag. -tūku", "tūkt", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"tūkt\""}, null), //aptūkt, aiztūkt
-		new VerbRule("-tveru, -tver,", "-tver, pag. -tvēru", "tvert", 15,
-				new String[] {"Darbības vārds", "Locīt kā \"tvert\""}, null), //aiztvert
+		VerbRule.firstConjDir("-tūkstu, -tūksti,", "-tūkst; pag. -tūku", "tūkt"), //aptūkt, aiztūkt
+		VerbRule.firstConjDir("-tveru, -tver,", "-tver, pag. -tvēru", "tvert"), //aiztvert
 		// U, V, Z
 				
 		// Single case rules.		
@@ -621,8 +524,7 @@ public class Gram  implements HasToJSON
 		/* Paradigm 16: Darbības vārdi 2. konjugācija tiešie
 		 */
 		// Rules for both all person and third-person-only cases.
-		new VerbRule("-dabūju, -dabū,", "-dabū, pag. -dabūju", "dabūt", 16,
-				new String[] {"Darbības vārds"}, null), //aizdabūt
+		VerbRule.secondConjDir("-dabūju, -dabū,", "-dabū, pag. -dabūju", "dabūt"), //aizdabūt
 				
 		// Single case rules.
 		// Verb-specific rules.
@@ -641,33 +543,22 @@ public class Gram  implements HasToJSON
 		// Rules for both all person and third-person-only cases.
 		// Verb-specific rules ordered alphabetically by verb infinitive.
 		// A, B, C, D
-		new VerbRule("-dziedu, -dziedi,", "-dzied, pag. -dziedāju", "dziedāt", 17,
-				new String[] {"Darbības vārds"}, null), //aizdziedāt
+		VerbRule.thirdConjDir("-dziedu, -dziedi,", "-dzied, pag. -dziedāju", "dziedāt"), //aizdziedāt
 		// E, F, G
-		new VerbRule("-grabu, -grabi,", "-grab, pag. -grabēju", "grabēt", 17,
-				new String[] {"Darbības vārds"}, null), //sagrabēt, aizgrabēt
-		new VerbRule("-guļu, -guli,", "-guļ, pag. -gulēju", "gulēt", 17,
-				new String[] {"Darbības vārds"}, null), //aizgulēt
+		VerbRule.thirdConjDir("-grabu, -grabi,", "-grab, pag. -grabēju", "grabēt"), //sagrabēt, aizgrabēt
+		VerbRule.thirdConjDir("-guļu, -guli,", "-guļ, pag. -gulēju", "gulēt"), //aizgulēt
 		// H, I, J, K
-		new VerbRule("-klabu, -klabi,", "-klab, pag. -klabēju", "klabēt", 17,
-				new String[] {"Darbības vārds"}, null), //paklabēt, aizklabēt		
-		new VerbRule("-klimstu, -klimsti,", "-klimst, pag. -klimstēju", "klimstēt", 17,
-				new String[] {"Darbības vārds"}, null), //aizklimstēt
-		new VerbRule("-kustu, -kusti,", "-kust, pag. -kustēju", "kustēt", 17,
-				new String[] {"Darbības vārds"}, null), //aizkustēt
-		new VerbRule("-kūpu, -kūpi,", "-kūp, pag. -kūpēju", "kūpēt", 17,
-				new String[] {"Darbības vārds"}, null), //apkūpēt, aizkūpēt
+		VerbRule.thirdConjDir("-klabu, -klabi,", "-klab, pag. -klabēju", "klabēt"), //paklabēt, aizklabēt		
+		VerbRule.thirdConjDir("-klimstu, -klimsti,", "-klimst, pag. -klimstēju", "klimstēt"), //aizklimstēt
+		VerbRule.thirdConjDir("-kustu, -kusti,", "-kust, pag. -kustēju", "kustēt"), //aizkustēt
+		VerbRule.thirdConjDir("-kūpu, -kūpi,", "-kūp, pag. -kūpēju", "kūpēt"), //apkūpēt, aizkūpēt
 		// L
-		new VerbRule("-loku, -loki,", "-loka, pag. -locīju", "locīt", 17,
-				new String[] {"Darbības vārds"}, null), //aizlocīt
+		VerbRule.thirdConjDir("-loku, -loki,", "-loka, pag. -locīju", "locīt"), //aizlocīt
 		// M, N, O, P
-		new VerbRule("-peldu, -peldi,", "-peld, pag. -peldēju", "peldēt", 17,
-				new String[] {"Darbības vārds"}, null), //aizpeldēt
-		new VerbRule("-pilu, -pili,", "-pil, pag. -pilēju", "pilēt", 17,
-				new String[] {"Darbības vārds"}, null), //appilēt, aizpilēt
+		VerbRule.thirdConjDir("-peldu, -peldi,", "-peld, pag. -peldēju", "peldēt"), //aizpeldēt
+		VerbRule.thirdConjDir("-pilu, -pili,", "-pil, pag. -pilēju", "pilēt"), //appilēt, aizpilēt
 		// R, S, T
-		new VerbRule("-turu, -turi,", "-tur, pag. -turēju", "turēt", 17,
-				new String[] {"Darbības vārds"}, null), //aizturēt
+		VerbRule.thirdConjDir("-turu, -turi,", "-tur, pag. -turēju", "turēt"), //aizturēt
 		// U, V, Z
 				
 		// Single case rules.		

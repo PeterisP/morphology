@@ -21,14 +21,14 @@ public class VerbRule implements Rule
 	 * 						1st and 2nd person
 	 * @param patternEndint	part of the grammar string containing endings for
 	 * 						3rd parson in present and past
-	 * @param lemmaEnding	required ending for the lemma to apply this rule
+	 * @param lemmaEnd		required ending for the lemma to apply this rule
 	 * @param paradigmId	paradigm ID to set if rule matched
 	 * @param positiveFlags	flags to set if rule pattern and lemma ending
 	 * 						matched
 	 * @param alwaysFlags	flags to set if rule pattern matched
 	 */
 	public VerbRule(String patternBegin, String patternEnd,
-			String lemmaEnding, int paradigmId,
+			String lemmaEnd, int paradigmId,
 			String[] positiveFlags, String[] alwaysFlags)
 	{
 		String[] alwaysFlags3p;
@@ -52,11 +52,61 @@ public class VerbRule implements Rule
 			thirdPersonPattern = allPersonPattern;
 		}
 		allPersonRule = new SimpleRule(allPersonPattern,
-				lemmaEnding, paradigmId, positiveFlags, alwaysFlags);
+				lemmaEnd, paradigmId, positiveFlags, alwaysFlags);
 		thirdPersonRule = new SimpleRule(thirdPersonPattern,
-				lemmaEnding, paradigmId, positiveFlags, alwaysFlags3p);
+				lemmaEnd, paradigmId, positiveFlags, alwaysFlags3p);
+	}
+	/**
+	 * Create simple VerbRule for 1st conjugation direct verbs without parallel
+	 * forms or homoforms.
+	 * @param patternBegin	part of the grammar string containing endings for
+	 * 						1st and 2nd person
+	 * @param patternEndint	part of the grammar string containing endings for
+	 * 						3rd parson in present and past
+	 * @param lemmaEnd		required ending for the lemma to apply this rule
+	 * @return VerbRule with Paradigm 15 and flag about conjugating.
+	 * TODO add IDs from lexicon
+	 */
+	public static VerbRule firstConjDir(
+			String patternBegin, String patternEnd, String lemmaEnd)
+	{
+		return new VerbRule(patternBegin, patternEnd, lemmaEnd,
+				15, new String[] {"Darbības vārds", "Locīt kā \""+ lemmaEnd + "\""}, null);
 	}
 	
+	/**
+	 * Create simple VerbRule for 2nd conjugation direct verbs without parallel
+	 * forms.
+	 * @param patternBegin	part of the grammar string containing endings for
+	 * 						1st and 2nd person
+	 * @param patternEndint	part of the grammar string containing endings for
+	 * 						3rd parson in present and past
+	 * @param lemmaEnd		required ending for the lemma to apply this rule
+	 * @return VerbRule with Paradigm 16
+	 */
+	public static VerbRule secondConjDir(
+			String patternBegin, String patternEnd, String lemmaEnd)
+	{
+		return new VerbRule(patternBegin, patternEnd, lemmaEnd,
+				16, new String[] {"Darbības vārds"}, null);
+	}
+	
+	/**
+	 * Create simple VerbRule for 3rd conjugation direct verbs without parallel
+	 * forms.
+	 * @param patternBegin	part of the grammar string containing endings for
+	 * 						1st and 2nd person
+	 * @param patternEndint	part of the grammar string containing endings for
+	 * 						3rd parson in present and past
+	 * @param lemmaEnd		required ending for the lemma to apply this rule
+	 * @return VerbRule with Paradigm 17
+	 */
+	public static VerbRule thirdConjDir(
+			String patternBegin, String patternEnd, String lemmaEnd)
+	{
+		return new VerbRule(patternBegin, patternEnd, lemmaEnd,
+				17, new String[] {"Darbības vārds"}, null);
+	}
 	
 	/**
 	 * Apply rule as-is - no magic whatsoever.
