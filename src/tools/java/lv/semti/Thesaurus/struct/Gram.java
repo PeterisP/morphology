@@ -91,54 +91,29 @@ public class Gram  implements HasToJSON
 				new String[] {"Darbības vārds"},
 				new String[] {"Parasti 3. personā"}), //aizducināt
 		
-				
-		/* Paradigm 18: Darbības vārdi 1. konjugācija atgriezeniski
-		 */
-		// Rules for both all person and third-person-only cases.
-		
 
 		/* Paradigm 18: Darbības vārdi 1. konjugācija atgriezeniski
 		 */
 		// Rules for both all person and third-person-only cases.
 		// Verb-specific rules ordered alphabetically by verb infinitive.
 		// A, B
-		new VerbRule("-brēcos, -brēcies,", "-brēcas, pag. -brēcos", "brēkties", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"brēkties\""},
-				null),  //aizbrēkties
+		VerbRule.firstConjRefl("-brēcos, -brēcies,", "-brēcas, pag. -brēcos", "brēkties"), //aizbrēkties
 		// C, D
-		new VerbRule("-degos, -dedzies,", "-degas, pag. -degos", "degties", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"degties\""},
-				null), //aizdegties
+		VerbRule.firstConjRefl("-degos, -dedzies,", "-degas, pag. -degos", "degties"), //aizdegties
 		// E
-		new VerbRule("-elšos, -elsies,", "-elšas, pag. -elsos", "elsties", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"elsties\""},
-				null), //aizelsties	
+		VerbRule.firstConjRefl("-elšos, -elsies,", "-elšas, pag. -elsos", "elsties"), //aizelsties	
 		// F, G
-		new VerbRule("-gārdzos, -gārdzies,", "-gārdzas, pag. -gārdzos", "gārgties", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"gārgties\""},
-				null), //aizgārgties
-		new VerbRule("-gūstos, -gūsties,", "-gūstas, pag. -guvos", "gūties", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"gūties\""},
-				null), //aizgūties
+		VerbRule.firstConjRefl("-gārdzos, -gārdzies,", "-gārdzas, pag. -gārdzos", "gārgties"), //aizgārgties
+		VerbRule.firstConjRefl("-gūstos, -gūsties,", "-gūstas, pag. -guvos", "gūties"), //aizgūties
 		// Ģ,
-		new VerbRule("-ģiedos, -ģiedies,", "-ģiedas, pag. -gidos", "ģisties", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"ģisties\""},
-				null), //apģisties
+		VerbRule.firstConjRefl("-ģiedos, -ģiedies,", "-ģiedas, pag. -gidos", "ģisties"), //apģisties
 		// H, I
-		new VerbRule("-ejos, -ejos,", "-ietas, pag. -gājos", "ieties", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"ieties\""},
-				null), //apieties
+		VerbRule.firstConjRefl("-ejos, -ejos,", "-ietas, pag. -gājos", "ieties"), //apieties
 		// J, K
-		new VerbRule("-kliedzos, -kliedzies,", "-kliedzas, pag. -kliedzos", "kliegties", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"kliegties\""},
-				null), //aizkliegties
-		new VerbRule("-krācos, -krācies,", "-krācas, pag. -krācos", "krākties", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"krākties\""},
-				null), //aizkrākties
+		VerbRule.firstConjRefl("-kliedzos, -kliedzies,", "-kliedzas, pag. -kliedzos", "kliegties"), //aizkliegties
+		VerbRule.firstConjRefl("-krācos, -krācies,", "-krācas, pag. -krācos", "krākties"), //aizkrākties
 		// L, M
-		new VerbRule("-mirstos, -mirsties,", "-mirstas, pag. -mirsos", "mirsties", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"mirsties\""},
-				null), //aizmirsties	
+		VerbRule.firstConjRefl("-mirstos, -mirsties,", "-mirstas, pag. -mirsos", "mirsties"), //aizmirsties	
 		// N, O, P, R, S, T, U, V, Z
 		
 		// Single-case rules.
@@ -161,12 +136,9 @@ public class Gram  implements HasToJSON
 		/* Paradigm 19: Darbības vārdi 2. konjugācija atgriezeniski
 		 */
 		// Rules for both all person and third-person-only cases.
-		new VerbRule("-ojos, -ojies,", "-ojas, pag. -ojos", "oties", 19,
-				new String[] {"Darbības vārds"}, null), //aiztuntuļoties, apgrēkoties
-		new VerbRule("-ējos, -ējies,", "-ējas, pag. -ējos", "ēties", 19,
-				new String[] {"Darbības vārds"}, null), //abstrahēties
-		new VerbRule("-ājos, -ājies,", "-ājas, pag. -ājos", "āties", 19,
-				new String[] {"Darbības vārds"}, null), //aizdomāties
+		VerbRule.secondConjRefl("-ojos, -ojies,", "-ojas, pag. -ojos", "oties"), //aiztuntuļoties, apgrēkoties
+		VerbRule.secondConjRefl("-ējos, -ējies,", "-ējas, pag. -ējos", "ēties"), //abstrahēties
+		VerbRule.secondConjRefl("-ājos, -ājies,", "-ājas, pag. -ājos", "āties"), //aizdomāties
 		
 		// Single-case rules.
 		new SimpleRule("parasti 3. pers., -ējas, pag. -ējās", "ēties", 19,
@@ -185,17 +157,12 @@ public class Gram  implements HasToJSON
 		 * "-os, -ies, -ās, pag. -ījos".
 		 */
 		// Rules for both all person and third-person-only cases.
-		new VerbRule("-os, -ies,", "-as, pag. -ējos", "ēties", 20,
-				new String[] {"Darbības vārds"}, null), //apkaunēties, aizņaudēties
-		new VerbRule("-inos, -inies,", "-inās, pag. -inājos", "ināties", 20,
-				new String[] {"Darbības vārds"}, null), //apklaušināties
-		new VerbRule("-os, -ies,", "-ās, pag. -ījos", "īties", 20,
-				new String[] {"Darbības vārds"}, null), //apklausīties	
+		VerbRule.thirdConjRefl("-os, -ies,", "-as, pag. -ējos", "ēties"), //apkaunēties, aizņaudēties
+		VerbRule.thirdConjRefl("-inos, -inies,", "-inās, pag. -inājos", "ināties"), //apklaušināties
+		VerbRule.thirdConjRefl("-os, -ies,", "-ās, pag. -ījos", "īties"), //apklausīties	
 		
-		new VerbRule("-dziedos, -dziedies,", "-dziedas, pag. -dziedājos", "dziedāties", 20,
-				new String[] {"Darbības vārds"}, null), //aizdziedāties
-		new VerbRule("-guļos, -gulies,", "-guļas, pag. -gulējos", "gulēties", 20,
-				new String[] {"Darbības vārds"}, null), //aizgulēties
+		VerbRule.thirdConjRefl("-dziedos, -dziedies,", "-dziedas, pag. -dziedājos", "dziedāties"), //aizdziedāties
+		VerbRule.thirdConjRefl("-guļos, -gulies,", "-guļas, pag. -gulējos", "gulēties"), //aizgulēties
 
 		// Single-case rules.
 		// Generic ending rules.
@@ -624,69 +591,49 @@ public class Gram  implements HasToJSON
 		/* Paradigm 18: Darbības vārdi 1. konjugācija atgriezeniski
 		 */
 		// Rules for both all person and third-person-only cases.
-		// Verb-specific rules ordered alphabetically by verb infinitive.
-		// A , B
-		new VerbRule("-brāžos, -brāzies,", "-brāžas, pag. -brāžos", "brāzties", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"brāzties\""}, null), //aizbrāzties
-		// C
-		new VerbRule("-ciešos, -cieties,", "-ciešas, pag. -cietos", "ciesties", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"ciesties\""}, null), //aizciesties
-		new VerbRule("-cērtos, -cērties,", "-cērtas, pag. -cirtos", "cirsties", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"cirsties\""}, null), //aizcirsties				
-		// D
-		new VerbRule("-drāžos, -drāzies,", "-drāžas, pag. -drāzos", "drāzties", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"drāzties\""}, null), //aizdrāzties
-		new VerbRule("-duros, -duries,", "-duras, pag. -dūros", "durties", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"durties\""}, null), //nodurties, aizdurties
-		// E, F, G
-		new VerbRule("-gāžos, -gāzies,", "-gāžas, pag. -gāzos", "gāzties", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"gāzties\""}, null), //apgāzties, aizgāzties
-		new VerbRule("-graužos, -grauzies,", "-graužas, pag. -graužos", "grauzties", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"grauzties\""}, null), //izgrauzties, aizgrauzties
-		new VerbRule("-griežos, -griezies,", "-griežas, pag. -griezos", "griezties", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"griezties\""}, null), //aizgriezties 1, 2
-		// H, I
+		// Verbs with infinitive homoforms:
 		new VerbRule("-iros, -iries,", "-iras, pag. -īros", "irties", 18,
 				new String[] {"Darbības vārds", "Locīt kā \"irties\" (kā ar airiem)"},
 				null), //aizirties
-		// J
-		new VerbRule("-jūdzos, -jūdzies,", "-jūdzas, pag. -jūdzos", "jūgties", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"jūgties\""}, null), //aizjūgties
-		// K
-		new VerbRule("-karos, -karies,", "-karas, pag. -kāros", "kārties", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"kārties\""}, null), //apkārties
-		new VerbRule("-klājos, -klājies,", "-klājas, pag. -klājos", "klāties", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"klāties\""}, null), //apklāties
-		new VerbRule("-kuļos, -kulies,", "-kuļas, pag. -kūlos", "kulties", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"kulties\""}, null), //aizkulties
-		new VerbRule("-ķēros, -ķeries,", "-ķeras, pag. -ķēros", "ķerties", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"ķerties\""}, null), //aizķerties
-		// L
-		new VerbRule("-laižos, -laidies,", "-laižas, pag. -laidos", "laisties", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"laisties\""}, null), //aizlaisties
-		new VerbRule("-laužos, -lauzies,", "-laužas, pag. -lauzos", "lauzties", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"lauzties\""}, null), //aizlauzties
-		new VerbRule("-liedzos, -liedzies,", "-liedzas, pag. -liedzos", "liegties", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"liegties\""}, null), //aizliegties
-		new VerbRule("-liecos, -liecies,", "-liecas, pag. -liecos", "liekties", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"liekties\""}, null), //aizliekties
-		new VerbRule("-liekos, -liecies,", "-liekas, pag. -likos", "likties", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"likties\""}, null), //aizlikties
-		// M
-		new VerbRule("-metos, -meties,", "-metas, pag. -metos", "mesties", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"mesties\""}, null), //aizmesties
 		new VerbRule("-minos, -minies,", "-minas, pag. -minos", "mīties", 18,
 				new String[] {"Darbības vārds", "Locīt kā \"mīties\" (kā pedāļus)"},
 				null), //aizmīties
 		new VerbRule("-mijos, -mijies,", "-mijas, pag. -mijos", "mīties", 18,
 				new String[] {"Darbības vārds", "Locīt kā \"mīties\" (kā naudu)"},
 				null), //apmīties
+				
+		// Verb-specific rules ordered alphabetically by verb infinitive.
+		// A , B
+		VerbRule.firstConjRefl("-brāžos, -brāzies,", "-brāžas, pag. -brāžos", "brāzties"), //aizbrāzties
+		// C
+		VerbRule.firstConjRefl("-ciešos, -cieties,", "-ciešas, pag. -cietos", "ciesties"), //aizciesties
+		VerbRule.firstConjRefl("-cērtos, -cērties,", "-cērtas, pag. -cirtos", "cirsties"), //aizcirsties				
+		// D
+		VerbRule.firstConjRefl("-drāžos, -drāzies,", "-drāžas, pag. -drāzos", "drāzties"), //aizdrāzties
+		VerbRule.firstConjRefl("-duros, -duries,", "-duras, pag. -dūros", "durties"), //nodurties, aizdurties
+		// E, F, G
+		VerbRule.firstConjRefl("-gāžos, -gāzies,", "-gāžas, pag. -gāzos", "gāzties"), //apgāzties, aizgāzties
+		VerbRule.firstConjRefl("-graužos, -grauzies,", "-graužas, pag. -graužos", "grauzties"), //izgrauzties, aizgrauzties
+		VerbRule.firstConjRefl("-griežos, -griezies,", "-griežas, pag. -griezos", "griezties"), //aizgriezties 1, 2
+		// H, I, J
+		VerbRule.firstConjRefl("-jūdzos, -jūdzies,", "-jūdzas, pag. -jūdzos", "jūgties"), //aizjūgties
+		// K
+		VerbRule.firstConjRefl("-karos, -karies,", "-karas, pag. -kāros", "kārties"), //apkārties
+		VerbRule.firstConjRefl("-klājos, -klājies,", "-klājas, pag. -klājos", "klāties"), //apklāties
+		VerbRule.firstConjRefl("-kuļos, -kulies,", "-kuļas, pag. -kūlos", "kulties"), //aizkulties
+		VerbRule.firstConjRefl("-ķēros, -ķeries,", "-ķeras, pag. -ķēros", "ķerties"), //aizķerties
+		// L
+		VerbRule.firstConjRefl("-laižos, -laidies,", "-laižas, pag. -laidos", "laisties"), //aizlaisties
+		VerbRule.firstConjRefl("-laužos, -lauzies,", "-laužas, pag. -lauzos", "lauzties"), //aizlauzties
+		VerbRule.firstConjRefl("-liedzos, -liedzies,", "-liedzas, pag. -liedzos", "liegties"), //aizliegties
+		VerbRule.firstConjRefl("-liecos, -liecies,", "-liecas, pag. -liecos", "liekties"), //aizliekties
+		VerbRule.firstConjRefl("-liekos, -liecies,", "-liekas, pag. -likos", "likties"), //aizlikties
+		// M
+		VerbRule.firstConjRefl("-metos, -meties,", "-metas, pag. -metos", "mesties"), //aizmesties
 		// N
-		new VerbRule("-nesos, -nesies,", "-nesas, pag. -nesos", "nesties", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"nesties\""}, null), //aiznesties
+		VerbRule.firstConjRefl("-nesos, -nesies,", "-nesas, pag. -nesos", "nesties"), //aiznesties
 		// Ņ
-		new VerbRule("-ņemos, -ņemies,", "-ņemas, pag. -ņemos", "ņemties", 18,
-				new String[] {"Darbības vārds", "Locīt kā \"ņemties\""}, null), //aizņemties
+		VerbRule.firstConjRefl("-ņemos, -ņemies,", "-ņemas, pag. -ņemos", "ņemties"), //aizņemties
 		// O, P, R, S, T, U, V, Z
 				
 				
@@ -710,12 +657,9 @@ public class Gram  implements HasToJSON
 		/* Paradigm 20: Darbības vārdi 3. konjugācija atgriezeniski
 		 */
 		// Rules for both all person and third-person-only cases.
-		new VerbRule("-dzenos, -dzenies,", "-dzenas, pag. -dzinos", "dzīties", 20,
-				new String[] {"Darbības vārds"}, null), //aizdzīties
-		new VerbRule("-kustos, -kusties,", "-kustas, pag. -kustējos", "kustēties", 20,
-				new String[] {"Darbības vārds"}, null), //aizkustēties
-		new VerbRule("-peros, -peries,", "-peras, pag. -pēros", "pērties", 20,
-				new String[] {"Darbības vārds"}, null), //aizpērties
+		VerbRule.thirdConjRefl("-dzenos, -dzenies,", "-dzenas, pag. -dzinos", "dzīties"), //aizdzīties
+		VerbRule.thirdConjRefl("-kustos, -kusties,", "-kustas, pag. -kustējos", "kustēties"), //aizkustēties
+		VerbRule.thirdConjRefl("-peros, -peries,", "-peras, pag. -pēros", "pērties"), //aizpērties
 				
 		// Single case rules.
 		new SimpleRule("-mokos, -mokies, -mokās, arī -mocos, -mocies, -mocās, pag. -mocījos", "mocīties", 20,

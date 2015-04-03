@@ -58,7 +58,7 @@ public class VerbRule implements Rule
 	}
 	/**
 	 * Create simple VerbRule for 1st conjugation direct verbs without parallel
-	 * forms or homoforms.
+	 * forms or infinitive homoforms.
 	 * @param patternBegin	part of the grammar string containing endings for
 	 * 						1st and 2nd person
 	 * @param patternEndint	part of the grammar string containing endings for
@@ -106,6 +106,58 @@ public class VerbRule implements Rule
 	{
 		return new VerbRule(patternBegin, patternEnd, lemmaEnd,
 				17, new String[] {"Darbības vārds"}, null);
+	}
+	
+	/**
+	 * Create simple VerbRule for 1st conjugation reflexive verbs without
+	 * parallel forms or infinitive homoforms.
+	 * @param patternBegin	part of the grammar string containing endings for
+	 * 						1st and 2nd person
+	 * @param patternEndint	part of the grammar string containing endings for
+	 * 						3rd parson in present and past
+	 * @param lemmaEnd		required ending for the lemma to apply this rule
+	 * @return VerbRule with Paradigm 18 and flag about conjugating.
+	 * TODO add IDs from lexicon
+	 */
+	public static VerbRule firstConjRefl(
+			String patternBegin, String patternEnd, String lemmaEnd)
+	{
+		return new VerbRule(patternBegin, patternEnd, lemmaEnd,
+				18, new String[] {"Darbības vārds", "Locīt kā \""+ lemmaEnd + "\""}, null);
+	}
+	
+	/**
+	 * Create simple VerbRule for 2nd conjugation reflexive verbs without
+	 * parallel forms.
+	 * @param patternBegin	part of the grammar string containing endings for
+	 * 						1st and 2nd person
+	 * @param patternEndint	part of the grammar string containing endings for
+	 * 						3rd parson in present and past
+	 * @param lemmaEnd		required ending for the lemma to apply this rule
+	 * @return VerbRule with Paradigm 19
+	 */
+	public static VerbRule secondConjRefl(
+			String patternBegin, String patternEnd, String lemmaEnd)
+	{
+		return new VerbRule(patternBegin, patternEnd, lemmaEnd,
+				19, new String[] {"Darbības vārds"}, null);
+	}
+	
+	/**
+	 * Create simple VerbRule for 3rd conjugation reflexive verbs without 
+	 * parallel forms.
+	 * @param patternBegin	part of the grammar string containing endings for
+	 * 						1st and 2nd person
+	 * @param patternEndint	part of the grammar string containing endings for
+	 * 						3rd parson in present and past
+	 * @param lemmaEnd		required ending for the lemma to apply this rule
+	 * @return VerbRule with Paradigm 20
+	 */
+	public static VerbRule thirdConjRefl(
+			String patternBegin, String patternEnd, String lemmaEnd)
+	{
+		return new VerbRule(patternBegin, patternEnd, lemmaEnd,
+				20, new String[] {"Darbības vārds"}, null);
 	}
 	
 	/**
