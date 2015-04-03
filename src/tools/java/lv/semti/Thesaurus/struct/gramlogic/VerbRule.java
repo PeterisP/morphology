@@ -45,7 +45,7 @@ public class VerbRule implements Rule
 		if (end.endsWith("u"))
 			thirdPersonPattern = "parasti 3. pers., " + end.substring(0, end.length()-1) + "a";
 		else if (end.endsWith("os"))
-			thirdPersonPattern = "parasti 3. pers., " + end.substring(0, end.length()-1) + "ās";
+			thirdPersonPattern = "parasti 3. pers., " + end.substring(0, end.length()-2) + "ās";
 		else
 		{
 			System.err.printf("Could not figure out third-person-only rule for grammar pattern \"%s\"\n", allPersonPattern);
