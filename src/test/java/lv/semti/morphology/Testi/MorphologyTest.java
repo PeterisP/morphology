@@ -2021,11 +2021,11 @@ public class MorphologyTest {
 	 * 2014-03-31 bug - autocreated lexemes from generateInflections pollute future analysis results
 	 */
 	public void inflect_garbage_collection(){
-		locītājs.generateInflections("Bulduri");
-		Word bulduri = locītājs.analyze("Bulduri");
+		locītājs.generateInflections("Šašliki");
+		Word bulduri = locītājs.analyze("Šašliki");
 		assertTrue(bulduri.isRecognized());		
 		for (Wordform wf : bulduri.wordforms) {
-			assertEquals("bulduris", wf.getValue(AttributeNames.i_Lemma));
+			assertEquals("šašliks", wf.getValue(AttributeNames.i_Lemma));
 		}
 	}
 	
@@ -2228,8 +2228,13 @@ public class MorphologyTest {
 
 		Word w = locītājs.guessByEnding("turlais", "Turlais");
 		assertTrue(w.isRecognized());
-		w.describe(System.out);
 		for (Wordform wf : w.wordforms)
 			assertFalse(wf.isMatchingStrong(AttributeNames.i_Lemma, "art"));
+	}
+	
+	@Test
+	public void apstākļa_vārdu_ģenerēšana() {
+		List<Wordform> formas = locītājs.generateInflections("labi");
+		assertEquals(1, formas.size());
 	}
 }
