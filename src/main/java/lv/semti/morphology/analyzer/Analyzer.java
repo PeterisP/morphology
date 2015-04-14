@@ -718,7 +718,11 @@ public class Analyzer extends Lexicon {
 			if (wf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(lemma) && !wf.isMatchingStrong(AttributeNames.i_Case, AttributeNames.v_Vocative)) {				
 				Lexeme lex = wf.lexeme;
 				if (lex == null || !lex.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(lemma)) {
-					lex = this.createLexeme(lemma, wf.getEnding().getID(), "generateInflections");				
+					int endingID = wf.getEnding().getID();
+					if (wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adverb))
+						endingID = 954; // FIXME - hardcoded number of Adverb paradigm main ending, must match the ending number in Lexicon.xml
+						
+					lex = this.createLexeme(lemma, endingID, "generateInflections");				
 					if (lex.getValue(AttributeNames.i_PartOfSpeech) == null)
 						lex.addAttribute(AttributeNames.i_PartOfSpeech, wf.getValue(AttributeNames.i_PartOfSpeech)); // Hardcoded vārdšķirai lai ir POS - saīsinājumi utml
 					if (p_firstcap.matcher(lemma).matches())
