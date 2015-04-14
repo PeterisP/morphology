@@ -106,7 +106,7 @@ public class Gram  implements HasToJSON
 		VerbRule.firstConjRefl("-gārdzos, -gārdzies,", "-gārdzas, pag. -gārdzos", "gārgties"), //aizgārgties
 		VerbRule.firstConjRefl("-gūstos, -gūsties,", "-gūstas, pag. -guvos", "gūties"), //aizgūties
 		// Ģ,
-		VerbRule.firstConjRefl("-ģiedos, -ģiedies,", "-ģiedas, pag. -gidos", "ģisties"), //apģisties
+		VerbRule.firstConjRefl("-ģiedos, -ģiedies,", "-ģiedas, pag. -ģidos", "ģisties"), //apģisties
 		// H, I
 		VerbRule.firstConjRefl("-ejos, -ejos,", "-ietas, pag. -gājos", "ieties"), //apieties
 		// J, K
@@ -514,7 +514,7 @@ public class Gram  implements HasToJSON
 		// E, F, G
 		VerbRule.thirdConjDir("-grabu, -grabi,", "-grab, pag. -grabēju", "grabēt"), //sagrabēt, aizgrabēt
 		VerbRule.thirdConjDir("-guļu, -guli,", "-guļ, pag. -gulēju", "gulēt"), //aizgulēt
-		// H, I, J, K
+		// H, I, J, K 
 		VerbRule.thirdConjDir("-klabu, -klabi,", "-klab, pag. -klabēju", "klabēt"), //paklabēt, aizklabēt		
 		VerbRule.thirdConjDir("-klimstu, -klimsti,", "-klimst, pag. -klimstēju", "klimstēt"), //aizklimstēt
 		VerbRule.thirdConjDir("-kustu, -kusti,", "-kust, pag. -kustēju", "kustēt"), //aizkustēt
@@ -604,7 +604,7 @@ public class Gram  implements HasToJSON
 				
 		// Verb-specific rules ordered alphabetically by verb infinitive.
 		// A , B
-		VerbRule.firstConjRefl("-brāžos, -brāzies,", "-brāžas, pag. -brāžos", "brāzties"), //aizbrāzties
+		VerbRule.firstConjRefl("-brāžos, -brāzies,", "-brāžas, pag. -brāzos", "brāzties"), //aizbrāzties
 		// C
 		VerbRule.firstConjRefl("-ciešos, -cieties,", "-ciešas, pag. -cietos", "ciesties"), //aizciesties
 		VerbRule.firstConjRefl("-cērtos, -cērties,", "-cērtas, pag. -cirtos", "cirsties"), //aizcirsties				
@@ -613,7 +613,7 @@ public class Gram  implements HasToJSON
 		VerbRule.firstConjRefl("-duros, -duries,", "-duras, pag. -dūros", "durties"), //nodurties, aizdurties
 		// E, F, G
 		VerbRule.firstConjRefl("-gāžos, -gāzies,", "-gāžas, pag. -gāzos", "gāzties"), //apgāzties, aizgāzties
-		VerbRule.firstConjRefl("-graužos, -grauzies,", "-graužas, pag. -graužos", "grauzties"), //izgrauzties, aizgrauzties
+		VerbRule.firstConjRefl("-graužos, -grauzies,", "-graužas, pag. -grauzos", "grauzties"), //izgrauzties, aizgrauzties
 		VerbRule.firstConjRefl("-griežos, -griezies,", "-griežas, pag. -griezos", "griezties"), //aizgriezties 1, 2
 		// H, I, J
 		VerbRule.firstConjRefl("-jūdzos, -jūdzies,", "-jūdzas, pag. -jūdzos", "jūgties"), //aizjūgties

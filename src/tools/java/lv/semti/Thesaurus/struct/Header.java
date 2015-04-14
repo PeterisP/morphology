@@ -109,7 +109,6 @@ public class Header implements HasToJSON
 		return res.toString();
 	}
 	
-	
 	public void addToLexicon(Analyzer analizators, String importSource) {
 		try {
 			String lemma = this.lemma.text;

@@ -38,7 +38,7 @@ import org.w3c.dom.NodeList;
 /**
  * Structured representation of entry header.
  */
-public class ThesaurusEntry
+public class Entry
 {
 	/**
 	 * i field.
@@ -76,7 +76,7 @@ public class ThesaurusEntry
 	private static HashSet<String> blacklist = initBlacklist();
 
 	// Reads data of a single thesaurus entry from the XML format
-	public ThesaurusEntry(Node sNode)
+	public Entry(Node sNode)
 	{
 		NodeList fields = sNode.getChildNodes();
 		LinkedList<Node> postponed = new LinkedList<Node>();
@@ -208,7 +208,7 @@ public class ThesaurusEntry
 		}
 		return res;
 	}
-		
+			
 	public boolean hasUnparsedGram()
 	{
 		if (head != null && head.hasUnparsedGram()) return true;
@@ -227,6 +227,24 @@ public class ThesaurusEntry
 		return false;
 	}
 	
+	/**
+	 * Collects all pronunciation elements from lemmas and derivatives.
+	 * @return
+	 */
+	public ArrayList<String> collectPronunciations()
+	{
+		ArrayList<String> res = new ArrayList<String> ();
+		if (head.lemma.pronunciation != null)
+			res.add(head.lemma.pronunciation);
+		if (derivs == null || derivs.isEmpty()) return res;
+		for (Header h : derivs)
+		{
+			if (h.lemma.pronunciation != null)
+				res.add(h.lemma.pronunciation);
+		}
+		return res;
+	}
+		
 	/**
 	 * Build a JSON representation, designed to load in Tezaurs2 webapp well.
 	 * @return JSON representation
@@ -276,103 +294,7 @@ public class ThesaurusEntry
 		return s.toString();
 	}
 	
-	
-	
-	
-	
-	
-
-	
-	
-	// Here the magic magic must happen.
-/*	private void setParadigm() {
-		// 1: Lietvārds 1. deklinācija -s
-		if (( lemma.l.endsWith("s") 
-			&& gramContains("v.") && !gramContains("-ais")) //FIXME īpašībasvārdi kas nav īpaši norādīti????
-			&& !lemma.l.endsWith("is") && !lemma.l.endsWith("us") && !gramContains("nenoteiktais vietn.") 
-			&& !gramContains("-sāls") && !gramContains("-rudens")
-			&& !lemma.l.endsWith("rudens") && !lemma.l.endsWith("debess")
-			&& !lemma.l.endsWith("akmens") && !lemma.l.endsWith("asmens")
-			&& !lemma.l.endsWith("ūdens") && !lemma.l.endsWith("suns")
-			&& !lemma.l.endsWith("zibens") && !lemma.l.endsWith("mēness")) {
-			if (paradigm > 0)
-				System.err.printf(
-					"Vārds '%s' gram '%s' atbilst paradigmām %d un %d\n", lemma,
-					gram, paradigm, 1);
-			
-			removeGram("v.");
-			removeGram("lietv.");
-			paradigm = 1;
-		}
-					
-		// 21: Apstākļa vārds
-		//if (gram != null && gram.equalsIgnoreCase("apst.")) return 21;
 		
-		if (paradigm > 0) {
-			// ja gramatikā ir -a, tad pārbaudam vai tiešām izpildās
-			assertNounEnding("-a","a", AttributeNames.v_Singular, AttributeNames.v_Genitive);
-			assertNounEnding("a","a", AttributeNames.v_Singular, AttributeNames.v_Genitive);
-			assertNounEnding("- a","a", AttributeNames.v_Singular, AttributeNames.v_Genitive); //TODO - typo pirmavotā
-			assertNounEnding("-ņa","ņa", AttributeNames.v_Singular, AttributeNames.v_Genitive);
-			assertNounEnding("-sa","sa", AttributeNames.v_Singular, AttributeNames.v_Genitive);
-			assertNounEnding("-ja","ja", AttributeNames.v_Singular, AttributeNames.v_Genitive);
-			assertNounEnding("-ļa","ļa", AttributeNames.v_Singular, AttributeNames.v_Genitive);
-			assertNounEnding("-ra","ra", AttributeNames.v_Singular, AttributeNames.v_Genitive);
-			assertNounEnding("-u","u", AttributeNames.v_Plural, AttributeNames.v_Genitive); //TODO - vai vienmēr tā?
-			
-			if (gram != null && gram.length() != 0)
-				System.err.printf("%s\t('%s' - gram bija %s)\n",gram,lemma.l,originalGram);
-						
-			if (analyzer != null) {
-				Word analīze = analyzer.analyzeLemma(lemma.l);
-				boolean found = false;
-				String paradigmas = "";
-				for (Wordform variants : analīze.wordforms) {
-					Paradigm paradigmas_variants = variants.getEnding().getParadigm();
-					if (paradigmas_variants.getID() == paradigm
-						|| (paradigmas_variants.getID() == 13 && paradigm==1)
-						|| (paradigmas_variants.getID() == 15 && paradigm==1)) //-iens atvasinājumi
-						found = true;
-					else paradigmas = paradigmas + " " + String.valueOf(paradigmas_variants.getID());
-				}
-				if (analīze.isRecognized() && !found) 
-					System.err.printf("'%s' - šķiet %d bet leksikonā ir %s\n", lemma, paradigm, paradigmas);
-
-			}
-		}
-		
-		//if (true_gram != null) System.out.printf("Truegram: '%s' out of '%s'\n",true_gram,original_gram);
-
-		//if (gram != null && gram.contains(".:")) System.err.println(original_gram); FIXME - te ir puse typo ...
-	}//*/
-	
-	// What is this?
-	// This is for test purposes.
-/*	private void assertNounEnding(
-		String gramDesc, String ending, String number, String nouncase)
-	{
-		// Assertion to verify if analyzer stemchanges match the dictionary.
-		if (gramContains(gramDesc) && analyzer != null) { 
-			Paradigm p = analyzer.paradigmByID(paradigm);
-			//FIXME - kā tad šis strādā ar daudzskaitliniekiem?
-			
-			ArrayList<Wordform> inflections = analyzer.generateInflections(
-				lemma.l, paradigm);
-			for (Wordform wf : inflections) {
-				if (wf.isMatchingStrong(AttributeNames.i_Case, nouncase) &&
-					wf.isMatchingStrong(AttributeNames.i_Number, number)) {
-					
-					if (!wf.getToken().endsWith(ending)) 
-						System.err.printf(
-							"Gram '%s' mismatch - expected to end with -%s but got %s\n",
-							gramDesc, ending, wf.getToken());
-				}
-			}
-		}		
-		removeGram(gramDesc);
-	}//*/
-	
-	
 	/**
 	 *  Formats a list of inflections as an JSON array.
 	 */

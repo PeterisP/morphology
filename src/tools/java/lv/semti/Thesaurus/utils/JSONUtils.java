@@ -18,15 +18,7 @@
 package lv.semti.Thesaurus.utils;
 
 import java.util.Iterator;
-import java.util.LinkedList;
-
-import lv.semti.Thesaurus.struct.Phrase;
-import lv.semti.Thesaurus.struct.Sense;
-
-
 import org.json.simple.JSONObject;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
 
 public class JSONUtils
 {
