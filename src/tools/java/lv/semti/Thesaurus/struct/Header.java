@@ -109,36 +109,6 @@ public class Header implements HasToJSON
 		return res.toString();
 	}
 	
-	public void addToLexicon(Analyzer analizators, String importSource) {
-		try {
-			String lemma = this.lemma.text;
-			Word w = analizators.analyzeLemma(lemma);
-			if (w.isRecognized()) 
-				return; //throw new Exception(String.format("Vārds %s jau ir leksikonā", lemma));
-			
-			if (this.gram == null) throw new Exception(String.format("Vārdam %s nav gramatikas", lemma));
-			if (this.gram.paradigm == null) throw new Exception(String.format("Vārdam %s nav atrastas paradigmas", lemma));
-			HashSet<Integer> paradigms = this.gram.paradigm;
-			if (paradigms.size() != 1) throw new Exception(String.format("Vārdam %s ir %d paradigmas", lemma, paradigms.size()));
-			int paradigmID = paradigms.iterator().next();
-						
-			Lexeme l = analizators.createLexemeFromParadigm(lemma, paradigmID, importSource);
-			if (l == null) throw new Exception(String.format("createLexemeFromParadigm nofailoja uz %s / %d", lemma, paradigmID));
-			if (l.getParadigmID() == 29) { // Hardcoded unflexible words
-				l.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Residual);
-				if (this.gram.flags.contains("Saīsinājums"))
-					l.addAttribute(AttributeNames.i_ResidualType, AttributeNames.v_Abbreviation);
-				else if (this.gram.flags.contains("Vārds svešvalodā"))
-					l.addAttribute(AttributeNames.i_ResidualType, AttributeNames.v_Foreign); 
-				else if (this.gram.flags.contains("Izsauksmes vārds"))
-					l.addAttribute(AttributeNames.i_ResidualType, AttributeNames.v_Interjection); 
-				
-			}
-			//System.out.printf("Jess %s\n", lemma);
-		} catch (Exception e) {
-			System.err.printf("Nesanāca ielikt leksēmu :(%s\n",e.getMessage());
-			if (e.getMessage() == null) e.printStackTrace();
-		}
-	}
+
 
 }

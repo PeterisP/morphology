@@ -318,11 +318,6 @@ public class Entry
 		return s.toString();
 	}//*/
 	
-	public void addToLexicon(Analyzer analizators, String importSource) {
-		this.head.addToLexicon(analizators, importSource);
-		if (this.derivs != null)
-			for (Header h : this.derivs)
-				h.addToLexicon(analizators, importSource);		
-	}
+
 
 }
