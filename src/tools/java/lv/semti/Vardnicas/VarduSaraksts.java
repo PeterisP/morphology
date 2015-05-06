@@ -26,6 +26,7 @@ import lv.semti.morphology.attributes.AttributeNames;
 import lv.semti.morphology.lexicon.*;
 
 public class VarduSaraksts {
+	public static boolean WRITE_LEMMA = true;
 
 	public static void main(String[] args) throws Exception {
 		Analyzer analizators = new Analyzer("dist/Lexicon.xml",true);
@@ -51,7 +52,9 @@ public class VarduSaraksts {
 					forma.removeAttribute(AttributeNames.i_SourceLemma);
 					//forma.removeAttribute(AttributeNames.i_Mija);
 					//izeja.append(String.format("%s\t%s\n",forma.getToken(),forma.toJSON()));
-					izeja.append(String.format("%s\n",forma.getToken()));
+					izeja.append(forma.getToken());
+					if (WRITE_LEMMA) izeja.append(String.format("\t%s", l.getValue(AttributeNames.i_Lemma)));
+					izeja.append("\n");
 				}
 				//break;
 				 
