@@ -26,7 +26,8 @@ import lv.semti.morphology.attributes.AttributeNames;
 import lv.semti.morphology.lexicon.*;
 
 public class VarduSaraksts {
-	public static boolean WRITE_LEMMA = true;
+	public static boolean WRITE_LEMMAS = true;
+	public static boolean WRITE_FORMS = true;
 
 	public static void main(String[] args) throws Exception {
 		Analyzer analizators = new Analyzer("dist/Lexicon.xml",true);
@@ -43,19 +44,23 @@ public class VarduSaraksts {
 				
 				//izeja.append(l.getValue(AttributeNames.i_Lemma)+"\n");
 				//izeja.append(l.getStem(1)+"\n");
-				ArrayList<Wordform> formas = analizators.generateInflections(l, l.getValue(AttributeNames.i_Lemma));
-				for (Wordform forma : formas) {
-					forma.removeNonlexicalAttributes();
-					//forma.removeAttribute(AttributeNames.i_LexemeID);
-					//forma.removeAttribute(AttributeNames.i_EndingID);
-					forma.removeAttribute(AttributeNames.i_ParadigmID);
-					forma.removeAttribute(AttributeNames.i_SourceLemma);
-					//forma.removeAttribute(AttributeNames.i_Mija);
-					//izeja.append(String.format("%s\t%s\n",forma.getToken(),forma.toJSON()));
-					izeja.append(forma.getToken());
-					if (WRITE_LEMMA) izeja.append(String.format("\t%s", l.getValue(AttributeNames.i_Lemma)));
-					izeja.append("\n");
-				}
+				if (WRITE_FORMS)
+				{
+					ArrayList<Wordform> formas = analizators.generateInflections(l, l.getValue(AttributeNames.i_Lemma));
+					for (Wordform forma : formas) {
+						forma.removeNonlexicalAttributes();
+						//forma.removeAttribute(AttributeNames.i_LexemeID);
+						//forma.removeAttribute(AttributeNames.i_EndingID);
+						forma.removeAttribute(AttributeNames.i_ParadigmID);
+						forma.removeAttribute(AttributeNames.i_SourceLemma);
+						//forma.removeAttribute(AttributeNames.i_Mija);
+						//izeja.append(String.format("%s\t%s\n",forma.getToken(),forma.toJSON()));
+						izeja.append(forma.getToken());
+						if (WRITE_LEMMAS) izeja.append(String.format("\t%s", l.getValue(AttributeNames.i_Lemma)));
+						izeja.append("\n");
+					}
+				} else if (WRITE_LEMMAS)
+					izeja.append(String.format("%s\n", l.getValue(AttributeNames.i_Lemma)));
 				//break;
 				 
 			}
