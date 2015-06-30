@@ -28,15 +28,19 @@ import lv.semti.morphology.lexicon.*;
 public class VarduSaraksts {
 	public static boolean WRITE_LEMMAS = true;
 	public static boolean WRITE_FORMS = true;
+	public static boolean WRITE_ABBRS = false;
 
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) throws Exception
+	{
 		Analyzer analizators = new Analyzer("dist/Lexicon.xml",true);
 		
 		//PrintWriter izeja = new PrintWriter(new PrintStream(System.out, true, "UTF8"));
 		BufferedWriter izeja = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("vaardi.txt"), "UTF-8"));
 		
 		for (Paradigm p : analizators.paradigms)
-			for (Lexeme l : p.lexemes) {
+		{
+			for (Lexeme l : p.lexemes)
+			{
 				//if (p.getID() != 20 /*&& p.getID() != 17*/) continue;
 				//if (p.getID() != 1) continue;
 				//if (!l.getStem(0).equalsIgnoreCase("pilnmēnes")) continue;
@@ -44,10 +48,21 @@ public class VarduSaraksts {
 				
 				//izeja.append(l.getValue(AttributeNames.i_Lemma)+"\n");
 				//izeja.append(l.getStem(1)+"\n");
+				ArrayList<Wordform> formas = analizators.generateInflections(l, l.getValue(AttributeNames.i_Lemma));
+				
+				if (!WRITE_ABBRS)
+				{
+					if (formas.get(0).isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Residual) ||
+							formas.get(0).isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Abbreviation) ||
+							formas.get(0).isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Interjection) ||
+							formas.get(0).isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Particle))
+						continue;
+				}
 				if (WRITE_FORMS)
 				{
-					ArrayList<Wordform> formas = analizators.generateInflections(l, l.getValue(AttributeNames.i_Lemma));
-					for (Wordform forma : formas) {
+					
+					for (Wordform forma : formas)
+					{
 						forma.removeNonlexicalAttributes();
 						//forma.removeAttribute(AttributeNames.i_LexemeID);
 						//forma.removeAttribute(AttributeNames.i_EndingID);
@@ -60,10 +75,14 @@ public class VarduSaraksts {
 						izeja.append("\n");
 					}
 				} else if (WRITE_LEMMAS)
+				{
 					izeja.append(String.format("%s\n", l.getValue(AttributeNames.i_Lemma)));
+					
+				}
 				//break;
 				 
 			}
+		}
 	
 		izeja.flush();
 		izeja.close();
