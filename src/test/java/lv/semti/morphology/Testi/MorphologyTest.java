@@ -25,7 +25,6 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
@@ -38,7 +37,6 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import lv.semti.morphology.Testi.MorphoEvaluate.Etalons;
 import lv.semti.morphology.analyzer.*;
 import lv.semti.morphology.attributes.*;
 import lv.semti.morphology.lexicon.*;
@@ -2236,5 +2234,12 @@ public class MorphologyTest {
 	public void apstākļa_vārdu_ģenerēšana() {
 		List<Wordform> formas = locītājs.generateInflections("labi");
 		assertEquals(1, formas.size());
+	}
+	
+	@Test
+	public void rozā() {
+		List<Wordform> formas = locītājs.generateInflections("rozā");
+		assertEquals(1, formas.size());
+		assertTrue(formas.get(0).isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adjective));
 	}
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Morphology revision="$Revision: 950 $" licence="Copyright 2008-2009 Institute of Mathematics and Computer Science, University of Latvia. This file is part of the SemTi-Kamols Chunker, see http://www.semti-kamols.lv/  This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program. If not, see http://www.gnu.org/licenses/.">
 	<Corpus FileName="Lexicon_core.xml" Type="core"/>
-	<Corpus FileName="Lexicon_firstnames.xml" Type="core"/>
+	<Corpus FileName="Lexicon_firstnames.xml" Type="aux"/>
 	<Corpus FileName="Lexicon_vietas.xml" Type="core"/>
 	<Corpus FileName="Lexicon_sv.xml" Type="core"/>
 	<Corpus FileName="Lexicon_valerijs.xml" Type="core"/>
@@ -3465,7 +3465,7 @@
 			<Attributes Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Lokatīvs"/>
 		</Ending>
 		<Ending ID="2037" StemChange="22" Ending="ī" LemmaEnding="2031">
-			<Attributes Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Vokatīvs"/>
+			<Attributes Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Vokatīvs"/>
 		</Ending>
 		<Ending ID="2038" Ending="ās" LemmaEnding="2031">
 			<Attributes Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Nominatīvs"/>
