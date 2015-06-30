@@ -280,6 +280,8 @@ public class Paradigm extends AttributeValues {
 	// Verifies if this stem is a valid stem for this paradigm, based on the last letter(s?) of that stem 
 	public boolean allowedGuess(String stem) {
 		if (allowedGuessEndings.length == 0) return true; // FIXME - workaround until all paradigms have this data filled
+		if (stem.isEmpty()) return false;
+		
 		char lastchar = stem.charAt(stem.length()-1);
 		for (char c : allowedGuessEndings) 
 			if (c==lastchar) return true;

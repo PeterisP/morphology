@@ -30,7 +30,7 @@ public class VarduSaraksts {
 	public static boolean WRITE_FORMS = true;
 
 	public static void main(String[] args) throws Exception {
-		Analyzer analizators = new Analyzer("dist/Lexicon.xml",true);
+		Analyzer analizators = new Analyzer("dist/Lexicon.xml", false);
 		
 		//PrintWriter izeja = new PrintWriter(new PrintStream(System.out, true, "UTF8"));
 		BufferedWriter izeja = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("vaardi.txt"), "UTF-8"));
