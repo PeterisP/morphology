@@ -530,12 +530,12 @@ public class TokenizeTest {
 		assertEquals(10, sentences.size());
 		
 		sentences = Splitting.tokenizeSentences(locītājs, "Valsts prezidents Guntis Ulmanis sniedzis interviju laikrakstam Diena, kurā paudis savu viedokli par nākamās valdības modeli, tās deklarācijas galvenajiem uzdevumiem, kā arī par Andra Šķēles personību. - Kopumā Ulmanis valdības deklarāciju novērtējis kā tādu, kurā tiek atmesti visi vājie punkti un ielikti pamatīgi, spēcīgi valdības darba principi. Tajā esot aptverti ne tikai makroekonomikas, bet arī struktūrpolitikas jautājumi, kurā būtiskākie esot bezdeficīta budżets, inflācijas ierobeżošana un kārtība, kā šis budżets tiks izmantots. Viņš pozitīvi novērtējis faktu, ka ir sākts domāt divu gadu kategorijās un izteica cerību, ka valdības būs tik stipras, ka nemainīsies vairs ik pēc gada, bet vismaz pēc diviem. Runājot par valdības vadītāju, Valsts prezidents izteicis vēlmi, lai tas nemainītos vismaz desmit gadus. Ulmanis apliecinājis, ka sarunās ar Ministru prezidentu Šķēli, konstatējis, ka pēdējais esot gatavs mainīt savu nostāju daudzos Latvijai būtiskos jautājumos, tai skaitā arī personiska rakstura jautājumos, piemēram, attiecību veidošanā ar partijām, ar parlamentu, arī \"attiecībās starp diviem prezidentiem\", kas līdz šim esot bijušas daudzmaz normālas. Taču Valsts prezidents atzinis, ka jaunās valdības darbs un viņa amatā pavadītais laiks esot sadūries, jo katrs esot gribējis pierādīt savu taisnību. Viņaprāt, pozitīvi esot tas, ka abas šīs institūcijas sākušas iedziļināties problēmās. Ulmanis paudis viedokli, ka šis Ministru prezidents esot izaudzis uz iepriekšējo premjeru darba bāzes un pieredzes - gan pozitīvās, gan negatīvās. Valsts prezidents paudis arī savu gandarījumu, ka valdības deklarācijā parādījušies morāles kritēriji. Raksturojot atsevišķus deklarācijas jautājumus, viņš par svarīgākajiem atzinis jautājumu par monopoliem, robeżkontroles jautājums, jautājumu par izglītības un zinātnes integrācijas reformu un nacionālās nozīmes centra izveidošanu, par vienu no galvenajām viņš minējis iedaļu par drošību un tieslietām, svarīga esot arī ārlietām veltītā nodaļa, kura ar laiku tiks uzlabota. Ulmanis apstiprinājis, ka teritoriālā reforma valstī esot jāveic, taču viņš nepiekrīt valsts ielikta rajona pārvaldnieka amatam, taču viss būšot skaidrs pēc pašvaldību vēlēšanām. - Valsts prezidents devis arī savu vērtējumu jaunajai valdībai, ko, viņaprāt, formāli nevar uzskatīt par stabilu, taču viņš izteicis pārliecību, ka nestabilitāte bija saistīta ar reorganizāciju, nevis ar reformu gaitu un valsts attīstību kopumā. Ulmanis paskaidrojis, ka Šķēle atvaļinājis finansu ministru Vasiliju Meļņiku aiz morāles principiem, kas tika uztverti daudz dziļāk, taču viņš atteicies komentēt DPS rīcības motīvus, izvirzot finansu ministra amatam Meļņika kandidatūru. Viņš apliecinājis, ka vēlēšanās reorganizēt valdību sakrita ar momenta aktualitāti un morāles jēdziena nozīmīgumu. Valsts prezidents paudis domu, ka demisija neesot traģēdija valstij, tās izraisītās pārmaiņas tikai varētu ienest MK daudz nopietnāku attieksmi. Viņš paskaidrojis, ka arī bez Meļņika morāles kritēriji esot figurējuši valdības reorganizācijas procesā. - Partijas, viņaprāt, rīkojoties saprātīgi un apdomīgi, tās daudz labāk zinot, ko tās grib panākt. Ulmanis arī paredzējis strīdus objektu ministru amatu sadalē, un tas būšot finansu ministrs. Viņš informējis par pastāvošo vienošanos, ka valdība netikšot sastādīta slepus no Valsts prezidenta. Uz jautājumu, vai Šķēlem izdosies sastādīt valdību, viņš apliecinājis, ka Saeimas ārkārtas vēlēšanas pagaidām neesot viņa darbu sarakstā, jo tas būtu nopietns satricinājums gan valstij, gan sabiedrībai. - Valsts Prezidents paudis savu viedokli arī attiecībā uz Latvijas iesaistīšanos ES, kā arī tās attiecībām ar kaimiņu valstīm, viņš izteicis arī savu atbalstu ĀM un tās vadītājam Valdim Birkavam (LC).");
-		for (LinkedList<Word> s : sentences) {
-			for (Word w : s) {
-				System.out.print(w.getToken()+' ');
-			}
-			System.out.println();
-		}
+//		for (LinkedList<Word> s : sentences) {
+//			for (Word w : s) {
+//				System.out.print(w.getToken()+' ');
+//			}
+//			System.out.println();
+//		}
 	}
 
 	@Test
@@ -554,6 +554,13 @@ public class TokenizeTest {
 		assertEquals(1, tokens.get(0).wordformsCount());
 		assertEquals(AttributeNames.v_Ordinal, tokens.get(0).wordforms.get(0).getValue(AttributeNames.i_ResidualType)); // ordinal number
 		assertEquals("xo", tokens.get(0).wordforms.get(0).getTag());
+	}
+
+	@Test
+	public void singleletters() {
+		LinkedList<Word> tokens;		
+		tokens = Splitting.tokenize(locītājs, "bv  q  i", false);
+		assertEquals(3, tokens.size());
 	}
 }
  
