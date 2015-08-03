@@ -443,7 +443,7 @@ public class Lexicon {
 	 *
 	 * @return	jauns leksēmas numurs
 	 */
-	int lexeme_id_counter = 1000000; 
+	int lexeme_id_counter = 1100000; 
 	public int newLexemeID() {
 		lexeme_id_counter += 1;
 		while (lexemeByID(lexeme_id_counter) != null)
@@ -471,6 +471,7 @@ public class Lexicon {
 			if (celmi.size() == 0) return null; // acīmredzot neder ar miju
 			// FIXME ! Nevajadzētu te būt iespējai uz null!
 			stem = celmi.get(0).celms;
+			// FIXME - vai te ir ok naivi ņemt pirmo variantu ?
 		} catch (Exception e) {
 			return null;
 		}

@@ -190,14 +190,23 @@ public class Analyzer extends Lexicon {
 		Word result = new Word(word);
 		
 		for (Ending ending : getAllEndings().matchedEndings(word)) {
-			ArrayList<Variants> celmi = Mijas.mijuVarianti(ending.stem(word), ending.getMija(), p_firstcap.matcher(originalWord).matches());
+			String stemBezMijas = ending.stem(word);
+			int stemChange = ending.getMija();
+			boolean properName = p_firstcap.matcher(originalWord).matches();
+			ArrayList<Variants> celmi = Mijas.mijuVarianti(stemBezMijas, stemChange, properName);
 
 			for (Variants celms : celmi) {
-				ArrayList<Lexeme> leksēmas = ending.getEndingLexemes(celms.celms);
+				ArrayList<Lexeme> lexemes = ending.getEndingLexemes(celms.celms);
 				boolean foundSomethingHere = false;
-				if (leksēmas != null) 					
-					for (Lexeme leksēma : leksēmas) {
-						Wordform variants = new Wordform(word, leksēma, ending);
+				if (lexemes != null) 					
+					for (Lexeme lexeme : lexemes) {
+						String trešāSakne = stemBezMijas;
+						if (lexeme.getParadigm().getStems() == 3) {
+							trešāSakne = lexeme.getStem(2);
+						}
+						if (!Mijas.atpakaļlocīšanasVerifikācija(celms, stemBezMijas, stemChange, trešāSakne, properName))
+							continue;
+						Wordform variants = new Wordform(word, lexeme, ending);
 						variants.addAttributes(celms);
 						variants.addAttribute(AttributeNames.i_Guess, AttributeNames.v_NoGuess);
 						if (this.isAcceptable(variants)) { // izmetam tos variantus, kas nav īsti pieļaujami - vienskaitliniekus daudzskaitlī, vokatīvus ja tos negrib
@@ -737,8 +746,9 @@ public class Analyzer extends Lexicon {
 					lex.getParadigm().removeLexeme(lex);
 				return result;
 			}
-			if ( (lemma.toLowerCase().endsWith("ais") && lemma.equalsIgnoreCase(wf.getValue(AttributeNames.i_Lemma).substring(0, wf.getValue(AttributeNames.i_Lemma).length()-1)+"ais")) ||
-				 (lemma.toLowerCase().endsWith("ā") && wf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(lemma.substring(0, lemma.length()-1)+"a")) ) {
+			if ( wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adjective) && (
+				 (lemma.toLowerCase().endsWith("ais") && lemma.equalsIgnoreCase(wf.getValue(AttributeNames.i_Lemma).substring(0, wf.getValue(AttributeNames.i_Lemma).length()-1)+"ais")) ||
+				 (lemma.toLowerCase().endsWith("ā") && wf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(lemma.substring(0, lemma.length()-1)+"a")) ) ) {
 				// Exception for adjective-based surnames "Lielais", "Platais" etc
 				Lexeme lex = wf.lexeme;
 				if ((lex == null && lemma.toLowerCase().endsWith("ais")) || (lex != null && !lex.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(lemma))) {

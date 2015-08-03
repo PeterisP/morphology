@@ -116,14 +116,16 @@ public class MorphologyTest {
 	}
 	
 	@Test
-	public void pīrādziņi() {
+	public void nadziņi() {
 		//2008-09-06 atrasts gļuks, ka "pīrādziņi" analīzē pamatforma bija "pīrāgš"
 		//2012-02-10 - vairs nav aktuāls 'pīrāgs', jābūt 'pīrādziņš'
+		//2015-08-03 failo, jo atrod LĢIS apdzīvoto vietu "Pīrāgi", nomainīts uz nadziņiem 
 		locītājs.enableDiminutive = true;
-		Word pīrādziņi = locītājs.analyze("pīrādziņi");
-		assertTrue(pīrādziņi.isRecognized());		
-		assertEquals("pīrādziņš", pīrādziņi.wordforms.get(0).getValue(AttributeNames.i_Lemma));
-		assertEquals("pīrāgs", pīrādziņi.wordforms.get(0).getValue(AttributeNames.i_SourceLemma));
+		Word nadziņi = locītājs.analyze("nadziņi");
+		assertTrue(nadziņi.isRecognized());		
+		Wordform forma = nadziņi.getBestWordform();
+		assertEquals("nadziņš", forma.getValue(AttributeNames.i_Lemma));
+		assertEquals("nags", forma.getValue(AttributeNames.i_SourceLemma));
 	}
 
 	@Test
@@ -777,6 +779,7 @@ public class MorphologyTest {
 		assertTrue(nopūzdamās.isRecognized());
 		
 		Word nopūsdamās = locītājs.analyze("pūsdamās");
+		nopūsdamās.describe(System.out);
 		assertFalse(nopūsdamās.isRecognized());
 		
 		Word grūzdams = locītājs.analyze("grūzdams");
@@ -1558,11 +1561,18 @@ public class MorphologyTest {
 	
 	@Test
 	public void divdabju_pārākās_formas() {
+		// Jautājums par to, kā pareizi tās interpretēt....
 		Word vārds = locītājs.analyze("izkusušais");
 		assertTrue(vārds.isRecognized());	
 		assertEquals("izkust", vārds.wordforms.get(0).getValue(AttributeNames.i_Lemma));
 		//vārds.wordforms.get(0).describe();
 		
+//		vārds.describe(System.out);
+		vārds = locītājs.analyze("izkusušākais");
+		assertTrue(vārds.isRecognized());	
+		assertEquals("izkust", vārds.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+		
+//		vārds.describe(System.out);
 		vārds = locītājs.analyze("visizkusušākais");
 		assertTrue(vārds.isRecognized());	
 		assertEquals("izkust", vārds.wordforms.get(0).getValue(AttributeNames.i_Lemma));
@@ -2072,6 +2082,7 @@ public class MorphologyTest {
 		locītājs.enableAllGuesses = true;
 		
 		List<Wordform> formas = locītājs.generateInflections("koks", true);
+		describe(formas);
 		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "", "koks");
 		
 		formas = locītājs.generateInflections("paziņa", true);
@@ -2140,7 +2151,7 @@ public class MorphologyTest {
 		assertTrue(w.isRecognized());
 		assertEquals("veikt", w.wordforms.get(0).getValue(AttributeNames.i_Lemma));
 		
-		List<Wordform> formas = locītājs.generateInflections("rakt", true);
+		List<Wordform> formas = locītājs.generateInflections("rakt", false);
 		AttributeValues testset = new AttributeValues();
 		testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
 		testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Nominative);
@@ -2161,9 +2172,11 @@ public class MorphologyTest {
 		w = locītājs.analyze("lecdams");
 		assertFalse(w.isRecognized());
 		
-		List<Wordform> formas = locītājs.generateInflections("lekt", true);
+		List<Wordform> formas = locītājs.generateInflections("lekt", false);
 		AttributeValues testset = new AttributeValues();
-		testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
+		testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+		testset.addAttribute(AttributeNames.i_Izteiksme, AttributeNames.v_Participle);
+		testset.addAttribute(AttributeNames.i_Lokaamiiba, AttributeNames.v_DaljeejiLokaams);
 		testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Nominative);
 		testset.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Masculine);
 		testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
@@ -2182,15 +2195,16 @@ public class MorphologyTest {
 		w = locītājs.analyze("līstiiet");
 		assertFalse(w.isRecognized());
 		
-		// un vēl "lijdams" http://ezis.ailab.lv:8182/inflect/en/l%C4%ABt
-		
-		List<Wordform> formas = locītājs.generateInflections("lekt", true);
+		// un vēl bija "lijdams" gļukforma		
+		List<Wordform> formas = locītājs.generateInflections("līt", false);
 		AttributeValues testset = new AttributeValues();
-		testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
+		testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+		testset.addAttribute(AttributeNames.i_Izteiksme, AttributeNames.v_Participle);
+		testset.addAttribute(AttributeNames.i_Lokaamiiba, AttributeNames.v_DaljeejiLokaams);
 		testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Nominative);
 		testset.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Masculine);
 		testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
-		assertInflection(formas, testset, "lekdams");
+		assertInflection(formas, testset, "līdams");
 	}
 	
 	@Test
