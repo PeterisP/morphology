@@ -1362,9 +1362,6 @@
     <Lexeme Stem1="plusk">
       <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="pluska"/>
     </Lexeme>
-    <Lexeme Stem1="žūp">
-      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="žūpa"/>
-    </Lexeme>
     <Lexeme Stem1="ložņ">
       <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="ložņa"/>
     </Lexeme>
@@ -10941,10 +10938,10 @@
       <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Cita" Pamatforma="'"/>
     </Lexeme>
     <Lexeme ID="50467" Stem1="`">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="`"/>
+      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="'"/>
     </Lexeme>
     <Lexeme ID="50468" Stem1="´">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="´"/>
+      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="'"/>
     </Lexeme>
     <Lexeme ID="27202" Stem1="(">
       <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Iekava" Pamatforma="("/>
@@ -10953,10 +10950,10 @@
       <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Iekava" Pamatforma=")"/>
     </Lexeme>
     <Lexeme ID="50463" Stem1="{">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Iekava" Pamatforma="{"/>
+      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Iekava" Pamatforma="("/>
     </Lexeme>
     <Lexeme ID="50464" Stem1="}">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Iekava" Pamatforma="}"/>
+      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Iekava" Pamatforma=")"/>
     </Lexeme>
     <Lexeme ID="50465" Stem1="&lt;">
       <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Iekava" Pamatforma="&lt;"/>
@@ -10965,88 +10962,91 @@
       <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Iekava" Pamatforma="&gt;"/>
     </Lexeme>
     <Lexeme ID="27204" Stem1="«">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="«"/>
+      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="&quot;"/>
     </Lexeme>
     <Lexeme ID="27205" Stem1="»">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="»"/>
+      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="&quot;"/>
     </Lexeme>
     <Lexeme ID="50758" Stem1="''">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="''"/>
+      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="&quot;"/>
     </Lexeme>
     <Lexeme ID="27206" Stem1="-">
       <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Domuzīme" Pamatforma="-"/>
     </Lexeme>
     <Lexeme ID="27207" Stem1="[">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Iekava" Pamatforma="["/>
+      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Iekava" Pamatforma="("/>
     </Lexeme>
     <Lexeme ID="27208" Stem1="]">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Iekava" Pamatforma="]"/>
+      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Iekava" Pamatforma=")"/>
     </Lexeme>
     <Lexeme ID="27211" Stem1="—">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Domuzīme" Pamatforma="—"/>
+      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Domuzīme" Pamatforma="-"/>
     </Lexeme>
     <Lexeme ID="50469" Stem1="‐">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Domuzīme" Pamatforma="‐"/>
+      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Domuzīme" Pamatforma="-"/>
     </Lexeme>
     <Lexeme ID="50470" Stem1="‑">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Domuzīme" Pamatforma="‑"/>
+      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Domuzīme" Pamatforma="-"/>
     </Lexeme>
     <Lexeme ID="50471" Stem1="‒">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Domuzīme" Pamatforma="‒"/>
+      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Domuzīme" Pamatforma="-"/>
     </Lexeme>
     <Lexeme ID="50472" Stem1="–">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Domuzīme" Pamatforma="–"/>
+      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Domuzīme" Pamatforma="-"/>
     </Lexeme>
     <Lexeme ID="50473" Stem1="―">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Domuzīme" Pamatforma="―"/>
+      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Domuzīme" Pamatforma="-"/>
+    </Lexeme>
+    <Lexeme Stem1="˗">
+      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Domuzīme" Pamatforma="-"/>
     </Lexeme>
     <Lexeme ID="50474" Stem1="‘">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="‘"/>
+      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="'"/>
     </Lexeme>
     <Lexeme ID="50475" Stem1="’">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="’"/>
+      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="'"/>
     </Lexeme>
     <Lexeme ID="50476" Stem1="‚">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="‚"/>
+      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="'"/>
     </Lexeme>
     <Lexeme ID="50477" Stem1="‛">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="‛"/>
+      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="'"/>
     </Lexeme>
     <Lexeme ID="50478" Stem1="“">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="“"/>
+      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="&quot;"/>
     </Lexeme>
     <Lexeme ID="50479" Stem1="”">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="”"/>
+      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="&quot;"/>
     </Lexeme>
     <Lexeme ID="50480" Stem1="„">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="„"/>
+      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="&quot;"/>
     </Lexeme>
     <Lexeme ID="50481" Stem1="‟">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="‟"/>
+      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="&quot;"/>
     </Lexeme>
     <Lexeme ID="50482" Stem1="′">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="′"/>
+      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="'"/>
     </Lexeme>
     <Lexeme ID="50483" Stem1="″">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="″"/>
+      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="'"/>
     </Lexeme>
     <Lexeme ID="50484" Stem1="‴">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="‴"/>
+      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="&quot;"/>
     </Lexeme>
     <Lexeme ID="50485" Stem1="‵">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="‵"/>
+      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="'"/>
     </Lexeme>
     <Lexeme ID="50486" Stem1="‶">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="‶"/>
+      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="&quot;"/>
     </Lexeme>
     <Lexeme ID="50487" Stem1="‷">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="‷"/>
+      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="&quot;"/>
     </Lexeme>
     <Lexeme ID="50488" Stem1="‹">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="‹"/>
+      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="'"/>
     </Lexeme>
     <Lexeme ID="50489" Stem1="›">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="›"/>
+      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="'"/>
     </Lexeme>
     <Lexeme ID="50490" Stem1="‼">
       <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Punkts" Pamatforma="‼"/>
