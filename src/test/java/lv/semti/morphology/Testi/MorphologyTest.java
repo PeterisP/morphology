@@ -1561,21 +1561,69 @@ public class MorphologyTest {
 	
 	@Test
 	public void divdabju_pārākās_formas() {
-		// Jautājums par to, kā pareizi tās interpretēt....
 		Word vārds = locītājs.analyze("izkusušais");
 		assertTrue(vārds.isRecognized());	
 		assertEquals("izkust", vārds.wordforms.get(0).getValue(AttributeNames.i_Lemma));
-		//vārds.wordforms.get(0).describe();
 		
-//		vārds.describe(System.out);
-		vārds = locītājs.analyze("izkusušākais");
+		vārds = locītājs.analyze("izkusušākais");	
 		assertTrue(vārds.isRecognized());	
 		assertEquals("izkust", vārds.wordforms.get(0).getValue(AttributeNames.i_Lemma));
 		
-//		vārds.describe(System.out);
 		vārds = locītājs.analyze("visizkusušākais");
 		assertTrue(vārds.isRecognized());	
 		assertEquals("izkust", vārds.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+
+		vārds = locītājs.analyze("visveiktākais");				
+		assertTrue(vārds.isRecognized());	
+		assertEquals("veikt", vārds.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+		
+		vārds = locītājs.analyze("vislasītākais");				
+		assertTrue(vārds.isRecognized());	
+		assertEquals("lasīt", vārds.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+
+		vārds = locītājs.analyze("veicu");				
+		assertTrue(vārds.isRecognized());	
+		assertEquals("veikt", vārds.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+		vārds = locītājs.analyze("veikušais");				
+		assertTrue(vārds.isRecognized());	
+		assertEquals("veikt", vārds.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+		vārds = locītājs.analyze("veicušais");				
+		assertFalse(vārds.isRecognized());	
+
+		vārds = locītājs.analyze("sarūgu");				
+		assertTrue(vārds.isRecognized());	
+		assertEquals("sarūgt", vārds.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+		vārds = locītājs.analyze("sarūgušais");				
+		assertTrue(vārds.isRecognized());	
+		assertEquals("sarūgt", vārds.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+		vārds = locītājs.analyze("sarūdzušais");				
+		assertFalse(vārds.isRecognized());		
+
+		// tas pats 2. un 3. konjug.
+		vārds = locītājs.analyze("zaigojušāks");	
+		assertTrue(vārds.isRecognized());	
+		assertEquals("zaigot", vārds.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+		vārds = locītājs.analyze("zaigojošāks");	
+		assertTrue(vārds.isRecognized());	
+		assertEquals("zaigot", vārds.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+		
+		vārds = locītājs.analyze("vislasījušākais");	
+		assertTrue(vārds.isRecognized());	
+		assertEquals("lasīt", vārds.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+		vārds = locītājs.analyze("lasošāks");	
+		assertTrue(vārds.isRecognized());	
+		assertEquals("lasīt", vārds.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+		
+		vārds = locītājs.analyze("vislasāmākais");	
+		assertTrue(vārds.isRecognized());	
+		assertEquals("lasīt", vārds.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+		vārds = locītājs.analyze("saprotamāks");	
+		assertTrue(vārds.isRecognized());	
+		assertEquals("saprast", vārds.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+		
+		vārds = locītājs.analyze("viszaigojošāk");	
+		assertTrue(vārds.isRecognized());	
+		assertEquals("zaigojoši", vārds.wordforms.get(0).getValue(AttributeNames.i_Lemma));
 	}
 
 	@Test
