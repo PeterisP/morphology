@@ -824,12 +824,6 @@
     <Lexeme ID="6765" Stem1="plaus">
       <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="plausis"/>
     </Lexeme>
-    <Lexeme ID="6835" Stem1="darbaļaud">
-      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="darbaļaudis"/>
-    </Lexeme>
-    <Lexeme ID="6836" Stem1="dzimtļaud">
-      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="dzimtļaudis"/>
-    </Lexeme>
     <Lexeme ID="7119" Stem1="deviņac">
       <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="deviņacis"/>
     </Lexeme>
@@ -1547,6 +1541,24 @@
   </Paradigm>
   <Paradigm Stems="1" ID="11" LemmaEnding="99" Description="Lietvārds 6. deklinācijā -s">
     <Attributes Vārdšķira="Lietvārds" Deklinācija="6" Dzimte="Sieviešu"/>
+    <Lexeme Stem1="ļaud">
+      <Attributes Lietvārda_tips="Sugas vārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="ļaudis" Dzimte="Vīriešu"/>
+    </Lexeme>
+    <Lexeme ID="6835" Stem1="darbaļaud">
+      <Attributes Lietvārda_tips="Sugas vārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="darbaļaudis" Dzimte="Vīriešu"/>
+    </Lexeme>
+    <Lexeme ID="6836" Stem1="dzimtļaud">
+      <Attributes Lietvārda_tips="Sugas vārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="dzimtļaudis" Dzimte="Vīriešu"/>
+    </Lexeme>
+    <Lexeme ID="1005165" Stem1="darbļaudi"><Attributes Pirmavots="Latviešu literārās valodas vārdnīca. 1.–8. Rīga, Zinātne, 1972.–1996." Piezīmes="Tikai daudzskaitlī" Skaitlis_2="Daudzskaitlinieks" Avots="Imports no Tezaura SV 2014-08-02" Pamatforma="darbļaudis"/></Lexeme>
+    <Lexeme ID="1005955" Stem1="dzimtsļaudi"><Attributes Pirmavots="Latviešu literārās valodas vārdnīca. 1.–8. Rīga, Zinātne, 1972.–1996." Piezīmes="Tikai daudzskaitlī" Skaitlis_2="Daudzskaitlinieks" Lietojums="Novecojis" Avots="Imports no Tezaura SV 2014-08-02" Pamatforma="dzimtsļaudis"/></Lexeme>    
+    <Lexeme ID="1013123" Stem1="mājļaudi"><Attributes Pirmavots="Latviešu literārās valodas vārdnīca. 1.–8. Rīga, Zinātne, 1972.–1996." Piezīmes="Tikai daudzskaitlī" Skaitlis_2="Daudzskaitlinieks" Avots="Imports no Tezaura SV 2014-08-02" Pamatforma="mājļaudis" Dzimte="Vīriešu"/></Lexeme>
+    <Lexeme ID="1013784" Stem1="mežaļaudi"><Attributes Pirmavots="Latviešu literārās valodas vārdnīca. 1.–8. Rīga, Zinātne, 1972.–1996." Biežums="Reti" Piezīmes="Tikai daudzskaitlī" Skaitlis_2="Daudzskaitlinieks" Avots="Imports no Tezaura SV 2014-08-02" Pamatforma="mežaļaudis"  Dzimte="Vīriešu"/></Lexeme>
+    <Lexeme ID="1014430" Stem1="mūsļaudi"><Attributes Pirmavots="Latviešu literārās valodas vārdnīca. 1.–8. Rīga, Zinātne, 1972.–1996." Piezīmes="Tikai daudzskaitlī" Skaitlis_2="Daudzskaitlinieks" Avots="Imports no Tezaura SV 2014-08-02" Pamatforma="mūsļaudis" Dzimte="Vīriešu"/></Lexeme>
+    <Lexeme ID="1014497" Stem1="nabagļaudi"><Attributes Pirmavots="Latviešu literārās valodas vārdnīca. 1.–8. Rīga, Zinātne, 1972.–1996., Ādamsons E., Kagaine E. Vainižu izloksnes vārdnīca. A-M, N-Ž. Rīga, LU LVI, 2000." Piezīmes="Tikai daudzskaitlī" Avots="Imports no Tezaura SV 2014-08-02" Pamatforma="nabagļaudis" Skaitlis_2="Daudzskaitlinieks" Dzimte="Vīriešu"/></Lexeme>
+    <Lexeme ID="1017082" Stem1="padomjļaudi"><Attributes Pirmavots="Latviešu literārās valodas vārdnīca. 1.–8. Rīga, Zinātne, 1972.–1996." Piezīmes="Tikai daudzskaitlī" Stils="Ironiska ekspresīvā nokrāsa" Avots="Imports no Tezaura SV 2014-08-02" Pamatforma="padomjļaudis" Skaitlis_2="Daudzskaitlinieks" Dzimte="Vīriešu"/></Lexeme>    
+    <Lexeme ID="1030419" Stem1="vecļaudi"><Attributes Pirmavots="Latviešu literārās valodas vārdnīca. 1.–8. Rīga, Zinātne, 1972.–1996." Piezīmes="Tikai daudzskaitlī" Avots="Imports no Tezaura SV 2014-08-02" Skaitlis_2="Daudzskaitlinieks" Pamatforma="vecļaudis" Dzimte="Vīriešu"/></Lexeme>
+    <Lexeme ID="1031078" Stem1="viņļaudi"><Attributes Pirmavots="Latviešu literārās valodas vārdnīca. 1.–8. Rīga, Zinātne, 1972.–1996." Piezīmes="Tikai daudzskaitlī" Avots="Imports no Tezaura SV 2014-08-02" Skaitlis_2="Daudzskaitlinieks" Pamatforma="viņļaudis" Dzimte="Vīriešu"/></Lexeme>
     <Lexeme ID="3908" Stem1="as">
       <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="ass"/>
     </Lexeme>
