@@ -171,7 +171,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="5" LemmaEnding="1211" Description="Lietvārdi, 2. deklinācija, vīriešu dzimte, galotne -s, vienskaitļa nominatīvs un ģenitīvs nesakrīt (suns, durkls)" AllowedGuessEndings="n">
+	<Paradigm Stems="1" ID="5" LemmaEnding="1211" Description="Lietvārdi, 2. deklinācija, vīriešu dzimte, galotne -s, vienskaitļa nominatīvs un ģenitīvs nesakrīt (suns)" AllowedGuessEndings="n">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="2" Dzimte="Vīriešu"/>
 		<Ending ID="1211" StemChange="0" Ending="s" StemID="1" LemmaEnding="1211">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>

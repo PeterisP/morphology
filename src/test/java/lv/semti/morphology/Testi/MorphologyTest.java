@@ -238,6 +238,14 @@ public class MorphologyTest {
 	}
 	
 	@Test
+	public void durkls() {
+		// 2015-08-26 tēzaura apstrādes gaitā mainījās priekšstats šī vārda paradigmu.
+		Word durkls = locītājs.analyze("durkls");
+		if (durkls.isRecognized())
+			assertEquals(1, durkls.wordforms.get(0).getValue(AttributeNames.i_ParadigmID));
+	}
+	
+	@Test
 	public void numuri(){
 		// integritāte - vai nav dubulti numuri
 		HashMap <Integer, Paradigm> vārdgrupuNr = new HashMap <Integer, Paradigm>();
