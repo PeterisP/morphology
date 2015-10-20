@@ -603,7 +603,7 @@
 	<Paradigm Stems="1" ID="14" LemmaEnding="180" Description="Īpašības vārdi, galotne -š (zaļš)" AllowedGuessEndings="djmrļņ">
 		<Attributes Vārdšķira="Īpašības vārds"/>
 		<Ending ID="180" StemChange="0" Ending="š" StemID="1" LemmaEnding="180">
-			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Nominatīvs"/>
+			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Nominatīvs" Pakāpe="Pamata"/>
 		</Ending>
 		<Ending ID="181" StemChange="3" Ending="a" StemID="1" LemmaEnding="180">
 			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Ģenitīvs"/>
@@ -738,7 +738,7 @@
 			<Attributes Vārdšķira="Apstākļa vārds"/>
 		</Ending>
 		<Ending ID="1181" StemChange="13" Ending="s" StemID="1" LemmaEnding="180">
-			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Nominatīvs"/>
+			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Nominatīvs" Pakāpe="Pārākā"/>
 		</Ending>
 		<Ending ID="2018" StemChange="13" Ending="" StemID="1" LemmaEnding="224">
 			<Attributes Vārdšķira="Apstākļa vārds"/>
