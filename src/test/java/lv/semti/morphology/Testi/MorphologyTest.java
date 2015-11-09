@@ -35,6 +35,7 @@ import java.util.Map.Entry;
 
 import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import lv.semti.morphology.analyzer.*;
@@ -242,7 +243,7 @@ public class MorphologyTest {
 		// 2015-08-26 tēzaura apstrādes gaitā mainījās priekšstats šī vārda paradigmu.
 		Word durkls = locītājs.analyze("durkls");
 		if (durkls.isRecognized())
-			assertEquals(1, durkls.wordforms.get(0).getValue(AttributeNames.i_ParadigmID));
+			assertEquals("1", durkls.wordforms.get(0).getValue(AttributeNames.i_ParadigmID));
 	}
 	
 	@Test
@@ -2124,7 +2125,7 @@ public class MorphologyTest {
 	}
 	
 	
-	@Test
+	@Ignore("nav skaidra pozīcija par vokatīviem") @Test
 	/**
 	 * LETA lietvārdu locījumu pārbaude - defaultajai formai lokot jābūt ar galotni
 	 */
@@ -2311,5 +2312,27 @@ public class MorphologyTest {
 		List<Wordform> formas = locītājs.generateInflections("rozā");
 		assertEquals(1, formas.size());
 		assertTrue(formas.get(0).isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adjective));
+	}
+	
+	@Test // klausītājies, vēlējumies - http://valoda.ailab.lv/latval/vidusskolai/morfol/lietv-atgr.htm 
+	public void reflexive_nouns() {
+		locītājs.enableGuessing = false;
+		
+		Word klausītājies = locītājs.analyze("klausītājies");
+		assertTrue(klausītājies.isRecognized());
+		
+		Word vēlējumies = locītājs.analyze("vēlējumies");
+		assertTrue(vēlējumies.isRecognized());
+		
+		Word sarakstīšanās = locītājs.analyze("sarakstīšanās");
+		assertTrue(sarakstīšanās.isRecognized());
+		
+		Word pakaļdzinējies = locītājs.analyze("pakaļdzinējies");
+		assertTrue(pakaļdzinējies.isRecognized());
+//		assertEquals(AttributeNames.v_Ending, crap.wordforms.get(0).getValue(AttributeNames.i_Guess));
+//
+//		List<Wordform> formas = locītājs.generateInflections("rozā");
+//		assertEquals(1, formas.size());
+//		assertTrue(formas.get(0).isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adjective));
 	}
 }

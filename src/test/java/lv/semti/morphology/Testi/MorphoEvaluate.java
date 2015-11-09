@@ -59,13 +59,13 @@ public class MorphoEvaluate {
 		locītājs.meklētsalikteņus = false;
     }	
 	
-	@Test
+//	@Test
 	public void testFile2012() throws IOException{
 		LinkedList<Etalons> etaloni = readVertEtalons("dist/all.txt");
 		evaluate(etaloni);
 	}
 	
-	//@Test
+	@Test
 	public void testFile2013May() throws IOException{
 		LinkedList<Etalons> etaloni = readCONLLEtalons("dist/morfoetalons.conll");
 		evaluate(etaloni);
