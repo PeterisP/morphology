@@ -2324,8 +2324,8 @@ public class MorphologyTest {
 		Word vēlējumies = locītājs.analyze("vēlējumies");
 		assertTrue(vēlējumies.isRecognized());
 		
-		Word sarakstīšanās = locītājs.analyze("sarakstīšanās");
-		assertTrue(sarakstīšanās.isRecognized());
+		Word acīsskatīšanās = locītājs.analyze("acīsskatīšanās");
+		assertTrue(acīsskatīšanās.isRecognized());
 		
 		Word pakaļdzinējies = locītājs.analyze("pakaļdzinējies");
 		assertTrue(pakaļdzinējies.isRecognized());

@@ -13345,5 +13345,14 @@
   </Paradigm>
   <Paradigm Stems="1" ID="31" LemmaEnding="2044" Description="Lietvārds 3. deklinācija -us sieviešu dzimtei (uzvārdiem)" AllowedGuessEndings="!">
   </Paradigm>
-
+  <Paradigm Stems="1" ID="32" LemmaEnding="2057" Description="Atgriezeniskie lietvārdi -tājies" AllowedGuessEndings="!">
+    <Lexeme Stem1="klausītā"/>
+    <Lexeme Stem1="pakaļdzinē"/>
+  </Paradigm> 
+  <Paradigm Stems="1" ID="33" LemmaEnding="2069" Description="Atgriezeniskie lietvārdi -umies" AllowedGuessEndings="!">
+    <Lexeme Stem1="vēlēj"/>
+  </Paradigm> 
+  <Paradigm Stems="1" ID="34" LemmaEnding="2073" Description="Atgriezeniskie lietvārdi -šanās" AllowedGuessEndings="!">
+    <Lexeme Stem1="acīsskatī"/>
+  </Paradigm>
 </Lexicon>
