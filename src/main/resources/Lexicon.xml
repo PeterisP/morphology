@@ -5145,7 +5145,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="32" LemmaEnding="2057" Description="Atgriezeniskie lietvārdi -tājies -ējies" AllowedGuessEndings="!">
+	<Paradigm Stems="1" ID="32" LemmaEnding="2057" Description="Atgriezeniskie lietvārdi, galotnes -ājies, -ējies (klausītājies, pakaļdzinējies)" AllowedGuessEndings="!">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="Nepiemīt"/>
 		<Ending ID="2057" StemChange="0" Ending="jies" StemID="1" Dzimte="Vīriešu">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
@@ -5184,7 +5184,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Akuzatīvs"/>
 		</Ending>
 	</Paradigm>	
-	<Paradigm Stems="1" ID="33" LemmaEnding="2069" Description="Atgriezeniskie lietvārdi -umies" AllowedGuessEndings="!">
+	<Paradigm Stems="1" ID="33" LemmaEnding="2069" Description="Atgriezeniskie lietvārdi, galotne -umies (vēlējumies)" AllowedGuessEndings="!">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="Nepiemīt" Dzimte="Vīriešu"/>
 		<Ending ID="2069" StemChange="0" Ending="umies" StemID="1">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
@@ -5199,7 +5199,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Akuzatīvs"/>
 		</Ending>
 	</Paradigm>	
-	<Paradigm Stems="1" ID="34" LemmaEnding="2073" Description="Atgriezeniskie lietvārdi -šanās" AllowedGuessEndings="!">
+	<Paradigm Stems="1" ID="34" LemmaEnding="2073" Description="Atgriezeniskie lietvārdi, galotne -šanās (acīsskatīšanās)" AllowedGuessEndings="!">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="Nepiemīt" Dzimte="Sieviešu"/>
 		<Ending ID="2073" StemChange="0" Ending="šanās" StemID="1">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
