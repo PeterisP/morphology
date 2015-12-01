@@ -43,7 +43,7 @@ public class MorphoEvaluate {
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 		try {
-			locītājs = new Analyzer("dist/Lexicon.xml");
+			locītājs = new Analyzer();
 		} catch(Exception e) {
 			e.printStackTrace();
 		} 
@@ -61,13 +61,13 @@ public class MorphoEvaluate {
 	
 //	@Test
 	public void testFile2012() throws IOException{
-		LinkedList<Etalons> etaloni = readVertEtalons("dist/all.txt");
+		LinkedList<Etalons> etaloni = readVertEtalons("all.txt");
 		evaluate(etaloni);
 	}
 	
 	@Test
 	public void testFile2013May() throws IOException{
-		LinkedList<Etalons> etaloni = readCONLLEtalons("dist/morfoetalons.conll");
+		LinkedList<Etalons> etaloni = readCONLLEtalons("morfoetalons.conll");
 		evaluate(etaloni);
 	}
 	
@@ -200,7 +200,7 @@ public class MorphoEvaluate {
 		BufferedReader ieeja;
 		String rinda;
 		ieeja = new BufferedReader(
-				new InputStreamReader(new FileInputStream(filename), "UTF-8"));
+				new InputStreamReader(getClass().getClassLoader().getResourceAsStream(filename), "UTF-8"));
 		
 		LinkedList<Etalons> etaloni = new LinkedList<Etalons>();
 		
@@ -217,7 +217,7 @@ public class MorphoEvaluate {
 		BufferedReader ieeja;
 		String rinda;
 		ieeja = new BufferedReader(
-				new InputStreamReader(new FileInputStream(filename), "UTF-8"));
+				new InputStreamReader(getClass().getClassLoader().getResourceAsStream(filename), "UTF-8"));
 		
 		LinkedList<Etalons> etaloni = new LinkedList<Etalons>();
 		

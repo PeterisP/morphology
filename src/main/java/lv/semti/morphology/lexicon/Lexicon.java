@@ -20,6 +20,7 @@ package lv.semti.morphology.lexicon;
 import java.io.*;
 import java.util.*;
 import java.util.regex.Pattern;
+import java.util.stream.Stream;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -63,34 +64,34 @@ public class Lexicon {
 	protected Pattern p_doublesurname = Pattern.compile("\\p{Lu}.+-\\p{Lu}.+");
 	
 	/**
-	 * Izveido leksikona objektu no XML faila pēc noklusēšanas
+	 * Creates a lexicon object from the default location in JAR resources
 	 *
-	 * @throws Exception	parsēšanas kļūdas
+	 * @throws Exception	parsing errors
 	 */
 	public Lexicon() throws Exception {
-		for (String location : DEFAULT_LEXICON_LOCATIONS) {
-			if (location == null) continue;
-
-			File file = new File(location);
-			if (file.isDirectory()) file = new File(location + "/" + DEFAULT_LEXICON_FILE);
-			System.out.println("Trying to load from '" + file.getCanonicalPath() + "'");
-			if (file.exists() && file.isFile()) {
-				init(file.getCanonicalPath(), true);
-				return;
-			}
+		InputStream stream = getClass().getClassLoader().getResourceAsStream(DEFAULT_LEXICON_FILE);
+		if (stream != null) {
+			init(stream, true);
 		}
-		
-		throw new IOException("Can't find '" + DEFAULT_LEXICON_FILE + "'.");
+		else throw new IOException("Can't find '" + DEFAULT_LEXICON_FILE + "'.");
+	}
+
+	public Lexicon(boolean useAuxiliaryLexicons) throws Exception {
+		InputStream stream = getClass().getClassLoader().getResourceAsStream(DEFAULT_LEXICON_FILE);
+		if (stream != null) {
+			init(stream, useAuxiliaryLexicons);
+		}
+		else throw new IOException("Can't find '" + DEFAULT_LEXICON_FILE + "'.");
 	}
 	
 	/**
 	 * Izveido leksikona objektu no XML faila
 	 *
-	 * @param failaVārds	faila vārds, kurā meklēt leksikonu
+	 * @param filename	faila vārds, kurā meklēt leksikonu
 	 * @throws Exception	parsēšanas kļūdas
 	 */
-	public Lexicon(String failaVārds) throws Exception {
-		init(failaVārds, true);
+	public Lexicon(String filename) throws Exception {
+		init(filename, true);
 	}
 	
 	/**
@@ -103,15 +104,16 @@ public class Lexicon {
 	public Lexicon(String lexiconFileName, boolean useAuxiliaryLexicons) throws Exception {
 		init(lexiconFileName, useAuxiliaryLexicons);
 	}
-	
+
+	// TODO - izvērtēt, vai šīs metodes vispār ir vajadzīgas
 	/**
 	 * Izveido leksikona objektu no XML plūsmas
 	 *
-	 * @param failaVārds	plūsma, pa kuru tiek padots leksikons
+	 * @param plusma	plūsma, pa kuru tiek padots leksikons
 	 * @throws Exception	parsēšanas kļūdas
 	 */
 	public Lexicon(InputStream plusma) throws Exception {
-		init(plusma);
+		init(plusma, false);  // Ja tikai viena plūsma padota, tad uzskatam ka auxiliary leksikoni nebūs
 	}
 	
 	public Lexicon(InputStream stream, InputStream[] auxiliaryLexicons) throws Exception {
@@ -182,22 +184,20 @@ public class Lexicon {
 		init_main(doc, new File(failaVārds).getParent(), blacklist);
 	}	
 
-	private void init(InputStream plusma) throws Exception {
+	private void init(InputStream plusma, boolean useAuxiliaryLexicons) throws Exception {
 		System.err.println("Loading the lexicon from an input stream...");
 		
-		Document doc = null;
 		DocumentBuilder docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-		doc = docBuilder.parse(plusma);
+		Document doc = docBuilder.parse(plusma);
 
-		init_main(doc, "", false);
+		init_main(doc, null, useAuxiliaryLexicons);
 	}
 	
 	private void init(InputStream stream, InputStream[] auxiliaryLexicons) throws Exception {
 		System.err.println("Loading the lexicon from an input stream...");
 		
-		Document doc = null;
 		DocumentBuilder docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-		doc = docBuilder.parse(stream);
+		Document doc = docBuilder.parse(stream);
 
 		init_main(doc, "", false, false, null);
 		
@@ -251,8 +251,12 @@ public class Lexicon {
 			Document doc2 = null;
 			DocumentBuilder docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
 			String fullname = filename;
-			if (path != null) fullname = path + java.io.File.separatorChar + filename;
-			doc2 = docBuilder.parse(new File(fullname));
+			if (path != null) {
+				fullname = path + java.io.File.separatorChar + filename;
+				doc2 = docBuilder.parse(new File(fullname));
+			} else {
+				doc2 = docBuilder.parse(getClass().getClassLoader().getResourceAsStream(filename));
+			}
 
 			init_sub(doc2);
 		}
@@ -375,9 +379,7 @@ public class Lexicon {
 	 * Teksta kodējums tiek likts UTF-8, un pietiek ar XML 1.0, ja XML parseris ir korekts,
 	 * lai var būt latviešu burti atribūtos.
 	 *
-	 * @param failaVārds 	Faila vārds, kurā saglabāt.
-	 * @throws FileNotFoundException
-	 * @throws UnsupportedEncodingException
+	 * @param plusma 	Faila vārds, kurā saglabāt.
 	 * @throws IOException
 	 */
 	public void toXML(OutputStream plusma) throws IOException {

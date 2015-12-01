@@ -27,6 +27,7 @@ import java.util.List;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.junit.Ignore;
 
 import lv.semti.morphology.analyzer.*;
 
@@ -35,7 +36,7 @@ public class MorphoSpeedTest {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
-		locītājs = new Analyzer("dist/Lexicon.xml");
+		locītājs = new Analyzer();
 	}
 	
 	@Before
@@ -118,7 +119,7 @@ public class MorphoSpeedTest {
 		System.out.printf("\tUzlabojumu benchmark (Pētera iMac) - 12 000 rq/sec\n");
 	}
 	
-	@Test
+	@Ignore("Hardcoded path") @Test
 	public void balanced_corpus() throws IOException {
 		BufferedReader ieeja;
 		String rinda;

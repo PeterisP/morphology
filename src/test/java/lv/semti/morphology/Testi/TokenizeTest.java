@@ -32,7 +32,7 @@ public class TokenizeTest {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
-		locītājs = new Analyzer("dist/Lexicon.xml");
+		locītājs = new Analyzer();
 		//locītājs=null;
 	}
 	

@@ -20,6 +20,7 @@ package lv.semti.morphology.attributes;
 import java.io.File;
 import java.io.IOException;
 import java.io.Writer;
+import java.io.InputStream;
 import java.util.AbstractCollection;
 import java.util.LinkedList;
 import java.util.Map.Entry;
@@ -64,9 +65,13 @@ public class TagSet {
 	 * @throws ParserConfigurationException
 	 */
 	public TagSet(String fileName) throws SAXException, IOException, ParserConfigurationException{
-		Document doc = null;
+		Document doc;
 		DocumentBuilder docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-		doc = docBuilder.parse(new File(fileName));
+		InputStream stream = getClass().getClassLoader().getResourceAsStream(fileName);
+		if (stream != null)
+			doc = docBuilder.parse(stream);
+		else
+			doc = docBuilder.parse(new File(fileName));
 
 		Node node = doc.getDocumentElement();
 		if (!node.getNodeName().equalsIgnoreCase("TagSet")) throw new Error("Node " + node.getNodeName() + ", but TagSet was expected");

@@ -45,7 +45,7 @@ public class TagSetTest {
 	@BeforeClass
 	public static void setUpBeforeClass() {
 		try {
-			locītājs = new Analyzer("dist/Lexicon.xml", false);
+			locītājs = new Analyzer(false);
 		} catch(Exception e) {
 			e.printStackTrace();
 		} 
@@ -99,7 +99,7 @@ public class TagSetTest {
 		BufferedReader ieeja;
 		String rinda;
 		ieeja = new BufferedReader(
-				new InputStreamReader(new FileInputStream("dist/morfoetalons.txt"), "UTF-8"));
+				new InputStreamReader(getClass().getClassLoader().getResourceAsStream("morfoetalons.txt"), "UTF-8"));
 		
 		LinkedList<Etalons> etaloni = new LinkedList<Etalons>();
 		
@@ -142,7 +142,7 @@ public class TagSetTest {
 	@Test
 	public void tildes_konvertors() throws Exception {
 		TagSet semti = TagSet.getTagSet();
-		TagSet tilde = new TagSet("dist/TagSet_Tilde.xml");
+		TagSet tilde = new TagSet("TagSet_Tilde.xml");
 		
 		assertEquals("N-msn---------n-------------", tilde.toTag(semti.fromTag("npmsn2"))); //TODO - nečeko capital letters fīčas
 //					  N-msn------------s----------
@@ -151,7 +151,7 @@ public class TagSetTest {
 	
 	@Test
 	public void tildes_output_analīzei() throws Exception {
-		TagSet tilde = new TagSet("dist/TagSet_Tilde.xml");
+		TagSet tilde = new TagSet("TagSet_Tilde.xml");
 		
 		Word jānis = locītājs.analyze("Jānis");
 		

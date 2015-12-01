@@ -64,6 +64,10 @@ public class Analyzer extends Lexicon {
 		super();
 		loadExceptionFile();
 	}
+	public Analyzer (boolean useAuxiliaryLexicons) throws Exception {
+		super(useAuxiliaryLexicons);
+		loadExceptionFile();
+	}
 	public Analyzer (String lexiconFileName) throws Exception {
 		super(lexiconFileName);
 		loadExceptionFile();
@@ -75,18 +79,23 @@ public class Analyzer extends Lexicon {
 
 	private void loadExceptionFile() throws IOException {
 		String exceptionName = "Exceptions.txt";
-		String path = new File(this.filename).getParent();
-		if (path != null) exceptionName = path + java.io.File.separatorChar + exceptionName;
 		try {
+			InputStream stream = getClass().getClassLoader().getResourceAsStream(exceptionName);
+			if (stream != null) {
+				automats = new Trie( stream );
+				return;
+			}
+
+			String path = new File(this.filename).getParent();
+			if (path != null) exceptionName = path + java.io.File.separatorChar + exceptionName;
 			automats=new Trie(exceptionName);
 		} catch (Exception e) { 
-			System.err.append(String.format("A1\nLeksikona ceļš:%s\nFolderis:%s\nException ceļš:\n",this.filename,path,exceptionName));
+			System.err.append(String.format("A1\nLeksikona ceļš:%s\nException ceļš:%s\n",this.filename,exceptionName));
 			e.printStackTrace();
 			automats = new Trie("");
 			System.err.println("Nesanāca ielādēt exceptionus");
 		}
 	}
-    
 	
 	public Analyzer (InputStream lexiconStream, InputStream[] auxiliaryLexiconStreams, InputStream exceptionStream) throws Exception {
 		super(lexiconStream, auxiliaryLexiconStreams);
@@ -109,8 +118,9 @@ public class Analyzer extends Lexicon {
 	} */
 	
 	/**
-	 * @param String lexiconFileName - main lexicon file name 
-	 * @param boolean useAuxiliaryLexicons
+	 * Loads the analyzer lexicon from the specified file
+	 * @param lexiconFileName - main lexicon file name
+	 * @param useAuxiliaryLexicons should secondary lexicon files be included in addition to the core lexicons
 	 */
 	public Analyzer(String lexiconFileName, boolean useAuxiliaryLexicons) throws Exception{
 		super(lexiconFileName, useAuxiliaryLexicons);

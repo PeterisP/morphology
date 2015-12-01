@@ -94,7 +94,7 @@ public class MorphologyTest {
 	@BeforeClass
 	public static void setUpBeforeClass() {
 		try {
-			locītājs = new Analyzer("dist/Lexicon.xml", false);
+			locītājs = new Analyzer(false);
 		} catch(Exception e) {
 			e.printStackTrace();
 		} 
@@ -1976,7 +1976,7 @@ public class MorphologyTest {
 			BufferedReader ieeja;
 			String rinda;
 			ieeja = new BufferedReader(
-					new InputStreamReader(new FileInputStream("dist/mandatory.txt"), "UTF-8"));
+					new InputStreamReader(getClass().getClassLoader().getResourceAsStream("mandatory.txt"), "UTF-8"));
 			
 			while ((rinda = ieeja.readLine()) != null) {
 				if (rinda.contains("#") || rinda.isEmpty()) continue;
