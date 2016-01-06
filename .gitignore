@@ -2,6 +2,8 @@ bin/
 build/
 dist/
 .DS_Store
+.idea/
+morphology.iml
 /Lexicon_valerijs_15000.xml
 /Lexicon_valerijs_5000.xml
 /Lexicon_valerijs_5000.xml.bak

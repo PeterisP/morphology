@@ -2399,4 +2399,10 @@ public class MorphologyTest {
 
 	}
 
+	@Test // izmaiņas izteiksmju sarakstā
+	public void vajadzībasatstāstījuma() {
+		Word jārokot = locītājs.analyze("jārokot");
+		assertTrue(jārokot.isRecognized());
+		assertEquals(AttributeNames.v_VajadziibasAtstaastiijuma, jārokot.wordforms.get(0).getValue(AttributeNames.i_Izteiksme));
+	}
 }

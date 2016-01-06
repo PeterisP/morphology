@@ -701,6 +701,9 @@ public class Analyzer extends Lexicon {
 	// TODO - needs support for extra features (plural nouns, fixed-genitives, etc)
 	public ArrayList<Wordform> generateInflections(String lemma, int paradigm) {
 		Paradigm p = this.paradigmByID(paradigm);
+
+		if (p == null)
+			return generateInflections(lemma); // If the supplied paradigm is invalid, we ignore it
 		
 		if (p.getStems() > 1)  // For 1st conjugation verbs, lemma is not enough info to inflect properly
 			return generateInflections(lemma); // Assume that it will be in current lexicon.. 
