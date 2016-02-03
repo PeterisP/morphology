@@ -3098,18 +3098,6 @@
     <Lexeme ID="24248" Stem1="nosmak" Stem2="nosmok" Stem3="nosmak">
       <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="nosmakt"/>
     </Lexeme>
-    <Lexeme ID="24250" Stem1="sēdē" Stem2="sēž" Stem3="sēdēj">
-      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="sēdēt"/>
-    </Lexeme>
-    <Lexeme ID="24251" Stem1="nosēdē" Stem2="nosēž" Stem3="nosēdēj">
-      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="nosēdēt"/>
-    </Lexeme>
-    <Lexeme ID="24252" Stem1="pasēdē" Stem2="pasēž" Stem3="pasēdēj">
-      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="pasēdēt"/>
-    </Lexeme>
-    <Lexeme ID="24253" Stem1="atsēdē" Stem2="atsēž" Stem3="atsēdēj">
-      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="atsēdēt"/>
-    </Lexeme>
     <Lexeme ID="24254" Stem1="iztik" Stem2="iztiek" Stem3="iztik">
       <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="iztikt"/>
     </Lexeme>

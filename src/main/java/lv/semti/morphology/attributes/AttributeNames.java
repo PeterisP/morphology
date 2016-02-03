@@ -99,6 +99,7 @@ public class AttributeNames {
 	public final static String v_Atstaastiijuma = "Atstāstījuma";
 	public final static String v_Veeleejuma = "Vēlējuma";
 	public final static String v_Vajadziibas = "Vajadzības";
+	public final static String v_VajadziibasAtstaastiijuma = "Vajadzības, atstāstījuma paveids";
 	public final static String v_Paveeles = "Pavēles";
 	public final static String v_Nenoteiksme = "Nenoteiksme";
 

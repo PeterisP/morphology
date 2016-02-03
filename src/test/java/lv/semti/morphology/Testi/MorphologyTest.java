@@ -94,7 +94,7 @@ public class MorphologyTest {
 	@BeforeClass
 	public static void setUpBeforeClass() {
 		try {
-			locītājs = new Analyzer("dist/Lexicon.xml", false);
+			locītājs = new Analyzer(false);
 		} catch(Exception e) {
 			e.printStackTrace();
 		} 
@@ -2043,7 +2043,7 @@ public class MorphologyTest {
 			BufferedReader ieeja;
 			String rinda;
 			ieeja = new BufferedReader(
-					new InputStreamReader(new FileInputStream("dist/mandatory.txt"), "UTF-8"));
+					new InputStreamReader(getClass().getClassLoader().getResourceAsStream("mandatory.txt"), "UTF-8"));
 			
 			while ((rinda = ieeja.readLine()) != null) {
 				if (rinda.contains("#") || rinda.isEmpty()) continue;
@@ -2401,5 +2401,75 @@ public class MorphologyTest {
 //		List<Wordform> formas = locītājs.generateInflections("rozā");
 //		assertEquals(1, formas.size());
 //		assertTrue(formas.get(0).isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adjective));
+	}
+	
+	@Test // https://github.com/PeterisP/morphology/issues/7 
+	public void mijas_3_konj() {
+		// mīcīt -> mīcu
+		Word test = locītājs.analyze("mīcu");
+		assertTrue(test.isRecognized());
+		test = locītājs.analyze("mīku");
+		assertFalse(test.isRecognized());
+		
+		test = locītājs.analyze("mācu");
+		assertTrue(test.isRecognized());
+		test = locītājs.analyze("māku");
+		assertFalse(test.getBestWordform().getValue(AttributeNames.i_Lemma).equalsIgnoreCase("mācīt"));
+		
+		test = locītājs.analyze("tūcu");
+		assertTrue(test.isRecognized());
+		test = locītājs.analyze("tūku");
+		assertFalse(test.getBestWordform().getValue(AttributeNames.i_Lemma).equalsIgnoreCase("tūcīt"));
+		
+		// sacīt -> saku
+		test = locītājs.analyze("sacu");
+		assertFalse(test.isRecognized());
+		test = locītājs.analyze("saku");
+		assertTrue(test.isRecognized());
+		
+		test = locītājs.analyze("slaucu");
+		assertFalse(test.getBestWordform().getValue(AttributeNames.i_Lemma).equalsIgnoreCase("slaucīt"));
+		test = locītājs.analyze("slauku");
+		assertTrue(test.isRecognized());
+
+		test = locītājs.analyze("braucu");
+		assertFalse(test.getBestWordform().getValue(AttributeNames.i_Lemma).equalsIgnoreCase("braucīt"));
+		test = locītājs.analyze("brauku");
+//		assertTrue(test.isRecognized());
+		
+//		test = locītājs.analyze("izšļaucu");
+//		assertFalse(test.getBestWordform().getValue(AttributeNames.i_Lemma).equalsIgnoreCase("izšļaucīt"));
+//		test = locītājs.analyze("izšļauku");
+//		assertTrue(test.isRecognized());
+		
+		// ņurcīt -> ņurcu un ņurku
+		test = locītājs.analyze("ņurcu");
+		assertTrue(test.isRecognized());
+		test = locītājs.analyze("ņurku");
+		assertTrue(test.isRecognized());
+		
+		test = locītājs.analyze("murcu");
+		assertTrue(test.isRecognized());
+		test = locītājs.analyze("murku");
+		assertTrue(test.isRecognized());
+		
+		test = locītājs.analyze("mocu");
+		assertTrue(test.isRecognized());
+		test = locītājs.analyze("moku");
+		assertTrue(test.isRecognized());
+	}
+
+	@Test // pēc analoģijas ar visu citu būtu jābūt sēžošs bet ir sēdošs
+	public void sēdošs() {
+		Word sēdošs = locītājs.analyze("sēdošs");
+		assertTrue(sēdošs.isRecognized());
+
+	}
+
+	@Test // izmaiņas izteiksmju sarakstā
+	public void vajadzībasatstāstījuma() {
+		Word jārokot = locītājs.analyze("jārokot");
+		assertTrue(jārokot.isRecognized());
+		assertEquals(AttributeNames.v_VajadziibasAtstaastiijuma, jārokot.wordforms.get(0).getValue(AttributeNames.i_Izteiksme));
 	}
 }
