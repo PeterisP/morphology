@@ -247,6 +247,73 @@ public class MorphologyTest {
 	}
 	
 	@Test
+	public void lasis(){
+		// 2016-02-03 atklāta ģenerēšanas kļūda - trūkst mijas.
+		List<Wordform> lasis = locītājs.generateInflections("lasis");
+		AttributeValues testset = new AttributeValues();
+		testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
+		testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Genitive);
+		testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+		assertInflection(lasis, testset, "laša");
+		
+		testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Dative);
+		testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Plural);
+		assertInflection(lasis, testset, "lašiem");
+		
+		Word w = locītājs.analyze("lasiem");
+		assertFalse(w.isRecognized());
+	}
+	
+	@Test
+	public void debesis(){
+		// 2016-02-03 ir divu veidu debesis - 3. un 6. deklinācija
+		// 3. deklinācijā lokās pēc standarta, bet 6. deklinācijā bez mijas
+		List<Wordform> debesis = locītājs.generateInflections("debesis", 3);
+		AttributeValues testset = new AttributeValues();
+		testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
+		testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Genitive);
+		testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+		testset.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Masculine);
+		assertInflection(debesis, testset, "debeša");
+		
+		testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Dative);
+		testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Plural);
+		assertInflection(debesis, testset, "debešiem");
+		
+		List<Wordform> debess = locītājs.generateInflections("debess", 11);
+		testset = new AttributeValues();
+		testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
+		testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Genitive);
+		testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+		testset.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Feminine);
+		assertInflection(debess, testset, "debess");
+		
+		testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Plural);
+		assertInflection(debess, testset, "debesu");
+
+		testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Dative);
+		assertInflection(debess, testset, "debesīm");
+		
+		//Word w = locītājs.analyze("debesis");
+		//assertTrue(w.isRecognized());
+		//assertEquals(w.wordforms.size(), 3); // siev. dz. dsk. nom., akuz., vīr. dz. vsk. nom.
+	}
+	
+	@Test
+	public void balss(){
+		// 2016-02-03 Tā kā "debesis" kļūda visticamāk ir saistīta ar 6.dekl. izņēmumiem, tad papildus tests uz tiem.
+		List<Wordform> lasis = locītājs.generateInflections("balss");
+		AttributeValues testset = new AttributeValues();
+		testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
+		testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Genitive);
+		testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Plural);
+		assertInflection(lasis, testset, "balsu");
+				
+		Word w = locītājs.analyze("balšu");
+		assertFalse(w.isRecognized());
+	}
+	
+	@Test
 	public void numuri(){
 		// integritāte - vai nav dubulti numuri
 		HashMap <Integer, Paradigm> vārdgrupuNr = new HashMap <Integer, Paradigm>();
