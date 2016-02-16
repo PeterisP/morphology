@@ -8,7 +8,7 @@
  
 BASIC USAGE
 
- Analyzer analyzer = new Analyzer("dist/Lexicon.xml");
+ Analyzer analyzer = new Analyzer();
  
  // analysis
  Word result = analyzer.analyze("roku");
@@ -22,12 +22,11 @@ BASIC USAGE
 	wf.describe();
  }
 
-Two typical use-cases are demonstrated in dist/doc/demo/src/MorphDemo.java
+ Review unit tests for more examples.
 
 INSTALLATION
   
- Download morphology.zip distribution file and unzip. Include dist/morphology.jar. Store the required libraries and Lexicon.xml in a location accessible to your application.
- The package should build with ant or as an Eclipse project (NB! Eclipse must open the source as UTF-8 encoded, or it won't compile).
+Use maven to build and deploy.
 
 LICENCE
 
