@@ -1426,6 +1426,7 @@ public class MorphologyTest {
 	
 	@Test
 	public void laura_Aug13() {
+		locītājs.enableGuessing = true;
 		// 2012.08.13 Lauras samarķētā atšķirību analīze 
 		List<Wordform> formas = locītājs.generateInflections("Fredis");
 		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "Freda");
@@ -2474,11 +2475,15 @@ public class MorphologyTest {
 	}
 
 	@Test // Tezauram locīšanai - lai nelokam to, kas nav leksikonā bez minēšānas
-	public void nelocīt() {
+	public void nelocīt() throws UnsupportedEncodingException {
 		locītājs.enableGuessing = false;
 
 		List<Wordform> formas = locītājs.generateInflections("xxx");
 		assertEquals(0, formas.size());
+
+		locītājs.guessVerbs = false;
+		locītājs.guessParticiples = false;
+		locītājs.describe(new PrintWriter(new OutputStreamWriter(System.out, "UTF-8")));
 
 		formas = locītājs.generateInflections("vārāms");
 		assertEquals(0, formas.size());
@@ -2486,8 +2491,6 @@ public class MorphologyTest {
 
 	@Test // Crash uz sliktu locīšanu
 	public void locīt_ar_sliktu_paradigmu() {
-		locītājs.enableGuessing = false;
-
 		List<Wordform> formas = locītājs.generateInflections("vārāms", 16);
 	}
 

@@ -160,7 +160,7 @@ public class Analyzer extends Lexicon {
 		pipe.format("meklētsalikteņus:\t%b\n", meklētsalikteņus);
 		pipe.format("guessNouns:\t\t%b\n", guessNouns);
 		pipe.format("guessVerbs:\t\t%b\n", guessVerbs);
-		pipe.format("guessParticibles:\t%b\n", guessParticiples);
+		pipe.format("guessParticiples:\t%b\n", guessParticiples);
 		pipe.format("guessAdjectives:\t%b\n", guessAdjectives);
 		pipe.format("guessInflexibleNouns:\t%b\n", guessInflexibleNouns);
 	
@@ -613,7 +613,7 @@ public class Analyzer extends Lexicon {
 		
 		// If result is null, it means that all the suggested lemma can be (and was) generated from another lemma - i.e. "Dīcis" from "dīkt"; but not from an existing lexicon lemma
 		// We assume that a true lemma was passed by the caller, and we need to generate/guess the wordforms as if the lemma was correct.
-		if (result == null || result.size()==0) {
+		if ((result == null || result.size()==0) && this.enableGuessing) {
 			possibilities = this.guessByEnding(lemma.toLowerCase(), lemma);
 			filterInflectionPossibilities(nouns_only, filter, possibilities.wordforms);		
 			
