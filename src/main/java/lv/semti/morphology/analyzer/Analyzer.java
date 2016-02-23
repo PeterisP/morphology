@@ -200,7 +200,12 @@ public class Analyzer extends Lexicon {
 		Word result = new Word(word);
 		
 		for (Ending ending : getAllEndings().matchedEndings(word)) {
-			String stemBezMijas = ending.stem(word);
+			String stemBezMijas;
+			try {
+				stemBezMijas = ending.stem(word);
+			} catch (Ending.WrongEndingException e) {
+				throw new Error(e); // Shouldn't ever happen - matchedEndings should ensure that word contains that ending.
+			}
 			int stemChange = ending.getMija();
 			boolean properName = p_firstcap.matcher(originalWord).matches();
 			ArrayList<Variants> celmi = Mijas.mijuVarianti(stemBezMijas, stemChange, properName);
@@ -472,9 +477,16 @@ public class Analyzer extends Lexicon {
 				if (ending.getEnding().length()==i) {
 					Paradigm p = ending.getParadigm();
 					if (p.getName().equals("Hardcoded"))
-						continue; // Hardcoded vārdgrupa minēšanai nav aktuāla					
+						continue; // Hardcoded vārdgrupa minēšanai nav aktuāla
 
-					ArrayList<Variants> celmi = Mijas.mijuVarianti(ending.stem(word), ending.getMija(), false); //FIXME - te var būt arī propername... tikai kā tā info līdz šejienei nonāks?
+					String stem;
+					try {
+						stem = ending.stem(word);
+					} catch (Ending.WrongEndingException e) {
+						throw new Error(e); // Shouldn't ever happen - matchedEndings should ensure that word contains that ending.
+					}
+
+					ArrayList<Variants> celmi = Mijas.mijuVarianti(stem, ending.getMija(), false); //FIXME - te var būt arī propername... tikai kā tā info līdz šejienei nonāks?
 					if (celmi.size() == 0) continue; // acīmredzot neder ar miju, ejam uz nākamo galotni.
 					String celms = celmi.get(0).celms;
 					
@@ -712,7 +724,10 @@ public class Analyzer extends Lexicon {
 			//FIXME - should check for plural nouns, etc
 		}
 		
-		Lexeme l = this.createLexeme(lemma, p.getLemmaEnding().getID(), "temp"); 
+		Lexeme l = this.createLexeme(lemma, p.getLemmaEnding().getID(), "temp");
+		if (l == null) { // Couldn't create the lexeme - the word didn't wasn't compatible with the supplied paradigm
+			return new ArrayList<Wordform>();
+		}
 		ArrayList<Wordform> result = generateInflections(l, lemma);		
 		p.removeLexeme(l); // To not pollute the in-memory lexicon
 		

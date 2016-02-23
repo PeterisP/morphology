@@ -124,11 +124,16 @@ public class Ending extends AttributeValues {
 		this.ending = ending;
 	}
 
+	public class WrongEndingException extends Exception {
+		public WrongEndingException(String message) {
+			super(message);
+		}
+	}
 	// tiek pieņemts, ka izsaucošā funkcija nodrošina, ka vārds tiešām beidzas ar šo galotni.
-	public String stem (String vārds) {
-		if (!vārds.endsWith(ending))
-			throw new Error("Gļuks - vārds (" + vārds + ") nebeidzas ar norādīto galotni (" + ending + ")");
-		return vārds.substring(0, vārds.length()- ending.length());
+	public String stem (String word) throws WrongEndingException {
+		if (!word.endsWith(ending))
+			throw new WrongEndingException("Gļuks - vārds (" + word + ") nebeidzas ar norādīto galotni (" + ending + ")");
+		return word.substring(0, word.length()- ending.length());
 	}
 
 	public Ending getLemmaEnding() {

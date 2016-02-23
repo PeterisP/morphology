@@ -469,7 +469,7 @@ public class Lexicon {
 		String stem;
 		try {
 			stem = ending.stem(word.toLowerCase());
-			ArrayList<Variants> celmi = Mijas.mijuVarianti(ending.stem(word.toLowerCase()), ending.getMija(), word.matches("\\p{Lu}.*"));
+			ArrayList<Variants> celmi = Mijas.mijuVarianti(stem, ending.getMija(), word.matches("\\p{Lu}.*"));
 			if (celmi.size() == 0) return null; // acīmredzot neder ar miju
 			// FIXME ! Nevajadzētu te būt iespējai uz null!
 			stem = celmi.get(0).celms;

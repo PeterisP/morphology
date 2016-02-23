@@ -2472,4 +2472,23 @@ public class MorphologyTest {
 		assertTrue(jārokot.isRecognized());
 		assertEquals(AttributeNames.v_VajadziibasAtstaastiijuma, jārokot.wordforms.get(0).getValue(AttributeNames.i_Izteiksme));
 	}
+
+	@Test // Tezauram locīšanai - lai nelokam to, kas nav leksikonā bez minēšānas
+	public void nelocīt() {
+		locītājs.enableGuessing = false;
+
+		List<Wordform> formas = locītājs.generateInflections("xxx");
+		assertEquals(0, formas.size());
+
+		formas = locītājs.generateInflections("vārāms");
+		assertEquals(0, formas.size());
+	}
+
+	@Test // Crash uz sliktu locīšanu
+	public void locīt_ar_sliktu_paradigmu() {
+		locītājs.enableGuessing = false;
+
+		List<Wordform> formas = locītājs.generateInflections("vārāms", 16);
+	}
+
 }
