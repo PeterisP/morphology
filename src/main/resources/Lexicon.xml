@@ -375,7 +375,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="10" LemmaEnding="1146" Description="Lietvārdi, 5. deklinācija, vīriešu dzimte, galotne -e (bende, Palle)" AllowedGuessEndings="!">
+	<Paradigm Stems="1" ID="10" LemmaEnding="1146" Description="Lietvārdi, 5. deklinācija, vīriešu dzimte, galotne -e (tēte, bende, Palle)" AllowedGuessEndings="!">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="5" Dzimte="Vīriešu"/>
 		<Ending ID="1146" StemChange="0" Ending="e" StemID="1" LemmaEnding="1146">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
