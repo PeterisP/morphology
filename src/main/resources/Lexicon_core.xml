@@ -1559,12 +1559,21 @@
     <Lexeme ID="1017082" Stem1="padomjļaudi"><Attributes Pirmavots="Latviešu literārās valodas vārdnīca. 1.–8. Rīga, Zinātne, 1972.–1996." Piezīmes="Tikai daudzskaitlī" Stils="Ironiska ekspresīvā nokrāsa" Avots="Imports no Tezaura SV 2014-08-02" Pamatforma="padomjļaudis" Skaitlis_2="Daudzskaitlinieks" Dzimte="Vīriešu"/></Lexeme>    
     <Lexeme ID="1030419" Stem1="vecļaudi"><Attributes Pirmavots="Latviešu literārās valodas vārdnīca. 1.–8. Rīga, Zinātne, 1972.–1996." Piezīmes="Tikai daudzskaitlī" Avots="Imports no Tezaura SV 2014-08-02" Skaitlis_2="Daudzskaitlinieks" Pamatforma="vecļaudis" Dzimte="Vīriešu"/></Lexeme>
     <Lexeme ID="1031078" Stem1="viņļaudi"><Attributes Pirmavots="Latviešu literārās valodas vārdnīca. 1.–8. Rīga, Zinātne, 1972.–1996." Piezīmes="Tikai daudzskaitlī" Avots="Imports no Tezaura SV 2014-08-02" Skaitlis_2="Daudzskaitlinieks" Pamatforma="viņļaudis" Dzimte="Vīriešu"/></Lexeme>
-    <Lexeme ID="3908" Stem1="as">
-      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="ass"/>
+    <Lexeme ID="17318" Stem1="rūt">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="rūts"/>
     </Lexeme>
-    <Lexeme ID="3975" Stem1="bals">
-      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="balss"/>
-    </Lexeme>    
+    <Lexeme ID="17319" Stem1="krūt">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="krūts"/>
+    </Lexeme>
+    <Lexeme ID="17320" Stem1="plīt">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="plīts"/>
+    </Lexeme>
+    <Lexeme ID="17321" Stem1="klēt">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="klēts"/>
+    </Lexeme>
+    <Lexeme ID="27355" Stem1="telt">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="telts"/>
+    </Lexeme>
     <Lexeme ID="4996" Stem1="līkst">
       <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="līksts"/>
     </Lexeme>
@@ -1577,12 +1586,9 @@
     <Lexeme ID="8752" Stem1="sāl">
       <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="sāls"/>
     </Lexeme>
-    <Lexeme ID="8597" Stem1="brokast">
-      <Attributes Lietvārda_tips="Sugas vārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="brokastis"/>
+    <Lexeme Stem1="skanst">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="skansts"/>
     </Lexeme>
-    <Lexeme ID="8362" Stem1="debes">
-      <Attributes Lietvārda_tips="Sugas vārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="debesis"/>
-    </Lexeme>    
     <Lexeme ID="6752" Stem1="asin">
       <Attributes Lietvārda_tips="Sugas vārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="asinis"/>
     </Lexeme>
@@ -1610,9 +1616,6 @@
     <Lexeme ID="43438" Stem1="ekrāndurv">
       <Attributes Lietvārda_tips="Sugas vārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="ekrāndurvis"/>
     </Lexeme>
-    <Lexeme ID="17281" Stem1="vēršac">
-      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="vēršacs"/>
-    </Lexeme>
     <Lexeme ID="17284" Stem1="priekšas">
       <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="priekšass"/>
     </Lexeme>
@@ -1627,9 +1630,6 @@
     </Lexeme>
     <Lexeme ID="27353" Stem1="olekt">
       <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="olekts"/>
-    </Lexeme>
-    <Lexeme ID="50654" Stem1="cēs">
-      <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Cēsis"/>
     </Lexeme>
     <Lexeme ID="4163" Stem1="bezdrāt">
       <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="bezdrāts"/>
@@ -1664,39 +1664,6 @@
     <Lexeme ID="4999" Stem1="dzirkst">
       <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="dzirksts"/>
     </Lexeme>
-    <Lexeme ID="50738" Stem1="valst">
-      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="valsts"/>
-    </Lexeme>    
-    <Lexeme ID="5009" Stem1="koloniālvalst">
-      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="koloniālvalsts"/>
-    </Lexeme>
-    <Lexeme ID="5010" Stem1="lielvalst">
-      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="lielvalsts"/>
-    </Lexeme>
-    <Lexeme ID="5011" Stem1="karaļvalst">
-      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="karaļvalsts"/>
-    </Lexeme>
-    <Lexeme ID="5012" Stem1="vasaļvalst">
-      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="vasaļvalsts"/>
-    </Lexeme>
-    <Lexeme ID="5013" Stem1="rietumvalst">
-      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="rietumvalsts"/>
-    </Lexeme>
-    <Lexeme ID="5014" Stem1="kaimiņvalst">
-      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="kaimiņvalsts"/>
-    </Lexeme>
-    <Lexeme ID="5015" Stem1="ārvalst">
-      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="ārvalsts"/>
-    </Lexeme>
-    <Lexeme ID="5016" Stem1="agrārvalst">
-      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="agrārvalsts"/>
-    </Lexeme>
-    <Lexeme ID="5017" Stem1="bufervalst">
-      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="bufervalsts"/>
-    </Lexeme>
-    <Lexeme ID="5018" Stem1="robežvalst">
-      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="robežvalsts"/>
-    </Lexeme>    
   </Paradigm>
   <Paradigm Stems="1" ID="12" LemmaEnding="111" Description="Nelokāmie lietvārdi">
     <Attributes Vārdšķira="Lietvārds" Deklinācija="Nepiemīt"/>
@@ -10871,775 +10838,6 @@
     <Lexeme ID="24944" Stem1="divarpus">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Pamatforma="divarpus"/>
     </Lexeme>
-    <Lexeme ID="26727" Stem1="...">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Punkts" Pamatforma="..."/>
-    </Lexeme>
-    <Lexeme ID="26728" Stem1="!...">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Punkts" Pamatforma="!..."/>
-    </Lexeme>
-    <Lexeme ID="26729" Stem1="?...">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Punkts" Pamatforma="?..."/>
-    </Lexeme>
-    <Lexeme ID="26730" Stem1="?!...">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Punkts" Pamatforma="?!..."/>
-    </Lexeme>
-    <Lexeme ID="26731" Stem1="?!">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Punkts" Pamatforma="?!"/>
-    </Lexeme>
-    <Lexeme ID="26732" Stem1="!?">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Punkts" Pamatforma="!?"/>
-    </Lexeme>
-    <Lexeme ID="26733" Stem1="!..">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Punkts" Pamatforma="!.."/>
-    </Lexeme>
-    <Lexeme ID="26734" Stem1="!?...">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Punkts" Pamatforma="!?..."/>
-    </Lexeme>
-    <Lexeme ID="26735" Stem1="?!..">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Punkts" Pamatforma="?!.."/>
-    </Lexeme>
-    <Lexeme ID="27194" Stem1=".">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Punkts" Pamatforma="."/>
-    </Lexeme>
-    <Lexeme ID="50462" Stem1="..">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Cita" Pamatforma=".."/>
-    </Lexeme>
-    <Lexeme ID="50731" Stem1="....">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Punkts" Pamatforma="...."/>
-    </Lexeme>
-    <Lexeme ID="50610" Stem1="[..]">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Cita" Pamatforma="[..]"/>
-    </Lexeme>
-    <Lexeme ID="27195" Stem1="?">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Punkts" Pamatforma="?"/>
-    </Lexeme>
-    <Lexeme ID="27196" Stem1=":">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Kols" Pamatforma=":"/>
-    </Lexeme>
-    <Lexeme ID="50606" Stem1="/">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Cita" Pamatforma="/"/>
-    </Lexeme>
-    <Lexeme ID="50607" Stem1="//">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Cita" Pamatforma="//"/>
-    </Lexeme>
-    <Lexeme ID="27197" Stem1="!">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Punkts" Pamatforma="!"/>
-    </Lexeme>
-    <Lexeme ID="27198" Stem1=",">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Komats" Pamatforma=","/>
-    </Lexeme>
-    <Lexeme ID="27199" Stem1=";">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Komats" Pamatforma=";"/>
-    </Lexeme>
-    <Lexeme ID="27200" Stem1="&quot;">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="&quot;"/>
-    </Lexeme>
-    <Lexeme ID="27201" Stem1="'">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Cita" Pamatforma="'"/>
-    </Lexeme>
-    <Lexeme ID="50467" Stem1="`">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="'"/>
-    </Lexeme>
-    <Lexeme ID="50468" Stem1="´">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="'"/>
-    </Lexeme>
-    <Lexeme ID="27202" Stem1="(">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Iekava" Pamatforma="("/>
-    </Lexeme>
-    <Lexeme ID="27203" Stem1=")">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Iekava" Pamatforma=")"/>
-    </Lexeme>
-    <Lexeme ID="50463" Stem1="{">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Iekava" Pamatforma="("/>
-    </Lexeme>
-    <Lexeme ID="50464" Stem1="}">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Iekava" Pamatforma=")"/>
-    </Lexeme>
-    <Lexeme ID="50465" Stem1="&lt;">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Iekava" Pamatforma="&lt;"/>
-    </Lexeme>
-    <Lexeme ID="50466" Stem1="&gt;">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Iekava" Pamatforma="&gt;"/>
-    </Lexeme>
-    <Lexeme ID="27204" Stem1="«">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="&quot;"/>
-    </Lexeme>
-    <Lexeme ID="27205" Stem1="»">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="&quot;"/>
-    </Lexeme>
-    <Lexeme ID="50758" Stem1="''">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="&quot;"/>
-    </Lexeme>
-    <Lexeme ID="27206" Stem1="-">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Domuzīme" Pamatforma="-"/>
-    </Lexeme>
-    <Lexeme ID="27207" Stem1="[">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Iekava" Pamatforma="("/>
-    </Lexeme>
-    <Lexeme ID="27208" Stem1="]">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Iekava" Pamatforma=")"/>
-    </Lexeme>
-    <Lexeme ID="27211" Stem1="—">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Domuzīme" Pamatforma="-"/>
-    </Lexeme>
-    <Lexeme ID="50469" Stem1="‐">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Domuzīme" Pamatforma="-"/>
-    </Lexeme>
-    <Lexeme ID="50470" Stem1="‑">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Domuzīme" Pamatforma="-"/>
-    </Lexeme>
-    <Lexeme ID="50471" Stem1="‒">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Domuzīme" Pamatforma="-"/>
-    </Lexeme>
-    <Lexeme ID="50472" Stem1="–">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Domuzīme" Pamatforma="-"/>
-    </Lexeme>
-    <Lexeme ID="50473" Stem1="―">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Domuzīme" Pamatforma="-"/>
-    </Lexeme>
-    <Lexeme Stem1="˗">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Domuzīme" Pamatforma="-"/>
-    </Lexeme>
-    <Lexeme ID="50474" Stem1="‘">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="'"/>
-    </Lexeme>
-    <Lexeme ID="50475" Stem1="’">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="'"/>
-    </Lexeme>
-    <Lexeme ID="50476" Stem1="‚">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="'"/>
-    </Lexeme>
-    <Lexeme ID="50477" Stem1="‛">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="'"/>
-    </Lexeme>
-    <Lexeme ID="50478" Stem1="“">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="&quot;"/>
-    </Lexeme>
-    <Lexeme ID="50479" Stem1="”">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="&quot;"/>
-    </Lexeme>
-    <Lexeme ID="50480" Stem1="„">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="&quot;"/>
-    </Lexeme>
-    <Lexeme ID="50481" Stem1="‟">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="&quot;"/>
-    </Lexeme>
-    <Lexeme ID="50482" Stem1="′">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="'"/>
-    </Lexeme>
-    <Lexeme ID="50483" Stem1="″">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="'"/>
-    </Lexeme>
-    <Lexeme ID="50484" Stem1="‴">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="&quot;"/>
-    </Lexeme>
-    <Lexeme ID="50485" Stem1="‵">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="'"/>
-    </Lexeme>
-    <Lexeme ID="50486" Stem1="‶">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="&quot;"/>
-    </Lexeme>
-    <Lexeme ID="50487" Stem1="‷">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="&quot;"/>
-    </Lexeme>
-    <Lexeme ID="50488" Stem1="‹">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="'"/>
-    </Lexeme>
-    <Lexeme ID="50489" Stem1="›">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Pēdiņa" Pamatforma="'"/>
-    </Lexeme>
-    <Lexeme ID="50490" Stem1="‼">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Punkts" Pamatforma="‼"/>
-    </Lexeme>
-    <Lexeme ID="50491" Stem1="‽">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Punkts" Pamatforma="‽"/>
-    </Lexeme>
-    <Lexeme ID="50492" Stem1="⁈">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Punkts" Pamatforma="⁈"/>
-    </Lexeme>
-    <Lexeme ID="50493" Stem1="⁉">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Punkts" Pamatforma="⁉"/>
-    </Lexeme>
-    <Lexeme ID="50494" Stem1="․">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Punkts" Pamatforma="․"/>
-    </Lexeme>
-    <Lexeme ID="50495" Stem1="‥">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Punkts" Pamatforma="‥"/>
-    </Lexeme>
-    <Lexeme ID="50496" Stem1="…">
-      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Punkts" Pamatforma="…"/>
-    </Lexeme>
-    <Lexeme ID="27265" Stem1="vau">
-      <Attributes Vārdšķira="Izsauksmes vārds" Pamatforma="vau"/>
-    </Lexeme>
-    <Lexeme ID="28312" Stem1="labdien">
-      <Attributes Vārdšķira="Izsauksmes vārds" Uzbūve="Vienkāršs" Pamatforma="labdien"/>
-    </Lexeme>
-    <Lexeme ID="50699" Stem1="lūdzu">
-      <Attributes Vārdšķira="Izsauksmes vārds" Uzbūve="Vienkāršs" Pamatforma="lūdzu"/>
-    </Lexeme>
-    <Lexeme ID="49544" Stem1="paldies">
-      <Attributes Vārdšķira="Izsauksmes vārds" Uzbūve="Vienkāršs" Pamatforma="paldies"/>
-    </Lexeme>
-    <Lexeme ID="50751" Stem1="pavei">
-      <Attributes Vārdšķira="Izsauksmes vārds" Uzbūve="Vienkāršs" Pamatforma="pavei"/>
-    </Lexeme>
-    <Lexeme ID="50819" Stem1="aha">
-      <Attributes Vārdšķira="Izsauksmes vārds" Uzbūve="Vienkāršs"/>
-    </Lexeme>    
-    <Lexeme ID="50821" Stem1="fui">
-      <Attributes Vārdšķira="Izsauksmes vārds" Uzbūve="Vienkāršs"/>
-    </Lexeme>    
-    <Lexeme ID="50829" Stem1="ha">
-      <Attributes Vārdšķira="Izsauksmes vārds" Uzbūve="Vienkāršs"/>
-    </Lexeme>    
-    <Lexeme ID="50822" Stem1="ha-ha">
-      <Attributes Vārdšķira="Izsauksmes vārds" Uzbūve="Vienkāršs"/>
-    </Lexeme>    
-    <Lexeme ID="50823" Stem1="ha-ha-ha">
-      <Attributes Vārdšķira="Izsauksmes vārds" Uzbūve="Vienkāršs"/>
-    </Lexeme>    
-    <Lexeme ID="50826" Stem1="bļin">
-      <Attributes Vārdšķira="Izsauksmes vārds" Uzbūve="Vienkāršs"/>
-    </Lexeme>    
-    <Lexeme ID="50827" Stem1="bļaģ">
-      <Attributes Vārdšķira="Izsauksmes vārds" Uzbūve="Vienkāršs"/>
-    </Lexeme>    
-    <Lexeme ID="50828" Stem1="bļa">
-      <Attributes Vārdšķira="Izsauksmes vārds" Uzbūve="Vienkāršs"/>
-    </Lexeme>    
-    <Lexeme ID="50841" Stem1="vot">
-      <Attributes Vārdšķira="Izsauksmes vārds" Uzbūve="Vienkāršs"/>
-    </Lexeme>    
-    <Lexeme ID="50842" Stem1="še">
-      <Attributes Vārdšķira="Izsauksmes vārds" Uzbūve="Vienkāršs"/>
-    </Lexeme>    
-    <Lexeme ID="50843" Stem1="redz">
-      <Attributes Vārdšķira="Izsauksmes vārds" Uzbūve="Vienkāršs"/>
-    </Lexeme>    
-    <Lexeme ID="50497" Stem1="u.c.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="u.c."/>
-    </Lexeme>
-    <Lexeme ID="50498" Stem1="utt.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="utt."/>
-    </Lexeme>
-    <Lexeme ID="50499" Stem1="u.tml.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="u.tml."/>
-    </Lexeme>
-    <Lexeme ID="50500" Stem1="vai tml.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="vai tml."/>
-    </Lexeme>
-    <Lexeme ID="50501" Stem1="t.i.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="t.i."/>
-    </Lexeme>
-    <Lexeme ID="50502" Stem1="sk.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="sk."/>
-    </Lexeme>
-    <Lexeme ID="50503" Stem1="sal.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="sal."/>
-    </Lexeme>
-    <Lexeme ID="50504" Stem1="š.g.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="š.g."/>
-    </Lexeme>
-    <Lexeme ID="50505" Stem1="plkst.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="plkst."/>
-    </Lexeme>
-    <Lexeme ID="50506" Stem1="nr.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="nr."/>
-    </Lexeme>
-    <Lexeme ID="50507" Stem1="f-ja">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="f-ja"/>
-    </Lexeme>
-    <Lexeme ID="50508" Stem1="v.i.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="v.i."/>
-    </Lexeme>
-    <Lexeme ID="50509" Stem1="vietn.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="vietn."/>
-    </Lexeme>
-    <Lexeme ID="50510" Stem1="n.b.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="N.B."/>
-    </Lexeme>
-    <Lexeme ID="50511" Stem1="p.s.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="P.S."/>
-    </Lexeme>
-    <Lexeme ID="50512" Stem1="a.god.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="a.god."/>
-    </Lexeme>
-    <Lexeme ID="50513" Stem1="a.k.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="a.k."/>
-    </Lexeme>
-    <Lexeme ID="50514" Stem1="a.l.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="a.l."/>
-    </Lexeme>
-    <Lexeme ID="50515" Stem1="apg.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="apg."/>
-    </Lexeme>
-    <Lexeme ID="50516" Stem1="apm.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="apm."/>
-    </Lexeme>
-    <Lexeme ID="50517" Stem1="apr.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="apr."/>
-    </Lexeme>
-    <Lexeme ID="50518" Stem1="a/s">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="a/s"/>
-    </Lexeme>
-    <Lexeme ID="50519" Stem1="att.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="att."/>
-    </Lexeme>
-    <Lexeme ID="50520" Stem1="aug.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="aug."/>
-    </Lexeme>
-    <Lexeme ID="50521" Stem1="b-ba">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="b-ba"/>
-    </Lexeme>
-    <Lexeme ID="50522" Stem1="bij.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="bij."/>
-    </Lexeme>
-    <Lexeme ID="50523" Stem1="bulv.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="bulv."/>
-    </Lexeme>
-    <Lexeme ID="50524" Stem1="cet.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="cet."/>
-    </Lexeme>
-    <Lexeme ID="50525" Stem1="cien.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="cien."/>
-    </Lexeme>
-    <Lexeme ID="50526" Stem1="dok.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="dok."/>
-    </Lexeme>
-    <Lexeme ID="50527" Stem1="dr.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="Dr."/>
-    </Lexeme>
-    <Lexeme ID="50528" Stem1="dr. h.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="Dr. h."/>
-    </Lexeme>
-    <Lexeme ID="50529" Stem1="dr. habil.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="Dr. habil."/>
-    </Lexeme>
-    <Lexeme ID="50530" Stem1="dsk.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="dsk."/>
-    </Lexeme>
-    <Lexeme ID="50531" Stem1="dz.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="dz."/>
-    </Lexeme>
-    <Lexeme ID="50532" Stem1="dzīv.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="dzīv."/>
-    </Lexeme>
-    <Lexeme ID="50533" Stem1="eks.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="eks."/>
-    </Lexeme>
-    <Lexeme ID="50534" Stem1="febr.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="febr."/>
-    </Lexeme>
-    <Lexeme ID="50535" Stem1="g.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="g."/>
-    </Lexeme>
-    <Lexeme ID="50536" Stem1="gab.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="gab."/>
-    </Lexeme>
-    <Lexeme ID="50537" Stem1="galv.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="galv."/>
-    </Lexeme>
-    <Lexeme ID="50538" Stem1="god.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="god."/>
-    </Lexeme>
-    <Lexeme ID="50539" Stem1="gr.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="gr."/>
-    </Lexeme>
-    <Lexeme ID="50540" Stem1="gs.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="gs."/>
-    </Lexeme>
-    <Lexeme ID="50541" Stem1="gs.b.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="gs.b."/>
-    </Lexeme>
-    <Lexeme ID="50542" Stem1="gs.s.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="gs.s."/>
-    </Lexeme>
-    <Lexeme ID="50543" Stem1="iec.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="iec."/>
-    </Lexeme>
-    <Lexeme ID="50544" Stem1="iedz.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="iedz."/>
-    </Lexeme>
-    <Lexeme ID="50545" Stem1="iesk.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="iesk."/>
-    </Lexeme>
-    <Lexeme ID="50546" Stem1="inv.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="inv."/>
-    </Lexeme>
-    <Lexeme ID="50547" Stem1="inž.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="inž."/>
-    </Lexeme>
-    <Lexeme ID="50548" Stem1="īst.loc.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="īst.loc."/>
-    </Lexeme>
-    <Lexeme ID="50549" Stem1="janv.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="janv."/>
-    </Lexeme>
-    <Lexeme ID="50550" Stem1="jaun.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="jaun."/>
-    </Lexeme>
-    <Lexeme ID="50551" Stem1="jūn.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="jūn."/>
-    </Lexeme>
-    <Lexeme ID="50552" Stem1="jūl.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="jūl."/>
-    </Lexeme>
-    <Lexeme ID="50553" Stem1="kl.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="kl."/>
-    </Lexeme>
-    <Lexeme ID="50554" Stem1="kor.loc.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="kor.loc."/>
-    </Lexeme>
-    <Lexeme ID="50555" Stem1="lauk.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="lauk."/>
-    </Lexeme>
-    <Lexeme ID="50556" Stem1="līn.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="līn."/>
-    </Lexeme>
-    <Lexeme ID="50557" Stem1="lp.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="lp."/>
-    </Lexeme>
-    <Lexeme ID="50558" Stem1="lpp.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="lpp."/>
-    </Lexeme>
-    <Lexeme ID="50559" Stem1="ļ.cien.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="ļ.cien."/>
-    </Lexeme>
-    <Lexeme ID="50560" Stem1="milj.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="milj."/>
-    </Lexeme>
-    <Lexeme ID="50561" Stem1="mljrd.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="mljrd."/>
-    </Lexeme>
-    <Lexeme ID="50562" Stem1="neiesk.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="neiesk."/>
-    </Lexeme>
-    <Lexeme ID="50563" Stem1="nod.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="nod."/>
-    </Lexeme>
-    <Lexeme ID="50564" Stem1="nov.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="nov."/>
-    </Lexeme>
-    <Lexeme ID="50565" Stem1="okt.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="okt."/>
-    </Lexeme>
-    <Lexeme ID="50566" Stem1="oriģ.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="oriģ."/>
-    </Lexeme>
-    <Lexeme ID="50567" Stem1="p.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="p."/>
-    </Lexeme>
-    <Lexeme ID="50568" Stem1="pag.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="pag."/>
-    </Lexeme>
-    <Lexeme ID="50569" Stem1="pārb.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="pārb."/>
-    </Lexeme>
-    <Lexeme ID="50570" Stem1="piel.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="piel."/>
-    </Lexeme>
-    <Lexeme ID="50571" Stem1="piem.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="piem."/>
-    </Lexeme>
-    <Lexeme ID="50572" Stem1="piez.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="piez."/>
-    </Lexeme>
-    <Lexeme ID="50573" Stem1="pils.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="pils."/>
-    </Lexeme>
-    <Lexeme ID="50574" Stem1="p.k.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="p.k."/>
-    </Lexeme>
-    <Lexeme ID="50575" Stem1="p.n.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="p.n."/>
-    </Lexeme>
-    <Lexeme ID="50576" Stem1="poz.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="poz."/>
-    </Lexeme>
-    <Lexeme ID="50577" Stem1="pr-js">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="pr-js"/>
-    </Lexeme>
-    <Lexeme ID="50578" Stem1="pr-ks">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="pr-ks"/>
-    </Lexeme>
-    <Lexeme ID="50579" Stem1="prof.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="prof."/>
-    </Lexeme>
-    <Lexeme ID="50580" Stem1="raj.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="raj."/>
-    </Lexeme>
-    <Lexeme ID="50581" Stem1="resp.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="resp."/>
-    </Lexeme>
-    <Lexeme ID="50582" Stem1="sab-ba">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="sab-ba"/>
-    </Lexeme>
-    <Lexeme ID="50583" Stem1="sant.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="sant."/>
-    </Lexeme>
-    <Lexeme ID="50584" Stem1="sast.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="sast."/>
-    </Lexeme>
-    <Lexeme ID="50585" Stem1="sāk.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="sāk."/>
-    </Lexeme>
-    <Lexeme ID="50586" Stem1="sēj.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="sēj."/>
-    </Lexeme>
-    <Lexeme ID="50587" Stem1="sept.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="sept."/>
-    </Lexeme>
-    <Lexeme ID="50588" Stem1="siev.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="siev."/>
-    </Lexeme>
-    <Lexeme ID="50589" Stem1="spec.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="spec."/>
-    </Lexeme>
-    <Lexeme ID="50591" Stem1="tab.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="tab."/>
-    </Lexeme>
-    <Lexeme ID="50592" Stem1="t.p.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="t.p."/>
-    </Lexeme>
-    <Lexeme ID="50593" Stem1="t.s.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="t.s."/>
-    </Lexeme>
-    <Lexeme ID="50594" Stem1="t.sk.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="t.sk."/>
-    </Lexeme>
-    <Lexeme ID="50595" Stem1="tūkst.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="tūkst."/>
-    </Lexeme>
-    <Lexeme ID="50596" Stem1="uzņ.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="uzņ."/>
-    </Lexeme>
-    <Lexeme ID="50597" Stem1="vad.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="vad."/>
-    </Lexeme>
-    <Lexeme ID="50598" Stem1="val.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="val."/>
-    </Lexeme>
-    <Lexeme ID="50599" Stem1="va/s">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="va/s"/>
-    </Lexeme>
-    <Lexeme ID="50600" Stem1="vec.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="vec."/>
-    </Lexeme>
-    <Lexeme ID="50601" Stem1="visp.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="visp."/>
-    </Lexeme>
-    <Lexeme ID="50602" Stem1="vīr.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="vīr."/>
-    </Lexeme>
-    <Lexeme ID="50603" Stem1="vsk.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="vsk."/>
-    </Lexeme>
-    <Lexeme ID="50604" Stem1="v/u">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="v/u"/>
-    </Lexeme>
-    <Lexeme ID="50605" Stem1="zīm.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="zīm."/>
-    </Lexeme>
-    <Lexeme ID="50816" Stem1="kr.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="kr."/>
-    </Lexeme>
-    <Lexeme ID="50629" Stem1="k-gs">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="k-gs"/>
-    </Lexeme>
-    <Lexeme ID="50630" Stem1="k-dze">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="k-dze"/>
-    </Lexeme>
-    <Lexeme ID="50648" Stem1="tālr.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="tālr."/>
-    </Lexeme>
-    <Lexeme ID="50649" Stem1="rēķ.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="rēķ."/>
-    </Lexeme>
-    <Lexeme ID="50650" Stem1="pl.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="pl."/>
-    </Lexeme>
-    <Lexeme ID="50651" Stem1="latv.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="latv."/>
-    </Lexeme>
-    <Lexeme ID="50658" Stem1="sv.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="sv."/>
-    </Lexeme>
-    <Lexeme ID="50665" Stem1="SIA">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="SIA"/>
-    </Lexeme>
-    <Lexeme ID="50666" Stem1="AS">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="AS"/>
-    </Lexeme>
-    <Lexeme ID="50667" Stem1="ZS">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="ZS"/>
-    </Lexeme>
-    <Lexeme ID="50668" Stem1="IU">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="IU"/>
-    </Lexeme>
-    <Lexeme ID="50669" Stem1="Ltd">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="Ltd"/>
-    </Lexeme>
-    <Lexeme ID="50670" Stem1="GmbH">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="GmbH"/>
-    </Lexeme>
-    <Lexeme ID="50671" Stem1="ZvS">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="ZvS"/>
-    </Lexeme>
-    <Lexeme ID="50672" Stem1="VSIA">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="VSIA"/>
-    </Lexeme>
-    <Lexeme ID="50673" Stem1="Inc">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="Inc"/>
-    </Lexeme>
-    <Lexeme ID="50674" Stem1="Inc.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="Inc."/>
-    </Lexeme>
-    <Lexeme ID="50675" Stem1="AB">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="AB"/>
-    </Lexeme>
-    <Lexeme ID="50676" Stem1="b-bas">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="b-bas"/>
-    </Lexeme>
-    <Lexeme ID="50677" Stem1="kult.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="kult."/>
-    </Lexeme>
-    <Lexeme Stem1="fak."> <Attributes Vārdšķira="Saīsinājums" Pamatforma="fak."/> </Lexeme>
-    <Lexeme ID="50679" Stem1="izglīt.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="izglīt."/>
-    </Lexeme>
-    <Lexeme ID="50680" Stem1="sav.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="sav."/>
-    </Lexeme>
-    <Lexeme ID="50681" Stem1="veic.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="veic."/>
-    </Lexeme>
-    <Lexeme ID="50682" Stem1="nac.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="nac."/>
-    </Lexeme>
-    <Lexeme ID="50683" Stem1="lauksaimn.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="lauksaimn."/>
-    </Lexeme>
-    <Lexeme ID="50685" Stem1="mūz.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="mūz."/>
-    </Lexeme>
-    <Lexeme ID="50686" Stem1="zemn.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="zemn."/>
-    </Lexeme>
-    <Lexeme ID="50687" Stem1="PSKP">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="PSKP"/>
-    </Lexeme>
-    <Lexeme ID="17323" Stem1="KGB">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="KGB"/>
-    </Lexeme>
-    <Lexeme ID="17324" Stem1="PSRS">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="PSRS"/>
-    </Lexeme>
-    <Lexeme ID="50688" Stem1="PSR">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="PSR"/>
-    </Lexeme>
-    <Lexeme ID="50689" Stem1="KP">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="KP"/>
-    </Lexeme>
-    <Lexeme ID="50690" Stem1="CK">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="CK"/>
-    </Lexeme>
-    <Lexeme ID="50691" Stem1="CIP">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="CIP"/>
-    </Lexeme>
-    <Lexeme ID="50692" Stem1="CX">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="CX"/>
-    </Lexeme>
-    <Lexeme ID="50693" Stem1="TIN">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="TIN"/>
-    </Lexeme>
-    <Lexeme ID="50698" Stem1="OK">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="OK"/>
-    </Lexeme>
-    <Lexeme ID="50708" Stem1="NATO">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="NATO"/>
-    </Lexeme>
-    <Lexeme ID="50709" Stem1="ANO">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="ANO"/>
-    </Lexeme>
-    <Lexeme Stem1="IT">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="IT"/>
-    </Lexeme>
-    <Lexeme Stem1="TV">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="TV"/>
-    </Lexeme>
-    <Lexeme Stem1="ISO">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="ISO"/>
-    </Lexeme>
-    <Lexeme ID="50711" Stem1="km">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="km"/>
-    </Lexeme>
-    <Lexeme ID="50721" Stem1="m.g.">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="m.g."/>
-    </Lexeme>
-    <Lexeme ID="50723" Stem1="ASV">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="ASV"/>
-    </Lexeme>
-    <Lexeme ID="50724" Stem1="UNESCO">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="UNESCO"/>
-    </Lexeme>
-    <Lexeme ID="50725" Stem1="LU">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="LU"/>
-    </Lexeme>
-    <Lexeme ID="50726" Stem1="LLU">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="LLU"/>
-    </Lexeme>
-    <Lexeme Stem1="LLA"> <Attributes Vārdšķira="Saīsinājums" Pamatforma="LLA"/> </Lexeme>
-    <Lexeme Stem1="LVA"> <Attributes Vārdšķira="Saīsinājums" Pamatforma="LVA"/> </Lexeme>
-    <Lexeme Stem1="LVS"> <Attributes Vārdšķira="Saīsinājums" Pamatforma="LVS"/> </Lexeme>
-    <Lexeme Stem1="RPIS"> <Attributes Vārdšķira="Saīsinājums" Pamatforma="RPIS"/> </Lexeme>
-    <Lexeme Stem1="DR"> <Attributes Vārdšķira="Saīsinājums" Pamatforma="DR"/> </Lexeme>
-    <Lexeme Stem1="USA"> <Attributes Vārdšķira="Saīsinājums" Pamatforma="USA"/> </Lexeme>
-    <Lexeme ID="50727" Stem1="LZP">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="LZP"/>
-    </Lexeme>
-    <Lexeme ID="50728" Stem1="PS">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="PS"/>
-    </Lexeme>
-    <Lexeme ID="50729" Stem1="LR">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="LR"/>
-    </Lexeme>
-    <Lexeme ID="50732" Stem1="EDSO">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="EDSO"/>
-    </Lexeme>
-    <Lexeme ID="50733" Stem1="ONAP">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="ONAP"/>
-    </Lexeme>
-    <Lexeme ID="50820" Stem1="EK">
-      <Attributes Vārdšķira="Saīsinājums" Pamatforma="EK"/>
-    </Lexeme>
-    <Lexeme ID="50830" Stem1="LETA">
-      <Attributes Vārdšķira="Saīsinājums"/>
-    </Lexeme>
-    <Lexeme ID="50831" Stem1="KNAB">
-      <Attributes Vārdšķira="Saīsinājums"/>
-    </Lexeme>
-    <Lexeme ID="50832" Stem1="LNB">
-      <Attributes Vārdšķira="Saīsinājums"/>
-    </Lexeme>
-    <Lexeme ID="50833" Stem1="LLC">
-      <Attributes Vārdšķira="Saīsinājums"/>
-    </Lexeme>
-    <Lexeme ID="50834" Stem1="LLP">
-      <Attributes Vārdšķira="Saīsinājums"/>
-    </Lexeme>
-    <Lexeme ID="50835" Stem1="LNNK">
-      <Attributes Vārdšķira="Saīsinājums"/>
-    </Lexeme>
-    <Lexeme ID="50836" Stem1="OECD">
-      <Attributes Vārdšķira="Saīsinājums"/>
-    </Lexeme>
-    <Lexeme ID="50837" Stem1="VK">
-      <Attributes Vārdšķira="Saīsinājums"/>
-    </Lexeme>
-    <Lexeme ID="50838" Stem1="FKTK">
-      <Attributes Vārdšķira="Saīsinājums"/>
-    </Lexeme>
     <Lexeme ID="50608" Stem1="=">
       <Attributes Vārdšķira="Reziduālis" Pamatforma="="/>
     </Lexeme>
@@ -11705,15 +10903,6 @@
     </Lexeme>
     <Lexeme ID="50825" Stem1="***">
       <Attributes Vārdšķira="Reziduālis"/>
-    </Lexeme>
-    <Lexeme ID="50864" Stem1="fuck">
-      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Vārds svešvalodā"/>
-    </Lexeme>
-    <Lexeme ID="50839" Stem1="company">
-      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Vārds svešvalodā"/>
-    </Lexeme>
-    <Lexeme ID="50840" Stem1="fund">
-      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Vārds svešvalodā"/>
     </Lexeme>
     <Lexeme ID="28313" Stem1="trīstūkstoš">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši" Pamatforma="trīstūkstoš"/>
@@ -11798,9 +10987,6 @@
     </Lexeme>
     <Lexeme ID="28336" Stem1="tūkstoti">
       <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Vienskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Akuzatīvs" Skaitļu_kārta="Tūkstoši" Pamatforma="tūkstotis"/>
-    </Lexeme>
-    <Lexeme ID="28337" Stem1="oho">
-      <Attributes Vārdšķira="Izsauksmes vārds" Uzbūve="Vienkāršs" Pamatforma="oho"/>
     </Lexeme>
     <Lexeme ID="28338" Stem1="esoši">
       <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Palīgverbs 'būt'" Locījums="Nominatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
@@ -11922,9 +11108,6 @@
     <Lexeme ID="28375" Stem1="bijušiem">
       <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Datīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
     </Lexeme>
-    <Lexeme ID="28376" Stem1="eu">
-      <Attributes Vārdšķira="Izsauksmes vārds" Uzbūve="Vienkāršs" Pamatforma="eu"/>
-    </Lexeme>
     <Lexeme ID="28377" Stem1="nebija">
       <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="3" Noliegums="Jā" Pamatforma="nebūt" Laiks="Pagātne" Kārta="Darāmā"/>
     </Lexeme>
@@ -11958,14 +11141,8 @@
     <Lexeme ID="28387" Stem1="esiet">
       <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Pavēles" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="2" Noliegums="Nē" Pamatforma="būt" Laiks="Nepiemīt" Kārta="Darāmā"/>
     </Lexeme>
-    <Lexeme ID="28388" Stem1="eh">
-      <Attributes Vārdšķira="Izsauksmes vārds" Uzbūve="Vienkāršs" Pamatforma="eh"/>
-    </Lexeme>
     <Lexeme ID="28389" Stem1="piecpadsmittūkstoš">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši" Pamatforma="piecpadsmittūkstoš"/>
-    </Lexeme>
-    <Lexeme ID="28390" Stem1="ei">
-      <Attributes Vārdšķira="Izsauksmes vārds" Uzbūve="Vienkāršs" Pamatforma="ei"/>
     </Lexeme>
     <Lexeme ID="28391" Stem1="nebijušiem">
       <Attributes Vārdšķira="Darbības vārds" Locījums="Datīvs" Laiks="Pagātne" Pamatforma="nebūt" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Palīgverbs 'būt'" Dzimte="Vīriešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
@@ -12023,9 +11200,6 @@
     </Lexeme>
     <Lexeme ID="49555" Stem1="nebijis">
       <Attributes Vārdšķira="Darbības vārds" Locījums="Nominatīvs" Laiks="Pagātne" Pamatforma="nebūt" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="'nebūt', 'trūkt' un 'pietikt'" Dzimte="Vīriešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme ID="28404" Stem1="žvīks">
-      <Attributes Vārdšķira="Izsauksmes vārds" Uzbūve="Vienkāršs" Pamatforma="žvīks"/>
     </Lexeme>
     <Lexeme ID="28405" Stem1="astoņpadsmit">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Skaitļu_kārta="Padsmiti" Pamatforma="astoņpadsmit"/>
@@ -12129,9 +11303,6 @@
     <Lexeme ID="49558" Stem1="nebijušā">
       <Attributes Vārdšķira="Darbības vārds" Locījums="Lokatīvs" Laiks="Pagātne" Pamatforma="nebūt" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="'nebūt', 'trūkt' un 'pietikt'" Dzimte="Vīriešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
     </Lexeme>
-    <Lexeme ID="28439" Stem1="labrīt">
-      <Attributes Vārdšķira="Izsauksmes vārds" Uzbūve="Vienkāršs" Pamatforma="labrīt"/>
-    </Lexeme>
     <Lexeme ID="28440" Stem1="iziet">
       <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Nē" Pamatforma="iziet" Laiks="Tagadne" Kārta="Darāmā"/>
     </Lexeme>
@@ -12192,9 +11363,6 @@
     <Lexeme ID="28458" Stem1="vienpadsmit">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Skaitļu_kārta="Padsmiti" Pamatforma="vienpadsmit"/>
     </Lexeme>
-    <Lexeme ID="28459" Stem1="ak">
-      <Attributes Vārdšķira="Izsauksmes vārds" Uzbūve="Vienkāršs" Pamatforma="ak"/>
-    </Lexeme>
     <Lexeme ID="28460" Stem1="divpadsmittūkstoš">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši" Pamatforma="divpadsmittūkstoš"/>
     </Lexeme>
@@ -12228,14 +11396,8 @@
     <Lexeme ID="28471" Stem1="esot">
       <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Atstāstījuma" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="Nepiemīt" Noliegums="Nē" Pamatforma="būt" Laiks="Tagadne" Kārta="Darāmā"/>
     </Lexeme>
-    <Lexeme ID="28472" Stem1="nu">
-      <Attributes Vārdšķira="Izsauksmes vārds" Uzbūve="Vienkāršs" Pamatforma="nu"/>
-    </Lexeme>
     <Lexeme ID="28473" Stem1="četrpadsmittūkstoš">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši" Pamatforma="četrpadsmittūkstoš"/>
-    </Lexeme>
-    <Lexeme ID="28474" Stem1="tik">
-      <Attributes Vārdšķira="Izsauksmes vārds" Uzbūve="Vienkāršs" Pamatforma="tik"/>
     </Lexeme>
     <Lexeme ID="28475" Stem1="būdamas">
       <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Palīgverbs 'būt'" Locījums="Nominatīvs" Pamatforma="būt" Lokāmība="Daļēji lokāms" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
@@ -12396,14 +11558,8 @@
     <Lexeme ID="28521" Stem1="esmu">
       <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="1" Noliegums="Nē" Pamatforma="būt" Laiks="Tagadne" Kārta="Darāmā"/>
     </Lexeme>
-    <Lexeme ID="28522" Stem1="krā">
-      <Attributes Vārdšķira="Izsauksmes vārds" Uzbūve="Vienkāršs" Pamatforma="krā"/>
-    </Lexeme>
     <Lexeme ID="28523" Stem1="trīspadsmittūkstoš">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši" Pamatforma="trīspadsmittūkstoš"/>
-    </Lexeme>
-    <Lexeme ID="28524" Stem1="ņau">
-      <Attributes Vārdšķira="Izsauksmes vārds" Uzbūve="Vienkāršs" Pamatforma="ņau"/>
     </Lexeme>
     <Lexeme ID="28525" Stem1="deviņdesmittūkstoš">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši" Pamatforma="deviņdesmittūkstoš"/>
@@ -13342,5 +12498,611 @@
   </Paradigm> 
   <Paradigm Stems="1" ID="34" LemmaEnding="2073" Description="Atgriezeniskie lietvārdi -šanās" AllowedGuessEndings="!">
     <Lexeme Stem1="acīsskatī"/>
+  </Paradigm>
+  <Paradigm Stems="1" ID="35" LemmaEnding="99" Description="Lietvārdi, 6. deklinācijas -s locīšanas izņēmumi bez mijas (auss, kūts)" AllowedGuessEndings="">  
+    <Lexeme ID="17280" Stem1="ac">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="acs"/>
+    </Lexeme>
+    <Lexeme ID="17282" Stem1="uzac">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="uzacs"/>
+    </Lexeme>
+    <Lexeme ID="17283" Stem1="varžac">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="varžacs"/>
+    </Lexeme>
+    <Lexeme ID="17281" Stem1="vēršac">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="vēršacs"/>
+    </Lexeme>
+    <Lexeme ID="27350" Stem1="aus">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="auss"/>
+    </Lexeme>
+    <Lexeme ID="3908" Stem1="as">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="ass"/>
+    </Lexeme>
+    <Lexeme ID="3975" Stem1="bals">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="balss"/>
+    </Lexeme>    
+    <Lexeme ID="3977" Stem1="atbals">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="atbalss"/>
+    </Lexeme>
+    <Lexeme ID="3976" Stem1="piebals">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="piebalss"/>
+    </Lexeme>
+    <Lexeme ID="33632" Stem1="pamatbals">
+      <Attributes Pamatforma="pamatbalss"/>
+    </Lexeme>
+    <Lexeme ID="8597" Stem1="brokast">
+      <Attributes Lietvārda_tips="Sugas vārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="brokastis"/>
+    </Lexeme>
+    <Lexeme ID="8362" Stem1="debes">
+      <Attributes Lietvārda_tips="Sugas vārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="debesis"/>
+    </Lexeme>    
+    <Lexeme ID="50654" Stem1="cēs">
+      <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Cēsis"/>
+    </Lexeme>
+    <Lexeme ID="4381" Stem1="dakt">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="dakts"/>
+    </Lexeme>
+    <Lexeme ID="17316" Stem1="kūt">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="kūts"/>
+    </Lexeme>
+    <Lexeme ID="17317" Stem1="cūkkūt">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="cūkkūts"/>
+    </Lexeme>
+    <Lexeme ID="4952" Stem1="makst">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="maksts"/>
+    </Lexeme>
+    <Lexeme ID="4983" Stem1="pākst">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="pāksts"/>
+    </Lexeme>
+    <Lexeme ID="5053" Stem1="ut">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="uts"/>
+    </Lexeme>
+    <Lexeme ID="4449" Stem1="šalt">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="šalts"/>
+    </Lexeme>
+    <Lexeme ID="27354" Stem1="takt">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="takts"/>
+    </Lexeme>
+    <Lexeme ID="50738" Stem1="valst">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="valsts"/>
+    </Lexeme>    
+    <Lexeme ID="5009" Stem1="koloniālvalst">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="koloniālvalsts"/>
+    </Lexeme>
+    <Lexeme ID="5010" Stem1="lielvalst">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="lielvalsts"/>
+    </Lexeme>
+    <Lexeme ID="5011" Stem1="karaļvalst">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="karaļvalsts"/>
+    </Lexeme>
+    <Lexeme ID="5012" Stem1="vasaļvalst">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="vasaļvalsts"/>
+    </Lexeme>
+    <Lexeme ID="5013" Stem1="rietumvalst">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="rietumvalsts"/>
+    </Lexeme>
+    <Lexeme ID="5015" Stem1="ārvalst">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="ārvalsts"/>
+    </Lexeme>
+    <Lexeme ID="5016" Stem1="agrārvalst">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="agrārvalsts"/>
+    </Lexeme>
+    <Lexeme ID="5017" Stem1="bufervalst">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="bufervalsts"/>
+    </Lexeme>
+    <Lexeme ID="5018" Stem1="robežvalst">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="robežvalsts"/>
+    </Lexeme> 
+    <Lexeme ID="43411" Stem1="atbalstītājvalst">
+      <Attributes Pamatforma="atbalstītājvalsts"/>
+    </Lexeme>
+    <Lexeme ID="43426" Stem1="dalībvalst">
+      <Attributes Pamatforma="dalībvalsts"/>
+    </Lexeme>
+    <Lexeme ID="43439" Stem1="eksportētājvalst">
+      <Attributes Pamatforma="eksportētājvalsts"/>
+    </Lexeme>
+    <Lexeme ID="43432" Stem1="donorvalst">
+      <Attributes Pamatforma="donorvalsts"/>
+    </Lexeme>
+    <Lexeme ID="43444" Stem1="importētājvalst">
+      <Attributes Pamatforma="importētājvalsts"/>
+    </Lexeme>
+    <Lexeme ID="43447" Stem1="kaimiņvalst">
+      <Attributes Pamatforma="kaimiņvalsts"/>
+    </Lexeme>
+    <Lexeme ID="43448" Stem1="kandidātvalst">
+      <Attributes Pamatforma="kandidātvalsts"/>
+    </Lexeme>
+    <Lexeme ID="43453" Stem1="kodolvalst">
+      <Attributes Pamatforma="kodolvalsts"/>
+    </Lexeme>
+    <Lexeme ID="43471" Stem1="nosūtītājvalst">
+      <Attributes Pamatforma="nosūtītājvalsts"/>
+    </Lexeme>
+    <Lexeme ID="43475" Stem1="parakstītājvalst">
+      <Attributes Pamatforma="parakstītājvalsts"/>
+    </Lexeme>
+    <Lexeme ID="43476" Stem1="partnervalst">
+      <Attributes Pamatforma="partnervalsts"/>
+    </Lexeme>
+    <Lexeme ID="43477" Stem1="patērētājvalst">
+      <Attributes Pamatforma="patērētājvalsts"/>
+    </Lexeme>
+    <Lexeme ID="43478" Stem1="pavalst">
+      <Attributes Pamatforma="pavalsts"/>
+    </Lexeme>
+    <Lexeme ID="43479" Stem1="piegādātājvalst">
+      <Attributes Pamatforma="piegādātājvalsts"/>
+    </Lexeme>
+    <Lexeme ID="43480" Stem1="prezidentvalst">
+      <Attributes Pamatforma="prezidentvalsts"/>
+    </Lexeme>
+    <Lexeme ID="43481" Stem1="prezidentūrvalst">
+      <Attributes Pamatforma="prezidentūrvalsts"/>
+    </Lexeme>
+    <Lexeme ID="43486" Stem1="ražotājvalst">
+      <Attributes Pamatforma="ražotājvalsts"/>
+    </Lexeme>
+    <Lexeme ID="43487" Stem1="rietumvalst">
+      <Attributes Pamatforma="rietumvalsts"/>
+    </Lexeme>
+    <Lexeme ID="43493" Stem1="saņēmējvalst">
+      <Attributes Pamatforma="saņēmējvalsts"/>
+    </Lexeme>
+    <Lexeme ID="43510" Stem1="tranzītvalst">
+      <Attributes Pamatforma="tranzītvalsts"/>
+    </Lexeme>
+    <Lexeme ID="43513" Stem1="uzņemējvalst">
+      <Attributes Pamatforma="uzņemējvalsts"/>
+    </Lexeme>
+    <Lexeme ID="43518" Stem1="ziemeļvalst">
+      <Attributes Pamatforma="ziemeļvalsts"/>
+    </Lexeme>
+    <Lexeme ID="43519" Stem1="ziņotājvalst">
+      <Attributes Pamatforma="ziņotājvalsts"/>
+    </Lexeme>
+    <Lexeme ID="4770" Stem1="vēst">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="vēsts"/>
+    </Lexeme>
+    <Lexeme ID="17290" Stem1="zos">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="zoss"/>
+    </Lexeme>
+    <Lexeme ID="43483" Stem1="pundurzos">
+      <Attributes Pamatforma="pundurzoss"/>
+    </Lexeme>
+    <Lexeme ID="43506" Stem1="svilpējzos">
+      <Attributes Pamatforma="svilpējzoss"/>
+    </Lexeme>
+    <Lexeme ID="43511" Stem1="tumšzos">
+      <Attributes Pamatforma="tumšzoss"/>
+    </Lexeme>
+    <Lexeme ID="4465" Stem1="žult">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="žults"/>
+    </Lexeme>
+    <Lexeme ID="17287" Stem1="nās">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="nāss" Avots="Valērija leksikons"/>
+    </Lexeme>    
+    <Lexeme ID="4398" Stem1="vakt">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="vakts" Avots="Valērija leksikons"/>
+    </Lexeme>
+    <Lexeme ID="5037" Stem1="verst">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="versts" Avots="Valērija leksikons"/>
+    </Lexeme>
+  </Paradigm>
+  <Paradigm Stems="1" ID="36" LemmaEnding="2091" Description="Saīsinājumi (t.i. utt. u.c.)" AllowedGuessEndings="!">
+    <Lexeme ID="50497" Stem1="u.c."/>
+    <Lexeme ID="50498" Stem1="utt."/>
+    <Lexeme ID="50499" Stem1="u.tml."/>
+    <Lexeme ID="50500" Stem1="vai tml."/>
+    <Lexeme ID="50501" Stem1="t.i."/>
+    <Lexeme ID="50502" Stem1="sk."/>
+    <Lexeme ID="50503" Stem1="sal."/>
+    <Lexeme ID="50504" Stem1="š.g."/>
+    <Lexeme ID="50505" Stem1="plkst."/>
+    <Lexeme ID="50506" Stem1="nr."/>
+    <Lexeme ID="50507" Stem1="f-ja"/>
+    <Lexeme ID="50508" Stem1="v.i."/>
+    <Lexeme ID="50509" Stem1="vietn."/>
+    <Lexeme ID="50510" Stem1="n.b."/>
+    <Lexeme ID="50511" Stem1="p.s."/>
+    <Lexeme ID="50512" Stem1="a.god."/>
+    <Lexeme ID="50513" Stem1="a.k."/>
+    <Lexeme ID="50514" Stem1="a.l."/>
+    <Lexeme ID="50515" Stem1="apg."/>
+    <Lexeme ID="50516" Stem1="apm."/>
+    <Lexeme ID="50517" Stem1="apr."/>
+    <Lexeme ID="50518" Stem1="a/s"/>
+    <Lexeme ID="50519" Stem1="att."/>
+    <Lexeme ID="50520" Stem1="aug."/>
+    <Lexeme ID="50521" Stem1="b-ba"/>
+    <Lexeme ID="50522" Stem1="bij."/>
+    <Lexeme ID="50523" Stem1="bulv."/>
+    <Lexeme ID="50524" Stem1="cet."/>
+    <Lexeme ID="50525" Stem1="cien."/>
+    <Lexeme ID="50526" Stem1="dok."/>
+    <Lexeme ID="50527" Stem1="dr."/>
+    <Lexeme ID="50528" Stem1="dr. h."/>
+    <Lexeme ID="50529" Stem1="dr. habil."/>
+    <Lexeme ID="50530" Stem1="dsk."/>
+    <Lexeme ID="50531" Stem1="dz."/>
+    <Lexeme ID="50532" Stem1="dzīv."/>
+    <Lexeme ID="50533" Stem1="eks."/>
+    <Lexeme ID="50534" Stem1="febr."/>
+    <Lexeme ID="50535" Stem1="g."/>
+    <Lexeme ID="50536" Stem1="gab."/>
+    <Lexeme ID="50537" Stem1="galv."/>
+    <Lexeme ID="50538" Stem1="god."/>
+    <Lexeme ID="50539" Stem1="gr."/>
+    <Lexeme ID="50540" Stem1="gs."/>
+    <Lexeme ID="50541" Stem1="gs.b."/>
+    <Lexeme ID="50542" Stem1="gs.s."/>
+    <Lexeme ID="50543" Stem1="iec."/>
+    <Lexeme ID="50544" Stem1="iedz."/>
+    <Lexeme ID="50545" Stem1="iesk."/>
+    <Lexeme ID="50546" Stem1="inv."/>
+    <Lexeme ID="50547" Stem1="inž."/>
+    <Lexeme ID="50548" Stem1="īst.loc."/>
+    <Lexeme ID="50549" Stem1="janv."/>
+    <Lexeme ID="50550" Stem1="jaun."/>
+    <Lexeme ID="50551" Stem1="jūn."/>
+    <Lexeme ID="50552" Stem1="jūl."/>
+    <Lexeme ID="50553" Stem1="kl."/>
+    <Lexeme ID="50554" Stem1="kor.loc."/>
+    <Lexeme ID="50555" Stem1="lauk."/>
+    <Lexeme ID="50556" Stem1="līn."/>
+    <Lexeme ID="50557" Stem1="lp."/>
+    <Lexeme ID="50558" Stem1="lpp."/>
+    <Lexeme ID="50559" Stem1="ļ.cien."/>
+    <Lexeme ID="50560" Stem1="milj."/>
+    <Lexeme ID="50561" Stem1="mljrd."/>
+    <Lexeme ID="50562" Stem1="neiesk."/>
+    <Lexeme ID="50563" Stem1="nod."/>
+    <Lexeme ID="50564" Stem1="nov."/>
+    <Lexeme ID="50565" Stem1="okt."/>
+    <Lexeme ID="50566" Stem1="oriģ."/>
+    <Lexeme ID="50567" Stem1="p."/>
+    <Lexeme ID="50568" Stem1="pag."/>
+    <Lexeme ID="50569" Stem1="pārb."/>
+    <Lexeme ID="50570" Stem1="piel."/>
+    <Lexeme ID="50571" Stem1="piem."/>
+    <Lexeme ID="50572" Stem1="piez."/>
+    <Lexeme ID="50573" Stem1="pils."/>
+    <Lexeme ID="50574" Stem1="p.k."/>
+    <Lexeme ID="50575" Stem1="p.n."/>
+    <Lexeme ID="50576" Stem1="poz."/>
+    <Lexeme ID="50577" Stem1="pr-js"/>
+    <Lexeme ID="50578" Stem1="pr-ks"/>
+    <Lexeme ID="50579" Stem1="prof."/>
+    <Lexeme ID="50580" Stem1="raj."/>
+    <Lexeme ID="50581" Stem1="resp."/>
+    <Lexeme ID="50582" Stem1="sab-ba"/>
+    <Lexeme ID="50583" Stem1="sant."/>
+    <Lexeme ID="50584" Stem1="sast."/>
+    <Lexeme ID="50585" Stem1="sāk."/>
+    <Lexeme ID="50586" Stem1="sēj."/>
+    <Lexeme ID="50587" Stem1="sept."/>
+    <Lexeme ID="50588" Stem1="siev."/>
+    <Lexeme ID="50589" Stem1="spec."/>
+    <Lexeme ID="50591" Stem1="tab."/>
+    <Lexeme ID="50592" Stem1="t.p."/>
+    <Lexeme ID="50593" Stem1="t.s."/>
+    <Lexeme ID="50594" Stem1="t.sk."/>
+    <Lexeme ID="50595" Stem1="tūkst."/>
+    <Lexeme ID="50596" Stem1="uzņ."/>
+    <Lexeme ID="50597" Stem1="vad."/>
+    <Lexeme ID="50598" Stem1="val."/>
+    <Lexeme ID="50599" Stem1="va/s"/>
+    <Lexeme ID="50600" Stem1="vec."/>
+    <Lexeme ID="50601" Stem1="visp."/>
+    <Lexeme ID="50602" Stem1="vīr."/>
+    <Lexeme ID="50603" Stem1="vsk."/>
+    <Lexeme ID="50604" Stem1="v/u"/>
+    <Lexeme ID="50605" Stem1="zīm."/>
+    <Lexeme ID="50816" Stem1="kr."/>
+    <Lexeme ID="50629" Stem1="k-gs"/>
+    <Lexeme ID="50630" Stem1="k-dze"/>
+    <Lexeme ID="50648" Stem1="tālr."/>
+    <Lexeme ID="50649" Stem1="rēķ."/>
+    <Lexeme ID="50650" Stem1="pl."/>
+    <Lexeme ID="50651" Stem1="latv."/>
+    <Lexeme ID="50658" Stem1="sv."/>
+    <Lexeme ID="50665" Stem1="SIA"/>
+    <Lexeme ID="50666" Stem1="AS"/>
+    <Lexeme ID="50667" Stem1="ZS"/>
+    <Lexeme ID="50668" Stem1="IU"/>
+    <Lexeme ID="50669" Stem1="Ltd"/>
+    <Lexeme ID="50670" Stem1="GmbH"/>
+    <Lexeme ID="50671" Stem1="ZvS"/>
+    <Lexeme ID="50672" Stem1="VSIA"/>
+    <Lexeme ID="50673" Stem1="Inc"/>
+    <Lexeme ID="50674" Stem1="Inc."/>
+    <Lexeme ID="50675" Stem1="AB"/>
+    <Lexeme ID="50676" Stem1="b-bas"/>
+    <Lexeme ID="50677" Stem1="kult."/>
+    <Lexeme Stem1="fak."/>
+    <Lexeme ID="50679" Stem1="izglīt."/>
+    <Lexeme ID="50680" Stem1="sav."/>
+    <Lexeme ID="50681" Stem1="veic."/>
+    <Lexeme ID="50682" Stem1="nac."/>
+    <Lexeme ID="50683" Stem1="lauksaimn."/>
+    <Lexeme ID="50685" Stem1="mūz."/>
+    <Lexeme ID="50686" Stem1="zemn."/>
+    <Lexeme ID="50687" Stem1="PSKP"/>
+    <Lexeme ID="17323" Stem1="KGB"/>
+    <Lexeme ID="17324" Stem1="PSRS"/>
+    <Lexeme ID="50688" Stem1="PSR"/>
+    <Lexeme ID="50689" Stem1="KP"/>
+    <Lexeme ID="50690" Stem1="CK"/>
+    <Lexeme ID="50691" Stem1="CIP"/>
+    <Lexeme ID="50692" Stem1="CX"/>
+    <Lexeme ID="50693" Stem1="TIN"/>
+    <Lexeme ID="50698" Stem1="OK"/>
+    <Lexeme ID="50708" Stem1="NATO"/>
+    <Lexeme ID="50709" Stem1="ANO"/>
+    <Lexeme Stem1="IT"/>
+    <Lexeme Stem1="TV"/>
+    <Lexeme Stem1="ISO"/>
+    <Lexeme ID="50711" Stem1="km"/>
+    <Lexeme ID="50721" Stem1="m.g."/>
+    <Lexeme ID="50723" Stem1="ASV"/>
+    <Lexeme ID="50724" Stem1="UNESCO"/>
+    <Lexeme ID="50725" Stem1="LU"/>
+    <Lexeme ID="50726" Stem1="LLU"/>
+    <Lexeme Stem1="LLA"/>
+    <Lexeme Stem1="LVA"/>
+    <Lexeme Stem1="LVS"/>
+    <Lexeme Stem1="RPIS"/>
+    <Lexeme Stem1="DR"/>
+    <Lexeme Stem1="USA"/>
+    <Lexeme ID="50727" Stem1="LZP"/>
+    <Lexeme ID="50728" Stem1="PS"/>
+    <Lexeme ID="50729" Stem1="LR"/>
+    <Lexeme ID="50732" Stem1="EDSO"/>
+    <Lexeme ID="50733" Stem1="ONAP"/>
+    <Lexeme ID="50820" Stem1="EK"/>
+    <Lexeme ID="50830" Stem1="LETA"/>
+    <Lexeme ID="50831" Stem1="KNAB"/>
+    <Lexeme ID="50832" Stem1="LNB"/>
+    <Lexeme ID="50833" Stem1="LLC"/>
+    <Lexeme ID="50834" Stem1="LLP"/>
+    <Lexeme ID="50835" Stem1="LNNK"/>
+    <Lexeme ID="50836" Stem1="OECD"/>
+    <Lexeme ID="50837" Stem1="VK"/>
+    <Lexeme ID="50838" Stem1="FKTK"/>
+  </Paradigm>
+  <Paradigm Stems="1" ID="37" LemmaEnding="2092" Description="Pieturzīmes (! , ...)" AllowedGuessEndings="!">
+    <Lexeme ID="26727" Stem1="...">
+      <Attributes Pieturzīmes_tips="Punkts" Pamatforma="..."/>
+    </Lexeme>
+    <Lexeme ID="26728" Stem1="!...">
+      <Attributes Pieturzīmes_tips="Punkts" Pamatforma="!..."/>
+    </Lexeme>
+    <Lexeme ID="26729" Stem1="?...">
+      <Attributes Pieturzīmes_tips="Punkts" Pamatforma="?..."/>
+    </Lexeme>
+    <Lexeme ID="26730" Stem1="?!...">
+      <Attributes Pieturzīmes_tips="Punkts" Pamatforma="?!..."/>
+    </Lexeme>
+    <Lexeme ID="26731" Stem1="?!">
+      <Attributes Pieturzīmes_tips="Punkts" Pamatforma="?!"/>
+    </Lexeme>
+    <Lexeme ID="26732" Stem1="!?">
+      <Attributes Pieturzīmes_tips="Punkts" Pamatforma="!?"/>
+    </Lexeme>
+    <Lexeme ID="26733" Stem1="!..">
+      <Attributes Pieturzīmes_tips="Punkts" Pamatforma="!.."/>
+    </Lexeme>
+    <Lexeme ID="26734" Stem1="!?...">
+      <Attributes Pieturzīmes_tips="Punkts" Pamatforma="!?..."/>
+    </Lexeme>
+    <Lexeme ID="26735" Stem1="?!..">
+      <Attributes Pieturzīmes_tips="Punkts" Pamatforma="?!.."/>
+    </Lexeme>
+    <Lexeme ID="27194" Stem1=".">
+      <Attributes Pieturzīmes_tips="Punkts" Pamatforma="."/>
+    </Lexeme>
+    <Lexeme ID="50462" Stem1="..">
+      <Attributes Pieturzīmes_tips="Cita" Pamatforma=".."/>
+    </Lexeme>
+    <Lexeme ID="50731" Stem1="....">
+      <Attributes Pieturzīmes_tips="Punkts" Pamatforma="...."/>
+    </Lexeme>
+    <Lexeme ID="50610" Stem1="[..]">
+      <Attributes Pieturzīmes_tips="Cita" Pamatforma="[..]"/>
+    </Lexeme>
+    <Lexeme ID="27195" Stem1="?">
+      <Attributes Pieturzīmes_tips="Punkts" Pamatforma="?"/>
+    </Lexeme>
+    <Lexeme ID="27196" Stem1=":">
+      <Attributes Pieturzīmes_tips="Kols" Pamatforma=":"/>
+    </Lexeme>
+    <Lexeme ID="50606" Stem1="/">
+      <Attributes Pieturzīmes_tips="Cita" Pamatforma="/"/>
+    </Lexeme>
+    <Lexeme ID="50607" Stem1="//">
+      <Attributes Pieturzīmes_tips="Cita" Pamatforma="//"/>
+    </Lexeme>
+    <Lexeme ID="27197" Stem1="!">
+      <Attributes Pieturzīmes_tips="Punkts" Pamatforma="!"/>
+    </Lexeme>
+    <Lexeme ID="27198" Stem1=",">
+      <Attributes Pieturzīmes_tips="Komats" Pamatforma=","/>
+    </Lexeme>
+    <Lexeme ID="27199" Stem1=";">
+      <Attributes Pieturzīmes_tips="Komats" Pamatforma=";"/>
+    </Lexeme>
+    <Lexeme ID="27200" Stem1="&quot;">
+      <Attributes Pieturzīmes_tips="Pēdiņa" Pamatforma="&quot;"/>
+    </Lexeme>
+    <Lexeme ID="27201" Stem1="'">
+      <Attributes Pieturzīmes_tips="Cita" Pamatforma="'"/>
+    </Lexeme>
+    <Lexeme ID="50467" Stem1="`">
+      <Attributes Pieturzīmes_tips="Pēdiņa" Pamatforma="'"/>
+    </Lexeme>
+    <Lexeme ID="50468" Stem1="´">
+      <Attributes Pieturzīmes_tips="Pēdiņa" Pamatforma="'"/>
+    </Lexeme>
+    <Lexeme ID="27202" Stem1="(">
+      <Attributes Pieturzīmes_tips="Iekava" Pamatforma="("/>
+    </Lexeme>
+    <Lexeme ID="27203" Stem1=")">
+      <Attributes Pieturzīmes_tips="Iekava" Pamatforma=")"/>
+    </Lexeme>
+    <Lexeme ID="50463" Stem1="{">
+      <Attributes Pieturzīmes_tips="Iekava" Pamatforma="("/>
+    </Lexeme>
+    <Lexeme ID="50464" Stem1="}">
+      <Attributes Pieturzīmes_tips="Iekava" Pamatforma=")"/>
+    </Lexeme>
+    <Lexeme ID="50465" Stem1="&lt;">
+      <Attributes Pieturzīmes_tips="Iekava" Pamatforma="&lt;"/>
+    </Lexeme>
+    <Lexeme ID="50466" Stem1="&gt;">
+      <Attributes Pieturzīmes_tips="Iekava" Pamatforma="&gt;"/>
+    </Lexeme>
+    <Lexeme ID="27204" Stem1="«">
+      <Attributes Pieturzīmes_tips="Pēdiņa" Pamatforma="&quot;"/>
+    </Lexeme>
+    <Lexeme ID="27205" Stem1="»">
+      <Attributes Pieturzīmes_tips="Pēdiņa" Pamatforma="&quot;"/>
+    </Lexeme>
+    <Lexeme ID="50758" Stem1="''">
+      <Attributes Pieturzīmes_tips="Pēdiņa" Pamatforma="&quot;"/>
+    </Lexeme>
+    <Lexeme ID="27206" Stem1="-">
+      <Attributes Pieturzīmes_tips="Domuzīme" Pamatforma="-"/>
+    </Lexeme>
+    <Lexeme ID="27207" Stem1="[">
+      <Attributes Pieturzīmes_tips="Iekava" Pamatforma="("/>
+    </Lexeme>
+    <Lexeme ID="27208" Stem1="]">
+      <Attributes Pieturzīmes_tips="Iekava" Pamatforma=")"/>
+    </Lexeme>
+    <Lexeme ID="27211" Stem1="—">
+      <Attributes Pieturzīmes_tips="Domuzīme" Pamatforma="-"/>
+    </Lexeme>
+    <Lexeme ID="50469" Stem1="‐">
+      <Attributes Pieturzīmes_tips="Domuzīme" Pamatforma="-"/>
+    </Lexeme>
+    <Lexeme ID="50470" Stem1="‑">
+      <Attributes Pieturzīmes_tips="Domuzīme" Pamatforma="-"/>
+    </Lexeme>
+    <Lexeme ID="50471" Stem1="‒">
+      <Attributes Pieturzīmes_tips="Domuzīme" Pamatforma="-"/>
+    </Lexeme>
+    <Lexeme ID="50472" Stem1="–">
+      <Attributes Pieturzīmes_tips="Domuzīme" Pamatforma="-"/>
+    </Lexeme>
+    <Lexeme ID="50473" Stem1="―">
+      <Attributes Pieturzīmes_tips="Domuzīme" Pamatforma="-"/>
+    </Lexeme>
+    <Lexeme Stem1="˗">
+      <Attributes Pieturzīmes_tips="Domuzīme" Pamatforma="-"/>
+    </Lexeme>
+    <Lexeme ID="50474" Stem1="‘">
+      <Attributes Pieturzīmes_tips="Pēdiņa" Pamatforma="'"/>
+    </Lexeme>
+    <Lexeme ID="50475" Stem1="’">
+      <Attributes Pieturzīmes_tips="Pēdiņa" Pamatforma="'"/>
+    </Lexeme>
+    <Lexeme ID="50476" Stem1="‚">
+      <Attributes Pieturzīmes_tips="Pēdiņa" Pamatforma="'"/>
+    </Lexeme>
+    <Lexeme ID="50477" Stem1="‛">
+      <Attributes Pieturzīmes_tips="Pēdiņa" Pamatforma="'"/>
+    </Lexeme>
+    <Lexeme ID="50478" Stem1="“">
+      <Attributes Pieturzīmes_tips="Pēdiņa" Pamatforma="&quot;"/>
+    </Lexeme>
+    <Lexeme ID="50479" Stem1="”">
+      <Attributes Pieturzīmes_tips="Pēdiņa" Pamatforma="&quot;"/>
+    </Lexeme>
+    <Lexeme ID="50480" Stem1="„">
+      <Attributes Pieturzīmes_tips="Pēdiņa" Pamatforma="&quot;"/>
+    </Lexeme>
+    <Lexeme ID="50481" Stem1="‟">
+      <Attributes Pieturzīmes_tips="Pēdiņa" Pamatforma="&quot;"/>
+    </Lexeme>
+    <Lexeme ID="50482" Stem1="′">
+      <Attributes Pieturzīmes_tips="Pēdiņa" Pamatforma="'"/>
+    </Lexeme>
+    <Lexeme ID="50483" Stem1="″">
+      <Attributes Pieturzīmes_tips="Pēdiņa" Pamatforma="'"/>
+    </Lexeme>
+    <Lexeme ID="50484" Stem1="‴">
+      <Attributes Pieturzīmes_tips="Pēdiņa" Pamatforma="&quot;"/>
+    </Lexeme>
+    <Lexeme ID="50485" Stem1="‵">
+      <Attributes Pieturzīmes_tips="Pēdiņa" Pamatforma="'"/>
+    </Lexeme>
+    <Lexeme ID="50486" Stem1="‶">
+      <Attributes Pieturzīmes_tips="Pēdiņa" Pamatforma="&quot;"/>
+    </Lexeme>
+    <Lexeme ID="50487" Stem1="‷">
+      <Attributes Pieturzīmes_tips="Pēdiņa" Pamatforma="&quot;"/>
+    </Lexeme>
+    <Lexeme ID="50488" Stem1="‹">
+      <Attributes Pieturzīmes_tips="Pēdiņa" Pamatforma="'"/>
+    </Lexeme>
+    <Lexeme ID="50489" Stem1="›">
+      <Attributes Pieturzīmes_tips="Pēdiņa" Pamatforma="'"/>
+    </Lexeme>
+    <Lexeme ID="50490" Stem1="‼">
+      <Attributes Pieturzīmes_tips="Punkts" Pamatforma="‼"/>
+    </Lexeme>
+    <Lexeme ID="50491" Stem1="‽">
+      <Attributes Pieturzīmes_tips="Punkts" Pamatforma="‽"/>
+    </Lexeme>
+    <Lexeme ID="50492" Stem1="⁈">
+      <Attributes Pieturzīmes_tips="Punkts" Pamatforma="⁈"/>
+    </Lexeme>
+    <Lexeme ID="50493" Stem1="⁉">
+      <Attributes Pieturzīmes_tips="Punkts" Pamatforma="⁉"/>
+    </Lexeme>
+    <Lexeme ID="50494" Stem1="․">
+      <Attributes Pieturzīmes_tips="Punkts" Pamatforma="․"/>
+    </Lexeme>
+    <Lexeme ID="50495" Stem1="‥">
+      <Attributes Pieturzīmes_tips="Punkts" Pamatforma="‥"/>
+    </Lexeme>
+    <Lexeme ID="50496" Stem1="…">
+      <Attributes Pieturzīmes_tips="Punkts" Pamatforma="…"/>
+    </Lexeme>
+  </Paradigm>
+  <Paradigm Stems="1" ID="38" LemmaEnding="2093" Description="Izsauksmes vārdi (ak, aha)" AllowedGuessEndings="!">
+    <Lexeme ID="27265" Stem1="vau"/>
+    <Lexeme ID="28312" Stem1="labdien"/>
+    <Lexeme ID="50699" Stem1="lūdzu"/>
+    <Lexeme ID="49544" Stem1="paldies"/>
+    <Lexeme ID="50751" Stem1="pavei"/>
+    <Lexeme ID="50819" Stem1="aha"/>    
+    <Lexeme ID="50821" Stem1="fui"/>    
+    <Lexeme ID="50829" Stem1="ha"/>    
+    <Lexeme ID="50822" Stem1="ha-ha"/>    
+    <Lexeme ID="50823" Stem1="ha-ha-ha"/>    
+    <Lexeme ID="50826" Stem1="bļin"/>    
+    <Lexeme ID="50827" Stem1="bļaģ"/>    
+    <Lexeme ID="50828" Stem1="bļa"/>    
+    <Lexeme ID="50841" Stem1="vot"/>    
+    <Lexeme ID="50842" Stem1="še"/>    
+    <Lexeme ID="50843" Stem1="redz"/>    
+    <Lexeme ID="28337" Stem1="oho"/>
+    <Lexeme ID="28376" Stem1="eu"/>
+    <Lexeme ID="28388" Stem1="eh"/>
+    <Lexeme ID="28390" Stem1="ei"/>
+    <Lexeme ID="28404" Stem1="žvīks"/>
+    <Lexeme ID="28439" Stem1="labrīt"/>
+    <Lexeme ID="28459" Stem1="ak"/>
+    <Lexeme ID="28472" Stem1="nu"/>
+    <Lexeme ID="28474" Stem1="tik"/>
+    <Lexeme ID="28522" Stem1="krā"/>
+    <Lexeme ID="28524" Stem1="ņau"/>
+  </Paradigm>
+  <Paradigm Stems="1" ID="39" LemmaEnding="2094" Description="Vārdi svešvalodā (company, adaggio)" AllowedGuessEndings="!">
+    <Lexeme ID="50839" Stem1="company"/>
+    <Lexeme ID="50840" Stem1="fund"/>
+    <Lexeme ID="50864" Stem1="fuck"/>
   </Paradigm>
 </Lexicon>

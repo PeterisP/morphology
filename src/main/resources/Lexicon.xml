@@ -5220,4 +5220,67 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Akuzatīvs"/>
 		</Ending>		
 	</Paradigm>	
+	<Paradigm Stems="1" ID="35" LemmaEnding="2079" Description="Lietvārdi, 6. deklinācijas -s locīšanas izņēmumi bez mijas (auss, kūts)" AllowedGuessEndings="!">
+		<Attributes Vārdšķira="Lietvārds" Deklinācija="6" Dzimte="Sieviešu"/>
+		<Ending ID="2079" StemChange="0" Ending="s" StemID="1" LemmaEnding="2079">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
+		</Ending>
+		<Ending ID="2080" StemChange="0" Ending="s" StemID="1" LemmaEnding="2079">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Ģenitīvs"/>
+		</Ending>
+		<Ending ID="2081" StemChange="0" Ending="ij" StemID="1" LemmaEnding="2079">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Datīvs"/>
+		</Ending>
+		<Ending ID="2082" StemChange="0" Ending="i" StemID="1" LemmaEnding="2079">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Akuzatīvs"/>
+		</Ending>
+		<Ending ID="2083" StemChange="0" Ending="ī" StemID="1" LemmaEnding="2079">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Lokatīvs"/>
+		</Ending>
+		<Ending ID="2084" StemChange="0" Ending="s" StemID="1" LemmaEnding="2079">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs"/>
+		</Ending>
+		<Ending ID="2085" StemChange="0" Ending="is" StemID="1" LemmaEnding="2079">
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Nominatīvs"/>
+		</Ending>
+		<Ending ID="2086" StemChange="0" Ending="u" StemID="1" LemmaEnding="2079">
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Ģenitīvs"/>
+		</Ending>
+		<Ending ID="2087" StemChange="0" Ending="īm" StemID="1" LemmaEnding="2079">
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Datīvs"/>
+		</Ending>
+		<Ending ID="2088" StemChange="0" Ending="is" StemID="1" LemmaEnding="2079">
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Akuzatīvs"/>
+		</Ending>
+		<Ending ID="2089" StemChange="0" Ending="īs" StemID="1" LemmaEnding="2079">
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Lokatīvs"/>
+		</Ending>
+		<Ending ID="2090" StemChange="0" Ending="is" StemID="1" LemmaEnding="2079">
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
+		</Ending>
+	</Paradigm>
+	<Paradigm Stems="1" ID="36" LemmaEnding="2091" Description="Saīsinājumi (t.i. utt. u.c.)" AllowedGuessEndings="!">
+		<Attributes Vārdšķira="Saīsinājums"/>
+		<Ending ID="2091" StemChange="0" Ending="" StemID="1" LemmaEnding="2091">
+			<Attributes/>
+		</Ending>
+	</Paradigm>
+	<Paradigm Stems="1" ID="37" LemmaEnding="2092" Description="Pieturzīmes (! , ...)" AllowedGuessEndings="!">
+		<Attributes Vārdšķira="Pieturzīme"/>
+		<Ending ID="2092" StemChange="0" Ending="" StemID="1" LemmaEnding="2092">
+			<Attributes/>
+		</Ending>
+	</Paradigm>
+	<Paradigm Stems="1" ID="38" LemmaEnding="2093" Description="Izsauksmes vārdi (ak, aha)" AllowedGuessEndings="!">
+		<Attributes Vārdšķira="Izsauksmes vārds" Uzbūve="Vienkāršs"/>
+		<Ending ID="2093" StemChange="0" Ending="" StemID="1" LemmaEnding="2093">
+			<Attributes/>
+		</Ending>
+	</Paradigm>
+	<Paradigm Stems="1" ID="39" LemmaEnding="2094" Description="Vārdi svešvalodā (company, adaggio)" AllowedGuessEndings="!">
+		<Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Vārds svešvalodā"/>
+		<Ending ID="2094" StemChange="0" Ending="" StemID="1" LemmaEnding="2094">
+			<Attributes/>
+		</Ending>
+	</Paradigm>
 </Morphology>

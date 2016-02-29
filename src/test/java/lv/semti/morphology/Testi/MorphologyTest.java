@@ -266,12 +266,14 @@ public class MorphologyTest {
 
 	@Test
 	public void skansts(){
-		List<Wordform> lasis = locītājs.generateInflections("skansts");
+		List<Wordform> skansts = locītājs.generateInflections("skansts");
+		assertNotEquals(skansts.size(), 0);
+		describe(skansts);
 		AttributeValues testset = new AttributeValues();
 		testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
 		testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Genitive);
 		testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Plural);
-		assertInflection(lasis, testset, "skanšu");
+		assertInflection(skansts, testset, "skanšu");
 	}
 	
 	@Test
