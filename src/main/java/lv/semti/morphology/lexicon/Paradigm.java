@@ -165,7 +165,7 @@ public class Paradigm extends AttributeValues {
 
 	public Ending getLemmaEnding(){
 		return lemmaEnding;
-		//FIXME - kur to lieto? varbūt vajag vienu no alternatīvajām pamatformām
+		// Lieto tam, lai jaunu leksēmu ģenerējot, aizpildītu lemma lauku
 	}
 
 	public int numberOfEndings () {
@@ -242,6 +242,8 @@ public class Paradigm extends AttributeValues {
 
 	public void setLemmaEnding(int lemmaEnding) {
 		this.lemmaEnding = endingByNr(lemmaEnding);
+		if (this.lemmaEnding == null)
+			System.err.printf("Error when loading paradigm %d - cannot find lemma ending %d\n", this.id, lemmaEnding);
 	}
 
 	public int getStems() {

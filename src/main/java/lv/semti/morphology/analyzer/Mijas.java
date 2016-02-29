@@ -82,12 +82,7 @@ public abstract class Mijas {
 					if (celms.equalsIgnoreCase("vies") || celms.equalsIgnoreCase("vieš") || celms.equalsIgnoreCase("cēs") || celms.equalsIgnoreCase("cēš") || celms.endsWith("tēt") || celms.endsWith("tēš") ||
 							celms.endsWith("ast") || celms.endsWith("asš") || celms.endsWith("mat") || celms.endsWith("maš") ||
 							celms.endsWith("skat") || celms.endsWith("skaš") || (celms.endsWith("st")&& ! celms.endsWith("kst")) ||	celms.endsWith("sš")
-							 // acs, auss, utml izņēmumi
-							 || (celms.endsWith("ac") || celms.endsWith("akti") || celms.endsWith("aus") || celms.equals("as") ||
-							     celms.endsWith("bals") || celms.endsWith("brokast") || celms.endsWith("cēs") || celms.endsWith("dakt") ||
-							     celms.endsWith("debes") || celms.endsWith("dzelz") || celms.endsWith("kūt") || celms.endsWith("makst") ||
-							     celms.endsWith("pirt") || celms.endsWith("šalt") || celms.endsWith("takt") || celms.endsWith("ut") ||
-							     celms.endsWith("valst") || celms.endsWith("vēst") || celms.endsWith("zos") || celms.endsWith("žult") ) ) {
+						) {
 						varianti.add(new Variants(celms));
 					}
 					// Personvārdu mijas - Valdis-Valda; Gatis-Gata.  Vēl ir literatūrā minēts izņēmums -skis -ckis (Čaikovskis, Visockis), taču tiem tāpat viss šķiet ok.
@@ -448,14 +443,7 @@ public abstract class Mijas {
 				case 1: // lietvārdu līdzskaņu mija
 					if ( (celms.endsWith("vies") && !celms.endsWith("kvies")) || (celms.endsWith("vieš") && !celms.endsWith("evieš")) || celms.equalsIgnoreCase("cēs") || celms.endsWith("tēt") || celms.endsWith("tēš") ||
 							celms.endsWith("ast") || celms.endsWith("asš") || celms.endsWith("mat") || celms.endsWith("maš") ||
-							celms.endsWith("skat") || celms.endsWith("skaš") || (celms.endsWith("st") && ! celms.endsWith("kst")) || celms.endsWith("sš")
-							 // acs, auss, utml siev. dz. izņēmumi
-							 || (celms.endsWith("ac") || celms.endsWith("akti") || celms.endsWith("aus") || celms.endsWith("as") ||
-							     celms.endsWith("bals") || celms.endsWith("brokast") || celms.endsWith("cēs") || celms.endsWith("dakt") ||
-							     celms.endsWith("debes") || celms.endsWith("dzelz") || celms.endsWith("kūt") || celms.endsWith("makst") ||
-							     celms.endsWith("pirt") || celms.endsWith("šalt") || celms.endsWith("takt") || (celms.endsWith("ut") && !celms.endsWith("but"))||
-							     celms.endsWith("valst") || celms.endsWith("vēst") || celms.endsWith("zos") || celms.endsWith("žult") )
-							     ) {
+							celms.endsWith("skat") || celms.endsWith("skaš") || (celms.endsWith("st") && ! celms.endsWith("kst")) || celms.endsWith("sš")) {
 						varianti.add(new Variants(celms));
 					}
 					// Personvārdu mijas - Valdis-Valda; Gatis-Gata. Eglīts - Eglīša.  Vēl ir literatūrā minēts izņēmums -skis -ckis (Čaikovskis, Visockis), taču tiem tāpat viss šķiet ok.

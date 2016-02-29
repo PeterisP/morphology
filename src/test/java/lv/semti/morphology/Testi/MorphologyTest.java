@@ -263,6 +263,16 @@ public class MorphologyTest {
 		Word w = locītājs.analyze("lasiem");
 		assertFalse(w.isRecognized());
 	}
+
+	@Test
+	public void skansts(){
+		List<Wordform> lasis = locītājs.generateInflections("skansts");
+		AttributeValues testset = new AttributeValues();
+		testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
+		testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Genitive);
+		testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Plural);
+		assertInflection(lasis, testset, "skanšu");
+	}
 	
 	@Test
 	public void debesis(){
@@ -280,7 +290,7 @@ public class MorphologyTest {
 		testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Plural);
 		assertInflection(debesis, testset, "debešiem");
 		
-		List<Wordform> debess = locītājs.generateInflections("debess", 11);
+		List<Wordform> debess = locītājs.generateInflections("debess", 35);
 		testset = new AttributeValues();
 		testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
 		testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Genitive);
@@ -302,12 +312,12 @@ public class MorphologyTest {
 	@Test
 	public void balss(){
 		// 2016-02-03 Tā kā "debesis" kļūda visticamāk ir saistīta ar 6.dekl. izņēmumiem, tad papildus tests uz tiem.
-		List<Wordform> lasis = locītājs.generateInflections("balss");
+		List<Wordform> balss = locītājs.generateInflections("balss");
 		AttributeValues testset = new AttributeValues();
 		testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
 		testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Genitive);
 		testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Plural);
-		assertInflection(lasis, testset, "balsu");
+		assertInflection(balss, testset, "balsu");
 				
 		Word w = locītājs.analyze("balšu");
 		assertFalse(w.isRecognized());
