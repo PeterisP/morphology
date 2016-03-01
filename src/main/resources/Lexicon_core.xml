@@ -12486,6 +12486,8 @@
     <Lexeme Stem1="centrāl"/>
     <Lexeme Stem1="malēj"/>
     <Lexeme Stem1="pēdēj"/>
+    <Lexeme Stem1="cietuš"/>
+    <Lexeme Stem1="dzeram"/>
   </Paradigm>
   <Paradigm Stems="1" ID="31" LemmaEnding="2044" Description="Lietvārds 3. deklinācija -us sieviešu dzimtei (uzvārdiem)" AllowedGuessEndings="!">
   </Paradigm>
@@ -13105,4 +13107,21 @@
     <Lexeme ID="50840" Stem1="fund"/>
     <Lexeme ID="50864" Stem1="fuck"/>
   </Paradigm>
-</Lexicon>
+  <Paradigm Stems="1" ID="40" LemmaEnding="2031" Description="Substantivizējušies noteiktās formas īpašības vārdi sieviešu dzimtē (mēnessērdzīgā, apsūdzētā)" AllowedGuessEndings="!">
+    <Lexeme Stem1="mēnessērdzīg"/>
+    <Lexeme Stem1="apsūdzēt"/>
+    <Lexeme Stem1="galven"/>
+    <Lexeme Stem1="vienīg"/>
+    <Lexeme Stem1="pērn"/>
+    <Lexeme Stem1="līdzšinēj"/>
+    <Lexeme Stem1="turpmāk"/>
+    <Lexeme Stem1="centrāl"/>
+    <Lexeme Stem1="malēj"/>
+    <Lexeme Stem1="pēdēj"/>
+  </Paradigm>
+  <Paradigm Stems="1" ID="41" Description="Substantivizējušies noteiktās formas -is/-usi divdabji sieviešu dzimtē (cietusī)">
+    <Lexeme Stem1="jaundzimuš"/>
+    <Lexeme Stem1="miruš"/>
+    <Lexeme Stem1="pieauguš"/>
+    <Lexeme Stem1="cietuš"/>
+  </Paradigm></Lexicon>

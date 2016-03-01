@@ -2112,18 +2112,17 @@ public class MorphologyTest {
 	public void jaundzimushais() {
 		Word w = locītājs.analyze("jaundzimušajam");
 		assertTrue(w.isRecognized());
-		assertEquals(AttributeNames.v_Adjective, w.wordforms.get(0).getValue(AttributeNames.i_PartOfSpeech));
+		assertEquals(AttributeNames.v_Noun, w.wordforms.get(0).getValue(AttributeNames.i_PartOfSpeech));
 		assertEquals("jaundzimušais", w.wordforms.get(0).getValue(AttributeNames.i_Lemma));
-		assertEquals(AttributeNames.v_Definite, w.wordforms.get(0).getValue(AttributeNames.i_Definiteness));
 
 		w = locītājs.analyze("jaundzimusī");
 		assertTrue(w.isRecognized());
-		assertEquals(AttributeNames.v_Adjective, w.wordforms.get(0).getValue(AttributeNames.i_PartOfSpeech));
+		assertEquals(AttributeNames.v_Noun, w.wordforms.get(0).getValue(AttributeNames.i_PartOfSpeech));
 		assertEquals("jaundzimusī", w.wordforms.get(0).getValue(AttributeNames.i_Lemma));
 		
 		w = locītājs.analyze("galvenajam");
 		assertTrue(w.isRecognized());
-		assertEquals(AttributeNames.v_Adjective, w.wordforms.get(0).getValue(AttributeNames.i_PartOfSpeech));
+		assertEquals(AttributeNames.v_Noun, w.wordforms.get(0).getValue(AttributeNames.i_PartOfSpeech));
 		assertEquals("galvenais", w.wordforms.get(0).getValue(AttributeNames.i_Lemma));
 	}
 	
@@ -2506,4 +2505,21 @@ public class MorphologyTest {
 		List<Wordform> formas = locītājs.generateInflections("vārāms", 16);
 	}
 
+	@Test // izmaiņas ar substantivizējušamies divdabjiem un īpašībasvārdiem
+	public void adjektīviskā_deklinācija() {
+        List<Wordform> formas = locītājs.generateInflections("mēnessērdzīgais", true);
+        assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, "", "mēnessērdzīgajam");
+
+        formas = locītājs.generateInflections("mēnessērdzīgā", true);
+        assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, "", "mēnessērdzīgajai");
+
+        formas = locītājs.generateInflections("cietušais", true);
+        assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, "", "cietušajam");
+
+        formas = locītājs.generateInflections("cietusī", true);
+        assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, "", "cietušajai");
+
+        formas = locītājs.generateInflections("dzeramais", true);
+        assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, "", "dzeramajam");
+    }
 }
