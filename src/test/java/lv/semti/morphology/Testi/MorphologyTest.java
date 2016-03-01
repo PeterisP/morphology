@@ -2536,6 +2536,12 @@ public class MorphologyTest {
         testset.addAttribute(AttributeNames.i_Izteiksme, AttributeNames.v_Iisteniibas);
         testset.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Tagadne);
         assertInflection(formas, testset, "ir");
+
+        formas = locītājs.generateInflections("viņš");
+
+        testset = new AttributeValues();
+        testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Dative);
+        assertInflection(formas, testset, "viņam");
     }
 
 }

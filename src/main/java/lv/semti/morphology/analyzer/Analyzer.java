@@ -812,7 +812,7 @@ public class Analyzer extends Lexicon {
 			trešāSakne = lexeme.getStem(2);
 		}
 
-        if (lexeme.getParadigm().getID() == 29) { // Hardcoded paradigma
+        if (lexeme.getParadigm().getID() == 29 || lexeme.getParadigm().getID() == 25 ) { // Hardcoded paradigma un vietniekvārdi
             // Ja vārds ir hardcoded, tad salasam visas hardcoded formas ar attiecīgo lemmu un tās arī atgriežam
             Ending ending = lexeme.getParadigm().getLemmaEnding();
             for (Lexeme formLexeme : this.hardcodedForms.get(lemma)) {
