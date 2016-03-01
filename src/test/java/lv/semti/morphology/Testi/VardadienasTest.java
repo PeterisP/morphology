@@ -20,15 +20,7 @@ package lv.semti.morphology.Testi;
 
 import static org.junit.Assert.*;
 
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.io.PrintStream;
-import java.io.PrintWriter;
-import java.io.UnsupportedEncodingException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -50,7 +42,7 @@ public class VardadienasTest {
 	@BeforeClass
 	public static void setUpBeforeClass() {
 		try {
-			locītājs = new Analyzer("dist/Lexicon.xml", false);
+			locītājs = new Analyzer(false);
 		} catch(Exception e) {
 			e.printStackTrace();
 		} 
@@ -68,7 +60,7 @@ public class VardadienasTest {
 		BufferedReader ieeja;
 		String rinda;
 		ieeja = new BufferedReader(
-				new InputStreamReader(new FileInputStream("dist/vardadienas.txt"), "UTF-8"));
+				new InputStreamReader(getClass().getClassLoader().getResourceAsStream("vardadienas.txt"), "UTF-8"));
 				
 		while ((rinda = ieeja.readLine()) != null) {
 			Word vārds = locītājs.analyze(rinda);

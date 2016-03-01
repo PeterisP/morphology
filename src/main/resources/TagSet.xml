@@ -75,6 +75,7 @@
 	<Value LV="Atstāstījuma" EN="Relative" Tag="r"/>
 	<Value LV="Vēlējuma" EN="Conditional" Tag="c"/>
 	<Value LV="Vajadzības" EN="Debitive" Tag="d"/>
+	<Value LV="Vajadzības, atstāstījuma paveids" EN="Debitive" Tag="?"/>
 	<Value LV="Pavēles" EN="Imperative" Tag="m"/>
 	<Value LV="Nenoteiksme" EN="Infinitive" Tag="n"/>
 	<Value LV="Divdabis" EN="Participle" Tag="p"/>
@@ -359,6 +360,7 @@
 	<Value LV="Skaitlis cipariem" EN="Numeral" Tag="n"/>
 	<Value LV="Kārtas skaitlis cipariem" EN="Ordinal" Tag="o"/>
 	<Value LV="URL" EN="URL" Tag="u"/>
+	<Value LV="Saīsinājums" EN="Abbreviation" Tag="?"/>
 	<Value LV="Cits" EN="Other" Tag="x"/>
 </Attribute>
 
@@ -374,19 +376,102 @@
 	<Value LV="Minēšana pēc galotnes" EN="Guess based on endings"/>
 </Attribute>
 
-<FreeAttribute LV="Vārdgrupas nr" EN="Paradigm ID">
-</FreeAttribute>
-<FreeAttribute LV="Leksēmas nr" EN="Lexeme ID">
-</FreeAttribute>
-<FreeAttribute LV="Galotnes nr" EN="Ending ID">
-</FreeAttribute>
-<FreeAttribute LV="Pamatforma" EN="Lemma">
-</FreeAttribute>
-<FreeAttribute LV="Avots" EN="Source"> 
-</FreeAttribute>
-<FreeAttribute LV="Vārds" EN="Wordform"> 
-</FreeAttribute>
-<FreeAttribute LV="Avota pamatforma" EN="Lexicon entry lemma"> 
-</FreeAttribute>
+<Attribute LV="Īpašvārda veids" EN="Proper noun type" PartOfSpeech="Lietvārds" >
+	<Value LV="Priekšvārds" EN="Given name"/>
+	<Value LV="Uzvārds" EN="Surname"/>
+	<Value LV="Vietvārds" EN="Toponym"/>
+</Attribute>
+
+<Attribute LV="Biežums" EN="Usage frequency">
+	<Value LV="Reti" EN="Rare"/>
+	<Value LV="Retāk" EN="Rarer"/>
+	<Value LV="Pareti" EN="Rarish"/>
+	<Value LV="Neaktuāls" EN="Obsolete"/>
+</Attribute>
+
+<Attribute LV="Lietojums" EN="Usage">
+	<Value LV="Novecojis" EN="Dated"/>
+	<Value LV="Vēsturisks" EN="Historical"/>
+	<Value LV="Sarunvaloda" EN="Colloquial"/>
+	<Value LV="Nevēlams" EN="Undesirable"/>
+	<Value LV="Žargonvārds" EN="Slang"/>
+	<Value LV="Vulgārisms" EN="Vulgar"/>
+</Attribute>
+
+<Attribute LV="Stils" EN="Style">
+	<Value LV="Nievīga ekspresīvā nokrāsa" EN="Derogatory"/>
+	<Value LV="Ironiska ekspresīvā nokrāsa" EN="Ironic"/>
+	<Value LV="Humoristiska ekspresīvā nokrāsa" EN="Jocular"/>
+	<Value LV="Poētiska stilistiskā nokrāsa" EN="Poetic"/>
+	<Value LV="Vienkāršrunas stilistiskā nokrāsa" EN="Simplistic"/>
+</Attribute>
+
+<Attribute LV="Nozare" EN="Domain">
+	<Value LV="Literatūrzinātne" EN="Literary science"/>
+	<Value LV="Jurisprudence" EN="Law"/>
+	<Value LV="Ķīmija" EN="Chemistry"/>
+	<Value LV="Bioloģija" EN="Biology"/>
+	<Value LV="Botānika" EN="Botany"/>
+	<Value LV="Ornitoloģija" EN="Ornitology"/>
+	<Value LV="Zooloģija" EN="Zoology"/>
+	<Value LV="Veterinārija" EN="Veterinary"/>
+	<Value LV="Anatomija" EN="Anatomy"/>
+	<Value LV="Fizioloģija" EN="Physiology"/>
+	<Value LV="Fizika" EN="Physics"/>
+	<Value LV="Valodniecība" EN="Linguistics"/>
+	<Value LV="Arhitektūra" EN="Architecture"/>
+	<Value LV="Medicīna" EN="Medicine"/>
+	<Value LV="Farmakoloģija" EN="Pharmacology"/>
+	<Value LV="Psiholoģija" EN="Psychology"/>
+	<Value LV="Arheoloģija" EN="Archeology"/>
+	<Value LV="Meteoroloģija" EN="Meteorology"/>
+	<Value LV="Astronomija" EN="Astronomy"/>
+	<Value LV="Filozofija" EN="Philosophy"/>
+	<Value LV="Ģeogrāfija" EN="Geography"/>
+	<Value LV="Ģeodēzija" EN="Geodesy"/>
+	<Value LV="Ģeoloģija" EN="Geology"/>
+	<Value LV="Mineraloģija" EN="Mineralogy"/>
+	<Value LV="Reliģija" EN="Religion"/>
+	<Value LV="Mitoloģija" EN="Mythology"/>
+	<Value LV="Etnogrāfija" EN="Etnography"/>
+	<Value LV="Folklora" EN="Folklore"/>
+	<Value LV="Mūzika" EN="Music"/>
+	<Value LV="Kulinārija" EN="Culinary"/>
+	<Value LV="Politika" EN="Politics"/>
+	<Value LV="Ekonomika" EN="Economics"/>
+	<Value LV="Finanses" EN="Finance"/>
+	<Value LV="Grāmatvedība" EN="Accounting"/>
+	<Value LV="Matemātika" EN="Mathemathics"/>
+	<Value LV="Loģika" EN="Logic"/>
+	<Value LV="Informātika" EN="Informatics"/>
+	<Value LV="Tehnika" EN="Technical"/>
+	<Value LV="Elektrotehnika" EN="Electrotechnical"/>
+	<Value LV="Hidrotehnika" EN="Hydrotechnical"/>
+	<Value LV="Tekstilrūpniecība" EN="Textiles"/>
+	<Value LV="Poligrāfija" EN="Poligraphy"/>
+	<Value LV="Lauksaimniecība" EN="Agriculture"/>
+	<Value LV="Mežsaimniecība" EN="Forestry"/>
+	<Value LV="Medniecība" EN="Hunting"/>
+	<Value LV="Biškopība" EN="Beekeeping"/>
+	<Value LV="Būvniecība" EN="Construction"/>
+	<Value LV="Fiziskā kultūra un sports" EN="Sports"/>
+	<Value LV="Militārās zinātnes" EN="Military"/>
+	<Value LV="Aviācija" EN="Aviation"/>
+	<Value LV="Jūrniecība" EN="Marine"/>
+	<Value LV="Attiecas uz kapitālistisko iekārtu, kapitālistisko sabiedrību" EN="Capitalism"/>
+</Attribute>
+
+
+<FreeAttribute LV="Vārdgrupas nr" EN="Paradigm ID"/>
+<FreeAttribute LV="Leksēmas nr" EN="Lexeme ID"/>
+<FreeAttribute LV="Galotnes nr" EN="Ending ID"/>
+<FreeAttribute LV="Pamatforma" EN="Lemma"/>
+<FreeAttribute LV="Avots" EN="Source"/> 
+<FreeAttribute LV="Pirmavots" EN="Primary source"/> 
+<FreeAttribute LV="Vārds" EN="Wordform"/> 
+<FreeAttribute LV="Avota pamatforma" EN="Lexicon entry lemma"/> 
+<FreeAttribute LV="Piezīmes" EN="Notes"/> 
+<FreeAttribute LV="Locīšana" EN="Inflection"/> 
+<FreeAttribute LV="Valoda" EN="Language"/> 
 
 </TagSet>

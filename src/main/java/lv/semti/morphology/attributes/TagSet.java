@@ -200,7 +200,7 @@ public class TagSet {
 		for (Attribute attribute : attributes) 
 			if (attribute instanceof FixedAttribute) {
 				FixedAttribute fattribute = (FixedAttribute) attribute;
-				if (fattribute.matchPos(pos) && fattribute.markupPos < tag.length()) 
+				if (fattribute.matchPos(pos) && fattribute.markupPos < tag.length() && fattribute.markupPos > 0)
 					fattribute.addValue(values, tag.charAt(fattribute.markupPos), language);
 			}
 		
