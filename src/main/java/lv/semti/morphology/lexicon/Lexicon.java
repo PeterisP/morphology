@@ -25,6 +25,8 @@ import java.util.stream.Stream;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
+import com.google.common.collect.ArrayListMultimap;
+import com.google.common.collect.Multimap;
 import lv.semti.morphology.analyzer.AllEndings;
 import lv.semti.morphology.analyzer.Mijas;
 import lv.semti.morphology.analyzer.Variants;
@@ -45,9 +47,6 @@ import org.w3c.dom.NodeList;
 public class Lexicon {
 
 	public final static String DEFAULT_LEXICON_FILE = "Lexicon.xml";
-	private final static String[] DEFAULT_LEXICON_LOCATIONS = {
-		System.getProperty("lv.semti.morphology.lexicon.path"),
-		".", "..", "../..", "resources", "src/main/resources", "dist"};
 
 	protected String filename;
 	private String revision;
@@ -62,6 +61,8 @@ public class Lexicon {
 	protected Pattern p_firstcap = Pattern.compile("\\p{Lu}.*");
 	protected Pattern p_allcaps = Pattern.compile("(\\p{Lu})*");
 	protected Pattern p_doublesurname = Pattern.compile("\\p{Lu}.+-\\p{Lu}.+");
+
+	protected Multimap<String, Lexeme> hardcodedForms = ArrayListMultimap.create();
 	
 	/**
 	 * Creates a lexicon object from the default location in JAR resources

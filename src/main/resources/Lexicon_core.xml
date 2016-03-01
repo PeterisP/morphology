@@ -3966,22 +3966,22 @@
       <Attributes Konjugācija="Nekārtns" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="iet"/>
     </Lexeme>
     <Lexeme ID="23877" Stem1="izie" Stem2="izej" Stem3="izgāj">
-      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="iziet"/>
+      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="iziet" Konjugācija="Nekārtns"/>
     </Lexeme>
     <Lexeme ID="23878" Stem1="aizie" Stem2="aizej" Stem3="aizgāj">
-      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="aiziet"/>
+      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="aiziet" Konjugācija="Nekārtns"/>
     </Lexeme>
     <Lexeme ID="49634" Stem1="ie" Stem2="ej" Stem3="gāj">
       <Attributes Konjugācija="Nekārtns" Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="iet"/>
     </Lexeme>
     <Lexeme ID="49636" Stem1="izie" Stem2="izej" Stem3="izgāj">
-      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="iziet"/>
+      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="iziet" Konjugācija="Nekārtns"/>
     </Lexeme>
     <Lexeme ID="49637" Stem1="aizie" Stem2="aizej" Stem3="aizgāj">
-      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="aiziet"/>
+      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="aiziet" Konjugācija="Nekārtns"/>
     </Lexeme>
     <Lexeme ID="50817" Stem1="pārie" Stem2="pārej" Stem3="pārgāj">
-      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="pāriet"/>
+      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="pāriet" Konjugācija="Nekārtns"/>
     </Lexeme>
     <Lexeme ID="28758" Stem1="slēg" Stem2="slēdz" Stem3="slēdz">
       <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="slēgt"/>
@@ -11163,22 +11163,22 @@
       <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Nominatīvs" Pamatforma="būt" Lokāmība="Daļēji lokāms" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
     </Lexeme>
     <Lexeme ID="28396" Stem1="iet">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Nē" Pamatforma="iet" Laiks="Tagadne" Kārta="Darāmā"/>
+      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Nē" Pamatforma="iet" Laiks="Tagadne" Kārta="Darāmā"/>
     </Lexeme>
     <Lexeme ID="50703" Stem1="pieiet">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Nē" Pamatforma="pieiet" Laiks="Tagadne" Kārta="Darāmā"/>
+      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Nē" Pamatforma="pieiet" Laiks="Tagadne" Kārta="Darāmā"/>
     </Lexeme>
     <Lexeme ID="50704" Stem1="apiet">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Nē" Pamatforma="apiet" Laiks="Tagadne" Kārta="Darāmā"/>
+      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Nē" Pamatforma="apiet" Laiks="Tagadne" Kārta="Darāmā"/>
     </Lexeme>
     <Lexeme ID="50705" Stem1="paiet">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Nē" Pamatforma="paiet" Laiks="Tagadne" Kārta="Darāmā"/>
+      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Nē" Pamatforma="paiet" Laiks="Tagadne" Kārta="Darāmā"/>
     </Lexeme>
     <Lexeme ID="50706" Stem1="aiziet">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Nē" Pamatforma="aiziet" Laiks="Tagadne" Kārta="Darāmā"/>
+      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Nē" Pamatforma="aiziet" Laiks="Tagadne" Kārta="Darāmā"/>
     </Lexeme>
     <Lexeme ID="50818" Stem1="pāriet">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Nē" Pamatforma="pāriet" Laiks="Tagadne" Kārta="Darāmā"/>
+      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Nē" Pamatforma="pāriet" Laiks="Tagadne" Kārta="Darāmā"/>
     </Lexeme>
     <Lexeme ID="28398" Stem1="bijušos">
       <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Palīgverbs 'būt'" Locījums="Lokatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>

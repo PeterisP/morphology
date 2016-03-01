@@ -752,9 +752,11 @@ public class Analyzer extends Lexicon {
 
 	private ArrayList<Wordform> generateInflections_TryLemmas(String lemma, Word w) {		
 		for (Wordform wf : w.wordforms) {
+			// Pamēģinam katru no analīzes variantiem, vai viņš ir pamatforma (atbilst vajadzīgajai lemmai)
 			if (wf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(lemma) && !wf.isMatchingStrong(AttributeNames.i_Case, AttributeNames.v_Vocative)) {				
 				Lexeme lex = wf.lexeme;
 				if (lex == null || !lex.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(lemma)) {
+                    // Ja nav pareizā leksēma (atvasināšana vai minēšana) tad uztaisam leksēmu
 					int endingID = wf.getEnding().getID();
 					if (wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adverb))
 						endingID = 954; // FIXME - hardcoded number of Adverb paradigm main ending, must match the ending number in Lexicon.xml
@@ -803,12 +805,21 @@ public class Analyzer extends Lexicon {
 	{
 		String trešāSakne = null, vārds;
 		//Vārds rezultāts = new Vārds(leksēma.īpašības.Īpašība(IpasibuNosaukumi.i_Pamatforma));
-		ArrayList <Wordform> locījumi =  new ArrayList<Wordform>(1);
+		ArrayList <Wordform> inflections =  new ArrayList<Wordform>(1);
 
 		//priekš 1. konj nākotnes mijas nepieciešams zināt 3. sakni
 		if (lexeme.getParadigm().getStems() == 3) {
 			trešāSakne = lexeme.getStem(2);
 		}
+
+        if (lexeme.getParadigm().getID() == 29) { // Hardcoded paradigma
+            // Ja vārds ir hardcoded, tad salasam visas hardcoded formas ar attiecīgo lemmu un tās arī atgriežam
+            Ending ending = lexeme.getParadigm().getLemmaEnding();
+            for (Lexeme formLexeme : this.hardcodedForms.get(lemma)) {
+                inflections.add(new Wordform(formLexeme.getStem(0), formLexeme, ending));
+            }
+            return inflections;
+        }
 		
 		for (Ending ending : lexeme.getParadigm().endings){
 			if ( ending.getValue(AttributeNames.i_PartOfSpeech)==null ||
@@ -830,11 +841,29 @@ public class Analyzer extends Lexicon {
 					if (locījums.isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum) && locījums.isMatchingStrong(AttributeNames.i_Number, AttributeNames.v_Singular)) validOption = false;
 					if (locījums.isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_SingulareTantum) && locījums.isMatchingStrong(AttributeNames.i_Number, AttributeNames.v_Plural)) validOption = false;
 					if (locījums.isMatchingStrong(AttributeNames.i_CaseSpecial, AttributeNames.v_InflexibleGenitive) && !locījums.isMatchingStrong(AttributeNames.i_Case, AttributeNames.v_Genitive)) validOption = false;
-					if (validOption) locījumi.add(locījums);
+					if (validOption) inflections.add(locījums);
 		    	}
 			}
 		}
-		return locījumi;
+
+        // Pārbaudam, vai šai lemmai nav kāds hardcoded formas override (piemēram, kā formai viņš *ej -> viņš iet)
+        for (Lexeme formLexeme : this.hardcodedForms.get(lemma)) {
+            Ending ending = formLexeme.getParadigm().getLemmaEnding();
+            Wordform hardcoded = new Wordform(formLexeme.getStem(0), formLexeme, ending);
+            Wordform override = null;
+            for (Wordform form : inflections) {
+                if (form.isMatchingWeak(formLexeme)) {
+                    override = form;
+                }
+            }
+            if (override != null) {
+                inflections.remove(override);
+            }
+            inflections.add(hardcoded);
+
+        }
+
+		return inflections;
 	}
 
 }

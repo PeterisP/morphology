@@ -54,6 +54,11 @@
 			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>com.google.collections</groupId>
+			<artifactId>google-collections</artifactId>
+			<version>1.0</version>
+		</dependency>
 	</dependencies>	
 
 	<!-- Build even if tests fail, as we tend to build with known bugs that aren't yet fixed -->

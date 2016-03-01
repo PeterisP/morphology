@@ -202,6 +202,11 @@ public class Paradigm extends AttributeValues {
 
 		if (lexeme.getValue(AttributeNames.i_Lemma) == null && getLemmaEnding() != null)
 			lexeme.addAttribute(AttributeNames.i_Lemma, lexeme.getStem(getLemmaEnding().stemID-1) + getLemmaEnding().getEnding());
+
+		if (this.id == 29) { // Hardcoded paradigma
+			String pamatforma = lexeme.getValue(AttributeNames.i_Lemma);
+			this.lexicon.hardcodedForms.put(pamatforma, lexeme);
+		}
 	}
 
 	public void removeLexeme (Lexeme leksēma) {

@@ -33,6 +33,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map.Entry;
 
+import lv.semti.morphology.lexicon.TableModels.AttributeModel;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Ignore;
@@ -2498,6 +2499,9 @@ public class MorphologyTest {
 
 		formas = locītājs.generateInflections("vārāms");
 		assertEquals(0, formas.size());
+
+        formas = locītājs.generateInflections("nav");
+        assertEquals(0, formas.size());
 	}
 
 	@Test // Crash uz sliktu locīšanu
@@ -2522,4 +2526,16 @@ public class MorphologyTest {
         formas = locītājs.generateInflections("dzeramais", true);
         assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, "", "dzeramajam");
     }
+
+    @Test // Hardcoded vārdu locīšana
+    public void inflect_hardcoded() {
+        List<Wordform> formas = locītājs.generateInflections("būt");
+
+        AttributeValues testset = new AttributeValues();
+        testset.addAttribute(AttributeNames.i_Person, "3");
+        testset.addAttribute(AttributeNames.i_Izteiksme, AttributeNames.v_Iisteniibas);
+        testset.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Tagadne);
+        assertInflection(formas, testset, "ir");
+    }
+
 }
