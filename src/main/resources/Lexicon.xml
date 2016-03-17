@@ -4899,7 +4899,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="23" LemmaEnding="1136" Description="Pamata skaitļa vārdi, vienskaitlis (viens, desmits, miljons, simts)" AllowedGuessEndings="!">
+	<Paradigm Stems="1" ID="23" LemmaEnding="1136" Description="Pamata skaitļa vārdi, vienskaitlis (viens)" AllowedGuessEndings="!">
 		<Attributes Vārdšķira="Skaitļa vārds" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā"/>
 		<Ending ID="1136" StemChange="0" Ending="s" StemID="1" LemmaEnding="1136">
 			<Attributes Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Locījums="Nominatīvs"/>
