@@ -21,7 +21,6 @@ package lv.semti.morphology.Testi;
 import static org.junit.Assert.*;
 
 import java.io.BufferedReader;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
@@ -33,7 +32,6 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map.Entry;
 
-import lv.semti.morphology.lexicon.TableModels.AttributeModel;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Ignore;
@@ -2544,4 +2542,16 @@ public class MorphologyTest {
         assertInflection(formas, testset, "viņam");
     }
 
+	@Test // Bija vārdiem simts, miljons utml nez kāpēc sieviešu dzimtes formas arī
+	public void simtas() {
+		locītājs.enableGuessing = false;
+
+		List<Wordform> formas = locītājs.generateInflections("simts");
+        for (Wordform forma : formas) {
+            assertNotEquals("simtas", forma.getToken());
+        }
+
+        Word simtas = locītājs.analyze("simtas");
+        assertFalse(simtas.isRecognized());
+    }
 }

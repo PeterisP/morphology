@@ -152,12 +152,8 @@ public class CorpusProcessing {
 		Statistics statistics = new Statistics();
 
 		try {
-			//pārveidotPlānoLedu();
-			//String failaVārds = "etalons_Sofija.txt";
-			//String failaVārds = "etalons_Ledus.txt";
-			String failaVārds = fileName;
-
-			ieeja = new BufferedReader(new InputStreamReader(new FileInputStream(failaVārds), "UTF-8"));
+			//ieeja = new BufferedReader(new InputStreamReader(new FileInputStream(failaVārds), "UTF-8"));
+			ieeja = new BufferedReader(new InputStreamReader(CorpusProcessing.class.getClassLoader().getResourceAsStream(fileName), "UTF-8"));
 			PrintWriter izeja = new PrintWriter(new OutputStreamWriter(System.out, "UTF-8"));
 
 			String rinda;
@@ -213,7 +209,7 @@ public class CorpusProcessing {
 		    izeja.flush();
 
 			Writer straume = new BufferedWriter(new OutputStreamWriter(
-					new FileOutputStream("dist/Statistics.xml"), "UTF-8"));
+					new FileOutputStream("Statistics.xml"), "UTF-8"));
 			statistics.toXML(straume);
 
 		} catch (IOException e) {
@@ -222,9 +218,9 @@ public class CorpusProcessing {
 	}
 	
 	public static void main(String[] args) throws Exception {
-		Analyzer analyzer = new Analyzer("dist/Lexicon.xml");
+		Analyzer analyzer = new Analyzer();
 		if (args.length == 0) {
-			processCorpus(analyzer, "dist/traindev.txt");
+			processCorpus(analyzer, "train.txt");
 		} else {
 			for (String filename: args) {
 				processCorpus(analyzer, filename);

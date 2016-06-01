@@ -19,6 +19,7 @@ package lv.semti.morphology.corpus;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.Writer;
 import java.util.HashMap;
 import java.util.Map.Entry;
@@ -44,7 +45,7 @@ public class Statistics {
 	/**
 	 * Default filename for statistics file.
 	 */
-	public final static String DEFAULT_STATISTICS_FILE = "dist/Statistics.xml";
+	public final static String DEFAULT_STATISTICS_FILE = "Statistics.xml";
 	public double lexemeWeight = 1000; //How much lexeme count should be weighed as a multiple of ending count 
 	
 	/**
@@ -136,8 +137,9 @@ public class Statistics {
 
 		Document doc = null;
 
+		InputStream stream = this.getClass().getClassLoader().getResourceAsStream(fileName);
 		DocumentBuilder docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-		doc = docBuilder.parse(new File(fileName));
+		doc = docBuilder.parse(stream);
 
 		Node node = doc.getDocumentElement();
 		if (!node.getNodeName().equalsIgnoreCase("Statistika"))

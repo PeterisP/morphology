@@ -20,7 +20,6 @@ package lv.semti.morphology.lexicon;
 import java.io.*;
 import java.util.*;
 import java.util.regex.Pattern;
-import java.util.stream.Stream;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;

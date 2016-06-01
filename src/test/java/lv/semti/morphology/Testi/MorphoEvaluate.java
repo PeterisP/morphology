@@ -43,7 +43,7 @@ public class MorphoEvaluate {
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 		try {
-			locītājs = new Analyzer();
+			locītājs = new Analyzer(false);
 		} catch(Exception e) {
 			e.printStackTrace();
 		} 
@@ -59,13 +59,13 @@ public class MorphoEvaluate {
 		locītājs.meklētsalikteņus = false;
     }	
 	
-//	@Test
-	public void testFile2012() throws IOException{
-		LinkedList<Etalons> etaloni = readVertEtalons("all.txt");
+	@Test
+	public void testFile2016() throws IOException{
+		LinkedList<Etalons> etaloni = readVertEtalons("dev.txt");
 		evaluate(etaloni);
 	}
 	
-	@Test
+//	@Test
 	public void testFile2013May() throws IOException{
 		LinkedList<Etalons> etaloni = readCONLLEtalons("morfoetalons.conll");
 		evaluate(etaloni);
@@ -95,6 +95,7 @@ public class MorphoEvaluate {
 		int ambiguous=0;
 		int wfcount=0;
 		int ambig_wfcount=0;
+		int lemma_correct=0;
 		
 		List<String> mistakes = new LinkedList<String>();
 		
@@ -136,7 +137,8 @@ public class MorphoEvaluate {
 				
 				if (mainwf.getValue(AttributeNames.i_PartOfSpeech).equalsIgnoreCase(etalonaAV.getValue(AttributeNames.i_PartOfSpeech)))
 					pos_correct++;
-				
+                if (mainwf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(e.lemma))
+                    lemma_correct++;
 				output = "\t" + mainwf.getValue(AttributeNames.i_Lemma) + "\t" + mainwf.getTag() + "\n";
 				if (mainwf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(e.lemma) && mainwf.getTag().equalsIgnoreCase(e.tag))
 					perfect++;  
@@ -178,12 +180,13 @@ public class MorphoEvaluate {
 		System.out.printf("Etalona pārbaude: pagāja %d ms\n%d pieprasījumi sekundē\n", starpība, etaloni.size()*1000/starpība);
 		System.out.printf("\nAnalīzes rezultāti:\n");
 		System.out.printf("\tPareizi:\t%4.1f%%\t%d\n", perfect*100.0/etaloni.size(), perfect);
+        System.out.printf("\tLemma ok:\t%4.1f%%\t%d\n", lemma_correct*100.0/etaloni.size(), perfect);
 		System.out.printf("\tDer:    \t%4.1f%%\t%d\n", (first_match+perfect)*100.0/etaloni.size(), first_match);
 		System.out.printf("\tNav pirmais:\t%4.1f%%\t%d\n", one_of_options*100.0/etaloni.size(), one_of_options);
 		System.out.printf("\tDer ne pirmais:\t%4.1f%%\t%d\n", (match+one_of_options)*100.0/etaloni.size(), match);
 		System.out.printf("\tNekas neder:\t%4.1f%%\t%d\n", wrong*100.0/etaloni.size(), wrong);
 		System.out.printf("\tNeatpazīti:\t%4.1f%%\t%d\n", not_recognized*100.0/etaloni.size(), not_recognized);
-		System.out.printf("\tPareizs POS:\t%4.1f%%\t%d\n", pos_correct*100.0/etaloni.size(), pos_correct);		
+		System.out.printf("\tPareizs POS:\t%4.1f%%\t%d\n", pos_correct*100.0/etaloni.size(), pos_correct);
 		System.out.printf("\nEtalons: Pareizi 85.9%%, Der 87.6%%, Nav vārdnīcā 5.6%%, Neatpazīti zem 2%%\n");
 		
 		System.out.printf("\nStatistika:\n");
