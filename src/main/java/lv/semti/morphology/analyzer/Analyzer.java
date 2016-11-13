@@ -733,6 +733,33 @@ public class Analyzer extends Lexicon {
 		
 		return result;
 	}
+
+	// generate all forms if the paradigm # and also the three lemmas (for 1st conjugation) are known
+	public ArrayList<Wordform> generateInflections(String lemma, int paradigm, String stem1, String stem2, String stem3) {
+		Paradigm p = this.paradigmByID(paradigm);
+
+		if (p == null)
+			return generateInflections(lemma); // If the supplied paradigm is invalid, we ignore it
+
+		if (p.getStems() == 1)  // If it's not 1st conjugation verb, perform as if we didn't know the stems
+			return generateInflections(lemma, paradigm);
+
+		if (!lemma.endsWith(p.getLemmaEnding().getEnding())) {
+			//FIXME - should check for plural nouns, etc
+		}
+
+		Lexeme l = this.createLexeme(lemma, p.getLemmaEnding().getID(), "temp");
+		if (l == null) { // Couldn't create the lexeme - the word didn't wasn't compatible with the supplied paradigm
+			return new ArrayList<Wordform>();
+		}
+        l.setStem(0, stem1);
+        l.setStem(1, stem2);
+        l.setStem(2, stem3);
+		ArrayList<Wordform> result = generateInflections(l, lemma);
+		p.removeLexeme(l); // To not pollute the in-memory lexicon
+
+		return result;
+	}
 	
 	// removes possibilities that aren't nouns/substantivised adjectives, and don't match the filter
 	private void filterInflectionPossibilities(boolean nouns_only, AttributeValues filter, ArrayList<Wordform> possibilities) {

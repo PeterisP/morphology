@@ -455,7 +455,7 @@ public class Lexicon {
 
 	/**
 	 * Creates a new lexeme based on a wordform with a known ending ID, and appends it to the lexicon
-	 * NB! If the paradigm needs multiple lemmas (1st conjugation verbs) then only the lemma of this wordform will be added, and the other lemmas will be empty and need to be filled later
+	 * NB! If the paradigm needs multiple stems (1st conjugation verbs) then only the lemma stem will be added, and the other stems will be empty and need to be filled later
 	 *
 	 * @param word		full wordform of the word to be added
 	 * @param endingID	ID of the ending
@@ -493,7 +493,7 @@ public class Lexicon {
 	
 	/**
 	 * Creates a new lexeme based on a wordform with a known paradigm ID, and appends it to the lexicon
-	 * NB! If the paradigm needs multiple lemmas (1st conjugation verbs) then only the lemma of this wordform will be added, and the other lemmas will be empty and need to be filled later
+	 * NB! If the paradigm needs multiple stems (1st conjugation verbs) then only the lemma stem will be added, and the other stems will be empty and need to be filled later
 	 *
 	 * @param word		full wordform of the word to be added
 	 * @param paradigmID	ID of the paradigm

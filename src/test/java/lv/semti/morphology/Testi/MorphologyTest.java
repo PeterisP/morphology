@@ -32,6 +32,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map.Entry;
 
+import lv.semti.morphology.lexicon.TableModels.AttributeModel;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Ignore;
@@ -57,6 +58,10 @@ public class MorphologyTest {
 		boolean found = false;
 		for (Wordform wf : forms) {
 			if (wf.isMatchingWeak(testset)) {
+                if (!validForm.equalsIgnoreCase(wf.getToken())) {
+                    System.err.printf("Found a different form");
+                    wf.describe(new PrintWriter(System.err));
+                }
 				assertEquals(validForm, wf.getToken());
 				found = true;
 				break;
@@ -2553,5 +2558,42 @@ public class MorphologyTest {
 
         Word simtas = locītājs.analyze("simtas");
         assertFalse(simtas.isRecognized());
+    }
+
+    @Test // Problēma ar vārdu krāties, kur bija formas 'krāos' u.c.
+    public void krāties() {
+        locītājs.enableGuessing = false;
+
+        List<Wordform> formas = locītājs.generateInflections("krāties");
+        for (Wordform forma : formas) {
+            assertNotEquals("krāos", forma.getToken());
+        }
+
+        Word krāos = locītājs.analyze("krāos");
+        assertFalse(krāos.isRecognized());
+    }
+
+    @Test // Locījumu ģenerēšanai jādarbojas ar vairākiem celmiem 1. konjugācijas gadījumā
+    public void multistem_generateinflections() {
+        locītājs.enableGuessing = false;
+
+        List<Wordform> sairšana = locītājs.generateInflections("irt", 15, "ir", "irst", "ir");
+        List<Wordform> laivas_iršana = locītājs.generateInflections("irt", 15, "ir", "ir", "īr");
+
+        AttributeValues pagaatne = new AttributeValues();
+        pagaatne.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+        pagaatne.addAttribute(AttributeNames.i_Person, "3");
+        pagaatne.addAttribute(AttributeNames.i_Izteiksme, AttributeNames.v_Iisteniibas);
+        pagaatne.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Pagaatne);
+        assertInflection(sairšana, pagaatne, "ira");
+        assertInflection(laivas_iršana, pagaatne, "īra");
+
+        AttributeValues tagadne = new AttributeValues();
+        tagadne.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+        tagadne.addAttribute(AttributeNames.i_Person, "1");
+        tagadne.addAttribute(AttributeNames.i_Izteiksme, AttributeNames.v_Iisteniibas);
+        tagadne.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Tagadne);
+        assertInflection(sairšana, tagadne, "irstu");
+        assertInflection(laivas_iršana, tagadne, "iru");
     }
 }
