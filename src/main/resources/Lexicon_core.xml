@@ -2456,7 +2456,7 @@
     <Lexeme ID="24039" Stem1="piekrāp" Stem2="piekrāpj" Stem3="piekrāp">
       <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="piekrāpt"/>
     </Lexeme>
-    <Lexeme ID="24040" Stem1="krā" Stem2="krāj" Stem3="krā">
+    <Lexeme ID="24040" Stem1="krā" Stem2="krāj" Stem3="krāj">
       <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="krāt"/>
     </Lexeme>
     <Lexeme ID="24041" Stem1="krau" Stem2="krauj" Stem3="krāv">
@@ -5252,7 +5252,7 @@
     <Lexeme ID="26238" Stem1="krāp" Stem2="krāpj" Stem3="krāp">
       <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="krāpties"/>
     </Lexeme>
-    <Lexeme ID="26239" Stem1="krā" Stem2="krāj" Stem3="krā">
+    <Lexeme ID="26239" Stem1="krā" Stem2="krāj" Stem3="krāj">
       <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="krāties"/>
     </Lexeme>
     <Lexeme ID="26240" Stem1="kur" Stem2="kur" Stem3="kūr">
