@@ -137,13 +137,6 @@ public class Wordform extends AttributeValues implements Serializable{
 		}
 	}
 
-	/*
-	@Override
-	public void addAttributes(AttributeValues attributes) {
-		super.addAttributes(attributes);
-		addAttribute(AttributeNames.i_Tag, MarkupConverter.toKamolsMarkup(this));
-	}*/
-	
 	@Override
 	public void toXML (Writer stream) throws IOException {
 		stream.write("<Vārdforma");
@@ -167,5 +160,46 @@ public class Wordform extends AttributeValues implements Serializable{
 	protected void setToken(String newtoken) {
 		token = newtoken;
 		addAttribute(AttributeNames.i_Word, newtoken);
-	}	
+	}
+
+    @Override
+    public boolean equals(Object other) {
+        if (other == null || !(other instanceof Wordform)) {
+            return false;
+        }
+        Wordform that = (Wordform) other;
+        if (this.attributes == null) {
+            if (that.attributes != null) return false;
+        } else if (!this.attributes.equals(that.attributes))
+            return false;
+
+        if (this.token == null) {
+            if (that.token != null) return false;
+        } else if (!this.token.equals(that.token))
+            return false;
+
+        if (this.ending == null) {
+            if (that.ending != null) return false;
+        } else if (!this.ending.equals(that.ending))
+            return false;
+
+        if (this.lexeme == null) {
+            if (that.lexeme != null) return false;
+        } else if (!this.lexeme.equals(that.lexeme))
+            return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int hashCode = this.attributes.hashCode();
+        if (token != null)
+            hashCode = hashCode * 37 + token.hashCode();
+        if (ending != null)
+            hashCode = hashCode * 37 + ending.hashCode();
+        if (lexeme != null)
+            hashCode = hashCode * 37 + lexeme.hashCode();
+        return hashCode;
+    }
 }

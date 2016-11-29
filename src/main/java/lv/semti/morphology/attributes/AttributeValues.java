@@ -303,4 +303,22 @@ public class AttributeValues implements FeatureStructure, Cloneable {
 		return s;
 	}
 
+    @Override
+    public boolean equals(Object other) {
+        if (other == null || !(other instanceof AttributeValues)) {
+            return false;
+        }
+        AttributeValues that = (AttributeValues) other;
+
+        if (this.attributes == null) {
+            if (that.attributes != null) return false;
+        } else if (!this.attributes.equals(that.attributes))
+            return false;
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        return this.attributes.hashCode();
+    }
 }
