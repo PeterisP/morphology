@@ -335,7 +335,7 @@ public class Analyzer extends Lexicon {
 			variants.addAttribute(AttributeNames.i_Tag, MarkupConverter.toKamolsMarkup(variants));
 			if (variants.lexeme != null) {
 				String locījumuDemo = "";
-				for (Wordform locījums : generateInflections(variants.lexeme)) {
+				for (Wordform locījums : generateInflectionsFromParadigm(variants.lexeme)) {
 					locījumuDemo = locījumuDemo + locījums.getValue(AttributeNames.i_Word) + " " + locījums.getValue(AttributeNames.i_Case) + "\n";
 				}
 				variants.pieliktĪpašību("LocījumuDemo", locījumuDemo);
@@ -709,40 +709,61 @@ public class Analyzer extends Lexicon {
 		return result;
 	}
 
-	// generate all forms if the paradigm # is known
-	// TODO - needs support for extra features (plural nouns, fixed-genitives, etc)
-	public ArrayList<Wordform> generateInflections(String lemma, int paradigm) {
-		Paradigm p = this.paradigmByID(paradigm);
+    // generate all forms if the paradigm # is known
+    // TODO - needs more support for extra features (fixed-genitives, etc)
+    public ArrayList<Wordform> generateInflectionsFromParadigm(String lemma, int paradigm, AttributeValues lemmaAttributes) {
+        Paradigm p = this.paradigmByID(paradigm);
 
-		if (p == null)
-			return generateInflections(lemma); // If the supplied paradigm is invalid, we ignore it
-		
-		if (p.getStems() > 1)  // For 1st conjugation verbs, lemma is not enough info to inflect properly
-			return generateInflections(lemma); // Assume that it will be in current lexicon.. 
-		
-		if (!lemma.endsWith(p.getLemmaEnding().getEnding())) {
-			//FIXME - should check for plural nouns, etc
-		}
-		
-		Lexeme l = this.createLexeme(lemma, p.getLemmaEnding().getID(), "temp");
-		if (l == null) { // Couldn't create the lexeme - the word didn't wasn't compatible with the supplied paradigm
-			return new ArrayList<Wordform>();
-		}
-		ArrayList<Wordform> result = generateInflections(l, lemma);		
-		p.removeLexeme(l); // To not pollute the in-memory lexicon
-		
-		return result;
+        if (p == null)
+            return generateInflections(lemma); // If the supplied paradigm is invalid, we ignore it
+
+        if (p.getStems() > 1)  // For 1st conjugation verbs, lemma is not enough info to inflect properly
+            return generateInflections(lemma); // Assume that it will be in current lexicon..
+
+        Ending ending = p.getLemmaEnding();
+        if (lemmaAttributes.isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum)
+                && !ending.isMatchingWeak(AttributeNames.i_Number, AttributeNames.v_Plural)) {
+            // Assuming that there will be only one plural nominative entry in case of daudzskaitlinieki
+            AttributeValues plural_nominative = new AttributeValues();
+            plural_nominative.addAttribute(AttributeNames.i_Number, AttributeNames.v_Plural);
+            plural_nominative.addAttribute(AttributeNames.i_Case, AttributeNames.v_Nominative);
+            for (Ending candidate_ending : ending.getParadigm().endings) {
+                if (candidate_ending.isMatchingStrong(plural_nominative)) {
+                    ending = candidate_ending;
+                }
+            }
+        }
+
+        if (!lemma.endsWith(ending.getEnding())) {
+            System.err.printf("Attempted to generate inflections for lemma '%s' at paradigm '%d'; failed because of mismatched ending", lemma, paradigm);
+        }
+
+        Lexeme l = this.createLexeme(lemma, ending.getID(), "temp");
+        if (l == null) { // Couldn't create the lexeme - the word wasn't compatible with the supplied paradigm
+            return new ArrayList<Wordform>();
+        }
+        l.addAttributes(lemmaAttributes);
+        ArrayList<Wordform> result = generateInflections(l, lemma);
+        p.removeLexeme(l); // To not pollute the in-memory lexicon
+
+        return result;
+    }
+
+
+    // generate all forms if the paradigm # is known
+	public ArrayList<Wordform> generateInflectionsFromParadigm(String lemma, int paradigm) {
+		return generateInflectionsFromParadigm(lemma, paradigm, new AttributeValues());
 	}
 
 	// generate all forms if the paradigm # and also the three lemmas (for 1st conjugation) are known
-	public ArrayList<Wordform> generateInflections(String lemma, int paradigm, String stem1, String stem2, String stem3) {
+	public ArrayList<Wordform> generateInflectionsFromParadigm(String lemma, int paradigm, String stem1, String stem2, String stem3) {
 		Paradigm p = this.paradigmByID(paradigm);
 
 		if (p == null)
 			return generateInflections(lemma); // If the supplied paradigm is invalid, we ignore it
 
 		if (p.getStems() == 1)  // If it's not 1st conjugation verb, perform as if we didn't know the stems
-			return generateInflections(lemma, paradigm);
+			return generateInflectionsFromParadigm(lemma, paradigm);
 
 		if (!lemma.endsWith(p.getLemmaEnding().getEnding())) {
 			//FIXME - should check for plural nouns, etc
@@ -788,7 +809,7 @@ public class Analyzer extends Lexicon {
 					if (wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adverb))
 						endingID = 954; // FIXME - hardcoded number of Adverb paradigm main ending, must match the ending number in Lexicon.xml
 						
-					lex = this.createLexeme(lemma, endingID, "generateInflections");				
+					lex = this.createLexeme(lemma, endingID, "generateInflectionsFromParadigm");
 					if (lex.getValue(AttributeNames.i_PartOfSpeech) == null)
 						lex.addAttribute(AttributeNames.i_PartOfSpeech, wf.getValue(AttributeNames.i_PartOfSpeech)); // Hardcoded vārdšķirai lai ir POS - saīsinājumi utml
 					if (p_firstcap.matcher(lemma).matches())
@@ -799,7 +820,7 @@ public class Analyzer extends Lexicon {
 					}
 				}
 				ArrayList<Wordform> result = generateInflections(lex, lemma);
-				if (lex.isMatchingStrong(AttributeNames.i_Source, "generateInflections"))
+				if (lex.isMatchingStrong(AttributeNames.i_Source, "generateInflectionsFromParadigm"))
 					lex.getParadigm().removeLexeme(lex);
 				return result;
 			}
@@ -809,7 +830,7 @@ public class Analyzer extends Lexicon {
 				// Exception for adjective-based surnames "Lielais", "Platais" etc
 				Lexeme lex = wf.lexeme;
 				if ((lex == null && lemma.toLowerCase().endsWith("ais")) || (lex != null && !lex.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(lemma))) {
-					lex = this.createLexeme(lemma, wf.getEnding().getID(), "generateInflections");
+					lex = this.createLexeme(lemma, wf.getEnding().getID(), "generateInflectionsFromParadigm");
 					if (p_firstcap.matcher(lemma).matches())
 						lex.addAttribute(AttributeNames.i_NounType, AttributeNames.v_ProperNoun); //FIXME - hack personvārdu 'Valdis' utml locīšanai
 				}
@@ -820,7 +841,7 @@ public class Analyzer extends Lexicon {
 						result.add(wf2);
 					}
 				}
-				if (lex.isMatchingStrong(AttributeNames.i_Source, "generateInflections"))
+				if (lex.isMatchingStrong(AttributeNames.i_Source, "generateInflectionsFromParadigm"))
 					lex.getParadigm().removeLexeme(lex);
 				return result;
 			}

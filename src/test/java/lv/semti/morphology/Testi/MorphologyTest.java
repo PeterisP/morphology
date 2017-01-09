@@ -32,7 +32,6 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map.Entry;
 
-import lv.semti.morphology.lexicon.TableModels.AttributeModel;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Ignore;
@@ -284,7 +283,7 @@ public class MorphologyTest {
 	public void debesis(){
 		// 2016-02-03 ir divu veidu debesis - 3. un 6. deklinācija
 		// 3. deklinācijā lokās pēc standarta, bet 6. deklinācijā bez mijas
-		List<Wordform> debesis = locītājs.generateInflections("debesis", 3);
+		List<Wordform> debesis = locītājs.generateInflectionsFromParadigm("debesis", 3);
 		AttributeValues testset = new AttributeValues();
 		testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
 		testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Genitive);
@@ -296,7 +295,7 @@ public class MorphologyTest {
 		testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Plural);
 		assertInflection(debesis, testset, "debešiem");
 		
-		List<Wordform> debess = locītājs.generateInflections("debess", 35);
+		List<Wordform> debess = locītājs.generateInflectionsFromParadigm("debess", 35);
 		testset = new AttributeValues();
 		testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
 		testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Genitive);
@@ -2095,7 +2094,7 @@ public class MorphologyTest {
 		formas = locītājs.generateInflections("Žverelo-Freiberga", true);
 		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "Žverelo-Freibergas");
 		
-//		formas = locītājs.generateInflections("Freiberga-Žverelo", true);
+//		formas = locītājs.generateInflectionsFromParadigm("Freiberga-Žverelo", true);
 //		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "Freibergas-Žverelo");
 		
 		formas = locītājs.generateInflections("Rīga-Best", true);
@@ -2166,7 +2165,7 @@ public class MorphologyTest {
 	
 	@Test
 	/**
-	 * 2014-03-31 bug - autocreated lexemes from generateInflections pollute future analysis results
+	 * 2014-03-31 bug - autocreated lexemes from generateInflectionsFromParadigm pollute future analysis results
 	 */
 	public void inflect_garbage_collection(){
 		locītājs.generateInflections("Šašliki");
@@ -2414,7 +2413,7 @@ public class MorphologyTest {
 		assertTrue(pakaļdzinējies.isRecognized());
 //		assertEquals(AttributeNames.v_Ending, crap.wordforms.get(0).getValue(AttributeNames.i_Guess));
 //
-//		List<Wordform> formas = locītājs.generateInflections("rozā");
+//		List<Wordform> formas = locītājs.generateInflectionsFromParadigm("rozā");
 //		assertEquals(1, formas.size());
 //		assertTrue(formas.get(0).isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adjective));
 	}
@@ -2509,7 +2508,7 @@ public class MorphologyTest {
 
 	@Test // Crash uz sliktu locīšanu
 	public void locīt_ar_sliktu_paradigmu() {
-		List<Wordform> formas = locītājs.generateInflections("vārāms", 16);
+		List<Wordform> formas = locītājs.generateInflectionsFromParadigm("vārāms", 16);
 	}
 
 	@Test // izmaiņas ar substantivizējušamies divdabjiem un īpašībasvārdiem
@@ -2577,8 +2576,8 @@ public class MorphologyTest {
     public void multistem_generateinflections() {
         locītājs.enableGuessing = false;
 
-        List<Wordform> sairšana = locītājs.generateInflections("irt", 15, "ir", "irst", "ir");
-        List<Wordform> laivas_iršana = locītājs.generateInflections("irt", 15, "ir", "ir", "īr");
+        List<Wordform> sairšana = locītājs.generateInflectionsFromParadigm("irt", 15, "ir", "irst", "ir");
+        List<Wordform> laivas_iršana = locītājs.generateInflectionsFromParadigm("irt", 15, "ir", "ir", "īr");
 
         AttributeValues pagaatne = new AttributeValues();
         pagaatne.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
@@ -2596,4 +2595,23 @@ public class MorphologyTest {
         assertInflection(sairšana, tagadne, "irstu");
         assertInflection(laivas_iršana, tagadne, "iru");
     }
+
+	@Test // Problēma ar daudzskaitlinieku locīšanu
+	public void ļaudis() {
+		locītājs.enableGuessing = false;
+
+        AttributeValues attrs = new AttributeValues();
+        attrs.addAttribute(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum);
+        attrs.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Masculine);
+
+        List<Wordform> formas = locītājs.generateInflectionsFromParadigm("ļaudis", 11, attrs);
+		for (Wordform forma : formas) {
+			assertNotEquals("ļaudiij", forma.getToken());
+            assertFalse(forma.isMatchingStrong(AttributeNames.i_Number, AttributeNames.v_Singular));
+            assertTrue(forma.isMatchingStrong(AttributeNames.i_Gender, AttributeNames.v_Masculine));
+		}
+
+		Word ļaudiij = locītājs.analyze("ļaudiij");
+		assertFalse(ļaudiij.isRecognized());
+	}
 }
