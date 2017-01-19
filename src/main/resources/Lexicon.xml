@@ -5026,7 +5026,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="30" LemmaEnding="2019" Description="Substantivizējušās divdabju noteiktās formas un īpašības vārdi bez nenoteiktājām formām vīriešu dzimtē (jaundzimušais, pēdējais)" AllowedGuessEndings="!">
-		<Attributes Vārdšķira="Lietvārds" Deklinācija="Adjektīviskā" Dzimte="Vīriešu" />
+		<Attributes Vārdšķira="Īpašības vārds" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Pakāpe="Pamata"/>
 		<Ending ID="2019" Ending="ais" LemmaEnding="2019">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
 		</Ending>
@@ -5245,7 +5245,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="40" LemmaEnding="2031" Description="Substantivizējušies noteiktās formas īpašības vārdi un -ts/-ta divdabji sieviešu dzimtē (mēnessērdzīgā, apsūdzētā)" AllowedGuessEndings="!">
-		<Attributes Vārdšķira="Lietvārds" Deklinācija="Adjektīviskā" Dzimte="Sieviešu" />
+		<Attributes Vārdšķira="Īpašības vārds" Noteiktība="Nenoteiktā" Dzimte="Sieviešu" Pakāpe="Pamata"/>
 		<Ending ID="2031" Ending="ā" LemmaEnding="2031">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
 		</Ending>
