@@ -5281,7 +5281,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="41" LemmaEnding="2095" Description="Substantivizējušies noteiktās formas -is/-usi divdabji sieviešu dzimtē (cietusī)" AllowedGuessEndings="!">
-		<Attributes Vārdšķira="Lietvārds" Deklinācija="Adjektīviskā" Dzimte="Sieviešu" />
+		<Attributes Vārdšķira="Īpašības vārds" Noteiktība="Nenoteiktā" Dzimte="Sieviešu" Pakāpe="Pamata" />
 		<Ending ID="2095" StemChange="22" Ending="ī" LemmaEnding="2095">
 			<Attributes Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Nominatīvs"/>
 		</Ending>
