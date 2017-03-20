@@ -2115,17 +2115,17 @@ public class MorphologyTest {
 	public void jaundzimushais() {
 		Word w = locītājs.analyze("jaundzimušajam");
 		assertTrue(w.isRecognized());
-		assertEquals(AttributeNames.v_Noun, w.wordforms.get(0).getValue(AttributeNames.i_PartOfSpeech));
+		assertEquals(AttributeNames.v_Adjective, w.wordforms.get(0).getValue(AttributeNames.i_PartOfSpeech));
 		assertEquals("jaundzimušais", w.wordforms.get(0).getValue(AttributeNames.i_Lemma));
 
 		w = locītājs.analyze("jaundzimusī");
 		assertTrue(w.isRecognized());
-		assertEquals(AttributeNames.v_Noun, w.wordforms.get(0).getValue(AttributeNames.i_PartOfSpeech));
+		assertEquals(AttributeNames.v_Adjective, w.wordforms.get(0).getValue(AttributeNames.i_PartOfSpeech));
 		assertEquals("jaundzimusī", w.wordforms.get(0).getValue(AttributeNames.i_Lemma));
 		
 		w = locītājs.analyze("galvenajam");
 		assertTrue(w.isRecognized());
-		assertEquals(AttributeNames.v_Noun, w.wordforms.get(0).getValue(AttributeNames.i_PartOfSpeech));
+		assertEquals(AttributeNames.v_Adjective, w.wordforms.get(0).getValue(AttributeNames.i_PartOfSpeech));
 		assertEquals("galvenais", w.wordforms.get(0).getValue(AttributeNames.i_Lemma));
 	}
 	
@@ -2546,12 +2546,15 @@ public class MorphologyTest {
         assertInflection(formas, testset, "viņam");
     }
 
-	@Test // Bija vārdiem simts, miljons utml nez kāpēc sieviešu dzimtes formas arī
+	@Test // Bija vārdiem simts, miljons utml sieviešu dzimtes formas arī. Pārklājas ar https://github.com/PeterisP/morphology/issues/10
 	public void simtas() {
 		locītājs.enableGuessing = false;
 
 		List<Wordform> formas = locītājs.generateInflections("simts");
         for (Wordform forma : formas) {
+        	if (forma.getToken().equalsIgnoreCase("simtas")) {
+        	    forma.describe();
+            }
             assertNotEquals("simtas", forma.getToken());
         }
 
