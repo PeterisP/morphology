@@ -13124,4 +13124,17 @@
     <Lexeme Stem1="miruš"/>
     <Lexeme Stem1="pieauguš"/>
     <Lexeme Stem1="cietuš"/>
-  </Paradigm></Lexicon>
+  </Paradigm>
+  <Paradigm Stems="1" ID="42" LemmaEnding="1141" Description="Pamata skaitļa vārdi vsk sieviešu dzimte (viena, otra)">
+    <Attributes Vārdšķira="Skaitļa vārds" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā"/>
+    <Lexeme Stem1="vien">
+      <Attributes Skaitļu_kārta="Vieni" Pamatforma="viens"/>
+    </Lexeme>
+    <Lexeme Stem1="otr">
+      <Attributes Pamatforma="otrs"/>
+    </Lexeme>
+  </Paradigm>
+  <Paradigm Stems="1" ID="43" Description="Substantivizējušies noteiktās formas -ies/-usies divdabji">
+    <Lexeme Stem1="pusapģērb"/>
+  </Paradigm>
+</Lexicon>
