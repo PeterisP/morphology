@@ -2,6 +2,14 @@
 <Lexicon revision="$Revision: 950 $" licence="Copyright 2008-2009 Institute of Mathematics and Computer Science, University of Latvia. This file is part of the SemTi-Kamols Chunker, see http://www.semti-kamols.lv/  This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program. If not, see http://www.gnu.org/licenses/.">
   <Paradigm Stems="1" ID="1" LemmaEnding="1" Description="Lietvārds 1. deklinācija -s">
     <Attributes Vārdšķira="Lietvārds" Deklinācija="1" Dzimte="Vīriešu"/>
+    <Lexeme Stem1="simt"/>
+    <Lexeme Stem1="pussimt"/>
+    <Lexeme Stem1="pārsimt"/>
+    <Lexeme Stem1="desmit"/>
+    <Lexeme Stem1="miljon"/>
+    <Lexeme Stem1="miljard"/>
+    <Lexeme Stem1="biljon"/>
+    <Lexeme Stem1="triljon"/>
     <Lexeme ID="11657" Stem1="bezsaimniek">
       <Attributes Locījums_2="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="bezsaimnieka"/>
     </Lexeme>
