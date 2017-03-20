@@ -8402,18 +8402,6 @@
     <Lexeme ID="26618" Stem1="otr">
       <Attributes Pamatforma="otrs"/>
     </Lexeme>
-    <Lexeme ID="27327" Stem1="desmit">
-      <Attributes Skaitļu_kārta="Desmiti" Pamatforma="desmits"/>
-    </Lexeme>
-    <Lexeme ID="27328" Stem1="miljon">
-      <Attributes Skaitļu_kārta="Miljoni" Pamatforma="miljons"/>
-    </Lexeme>
-    <Lexeme ID="27329" Stem1="miljard">
-      <Attributes Skaitļu_kārta="Miljardi" Pamatforma="miljards"/>
-    </Lexeme>
-    <Lexeme ID="27369" Stem1="simt">
-      <Attributes Skaitļu_kārta="Simti" Pamatforma="simts"/>
-    </Lexeme>
   </Paradigm>
   <Paradigm Stems="1" ID="24" LemmaEnding="1126" Description="Pamata skaitļa vārdi dsk">
     <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā"/>
@@ -13125,14 +13113,10 @@
     <Lexeme Stem1="pieauguš"/>
     <Lexeme Stem1="cietuš"/>
   </Paradigm>
-  <Paradigm Stems="1" ID="42" LemmaEnding="1141" Description="Pamata skaitļa vārdi vsk sieviešu dzimte (viena, otra)">
-    <Attributes Vārdšķira="Skaitļa vārds" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā"/>
-    <Lexeme Stem1="vien">
-      <Attributes Skaitļu_kārta="Vieni" Pamatforma="viens"/>
-    </Lexeme>
-    <Lexeme Stem1="otr">
-      <Attributes Pamatforma="otrs"/>
-    </Lexeme>
+  <Paradigm Stems="1" ID="42" Description="Substantivizējušās divdabju formas kā 'pusjucis'">
+    <Lexeme Stem1="pusjuk"/>    
+    <Lexeme Stem1="jauniznāk"/>    
+    <Lexeme Stem1="pusaizaug"/>    
   </Paradigm>
   <Paradigm Stems="1" ID="43" Description="Substantivizējušies noteiktās formas -ies/-usies divdabji">
     <Lexeme Stem1="pusapģērb"/>
