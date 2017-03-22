@@ -5316,7 +5316,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>	
-	<Paradigm Stems="1" ID="42" LemmaEnding="2128" Description="Substantivizējušās divdabju formas kā 'pusjucis'" AllowedGuessEndings="!">
+	<Paradigm Stems="1" ID="42" LemmaEnding="2128" Description="Adjektivizējušies -is/-usi divdabji (pusjucis)" AllowedGuessEndings="!">
 		<Attributes Vārdšķira="Īpašības vārds" /> 
 		<Ending ID="2128" StemChange="14" Ending="is" StemID="1" LemmaEnding="2128">
 			<Attributes Noteiktība="Nenoteiktā" Skaitlis="Vienskaitlis" Locījums="Nominatīvs" Dzimte="Vīriešu"/>
@@ -5440,7 +5440,7 @@
 			<Attributes Noteiktība="Noteiktā" Skaitlis="Daudzskaitlis" Locījums="Lokatīvs" Dzimte="Sieviešu"/>
 		</Ending>		
 	</Paradigm>
-	<Paradigm Stems="1" ID="43" LemmaEnding="2106" Description="Substantivizējušās divdabju formas kā 'pusapģērbies'" AllowedGuessEndings="!">
+	<Paradigm Stems="1" ID="43" LemmaEnding="2106" Description="Adjektivizējušies -ies/-usies divdabji (pusapģērbies)" AllowedGuessEndings="!">
 		<Attributes Vārdšķira="Īpašības vārds" Noteiktība="Nenoteiktā"/> 
 		<Ending ID="2106" StemChange="0" Ending="ies" StemID="1" LemmaEnding="2106">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs" Dzimte="Vīriešu"/>
