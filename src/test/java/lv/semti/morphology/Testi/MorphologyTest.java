@@ -2617,4 +2617,20 @@ public class MorphologyTest {
 		Word ļaudiij = locītājs.analyze("ļaudiij");
 		assertFalse(ļaudiij.isRecognized());
 	}
+
+    @Test // https://github.com/PeterisP/morphology/issues/15
+    public void griedt() {
+        locītājs.enableGuessing = false;
+
+        List<Wordform> formas = locītājs.generateInflections("griezt");
+        for (Wordform forma : formas) {
+            assertNotEquals("gried", forma.getToken());
+            assertNotEquals("griediet", forma.getToken());
+        }
+
+        assertFalse( locītājs.analyze("gried").isRecognized() );
+        assertFalse( locītājs.analyze("griediet").isRecognized() );
+        assertTrue( locītājs.analyze("griez").isRecognized() );
+        assertTrue( locītājs.analyze("grieziet").isRecognized() );
+    }
 }
