@@ -105,7 +105,13 @@ public class Statistics {
 	
 	public static Statistics getStatistics() {
 		if (singleton == null)
-			singleton = new Statistics();
+			try {
+			    singleton = new Statistics(DEFAULT_STATISTICS_FILE);
+            } catch (Exception e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+                singleton = new Statistics();
+            }
 		return singleton;
 	}
 	
@@ -116,6 +122,7 @@ public class Statistics {
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
+                singleton = new Statistics();
 			}
 		return singleton;
 	}
