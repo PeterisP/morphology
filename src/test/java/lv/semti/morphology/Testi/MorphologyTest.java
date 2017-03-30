@@ -271,7 +271,6 @@ public class MorphologyTest {
 	public void skansts(){
 		List<Wordform> skansts = locītājs.generateInflections("skansts");
 		assertNotEquals(skansts.size(), 0);
-		describe(skansts);
 		AttributeValues testset = new AttributeValues();
 		testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
 		testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Genitive);
@@ -397,7 +396,7 @@ public class MorphologyTest {
 		
 		long beigas = System.currentTimeMillis();
 		long starpība = beigas - sākums;
-		System.out.printf("Pagāja %d ms\n%d pieprasījumi sekundē\n", starpība, skaits*1000/starpība);
+		System.out.printf("%d pieprasījumi sekundē (%d ms)\n", skaits*1000/starpība, starpība);
 	}
 	
 	//TODO - dubulto leksēmu tests jāuztaisa
@@ -870,7 +869,6 @@ public class MorphologyTest {
 		assertTrue(nopūzdamās.isRecognized());
 		
 		Word nopūsdamās = locītājs.analyze("pūsdamās");
-		nopūsdamās.describe(System.out);
 		assertFalse(nopūsdamās.isRecognized());
 		
 		Word grūzdams = locītājs.analyze("grūzdams");
@@ -2136,7 +2134,7 @@ public class MorphologyTest {
 		locītājs.guessVerbs = false;
 		locītājs.guessNouns = true;
 		locītājs.enableAllGuesses = true;
-		locītājs.describe(new PrintWriter(System.out));
+//		locītājs.describe(new PrintWriter(System.out));
 		Word w = locītājs.analyze("xxxbs");		
 		assertTrue(w.isRecognized());
 		
@@ -2156,11 +2154,9 @@ public class MorphologyTest {
 		
 		Word austrumlatvija = locītājs.analyze("Austrumlatvija");
 		assertTrue(austrumlatvija.isRecognized());
-		austrumlatvija.describe(new PrintWriter(System.out));		
 
 		Word w = locītājs.analyze("mirušais");
 		assertTrue(w.isRecognized());
-		w.describe(new PrintWriter(System.out));		
 	}
 	
 	@Test
@@ -2497,7 +2493,7 @@ public class MorphologyTest {
 
 		locītājs.guessVerbs = false;
 		locītājs.guessParticiples = false;
-		locītājs.describe(new PrintWriter(new OutputStreamWriter(System.out, "UTF-8")));
+//		locītājs.describe(new PrintWriter(new OutputStreamWriter(System.out, "UTF-8")));
 
 		formas = locītājs.generateInflections("vārāms");
 		assertEquals(0, formas.size());
