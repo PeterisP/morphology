@@ -2,13 +2,13 @@
 <TagSet>
 <Attribute LV="Vārdšķira" EN="Part of speech" MarkupPos="0">
 	<Value LV="Lietvārds" EN="Noun" Tag="n" DefaultTags="n_____"/>
-	<Value LV="Darbības vārds" EN="Verb" Tag="v"/>
-	<Value LV="Īpašības vārds" EN="Adjective" Tag="a"/>
-	<Value LV="Vietniekvārds" EN="Pronoun" Tag="p"/>
-	<Value LV="Apstākļa vārds" EN="Adverb" Tag="r"/>
-	<Value LV="Prievārds" EN="Preposition" Tag="s"/>
+	<Value LV="Darbības vārds" EN="Verb" Tag="v" DefaultTags="v__________"/>
+	<Value LV="Īpašības vārds" EN="Adjective" Tag="a" DefaultTags="a_____"/>
+	<Value LV="Vietniekvārds" EN="Pronoun" Tag="p" DefaultTags="p______"/>
+	<Value LV="Apstākļa vārds" EN="Adverb" Tag="r" DefaultTags="r__"/>
+	<Value LV="Prievārds" EN="Preposition" Tag="s" DefaultTags="s___"/>
 	<Value LV="Saiklis" EN="Conjunction" Tag="c"/>
-	<Value LV="Skaitļa vārds" EN="Numeral" Tag="m"/>
+	<Value LV="Skaitļa vārds" EN="Numeral" Tag="m" DefaultTags="m_____"/>
 	<Value LV="Izsauksmes vārds" EN="Interjection" Tag="i"/>
 	<Value LV="Saīsinājums" EN="Abbreviation" Tag="y"/>
 	<Value LV="Partikula" EN="Particle" Tag="q"/>
@@ -362,6 +362,7 @@
 	<Value LV="Kārtas skaitlis cipariem" EN="Ordinal" Tag="o"/>
 	<Value LV="URL" EN="URL" Tag="u"/>
 	<Value LV="Saīsinājums" EN="Abbreviation" Tag="?"/>
+	<Value LV="Drukas kļūda" EN="Typo" Tag="t"/>
 	<Value LV="Cits" EN="Other" Tag="x"/>
 </Attribute>
 

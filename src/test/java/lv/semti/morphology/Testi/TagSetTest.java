@@ -99,7 +99,7 @@ public class TagSetTest {
 		BufferedReader ieeja;
 		String rinda;
 		ieeja = new BufferedReader(
-				new InputStreamReader(getClass().getClassLoader().getResourceAsStream("morfoetalons.txt"), "UTF-8"));
+				new InputStreamReader(getClass().getClassLoader().getResourceAsStream("all.txt"), "UTF-8"));
 		
 		LinkedList<Etalons> etaloni = new LinkedList<Etalons>();
 		
@@ -111,16 +111,26 @@ public class TagSetTest {
 		PrintWriter izeja = new PrintWriter(new PrintStream(System.out, true, "UTF8"));
 		TagSet tags = TagSet.getTagSet();
 
+		boolean na_tags = false;
+		boolean bad_tags = false;
 		for (Etalons e : etaloni) {
+		    if (e.tag.equalsIgnoreCase("N/A")) {
+		        na_tags = true;
+		        continue;
+            }
 			AttributeValues av = tags.fromTag(e.tag);
 			String converted = tags.toTag(av);
 			
 			if (!e.tag.equalsIgnoreCase(converted)) {
+			    bad_tags = true;
 				izeja.println(e.wordform+"\t"+e.tag+"\n\t"+converted+"\n");
 				av.describe(izeja);
 				izeja.println();
 			}
 		}
+
+		assertFalse("Morphocorpus (all.txt) contains tags that aren't valid according to TagSet.xml", bad_tags);
+        assertFalse("Morphocorpus (all.txt) contains N/A tags", na_tags);
 		
 		izeja.flush();
 		ieeja.close();
@@ -167,10 +177,10 @@ public class TagSetTest {
 		Word cirvis = locītājs.analyze("cirvis");
 		assertTrue(cirvis.getBestWordform().isMatchingStrong("Locījums", "Nominatīvs"));
 		assertTrue(cirvis.getBestWordform().isMatchingStrong("Vārds", "cirvis"));
-		cirvis.getBestWordform().describe();
+//		cirvis.getBestWordform().describe();
 		AttributeValues english = tags.toEnglish(cirvis.getBestWordform());
-		System.out.println("----------------");
-		english.describe();
+//		System.out.println("----------------");
+//		english.describe();
 		assertTrue(english.isMatchingStrong("Case", "Nominative"));
 		assertTrue(english.isMatchingStrong("Wordform", "cirvis"));
 	}
