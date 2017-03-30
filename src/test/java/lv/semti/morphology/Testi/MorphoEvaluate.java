@@ -19,7 +19,6 @@ package lv.semti.morphology.Testi;
 
 
 import java.io.BufferedReader;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintStream;
@@ -28,6 +27,7 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
+import lv.semti.morphology.attributes.TagSet;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -60,8 +60,8 @@ public class MorphoEvaluate {
     }	
 	
 	@Test
-	public void testFile2016() throws IOException{
-		LinkedList<Etalons> etaloni = readVertEtalons("dev.txt");
+	public void testFile2017() throws IOException{
+		LinkedList<Etalons> etaloni = readVertEtalons("all.txt");
 		evaluate(etaloni);
 	}
 	
@@ -96,17 +96,19 @@ public class MorphoEvaluate {
 		int wfcount=0;
 		int ambig_wfcount=0;
 		int lemma_correct=0;
+
+		TagSet tags = TagSet.getTagSet();
 		
 		List<String> mistakes = new LinkedList<String>();
 		
 		for (Etalons e : etaloni) {
 			Word w = locītājs.analyze(e.wordform);
-			AttributeValues etalonaAV = MarkupConverter.fromKamolsMarkup(e.tag);
-			if (!e.tag.equalsIgnoreCase(MarkupConverter.toKamolsMarkupNoDefaults(etalonaAV))) {
-				System.out.printf("Slikts tags vārdam %s : '%s' -> '%s' \t\t%s\n", e.wordform, e.tag, MarkupConverter.toKamolsMarkupNoDefaults(etalonaAV), e.id);
+			AttributeValues etalonaAV = tags.fromTag(e.tag);
+			if (!e.tag.equalsIgnoreCase(tags.toTag(etalonaAV))) {
+				System.out.printf("Slikts tags vārdam %s : '%s' -> '%s' \t\t%s\n", e.wordform, e.tag, tags.toTag(etalonaAV), e.id);
 			}
 			etalonaAV.removeNonlexicalAttributes();
-			e.tag = MarkupConverter.toKamolsMarkup(etalonaAV);
+			e.tag = tags.toTag(etalonaAV);
 			
 			boolean in_voc=false;
 			for (Wordform wf : w.wordforms) {
@@ -143,7 +145,7 @@ public class MorphoEvaluate {
 				if (mainwf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(e.lemma) && mainwf.getTag().equalsIgnoreCase(e.tag))
 					perfect++;  
 				//else if (mainwf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(e.lemma) && mainwf.isMatchingWeak(MarkupConverter.fromKamolsMarkup(e.tag)))
-				else if (mainwf.isMatchingWeak(MarkupConverter.fromKamolsMarkup(e.tag)))
+				else if (mainwf.isMatchingWeak(tags.fromTag(e.tag)))
 					first_match++;
 				else {
 					boolean found = false;
@@ -151,7 +153,7 @@ public class MorphoEvaluate {
 					output = "";
 					for (Wordform wf : w.wordforms) {
 						if (wf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(e.lemma) && wf.getTag().equalsIgnoreCase(e.tag)) found = true;
-						if (wf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(e.lemma) && wf.isMatchingWeak(MarkupConverter.fromKamolsMarkup(e.tag))) found_match=true;
+						if (wf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(e.lemma) && wf.isMatchingWeak(tags.fromTag(e.tag))) found_match=true;
 						//if (wf.isMatchingWeak(MarkupConverter.fromKamolsMarkup(e.tag))) found_match=true;
 						output += "\t\t" + wf.getValue(AttributeNames.i_Lemma) + "\t" + wf.getTag() + "\n";
 					}

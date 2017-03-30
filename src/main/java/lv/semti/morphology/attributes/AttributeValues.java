@@ -28,8 +28,6 @@ import java.util.HashMap;
 import java.util.Set;
 import java.util.Map.Entry;
 
-import lv.semti.morphology.analyzer.MarkupConverter;
-
 import org.json.simple.JSONValue;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -242,7 +240,7 @@ public class AttributeValues implements FeatureStructure, Cloneable {
 	 * @return
 	 */
 	public String getTag() {
-		return MarkupConverter.toKamolsMarkup(this);
+		return TagSet.getTagSet().toTag(this);
 	}	
 
 	/**

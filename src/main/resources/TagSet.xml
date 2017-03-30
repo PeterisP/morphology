@@ -6,14 +6,14 @@
 	<Value LV="Īpašības vārds" EN="Adjective" Tag="a" DefaultTags="a_____"/>
 	<Value LV="Vietniekvārds" EN="Pronoun" Tag="p" DefaultTags="p______"/>
 	<Value LV="Apstākļa vārds" EN="Adverb" Tag="r" DefaultTags="r__"/>
-	<Value LV="Prievārds" EN="Preposition" Tag="s" DefaultTags="s___"/>
+	<Value LV="Prievārds" EN="Preposition" Tag="s" DefaultTags="s__"/>
 	<Value LV="Saiklis" EN="Conjunction" Tag="c"/>
 	<Value LV="Skaitļa vārds" EN="Numeral" Tag="m" DefaultTags="m_____"/>
 	<Value LV="Izsauksmes vārds" EN="Interjection" Tag="i"/>
 	<Value LV="Saīsinājums" EN="Abbreviation" Tag="y"/>
 	<Value LV="Partikula" EN="Particle" Tag="q"/>
 	<Value LV="Pieturzīme" EN="Punctuation" Tag="z"/>
-	<Value LV="Reziduālis" EN="Residual" Tag="x"/>
+	<Value LV="Reziduālis" EN="Residual" Tag="x" DefaultTags="xx"/>
 </Attribute>
 
 <Attribute LV="Lietvārda tips" EN="Noun type" PartOfSpeech="Lietvārds" MarkupPos="1" Description="Īpašvārds vai sugas vārds?">
@@ -28,7 +28,6 @@
 <Attribute LV="Skaitlis" EN="Number" PartOfSpeech="Lietvārds" MarkupPos="3">
 	<Value LV="Vienskaitlis" EN="Singular" Tag="s"/>
 	<Value LV="Daudzskaitlis" EN="Plural" Tag="p"/>
-	<Value LV="Nepiemīt" EN="Not applicable" Tag="0"/>
 </Attribute>
 <Attribute LV="Skaitlis 2" EN="Number-special" PartOfSpeech="Lietvārds" MarkupPos="3">
 	<Value LV="Vienskaitlinieks" EN="Always singular" Tag="v"/>
@@ -53,19 +52,18 @@
 	<Value LV="4" EN="4" Tag="4"/>
 	<Value LV="5" EN="5" Tag="5"/>
 	<Value LV="6" EN="6" Tag="6"/>
-	<Value LV="Atgriezenisks" EN="Reflexive" Tag="r"/>
-	<Value LV="Adjektīviskā" EN="Adjectivic" Tag="?"/>
 	<Value LV="Nepiemīt" EN="Not applicable" Tag="0"/>
+	<Value LV="Atgriezenisks" EN="Reflexive" Tag="r"/>
 </Attribute>
 
 <Attribute LV="Darbības vārda tips" EN="Verb type" PartOfSpeech="Darbības vārds" MarkupPos="1" Description="patstāvīgs vai palīg d.v ?">
 	<Value LV="Patstāvīgs darbības vārds" EN="Main" Tag="m"/>
+	<Value LV="'nebūt', 'trūkt' un 'pietikt'" EN="Requires genitive - 'not be', 'lack', 'have-enough'" Tag="g"/>
 	<Value LV="Modāls" EN="Modal" Tag="o"/>
 	<Value LV="Fāzes" EN="Phasal" Tag="p"/>
 	<Value LV="Izpausmes veida" EN="Expression" Tag="e"/>
 	<Value LV="Palīgverbs 'būt'" EN="Auxiliary 'to be'" Tag="c"/>
 	<Value LV="Palīgverbi 'tikt' un 'tapt'" EN="Auxiliary 'become'" Tag="t"/>
-	<Value LV="'nebūt', 'trūkt' un 'pietikt'" EN="Requires genitive - 'not be', 'lack', 'have-enough'" Tag="g"/>
 </Attribute>
 <Attribute LV="Atgriezeniskums" EN="Reflexive" PartOfSpeech="Darbības vārds" MarkupPos="2">
 	<Value LV="Jā" EN="Yes" Tag="y"/>
@@ -120,12 +118,12 @@
 
 <Attribute LV="Darbības vārda tips" EN="Verb type" PartOfSpeech="Divdabis" MarkupPos="1" Description="patstāvīgs vai palīg d.v ?">
 	<Value LV="Patstāvīgs darbības vārds" EN="Main" Tag="m"/>
+	<Value LV="'nebūt', 'trūkt' un 'pietikt'" EN="Requires genitive - 'not be', 'lack', 'have-enough'" Tag="g"/>
 	<Value LV="Modāls" EN="Modal" Tag="o"/>
 	<Value LV="Fāzes" EN="Phasal" Tag="p"/>
 	<Value LV="Izpausmes veida" EN="Expression" Tag="e"/>
 	<Value LV="Palīgverbs 'būt'" EN="Auxiliary 'to be'" Tag="c"/>
 	<Value LV="Palīgverbi 'tikt' un 'tapt'" EN="Auxiliary 'become'" Tag="t"/>
-	<Value LV="'nebūt', 'trūkt' un 'pietikt'" EN="Requires genitive - 'not be', 'lack', 'have-enough'" Tag="g"/>
 </Attribute>
 <Attribute LV="Atgriezeniskums" PartOfSpeech="Divdabis" MarkupPos="2">
 	<Value LV="Jā" EN="Yes" Tag="y"/>
@@ -247,17 +245,17 @@
 	<Value LV="Jā" EN="Yes" Tag="y"/>
 	<Value LV="Nē" EN="No" Tag="n"/>
 </Attribute>
-<Attribute LV="Anafora" EN="Anaphora" PartOfSpeech="Vietniekvārds" MarkupPos="7">
+<Attribute LV="Anafora" EN="Anaphora" PartOfSpeech="Vietniekvārds">
 	<Value LV="Aizstāj adjektīvu" EN="Replaces adjective" Tag="a"/>
 	<Value LV="Aizstāj substantīvu" EN="Replaces substantive/nominal" Tag="s"/>
 	<Value LV="Nepiemīt" EN="Not applicable" Tag="n"/>
 </Attribute>
 
 <Attribute LV="Pakāpe" EN="Degree" PartOfSpeech="Apstākļa vārds" MarkupPos="1">
+	<Value LV="Relatīvais" EN="Relative" Tag="r"/>
 	<Value LV="Pamata" EN="Positive" Tag="p"/>
 	<Value LV="Pārākā" EN="Comparative" Tag="c"/>
 	<Value LV="Vispārākā" EN="Superlative" Tag="s"/>
-	<Value LV="Relatīvais" EN="Relative" Tag="r"/>
 	<Value LV="Nepiemīt" EN="Not applicable" Tag="0"/>
 </Attribute>
 <Attribute LV="Apstākļa vārda tips" EN="Adverb type" PartOfSpeech="Apstākļa vārds" MarkupPos="2">
@@ -283,7 +281,7 @@
 	<Value LV="Akuzatīvs" EN="Accusative" Tag="a"/>
 	<Value LV="Nepiemīt" EN="Not applicable" Tag="0"/>
 </Attribute>
-<Attribute LV="Vietas apstākļa nozīme" EN="Usable as location adverb" PartOfSpeech="Prievārds" MarkupPos="4">
+<Attribute LV="Vietas apstākļa nozīme" EN="Usable as location adverb" PartOfSpeech="Prievārds">
 	<Value LV="Jā" EN="Yes" Tag="y"/>
 	<Value LV="Nē" EN="No" Tag="n"/>
 </Attribute>
@@ -295,8 +293,8 @@
 <Attribute LV="Uzbūve" EN="Structure" PartOfSpeech="Saiklis" MarkupPos="2">
 	<Value LV="Vienkāršs" EN="Simple" Tag="s"/>
 	<Value LV="Salikts" EN="Compound" Tag="c"/>
-	<Value LV="Atkārtots" EN="Repeated" Tag="r"/>
 	<Value LV="Divkāršs" EN="Double" Tag="d"/>
+	<Value LV="Atkārtots" EN="Repeated" Tag="r"/>
 </Attribute>
 
 <Attribute LV="Skaitļa vārda tips" EN="Numeral type" PartOfSpeech="Skaitļa vārds" MarkupPos="1">
@@ -326,7 +324,7 @@
 	<Value LV="Lokatīvs" Tag="l"/>
 	<Value LV="Nepiemīt" Tag="0"/>
 </Attribute>
-<Attribute LV="Skaitļu kārta" EN="Numeral order" PartOfSpeech="Skaitļa vārds" MarkupPos="6">
+<Attribute LV="Skaitļu kārta" EN="Numeral order">
 	<Value LV="Vieni" EN="Ones" Tag="v"/>
 	<Value LV="Padsmiti" EN="Teens" Tag="p"/>
 	<Value LV="Desmiti" EN="Tens" Tag="d"/>
@@ -335,6 +333,7 @@
 	<Value LV="Miljoni" EN="Millions" Tag="m"/>
 	<Value LV="Miljardi" EN="Milliards" Tag="r"/>
 </Attribute>
+
 
 <Attribute LV="Uzbūve" EN="Structure" PartOfSpeech="Izsauksmes vārds" MarkupPos="1">
 	<Value LV="Vienkāršs" EN="Simple" Tag="s"/>
@@ -358,11 +357,10 @@
 
 <Attribute LV="Reziduāļa tips" EN="Residual type" PartOfSpeech="Reziduālis" MarkupPos="1">
 	<Value LV="Vārds svešvalodā" EN="Foreign material" Tag="f"/>
+	<Value LV="Drukas kļūda" EN="Typo" Tag="t"/>
 	<Value LV="Skaitlis cipariem" EN="Numeral" Tag="n"/>
 	<Value LV="Kārtas skaitlis cipariem" EN="Ordinal" Tag="o"/>
-	<Value LV="URL" EN="URL" Tag="u"/>
-	<Value LV="Saīsinājums" EN="Abbreviation" Tag="?"/>
-	<Value LV="Drukas kļūda" EN="Typo" Tag="t"/>
+	<Value LV="URI" EN="URI" Tag="u"/>
 	<Value LV="Cits" EN="Other" Tag="x"/>
 </Attribute>
 

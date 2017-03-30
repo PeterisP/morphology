@@ -523,7 +523,7 @@ public class MorphologyTest {
 		Word simt = locītājs.analyze("simt");
 		assertTrue(simt.isRecognized());
 		assertEquals(AttributeNames.v_Hundreds, simt.wordforms.get(0).getValue(AttributeNames.i_Order));		
-		assertEquals("mcs_p0s", simt.wordforms.get(0).getTag());
+		assertEquals("mcs_p0", simt.wordforms.get(0).getTag());
 	}
 
 	@Test
@@ -1321,7 +1321,7 @@ public class MorphologyTest {
 		
 		vārds = locītājs.analyze("piecsimt");
 		assertTrue(vārds.isRecognized());
-		assertEquals("mcc0p0s", vārds.wordforms.get(0).getTag());
+		assertEquals("mcc0p0", vārds.wordforms.get(0).getTag());
 	}
 
 	@Test
@@ -2048,6 +2048,7 @@ public class MorphologyTest {
 	public void uri() {
 		Word url = locītājs.analyze("www.pillar.lv");
 		assertTrue(url.isRecognized());
+		describe(url.wordforms);
 		assertEquals("xu", url.wordforms.get(0).getTag());		
 	}
 	

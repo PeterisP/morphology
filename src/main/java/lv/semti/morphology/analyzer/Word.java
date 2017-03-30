@@ -25,6 +25,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Observable;
 
+import lv.semti.morphology.attributes.TagSet;
 import org.json.simple.JSONValue;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -253,7 +254,7 @@ public class Word extends Observable implements Cloneable{
 	
 	public Wordform getMatchingWordform(String answerTag, boolean complain) {
 		Wordform result = null;
-		AttributeValues av = MarkupConverter.fromKamolsMarkup(answerTag);
+		AttributeValues av = TagSet.getTagSet().fromTag(answerTag);
 		
 		//FIXME - hardcoded workaround tagera kļūdai
 		if (this.getToken().endsWith("ais") && av.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adjective) 
@@ -285,7 +286,6 @@ public class Word extends Observable implements Cloneable{
 		if (complain && (result.getValue(AttributeNames.i_Lemma).equalsIgnoreCase("nav") || result.getValue(AttributeNames.i_Lemma).equalsIgnoreCase("nenāk"))) {
 			result.describe();
 		}
-
 		
 		return result;
 	}

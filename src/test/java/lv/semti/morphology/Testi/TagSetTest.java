@@ -18,7 +18,6 @@
 package lv.semti.morphology.Testi;
 
 import java.io.BufferedReader;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
@@ -72,10 +71,7 @@ public class TagSetTest {
 		
 		List<String> testcases = Arrays.asList("sppdn","vmnift330an","zc");
 		
-		Lexicon lexicon = null;
 		try {
-			//lexicon = new Lexicon("dist/Lexicon.xml");
-			
 			for (String testcase : testcases) {
 				String result = MarkupConverter.toKamolsMarkup(MarkupConverter.fromKamolsMarkup(testcase));
 				assertEquals(testcase, result);
@@ -86,7 +82,6 @@ public class TagSetTest {
 					izeja.println();					
 				}
 			}
-
 			izeja.flush();
 		} catch (Exception e) {
 			e.printStackTrace();

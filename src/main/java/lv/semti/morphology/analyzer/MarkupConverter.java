@@ -22,9 +22,10 @@ import lv.semti.morphology.attributes.*;
 /**
  * Transforms between internal attribute value structure and SemTi-Kamols
  * tagset.
- * TODO - saintegrēt ar klasi ĪpašībuVarianti; lai šī loģika ir iekļauta īpašību variantu XML failā
+ * @deprecated use lv.semti.morphology.attributes.TagSet instead
  * @author Pēteris Paikens
  */
+@Deprecated
 public class MarkupConverter {
 	public static boolean defaulti = false;
 

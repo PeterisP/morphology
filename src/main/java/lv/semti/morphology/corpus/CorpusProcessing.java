@@ -174,7 +174,7 @@ public class CorpusProcessing {
 				lemma = parse[2];
 				tag = parse[1];
 				
-	    		AttributeValues vajadzīgās = MarkupConverter.fromKamolsMarkup(tag);
+	    		AttributeValues vajadzīgās = TagSet.getTagSet().fromTag(tag);
 
 		    	Word analīze = analyzer.analyze(wordform);
 		    	boolean vaiKādsSakrīt = false;
