@@ -541,8 +541,12 @@ public class TokenizeTest {
 	@Test
 	public void nonbreakingspace() {
 		LinkedList<Word> tokens;		
-		tokens = Splitting.tokenize(locītājs, "a b\u00A0c", false);
-		assertEquals(2, tokens.size());
+		tokens = Splitting.tokenize(locītājs, "aaa bbbb\u00A0cccc", false);
+//		PP - At 2017.03.30 it was set so that nonbreaking space keeps tokens together.
+//      I can't remember why I made it so back in 2014.
+//      This causes problems for tokenization of web based data and corpora, since often they have nbsp in random places for line break reasons.
+//      So I'm putting it back as splitting whitespace until we have a test sample why (and when) it needs to be so
+		assertEquals(3, tokens.size());
 	}
 	
 	@Test

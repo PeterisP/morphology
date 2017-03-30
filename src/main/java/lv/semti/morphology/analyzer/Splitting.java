@@ -44,26 +44,13 @@ public class Splitting {
 		String separators=" .?:/!,;\"'`´(){}<>«»-[]—‐‑‒–―‘’‚‛“”„‟′″‴‵‶‷‹›‼‽⁈⁉․‥…&•";
 		return separators.contains(String.valueOf(c));
 	}
-	
-	/**
-	 * Determine if given string is a whitespace char (space, tab, newline).
-	 */
-	public static boolean isSpace(String s)
-	{
-		String separatorSymbols = " \t\n\r";
-		if (separatorSymbols.contains(s))
-		{
-			return true;
-		}
-		return false;
-	}
 
 	/**
 	 * Determine if given char is a whitespace char (space, tab, newline).
 	 */
 	public static boolean isSpace(char c)
 	{
-		return isSpace(String.valueOf(c));
+	    return (" \t\n\r\u00A0".indexOf(c) != -1);
 	}
 
 	/*
@@ -82,6 +69,7 @@ public class Splitting {
 		str = str.replace('\n', ' ');
 		str = str.replace('\r', ' ');
 		str = str.replace('\t', ' ');
+		str = str.replace('\u00A0', ' ');
 		boolean inApostrophes=false;
 		Status statuss = Status.IN_SPACE;
 		
