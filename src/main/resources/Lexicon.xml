@@ -4542,7 +4542,7 @@
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Vajadzības, atstāstījuma paveids" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Darāmā"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="19" LemmaEnding="955" Description="Darbības vārdi, 2. konjugācija, atgriezeniskie (spelēties)" AllowedGuessEndings="oāēī">
+	<Paradigm Stems="1" ID="19" LemmaEnding="955" Description="Darbības vārdi, 2. konjugācija, atgriezeniskie (spēlēties)" AllowedGuessEndings="oāēī">
 		<Attributes Konjugācija="2" Atgriezeniskums="Jā" Noliegums="Nē"/>
 		<Ending ID="955" StemChange="0" Ending="ties" StemID="1" LemmaEnding="955">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Nenoteiksme" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
