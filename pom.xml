@@ -5,7 +5,7 @@
 	<groupId>lv.ailab.morphology</groupId>
 	<artifactId>morphology</artifactId>
 	<packaging>jar</packaging>
-	<version>1.0.9</version>
+	<version>1.0.10-SNAPSHOT</version>
 	<name>Latvian morphological analysis library</name>
 	<description>Latvian morphological analysis library</description>
 	<url>https://github.com/PeterisP/morphology</url>
@@ -41,6 +41,8 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.6</maven.compiler.source>
+        <maven.compiler.target>1.6</maven.compiler.target>
 	</properties>
 	<dependencies>
 		<dependency>

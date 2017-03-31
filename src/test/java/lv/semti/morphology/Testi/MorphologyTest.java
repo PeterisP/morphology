@@ -26,10 +26,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 import java.util.Map.Entry;
 
 import org.junit.Before;
@@ -45,13 +42,13 @@ public class MorphologyTest {
 	private static Analyzer locītājs;
 
 	private void assertNounInflection(List<Wordform> forms, String number, String nounCase, String gender, String validForm) {
-		AttributeValues testset = new AttributeValues();
-		testset.addAttribute(AttributeNames.i_Case, nounCase);
-		testset.addAttribute(AttributeNames.i_Number, number);
-		if (!gender.isEmpty()) testset.addAttribute(AttributeNames.i_Gender, gender);
-		
-		assertInflection(forms, testset, validForm);
-	}
+        AttributeValues testset = new AttributeValues();
+        testset.addAttribute(AttributeNames.i_Case, nounCase);
+        testset.addAttribute(AttributeNames.i_Number, number);
+        if (!gender.isEmpty()) testset.addAttribute(AttributeNames.i_Gender, gender);
+
+        assertInflection(forms, testset, validForm);
+    }
 	
 	private void assertInflection(List<Wordform> forms, AttributeValues testset, String validForm) {
 		boolean found = false;
@@ -77,6 +74,13 @@ public class MorphologyTest {
 		}
 		assertTrue(found);		
 	}
+
+	private void assertLemma(String word, String expectedLemma) {
+        Word analysis= locītājs.analyze(word);
+        assertTrue(analysis.isRecognized());
+        Wordform forma = analysis.getBestWordform();
+        assertEquals(expectedLemma, forma.getValue(AttributeNames.i_Lemma));
+    }
 
 	@SuppressWarnings("unused")
 	private void describe(List<Wordform> formas) {
@@ -375,7 +379,6 @@ public class MorphologyTest {
 		locītājs.enableVocative = true;
 		locītājs.enableDiminutive = true;
 		locītājs.enablePrefixes = false;
-		locītājs.enableGuessing = false;
 		locītājs.enableAllGuesses = true;
 		locītājs.meklētsalikteņus = false; 
 		
@@ -2395,8 +2398,6 @@ public class MorphologyTest {
 	
 	@Test // klausītājies, vēlējumies - http://valoda.ailab.lv/latval/vidusskolai/morfol/lietv-atgr.htm 
 	public void reflexive_nouns() {
-		locītājs.enableGuessing = false;
-		
 		Word klausītājies = locītājs.analyze("klausītājies");
 		assertTrue(klausītājies.isRecognized());
 		
@@ -2487,8 +2488,6 @@ public class MorphologyTest {
 
 	@Test // Tezauram locīšanai - lai nelokam to, kas nav leksikonā bez minēšānas
 	public void nelocīt() throws UnsupportedEncodingException {
-		locītājs.enableGuessing = false;
-
 		List<Wordform> formas = locītājs.generateInflections("xxx");
 		assertEquals(0, formas.size());
 
@@ -2506,6 +2505,7 @@ public class MorphologyTest {
 	@Test // Crash uz sliktu locīšanu
 	public void locīt_ar_sliktu_paradigmu() {
 		List<Wordform> formas = locītājs.generateInflectionsFromParadigm("vārāms", 16);
+		assertTrue(true);
 	}
 
 	@Test // izmaiņas ar substantivizējušamies divdabjiem un īpašībasvārdiem
@@ -2545,8 +2545,6 @@ public class MorphologyTest {
 
 	@Test // Bija vārdiem simts, miljons utml sieviešu dzimtes formas arī. Pārklājas ar https://github.com/PeterisP/morphology/issues/10
 	public void simtas() {
-		locītājs.enableGuessing = false;
-
 		List<Wordform> formas = locītājs.generateInflections("simts");
         for (Wordform forma : formas) {
         	if (forma.getToken().equalsIgnoreCase("simtas")) {
@@ -2561,8 +2559,6 @@ public class MorphologyTest {
 
     @Test // Problēma ar vārdu krāties, kur bija formas 'krāos' u.c.
     public void krāties() {
-        locītājs.enableGuessing = false;
-
         List<Wordform> formas = locītājs.generateInflections("krāties");
         for (Wordform forma : formas) {
             assertNotEquals("krāos", forma.getToken());
@@ -2574,8 +2570,6 @@ public class MorphologyTest {
 
     @Test // Locījumu ģenerēšanai jādarbojas ar vairākiem celmiem 1. konjugācijas gadījumā
     public void multistem_generateinflections() {
-        locītājs.enableGuessing = false;
-
         List<Wordform> sairšana = locītājs.generateInflectionsFromParadigm("irt", 15, "ir", "irst", "ir");
         List<Wordform> laivas_iršana = locītājs.generateInflectionsFromParadigm("irt", 15, "ir", "ir", "īr");
 
@@ -2598,8 +2592,6 @@ public class MorphologyTest {
 
 	@Test // Problēma ar daudzskaitlinieku locīšanu
 	public void ļaudis() {
-		locītājs.enableGuessing = false;
-
         AttributeValues attrs = new AttributeValues();
         attrs.addAttribute(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum);
         attrs.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Masculine);
@@ -2617,8 +2609,6 @@ public class MorphologyTest {
 
     @Test // https://github.com/PeterisP/morphology/issues/15
     public void griedt() {
-        locītājs.enableGuessing = false;
-
         List<Wordform> formas = locītājs.generateInflections("griezt");
         for (Wordform forma : formas) {
             assertNotEquals("gried", forma.getToken());
@@ -2629,5 +2619,34 @@ public class MorphologyTest {
         assertFalse( locītājs.analyze("griediet").isRecognized() );
         assertTrue( locītājs.analyze("griez").isRecognized() );
         assertTrue( locītājs.analyze("grieziet").isRecognized() );
+    }
+
+    @Test
+    public void lemmas2017mar() {
+        assertLemma("izpaužas", "izpausties");
+        assertLemma("finanšu", "finanses");
+//        assertLemma("pārējie", "pārējais");
+        locītājs.enableGuessing = true;
+        assertLemma("Pētera", "Pēteris");
+        assertLemma("NATO", "NATO");
+        assertLemma("lībiešu", "lībietis");
+    }
+
+    @Test
+    public void turpms() {
+        assertLemma("turpmākiem", "turpmāks");
+    }
+
+//    https://github.com/PeterisP/morphology/issues/12
+    @Test
+    public void pēdējajam() {
+        List<Wordform> formas = locītājs.generateInflections("pēdējs");
+        for (Wordform forma : formas) {
+            if (forma.getToken().equalsIgnoreCase("pēdējajam"))
+                describe(new LinkedList<Wordform>(Arrays.asList(forma)));
+            assertNotEquals("pēdējajam", forma.getToken()); // šo formu nedrīkst ģenerēt
+        }
+        assertLemma("pēdējam", "pēdējs");
+        assertLemma("pēdējajam", "pēdējais");  // bet drīkst atpazīt
     }
 }

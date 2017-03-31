@@ -93,9 +93,10 @@ public abstract class Mijas {
 					else if (celms.endsWith("š")) {
 						if (celms.endsWith("kš")) {
 							varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "kst", "Mija", "kst -> kš"));
-						} else if (celms.endsWith("nš")) {
-							varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "nst", "Mija", "nst -> nš"));
 						} else {
+							if (celms.endsWith("nš")) {
+                                varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "nst", "Mija", "nst -> nš"));
+                            }
 							varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "s", "Mija", "s -> š"));
 							varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "t", "Mija", "t -> š"));
 						}
