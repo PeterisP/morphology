@@ -180,4 +180,10 @@ public class TagSetTest {
 		assertTrue(english.isMatchingStrong("Wordform", "cirvis"));
 	}
 
+	@Test
+    public void nulls() {
+        TagSet tags = TagSet.getTagSet();
+        assertEquals("-", tags.toTag(null));
+        assertEquals(0, tags.fromTag(null).size());
+    }
 }

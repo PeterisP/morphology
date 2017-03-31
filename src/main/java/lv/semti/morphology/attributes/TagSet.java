@@ -43,7 +43,7 @@ import org.xml.sax.SAXException;
  */
 public class TagSet {
 
-	private final static String DEFAULT_TAGSET_FILE = "dist/TagSet.xml";
+	private final static String DEFAULT_TAGSET_FILE = "TagSet.xml";
 	
 	private static TagSet ref; //Reference uz singletonu
 	
@@ -100,12 +100,9 @@ public class TagSet {
 			try {
 				ref = new TagSet();
 			} catch (Exception e) {
-				try {
-					ref = new TagSet("TagSet.xml");
-				} catch (Exception e2) {
-					e.printStackTrace();
-				}
-			} 
+				System.err.println("Unable to load TagSet.xml !");
+				e.printStackTrace();
+			}
 		}
 		return ref;
 	}
@@ -177,7 +174,7 @@ public class TagSet {
 	}
 	public AttributeValues fromTag(String tag, String language) {
 		AttributeValues values = new AttributeValues();
-		if (tag.equals("")) return values;
+		if (tag == null || tag.equals("")) return values;
 		
 		FixedAttribute postag = null;
 		for (Attribute attribute : attributes) 
@@ -195,7 +192,7 @@ public class TagSet {
 		if (structure == structureTypes.POS_BASED_SEMTI && pos.equalsIgnoreCase(AttributeNames.v_Verb) && tag.length() > 3 && tag.charAt(3) == 'p') {
 			pos = AttributeNames.v_Participle;
 		}
-		postag.addValue(values, tag.charAt(0), language); //FIXME - hardcoded, maybe shouldn't be
+		postag.addValue(values, tag.charAt(0), language); // hardcoded, maybe shouldn't be
 		
 		for (Attribute attribute : attributes) 
 			if (attribute instanceof FixedAttribute) {
@@ -213,6 +210,7 @@ public class TagSet {
 	 * @return
 	 */
 	public String toTag(AttributeValues values) {	//TODO - valodu ņemt vērā?	
+        if (values == null) return "-"; //FIXME - neesmu droshs ka "-" ir pareizaakais variants
 		String result = "";
 		String pos = values.getValue(AttributeNames.i_PartOfSpeech);
 		if (pos == null) return "-"; //FIXME - neesmu droshs ka "-" ir pareizaakais variants
