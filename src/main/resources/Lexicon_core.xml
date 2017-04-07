@@ -1394,6 +1394,9 @@
   </Paradigm>
   <Paradigm Stems="1" ID="9" LemmaEnding="87" Description="Lietvārds 5. deklinācija -e siev. dz">
     <Attributes Vārdšķira="Lietvārds" Deklinācija="5" Dzimte="Sieviešu"/>
+    <Lexeme Stem1="finans">
+      <Attributes Lietvārda_tips="Sugas vārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="finanses"/>
+    </Lexeme>
     <Lexeme ID="14649" Stem1="vecenīt">
       <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="vecenīte"/>
     </Lexeme>
@@ -5083,6 +5086,9 @@
   </Paradigm>
   <Paradigm Stems="3" ID="18" LemmaEnding="1061" Description="Darbības vārdi 1. konjugācija atgriezeniskie">
     <Attributes Konjugācija="1" Atgriezeniskums="Jā"/>
+    <Lexeme Stem1="izpaus" Stem2="izpauž" Stem3="izpaud">
+      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="izpausties"/>
+    </Lexeme>    
     <Lexeme ID="23960" Stem1="cel" Stem2="ceļ" Stem3="cēl">
       <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="celties"/>
     </Lexeme>
