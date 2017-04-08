@@ -18,13 +18,22 @@
 package lv.semti.morphology.Testi;
 
 
+import static java.lang.Integer.max;
 import static org.junit.Assert.*;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
+
 import org.junit.BeforeClass;
 import org.junit.Test;
 import lv.semti.morphology.analyzer.*;
 import lv.semti.morphology.attributes.AttributeNames;
+import sun.font.TrueTypeFont;
 
 public class TokenizeTest {
 	private static Analyzer locītājs;
@@ -566,5 +575,65 @@ public class TokenizeTest {
 		tokens = Splitting.tokenize(locītājs, "bv  q  i", false);
 		assertEquals(3, tokens.size());
 	}
+
+	@Test
+	// Verify the differences between automatic tokenization and the tokenization implemented in morphology training data
+	public void corpustest() throws IOException {
+        BufferedReader ieeja;
+        String rinda;
+        ieeja = new BufferedReader(
+                new InputStreamReader(getClass().getClassLoader().getResourceAsStream("all.txt"), "UTF-8"));
+
+        StringBuilder sentence = new StringBuilder();
+        boolean no_space = true;
+        int count = 0;
+        List<String> gold_tokens = new ArrayList<>();
+        while ((rinda = ieeja.readLine()) != null) {
+            if (rinda.contains("<s>")) {
+                assertEquals(0, sentence.length());
+            } else if (rinda.contains("</s")) {
+                LinkedList<Word> silver_tokens = Splitting.tokenize(locītājs, sentence.toString(), false);
+                boolean ok = gold_tokens.size() == silver_tokens.size();
+                if (ok) {
+                    for (int i = 0; i < gold_tokens.size(); i++) {
+                        if (!gold_tokens.get(i).equals(silver_tokens.get(i).getToken()))
+                            ok = false;
+                    }
+                }
+                if (!ok) {
+                    System.out.println(sentence);
+                    for (int i = 0; i < max(gold_tokens.size(), silver_tokens.size()); i++) {
+                        if (i < gold_tokens.size()) {
+                            System.out.printf("%-15s", gold_tokens.get(i));
+                        }
+                        System.out.print("\t");
+                        if (i < silver_tokens.size()) {
+                            System.out.print(silver_tokens.get(i).getToken());
+                        }
+                        System.out.println();
+                    }
+                    fail();
+                }
+
+                count ++;
+                if (count > 100) break;
+                sentence = new StringBuilder();
+                gold_tokens = new ArrayList<>();
+                no_space = true;
+            } else if (rinda.contains("<g />")) {
+                no_space = true;
+            } else {
+                if (!no_space) sentence.append(' ');
+                no_space = false;
+                String token = rinda.split("\t")[0];
+                sentence.append(token);
+                gold_tokens.add(token);
+            }
+            if (rinda.contains("<s>") || rinda.contains("</s>") || rinda.isEmpty()) continue;
+        }
+        ieeja.close();
+
+
+    }
 }
  
