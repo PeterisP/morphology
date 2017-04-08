@@ -10405,9 +10405,6 @@
     <Lexeme ID="26720" Stem1="vai">
       <Attributes Saikļa_tips="Sakārtojuma" Uzbūve="Vienkāršs" Pamatforma="vai"/>
     </Lexeme>
-    <Lexeme ID="50652" Stem1="vai arī">
-      <Attributes Saikļa_tips="Sakārtojuma" Uzbūve="Vienkāršs" Pamatforma="vai arī"/>
-    </Lexeme>
     <Lexeme ID="26673" Stem1="ja">
       <Attributes Saikļa_tips="Pakārtojuma" Uzbūve="Vienkāršs" Pamatforma="ja"/>
     </Lexeme>
@@ -10437,90 +10434,6 @@
     </Lexeme>
     <Lexeme ID="27336" Stem1="nedz">
       <Attributes Saikļa_tips="Sakārtojuma" Uzbūve="Atkārtots" Pamatforma="nedz"/>
-    </Lexeme>
-    <Lexeme ID="27386" Stem1="bet tomēr">
-      <Attributes Saikļa_tips="Sakārtojuma" Uzbūve="Salikts" Pamatforma="bet tomēr"/>
-    </Lexeme>
-    <Lexeme ID="27387" Stem1="kā arī">
-      <Attributes Saikļa_tips="Sakārtojuma" Uzbūve="Divkāršs" Pamatforma="kā arī"/>
-    </Lexeme>
-    <Lexeme ID="50858" Stem1="tā arī">
-      <Attributes Saikļa_tips="Sakārtojuma" Uzbūve="Divkāršs" Pamatforma="tā arī"/>
-    </Lexeme>
-    <Lexeme ID="27388" Stem1="bet arī">
-      <Attributes Saikļa_tips="Sakārtojuma" Uzbūve="Divkāršs" Pamatforma="bet arī"/>
-    </Lexeme>
-    <Lexeme ID="27389" Stem1="kā arī">
-      <Attributes Saikļa_tips="Sakārtojuma" Uzbūve="Salikts" Pamatforma="kā arī"/>
-    </Lexeme>
-    <Lexeme ID="27390" Stem1="ne tikai">
-      <Attributes Saikļa_tips="Sakārtojuma" Uzbūve="Divkāršs" Pamatforma="ne tikai"/>
-    </Lexeme>
-    <Lexeme ID="27391" Stem1="ne tikvien">
-      <Attributes Saikļa_tips="Sakārtojuma" Uzbūve="Divkāršs" Pamatforma="ne tikvien"/>
-    </Lexeme>
-    <Lexeme ID="27392" Stem1="ne vien">
-      <Attributes Saikļa_tips="Sakārtojuma" Uzbūve="Divkāršs" Pamatforma="ne vien"/>
-    </Lexeme>
-    <Lexeme ID="27393" Stem1="vai nu">
-      <Attributes Saikļa_tips="Sakārtojuma" Uzbūve="Divkāršs" Pamatforma="vai nu"/>
-    </Lexeme>
-    <Lexeme ID="27394" Stem1="it kā">
-      <Attributes Saikļa_tips="Pakārtojuma" Uzbūve="Salikts" Pamatforma="it kā"/>
-    </Lexeme>
-    <Lexeme ID="27395" Stem1="ja arī">
-      <Attributes Saikļa_tips="Pakārtojuma" Uzbūve="Salikts" Pamatforma="ja arī"/>
-    </Lexeme>
-    <Lexeme ID="27396" Stem1="kā kad">
-      <Attributes Saikļa_tips="Pakārtojuma" Uzbūve="Salikts" Pamatforma="kā kad"/>
-    </Lexeme>
-    <Lexeme ID="27397" Stem1="kaut arī">
-      <Attributes Saikļa_tips="Pakārtojuma" Uzbūve="Salikts" Pamatforma="kaut arī"/>
-    </Lexeme>
-    <Lexeme ID="27398" Stem1="kaut gan">
-      <Attributes Saikļa_tips="Pakārtojuma" Uzbūve="Salikts" Pamatforma="kaut gan"/>
-    </Lexeme>
-    <Lexeme ID="27399" Stem1="lai arī">
-      <Attributes Saikļa_tips="Pakārtojuma" Uzbūve="Salikts" Pamatforma="lai arī"/>
-    </Lexeme>
-    <Lexeme ID="27400" Stem1="lai gan">
-      <Attributes Saikļa_tips="Pakārtojuma" Uzbūve="Salikts" Pamatforma="lai gan"/>
-    </Lexeme>
-    <Lexeme ID="50876" Stem1="gan arī">
-      <Attributes Saikļa_tips="Pakārtojuma" Uzbūve="Salikts" Pamatforma="gan arī"/>
-    </Lexeme>
-    <Lexeme ID="27401" Stem1="pie tam">
-      <Attributes Saikļa_tips="Pakārtojuma" Uzbūve="Salikts" Pamatforma="pie tam"/>
-    </Lexeme>
-    <Lexeme ID="27402" Stem1="tā ka">
-      <Attributes Saikļa_tips="Pakārtojuma" Uzbūve="Salikts" Pamatforma="tā ka"/>
-    </Lexeme>
-    <Lexeme ID="50452" Stem1="jeb vai">
-      <Attributes Saikļa_tips="Pakārtojuma" Uzbūve="Salikts" Pamatforma="jeb vai"/>
-    </Lexeme>
-    <Lexeme ID="50453" Stem1="bet toties">
-      <Attributes Saikļa_tips="Pakārtojuma" Uzbūve="Salikts" Pamatforma="bet toties"/>
-    </Lexeme>
-    <Lexeme ID="27403" Stem1="tā kā">
-      <Attributes Saikļa_tips="Pakārtojuma" Uzbūve="Salikts" Pamatforma="tā kā"/>
-    </Lexeme>
-    <Lexeme ID="27404" Stem1="tādēļ ka">
-      <Attributes Saikļa_tips="Pakārtojuma" Uzbūve="Salikts" Pamatforma="tādēļ ka"/>
-    </Lexeme>
-    <Lexeme ID="27405" Stem1="tālab ka">
-      <Attributes Saikļa_tips="Pakārtojuma" Uzbūve="Salikts" Pamatforma="tālab ka"/>
-    </Lexeme>
-    <Lexeme ID="27406" Stem1="tamdēļ ka">
-      <Attributes Saikļa_tips="Pakārtojuma" Uzbūve="Salikts" Pamatforma="tamdēļ ka"/>
-    </Lexeme>
-    <Lexeme ID="27407" Stem1="tāpat kā">
-      <Attributes Saikļa_tips="Pakārtojuma" Uzbūve="Salikts" Pamatforma="tāpat kā"/>
-    </Lexeme>
-    <Lexeme ID="27408" Stem1="tāpēc ka">
-      <Attributes Saikļa_tips="Pakārtojuma" Uzbūve="Salikts" Pamatforma="tāpēc ka"/>
-    </Lexeme>
-    <Lexeme ID="27409" Stem1="tiklīdz kā">
-      <Attributes Saikļa_tips="Pakārtojuma" Uzbūve="Salikts" Pamatforma="tiklīdz kā"/>
     </Lexeme>
     <Lexeme ID="27410" Stem1="te">
       <Attributes Saikļa_tips="Sakārtojuma" Uzbūve="Atkārtots" Pamatforma="te"/>
@@ -10714,12 +10627,6 @@
     <Lexeme ID="27344" Stem1="patiešām">
       <Attributes Uzbūve="Vienkāršs" Pamatforma="patiešām"/>
     </Lexeme>
-    <Lexeme ID="27429" Stem1="droši vien">
-      <Attributes Uzbūve="Salikts" Pamatforma="droši vien"/>
-    </Lexeme>
-    <Lexeme ID="27430" Stem1="gan jau">
-      <Attributes Uzbūve="Salikts" Pamatforma="gan jau"/>
-    </Lexeme>
     <Lexeme ID="28309" Stem1="še">
       <Attributes Uzbūve="Vienkāršs" Pamatforma="še"/>
     </Lexeme>
@@ -10729,98 +10636,8 @@
     <Lexeme ID="28311" Stem1="tā">
       <Attributes Uzbūve="Vienkāršs" Pamatforma="tā"/>
     </Lexeme>
-    <Lexeme ID="50847" Stem1="tā arī">
-      <Attributes Uzbūve="Salikts" Pamatforma="tā arī"/>
-    </Lexeme>
     <Lexeme ID="49609" Stem1="tiešām">
       <Attributes Uzbūve="Vienkāršs" Pamatforma="tiešām"/>
-    </Lexeme>
-    <Lexeme ID="50421" Stem1="it kā">
-      <Attributes Uzbūve="Salikts" Pamatforma="it kā"/>
-    </Lexeme>
-    <Lexeme ID="50454" Stem1="tā kā">
-      <Attributes Uzbūve="Salikts" Pamatforma="tā kā"/>
-    </Lexeme>
-    <Lexeme ID="50423" Stem1="nu gan">
-      <Attributes Uzbūve="Salikts" Pamatforma="nu gan"/>
-    </Lexeme>
-    <Lexeme ID="50425" Stem1="vai tad">
-      <Attributes Uzbūve="Salikts" Pamatforma="vai tad"/>
-    </Lexeme>
-    <Lexeme ID="50426" Stem1="tad gan">
-      <Attributes Uzbūve="Salikts" Pamatforma="tad gan"/>
-    </Lexeme>
-    <Lexeme ID="50427" Stem1="vai nu">
-      <Attributes Uzbūve="Salikts" Pamatforma="vai nu"/>
-    </Lexeme>
-    <Lexeme ID="50428" Stem1="ne jau nu">
-      <Attributes Uzbūve="Salikts" Pamatforma="ne jau nu"/>
-    </Lexeme>
-    <Lexeme ID="50429" Stem1="jau gan">
-      <Attributes Uzbūve="Salikts" Pamatforma="jau gan"/>
-    </Lexeme>
-    <Lexeme ID="50430" Stem1="jau nu">
-      <Attributes Uzbūve="Salikts" Pamatforma="jau nu"/>
-    </Lexeme>
-    <Lexeme ID="50431" Stem1="ne jau">
-      <Attributes Uzbūve="Salikts" Pamatforma="ne jau"/>
-    </Lexeme>
-    <Lexeme ID="50432" Stem1="tad jau">
-      <Attributes Uzbūve="Salikts" Pamatforma="tad jau"/>
-    </Lexeme>
-    <Lexeme ID="50433" Stem1="jau arī">
-      <Attributes Uzbūve="Salikts" Pamatforma="jau arī"/>
-    </Lexeme>
-    <Lexeme ID="50434" Stem1="lai jau">
-      <Attributes Uzbūve="Salikts" Pamatforma="lai jau"/>
-    </Lexeme>
-    <Lexeme ID="50435" Stem1="diez jau">
-      <Attributes Uzbūve="Salikts" Pamatforma="diez jau"/>
-    </Lexeme>
-    <Lexeme ID="50436" Stem1="jau vien">
-      <Attributes Uzbūve="Salikts" Pamatforma="jau vien"/>
-    </Lexeme>
-    <Lexeme ID="50437" Stem1="nu jā">
-      <Attributes Uzbūve="Salikts" Pamatforma="nu jā"/>
-    </Lexeme>
-    <Lexeme ID="50438" Stem1="nu nē">
-      <Attributes Uzbūve="Salikts" Pamatforma="nu nē"/>
-    </Lexeme>
-    <Lexeme ID="50439" Stem1="kā nu nē">
-      <Attributes Uzbūve="Salikts" Pamatforma="kā nu nē"/>
-    </Lexeme>
-    <Lexeme ID="50441" Stem1="ne nu">
-      <Attributes Uzbūve="Salikts" Pamatforma="ne nu"/>
-    </Lexeme>
-    <Lexeme ID="50443" Stem1="diez vai">
-      <Attributes Uzbūve="Salikts" Pamatforma="diez vai"/>
-    </Lexeme>
-    <Lexeme ID="50444" Stem1="itin kā">
-      <Attributes Uzbūve="Salikts" Pamatforma="itin kā"/>
-    </Lexeme>
-    <Lexeme ID="50445" Stem1="jā gan">
-      <Attributes Uzbūve="Salikts" Pamatforma="jā gan"/>
-    </Lexeme>
-    <Lexeme ID="50446" Stem1="kaut jel">
-      <Attributes Uzbūve="Salikts" Pamatforma="kaut jel"/>
-    </Lexeme>
-    <Lexeme ID="50447" Stem1="kaut vai">
-      <Attributes Uzbūve="Salikts" Pamatforma="kaut vai"/>
-    </Lexeme>
-    <Lexeme ID="50448" Stem1="laikam gan">
-      <Attributes Uzbūve="Salikts" Pamatforma="laikam gan"/>
-    </Lexeme>
-    <Lexeme ID="50449" Stem1="tad nu gan">
-      <Attributes Uzbūve="Salikts" Pamatforma="tad nu gan"/>
-    </Lexeme>
-    <Lexeme ID="50450" Stem1="tik un tā">
-      <Attributes Uzbūve="Salikts" Pamatforma="tik un tā"/>
-    </Lexeme>
-    <Lexeme ID="50451" Stem1="vai tiešām">
-      <Attributes Uzbūve="Salikts" Pamatforma="vai tiešām"/>
-    </Lexeme>
-    <Lexeme ID="50662" Stem1="tikpat kā">
-      <Attributes Uzbūve="Salikts" Pamatforma="tikpat kā"/>
     </Lexeme>
     <Lexeme ID="50636" Stem1="proti">
       <Attributes Uzbūve="Vienkāršs" Pamatforma="proti"/>

@@ -137,8 +137,8 @@ public class TokenizeTest {
 	public void CaseTest()
 	{
 		LinkedList<Word> tokens = Splitting.tokenize(locītājs, "kaut arī KAUT ARĪ");
-		assertEquals(2, tokens.size());
-		assertEquals("KAUT ARĪ", tokens.get(1).getToken());
+		assertEquals(4, tokens.size());
+		assertEquals("ARĪ", tokens.get(3).getToken());
 	}
 	
 	@Test
@@ -337,7 +337,7 @@ public class TokenizeTest {
 		assertEquals(3, tokens.size());
 		
 		tokens = Splitting.tokenize(locītājs, "kaut gan",false);
-		assertEquals(1, tokens.size());
+		assertEquals(2, tokens.size());
 	}
 	
 	@Test
@@ -418,7 +418,7 @@ public class TokenizeTest {
 	public void Laura10Aug()
 	{
 		LinkedList<Word> tokens = Splitting.tokenize(locītājs, "tikpat kā", false);
-		assertEquals(1, tokens.size());
+		assertEquals(2, tokens.size());
 		
 		tokens = Splitting.tokenize(locītājs, "11:00", false);
 		assertEquals(1, tokens.size());
@@ -585,8 +585,9 @@ public class TokenizeTest {
                 new InputStreamReader(getClass().getClassLoader().getResourceAsStream("all.txt"), "UTF-8"));
 
         StringBuilder sentence = new StringBuilder();
+        String tokenid="";
         boolean no_space = true;
-        int count = 0;
+        int differences = 0;
         List<String> gold_tokens = new ArrayList<>();
         while ((rinda = ieeja.readLine()) != null) {
             if (rinda.contains("<s>")) {
@@ -601,7 +602,9 @@ public class TokenizeTest {
                     }
                 }
                 if (!ok) {
+                    System.out.println();
                     System.out.println(sentence);
+                    System.out.println(tokenid);
                     for (int i = 0; i < max(gold_tokens.size(), silver_tokens.size()); i++) {
                         if (i < gold_tokens.size()) {
                             System.out.printf("%-15s", gold_tokens.get(i));
@@ -612,11 +615,9 @@ public class TokenizeTest {
                         }
                         System.out.println();
                     }
-                    fail();
+                    differences ++;
                 }
 
-                count ++;
-                if (count > 100) break;
                 sentence = new StringBuilder();
                 gold_tokens = new ArrayList<>();
                 no_space = true;
@@ -628,11 +629,13 @@ public class TokenizeTest {
                 String token = rinda.split("\t")[0];
                 sentence.append(token);
                 gold_tokens.add(token);
+                tokenid = rinda.split("\t")[3];
             }
             if (rinda.contains("<s>") || rinda.contains("</s>") || rinda.isEmpty()) continue;
         }
         ieeja.close();
 
+        assertEquals(0, differences);
 
     }
 }
