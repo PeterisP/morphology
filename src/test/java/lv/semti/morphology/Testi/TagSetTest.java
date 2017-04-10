@@ -99,7 +99,7 @@ public class TagSetTest {
 		LinkedList<Etalons> etaloni = new LinkedList<Etalons>();
 		
 		while ((rinda = ieeja.readLine()) != null) {
-			if (rinda.equalsIgnoreCase("<s>") || rinda.equalsIgnoreCase("</s>")) continue;
+			if (rinda.equalsIgnoreCase("<s>") || rinda.equalsIgnoreCase("</s>") || rinda.equalsIgnoreCase("<g />")) continue;
 			etaloni.add(new Etalons(rinda));
 		}
 		

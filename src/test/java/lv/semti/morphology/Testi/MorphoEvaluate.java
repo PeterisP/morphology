@@ -210,7 +210,7 @@ public class MorphoEvaluate {
 		LinkedList<Etalons> etaloni = new LinkedList<Etalons>();
 		
 		while ((rinda = ieeja.readLine()) != null) {
-			if (rinda.contains("<s>") || rinda.contains("</s>") || rinda.isEmpty()) continue;
+			if (rinda.contains("<s>") || rinda.contains("</s>") || rinda.equalsIgnoreCase("<g />") || rinda.isEmpty()) continue;
 			etaloni.add(Etalons.loadVert(rinda));
 		}		
 		ieeja.close();

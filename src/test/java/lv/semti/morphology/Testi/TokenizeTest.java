@@ -588,7 +588,7 @@ public class TokenizeTest {
         String tokenid="";
         boolean no_space = true;
         int differences = 0;
-        List<String> gold_tokens = new ArrayList<>();
+        List<String> gold_tokens = new ArrayList<String>();
         while ((rinda = ieeja.readLine()) != null) {
             if (rinda.contains("<s>")) {
                 assertEquals(0, sentence.length());
@@ -605,7 +605,7 @@ public class TokenizeTest {
                     System.out.println();
                     System.out.println(sentence);
                     System.out.println(tokenid);
-                    for (int i = 0; i < max(gold_tokens.size(), silver_tokens.size()); i++) {
+                    for (int i = 0; i < Math.max(gold_tokens.size(), silver_tokens.size()); i++) {
                         if (i < gold_tokens.size()) {
                             System.out.printf("%-15s", gold_tokens.get(i));
                         }
@@ -619,7 +619,7 @@ public class TokenizeTest {
                 }
 
                 sentence = new StringBuilder();
-                gold_tokens = new ArrayList<>();
+                gold_tokens = new ArrayList<String>();
                 no_space = true;
             } else if (rinda.contains("<g />")) {
                 no_space = true;

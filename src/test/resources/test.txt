@@ -190,8 +190,8 @@ pieejamību	ncfsa4	pieejamība	m-Latv_Veestn_p133-p4s6w29
 tiesnešiem	ncmpd2	tiesnesis	m-Latv_Veestn_p133-p4s6w30
 <g />
 ,	zc	,	m-Latv_Veestn_p133-p4s6w31
-kā	N/A	kā	m-Latv_Veestn_p133-p4s6w32
-arī	N/A	arī	m-Latv_Veestn_p133-p4s6w33
+kā	ccs	kā	m-Latv_Veestn_p133-p4s6w32
+arī	qs	arī	m-Latv_Veestn_p133-p4s6w33
 sabiedrībai	ncfsd4	sabiedrība	m-Latv_Veestn_p133-p4s6w34
 <g />
 .	zs	.	m-Latv_Veestn_p133-p4s6w35
@@ -519,8 +519,8 @@ apjomīgs	afmsnnp	apjomīgs	m-Latv_Veestn_p133-p8s16w6
 pētījums	ncmsn1	pētījums	m-Latv_Veestn_p133-p8s16w7
 <g />
 ,	zc	,	m-Latv_Veestn_p133-p8s16w8
-kā	N/A	kā	m-Latv_Veestn_p133-p8s16w9
-arī	N/A	arī	m-Latv_Veestn_p133-p8s16w10
+kā	ccs	kā	m-Latv_Veestn_p133-p8s16w9
+arī	qs	arī	m-Latv_Veestn_p133-p8s16w10
 Latvijas	npfsg4	Latvija	m-Latv_Veestn_p133-p8s16w11
 pirmās	mosfsg	pirmā	m-Latv_Veestn_p133-p8s16w12
 brīvvalsts	ncfsg6	brīvvalsts	m-Latv_Veestn_p133-p8s16w13
@@ -656,8 +656,8 @@ personas	ncfsg4	persona	m-Latv_Veestn_p133-p9s19w18
 datus	ncmpa1	dats	m-Latv_Veestn_p133-p9s19w19
 <g />
 ,	zc	,	m-Latv_Veestn_p133-p9s19w20
-kā	N/A	kā	m-Latv_Veestn_p133-p9s19w21
-arī	N/A	arī	m-Latv_Veestn_p133-p9s19w22
+kā	ccs	kā	m-Latv_Veestn_p133-p9s19w21
+arī	qs	arī	m-Latv_Veestn_p133-p9s19w22
 saimnieciskos	armplnp	saimniecisks	m-Latv_Veestn_p133-p9s19w23
 strīdos	ncmpl1	strīds	m-Latv_Veestn_p133-p9s19w24
 iesaistīto	vmnpdmpgpsy	iesaistīt	m-Latv_Veestn_p133-p9s19w25
@@ -780,8 +780,8 @@ moduļa	ncmsg2	modulis	m-Latv_Veestn_p133-p11s23w22
 izstrādāšanai	ncfsd4	izstrādāšana	m-Latv_Veestn_p133-p11s23w23
 <g />
 ,	zc	,	m-Latv_Veestn_p133-p11s23w24
-kā	N/A	kā	m-Latv_Veestn_p133-p11s23w25
-arī	N/A	arī	m-Latv_Veestn_p133-p11s23w26
+kā	ccs	kā	m-Latv_Veestn_p133-p11s23w25
+arī	qs	arī	m-Latv_Veestn_p133-p11s23w26
 testēšanas	ncfsg4	testēšana	m-Latv_Veestn_p133-p11s23w27
 nodrošināšanai	ncfsd4	nodrošināšana	m-Latv_Veestn_p133-p11s23w28
 <g />
@@ -1233,8 +1233,8 @@ skaidrs	afmsnnp	skaidrs	m-Latv_Veestn_p135-p7s20w8
 .	zs	.	m-Latv_Veestn_p135-p7s20w9
 </s>
 <s>
-Lai	N/A	lai	m-Latv_Veestn_p135-p7s21w1
-gan	N/A	gan	m-Latv_Veestn_p135-p7s21w2
+Lai	css	lai	m-Latv_Veestn_p135-p7s21w1
+gan	qs	gan	m-Latv_Veestn_p135-p7s21w2
 pēc	spsg	pēc	m-Latv_Veestn_p135-p7s21w3
 uzteikuma	ncmsg1	uzteikums	m-Latv_Veestn_p135-p7s21w4
 saņemšanas	ncfsg4	saņemšana	m-Latv_Veestn_p135-p7s21w5
@@ -1290,8 +1290,8 @@ prasībās	ncfpl4	prasība	m-Latv_Veestn_p135-p8s23w11
 <g />
 ,	zc	,	m-Latv_Veestn_p135-p8s23w12
 tomēr	ccs	tomēr	m-Latv_Veestn_p135-p8s23w13
-ne	N/A	ne	m-Latv_Veestn_p135-p8s23w14
-tikai	N/A	tikai	m-Latv_Veestn_p135-p8s23w15
+ne	qs	ne	m-Latv_Veestn_p135-p8s23w14
+tikai	qs	tikai	m-Latv_Veestn_p135-p8s23w15
 <g />
 .	zs	.	m-Latv_Veestn_p135-p8s23w16
 </s>
@@ -1700,14 +1700,14 @@ maternitātes	ncfsg5	maternitāte	m-Latv_Veestn_p135-p12s36w15
 laikā	ncmsl1	laiks	m-Latv_Veestn_p135-p12s36w16
 ir	vcnipii30an	būt	m-Latv_Veestn_p135-p12s36w17
 skatāma	vmnpdfsnppn	skatīt	m-Latv_Veestn_p135-p12s36w18
-ne	N/A	ne	m-Latv_Veestn_p135-p12s36w19
-tikai	N/A	tikai	m-Latv_Veestn_p135-p12s36w20
+ne	ccs	ne	m-Latv_Veestn_p135-p12s36w19
+tikai	qs	tikai	m-Latv_Veestn_p135-p12s36w20
 darba	ncmsg1	darbs	m-Latv_Veestn_p135-p12s36w21
 drošības	ncfsg4	drošība	m-Latv_Veestn_p135-p12s36w22
 <g />
 ,	zc	,	m-Latv_Veestn_p135-p12s36w23
-bet	N/A	bet	m-Latv_Veestn_p135-p12s36w24
-arī	N/A	arī	m-Latv_Veestn_p135-p12s36w25
+bet	ccs	bet	m-Latv_Veestn_p135-p12s36w24
+arī	qs	arī	m-Latv_Veestn_p135-p12s36w25
 diskriminācijas	ncfsg4	diskriminācija	m-Latv_Veestn_p135-p12s36w26
 aizlieguma	ncmsg1	aizliegums	m-Latv_Veestn_p135-p12s36w27
 kontekstā	ncmsl1	konteksts	m-Latv_Veestn_p135-p12s36w28
@@ -1872,8 +1872,8 @@ to	pd0msan	tas	m-Latv_Veestn_p135-p13s41w47
 .	zs	.	m-Latv_Veestn_p135-p13s41w48
 </s>
 <s>
-Lai	N/A	lai	m-Latv_Veestn_p135-p13s42w1
-gan	N/A	gan	m-Latv_Veestn_p135-p13s42w2
+Lai	css	lai	m-Latv_Veestn_p135-p13s42w1
+gan	qs	gan	m-Latv_Veestn_p135-p13s42w2
 EKT	y	EKT	m-Latv_Veestn_p135-p13s42w3
 ir	vcnipii30an	būt	m-Latv_Veestn_p135-p13s42w4
 noteikusi	vmnpdfsnasn	noteikt	m-Latv_Veestn_p135-p13s42w5
@@ -2391,8 +2391,8 @@ priekšmeta	ncmsg1	priekšmets	m-Latv_Veestn_p135-p17s56w18
 robežas	ncfpa4	robeža	m-Latv_Veestn_p135-p17s56w19
 <g />
 ,	zc	,	m-Latv_Veestn_p135-p17s56w20
-kā	N/A	kā	m-Latv_Veestn_p135-p17s56w21
-arī	N/A	arī	m-Latv_Veestn_p135-p17s56w22
+kā	ccs	kā	m-Latv_Veestn_p135-p17s56w21
+arī	qs	arī	m-Latv_Veestn_p135-p17s56w22
 nebūtu	vcnc0ii00ay	nebūt	m-Latv_Veestn_p135-p17s56w23
 jāatsaucas	vmyd0i100an	atsaukties	m-Latv_Veestn_p135-p17s56w24
 uz	sppd	uz	m-Latv_Veestn_p135-p17s56w25
@@ -2470,8 +2470,8 @@ interpretācijas	ncfsg4	interpretācija	m-Latv_Veestn_p135-p18s58w15
 metodi	ncfsa5	metode	m-Latv_Veestn_p135-p18s58w16
 <g />
 ,	zc	,	m-Latv_Veestn_p135-p18s58w17
-kā	N/A	kā	m-Latv_Veestn_p135-p18s58w18
-arī	N/A	arī	m-Latv_Veestn_p135-p18s58w19
+kā	ccs	kā	m-Latv_Veestn_p135-p18s58w18
+arī	qs	arī	m-Latv_Veestn_p135-p18s58w19
 nav	vcnipii30ay	nebūt	m-Latv_Veestn_p135-p18s58w20
 ievērojusi	vmnpdfsnasn	ievērot	m-Latv_Veestn_p135-p18s58w21
 EKT	y	EKT	m-Latv_Veestn_p135-p18s58w22
