@@ -186,7 +186,7 @@ public class Trie {
 		root.firstChild.firstChild.firstChild.firstChild.firstChild=new StringNode("/");
 		root.firstChild.firstChild.firstChild.firstChild.firstChild.firstChild=new StringNode("/");
 		root.firstChild.firstChild.firstChild.firstChild.nextSibling=new StringNode("sS");
-		root.firstChild.firstChild.firstChild.firstChild.firstChild=root.firstChild.firstChild.firstChild.firstChild;
+		root.firstChild.firstChild.firstChild.firstChild.nextSibling.firstChild=root.firstChild.firstChild.firstChild.firstChild;
 		root.nextSibling=new StringNode("fF");
 		root.nextSibling.firstChild=new StringNode("tT");
 		root.nextSibling.firstChild.firstChild=new StringNode("pP");

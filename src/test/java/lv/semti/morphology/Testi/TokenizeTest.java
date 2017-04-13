@@ -245,7 +245,13 @@ public class TokenizeTest {
 		tokens = Splitting.tokenize(locītājs, "Mūsu mājas lapa www.skaistas-vietas.lv");
 		assertEquals(4, tokens.size());
 		assertEquals("www.skaistas-vietas.lv", tokens.get(3).getToken());
-	}
+
+
+        tokens = Splitting.tokenize(locītājs, "vietnē \"https://esta.MRB.dhs.gov/\" jāatbild");
+        assertEquals(5, tokens.size());
+        assertEquals("https://esta.MRB.dhs.gov/", tokens.get(2).getToken());
+
+    }
 	
 	@Test
 	public void skaitli()
