@@ -37,6 +37,7 @@ import org.junit.Test;
 import lv.semti.morphology.analyzer.*;
 import lv.semti.morphology.attributes.*;
 import lv.semti.morphology.lexicon.*;
+import org.w3c.dom.Attr;
 
 public class MorphologyTest {
 	private static Analyzer locītājs;
@@ -2650,5 +2651,19 @@ public class MorphologyTest {
         }
         assertLemma("pēdējam", "pēdējs");
         assertLemma("pēdējajam", "pēdējais");  // bet drīkst atpazīt
+    }
+
+    @Test public void pase() {
+        List<Wordform> pase = locītājs.generateInflections("pase");
+        List<Wordform> kase = locītājs.generateInflections("kase");
+        List<Wordform> rase = locītājs.generateInflections("rase");
+
+        AttributeValues dskg = new AttributeValues();
+        dskg.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
+        dskg.addAttribute(AttributeNames.i_Number, AttributeNames.v_Plural);
+        dskg.addAttribute(AttributeNames.i_Case, AttributeNames.v_Genitive);
+        assertInflection(pase, dskg, "pasu");
+        assertInflection(kase, dskg, "kasu");
+        assertInflection(rase, dskg, "rasu");
     }
 }
