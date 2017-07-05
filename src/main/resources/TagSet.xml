@@ -28,6 +28,7 @@
 <Attribute LV="Skaitlis" EN="Number" PartOfSpeech="Lietvārds" MarkupPos="3">
 	<Value LV="Vienskaitlis" EN="Singular" Tag="s"/>
 	<Value LV="Daudzskaitlis" EN="Plural" Tag="p"/>
+	<Value LV="Nepiemīt" EN="Not applicable" Tag="0"/>
 </Attribute>
 <Attribute LV="Skaitlis 2" EN="Number-special" PartOfSpeech="Lietvārds" MarkupPos="3">
 	<Value LV="Vienskaitlinieks" EN="Always singular" Tag="v"/>
@@ -54,6 +55,7 @@
 	<Value LV="6" EN="6" Tag="6"/>
 	<Value LV="Nepiemīt" EN="Not applicable" Tag="0"/>
 	<Value LV="Atgriezenisks" EN="Reflexive" Tag="r"/>
+	<Value LV="Ģenitīvenis" EN="Genitive only" Tag="g"/>
 </Attribute>
 
 <Attribute LV="Darbības vārda tips" EN="Verb type" PartOfSpeech="Darbības vārds" MarkupPos="1" Description="patstāvīgs vai palīg d.v ?">
@@ -175,6 +177,12 @@
 <Attribute LV="Noteiktība" EN="Definiteness" PartOfSpeech="Divdabis" MarkupPos="10">
 	<Value LV="Nenoteiktā" EN="Indefinite" Tag="n"/>
 	<Value LV="Noteiktā" EN="Definite" Tag="y"/>
+	<Value LV="Nepiemīt" EN="Not applicable" Tag="0"/>
+</Attribute>
+<Attribute LV="Pakāpe" EN="Degree" PartOfSpeech="Divdabis" MarkupPos="11">
+	<Value LV="Pamata" EN="Positive" Tag="p"/>
+	<Value LV="Pārākā" EN="Comparative" Tag="c"/>
+	<Value LV="Vispārākā" EN="Superlative" Tag="s"/>
 	<Value LV="Nepiemīt" EN="Not applicable" Tag="0"/>
 </Attribute>
 
@@ -362,6 +370,15 @@
 	<Value LV="Kārtas skaitlis cipariem" EN="Ordinal" Tag="o"/>
 	<Value LV="URI" EN="URI" Tag="u"/>
 	<Value LV="Cits" EN="Other" Tag="x"/>
+</Attribute>
+
+<Attribute LV="Saīsinājuma tips" EN="Abbreviation type" PartOfSpeech="Saīsinājums" MarkupPos="1">
+	<Value LV="Sugasvārds" EN="Common noun" Tag="n"/>
+	<Value LV="Īpašvārds" EN="Proper noun" Tag="p"/>
+	<Value LV="Īpašības vārds" EN="Adjective" Tag="a"/>
+	<Value LV="Verbāls" EN="Verbal" Tag="v"/>
+	<Value LV="Apstāklis" EN="Adverb" Tag="r"/>
+	<Value LV="Diskursa iezīmētāji" EN="discourse" Tag="d"/>
 </Attribute>
 
 <Attribute LV="Ģenerēt" EN="Generate">

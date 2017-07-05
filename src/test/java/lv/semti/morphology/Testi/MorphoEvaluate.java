@@ -105,7 +105,7 @@ public class MorphoEvaluate {
 			Word w = locītājs.analyze(e.wordform);
 			AttributeValues etalonaAV = tags.fromTag(e.tag);
 			if (!e.tag.equalsIgnoreCase(tags.toTag(etalonaAV))) {
-				System.out.printf("Slikts tags vārdam %s : '%s' -> '%s' \t\t%s\n", e.wordform, e.tag, tags.toTag(etalonaAV), e.id);
+				System.out.printf("Nesavietojams tags vārdam %s : failā '%s', morfostruktūrās '%s' \t\t%s\n", e.wordform, e.tag, tags.toTag(etalonaAV), e.id);
 			}
 			etalonaAV.removeNonlexicalAttributes();
 			e.tag = tags.toTag(etalonaAV);
@@ -182,7 +182,7 @@ public class MorphoEvaluate {
 		System.out.printf("Etalona pārbaude: pagāja %d ms\n%d pieprasījumi sekundē\n", starpība, etaloni.size()*1000/starpība);
 		System.out.printf("\nAnalīzes rezultāti:\n");
 		System.out.printf("\tPareizi:\t%4.1f%%\t%d\n", perfect*100.0/etaloni.size(), perfect);
-        System.out.printf("\tLemma ok:\t%4.1f%%\t%d\n", lemma_correct*100.0/etaloni.size(), perfect);
+        System.out.printf("\tLemma ok:\t%4.1f%%\t%d\n", lemma_correct*100.0/etaloni.size(), lemma_correct);
 		System.out.printf("\tDer:    \t%4.1f%%\t%d\n", (first_match+perfect)*100.0/etaloni.size(), first_match);
 		System.out.printf("\tNav pirmais:\t%4.1f%%\t%d\n", one_of_options*100.0/etaloni.size(), one_of_options);
 		System.out.printf("\tDer ne pirmais:\t%4.1f%%\t%d\n", (match+one_of_options)*100.0/etaloni.size(), match);
