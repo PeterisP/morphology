@@ -29,7 +29,7 @@ import lv.semti.morphology.attributes.*;
  *
  * @author Pēteris Paikens
  * Informācija par vienu leksēmu/celmu, kuru var lietot vārdu locīšanai
- *
+ * Information about a single lexicon element - lexeme / a stem that can be used for generation of inflactional forms
  */
 public class Lexeme extends AttributeValues {
 	private int id = 0;		// numurs pēc kārtas - ID
@@ -42,10 +42,6 @@ public class Lexeme extends AttributeValues {
 
 	public Paradigm getParadigm() {
 		return paradigm;
-	}
-
-	public int getParadigmID() {
-		return paradigm.getID();
 	}
 
 	@Override
@@ -109,7 +105,6 @@ public class Lexeme extends AttributeValues {
 	public Lexeme() {
 		// nekas arī nav jādara
 	}
-
 
 	public int getID() {
 		return id;

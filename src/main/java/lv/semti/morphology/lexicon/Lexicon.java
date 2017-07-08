@@ -44,8 +44,8 @@ import org.w3c.dom.NodeList;
  *
  */
 public class Lexicon {
-
 	public final static String DEFAULT_LEXICON_FILE = "Lexicon.xml";
+	public static int proper_name_frequency_floor = 200; // When loading proper name lexemes, entries that have a frequency ("Skaits") field will be ignored and not loaded
 
 	protected String filename;
 	private String revision;

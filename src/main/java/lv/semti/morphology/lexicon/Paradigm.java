@@ -136,8 +136,14 @@ public class Paradigm extends AttributeValues {
 
 		NodeList nodes = node.getChildNodes();
 		for (int i = 0; i < nodes.getLength(); i++) {
-			if (nodes.item(i).getNodeName().equals("Lexeme"))
-				addLexeme(new Lexeme(this,nodes.item(i)));
+			if (nodes.item(i).getNodeName().equals("Lexeme")) {
+                Lexeme l = new Lexeme(this, nodes.item(i));
+                if (l != null) {
+                    String frequency = l.getValue("Skaits"); // FIXME - hardcoded value
+                    if (frequency == null || Integer.parseInt(frequency) > Lexicon.proper_name_frequency_floor)
+                        addLexeme(l);
+                }
+            }
 		}
 	}
 	

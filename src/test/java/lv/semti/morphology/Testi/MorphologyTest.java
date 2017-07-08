@@ -1452,8 +1452,10 @@ public class MorphologyTest {
 		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "Fredas");
 		
 		
-		Word freda = locītājs.analyze("Freda");		
-		assertTrue(freda.isRecognized());
+		Word freda = locītājs.analyze("Freda");
+//        freda.describe(new PrintWriter(System.err));
+
+        assertTrue(freda.isRecognized());
 		
 		boolean irPareizā = false;
 		for (Wordform vārdforma : freda.wordforms) {
@@ -2665,5 +2667,10 @@ public class MorphologyTest {
         assertInflection(pase, dskg, "pasu");
         assertInflection(kase, dskg, "kasu");
         assertInflection(rase, dskg, "rasu");
+    }
+
+    @Test public void frequencies() {
+        assertTrue( locītājs.analyze("Kaspars").isRecognized() );
+        assertFalse( locītājs.analyze("Induls").isRecognized() );
     }
 }
