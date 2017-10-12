@@ -5509,4 +5509,46 @@
 			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Noteiktā" Locījums="Lokatīvs" Dzimte="Sieviešu" Ģenerēt="Nē"/>
 		</Ending>
 	</Paradigm>
+	<Paradigm Stems="1" ID="44" Name="noun-5fb" LemmaEnding="1765" Description="Lietvārdi, 5. deklinācija, sieviešu dzimte, galotne -e mijas izņēmumi (pase)" AllowedGuessEndings="!">
+		<Attributes Vārdšķira="Lietvārds" Deklinācija="5" Dzimte="Sieviešu"/>
+		<Ending ID="1765" StemChange="0" Ending="e" StemID="1" LemmaEnding="1765">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
+		</Ending>
+		<Ending ID="1766" StemChange="0" Ending="es" StemID="1" LemmaEnding="1765">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Ģenitīvs"/>
+		</Ending>
+		<Ending ID="1767" StemChange="0" Ending="ei" StemID="1" LemmaEnding="1765">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Datīvs"/>
+		</Ending>
+		<Ending ID="1768" StemChange="0" Ending="i" StemID="1" LemmaEnding="1765">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Akuzatīvs"/>
+		</Ending>
+		<Ending ID="1769" StemChange="0" Ending="ē" StemID="1" LemmaEnding="1765">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Lokatīvs"/>
+		</Ending>
+		<Ending ID="1770" StemChange="18" Ending="e" StemID="1" LemmaEnding="1765">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs"/>
+		</Ending>
+		<Ending ID="1771" StemChange="17" Ending="" StemID="1" LemmaEnding="1765">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs"/>
+		</Ending>
+		<Ending ID="1772" StemChange="0" Ending="es" StemID="1" LemmaEnding="1765">
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Nominatīvs"/>
+		</Ending>
+		<Ending ID="1773" StemChange="0" Ending="u" StemID="1" LemmaEnding="1765">
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Ģenitīvs"/>
+		</Ending>
+		<Ending ID="1774" StemChange="0" Ending="ēm" StemID="1" LemmaEnding="1765">
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Datīvs"/>
+		</Ending>
+		<Ending ID="1775" StemChange="0" Ending="es" StemID="1" LemmaEnding="1765">
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Akuzatīvs"/>
+		</Ending>
+		<Ending ID="1776" StemChange="0" Ending="ēs" StemID="1" LemmaEnding="1765">
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Lokatīvs"/>
+		</Ending>
+		<Ending ID="1777" StemChange="0" Ending="es" StemID="1" LemmaEnding="1765">
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
+		</Ending>
+	</Paradigm>
 </Morphology>

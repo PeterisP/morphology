@@ -12946,4 +12946,21 @@
   <Paradigm Stems="1" ID="43" Description="Substantivizējušies noteiktās formas -ies/-usies divdabji">
     <Lexeme Stem1="pusapģērb"/>
   </Paradigm>
+  <Paradigm Stems="1" ID="44" Description="Lietvārdi, 5. deklinācija, sieviešu dzimte, galotne -e mijas izņēmumi (pase)">
+    <Lexeme ID="16209" Stem1="pas">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="pase"/>
+    </Lexeme>
+    <Lexeme ID="16210" Stem1="ras">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="rase"/>
+    </Lexeme>
+    <Lexeme ID="16200" Stem1="kas">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="kase"/>
+    </Lexeme>
+    <Lexeme ID="16201" Stem1="krājkas">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="krājkase"/>
+    </Lexeme>
+    <Lexeme ID="16202" Stem1="slimokas">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="slimokase"/>
+    </Lexeme>
+</Paradigm>
 </Lexicon>
