@@ -29,12 +29,13 @@ import lv.semti.morphology.attributes.*;
  *
  * @author Pēteris Paikens
  * Informācija par vienu leksēmu/celmu, kuru var lietot vārdu locīšanai
- * Information about a single lexicon element - lexeme / a stem that can be used for generation of inflactional forms
+ * Information about a single lexicon element - lexeme / a stem that can be used for generation of inflectional forms
  */
 public class Lexeme extends AttributeValues {
 	private int id = 0;		// numurs pēc kārtas - ID
 	private ArrayList <String> stems = new ArrayList<String>();    // Saknes - 1 vai 3 eksemplāri.
 	private Paradigm paradigm = null;
+	private String name = "";
 
 	protected void setParadigm(Paradigm vārdgrupa) {
 		this.paradigm = vārdgrupa;
@@ -48,6 +49,9 @@ public class Lexeme extends AttributeValues {
 	public void toXML (Writer pipe) throws IOException {
 		pipe.write("<Lexeme");
 		pipe.write(" ID=\""+String.valueOf(id)+"\"");
+		if (!name.isEmpty()) {
+		    pipe.write(" Name=\""+name+"\"");
+        }
 		for (int i=0;i<stems.size();i++) {
 			String stem = stems.get(i);
 			stem = stem.replace("\"", "&quot;").replace("&", "&amp;");
@@ -64,7 +68,11 @@ public class Lexeme extends AttributeValues {
 		this.paradigm = paradigm;
 		setStemCount(paradigm.getStems());
 
-		Node n = node.getAttributes().getNamedItem("Stem1");
+        Node n = node.getAttributes().getNamedItem("Name");
+        if (n != null)
+            name = n.getTextContent().toLowerCase();
+
+        n = node.getAttributes().getNamedItem("Stem1");
 		if (n != null)
 			stems.set(0, n.getTextContent().toLowerCase()); // TODO - supports case-sensitive lietām - saīsinājumiem utml
 		n = node.getAttributes().getNamedItem("Stem2");
@@ -90,6 +98,7 @@ public class Lexeme extends AttributeValues {
 			kopija.stems = (ArrayList<String>)stems.clone();
 			kopija.paradigm = (Paradigm)paradigm.clone();
 			kopija.id = id;
+            kopija.name = name;
 	        return kopija;
 		} catch (CloneNotSupportedException e) {
 			e.printStackTrace();
