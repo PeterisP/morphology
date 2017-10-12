@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TagSet>
 <Attribute LV="Vārdšķira" EN="Part of speech" MarkupPos="0">
-	<Value LV="Lietvārds" EN="Noun" Tag="n" DefaultTags="n_____"/>
-	<Value LV="Darbības vārds" EN="Verb" Tag="v" DefaultTags="v__________"/>
+	<Value LV="Lietvārds" EN="Noun" Tag="n" DefaultTags="nc____"/>
+	<Value LV="Darbības vārds" EN="Verb" Tag="v" DefaultTags="vm_________"/>
 	<Value LV="Īpašības vārds" EN="Adjective" Tag="a" DefaultTags="a_____"/>
 	<Value LV="Vietniekvārds" EN="Pronoun" Tag="p" DefaultTags="p______"/>
 	<Value LV="Apstākļa vārds" EN="Adverb" Tag="r" DefaultTags="r__"/>

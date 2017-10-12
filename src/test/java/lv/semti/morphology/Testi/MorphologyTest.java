@@ -2667,6 +2667,10 @@ public class MorphologyTest {
         assertInflection(pase, dskg, "pasu");
         assertInflection(kase, dskg, "kasu");
         assertInflection(rase, dskg, "rasu");
+
+        // vēl pase, kase, apaļmute, diplomande, artiste, amtisemīte, autobāze, mufe
+        // manšete, torte, cunfte, dzeņaukste, plekste, lete, mufe ir ar optionālo miju
+        // aste, balle, gāze ir bez mijas
     }
 
     @Test public void frequencies() {

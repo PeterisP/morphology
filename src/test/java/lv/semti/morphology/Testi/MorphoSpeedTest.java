@@ -119,7 +119,8 @@ public class MorphoSpeedTest {
 		System.out.printf("\tUzlabojumu benchmark (Pētera iMac) - 12 000 rq/sec\n");
 	}
 	
-	@Ignore("Hardcoded path") @Test
+//	@Ignore("Hardcoded path")
+	@Test
 	public void balanced_corpus() throws IOException {
 		BufferedReader ieeja;
 		String rinda;
@@ -129,7 +130,7 @@ public class MorphoSpeedTest {
 		long skaits = 0;
 		
 		ieeja = new BufferedReader(
-				new InputStreamReader(new FileInputStream("/Users/Pet/Documents/Balanseetais 3.5m/balansetais3.5m.txt"), "UTF-8"));
+				new InputStreamReader(new FileInputStream("/Users/pet/Documents/ERAF fulltext/Corpora/Balanced2016/LVK2013.txt"), "UTF-8"));
 		while ((rinda = ieeja.readLine()) != null) {
 			List<Word> tokens = Splitting.tokenize(locītājs, rinda);
 			skaits += tokens.size();	
