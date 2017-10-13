@@ -490,5 +490,6 @@
 <FreeAttribute LV="Piezīmes" EN="Notes"/> 
 <FreeAttribute LV="Locīšana" EN="Inflection"/> 
 <FreeAttribute LV="Valoda" EN="Language"/> 
+<FreeAttribute LV="Skaits" EN="Frequency"/> 
 
 </TagSet>

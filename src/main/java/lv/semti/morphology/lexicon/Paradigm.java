@@ -118,8 +118,10 @@ public class Paradigm extends AttributeValues {
 			this.setAllowedGuessEndings(n.getTextContent());
 
 		for (int i = 0; i < nodes.getLength(); i++) {
-			if (nodes.item(i).getNodeName().equals("Lexeme"))
-				addLexeme(new Lexeme(this,nodes.item(i)));
+			if (nodes.item(i).getNodeName().equals("Lexeme")) {
+			    Lexeme l = new Lexeme(this, nodes.item(i));
+				addLexeme(l);
+			}
 		}
 	}
 	

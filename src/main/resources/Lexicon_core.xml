@@ -4036,6 +4036,9 @@
     <Lexeme ID="49615" Stem1="klieg" Stem2="kliedz" Stem3="kliedz">
       <Attributes Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="kliegt"/>
     </Lexeme>
+    <Lexeme Stem1="slauk" Stem2="slauc" Stem3="slauc">
+      <Attributes Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="slaukt"/>
+    </Lexeme>
   </Paradigm>
   <Paradigm Stems="1" ID="16" LemmaEnding="225" Description="Darbības vārdi 2. konjugācija tiešie">
     <Attributes Konjugācija="2" Atgriezeniskums="Nē"/>
@@ -5115,9 +5118,6 @@
     </Lexeme>
     <Lexeme ID="26184" Stem1="atklā" Stem2="atklāj" Stem3="atklāj">
       <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="atklāties"/>
-    </Lexeme>
-    <Lexeme ID="26185" Stem1="mocī" Stem2="mok" Stem3="mocīj">
-      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="mocīties"/>
     </Lexeme>
     <Lexeme ID="26186" Stem1="sauk" Stem2="sauc" Stem3="sauc">
       <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="saukties"/>
@@ -12496,13 +12496,13 @@
       <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="žults"/>
     </Lexeme>
     <Lexeme ID="17287" Stem1="nās">
-      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="nāss" Avots="Valērija leksikons"/>
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="nāss"/>
     </Lexeme>    
     <Lexeme ID="4398" Stem1="vakt">
-      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="vakts" Avots="Valērija leksikons"/>
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="vakts"/>
     </Lexeme>
     <Lexeme ID="5037" Stem1="verst">
-      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="versts" Avots="Valērija leksikons"/>
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="versts"/>
     </Lexeme>
   </Paradigm>
   <Paradigm Stems="1" ID="36" LemmaEnding="2091" Description="Saīsinājumi (t.i. utt. u.c.)" AllowedGuessEndings="!">
@@ -12961,6 +12961,382 @@
     </Lexeme>
     <Lexeme ID="16202" Stem1="slimokas">
       <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="slimokase"/>
+    </Lexeme>
+</Paradigm>
+<Paradigm Stems="1" ID="45" Description="Darbības vārdi, 3. konjugācija, tiešie ar tagadnes miju (sacīt)">
+    <Lexeme ID="23899" Stem1="sacī">
+      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="sacīt"/>
+    </Lexeme>
+    <Lexeme ID="48349" Stem1="piesacī">
+      <Attributes Pamatforma="piesacīt"/>
+    </Lexeme>
+    <Lexeme ID="47784" Stem1="atsacī">
+      <Attributes Pamatforma="atsacīt"/>
+    </Lexeme>
+    <Lexeme ID="47977" Stem1="izsacī">
+      <Attributes Pamatforma="izsacīt"/>
+    </Lexeme>
+    <Lexeme ID="48153" Stem1="nosacī">
+      <Attributes Pamatforma="nosacīt"/>
+    </Lexeme>
+    <Lexeme ID="48285" Stem1="pasacī">
+      <Attributes Pamatforma="pasacīt"/>
+    </Lexeme>
+    <Lexeme ID="48050" Stem1="mocī">
+      <Attributes Pamatforma="mocīt"/>
+    </Lexeme>
+    <Lexeme ID="48131" Stem1="nomocī">
+      <Attributes Pamatforma="nomocīt"/>
+    </Lexeme>
+    <Lexeme ID="48271" Stem1="pamocī">
+      <Attributes Pamatforma="pamocīt"/>
+    </Lexeme>
+    <Lexeme ID="48397" Stem1="pārmocī">
+      <Attributes Pamatforma="pārmocīt"/>
+    </Lexeme>
+    <Lexeme ID="48490" Stem1="samocī">
+      <Attributes Pamatforma="samocīt"/>
+    </Lexeme>
+    <Lexeme ID="47948" Stem1="izmocī">
+      <Attributes Pamatforma="izmocīt"/>
+    </Lexeme>
+    <Lexeme ID="23603" Stem1="slacī">
+      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="slacīt"/>
+    </Lexeme>
+    <Lexeme ID="47722" Stem1="apslacī">
+      <Attributes Pamatforma="apslacīt"/>
+    </Lexeme>
+    <Lexeme ID="47881" Stem1="ieslacī">
+      <Attributes Pamatforma="ieslacīt"/>
+    </Lexeme>
+    <Lexeme ID="47981" Stem1="izslacī">
+      <Attributes Pamatforma="izslacīt"/>
+    </Lexeme>
+    <Lexeme ID="48162" Stem1="noslacī">
+      <Attributes Pamatforma="noslacīt"/>
+    </Lexeme>
+    <Lexeme ID="48513" Stem1="saslacī">
+      <Attributes Pamatforma="saslacīt"/>
+    </Lexeme>
+    <Lexeme ID="48617" Stem1="uzslacī">
+      <Attributes Pamatforma="uzslacīt"/>
+    </Lexeme>
+    <Lexeme ID="23608" Stem1="slaucī">
+      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="slaucīt"/>
+    </Lexeme>
+    <Lexeme ID="47669" Stem1="aizslaucī">
+      <Attributes Pamatforma="aizslaucīt"/>
+    </Lexeme>
+    <Lexeme ID="47723" Stem1="apslaucī">
+      <Attributes Pamatforma="apslaucīt"/>
+    </Lexeme>
+    <Lexeme ID="47790" Stem1="atslaucī">
+      <Attributes Pamatforma="atslaucīt"/>
+    </Lexeme>
+    <Lexeme ID="47882" Stem1="ieslaucī">
+      <Attributes Pamatforma="ieslaucīt"/>
+    </Lexeme>
+    <Lexeme ID="47982" Stem1="izslaucī">
+      <Attributes Pamatforma="izslaucīt"/>
+    </Lexeme>
+    <Lexeme ID="48163" Stem1="noslaucī">
+      <Attributes Pamatforma="noslaucīt"/>
+    </Lexeme>
+    <Lexeme ID="48355" Stem1="pieslaucī">
+      <Attributes Pamatforma="pieslaucīt"/>
+    </Lexeme>
+    <Lexeme ID="48409" Stem1="pārslaucī">
+      <Attributes Pamatforma="pārslaucīt"/>
+    </Lexeme>
+    <Lexeme ID="48514" Stem1="saslaucī">
+      <Attributes Pamatforma="saslaucīt"/>
+    </Lexeme>
+    <Lexeme ID="48618" Stem1="uzslaucī">
+      <Attributes Pamatforma="uzslaucīt"/>
+    </Lexeme>
+    <Lexeme ID="47771" Stem1="atlocī">
+      <Attributes Pamatforma="atlocīt"/>
+    </Lexeme>
+    <Lexeme ID="47858" Stem1="ielocī">
+      <Attributes Pamatforma="ielocīt"/>
+    </Lexeme>
+    <Lexeme ID="47941" Stem1="izlocī">
+      <Attributes Pamatforma="izlocīt"/>
+    </Lexeme>
+    <Lexeme ID="48043" Stem1="locī">
+      <Attributes Pamatforma="locīt"/>
+    </Lexeme>
+    <Lexeme ID="48124" Stem1="nolocī">
+      <Attributes Pamatforma="nolocīt"/>
+    </Lexeme>
+    <Lexeme ID="48267" Stem1="palocī">
+      <Attributes Pamatforma="palocīt"/>
+    </Lexeme>
+    <Lexeme ID="48334" Stem1="pielocī">
+      <Attributes Pamatforma="pielocīt"/>
+    </Lexeme>
+    <Lexeme ID="48395" Stem1="pārlocī">
+      <Attributes Pamatforma="pārlocīt"/>
+    </Lexeme>
+    <Lexeme ID="48482" Stem1="salocī">
+      <Attributes Pamatforma="salocīt"/>
+    </Lexeme>
+    <Lexeme ID="48604" Stem1="uzlocī">
+      <Attributes Pamatforma="uzlocīt"/>
+    </Lexeme>
+    <Lexeme ID="23402" Stem1="slodzī">
+      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="slodzīt"/>
+    </Lexeme>
+    <Lexeme ID="23403" Stem1="ieslodzī">
+      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="ieslodzīt"/>
+    </Lexeme>
+    <Lexeme ID="48515" Stem1="saslodzī">
+      <Attributes Pamatforma="saslodzīt"/>
+    </Lexeme>
+    <Lexeme ID="47717" Stem1="apraudzī">
+      <Attributes Pamatforma="apraudzīt"/>
+    </Lexeme>
+    <Lexeme ID="47873" Stem1="ieraudzī">
+      <Attributes Pamatforma="ieraudzīt"/>
+    </Lexeme>
+    <Lexeme ID="47973" Stem1="izraudzī">
+      <Attributes Pamatforma="izraudzīt"/>
+    </Lexeme>
+    <Lexeme ID="48282" Stem1="paraudzī">
+      <Attributes Pamatforma="paraudzīt"/>
+    </Lexeme>
+    <Lexeme ID="48347" Stem1="pieraudzī">
+      <Attributes Pamatforma="pieraudzīt"/>
+    </Lexeme>
+    <Lexeme ID="48404" Stem1="pārraudzī">
+      <Attributes Pamatforma="pārraudzīt"/>
+    </Lexeme>
+    <Lexeme ID="48434" Stem1="raudzī">
+      <Attributes Pamatforma="raudzīt"/>
+    </Lexeme>
+    <Lexeme ID="48612" Stem1="uzraudzī">
+      <Attributes Pamatforma="uzraudzīt"/>
+    </Lexeme>
+    <Lexeme ID="48022" Stem1="izļodzī">
+      <Attributes Pamatforma="izļodzīt"/>
+    </Lexeme>
+    <Lexeme ID="48310" Stem1="paļodzī">
+      <Attributes Pamatforma="paļodzīt"/>
+    </Lexeme>
+    <Lexeme ID="48558" Stem1="saļodzī">
+      <Attributes Pamatforma="saļodzīt"/>
+    </Lexeme>
+    <Lexeme ID="48654" Stem1="ļodzī">
+      <Attributes Pamatforma="ļodzīt"/>
+    </Lexeme>
+    <Lexeme ID="22567" Stem1="gulē">
+      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="gulēt"/>
+    </Lexeme>
+    <Lexeme ID="22569" Stem1="nogulē">
+      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="nogulēt"/>
+    </Lexeme>
+    <Lexeme ID="22570" Stem1="piegulē">
+      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="piegulēt"/>
+    </Lexeme>
+    <Lexeme ID="47925" Stem1="izgulē">
+      <Attributes Pamatforma="izgulēt"/>
+    </Lexeme>
+    <Lexeme ID="48253" Stem1="pagulē">
+      <Attributes Pamatforma="pagulēt"/>
+    </Lexeme>
+    <Lexeme ID="48390" Stem1="pārgulē">
+      <Attributes Pamatforma="pārgulēt"/>
+    </Lexeme>
+    <Lexeme ID="48464" Stem1="sagulē">
+      <Attributes Pamatforma="sagulēt"/>
+    </Lexeme>
+    <Lexeme ID="23422" Stem1="mācē">
+      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="mācēt"/>
+    </Lexeme>
+    <Lexeme ID="47675" Stem1="aiztecē">
+      <Attributes Pamatforma="aiztecēt"/>
+    </Lexeme>
+    <Lexeme ID="47737" Stem1="aptecē">
+      <Attributes Pamatforma="aptecēt"/>
+    </Lexeme>
+    <Lexeme ID="47800" Stem1="attecē">
+      <Attributes Pamatforma="attecēt"/>
+    </Lexeme>
+    <Lexeme ID="47895" Stem1="ietecē">
+      <Attributes Pamatforma="ietecēt"/>
+    </Lexeme>
+    <Lexeme ID="48000" Stem1="iztecē">
+      <Attributes Pamatforma="iztecēt"/>
+    </Lexeme>
+    <Lexeme ID="48188" Stem1="notecē">
+      <Attributes Pamatforma="notecēt"/>
+    </Lexeme>
+    <Lexeme ID="48367" Stem1="pietecē">
+      <Attributes Pamatforma="pietecēt"/>
+    </Lexeme>
+    <Lexeme ID="48421" Stem1="pārtecē">
+      <Attributes Pamatforma="pārtecēt"/>
+    </Lexeme>
+    <Lexeme ID="48534" Stem1="satecē">
+      <Attributes Pamatforma="satecēt"/>
+    </Lexeme>
+    <Lexeme ID="48582" Stem1="tecē">
+      <Attributes Pamatforma="tecēt"/>
+    </Lexeme>
+    <Lexeme ID="48626" Stem1="uztecē">
+      <Attributes Pamatforma="uztecēt"/>
+    </Lexeme>
+    <Lexeme ID="23187" Stem1="vajadzē">
+      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="vajadzēt"/>
+    </Lexeme>
+    <Lexeme ID="47761" Stem1="atbraucī">
+      <Attributes Pamatforma="atbraucīt" Avots="Valērija leksikons"/>
+    </Lexeme>
+    <Lexeme ID="47817" Stem1="braucī">
+      <Attributes Pamatforma="braucīt" Avots="Valērija leksikons"/>
+    </Lexeme>
+    <Lexeme ID="48069" Stem1="nobraucī">
+      <Attributes Pamatforma="nobraucīt" Avots="Valērija leksikons"/>
+    </Lexeme>
+    <Lexeme ID="48241" Stem1="pabraucī">
+      <Attributes Pamatforma="pabraucīt" Avots="Valērija leksikons"/>
+    </Lexeme>
+    <Lexeme ID="48589" Stem1="uzbraucī">
+      <Attributes Pamatforma="uzbraucīt" Avots="Valērija leksikons"/>
+    </Lexeme>
+    <Lexeme ID="48662" Stem1="ņurcī">
+      <Attributes Pamatforma="ņurcīt" Avots="Valērija leksikons"/>
+    </Lexeme>
+    <Lexeme ID="48052" Stem1="murcī">
+      <Attributes Pamatforma="murcīt" Avots="Valērija leksikons"/>
+    </Lexeme>
+    <Lexeme ID="48313" Stem1="paņurcī">
+      <Attributes Pamatforma="paņurcīt" Avots="Valērija leksikons"/>
+    </Lexeme>
+    <Lexeme ID="48562" Stem1="saņurcī">
+      <Attributes Pamatforma="saņurcīt" Avots="Valērija leksikons"/>
+    </Lexeme>    
+</Paradigm>
+<Paradigm Stems="1" ID="46" Description="Darbības vārdi, 3. konjugācija, atgriezeniskie ar miju (izsacīties)">
+    <Lexeme ID="49115" Stem1="atsacī">
+      <Attributes Pamatforma="atsacīties"/>
+    </Lexeme>
+    <Lexeme ID="49426" Stem1="pārsacī">
+      <Attributes Pamatforma="pārsacīties"/>
+    </Lexeme>
+    <Lexeme ID="49175" Stem1="iesacī">
+      <Attributes Pamatforma="iesacīties"/>
+    </Lexeme>
+    <Lexeme ID="49263" Stem1="izsacī">
+      <Attributes Pamatforma="izsacīties"/>
+    </Lexeme>
+    <Lexeme ID="49294" Stem1="mocī">
+      <Attributes Pamatforma="mocīties"/>
+    </Lexeme>
+    <Lexeme ID="49311" Stem1="nomocī">
+      <Attributes Pamatforma="nomocīties"/>
+    </Lexeme>
+    <Lexeme ID="49369" Stem1="pamocī">
+      <Attributes Pamatforma="pamocīties"/>
+    </Lexeme>
+    <Lexeme ID="49422" Stem1="pārmocī">
+      <Attributes Pamatforma="pārmocīties"/>
+    </Lexeme>
+    <Lexeme ID="49461" Stem1="samocī">
+      <Attributes Pamatforma="samocīties"/>
+    </Lexeme>
+    <Lexeme ID="49250" Stem1="izmocī">
+      <Attributes Pamatforma="izmocīties"/>
+    </Lexeme>
+    <Lexeme ID="49090" Stem1="apslacī">
+      <Attributes Pamatforma="apslacīties"/>
+    </Lexeme>
+    <Lexeme ID="49180" Stem1="ieslacī">
+      <Attributes Pamatforma="ieslacīties"/>
+    </Lexeme>
+    <Lexeme ID="49475" Stem1="saslacī">
+      <Attributes Pamatforma="saslacīties"/>
+    </Lexeme>
+    <Lexeme ID="49091" Stem1="apslaucī">
+      <Attributes Pamatforma="apslaucīties"/>
+    </Lexeme>
+    <Lexeme ID="49326" Stem1="noslaucī">
+      <Attributes Pamatforma="noslaucīties"/>
+    </Lexeme>
+    <Lexeme ID="49499" Stem1="slaucī">
+      <Attributes Pamatforma="slaucīties"/>
+    </Lexeme>
+    <Lexeme ID="49072" Stem1="aizlocī">
+      <Attributes Pamatforma="aizlocīties"/>
+    </Lexeme>
+    <Lexeme ID="49110" Stem1="atlocī">
+      <Attributes Pamatforma="atlocīties"/>
+    </Lexeme>
+    <Lexeme ID="49161" Stem1="ielocī">
+      <Attributes Pamatforma="ielocīties"/>
+    </Lexeme>
+    <Lexeme ID="49244" Stem1="izlocī">
+      <Attributes Pamatforma="izlocīties"/>
+    </Lexeme>
+    <Lexeme ID="49289" Stem1="locī">
+      <Attributes Pamatforma="locīties"/>
+    </Lexeme>
+    <Lexeme ID="49309" Stem1="nolocī">
+      <Attributes Pamatforma="nolocīties"/>
+    </Lexeme>
+    <Lexeme ID="49366" Stem1="palocī">
+      <Attributes Pamatforma="palocīties"/>
+    </Lexeme>
+    <Lexeme ID="49458" Stem1="salocī">
+      <Attributes Pamatforma="salocīties"/>
+    </Lexeme>
+    <Lexeme ID="49262" Stem1="izraudzī">
+      <Attributes Pamatforma="izraudzīties"/>
+    </Lexeme>
+    <Lexeme ID="49320" Stem1="noraudzī">
+      <Attributes Pamatforma="noraudzīties"/>
+    </Lexeme>
+    <Lexeme ID="49378" Stem1="paraudzī">
+      <Attributes Pamatforma="paraudzīties"/>
+    </Lexeme>
+    <Lexeme ID="49435" Stem1="raudzī">
+      <Attributes Pamatforma="raudzīties"/>
+    </Lexeme>
+    <Lexeme ID="49276" Stem1="izļodzī">
+      <Attributes Pamatforma="izļodzīties"/>
+    </Lexeme>
+    <Lexeme ID="49492" Stem1="saļodzī">
+      <Attributes Pamatforma="saļodzīties"/>
+    </Lexeme>
+    <Lexeme ID="49534" Stem1="ļodzī">
+      <Attributes Pamatforma="ļodzīties"/>
+    </Lexeme>
+    <Lexeme ID="49069" Stem1="aizgulē">
+      <Attributes Pamatforma="aizgulēties"/>
+    </Lexeme>
+    <Lexeme ID="49235" Stem1="izgulē">
+      <Attributes Pamatforma="izgulēties"/>
+    </Lexeme>
+    <Lexeme ID="49304" Stem1="nogulē">
+      <Attributes Pamatforma="nogulēties"/>
+    </Lexeme>
+    <Lexeme ID="49359" Stem1="pagulē">
+      <Attributes Pamatforma="pagulēties"/>
+    </Lexeme>
+    <Lexeme ID="49449" Stem1="sagulē">
+      <Attributes Pamatforma="sagulēties"/>
+    </Lexeme>
+    <Lexeme ID="49095" Stem1="aptecē">
+      <Attributes Pamatforma="aptecēties"/>
+    </Lexeme>
+    <Lexeme ID="49333" Stem1="notecē">
+      <Attributes Pamatforma="notecēties"/>
+    </Lexeme>
+    <Lexeme ID="49201" Stem1="ievajadzē">
+      <Attributes Pamatforma="ievajadzēties"/>
+    </Lexeme>
+    <Lexeme Stem1="savajadzē">
+      <Attributes Pamatforma="savajadzēties"/>
     </Lexeme>
 </Paradigm>
 </Lexicon>

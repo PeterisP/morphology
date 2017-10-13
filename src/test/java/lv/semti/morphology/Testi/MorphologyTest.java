@@ -1521,49 +1521,49 @@ public class MorphologyTest {
 		assertInflection(formas, testset, "jāmācot");
 		
 		formas = locītājs.generateInflections("mācēt");
-		testset.addAttribute(AttributeNames.i_EndingID, "469");
+		testset.addAttribute(AttributeNames.i_EndingID, "1779");
 		assertInflection(formas, testset, "māku");
-		testset.addAttribute(AttributeNames.i_EndingID, "472");
+		testset.addAttribute(AttributeNames.i_EndingID, "1781");
 		assertInflection(formas, testset, "mākam");		
-		testset.addAttribute(AttributeNames.i_EndingID, "474");
+		testset.addAttribute(AttributeNames.i_EndingID, "1783");
 		assertInflection(formas, testset, "māk");
-		testset.addAttribute(AttributeNames.i_EndingID, "487");
+		testset.addAttribute(AttributeNames.i_EndingID, "1794");
 		assertInflection(formas, testset, "jāmāk");
-		testset.addAttribute(AttributeNames.i_EndingID, "1204");
+		testset.addAttribute(AttributeNames.i_EndingID, "2328");
 		assertInflection(formas, testset, "jāmākot");
 
 		formas = locītājs.generateInflections("gulēt");
-		testset.addAttribute(AttributeNames.i_EndingID, "470");
+		testset.addAttribute(AttributeNames.i_EndingID, "1780");
 		assertInflection(formas, testset, "guli");
-		testset.addAttribute(AttributeNames.i_EndingID, "474");
+		testset.addAttribute(AttributeNames.i_EndingID, "1783");
 		assertInflection(formas, testset, "guļ");
-		testset.addAttribute(AttributeNames.i_EndingID, "494");
+		testset.addAttribute(AttributeNames.i_EndingID, "1798");
 		assertInflection(formas, testset, "guliet");
-		testset.addAttribute(AttributeNames.i_EndingID, "1204");
+		testset.addAttribute(AttributeNames.i_EndingID, "2328");
 		assertInflection(formas, testset, "jāguļot");
 
 		formas = locītājs.generateInflections("aizgulēties");
-		testset.addAttribute(AttributeNames.i_EndingID, "1009");
+		testset.addAttribute(AttributeNames.i_EndingID, "2337");
 		assertInflection(formas, testset, "aizguļos");
 		
 		formas = locītājs.generateInflections("vajadzēt");
-		testset.addAttribute(AttributeNames.i_EndingID, "469");
+		testset.addAttribute(AttributeNames.i_EndingID, "1779");
 		assertInflection(formas, testset, "vajagu");
-		testset.addAttribute(AttributeNames.i_EndingID, "472");
+		testset.addAttribute(AttributeNames.i_EndingID, "1781");
 		assertInflection(formas, testset, "vajagam");		
-		testset.addAttribute(AttributeNames.i_EndingID, "474");
+		testset.addAttribute(AttributeNames.i_EndingID, "1783");
 		assertInflection(formas, testset, "vajag");
-		testset.addAttribute(AttributeNames.i_EndingID, "487");
+		testset.addAttribute(AttributeNames.i_EndingID, "1794");
 		assertInflection(formas, testset, "jāvajag");
-		testset.addAttribute(AttributeNames.i_EndingID, "1204");
+		testset.addAttribute(AttributeNames.i_EndingID, "2328");
 		assertInflection(formas, testset, "jāvajagot");
 
 		formas = locītājs.generateInflections("mocīt");
-		testset.addAttribute(AttributeNames.i_EndingID, "493");
+		testset.addAttribute(AttributeNames.i_EndingID, "1780");
 		assertInflection(formas, testset, "moki");		
 
 		formas = locītājs.generateInflections("slodzīt");
-		testset.addAttribute(AttributeNames.i_EndingID, "469");
+		testset.addAttribute(AttributeNames.i_EndingID, "1779");
 		assertInflection(formas, testset, "slogu");
 		
 		formas = locītājs.generateInflections("mesties");
@@ -2442,17 +2442,30 @@ public class MorphologyTest {
 		assertFalse(test.isRecognized());
 		test = locītājs.analyze("saku");
 		assertTrue(test.isRecognized());
-		
-		test = locītājs.analyze("slaucu");
+
+        // sacīt -> saku
+        test = locītājs.analyze("izsacos");
+        assertFalse(test.isRecognized());
+        test = locītājs.analyze("izsakos");
+        assertTrue(test.isRecognized());
+
+        test = locītājs.analyze("slaucu");
+        assertTrue(test.isRecognized());
 		assertFalse(test.getBestWordform().getValue(AttributeNames.i_Lemma).equalsIgnoreCase("slaucīt"));
+        assertTrue(test.getBestWordform().getValue(AttributeNames.i_Lemma).equalsIgnoreCase("slaukt"));
 		test = locītājs.analyze("slauku");
 		assertTrue(test.isRecognized());
 
 		test = locītājs.analyze("braucu");
 		assertFalse(test.getBestWordform().getValue(AttributeNames.i_Lemma).equalsIgnoreCase("braucīt"));
 		test = locītājs.analyze("brauku");
-//		assertTrue(test.isRecognized());
-		
+		assertTrue(test.isRecognized());
+
+        test = locītājs.analyze("uzbraucu");
+        assertFalse(test.getBestWordform().getValue(AttributeNames.i_Lemma).equalsIgnoreCase("uzbraucīt"));
+        test = locītājs.analyze("uzbrauku");
+        assertTrue(test.isRecognized());
+
 //		test = locītājs.analyze("izšļaucu");
 //		assertFalse(test.getBestWordform().getValue(AttributeNames.i_Lemma).equalsIgnoreCase("izšļaucīt"));
 //		test = locītājs.analyze("izšļauku");

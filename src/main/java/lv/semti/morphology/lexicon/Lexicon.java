@@ -475,6 +475,8 @@ public class Lexicon {
 			stem = celmi.get(0).celms;
 			// FIXME - vai te ir ok naivi ņemt pirmo variantu ?
 		} catch (Exception e) {
+            System.err.print(word + Integer.toString(endingID) + source);
+			System.err.print(e.getStackTrace());
 			return null;
 		}
 
