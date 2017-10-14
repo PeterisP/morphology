@@ -76,11 +76,11 @@ public class AttributeNames {
 	public final static String v_Locative = "Lokatīvs";
 	public final static String v_Vocative = "Vokatīvs";
 
-	public final static String i_CaseSpecial = "Locījums 2";
-	public final static String v_InflexibleGenitive = "Ģenitīvenis";
+	// public final static String i_CaseSpecial = "Locījums 2";
 
 	public final static String i_Declension = "Deklinācija";
 	public final static String v_Reflexive = "Atgriezenisks";
+	public final static String v_InflexibleGenitive = "Ģenitīvenis";
 
 	public final static String i_VerbType = "Darbības vārda tips";
 	public final static String v_MainVerb = "Patstāvīgs darbības vārds";

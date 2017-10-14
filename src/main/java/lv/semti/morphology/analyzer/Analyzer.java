@@ -423,7 +423,7 @@ public class Analyzer extends Lexicon {
 				!variants.isMatchingWeak(AttributeNames.i_Number, AttributeNames.v_Singular))
 			return false;
 
-		if (variants.isMatchingStrong(AttributeNames.i_CaseSpecial, AttributeNames.v_InflexibleGenitive) &&
+		if (variants.isMatchingStrong(AttributeNames.i_Declension, AttributeNames.v_InflexibleGenitive) &&
 				!variants.isMatchingWeak(AttributeNames.i_Case, AttributeNames.v_Genitive))
 			return false;
 		
@@ -561,7 +561,7 @@ public class Analyzer extends Lexicon {
 			
 			if ( (ending != null && ending.getLemmaEnding() == ending) ||
 				(vārdforma.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(word) && 
-						(vārdforma.isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum) || vārdforma.isMatchingStrong(AttributeNames.i_CaseSpecial, AttributeNames.v_InflexibleGenitive) )) )
+						(vārdforma.isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum) || vārdforma.isMatchingStrong(AttributeNames.i_Declension, AttributeNames.v_InflexibleGenitive) )) )
 				result.addWordform(vārdforma);
 		}
 
@@ -888,7 +888,7 @@ public class Analyzer extends Lexicon {
 					boolean validOption = locījums.isMatchingWeak(AttributeNames.i_Generate, AttributeNames.v_Yes);
 					if (locījums.isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum) && locījums.isMatchingStrong(AttributeNames.i_Number, AttributeNames.v_Singular)) validOption = false;
 					if (locījums.isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_SingulareTantum) && locījums.isMatchingStrong(AttributeNames.i_Number, AttributeNames.v_Plural)) validOption = false;
-					if (locījums.isMatchingStrong(AttributeNames.i_CaseSpecial, AttributeNames.v_InflexibleGenitive) && !locījums.isMatchingStrong(AttributeNames.i_Case, AttributeNames.v_Genitive)) validOption = false;
+					if (locījums.isMatchingStrong(AttributeNames.i_Declension, AttributeNames.v_InflexibleGenitive) && !locījums.isMatchingStrong(AttributeNames.i_Case, AttributeNames.v_Genitive)) validOption = false;
 					if (validOption) inflections.add(locījums);
 		    	}
 			}

@@ -64,7 +64,7 @@ public class Wordform extends AttributeValues implements Serializable{
 			addAttribute(AttributeNames.i_LexemeID, Integer.toString(lexeme.getID()));
 			fixed_stem = lexeme.isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum)  ||
 						 lexeme.isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_SingulareTantum) ||
-						 lexeme.isMatchingStrong(AttributeNames.i_CaseSpecial, AttributeNames.v_InflexibleGenitive);
+						 lexeme.isMatchingStrong(AttributeNames.i_Declension, AttributeNames.v_InflexibleGenitive);
 			// || leksēma.isMatchingStrong(AttributeNames.i_Deminutive, "-iņ-")
 		} else fixed_stem = true;
 		

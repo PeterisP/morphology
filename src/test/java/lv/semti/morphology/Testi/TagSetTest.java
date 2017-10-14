@@ -118,7 +118,7 @@ public class TagSetTest {
 			
 			if (!e.tag.equalsIgnoreCase(converted)) {
 			    bad_tags = true;
-				izeja.println(e.wordform+"\t"+e.tag+"\n\t"+converted+"\n");
+				izeja.println("Korpusā ir  \t"+e.tag+"\t("+e.wordform+")\nDekodējas uz\t"+converted+"\n");
 				av.describe(izeja);
 				izeja.println();
 			}

@@ -95,7 +95,7 @@ public class MarkupConverter {
 			//Tagset toties ir "Nepiemīt" skaitlis
 			verifyAndSetKamolsAttribute(avs,tag,4,'n',AttributeNames.i_Case,AttributeNames.v_Nominative);
 			verifyAndSetKamolsAttribute(avs,tag,4,'g',AttributeNames.i_Case,AttributeNames.v_Genitive);
-			verifyAndSetKamolsAttribute(avs,tag,4,'s',AttributeNames.i_CaseSpecial,AttributeNames.v_InflexibleGenitive);
+			verifyAndSetKamolsAttribute(avs,tag,4,'s',AttributeNames.i_Declension,AttributeNames.v_InflexibleGenitive);
 			verifyAndSetKamolsAttribute(avs,tag,4,'d',AttributeNames.i_Case,AttributeNames.v_Dative);
 			verifyAndSetKamolsAttribute(avs,tag,4,'a',AttributeNames.i_Case,AttributeNames.v_Accusative);
 			verifyAndSetKamolsAttribute(avs,tag,4,'v',AttributeNames.i_Case,AttributeNames.v_Vocative);
@@ -513,7 +513,6 @@ public class MarkupConverter {
 			verifyAndSetAVSAttribute(tag,attributes,4,'n',AttributeNames.i_Case,AttributeNames.v_Nominative);
 			verifyAndSetAVSAttribute(tag,attributes,4,'g',AttributeNames.i_Case,AttributeNames.v_Genitive);
 			verifyAndSetAVSAttribute(tag,attributes,4,'s',AttributeNames.i_Case,AttributeNames.v_Genitive);
-			verifyAndSetAVSAttribute(tag,attributes,4,'s',AttributeNames.i_CaseSpecial,AttributeNames.v_InflexibleGenitive);
 			verifyAndSetAVSAttribute(tag,attributes,4,'d',AttributeNames.i_Case,AttributeNames.v_Dative);
 			verifyAndSetAVSAttribute(tag,attributes,4,'a',AttributeNames.i_Case,AttributeNames.v_Accusative);
 			verifyAndSetAVSAttribute(tag,attributes,4,'v',AttributeNames.i_Case,AttributeNames.v_Vocative);
@@ -526,6 +525,7 @@ public class MarkupConverter {
 			verifyAndSetAVSAttribute(tag,attributes,5,'6',AttributeNames.i_Declension,"6");
 			verifyAndSetAVSAttribute(tag,attributes,5,'r',AttributeNames.i_Declension,AttributeNames.v_Reflexive);
 			verifyAndSetAVSAttribute(tag,attributes,5,'0',AttributeNames.i_Declension,AttributeNames.v_NA);
+			verifyAndSetAVSAttribute(tag,attributes,4,'s',AttributeNames.i_Declension,AttributeNames.v_InflexibleGenitive);
 			break;
 		case 'v':
 			attributes.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);

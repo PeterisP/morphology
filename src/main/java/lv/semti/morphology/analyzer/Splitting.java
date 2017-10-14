@@ -213,8 +213,17 @@ public class Splitting {
 		List<Word> tokens = Splitting.tokenize(morphoAnalyzer, paragraph);
 		LinkedList<Word> sentence = new LinkedList<Word>();
 		for (Word word : tokens) {
+		    // Teikumu beigas iekšā tiešajā runā - pievelkam pēdiņu klāt
+            if (sentence.size() == 0 && word.getToken().equals("\"")) {
+                // Pārbaudam vai iepriekšējā teikuma beigās ir punkts
+                if (!result.isEmpty() && !result.getLast().isEmpty() && result.getLast().getLast().getToken().equals(".")) {
+                    result.getLast().add(word);
+                    continue;
+                }
+            }
+
 			sentence.add(word);
-			if (Splitting.isChunkCloser(word) || // does this token look like end of sentence
+			if ( Splitting.isChunkCloser(word) || // does this token look like end of sentence
 				(sentence.size() >= lengthCap-5 && (word.hasAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Punctuation) || word.getToken().startsWith("<")) )
 				|| sentence.size() > lengthCap) { 		// hard limit		
 				result.add(sentence);

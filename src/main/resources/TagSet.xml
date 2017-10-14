@@ -6,7 +6,7 @@
 	<Value LV="Īpašības vārds" EN="Adjective" Tag="a" DefaultTags="a_____"/>
 	<Value LV="Vietniekvārds" EN="Pronoun" Tag="p" DefaultTags="p______"/>
 	<Value LV="Apstākļa vārds" EN="Adverb" Tag="r" DefaultTags="r__"/>
-	<Value LV="Prievārds" EN="Preposition" Tag="s" DefaultTags="s__"/>
+	<Value LV="Prievārds" EN="Preposition" Tag="s" DefaultTags="sp__"/>
 	<Value LV="Saiklis" EN="Conjunction" Tag="c"/>
 	<Value LV="Skaitļa vārds" EN="Numeral" Tag="m" DefaultTags="m_____"/>
 	<Value LV="Izsauksmes vārds" EN="Interjection" Tag="i"/>
@@ -43,9 +43,11 @@
 	<Value LV="Vokatīvs" EN="Vocative" Tag="v"/>
 	<Value LV="Nepiemīt" EN="Not applicable" Tag="0"/>
 </Attribute>
+<!-- Pārcelts uz deklināciju
 <Attribute LV="Locījums 2" EN="Case-special" PartOfSpeech="Lietvārds" MarkupPos="4">
 	<Value LV="Ģenitīvenis" EN="Genitive only" Tag="s"/>
 </Attribute>
+-->
 <Attribute LV="Deklinācija" EN="Declension" PartOfSpeech="Lietvārds" MarkupPos="5">
 	<Value LV="1" EN="1" Tag="1"/>
 	<Value LV="2" EN="2" Tag="2"/>

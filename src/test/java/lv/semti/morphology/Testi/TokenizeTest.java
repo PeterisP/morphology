@@ -642,7 +642,24 @@ public class TokenizeTest {
         ieeja.close();
 
         assertEquals(0, differences);
+    }
 
+    @Test
+    public void zvaigzne() {
+        LinkedList<Word> tokens;
+
+        tokens = Splitting.tokenize(locītājs, "rocknroll*.", false);
+        assertEquals(3, tokens.size());
+    }
+
+    @Test
+    public void pēdiņas() {
+        LinkedList<LinkedList<Word>> sentences;
+        sentences = Splitting.tokenizeSentences(locītājs, "Paruna saka: \"Zivs meklē kur dziļāk, cilvēks, kur labāk.\" ");
+        assertEquals(1, sentences.size());
+
+        sentences = Splitting.tokenizeSentences(locītājs, "\"Kurzemes Vārds\" uzklausīja viedokļus par darba meklēšanu ārzemēs un problēmām, kas tādēļ rodas vietējiem uzņēmējiem.");
+        assertEquals(1, sentences.size());
     }
 }
  
