@@ -129,7 +129,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="4" Name="noun-2b" LemmaEnding="39" Description="Lietvārdi, 2. deklinācija, vīriešu dzimte, galotne -s, vienskaitļa nominatīvs un ģenitīvs sakrīt (mēness, akmens, asmens, ūdens, rudens, zibens)" AllowedGuessEndings="ns">
+	<Paradigm Stems="1" ID="4" Name="noun-2c" LemmaEnding="39" Description="Lietvārdi, 2. deklinācija, vīriešu dzimte, galotne -s, vienskaitļa nominatīvs un ģenitīvs sakrīt (mēness, akmens, asmens, ūdens, rudens, zibens)" AllowedGuessEndings="ns">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="2" Dzimte="Vīriešu"/>
 		<Ending ID="39" StemChange="0" Ending="s" StemID="1" LemmaEnding="39">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
@@ -171,7 +171,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="5" Name="noun-2c" LemmaEnding="1211" Description="Lietvārdi, 2. deklinācija, vīriešu dzimte, galotne -s, vienskaitļa nominatīvs un ģenitīvs nesakrīt (suns)" AllowedGuessEndings="n">
+	<Paradigm Stems="1" ID="5" Name="noun-2d" LemmaEnding="1211" Description="Lietvārdi, 2. deklinācija, vīriešu dzimte, galotne -s, vienskaitļa nominatīvs un ģenitīvs nesakrīt (suns)" AllowedGuessEndings="n">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="2" Dzimte="Vīriešu"/>
 		<Ending ID="1211" StemChange="0" Ending="s" StemID="1" LemmaEnding="1211">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
@@ -6934,6 +6934,45 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Lokatīvs"/>
 		</Ending>
 		<Ending ID="2392" StemChange="0" Ending="es" StemID="1" LemmaEnding="2381">
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
+		</Ending>
+	</Paradigm>
+	<Paradigm Stems="1" ID="48" Name="noun-2b" LemmaEnding="2393" Description="Lietvārdi, 2. deklinācija, vīriešu dzimte, galotne -is bez mijas (tētis)" AllowedGuessEndings="!">
+		<Attributes Vārdšķira="Lietvārds" Deklinācija="2" Dzimte="Vīriešu"/>
+		<Ending ID="2393" StemChange="0" Ending="is" StemID="1" LemmaEnding="2393">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
+		</Ending>
+		<Ending ID="2394" StemChange="0" Ending="a" StemID="1" LemmaEnding="2393">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Ģenitīvs"/>
+		</Ending>
+		<Ending ID="2395" StemChange="0" Ending="im" StemID="1" LemmaEnding="2393">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Datīvs"/>
+		</Ending>
+		<Ending ID="2396" StemChange="0" Ending="i" StemID="1" LemmaEnding="2393">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Akuzatīvs"/>
+		</Ending>
+		<Ending ID="2397" StemChange="0" Ending="ī" StemID="1" LemmaEnding="2393">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Lokatīvs"/>
+		</Ending>
+		<Ending ID="2398" StemChange="0" Ending="i" StemID="1" LemmaEnding="2393">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs"/>
+		</Ending>
+		<Ending ID="2399" StemChange="0" Ending="i" StemID="1" LemmaEnding="2393">
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Nominatīvs"/>
+		</Ending>
+		<Ending ID="2400" StemChange="0" Ending="u" StemID="1" LemmaEnding="2393">
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Ģenitīvs"/>
+		</Ending>
+		<Ending ID="2401" StemChange="0" Ending="iem" StemID="1" LemmaEnding="2393">
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Datīvs"/>
+		</Ending>
+		<Ending ID="2402" StemChange="0" Ending="us" StemID="1" LemmaEnding="2393">
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Akuzatīvs"/>
+		</Ending>
+		<Ending ID="2403" StemChange="0" Ending="os" StemID="1" LemmaEnding="2393">
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Lokatīvs"/>
+		</Ending>
+		<Ending ID="2404" StemChange="0" Ending="i" StemID="1" LemmaEnding="2393">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>

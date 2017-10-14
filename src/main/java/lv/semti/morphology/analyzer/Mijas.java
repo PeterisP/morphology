@@ -96,21 +96,7 @@ public abstract class Mijas {
 
 				case 1: // lietvārdu līdzskaņu mija
 					// sākam ar izņēmumgadījumiem.
-					// minēti gan pareizie celmi 'strupastis' gan ar neatļauto miju 'strupasša'.
-					// .endsWith lietots, lai nav problēmas ar salikteņiem/priedēkļiem - vectētis utml.
-					// vārdam 'viesis' ir fiksēts, lai strādā 'sieviete'->'sieviešu', latvietis->latviešu
-					if (celms.equalsIgnoreCase("vies") || celms.equalsIgnoreCase("vieš") || celms.equalsIgnoreCase("cēs") || celms.equalsIgnoreCase("cēš") || celms.endsWith("tēt") || celms.endsWith("tēš") ||
-							celms.endsWith("ast") || celms.endsWith("asš") || celms.endsWith("mat") || celms.endsWith("maš") ||
-							celms.endsWith("skat") || celms.endsWith("skaš") || (celms.endsWith("st") && !celms.endsWith("kst") && !celms.endsWith("nst")) || celms.endsWith("sš")
-						) {
-						varianti.add(new Variants(celms));
-					}
-					// Personvārdu mijas - Valdis-Valda; Gatis-Gata.  Vēl ir literatūrā minēts izņēmums -skis -ckis (Čaikovskis, Visockis), taču tiem tāpat viss šķiet ok.
-					else if (properName && (celms.endsWith("t") || celms.endsWith("d"))) {
-						varianti.add(new Variants(celms));
-					}
-					// tagad normālie gadījumi mijām
-					else if (celms.endsWith("š")) {
+                    if (celms.endsWith("š")) {
 						if (celms.endsWith("kš")) {
 							varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "kst", "Mija", "kst -> kš"));
 						} else {

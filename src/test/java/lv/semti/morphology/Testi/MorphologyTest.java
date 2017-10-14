@@ -2252,7 +2252,18 @@ public class MorphologyTest {
 		List<Wordform> formas = locītājs.generateInflections("kviesis", true);
 		assertNounInflection(formas, AttributeNames.v_Plural, AttributeNames.v_Genitive, "", "kviešu");
 	}
-	
+
+    @Test
+    public void viesis() {
+        Word w = locītājs.analyze("tālskatu");
+        assertTrue(w.isRecognized());
+        assertEquals("tālskatis", w.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+        assertFalse(locītājs.analyze("tālskašu").isRecognized());
+
+        List<Wordform> formas = locītājs.generateInflections("viesis", true);
+        assertNounInflection(formas, AttributeNames.v_Plural, AttributeNames.v_Genitive, "", "viesu");
+    }
+
 	@Test
 	/**
 	 * LETA lietvārdu locījumu pārbaude - citi gljuki
