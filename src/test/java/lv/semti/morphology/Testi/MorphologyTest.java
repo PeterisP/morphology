@@ -2721,4 +2721,20 @@ public class MorphologyTest {
         assertEquals("vmnpdmsnapys", visziedošākais.wordforms.get(0).getTag());
     }
 
+    @Test public void balamute() {
+        List<Wordform> balamute = locītājs.generateInflections("balamute");
+
+        AttributeValues dskg = new AttributeValues();
+        dskg.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
+        dskg.addAttribute(AttributeNames.i_Number, AttributeNames.v_Plural);
+        dskg.addAttribute(AttributeNames.i_Case, AttributeNames.v_Genitive);
+        assertInflection(balamute, dskg, "balamutu");
+
+        AttributeValues vskd = new AttributeValues();
+        dskg.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
+        dskg.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+        dskg.addAttribute(AttributeNames.i_Case, AttributeNames.v_Dative);
+        assertInflection(balamute, dskg, "balamutem");
+    }
+
 }

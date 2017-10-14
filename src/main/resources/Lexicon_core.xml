@@ -1537,9 +1537,6 @@
     <Lexeme Stem1="bend">
       <Attributes Pamatforma="bende"/>
     </Lexeme>
-    <Lexeme Stem1="balamut">
-      <Attributes Pamatforma="balamute"/>
-    </Lexeme>
     <Lexeme Stem1="miegamic">
       <Attributes Pamatforma="miegamice"/>
     </Lexeme>
@@ -13337,6 +13334,11 @@
     </Lexeme>
     <Lexeme Stem1="savajadzē">
       <Attributes Pamatforma="savajadzēties"/>
+    </Lexeme>
+</Paradigm>
+<Paradigm Stems="1" ID="47" Description="Lietvārdi, 5. deklinācija, vīriešu dzimte, galotne -e mijas izņēmumi (balamute)">
+    <Lexeme Stem1="balamut">
+      <Attributes Pamatforma="balamute"/>
     </Lexeme>
 </Paradigm>
 </Lexicon>
