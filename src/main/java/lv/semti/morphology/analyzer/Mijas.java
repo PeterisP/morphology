@@ -275,7 +275,7 @@ public abstract class Mijas {
 					if (syllables(celms) > 1 && (celms.endsWith("kāj") || celms.endsWith("māj"))) 
 						varianti.add(new Variants(celms));	
 					break;								
-				case 20: //  dv. 3. konjugācijas tagadnes mija 1. personai un vajadzībai - atšķiras no 26. mijas tikai vārdam 'gulēt'
+				case 20: //  dv. 3. konjugācijas tagadnes mija 1. personas tagadnei, -ot divdabim un vajadzībai - atšķiras no 26. mijas 'gulēt' un 'tecēt'
                     if (celms.endsWith("guļ") || celms.endsWith("gul")) // FIXME - dēļ 'gulošs' pieļaujam formu 'es gulu' ????
                         varianti.add(new Variants(celms.substring(0,celms.length()-1)+"lē")); //gulēt -> guļošs un arī gulošs
                     if (celms.endsWith("k")) {
@@ -322,15 +322,17 @@ public abstract class Mijas {
 						if (!celms.endsWith("ina")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"ā", AttributeNames.i_Degree, pakāpe));
 					}
 					break;
-                case 26: //  dv. 3. konjugācijas miju gadījuma formas, kam noņem celma pēdējo burtu
-                    if (celms.endsWith("gul")) // FIXME - dēļ 'gulošs' pieļaujam formu 'es gulu' ????
-                        varianti.add(new Variants(celms.substring(0,celms.length()-1)+"lē")); //gulēt -> guļošs un arī gulošs
-                    if (celms.endsWith("k")) {
-                        varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "cī")); //sacīt -> saku
-                        varianti.add(new Variants(celms.substring(0,celms.length()-1)+"cē")); //mācēt -> māku
+                case 26: //  dv. 3. konjugācijas miju gadījuma formas - otrās personas tagadne, pavēles izteiksme
+                    if (celms.endsWith("gul"))
+                        varianti.add(new Variants(celms.substring(0,celms.length()-1)+"lē")); // guli -> gulēt
+                    if (celms.endsWith("tec")) {
+                        varianti.add(new Variants(celms+"ē")); // teci -> tecēt
+                    } else if (celms.endsWith("k") && !celms.endsWith("tek")) {
+                        varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "cī")); // saki -> sacīt
+                        varianti.add(new Variants(celms.substring(0,celms.length()-1)+"cē")); //māki -> mācēt
                     } else if (celms.endsWith("g") ) {
-                        varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "dzī")); //slodzīt -> slogu
-                        varianti.add(new Variants(celms.substring(0,celms.length()-1)+"dzē")); //vajadzēt -> vajag
+                        varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "dzī")); //slogi -> slodzīt
+                        varianti.add(new Variants(celms.substring(0,celms.length()-1)+"dzē")); //vajag -> vajadzēt
                     }
                     if (celms.endsWith("loc") || celms.endsWith("moc") || celms.endsWith("urc"))
                         varianti.add(new Variants(celms+"ī")); // alternatīvā forma
@@ -646,9 +648,11 @@ public abstract class Mijas {
 					if (syllables(celms) > 1 && (celms.endsWith("kāj") || celms.endsWith("māj"))) 
 						varianti.add(new Variants(celms));		
 					break;								
-				case 20: //  dv. 3. konjugācijas tagadne 1. personai un vajadzībai - atšķiras no 26. mijas tikai vārdam 'gulēt'
-                    if (celms.endsWith("gulē")) varianti.add(new Variants(celms.substring(0,celms.length()-2)+"ļ")); //gulēt -> guļu
-					else if (celms.endsWith("cī") )
+				case 20: //  dv. 3. konjugācijas tagadnes mija 1. personas tagadnei, -ot divdabim un vajadzībai - atšķiras no 26. mijas 'gulēt' un 'tecēt'
+                    if (celms.endsWith("gulē")) {
+                        varianti.add(new Variants(celms.substring(0,celms.length()-2)+"ļ")); //gulēt -> guļu
+                        // variantu ar -l (gulošs) atpazīstam bet neģenerējam
+                    } else if (celms.endsWith("cī") )
 						varianti.add(new Variants(celms.substring(0,celms.length()-2)+"k", "Garā", "ā")); //sacīt
 					else if (celms.endsWith("cē") )
 						varianti.add(new Variants(celms.substring(0,celms.length()-2)+"k")); //mācēt -> māku
@@ -690,11 +694,13 @@ public abstract class Mijas {
 						else varianti.add(new Variants("vis" + celms, AttributeNames.i_Degree, AttributeNames.v_Superlative));						
 					}
 					break;
-				case 26: //  dv. 3. konjugācijas tagadne, kas noņem celma pēdējo burtu - miju gadījums
+				case 26:  //  dv. 3. konjugācijas miju gadījuma formas - otrās personas tagadne, pavēles izteiksme
                     if (celms.endsWith("lē")) varianti.add(new Variants(celms.substring(0,celms.length()-1))); //gulēt -> guli
                     else if (celms.endsWith("cī") )
                         varianti.add(new Variants(celms.substring(0,celms.length()-2)+"k", "Garā", "ā")); //sacīt->saki
-                    else if (celms.endsWith("cē") )
+                    else if (celms.endsWith("tecē"))
+                        varianti.add(new Variants(celms.substring(0,celms.length()-2)+"c")); //tecēt -> teci
+                    else if (celms.endsWith("cē"))
                         varianti.add(new Variants(celms.substring(0,celms.length()-2)+"k")); //mācēt -> māki
                     else if (celms.endsWith("dzē") || celms.endsWith("dzī"))
                         varianti.add(new Variants(celms.substring(0,celms.length()-3)+"g")); //vajadzēt -> vajag, slodzīt -> slogi

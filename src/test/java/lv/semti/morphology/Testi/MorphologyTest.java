@@ -1523,6 +1523,8 @@ public class MorphologyTest {
 		formas = locītājs.generateInflections("mācēt");
 		testset.addAttribute(AttributeNames.i_EndingID, "1779");
 		assertInflection(formas, testset, "māku");
+        testset.addAttribute(AttributeNames.i_EndingID, "1780");
+        assertInflection(formas, testset, "māki");
 		testset.addAttribute(AttributeNames.i_EndingID, "1781");
 		assertInflection(formas, testset, "mākam");		
 		testset.addAttribute(AttributeNames.i_EndingID, "1783");
@@ -1531,6 +1533,16 @@ public class MorphologyTest {
 		assertInflection(formas, testset, "jāmāk");
 		testset.addAttribute(AttributeNames.i_EndingID, "2328");
 		assertInflection(formas, testset, "jāmākot");
+
+        formas = locītājs.generateInflections("tecēt");
+        testset.addAttribute(AttributeNames.i_EndingID, "1779");
+        assertInflection(formas, testset, "teku");
+        testset.addAttribute(AttributeNames.i_EndingID, "1780");
+        assertInflection(formas, testset, "teci");
+        testset.addAttribute(AttributeNames.i_EndingID, "1781");
+        assertInflection(formas, testset, "tekam");
+        testset.addAttribute(AttributeNames.i_EndingID, "1783");
+        assertInflection(formas, testset, "tek");
 
 		formas = locītājs.generateInflections("gulēt");
 		testset.addAttribute(AttributeNames.i_EndingID, "1780");
