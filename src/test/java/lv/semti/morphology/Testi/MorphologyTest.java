@@ -1302,9 +1302,11 @@ public class MorphologyTest {
 		
 		List<Wordform> formas = locītājs.generateInflections("Auziņš", true);
 		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "", "Auziņ");
-		
+
+        assertTrue(locītājs.analyze("Miervalda").isRecognized());
+        assertTrue(locītājs.analyze("Miervalža").isRecognized());
 		formas = locītājs.generateInflections("Miervaldis", true);
-		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "Miervalža");
+		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "Miervalda");
 	}
 	
 	

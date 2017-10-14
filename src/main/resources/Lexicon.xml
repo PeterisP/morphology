@@ -6945,34 +6945,37 @@
 		<Ending ID="2394" StemChange="0" Ending="a" StemID="1" LemmaEnding="2393">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Ģenitīvs"/>
 		</Ending>
-		<Ending ID="2395" StemChange="0" Ending="im" StemID="1" LemmaEnding="2393">
+		<Ending ID="2395" StemChange="1" Ending="a" StemID="1" LemmaEnding="2393">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Ģenitīvs" Ģenerēt="Nē"/>
+		</Ending>
+		<Ending ID="2396" StemChange="0" Ending="im" StemID="1" LemmaEnding="2393">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Datīvs"/>
 		</Ending>
-		<Ending ID="2396" StemChange="0" Ending="i" StemID="1" LemmaEnding="2393">
+		<Ending ID="2397" StemChange="0" Ending="i" StemID="1" LemmaEnding="2393">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Akuzatīvs"/>
 		</Ending>
-		<Ending ID="2397" StemChange="0" Ending="ī" StemID="1" LemmaEnding="2393">
+		<Ending ID="2398" StemChange="0" Ending="ī" StemID="1" LemmaEnding="2393">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Lokatīvs"/>
 		</Ending>
-		<Ending ID="2398" StemChange="0" Ending="i" StemID="1" LemmaEnding="2393">
+		<Ending ID="2399" StemChange="0" Ending="i" StemID="1" LemmaEnding="2393">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
-		<Ending ID="2399" StemChange="0" Ending="i" StemID="1" LemmaEnding="2393">
+		<Ending ID="2400" StemChange="0" Ending="i" StemID="1" LemmaEnding="2393">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Nominatīvs"/>
 		</Ending>
-		<Ending ID="2400" StemChange="0" Ending="u" StemID="1" LemmaEnding="2393">
+		<Ending ID="2401" StemChange="0" Ending="u" StemID="1" LemmaEnding="2393">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Ģenitīvs"/>
 		</Ending>
-		<Ending ID="2401" StemChange="0" Ending="iem" StemID="1" LemmaEnding="2393">
+		<Ending ID="2402" StemChange="0" Ending="iem" StemID="1" LemmaEnding="2393">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Datīvs"/>
 		</Ending>
-		<Ending ID="2402" StemChange="0" Ending="us" StemID="1" LemmaEnding="2393">
+		<Ending ID="2403" StemChange="0" Ending="us" StemID="1" LemmaEnding="2393">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Akuzatīvs"/>
 		</Ending>
-		<Ending ID="2403" StemChange="0" Ending="os" StemID="1" LemmaEnding="2393">
+		<Ending ID="2404" StemChange="0" Ending="os" StemID="1" LemmaEnding="2393">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Lokatīvs"/>
 		</Ending>
-		<Ending ID="2404" StemChange="0" Ending="i" StemID="1" LemmaEnding="2393">
+		<Ending ID="2405" StemChange="0" Ending="i" StemID="1" LemmaEnding="2393">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>

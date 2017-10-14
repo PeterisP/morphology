@@ -13341,4 +13341,48 @@
       <Attributes Pamatforma="balamute"/>
     </Lexeme>
 </Paradigm>
+<Paradigm Stems="1" ID="48" Description="Lietvārdi, 2. deklinācija, vīriešu dzimte, galotne -is bez mijas (tētis)">
+    <Lexeme ID="8526" Stem1="tēt">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="tētis" Avots="Valērija leksikons"/>
+    </Lexeme>
+    <Lexeme ID="8367" Stem1="vies">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="viesis" Avots="Valērija leksikons"/>
+    </Lexeme>
+    <Lexeme ID="8368" Stem1="peldvies">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="peldviesis" Avots="Valērija leksikons"/>
+    </Lexeme>
+    <Lexeme ID="8369" Stem1="kūrvies">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="kūrviesis" Avots="Valērija leksikons"/>
+    </Lexeme>
+    <Lexeme ID="8598" Stem1="strupast">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="strupastis" Avots="Valērija leksikons"/>
+    </Lexeme>
+    <Lexeme ID="8599" Stem1="garast">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="garastis" Avots="Valērija leksikons"/>
+    </Lexeme>
+    <Lexeme ID="8600" Stem1="lirast">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="lirastis" Avots="Valērija leksikons"/>
+    </Lexeme>
+    <Lexeme ID="8601" Stem1="sprikst">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="sprikstis" Avots="Valērija leksikons"/>
+    </Lexeme>
+    <Lexeme ID="8433" Stem1="sarkanmat">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="sarkanmatis" Avots="Valērija leksikons"/>
+    </Lexeme>
+    <Lexeme ID="8434" Stem1="melnmat">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="melnmatis" Avots="Valērija leksikons"/>
+    </Lexeme>
+    <Lexeme ID="8435" Stem1="garmat">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="garmatis" Avots="Valērija leksikons"/>
+    </Lexeme>
+    <Lexeme ID="8436" Stem1="gaišmat">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="gaišmatis" Avots="Valērija leksikons"/>
+    </Lexeme>
+    <Lexeme ID="8437" Stem1="tumšmat">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="tumšmatis" Avots="Valērija leksikons"/>
+    </Lexeme>
+    <Lexeme ID="8432" Stem1="tālskat">
+      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="tālskatis" Avots="Valērija leksikons"/>
+    </Lexeme>
+</Paradigm>
 </Lexicon>
