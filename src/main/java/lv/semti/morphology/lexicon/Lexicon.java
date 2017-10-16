@@ -168,7 +168,7 @@ public class Lexicon {
 		
 		this.filename = failaVārds;
 
-		Document doc = null;
+		Document doc;
 		DocumentBuilder docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
 		doc = docBuilder.parse(new File(failaVārds));
 

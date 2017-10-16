@@ -874,7 +874,8 @@ public class Analyzer extends Lexicon {
 					ending.getValue(AttributeNames.i_PartOfSpeech).equals(lexeme.getValue(AttributeNames.i_PartOfSpeech)) ||
 					lexeme.getValue(AttributeNames.i_PartOfSpeech) == null) {
 				
-				boolean vispārākāPak = ending.isMatchingStrong(AttributeNames.i_Definiteness, AttributeNames.v_Definite);
+				boolean vispārākāPak = ending.isMatchingStrong(AttributeNames.i_Definiteness, AttributeNames.v_Definite) ||
+						                ending.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adverb);
 				boolean properName = lexeme.isMatchingStrong(AttributeNames.i_NounType, AttributeNames.v_ProperNoun);
 				
 		    	ArrayList<Variants> celmi = Mijas.MijasLocīšanai(lexeme.getStem(ending.stemID-1), ending.getMija(), trešāSakne, vispārākāPak, properName);

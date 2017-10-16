@@ -132,7 +132,10 @@ public abstract class Mijas {
 						if (celms.endsWith("pj") || celms.endsWith("bj") || celms.endsWith("mj") || celms.endsWith("vj"))
 	//						 ... nj <> n ??
 							{varianti.add(new Variants(celms.substring(0,celms.length()-1),"Mija","p->pj (u.c.)"));}
-						else varianti.add(new Variants(celms));
+                        else if (celms.endsWith("fj")) { // žirafju -> žirafe; žirafu->žirafe
+                            varianti.add(new Variants(celms.substring(0,celms.length()-1),"Mija","p->pj (u.c.)"));
+                            varianti.add(new Variants(celms));
+                        } else varianti.add(new Variants(celms));
 					}
 					else if (!(celms.endsWith("p") || celms.endsWith("b") || celms.endsWith("m") || celms.endsWith("v") ||
 							   celms.endsWith("t") || celms.endsWith("d") || celms.endsWith("c") || celms.endsWith("z") ||
@@ -535,6 +538,12 @@ public abstract class Mijas {
 					else if (celms.endsWith("p") || celms.endsWith("b") || celms.endsWith("m") || celms.endsWith("v")) {
 						varianti.add(new Variants(celms+"j","Mija","p->pj (u.c.)"));
 					}
+                    else if (celms.endsWith("f")) { // Žirafu -> žirafju, žirafu
+                        Variants v = new Variants(celms+"j","Mija","p->pj (u.c.)");
+                        v.addAttribute(AttributeNames.i_Recommended, AttributeNames.v_Yes);
+                        varianti.add(v);
+                        varianti.add(new Variants(celms));
+                    }
 					else if (!(celms.endsWith("p") || celms.endsWith("b") || celms.endsWith("m") || celms.endsWith("v") ||
 							   celms.endsWith("t") || celms.endsWith("d") || celms.endsWith("c") || celms.endsWith("z") ||
 							   celms.endsWith("s") || celms.endsWith("z") || celms.endsWith("n") || celms.endsWith("l") ) )
@@ -603,9 +612,9 @@ public abstract class Mijas {
 					else varianti.add(new Variants(celms));
 					break;
 				case 13: // īpašības vārdiem -āk-, ar š->s nominatīva formā (zaļš -> zaļāks
-					varianti.add(new Variants(celms+"āk"));
+					varianti.add(new Variants(celms+"āk", AttributeNames.i_Degree, AttributeNames.v_Comparative));
 					if (pieliktVisPārākoPak)
-						varianti.add(new Variants("vis" + celms + "āk",AttributeNames.i_Degree,AttributeNames.v_Superlative));
+						varianti.add(new Variants("vis" + celms + "āk",AttributeNames.i_Degree, AttributeNames.v_Superlative));
 					break;	
 				case 14: // 1. konjugācijas "-is" forma
 					if (celms.endsWith("k")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"c"));

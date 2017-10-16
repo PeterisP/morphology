@@ -244,8 +244,9 @@ public class AttributeValues implements FeatureStructure, Cloneable {
 	}	
 
 	/**
-	 * Removes a set of attributes that are considered not target of POS/morphotagging; mainly lexical features. 
-	 * TODO - confusing name of function?
+	 * Removes a set of attributes that are considered not target of POS/morphotagging; mainly lexical features.
+	 * NB! This set also defines which attributes will not be guessed/tagged by the automated tagger.
+	 * FIXME - confusing name of function?
 	 */
 	public void removeNonlexicalAttributes() {
 		removeAttribute(AttributeNames.i_Transitivity);
@@ -254,7 +255,7 @@ public class AttributeValues implements FeatureStructure, Cloneable {
 		removeAttribute(AttributeNames.i_Declension);
 		removeAttribute(AttributeNames.i_Konjugaacija);
 		
-		removeAttribute(AttributeNames.i_ApstTips);
+		// removeAttribute(AttributeNames.i_ApstTips);
 		removeAttribute(AttributeNames.i_SaikljaTips);
 		removeAttribute(AttributeNames.i_SkaitljaTips);
 		removeAttribute(AttributeNames.i_AdjectiveType);		
@@ -266,11 +267,11 @@ public class AttributeValues implements FeatureStructure, Cloneable {
 		
 		if (isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Preposition)) {			
 			removeAttribute(AttributeNames.i_Novietojums);
-			//removeAttribute(AttributeNames.i_Rekcija);  // FIXME - may be needed
-			//removeAttribute(AttributeNames.i_Number);   // FIXME - may be needed
+			//removeAttribute(AttributeNames.i_Rekcija);
+			//removeAttribute(AttributeNames.i_Number);
 		}
 		
-		//par šiem jādomā
+		//par šiem jādomā. Principā analizators no galotnes varētu izdomāt
 		removeAttribute(AttributeNames.i_Degree);
 		removeAttribute(AttributeNames.i_Reflexive);
 		removeAttribute(AttributeNames.i_Laiks);

@@ -2744,10 +2744,30 @@ public class MorphologyTest {
         assertInflection(balamute, dskg, "balamutu");
 
         AttributeValues vskd = new AttributeValues();
-        dskg.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
-        dskg.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
-        dskg.addAttribute(AttributeNames.i_Case, AttributeNames.v_Dative);
-        assertInflection(balamute, dskg, "balamutem");
+        vskd.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
+        vskd.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+        vskd.addAttribute(AttributeNames.i_Case, AttributeNames.v_Dative);
+        assertInflection(balamute, vskd, "balamutem");
     }
 
+    @Test
+    public void žirafe() {
+        Word w = locītājs.analyze("žirafu");
+        assertTrue(w.isRecognized());
+        w = locītājs.analyze("žirafju");
+        assertTrue(w.isRecognized());
+    }
+
+    @Test
+    public void viszaļāk() {
+        Word w = locītājs.analyze("viszaļāk");
+        assertTrue(w.isRecognized());
+
+        List<Wordform> zaļš = locītājs.generateInflections("zaļš");
+
+        AttributeValues visp = new AttributeValues();
+        visp.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adverb);
+        visp.addAttribute(AttributeNames.i_Degree, AttributeNames.v_Superlative);
+        assertInflection(zaļš, visp, "viszaļāk");
+    }
 }
