@@ -2770,4 +2770,24 @@ public class MorphologyTest {
         visp.addAttribute(AttributeNames.i_Degree, AttributeNames.v_Superlative);
         assertInflection(zaļš, visp, "viszaļāk");
     }
+
+    @Test
+    public void iekosties() {
+        Word w = locītājs.analyze("kod");
+        assertTrue(w.isRecognized());
+        w = locītājs.analyze("koz");
+        assertFalse(w.isRecognized());
+
+        List<Wordform> kost = locītājs.generateInflections("kost");
+        List<Wordform> iekosties = locītājs.generateInflections("iekosties");
+//        describe(iekosties);
+        AttributeValues tu = new AttributeValues();
+        tu.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+        tu.addAttribute(AttributeNames.i_Person, "2");
+        tu.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Tagadne);
+        tu.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+        assertInflection(kost, tu, "kod");
+        assertInflection(kost, tu, "iekodies");
+
+    }
 }

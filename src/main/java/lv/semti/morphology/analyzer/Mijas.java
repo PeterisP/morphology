@@ -177,7 +177,9 @@ public abstract class Mijas {
 					}
 					else if (celms.endsWith("d")) {
 						//tikai attiecīgajiem vārdiem, pārējiem visiem 2. personas tagadnei jābūt galā -i, piem. 'pazūdi', 'atrodi'
-						if (celms.endsWith("dod") || celms.endsWith("ved") || celms.endsWith("ēd")) varianti.add(new Variants(celms)); 
+						if (celms.endsWith("dod") || celms.endsWith("ved") || celms.endsWith("ēd"))
+							varianti.add(new Variants(celms));
+//						else varianti.add(new Variants(celms.substring(0,celms.length()-1)+"ž"));  // kožu -> kod
 					}
 					else if (celms.endsWith("l")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"ļ"));
 					else if (celms.endsWith("s")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"š")); // elšu -> elsis
