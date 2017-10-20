@@ -2773,21 +2773,22 @@ public class MorphologyTest {
 
     @Test
     public void iekosties() {
-        Word w = locītājs.analyze("kod");
-        assertTrue(w.isRecognized());
-        w = locītājs.analyze("koz");
-        assertFalse(w.isRecognized());
 
         List<Wordform> kost = locītājs.generateInflections("kost");
-        List<Wordform> iekosties = locītājs.generateInflections("iekosties");
-//        describe(iekosties);
         AttributeValues tu = new AttributeValues();
         tu.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
         tu.addAttribute(AttributeNames.i_Person, "2");
         tu.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Tagadne);
         tu.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
         assertInflection(kost, tu, "kod");
-        assertInflection(kost, tu, "iekodies");
+        List<Wordform> izpausties = locītājs.generateInflections("izpausties");
+        assertInflection(izpausties, tu, "izpaudies");
+        List<Wordform> izlauzties = locītājs.generateInflections("izlauzties");
+        assertInflection(izlauzties, tu, "izlauzies");
 
+        Word w = locītājs.analyze("kod");
+        assertTrue(w.isRecognized());
+        w = locītājs.analyze("koz");
+        assertFalse(w.isRecognized());
     }
 }

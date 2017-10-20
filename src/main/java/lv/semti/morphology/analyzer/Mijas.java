@@ -179,7 +179,7 @@ public abstract class Mijas {
 						//tikai attiecīgajiem vārdiem, pārējiem visiem 2. personas tagadnei jābūt galā -i, piem. 'pazūdi', 'atrodi'
 						if (celms.endsWith("dod") || celms.endsWith("ved") || celms.endsWith("ēd"))
 							varianti.add(new Variants(celms));
-//						else varianti.add(new Variants(celms.substring(0,celms.length()-1)+"ž"));  // kožu -> kod
+						else varianti.add(new Variants(celms.substring(0,celms.length()-1)+"ž"));  // kožu -> kod
 					}
 					else if (celms.endsWith("l")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"ļ"));
 					else if (celms.endsWith("s")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"š")); // elšu -> elsis
@@ -406,9 +406,9 @@ public abstract class Mijas {
 			if (locītais.celms.equalsIgnoreCase(stem)) atrasts = true;
 		}
 		
-		if (!atrasts && Arrays.asList(1,2,5,7,8,9,14,15,17).contains(stemChange)) { //FIXME - varbūt performance dēļ tikai šiem stemChange ir jāloka varianti
+		if (!atrasts && Arrays.asList(1,2,5,7,8,9,14,15,17,23).contains(stemChange)) { //FIXME - varbūt performance dēļ tikai šiem stemChange ir jāloka varianti
+//            System.err.printf("Celmam '%s' ar miju %d sanāca '%s' - noraidījām dēļ atpakaļlocīšanas verifikācijas.\n", stem, stemChange, variants.celms);
 			return false;
-//				System.err.printf("Celmam '%s' ar miju %d sanāca '%s' - noraidījām dēļ atpakaļlocīšanas verifikācijas.\n", stem, stemChange, variants.celms);
 		} else {
 			if (!atrasts && stemChange != 18 && stemChange != 20) { //debuginfo.     FIXME - 18. mijā neierobežojam, jo tur ir nesimetrija - vokatīvu silvij! atpazīstam bet neģenerējam. 20. mijā ir arī alternatīvas - guļošs un gulošs
 				System.err.printf("Celms '%s' ar miju %d sanāca '%s'. Bet atpakaļ lokot:\n", stem, stemChange, variants.celms);
@@ -586,8 +586,10 @@ public abstract class Mijas {
 					else if (celms.endsWith("mj") || celms.endsWith("bj") || celms.endsWith("pj"))	varianti.add(new Variants(celms.substring(0,celms.length()-1)));
 					else if (celms.endsWith("k")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"c"));
 					else if (celms.endsWith("g")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"dz"));
-					else if (celms.endsWith("ž")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"z")); // griez -> griežu
-					else varianti.add(new Variants(celms));
+					else if (celms.endsWith("ž")) {
+					   // varianti.add(new Variants(celms.substring(0,celms.length()-1)+"z")); // griez -> griežu
+                        varianti.add(new Variants(trešāSakne)); // skaužu -> skaud, laužu -> lauz; sanāk atbilstoši pagātnes celmam
+                    } else varianti.add(new Variants(celms));
 					break;
 				case 8: // -ams -āms 3. konjugācijai bezmiju gadījums
 					if (celms.endsWith("inā")) varianti.add(new Variants(celms, "Garā", "ā"));
