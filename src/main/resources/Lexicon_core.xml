@@ -5687,7 +5687,7 @@
       <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="skrieties"/>
     </Lexeme>
     <Lexeme ID="50344" Stem1="pateik" Stem2="pateic" Stem3="pateic">
-      <Attributes Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="ties"/>
+      <Attributes Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="pateikties"/>
     </Lexeme>
     <Lexeme ID="50419" Stem1="attap" Stem2="attop" Stem3="attap">
       <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="attapties"/>
@@ -5724,6 +5724,9 @@
     </Lexeme>    
     <Lexeme ID="50869" Stem1="atkāp" Stem2="atkāpj" Stem3="atkāp">
       <Attributes Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="atkāpties"/>
+    </Lexeme>    
+    <Lexeme Stem1="slēp" Stem2="slēpj" Stem3="slēp">
+      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="slēpties"/>
     </Lexeme>    
   </Paradigm>
   <Paradigm Stems="1" ID="19" LemmaEnding="955" Description="Darbības vārdi 2. konjugācija atgriezeniski">
@@ -8442,9 +8445,6 @@
     </Lexeme>
     <Lexeme ID="26591" Stem1="vairāk">
       <Attributes Pamatforma="vairāki" Vārdšķira="Vietniekvārds" Persona="Nepiemīt" Vietniekvārda_tips="Nenoteiktie"/>
-    </Lexeme>
-    <Lexeme ID="27372" Stem1="tūkstoš">
-      <Attributes Skaitļu_kārta="Tūkstoši" Pamatforma="tūkstotis"/>
     </Lexeme>
   </Paradigm>
   <Paradigm Stems="1" ID="25" LemmaEnding="2011" Description="Vietniekvārdi">
