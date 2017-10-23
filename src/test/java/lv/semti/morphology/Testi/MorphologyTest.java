@@ -2068,7 +2068,7 @@ public class MorphologyTest {
 	public void uri() {
 		Word url = locītājs.analyze("www.pillar.lv");
 		assertTrue(url.isRecognized());
-		describe(url.wordforms);
+//		describe(url.wordforms);
 		assertEquals("xu", url.wordforms.get(0).getTag());		
 	}
 	
@@ -2673,11 +2673,21 @@ public class MorphologyTest {
         locītājs.enableGuessing = true;
         assertLemma("Pētera", "Pēteris");
         assertLemma("NATO", "NATO");
-        assertLemma("lībiešu", "lībietis");
+        Word lībiešu = locītājs.analyze("lībiešu");
+        assertTrue(lībiešu.isRecognized());
+        boolean foundLemma = false;
+        for (Wordform wf : lībiešu.wordforms) {
+            if (wf.isMatchingStrong(AttributeNames.i_Lemma, "lībietis"))
+                foundLemma = true;
+        }
+        assertTrue(foundLemma);
     }
 
     @Test
     public void turpms() {
+        locītājs.enableGuessing = true;
+        Word turpmākiem = locītājs.analyze("turpmākiem");
+        assertTrue(turpmākiem.isRecognized());
         assertLemma("turpmākiem", "turpmāks");
     }
 
@@ -2691,7 +2701,9 @@ public class MorphologyTest {
             assertNotEquals("pēdējajam", forma.getToken()); // šo formu nedrīkst ģenerēt
         }
         assertLemma("pēdējam", "pēdējs");
-        assertLemma("pēdējajam", "pēdējais");  // bet drīkst atpazīt
+        assertLemma("pēdējajam", "pēdējs");  // bet drīkst atpazīt
+        assertLemma("vispēdējākais", "pēdējs");
+        assertLemma("vispēdējākajam", "pēdējs");
     }
 
     @Test public void pase() {

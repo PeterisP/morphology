@@ -381,6 +381,18 @@ public abstract class Mijas {
                     else if (celms.endsWith("guļa"))
                         varianti.add(new Variants(celms.substring(0,celms.length()-2)+"lē", AttributeNames.i_Degree, pakāpe)); //gulēt -> guļam
                     break;
+                case 34: // īpašības vārdiem -āk- un vis- izskaņām kā -ajam: liekam nevis zaļ-š->zaļ-ajam, bet zaļ-š->zaļ-a-jam, bet pēdēj-ais -> pēdē-jam/pēdēj-a-jam
+                    if (celms.endsWith("āka") && celms.length() > 4) {
+                        if (celms.startsWith("vis")) varianti.add(new Variants(celms.substring(3,celms.length()-3),AttributeNames.i_Degree,AttributeNames.v_Superlative));
+                        else varianti.add(new Variants(celms.substring(0,celms.length()-3),AttributeNames.i_Degree,AttributeNames.v_Comparative));
+                    } else {
+                        if (celms.endsWith("a")) // zaļa-jam -> zaļ; pēdēja-jam -> pēdēj
+                            varianti.add(new Variants(celms.substring(0,celms.length()-1) ,AttributeNames.i_Degree, AttributeNames.v_Positive));
+                        else if (celms.endsWith("ē")) // pēdē-jam -> pēdēj
+                            varianti.add(new Variants(celms+"j",AttributeNames.i_Degree, AttributeNames.v_Positive));
+                        // citiem pareiziem variantiem IMHO te nevajadzētu būt
+                    }
+                    break;
 				default:
 					System.err.printf("Invalid StemChange ID, stem '%s', stemchange %d\n", celms, mija);
 			}
@@ -774,6 +786,16 @@ public abstract class Mijas {
                         else if (celms.endsWith("dzē"))
                             varianti.add(new Variants("vis" + celms.substring(0,celms.length()-3)+"ga", AttributeNames.i_Degree, AttributeNames.v_Superlative)); //vajadzēt -> vajag
                     }
+                    break;
+                case 34: // īpašības vārdiem -āk- un vis- izskaņām kā -ajam: liekam nevis zaļ-š->zaļ-ajam, bet zaļ-š->zaļ-a-jam, bet pēdēj-ais -> pēdē-jam/pēdēj-a-jam
+                    if (celms.endsWith("ēj")) // pēdēj-ais -> pēdē-jam
+                        varianti.add(new Variants(celms.substring(0, celms.length()-1),AttributeNames.i_Degree,AttributeNames.v_Positive));
+                    else // zaļ-š -> zaļa-jam
+                        varianti.add(new Variants(celms+"a",AttributeNames.i_Degree,AttributeNames.v_Positive));
+
+                    varianti.add(new Variants(celms + "āka",AttributeNames.i_Degree,AttributeNames.v_Comparative));
+                    if (pieliktVisPārākoPak)
+                        varianti.add(new Variants("vis" + celms + "āka",AttributeNames.i_Degree,AttributeNames.v_Superlative));
                     break;
 				default:
 					System.err.printf("Invalid StemChange ID, stem '%s', stemchange %d\n", celms, mija);

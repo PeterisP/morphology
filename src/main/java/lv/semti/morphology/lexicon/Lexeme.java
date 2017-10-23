@@ -70,7 +70,7 @@ public class Lexeme extends AttributeValues {
 
         Node n = node.getAttributes().getNamedItem("Name");
         if (n != null)
-            name = n.getTextContent().toLowerCase();
+            name = n.getTextContent().toLowerCase(); // TODO - vai šāds vispār te eksistē?
 
         n = node.getAttributes().getNamedItem("Stem1");
 		if (n != null)

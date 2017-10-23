@@ -30,6 +30,8 @@ import lv.semti.morphology.attributes.AttributeNames;
 import lv.semti.morphology.attributes.AttributeValues;
 import lv.semti.morphology.lexicon.*;
 
+import javax.smartcardio.ATR;
+
 public class Analyzer extends Lexicon {
 
 	public boolean enablePrefixes = true;
@@ -54,7 +56,7 @@ public class Analyzer extends Lexicon {
 		
 	private Cache<String, Word> wordCache = new Cache<String, Word>();
 
-	public Trie automats;
+	Trie automats;
 		
 	/**
 	 * Construct the morphological analyzer object by loading the lexicon from either the default location, a specified file name or an inputstream.
@@ -221,9 +223,11 @@ public class Analyzer extends Lexicon {
 						}
 						if (!Mijas.atpakaļlocīšanasVerifikācija(celms, stemBezMijas, stemChange, trešāSakne, properName))
 							continue;
-						Wordform variants = new Wordform(word, lexeme, ending);
+						Wordform variants = new Wordform(word, lexeme, ending, originalWord);
 						variants.addAttributes(celms);
 						variants.addAttribute(AttributeNames.i_Guess, AttributeNames.v_NoGuess);
+						if (variants.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Abbreviation) && p_allcaps.matcher(originalWord).matches())
+						    variants.addAttribute(AttributeNames.i_Lemma, variants.getValue(AttributeNames.i_Lemma).toUpperCase());
 						if (this.isAcceptable(variants)) { // izmetam tos variantus, kas nav īsti pieļaujami - vienskaitliniekus daudzskaitlī, vokatīvus ja tos negrib
 							result.addWordform(variants);
 							foundSomethingHere = true;
@@ -475,68 +479,69 @@ public class Analyzer extends Lexicon {
 		for (int i=word.length()-2; i>=0; i--) { // TODO - duma heiristika, kas vērtē tīri pēc galotņu garuma; vajag pēc statistikas
 			for (Ending ending : getAllEndings().matchedEndings(word))
 				if (ending.getEnding().length()==i) {
-					Paradigm p = ending.getParadigm();
-					if (p.getName().equals("Hardcoded"))
-						continue; // Hardcoded vārdgrupa minēšanai nav aktuāla
+                    Paradigm p = ending.getParadigm();
+                    if (p.getName().equals("Hardcoded"))
+                        continue; // Hardcoded vārdgrupa minēšanai nav aktuāla
 
-					String stem;
-					try {
-						stem = ending.stem(word);
-					} catch (Ending.WrongEndingException e) {
-						throw new Error(e); // Shouldn't ever happen - matchedEndings should ensure that word contains that ending.
-					}
+                    String stem;
+                    try {
+                        stem = ending.stem(word);
+                    } catch (Ending.WrongEndingException e) {
+                        throw new Error(e); // Shouldn't ever happen - matchedEndings should ensure that word contains that ending.
+                    }
 
-					ArrayList<Variants> celmi = Mijas.mijuVarianti(stem, ending.getMija(), false); //FIXME - te var būt arī propername... tikai kā tā info līdz šejienei nonāks?
-					if (celmi.size() == 0) continue; // acīmredzot neder ar miju, ejam uz nākamo galotni.
-					String celms = celmi.get(0).celms;
-					
-					if (!p.allowedGuess(celms))
-						if (p_firstcap.matcher(originalWord).matches() && (p.getID() == 8 || p.getID() == 10 || p.getID() == 31 ))
-						{} // Ja ir īpašvārds ar -a -e galotni, tad mēģina arī vīriešu dzimtes variantus uzvārdiem
-						else continue; // citos gadījumos, ja beigu burti izskatās neadekvāti tam, kas leksikonā pie paradigmas norādīts - tad neminam.
-					if (p.getID() == 5 && !celms.endsWith("sun"))
-						continue; // der tikai -suns salikteņi
-					//TODO - varbūt drīzāk whitelist datos - pie paradigmas karodziņu, ka tā ir atvērta un tajā drīkst minēt?
-					//TODO te var vēl heiristikas salikt, lai uzlabotu minēšanu - ne katrs burts var būt darbībasvārdam beigās utml
+                    ArrayList<Variants> celmi = Mijas.mijuVarianti(stem, ending.getMija(), false); //FIXME - te var būt arī propername... tikai kā tā info līdz šejienei nonāks?
+                    for (Variants celma_variants : celmi) {
+                        String celms = celma_variants.celms;
 
-					Wordform variants = new Wordform(word, null, ending);
-					variants.addAttribute(AttributeNames.i_Source,"minējums pēc galotnes");
-					variants.addAttribute(AttributeNames.i_Guess, AttributeNames.v_Ending);
+                        if (!p.allowedGuess(celms))
+                            if (p_firstcap.matcher(originalWord).matches() && (p.getID() == 8 || p.getID() == 10 || p.getID() == 31)) {
+                            } // Ja ir īpašvārds ar -a -e galotni, tad mēģina arī vīriešu dzimtes variantus uzvārdiem
+                            else
+                                continue; // citos gadījumos, ja beigu burti izskatās neadekvāti tam, kas leksikonā pie paradigmas norādīts - tad neminam.
+                        if (p.getID() == 5 && !celms.endsWith("sun"))
+                            continue; // der tikai -suns salikteņi
+                        //TODO - varbūt drīzāk whitelist datos - pie paradigmas karodziņu, ka tā ir atvērta un tajā drīkst minēt?
+                        //TODO te var vēl heiristikas salikt, lai uzlabotu minēšanu - ne katrs burts var būt darbībasvārdam beigās utml
 
-					// FIXME ko ar pārējiem variantiem?? un ko ja nav variantu?
-					Ending pamatforma = ending.getLemmaEnding();					
-					if (pamatforma != null) {
-						// Izdomājam korektu lemmu
-						String lemma = celms + pamatforma.getEnding();
-						lemma = recapitalize(lemma, originalWord);	
-						
-						variants.addAttribute(AttributeNames.i_Lemma, lemma);
-					}
+                        Wordform variants = new Wordform(word, null, ending);
+                        variants.addAttribute(AttributeNames.i_Source, "minējums pēc galotnes");
+                        variants.addAttribute(AttributeNames.i_Guess, AttributeNames.v_Ending);
 
-					if (  ((this.guessNouns && ending.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech,AttributeNames.v_Noun) &&							
-                            (enableVocative || !variants.isMatchingStrong(AttributeNames.i_Case,AttributeNames.v_Vocative)) &&
-                            (guessInflexibleNouns || !variants.isMatchingStrong(AttributeNames.i_Declension,AttributeNames.v_NA))
-                            ) ||
-							(this.guessVerbs && ending.getParadigm().isMatchingWeak(AttributeNames.i_PartOfSpeech,AttributeNames.v_Verb)) ||
-                            (this.guessAdjectives && ending.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech,AttributeNames.v_Adjective)) ||
-                            (this.guessParticiples && variants.isMatchingStrong(AttributeNames.i_Izteiksme,AttributeNames.v_Participle))) 
-                      && (i>0 || variants.isMatchingStrong(AttributeNames.i_Declension,AttributeNames.v_NA)) ) // ja galotnes nav, tad vai nu nelokāms lietvārds vai neatpazīstam. Lai nav verbu bezgalotņu formas minējumos, kas parasti nav pareizās.
-                            	{
-									if (ending.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech,AttributeNames.v_Noun) && 
-											variants.isMatchingStrong(AttributeNames.i_Declension,AttributeNames.v_NA)) {
-										char last = celms.charAt(celms.length()-1);
- 										if (!(last=='ā' || last == 'e' || last == 'ē' || last == 'i' || last == 'ī' || last == 'o' || last == 'ū' || celms.endsWith("as"))) {  // uzskatam, ka 'godīgi' nelokāmie lietvārdi beidzas tikai ar šiem - klasiski nelokāmie, un lietuviešu Arvydas
- 											variants.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Residual);
- 											if (!Character.isDigit(last)) {
- 												variants.addAttribute(AttributeNames.i_ResidualType, AttributeNames.v_Foreign);
-												//Pieņemam, ka vārdi svešvalodā - 'crawling' 'Kirill' utml.
-											} 
-										}
-									}
-									rezultāts.wordforms.add(variants);
-                            	}
+                        // FIXME ko ar pārējiem variantiem?? un ko ja nav variantu?
+                        Ending pamatforma = ending.getLemmaEnding();
+                        if (pamatforma != null) {
+                            // Izdomājam korektu lemmu
+                            String lemma = celms + pamatforma.getEnding();
+                            lemma = recapitalize(lemma, originalWord);
 
-				}
+                            variants.addAttribute(AttributeNames.i_Lemma, lemma);
+                        }
+
+                        if (((this.guessNouns && ending.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun) &&
+                                (enableVocative || !variants.isMatchingStrong(AttributeNames.i_Case, AttributeNames.v_Vocative)) &&
+                                (guessInflexibleNouns || !variants.isMatchingStrong(AttributeNames.i_Declension, AttributeNames.v_NA))
+                        ) ||
+                                (this.guessVerbs && ending.getParadigm().isMatchingWeak(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb)) ||
+                                (this.guessAdjectives && ending.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adjective)) ||
+                                (this.guessParticiples && variants.isMatchingStrong(AttributeNames.i_Izteiksme, AttributeNames.v_Participle)))
+                                && (i > 0 || variants.isMatchingStrong(AttributeNames.i_Declension, AttributeNames.v_NA))) // ja galotnes nav, tad vai nu nelokāms lietvārds vai neatpazīstam. Lai nav verbu bezgalotņu formas minējumos, kas parasti nav pareizās.
+                        {
+                            if (ending.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun) &&
+                                    variants.isMatchingStrong(AttributeNames.i_Declension, AttributeNames.v_NA)) {
+                                char last = celms.charAt(celms.length() - 1);
+                                if (!(last == 'ā' || last == 'e' || last == 'ē' || last == 'i' || last == 'ī' || last == 'o' || last == 'ū' || celms.endsWith("as"))) {  // uzskatam, ka 'godīgi' nelokāmie lietvārdi beidzas tikai ar šiem - klasiski nelokāmie, un lietuviešu Arvydas
+                                    variants.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Residual);
+                                    if (!Character.isDigit(last)) {
+                                        variants.addAttribute(AttributeNames.i_ResidualType, AttributeNames.v_Foreign);
+                                        //Pieņemam, ka vārdi svešvalodā - 'crawling' 'Kirill' utml.
+                                    }
+                                }
+                            }
+                            rezultāts.wordforms.add(variants);
+                        }
+                    }
+                }
 			if (rezultāts.isRecognized() && !enableAllGuesses) break;
 			// FIXME - šo te vajag aizstāt ar kādu heiristiku, kas atrastu, piemēram, ticamākos lietvārdvariantus, ticamākos īpašībasvārdagadījumus utml.
 		}

@@ -57,9 +57,9 @@ public class Lexicon {
 	private ArrayList<String> corpusFileNames = new ArrayList<String>();
 
 	// Vārdu lielo/mazo burtu nošķiršana
-	protected Pattern p_firstcap = Pattern.compile("\\p{Lu}.*");
-	protected Pattern p_allcaps = Pattern.compile("(\\p{Lu})*");
-	protected Pattern p_doublesurname = Pattern.compile("\\p{Lu}.+-\\p{Lu}.+");
+	protected static Pattern p_firstcap = Pattern.compile("\\p{Lu}.*");
+	protected static Pattern p_allcaps = Pattern.compile("(\\p{Lu})*");
+	protected static Pattern p_doublesurname = Pattern.compile("\\p{Lu}.+-\\p{Lu}.+");
 
 	protected Multimap<String, Lexeme> hardcodedForms = ArrayListMultimap.create();
 	
@@ -177,7 +177,7 @@ public class Lexicon {
 	private void init(String failaVārds, ArrayList<String> blacklist) throws Exception {
 		System.err.println("Loading " + failaVārds);	
 		this.filename = failaVārds;
-		Document doc = null;
+		Document doc;
 		DocumentBuilder docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
 		doc = docBuilder.parse(new File(failaVārds));
 
@@ -248,11 +248,10 @@ public class Lexicon {
 		
 		for (String filename : corpusFileNames) {
 			if (blacklist != null && blacklist.contains(filename)) continue; //FIXME - case sensitivity?
-			Document doc2 = null;
+			Document doc2;
 			DocumentBuilder docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-			String fullname = filename;
 			if (path != null) {
-				fullname = path + java.io.File.separatorChar + filename;
+				String fullname = path + java.io.File.separatorChar + filename;
 				doc2 = docBuilder.parse(new File(fullname));
 			} else {
 				doc2 = docBuilder.parse(getClass().getClassLoader().getResourceAsStream(filename));
@@ -308,9 +307,8 @@ public class Lexicon {
 	 * @throws UnsupportedEncodingException
 	 * @throws IOException
 	 */
-	public void toXML(String failaVārds) throws FileNotFoundException,
+	public void toXML(String failaVārds) throws IOException {
 	//TODO - būtu nevis faila vārds jāņem, bet outputstream.
-			UnsupportedEncodingException, IOException {
 		System.out.println("Warning! XML saving possibly obsolete after multuple-lexicon changes");
 		
 		File file = new File(failaVārds);
@@ -347,8 +345,7 @@ public class Lexicon {
 	 * @throws UnsupportedEncodingException
 	 * @throws IOException
 	 */
-	public void toXML_sub(String failaVārds, String source) throws FileNotFoundException,
-			UnsupportedEncodingException, IOException {	
+	public void toXML_sub(String failaVārds, String source) throws IOException {
 		File file = new File(failaVārds);
 		File newfile = new File(failaVārds + ".new");
 		File backupfile = new File(failaVārds + ".bak");
@@ -573,7 +570,7 @@ public class Lexicon {
 	 */
 	public void clearCache () {}
 
-	public String recapitalize(String word, String originalWord) {
+	public static String recapitalize(String word, String originalWord) {
 		if (p_firstcap.matcher(originalWord).matches())
 			word = word.substring(0, 1).toUpperCase() + word.substring(1,word.length());
 		if (p_allcaps.matcher(originalWord).matches())

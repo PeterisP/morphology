@@ -497,13 +497,13 @@
 		<Ending ID="146" StemChange="3" Ending="ā" StemID="1" LemmaEnding="135">
 			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Noteiktā" Dzimte="Vīriešu" Locījums="Ģenitīvs"/>
 		</Ending>
-		<Ending ID="147" StemChange="3" Ending="ajam" StemID="1" LemmaEnding="135">
+		<Ending ID="147" StemChange="34" Ending="jam" StemID="1" LemmaEnding="135">
 			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Noteiktā" Dzimte="Vīriešu" Locījums="Datīvs"/>
 		</Ending>
 		<Ending ID="148" StemChange="3" Ending="o" StemID="1" LemmaEnding="135">
 			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Noteiktā" Dzimte="Vīriešu" Locījums="Akuzatīvs"/>
 		</Ending>
-		<Ending ID="149" StemChange="3" Ending="ajā" StemID="1" LemmaEnding="135">
+		<Ending ID="149" StemChange="34" Ending="jā" StemID="1" LemmaEnding="135">
 			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Noteiktā" Dzimte="Vīriešu" Locījums="Lokatīvs"/>
 		</Ending>
 		<Ending ID="150" StemChange="3" Ending="ais" StemID="1" LemmaEnding="135">
@@ -515,13 +515,13 @@
 		<Ending ID="152" StemChange="3" Ending="o" StemID="1" LemmaEnding="135">
 			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Noteiktā" Dzimte="Vīriešu" Locījums="Ģenitīvs"/>
 		</Ending>
-		<Ending ID="153" StemChange="3" Ending="ajiem" StemID="1" LemmaEnding="135">
+		<Ending ID="153" StemChange="34" Ending="jiem" StemID="1" LemmaEnding="135">
 			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Noteiktā" Dzimte="Vīriešu" Locījums="Datīvs"/>
 		</Ending>
 		<Ending ID="154" StemChange="3" Ending="os" StemID="1" LemmaEnding="135">
 			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Noteiktā" Dzimte="Vīriešu" Locījums="Akuzatīvs"/>
 		</Ending>
-		<Ending ID="155" StemChange="3" Ending="ajos" StemID="1" LemmaEnding="135">
+		<Ending ID="155" StemChange="34" Ending="jos" StemID="1" LemmaEnding="135">
 			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Noteiktā" Dzimte="Vīriešu" Locījums="Lokatīvs"/>
 		</Ending>
 		<Ending ID="156" StemChange="3" Ending="ie" StemID="1" LemmaEnding="135">
@@ -563,13 +563,13 @@
 		<Ending ID="168" StemChange="3" Ending="ās" StemID="1" LemmaEnding="157">
 			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Noteiktā" Dzimte="Sieviešu" Locījums="Ģenitīvs"/>
 		</Ending>
-		<Ending ID="169" StemChange="3" Ending="ajai" StemID="1" LemmaEnding="157">
+		<Ending ID="169" StemChange="34" Ending="jai" StemID="1" LemmaEnding="157">
 			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Noteiktā" Dzimte="Sieviešu" Locījums="Datīvs"/>
 		</Ending>
 		<Ending ID="170" StemChange="3" Ending="o" StemID="1" LemmaEnding="157">
 			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Noteiktā" Dzimte="Sieviešu" Locījums="Akuzatīvs"/>
 		</Ending>
-		<Ending ID="171" StemChange="3" Ending="ajā" StemID="1" LemmaEnding="157">
+		<Ending ID="171" StemChange="34" Ending="jā" StemID="1" LemmaEnding="157">
 			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Noteiktā" Dzimte="Sieviešu" Locījums="Lokatīvs"/>
 		</Ending>
 		<Ending ID="172" StemChange="3" Ending="ā" StemID="1" LemmaEnding="157">
@@ -581,13 +581,13 @@
 		<Ending ID="174" StemChange="3" Ending="o" StemID="1" LemmaEnding="157">
 			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Noteiktā" Dzimte="Sieviešu" Locījums="Ģenitīvs"/>
 		</Ending>
-		<Ending ID="175" StemChange="3" Ending="ajām" StemID="1" LemmaEnding="157">
+		<Ending ID="175" StemChange="34" Ending="jām" StemID="1" LemmaEnding="157">
 			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Noteiktā" Dzimte="Sieviešu" Locījums="Datīvs"/>
 		</Ending>
 		<Ending ID="176" StemChange="3" Ending="ās" StemID="1" LemmaEnding="157">
 			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Noteiktā" Dzimte="Sieviešu" Locījums="Akuzatīvs"/>
 		</Ending>
-		<Ending ID="177" StemChange="3" Ending="ajās" StemID="1" LemmaEnding="157">
+		<Ending ID="177" StemChange="34" Ending="jās" StemID="1" LemmaEnding="157">
 			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Noteiktā" Dzimte="Sieviešu" Locījums="Lokatīvs"/>
 		</Ending>
 		<Ending ID="178" StemChange="3" Ending="ās" StemID="1" LemmaEnding="157">
@@ -638,13 +638,13 @@
 		<Ending ID="191" StemChange="3" Ending="ā" StemID="1" LemmaEnding="180">
 			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Noteiktā" Dzimte="Vīriešu" Locījums="Ģenitīvs"/>
 		</Ending>
-		<Ending ID="192" StemChange="3" Ending="ajam" StemID="1" LemmaEnding="180">
+		<Ending ID="192" StemChange="34" Ending="jam" StemID="1" LemmaEnding="180">
 			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Noteiktā" Dzimte="Vīriešu" Locījums="Datīvs"/>
 		</Ending>
 		<Ending ID="193" StemChange="3" Ending="o" StemID="1" LemmaEnding="180">
 			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Noteiktā" Dzimte="Vīriešu" Locījums="Akuzatīvs"/>
 		</Ending>
-		<Ending ID="194" StemChange="3" Ending="ajā" StemID="1" LemmaEnding="180">
+		<Ending ID="194" StemChange="34" Ending="jā" StemID="1" LemmaEnding="180">
 			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Noteiktā" Dzimte="Vīriešu" Locījums="Lokatīvs"/>
 		</Ending>
 		<Ending ID="195" StemChange="3" Ending="ais" StemID="1" LemmaEnding="180">
@@ -656,13 +656,13 @@
 		<Ending ID="197" StemChange="3" Ending="o" StemID="1" LemmaEnding="180">
 			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Noteiktā" Dzimte="Vīriešu" Locījums="Ģenitīvs"/>
 		</Ending>
-		<Ending ID="198" StemChange="3" Ending="ajiem" StemID="1" LemmaEnding="180">
+		<Ending ID="198" StemChange="34" Ending="jiem" StemID="1" LemmaEnding="180">
 			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Noteiktā" Dzimte="Vīriešu" Locījums="Datīvs"/>
 		</Ending>
 		<Ending ID="199" StemChange="3" Ending="os" StemID="1" LemmaEnding="180">
 			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Noteiktā" Dzimte="Vīriešu" Locījums="Akuzatīvs"/>
 		</Ending>
-		<Ending ID="200" StemChange="3" Ending="ajos" StemID="1" LemmaEnding="180">
+		<Ending ID="200" StemChange="34" Ending="jos" StemID="1" LemmaEnding="180">
 			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Noteiktā" Dzimte="Vīriešu" Locījums="Lokatīvs"/>
 		</Ending>
 		<Ending ID="201" StemChange="3" Ending="ie" StemID="1" LemmaEnding="180">
@@ -704,13 +704,13 @@
 		<Ending ID="213" StemChange="3" Ending="ās" StemID="1" LemmaEnding="202">
 			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Noteiktā" Dzimte="Sieviešu" Locījums="Ģenitīvs"/>
 		</Ending>
-		<Ending ID="214" StemChange="3" Ending="ajai" StemID="1" LemmaEnding="202">
+		<Ending ID="214" StemChange="34" Ending="jai" StemID="1" LemmaEnding="202">
 			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Noteiktā" Dzimte="Sieviešu" Locījums="Datīvs"/>
 		</Ending>
 		<Ending ID="215" StemChange="3" Ending="o" StemID="1" LemmaEnding="202">
 			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Noteiktā" Dzimte="Sieviešu" Locījums="Akuzatīvs"/>
 		</Ending>
-		<Ending ID="216" StemChange="3" Ending="ajā" StemID="1" LemmaEnding="202">
+		<Ending ID="216" StemChange="34" Ending="jā" StemID="1" LemmaEnding="202">
 			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Noteiktā" Dzimte="Sieviešu" Locījums="Lokatīvs"/>
 		</Ending>
 		<Ending ID="217" StemChange="3" Ending="ā" StemID="1" LemmaEnding="202">
@@ -722,13 +722,13 @@
 		<Ending ID="219" StemChange="3" Ending="o" StemID="1" LemmaEnding="202">
 			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Noteiktā" Dzimte="Sieviešu" Locījums="Ģenitīvs"/>
 		</Ending>
-		<Ending ID="220" StemChange="3" Ending="ajām" StemID="1" LemmaEnding="202">
+		<Ending ID="220" StemChange="34" Ending="jām" StemID="1" LemmaEnding="202">
 			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Noteiktā" Dzimte="Sieviešu" Locījums="Datīvs"/>
 		</Ending>
 		<Ending ID="221" StemChange="3" Ending="ās" StemID="1" LemmaEnding="202">
 			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Noteiktā" Dzimte="Sieviešu" Locījums="Akuzatīvs"/>
 		</Ending>
-		<Ending ID="222" StemChange="3" Ending="ajās" StemID="1" LemmaEnding="202">
+		<Ending ID="222" StemChange="34" Ending="jās" StemID="1" LemmaEnding="202">
 			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Noteiktā" Dzimte="Sieviešu" Locījums="Lokatīvs"/>
 		</Ending>
 		<Ending ID="223" StemChange="3" Ending="ās" StemID="1" LemmaEnding="202">
@@ -5033,13 +5033,13 @@
 		<Ending ID="2020" Ending="ā" LemmaEnding="2019">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Ģenitīvs"/>
 		</Ending>
-		<Ending ID="2021" Ending="ajam" LemmaEnding="2019">
+		<Ending ID="2021" StemChange="34" Ending="jam" LemmaEnding="2019">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Datīvs"/>
 		</Ending>
 		<Ending ID="2022" Ending="o" LemmaEnding="2019">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Akuzatīvs"/>
 		</Ending>
-		<Ending ID="2023" Ending="ajā" LemmaEnding="2019">
+		<Ending ID="2023" StemChange="34" Ending="jā" LemmaEnding="2019">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Lokatīvs"/>
 		</Ending>
 		<Ending ID="2024" Ending="ais" LemmaEnding="2019">
@@ -5051,13 +5051,13 @@
 		<Ending ID="2026" Ending="o" LemmaEnding="2019">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Ģenitīvs"/>
 		</Ending>
-		<Ending ID="2027" Ending="ajiem" LemmaEnding="2019">
+		<Ending ID="2027" StemChange="34" Ending="jiem" LemmaEnding="2019">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Datīvs"/>
 		</Ending>
 		<Ending ID="2028" Ending="os" LemmaEnding="2019">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Akuzatīvs"/>
 		</Ending>
-		<Ending ID="2029" Ending="ajos" LemmaEnding="2019">
+		<Ending ID="2029" StemChange="34" Ending="jos" LemmaEnding="2019">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Lokatīvs"/>
 		</Ending>
 		<Ending ID="2030" Ending="ie" LemmaEnding="2019">
@@ -5252,13 +5252,13 @@
 		<Ending ID="2033" Ending="ās" LemmaEnding="2031">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Ģenitīvs"/>
 		</Ending>
-		<Ending ID="2034" Ending="ajai" LemmaEnding="2031">
+		<Ending ID="2034" StemChange="34" Ending="jai" LemmaEnding="2031">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Datīvs"/>
 		</Ending>
 		<Ending ID="2035" Ending="o" LemmaEnding="2031">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Akuzatīvs"/>
 		</Ending>
-		<Ending ID="2036" Ending="ajā" LemmaEnding="2031">
+		<Ending ID="2036" StemChange="34" Ending="jā" LemmaEnding="2031">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Lokatīvs"/>
 		</Ending>
 		<Ending ID="2038" Ending="ās" LemmaEnding="2031">
@@ -5267,13 +5267,13 @@
 		<Ending ID="2039" Ending="o" LemmaEnding="2031">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Ģenitīvs"/>
 		</Ending>
-		<Ending ID="2040" Ending="ajām" LemmaEnding="2031">
+		<Ending ID="2040" StemChange="34" Ending="jām" LemmaEnding="2031">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Datīvs"/>
 		</Ending>
 		<Ending ID="2041" Ending="ās" LemmaEnding="2031">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Akuzatīvs"/>
 		</Ending>
-		<Ending ID="2042" Ending="ajās" LemmaEnding="2031">
+		<Ending ID="2042" StemChange="34" Ending="jās" LemmaEnding="2031">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Lokatīvs"/>
 		</Ending>
 		<Ending ID="2043" Ending="ās" LemmaEnding="2031">

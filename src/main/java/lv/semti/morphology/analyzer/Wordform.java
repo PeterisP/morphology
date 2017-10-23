@@ -26,6 +26,7 @@ import java.io.UnsupportedEncodingException;
 import java.io.Writer;
 import java.util.ArrayList;
 
+import org.w3c.dom.Attr;
 import org.w3c.dom.Node;
 
 import lv.semti.morphology.attributes.AttributeNames;
@@ -45,6 +46,10 @@ public class Wordform extends AttributeValues implements Serializable{
 	public transient Lexeme lexeme;
 		
 	public Wordform (String token, Lexeme lexeme, Ending ending) {
+	    this(token, lexeme, ending, null);
+	}
+
+	public Wordform(String token, Lexeme lexeme, Ending ending, String originalWord) {
 		this.token = token;
 		this.lexeme = lexeme;
 		this.ending = ending;
@@ -68,22 +73,24 @@ public class Wordform extends AttributeValues implements Serializable{
 			// || leksēma.isMatchingStrong(AttributeNames.i_Deminutive, "-iņ-")
 		} else fixed_stem = true;
 		
-		Ending pamatformasEnding = ending.getLemmaEnding();
+		Ending lemmaEnding = ending.getLemmaEnding();
 		// FIXME šis 'if' būtu jāsaprot un jāsakārto - lai ir sakarīgi, bet nesalauž specgadījumus ('vairāk' -> pamatforma 'daudz' utml)
-		if (pamatformasEnding != null && !(paradigm.getID() == 25 || paradigm.getID() == 29 || paradigm.getID() == 21)
+		if (lemmaEnding != null && !(paradigm.getID() == 25 || paradigm.getID() == 29 || paradigm.getID() == 21)
 				&& !fixed_stem) {
-			String trešāSakne = null; 
-			if (paradigm.getStems() == 3) trešāSakne = lexeme.getStem(2);
-			String celms = lexeme.getStem(pamatformasEnding.stemID-1);
-			ArrayList<Variants> celmi = Mijas.MijasLocīšanai(celms, pamatformasEnding.getMija(), trešāSakne, false, this.isMatchingStrong(AttributeNames.i_NounType, AttributeNames.v_ProperNoun));
+			String thirdStem = null;
+			if (paradigm.getStems() == 3) thirdStem = lexeme.getStem(2);
+			String stem = lexeme.getStem(lemmaEnding.stemID-1);
+			ArrayList<Variants> celmi = Mijas.MijasLocīšanai(stem, lemmaEnding.getMija(), thirdStem, false, this.isMatchingStrong(AttributeNames.i_NounType, AttributeNames.v_ProperNoun));
 			
-			if (celmi.size()>0) celms = celmi.get(0).celms; // FIXME - nav objektīva pamata ņemt tieši pirmo, netīri
+			if (celmi.size()>0) stem = celmi.get(0).celms; // FIXME - nav objektīva pamata ņemt tieši pirmo, netīri
 			
-			String pamatforma = celms + pamatformasEnding.getEnding();	
+			String lemma = stem + lemmaEnding.getEnding();
 			if (lexeme.isMatchingStrong(AttributeNames.i_NounType, AttributeNames.v_ProperNoun)) {
-				pamatforma = Character.toUpperCase(pamatforma.charAt(0)) + pamatforma.substring(1);
+				lemma = Character.toUpperCase(lemma.charAt(0)) + lemma.substring(1);
 			}
-			addAttribute(AttributeNames.i_Lemma, pamatforma );
+			String originalLemma = lexeme.getValue(AttributeNames.i_Lemma);
+            lemma = Lexicon.recapitalize(lemma, originalLemma);
+			addAttribute(AttributeNames.i_Lemma, lemma );
 			// jo var pamatforma atšķirties no leksēmas pamatformas, piem. "otrās" pamatforma ir "otrā" nevis "otrais".
 			// TODO - varbūt vienkārši dažām paradigmām vai galotnēm vajag karodziņu par to, ka jāģenerē pamatforma no jauna?
 		}	
@@ -98,7 +105,8 @@ public class Wordform extends AttributeValues implements Serializable{
 		if (!node.getNodeName().equalsIgnoreCase("Vārdforma")) throw new Error("Node " + node.getNodeName() + " nav Vārdforma");
 		token = node.getAttributes().getNamedItem("vārds").getTextContent();
 	}
-	
+
+
 	//getLocījumuDemo
 /*	public String getDemo() {
 		return this.getValue("LocījumuDemo");
