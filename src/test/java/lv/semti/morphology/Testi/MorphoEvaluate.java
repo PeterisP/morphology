@@ -178,7 +178,7 @@ public class MorphoEvaluate {
 					if (found_compatible) any_compatible++;
 					else {
 						wrong++;
-						mistakes.add(e.wordform+"\nKorpusā:\t"+e.lemma+"\t"+e.tag+"\t\t(" + e.id + ")\n"+output);
+						mistakes.add(e.tag+"\t"+e.wordform+"\nKorpusā:\t"+e.lemma+"\t"+e.tag+"\t\t(" + e.id + ")\n"+output);
 					}
 				}	
 			} else {

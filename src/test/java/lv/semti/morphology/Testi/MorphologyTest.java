@@ -2876,4 +2876,12 @@ public class MorphologyTest {
         Word w = locītājs.analyze("zaļoksnējajā");
         assertTrue(w.isRecognized());
     }
+
+    @Test
+    public void plāns_B() {
+        Word w = locītājs.analyze("B");
+        assertTrue(w.isRecognized());
+        assertEquals("xx", w.getBestWordform().getTag());
+    }
+
 }
