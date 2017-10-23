@@ -41,18 +41,18 @@ public class Analyzer extends Lexicon {
 	public boolean enableVocative = false;
 	public boolean guessNouns = true;
     public boolean guessVerbs = true;
-    public boolean guessParticiples = false;
+    public boolean guessParticiples = true;
     public boolean guessAdjectives = true;
     public boolean enableAllGuesses = false;
-	public boolean guessInflexibleNouns = false;
+	public boolean guessInflexibleNouns = true;
 	public boolean removeRareWords = true;
 	
-	private Pattern p_number = Pattern.compile("[\\d\\., ]*\\d+([\\.,][-‐‑‒–—―])?");
+	private Pattern p_number = Pattern.compile("[\\d., ]*\\d+([.,][-‐‑‒–—―])?");
 	private Pattern p_ordinal = Pattern.compile("\\d+\\.");
 	private Pattern p_fractional = Pattern.compile("\\d+[\\\\/]\\d+");
 	private Pattern p_abbrev = Pattern.compile("\\w+\\.");
 	private Pattern p_acronym = Pattern.compile("(\\p{Lu}){2,5}"); // all caps, repeated 2-5 times
-	private Pattern p_url = Pattern.compile("[\\.\\w]+\\.(lv|com|org)");
+	private Pattern p_url = Pattern.compile("[.\\w]+\\.(lv|com|org)");
 		
 	private Cache<String, Word> wordCache = new Cache<String, Word>();
 
@@ -150,7 +150,8 @@ public class Analyzer extends Lexicon {
 	    guessParticiples = true;
 	    guessAdjectives = true;
 	    enableAllGuesses = false;
-		guessInflexibleNouns = false;
+		guessInflexibleNouns = true;
+        removeRareWords = true;
 	}
 	
 	public void describe(PrintWriter pipe) {
@@ -288,7 +289,7 @@ public class Analyzer extends Lexicon {
 			}
 			if (p_abbrev.matcher(word).matches()) {
 				Wordform wf = new Wordform(word);
-				wf.setEnding(this.endingByID(1158)); // FIXME - hardkodēts numurs hardcoded vārdu galotnei
+				wf.setEnding(this.endingByID(2091)); // FIXME - hardkodēts numurs saīsinājumu galotnei
 				wf.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Abbreviation);
 				wf.addAttribute(AttributeNames.i_Lemma, word);
 				wf.addAttribute(AttributeNames.i_Word, word);
@@ -297,15 +298,10 @@ public class Analyzer extends Lexicon {
 			}
 			if (enableGuessing && p_acronym.matcher(originalWord).matches()) { // Treating all short allcaps words as acronyms is a form of guessing, since it's not safe and makes a brave assumption about such outofvocabulary words
 				Wordform wf = new Wordform(originalWord);
-				Paradigm p = this.paradigmByID(12); // FIXME - hardkodēts numurs nelokāmo lietvārdu paradigmai
-				Ending e = p.getLemmaEnding();
-				wf.setEnding(e);
+                wf.setEnding(this.endingByID(2091)); // FIXME - hardkodēts numurs saīsinājumu galotnei
+                wf.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Abbreviation);
+                wf.addAttribute(AttributeNames.i_Lemma, originalWord);
 				wf.addAttribute(AttributeNames.i_Word, word);
-				wf.addAttribute(AttributeNames.i_Lemma, word);
-				wf.addAttributes(p);
-				wf.addAttributes(e);
-				wf.addAttribute(AttributeNames.i_EndingID, Integer.toString(e.getID()));
-				wf.addAttribute(AttributeNames.i_ParadigmID, Integer.toString(p.getID()));
 				result.addWordform(wf);
 				return result;
 			}
@@ -542,8 +538,11 @@ public class Analyzer extends Lexicon {
                         }
                     }
                 }
-			if (rezultāts.isRecognized() && !enableAllGuesses) break;
-			// FIXME - šo te vajag aizstāt ar kādu heiristiku, kas atrastu, piemēram, ticamākos lietvārdvariantus, ticamākos īpašībasvārdagadījumus utml.
+			if (rezultāts.isRecognized() && !enableAllGuesses) {
+                // FIXME - šo te vajag aizstāt ar kādu heiristiku, kas atrastu, piemēram, ticamākos lietvārdvariantus, ticamākos īpašībasvārdagadījumus utml.
+                if (!word.endsWith("o")) // mēdz būt nelokāmi -o lietvārdi - bez galotnes, pretstatā dažām -o formām
+			        break;
+            }
 		}
 		return rezultāts;
 	}
