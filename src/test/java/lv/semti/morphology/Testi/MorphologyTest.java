@@ -2786,7 +2786,6 @@ public class MorphologyTest {
 
     @Test
     public void iekosties() {
-
         List<Wordform> kost = locītājs.generateInflections("kost");
         AttributeValues tu = new AttributeValues();
         tu.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
@@ -2802,6 +2801,34 @@ public class MorphologyTest {
         Word w = locītājs.analyze("kod");
         assertTrue(w.isRecognized());
         w = locītājs.analyze("koz");
+        assertFalse(w.isRecognized());
+    }
+
+    @Test
+    public void aizkost() {
+        List<Wordform> aizkost = locītājs.generateInflections("aizkost");
+        AttributeValues tu = new AttributeValues();
+        tu.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+        tu.addAttribute(AttributeNames.i_Person, "2");
+        tu.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Tagadne);
+        tu.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+        assertInflection(aizkost, tu, "aizkod");
+
+        Word w = locītājs.analyze("aizkod");
+        assertTrue(w.isRecognized());
+        w = locītājs.analyze("aizkoz");
+        assertFalse(w.isRecognized());
+    }
+
+    @Test
+    public void jaundzimušākais() {
+        Word w = locītājs.analyze("jaundzimušais");
+        assertTrue(w.isRecognized());
+        w = locītājs.analyze("jaundzimušākais");
+        assertFalse(w.isRecognized());
+        w = locītājs.analyze("jaundzimušajam");
+        assertTrue(w.isRecognized());
+        w = locītājs.analyze("jaundzimušākajam");
         assertFalse(w.isRecognized());
     }
 }
