@@ -28,7 +28,7 @@ import lv.semti.morphology.attributes.AttributeNames;
  */
 public class Splitting {
 	// Vārdā, atdalītājā, atstarpē
-	private enum Status {IN_WORD, IN_DELIMITER, IN_SPACE, IN_EXCEPTION};
+	private enum Status {IN_WORD, IN_SPACE}; // , IN_DELIMITER, IN_EXCEPTION - tagad šo funkcionalitāti dara Trie morphoAnalyzer.automats
 	
 	public static int DEFAULT_SENTENCE_LENGTH_CAP = 50;
 	
@@ -41,7 +41,7 @@ public class Splitting {
 		
 	public static boolean isSeparator(char c)
 	{
-		String separators=" .?:/!,;\"'`´(){}<>«»-[]—‐‑‒–―‘’‚‛“”„‟′″‴‵‶‷‹›‼‽⁈⁉․‥…&•";
+		String separators=" .?:/!,;\"'`´(){}<>«»-[]—‐‑‒–―‘’‚‛“”„‟′″‴‵‶‷‹›‼‽⁈⁉․‥…&•*";
 		return separators.contains(String.valueOf(c));
 	}
 
@@ -64,7 +64,7 @@ public class Splitting {
 
 		// te tiek ciklā doti visi tekstā esošie vārdi uz morfoanalīzi.    
 	    int progress = 0;
-	    //bug fix - pievonata beigās whitespace
+	    //bug fix - pievienota beigās whitespace
 		String str = chunk+" ";
 		str = str.replace('\n', ' ');
 		str = str.replace('\r', ' ');

@@ -173,8 +173,7 @@ public class Trie {
 		 * web adreses automāts 
 		 * atpazīst adreses kuras sākas ar http(s) ftp(s) www
 		 * adreses var saturēt  burtus, ciparus un simbolus "/_-@:?=&%."
-		 * adrese dr
-		 * ikst beigties ar burtu vai ciparu vai simbolu "/"
+		 * adrese drikst beigties ar burtu vai ciparu vai simbolu "/"
 		 */
 		
 		root=new StringNode("hH");
@@ -205,7 +204,20 @@ public class Trie {
 		root.firstChild.firstChild.canEnd=true;
 		root.firstChild.firstChild.nextSibling=new StringNode("_-@:?=&%.");
 		root.firstChild.firstChild.nextSibling.firstChild=root;
-		
+
+		/* 4b
+		 * domēnvārda automāts
+		 * burti.lv
+		 */
+        root=new LetterNode();
+        branchList.add(root);
+        root.firstChild=new LetterNode();
+        root.firstChild.firstChild=root.firstChild; // 2+ burti
+        root.firstChild.nextSibling=new StringNode(".");
+        root.firstChild.nextSibling.firstChild=new StringNode("lL");
+        root.firstChild.nextSibling.firstChild.firstChild=new StringNode("vV");
+        root.firstChild.nextSibling.firstChild.firstChild.canEnd=true;
+
 		/* 5
 		 * Ciklojošo pieturzīmju automāts (atpazīst .?!)
 		 */

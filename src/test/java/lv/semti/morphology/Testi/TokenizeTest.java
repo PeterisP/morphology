@@ -648,6 +648,9 @@ public class TokenizeTest {
     public void zvaigzne() {
         LinkedList<Word> tokens;
 
+        tokens = Splitting.tokenize(locītājs, "abc*", false);
+        assertEquals(2, tokens.size());
+
         tokens = Splitting.tokenize(locītājs, "rocknroll*.", false);
         assertEquals(3, tokens.size());
     }
@@ -661,5 +664,23 @@ public class TokenizeTest {
         sentences = Splitting.tokenizeSentences(locītājs, "\"Kurzemes Vārds\" uzklausīja viedokļus par darba meklēšanu ārzemēs un problēmām, kas tādēļ rodas vietējiem uzņēmējiem.");
         assertEquals(1, sentences.size());
     }
+
+    @Test
+    public void domēni() {
+        LinkedList<Word> tokens;
+        tokens = Splitting.tokenize(locītājs, "AB.LV", false);
+        assertEquals(1, tokens.size());
+
+        tokens = Splitting.tokenize(locītājs, "sarunā ar \"Nozare.lv\" teica", false);
+        assertEquals(6, tokens.size());
+    }
+
+    @Test
+    public void panti() {
+        LinkedList<Word> tokens;
+        tokens = Splitting.tokenize(locītājs, "Direktīvas 76/207 mērķis", false);
+        assertEquals(3, tokens.size());
+    }
+
 }
  
