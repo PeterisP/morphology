@@ -76,26 +76,25 @@ public class MorphoEvaluate {
 		
 		long sākums = System.currentTimeMillis();
 		
+		locītājs.defaultSettings();
+		locītājs.enableGuessing = true;
 		locītājs.enableVocative = true;
-		locītājs.enableDiminutive = true;
-		locītājs.enablePrefixes = true;
-		locītājs.enableGuessing = true; // jāčeko
-		locītājs.enableAllGuesses = false;
-		locītājs.meklētsalikteņus = false; 
-		
-		int perfect = 0;
-		int first_match = 0;
-		int one_of_options = 0;
-		int match = 0;
+
+        int first_pos_correct=0;
+        int any_pos_correct=0;
+        int first_lemma_correct=0;
+        int any_lemma_correct=0;
+		int first_all_correct = 0;
+        int any_all_correct = 0;
+		int first_compatible = 0;
+		int any_compatible = 0;
 		int not_recognized = 0;
 		int wrong = 0;
-		int pos_correct=0;
 		int oov=0; //out of vocabulary
 		int unambiguous=0;
 		int ambiguous=0;
 		int wfcount=0;
 		int ambig_wfcount=0;
-		int lemma_correct=0;
 
 		TagSet tags = TagSet.getTagSet();
 		
@@ -123,7 +122,6 @@ public class MorphoEvaluate {
 				ambig_wfcount += w.wordformsCount();
 			} else unambiguous++;
 			
-			String output = "Neatpazīts";
 			if (w.isRecognized()) {
 				Wordform mainwf = w.wordforms.get(0);
 				double maxticamība = -1;
@@ -138,27 +136,46 @@ public class MorphoEvaluate {
 				}
 				
 				if (mainwf.getValue(AttributeNames.i_PartOfSpeech).equalsIgnoreCase(etalonaAV.getValue(AttributeNames.i_PartOfSpeech)))
-					pos_correct++;
-                if (mainwf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(e.lemma))
-                    lemma_correct++;
-				output = "\t" + mainwf.getValue(AttributeNames.i_Lemma) + "\t" + mainwf.getTag() + "\n";
-				if (mainwf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(e.lemma) && mainwf.getTag().equalsIgnoreCase(e.tag))
-					perfect++;  
-				//else if (mainwf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(e.lemma) && mainwf.isMatchingWeak(MarkupConverter.fromKamolsMarkup(e.tag)))
-				else if (mainwf.isMatchingWeak(tags.fromTag(e.tag)))
-					first_match++;
+					first_pos_correct++;
 				else {
-					boolean found = false;
-					boolean found_match = false;
-					output = "";
+                    boolean found_pos = false;
+                    for (Wordform wf : w.wordforms) {
+                        if (wf.getValue(AttributeNames.i_PartOfSpeech).equalsIgnoreCase(etalonaAV.getValue(AttributeNames.i_PartOfSpeech)))
+                            found_pos = true;
+                    }
+                    if (found_pos) any_pos_correct++;
+                }
+                if (mainwf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(e.lemma))
+                    first_lemma_correct++;
+                else {
+                    boolean found_lemma = false;
+                    for (Wordform wf : w.wordforms) {
+                        if (wf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(e.lemma)) found_lemma = true;
+                    }
+                    if (found_lemma) any_lemma_correct++;
+                }
+				if (mainwf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(e.lemma) && mainwf.getTag().equalsIgnoreCase(e.tag))
+					first_all_correct++;
+				if (mainwf.isMatchingWeak(tags.fromTag(e.tag)))
+					first_compatible++;
+				else {
+					boolean found_all_correct = false;
+					boolean found_compatible = false;
+                    boolean first_output = true;
+					String output = "";
 					for (Wordform wf : w.wordforms) {
-						if (wf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(e.lemma) && wf.getTag().equalsIgnoreCase(e.tag)) found = true;
-						if (wf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(e.lemma) && wf.isMatchingWeak(tags.fromTag(e.tag))) found_match=true;
-						//if (wf.isMatchingWeak(MarkupConverter.fromKamolsMarkup(e.tag))) found_match=true;
-						output += "\t\t" + wf.getValue(AttributeNames.i_Lemma) + "\t" + wf.getTag() + "\n";
+						if (wf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(e.lemma) && wf.getTag().equalsIgnoreCase(e.tag)) found_all_correct = true;
+                        if (wf.isMatchingWeak(tags.fromTag(e.tag))) found_compatible = true;
+
+                        if (first_output)
+                            output += "Varianti:\t";
+                        else
+                            output += "\t\t\t";
+						output += wf.getValue(AttributeNames.i_Lemma) + "\t" + wf.getTag() + "\n";
+						first_output = false;
 					}
-					if (found) one_of_options++;
-					else if (found_match) match++; 
+					if (found_all_correct) any_all_correct++;
+					if (found_compatible) any_compatible++;
 					else {
 						wrong++;
 						mistakes.add(e.wordform+"\nKorpusā:\t"+e.lemma+"\t"+e.tag+"\t\t(" + e.id + ")\n"+output);
@@ -180,21 +197,19 @@ public class MorphoEvaluate {
 		izeja.flush();
 		
 		System.out.printf("Etalona pārbaude: pagāja %d ms\n%d pieprasījumi sekundē\n", starpība, etaloni.size()*1000/starpība);
-		System.out.printf("\nAnalīzes rezultāti:\n");
-		System.out.printf("\tPareizi:\t%4.1f%%\t%d\n", perfect*100.0/etaloni.size(), perfect);
-        System.out.printf("\tLemma ok:\t%4.1f%%\t%d\n", lemma_correct*100.0/etaloni.size(), lemma_correct);
-		System.out.printf("\tDer:    \t%4.1f%%\t%d\n", (first_match+perfect)*100.0/etaloni.size(), first_match);
-		System.out.printf("\tNav pirmais:\t%4.1f%%\t%d\n", one_of_options*100.0/etaloni.size(), one_of_options);
-		System.out.printf("\tDer ne pirmais:\t%4.1f%%\t%d\n", (match+one_of_options)*100.0/etaloni.size(), match);
-		System.out.printf("\tNekas neder:\t%4.1f%%\t%d\n", wrong*100.0/etaloni.size(), wrong);
-		System.out.printf("\tNeatpazīti:\t%4.1f%%\t%d\n", not_recognized*100.0/etaloni.size(), not_recognized);
-		System.out.printf("\tPareizs POS:\t%4.1f%%\t%d\n", pos_correct*100.0/etaloni.size(), pos_correct);
+		System.out.printf("\nAnalīzes rezultāti: (pirmais/kandidāti)\n");
+		System.out.printf("\tViss pareizi:\t%4.1f%% / %4.1f%%\t%6d\t%6d\tpaliek %5d\n", first_all_correct*100.0/etaloni.size(), (first_all_correct+any_all_correct)*100.0/etaloni.size(), first_all_correct, any_all_correct, etaloni.size()-first_all_correct-any_all_correct);
+        System.out.printf("\tLemma pareiza:\t%4.1f%% / %4.1f%%\t%6d\t%6d\tpaliek %5d\n", first_lemma_correct*100.0/etaloni.size(), (first_lemma_correct+any_lemma_correct)*100.0/etaloni.size(), first_lemma_correct, any_lemma_correct, etaloni.size()-first_lemma_correct-any_lemma_correct);
+		System.out.printf("\tTags der:    \t%4.1f%% / %4.1f%%\t%6d\t%6d\tpaliek %5d\n", first_compatible*100.0/etaloni.size(), (first_compatible+any_compatible)*100.0/etaloni.size(), first_compatible, any_compatible, etaloni.size()-first_compatible-any_compatible);
+		System.out.printf("\tVarianti neder:\t%4.1f%%\t%6d\n", wrong*100.0/etaloni.size(), wrong);
+		System.out.printf("\tNeatpazīti:    \t%4.1f%%\t%6d\n", not_recognized*100.0/etaloni.size(), not_recognized);
+        System.out.printf("\tPareizs POS:\t%4.1f%% / %4.1f%%\t%6d\t%6d\tpaliek %5d\n", first_pos_correct*100.0/etaloni.size(), (any_pos_correct+first_pos_correct)*100.0/etaloni.size(), first_pos_correct, any_pos_correct, etaloni.size()-first_pos_correct-any_pos_correct);
 		System.out.printf("\nEtalons: Pareizi 85.9%%, Der 87.6%%, Nav vārdnīcā 5.6%%, Neatpazīti zem 2%%\n");
 		
 		System.out.printf("\nStatistika:\n");
-		System.out.printf("\tNav vārdnīcā:\t\t%4.1f%%\t%d\n", oov*100.0/etaloni.size(), oov);
-		System.out.printf("\tViennozīmīgi:\t\t%4.1f%%\t%d\n", unambiguous*100.0/(unambiguous+ambiguous), unambiguous);
-		System.out.printf("\tDaudznozīmīgi:\t\t%4.1f%%\t%d\n", ambiguous*100.0/(unambiguous+ambiguous), ambiguous);
+		System.out.printf("\tNav vārdnīcā:\t\t%4.1f%%\t%6d\n", oov*100.0/etaloni.size(), oov);
+		System.out.printf("\tViennozīmīgi:\t\t%4.1f%%\t%6d\n", unambiguous*100.0/(unambiguous+ambiguous), unambiguous);
+		System.out.printf("\tDaudznozīmīgi:\t\t%4.1f%%\t%6d\n", ambiguous*100.0/(unambiguous+ambiguous), ambiguous);
 		System.out.printf("\tVariantu skaits:\t%4.2f\n", wfcount*1.0/(unambiguous+ambiguous));
 		System.out.printf("\tVariantu skaits tiem, kas daudznozīmīgi:\t%4.2f\n", ambig_wfcount*1.0/ambiguous);
 		
