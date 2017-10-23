@@ -2870,4 +2870,10 @@ public class MorphologyTest {
         }
         assertTrue(found);
     }
+
+    @Test
+    public void zaļoksnējajā() {
+        Word w = locītājs.analyze("zaļoksnējajā");
+        assertTrue(w.isRecognized());
+    }
 }

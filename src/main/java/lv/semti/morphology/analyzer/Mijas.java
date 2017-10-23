@@ -425,11 +425,13 @@ public abstract class Mijas {
 			if (locītais.celms.equalsIgnoreCase(stem)) atrasts = true;
 		}
 		
-		if (!atrasts && Arrays.asList(1,2,5,7,8,9,14,15,17,23).contains(stemChange)) { //FIXME - varbūt performance dēļ tikai šiem stemChange ir jāloka varianti
+		if (!atrasts && Arrays.asList(1,2,5,6,7,8,9,14,15,17,23,26).contains(stemChange)) { //FIXME - varbūt performance dēļ tikai šiem stemChange ir jāloka varianti
 //            System.err.printf("Celmam '%s' ar miju %d sanāca '%s' - noraidījām dēļ atpakaļlocīšanas verifikācijas.\n", stem, stemChange, variants.celms);
 			return false;
 		} else {
-			if (!atrasts && stemChange != 18 && stemChange != 20) { //debuginfo.     FIXME - 18. mijā neierobežojam, jo tur ir nesimetrija - vokatīvu silvij! atpazīstam bet neģenerējam. 20. mijā ir arī alternatīvas - guļošs un gulošs
+			if (!atrasts && !Arrays.asList(18,20,34,35).contains(stemChange)) { //debuginfo.
+                // 18. mijā neierobežojam, jo tur ir nesimetrija - vokatīvu silvij! atpazīstam bet neģenerējam. 20. mijā ir arī alternatīvas - guļošs un gulošs; 34/35 mijā - pēdējamajam atpazīstam bet neģenerējam
+                // FIXME - šo principā vajadzētu realizēt kā karodziņu - ka ielikeam Variant klasē zīmi, ka šis ir neiesakāms, un tad nebrīnamies, ja ģenerācija to neiedod; vai arī lai ģenerācija dod tos variantus ar tādu karodziņu un tad šeit tos ieraugam
 				System.err.printf("Celms '%s' ar miju %d sanāca '%s'. Bet atpakaļ lokot:\n", stem, stemChange, variants.celms);
 				for (Variants locītais : atpakaļlocīti) {
 					System.err.printf("\t'%s'\n", locītais.celms);
