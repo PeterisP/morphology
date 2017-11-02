@@ -2884,4 +2884,21 @@ public class MorphologyTest {
         assertEquals("xx", w.getBestWordform().getTag());
     }
 
+    @Test
+    public void pelus() {
+        AttributeValues attrs = new AttributeValues();
+        attrs.addAttribute(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum);
+        attrs.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Masculine);
+
+        List<Wordform> pelus = locītājs.generateInflectionsFromParadigm("pelus", 31, attrs);
+        assertNotEquals(0, pelus.size());
+        describe(pelus);
+//        AttributeValues testset = new AttributeValues();
+//        testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
+//        testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Genitive);
+//        testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+//        testset.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Masculine);
+//        assertInflection(debesis, testset, "debeša");
+    }
+
 }

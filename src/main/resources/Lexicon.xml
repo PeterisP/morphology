@@ -5087,7 +5087,7 @@
 		<Ending ID="2050" StemChange="0" Ending="u" StemID="1">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
-		<Ending ID="2051" StemChange="0" Ending="i" StemID="1">
+		<Ending ID="2051" StemChange="0" Ending="us" StemID="1">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Nominatīvs"/>
 		</Ending>
 		<Ending ID="2052" StemChange="0" Ending="u" StemID="1">
@@ -5099,10 +5099,10 @@
 		<Ending ID="2054" StemChange="0" Ending="us" StemID="1">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Akuzatīvs"/>
 		</Ending>
-		<Ending ID="2055" StemChange="0" Ending="os" StemID="1">
+		<Ending ID="2055" StemChange="0" Ending="ūs" StemID="1">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Lokatīvs"/>
 		</Ending>
-		<Ending ID="2056" StemChange="0" Ending="i" StemID="1">
+		<Ending ID="2056" StemChange="0" Ending="us" StemID="1">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>
