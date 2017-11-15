@@ -10,330 +10,6 @@
     <Lexeme Stem1="miljard"/>
     <Lexeme Stem1="biljon"/>
     <Lexeme Stem1="triljon"/>
-    <Lexeme ID="11657" Stem1="bezsaimniek">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="bezsaimnieka"/>
-    </Lexeme>
-    <Lexeme ID="11658" Stem1="bezīpašniek">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="bezīpašnieka"/>
-    </Lexeme>
-    <Lexeme ID="11659" Stem1="bezpriek">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="bezprieka"/>
-    </Lexeme>
-    <Lexeme ID="11942" Stem1="bezgal">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="bezgala"/>
-    </Lexeme>
-    <Lexeme ID="12043" Stem1="bezalkohol">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="bezalkohola"/>
-    </Lexeme>
-    <Lexeme ID="13245" Stem1="aizokeān">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="aizokeāna"/>
-    </Lexeme>
-    <Lexeme ID="13252" Stem1="bezplān">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="bezplāna"/>
-    </Lexeme>
-    <Lexeme ID="13277" Stem1="augstspiedien">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="augstspiediena"/>
-    </Lexeme>
-    <Lexeme ID="13341" Stem1="beznorēķin">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="beznorēķina"/>
-    </Lexeme>
-    <Lexeme ID="10134" Stem1="šāgad">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="šāgada"/>
-    </Lexeme>
-    <Lexeme ID="13803" Stem1="šāvakar">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="šāvakara"/>
-    </Lexeme>
-    <Lexeme ID="13807" Stem1="pirmskar">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="pirmskara"/>
-    </Lexeme>
-    <Lexeme ID="13820" Stem1="bezsvar">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="bezsvara"/>
-    </Lexeme>
-    <Lexeme ID="13830" Stem1="mazkalibr">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="mazkalibra"/>
-    </Lexeme>
-    <Lexeme ID="13832" Stem1="pirmsoktobr">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="pirmsoktobra"/>
-    </Lexeme>
-    <Lexeme ID="13876" Stem1="mazmēr">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="mazmēra"/>
-    </Lexeme>
-    <Lexeme ID="13925" Stem1="pusotr">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="pusotra"/>
-    </Lexeme>
-    <Lexeme ID="13945" Stem1="bezrakstur">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="bezrakstura"/>
-    </Lexeme>
-    <Lexeme ID="14067" Stem1="bezgais">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="bezgaisa"/>
-    </Lexeme>
-    <Lexeme ID="14297" Stem1="mazgabarīt">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="mazgabarīta"/>
-    </Lexeme>
-    <Lexeme ID="10141" Stem1="bezvad">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="bezvada"/>
-    </Lexeme>
-    <Lexeme ID="10197" Stem1="rombveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="rombveida"/>
-    </Lexeme>
-    <Lexeme ID="10198" Stem1="bumbveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="bumbveida"/>
-    </Lexeme>
-    <Lexeme ID="10199" Stem1="zobveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="zobveida"/>
-    </Lexeme>
-    <Lexeme ID="10200" Stem1="kubveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="kubveida"/>
-    </Lexeme>
-    <Lexeme ID="10201" Stem1="lodveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="lodveida"/>
-    </Lexeme>
-    <Lexeme ID="10202" Stem1="ragveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="ragveida"/>
-    </Lexeme>
-    <Lexeme ID="10203" Stem1="diegveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="diegveida"/>
-    </Lexeme>
-    <Lexeme ID="10204" Stem1="vairogveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="vairogveida"/>
-    </Lexeme>
-    <Lexeme ID="10206" Stem1="šahveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="šahveida"/>
-    </Lexeme>
-    <Lexeme ID="10207" Stem1="lekcijveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="lekcijveida"/>
-    </Lexeme>
-    <Lexeme ID="10208" Stem1="sērijveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="sērijveida"/>
-    </Lexeme>
-    <Lexeme ID="10209" Stem1="pakāpjveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="pakāpjveida"/>
-    </Lexeme>
-    <Lexeme ID="10210" Stem1="sirpjveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="sirpjveida"/>
-    </Lexeme>
-    <Lexeme ID="10211" Stem1="šķīvjveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="šķīvjveida"/>
-    </Lexeme>
-    <Lexeme ID="10212" Stem1="cikcakveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="cikcakveida"/>
-    </Lexeme>
-    <Lexeme ID="10213" Stem1="tvaikveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="tvaikveida"/>
-    </Lexeme>
-    <Lexeme ID="10214" Stem1="kokveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="kokveida"/>
-    </Lexeme>
-    <Lexeme ID="10215" Stem1="lokveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="lokveida"/>
-    </Lexeme>
-    <Lexeme ID="10216" Stem1="riņķveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="riņķveida"/>
-    </Lexeme>
-    <Lexeme ID="10217" Stem1="spirālveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="spirālveida"/>
-    </Lexeme>
-    <Lexeme ID="10218" Stem1="zālveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="zālveida"/>
-    </Lexeme>
-    <Lexeme ID="10219" Stem1="seglveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="seglveida"/>
-    </Lexeme>
-    <Lexeme ID="10220" Stem1="mezglveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="mezglveida"/>
-    </Lexeme>
-    <Lexeme ID="10221" Stem1="stiklveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="stiklveida"/>
-    </Lexeme>
-    <Lexeme ID="10222" Stem1="šallveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="šallveida"/>
-    </Lexeme>
-    <Lexeme ID="10223" Stem1="olveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="olveida"/>
-    </Lexeme>
-    <Lexeme ID="10224" Stem1="kupolveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="kupolveida"/>
-    </Lexeme>
-    <Lexeme ID="10225" Stem1="pārslveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="pārslveida"/>
-    </Lexeme>
-    <Lexeme ID="10226" Stem1="mendeļveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="mendeļveida"/>
-    </Lexeme>
-    <Lexeme ID="10227" Stem1="ķīlveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="ķīlveida"/>
-    </Lexeme>
-    <Lexeme ID="10228" Stem1="spīļveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="spīļveida"/>
-    </Lexeme>
-    <Lexeme ID="10229" Stem1="vēdekļveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="vēdekļveida"/>
-    </Lexeme>
-    <Lexeme ID="10230" Stem1="pērļveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="pērļveida"/>
-    </Lexeme>
-    <Lexeme ID="10231" Stem1="virpuļveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="virpuļveida"/>
-    </Lexeme>
-    <Lexeme ID="10232" Stem1="cauruļveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="cauruļveida"/>
-    </Lexeme>
-    <Lexeme ID="10233" Stem1="krūmveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="krūmveida"/>
-    </Lexeme>
-    <Lexeme ID="10234" Stem1="zvanveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="zvanveida"/>
-    </Lexeme>
-    <Lexeme ID="10235" Stem1="plānveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="plānveida"/>
-    </Lexeme>
-    <Lexeme ID="10236" Stem1="zobenveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="zobenveida"/>
-    </Lexeme>
-    <Lexeme ID="10237" Stem1="pavedienveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="pavedienveida"/>
-    </Lexeme>
-    <Lexeme ID="10238" Stem1="pilienveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="pilienveida"/>
-    </Lexeme>
-    <Lexeme ID="10239" Stem1="vienveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="vienveida"/>
-    </Lexeme>
-    <Lexeme ID="10240" Stem1="gredzenveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="gredzenveida"/>
-    </Lexeme>
-    <Lexeme ID="10241" Stem1="šūnveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="šūnveida"/>
-    </Lexeme>
-    <Lexeme ID="10242" Stem1="kampaņveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="kampaņveida"/>
-    </Lexeme>
-    <Lexeme ID="10243" Stem1="nūjiņveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="nūjiņveida"/>
-    </Lexeme>
-    <Lexeme ID="10244" Stem1="zvīņveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="zvīņveida"/>
-    </Lexeme>
-    <Lexeme ID="10245" Stem1="sakņveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="sakņveida"/>
-    </Lexeme>
-    <Lexeme ID="10246" Stem1="viļņveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="viļņveida"/>
-    </Lexeme>
-    <Lexeme ID="10247" Stem1="vītņveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="vītņveida"/>
-    </Lexeme>
-    <Lexeme ID="10248" Stem1="zvaigžņveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="zvaigžņveida"/>
-    </Lexeme>
-    <Lexeme ID="10249" Stem1="tipveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="tipveida"/>
-    </Lexeme>
-    <Lexeme ID="10250" Stem1="tārpveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="tārpveida"/>
-    </Lexeme>
-    <Lexeme ID="10251" Stem1="grupveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="grupveida"/>
-    </Lexeme>
-    <Lexeme ID="10252" Stem1="ķekarveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="ķekarveida"/>
-    </Lexeme>
-    <Lexeme ID="10253" Stem1="cigārveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="cigārveida"/>
-    </Lexeme>
-    <Lexeme ID="10254" Stem1="starveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="starveida"/>
-    </Lexeme>
-    <Lexeme ID="10255" Stem1="cilindrveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="cilindrveida"/>
-    </Lexeme>
-    <Lexeme ID="10256" Stem1="bumbierveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="bumbierveida"/>
-    </Lexeme>
-    <Lexeme ID="10257" Stem1="pulverveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="pulverveida"/>
-    </Lexeme>
-    <Lexeme ID="10258" Stem1="masveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="masveida"/>
-    </Lexeme>
-    <Lexeme ID="10259" Stem1="sirdsveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="sirdsveida"/>
-    </Lexeme>
-    <Lexeme ID="10260" Stem1="kompleksveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="kompleksveida"/>
-    </Lexeme>
-    <Lexeme ID="10261" Stem1="kausveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="kausveida"/>
-    </Lexeme>
-    <Lexeme ID="10262" Stem1="konusveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="konusveida"/>
-    </Lexeme>
-    <Lexeme ID="10263" Stem1="adatveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="adatveida"/>
-    </Lexeme>
-    <Lexeme ID="10264" Stem1="matveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="matveida"/>
-    </Lexeme>
-    <Lexeme ID="10265" Stem1="kvadrātveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="kvadrātveida"/>
-    </Lexeme>
-    <Lexeme ID="10266" Stem1="lancetveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="lancetveida"/>
-    </Lexeme>
-    <Lexeme ID="10267" Stem1="šahtveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="šahtveida"/>
-    </Lexeme>
-    <Lexeme ID="10268" Stem1="bultveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="bultveida"/>
-    </Lexeme>
-    <Lexeme ID="10269" Stem1="rakstveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="rakstveida"/>
-    </Lexeme>
-    <Lexeme ID="10270" Stem1="pirkstveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="pirkstveida"/>
-    </Lexeme>
-    <Lexeme ID="10271" Stem1="vārpstveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="vārpstveida"/>
-    </Lexeme>
-    <Lexeme ID="10272" Stem1="krustveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="krustveida"/>
-    </Lexeme>
-    <Lexeme ID="10273" Stem1="pakavveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="pakavveida"/>
-    </Lexeme>
-    <Lexeme ID="10274" Stem1="piltuvveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="piltuvveida"/>
-    </Lexeme>
-    <Lexeme ID="10275" Stem1="gāzveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="gāzveida"/>
-    </Lexeme>
-    <Lexeme ID="10276" Stem1="bezveid">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="bezveida"/>
-    </Lexeme>
-    <Lexeme ID="10324" Stem1="bezvārd">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="bezvārda"/>
-    </Lexeme>
-    <Lexeme ID="10373" Stem1="bezsnieg">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="bezsniega"/>
-    </Lexeme>
-    <Lexeme ID="10444" Stem1="bezzirg">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="bezzirga"/>
-    </Lexeme>
-    <Lexeme ID="10701" Stem1="bezvēj">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="bezvēja"/>
-    </Lexeme>
-    <Lexeme ID="12362" Stem1="brīvlīgum">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="brīvlīguma"/>
-    </Lexeme>
-    <Lexeme ID="12364" Stem1="beznosacījum">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="beznosacījuma"/>
-    </Lexeme>
-    <Lexeme ID="12365" Stem1="pirmsiesaukum">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="pirmsiesaukuma"/>
-    </Lexeme>
-    <Lexeme ID="12367" Stem1="bezdzimum">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="bezdzimuma"/>
-    </Lexeme>
     <Lexeme ID="50848" Stem1="plān">
       <Attributes Lietvārda_tips="Sugas vārds"/>
     </Lexeme>
@@ -700,12 +376,6 @@
     <Lexeme ID="49616" Stem1="palīg">
       <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="palīgs" Avots="Marķētājs (Fri May 29 16:38:04 EEST 2009)"/>
     </Lexeme>
-    <Lexeme ID="28772" Stem1="daudzstāv">
-      <Attributes Skaitlis_2="Daudzskaitlinieks" Deklinācija="Ģenitīvenis" Pamatforma="daudzstāvu"/>
-    </Lexeme>
-    <Lexeme ID="50631" Stem1="šīrīt">
-      <Attributes Deklinācija="Ģenitīvenis" Pamatforma="šīrīta"/>
-    </Lexeme>
     <Lexeme Stem1="blau">
       <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Blaus"/>
     </Lexeme>
@@ -766,21 +436,6 @@
   </Paradigm>
   <Paradigm Stems="1" ID="3" LemmaEnding="27" Description="Lietvārds 2. deklinācija -is">
     <Attributes Vārdšķira="Lietvārds" Deklinācija="2" Dzimte="Vīriešu"/>
-    <Lexeme ID="14126" Stem1="ikmēneš">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="ikmēneša"/>
-    </Lexeme>
-    <Lexeme ID="12175" Stem1="bezpriedēkl">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="bezpriedēkļa"/>
-    </Lexeme>
-    <Lexeme ID="12176" Stem1="bezsaikl">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="bezsaikļa"/>
-    </Lexeme>
-    <Lexeme ID="11937" Stem1="bezmērķ">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="bezmērķa"/>
-    </Lexeme>
-    <Lexeme ID="13702" Stem1="beztroksn">
-      <Attributes Deklinācija="Ģenitīvenis" Lietvārda_tips="Sugas vārds" Pamatforma="beztrokšņa"/>
-    </Lexeme>
     <Lexeme ID="6732" Stem1="laiciņ">
       <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="laiciņis"/>
     </Lexeme>
@@ -897,9 +552,6 @@
     </Lexeme>
     <Lexeme ID="50632" Stem1="vizul">
       <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="vizulis"/>
-    </Lexeme>
-    <Lexeme ID="28771" Stem1="augstpapēd">
-      <Attributes Skaitlis_2="Daudzskaitlinieks" Deklinācija="Ģenitīvenis" Pamatforma="augstpapēžu"/>
     </Lexeme>
     <Lexeme ID="50343" Stem1="limbaz">
       <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Limbaži"/>
@@ -13383,6 +13035,356 @@
     </Lexeme>
     <Lexeme ID="8432" Stem1="tālskat">
       <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="tālskatis" Avots="Valērija leksikons"/>
+    </Lexeme>
+</Paradigm>
+<Paradigm Stems="1" ID="49" Description="Ģenitīveņi (augstpapēžu, milzu)">
+    <Lexeme ID="11657" Stem1="bezsaimnieka">
+      <Attributes Pamatforma="bezsaimnieka"/>
+    </Lexeme>
+    <Lexeme ID="11658" Stem1="bezīpašnieka">
+      <Attributes Pamatforma="bezīpašnieka"/>
+    </Lexeme>
+    <Lexeme ID="11659" Stem1="bezprieka">
+      <Attributes Pamatforma="bezprieka"/>
+    </Lexeme>
+    <Lexeme ID="11942" Stem1="bezgala">
+      <Attributes Pamatforma="bezgala"/>
+    </Lexeme>
+    <Lexeme ID="12043" Stem1="bezalkohola">
+      <Attributes Pamatforma="bezalkohola"/>
+    </Lexeme>
+    <Lexeme ID="13245" Stem1="aizokeāna">
+      <Attributes Pamatforma="aizokeāna"/>
+    </Lexeme>
+    <Lexeme ID="13252" Stem1="bezplāna">
+      <Attributes Pamatforma="bezplāna"/>
+    </Lexeme>
+    <Lexeme ID="13277" Stem1="augstspiediena">
+      <Attributes Pamatforma="augstspiediena"/>
+    </Lexeme>
+    <Lexeme ID="13341" Stem1="beznorēķina">
+      <Attributes Pamatforma="beznorēķina"/>
+    </Lexeme>
+    <Lexeme ID="10134" Stem1="šāgada">
+      <Attributes Pamatforma="šāgada"/>
+    </Lexeme>
+    <Lexeme ID="13803" Stem1="šāvakara">
+      <Attributes Pamatforma="šāvakara"/>
+    </Lexeme>
+    <Lexeme ID="13807" Stem1="pirmskara">
+      <Attributes Pamatforma="pirmskara"/>
+    </Lexeme>
+    <Lexeme ID="13820" Stem1="bezsvara">
+      <Attributes Pamatforma="bezsvara"/>
+    </Lexeme>
+    <Lexeme ID="13830" Stem1="mazkalibra">
+      <Attributes Pamatforma="mazkalibra"/>
+    </Lexeme>
+    <Lexeme ID="13832" Stem1="pirmsoktobra">
+      <Attributes Pamatforma="pirmsoktobra"/>
+    </Lexeme>
+    <Lexeme ID="13876" Stem1="mazmēra">
+      <Attributes Pamatforma="mazmēra"/>
+    </Lexeme>
+    <Lexeme ID="13925" Stem1="pusotra">
+      <Attributes Pamatforma="pusotra"/>
+    </Lexeme>
+    <Lexeme ID="13945" Stem1="bezrakstura">
+      <Attributes Pamatforma="bezrakstura"/>
+    </Lexeme>
+    <Lexeme ID="14067" Stem1="bezgaisa">
+      <Attributes Pamatforma="bezgaisa"/>
+    </Lexeme>
+    <Lexeme ID="14297" Stem1="mazgabarīta">
+      <Attributes Pamatforma="mazgabarīta"/>
+    </Lexeme>
+    <Lexeme ID="10141" Stem1="bezvada">
+      <Attributes Pamatforma="bezvada"/>
+    </Lexeme>
+    <Lexeme ID="10197" Stem1="rombveida">
+      <Attributes Pamatforma="rombveida"/>
+    </Lexeme>
+    <Lexeme ID="10198" Stem1="bumbveida">
+      <Attributes Pamatforma="bumbveida"/>
+    </Lexeme>
+    <Lexeme ID="10199" Stem1="zobveida">
+      <Attributes Pamatforma="zobveida"/>
+    </Lexeme>
+    <Lexeme ID="10200" Stem1="kubveida">
+      <Attributes Pamatforma="kubveida"/>
+    </Lexeme>
+    <Lexeme ID="10201" Stem1="lodveida">
+      <Attributes Pamatforma="lodveida"/>
+    </Lexeme>
+    <Lexeme ID="10202" Stem1="ragveida">
+      <Attributes Pamatforma="ragveida"/>
+    </Lexeme>
+    <Lexeme ID="10203" Stem1="diegveida">
+      <Attributes Pamatforma="diegveida"/>
+    </Lexeme>
+    <Lexeme ID="10204" Stem1="vairogveida">
+      <Attributes Pamatforma="vairogveida"/>
+    </Lexeme>
+    <Lexeme ID="10206" Stem1="šahveida">
+      <Attributes Pamatforma="šahveida"/>
+    </Lexeme>
+    <Lexeme ID="10207" Stem1="lekcijveida">
+      <Attributes Pamatforma="lekcijveida"/>
+    </Lexeme>
+    <Lexeme ID="10208" Stem1="sērijveida">
+      <Attributes Pamatforma="sērijveida"/>
+    </Lexeme>
+    <Lexeme ID="10209" Stem1="pakāpjveida">
+      <Attributes Pamatforma="pakāpjveida"/>
+    </Lexeme>
+    <Lexeme ID="10210" Stem1="sirpjveida">
+      <Attributes Pamatforma="sirpjveida"/>
+    </Lexeme>
+    <Lexeme ID="10211" Stem1="šķīvjveida">
+      <Attributes Pamatforma="šķīvjveida"/>
+    </Lexeme>
+    <Lexeme ID="10212" Stem1="cikcakveida">
+      <Attributes Pamatforma="cikcakveida"/>
+    </Lexeme>
+    <Lexeme ID="10213" Stem1="tvaikveida">
+      <Attributes Pamatforma="tvaikveida"/>
+    </Lexeme>
+    <Lexeme ID="10214" Stem1="kokveida">
+      <Attributes Pamatforma="kokveida"/>
+    </Lexeme>
+    <Lexeme ID="10215" Stem1="lokveida">
+      <Attributes Pamatforma="lokveida"/>
+    </Lexeme>
+    <Lexeme ID="10216" Stem1="riņķveida">
+      <Attributes Pamatforma="riņķveida"/>
+    </Lexeme>
+    <Lexeme ID="10217" Stem1="spirālveida">
+      <Attributes Pamatforma="spirālveida"/>
+    </Lexeme>
+    <Lexeme ID="10218" Stem1="zālveida">
+      <Attributes Pamatforma="zālveida"/>
+    </Lexeme>
+    <Lexeme ID="10219" Stem1="seglveida">
+      <Attributes Pamatforma="seglveida"/>
+    </Lexeme>
+    <Lexeme ID="10220" Stem1="mezglveida">
+      <Attributes Pamatforma="mezglveida"/>
+    </Lexeme>
+    <Lexeme ID="10221" Stem1="stiklveida">
+      <Attributes Pamatforma="stiklveida"/>
+    </Lexeme>
+    <Lexeme ID="10222" Stem1="šallveida">
+      <Attributes Pamatforma="šallveida"/>
+    </Lexeme>
+    <Lexeme ID="10223" Stem1="olveida">
+      <Attributes Pamatforma="olveida"/>
+    </Lexeme>
+    <Lexeme ID="10224" Stem1="kupolveida">
+      <Attributes Pamatforma="kupolveida"/>
+    </Lexeme>
+    <Lexeme ID="10225" Stem1="pārslveida">
+      <Attributes Pamatforma="pārslveida"/>
+    </Lexeme>
+    <Lexeme ID="10226" Stem1="mendeļveida">
+      <Attributes Pamatforma="mendeļveida"/>
+    </Lexeme>
+    <Lexeme ID="10227" Stem1="ķīlveida">
+      <Attributes Pamatforma="ķīlveida"/>
+    </Lexeme>
+    <Lexeme ID="10228" Stem1="spīļveida">
+      <Attributes Pamatforma="spīļveida"/>
+    </Lexeme>
+    <Lexeme ID="10229" Stem1="vēdekļveida">
+      <Attributes Pamatforma="vēdekļveida"/>
+    </Lexeme>
+    <Lexeme ID="10230" Stem1="pērļveida">
+      <Attributes Pamatforma="pērļveida"/>
+    </Lexeme>
+    <Lexeme ID="10231" Stem1="virpuļveida">
+      <Attributes Pamatforma="virpuļveida"/>
+    </Lexeme>
+    <Lexeme ID="10232" Stem1="cauruļveida">
+      <Attributes Pamatforma="cauruļveida"/>
+    </Lexeme>
+    <Lexeme ID="10233" Stem1="krūmveida">
+      <Attributes Pamatforma="krūmveida"/>
+    </Lexeme>
+    <Lexeme ID="10234" Stem1="zvanveida">
+      <Attributes Pamatforma="zvanveida"/>
+    </Lexeme>
+    <Lexeme ID="10235" Stem1="plānveida">
+      <Attributes Pamatforma="plānveida"/>
+    </Lexeme>
+    <Lexeme ID="10236" Stem1="zobenveida">
+      <Attributes Pamatforma="zobenveida"/>
+    </Lexeme>
+    <Lexeme ID="10237" Stem1="pavedienveida">
+      <Attributes Pamatforma="pavedienveida"/>
+    </Lexeme>
+    <Lexeme ID="10238" Stem1="pilienveida">
+      <Attributes Pamatforma="pilienveida"/>
+    </Lexeme>
+    <Lexeme ID="10239" Stem1="vienveida">
+      <Attributes Pamatforma="vienveida"/>
+    </Lexeme>
+    <Lexeme ID="10240" Stem1="gredzenveida">
+      <Attributes Pamatforma="gredzenveida"/>
+    </Lexeme>
+    <Lexeme ID="10241" Stem1="šūnveida">
+      <Attributes Pamatforma="šūnveida"/>
+    </Lexeme>
+    <Lexeme ID="10242" Stem1="kampaņveida">
+      <Attributes Pamatforma="kampaņveida"/>
+    </Lexeme>
+    <Lexeme ID="10243" Stem1="nūjiņveida">
+      <Attributes Pamatforma="nūjiņveida"/>
+    </Lexeme>
+    <Lexeme ID="10244" Stem1="zvīņveida">
+      <Attributes Pamatforma="zvīņveida"/>
+    </Lexeme>
+    <Lexeme ID="10245" Stem1="sakņveida">
+      <Attributes Pamatforma="sakņveida"/>
+    </Lexeme>
+    <Lexeme ID="10246" Stem1="viļņveida">
+      <Attributes Pamatforma="viļņveida"/>
+    </Lexeme>
+    <Lexeme ID="10247" Stem1="vītņveida">
+      <Attributes Pamatforma="vītņveida"/>
+    </Lexeme>
+    <Lexeme ID="10248" Stem1="zvaigžņveida">
+      <Attributes Pamatforma="zvaigžņveida"/>
+    </Lexeme>
+    <Lexeme ID="10249" Stem1="tipveida">
+      <Attributes Pamatforma="tipveida"/>
+    </Lexeme>
+    <Lexeme ID="10250" Stem1="tārpveida">
+      <Attributes Pamatforma="tārpveida"/>
+    </Lexeme>
+    <Lexeme ID="10251" Stem1="grupveida">
+      <Attributes Pamatforma="grupveida"/>
+    </Lexeme>
+    <Lexeme ID="10252" Stem1="ķekarveida">
+      <Attributes Pamatforma="ķekarveida"/>
+    </Lexeme>
+    <Lexeme ID="10253" Stem1="cigārveida">
+      <Attributes Pamatforma="cigārveida"/>
+    </Lexeme>
+    <Lexeme ID="10254" Stem1="starveida">
+      <Attributes Pamatforma="starveida"/>
+    </Lexeme>
+    <Lexeme ID="10255" Stem1="cilindrveida">
+      <Attributes Pamatforma="cilindrveida"/>
+    </Lexeme>
+    <Lexeme ID="10256" Stem1="bumbierveida">
+      <Attributes Pamatforma="bumbierveida"/>
+    </Lexeme>
+    <Lexeme ID="10257" Stem1="pulverveida">
+      <Attributes Pamatforma="pulverveida"/>
+    </Lexeme>
+    <Lexeme ID="10258" Stem1="masveida">
+      <Attributes Pamatforma="masveida"/>
+    </Lexeme>
+    <Lexeme ID="10259" Stem1="sirdsveida">
+      <Attributes Pamatforma="sirdsveida"/>
+    </Lexeme>
+    <Lexeme ID="10260" Stem1="kompleksveida">
+      <Attributes Pamatforma="kompleksveida"/>
+    </Lexeme>
+    <Lexeme ID="10261" Stem1="kausveida">
+      <Attributes Pamatforma="kausveida"/>
+    </Lexeme>
+    <Lexeme ID="10262" Stem1="konusveida">
+      <Attributes Pamatforma="konusveida"/>
+    </Lexeme>
+    <Lexeme ID="10263" Stem1="adatveida">
+      <Attributes Pamatforma="adatveida"/>
+    </Lexeme>
+    <Lexeme ID="10264" Stem1="matveida">
+      <Attributes Pamatforma="matveida"/>
+    </Lexeme>
+    <Lexeme ID="10265" Stem1="kvadrātveida">
+      <Attributes Pamatforma="kvadrātveida"/>
+    </Lexeme>
+    <Lexeme ID="10266" Stem1="lancetveida">
+      <Attributes Pamatforma="lancetveida"/>
+    </Lexeme>
+    <Lexeme ID="10267" Stem1="šahtveida">
+      <Attributes Pamatforma="šahtveida"/>
+    </Lexeme>
+    <Lexeme ID="10268" Stem1="bultveida">
+      <Attributes Pamatforma="bultveida"/>
+    </Lexeme>
+    <Lexeme ID="10269" Stem1="rakstveida">
+      <Attributes Pamatforma="rakstveida"/>
+    </Lexeme>
+    <Lexeme ID="10270" Stem1="pirkstveida">
+      <Attributes Pamatforma="pirkstveida"/>
+    </Lexeme>
+    <Lexeme ID="10271" Stem1="vārpstveida">
+      <Attributes Pamatforma="vārpstveida"/>
+    </Lexeme>
+    <Lexeme ID="10272" Stem1="krustveida">
+      <Attributes Pamatforma="krustveida"/>
+    </Lexeme>
+    <Lexeme ID="10273" Stem1="pakavveida">
+      <Attributes Pamatforma="pakavveida"/>
+    </Lexeme>
+    <Lexeme ID="10274" Stem1="piltuvveida">
+      <Attributes Pamatforma="piltuvveida"/>
+    </Lexeme>
+    <Lexeme ID="10275" Stem1="gāzveida">
+      <Attributes Pamatforma="gāzveida"/>
+    </Lexeme>
+    <Lexeme ID="10276" Stem1="bezveida">
+      <Attributes Pamatforma="bezveida"/>
+    </Lexeme>
+    <Lexeme ID="10324" Stem1="bezvārda">
+      <Attributes Pamatforma="bezvārda"/>
+    </Lexeme>
+    <Lexeme ID="10373" Stem1="bezsniega">
+      <Attributes Pamatforma="bezsniega"/>
+    </Lexeme>
+    <Lexeme ID="10444" Stem1="bezzirga">
+      <Attributes Pamatforma="bezzirga"/>
+    </Lexeme>
+    <Lexeme ID="10701" Stem1="bezvēja">
+      <Attributes Pamatforma="bezvēja"/>
+    </Lexeme>
+    <Lexeme ID="12362" Stem1="brīvlīguma">
+      <Attributes Pamatforma="brīvlīguma"/>
+    </Lexeme>
+    <Lexeme ID="12364" Stem1="beznosacījuma">
+      <Attributes Pamatforma="beznosacījuma"/>
+    </Lexeme>
+    <Lexeme ID="12365" Stem1="pirmsiesaukuma">
+      <Attributes Pamatforma="pirmsiesaukuma"/>
+    </Lexeme>
+    <Lexeme ID="12367" Stem1="bezdzimuma">
+      <Attributes Pamatforma="bezdzimuma"/>
+    </Lexeme>
+    <Lexeme ID="28772" Stem1="daudzstāvu">
+      <Attributes Skaitlis_2="Daudzskaitlinieks" Pamatforma="daudzstāvu"/>
+    </Lexeme>
+    <Lexeme ID="50631" Stem1="šīrīta">
+      <Attributes Pamatforma="šīrīta"/>
+    </Lexeme>
+    <Lexeme ID="14126" Stem1="ikmēneša">
+      <Attributes Pamatforma="ikmēneša"/>
+    </Lexeme>
+    <Lexeme ID="12175" Stem1="bezpriedēkļa">
+      <Attributes Pamatforma="bezpriedēkļa"/>
+    </Lexeme>
+    <Lexeme ID="12176" Stem1="bezsaikļa">
+      <Attributes Pamatforma="bezsaikļa"/>
+    </Lexeme>
+    <Lexeme ID="11937" Stem1="bezmērķa">
+      <Attributes Pamatforma="bezmērķa"/>
+    </Lexeme>
+    <Lexeme ID="13702" Stem1="beztrokšņa">
+      <Attributes Pamatforma="beztrokšņa"/>
+    </Lexeme>
+    <Lexeme ID="28771" Stem1="augstpapēžu">
+      <Attributes Skaitlis_2="Daudzskaitlinieks" Pamatforma="augstpapēžu"/>
     </Lexeme>
 </Paradigm>
 </Lexicon>

@@ -2914,6 +2914,9 @@ public class MorphologyTest {
         assertInflection(sēdu, testset, "sēdu");
         List<Wordform> sēžu = locītājs.generateInflectionsFromParadigm("sēdēt", 45);
         assertInflection(sēžu, testset, "sēžu");
+
+        List<Wordform> aizsēdēties = locītājs.generateInflectionsFromParadigm("aizsēdēties", 46);
+        assertInflection(aizsēdēties, testset, "aizsēžos");
     }
 
 }
