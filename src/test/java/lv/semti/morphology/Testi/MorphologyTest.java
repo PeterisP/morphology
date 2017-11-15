@@ -2919,4 +2919,14 @@ public class MorphologyTest {
         assertInflection(aizsēdēties, testset, "aizsēžos");
     }
 
+    @Test
+//    Ticket #18
+    public void roberts_20171110() {
+        Word w = locītājs.analyze("!!!!");
+        assertTrue(w.isRecognized());
+        assertEquals("zs", w.getBestWordform().getTag());
+        w = locītājs.analyze("!!!");
+        assertTrue(w.isRecognized());
+        assertEquals("zs", w.getBestWordform().getTag());
+    }
 }

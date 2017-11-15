@@ -682,5 +682,17 @@ public class TokenizeTest {
         assertEquals(3, tokens.size());
     }
 
+	@Test
+//    Ticket #18
+	public void roberts_20171110() {
+        LinkedList<Word> tokens;
+        tokens = Splitting.tokenize(locītājs, "gaļa, dārzeņi, u.t.t.", false);
+        assertEquals(5, tokens.size());
+
+        tokens = Splitting.tokenize(locītājs, "jā!!!!", false);
+        assertEquals(2, tokens.size());
+        assertTrue(tokens.get(1).isRecognized());
+	}
+
 }
  
