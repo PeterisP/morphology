@@ -326,9 +326,9 @@ public abstract class Mijas {
                     } else if (celms.endsWith("g") ) {
                         varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "dzī")); //slogi -> slodzīt
                         varianti.add(new Variants(celms.substring(0,celms.length()-1)+"dzē")); //vajag -> vajadzēt
-                    }
-                    if (celms.endsWith("loc") || celms.endsWith("moc") || celms.endsWith("urc"))
+                    } else if (celms.endsWith("loc") || celms.endsWith("moc") || celms.endsWith("urc"))
                         varianti.add(new Variants(celms+"ī")); // alternatīvā forma
+					else varianti.add(new Variants(celms+"ē")); // sēdies -> sēdēties
                     break;
                 case 27: // -ams -āms 3. konjugācijai miju gadījumam, un arī mēs/jūs formas
                     if (celms.endsWith("kā"))
@@ -736,6 +736,8 @@ public abstract class Mijas {
                         varianti.add(new Variants(celms.substring(0,celms.length()-2)+"k")); //mācēt -> māki
                     else if (celms.endsWith("dzē") || celms.endsWith("dzī"))
                         varianti.add(new Variants(celms.substring(0,celms.length()-3)+"g")); //vajadzēt -> vajag, slodzīt -> slogi
+					else
+						varianti.add(new Variants(celms.substring(0,celms.length()-1))); // sēdē-ties -> sēd-ies
                     break;
                 case 27: // -ams -āms 3. konjugācijai miju gadījums
                     if (celms.endsWith("cī"))
