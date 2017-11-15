@@ -57,7 +57,7 @@
 	<Value LV="6" EN="6" Tag="6"/>
 	<Value LV="Nepiemīt" EN="Not applicable" Tag="0"/>
 	<Value LV="Atgriezenisks" EN="Reflexive" Tag="r"/>
-	<Value LV="Ģenitīvenis" EN="Genitive only" Tag="g"/>
+	<Value LV="Ģenitīvenis" EN="Inflexible genitive" Tag="g"/>
 </Attribute>
 
 <Attribute LV="Darbības vārda tips" EN="Verb type" PartOfSpeech="Darbības vārds" MarkupPos="1" Description="patstāvīgs vai palīg d.v ?">

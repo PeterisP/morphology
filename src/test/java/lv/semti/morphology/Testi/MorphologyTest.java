@@ -2901,4 +2901,19 @@ public class MorphologyTest {
 //        assertInflection(debesis, testset, "debeša");
     }
 
+    @Test
+    public void sēžu() {
+        AttributeValues testset = new AttributeValues();
+        testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+        testset.addAttribute(AttributeNames.i_Izteiksme, AttributeNames.v_Iisteniibas);
+        testset.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Tagadne);
+        testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+        testset.addAttribute(AttributeNames.i_Person, "1");
+
+        List<Wordform> sēdu = locītājs.generateInflectionsFromParadigm("sēdēt", 17);
+        assertInflection(sēdu, testset, "sēdu");
+        List<Wordform> sēžu = locītājs.generateInflectionsFromParadigm("sēdēt", 45);
+        assertInflection(sēžu, testset, "sēžu");
+    }
+
 }
