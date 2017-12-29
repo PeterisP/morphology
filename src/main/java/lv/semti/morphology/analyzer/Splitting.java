@@ -53,6 +53,14 @@ public class Splitting {
 	    return Character.isWhitespace(c) || c=='\u00A0';
 	}
 
+	private static Word formToken(Analyzer morphoAnalyzer, String str, StringBuilder accumulatedWhitespace) {
+        Word token = (morphoAnalyzer == null) ? new Word(str) : morphoAnalyzer.analyze(str);
+        for (Wordform wf : token.wordforms) {
+            wf.addAttribute(AttributeNames.i_WhitespaceBefore, accumulatedWhitespace.toString());
+        }
+        return token;
+    }
+
 	/*
 	 * Tokenizes the string (sentence?) and runs morphoanalysis on each word.
 	 */
@@ -68,6 +76,7 @@ public class Splitting {
 		String str = chunk+" ";
 		boolean inApostrophes=false;
 		Status statuss = Status.IN_SPACE;
+		StringBuilder accumulatedWhitespace = new StringBuilder();
 		
 		int lastGoodEnd=0;
 		boolean canEndInNextStep=false;
@@ -89,11 +98,11 @@ public class Splitting {
 						canEndInNextStep = (automats.status()==2);
 					} else {
 						//ja neatrada, pievieno simbolu rezultātam
-						tokens.add( (morphoAnalyzer == null) ? 
-								new Word(str.substring(i,i+1)) :
-								morphoAnalyzer.analyze(str.substring(i,i+1)) );
+						tokens.add( formToken(morphoAnalyzer, str.substring(i,i+1), accumulatedWhitespace));
 					}
-				}
+				} else {
+				   accumulatedWhitespace.append(str.charAt(i));
+                }
 				break;
 			case IN_WORD:
 				//pārbauda vai ir atrastas potenciālās beigas
@@ -102,12 +111,9 @@ public class Splitting {
 				{
 					lastGoodEnd=i;
 					if(str.charAt(i)=='\'' && inApostrophes) {
-						tokens.add( (morphoAnalyzer == null) ? 
-								new Word(str.substring(progress,i)) :
-								morphoAnalyzer.analyze(str.substring(progress,i)) );
-						tokens.add( (morphoAnalyzer == null) ? 
-								new Word(str.substring(i,i+1)) :   
-								morphoAnalyzer.analyze(str.substring(i,i+1)) );
+						tokens.add( formToken(morphoAnalyzer, str.substring(progress,i), accumulatedWhitespace));
+                        accumulatedWhitespace = new StringBuilder();
+                        tokens.add( formToken(morphoAnalyzer, str.substring(i,i+1), accumulatedWhitespace));
 						inApostrophes=false;
 						statuss=Status.IN_SPACE;
 						break;
@@ -123,11 +129,10 @@ public class Splitting {
 				} else {
 					//ja neatrada, pārbauda vai darbības laikā tika atrasta potenciālā beigu pozīcija
 					if (lastGoodEnd>progress) {
-						tokens.add( (morphoAnalyzer == null) ? 
-								new Word(str.substring(progress,lastGoodEnd)) :
-								morphoAnalyzer.analyze(str.substring(progress,lastGoodEnd)) );
+                        tokens.add( formToken(morphoAnalyzer, str.substring(progress, lastGoodEnd), accumulatedWhitespace));
 						i=lastGoodEnd-1;
 						statuss = Status.IN_SPACE;
+                        accumulatedWhitespace = new StringBuilder();
 					} else {
 						i=progress;
 						//mēgina atrast nākamo derīgo zaru
@@ -139,10 +144,9 @@ public class Splitting {
 								canEndInNextStep=true;
 						} else {
 							//ja neatrada, pievieno simbolu rezultātam un pēc tam dosies meklēt jauno sākumu
-							tokens.add( (morphoAnalyzer == null) ? 
-									new Word(str.substring(i,i+1)) :
-									morphoAnalyzer.analyze(str.substring(i,i+1)) );
+                            tokens.add( formToken(morphoAnalyzer, str.substring(i,i+1), accumulatedWhitespace));
 							statuss = Status.IN_SPACE;
+                            accumulatedWhitespace = new StringBuilder();
 						}
 					}
 				}				
