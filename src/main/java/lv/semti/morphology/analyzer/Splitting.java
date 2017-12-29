@@ -41,7 +41,7 @@ public class Splitting {
 		
 	public static boolean isSeparator(char c)
 	{
-		String separators=" .?:/!,;\"'`´(){}<>«»-[]—‐‑‒–―‘’‚‛“”„‟′″‴‵‶‷‹›‼‽⁈⁉․‥…&•*";
+		String separators=" \t\n\r\u00A0.?:/!,;\"'`´(){}<>«»-[]—‐‑‒–―‘’‚‛“”„‟′″‴‵‶‷‹›‼‽⁈⁉․‥…&•*";
 		return separators.contains(String.valueOf(c));
 	}
 
@@ -50,7 +50,7 @@ public class Splitting {
 	 */
 	public static boolean isSpace(char c)
 	{
-	    return (" \t\n\r\u00A0".indexOf(c) != -1);
+	    return Character.isWhitespace(c) || c=='\u00A0';
 	}
 
 	/*
@@ -66,10 +66,6 @@ public class Splitting {
 	    int progress = 0;
 	    //bug fix - pievienota beigās whitespace
 		String str = chunk+" ";
-		str = str.replace('\n', ' ');
-		str = str.replace('\r', ' ');
-		str = str.replace('\t', ' ');
-		str = str.replace('\u00A0', ' ');
 		boolean inApostrophes=false;
 		Status statuss = Status.IN_SPACE;
 		
@@ -101,11 +97,8 @@ public class Splitting {
 				break;
 			case IN_WORD:
 				//pārbauda vai ir atrastas potenciālās beigas
-		        if(canEndInNextStep==true && 
-			            (
-			              ( Splitting.isSeparator(str.charAt(i)) && Character.isLetter((i>0 ? str.charAt(i-1) : 0))  ) 
-			              || !Character.isLetter((i>0 ? str.charAt(i-1) : 0) )     
-			            ) )
+		        if (canEndInNextStep==true &&
+			            (Splitting.isSeparator(str.charAt(i)) || !Character.isLetter((i>0 ? str.charAt(i-1) : 0) ) ) )
 				{
 					lastGoodEnd=i;
 					if(str.charAt(i)=='\'' && inApostrophes) {

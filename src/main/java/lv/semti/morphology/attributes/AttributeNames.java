@@ -237,8 +237,10 @@ public class AttributeNames {
 	public static final String i_EndingID = "Galotnes nr";
 
 	public static final String i_Generate = "Ģenerēt";
-	
-	public static final String i_Frequency = "Biežums";
+
+    public static final String i_WhitespaceBefore = "Atstarpes pirms";
+
+    public static final String i_Frequency = "Biežums";
 	public static final String v_Rare = "Reti";
 	
 	// Vērtības, kuras īslaicīgi piekabina vārda objektam, lai GUI to īpaši atzīmētu

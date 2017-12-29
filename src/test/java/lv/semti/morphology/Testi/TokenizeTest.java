@@ -555,7 +555,10 @@ public class TokenizeTest {
 
 	@Test
 	public void nonbreakingspace() {
-		LinkedList<Word> tokens;		
+        assertTrue(Splitting.isSeparator('\u00A0'));
+        assertTrue(Splitting.isSpace('\u00A0'));
+
+		LinkedList<Word> tokens;
 		tokens = Splitting.tokenize(locītājs, "aaa bbbb\u00A0cccc", false);
 //		PP - At 2017.03.30 it was set so that nonbreaking space keeps tokens together.
 //      I can't remember why I made it so back in 2014.
@@ -693,6 +696,16 @@ public class TokenizeTest {
         assertEquals(2, tokens.size());
         assertTrue(tokens.get(1).isRecognized());
 	}
+
+	@Test
+    public void atstarpju_info() {
+        LinkedList<Word> tokens;
+        tokens = Splitting.tokenize(locītājs, "viens divi.", false);
+        assertEquals(3, tokens.size());
+        assertTrue(tokens.get(0).hasAttribute(AttributeNames.i_WhitespaceBefore, ""));
+        assertTrue(tokens.get(1).hasAttribute(AttributeNames.i_WhitespaceBefore, " "));
+        assertTrue(tokens.get(2).hasAttribute(AttributeNames.i_WhitespaceBefore, ""));
+    }
 
 }
  
