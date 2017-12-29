@@ -211,7 +211,6 @@ public class AttributeNames {
 	public static final String v_Number = "Skaitlis cipariem";
 	public static final String v_Ordinal = "Kārtas skaitlis cipariem";
 	public static final String v_URI = "URI";
-
 	
 	public static final String i_Guess = "Minēšana";
 	public static final String v_NoGuess = "Nav";
@@ -239,6 +238,7 @@ public class AttributeNames {
 	public static final String i_Generate = "Ģenerēt";
 
     public static final String i_WhitespaceBefore = "Atstarpes pirms";
+    public static final String i_Offset = "Nobīde rindkopā";
 
     public static final String i_Frequency = "Biežums";
 	public static final String v_Rare = "Reti";

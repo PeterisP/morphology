@@ -53,10 +53,12 @@ public class Splitting {
 	    return Character.isWhitespace(c) || c=='\u00A0';
 	}
 
-	private static Word formToken(Analyzer morphoAnalyzer, String str, StringBuilder accumulatedWhitespace) {
-        Word token = (morphoAnalyzer == null) ? new Word(str) : morphoAnalyzer.analyze(str);
+	private static Word formToken(Analyzer morphoAnalyzer, String str, int start, int end, StringBuilder accumulatedWhitespace) {
+	    String word = str.substring(start, end);
+        Word token = (morphoAnalyzer == null) ? new Word(word) : morphoAnalyzer.analyze(word);
         for (Wordform wf : token.wordforms) {
             wf.addAttribute(AttributeNames.i_WhitespaceBefore, accumulatedWhitespace.toString());
+            wf.addAttribute(AttributeNames.i_Offset, Integer.toString(start));
         }
         return token;
     }
@@ -98,7 +100,7 @@ public class Splitting {
 						canEndInNextStep = (automats.status()==2);
 					} else {
 						//ja neatrada, pievieno simbolu rezultātam
-						tokens.add( formToken(morphoAnalyzer, str.substring(i,i+1), accumulatedWhitespace));
+						tokens.add( formToken(morphoAnalyzer, str, i, i+1, accumulatedWhitespace));
 					}
 				} else {
 				   accumulatedWhitespace.append(str.charAt(i));
@@ -111,9 +113,9 @@ public class Splitting {
 				{
 					lastGoodEnd=i;
 					if(str.charAt(i)=='\'' && inApostrophes) {
-						tokens.add( formToken(morphoAnalyzer, str.substring(progress,i), accumulatedWhitespace));
+						tokens.add( formToken(morphoAnalyzer, str, progress, i, accumulatedWhitespace));
                         accumulatedWhitespace = new StringBuilder();
-                        tokens.add( formToken(morphoAnalyzer, str.substring(i,i+1), accumulatedWhitespace));
+                        tokens.add( formToken(morphoAnalyzer, str, i, i+1, accumulatedWhitespace));
 						inApostrophes=false;
 						statuss=Status.IN_SPACE;
 						break;
@@ -129,7 +131,7 @@ public class Splitting {
 				} else {
 					//ja neatrada, pārbauda vai darbības laikā tika atrasta potenciālā beigu pozīcija
 					if (lastGoodEnd>progress) {
-                        tokens.add( formToken(morphoAnalyzer, str.substring(progress, lastGoodEnd), accumulatedWhitespace));
+                        tokens.add( formToken(morphoAnalyzer, str, progress, lastGoodEnd, accumulatedWhitespace));
 						i=lastGoodEnd-1;
 						statuss = Status.IN_SPACE;
                         accumulatedWhitespace = new StringBuilder();
@@ -144,7 +146,7 @@ public class Splitting {
 								canEndInNextStep=true;
 						} else {
 							//ja neatrada, pievieno simbolu rezultātam un pēc tam dosies meklēt jauno sākumu
-                            tokens.add( formToken(morphoAnalyzer, str.substring(i,i+1), accumulatedWhitespace));
+                            tokens.add( formToken(morphoAnalyzer, str, i,i+1, accumulatedWhitespace));
 							statuss = Status.IN_SPACE;
                             accumulatedWhitespace = new StringBuilder();
 						}
@@ -156,9 +158,7 @@ public class Splitting {
 		
 		
 		if (statuss == Status.IN_WORD) { 
-			tokens.add( (morphoAnalyzer == null) ? 
-					new Word(str.substring(progress,str.length())) :
-					morphoAnalyzer.analyze(str.substring(progress,str.length())) );
+			tokens.add( formToken(morphoAnalyzer, str, progress, str.length(), accumulatedWhitespace));
 		}
 		
 		return tokens;

@@ -30,6 +30,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 import lv.semti.morphology.analyzer.*;
 import lv.semti.morphology.attributes.AttributeNames;
@@ -585,6 +586,7 @@ public class TokenizeTest {
 		assertEquals(3, tokens.size());
 	}
 
+	@Ignore
 	@Test
 	// Verify the differences between automatic tokenization and the tokenization implemented in morphology training data
 	public void corpustest() throws IOException {
@@ -705,6 +707,10 @@ public class TokenizeTest {
         assertTrue(tokens.get(0).hasAttribute(AttributeNames.i_WhitespaceBefore, ""));
         assertTrue(tokens.get(1).hasAttribute(AttributeNames.i_WhitespaceBefore, " "));
         assertTrue(tokens.get(2).hasAttribute(AttributeNames.i_WhitespaceBefore, ""));
+
+        assertEquals("0", tokens.get(0).getBestWordform().getValue(AttributeNames.i_Offset));
+        assertEquals("6", tokens.get(1).getBestWordform().getValue(AttributeNames.i_Offset));
+        assertEquals("10", tokens.get(2).getBestWordform().getValue(AttributeNames.i_Offset));
     }
 
 }

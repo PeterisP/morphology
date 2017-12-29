@@ -52,6 +52,7 @@ public class Analyzer extends Lexicon {
 	private Pattern p_fractional = Pattern.compile("\\d+[\\\\/]\\d+");
 	private Pattern p_abbrev = Pattern.compile("\\w+\\.");
 	private Pattern p_acronym = Pattern.compile("(\\p{Lu}){2,5}"); // all caps, repeated 2-5 times
+	private Pattern p_letter = Pattern.compile("(\\p{L})"); // an isolated letter
 	private Pattern p_url = Pattern.compile("[.\\w]+\\.(lv|com|org)");
 		
 	private Cache<String, Word> wordCache = new Cache<String, Word>();
@@ -305,6 +306,15 @@ public class Analyzer extends Lexicon {
 				result.addWordform(wf);
 				return result;
 			}
+            if (p_letter.matcher(word).matches()) {
+                Wordform wf = new Wordform(word);
+                wf.setEnding(this.endingByID(1158)); // FIXME - hardkodēts numurs hardcoded vārdu galotnei
+                wf.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Residual);
+                wf.addAttribute(AttributeNames.i_Lemma, word);
+                wf.addAttribute(AttributeNames.i_Word, word);
+                result.addWordform(wf);
+                return result;
+            }
 			if (p_url.matcher(word).matches()) {
 				Wordform wf = new Wordform(word);
 				wf.setEnding(this.endingByID(1158)); // FIXME - hardkodēts numurs hardcoded vārdu galotnei
@@ -739,7 +749,7 @@ public class Analyzer extends Lexicon {
         }
 
         if (!lemma.endsWith(ending.getEnding())) {
-            System.err.printf("Attempted to generate inflections for lemma '%s' at paradigm '%d'; failed because of mismatched ending", lemma, paradigm);
+            System.err.printf("Attempted to generate inflections for lemma '%s' at paradigm '%d'; failed because of mismatched ending\n", lemma, paradigm);
         }
 
         Lexeme l = this.createLexeme(lemma, ending.getID(), "temp");
