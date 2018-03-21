@@ -62,7 +62,6 @@
 
 <Attribute LV="Darbības vārda tips" EN="Verb type" PartOfSpeech="Darbības vārds" MarkupPos="1" Description="patstāvīgs vai palīg d.v ?">
 	<Value LV="Patstāvīgs darbības vārds" EN="Main" Tag="m"/>
-	<Value LV="'nebūt', 'trūkt' un 'pietikt'" EN="Requires genitive - 'not be', 'lack', 'have-enough'" Tag="g"/>
 	<Value LV="Modāls" EN="Modal" Tag="o"/>
 	<Value LV="Fāzes" EN="Phasal" Tag="p"/>
 	<Value LV="Izpausmes veida" EN="Expression" Tag="e"/>
