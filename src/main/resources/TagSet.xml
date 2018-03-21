@@ -187,6 +187,10 @@
 	<Value LV="Vispārākā" EN="Superlative" Tag="s"/>
 	<Value LV="Nepiemīt" EN="Not applicable" Tag="0"/>
 </Attribute>
+<Attribute LV="Noliegums" EN="Negation" PartOfSpeech="Divdabis" MarkupPos="12">
+	<Value LV="Jā" EN="Yes" Tag="y"/>
+	<Value LV="Nē" EN="No" Tag="n"/>
+</Attribute>
 
 <Attribute LV="Īpašības vārda tips" EN="Adjective type" PartOfSpeech="Īpašības vārds" MarkupPos="1">
 	<Value LV="Kādības" EN="Qualificative" Tag="f"/>
