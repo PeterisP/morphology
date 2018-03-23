@@ -99,8 +99,16 @@ public class MorphoEvaluate {
 		TagSet tags = TagSet.getTagSet();
 		
 		List<String> mistakes = new LinkedList<String>();
+
+		List<String> capitalization_mistakes = new LinkedList<String>();
 		
 		for (Etalons e : etaloni) {
+		    if (e.tag.startsWith("np") && !e.lemma.matches("(?U)^\\p{Lu}[\\p{Ll}-]*$"))
+		        capitalization_mistakes.add(String.format("Īpašvārda lemma nav ar lielo burtu: %s\t%s", e.lemma, e.id));
+
+            if (e.tag.startsWith("n") && !e.tag.startsWith("np") && !e.lemma.matches("(?U)^[\\p{Ll}-]+$"))
+                capitalization_mistakes.add(String.format("Sugasvārda lemma nav ar mazajiem burtiem: %s\t%s", e.lemma, e.id));
+
 			Word w = locītājs.analyze(e.wordform);
 			AttributeValues etalonaAV = tags.fromTag(e.tag);
 			if (!e.tag.equalsIgnoreCase(tags.toTag(etalonaAV))) {
@@ -108,7 +116,8 @@ public class MorphoEvaluate {
 			}
 			etalonaAV.removeNonlexicalAttributes();
 			e.tag = tags.toTag(etalonaAV);
-			
+
+
 			boolean in_voc=false;
 			for (Wordform wf : w.wordforms) {
 				if (wf.getValue(AttributeNames.i_Guess)==null || wf.getValue(AttributeNames.i_Guess).equalsIgnoreCase("Nav")) in_voc=true;
@@ -186,7 +195,11 @@ public class MorphoEvaluate {
 				mistakes.add("Nav variantu :( \t"+e.wordform+"\t"+e.lemma+"\t"+e.tag+"\t\t"+e.id+"\n");
 			}						
 		}
-		
+
+        Collections.sort(capitalization_mistakes);
+        for (String mistake:capitalization_mistakes){
+            izeja.println(mistake);
+        }
 		Collections.sort(mistakes);
 		for (String mistake:mistakes){
 			izeja.println(mistake);
