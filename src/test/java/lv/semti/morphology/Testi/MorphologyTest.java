@@ -236,14 +236,14 @@ public class MorphologyTest {
         Word pieveicis = locītājs.analyze("pieveicis");
         assertTrue(pieveicis.isRecognized());
         assertEquals(AttributeNames.v_Prefix, pieveicis.wordforms.get(0).getValue(AttributeNames.i_Guess));
-        assertEquals("vmnpdmsnasnp", pieveicis.wordforms.get(0).getTag());
+        assertEquals("vmnpdmsnasnpn", pieveicis.wordforms.get(0).getTag());
     }
 
     @Test
     public void paņēmis() {
         Word paņēmis = locītājs.analyze("paņēmis");
         assertTrue(paņēmis.isRecognized());
-        assertEquals("vmnpdmsnasnp", paņēmis.wordforms.get(0).getTag());
+        assertEquals("vmnpdmsnasnpn", paņēmis.wordforms.get(0).getTag());
     }
 
     @Test
@@ -2736,17 +2736,17 @@ public class MorphologyTest {
         Word ziedošs = locītājs.analyze("ziedošs");
         assertTrue(ziedošs.isRecognized());
         assertEquals(AttributeNames.v_Positive, ziedošs.getBestWordform().getValue(AttributeNames.i_Degree));
-        assertEquals("vmnpdmsnapnp", ziedošs.wordforms.get(0).getTag());
+        assertEquals("vmnpdmsnapnpn", ziedošs.wordforms.get(0).getTag());
 
         Word ziedošāks = locītājs.analyze("ziedošāks");
         assertTrue(ziedošāks.isRecognized());
         assertEquals(AttributeNames.v_Comparative, ziedošāks.getBestWordform().getValue(AttributeNames.i_Degree));
-        assertEquals("vmnpdmsnapnc", ziedošāks.wordforms.get(0).getTag());
+        assertEquals("vmnpdmsnapncn", ziedošāks.wordforms.get(0).getTag());
 
         Word visziedošākais = locītājs.analyze("visziedošākais");
         assertTrue(visziedošākais.isRecognized());
         assertEquals(AttributeNames.v_Superlative, visziedošākais.getBestWordform().getValue(AttributeNames.i_Degree));
-        assertEquals("vmnpdmsnapys", visziedošākais.wordforms.get(0).getTag());
+        assertEquals("vmnpdmsnapysn", visziedošākais.wordforms.get(0).getTag());
     }
 
     @Test
