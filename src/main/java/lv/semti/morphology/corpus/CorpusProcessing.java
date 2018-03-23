@@ -166,10 +166,13 @@ public class CorpusProcessing {
 
 		    while ((rinda = ieeja.readLine()) != null) {
 		    	if (rinda.trim().length() == 0) continue;
-		    	if (rinda.contains("<s>") || rinda.contains("</s>")) continue;		    	
+		    	if (rinda.contains("<s>") || rinda.contains("</s>") || rinda.contains("<g />")) continue;
 		    	//if (vārdi >= 20000) break;
 		    	
 		    	String[] parse = rinda.split("\t");
+		    	if (parse.length<3) {
+		    	    System.err.println(rinda);
+                }
 				wordform = parse[0];
 				lemma = parse[2];
 				tag = parse[1];
