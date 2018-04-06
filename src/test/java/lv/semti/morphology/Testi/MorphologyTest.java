@@ -37,7 +37,6 @@ import org.junit.Test;
 import lv.semti.morphology.analyzer.*;
 import lv.semti.morphology.attributes.*;
 import lv.semti.morphology.lexicon.*;
-import org.w3c.dom.Attr;
 
 public class MorphologyTest {
     private static Analyzer locītājs;

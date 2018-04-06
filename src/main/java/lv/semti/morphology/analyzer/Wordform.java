@@ -18,15 +18,12 @@
 package lv.semti.morphology.analyzer;
 
 import java.io.IOException;
-import java.io.OutputStreamWriter;
 import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.io.Serializable;
-import java.io.UnsupportedEncodingException;
 import java.io.Writer;
 import java.util.ArrayList;
 
-import org.w3c.dom.Attr;
 import org.w3c.dom.Node;
 
 import lv.semti.morphology.attributes.AttributeNames;

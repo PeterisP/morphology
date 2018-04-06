@@ -225,6 +225,8 @@ public class AttributeNames {
 
 	public static final String i_Lemma = "Pamatforma";
 	public static final String i_SourceLemma = "Avota pamatforma";
+    public static final String i_EntryID = "Šķirkļa ID";
+    public static final String i_EntryName = "Šķirkļa cilvēklasāmais ID";
 	public static final String i_Source = "Avots";   
 	public static final String i_Role = "Loma";
 	public static final String i_Prefix = "Priedēklis";

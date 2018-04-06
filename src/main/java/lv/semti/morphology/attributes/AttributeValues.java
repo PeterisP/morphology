@@ -250,8 +250,8 @@ public class AttributeValues implements FeatureStructure, Cloneable {
 	 */
 	public void removeNonlexicalAttributes() {
 		removeAttribute(AttributeNames.i_Transitivity);
-		removeAttribute(AttributeNames.i_VerbType);
-		removeAttribute(AttributeNames.i_NounType);
+//		removeAttribute(AttributeNames.i_VerbType);
+//		removeAttribute(AttributeNames.i_NounType);
 		removeAttribute(AttributeNames.i_Declension);
 		removeAttribute(AttributeNames.i_Konjugaacija);
 		
@@ -274,7 +274,7 @@ public class AttributeValues implements FeatureStructure, Cloneable {
 		//par šiem jādomā. Principā analizators no galotnes varētu izdomāt
 		removeAttribute(AttributeNames.i_Degree);
 		removeAttribute(AttributeNames.i_Reflexive);
-		removeAttribute(AttributeNames.i_Laiks);
+//		removeAttribute(AttributeNames.i_Laiks);  // FIXME - piemēram, ēdu mēdzu zīmēju nestrādās nošķirt pagātne tagadne
 		removeAttribute(AttributeNames.i_Voice);
 	}
 	

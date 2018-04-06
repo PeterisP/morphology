@@ -17,24 +17,27 @@
  *******************************************************************************/
 package lv.semti.morphology.lexicon;
 
-import java.io.*;
-import java.util.*;
-import java.util.regex.Pattern;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-
-import com.google.common.collect.ArrayListMultimap;
-import com.google.common.collect.Multimap;
 import lv.semti.morphology.analyzer.AllEndings;
 import lv.semti.morphology.analyzer.Mijas;
 import lv.semti.morphology.analyzer.Variants;
 import lv.semti.morphology.attributes.AttributeNames;
 
+import java.io.*;
+import java.util.*;
+import java.util.regex.Pattern;
+import com.google.common.collect.ArrayListMultimap;
+import com.google.common.collect.Multimap;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 /**
  * Satur leksikona datus - leksēmu sarakstu un to locīšanas informāciju
@@ -105,21 +108,6 @@ public class Lexicon {
 		init(lexiconFileName, useAuxiliaryLexicons);
 	}
 
-	// TODO - izvērtēt, vai šīs metodes vispār ir vajadzīgas
-	/**
-	 * Izveido leksikona objektu no XML plūsmas
-	 *
-	 * @param plusma	plūsma, pa kuru tiek padots leksikons
-	 * @throws Exception	parsēšanas kļūdas
-	 */
-	public Lexicon(InputStream plusma) throws Exception {
-		init(plusma, false);  // Ja tikai viena plūsma padota, tad uzskatam ka auxiliary leksikoni nebūs
-	}
-	
-	public Lexicon(InputStream stream, InputStream[] auxiliaryLexicons) throws Exception {
-		init(stream, auxiliaryLexicons);
-	}
-	
 	public Lexicon(String lexiconFileName, ArrayList<String> blacklist) throws Exception{
 		init(lexiconFileName, blacklist);
 	}
@@ -130,23 +118,7 @@ public class Lexicon {
 	public String getFilename() {
 		return filename;
 	}
-	
-	public String getRevision() {
-		return revision;
-	}
-	
-	public int getRevisionNumber() {
-		if (revision == null)
-			return 0;
-		StringTokenizer st = new StringTokenizer(revision, " :$");
-		if (st.countTokens() >= 2) {
-			st.nextToken();
-			String number = st.nextToken();
-			try { return Integer.parseInt(number); } catch (java.lang.NumberFormatException e) {} 
-		}
-		return 0;
-	}
-	
+
 	protected AllEndings getAllEndings(){
 		if (allEndings == null) {
 			ArrayList<Ending> endings = new ArrayList<Ending>();
@@ -163,25 +135,29 @@ public class Lexicon {
 		allEndings = null;
 	}
 	
-	private void init(String failaVārds, boolean useAuxiliaryLexicons) throws Exception {
-		System.err.println("Loading " + failaVārds);
-		
-		this.filename = failaVārds;
+	private void init(String fileName, boolean useAuxiliaryLexicons) throws Exception {
+		System.err.println("Loading " + fileName);
+		this.filename = fileName;
+        Document doc;
+        DocumentBuilder docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
+        InputStream stream = getClass().getClassLoader().getResourceAsStream(fileName);
+        if (stream != null) {
+            doc = docBuilder.parse(stream);
+        } else doc = docBuilder.parse(new File(fileName));
 
-		Document doc;
-		DocumentBuilder docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-		doc = docBuilder.parse(new File(failaVārds));
-
-		init_main(doc, new File(failaVārds).getParent(), useAuxiliaryLexicons);
+		init_main(doc, new File(fileName).getParent(), useAuxiliaryLexicons);
 	}
-	private void init(String failaVārds, ArrayList<String> blacklist) throws Exception {
-		System.err.println("Loading " + failaVārds);	
-		this.filename = failaVārds;
+	private void init(String fileName, ArrayList<String> blacklist) throws Exception {
+		System.err.println("Loading " + fileName);
+		this.filename = fileName;
 		Document doc;
 		DocumentBuilder docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-		doc = docBuilder.parse(new File(failaVārds));
+        InputStream stream = getClass().getClassLoader().getResourceAsStream(fileName);
+        if (stream != null) {
+            doc = docBuilder.parse(stream);
+        } else doc = docBuilder.parse(new File(fileName));
 
-		init_main(doc, new File(failaVārds).getParent(), blacklist);
+		init_main(doc, new File(fileName).getParent(), blacklist);
 	}	
 
 	private void init(InputStream plusma, boolean useAuxiliaryLexicons) throws Exception {
@@ -192,22 +168,7 @@ public class Lexicon {
 
 		init_main(doc, null, useAuxiliaryLexicons);
 	}
-	
-	private void init(InputStream stream, InputStream[] auxiliaryLexicons) throws Exception {
-		System.err.println("Loading the lexicon from an input stream...");
-		
-		DocumentBuilder docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-		Document doc = docBuilder.parse(stream);
 
-		init_main(doc, "", false, false, null);
-		
-		for (InputStream lexicon : auxiliaryLexicons) {
-			docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-			Document doc2 = docBuilder.parse(lexicon);
-			init_sub(doc2);
-		}
-	}
-	
 	private void init_main(Document doc, String path, boolean useAuxiliaryLexicons) throws Exception {
 		init_main(doc, path, useAuxiliaryLexicons, true, null);
 	}
@@ -248,16 +209,25 @@ public class Lexicon {
 		
 		for (String filename : corpusFileNames) {
 			if (blacklist != null && blacklist.contains(filename)) continue; //FIXME - case sensitivity?
-			Document doc2;
-			DocumentBuilder docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-			if (path != null) {
-				String fullname = path + java.io.File.separatorChar + filename;
-				doc2 = docBuilder.parse(new File(fullname));
-			} else {
-				doc2 = docBuilder.parse(getClass().getClassLoader().getResourceAsStream(filename));
-			}
 
-			init_sub(doc2);
+            if (filename.endsWith(".xml")) {
+                Document doc2;
+                DocumentBuilder docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
+                if (path != null) {
+                    String fullname = path + java.io.File.separatorChar + filename;
+                    doc2 = docBuilder.parse(new File(fullname));
+                } else {
+                    doc2 = docBuilder.parse(getClass().getClassLoader().getResourceAsStream(filename));
+                }
+                load_sublexicon_xml(doc2);
+            } else if (filename.endsWith(".json")) {
+                if (path != null) {
+                    String fullname = path + java.io.File.separatorChar + filename;
+                    load_sublexicon_json(new FileInputStream(new File(fullname)));
+                } else {
+                    load_sublexicon_json(getClass().getClassLoader().getResourceAsStream(filename));
+                }
+            } else throw new Error(String.format("Unsupported file format for sublexicon '%s'", filename));
 		}
 
 		//TODO - nav īsti smuki šāds hardcoded saraksts.
@@ -278,7 +248,21 @@ public class Lexicon {
 		System.err.println("Lexicon " + (revision != null ? revision : "") + " loaded");
 	}
 
-	private void init_sub(Document doc) throws Exception {
+    private void load_sublexicon_json(InputStream stream) throws ParseException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
+        JSONParser parser = new JSONParser();
+        String json_row;
+        try {
+            while ((json_row = reader.readLine()) != null) {
+                Lexeme l = new Lexeme((JSONObject) parser.parse(json_row), this);
+            }
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+	}
+
+    private void load_sublexicon_xml(Document doc) throws Exception {
 		Node node = doc.getDocumentElement();
 		if (!node.getNodeName().equalsIgnoreCase("Lexicon")) throw new Error("Node '" + node.getNodeName() + "' but Lexicon expected!");
 	

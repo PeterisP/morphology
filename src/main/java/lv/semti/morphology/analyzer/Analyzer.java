@@ -75,10 +75,6 @@ public class Analyzer extends Lexicon {
 		super(lexiconFileName);
 		loadExceptionFile();
 	}	
-	public Analyzer (InputStream lexiconStream) throws Exception {
-		super(lexiconStream);
-		loadExceptionFile();
-	}
 
 	private void loadExceptionFile() throws IOException {
 		String exceptionName = "Exceptions.txt";
@@ -96,19 +92,7 @@ public class Analyzer extends Lexicon {
 			System.err.append(String.format("A1\nLeksikona ceļš:%s\nException ceļš:%s\n",this.filename,exceptionName));
 			e.printStackTrace();
 			automats = new Trie("");
-			System.err.println("Nesanāca ielādēt exceptionus");
-		}
-	}
-	
-	public Analyzer (InputStream lexiconStream, InputStream[] auxiliaryLexiconStreams, InputStream exceptionStream) throws Exception {
-		super(lexiconStream, auxiliaryLexiconStreams);
-
-		try {
-			automats=new Trie(exceptionStream);
-		} catch (Exception e) { 
-			e.printStackTrace();
-			System.err.println("Nesanāca ielādēt exceptionus");
-			automats = new Trie("");
+			System.err.println("Failed to load exceptions");
 		}
 	}
     

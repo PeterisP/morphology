@@ -20,7 +20,11 @@ package lv.semti.morphology.lexicon;
 import java.io.IOException;
 import java.io.Writer;
 import java.util.ArrayList;
+import java.util.Map;
 
+import org.json.simple.JSONObject;
+import org.json.simple.JSONValue;
+import org.w3c.dom.Attr;
 import org.w3c.dom.Node;
 
 import lv.semti.morphology.attributes.*;
@@ -35,10 +39,9 @@ public class Lexeme extends AttributeValues {
 	private int id = 0;		// numurs pēc kārtas - ID
 	private ArrayList <String> stems = new ArrayList<String>();    // Saknes - 1 vai 3 eksemplāri.
 	private Paradigm paradigm = null;
-	private String name = "";
 
-	protected void setParadigm(Paradigm vārdgrupa) {
-		this.paradigm = vārdgrupa;
+	protected void setParadigm(Paradigm paradigm) {
+		this.paradigm = paradigm;
 	}
 
 	public Paradigm getParadigm() {
@@ -49,9 +52,6 @@ public class Lexeme extends AttributeValues {
 	public void toXML (Writer pipe) throws IOException {
 		pipe.write("<Lexeme");
 		pipe.write(" ID=\""+String.valueOf(id)+"\"");
-		if (!name.isEmpty()) {
-		    pipe.write(" Name=\""+name+"\"");
-        }
 		for (int i=0;i<stems.size();i++) {
 			String stem = stems.get(i);
 			stem = stem.replace("\"", "&quot;").replace("&", "&amp;");
@@ -62,17 +62,18 @@ public class Lexeme extends AttributeValues {
 		pipe.write("</Lexeme>\n");
 	}
 
+    /**
+     * Constructs a lexeme from an XML node
+     * @param paradigm
+     * @param node
+     */
 	public Lexeme(Paradigm paradigm, Node node) {
 		super(node);
 		if (!node.getNodeName().equalsIgnoreCase("Lexeme")) throw new Error("Node '" + node.getNodeName() + "' but Lexeme expected");
 		this.paradigm = paradigm;
 		setStemCount(paradigm.getStems());
 
-        Node n = node.getAttributes().getNamedItem("Name");
-        if (n != null)
-            name = n.getTextContent().toLowerCase(); // TODO - vai šāds vispār te eksistē?
-
-        n = node.getAttributes().getNamedItem("Stem1");
+        Node n = node.getAttributes().getNamedItem("Stem1");
 		if (n != null)
 			stems.set(0, n.getTextContent().toLowerCase()); // TODO - supports case-sensitive lietām - saīsinājumiem utml
 		n = node.getAttributes().getNamedItem("Stem2");
@@ -88,6 +89,77 @@ public class Lexeme extends AttributeValues {
 			this.setID(Integer.parseInt(n.getTextContent()));
 	}
 
+    /**
+     * Constructs a lexeme from an XML node
+     * @param json
+     */
+    public Lexeme(JSONObject json, Lexicon lexicon) {
+        if (json.get("paradigm") == null)
+            throw new Error("Nav paradigmas leksēmai " + json.toJSONString());
+
+        int paradigmID = ((Long)json.get("paradigm")).intValue();
+        this.addAttribute(AttributeNames.i_ParadigmID, ((Long)json.get("paradigm")).toString());
+        Paradigm paradigm = lexicon.paradigmByID(paradigmID);
+        setStemCount(paradigm.getStems());
+
+        if (json.get("lexeme_id") != null) {
+            this.setID(((Long) json.get("lexeme_id")).intValue());
+            this.addAttribute(AttributeNames.i_LexemeID, ((Long)json.get("lexeme_id")).toString());
+        }
+        if (json.get("entry_id") != null)
+            this.addAttribute(AttributeNames.i_EntryID, ((Long)json.get("entry_id")).toString());
+        if (json.get("human_id") != null)
+            this.addAttribute(AttributeNames.i_EntryName, (String)json.get("human_id"));
+        if (json.get("lemma") != null)
+            this.addAttribute(AttributeNames.i_Lemma, (String)json.get("lemma"));
+        if (json.get("stem1") != null)
+            stems.set(0, (String)json.get("stem1"));
+        if (json.get("stem2") != null)
+            stems.set(1, (String)json.get("stem2"));
+        if (json.get("stem3") != null)
+            stems.set(2, (String)json.get("stem3"));
+        if (json.get("attributes") != null) {
+            JSONObject attrs = (JSONObject)json.get("attributes");
+            for (Object key : attrs.keySet()) {
+                Object value_obj = attrs.get(key);
+                String value;
+                if (value_obj instanceof String) {
+                    value = (String) value_obj;
+                } else {
+                    value = value_obj.toString();
+                }
+                this.addAttribute((String)key, value);
+            }
+        }
+
+        if (stems.get(0).isEmpty() && this.getValue(AttributeNames.i_Lemma) != null) {
+            String lemma = this.getValue(AttributeNames.i_Lemma);
+            try {
+                String stem = paradigm.getLemmaEnding().stem(lemma);
+                stems.set(0, stem);
+            } catch (Ending.WrongEndingException exc) {
+                // Check if maybe it's plurare tantum
+                AttributeValues filter = new AttributeValues();
+                filter.addAttribute(AttributeNames.i_Case, AttributeNames.v_Nominative);
+                filter.addAttribute(AttributeNames.i_Number, AttributeNames.v_Plural);
+                for (Ending e : paradigm.endings) {
+                    if (e.isMatchingWeak(filter)) {
+                        try {
+                            String stem = e.stem(lemma);
+                            stems.set(0, stem);
+                        } catch (Ending.WrongEndingException exc2) { /*pass*/ }
+                    }
+                }
+                if (stems.get(0).isEmpty()) {
+                    System.err.println(String.format("Leksēmai '%s' #%d galotne neatbilst paradigmai", lemma, this.id));
+                    this.describe();
+                }
+            }
+        }
+
+        paradigm.addLexeme(this);
+    }
+
 	@Override
 	@SuppressWarnings("unchecked")
 	public Object clone() {
@@ -98,7 +170,6 @@ public class Lexeme extends AttributeValues {
 			kopija.stems = (ArrayList<String>)stems.clone();
 			kopija.paradigm = (Paradigm)paradigm.clone();
 			kopija.id = id;
-            kopija.name = name;
 	        return kopija;
 		} catch (CloneNotSupportedException e) {
 			e.printStackTrace();
@@ -111,9 +182,9 @@ public class Lexeme extends AttributeValues {
 		stems.add(stem);
 	}
 
-	public Lexeme() {
-		// nekas arī nav jādara
-	}
+    public Lexeme() {
+        // nothing to do here
+    }
 
 	public int getID() {
 		return id;
