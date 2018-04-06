@@ -157,6 +157,12 @@ public class Lexeme extends AttributeValues {
             }
         }
 
+//        if (this.getValue(AttributeNames.i_Lemma).equalsIgnoreCase("celt")) {
+//            System.out.print(json.toJSONString());
+//            this.describe();
+//            System.out.print(stems);
+//        }
+
         paradigm.addLexeme(this);
     }
 
