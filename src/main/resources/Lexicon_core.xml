@@ -640,9 +640,6 @@
   </Paradigm>
   <Paradigm Stems="1" ID="6" LemmaEnding="51" Description="Lietvārds 3. deklinācija -us">
     <Attributes Vārdšķira="Lietvārds" Deklinācija="3" Dzimte="Vīriešu"/>
-    <Lexeme ID="8786" Stem1="bezliet">
-      <Attributes Lietvārda_tips="Sugas vārds" Pamatforma="bezlietus"/>
-    </Lexeme>
     <Lexeme ID="50853" Stem1="jēz">
       <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Jēzus"/>
     </Lexeme>

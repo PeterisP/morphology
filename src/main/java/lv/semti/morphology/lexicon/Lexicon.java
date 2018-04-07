@@ -28,8 +28,11 @@ import java.util.regex.Pattern;
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
 
+import javax.management.Attribute;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+
+import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -255,6 +258,16 @@ public class Lexicon {
         try {
             while ((json_row = reader.readLine()) != null) {
                 Lexeme l = new Lexeme((JSONObject) parser.parse(json_row), this);
+                if (l.isMatchingStrong(AttributeNames.i_Restrictions, AttributeNames.v_Regional) // Negribam apvidvārdus
+                        || l.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Pronoun)  // Vietniekvārdiem leksikonā ir labāki dati
+                        || l.isMatchingStrong("Kategorija", AttributeNames.v_Pronoun)  // Vietniekvārdiem leksikonā ir labāki dati
+                        || l.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Pronoun)  // Vietniekvārdiem leksikonā ir labāki dati
+                        || l.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Numeral)  // Skaitļavārdiem leksikonā ir labāki dati
+                        || l.isMatchingStrong("Kategorija", AttributeNames.v_Numeral)  // Skaitļavārdiem leksikonā ir labāki dati
+                        || l.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Numeral)  // Skaitļavārdiem leksikonā ir labāki dati
+                        ) {
+                    l.getParadigm().removeLexeme(l);
+                }
             }
         } catch (IOException e) {
             // TODO Auto-generated catch block

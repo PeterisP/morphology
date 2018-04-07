@@ -32,4 +32,15 @@ public class JSONLexiconTest {
             e.printStackTrace();
         }
     }
+
+    @Test
+    public void comparison() {
+        try {
+            Analyzer analyzer_xml = new Analyzer("Lexicon.xml");
+            Analyzer analyzer_json = new Analyzer("Lexicon_v2.xml");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
