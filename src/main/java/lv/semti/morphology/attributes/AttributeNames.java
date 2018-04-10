@@ -249,6 +249,7 @@ public class AttributeNames {
     public static final String v_Regional = "Apvidvārds";
 
     public static final String i_FormRestrictions = "Lieto tikai noteiktā formā/atvasinājumā";
+    public static final String i_EntryProperties = "Šķirkļavārda īpatnības";
 
 	// Vērtības, kuras īslaicīgi piekabina vārda objektam, lai GUI to īpaši atzīmētu
 	public static final String i_Recommended = "Rādīt zaļu - čunkera rekomendācija";

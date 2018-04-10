@@ -62,6 +62,9 @@
   </Paradigm>
   <Paradigm Stems="1" ID="21" LemmaEnding="954" Description="Apstākļa vārdi">
     <Attributes Vārdšķira="Apstākļa vārds" Pakāpe="Nepiemīt"/>
+    <Lexeme Stem1="vairāk">
+      <Attributes Apstākļa_vārda_tips="Mēra" Pakāpe="Pārākā" Pamatforma="daudz"/>
+    </Lexeme>
   </Paradigm>
   <Paradigm Stems="1" ID="22" LemmaEnding="1102" Description="Kārtas skaitļa vārdi">
     <Attributes Vārdšķira="Skaitļa vārds" Skaitļa_vārda_tips="Kārtas" Uzbūve="Vienkāršs" Noteiktība="Noteiktā"/>

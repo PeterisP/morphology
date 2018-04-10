@@ -459,12 +459,12 @@ public class MorphologyTest {
     public void ticket9() {
         // Ticket #9 - vienskaitlinieki, daudzskaitlinieki, ģenitīveņi
 
-        Word cukurs = locītājs.analyze("cukurs");
-        assertTrue(cukurs.isRecognized());
-        assertEquals("cukurs", cukurs.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+        Word turiene = locītājs.analyze("turiene");
+        assertTrue(turiene.isRecognized());
+        assertEquals("turiene", turiene.wordforms.get(0).getValue(AttributeNames.i_Lemma));
 
-        Word cukuri = locītājs.analyze("cukuriem");
-        assertFalse(cukuri.isRecognized());
+        Word turienēm = locītājs.analyze("turienēm");
+        assertFalse(turienēm.isRecognized());
 
         Word bikses = locītājs.analyze("bikses");
         assertTrue(bikses.isRecognized());
@@ -515,7 +515,7 @@ public class MorphologyTest {
         Word dodas = locītājs.analyze("dodas");
         assertTrue(dodas.isRecognized());
         assertEquals(AttributeNames.v_Active, dodas.wordforms.get(0).getValue(AttributeNames.i_Voice));
-        assertEquals("vmyipti30an", dodas.wordforms.get(0).getTag());
+        assertEquals("vmyip_130an", dodas.wordforms.get(0).getTag());
     }
 
 
@@ -2135,12 +2135,12 @@ public class MorphologyTest {
         Word w = locītājs.analyze("jaundzimušajam");
         assertTrue(w.isRecognized());
         assertEquals(AttributeNames.v_Adjective, w.wordforms.get(0).getValue(AttributeNames.i_PartOfSpeech));
-        assertEquals("jaundzimušais", w.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+        assertEquals("jaundzimis", w.wordforms.get(0).getValue(AttributeNames.i_Lemma));
 
         w = locītājs.analyze("jaundzimusī");
         assertTrue(w.isRecognized());
         assertEquals(AttributeNames.v_Adjective, w.wordforms.get(0).getValue(AttributeNames.i_PartOfSpeech));
-        assertEquals("jaundzimusī", w.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+        assertEquals("jaundzimusi", w.wordforms.get(0).getValue(AttributeNames.i_Lemma));
 
         w = locītājs.analyze("galvenajam");
         assertTrue(w.isRecognized());
@@ -2704,8 +2704,8 @@ public class MorphologyTest {
                 describe(new LinkedList<Wordform>(Arrays.asList(forma)));
             assertNotEquals("pēdējajam", forma.getToken()); // šo formu nedrīkst ģenerēt
         }
-        assertLemma("pēdējam", "pēdējs");
-        assertLemma("pēdējajam", "pēdējs");  // bet drīkst atpazīt
+        assertLemma("pēdējam", "pēdējais");
+        assertLemma("pēdējajam", "pēdējais");  // bet drīkst atpazīt
         assertLemma("vispēdējākais", "pēdējs");
         assertLemma("vispēdējākajam", "pēdējs");
     }

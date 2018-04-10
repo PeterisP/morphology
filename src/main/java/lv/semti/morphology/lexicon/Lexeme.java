@@ -138,17 +138,31 @@ public class Lexeme extends AttributeValues {
             addAttribute(AttributeNames.v_Kopdzimte, AttributeNames.v_Yes);
         }
 
+        // FIXME - šo principā būtu jāpārveido pirms datu nonākšanas Tēzaura DB
+        if (isMatchingStrong(AttributeNames.i_FormRestrictions, AttributeNames.v_Plural)) {
+            addAttribute(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum);
+            removeAttribute(AttributeNames.i_FormRestrictions);
+        }
+        if (isMatchingStrong(AttributeNames.i_FormRestrictions, AttributeNames.v_Singular)) {
+            addAttribute(AttributeNames.i_NumberSpecial, AttributeNames.v_SingulareTantum);
+            removeAttribute(AttributeNames.i_FormRestrictions);
+        }
+
         if (stems.get(0).isEmpty() && getValue(AttributeNames.i_Lemma) != null) {
             String lemma = getValue(AttributeNames.i_Lemma);
-            if (isMatchingStrong(AttributeNames.i_FormRestrictions, AttributeNames.v_Plural)) {
-                addAttribute(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum);
+            if (isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum)) {
                 constructor_try_plural();
             } else {
                 try {
                     String stem = paradigm.getLemmaEnding().stem(lemma);
                     stems.set(0, stem);
                 } catch (Ending.WrongEndingException exc) {
-                    constructor_try_plural();
+                    if (isMatchingStrong(AttributeNames.i_EntryProperties, AttributeNames.v_Plural)) {
+                        constructor_try_plural();
+                    } else {
+                        System.err.println(String.format("Leksēmai '%s' #%d galotne neatbilst paradigmai", lemma, this.id));
+                        this.describe();
+                    }
                 }
             }
         }

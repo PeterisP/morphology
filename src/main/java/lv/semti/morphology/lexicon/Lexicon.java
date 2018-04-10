@@ -255,8 +255,9 @@ public class Lexicon {
         try {
             while ((json_row = reader.readLine()) != null) {
                 Lexeme l = new Lexeme((JSONObject) parser.parse(json_row), this);
-                if (l.isMatchingStrong(AttributeNames.i_EntryName, "finanses")) {
-                    l.describe();
+                if (l.isMatchingStrong(AttributeNames.i_EntryName, "irt:1")
+                        || l.isMatchingStrong(AttributeNames.i_EntryName, "art:1")) {
+                    l.addAttribute(AttributeNames.i_Frequency, AttributeNames.v_Rare);
                 }
                 if (l.isMatchingStrong(AttributeNames.i_Restrictions, AttributeNames.v_Regional) // Negribam apvidvārdus
                         //FIXME - šitie visi principā ir jāpārskata un jārisina
@@ -270,6 +271,7 @@ public class Lexicon {
                         ) {
                     l.getParadigm().removeLexeme(l);
                 }
+
             }
         } catch (IOException e) {
             // TODO Auto-generated catch block
