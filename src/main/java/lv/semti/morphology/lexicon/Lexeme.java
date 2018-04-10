@@ -90,7 +90,7 @@ public class Lexeme extends AttributeValues {
 	}
 
     /**
-     * Constructs a lexeme from an XML node
+     * Constructs a lexeme from a JSON object
      * @param json
      */
     public Lexeme(JSONObject json, Lexicon lexicon) {
@@ -98,20 +98,20 @@ public class Lexeme extends AttributeValues {
             throw new Error("Nav paradigmas leksēmai " + json.toJSONString());
 
         int paradigmID = ((Long)json.get("paradigm")).intValue();
-        this.addAttribute(AttributeNames.i_ParadigmID, ((Long)json.get("paradigm")).toString());
-        Paradigm paradigm = lexicon.paradigmByID(paradigmID);
-        setStemCount(paradigm.getStems());
+        addAttribute(AttributeNames.i_ParadigmID, ((Long)json.get("paradigm")).toString());
+        paradigm = lexicon.paradigmByID(paradigmID);
+        setStemCount(this.paradigm.getStems());
 
         if (json.get("lexeme_id") != null) {
-            this.setID(((Long) json.get("lexeme_id")).intValue());
-            this.addAttribute(AttributeNames.i_LexemeID, ((Long)json.get("lexeme_id")).toString());
+            setID(((Long) json.get("lexeme_id")).intValue());
+            addAttribute(AttributeNames.i_LexemeID, ((Long)json.get("lexeme_id")).toString());
         }
         if (json.get("entry_id") != null)
-            this.addAttribute(AttributeNames.i_EntryID, ((Long)json.get("entry_id")).toString());
+            addAttribute(AttributeNames.i_EntryID, ((Long)json.get("entry_id")).toString());
         if (json.get("human_id") != null)
-            this.addAttribute(AttributeNames.i_EntryName, (String)json.get("human_id"));
+            addAttribute(AttributeNames.i_EntryName, (String)json.get("human_id"));
         if (json.get("lemma") != null)
-            this.addAttribute(AttributeNames.i_Lemma, (String)json.get("lemma"));
+            addAttribute(AttributeNames.i_Lemma, (String)json.get("lemma"));
         if (json.get("stem1") != null)
             stems.set(0, (String)json.get("stem1"));
         if (json.get("stem2") != null)
@@ -132,27 +132,23 @@ public class Lexeme extends AttributeValues {
             }
         }
 
-        if (stems.get(0).isEmpty() && this.getValue(AttributeNames.i_Lemma) != null) {
-            String lemma = this.getValue(AttributeNames.i_Lemma);
-            try {
-                String stem = paradigm.getLemmaEnding().stem(lemma);
-                stems.set(0, stem);
-            } catch (Ending.WrongEndingException exc) {
-                // Check if maybe it's plurare tantum
-                AttributeValues filter = new AttributeValues();
-                filter.addAttribute(AttributeNames.i_Case, AttributeNames.v_Nominative);
-                filter.addAttribute(AttributeNames.i_Number, AttributeNames.v_Plural);
-                for (Ending e : paradigm.endings) {
-                    if (e.isMatchingWeak(filter)) {
-                        try {
-                            String stem = e.stem(lemma);
-                            stems.set(0, stem);
-                        } catch (Ending.WrongEndingException exc2) { /*pass*/ }
-                    }
-                }
-                if (stems.get(0).isEmpty()) {
-                    System.err.println(String.format("Leksēmai '%s' #%d galotne neatbilst paradigmai", lemma, this.id));
-                    this.describe();
+        if (isMatchingStrong(AttributeNames.i_Gender, AttributeNames.v_Kopdzimte) &&
+                paradigm.getValue(AttributeNames.i_Gender) != null) {
+            removeAttribute(AttributeNames.i_Gender);
+            addAttribute(AttributeNames.v_Kopdzimte, AttributeNames.v_Yes);
+        }
+
+        if (stems.get(0).isEmpty() && getValue(AttributeNames.i_Lemma) != null) {
+            String lemma = getValue(AttributeNames.i_Lemma);
+            if (isMatchingStrong(AttributeNames.i_FormRestrictions, AttributeNames.v_Plural)) {
+                addAttribute(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum);
+                constructor_try_plural();
+            } else {
+                try {
+                    String stem = paradigm.getLemmaEnding().stem(lemma);
+                    stems.set(0, stem);
+                } catch (Ending.WrongEndingException exc) {
+                    constructor_try_plural();
                 }
             }
         }
@@ -166,7 +162,30 @@ public class Lexeme extends AttributeValues {
         paradigm.addLexeme(this);
     }
 
-	@Override
+    private void constructor_try_plural() {
+        // Check if maybe it's plurare tantum
+        String lemma = this.getValue(AttributeNames.i_Lemma);
+
+        AttributeValues filter = new AttributeValues();
+        filter.addAttribute(AttributeNames.i_Case, AttributeNames.v_Nominative);
+        filter.addAttribute(AttributeNames.i_Number, AttributeNames.v_Plural);
+        for (Ending e : paradigm.endings) {
+            if (e.isMatchingWeak(filter)) {
+                try {
+                    String stem = e.stem(lemma);
+                    stems.set(0, stem);
+                } catch (Ending.WrongEndingException exc2) { /*pass*/ }
+            }
+        }
+        if (stems.get(0).isEmpty()) {
+            System.err.println(String.format("Leksēmai '%s' #%d galotne neatbilst paradigmai", lemma, this.id));
+            this.describe();
+        } else {
+            addAttribute(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum);
+        }
+    }
+
+    @Override
 	@SuppressWarnings("unchecked")
 	public Object clone() {
 		// uztaisa leksēmas kopiju, kurai var mainīt īpašības, nenočakarējot sākotnējo leksēmu DB.

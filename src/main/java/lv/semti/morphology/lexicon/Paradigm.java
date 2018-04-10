@@ -217,17 +217,18 @@ public class Paradigm extends AttributeValues {
 		}
 	}
 
-	public void removeLexeme (Lexeme leksēma) {
+	public void removeLexeme (Lexeme lexeme) {
 		// ja nebūs tādas leksēmas, tad nekas arī nenotiks
-		lexemes.remove(leksēma);
-		lexemesByID.remove(leksēma.getID());
+		lexemes.remove(lexeme);
+		lexemesByID.remove(lexeme.getID());
 		for (int i = 0; i < stems; i++) {
-			ArrayList<Lexeme> esošās = lexemesByStem.get(i).get(leksēma.getStem(i));
-			if (esošās != null) {
-				esošās.remove(leksēma);
-				if (esošās.size()==0) lexemesByStem.get(i).remove(leksēma.getStem(i));
+			ArrayList<Lexeme> matchingstems = lexemesByStem.get(i).get(lexeme.getStem(i));
+			if (matchingstems != null) {
+				matchingstems.remove(lexeme);
+				if (matchingstems.size()==0) lexemesByStem.get(i).remove(lexeme.getStem(i));
 			}
 		}
+		this.lexicon.hardcodedForms.remove(lexeme.getValue(AttributeNames.i_Lemma), lexeme);
 	}
 
 	public void addEnding (Ending ending) {

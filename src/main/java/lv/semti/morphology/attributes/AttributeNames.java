@@ -248,6 +248,8 @@ public class AttributeNames {
     public static final String i_Restrictions = "Lietojuma ierobežojumi";
     public static final String v_Regional = "Apvidvārds";
 
+    public static final String i_FormRestrictions = "Lieto tikai noteiktā formā/atvasinājumā";
+
 	// Vērtības, kuras īslaicīgi piekabina vārda objektam, lai GUI to īpaši atzīmētu
 	public static final String i_Recommended = "Rādīt zaļu - čunkera rekomendācija";
 	public static final String i_Tagged = "Tagera rekomendācija";

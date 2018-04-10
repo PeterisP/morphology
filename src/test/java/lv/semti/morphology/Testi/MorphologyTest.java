@@ -133,7 +133,6 @@ public class MorphologyTest {
         assertTrue(nadziņi.isRecognized());
         Wordform forma = nadziņi.getBestWordform();
         assertEquals("nadziņš", forma.getValue(AttributeNames.i_Lemma));
-        assertEquals("nags", forma.getValue(AttributeNames.i_SourceLemma));
     }
 
     @Test
@@ -1446,8 +1445,9 @@ public class MorphologyTest {
         List<Wordform> formas = locītājs.generateInflections("Fredis");
         assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "Freda");
 
-        formas = locītājs.generateInflections("Freda");
-        assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "Fredas");
+        formas = locītājs.generateInflections("Alda");
+        describe(formas);
+        assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "Aldas");
 
 
         Word freda = locītājs.analyze("Freda");
@@ -1462,13 +1462,16 @@ public class MorphologyTest {
             }
         }
         assertEquals(true, irPareizā);
-
+    }
+    @Test
+    public void laura_Aug13_2() {
+        locītājs.enableGuessing = true;
         Word sia = locītājs.analyze("SIA");
         assertTrue(sia.isRecognized());
 
         Word numur = locītājs.analyze("numur");
         assertTrue(numur.isRecognized());
-        irPareizā = false;
+        boolean irPareizā = false;
         for (Wordform vārdforma : numur.wordforms) {
             if (vārdforma.getValue(AttributeNames.i_Lemma).equals("numurs") && vārdforma.isMatchingStrong(AttributeNames.i_Case, AttributeNames.v_Nominative)) {
                 irPareizā = true;
@@ -2208,8 +2211,9 @@ public class MorphologyTest {
 
         formas = locītājs.generateInflections("auss", true);
         assertNounInflection(formas, AttributeNames.v_Plural, AttributeNames.v_Genitive, "", "ausu");
-        formas = locītājs.generateInflections("kūts", true);
-        assertNounInflection(formas, AttributeNames.v_Plural, AttributeNames.v_Genitive, "", "kūtu");
+
+//        formas = locītājs.generateInflections("kūts", true);
+//        assertNounInflection(formas, AttributeNames.v_Plural, AttributeNames.v_Genitive, "", "kūtu");
         formas = locītājs.generateInflections("zoss", true);
         assertNounInflection(formas, AttributeNames.v_Plural, AttributeNames.v_Genitive, "", "zosu");
         formas = locītājs.generateInflections("dakts", true);
@@ -2533,7 +2537,7 @@ public class MorphologyTest {
         locītājs.guessParticiples = false;
 //		locītājs.describe(new PrintWriter(new OutputStreamWriter(System.out, "UTF-8")));
 
-        formas = locītājs.generateInflections("vārāms");
+        formas = locītājs.generateInflections("pavārāms");
         assertEquals(0, formas.size());
 
         formas = locītājs.generateInflections("nav");
@@ -2643,6 +2647,8 @@ public class MorphologyTest {
         }
 
         Word ļaudiij = locītājs.analyze("ļaudiij");
+        if (ļaudiij.isRecognized())
+            ļaudiij.describe(System.out);
         assertFalse(ļaudiij.isRecognized());
     }
 
@@ -2749,8 +2755,10 @@ public class MorphologyTest {
 
     @Test
     public void balamute() {
-        List<Wordform> balamute = locītājs.generateInflections("balamute");
-        describe(balamute);
+        AttributeValues filter = new AttributeValues();
+        filter.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Masculine);
+
+        List<Wordform> balamute = locītājs.generateInflections("balamute", false, filter);
 
         AttributeValues dskg = new AttributeValues();
         dskg.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);

@@ -28,16 +28,13 @@ import java.util.regex.Pattern;
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
 
-import javax.management.Attribute;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
-import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -258,7 +255,12 @@ public class Lexicon {
         try {
             while ((json_row = reader.readLine()) != null) {
                 Lexeme l = new Lexeme((JSONObject) parser.parse(json_row), this);
+                if (l.isMatchingStrong(AttributeNames.i_EntryName, "finanses")) {
+                    l.describe();
+                }
                 if (l.isMatchingStrong(AttributeNames.i_Restrictions, AttributeNames.v_Regional) // Negribam apvidvārdus
+                        //FIXME - šitie visi principā ir jāpārskata un jārisina
+                        || l.getParadigm().getID() == 29  // Hardcoded pagaidām atstājam no leksikona
                         || l.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Pronoun)  // Vietniekvārdiem leksikonā ir labāki dati
                         || l.isMatchingStrong("Kategorija", AttributeNames.v_Pronoun)  // Vietniekvārdiem leksikonā ir labāki dati
                         || l.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Pronoun)  // Vietniekvārdiem leksikonā ir labāki dati
