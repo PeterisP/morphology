@@ -186,12 +186,13 @@ public class Paradigm extends AttributeValues {
 		if (lexeme.getID() == 0) {
 			lexeme.setID( lexicon.newLexemeID());
 		} else {
-			Lexeme duplicatetest = lexemesByID.get(lexeme.getID());
-			if (duplicatetest != null) {
-				System.err.println("Lexemes with duplicate IDs:");
-				duplicatetest.describe(new PrintWriter(System.err));
-				lexeme.describe(new PrintWriter(System.err));
-			}
+// TODO - principā jau šī pārbaude ir OK
+//			Lexeme duplicatetest = lexemesByID.get(lexeme.getID());
+//			if (duplicatetest != null) {
+//				System.err.println("Lexemes with duplicate IDs:");
+//				duplicatetest.describe(new PrintWriter(System.err));
+//				lexeme.describe(new PrintWriter(System.err));
+//			}
 		}
 		lexemesByID.put(lexeme.getID(), lexeme);
 

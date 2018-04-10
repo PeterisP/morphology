@@ -139,7 +139,8 @@ public class Lexeme extends AttributeValues {
         }
 
         // FIXME - šo principā būtu jāpārveido pirms datu nonākšanas Tēzaura DB
-        if (isMatchingStrong(AttributeNames.i_FormRestrictions, AttributeNames.v_Plural)) {
+        if (isMatchingStrong(AttributeNames.i_FormRestrictions, AttributeNames.v_Plural)
+                && paradigm.getValue(AttributeNames.i_Konjugaacija) == null) {
             addAttribute(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum);
             removeAttribute(AttributeNames.i_FormRestrictions);
         }

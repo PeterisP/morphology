@@ -2335,14 +2335,14 @@ public class MorphologyTest {
      * 2014.08.25 Bug with verb stem changes
      */
     public void lecdams() {
-        Word w = locītājs.analyze("lekdams");
+        Word w = locītājs.analyze("lēkdams");
         assertTrue(w.isRecognized());
-        assertEquals("lekt", w.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+        assertEquals("lēkt", w.wordforms.get(0).getValue(AttributeNames.i_Lemma));
 
-        w = locītājs.analyze("lecdams");
+        w = locītājs.analyze("lēcdams");
         assertFalse(w.isRecognized());
 
-        List<Wordform> formas = locītājs.generateInflections("lekt", false);
+        List<Wordform> formas = locītājs.generateInflections("lēkt", false);
         AttributeValues testset = new AttributeValues();
         testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
         testset.addAttribute(AttributeNames.i_Izteiksme, AttributeNames.v_Participle);
@@ -2350,7 +2350,7 @@ public class MorphologyTest {
         testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Nominative);
         testset.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Masculine);
         testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
-        assertInflection(formas, testset, "lekdams");
+        assertInflection(formas, testset, "lēkdams");
     }
 
     @Test
@@ -2706,8 +2706,8 @@ public class MorphologyTest {
                 describe(new LinkedList<Wordform>(Arrays.asList(forma)));
             assertNotEquals("pēdējajam", forma.getToken()); // šo formu nedrīkst ģenerēt
         }
-        assertLemma("pēdējam", "pēdējais");
-        assertLemma("pēdējajam", "pēdējais");  // bet drīkst atpazīt
+        assertLemma("pēdējam", "pēdējs");
+        assertLemma("pēdējajam", "pēdējs");  // bet drīkst atpazīt
         assertLemma("vispēdējākais", "pēdējs");
         assertLemma("vispēdējākajam", "pēdējs");
     }
