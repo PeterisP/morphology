@@ -245,11 +245,19 @@ public class AttributeNames {
     public static final String i_Frequency = "Biežums";
 	public static final String v_Rare = "Reti";
 
-    public static final String i_Restrictions = "Lietojuma ierobežojumi";
+    public static final String i_Usage = "Lietojums";
     public static final String v_Regional = "Apvidvārds";
 
     public static final String i_FormRestrictions = "Lieto tikai noteiktā formā/atvasinājumā";
     public static final String i_EntryProperties = "Šķirkļavārda īpatnības";
+    public static final String i_TezaursCategory = "Kategorija";
+    public static final String i_Domain = "Nozare";
+
+    public static final String i_Other = "Citi";
+    public static final String i_ProperNounType = "Īpašvārda veids";
+    public static final String v_GivenName = "Priekšvārds";
+    public static final String v_Surname = "Uzvārds";
+    public static final String v_Toponym = "Vietvārds";
 
 	// Vērtības, kuras īslaicīgi piekabina vārda objektam, lai GUI to īpaši atzīmētu
 	public static final String i_Recommended = "Rādīt zaļu - čunkera rekomendācija";

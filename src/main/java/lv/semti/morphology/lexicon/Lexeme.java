@@ -149,6 +149,42 @@ public class Lexeme extends AttributeValues {
             removeAttribute(AttributeNames.i_FormRestrictions);
         }
 
+        if (getValue(AttributeNames.i_TezaursCategory) != null &&
+                (getValue(AttributeNames.i_TezaursCategory).equalsIgnoreCase(paradigm.getValue(AttributeNames.i_PartOfSpeech)) // Lietvārds
+                || getValue(AttributeNames.i_TezaursCategory).equalsIgnoreCase(paradigm.getValue(AttributeNames.i_ResidualType)) // Vārds svešvalodā
+                || getValue(AttributeNames.i_TezaursCategory).equalsIgnoreCase(paradigm.getValue(AttributeNames.i_Declension)) // Ģenitīvenis
+                )) {
+            removeAttribute(AttributeNames.i_TezaursCategory);
+        }
+        if (isMatchingStrong(AttributeNames.i_TezaursCategory, "[\"Atgriezenisks darbības vārds\",\"Darbības vārds\"]")
+                && paradigm.isMatchingStrong(AttributeNames.i_Reflexive, AttributeNames.v_Yes)) {
+            removeAttribute(AttributeNames.i_TezaursCategory);
+        }
+        if (isMatchingStrong(AttributeNames.i_Other, "Refleksīvs")
+                && paradigm.isMatchingStrong(AttributeNames.i_Reflexive, AttributeNames.v_Yes)) {
+            removeAttribute(AttributeNames.i_Other);
+        }
+        if (isMatchingStrong(AttributeNames.i_TezaursCategory, "[\"Darbības vārds\",\"Tiešs darbības vārds\"]")
+                && paradigm.isMatchingStrong(AttributeNames.i_Reflexive, AttributeNames.v_No)) {
+            removeAttribute(AttributeNames.i_TezaursCategory);
+        }
+        if (isMatchingStrong(AttributeNames.i_Other, AttributeNames.v_Toponym)) {
+            addAttribute(AttributeNames.i_ProperNounType, getValue(AttributeNames.i_Other));
+            addAttribute(AttributeNames.i_NounType, AttributeNames.v_ProperNoun);
+            removeAttribute(AttributeNames.i_Other);
+        }
+        if (isMatchingStrong(AttributeNames.i_Domain, "Vēsturisks vietvārds")) {
+            removeAttribute(AttributeNames.i_Domain);
+        }
+
+        if (paradigm.getID() == 49) {
+            if (isMatchingStrong(AttributeNames.i_Other, "Nelokāms vārds"))
+                removeAttribute(AttributeNames.i_Other);
+
+            if (isMatchingStrong("Locīšanas īpatnības", "Sastingusi forma"))
+                removeAttribute("Locīšanas īpatnības");
+        }
+
         if (stems.get(0).isEmpty() && getValue(AttributeNames.i_Lemma) != null) {
             String lemma = getValue(AttributeNames.i_Lemma);
             if (isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum)) {

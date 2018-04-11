@@ -47,7 +47,7 @@ import org.json.simple.parser.ParseException;
  *
  */
 public class Lexicon {
-	public final static String DEFAULT_LEXICON_FILE = "Lexicon.xml";
+	public final static String DEFAULT_LEXICON_FILE = "Lexicon_v2.xml";
 	public static int proper_name_frequency_floor = 200; // When loading proper name lexemes, entries that have a frequency ("Skaits") field will be ignored and not loaded
 
 	protected String filename;
@@ -259,7 +259,7 @@ public class Lexicon {
                         || l.isMatchingStrong(AttributeNames.i_EntryName, "art:1")) {
                     l.addAttribute(AttributeNames.i_Frequency, AttributeNames.v_Rare);
                 }
-                if (l.isMatchingStrong(AttributeNames.i_Restrictions, AttributeNames.v_Regional) // Negribam apvidvārdus
+                if (l.isMatchingStrong(AttributeNames.i_Usage, AttributeNames.v_Regional) // Negribam apvidvārdus
                         //FIXME - šitie visi principā ir jāpārskata un jārisina
                         || l.getParadigm().getID() == 29  // Hardcoded pagaidām atstājam no leksikona
                         || l.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Pronoun)  // Vietniekvārdiem leksikonā ir labāki dati

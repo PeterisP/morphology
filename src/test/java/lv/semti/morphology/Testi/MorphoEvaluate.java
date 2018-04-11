@@ -43,6 +43,7 @@ public class MorphoEvaluate {
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 		try {
+//			locītājs = new Analyzer("Lexicon.xml", false);
 			locītājs = new Analyzer(false);
 		} catch(Exception e) {
 			e.printStackTrace();

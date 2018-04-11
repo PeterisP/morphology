@@ -52,15 +52,23 @@ public class TagSetTest {
 	
 	@Test
 	public void leksikons() {
-		TagSet īpv = TagSet.getTagSet();
-		
-		for (Paradigm vārdgrupa : locītājs.paradigms) {
-			assertEquals(String.format("Nevalidējas vārdgrupa %d", vārdgrupa.getID()), null, īpv.validate(vārdgrupa, "LV"));
-			for (Lexeme leksēma : vārdgrupa.lexemes)
-				assertEquals(String.format("Nevalidējas leksēma %d", leksēma.getID()),  null, īpv.validate(leksēma, "LV"));
-			for (Ending ending : vārdgrupa.endings)
-				assertEquals(String.format("Nevalidējas galotne %d", ending.getID()), null, īpv.validate(ending, "LV"));			
+		TagSet tagset = TagSet.getTagSet();
+
+		int lexeme_errors = 0;
+		for (Paradigm paradigm : locītājs.paradigms) {
+			assertEquals(String.format("Nevalidējas vārdgrupa %d", paradigm.getID()), null, tagset.validate(paradigm, "LV"));
+			for (Lexeme lexeme : paradigm.lexemes) {
+			    String error = tagset.validate(lexeme, "LV");
+			    if (error != null) {
+			        System.err.println(String.format("Nevalidējas leksēma %d - %s", lexeme.getID(), error));
+			        lexeme.describe();
+			        lexeme_errors ++;
+                }
+            }
+			for (Ending ending : paradigm.endings)
+				assertEquals(String.format("Nevalidējas galotne %d", ending.getID()), null, tagset.validate(ending, "LV"));
 		}
+		assertEquals("Not all lexemes validated!", 0, lexeme_errors);
 	}
 	
 	@Test

@@ -101,7 +101,7 @@ public class MorphologyTest {
     @BeforeClass
     public static void setUpBeforeClass() {
         try {
-            locītājs = new Analyzer("Lexicon_v2.xml", false);
+            locītājs = new Analyzer(false);
         } catch (Exception e) {
             e.printStackTrace();
         }

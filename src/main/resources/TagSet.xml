@@ -421,7 +421,7 @@
 </Attribute>
 
 <Attribute LV="Stils" EN="Style">
-	<Value LV="Nievīga ekspresīvā nokrāsa" EN="Derogatory"/>
+	<Value LV="Nievājoša ekspresīvā nokrāsa" EN="Derogatory"/>
 	<Value LV="Ironiska ekspresīvā nokrāsa" EN="Ironic"/>
 	<Value LV="Humoristiska ekspresīvā nokrāsa" EN="Jocular"/>
 	<Value LV="Poētiska stilistiskā nokrāsa" EN="Poetic"/>
@@ -481,8 +481,9 @@
 	<Value LV="Aviācija" EN="Aviation"/>
 	<Value LV="Jūrniecība" EN="Marine"/>
 	<Value LV="Attiecas uz kapitālistisko iekārtu, kapitālistisko sabiedrību" EN="Capitalism"/>
-</Attribute>
 
+	<Value LV="Aeronautika" EN="Aeronautics"/>
+</Attribute>
 
 <FreeAttribute LV="Vārdgrupas nr" EN="Paradigm ID"/>
 <FreeAttribute LV="Leksēmas nr" EN="Lexeme ID"/>
@@ -496,5 +497,29 @@
 <FreeAttribute LV="Locīšana" EN="Inflection"/> 
 <FreeAttribute LV="Valoda" EN="Language"/> 
 <FreeAttribute LV="Skaits" EN="Frequency"/> 
+
+<!-- tezaurs.lv datu īpatnības -->
+<FreeAttribute LV="FreeText" EN="FreeText"/> 
+<FreeAttribute LV="Leftovers" EN="Leftovers"/> 
+<FreeAttribute LV="Pronunciation" EN="Pronunciation"/> 
+<FreeAttribute LV="Šķirkļa ID" EN="Entry ID"/>
+<FreeAttribute LV="Šķirkļa cilvēklasāmais ID" EN="Entry name"/>
+<FreeAttribute LV="Parasti lieto noteiktā formā/atvasinājumā" EN="Usually used in"/>
+<FreeAttribute LV="Locīt kā" EN="Inflect like"/>
+<FreeAttribute LV="Priedēklis" EN="Prefix"/> 
+
+<Attribute LV="Šķirkļavārda īpatnības" EN="Entry properties">
+	<Value LV="Daudzskaitlis" EN="Plural"/>
+	<Value LV="Vienskaitlis" EN="Singular"/>
+</Attribute>
+<Attribute LV="Locīšanas īpatnības" EN="Inflection properties">
+	<Value LV="[&quot;Otrās un trešās konjugācijas paralelitāte&quot;,&quot;Paralēlās formas&quot;]" EN="Plural"/>
+</Attribute>
+
+<Attribute LV="Citi" EN="Other">
+	<Value LV="Neviennozīmīga paradigma" EN="Ambiguous paradigm"/>
+	<Value LV="Oriģinālā gramatika satur karodziņos neatšifrētas nianses" EN="Freetext contains items not converted to attributes"/>
+</Attribute>
+
 
 </TagSet>
