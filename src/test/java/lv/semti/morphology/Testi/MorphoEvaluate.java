@@ -104,10 +104,10 @@ public class MorphoEvaluate {
 		List<String> capitalization_mistakes = new LinkedList<String>();
 		
 		for (Etalons e : etaloni) {
-		    if (e.tag.startsWith("np") && !e.lemma.matches("(?U)^\\p{Lu}[\\p{Ll}-]*$"))
+		    if (e.tag.startsWith("np") && !e.lemma.matches("(?U)^\\p{Lu}[\\p{Alnum}-.]*$"))
 		        capitalization_mistakes.add(String.format("Īpašvārda lemma nav ar lielo burtu: %s\t%s", e.lemma, e.id));
 
-            if (e.tag.startsWith("n") && !e.tag.startsWith("np") && !e.lemma.matches("(?U)^[\\p{Ll}-]+$"))
+            if (e.tag.startsWith("n") && !e.tag.startsWith("np") && !e.lemma.matches("(?U)^[\\p{Ll}-.]+$"))
                 capitalization_mistakes.add(String.format("Sugasvārda lemma nav ar mazajiem burtiem: %s\t%s", e.lemma, e.id));
 
 			Word w = locītājs.analyze(e.wordform);

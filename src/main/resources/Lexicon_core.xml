@@ -3604,11 +3604,11 @@
     <Lexeme ID="23879" Stem1="do" Stem2="dod" Stem3="dev">
       <Attributes Konjugācija="Nekārtns" Transitivitāte="Pārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="dot"/>
     </Lexeme>
-    <Lexeme ID="27427" Stem1="beig" Stem2="beidz" Stem3="beidz">
-      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Fāzes" Pamatforma="beigt"/>
-    </Lexeme>
     <Lexeme ID="24507" Stem1="zvel" Stem2="zveļ" Stem3="zvēl">
       <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="zvelt"/>
+    </Lexeme>
+    <Lexeme ID="27427" Stem1="beig" Stem2="beidz" Stem3="beidz">
+      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Fāzes" Pamatforma="beigt"/>
     </Lexeme>
     <Lexeme ID="27428" Stem1="sāk" Stem2="sāk" Stem3="sāk">
       <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Fāzes" Pamatforma="sākt"/>
