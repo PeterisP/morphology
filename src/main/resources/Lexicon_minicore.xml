@@ -8,9 +8,11 @@
   </Paradigm>
   <Paradigm Stems="1" ID="3" LemmaEnding="27" Description="Lietvārds 2. deklinācija -is">
     <Attributes Vārdšķira="Lietvārds" Deklinācija="2" Dzimte="Vīriešu"/>
+    <Lexeme Stem1="kvies"/>
   </Paradigm>
   <Paradigm Stems="1" ID="4" LemmaEnding="39" Description="Lietvārds 2. deklinācija -s (piem, mēness)">
     <Attributes Vārdšķira="Lietvārds" Deklinācija="2" Dzimte="Vīriešu"/>
+    <Lexeme Stem1="mēnes"/>
   </Paradigm>
   <Paradigm Stems="1" ID="5" LemmaEnding="1211" Description="Lietvārds 2. deklinācija - suns">
     <Attributes Vārdšķira="Lietvārds" Deklinācija="2" Dzimte="Vīriešu"/>
@@ -41,6 +43,7 @@
   </Paradigm>
   <Paradigm Stems="1" ID="12" LemmaEnding="111" Description="Nelokāmie lietvārdi">
     <Attributes Vārdšķira="Lietvārds" Deklinācija="Nepiemīt"/>
+    <Lexeme Stem1="video"/>
   </Paradigm>
   <Paradigm Stems="1" ID="13" LemmaEnding="135" Description="Īpašības vārdi ar -s">
     <Attributes Vārdšķira="Īpašības vārds"/>
@@ -4013,121 +4016,37 @@
   </Paradigm>
   <Paradigm Stems="1" ID="36" LemmaEnding="2091" Description="Saīsinājumi (t.i. utt. u.c.)" AllowedGuessEndings="!">
     <Lexeme Stem1="u.c."/>
-    <Lexeme Stem1="utt."/>
     <Lexeme Stem1="u.t.t."/>
     <Lexeme Stem1="u.tml."/>
     <Lexeme Stem1="vai tml."/>
     <Lexeme Stem1="t.i."/>
-    <Lexeme Stem1="sk."/>
-    <Lexeme Stem1="sal."/>
     <Lexeme Stem1="š.g."/>
-    <Lexeme Stem1="plkst."/>
-    <Lexeme Stem1="nr."/>
-    <Lexeme Stem1="f-ja"/>
     <Lexeme Stem1="v.i."/>
-    <Lexeme Stem1="vietn."/>
     <Lexeme Stem1="n.b."/>
     <Lexeme Stem1="p.s."/>
     <Lexeme Stem1="a.god."/>
-    <Lexeme Stem1="a.k."/>
     <Lexeme Stem1="a.l."/>
-    <Lexeme Stem1="apg."/>
-    <Lexeme Stem1="apm."/>
-    <Lexeme Stem1="apr."/>
-    <Lexeme Stem1="a/s"/>
-    <Lexeme Stem1="att."/>
-    <Lexeme Stem1="aug."/>
-    <Lexeme Stem1="b-ba"/>
-    <Lexeme Stem1="bij."/>
-    <Lexeme Stem1="bulv."/>
-    <Lexeme Stem1="cet."/>
-    <Lexeme Stem1="cien."/>
     <Lexeme Stem1="dok."/>
     <Lexeme Stem1="dr."/>
     <Lexeme Stem1="dr. h."/>
     <Lexeme Stem1="dr. habil."/>
-    <Lexeme Stem1="dsk."/>
-    <Lexeme Stem1="dz."/>
-    <Lexeme Stem1="dzīv."/>
-    <Lexeme Stem1="eks."/>
-    <Lexeme Stem1="febr."/>
     <Lexeme Stem1="g."/>
-    <Lexeme Stem1="gab."/>
-    <Lexeme Stem1="galv."/>
-    <Lexeme Stem1="god."/>
-    <Lexeme Stem1="gr."/>
-    <Lexeme Stem1="gs."/>
     <Lexeme Stem1="gs.b."/>
     <Lexeme Stem1="gs.s."/>
-    <Lexeme Stem1="iec."/>
-    <Lexeme Stem1="iedz."/>
-    <Lexeme Stem1="iesk."/>
-    <Lexeme Stem1="inv."/>
-    <Lexeme Stem1="inž."/>
     <Lexeme Stem1="īst.loc."/>
-    <Lexeme Stem1="janv."/>
-    <Lexeme Stem1="jaun."/>
-    <Lexeme Stem1="jūn."/>
-    <Lexeme Stem1="jūl."/>
-    <Lexeme Stem1="kl."/>
     <Lexeme Stem1="kor.loc."/>
-    <Lexeme Stem1="lauk."/>
-    <Lexeme Stem1="līn."/>
-    <Lexeme Stem1="lp."/>
-    <Lexeme Stem1="lpp."/>
     <Lexeme Stem1="ļ.cien."/>
-    <Lexeme Stem1="milj."/>
-    <Lexeme Stem1="mljrd."/>
     <Lexeme Stem1="neiesk."/>
-    <Lexeme Stem1="nod."/>
-    <Lexeme Stem1="nov."/>
-    <Lexeme Stem1="okt."/>
-    <Lexeme Stem1="oriģ."/>
-    <Lexeme Stem1="p."/>
-    <Lexeme Stem1="pag."/>
-    <Lexeme Stem1="pārb."/>
-    <Lexeme Stem1="piel."/>
-    <Lexeme Stem1="piem."/>
-    <Lexeme Stem1="piez."/>
-    <Lexeme Stem1="pils."/>
     <Lexeme Stem1="p.k."/>
     <Lexeme Stem1="p.n."/>
     <Lexeme Stem1="poz."/>
-    <Lexeme Stem1="pr-js"/>
-    <Lexeme Stem1="pr-ks"/>
-    <Lexeme Stem1="prof."/>
-    <Lexeme Stem1="raj."/>
-    <Lexeme Stem1="resp."/>
     <Lexeme Stem1="sab-ba"/>
-    <Lexeme Stem1="sant."/>
-    <Lexeme Stem1="sast."/>
-    <Lexeme Stem1="sāk."/>
-    <Lexeme Stem1="sēj."/>
-    <Lexeme Stem1="sept."/>
-    <Lexeme Stem1="siev."/>
-    <Lexeme Stem1="spec."/>
-    <Lexeme Stem1="tab."/>
     <Lexeme Stem1="t.p."/>
     <Lexeme Stem1="t.s."/>
     <Lexeme Stem1="t.sk."/>
-    <Lexeme Stem1="tūkst."/>
-    <Lexeme Stem1="uzņ."/>
-    <Lexeme Stem1="vad."/>
-    <Lexeme Stem1="val."/>
     <Lexeme Stem1="va/s"/>
-    <Lexeme Stem1="vec."/>
-    <Lexeme Stem1="visp."/>
     <Lexeme Stem1="vīr."/>
-    <Lexeme Stem1="vsk."/>
-    <Lexeme Stem1="v/u"/>
-    <Lexeme Stem1="zīm."/>
-    <Lexeme Stem1="kr."/>
-    <Lexeme Stem1="k-gs"/>
-    <Lexeme Stem1="k-dze"/>
-    <Lexeme Stem1="tālr."/>
     <Lexeme Stem1="rēķ."/>
-    <Lexeme Stem1="pl."/>
-    <Lexeme Stem1="latv."/>
     <Lexeme Stem1="sv."/>
     <Lexeme Stem1="SIA"/>
     <Lexeme Stem1="AS"/>
@@ -4142,13 +4061,9 @@
     <Lexeme Stem1="AB"/>
     <Lexeme Stem1="b-bas"/>
     <Lexeme Stem1="kult."/>
-    <Lexeme Stem1="fak."/>
     <Lexeme Stem1="izglīt."/>
-    <Lexeme Stem1="sav."/>
     <Lexeme Stem1="veic."/>
-    <Lexeme Stem1="nac."/>
     <Lexeme Stem1="lauksaimn."/>
-    <Lexeme Stem1="mūz."/>
     <Lexeme Stem1="zemn."/>
     <Lexeme Stem1="PSKP"/>
     <Lexeme Stem1="KGB"/>
@@ -4165,7 +4080,6 @@
     <Lexeme Stem1="IT"/>
     <Lexeme Stem1="TV"/>
     <Lexeme Stem1="ISO"/>
-    <Lexeme Stem1="km"/>
     <Lexeme Stem1="m.g."/>
     <Lexeme Stem1="ASV"/>
     <Lexeme Stem1="UNESCO"/>
@@ -4426,5 +4340,7 @@
 <Paradigm Stems="1" ID="48" Description="Lietvārdi, 2. deklinācija, vīriešu dzimte, galotne -is bez mijas (tētis)">
 </Paradigm>
 <Paradigm Stems="1" ID="49" Description="Ģenitīveņi (augstpapēžu, milzu)">
+</Paradigm>
+<Paradigm Stems="3" ID="50" Description="būt, nebūt, pabūt, sabūt">
 </Paradigm>
 </Lexicon>

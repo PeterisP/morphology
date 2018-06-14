@@ -330,6 +330,7 @@ public class MorphologyTest {
         assertFalse(w.isRecognized());
     }
 
+    @Ignore("Ir zināma problēma, ka Tēzaurs.lv JSON eksportā ir vairākas morfo-leksēmas kas nāk no vienas tēzaurs-leksēmas un tādēļ ir ar vienādu leksēmas ID")
     @Test
     public void numuri() {
         // integritāte - vai nav dubulti numuri
@@ -1446,7 +1447,7 @@ public class MorphologyTest {
         assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "Freda");
 
         formas = locītājs.generateInflections("Alda");
-        describe(formas);
+//        describe(formas);
         assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "Aldas");
 
 
