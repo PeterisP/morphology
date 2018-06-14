@@ -862,7 +862,9 @@ public class Analyzer extends Lexicon {
             // Ja vārds ir hardcoded, tad salasam visas hardcoded formas ar attiecīgo lemmu un tās arī atgriežam
             Ending ending = lexeme.getParadigm().getLemmaEnding();
             for (Lexeme formLexeme : this.hardcodedForms.get(lemma)) {
-                inflections.add(new Wordform(formLexeme.getStem(0), formLexeme, ending));
+            	Wordform wf = new Wordform(formLexeme.getStem(0), formLexeme, ending);
+            	if (wf.isMatchingWeak(AttributeNames.i_Generate, AttributeNames.v_Yes))
+                    inflections.add(wf);
             }
             return inflections;
         }

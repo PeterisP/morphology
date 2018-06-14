@@ -504,7 +504,7 @@
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Dzimte="Nepiemīt" Persona="1" Locījums="Datīvs" Vietniekvārda_tips="Personu" Pamatforma="es"/>
     </Lexeme>
     <Lexeme Stem1="manīm">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Dzimte="Nepiemīt" Persona="1" Locījums="Datīvs" Vietniekvārda_tips="Personu" Pamatforma="es" Avots="Lietojums tikai 'līdz manīm'"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Dzimte="Nepiemīt" Persona="1" Locījums="Datīvs" Vietniekvārda_tips="Personu" Pamatforma="es" Avots="Lietojums tikai 'līdz manīm'" Ģenerēt="Nē"/>
     </Lexeme>
     <Lexeme Stem1="pašam">
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Datīvs" Vietniekvārda_tips="Noteiktie" Pamatforma="pats"/>

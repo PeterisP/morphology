@@ -6987,7 +6987,7 @@
 			<Attributes/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="50" Name="verb-1i" LemmaEnding="2407" Description="būt, nebūt, pabūt, sabūt">
+	<Paradigm Stems="3" ID="50" Name="verb-1i" LemmaEnding="2407" Description="būt, nebūt, pabūt, sabūt">
 		<!-- TODO - paskatīties vai gadījumā nevajag visus stemchange aizvākt -->
 		<Attributes Konjugācija="Nekārtns" Atgriezeniskums="Nē" Noliegums="Nē"/>
 		<Ending ID="2407" StemChange="0" Ending="t" StemID="1" LemmaEnding="2407">

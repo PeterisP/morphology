@@ -8258,7 +8258,7 @@
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Dzimte="Nepiemīt" Persona="1" Locījums="Datīvs" Vietniekvārda_tips="Personu" Pamatforma="es"/>
     </Lexeme>
     <Lexeme ID="50623" Stem1="manīm">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Dzimte="Nepiemīt" Persona="1" Locījums="Datīvs" Vietniekvārda_tips="Personu" Pamatforma="es" Avots="Lietojums tikai 'līdz manīm'"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Dzimte="Nepiemīt" Persona="1" Locījums="Datīvs" Vietniekvārda_tips="Personu" Pamatforma="es" Avots="Lietojums tikai 'līdz manīm'" Ģenerēt="Nē"/>
     </Lexeme>
     <Lexeme ID="27514" Stem1="pašam">
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Datīvs" Vietniekvārda_tips="Noteiktie" Pamatforma="pats"/>
@@ -12408,12 +12408,12 @@
     <Lexeme Stem1="pieauguš"/>
     <Lexeme Stem1="cietuš"/>
   </Paradigm>
-  <Paradigm Stems="1" ID="42" Description="Substantivizējušās divdabju formas kā 'pusjucis'">
+  <Paradigm Stems="1" ID="42" Description="Adjektivizējušās divdabju formas kā 'pusjucis'">
     <Lexeme Stem1="pusjuk"/>    
     <Lexeme Stem1="jauniznāk"/>    
     <Lexeme Stem1="pusaizaug"/>    
   </Paradigm>
-  <Paradigm Stems="1" ID="43" Description="Substantivizējušies noteiktās formas -ies/-usies divdabji">
+  <Paradigm Stems="1" ID="43" Description="Adjektivizējušies noteiktās formas -ies/-usies divdabji">
     <Lexeme Stem1="pusapģērb"/>
   </Paradigm>
   <Paradigm Stems="1" ID="44" Description="Lietvārdi, 5. deklinācija, sieviešu dzimte, galotne -e mijas izņēmumi (pase)">
