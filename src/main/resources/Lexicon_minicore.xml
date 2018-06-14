@@ -56,21 +56,75 @@
   </Paradigm>
   <Paradigm Stems="3" ID="15" LemmaEnding="711" Description="Darbības vārdi 1. konjugācija tiešie">
     <Attributes Konjugācija="1" Atgriezeniskums="Nē"/>
+    <Lexeme Stem1="spē" Stem2="spēj" Stem3="spēj">
+      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Modāls" Pamatforma="spēt"/>
+    </Lexeme>
+    <Lexeme Stem1="nespē" Stem2="nespēj" Stem3="nespēj">
+      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Modāls" Pamatforma="nespēt"/>
+    </Lexeme>
+    <Lexeme Stem1="mēg" Stem2="mēdz" Stem3="mēdz">
+      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Modāls" Pamatforma="mēgt"/>
+    </Lexeme>
+    <Lexeme Stem1="beig" Stem2="beidz" Stem3="beidz">
+      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Fāzes" Pamatforma="beigt"/>
+    </Lexeme>
+    <Lexeme Stem1="sāk" Stem2="sāk" Stem3="sāk">
+      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Fāzes" Pamatforma="sākt"/>
+    </Lexeme>
+    <Lexeme Stem1="pārstā" Stem2="pārstāj" Stem3="pārstāj">
+      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Fāzes" Pamatforma="pārstāt"/>
+    </Lexeme>
+    <Lexeme Stem1="iznāk" Stem2="iznāk" Stem3="iznāc">
+      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Izpausmes veida" Pamatforma="iznākt"/>
+    </Lexeme>
   </Paradigm>
   <Paradigm Stems="1" ID="16" LemmaEnding="225" Description="Darbības vārdi 2. konjugācija tiešie">
     <Attributes Konjugācija="2" Atgriezeniskums="Nē"/>
   </Paradigm>
   <Paradigm Stems="1" ID="17" LemmaEnding="468" Description="Darbības vārdi 3. konjugācija tiešie">
     <Attributes Konjugācija="3" Atgriezeniskums="Nē"/>
+    <Lexeme Stem1="varē">
+      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Modāls" Pamatforma="varēt"/>
+    </Lexeme>
+    <Lexeme Stem1="nevarē">
+      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Modāls" Pamatforma="nevarēt"/>
+    </Lexeme>
+    <Lexeme Stem1="gribē">
+      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Modāls" Pamatforma="gribēt"/>
+    </Lexeme>
+    <Lexeme Stem1="drīkstē">
+      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Modāls" Pamatforma="drīkstēt"/>
+    </Lexeme>
   </Paradigm>
   <Paradigm Stems="3" ID="18" LemmaEnding="1061" Description="Darbības vārdi 1. konjugācija atgriezeniskie">
     <Attributes Konjugācija="1" Atgriezeniskums="Jā"/>
+    <Lexeme Stem1="nāk" Stem2="nāk" Stem3="nāc">
+      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Modāls" Pamatforma="nākties"/>
+    </Lexeme>
+    <Lexeme Stem1="cens" Stem2="cenš" Stem3="cent">
+      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Modāls" Pamatforma="censties"/>
+    </Lexeme>
+    <Lexeme Stem1="turpinā">
+      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Fāzes" Pamatforma="turpināt"/>
+    </Lexeme>
   </Paradigm>
   <Paradigm Stems="1" ID="19" LemmaEnding="955" Description="Darbības vārdi 2. konjugācija atgriezeniski">
     <Attributes Konjugācija="2" Atgriezeniskums="Jā"/>
+    <Lexeme Stem1="mitē">
+      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Fāzes" Pamatforma="mitēties"/>
+    </Lexeme>
+    <Lexeme Stem1="laimē">
+      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Izpausmes veida" Pamatforma="laimēties"/>
+    </Lexeme>
   </Paradigm>
   <Paradigm Stems="1" ID="20" LemmaEnding="1008" Description="Darbības vārdi 3. konjugācija atgriezeniski">
     <Attributes Konjugācija="3" Atgriezeniskums="Jā"/>
+    <Lexeme Stem1="vēlē">
+      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Modāls" Pamatforma="vēlēties"/>
+    </Lexeme>
+    <Lexeme Stem1="gadī">
+      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Izpausmes veida" Pamatforma="gadīties"/>
+    </Lexeme>
   </Paradigm>
   <Paradigm Stems="1" ID="21" LemmaEnding="954" Description="Apstākļa vārdi">
     <Attributes Vārdšķira="Apstākļa vārds" Pakāpe="Nepiemīt"/>

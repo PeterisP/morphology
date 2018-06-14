@@ -2937,4 +2937,34 @@ public class MorphologyTest {
         assertTrue(w.isRecognized());
         assertEquals("zs", w.getBestWordform().getTag());
     }
+
+    @Test
+    // Aizdomas par tagset problēmām
+    public void laura_20180614() {
+        Word w = locītājs.analyze("ka");
+        assertTrue(w.isRecognized());
+        assertEquals("cs", w.getBestWordform().getTag());
+
+        w = locītājs.analyze("arī");
+        assertTrue(w.isRecognized());
+        boolean found = false;
+        for (Wordform f : w.wordforms) {
+            if (f.getTag().equalsIgnoreCase("q"))
+                found = true;
+        }
+        assertTrue("Nav 'arī' kā partikula ar 'q' tagu", found);
+
+        w = locītājs.analyze("var");
+        assertTrue(w.isRecognized());
+        found = false;
+        for (Wordform f : w.wordforms) {
+            if (f.getTag().startsWith("vo"))
+                found = true;
+        }
+        assertTrue("Nav 'var' varianta ar 'vo...' tagu", found);
+
+        w = locītājs.analyze("norādījuši");
+        assertTrue(w.isRecognized());
+        assertTrue(w.getBestWordform().getTag() + " needs to end with pn", w.getBestWordform().getTag().endsWith("pn"));
+    }
 }

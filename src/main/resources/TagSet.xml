@@ -303,7 +303,7 @@
 	<Value LV="Sakārtojuma" EN="Coordinating" Tag="c"/>
 	<Value LV="Pakārtojuma" EN="Subordinating" Tag="s"/>
 </Attribute>
-<Attribute LV="Uzbūve" EN="Structure" PartOfSpeech="Saiklis" MarkupPos="2">
+<Attribute LV="Uzbūve" EN="Structure" PartOfSpeech="Saiklis">
 	<Value LV="Vienkāršs" EN="Simple" Tag="s"/>
 	<Value LV="Salikts" EN="Compound" Tag="c"/>
 	<Value LV="Divkāršs" EN="Double" Tag="d"/>
@@ -353,7 +353,7 @@
 	<Value LV="Salikts" EN="Compound" Tag="c"/>
 </Attribute>
 
-<Attribute LV="Uzbūve" EN="Structure" PartOfSpeech="Partikula" MarkupPos="1">
+<Attribute LV="Uzbūve" EN="Structure" PartOfSpeech="Partikula">
 	<Value LV="Vienkāršs" EN="Simple" Tag="s"/>
 	<Value LV="Salikts" EN="Compound" Tag="c"/>
 </Attribute>
