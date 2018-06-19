@@ -2987,9 +2987,9 @@ public class MorphologyTest {
         assertTrue(w.isRecognized());
         assertTrue(w.getBestWordform().getTag() + " needs to end with pn", w.getBestWordform().getTag().endsWith("pn"));
 
-        w = locītājs.analyze("zaļā");
+        w = locītājs.analyze("zaļajā");
         assertTrue(w.isRecognized());
-        assertEquals("afmslnp", w.getBestWordform().getTag());
+        assertEquals("afmslyp", w.getBestWordform().getTag());
     }
 
     @Test

@@ -143,9 +143,6 @@
   </Paradigm>
   <Paradigm Stems="1" ID="17" LemmaEnding="468" Description="Darbības vārdi 3. konjugācija tiešie">
     <Attributes Konjugācija="3" Atgriezeniskums="Nē"/>
-    <Lexeme Stem1="mācē">
-      <Attributes Darbības_vārda_tips="Modāls" Pamatforma="mācēt"/>
-    </Lexeme>
     <Lexeme Stem1="varē">
       <Attributes Darbības_vārda_tips="Modāls" Pamatforma="varēt"/>
     </Lexeme>
@@ -161,9 +158,6 @@
     <Lexeme Stem1="mēģinā">
       <Attributes Darbības_vārda_tips="Modāls" Pamatforma="mēģināt"/>
     </Lexeme>    
-    <Lexeme Stem1="vajadzē">
-      <Attributes Darbības_vārda_tips="Modāls" Pamatforma="vajadzēt"/>
-    </Lexeme>
     <Lexeme Stem1="derē">
       <Attributes Darbības_vārda_tips="Modāls" Pamatforma="derēt"/>
     </Lexeme>
@@ -4556,6 +4550,12 @@
   <Paradigm Stems="1" ID="44" Description="Lietvārdi, 5. deklinācija, sieviešu dzimte, galotne -e mijas izņēmumi (pase)">
 </Paradigm>
 <Paradigm Stems="1" ID="45" Description="Darbības vārdi, 3. konjugācija, tiešie ar tagadnes miju (sacīt)">
+  <Lexeme Stem1="mācē">
+    <Attributes Darbības_vārda_tips="Modāls" Pamatforma="mācēt"/>
+  </Lexeme>
+  <Lexeme Stem1="vajadzē">
+    <Attributes Darbības_vārda_tips="Modāls" Pamatforma="vajadzēt"/>
+  </Lexeme>
 </Paradigm>
 <Paradigm Stems="1" ID="46" Description="Darbības vārdi, 3. konjugācija, atgriezeniskie ar miju (izsacīties)">
 </Paradigm>
