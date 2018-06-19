@@ -77,6 +77,18 @@
     <Lexeme Stem1="iznāk" Stem2="iznāk" Stem3="iznāc">
       <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Izpausmes veida" Pamatforma="iznākt"/>
     </Lexeme>
+    <Lexeme Stem1="tik" Stem2="tiek" Stem3="tik">
+      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbi 'tikt' un 'tapt'" Pamatforma="tikt"/>
+    </Lexeme>
+    <Lexeme Stem1="kļū" Stem2="kļūst" Stem3="kļuv">
+      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbi 'tikt' un 'tapt'" Pamatforma="kļūt"/>
+    </Lexeme>
+    <Lexeme Stem1="tap" Stem2="top" Stem3="tap">
+      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbi 'tikt' un 'tapt'" Pamatforma="tapt"/>
+    </Lexeme>
+    <Lexeme Stem1="palik" Stem2="paliek" Stem3="palik">
+      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbi 'tikt' un 'tapt'" Pamatforma="palikt"/>
+    </Lexeme>
   </Paradigm>
   <Paradigm Stems="1" ID="16" LemmaEnding="225" Description="Darbības vārdi 2. konjugācija tiešie">
     <Attributes Konjugācija="2" Atgriezeniskums="Nē"/>
