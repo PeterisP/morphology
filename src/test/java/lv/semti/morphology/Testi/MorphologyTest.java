@@ -2958,6 +2958,7 @@ public class MorphologyTest {
         }
     }
 
+    @Test
     // Aizdomas par tagset problēmām
     public void laura_20180614() {
         Word w = locītājs.analyze("ka");
@@ -2985,5 +2986,27 @@ public class MorphologyTest {
         w = locītājs.analyze("norādījuši");
         assertTrue(w.isRecognized());
         assertTrue(w.getBestWordform().getTag() + " needs to end with pn", w.getBestWordform().getTag().endsWith("pn"));
+
+        w = locītājs.analyze("zaļā");
+        assertTrue(w.isRecognized());
+        assertEquals("afmslnp", w.getBestWordform().getTag());
+    }
+
+    @Test
+    public void nav() {
+        // Jābūt gan variantam kā saitiņai, gan patstāvīgajā nozīmē 'man nav mājas'
+        Word nav = locītājs.analyze("nav");
+        assertTrue(nav.isRecognized());
+        boolean found_m = false;
+        boolean found_c = false;
+        for (Wordform wf : nav.wordforms) {
+            assertEquals("nebūt", wf.getValue(AttributeNames.i_Lemma));
+            if (wf.isMatchingStrong(AttributeNames.i_VerbType, AttributeNames.v_MainVerb))
+                found_m = true;
+            if (wf.isMatchingStrong(AttributeNames.i_VerbType, AttributeNames.v_Buut))
+                found_c = true;
+        }
+        assertTrue(found_m);
+        assertTrue(found_c);
     }
 }

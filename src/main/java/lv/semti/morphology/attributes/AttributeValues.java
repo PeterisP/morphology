@@ -258,7 +258,7 @@ public class AttributeValues implements FeatureStructure, Cloneable {
 		// removeAttribute(AttributeNames.i_ApstTips);
 		removeAttribute(AttributeNames.i_SaikljaTips);
 		removeAttribute(AttributeNames.i_SkaitljaTips);
-		removeAttribute(AttributeNames.i_AdjectiveType);		
+		removeAttribute(AttributeNames.i_AdjectiveType);
 		removeAttribute(AttributeNames.i_Uzbuuve);
 		removeAttribute(AttributeNames.i_Order);
 		//removeAttribute(AttributeNames.i_VvTips);

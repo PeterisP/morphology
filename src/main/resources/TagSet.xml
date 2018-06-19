@@ -3,7 +3,7 @@
 <Attribute LV="Vārdšķira" EN="Part of speech" MarkupPos="0">
 	<Value LV="Lietvārds" EN="Noun" Tag="n" DefaultTags="nc____"/>
 	<Value LV="Darbības vārds" EN="Verb" Tag="v" DefaultTags="vm_________"/>
-	<Value LV="Īpašības vārds" EN="Adjective" Tag="a" DefaultTags="a______"/>
+	<Value LV="Īpašības vārds" EN="Adjective" Tag="a" DefaultTags="af_____"/>
 	<Value LV="Vietniekvārds" EN="Pronoun" Tag="p" DefaultTags="p______"/>
 	<Value LV="Apstākļa vārds" EN="Adverb" Tag="r" DefaultTags="r__"/>
 	<Value LV="Prievārds" EN="Preposition" Tag="s" DefaultTags="sp__"/>

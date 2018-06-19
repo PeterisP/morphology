@@ -90,7 +90,7 @@ public class AttributeNames {
 	public final static String v_IzpausmesVeida = "Izpausmes veida";
 	public final static String v_Buut = "Palīgverbs 'būt'";
 	public final static String v_TiktTapt = "Palīgverbi 'tikt' un 'tapt'";
-	public final static String v_Nebuut = "'nebūt', 'trūkt' un 'pietikt'";
+	@Deprecated public final static String v_Nebuut = "'nebūt', 'trūkt' un 'pietikt'"; // Only in old Semti-kamols annotation
 
 	public final static String i_Reflexive = "Atgriezeniskums";
 
