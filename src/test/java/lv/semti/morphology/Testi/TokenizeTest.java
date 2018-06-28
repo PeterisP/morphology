@@ -768,6 +768,7 @@ public class TokenizeTest {
         Trie n2c = new Trie(Trie.n2_c_paragraphs());
         assertTrue(n2c.match("4."));
         assertTrue(n2c.match("4.1."));
+        // FIXME - šis tomēr līdz galam labi neintegrējas pārējā Trie, ja ņemu analizators.automats, tad šos te viņš neatpazīst korekti...
     }
 
     @Test

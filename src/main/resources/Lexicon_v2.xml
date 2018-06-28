@@ -747,7 +747,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="3" ID="15" Name="verb-1" LemmaEnding="711" Description="Darbības vārdi, 1. konjugācija, tiešie (dzert, dot, iet)" AllowedGuessEndings="!">
-		<Attributes Konjugācija="1" Atgriezeniskums="Nē" Noliegums="Nē"/>
+		<Attributes Konjugācija="1" Atgriezeniskums="Nē" Noliegums="Nē" Darbības_vārda_tips="Patstāvīgs darbības vārds"/>
 		<Ending ID="711" StemChange="0" Ending="t" StemID="1" LemmaEnding="711">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Nenoteiksme" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
 		</Ending>
@@ -1989,7 +1989,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="16" Name="verb-2" LemmaEnding="225" Description="Darbības vārdi, 2. konjugācija, tiešie (spēlēt)" AllowedGuessEndings="oāēīū">
-		<Attributes Konjugācija="2" Atgriezeniskums="Nē" Noliegums="Nē"/>
+		<Attributes Konjugācija="2" Atgriezeniskums="Nē" Noliegums="Nē" Darbības_vārda_tips="Patstāvīgs darbības vārds"/>
 		<Ending ID="225" StemChange="0" Ending="t" StemID="1" LemmaEnding="225">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Nenoteiksme" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
 		</Ending>
@@ -3198,7 +3198,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="17" Name="verb-3a" LemmaEnding="468" Description="Darbības vārdi, 3. konjugācija, tiešie, bez tagadnes mijas (lasīt)" AllowedGuessEndings="āēī">
-		<Attributes Konjugācija="3" Atgriezeniskums="Nē" Noliegums="Nē"/>
+		<Attributes Konjugācija="3" Atgriezeniskums="Nē" Noliegums="Nē" Darbības_vārda_tips="Patstāvīgs darbības vārds"/>
 		<Ending ID="468" StemChange="0" Ending="t" StemID="1" LemmaEnding="468">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Nenoteiksme" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
 		</Ending>
@@ -4407,7 +4407,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="3" ID="18" Name="verb-1r" LemmaEnding="1061" Description="Darbības vārdi, 1. konjugācija, atgriezeniskie (aizlauzties)" AllowedGuessEndings="!">
-		<Attributes Konjugācija="1" Atgriezeniskums="Jā" Noliegums="Nē"/>
+		<Attributes Konjugācija="1" Atgriezeniskums="Jā" Noliegums="Nē" Darbības_vārda_tips="Patstāvīgs darbības vārds"/>
 		<Ending ID="1061" StemChange="0" Ending="ties" StemID="1" LemmaEnding="1061">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Nenoteiksme" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
 		</Ending>
@@ -4545,7 +4545,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="19" Name="verb-2r" LemmaEnding="955" Description="Darbības vārdi, 2. konjugācija, atgriezeniskie (spēlēties)" AllowedGuessEndings="oāēī">
-		<Attributes Konjugācija="2" Atgriezeniskums="Jā" Noliegums="Nē"/>
+		<Attributes Konjugācija="2" Atgriezeniskums="Jā" Noliegums="Nē" Darbības_vārda_tips="Patstāvīgs darbības vārds"/>
 		<Ending ID="955" StemChange="0" Ending="ties" StemID="1" LemmaEnding="955">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Nenoteiksme" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
 		</Ending>
@@ -4683,7 +4683,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="20" Name="verb-3ar" LemmaEnding="1008" Description="Darbības vārdi, 3. konjugācija, atgriezeniskie, bez tagadnes mijas (dīdīties)" AllowedGuessEndings="āēī">
-		<Attributes Konjugācija="3" Atgriezeniskums="Jā" Noliegums="Nē"/>
+		<Attributes Konjugācija="3" Atgriezeniskums="Jā" Noliegums="Nē" Darbības_vārda_tips="Patstāvīgs darbības vārds"/>
 		<Ending ID="1008" StemChange="0" Ending="ties" StemID="1" LemmaEnding="1008">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Nenoteiksme" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
 		</Ending>
@@ -5554,7 +5554,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="45" Name="verb-3b" LemmaEnding="1778" Description="Darbības vārdi, 3. konjugācija, tiešie, ar tagadnes miju (sacīt)" AllowedGuessEndings="!">
-		<Attributes Konjugācija="3" Atgriezeniskums="Nē" Noliegums="Nē"/>
+		<Attributes Konjugācija="3" Atgriezeniskums="Nē" Noliegums="Nē" Darbības_vārda_tips="Patstāvīgs darbības vārds"/>
 		<Ending ID="1778" StemChange="0" Ending="t" StemID="1" LemmaEnding="1778">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Nenoteiksme" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
 		</Ending>
@@ -6763,7 +6763,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="46" Name="verb-3br" LemmaEnding="2336" Description="Darbības vārdi, 3. konjugācija, atgriezeniskie, ar tagadnes miju (izsacīties)" AllowedGuessEndings="!">
-		<Attributes Konjugācija="3" Atgriezeniskums="Jā" Noliegums="Nē"/>
+		<Attributes Konjugācija="3" Atgriezeniskums="Jā" Noliegums="Nē" Darbības_vārda_tips="Patstāvīgs darbības vārds"/>
 		<Ending ID="2336" StemChange="0" Ending="ties" StemID="1" LemmaEnding="2336">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Nenoteiksme" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
 		</Ending>
