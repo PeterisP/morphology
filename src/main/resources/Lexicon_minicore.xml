@@ -4464,6 +4464,33 @@
     <Lexeme Stem1="˗">
       <Attributes Pieturzīmes_tips="Domuzīme" Pamatforma="-"/>
     </Lexeme>
+    <Lexeme Stem1="⁻">
+      <Attributes Pieturzīmes_tips="Domuzīme" Pamatforma="-"/>
+    </Lexeme>
+    <Lexeme Stem1="₋">
+      <Attributes Pieturzīmes_tips="Domuzīme" Pamatforma="-"/>
+    </Lexeme>
+    <Lexeme Stem1="−">
+      <Attributes Pieturzīmes_tips="Domuzīme" Pamatforma="-"/>
+    </Lexeme>
+    <Lexeme Stem1="➖">
+      <Attributes Pieturzīmes_tips="Domuzīme" Pamatforma="-"/>
+    </Lexeme>
+    <Lexeme Stem1="﹣">
+      <Attributes Pieturzīmes_tips="Domuzīme" Pamatforma="-"/>
+    </Lexeme>
+    <Lexeme Stem1="－">
+      <Attributes Pieturzīmes_tips="Domuzīme" Pamatforma="-"/>
+    </Lexeme>
+    <Lexeme Stem1="᠆">
+      <Attributes Pieturzīmes_tips="Domuzīme" Pamatforma="-"/>
+    </Lexeme>
+    <Lexeme Stem1="‧">
+      <Attributes Pieturzīmes_tips="Domuzīme" Pamatforma="-"/>
+    </Lexeme>
+    <Lexeme Stem1="⁃">
+      <Attributes Pieturzīmes_tips="Domuzīme" Pamatforma="-"/>
+    </Lexeme>
     <Lexeme Stem1="‘">
       <Attributes Pieturzīmes_tips="Pēdiņa" Pamatforma="'"/>
     </Lexeme>
