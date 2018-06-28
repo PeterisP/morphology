@@ -28,6 +28,9 @@
   </Paradigm>
   <Paradigm Stems="1" ID="7" LemmaEnding="75" Description="Lietvārds 4. deklinācija -a siev. dz">
     <Attributes Vārdšķira="Lietvārds" Deklinācija="4" Dzimte="Sieviešu"/>
+    <Lexeme Stem1="saeim">
+      <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Saeima"/>
+    </Lexeme>
   </Paradigm>
   <Paradigm Stems="1" ID="8" LemmaEnding="63" Description="Lietvārds 4. deklinācija -a vīr. dz">
     <Attributes Vārdšķira="Lietvārds" Deklinācija="4" Dzimte="Vīriešu"/>
@@ -2752,6 +2755,66 @@
   </Paradigm>
   <Paradigm Stems="1" ID="29" LemmaEnding="1158" Description="Hardcoded">
     <Attributes/>
+    <Lexeme Stem1="I">
+      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Skaitlis cipariem" Pamatforma="I"/>
+    </Lexeme>
+    <Lexeme Stem1="II">
+      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Skaitlis cipariem" Pamatforma="II"/>
+    </Lexeme>
+    <Lexeme Stem1="III">
+      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Skaitlis cipariem" Pamatforma="III"/>
+    </Lexeme>
+    <Lexeme Stem1="IV">
+      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Skaitlis cipariem" Pamatforma="IV"/>
+    </Lexeme>
+    <Lexeme Stem1="V">
+      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Skaitlis cipariem" Pamatforma="V"/>
+    </Lexeme>
+    <Lexeme Stem1="VI">
+      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Skaitlis cipariem" Pamatforma="VI"/>
+    </Lexeme>
+    <Lexeme Stem1="VII">
+      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Skaitlis cipariem" Pamatforma="VII"/>
+    </Lexeme>
+    <Lexeme Stem1="VIII">
+      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Skaitlis cipariem" Pamatforma="VIII"/>
+    </Lexeme>
+    <Lexeme Stem1="IX">
+      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Skaitlis cipariem" Pamatforma="IX"/>
+    </Lexeme>
+    <Lexeme Stem1="X">
+      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Skaitlis cipariem" Pamatforma="X"/>
+    </Lexeme>
+    <Lexeme Stem1="XI">
+      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Skaitlis cipariem" Pamatforma="XI"/>
+    </Lexeme>
+    <Lexeme Stem1="XII">
+      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Skaitlis cipariem" Pamatforma="XII"/>
+    </Lexeme>
+    <Lexeme Stem1="XIII">
+      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Skaitlis cipariem" Pamatforma="XIII"/>
+    </Lexeme>
+    <Lexeme Stem1="XIV">
+      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Skaitlis cipariem" Pamatforma="XIV"/>
+    </Lexeme>
+    <Lexeme Stem1="XV">
+      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Skaitlis cipariem" Pamatforma="XV"/>
+    </Lexeme>
+    <Lexeme Stem1="XVI">
+      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Skaitlis cipariem" Pamatforma="XVI"/>
+    </Lexeme>
+    <Lexeme Stem1="XVII">
+      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Skaitlis cipariem" Pamatforma="XVII"/>
+    </Lexeme>
+    <Lexeme Stem1="XVIII">
+      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Skaitlis cipariem" Pamatforma="XVIII"/>
+    </Lexeme>
+    <Lexeme Stem1="XIX">
+      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Skaitlis cipariem" Pamatforma="XIX"/>
+    </Lexeme>
+    <Lexeme Stem1="XX">
+      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Skaitlis cipariem" Pamatforma="XX"/>
+    </Lexeme>
     <Lexeme Stem1="trīsarpus">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Pamatforma="trīsarpus"/>
     </Lexeme>
@@ -4283,47 +4346,54 @@
     <Lexeme Stem1="veic."/>
     <Lexeme Stem1="lauksaimn."/>
     <Lexeme Stem1="zemn."/>
-    <Lexeme Stem1="PSKP"/>
-    <Lexeme Stem1="KGB"/>
-    <Lexeme Stem1="PSRS"/>
-    <Lexeme Stem1="PSR"/>
-    <Lexeme Stem1="KP"/>
-    <Lexeme Stem1="CK"/>
-    <Lexeme Stem1="CIP"/>
+    <Lexeme Stem1="PSKP"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
+    <Lexeme Stem1="KGB"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
+    <Lexeme Stem1="PSRS"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
+    <Lexeme Stem1="PSR"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
+    <Lexeme Stem1="KP"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
+    <Lexeme Stem1="CK"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
+    <Lexeme Stem1="CIP"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
     <Lexeme Stem1="CX"/>
     <Lexeme Stem1="TIN"/>
     <Lexeme Stem1="OK"/>
-    <Lexeme Stem1="NATO"/>
-    <Lexeme Stem1="ANO"/>
+    <Lexeme Stem1="NATO"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
+    <Lexeme Stem1="ANO"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
     <Lexeme Stem1="IT"/>
     <Lexeme Stem1="TV"/>
     <Lexeme Stem1="ISO"/>
+    <Lexeme Stem1="AIDS"/>
+    <Lexeme Stem1="DUS"/>
+    <Lexeme Stem1="WiFi"/>
+    <Lexeme Stem1="Mbps"/>
+    <Lexeme Stem1="Gbps"/>
+    <Lexeme Stem1="Ls"/>
     <Lexeme Stem1="m.g."/>
-    <Lexeme Stem1="ASV"/>
-    <Lexeme Stem1="UNESCO"/>
-    <Lexeme Stem1="LU"/>
-    <Lexeme Stem1="LLU"/>
-    <Lexeme Stem1="LLA"/>
-    <Lexeme Stem1="LVA"/>
-    <Lexeme Stem1="LVS"/>
-    <Lexeme Stem1="RPIS"/>
-    <Lexeme Stem1="DR"/>
-    <Lexeme Stem1="USA"/>
-    <Lexeme Stem1="LZP"/>
-    <Lexeme Stem1="PS"/>
-    <Lexeme Stem1="LR"/>
-    <Lexeme Stem1="EDSO"/>
-    <Lexeme Stem1="ONAP"/>
-    <Lexeme Stem1="EK"/>
-    <Lexeme Stem1="LETA"/>
-    <Lexeme Stem1="KNAB"/>
-    <Lexeme Stem1="LNB"/>
-    <Lexeme Stem1="LLC"/>
-    <Lexeme Stem1="LLP"/>
-    <Lexeme Stem1="LNNK"/>
-    <Lexeme Stem1="OECD"/>
-    <Lexeme Stem1="VK"/>
-    <Lexeme Stem1="FKTK"/>
+    <Lexeme Stem1="ASV"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
+    <Lexeme Stem1="UNESCO"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
+    <Lexeme Stem1="LU"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
+    <Lexeme Stem1="LLU"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
+    <Lexeme Stem1="LLA"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
+    <Lexeme Stem1="LVA"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
+    <Lexeme Stem1="LVS"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
+    <Lexeme Stem1="RPIS"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
+    <Lexeme Stem1="DR"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
+    <Lexeme Stem1="USA"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
+    <Lexeme Stem1="LZP"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
+    <Lexeme Stem1="PS"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
+    <Lexeme Stem1="LR"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
+    <Lexeme Stem1="EDSO"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
+    <Lexeme Stem1="ONAP"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
+    <Lexeme Stem1="EK"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
+    <Lexeme Stem1="LETA"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
+    <Lexeme Stem1="KNAB"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
+    <Lexeme Stem1="LNB"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
+    <Lexeme Stem1="LLC"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
+    <Lexeme Stem1="LLP"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
+    <Lexeme Stem1="LNNK"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
+    <Lexeme Stem1="OECD"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
+    <Lexeme Stem1="VK"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
+    <Lexeme Stem1="FKTK"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
+    <Lexeme Stem1="ES"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
   </Paradigm>
   <Paradigm Stems="1" ID="37" LemmaEnding="2092" Description="Pieturzīmes (! , ...)" AllowedGuessEndings="!">
     <Lexeme Stem1="...">
@@ -4564,6 +4634,10 @@
   <Paradigm Stems="1" ID="38" LemmaEnding="2093" Description="Izsauksmes vārdi (ak, aha)" AllowedGuessEndings="!">
   </Paradigm>
   <Paradigm Stems="1" ID="39" LemmaEnding="2094" Description="Vārdi svešvalodā (company, adaggio)" AllowedGuessEndings="!">
+    <Lexeme Stem1="fon"/>
+    <Lexeme Stem1="de"/>
+    <Lexeme Stem1="da"/>
+    <Lexeme Stem1="the"/>
   </Paradigm>
   <Paradigm Stems="1" ID="40" LemmaEnding="2031" Description="Substantivizējušies noteiktās formas īpašības vārdi sieviešu dzimtē (mēnessērdzīgā, apsūdzētā)" AllowedGuessEndings="!">
   </Paradigm>
