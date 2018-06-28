@@ -792,13 +792,29 @@ public class TokenizeTest {
         LinkedList<Word> tokens;
         LinkedList<LinkedList<Word>> sentences;
         tokens = Splitting.tokenize(locītājs, "Liels paldies! (Aplausi.)");
-        assertEquals(2, tokens.size());
+        assertEquals(7, tokens.size());
         sentences = Splitting.tokenizeSentences(locītājs, "Liels paldies! (Aplausi.)");
+        assertEquals(2, sentences.size());
+
+        tokens = Splitting.tokenize(locītājs, "(Ienāk istabā.) Nevajag tur piekopt?");
+        assertEquals(9, tokens.size());
+        sentences = Splitting.tokenizeSentences(locītājs, "(Ienāk istabā.) Nevajag tur piekopt?");
+        assertEquals(2, sentences.size());
+
+        tokens = Splitting.tokenize(locītājs, "(No zāles dep. A.Lejiņš: \"Pareizi!\")");
+        assertEquals(12, tokens.size());
+        sentences = Splitting.tokenizeSentences(locītājs, "(No zāles dep. A.Lejiņš: \"Pareizi!\")");
         assertEquals(1, sentences.size());
-//        (Ienāk istabā.) Nevajag tur piekopt?
-//        (No zāles dep. A.Lejiņš: "Pareizi!")
-//        ap 4000 g. p.m.ē.
-//        Bateman et al., 2010
+
+        tokens = Splitting.tokenize(locītājs, "ap 4000 g. p.m.ē.");
+        assertEquals(4, tokens.size());
+        sentences = Splitting.tokenizeSentences(locītājs, "ap 4000 g. p.m.ē.");
+        assertEquals(1, sentences.size());
+
+        tokens = Splitting.tokenize(locītājs, "Bateman et al., 2010");
+        assertEquals(4, tokens.size());
+        sentences = Splitting.tokenizeSentences(locītājs, "Bateman et al., 2010");
+        assertEquals(1, sentences.size());
     }
 }
  
