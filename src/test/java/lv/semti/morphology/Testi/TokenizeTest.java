@@ -713,5 +713,49 @@ public class TokenizeTest {
         assertEquals("10", tokens.get(2).getBestWordform().getValue(AttributeNames.i_Offset));
     }
 
+    // Ticket #32
+    @Test
+    public void atstarpjvārdi_UD() {
+        LinkedList<Word> tokens;
+//        ([+-]\s*)?\d+(\s+\d+)*
+        tokens = Splitting.tokenize(locītājs, "100 000", false);
+        assertEquals(1, tokens.size());
+        tokens = Splitting.tokenize(locītājs, "+ 100 000", false);
+        assertEquals(1, tokens.size());
+        tokens = Splitting.tokenize(locītājs, "-100 000", false);
+        assertEquals(1, tokens.size());
+
+//        u\. t\. jpr\.
+        tokens = Splitting.tokenize(locītājs, "u. t. jpr.", false);
+        assertEquals(1, tokens.size());
+
+//        u\. c\.
+        tokens = Splitting.tokenize(locītājs, "u. c.", false);
+        assertEquals(1, tokens.size());
+
+//        u\. tml\.
+        tokens = Splitting.tokenize(locītājs, "u. tml.", false);
+        assertEquals(1, tokens.size());
+
+//        v\. tml\.
+        tokens = Splitting.tokenize(locītājs, "v. tml.", false);
+        assertEquals(1, tokens.size());
+
+//        u\.\s*t\.\s*t\.
+        tokens = Splitting.tokenize(locītājs, "u.t.t.", false);
+        assertEquals(1, tokens.size());
+        tokens = Splitting.tokenize(locītājs, "u. t. t.", false);
+        assertEquals(1, tokens.size());
+
+//        N. B.
+        tokens = Splitting.tokenize(locītājs, "N. B.", false);
+        assertEquals(1, tokens.size());
+
+//        (P\.\s*)+S\.
+        tokens = Splitting.tokenize(locītājs, "P.P.P.S.", false);
+        assertEquals(1, tokens.size());
+        tokens = Splitting.tokenize(locītājs, "P. P. S.", false);
+        assertEquals(1, tokens.size());
+    }
 }
  

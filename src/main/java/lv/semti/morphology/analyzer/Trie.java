@@ -46,7 +46,7 @@ public class Trie {
 			}
 			br.close();
 			
-			//pievieno Exception trie brach listam
+			//pievieno Exception trie branch listam
 			root=root.firstChild;
 			branchList.add(root);
 		}
@@ -81,7 +81,7 @@ public class Trie {
 		root.nextSibling.firstChild.firstChild=root.firstChild.firstChild;
 		
 		/*
-		 * 2aa atpazīst datumu ISO formāta 2009-12-14 (patiesībā /[0-9][0-9][0-9][0-9][\-.][0-9][0-9][\-.][0-9][0-9]/)
+		 * 2aa atpazīst datumu ISO formāta 2009-12-14 (patiesībā /[0-9][0-9][0-9][0-9][\-.][0-9][0-9][\-.][0-9][0-9]\.?/)
 		 */
 		
 		root=new DigitNode();
@@ -98,7 +98,8 @@ public class Trie {
 		root.firstChild=new DigitNode();
 		root.firstChild.firstChild=new DigitNode();
 		root.firstChild.firstChild.canEnd=true;
-		
+		root.firstChild.firstChild.firstChild=new StringNode(".");
+		root.firstChild.firstChild.firstChild.canEnd=true;
 		
 		/*
 		 * 2aaa atapzīst mājas numurus ( /[0-9]+[A-Z]/)
@@ -140,6 +141,14 @@ public class Trie {
 		root.firstChild.nextSibling.nextSibling.firstChild=root.firstChild.nextSibling.firstChild;
 		root.firstChild.nextSibling.nextSibling.nextSibling=new StringNode(" '/\\");
 		root.firstChild.nextSibling.nextSibling.nextSibling.firstChild=root;
+
+		// optional +- in front
+        tmp = new StringNode("+-");
+        tmp.firstChild = root;
+        tmp.firstChild.nextSibling = new StringNode(" ");
+        tmp.firstChild.nextSibling.firstChild = root;
+        branchList.add(tmp);
+
 		
 		tmp=root.firstChild.nextSibling.firstChild;
 		tmp.nextSibling=new DigitNode();
