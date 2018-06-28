@@ -201,6 +201,7 @@ public class Trie {
         tmp.firstChild.canEnd=true;
         tmp.firstChild.firstChild=tmp.firstChild;
         tmp.firstChild.nextSibling=new StringNode(".,");
+        tmp.firstChild.nextSibling.canEnd = true;
         tmp.firstChild.nextSibling.firstChild=new StringNode("-‐‑‒–—―'");
         tmp.firstChild.nextSibling.firstChild.canEnd=true;
         tmp.firstChild.nextSibling.firstChild.nextSibling=tmp;
@@ -341,7 +342,7 @@ public class Trie {
 		int i=0;
 		int length=s.length();
 		node t=root;
-		node p=null;
+		node p;
 		while(i<length)
 		{
 			p=t;
