@@ -1563,10 +1563,10 @@ public class MorphologyTest {
         assertInflection(formas, testset, "aizguļos");
 
         formas = locītājs.generateInflections("vajadzēt");
-        testset.addAttribute(AttributeNames.i_EndingID, "1779");
-        assertInflection(formas, testset, "vajagu");
-        testset.addAttribute(AttributeNames.i_EndingID, "1781");
-        assertInflection(formas, testset, "vajagam");
+//        testset.addAttribute(AttributeNames.i_EndingID, "1779");
+//        assertInflection(formas, testset, "vajagu");
+//        testset.addAttribute(AttributeNames.i_EndingID, "1781");
+//        assertInflection(formas, testset, "vajagam");
         testset.addAttribute(AttributeNames.i_EndingID, "1783");
         assertInflection(formas, testset, "vajag");
         testset.addAttribute(AttributeNames.i_EndingID, "1794");
@@ -3019,5 +3019,21 @@ public class MorphologyTest {
 
         Word ņukšu = locītājs.analyze("Ņukšu");
         assertTrue(ņukšu.isRecognized());
+    }
+
+    @Test
+    public void vajagu() {
+        ArrayList<Wordform> formas = locītājs.generateInflections("vajadzēt");
+        for (Wordform wf : formas) {
+            assertNotEquals("vajagu", wf.getToken());
+            assertNotEquals("vajagi", wf.getToken());
+        }
+        formas = locītājs.generateInflections("ievajadzēties");
+        boolean found = false;
+        for (Wordform wf : formas) {
+            if (wf.getToken().equalsIgnoreCase("ievajagos"))
+                found = true;
+        }
+        assertTrue(found);
     }
 }

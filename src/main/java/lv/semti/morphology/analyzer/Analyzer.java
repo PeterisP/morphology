@@ -630,7 +630,6 @@ public class Analyzer extends Lexicon {
 			ArrayList<Wordform> inflections1, ArrayList<Wordform> inflections2,
 			String concatenator) {		
 		ArrayList<Wordform> result = new ArrayList<Wordform>();
-		
 
 		if (inflections1.size() <= 1) {
 			// Specgadījums - pirmais ir nelokāms
@@ -890,6 +889,7 @@ public class Analyzer extends Lexicon {
 					if (locījums.isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum) && locījums.isMatchingStrong(AttributeNames.i_Number, AttributeNames.v_Singular)) validOption = false;
 					if (locījums.isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_SingulareTantum) && locījums.isMatchingStrong(AttributeNames.i_Number, AttributeNames.v_Plural)) validOption = false;
 					if (locījums.isMatchingStrong(AttributeNames.i_Declension, AttributeNames.v_InflexibleGenitive) && !locījums.isMatchingStrong(AttributeNames.i_Case, AttributeNames.v_Genitive)) validOption = false;
+					if (GenerationBlacklist.blacklist(locījums)) validOption = false;
 					if (validOption) inflections.add(locījums);
 		    	}
 			}
@@ -909,7 +909,6 @@ public class Analyzer extends Lexicon {
                 inflections.remove(override);
             }
             inflections.add(hardcoded);
-
         }
 
 		return inflections;
