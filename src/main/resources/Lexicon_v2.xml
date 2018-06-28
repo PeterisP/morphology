@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Morphology revision="2.0.2" licence="Copyright 2008-2018 Institute of Mathematics and Computer Science, University of Latvia. This file is part of the SemTi-Kamols Chunker, see http://www.semti-kamols.lv/  This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program. If not, see http://www.gnu.org/licenses/.">
+<Morphology revision="2.0.3" licence="Copyright 2008-2018 Institute of Mathematics and Computer Science, University of Latvia. This file is part of the SemTi-Kamols Chunker, see http://www.semti-kamols.lv/  This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program. If not, see http://www.gnu.org/licenses/.">
 	<Corpus FileName="tezaurs_lexemes.json" Type="core"/>
 	<Corpus FileName="Lexicon_minicore.xml" Type="core"/>
 	<Corpus FileName="Lexicon_firstnames.xml" Type="core"/>
-<!--	<Corpus FileName="Lexicon_core.xml" Type="core"/>	
 	<Corpus FileName="Lexicon_vietas.xml" Type="core"/>
+<!--	<Corpus FileName="Lexicon_core.xml" Type="core"/>	
 	<Corpus FileName="Lexicon_sv.xml" Type="core"/>
 	<Corpus FileName="Lexicon_valerijs.xml" Type="core"/>
 	<Corpus FileName="Lexicon_onomastica.xml" Type="aux"/> -->
@@ -5066,7 +5066,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="31" Name="noun-3f" LemmaEnding="2044" Description="Lietvārdi, 3. deklinācija, sieviešu dzimte, galotne -us (uzvārdi)" AllowedGuessEndings="!">
+	<Paradigm Stems="1" ID="31" Name="noun-3f" LemmaEnding="2044" Description="Lietvārdi, 3. deklinācija, sieviešu dzimte, galotne -us (uzvārdi, vecvārdi kā pelus, ragus)" AllowedGuessEndings="!">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="3" Dzimte="Sieviešu"/>
 		<Ending ID="2044" StemChange="0" Ending="us" StemID="1">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>

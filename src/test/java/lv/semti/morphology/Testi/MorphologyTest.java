@@ -2074,7 +2074,7 @@ public class MorphologyTest {
         assertEquals("xu", url.wordforms.get(0).getTag());
     }
 
-    @Ignore("Jāskatās pēc tēzaura datu pievienošanas")
+//    @Ignore("Jāskatās pēc tēzaura datu pievienošanas")
     @Test
     public void obligātiatpazīstamie() throws IOException {
         {
@@ -2083,17 +2083,19 @@ public class MorphologyTest {
             ieeja = new BufferedReader(
                     new InputStreamReader(getClass().getClassLoader().getResourceAsStream("mandatory.txt"), "UTF-8"));
 
+            int not_recognized = 0;
             while ((rinda = ieeja.readLine()) != null) {
                 if (rinda.contains("#") || rinda.isEmpty()) continue;
                 List<Word> vārdi = Splitting.tokenize(locītājs, rinda);
                 for (Word vārds : vārdi) {
                     if (!vārds.isRecognized()) {
+                        not_recognized += 1;
                         System.err.printf("Neatpazīts vārds '%s' frāzē '%s'\n", vārds.getToken(), rinda);
-                        //assertTrue(false);
                     }
                 }
             }
             ieeja.close();
+            assertTrue("Par daudz neatpazītu vārdu", not_recognized<70);
         }
     }
 
@@ -3008,5 +3010,14 @@ public class MorphologyTest {
         }
         assertTrue(found_m);
         assertTrue(found_c);
+    }
+
+    @Test
+    public void ņukši() {
+        Word ņukši = locītājs.analyze("Ņukši");
+        assertTrue(ņukši.isRecognized());
+
+        Word ņukšu = locītājs.analyze("Ņukšu");
+        assertTrue(ņukšu.isRecognized());
     }
 }

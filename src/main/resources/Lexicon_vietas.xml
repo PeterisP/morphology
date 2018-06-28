@@ -345,9 +345,7 @@
     <Lexeme Stem1="auziņ"> <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Auziņi" Avots="LĢIS"/> </Lexeme>
     <Lexeme Stem1="ūziņ"> <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Ūziņi" Avots="LĢIS"/> </Lexeme>
   </Paradigm>
-  <Paradigm Stems="1" ID="3" LemmaEnding="27" Description="Lietvārds 2. deklinācija -is">
-    <Attributes Vārdšķira="Lietvārds" Deklinācija="2" Dzimte="Vīriešu"/>
-    
+  <Paradigm Stems="1" ID="3" LemmaEnding="27" Description="Lietvārdi, 2. deklinācija, vīriešu dzimte, galotne -is, ar miju (dzenis)">
     <Lexeme Stem1="plāc"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Plācis" Avots="LĢIS"/> </Lexeme>
     <Lexeme Stem1="kolberģ"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Kolberģis" Avots="LĢIS"/> </Lexeme>
     <Lexeme Stem1="svelberģ"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Svelberģis" Avots="LĢIS"/> </Lexeme>
@@ -527,6 +525,9 @@
   </Paradigm>  
   <Paradigm Stems="1" ID="7" LemmaEnding="75" Description="Lietvārds 4. deklinācija -a siev. dz">
     <Attributes Vārdšķira="Lietvārds" Deklinācija="4" Dzimte="Sieviešu"/>
+      <Lexeme Stem1="amat"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Amata" /> </Lexeme>
+      <Lexeme Stem1="arābij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Arābija" /> </Lexeme>
+
       <Lexeme Stem1="vienīb"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Vienība" Avots="LĢIS"/> </Lexeme>
       <Lexeme Stem1="draudzīb"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Draudzība" Avots="LĢIS"/> </Lexeme>
       <Lexeme Stem1="rub"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Ruba" Avots="LĢIS"/> </Lexeme>
@@ -1457,7 +1458,6 @@
       <Lexeme Stem1="kalnabeit"> <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Kalnabeites" Avots="LĢIS"/> </Lexeme>
       <Lexeme Stem1="aizupīt"> <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Aizupītes" Avots="LĢIS"/> </Lexeme>
       <Lexeme Stem1="pelt"> <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Peltes" Avots="LĢIS"/> </Lexeme>
-      <Lexeme Stem1="daukst"> <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Daukstes" Avots="LĢIS"/> </Lexeme>
       <Lexeme Stem1="vālodz"> <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Vālodzes" Avots="LĢIS"/> </Lexeme>
       <Lexeme Stem1="roz"> <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Rozes" Avots="LĢIS"/> </Lexeme>
   </Paradigm>
@@ -1476,13 +1476,12 @@
       <Lexeme Stem1="krustpil"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Krustpils" Avots="LĢIS"/> </Lexeme>
       <Lexeme Stem1="daugavpil"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Daugavpils" Avots="LĢIS"/> </Lexeme>
       <Lexeme Stem1="bērzpil"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Bērzpils" Avots="LĢIS"/> </Lexeme>
-      <Lexeme Stem1="cēs"> <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Cēsis" Avots="LĢIS"/> </Lexeme>
   </Paradigm>
   <Paradigm Stems="1" ID="12" LemmaEnding="111" Description="Nelokāmie lietvārdi">
     <Attributes Vārdšķira="Lietvārds" Deklinācija="Nepiemīt"/>
       <Lexeme Stem1="līgo"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Līgo" Avots="LĢIS"/> </Lexeme>
 
-      <Lexeme Stem1="samo"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Samoa" Avots="wiki"/> </Lexeme>
+      <Lexeme Stem1="samoa"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Samoa" Avots="wiki"/> </Lexeme>
       <Lexeme Stem1="karači"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Karači" Avots="wiki"/> </Lexeme>
       <Lexeme Stem1="burundi"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Burundi" Avots="wiki"/> </Lexeme>
       <Lexeme Stem1="mali"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Mali" Avots="wiki"/> </Lexeme>
@@ -1509,4 +1508,10 @@
       <Lexeme Stem1="bengalūru"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Bengalūru" Avots="wiki"/> </Lexeme>
       <Lexeme Stem1="vanuatu"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Vanuatu" Avots="wiki"/> </Lexeme>
   </Paradigm>  
+  <Paradigm Stems="1" ID="35" Name="noun-6b" LemmaEnding="2079" Description="Lietvārdi, 6. deklinācija, sieviešu dzimte, galotne -s, bez miju (auss, balss)" AllowedGuessEndings="!">
+      <Lexeme Stem1="cēs"> <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Cēsis" Avots="LĢIS"/> </Lexeme>        
+  </Paradigm>
+  <Paradigm Stems="1" ID="44" Name="noun-5fb" LemmaEnding="1765" Description="Lietvārdi, 5. deklinācija, sieviešu dzimte, galotne -e, bez mijas (pase)" AllowedGuessEndings="!">
+      <Lexeme Stem1="daukst"> <Attributes Lietvārda_tips="Īpašvārds" Skaitlis_2="Daudzskaitlinieks" Pamatforma="Daukstes" Avots="LĢIS"/> </Lexeme>
+  </Paradigm>
 </Lexicon>
