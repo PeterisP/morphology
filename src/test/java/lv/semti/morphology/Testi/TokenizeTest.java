@@ -757,5 +757,48 @@ public class TokenizeTest {
         tokens = Splitting.tokenize(locītājs, "P. P. S.", false);
         assertEquals(1, tokens.size());
     }
+
+    @Test
+    public void trie_automatons() {
+        Trie n1 = new Trie(Trie.n1_dz_initials());
+        assertTrue(n1.match("Dz."));
+        assertTrue(n1.match("Dž."));
+        assertFalse(n1.match("Dz"));
+
+        Trie n2c = new Trie(Trie.n2_c_paragraphs());
+        assertTrue(n2c.match("4."));
+        assertTrue(n2c.match("4.1."));
+        assertTrue(locītājs.automats.match("4."));
+        assertTrue(locītājs.automats.match("4.1."));
+    }
+
+    @Test
+    public void arturs_ticket_33_1(){
+        LinkedList<Word> tokens;
+        LinkedList<LinkedList<Word>> sentences;
+        tokens = Splitting.tokenize(locītājs, "4.1. tabula");
+        assertEquals(2, tokens.size());
+        sentences = Splitting.tokenizeSentences(locītājs, "4.1. tabula");
+        assertEquals(1, sentences.size());
+//        Liels paldies! (Aplausi.)
+//        (Ienāk istabā.) Nevajag tur piekopt?
+//        (No zāles dep. A.Lejiņš: "Pareizi!")
+//        ap 4000 g. p.m.ē.
+//        Bateman et al., 2010
+    }
+
+    @Test
+    public void arturs_ticket_33_2(){
+        LinkedList<Word> tokens;
+        LinkedList<LinkedList<Word>> sentences;
+        tokens = Splitting.tokenize(locītājs, "Liels paldies! (Aplausi.)");
+        assertEquals(2, tokens.size());
+        sentences = Splitting.tokenizeSentences(locītājs, "Liels paldies! (Aplausi.)");
+        assertEquals(1, sentences.size());
+//        (Ienāk istabā.) Nevajag tur piekopt?
+//        (No zāles dep. A.Lejiņš: "Pareizi!")
+//        ap 4000 g. p.m.ē.
+//        Bateman et al., 2010
+    }
 }
  

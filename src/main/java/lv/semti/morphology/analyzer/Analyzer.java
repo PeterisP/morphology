@@ -57,7 +57,7 @@ public class Analyzer extends Lexicon {
 		
 	private Cache<String, Word> wordCache = new Cache<String, Word>();
 
-	Trie automats;
+	public Trie automats;
 		
 	/**
 	 * Construct the morphological analyzer object by loading the lexicon from either the default location, a specified file name or an inputstream.

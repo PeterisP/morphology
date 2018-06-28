@@ -26,7 +26,13 @@ public class Trie {
 	private node iterator;
 	private ArrayList<node> branchList;
 	private boolean isFirst;
-	
+
+    public Trie(node root) {
+        branchList=new ArrayList<node>();
+        branchList.add(root);
+        this.reset();
+    }
+
 	public Trie(String filename) throws IOException {
 		this(filename != null && !filename.isEmpty() ? new FileInputStream(filename) : null);
 	}
@@ -34,9 +40,9 @@ public class Trie {
 	public Trie(InputStream fstream) throws IOException {
 		node root,tmp;
 		branchList=new ArrayList<node>();
-		//izveido exception Trie
 		root=new node();
 
+        //izveido exception Trie
 		if (fstream != null) {
 			InputStreamReader in = new InputStreamReader(fstream,"UTF-8");
 			BufferedReader br = new BufferedReader(in);
@@ -51,97 +57,19 @@ public class Trie {
 			branchList.add(root);
 		}
 		
-		/* 1
-		 * Iniciāļu automāts atpazīst Dz. Dž. UpperCaseLetter.
-		 */
-		root=new StringNode("D");
-		branchList.add(root);
-		root.firstChild=new StringNode("zžZŽ");
-		root.firstChild.nextSibling=new StringNode(".");
-		root.firstChild.nextSibling.canEnd=true;
-		root.firstChild.firstChild=root.firstChild.nextSibling;
-		root.nextSibling=new UCNode();
-		root.nextSibling.firstChild=root.firstChild.nextSibling;
-		
-		
-		/*
-		 * 2a automāts atpazīst pulksteni
-		 */
-		
-		root=new StringNode("01");
-		branchList.add(root);
-		root.firstChild=new DigitNode();
-		root.firstChild.firstChild=new StringNode(":");
-		root.firstChild.firstChild.firstChild=new StringNode("012345");
-		root.firstChild.firstChild.firstChild.firstChild=new DigitNode();
-		root.firstChild.firstChild.firstChild.firstChild.canEnd=true;
-		root.firstChild.firstChild.firstChild.firstChild.firstChild=root.firstChild.firstChild;
-		root.nextSibling=new StringNode("2");
-		root.nextSibling.firstChild=new StringNode("0123");
-		root.nextSibling.firstChild.firstChild=root.firstChild.firstChild;
-		
-		/*
-		 * 2aa atpazīst datumu ISO formāta 2009-12-14 (patiesībā /[0-9][0-9][0-9][0-9][\-.][0-9][0-9][\-.][0-9][0-9]\.?/)
-		 */
-		
-		root=new DigitNode();
-		branchList.add(root);
-		root.firstChild=new DigitNode();
-		root.firstChild.firstChild=new DigitNode();
-		root.firstChild.firstChild.firstChild=new DigitNode();
-		root.firstChild.firstChild.firstChild.firstChild=new StringNode("-.");
-		root=root.firstChild.firstChild.firstChild.firstChild;
-		root.firstChild=new DigitNode();
-		root.firstChild.firstChild=new DigitNode();
-		root.firstChild.firstChild.firstChild=new StringNode("-.");
-		root=root.firstChild.firstChild.firstChild;
-		root.firstChild=new DigitNode();
-		root.firstChild.firstChild=new DigitNode();
-		root.firstChild.firstChild.canEnd=true;
-		root.firstChild.firstChild.firstChild=new StringNode(".");
-		root.firstChild.firstChild.firstChild.canEnd=true;
-		
-		/*
-		 * 2aaa atapzīst mājas numurus ( /[0-9]+[A-Z]/)
-		 */
-		
-		root=new DigitNode();
-		branchList.add(root);
-		root.firstChild=new DigitNode();
-		root.firstChild.firstChild=root.firstChild;
-		root.firstChild.nextSibling=new LetterNode();
-		root.firstChild.nextSibling.canEnd=true;
-		
-		
-		/*
-		 * 2b automāts
-		 * atpazīst:
-		 *  naudas formā 123,-
-		 * 	pamata skaitļus 
-		 *  kārtas skaitļus
-		 * 	skaitļus ar decimālatdalītāju (punktu vai komatu)
-		 * 	skaitļus ar tūkstošu atdalītāju (komatu vai apostrofu)
-		 * 	daļskaitļus (/ vai \)
-		 */
-		
-		root=new DigitNode();
-		root.canEnd=true;
-		branchList.add(root);
-		root.firstChild=new DigitNode();
-		root.firstChild.canEnd=true;
-		root.firstChild.firstChild=root.firstChild;
-		root.firstChild.nextSibling=new StringNode(".");
-		root.firstChild.nextSibling.canEnd=true;
-		root.firstChild.nextSibling.firstChild=new StringNode("-‐‑‒–—―'");
-		root.firstChild.nextSibling.firstChild.canEnd=true;		
-		root.firstChild.nextSibling.nextSibling=new StringNode(",");
-		root.firstChild.nextSibling.nextSibling.firstChild=new StringNode("-‐‑‒–—―'");
-		root.firstChild.nextSibling.nextSibling.firstChild.canEnd=true;
-		root.firstChild.nextSibling.nextSibling.firstChild.nextSibling=root;
-		root.firstChild.nextSibling.nextSibling.firstChild=root.firstChild.nextSibling.firstChild;
-		root.firstChild.nextSibling.nextSibling.nextSibling=new StringNode(" '/\\");
-		root.firstChild.nextSibling.nextSibling.nextSibling.firstChild=root;
+		// 1. Iniciāļu automāts atpazīst Dz. Dž. UpperCaseLetter.
+		branchList.add(n1_dz_initials());
 
+		// 2a automāts atpazīst pulksteni
+		branchList.add(n2_a_clock());
+		// 2aa atpazīst datumu ISO formāta 2009-12-14 (patiesībā /[0-9][0-9][0-9][0-9][\-.][0-9][0-9][\-.][0-9][0-9]\.?/)
+		branchList.add(n2_aa_date());
+		// 2aaa atapzīst mājas numurus ( /[0-9]+[A-Z]/)
+		branchList.add(n2_aaa_houses());
+
+		// 2b automāts atpazīst skaitļus dažādos veidos
+		root=n2_b_numbers();
+		branchList.add(root);
 		// optional +- in front
         tmp = new StringNode("+-");
         tmp.firstChild = root;
@@ -149,126 +77,265 @@ public class Trie {
         tmp.firstChild.nextSibling.firstChild = root;
         branchList.add(tmp);
 
-		
-		tmp=root.firstChild.nextSibling.firstChild;
-		tmp.nextSibling=new DigitNode();
-		tmp=tmp.nextSibling;
-		tmp.canEnd=true;
-		tmp.firstChild=new DigitNode();
-		tmp.firstChild.canEnd=true;
-		tmp.firstChild.firstChild=tmp.firstChild;
-		tmp.firstChild.nextSibling=new StringNode(".,");
-		tmp.firstChild.nextSibling.firstChild=new StringNode("-‐‑‒–—―'");
-		tmp.firstChild.nextSibling.firstChild.canEnd=true;
-		tmp.firstChild.nextSibling.firstChild.nextSibling=tmp;
-		tmp.firstChild.nextSibling.nextSibling=new StringNode(" '/\\");
-		tmp.firstChild.nextSibling.nextSibling.firstChild=tmp;
-		
-		/* 3
-		 * e-pasta automāts
-		 */
-		root=new LetterOrDigitNode();
-		branchList.add(root);
-		root.firstChild=new LetterOrDigitNode("_-.");
-		root.firstChild.firstChild=root.firstChild;
-		root.firstChild.nextSibling=new StringNode("@");
-		root.firstChild.nextSibling.firstChild=new LetterOrDigitNode();
-		root.firstChild.nextSibling.firstChild.canEnd=true;
-		root.firstChild.nextSibling.firstChild.firstChild=root.firstChild.nextSibling.firstChild;
-		root.firstChild.nextSibling.firstChild.nextSibling=new StringNode("_-.");
-		root.firstChild.nextSibling.firstChild.nextSibling.firstChild=root.firstChild.nextSibling.firstChild;
-		
-		/* 4
-		 * web adreses automāts 
-		 * atpazīst adreses kuras sākas ar http(s) ftp(s) www
-		 * adreses var saturēt  burtus, ciparus un simbolus "/_-@:?=&%."
-		 * adrese drikst beigties ar burtu vai ciparu vai simbolu "/"
-		 */
-		
-		root=new StringNode("hH");
-		branchList.add(root);
-		root.firstChild=new StringNode("tT");
-		root.firstChild.firstChild=new StringNode("tT");
-		root.firstChild.firstChild.firstChild=new StringNode("pP");
-		root.firstChild.firstChild.firstChild.firstChild=new StringNode(":");
-		root.firstChild.firstChild.firstChild.firstChild.firstChild=new StringNode("/");
-		root.firstChild.firstChild.firstChild.firstChild.firstChild.firstChild=new StringNode("/");
-		root.firstChild.firstChild.firstChild.firstChild.nextSibling=new StringNode("sS");
-		root.firstChild.firstChild.firstChild.firstChild.nextSibling.firstChild=root.firstChild.firstChild.firstChild.firstChild;
-		root.nextSibling=new StringNode("fF");
-		root.nextSibling.firstChild=new StringNode("tT");
-		root.nextSibling.firstChild.firstChild=new StringNode("pP");
-		root.nextSibling.firstChild.firstChild.firstChild=root.firstChild.firstChild.firstChild.firstChild;
-		root.nextSibling.nextSibling=new StringNode("wW");
-		root.nextSibling.nextSibling.firstChild=new StringNode("wW");
-		root.nextSibling.nextSibling.firstChild.firstChild=new StringNode("wW");
-		root.nextSibling.nextSibling.firstChild.firstChild.firstChild=new StringNode(".");
-		root.nextSibling.nextSibling.firstChild.firstChild.firstChild.firstChild=new LetterOrDigitNode("/");
-		root.nextSibling.nextSibling.firstChild.firstChild.firstChild.firstChild.canEnd=true;
-		root.firstChild.firstChild.firstChild.firstChild.firstChild.firstChild.firstChild=root.nextSibling.nextSibling.firstChild.firstChild.firstChild.firstChild;
-		root=root.nextSibling.nextSibling.firstChild.firstChild.firstChild.firstChild;
-		root.firstChild=new LetterOrDigitNode("/");
-		root.firstChild.canEnd=true;
-		root.firstChild.firstChild=root.firstChild;
-		root.firstChild.firstChild.canEnd=true;
-		root.firstChild.firstChild.nextSibling=new StringNode("_-@:?=&%.");
-		root.firstChild.firstChild.nextSibling.firstChild=root;
+        // 2c automāts atpazīst paragrāfus formā 1.2.3.4.
+        branchList.add(n2_c_paragraphs());
 
-		/* 4b
-		 * domēnvārda automāts
-		 * burti.lv
-		 */
-        root=new LetterNode();
-        branchList.add(root);
+		// 3 e-pasta automāts
+		branchList.add(n3_email());
+
+		// 4a web adreses automāts
+		branchList.add(n4a_url());
+        // 4b domēna automāts
+        branchList.add(n4b_domain());
+
+		// 5 Ciklojošo pieturzīmju automāts (atpazīst .?!)
+		branchList.add(n5_punctuation());
+		
+		// 6 automāts, kurš atpazīsts vārdus ar atstarpēm
+		branchList.add(n6_spaced());
+
+		// 7 automāts saliktiem vārdiem un to sastāvdaļām
+		branchList.add(n7_compound());
+
+		//sagatavojamies pirmajam meklētajam simbolam
+		this.reset();
+	}
+
+	public static node n1_dz_initials() {
+        /* 1
+         * Iniciāļu automāts atpazīst Dz. Dž. UpperCaseLetter.
+         */
+        node root=new StringNode("D");
+        root.firstChild=new StringNode("zžZŽ");
+        root.firstChild.nextSibling=new StringNode(".");
+        root.firstChild.nextSibling.canEnd=true;
+        root.firstChild.firstChild=root.firstChild.nextSibling;
+        root.nextSibling=new UCNode();
+        root.nextSibling.firstChild=root.firstChild.nextSibling;
+        return root;
+    }
+
+    public static node n2_a_clock() {
+        /*
+         * 2a automāts atpazīst pulksteni
+         */
+        node root=new StringNode("01");
+        root.firstChild=new DigitNode();
+        root.firstChild.firstChild=new StringNode(":");
+        root.firstChild.firstChild.firstChild=new StringNode("012345");
+        root.firstChild.firstChild.firstChild.firstChild=new DigitNode();
+        root.firstChild.firstChild.firstChild.firstChild.canEnd=true;
+        root.firstChild.firstChild.firstChild.firstChild.firstChild=root.firstChild.firstChild;
+        root.nextSibling=new StringNode("2");
+        root.nextSibling.firstChild=new StringNode("0123");
+        root.nextSibling.firstChild.firstChild=root.firstChild.firstChild;
+        return root;
+    }
+
+    public static node n2_aa_date() {
+        /*
+         * 2aa atpazīst datumu ISO formāta 2009-12-14 (patiesībā /[0-9][0-9][0-9][0-9][\-.][0-9][0-9][\-.][0-9][0-9]\.?/)
+         */
+        node root=new DigitNode();
+        root.firstChild=new DigitNode();
+        root.firstChild.firstChild=new DigitNode();
+        root.firstChild.firstChild.firstChild=new DigitNode();
+        root.firstChild.firstChild.firstChild.firstChild=new StringNode("-.");
+        node root2=root.firstChild.firstChild.firstChild.firstChild;
+        root2.firstChild=new DigitNode();
+        root2.firstChild.firstChild=new DigitNode();
+        root2.firstChild.firstChild.firstChild=new StringNode("-.");
+        root2=root2.firstChild.firstChild.firstChild;
+        root2.firstChild=new DigitNode();
+        root2.firstChild.firstChild=new DigitNode();
+        root2.firstChild.firstChild.canEnd=true;
+        root2.firstChild.firstChild.firstChild=new StringNode(".");
+        root2.firstChild.firstChild.firstChild.canEnd=true;
+        return root;
+    }
+
+    public static node n2_aaa_houses() {
+        // 2aaa atapzīst mājas numurus ( /[0-9]+[A-Z]/)
+        node root=new DigitNode();
+        root.firstChild=new DigitNode();
+        root.firstChild.firstChild=root.firstChild;
+        root.firstChild.nextSibling=new LetterNode();
+        root.firstChild.nextSibling.canEnd=true;
+        return root;
+    }
+
+    public static node n2_b_numbers() {
+        /*
+         * 2b automāts
+         * atpazīst:
+         *  naudas formā 123,-
+         * 	pamata skaitļus
+         *  kārtas skaitļus
+         * 	skaitļus ar decimālatdalītāju (punktu vai komatu)
+         * 	skaitļus ar tūkstošu atdalītāju (komatu vai apostrofu)
+         * 	daļskaitļus (/ vai \)
+         */
+
+        node root=new DigitNode();
+        root.canEnd=true;
+        root.firstChild=new DigitNode();
+        root.firstChild.canEnd=true;
+        root.firstChild.firstChild=root.firstChild;
+        root.firstChild.nextSibling=new StringNode(".");
+        root.firstChild.nextSibling.canEnd=true;
+        root.firstChild.nextSibling.firstChild=new StringNode("-‐‑‒–—―'");
+        root.firstChild.nextSibling.firstChild.canEnd=true;
+        root.firstChild.nextSibling.nextSibling=new StringNode(",");
+        root.firstChild.nextSibling.nextSibling.firstChild=new StringNode("-‐‑‒–—―'");
+        root.firstChild.nextSibling.nextSibling.firstChild.canEnd=true;
+        root.firstChild.nextSibling.nextSibling.firstChild.nextSibling=root;
+        root.firstChild.nextSibling.nextSibling.firstChild=root.firstChild.nextSibling.firstChild;
+        root.firstChild.nextSibling.nextSibling.nextSibling=new StringNode(" '/\\");
+        root.firstChild.nextSibling.nextSibling.nextSibling.firstChild=root;
+
+        node tmp=root.firstChild.nextSibling.firstChild;
+        tmp.nextSibling=new DigitNode();
+        tmp=tmp.nextSibling;
+        tmp.canEnd=true;
+        tmp.firstChild=new DigitNode();
+        tmp.firstChild.canEnd=true;
+        tmp.firstChild.firstChild=tmp.firstChild;
+        tmp.firstChild.nextSibling=new StringNode(".,");
+        tmp.firstChild.nextSibling.firstChild=new StringNode("-‐‑‒–—―'");
+        tmp.firstChild.nextSibling.firstChild.canEnd=true;
+        tmp.firstChild.nextSibling.firstChild.nextSibling=tmp;
+        tmp.firstChild.nextSibling.nextSibling=new StringNode(" '/\\");
+        tmp.firstChild.nextSibling.nextSibling.firstChild=tmp;
+
+        return root;
+    }
+
+    public static node n2_c_paragraphs() {
+        // 2c automāts atpazīst paragrāfus formā 1.2.3.4.
+        node root=new DigitNode();
+        root.canEnd=true;
+        root.firstChild=new DigitNode();
+        root.firstChild.canEnd=true;
+        root.firstChild.firstChild=root.firstChild;
+        root.firstChild.nextSibling=new StringNode(".");
+        root.firstChild.nextSibling.canEnd=true;
+        root.firstChild.nextSibling.firstChild=root.firstChild;
+
+        return root;
+    }
+
+    public static node n3_email() {
+        /* 3
+         * e-pasta automāts
+         */
+        node root=new LetterOrDigitNode();
+        root.firstChild=new LetterOrDigitNode("_-.");
+        root.firstChild.firstChild=root.firstChild;
+        root.firstChild.nextSibling=new StringNode("@");
+        root.firstChild.nextSibling.firstChild=new LetterOrDigitNode();
+        root.firstChild.nextSibling.firstChild.canEnd=true;
+        root.firstChild.nextSibling.firstChild.firstChild=root.firstChild.nextSibling.firstChild;
+        root.firstChild.nextSibling.firstChild.nextSibling=new StringNode("_-.");
+        root.firstChild.nextSibling.firstChild.nextSibling.firstChild=root.firstChild.nextSibling.firstChild;
+        return root;
+    }
+
+    public static node n4a_url() {
+        /* 4
+         * web adreses automāts
+         * atpazīst adreses kuras sākas ar http(s) ftp(s) www
+         * adreses var saturēt  burtus, ciparus un simbolus "/_-@:?=&%."
+         * adrese drikst beigties ar burtu vai ciparu vai simbolu "/"
+         */
+
+        node root=new StringNode("hH");
+        root.firstChild=new StringNode("tT");
+        root.firstChild.firstChild=new StringNode("tT");
+        root.firstChild.firstChild.firstChild=new StringNode("pP");
+        root.firstChild.firstChild.firstChild.firstChild=new StringNode(":");
+        root.firstChild.firstChild.firstChild.firstChild.firstChild=new StringNode("/");
+        root.firstChild.firstChild.firstChild.firstChild.firstChild.firstChild=new StringNode("/");
+        root.firstChild.firstChild.firstChild.firstChild.nextSibling=new StringNode("sS");
+        root.firstChild.firstChild.firstChild.firstChild.nextSibling.firstChild=root.firstChild.firstChild.firstChild.firstChild;
+        root.nextSibling=new StringNode("fF");
+        root.nextSibling.firstChild=new StringNode("tT");
+        root.nextSibling.firstChild.firstChild=new StringNode("pP");
+        root.nextSibling.firstChild.firstChild.firstChild=root.firstChild.firstChild.firstChild.firstChild;
+        root.nextSibling.nextSibling=new StringNode("wW");
+        root.nextSibling.nextSibling.firstChild=new StringNode("wW");
+        root.nextSibling.nextSibling.firstChild.firstChild=new StringNode("wW");
+        root.nextSibling.nextSibling.firstChild.firstChild.firstChild=new StringNode(".");
+        root.nextSibling.nextSibling.firstChild.firstChild.firstChild.firstChild=new LetterOrDigitNode("/");
+        root.nextSibling.nextSibling.firstChild.firstChild.firstChild.firstChild.canEnd=true;
+        root.firstChild.firstChild.firstChild.firstChild.firstChild.firstChild.firstChild=root.nextSibling.nextSibling.firstChild.firstChild.firstChild.firstChild;
+        node root2=root.nextSibling.nextSibling.firstChild.firstChild.firstChild.firstChild;
+        root2.firstChild=new LetterOrDigitNode("/");
+        root2.firstChild.canEnd=true;
+        root2.firstChild.firstChild=root2.firstChild;
+        root2.firstChild.firstChild.canEnd=true;
+        root2.firstChild.firstChild.nextSibling=new StringNode("_-@:?=&%.");
+        root2.firstChild.firstChild.nextSibling.firstChild=root2;
+        return root;
+    }
+
+    public static node n4b_domain(){
+        /* 4b
+         * domēnvārda automāts
+         * burti.lv
+         */
+        node root=new LetterNode();
         root.firstChild=new LetterNode();
         root.firstChild.firstChild=root.firstChild; // 2+ burti
         root.firstChild.nextSibling=new StringNode(".");
         root.firstChild.nextSibling.firstChild=new StringNode("lL");
         root.firstChild.nextSibling.firstChild.firstChild=new StringNode("vV");
         root.firstChild.nextSibling.firstChild.firstChild.canEnd=true;
+        return root;
+    }
 
-		/* 5
-		 * Ciklojošo pieturzīmju automāts (atpazīst .?!)
-		 */
-		
-		root=new StringNode(".?!");
-		root.canEnd=true;
-		root.firstChild=root;
-		branchList.add(root);
-		
-		/* 6
-		 * automāts, kurš atpazīsts vārdus ar atstarpēm
-		 * piemērām "a t s t a r p e s"
-		 */
-		root=new LetterNode();
-		branchList.add(root);
-		root.firstChild=new StringNode(" ");
-		root.firstChild.firstChild=new LetterNode();
-		root.firstChild.firstChild.canEnd=true;
-		root.firstChild.firstChild.firstChild=root.firstChild;
-		
-		/* 7
-		 * automāts, kurš atpazīst virkni 
-		 * no simboliem kuri var atrasties jebkur - burti un cipari
-		 * no simboliem kuri var atrasties tikai vidū - "_-"
-		 * no simboliem kuri var atrasties tikai beigās - "'"   
-		 */
-		
-		root=new LetterOrDigitNode();
-		branchList.add(root);
-		root.canEnd=true;
-		root.firstChild=new LetterOrDigitNode();
-		root.firstChild.canEnd=true;
-		root.firstChild.firstChild=root.firstChild;
-		root.firstChild.nextSibling=new StringNode("_-");
-		root.firstChild.nextSibling.firstChild=root;
-		root.firstChild.nextSibling.nextSibling=new StringNode("'");
-		root.firstChild.nextSibling.nextSibling.canEnd=true;
-			
-		//sagatavojamies pirmajam meklētajam simbolam
-		this.reset();
-	}
-	
+    public static node n5_punctuation() {
+        /* 5
+         * Ciklojošo pieturzīmju automāts (atpazīst .?!)
+         */
+        node root=new StringNode(".?!");
+        root.canEnd=true;
+        root.firstChild=root;
+        return root;
+    }
+
+    public static node n6_spaced() {
+        /* 6
+         * automāts, kurš atpazīsts vārdus ar atstarpēm
+         * piemērām "a t s t a r p e s"
+         */
+        node root=new LetterNode();
+        root.firstChild=new StringNode(" ");
+        root.firstChild.firstChild=new LetterNode();
+        root.firstChild.firstChild.canEnd=true;
+        root.firstChild.firstChild.firstChild=root.firstChild;
+        return root;
+    }
+
+    public static node n7_compound() {
+        /* 7
+         * automāts, kurš atpazīst virkni
+         * no simboliem kuri var atrasties jebkur - burti un cipari
+         * no simboliem kuri var atrasties tikai vidū - "_-"
+         * no simboliem kuri var atrasties tikai beigās - "'"
+         */
+
+        node root=new LetterOrDigitNode();
+        root.canEnd=true;
+        root.firstChild=new LetterOrDigitNode();
+        root.firstChild.canEnd=true;
+        root.firstChild.firstChild=root.firstChild;
+        root.firstChild.nextSibling=new StringNode("_-");
+        root.firstChild.nextSibling.firstChild=root;
+        root.firstChild.nextSibling.nextSibling=new StringNode("'");
+        root.firstChild.nextSibling.nextSibling.canEnd=true;
+        return root;
+    }
+
 	public void add(String s, node root)
 	{
 		int i=0;
@@ -380,6 +447,16 @@ public class Trie {
 			}
 		}
 	}
+
+	public boolean match(String sequence) {
+        reset();
+        int status =0;
+        for (char c : sequence.toCharArray()) {
+             status = findNext(c);
+            if (status==0) return false;
+        }
+        return (status==2);
+    }
 }
 
 class node  {
