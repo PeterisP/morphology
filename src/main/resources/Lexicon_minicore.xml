@@ -2,6 +2,8 @@
 <Lexicon revision="2.0.0-SNAPSHOT" licence="Copyright 2008-2018 Institute of Mathematics and Computer Science, University of Latvia. This file is part of the SemTi-Kamols Chunker, see http://www.semti-kamols.lv/  This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program. If not, see http://www.gnu.org/licenses/.">
   <Paradigm Stems="1" ID="1" LemmaEnding="1" Description="Lietvārds 1. deklinācija -s">
     <Attributes Vārdšķira="Lietvārds" Deklinācija="1" Dzimte="Vīriešu"/>
+    <Lexeme Stem1="lietotāj"/>
+    <Lexeme Stem1="zinātniek"/>
   </Paradigm>
   <Paradigm Stems="1" ID="2" LemmaEnding="14" Description="Lietvārds 1. deklinācija -š">
     <Attributes Vārdšķira="Lietvārds" Deklinācija="1" Dzimte="Vīriešu"/>
@@ -43,10 +45,10 @@
   </Paradigm>
   <Paradigm Stems="1" ID="11" LemmaEnding="99" Description="Lietvārds 6. deklinācijā -s">
     <Attributes Vārdšķira="Lietvārds" Deklinācija="6" Dzimte="Sieviešu"/>
+    <Lexeme Stem1="dalībvalst"/>
   </Paradigm>
   <Paradigm Stems="1" ID="12" LemmaEnding="111" Description="Nelokāmie lietvārdi">
     <Attributes Vārdšķira="Lietvārds" Deklinācija="Nepiemīt"/>
-    <Lexeme Stem1="video"/>
   </Paradigm>
   <Paradigm Stems="1" ID="13" LemmaEnding="135" Description="Īpašības vārdi ar -s">
     <Attributes Vārdšķira="Īpašības vārds"/>
@@ -67,6 +69,9 @@
     </Lexeme>
     <Lexeme Stem1="nespē" Stem2="nespēj" Stem3="nespēj">
       <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Modāls" Pamatforma="nespēt"/>
+    </Lexeme>
+    <Lexeme Stem1="nespē" Stem2="nespēj" Stem3="nespēj">
+      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Pamata darbības vārds" Pamatforma="nespēt"/>
     </Lexeme>
     <Lexeme Stem1="pagū" Stem2="pagūst" Stem3="paguv">
       <Attributes Darbības_vārda_tips="Modāls" Pamatforma="pagūt"/>
@@ -155,8 +160,14 @@
     <Lexeme Stem1="gribē">
       <Attributes Darbības_vārda_tips="Modāls" Pamatforma="gribēt"/>
     </Lexeme>
+    <Lexeme Stem1="negribē">
+      <Attributes Darbības_vārda_tips="Modāls" Pamatforma="negribēt"/>
+    </Lexeme>
     <Lexeme Stem1="drīkstē">
       <Attributes Darbības_vārda_tips="Modāls" Pamatforma="drīkstēt"/>
+    </Lexeme>
+    <Lexeme Stem1="nedrīkstē">
+      <Attributes Darbības_vārda_tips="Modāls" Pamatforma="nedrīkstēt"/>
     </Lexeme>
     <Lexeme Stem1="mēģinā">
       <Attributes Darbības_vārda_tips="Modāls" Pamatforma="mēģināt"/>
@@ -292,6 +303,7 @@
     <Lexeme Stem1="vairāk">
       <Attributes Apstākļa_vārda_tips="Mēra" Pakāpe="Pārākā" Pamatforma="daudz"/>
     </Lexeme>
+    <Lexeme Stem1="beidzot"/>
   </Paradigm>
   <Paradigm Stems="1" ID="22" LemmaEnding="1102" Description="Kārtas skaitļa vārdi">
     <Attributes Vārdšķira="Skaitļa vārds" Skaitļa_vārda_tips="Kārtas" Uzbūve="Vienkāršs" Noteiktība="Noteiktā"/>
@@ -2590,6 +2602,9 @@
     <Lexeme Stem1="protams">
       <Attributes Uzbūve="Vienkāršs" Pamatforma="protams"/>
     </Lexeme>
+    <Lexeme Stem1="droši">
+      <Attributes Uzbūve="Vienkāršs" Pamatforma="droši"/>
+    </Lexeme>
     <Lexeme Stem1="tieši">
       <Attributes Uzbūve="Vienkāršs" Pamatforma="tieši"/>
     </Lexeme>
@@ -2890,12 +2905,6 @@
     <Lexeme Stem1="trīstūkstoš">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši" Pamatforma="trīstūkstoš"/>
     </Lexeme>
-    <Lexeme Stem1="nebūšu">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="1" Noliegums="Jā" Pamatforma="nebūt" Laiks="Nākotne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebūšu">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="1" Noliegums="Jā" Pamatforma="nebūt" Laiks="Nākotne" Kārta="Darāmā"/>
-    </Lexeme>
     <Lexeme Stem1="sešpadsmit">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Skaitļu_kārta="Padsmiti" Pamatforma="sešpadsmit"/>
     </Lexeme>
@@ -2905,50 +2914,8 @@
     <Lexeme Stem1="deviņtūkstoš">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši" Pamatforma="deviņtūkstoš"/>
     </Lexeme>
-    <Lexeme Stem1="nebijušām">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Datīvs" Laiks="Pagātne" Pamatforma="nebūt" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Palīgverbs 'būt'" Dzimte="Sieviešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijušām">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Datīvs" Laiks="Pagātne" Pamatforma="nebūt" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Noteiktā" Darbības_vārda_tips="Patstāvīgs darbības vārds" Dzimte="Sieviešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošus">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Akuzatīvs" Laiks="Tagadne" Pamatforma="nebūt" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Palīgverbs 'būt'" Dzimte="Vīriešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošus">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Akuzatīvs" Laiks="Tagadne" Pamatforma="nebūt" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Noteiktā" Darbības_vārda_tips="Patstāvīgs darbības vārds" Dzimte="Vīriešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijušās">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Lokatīvs" Laiks="Pagātne" Pamatforma="nebūt" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Palīgverbs 'būt'" Dzimte="Sieviešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijušās">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Lokatīvs" Laiks="Pagātne" Pamatforma="nebūt" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Noteiktā" Darbības_vārda_tips="Patstāvīgs darbības vārds" Dzimte="Sieviešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebūšot">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Atstāstījuma" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="Nepiemīt" Noliegums="Jā" Pamatforma="nebūt" Laiks="Nākotne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebūšot">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Atstāstījuma" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="Nepiemīt" Noliegums="Jā" Pamatforma="nebūt" Laiks="Nākotne" Kārta="Darāmā"/>
-    </Lexeme>
     <Lexeme Stem1="divdesmit">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Desmiti" Pamatforma="divdesmit"/>
-    </Lexeme>
-    <Lexeme Stem1="esošiem">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Palīgverbs 'būt'" Locījums="Datīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošiem">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Datīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esoša">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Palīgverbs 'būt'" Locījums="Nominatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esoša">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Palīgverbs 'būt'" Locījums="Ģenitīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esoša">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Nominatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esoša">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Ģenitīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
     </Lexeme>
     <Lexeme Stem1="neiet">
       <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Jā" Pamatforma="iet" Laiks="Tagadne" Kārta="Darāmā"/>
@@ -2956,47 +2923,11 @@
     <Lexeme Stem1="tūkstoti">
       <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Vienskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Akuzatīvs" Skaitļu_kārta="Tūkstoši" Pamatforma="tūkstotis"/>
     </Lexeme>
-    <Lexeme Stem1="esoši">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Palīgverbs 'būt'" Locījums="Nominatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esoši">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Nominatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
     <Lexeme Stem1="divsimt">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Simti" Pamatforma="divsimt"/>
     </Lexeme>
-    <Lexeme Stem1="esošu">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Palīgverbs 'būt'" Locījums="Ģenitīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošu">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Palīgverbs 'būt'" Locījums="Akuzatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošu">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Palīgverbs 'būt'" Locījums="Ģenitīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošu">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Palīgverbs 'būt'" Locījums="Akuzatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošu">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Ģenitīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošu">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Akuzatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošu">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Ģenitīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošu">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Akuzatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
     <Lexeme Stem1="divtūkstoš">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši" Pamatforma="divtūkstoš"/>
-    </Lexeme>
-    <Lexeme Stem1="esošs">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Palīgverbs 'būt'" Locījums="Nominatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošs">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Nominatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
     </Lexeme>
     <Lexeme Stem1="divpadsmit">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Skaitļu_kārta="Padsmiti" Pamatforma="divpadsmit"/>
@@ -3004,116 +2935,20 @@
     <Lexeme Stem1="sešsimt">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Simti" Pamatforma="sešsimt"/>
     </Lexeme>
-    <Lexeme Stem1="nebūsiet">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="2" Noliegums="Jā" Pamatforma="nebūt" Laiks="Nākotne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebūsiet">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="2" Noliegums="Jā" Pamatforma="nebūt" Laiks="Nākotne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="būdami">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Palīgverbs 'būt'" Locījums="Nominatīvs" Pamatforma="būt" Lokāmība="Daļēji lokāms" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
-    </Lexeme>
-    <Lexeme Stem1="būdami">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Nominatīvs" Pamatforma="būt" Lokāmība="Daļēji lokāms" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
-    </Lexeme>
     <Lexeme Stem1="sešpadsmittūkstoš">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši" Pamatforma="sešpadsmittūkstoš"/>
-    </Lexeme>
-    <Lexeme Stem1="būdams">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Palīgverbs 'būt'" Locījums="Nominatīvs" Pamatforma="būt" Lokāmība="Daļēji lokāms" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
-    </Lexeme>
-    <Lexeme Stem1="būdams">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Nominatīvs" Pamatforma="būt" Lokāmība="Daļēji lokāms" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
-    </Lexeme>
-    <Lexeme Stem1="būsiet">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="2" Noliegums="Nē" Pamatforma="būt" Laiks="Nākotne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="būsiet">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="2" Noliegums="Nē" Pamatforma="būt" Laiks="Nākotne" Kārta="Darāmā"/>
     </Lexeme>
     <Lexeme Stem1="četrsimttūkstoš">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši" Pamatforma="četrsimttūkstoš"/>
     </Lexeme>
-    <Lexeme Stem1="nebijušus">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Akuzatīvs" Laiks="Pagātne" Pamatforma="nebūt" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Palīgverbs 'būt'" Dzimte="Vīriešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijušus">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Akuzatīvs" Laiks="Pagātne" Pamatforma="nebūt" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Noteiktā" Darbības_vārda_tips="Patstāvīgs darbības vārds" Dzimte="Vīriešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijušu">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Palīgverbs 'būt'" Locījums="Ģenitīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijušu">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Palīgverbs 'būt'" Locījums="Akuzatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijušu">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Palīgverbs 'būt'" Locījums="Ģenitīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijušu">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Palīgverbs 'būt'" Locījums="Akuzatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijušu">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Ģenitīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijušu">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Akuzatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijušu">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Ģenitīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijušu">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Akuzatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijušiem">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Palīgverbs 'būt'" Locījums="Datīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijušiem">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Datīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebija">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="3" Noliegums="Jā" Pamatforma="nebūt" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebija">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Jā" Pamatforma="nebūt" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
     <Lexeme Stem1="četrpadsmit">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Skaitļu_kārta="Padsmiti" Pamatforma="četrpadsmit"/>
-    </Lexeme>
-    <Lexeme Stem1="būsim">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="1" Noliegums="Nē" Pamatforma="būt" Laiks="Nākotne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="būsim">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="1" Noliegums="Nē" Pamatforma="būt" Laiks="Nākotne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebiji">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="2" Noliegums="Jā" Pamatforma="nebūt" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebiji">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="2" Noliegums="Jā" Pamatforma="nebūt" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esiet">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Pavēles" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="2" Noliegums="Nē" Pamatforma="būt" Laiks="Nepiemīt" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esiet">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Pavēles" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="2" Noliegums="Nē" Pamatforma="būt" Laiks="Nepiemīt" Kārta="Darāmā"/>
     </Lexeme>
     <Lexeme Stem1="piecpadsmittūkstoš">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši" Pamatforma="piecpadsmittūkstoš"/>
     </Lexeme>
-    <Lexeme Stem1="nebijušiem">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Datīvs" Laiks="Pagātne" Pamatforma="nebūt" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Palīgverbs 'būt'" Dzimte="Vīriešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijušiem">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Datīvs" Laiks="Pagātne" Pamatforma="nebūt" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Noteiktā" Darbības_vārda_tips="Patstāvīgs darbības vārds" Dzimte="Vīriešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
     <Lexeme Stem1="septiņsimt">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Simti" Pamatforma="septiņsimt"/>
-    </Lexeme>
-    <Lexeme Stem1="būdama">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Palīgverbs 'būt'" Locījums="Nominatīvs" Pamatforma="būt" Lokāmība="Daļēji lokāms" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
-    </Lexeme>
-    <Lexeme Stem1="būdama">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Nominatīvs" Pamatforma="būt" Lokāmība="Daļēji lokāms" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
     </Lexeme>
     <Lexeme Stem1="iet">
       <Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Nē" Pamatforma="iet" Laiks="Tagadne" Kārta="Darāmā"/>
@@ -3133,80 +2968,20 @@
     <Lexeme Stem1="pāriet">
       <Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Nē" Pamatforma="pāriet" Laiks="Tagadne" Kārta="Darāmā"/>
     </Lexeme>
-    <Lexeme Stem1="bijušos">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Palīgverbs 'būt'" Locījums="Lokatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijušos">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Lokatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijis">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Palīgverbs 'būt'" Locījums="Nominatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijis">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Nominatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijis">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Nominatīvs" Laiks="Pagātne" Pamatforma="nebūt" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Palīgverbs 'būt'" Dzimte="Vīriešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijis">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Nominatīvs" Laiks="Pagātne" Pamatforma="nebūt" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Noteiktā" Darbības_vārda_tips="Patstāvīgs darbības vārds" Dzimte="Vīriešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
     <Lexeme Stem1="astoņpadsmit">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Skaitļu_kārta="Padsmiti" Pamatforma="astoņpadsmit"/>
     </Lexeme>
     <Lexeme Stem1="četrdesmittūkstoš">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši" Pamatforma="četrdesmittūkstoš"/>
     </Lexeme>
-    <Lexeme Stem1="esam">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="1" Noliegums="Nē" Pamatforma="būt" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esam">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Noteiktība="Nepiemīt" Izteiksme="Divdabis" Dzimte="Nepiemīt" Darbības_vārda_tips="Palīgverbs 'būt'" Locījums="Nepiemīt" Pamatforma="būt" Lokāmība="Nelokāms" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
-    </Lexeme>
-    <Lexeme Stem1="esam">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="1" Noliegums="Nē" Pamatforma="būt" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esam">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Noteiktība="Nepiemīt" Izteiksme="Divdabis" Dzimte="Nepiemīt" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Nepiemīt" Pamatforma="būt" Lokāmība="Nelokāms" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
-    </Lexeme>
     <Lexeme Stem1="piecsimt">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Simti" Pamatforma="piecsimt"/>
-    </Lexeme>
-    <Lexeme Stem1="bijuša">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Palīgverbs 'būt'" Locījums="Ģenitīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijuša">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Ģenitīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
     </Lexeme>
     <Lexeme Stem1="piecpadsmit">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Skaitļu_kārta="Padsmiti" Pamatforma="piecpadsmit"/>
     </Lexeme>
     <Lexeme Stem1="astoņdesmittūkstoš">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši" Pamatforma="astoņdesmittūkstoš"/>
-    </Lexeme>
-    <Lexeme Stem1="bijuši">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Palīgverbs 'būt'" Locījums="Nominatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijuši">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Nominatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="būs">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="3" Noliegums="Nē" Pamatforma="būt" Laiks="Nākotne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="būs">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Nē" Pamatforma="būt" Laiks="Nākotne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="būt">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Nenoteiksme" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="Nepiemīt" Noliegums="Nē" Pamatforma="būt" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
-    </Lexeme>
-    <Lexeme Stem1="būt">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Nenoteiksme" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="Nepiemīt" Noliegums="Nē" Pamatforma="būt" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
-    </Lexeme>
-    <Lexeme Stem1="esat">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="2" Noliegums="Nē" Pamatforma="būt" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esat">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="2" Noliegums="Nē" Pamatforma="būt" Laiks="Tagadne" Kārta="Darāmā"/>
     </Lexeme>
     <Lexeme Stem1="triju">
       <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Sieviešu" Locījums="Ģenitīvs" Skaitļu_kārta="Vieni" Pamatforma="trīs"/>
@@ -3216,30 +2991,6 @@
     </Lexeme>
     <Lexeme Stem1="septiņdesmittūkstoš">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši" Pamatforma="septiņdesmittūkstoš"/>
-    </Lexeme>
-    <Lexeme Stem1="nebūs">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="3" Noliegums="Jā" Pamatforma="nebūt" Laiks="Nākotne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebūs">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Jā" Pamatforma="nebūt" Laiks="Nākotne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošos">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Palīgverbs 'būt'" Locījums="Lokatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošos">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Lokatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebūt">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Nenoteiksme" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="Nepiemīt" Noliegums="Jā" Pamatforma="nebūt" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
-    </Lexeme>
-    <Lexeme Stem1="nebūt">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Nenoteiksme" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="Nepiemīt" Noliegums="Jā" Pamatforma="nebūt" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijušā">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Lokatīvs" Laiks="Pagātne" Pamatforma="nebūt" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Palīgverbs 'būt'" Dzimte="Sieviešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijušā">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Lokatīvs" Laiks="Pagātne" Pamatforma="nebūt" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Palīgverbs 'būt'" Dzimte="Vīriešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
     </Lexeme>
     <Lexeme Stem1="iziet">
       <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Nē" Pamatforma="iziet" Laiks="Tagadne" Kārta="Darāmā"/>
@@ -3274,24 +3025,6 @@
     <Lexeme Stem1="jāaiziet">
       <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Vajadzības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="Nepiemīt" Noliegums="Nē" Pamatforma="aiziet" Laiks="Nepiemīt" Kārta="Darāmā"/>
     </Lexeme>
-    <Lexeme Stem1="esi">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="2" Noliegums="Nē" Pamatforma="būt" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esi">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Pavēles" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="2" Noliegums="Nē" Pamatforma="būt" Laiks="Nepiemīt" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esi">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="2" Noliegums="Nē" Pamatforma="būt" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esi">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Pavēles" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="2" Noliegums="Nē" Pamatforma="būt" Laiks="Nepiemīt" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="būšot">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Atstāstījuma" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="Nepiemīt" Noliegums="Nē" Pamatforma="būt" Laiks="Nākotne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="būšot">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Atstāstījuma" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="Nepiemīt" Noliegums="Nē" Pamatforma="būt" Laiks="Nākotne" Kārta="Darāmā"/>
-    </Lexeme>
     <Lexeme Stem1="desmit">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Skaitļu_kārta="Desmiti" Pamatforma="desmit"/>
     </Lexeme>
@@ -3313,83 +3046,17 @@
     <Lexeme Stem1="piecdesmit">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Desmiti" Pamatforma="piecdesmit"/>
     </Lexeme>
-    <Lexeme Stem1="neesi">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="2" Noliegums="Jā" Pamatforma="nebūt" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesi">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="2" Noliegums="Jā" Pamatforma="nebūt" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esot">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Noteiktība="Nepiemīt" Izteiksme="Divdabis" Dzimte="Nepiemīt" Darbības_vārda_tips="Palīgverbs 'būt'" Locījums="Nepiemīt" Pamatforma="būt" Lokāmība="Nelokāms" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
-    </Lexeme>
-    <Lexeme Stem1="esot">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Atstāstījuma" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="Nepiemīt" Noliegums="Nē" Pamatforma="būt" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esot">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Noteiktība="Nepiemīt" Izteiksme="Divdabis" Dzimte="Nepiemīt" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Nepiemīt" Pamatforma="būt" Lokāmība="Nelokāms" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
-    </Lexeme>
-    <Lexeme Stem1="esot">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Atstāstījuma" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="Nepiemīt" Noliegums="Nē" Pamatforma="būt" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
     <Lexeme Stem1="četrpadsmittūkstoš">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši" Pamatforma="četrpadsmittūkstoš"/>
-    </Lexeme>
-    <Lexeme Stem1="būdamas">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Palīgverbs 'būt'" Locījums="Nominatīvs" Pamatforma="būt" Lokāmība="Daļēji lokāms" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
-    </Lexeme>
-    <Lexeme Stem1="būdamas">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Nominatīvs" Pamatforma="būt" Lokāmība="Daļēji lokāms" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
-    </Lexeme>
-    <Lexeme Stem1="neesoša">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Nominatīvs" Laiks="Tagadne" Pamatforma="nebūt" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Palīgverbs 'būt'" Dzimte="Sieviešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesoša">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Ģenitīvs" Laiks="Tagadne" Pamatforma="nebūt" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Palīgverbs 'būt'" Dzimte="Vīriešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesoša">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Nominatīvs" Laiks="Tagadne" Pamatforma="nebūt" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Noteiktā" Darbības_vārda_tips="Patstāvīgs darbības vārds" Dzimte="Sieviešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesoša">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Ģenitīvs" Laiks="Tagadne" Pamatforma="nebūt" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Noteiktā" Darbības_vārda_tips="Patstāvīgs darbības vārds" Dzimte="Vīriešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bija">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="3" Noliegums="Nē" Pamatforma="būt" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bija">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Nē" Pamatforma="būt" Laiks="Pagātne" Kārta="Darāmā"/>
     </Lexeme>
     <Lexeme Stem1="trīsdesmittūkstoš">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši" Pamatforma="trīsdesmittūkstoš"/>
     </Lexeme>
-    <Lexeme Stem1="nebijušos">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Lokatīvs" Laiks="Pagātne" Pamatforma="nebūt" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Palīgverbs 'būt'" Dzimte="Vīriešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijušos">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Lokatīvs" Laiks="Pagātne" Pamatforma="nebūt" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Noteiktā" Darbības_vārda_tips="Patstāvīgs darbības vārds" Dzimte="Vīriešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošās">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Palīgverbs 'būt'" Locījums="Lokatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošās">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Lokatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
     <Lexeme Stem1="divdesmittūkstoš">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši" Pamatforma="divdesmittūkstoš"/>
     </Lexeme>
-    <Lexeme Stem1="neesoši">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Nominatīvs" Laiks="Tagadne" Pamatforma="nebūt" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Palīgverbs 'būt'" Dzimte="Vīriešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesoši">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Nominatīvs" Laiks="Tagadne" Pamatforma="nebūt" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Noteiktā" Darbības_vārda_tips="Patstāvīgs darbības vārds" Dzimte="Vīriešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
     <Lexeme Stem1="tūkstotis">
       <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Vienskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Nominatīvs" Skaitļu_kārta="Tūkstoši" Pamatforma="tūkstotis"/>
-    </Lexeme>
-    <Lexeme Stem1="esošām">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Palīgverbs 'būt'" Locījums="Datīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošām">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Datīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
     </Lexeme>
     <Lexeme Stem1="depiņpadsmittūkstoš">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši" Pamatforma="depiņpadsmittūkstoš"/>
@@ -3400,65 +3067,8 @@
     <Lexeme Stem1="nebūsit">
       <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="2" Noliegums="Jā" Pamatforma="nebūt" Laiks="Nākotne" Kārta="Darāmā"/>
     </Lexeme>
-    <Lexeme Stem1="neesošu">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Ģenitīvs" Laiks="Tagadne" Pamatforma="nebūt" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Palīgverbs 'būt'" Dzimte="Sieviešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošu">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Akuzatīvs" Laiks="Tagadne" Pamatforma="nebūt" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Palīgverbs 'būt'" Dzimte="Sieviešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošu">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Ģenitīvs" Laiks="Tagadne" Pamatforma="nebūt" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Palīgverbs 'būt'" Dzimte="Vīriešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošu">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Akuzatīvs" Laiks="Tagadne" Pamatforma="nebūt" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Palīgverbs 'būt'" Dzimte="Vīriešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošu">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Ģenitīvs" Laiks="Tagadne" Pamatforma="nebūt" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Patstāvīgs darbības vārds" Dzimte="Sieviešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošu">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Akuzatīvs" Laiks="Tagadne" Pamatforma="nebūt" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Patstāvīgs darbības vārds" Dzimte="Sieviešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošu">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Ģenitīvs" Laiks="Tagadne" Pamatforma="nebūt" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Patstāvīgs darbības vārds" Dzimte="Vīriešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošu">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Akuzatīvs" Laiks="Tagadne" Pamatforma="nebūt" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Patstāvīgs darbības vārds" Dzimte="Vīriešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošs">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Nominatīvs" Laiks="Tagadne" Pamatforma="nebūt" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Patstāvīgs darbības vārds" Dzimte="Vīriešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebūsim">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="1" Noliegums="Jā" Pamatforma="nebūt" Laiks="Nākotne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebūsim">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="1" Noliegums="Jā" Pamatforma="nebūt" Laiks="Nākotne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijušas">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Palīgverbs 'būt'" Locījums="Akuzatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijušas">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Palīgverbs 'būt'" Locījums="Nominatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijušas">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Palīgverbs 'būt'" Locījums="Ģenitīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijušas">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Akuzatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijušas">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Nominatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijušas">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Ģenitīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
     <Lexeme Stem1="trīssimt">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Simti" Pamatforma="trīssimt"/>
-    </Lexeme>
-    <Lexeme Stem1="esmu">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="1" Noliegums="Nē" Pamatforma="būt" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esmu">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="1" Noliegums="Nē" Pamatforma="būt" Laiks="Tagadne" Kārta="Darāmā"/>
     </Lexeme>
     <Lexeme Stem1="trīspadsmittūkstoš">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši" Pamatforma="trīspadsmittūkstoš"/>
@@ -3469,12 +3079,6 @@
     <Lexeme Stem1="septiņtūkstoš">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši" Pamatforma="septiņtūkstoš"/>
     </Lexeme>
-    <Lexeme Stem1="neesat">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="2" Noliegums="Jā" Pamatforma="nebūt" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesat">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="2" Noliegums="Jā" Pamatforma="nebūt" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
     <Lexeme Stem1="tūkstoš">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši" Pamatforma="tūkstoš"/>
     </Lexeme>
@@ -3484,35 +3088,14 @@
     <Lexeme Stem1="simttūkstoš">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši" Pamatforma="simttūkstoš"/>
     </Lexeme>
-    <Lexeme Stem1="neesam">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="1" Noliegums="Jā" Pamatforma="nebūt" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
     <Lexeme Stem1="trīsdesmit">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Desmiti" Pamatforma="trīsdesmit"/>
     </Lexeme>
     <Lexeme Stem1="četrdesmit">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Desmiti" Pamatforma="četrdesmit"/>
     </Lexeme>
-    <Lexeme Stem1="neesošos">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Lokatīvs" Laiks="Tagadne" Pamatforma="nebūt" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Palīgverbs 'būt'" Dzimte="Vīriešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošos">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Lokatīvs" Laiks="Tagadne" Pamatforma="nebūt" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Patstāvīgs darbības vārds" Dzimte="Vīriešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
     <Lexeme Stem1="tūkstotī">
       <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Vienskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Lokatīvs" Skaitļu_kārta="Tūkstoši" Pamatforma="tūkstotis"/>
-    </Lexeme>
-    <Lexeme Stem1="bijusi">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Palīgverbs 'būt'" Locījums="Nominatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijusi">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Nominatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="jāesot">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Vajadzības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="Nepiemīt" Noliegums="Nē" Pamatforma="būt" Laiks="Nepiemīt" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="jāesot">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Vajadzības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="Nepiemīt" Noliegums="Nē" Pamatforma="būt" Laiks="Nepiemīt" Kārta="Darāmā"/>
     </Lexeme>
     <Lexeme Stem1="simt">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Skaitļu_kārta="Simti" Pamatforma="simt"/>
@@ -3544,32 +3127,8 @@
     <Lexeme Stem1="trīs">
       <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Nominatīvs" Skaitļu_kārta="Vieni" Pamatforma="trīs"/>
     </Lexeme>
-    <Lexeme Stem1="bijušai">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Palīgverbs 'būt'" Locījums="Datīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijušai">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Datīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošā">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Palīgverbs 'būt'" Locījums="Lokatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošā">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Palīgverbs 'būt'" Locījums="Lokatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošā">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Lokatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošā">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Lokatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
     <Lexeme Stem1="astoņtūkstoš">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši" Pamatforma="astoņtūkstoš"/>
-    </Lexeme>
-    <Lexeme Stem1="bijušam">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Palīgverbs 'būt'" Locījums="Datīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijušam">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Datīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
     </Lexeme>
     <Lexeme Stem1="astoņsimt">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Simti" Pamatforma="astoņsimt"/>
@@ -3577,71 +3136,11 @@
     <Lexeme Stem1="sešsimttūkstoš">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši" Pamatforma="sešsimttūkstoš"/>
     </Lexeme>
-    <Lexeme Stem1="bijām">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="1" Noliegums="Nē" Pamatforma="būt" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijām">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="1" Noliegums="Nē" Pamatforma="būt" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="biju">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="1" Noliegums="Nē" Pamatforma="būt" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="biju">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="1" Noliegums="Nē" Pamatforma="būt" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošai">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Palīgverbs 'būt'" Locījums="Datīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošai">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Datīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošam">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Palīgverbs 'būt'" Locījums="Datīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošam">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Datīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
     <Lexeme Stem1="deviņsimt">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Simti" Pamatforma="deviņsimt"/>
     </Lexeme>
-    <Lexeme Stem1="esošas">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Palīgverbs 'būt'" Locījums="Akuzatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošas">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Palīgverbs 'būt'" Locījums="Nominatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošas">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Palīgverbs 'būt'" Locījums="Ģenitīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošas">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Akuzatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošas">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Nominatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošas">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Ģenitīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="biji">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="2" Noliegums="Nē" Pamatforma="būt" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="biji">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="2" Noliegums="Nē" Pamatforma="būt" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
     <Lexeme Stem1="četrtūkstoš">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši" Pamatforma="četrtūkstoš"/>
-    </Lexeme>
-    <Lexeme Stem1="bijāt">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="2" Noliegums="Nē" Pamatforma="būt" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijāt">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="2" Noliegums="Nē" Pamatforma="būt" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="būsi">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="2" Noliegums="Nē" Pamatforma="būt" Laiks="Nākotne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="būsi">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="2" Noliegums="Nē" Pamatforma="būt" Laiks="Nākotne" Kārta="Darāmā"/>
     </Lexeme>
     <Lexeme Stem1="septiņpadsmit">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Skaitļu_kārta="Padsmiti" Pamatforma="septiņpadsmit"/>
@@ -3649,38 +3148,8 @@
     <Lexeme Stem1="astoņdesmit">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Desmiti" Pamatforma="astoņdesmit"/>
     </Lexeme>
-    <Lexeme Stem1="neesot">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Atstāstījuma" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="Nepiemīt" Noliegums="Jā" Pamatforma="nebūt" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesot">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Atstāstījuma" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="Nepiemīt" Noliegums="Jā" Pamatforma="nebūt" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijušam">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Datīvs" Laiks="Pagātne" Pamatforma="nebūt" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Palīgverbs 'būt'" Dzimte="Vīriešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijušam">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Datīvs" Laiks="Pagātne" Pamatforma="nebūt" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Patstāvīgs darbības vārds" Dzimte="Vīriešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebūsi">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="2" Noliegums="Jā" Pamatforma="nebūt" Laiks="Nākotne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebūsi">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="2" Noliegums="Jā" Pamatforma="nebūt" Laiks="Nākotne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošam">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Datīvs" Laiks="Tagadne" Pamatforma="nebūt" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Palīgverbs 'būt'" Dzimte="Vīriešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošam">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Datīvs" Laiks="Tagadne" Pamatforma="nebūt" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Patstāvīgs darbības vārds" Dzimte="Vīriešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
     <Lexeme Stem1="sešdesmittūkstoš">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši" Pamatforma="sešdesmittūkstoš"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijušai">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Datīvs" Laiks="Pagātne" Pamatforma="nebūt" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Palīgverbs 'būt'" Dzimte="Sieviešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijušai">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Datīvs" Laiks="Pagātne" Pamatforma="nebūt" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Patstāvīgs darbības vārds" Dzimte="Sieviešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
     </Lexeme>
     <Lexeme Stem1="jāiet">
       <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Vajadzības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="Nepiemīt" Noliegums="Nē" Pamatforma="iet" Laiks="Nepiemīt" Kārta="Darāmā"/>
@@ -3688,86 +3157,8 @@
     <Lexeme Stem1="trīssimttūkstoš">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši" Pamatforma="trīssimttūkstoš"/>
     </Lexeme>
-    <Lexeme Stem1="neesošas">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Akuzatīvs" Laiks="Tagadne" Pamatforma="nebūt" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Palīgverbs 'būt'" Dzimte="Sieviešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošas">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Nominatīvs" Laiks="Tagadne" Pamatforma="nebūt" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Palīgverbs 'būt'" Dzimte="Sieviešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošas">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Ģenitīvs" Laiks="Tagadne" Pamatforma="nebūt" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Palīgverbs 'būt'" Dzimte="Sieviešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošas">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Akuzatīvs" Laiks="Tagadne" Pamatforma="nebūt" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Patstāvīgs darbības vārds" Dzimte="Sieviešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošas">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Nominatīvs" Laiks="Tagadne" Pamatforma="nebūt" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Patstāvīgs darbības vārds" Dzimte="Sieviešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošas">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Ģenitīvs" Laiks="Tagadne" Pamatforma="nebūt" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Patstāvīgs darbības vārds" Dzimte="Sieviešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="būšu">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="1" Noliegums="Nē" Pamatforma="būt" Laiks="Nākotne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="būšu">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="1" Noliegums="Nē" Pamatforma="būt" Laiks="Nākotne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijušas">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Akuzatīvs" Laiks="Pagātne" Pamatforma="nebūt" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Palīgverbs 'būt'" Dzimte="Sieviešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijušas">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Nominatīvs" Laiks="Pagātne" Pamatforma="nebūt" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Palīgverbs 'būt'" Dzimte="Sieviešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijušas">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Ģenitīvs" Laiks="Pagātne" Pamatforma="nebūt" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Palīgverbs 'būt'" Dzimte="Sieviešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijušas">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Akuzatīvs" Laiks="Pagātne" Pamatforma="nebūt" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Patstāvīgs darbības vārds" Dzimte="Sieviešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijušas">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Nominatīvs" Laiks="Pagātne" Pamatforma="nebūt" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Patstāvīgs darbības vārds" Dzimte="Sieviešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijušas">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Ģenitīvs" Laiks="Pagātne" Pamatforma="nebūt" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Patstāvīgs darbības vārds" Dzimte="Sieviešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
     <Lexeme Stem1="trīspadsmit">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Skaitļu_kārta="Padsmiti" Pamatforma="trīspadsmit"/>
-    </Lexeme>
-    <Lexeme Stem1="nebiju">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="1" Noliegums="Jā" Pamatforma="nebūt" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebiju">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="1" Noliegums="Jā" Pamatforma="nebūt" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošā">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Lokatīvs" Laiks="Tagadne" Pamatforma="nebūt" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Palīgverbs 'būt'" Dzimte="Sieviešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošā">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Lokatīvs" Laiks="Tagadne" Pamatforma="nebūt" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Palīgverbs 'būt'" Dzimte="Vīriešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošā">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Lokatīvs" Laiks="Tagadne" Pamatforma="nebūt" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Patstāvīgs darbības vārds" Dzimte="Sieviešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošā">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Lokatīvs" Laiks="Tagadne" Pamatforma="nebūt" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Patstāvīgs darbības vārds" Dzimte="Vīriešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošām">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Datīvs" Laiks="Tagadne" Pamatforma="nebūt" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Palīgverbs 'būt'" Dzimte="Sieviešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošām">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Datīvs" Laiks="Tagadne" Pamatforma="nebūt" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Patstāvīgs darbības vārds" Dzimte="Sieviešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebūtu">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Vēlējuma" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="Nepiemīt" Noliegums="Jā" Pamatforma="būt" Laiks="Nepiemīt" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebūtu">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Vēlējuma" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="Nepiemīt" Noliegums="Jā" Pamatforma="būt" Laiks="Nepiemīt" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="būtu">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Vēlējuma" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="Nepiemīt" Noliegums="Nē" Pamatforma="būt" Laiks="Nepiemīt" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="būtu">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Vēlējuma" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="Nepiemīt" Noliegums="Nē" Pamatforma="būt" Laiks="Nepiemīt" Kārta="Darāmā"/>
     </Lexeme>
     <Lexeme Stem1="trijos">
       <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Lokatīvs" Skaitļu_kārta="Vieni" Pamatforma="trīs"/>
@@ -3775,77 +3166,11 @@
     <Lexeme Stem1="divsimttūkstoš">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši" Pamatforma="divsimttūkstoš"/>
     </Lexeme>
-    <Lexeme Stem1="nebijušu">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Ģenitīvs" Laiks="Pagātne" Pamatforma="nebūt" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Palīgverbs 'būt'" Dzimte="Sieviešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijušu">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Akuzatīvs" Laiks="Pagātne" Pamatforma="nebūt" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Palīgverbs 'būt'" Dzimte="Sieviešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijušu">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Ģenitīvs" Laiks="Pagātne" Pamatforma="nebūt" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Palīgverbs 'būt'" Dzimte="Vīriešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijušu">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Akuzatīvs" Laiks="Pagātne" Pamatforma="nebūt" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Palīgverbs 'būt'" Dzimte="Vīriešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijušu">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Ģenitīvs" Laiks="Pagātne" Pamatforma="nebūt" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Patstāvīgs darbības vārds" Dzimte="Sieviešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijušu">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Akuzatīvs" Laiks="Pagātne" Pamatforma="nebūt" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Patstāvīgs darbības vārds" Dzimte="Sieviešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijušu">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Ģenitīvs" Laiks="Pagātne" Pamatforma="nebūt" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Patstāvīgs darbības vārds" Dzimte="Vīriešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijušu">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Akuzatīvs" Laiks="Pagātne" Pamatforma="nebūt" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Patstāvīgs darbības vārds" Dzimte="Vīriešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošās">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Lokatīvs" Laiks="Tagadne" Pamatforma="nebūt" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Palīgverbs 'būt'" Dzimte="Sieviešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošās">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Lokatīvs" Laiks="Tagadne" Pamatforma="nebūt" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Patstāvīgs darbības vārds" Dzimte="Sieviešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijām">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="1" Noliegums="Jā" Pamatforma="nebūt" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijām">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="1" Noliegums="Jā" Pamatforma="nebūt" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
     <Lexeme Stem1="tūkstoša">
       <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Vienskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Ģenitīvs" Skaitļu_kārta="Tūkstoši" Pamatforma="tūkstotis"/>
     </Lexeme>
-    <Lexeme Stem1="nebijuši">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Nominatīvs" Laiks="Pagātne" Pamatforma="nebūt" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Palīgverbs 'būt'" Dzimte="Vīriešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijuši">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Nominatīvs" Laiks="Pagātne" Pamatforma="nebūt" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Patstāvīgs darbības vārds" Dzimte="Vīriešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošai">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Datīvs" Laiks="Tagadne" Pamatforma="nebūt" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Palīgverbs 'būt'" Dzimte="Sieviešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošai">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Datīvs" Laiks="Tagadne" Pamatforma="nebūt" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Patstāvīgs darbības vārds" Dzimte="Sieviešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijāt">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="2" Noliegums="Jā" Pamatforma="nebūt" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijāt">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="2" Noliegums="Jā" Pamatforma="nebūt" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijuša">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Ģenitīvs" Laiks="Pagātne" Pamatforma="nebūt" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Palīgverbs 'būt'" Dzimte="Vīriešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijuša">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Ģenitīvs" Laiks="Pagātne" Pamatforma="nebūt" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Patstāvīgs darbības vārds" Dzimte="Vīriešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
     <Lexeme Stem1="piecsimtūkstoš">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši" Pamatforma="piecsimtūkstoš"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošiem">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Datīvs" Laiks="Tagadne" Pamatforma="nebūt" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Palīgverbs 'būt'" Dzimte="Vīriešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošiem">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Datīvs" Laiks="Tagadne" Pamatforma="nebūt" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Patstāvīgs darbības vārds" Dzimte="Vīriešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
     </Lexeme>
     <Lexeme Stem1="vienpadsmittūkstoš">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši" Pamatforma="vienpadsmittūkstoš"/>
@@ -3853,50 +3178,14 @@
     <Lexeme Stem1="jāiziet">
       <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Vajadzības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="Nepiemīt" Noliegums="Nē" Pamatforma="iziet" Laiks="Nepiemīt" Kārta="Darāmā"/>
     </Lexeme>
-    <Lexeme Stem1="nebijusi">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Nominatīvs" Laiks="Pagātne" Pamatforma="nebūt" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Palīgverbs 'būt'" Dzimte="Sieviešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijusi">
-      <Attributes Vārdšķira="Darbības vārds" Locījums="Nominatīvs" Laiks="Pagātne" Pamatforma="nebūt" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Divdabis" Noteiktība="Nenoteiktā" Darbības_vārda_tips="Patstāvīgs darbības vārds" Dzimte="Sieviešu" Noliegums="Jā" Lokāmība="Lokāms" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesmu">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="1" Noliegums="Jā" Pamatforma="nebūt" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesmu">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="1" Noliegums="Jā" Pamatforma="nebūt" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
     <Lexeme Stem1="septiņsimttūkstoš">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši" Pamatforma="septiņsimttūkstoš"/>
     </Lexeme>
     <Lexeme Stem1="trijiem">
       <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Datīvs" Skaitļu_kārta="Vieni" Pamatforma="trīs"/>
     </Lexeme>
-    <Lexeme Stem1="jābūt">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Vajadzības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="Nepiemīt" Noliegums="Nē" Pamatforma="būt" Laiks="Nepiemīt" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="jābūt">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Vajadzības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="Nepiemīt" Noliegums="Nē" Pamatforma="būt" Laiks="Nepiemīt" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijušā">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Palīgverbs 'būt'" Locījums="Lokatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijušā">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Lokatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijušā">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Palīgverbs 'būt'" Locījums="Lokatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijušā">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Lokatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
     <Lexeme Stem1="deviņpadsmit">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Skaitļu_kārta="Padsmiti" Pamatforma="deviņpadsmit"/>
-    </Lexeme>
-    <Lexeme Stem1="bijušās">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Palīgverbs 'būt'" Locījums="Lokatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijušās">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Lokatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
     </Lexeme>
     <Lexeme Stem1="ir">
       <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="3" Noliegums="Nē" Pamatforma="būt" Laiks="Tagadne" Kārta="Darāmā"/>
@@ -3904,20 +3193,8 @@
     <Lexeme Stem1="ir">
       <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Nē" Pamatforma="būt" Laiks="Tagadne" Kārta="Darāmā"/>
     </Lexeme>
-    <Lexeme Stem1="bijušām">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Palīgverbs 'būt'" Locījums="Datīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijušām">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Datīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
     <Lexeme Stem1="septiņdesmit">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Desmiti" Pamatforma="septiņdesmit"/>
-    </Lexeme>
-    <Lexeme Stem1="bijušus">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Palīgverbs 'būt'" Locījums="Akuzatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijušus">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Akuzatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
     </Lexeme>
     <Lexeme Stem1="tūkstotim">
       <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Vienskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Datīvs" Skaitļu_kārta="Tūkstoši" Pamatforma="tūkstotis"/>
@@ -3928,303 +3205,9 @@
     <Lexeme Stem1="četrsimt">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Simti" Pamatforma="četrsimt"/>
     </Lexeme>
-    <Lexeme Stem1="esošus">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Palīgverbs 'būt'" Locījums="Akuzatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošus">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Akuzatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
     <Lexeme Stem1="seštūkstoš">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši" Pamatforma="seštūkstoš"/>
     </Lexeme>
-    <Lexeme Stem1="bijušais">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="būt" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Locījums="Nominatīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijušā">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="būt" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Locījums="Ģenitīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijušajam">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="būt" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Locījums="Datīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijušo">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="būt" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Locījums="Akuzatīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijušajā">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="būt" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Locījums="Lokatīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijušais">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="būt" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Locījums="Vokatīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijušie">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="būt" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Locījums="Nominatīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijušo">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="būt" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Locījums="Ģenitīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijušajiem">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="būt" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Locījums="Datīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijušos">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="būt" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Locījums="Akuzatīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijušajos">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="būt" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Locījums="Lokatīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijušie">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="būt" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Locījums="Vokatīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijusī">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="būt" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Locījums="Nominatīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijušās">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="būt" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Locījums="Ģenitīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijušajai">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="būt" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Locījums="Datīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijušo">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="būt" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Locījums="Akuzatīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijušajā">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="būt" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Locījums="Lokatīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijusī">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="būt" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Locījums="Vokatīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijušās">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="būt" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Locījums="Nominatīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijušo">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="būt" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Locījums="Ģenitīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijušajām">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="būt" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Locījums="Datīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijušās">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="būt" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Locījums="Akuzatīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijušajās">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="būt" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Locījums="Lokatīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="bijušās">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="būt" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Locījums="Vokatīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijušais">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="nebūt" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Locījums="Nominatīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijušā">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="nebūt" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Locījums="Ģenitīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijušajam">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="nebūt" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Locījums="Datīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijušo">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="nebūt" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Locījums="Akuzatīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijušajā">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="nebūt" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Locījums="Lokatīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijušais">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="nebūt" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Locījums="Vokatīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijušie">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="nebūt" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Locījums="Nominatīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijušo">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="nebūt" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Locījums="Ģenitīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijušajiem">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="nebūt" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Locījums="Datīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijušos">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="nebūt" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Locījums="Akuzatīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijušajos">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="nebūt" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Locījums="Lokatīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijušie">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="nebūt" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Locījums="Vokatīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijusī">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="nebūt" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Locījums="Nominatīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijušās">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="nebūt" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Locījums="Ģenitīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijušajai">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="nebūt" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Locījums="Datīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijušo">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="nebūt" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Locījums="Akuzatīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijušajā">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="nebūt" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Locījums="Lokatīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijusī">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="nebūt" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Locījums="Vokatīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijušās">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="nebūt" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Locījums="Nominatīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijušo">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="nebūt" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Locījums="Ģenitīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijušajām">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="nebūt" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Locījums="Datīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijušās">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="nebūt" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Locījums="Akuzatīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijušajās">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="nebūt" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Locījums="Lokatīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebijušās">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="nebūt" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Locījums="Vokatīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošais">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Nominatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošā">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Ģenitīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošajam">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Datīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošo">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Akuzatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošajā">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Lokatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošais">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Vokatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošie">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Nominatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošo">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Ģenitīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošajiem">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Datīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošos">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Akuzatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošajos">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Lokatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošie">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Vokatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošā">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Nominatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošās">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Ģenitīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošajai">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Datīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošo">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Akuzatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošajā">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Lokatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošā">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Vokatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošās">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Nominatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošo">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Ģenitīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošajām">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Datīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošās">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Akuzatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošajās">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Lokatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esošās">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Vokatīvs" Pamatforma="būt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošais">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Nominatīvs" Pamatforma="nebūt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošā">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Ģenitīvs" Pamatforma="nebūt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošajam">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Datīvs" Pamatforma="nebūt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošo">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Akuzatīvs" Pamatforma="nebūt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošajā">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Lokatīvs" Pamatforma="nebūt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošais">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Vokatīvs" Pamatforma="nebūt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošie">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Nominatīvs" Pamatforma="nebūt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošo">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Ģenitīvs" Pamatforma="nebūt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošajiem">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Datīvs" Pamatforma="nebūt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošos">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Akuzatīvs" Pamatforma="nebūt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošajos">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Lokatīvs" Pamatforma="nebūt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošie">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Vokatīvs" Pamatforma="nebūt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošā">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Nominatīvs" Pamatforma="nebūt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošās">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Ģenitīvs" Pamatforma="nebūt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošajai">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Datīvs" Pamatforma="nebūt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošo">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Akuzatīvs" Pamatforma="nebūt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošajā">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Lokatīvs" Pamatforma="nebūt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošā">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Vokatīvs" Pamatforma="nebūt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošās">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Nominatīvs" Pamatforma="nebūt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošo">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Ģenitīvs" Pamatforma="nebūt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošajām">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Datīvs" Pamatforma="nebūt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošās">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Akuzatīvs" Pamatforma="nebūt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošajās">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Lokatīvs" Pamatforma="nebūt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="neesošās">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Darbības_vārda_tips="Patstāvīgs darbības vārds" Locījums="Vokatīvs" Pamatforma="nebūt" Lokāmība="Lokāms" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>    
     <Lexeme Stem1="rozā">
       <Attributes Pamatforma="rozā" Vārdšķira="Īpašības vārds" Lokāmība="Nelokāms" Īpašības_vārda_tips="Attieksmes"/>
     </Lexeme>
@@ -4668,9 +3651,14 @@
 <Paradigm Stems="1" ID="49" Description="Ģenitīveņi (augstpapēžu, milzu)">
 </Paradigm>
 <Paradigm Stems="3" ID="50" Description="būt, nebūt, pabūt, sabūt">
-  <!--
-    <Lexeme Stem1="nebū" Stem2="nees" Stem3="nebij">
-      <Attributes Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="nebūt"/>
+    <Lexeme Stem1="bū" Stem2="es" Stem3="bij">
+      <Attributes Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="būt"/>
+    </Lexeme>  
+    <Lexeme Stem1="bū" Stem2="es" Stem3="bij">
+      <Attributes Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="būt"/>
+    </Lexeme>  
+<!--    <Lexeme Stem1="nebū" Stem2="nees" Stem3="nebij">
+      <Attributes Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="būt"/>
     </Lexeme>  
   -->
 </Paradigm>

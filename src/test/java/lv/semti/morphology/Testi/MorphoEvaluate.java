@@ -23,10 +23,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintStream;
 import java.io.PrintWriter;
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
+import com.google.common.collect.*;
+import com.google.common.primitives.Ints;
 import lv.semti.morphology.attributes.TagSet;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -71,6 +71,26 @@ public class MorphoEvaluate {
 		LinkedList<Etalons> etaloni = readCONLLEtalons("morfoetalons.conll");
 		evaluate(etaloni);
 	}
+
+    /**
+     * Code from https://stackoverflow.com/questions/7881629/sort-guava-multimap-by-number-of-values answer
+     * @return a {@link Multimap} whose entries are sorted by descending frequency
+     */
+    public Multimap<String, String> sortedByDescendingFrequency(Multimap<String, String> multimap) {
+        return ImmutableMultimap.<String, String>builder()
+                .orderKeysBy(descendingCountOrdering(multimap.keys()))
+                .putAll(multimap)
+                .build();
+    }
+
+    private static Ordering<String> descendingCountOrdering(final Multiset<String> multiset) {
+        return new Ordering<String>() {
+            @Override
+            public int compare(String left, String right) {
+                return Ints.compare(multiset.count(right), multiset.count(left));
+            }
+        };
+    }
 	
 	public void evaluate(LinkedList<Etalons> etaloni) throws IOException{				
 		PrintWriter izeja = new PrintWriter(new PrintStream(System.out, true, "UTF8"));
@@ -98,9 +118,9 @@ public class MorphoEvaluate {
 		int ambig_wfcount=0;
 
 		TagSet tags = TagSet.getTagSet();
-		
-		List<String> mistakes = new LinkedList<String>();
 
+        Multimap<String, String> mistakes_by_lemma = ArrayListMultimap.create();
+		List<String> mistakes = new LinkedList<String>();
 		List<String> capitalization_mistakes = new LinkedList<String>();
 		
 		for (Etalons e : etaloni) {
@@ -188,7 +208,9 @@ public class MorphoEvaluate {
 					if (found_compatible) any_compatible++;
 					else {
 						wrong++;
-						mistakes.add(e.tag+"\t"+e.wordform+"\nKorpusā:\t"+e.lemma+"\t"+e.tag+"\t\t(" + e.id + ")\n"+output);
+						String mistake_description = e.tag+"\t"+e.wordform+"\nKorpusā:\t"+e.lemma+"\t"+e.tag+"\t\t(" + e.id + ")\n"+output;
+						mistakes.add(mistake_description);
+						mistakes_by_lemma.put(e.lemma, mistake_description);
 					}
 				}	
 			} else {
@@ -201,10 +223,24 @@ public class MorphoEvaluate {
         for (String mistake:capitalization_mistakes){
             izeja.println(mistake);
         }
-		Collections.sort(mistakes);
-		for (String mistake:mistakes){
-			izeja.println(mistake);
-		}
+//		Collections.sort(mistakes);
+//		for (String mistake:mistakes){
+//			izeja.println(mistake);
+//		}
+        int singletons = 0;
+		for (String key : sortedByDescendingFrequency(mistakes_by_lemma).keySet()) {
+            Collection<String> list = mistakes_by_lemma.get(key);
+            if (list.size()<=1) {
+                singletons++;
+                continue;
+            }
+            izeja.printf("%s : %d kļūdas\n", key, list.size());
+            Set<String> sortedlist = new TreeSet<String>();
+            sortedlist.addAll(list);
+            for (String mistake : sortedlist)
+                izeja.println(mistake);
+        }
+        izeja.printf(".... un %d izolētas kļūdas\n", singletons);
 		
 		long beigas = System.currentTimeMillis();
 		long starpība = beigas - sākums;
@@ -218,7 +254,7 @@ public class MorphoEvaluate {
 		System.out.printf("\tVarianti neder:\t%4.1f%%\t%6d\n", wrong*100.0/etaloni.size(), wrong);
 		System.out.printf("\tNeatpazīti:    \t%4.1f%%\t%6d\n", not_recognized*100.0/etaloni.size(), not_recognized);
         System.out.printf("\tPareizs POS:\t%4.1f%% / %4.1f%%\t%6d\t%6d\tpaliek %5d\n", first_pos_correct*100.0/etaloni.size(), (any_pos_correct+first_pos_correct)*100.0/etaloni.size(), first_pos_correct, any_pos_correct, etaloni.size()-first_pos_correct-any_pos_correct);
-		System.out.printf("\nEtalons: Pareizi 85.9%%, Der 87.6%%, Nav vārdnīcā 5.6%%, Neatpazīti zem 2%%\n");
+		System.out.printf("\nEtalons: Viss pareizi 72.4%%/88.8%%, Lemma pareiza 91.0%%/98.7%%, Tags der 77.8%%/98.2%%, Nav vārdnīcā 3.9%%\n");
 		
 		System.out.printf("\nStatistika:\n");
 		System.out.printf("\tNav vārdnīcā:\t\t%4.1f%%\t%6d\n", oov*100.0/etaloni.size(), oov);

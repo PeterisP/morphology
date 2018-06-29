@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Morphology revision="2.0.3" licence="Copyright 2008-2018 Institute of Mathematics and Computer Science, University of Latvia. This file is part of the SemTi-Kamols Chunker, see http://www.semti-kamols.lv/  This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program. If not, see http://www.gnu.org/licenses/.">
+<Morphology revision="2.0.5" licence="Copyright 2008-2018 Institute of Mathematics and Computer Science, University of Latvia. This file is part of the SemTi-Kamols Chunker, see http://www.semti-kamols.lv/  This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program. If not, see http://www.gnu.org/licenses/.">
 	<Corpus FileName="tezaurs_lexemes.json" Type="core"/>
 	<Corpus FileName="Lexicon_minicore.xml" Type="core"/>
 	<Corpus FileName="Lexicon_firstnames.xml" Type="core"/>
@@ -6988,27 +6988,26 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="3" ID="50" Name="verb-1i" LemmaEnding="2407" Description="būt, nebūt, pabūt, sabūt">
-		<!-- TODO - paskatīties vai gadījumā nevajag visus stemchange aizvākt -->
 		<Attributes Konjugācija="Nekārtns" Atgriezeniskums="Nē" Noliegums="Nē"/>
 		<Ending ID="2407" StemChange="0" Ending="t" StemID="1" LemmaEnding="2407">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Nenoteiksme" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
 		</Ending>
-		<Ending ID="2408" StemChange="6" Ending="šu" StemID="1" LemmaEnding="2407">
+		<Ending ID="2408" StemChange="0" Ending="šu" StemID="1" LemmaEnding="2407">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Izteiksme="Īstenības" Persona="1" Laiks="Nākotne" Kārta="Darāmā"/>
 		</Ending>
-		<Ending ID="2409" StemChange="6" Ending="si" StemID="1" LemmaEnding="2407">
+		<Ending ID="2409" StemChange="0" Ending="si" StemID="1" LemmaEnding="2407">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Izteiksme="Īstenības" Persona="2" Laiks="Nākotne" Kārta="Darāmā"/>
 		</Ending>
-		<Ending ID="2410" StemChange="6" Ending="sim" StemID="1" LemmaEnding="2407">
+		<Ending ID="2410" StemChange="0" Ending="sim" StemID="1" LemmaEnding="2407">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Izteiksme="Īstenības" Persona="1" Laiks="Nākotne" Kārta="Darāmā"/>
 		</Ending>
-		<Ending ID="2411" StemChange="6" Ending="siet" StemID="1" LemmaEnding="2407">
+		<Ending ID="2411" StemChange="0" Ending="siet" StemID="1" LemmaEnding="2407">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Izteiksme="Īstenības" Persona="2" Laiks="Nākotne" Kārta="Darāmā"/>
 		</Ending>
-		<Ending ID="2412" StemChange="6" Ending="s" StemID="1" LemmaEnding="2407">
+		<Ending ID="2412" StemChange="0" Ending="s" StemID="1" LemmaEnding="2407">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Īstenības" Persona="3" Laiks="Nākotne" Kārta="Darāmā"/>
 		</Ending>
-		<Ending ID="2413" StemChange="6" Ending="šot" StemID="1" LemmaEnding="2407">
+		<Ending ID="2413" StemChange="0" Ending="šot" StemID="1" LemmaEnding="2407">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Atstāstījuma" Persona="Nepiemīt" Laiks="Nākotne" Kārta="Darāmā"/>
 		</Ending>
 		<Ending ID="2414" StemChange="0" Ending="ts" StemID="1" LemmaEnding="2407">
@@ -7277,52 +7276,52 @@
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Noteiktība="Noteiktā" Izteiksme="Divdabis" Dzimte="Sieviešu" Locījums="Vokatīvs" Lokāmība="Lokāms" Laiks="Pagātne" Kārta="Ciešamā"/>
 		</Ending>
 	-->
-		<Ending ID="2601" StemChange="16" Ending="šana" StemID="1" LemmaEnding="2601">
+		<Ending ID="2601" StemChange="0" Ending="šana" StemID="1" LemmaEnding="2601">
 			<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Lietvārda_tips="Sugas vārds" Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Nominatīvs"/>
 		</Ending>
-		<Ending ID="2602" StemChange="16" Ending="šanas" StemID="1" LemmaEnding="2601">
+		<Ending ID="2602" StemChange="0" Ending="šanas" StemID="1" LemmaEnding="2601">
 			<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Lietvārda_tips="Sugas vārds" Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Ģenitīvs"/>
 		</Ending>
-		<Ending ID="2603" StemChange="16" Ending="šanai" StemID="1" LemmaEnding="2601">
+		<Ending ID="2603" StemChange="0" Ending="šanai" StemID="1" LemmaEnding="2601">
 			<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Lietvārda_tips="Sugas vārds" Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Datīvs"/>
 		</Ending>
-		<Ending ID="2604" StemChange="16" Ending="šanu" StemID="1" LemmaEnding="2601">
+		<Ending ID="2604" StemChange="0" Ending="šanu" StemID="1" LemmaEnding="2601">
 			<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Lietvārda_tips="Sugas vārds" Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Akuzatīvs"/>
 		</Ending>
-		<Ending ID="2605" StemChange="16" Ending="šanā" StemID="1" LemmaEnding="2601">
+		<Ending ID="2605" StemChange="0" Ending="šanā" StemID="1" LemmaEnding="2601">
 			<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Lietvārda_tips="Sugas vārds" Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Lokatīvs"/>
 		</Ending>
-		<Ending ID="2606" StemChange="16" Ending="šana" StemID="1" LemmaEnding="2601">
+		<Ending ID="2606" StemChange="0" Ending="šana" StemID="1" LemmaEnding="2601">
 			<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Lietvārda_tips="Sugas vārds" Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Vokatīvs"/>
 		</Ending>
-		<Ending ID="2607" StemChange="16" Ending="šanas" StemID="1" LemmaEnding="2601">
+		<Ending ID="2607" StemChange="0" Ending="šanas" StemID="1" LemmaEnding="2601">
 			<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Lietvārda_tips="Sugas vārds" Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Nominatīvs"/>
 		</Ending>
-		<Ending ID="2608" StemChange="16" Ending="šanu" StemID="1" LemmaEnding="2601">
+		<Ending ID="2608" StemChange="0" Ending="šanu" StemID="1" LemmaEnding="2601">
 			<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Lietvārda_tips="Sugas vārds" Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Ģenitīvs"/>
 		</Ending>
-		<Ending ID="2609" StemChange="16" Ending="šanām" StemID="1" LemmaEnding="2601">
+		<Ending ID="2609" StemChange="0" Ending="šanām" StemID="1" LemmaEnding="2601">
 			<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Lietvārda_tips="Sugas vārds" Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Datīvs"/>
 		</Ending>
-		<Ending ID="2610" StemChange="16" Ending="šanas" StemID="1" LemmaEnding="2601">
+		<Ending ID="2610" StemChange="0" Ending="šanas" StemID="1" LemmaEnding="2601">
 			<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Lietvārda_tips="Sugas vārds" Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Akuzatīvs"/>
 		</Ending>
-		<Ending ID="2611" StemChange="16" Ending="šanās" StemID="1" LemmaEnding="2601">
+		<Ending ID="2611" StemChange="0" Ending="šanās" StemID="1" LemmaEnding="2601">
 			<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Lietvārda_tips="Sugas vārds" Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Lokatīvs"/>
 		</Ending>
-		<Ending ID="2612" StemChange="16" Ending="šanas" StemID="1" LemmaEnding="2601">
+		<Ending ID="2612" StemChange="0" Ending="šanas" StemID="1" LemmaEnding="2601">
 			<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Lietvārda_tips="Sugas vārds" Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Vokatīvs"/>
 		</Ending>
-		<Ending ID="2613" StemChange="15" Ending="dams" StemID="1" LemmaEnding="2407">
+		<Ending ID="2613" StemChange="0" Ending="dams" StemID="1" LemmaEnding="2407">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Noteiktība="Nepiemīt" Izteiksme="Divdabis" Dzimte="Vīriešu" Locījums="Nominatīvs" Lokāmība="Daļēji lokāms" Pakāpe="Nepiemīt" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
 		</Ending>
-		<Ending ID="2614" StemChange="15" Ending="dama" StemID="1" LemmaEnding="2407">
+		<Ending ID="2614" StemChange="0" Ending="dama" StemID="1" LemmaEnding="2407">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Noteiktība="Nepiemīt" Izteiksme="Divdabis" Dzimte="Sieviešu" Locījums="Nominatīvs" Lokāmība="Daļēji lokāms" Pakāpe="Nepiemīt" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
 		</Ending>
-		<Ending ID="2615" StemChange="15" Ending="dami" StemID="1" LemmaEnding="2407">
+		<Ending ID="2615" StemChange="0" Ending="dami" StemID="1" LemmaEnding="2407">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Noteiktība="Nepiemīt" Izteiksme="Divdabis" Dzimte="Vīriešu" Locījums="Nominatīvs" Lokāmība="Daļēji lokāms" Pakāpe="Nepiemīt" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
 		</Ending>
-		<Ending ID="2616" StemChange="15" Ending="damas" StemID="1" LemmaEnding="2407">
+		<Ending ID="2616" StemChange="0" Ending="damas" StemID="1" LemmaEnding="2407">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Noteiktība="Nepiemīt" Izteiksme="Divdabis" Dzimte="Sieviešu" Locījums="Nominatīvs" Lokāmība="Daļēji lokāms" Pakāpe="Nepiemīt" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
 		</Ending>
 		<Ending ID="2617" StemChange="0" Ending="ot" StemID="2" LemmaEnding="2407">
@@ -7331,7 +7330,7 @@
 		<Ending ID="2618" StemChange="0" Ending="u" StemID="2" LemmaEnding="2407">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Izteiksme="Īstenības" Persona="1" Laiks="Tagadne" Kārta="Darāmā"/>
 		</Ending>
-		<Ending ID="2619" StemChange="7" Ending="" StemID="2" LemmaEnding="2407">
+		<Ending ID="2619" StemChange="0" Ending="i" StemID="2" LemmaEnding="2407">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Izteiksme="Īstenības" Persona="2" Laiks="Tagadne" Kārta="Darāmā"/>
 		</Ending>
 		<Ending ID="2620" StemChange="0" Ending="am" StemID="2" LemmaEnding="2407">
@@ -7343,16 +7342,16 @@
 		<Ending ID="2622" StemChange="0" Ending="" StemID="2" LemmaEnding="2407">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Īstenības" Persona="3" Laiks="Tagadne" Kārta="Darāmā"/>
 		</Ending>
-		<Ending ID="2623" StemChange="4" Ending="" StemID="2" LemmaEnding="2407">
+		<Ending ID="2623" StemChange="4" Ending="t" StemID="1" LemmaEnding="2407">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Vajadzības" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Darāmā"/>
 		</Ending>
 		<Ending ID="2624" StemChange="0" Ending="ot" StemID="2" LemmaEnding="2407">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Atstāstījuma" Persona="Nepiemīt" Laiks="Tagadne" Kārta="Darāmā"/>
 		</Ending>
-		<Ending ID="2625" StemChange="7" Ending="" StemID="2" LemmaEnding="2407">
+		<Ending ID="2625" StemChange="0" Ending="i" StemID="2" LemmaEnding="2407">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Izteiksme="Pavēles" Persona="2" Laiks="Nepiemīt" Kārta="Darāmā"/>
 		</Ending>
-		<Ending ID="2626" StemChange="23" Ending="iet" StemID="2" LemmaEnding="2407">
+		<Ending ID="2626" StemChange="0" Ending="iet" StemID="2" LemmaEnding="2407">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Izteiksme="Pavēles" Persona="2" Laiks="Nepiemīt" Kārta="Darāmā"/>
 		</Ending>
 		<Ending ID="2627" StemChange="0" Ending="ošs" StemID="2" LemmaEnding="2407">

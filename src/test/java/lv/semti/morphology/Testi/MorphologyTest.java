@@ -648,7 +648,7 @@ public class MorphologyTest {
         // Ticket #245: nelokāmie lietvārdi vienmēr ir nominatīvā.
         Word video = locītājs.analyze("video");
         assertTrue(video.isRecognized());
-
+        video.describe(System.out);
         assertTrue(video.wordformsCount() == 1);
     }
 
@@ -2581,6 +2581,7 @@ public class MorphologyTest {
         testset.addAttribute(AttributeNames.i_Person, "3");
         testset.addAttribute(AttributeNames.i_Izteiksme, AttributeNames.v_Iisteniibas);
         testset.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Tagadne);
+        testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
         assertInflection(formas, testset, "ir");
 
         formas = locītājs.generateInflections("viņš");
@@ -3035,5 +3036,25 @@ public class MorphologyTest {
                 found = true;
         }
         assertTrue(found);
+    }
+
+    @Test
+    public void būt() {
+        ArrayList<Wordform> formas = locītājs.generateInflections("būt");
+        AttributeValues testset = new AttributeValues();
+        testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+        testset.addAttribute(AttributeNames.i_Izteiksme, AttributeNames.v_Vajadziibas);
+        assertInflection(formas, testset, "jābūt");
+
+        Word jābūt = locītājs.analyze("jābūt");
+        assertTrue(jābūt.isRecognized());
+
+        testset.addAttribute(AttributeNames.i_Izteiksme, AttributeNames.v_Iisteniibas);
+        testset.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Tagadne);
+        testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+        testset.addAttribute(AttributeNames.i_Person, "2");
+        assertInflection(formas, testset, "esi");
+
+
     }
 }

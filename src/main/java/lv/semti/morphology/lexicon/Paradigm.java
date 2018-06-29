@@ -18,7 +18,6 @@
 package lv.semti.morphology.lexicon;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.io.Writer;
 import java.util.HashMap;
 import java.util.ArrayList;
