@@ -413,11 +413,15 @@
 
 <Attribute LV="Lietojums" EN="Usage">
 	<Value LV="Novecojis" EN="Dated"/>
+	<Value LV="Neaktuāls" EN="Obsolete"/>
 	<Value LV="Vēsturisks" EN="Historical"/>
 	<Value LV="Sarunvaloda" EN="Colloquial"/>
 	<Value LV="Nevēlams" EN="Undesirable"/>
 	<Value LV="Žargonvārds" EN="Slang"/>
 	<Value LV="Vulgārisms" EN="Vulgar"/>
+	<Value LV="Barbarisms" EN="Barbaric"/>
+	<Value LV="Īsziņās" EN="SMS"/>
+	<Value LV="Bērnu valoda" EN="Children"/>
 </Attribute>
 
 <Attribute LV="Stils" EN="Style">
@@ -426,6 +430,8 @@
 	<Value LV="Humoristiska ekspresīvā nokrāsa" EN="Jocular"/>
 	<Value LV="Poētiska stilistiskā nokrāsa" EN="Poetic"/>
 	<Value LV="Vienkāršrunas stilistiskā nokrāsa" EN="Simplistic"/>
+	<Value LV="Sirsnīga emocionālā nokrāsa" EN="Hearty"/>
+	<Value LV="Pārnestā nozīmē" EN="Figurative"/>
 </Attribute>
 
 <Attribute LV="Nozare" EN="Domain">
@@ -452,6 +458,7 @@
 	<Value LV="Ģeogrāfija" EN="Geography"/>
 	<Value LV="Ģeodēzija" EN="Geodesy"/>
 	<Value LV="Ģeoloģija" EN="Geology"/>
+	<Value LV="Ģeometrija" EN="Geometry"/>
 	<Value LV="Mineraloģija" EN="Mineralogy"/>
 	<Value LV="Reliģija" EN="Religion"/>
 	<Value LV="Mitoloģija" EN="Mythology"/>
@@ -480,9 +487,21 @@
 	<Value LV="Militārās zinātnes" EN="Military"/>
 	<Value LV="Aviācija" EN="Aviation"/>
 	<Value LV="Jūrniecība" EN="Marine"/>
-	<Value LV="Attiecas uz kapitālistisko iekārtu, kapitālistisko sabiedrību" EN="Capitalism"/>
-
+	<Value LV="Zvejniecība" EN="Fishing"/>
+	<Value LV="Kalnrūpniecība" EN="Mining"/>
+	<Value LV="Dzelzceļš" EN="Railroad"/>
+	<Value LV="Historiogrāfija" EN="Historiography"/>
+	<Value LV="Materiālzinātne" EN="Material science"/>
+	<Value LV="Apģērbi" EN="Clothing"/>
+	<Value LV="Fototehnika" EN="Photography"/>
 	<Value LV="Aeronautika" EN="Aeronautics"/>
+	<Value LV="Agronomija" EN="Agriculture"/>
+	<Value LV="Bioķīmija" EN="Biochemistry"/>
+	<Value LV="Glezniecība" EN="Painting"/>
+	<Value LV="Televīzija" EN="Television"/>
+	<Value LV="Entomoloģija" EN="Entomology"/>
+	<Value LV="Antropoloģija" EN="Antropology"/>
+	<Value LV="Attiecas uz kapitālistisko iekārtu, kapitālistisko sabiedrību" EN="Capitalism"/>
 </Attribute>
 
 <FreeAttribute LV="Vārdgrupas nr" EN="Paradigm ID"/>
@@ -501,24 +520,51 @@
 <!-- tezaurs.lv datu īpatnības -->
 <FreeAttribute LV="FreeText" EN="FreeText"/> 
 <FreeAttribute LV="Leftovers" EN="Leftovers"/> 
+<FreeAttribute LV="FormRestrictions" EN="FormRestrictions"/> 
 <FreeAttribute LV="Pronunciation" EN="Pronunciation"/> 
 <FreeAttribute LV="Šķirkļa ID" EN="Entry ID"/>
 <FreeAttribute LV="Šķirkļa cilvēklasāmais ID" EN="Entry name"/>
 <FreeAttribute LV="Parasti lieto noteiktā formā/atvasinājumā" EN="Usually used in"/>
+<FreeAttribute LV="Lieto noteiktā formā/atvasinājumā" EN="Used in"/>
+<FreeAttribute LV="Parasti lieto kopā ar" EN="Usually used with"/>
+<FreeAttribute LV="Lieto kopā ar" EN="Used with"/>
 <FreeAttribute LV="Locīt kā" EN="Inflect like"/>
+<FreeAttribute LV="Šablons salikteņa vairākpunktu locīšanai" EN="Pattern for multipoint inflection"/>
 <FreeAttribute LV="Priedēklis" EN="Prefix"/> 
 
 <Attribute LV="Šķirkļavārda īpatnības" EN="Entry properties">
 	<Value LV="Daudzskaitlis" EN="Plural"/>
 	<Value LV="Vienskaitlis" EN="Singular"/>
+	<Value LV="Sieviešu dzimte" EN="Feminine"/>
 </Attribute>
 <Attribute LV="Locīšanas īpatnības" EN="Inflection properties">
-	<Value LV="[&quot;Otrās un trešās konjugācijas paralelitāte&quot;,&quot;Paralēlās formas&quot;]" EN="Plural"/>
+	<Value LV="[&quot;Otrās un trešās konjugācijas paralelitāte&quot;,&quot;Paralēlās formas&quot;]" EN="2nd/3rd conjugation parallel forms"/>
+	<Value LV="[&quot;Paralēlās formas&quot;,&quot;Pirmās konjugācijas paralēlforma&quot;]" EN="1st conjugation parallel forms"/>	
+	<Value LV="[&quot;Nenoteiksmes homoformas&quot;,&quot;Paralēlās formas&quot;]" EN="Infinitive homoforms"/>	
+	<Value LV="[&quot;Otrās un trešās konjugācijas paralelitāte&quot;,&quot;Paralēlās formas&quot;,&quot;Pirmās konjugācijas paralēlforma&quot;]" EN="1st,2nd,3rd conjugation parallel forms"/>	
+	<Value LV="Paralēlās formas" EN="Parallel forms"/>
+	<Value LV="Nenoteiksmes homoformas" EN="Infinitive homonym"/>
+</Attribute>
+<Attribute LV="Kontaminācija" EN="Contamination">
+	<Value LV="Lietvārds" EN="Noun"/>
+	<Value LV="Īpašības vārds" EN="Adjective"/>
+	<Value LV="Pamata skaitļa vārds" EN="Numeral"/>
+</Attribute>
+<Attribute LV="Kopdzimte" EN="Common gender">
+	<Value LV="Jā" EN="Yes"/>
+</Attribute>
+<Attribute LV="Lieto tikai noteiktā formā/atvasinājumā" EN="Used only in specific form">
+	<Value LV="Trešā persona" EN="Third person"/>
+	<Value LV="Daudzskaitlis" EN="Plural"/>
+	<Value LV="Nelieto tagadnes formas" EN="Not in present tense"/>
 </Attribute>
 
 <Attribute LV="Citi" EN="Other">
 	<Value LV="Neviennozīmīga paradigma" EN="Ambiguous paradigm"/>
+	<Value LV="Neviennozīmīga vārdšķira vai kategorija" EN="Ambiguous part of speech"/>
 	<Value LV="Oriģinālā gramatika satur karodziņos neatšifrētas nianses" EN="Freetext contains items not converted to attributes"/>
+	<Value LV="Vairākos punktos lokāms saliktenis" EN="Compound noun with middle inflection point"/>
+	<Value LV="Vienskaitļa formas lieto sarunvalodā" EN="Singular forms used in colloquial language"/>
 </Attribute>
 
 

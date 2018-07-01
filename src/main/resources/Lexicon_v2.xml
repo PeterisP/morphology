@@ -7917,6 +7917,12 @@
 		<Ending ID="2812" StemChange="0" Ending="a" StemID="3" LemmaEnding="2407">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Īstenības" Persona="3" Laiks="Pagātne" Kārta="Darāmā"/>
 		</Ending>
+		<Ending ID="2905" StemChange="0" Ending="" StemID="3" LemmaEnding="2407">
+			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Īstenības" Persona="3" Laiks="Pagātne" Kārta="Darāmā" Ģenerēt="Nē"/>
+		</Ending>
+		<Ending ID="2906" StemChange="0" Ending="'" StemID="3" LemmaEnding="2407">
+			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Īstenības" Persona="3" Laiks="Pagātne" Kārta="Darāmā" Ģenerēt="Nē"/>
+		</Ending>
 		<Ending ID="2813" StemChange="14" Ending="is" StemID="3" LemmaEnding="2407">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Locījums="Nominatīvs" Lokāmība="Lokāms" Pakāpe="Pamata" Laiks="Pagātne" Kārta="Darāmā"/>
 		</Ending>
