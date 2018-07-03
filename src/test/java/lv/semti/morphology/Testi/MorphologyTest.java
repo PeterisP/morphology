@@ -3065,7 +3065,43 @@ public class MorphologyTest {
             }
             assertNotEquals("paša", wf.getToken());
         }
+    }
 
+    @Test
+    public void jauš() {
+        ArrayList<Wordform> formas = locītājs.generateInflectionsFromParadigm("jaust", 15, "jaus", "jauš", "jaut");
+        formas = locītājs.generateInflectionsFromParadigm("jaust", 15, "jaus", "jauš", "jaud");
+        for (Wordform wf : formas) {
+            if (wf.getToken().equalsIgnoreCase("jauš")) {
+                wf.describe();
+                assertNotEquals("2", wf.getValue(AttributeNames.i_Person));
+            }
+        }
+    }
+
+    @Test
+    public void iet() {
+        ArrayList<Wordform> formas = locītājs.generateInflections("iet");
+        AttributeValues testset = new AttributeValues();
+        testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+        testset.addAttribute(AttributeNames.i_Izteiksme, AttributeNames.v_Vajadziibas);
+        assertInflection(formas, testset, "jāiet");
+
+        Word jāiet = locītājs.analyze("jāiet");
+        assertTrue(jāiet.isRecognized());
+        Word jāej = locītājs.analyze("jāej");
+        assertFalse(jāej.isRecognized());
+
+        formas = locītājs.generateInflections("nepaiet");
+        testset.addAttribute(AttributeNames.i_Izteiksme, AttributeNames.v_Iisteniibas);
+        testset.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Tagadne);
+        testset.addAttribute(AttributeNames.i_Person, "3");
+        assertInflection(formas, testset, "nepaiet");
+
+        Word nepaiet = locītājs.analyze("nepaiet");
+        assertTrue(nepaiet.isRecognized());
+        Word nepaej = locītājs.analyze("nepaej");
+        assertTrue(nepaej.isRecognized());
     }
 }
 

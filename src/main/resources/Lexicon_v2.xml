@@ -1096,10 +1096,10 @@
 		<Ending ID="793" StemChange="0" Ending="at" StemID="2" LemmaEnding="711">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Izteiksme="Īstenības" Persona="2" Laiks="Tagadne" Kārta="Darāmā"/>
 		</Ending>
-		<Ending ID="794" StemChange="0" Ending="" StemID="2" LemmaEnding="711">
+		<Ending ID="794" StemChange="36" Ending="" StemID="2" LemmaEnding="711">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Īstenības" Persona="3" Laiks="Tagadne" Kārta="Darāmā"/>
 		</Ending>
-		<Ending ID="795" StemChange="4" Ending="" StemID="2" LemmaEnding="711">
+		<Ending ID="795" StemChange="37" Ending="" StemID="2" LemmaEnding="711">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Vajadzības" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Darāmā"/>
 		</Ending>
 		<Ending ID="796" StemChange="0" Ending="ot" StemID="2" LemmaEnding="711">
@@ -4468,10 +4468,10 @@
 		<Ending ID="1090" StemChange="0" Ending="aties" StemID="2" LemmaEnding="1061">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Izteiksme="Īstenības" Persona="2" Laiks="Tagadne" Kārta="Darāmā"/>
 		</Ending>
-		<Ending ID="1091" StemChange="0" Ending="as" StemID="2" LemmaEnding="1061">
+		<Ending ID="1091" StemChange="36" Ending="as" StemID="2" LemmaEnding="1061">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Īstenības" Persona="3" Laiks="Tagadne" Kārta="Darāmā"/>
 		</Ending>
-		<Ending ID="1092" StemChange="4" Ending="as" StemID="2" LemmaEnding="1061">
+		<Ending ID="1092" StemChange="37" Ending="as" StemID="2" LemmaEnding="1061">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Vajadzības" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Darāmā"/>
 		</Ending>
 		<Ending ID="1093" StemChange="0" Ending="oties" StemID="2" LemmaEnding="1061">

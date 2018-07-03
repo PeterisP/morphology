@@ -872,10 +872,10 @@
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Nepiemīt" Dzimte="Nepiemīt" Persona="Nepiemīt" Locījums="Datīvs" Vietniekvārda_tips="Atgriezeniskie" Pamatforma="sevis"/>
     </Lexeme>
     <Lexeme Stem1="nekam">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Persona="Nepiemīt" Noliegums="Jā" Locījums="Datīvs" Vietniekvārda_tips="Nenoteiktie" Pamatforma="nekas"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Nepiemīt" Dzimte="Nepiemīt" Persona="Nepiemīt" Noliegums="Jā" Locījums="Datīvs" Vietniekvārda_tips="Nenoteiktie" Pamatforma="nekas"/>
     </Lexeme>
     <Lexeme Stem1="nekas">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Persona="Nepiemīt" Noliegums="Jā" Locījums="Nominatīvs" Vietniekvārda_tips="Nenoteiktie" Pamatforma="nekas"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Nepiemīt" Dzimte="Nepiemīt" Persona="Nepiemīt" Noliegums="Jā" Locījums="Nominatīvs" Vietniekvārda_tips="Nenoteiktie" Pamatforma="nekas"/>
     </Lexeme>
     <Lexeme Stem1="citām">
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Datīvs" Vietniekvārda_tips="Nenoteiktie" Pamatforma="cita"/>
@@ -1115,7 +1115,7 @@
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Dzimte="Vīriešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="tas"/>
     </Lexeme>
     <Lexeme Stem1="nekā">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Persona="Nepiemīt" Noliegums="Jā" Locījums="Ģenitīvs" Vietniekvārda_tips="Nenoteiktie" Pamatforma="nekas"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Nepiemīt" Dzimte="Nepiemīt" Persona="Nepiemīt" Noliegums="Jā" Locījums="Ģenitīvs" Vietniekvārda_tips="Nenoteiktie" Pamatforma="nekas"/>
     </Lexeme>
     <Lexeme Stem1="dažā">
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Lokatīvs" Vietniekvārda_tips="Nenoteiktie" Pamatforma="daža"/>
@@ -1337,7 +1337,7 @@
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Nominatīvs" Vietniekvārda_tips="Noteiktie" Pamatforma="pats"/>
     </Lexeme>
     <Lexeme Stem1="neko">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Persona="Nepiemīt" Noliegums="Jā" Locījums="Akuzatīvs" Vietniekvārda_tips="Nenoteiktie" Pamatforma="nekas"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Nepiemīt" Dzimte="Nepiemīt" Persona="Nepiemīt" Noliegums="Jā" Locījums="Akuzatīvs" Vietniekvārda_tips="Nenoteiktie" Pamatforma="nekas"/>
     </Lexeme>
     <Lexeme Stem1="viņas">
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Persona="3" Locījums="Akuzatīvs" Vietniekvārda_tips="Personu" Pamatforma="viņa"/>
@@ -1651,7 +1651,7 @@
     <Lexeme Stem1="jebkāds">
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Nominatīvs" Vietniekvārda_tips="Nenoteiktie" Pamatforma="jebkāds"/>
     </Lexeme>
-    <Lexeme Stem1="paša">
+    <Lexeme Stem1="pašu">
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Persona="Nepiemīt" Locījums="Akuzatīvs" Vietniekvārda_tips="Noteiktie" Pamatforma="pati"/>
     </Lexeme>
     <Lexeme Stem1="paša">
@@ -2918,7 +2918,7 @@
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Desmiti" Pamatforma="divdesmit"/>
     </Lexeme>
     <Lexeme Stem1="neiet">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Jā" Pamatforma="iet" Laiks="Tagadne" Kārta="Darāmā"/>
+      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Jā" Pamatforma="neiet" Laiks="Tagadne" Kārta="Darāmā"/>
     </Lexeme>
     <Lexeme Stem1="tūkstoti">
       <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Vienskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Akuzatīvs" Skaitļu_kārta="Tūkstoši" Pamatforma="tūkstotis"/>
@@ -2950,24 +2950,6 @@
     <Lexeme Stem1="septiņsimt">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Simti" Pamatforma="septiņsimt"/>
     </Lexeme>
-    <Lexeme Stem1="iet">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Nē" Pamatforma="iet" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="pieiet">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Nē" Pamatforma="pieiet" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="apiet">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Nē" Pamatforma="apiet" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="paiet">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Nē" Pamatforma="paiet" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="aiziet">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Nē" Pamatforma="aiziet" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="pāriet">
-      <Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Nē" Pamatforma="pāriet" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
     <Lexeme Stem1="astoņpadsmit">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Skaitļu_kārta="Padsmiti" Pamatforma="astoņpadsmit"/>
     </Lexeme>
@@ -2992,12 +2974,6 @@
     <Lexeme Stem1="septiņdesmittūkstoš">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši" Pamatforma="septiņdesmittūkstoš"/>
     </Lexeme>
-    <Lexeme Stem1="iziet">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Nē" Pamatforma="iziet" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="iziet">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Nē" Pamatforma="iziet" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
     <Lexeme Stem1="astoņpadsmittūkstoš">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši" Pamatforma="astoņpadsmittūkstoš"/>
     </Lexeme>
@@ -3021,9 +2997,6 @@
     </Lexeme>
     <Lexeme Stem1="septiņpadsmittūkstoš">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši" Pamatforma="septiņpadsmittūkstoš"/>
-    </Lexeme>
-    <Lexeme Stem1="jāaiziet">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Vajadzības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="Nepiemīt" Noliegums="Nē" Pamatforma="aiziet" Laiks="Nepiemīt" Kārta="Darāmā"/>
     </Lexeme>
     <Lexeme Stem1="desmit">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Skaitļu_kārta="Desmiti" Pamatforma="desmit"/>
@@ -3151,9 +3124,6 @@
     <Lexeme Stem1="sešdesmittūkstoš">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši" Pamatforma="sešdesmittūkstoš"/>
     </Lexeme>
-    <Lexeme Stem1="jāiet">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Vajadzības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="Nepiemīt" Noliegums="Nē" Pamatforma="iet" Laiks="Nepiemīt" Kārta="Darāmā"/>
-    </Lexeme>
     <Lexeme Stem1="trīssimttūkstoš">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši" Pamatforma="trīssimttūkstoš"/>
     </Lexeme>
@@ -3174,9 +3144,6 @@
     </Lexeme>
     <Lexeme Stem1="vienpadsmittūkstoš">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši" Pamatforma="vienpadsmittūkstoš"/>
-    </Lexeme>
-    <Lexeme Stem1="jāiziet">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Vajadzības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="Nepiemīt" Noliegums="Nē" Pamatforma="iziet" Laiks="Nepiemīt" Kārta="Darāmā"/>
     </Lexeme>
     <Lexeme Stem1="septiņsimttūkstoš">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši" Pamatforma="septiņsimttūkstoš"/>

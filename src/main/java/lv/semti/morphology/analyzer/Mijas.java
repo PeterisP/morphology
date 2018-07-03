@@ -85,6 +85,12 @@ public abstract class Mijas {
                     mija = 30;
                 } else return varianti;
                 break;
+            case 37: // vajadzības izteiksme 1. konjugācijai ar miju (jāiet)
+                if (stem.startsWith("jā") && stem.length() >= 4) {
+                    celms = stem.substring(2,stem.length());
+                    mija = 36;
+                } else return varianti;
+                break;
 			default:
 				celms = stem;
 				mija = stemChange;
@@ -409,6 +415,11 @@ public abstract class Mijas {
                         varianti.add(new Variants(celms+"j",AttributeNames.i_Degree, AttributeNames.v_Positive));
                     // citiem pareiziem variantiem IMHO te nevajadzētu būt
                     break;
+                case 36: // 'iet' speciālgadījums - normāli 3. personas tagadnei atbilstošais celms būtu 'ej', bet ir 'iet'.
+                    varianti.add(new Variants(celms));
+                    if (celms.endsWith("iet"))
+                        varianti.add(new Variants(celms.substring(0,celms.length()-3)+"ej"));
+                    break;
 				default:
 					System.err.printf("Invalid StemChange ID, stem '%s', stemchange %d\n", celms, mija);
 			}
@@ -434,7 +445,7 @@ public abstract class Mijas {
 			if (locītais.celms.equalsIgnoreCase(stem)) atrasts = true;
 		}
 		
-		if (!atrasts && Arrays.asList(1,2,5,6,7,8,9,14,15,17,23,26).contains(stemChange)) { //FIXME - varbūt performance dēļ tikai šiem stemChange ir jāloka varianti
+		if (!atrasts && Arrays.asList(1,2,5,6,7,8,9,14,15,17,23,26,36,37).contains(stemChange)) { //FIXME - varbūt performance dēļ tikai šiem stemChange ir jāloka varianti
 //            System.err.printf("Celmam '%s' ar miju %d sanāca '%s' - noraidījām dēļ atpakaļlocīšanas verifikācijas.\n", stem, stemChange, variants.celms);
 			return false;
 		} else {
@@ -509,6 +520,10 @@ public abstract class Mijas {
             case 31: // vajadzības izteiksme 3. konjugācijai ar miju
                 celms = "jā" + stem;
                 mija = 30;
+                break;
+            case 37: // vajadzības izteiksme 1. konjugācijai ar miju
+                celms = "jā" + stem;
+                mija = 36;
                 break;
             default:
 				celms = stem;
@@ -838,7 +853,13 @@ public abstract class Mijas {
                     else // zaļ-š -> zaļa-jam
                         varianti.add(new Variants(celms+"a",AttributeNames.i_Degree,AttributeNames.v_Positive));
                     break;
-				default:
+                case 36: // 'iet' speciālgadījums - normāli 3. personas tagadnei atbilstošais celms būtu 'ej', bet ir 'iet'.
+                    if (celms.endsWith("ej") && trešāSakne.endsWith("gāj"))
+                        varianti.add(new Variants(celms.substring(0, celms.length()-2)+"iet"));
+                    else varianti.add(new Variants(celms));
+                    break;
+
+                default:
 					System.err.printf("Invalid StemChange ID, stem '%s', stemchange %d\n", celms, mija);
 			}
 		} catch (StringIndexOutOfBoundsException e){

@@ -810,5 +810,17 @@ public class TokenizeTest {
         sentences = Splitting.tokenizeSentences(locītājs, "Bateman et al., 2010");
         assertEquals(1, sentences.size());
     }
+
+    @Test
+    public void ticket_34() {
+	    LinkedList<Word> tokens = Splitting.tokenize(locītājs, "PY+PD");
+        assertEquals(3, tokens.size());
+
+        tokens = Splitting.tokenize(locītājs, "Izdala piecas miera perioda klases: izioloģiskais (PD), morfoloģiskais (MD), morfoizioloģiskais (MPD), iziskais (PY) un kombinētais (PY+PD) (4. tabula).");
+
+        assertEquals("PY", tokens.get(28));
+	    assertEquals(37, tokens.size());
+
+    }
 }
  
