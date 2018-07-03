@@ -899,8 +899,10 @@ public class Analyzer extends Lexicon {
         for (Lexeme formLexeme : this.hardcodedForms.get(lemma)) {
             Ending ending = formLexeme.getParadigm().getLemmaEnding();
             Wordform hardcoded = new Wordform(formLexeme.getStem(0), formLexeme, ending);
+            if (!lexeme.getParadigm().isMatchingWeak(AttributeNames.i_PartOfSpeech, hardcoded.getValue(AttributeNames.i_PartOfSpeech)))
+                continue;
             Wordform override = null;
-            for (Wordform form : inflections) {
+            for (Wordform form : inflections) { // pārbaudam, vai kādu no esošajiem locījumiem nevajag izmest, jo šis hardcoded variants to aizvieto
                 if (form.isMatchingWeak(formLexeme)) {
                     override = form;
                 }

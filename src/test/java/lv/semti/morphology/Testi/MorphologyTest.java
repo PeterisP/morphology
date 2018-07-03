@@ -3054,7 +3054,18 @@ public class MorphologyTest {
         testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
         testset.addAttribute(AttributeNames.i_Person, "2");
         assertInflection(formas, testset, "esi");
+    }
 
+    @Test
+    public void pats() {
+        ArrayList<Wordform> formas = locītājs.generateInflectionsFromParadigm("pats", 1);
+        for (Wordform wf : formas) {
+            if (wf.getToken().equalsIgnoreCase("paša")) {
+                wf.describe();
+            }
+            assertNotEquals("paša", wf.getToken());
+        }
 
     }
 }
+
