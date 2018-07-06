@@ -130,5 +130,18 @@
 				</executions>
 			</plugin>			
 		</plugins>
+		<resources>
+	        <resource>
+	            <directory>src/main/resources</directory>
+	            <filtering>false</filtering>
+	        </resource>
+	        <resource>
+	            <directory>src/main/resources</directory>
+	            <filtering>true</filtering>
+	            <includes>
+	                <include>Lexicon_v2.xml</include>
+	            </includes>
+	        </resource>			
+		</resources>
 	</build>
 </project>

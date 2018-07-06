@@ -3103,5 +3103,35 @@ public class MorphologyTest {
         Word nepaej = locītājs.analyze("nepaej");
         assertTrue(nepaej.isRecognized());
     }
+
+    @Test
+    public void ticket_26() {
+        Word w = locītājs.analyze("sen");
+        assertTrue(w.isRecognized());
+        w.describe(System.out);
+        assertEquals("rpt", w.getBestWordform().getTag());
+
+        w = locītājs.analyze("maz");
+        assertTrue(w.isRecognized());
+        assertEquals("rqt", w.getBestWordform().getTag());
+
+        w = locītājs.analyze("drīz");
+        assertTrue(w.isRecognized());
+        assertEquals("rpt", w.getBestWordform().getTag());
+
+        w = locītājs.analyze("pārāk");
+        assertTrue(w.isRecognized());
+        assertEquals("r0q", w.getBestWordform().getTag());
+
+        w = locītājs.analyze("daudzāk");
+        assertTrue(w.isRecognized());
+        assertEquals("rcq", w.getBestWordform().getTag());
+        assertEquals("daudz", w.getBestWordform().getValue(AttributeNames.i_Lemma));
+
+        w = locītājs.analyze("vairāk");
+        assertTrue(w.isRecognized());
+        assertEquals("rcq", w.getBestWordform().getTag());
+        assertEquals("daudz", w.getBestWordform().getValue(AttributeNames.i_Lemma));
+    }
 }
 

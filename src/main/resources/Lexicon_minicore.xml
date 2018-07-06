@@ -303,7 +303,46 @@
     <Lexeme Stem1="vairāk">
       <Attributes Apstākļa_vārda_tips="Mēra" Pakāpe="Pārākā" Pamatforma="daudz"/>
     </Lexeme>
+    <Lexeme Stem1="visvairāk">
+      <Attributes Apstākļa_vārda_tips="Mēra" Pakāpe="Vispārākā" Pamatforma="daudz"/>
+    </Lexeme>
+    <Lexeme Stem1="daudzāk">
+      <Attributes Apstākļa_vārda_tips="Mēra" Pakāpe="Pārākā" Pamatforma="daudz" Ģenerēt="Nē"/>
+    </Lexeme>
+    <Lexeme Stem1="visdaudzāk">
+      <Attributes Apstākļa_vārda_tips="Mēra" Pakāpe="Vispārākā" Pamatforma="daudz" Ģenerēt="Nē"/>
+    </Lexeme>
     <Lexeme Stem1="beidzot"/>
+    <Lexeme Stem1="sen">
+      <Attributes Apstākļa_vārda_tips="Laika" Pakāpe="Pamata"/>
+    </Lexeme>
+    <Lexeme Stem1="senāk">
+      <Attributes Apstākļa_vārda_tips="Laika" Pakāpe="Pārākā"/>
+    </Lexeme>
+    <Lexeme Stem1="vissenāk">
+      <Attributes Apstākļa_vārda_tips="Laika" Pakāpe="Vispārākā"/>
+    </Lexeme>
+    <Lexeme Stem1="drīz">
+      <Attributes Apstākļa_vārda_tips="Laika" Pakāpe="Pamata"/>
+    </Lexeme>
+    <Lexeme Stem1="drīzāk">
+      <Attributes Apstākļa_vārda_tips="Laika" Pakāpe="Pārākā"/>
+    </Lexeme>
+    <Lexeme Stem1="visdrīzāk">
+      <Attributes Apstākļa_vārda_tips="Laika" Pakāpe="Vispārākā"/>
+    </Lexeme>
+    <Lexeme Stem1="maz">
+      <Attributes Apstākļa_vārda_tips="Mēra" Pakāpe="Pamata"/>
+    </Lexeme>
+    <Lexeme Stem1="mazāk">
+      <Attributes Apstākļa_vārda_tips="Mēra" Pakāpe="Pārākā"/>
+    </Lexeme>
+    <Lexeme Stem1="vismazāk">
+      <Attributes Apstākļa_vārda_tips="Mēra" Pakāpe="Vispārākā"/>
+    </Lexeme>
+    <Lexeme Stem1="pārāk">
+      <Attributes Apstākļa_vārda_tips="Mēra"/>
+    </Lexeme>
   </Paradigm>
   <Paradigm Stems="1" ID="22" LemmaEnding="1102" Description="Kārtas skaitļa vārdi">
     <Attributes Vārdšķira="Skaitļa vārds" Skaitļa_vārda_tips="Kārtas" Uzbūve="Vienkāršs" Noteiktība="Noteiktā"/>
