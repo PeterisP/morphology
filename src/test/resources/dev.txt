@@ -318,7 +318,7 @@ skaits	ncmsn1	skaits	m-z109-p95s6w21
 bija	vcnisii30an	būt	m-z109-p95s6w22
 ap	sppd	ap	m-z109-p95s6w23
 pieciem	mcsmpd	pieci	m-z109-p95s6w24
-tūkstošiem	ncmpd2	tūkstošiem	m-z109-p95s6w25
+tūkstošiem	ncmpd2	tūkstotis	m-z109-p95s6w25
 <g />
 .	zs	.	m-z109-p95s6w26
 <g />
@@ -425,7 +425,7 @@ Latgalē	npfsl5	Latgale	m-z109-p95s10w3
 dzīvoja	vmnist230an	dzīvot	m-z109-p95s10w4
 apmēram	r0q	apmēram	m-z109-p95s10w5
 30	xn	30	m-z109-p95s10w6
-tūkstoši	mcsmpn	tūkstoši	m-z109-p95s10w7
+tūkstoši	ncmpn2	tūkstotis	m-z109-p95s10w7
 ebreju	ncmpg1	ebrejs	m-z109-p95s10w8
 <g />
 ,	zc	,	m-z109-p95s10w9
@@ -1110,7 +1110,7 @@ apturētas	vmnpdfpnpsnpn	apturēt	m-p3734-p10s1w40
 ST	yp	ST	m-p3734-p10s2w1
 tiesnešus	ncmpa2	tiesnesis	m-p3734-p10s2w2
 ievēl	vmnipt330an	ievēlēt	m-p3734-p10s2w3
-Saeima	ncfsn4	saeima	m-p3734-p10s2w4
+Saeima	npfsn4	Saeima	m-p3734-p10s2w4
 uz	spsa	uz	m-p3734-p10s2w5
 vienu	mcsmsa	viens	m-p3734-p10s2w6
 desmit	mcs0p0	desmit	m-p3734-p10s2w7
@@ -1279,6 +1279,76 @@ balstītas	vmnpdfpapsnpn	balstīt	m-n33-p112s2w15
 procedūras	ncfpa4	procedūra	m-n33-p112s2w16
 <g />
 .	zs	.	m-n33-p112s2w17
+</s>
+<s>
+Analīzei	ncfsd5	analīze	m-z108-p155s1w1
+autore	ncfsn5	autore	m-z108-p155s1w2
+izvēlējusies	vmypdfsnasnpn	izvēlēties	m-z108-p155s1w3
+Īriju	npfsa4	Īrija	m-z108-p155s1w4
+<g />
+,	zc	,	m-z108-p155s1w5
+Nīderlandi	npfsa5	Nīderlande	m-z108-p155s1w6
+un	cc	un	m-z108-p155s1w7
+Zviedriju	npfsa4	Zviedrija	m-z108-p155s1w8
+<g />
+,	zc	,	m-z108-p155s1w9
+ņemot	vmnpu0000000n	ņemt	m-z108-p155s1w10
+vērā	r0m	vērā	m-z108-p155s1w11
+to	pd0fpgn	tā	m-z108-p155s1w12
+valdību	ncfpg4	valdība	m-z108-p155s1w13
+spēju	ncfsa4	spēja	m-z108-p155s1w14
+pārvarēt	vmnn0t3000n	pārvarēt	m-z108-p155s1w15
+ekonomiskās	affsgyp	ekonomiska	m-z108-p155s1w16
+problēmas	ncfpa4	problēma	m-z108-p155s1w17
+un	cc	un	m-z108-p155s1w18
+attīstīt	vmnn0t3000n	attīstīt	m-z108-p155s1w19
+uzņēmējdarbības	ncfsg4	uzņēmējdarbība	m-z108-p155s1w20
+vidi	ncfsa5	vide	m-z108-p155s1w21
+<g />
+.	zs	.	m-z108-p155s1w22
+</s>
+<s>
+Bez	spsd	Bez	m-z108-p155s2w1
+tam	pd0msdn	tas	m-z108-p155s2w2
+visas	pg0fpnn	visa	m-z108-p155s2w3
+izvēlētās	vmnpdfsgpsypn	izvēlēt	m-z108-p155s2w4
+valstis	ncfpn6	valsts	m-z108-p155s2w5
+ir	vmnipii30an	būt	m-z108-p155s2w6
+ES	yp	ES	m-z108-p155s2w7
+sastāvā	ncmsl1	sastāvs	m-z108-p155s2w8
+<g />
+,	zc	,	m-z108-p155s2w9
+līdz	r0m	līdz	m-z108-p155s2w10
+ar	spsa	ar	m-z108-p155s2w11
+to	pd0msan	tas	m-z108-p155s2w12
+ievērojot	vmnpu0000000n	ievērot	m-z108-p155s2w13
+tos	pd0mpan	tas	m-z108-p155s2w14
+pašus	pg0mpan	pats	m-z108-p155s2w15
+nosacījumus	ncmpa1	nosacījums	m-z108-p155s2w16
+<g />
+,	zc	,	m-z108-p155s2w17
+ko	pr000an	kas	m-z108-p155s2w18
+nepieciešams	afmsnnp	nepieciešams	m-z108-p155s2w19
+garantēt	vmnn0t2000n	garantēt	m-z108-p155s2w20
+Latvijā	npfsl4	Latvija	m-z108-p155s2w21
+<g />
+.	zs	.	m-z108-p155s2w22
+</s>
+<s>
+Konkrētās	affpnyp	konkrēta	m-z108-p155s3w1
+valstis	ncfpn6	valsts	m-z108-p155s3w2
+analīzei	ncfsd5	analīze	m-z108-p155s3w3
+izvēlētas	vmnpdfpnpsnpn	izvēlēt	m-z108-p155s3w4
+<g />
+,	zc	,	m-z108-p155s3w5
+ņemot	vmnpu0000000n	ņemt	m-z108-p155s3w6
+vērā	r0m	vērā	m-z108-p155s3w7
+to	pd0fpgn	tā	m-z108-p155s3w8
+sasniegtos	vmnpdmpapsypn	sasniegt	m-z108-p155s3w9
+rezultātus	ncmpa1	rezultāts	m-z108-p155s3w10
+<g />
+:	zo	:	m-z108-p155s3w11
+<g />
 </s>
 <s>
 Žans	npmsn1	Žans	m-d94-p4s1w1
@@ -1585,7 +1655,7 @@ lieki	rpm	lieki	m-s9-p21s4w4
 .	zs	.	m-s9-p21s4w5
 </s>
 <s>
-Saeima	ncfsn4	saeima	m-s9-p21s5w1
+Saeima	npfsn4	Saeima	m-s9-p21s5w1
 ir	vcnipii30an	būt	m-s9-p21s5w2
 galvenā	arfsnyp	galvenā	m-s9-p21s5w3
 valsts	ncfsg6	valsts	m-s9-p21s5w4
@@ -1642,10 +1712,10 @@ tautu	ncfsa4	tauta	m-s9-p21s8w3
 nevis	cc	nevis	m-s9-p21s8w5
 pretstatīt	vmnn0t3000n	pretstatīt	m-s9-p21s8w6
 600	xn	600	m-s9-p21s8w7
-tūkstošus	mcsmpa	tūkstoši	m-s9-p21s8w8
+tūkstošus	ncmpa2	tūkstotis	m-s9-p21s8w8
 pret	sppd	pret	m-s9-p21s8w9
 900	xn	900	m-s9-p21s8w10
-tūkstošiem	mcsmpd	tūkstoši	m-s9-p21s8w11
+tūkstošiem	ncmpd2	tūkstotis	m-s9-p21s8w11
 <g />
 !	zs	!	m-s9-p21s8w12
 <g />
@@ -1813,7 +1883,7 @@ ka	cs	ka	m-s9-p20s1w12
 šī	pd3fsnn	šī	m-s9-p20s1w13
 9.	xo	9.	m-s9-p20s1w14
 <g />
-Saeima	ncfsn4	saeima	m-s9-p20s1w15
+Saeima	npfsn4	Saeima	m-s9-p20s1w15
 tūlīt	r0t	tūlīt	m-s9-p20s1w16
 ir	vcnipii30an	būt	m-s9-p20s1w17
 jāatlaiž	vmnd0t100an	atlaist	m-s9-p20s1w18
@@ -1826,7 +1896,7 @@ deputāti	ncmpn1	deputāts	m-s9-p20s2w2
 šeit	r0p	šeit	m-s9-p20s2w3
 <g />
 ,	zc	,	m-s9-p20s2w4
-Saeimā	ncfsl4	saeima	m-s9-p20s2w5
+Saeimā	npfsl4	Saeima	m-s9-p20s2w5
 <g />
 ,	zc	,	m-s9-p20s2w6
 saņem	vmnipt130an	saņemt	m-s9-p20s2w7
@@ -4786,7 +4856,7 @@ palielināsies	vmyifi330an	palielināties	m-p3754-p28s2w17
 <g />
 ,	zc	,	m-p3754-p28s2w18
 pašlaik	r0t	pašlaik	m-p3754-p28s2w19
-neko	pi0msay	nekas	m-p3754-p28s2w20
+neko	pi000ay	nekas	m-p3754-p28s2w20
 nezinām	vmnipt11pan	nezināt	m-p3754-p28s2w21
 <g />
 .	zs	.	m-p3754-p28s2w22
@@ -7413,7 +7483,7 @@ degunā	ncmsl1	deguns	m-p2690-p7s1w11
 ,	zc	,	m-p2690-p7s1w12
 nekādā	pi0msly	nekāds	m-p2690-p7s1w13
 gadījumā	ncmsl1	gadījums	m-p2690-p7s1w14
-nemēģināt	vmnn0t3000y	nemēģināt	m-p2690-p7s1w15
+nemēģināt	vonn0t3000y	nemēģināt	m-p2690-p7s1w15
 dabūt	vmnn0t2000n	dabūt	m-p2690-p7s1w16
 ārā	r0p	ārā	m-p2690-p7s1w17
 pašu	pg0mpgn	pašu	m-p2690-p7s1w18
@@ -7441,6 +7511,81 @@ varēs	vonift330an	varēt	m-p2690-p7s2w5
 izņemt	vmnn0t1000n	izņemt	m-p2690-p7s2w6
 <g />
 .	zs	.	m-p2690-p7s2w7
+</s>
+<s>
+[	zb	[	m-n440-p40s1w1
+<g />
+11.3	xn	11.3	m-n440-p40s1w2
+<g />
+]	zb	]	m-n440-p40s1w3
+Ukrainas	npfsg4	Ukraina	m-n440-p40s1w4
+demokrātijas	ncfsg4	demokrātija	m-n440-p40s1w5
+aizstāvji	ncmpn2	aizstāvis	m-n440-p40s1w6
+un	cc	un	m-n440-p40s1w7
+likumīgā	arfsnyp	likumīga	m-n440-p40s1w8
+Ukrainas	npfsg4	Ukraina	m-n440-p40s1w9
+vara	ncfsn4	vara	m-n440-p40s1w10
+konsekventi	r0m	konsekventi	m-n440-p40s1w11
+tiek	vtnipi130an	tikt	m-n440-p40s1w12
+pielīdzināta	vmnpdfsnpsnpn	pielīdzināt	m-n440-p40s1w13
+nacistiskās	arfsgyp	nacistiska	m-n440-p40s1w14
+Vācijas	npfsg4	Vācija	m-n440-p40s1w15
+ideoloģijas	ncfsg4	ideoloģija	m-n440-p40s1w16
+aizstāvjiem	ncmpd2	aizstāvis	m-n440-p40s1w17
+<g />
+.	zs	.	m-n440-p40s1w18
+</s>
+<s>
+Raidījumos	ncmpl1	raidījums	m-n440-p40s2w1
+tiek	vtnipi130an	tikt	m-n440-p40s2w2
+vilktas	vmnpdfpnpsnpn	vilkt	m-n440-p40s2w3
+paralēles	ncfpn5	paralēle	m-n440-p40s2w4
+ar	spsa	ar	m-n440-p40s2w5
+nacistu	ncmpg1	nacists	m-n440-p40s2w6
+noziegumiem	ncmpd1	noziegums	m-n440-p40s2w7
+Otrajā	mosfsl	otrā	m-n440-p40s2w8
+pasaules	ncfsg5	pasaule	m-n440-p40s2w9
+karā	ncmsl1	karš	m-n440-p40s2w10
+<g />
+,	zc	,	m-n440-p40s2w11
+nododot	vmnpu0000000n	nodot	m-n440-p40s2w12
+vēstījumu	ncmsa1	vēstījums	m-n440-p40s2w13
+<g />
+,	zc	,	m-n440-p40s2w14
+ka	cs	ka	m-n440-p40s2w15
+<g />
+,	zc	,	m-n440-p40s2w16
+šādiem	pd0mpdn	šāds	m-n440-p40s2w17
+spēkiem	ncmpd1	spēks	m-n440-p40s2w18
+nākot	vmnpu0000000n	nākt	m-n440-p40s2w19
+pie	spsg	pie	m-n440-p40s2w20
+varas	ncfsg4	vara	m-n440-p40s2w21
+<g />
+,	zc	,	m-n440-p40s2w22
+tie	pd0mpnn	tas	m-n440-p40s2w23
+atkārtos	vmnift230an	atkārtot	m-n440-p40s2w24
+nacistu	ncmpg1	nacists	m-n440-p40s2w25
+noziegumus	ncmpa1	noziegums	m-n440-p40s2w26
+<g />
+.	zs	.	m-n440-p40s2w27
+</s>
+<s>
+Sižetos	ncmpl1	sižets	m-n440-p40s3w1
+sistemātiski	r0m	sistemātiski	m-n440-p40s3w2
+tiek	vtnipi130an	tikt	m-n440-p40s3w3
+stāstīts	vmnpdmsnpsnpn	stāstīt	m-n440-p40s3w4
+par	spsa	par	m-n440-p40s3w5
+šo	pd0mpgn	šis	m-n440-p40s3w6
+Ukrainas	npfsg4	Ukraina	m-n440-p40s3w7
+demokrātijas	ncfsg4	demokrātija	m-n440-p40s3w8
+aizstāvju	ncmpg2	aizstāvis	m-n440-p40s3w9
+it	q	it	m-n440-p40s3w10
+kā	q	kā	m-n440-p40s3w11
+izdarītajiem	vmnpdmpdpsypn	izdarīt	m-n440-p40s3w12
+noziegumiem	ncmpd1	noziegums	m-n440-p40s3w13
+<g />
+.	zs	.	m-n440-p40s3w14
+<g />
 </s>
 <s>
 Alfs	npmsn1	Alfs	m-d138-p794s1w1
@@ -8941,14 +9086,14 @@ sastādīts	vmnpdmsnpsnpn	sastādīt	m-s9-p64s4w14
 </s>
 <s>
 Jo	cs	jo	m-s9-p64s5w1
-Saeima	ncfsn4	saeima	m-s9-p64s5w2
+Saeima	npfsn4	Saeima	m-s9-p64s5w2
 neveido	vmnipt230ay	neveidot	m-s9-p64s5w3
 kādas	pi0fpan	kāda	m-s9-p64s5w4
 nenosakāmas	arfpanp	nenosakāma	m-s9-p64s5w5
 apakškomisijas	ncfpa4	apakškomisija	m-s9-p64s5w6
 <g />
 ,	zc	,	m-s9-p64s5w7
-Saeima	ncfsn4	saeima	m-s9-p64s5w8
+Saeima	npfsn4	Saeima	m-s9-p64s5w8
 veido	vmnipt230an	veidot	m-s9-p64s5w9
 speciālas	arfpnnp	speciāla	m-s9-p64s5w10
 komisijas	ncfpa4	komisija	m-s9-p64s5w11
@@ -8970,7 +9115,7 @@ nepieciešams	afmsnnp	nepieciešams	m-s9-p64s6w6
 <g />
 ,	zc	,	m-s9-p64s6w7
 jo	cs	jo	m-s9-p64s6w8
-Saeimas	ncfsg4	saeima	m-s9-p64s6w9
+Saeimas	npfsg4	Saeima	m-s9-p64s6w9
 Juridiskā	arfsnyp	juridiska	m-s9-p64s6w10
 komisija	ncfsn4	komisija	m-s9-p64s6w11
 jau	r0t	jau	m-s9-p64s6w12
@@ -9033,7 +9178,7 @@ informēt	vmnn0t2000n	informēt	m-s9-p64s7w4
 ka	cs	ka	m-s9-p64s7w6
 nav	vcnipii30ay	nebūt	m-s9-p64s7w7
 pieļaujama	arfsnnp	pieļaujama	m-s9-p64s7w8
-Saeimā	ncfsl4	saeima	m-s9-p64s7w9
+Saeimā	npfsl4	Saeima	m-s9-p64s7w9
 tāda	pd0fsnn	tāda	m-s9-p64s7w10
 situācija	ncfsn4	situācija	m-s9-p64s7w11
 <g />
@@ -9062,7 +9207,7 @@ uzdevums	ncmsn1	uzdevums	m-s9-p64s7w29
 par	spsa	par	m-s9-p64s7w31
 to	pd3msan	tas	m-s9-p64s7w32
 neinformē	vmnipt230ay	neinformēt	m-s9-p64s7w33
-Saeimu	ncfsa4	saeima	m-s9-p64s7w34
+Saeimu	npfsa4	Saeima	m-s9-p64s7w34
 <g />
 ,	zc	,	m-s9-p64s7w35
 cenšas	voyipt130an	censties	m-s9-p64s7w36
@@ -10601,7 +10746,7 @@ Ha-ha	i	ha-ha	m-d62-p26s2w1
 "	zq	"	m-d62-p27s1w1
 <g />
 Tas	pd3msnn	tas	m-d62-p27s1w2
-nekas	pi0msny	nekas	m-d62-p27s1w3
+nekas	pi000ny	nekas	m-d62-p27s1w3
 <g />
 .	zs	.	m-d62-p27s1w4
 </s>
@@ -11061,7 +11206,7 @@ saklausāmas	vmnpdfpnppnpn	saklausīt	m-d62-p34s8w15
 .	zs	.	m-d62-p34s8w16
 </s>
 <s>
-Neko	pi0msay	nekas	m-d62-p34s9w1
+Neko	pi000ay	nekas	m-d62-p34s9w1
 citu	pi0msan	cits	m-d62-p34s9w2
 <g />
 .	zs	.	m-d62-p34s9w3
@@ -12188,7 +12333,7 @@ kampaņām	ncfpd4	kampaņa	m-p340-p14s3w12
 <s>
 Pietiek	vonipi130an	pietikt	m-p340-p14s4w1
 nedarīt	vmnn0t3000y	nedarīt	m-p340-p14s4w2
-neko	pi0msay	nekas	m-p340-p14s4w3
+neko	pi000ay	nekas	m-p340-p14s4w3
 <g />
 ,	zc	,	m-p340-p14s4w4
 gaidot	vmnpu0000000n	gaidīt	m-p340-p14s4w5
@@ -15893,7 +16038,7 @@ tā	r0m	tā	m-d197-p93s2w3
 .	zs	.	m-d197-p93s2w4
 </s>
 <s>
-Nekas	pi0msny	nekas	m-d197-p93s3w1
+Nekas	pi000ny	nekas	m-d197-p93s3w1
 īpašs	afmsnnp	īpašs	m-d197-p93s3w2
 <g />
 .	zs	.	m-d197-p93s3w3
@@ -16656,7 +16801,7 @@ stāstu	vmnipt31san	stāstīt	m-d197-p120s2w6
 Vai	q	vai	m-d197-p120s3w1
 tad	q	tad	m-d197-p120s3w2
 tu	pp20snn	tu	m-d197-p120s3w3
-neko	pi0msay	nekas	m-d197-p120s3w4
+neko	pi000ay	nekas	m-d197-p120s3w4
 nesaproti	vmnipt12say	nesaprast	m-d197-p120s3w5
 <g />
 ?	zs	?	m-d197-p120s3w6
@@ -16858,7 +17003,7 @@ balss	ncfsn6	balss	m-d197-p127s1w13
 -	zd	-	m-d197-p127s2w1
 Tu	pp20snn	tu	m-d197-p127s2w2
 vispār	r0m	vispār	m-d197-p127s2w3
-neko	pi0msay	nekas	m-d197-p127s2w4
+neko	pi000ay	nekas	m-d197-p127s2w4
 nedzirdi	vmnipt32say	nedzirdēt	m-d197-p127s2w5
 <g />
 !	zs	!	m-d197-p127s2w6
@@ -19206,7 +19351,7 @@ atrunāja	vmnist230an	atrunāt	m-p3332-p10s13w13
 ,	zc	,	m-p3332-p10s13w14
 bet	cc	bet	m-p3332-p10s13w15
 es	pp10snn	es	m-p3332-p10s13w16
-neko	pi0msay	nekas	m-p3332-p10s13w17
+neko	pi000ay	nekas	m-p3332-p10s13w17
 nevarēju	vonist31say	nevarēt	m-p3332-p10s13w18
 padarīt	vmnn0t3000n	padarīt	m-p3332-p10s13w19
 <g />
@@ -19215,7 +19360,7 @@ padarīt	vmnn0t3000n	padarīt	m-p3332-p10s13w19
 <s>
 Sākumā	ncmsl1	sākums	m-p3332-p10s14w1
 mums	pp10pdn	mēs	m-p3332-p10s14w2
-nekas	pi0msny	nekas	m-p3332-p10s14w3
+nekas	pi000ny	nekas	m-p3332-p10s14w3
 tāds	pd0msnn	tāds	m-p3332-p10s14w4
 nebija	vmnisii30ay	nebūt	m-p3332-p10s14w5
 <g />
@@ -19927,7 +20072,7 @@ ir	vcnipii30an	būt	m-p136-p4s2w25
 noslēgts	vmnpdmsnpsnpn	noslēgt	m-p136-p4s2w26
 un	cc	un	m-p136-p4s2w27
 apstiprināts	vmnpdmsnpsnpn	apstiprināt	m-p136-p4s2w28
-Saeimā	ncfsl4	saeima	m-p136-p4s2w29
+Saeimā	npfsl4	Saeima	m-p136-p4s2w29
 <g />
 .	zs	.	m-p136-p4s2w30
 </s>
@@ -19952,7 +20097,7 @@ iesniedza	vmnist130an	iesniegt	m-p136-p4s3w14
 divas	mcsfpn	divas	m-p136-p4s3w16
 dažādas	affpnnp	dažāda	m-p136-p4s3w17
 iedomātas	vmnpdfpnpsnpn	iedomāt	m-p136-p4s3w18
-Saeimas	ncfsg4	saeima	m-p136-p4s3w19
+Saeimas	npfsg4	Saeima	m-p136-p4s3w19
 frakcijas	ncfpn4	frakcija	m-p136-p4s3w20
 -	zd	-	m-p136-p4s3w21
 Tēvzemes	ncfsg5	tēvzeme	m-p136-p4s3w22
@@ -20874,7 +21019,7 @@ par	sppd	par	m-p136-p9s6w8
 starptautiskajām	affpdyp	starptautiska	m-p136-p9s6w9
 tiesībām	ncfpd4	tiesība	m-p136-p9s6w10
 un	cc	un	m-p136-p9s6w11
-Saeimas	ncfsg4	saeima	m-p136-p9s6w12
+Saeimas	npfsg4	Saeima	m-p136-p9s6w12
 procedūrām	ncfpd4	procedūra	m-p136-p9s6w13
 <g />
 .	zs	.	m-p136-p9s6w14

@@ -51,6 +51,11 @@ public class Lexicon {
 	public static int proper_name_frequency_floor = 200; // When loading proper name lexemes, entries that have a frequency ("Skaits") field will be ignored and not loaded
 
 	protected String filename;
+
+	public String getRevision() {
+		return revision;
+	}
+
 	private String revision;
 	private String licence;
 	

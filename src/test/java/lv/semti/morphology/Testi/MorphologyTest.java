@@ -3133,5 +3133,22 @@ public class MorphologyTest {
         assertEquals("rcq", w.getBestWordform().getTag());
         assertEquals("daudz", w.getBestWordform().getValue(AttributeNames.i_Lemma));
     }
+
+    @Test
+    public void saites()
+    {
+        Word w = locītājs.analyze("http://www.faili.lv/fails.php?id=215");
+        assertTrue(w.isRecognized());
+        assertEquals("xu", w.getBestWordform().getTag());
+
+        w = locītājs.analyze("www.skaistas-vietas.lv");
+        assertTrue(w.isRecognized());
+        assertEquals("xu", w.getBestWordform().getTag());
+
+        w = locītājs.analyze("https://esta.MRB.dhs.gov/");
+        assertTrue(w.isRecognized());
+        assertEquals("xu", w.getBestWordform().getTag());
+    }
+
 }
 
