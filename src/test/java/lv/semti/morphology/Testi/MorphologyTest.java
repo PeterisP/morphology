@@ -3070,7 +3070,13 @@ public class MorphologyTest {
     @Test
     public void jauš() {
         ArrayList<Wordform> formas = locītājs.generateInflectionsFromParadigm("jaust", 15, "jaus", "jauš", "jaut");
-        formas = locītājs.generateInflectionsFromParadigm("jaust", 15, "jaus", "jauš", "jaud");
+        for (Wordform wf : formas) {
+            if (wf.getToken().equalsIgnoreCase("jauš")) {
+                wf.describe();
+                assertNotEquals("2", wf.getValue(AttributeNames.i_Person));
+            }
+        }
+        formas = locītājs.generateInflectionsFromParadigm("jaust", 15, "jaus", "jauž", "jaud");
         for (Wordform wf : formas) {
             if (wf.getToken().equalsIgnoreCase("jauš")) {
                 wf.describe();

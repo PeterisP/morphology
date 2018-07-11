@@ -53,7 +53,7 @@ public class Analyzer extends Lexicon {
 	private Pattern p_abbrev = Pattern.compile("\\w+\\.");
 	private Pattern p_acronym = Pattern.compile("(\\p{Lu}){2,5}"); // all caps, repeated 2-5 times
 	private Pattern p_letter = Pattern.compile("(\\p{L})"); // an isolated letter
-	private Pattern p_url = Pattern.compile("[.\\w]+\\.(lv|com|org)");
+	private Pattern p_url = Pattern.compile("((ht|f)tps?://)?[.\\w-]+\\.(lv|com|org|gov)(/[\\w\\d-@:?=&%.]*)?");
 		
 	private Cache<String, Word> wordCache = new Cache<String, Word>();
 
