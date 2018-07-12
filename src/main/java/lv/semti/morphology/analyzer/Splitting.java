@@ -50,7 +50,7 @@ public class Splitting {
 	 */
 	public static boolean isSpace(char c)
 	{
-	    return Character.isWhitespace(c) || c=='\u00A0';
+	    return Character.isWhitespace(c) || c=='\u00A0' || c=='\uFEFF';
 	}
 
 	private static Word formToken(Analyzer morphoAnalyzer, String str, int start, int end, StringBuilder accumulatedWhitespace) {
@@ -92,15 +92,15 @@ public class Splitting {
 					automats.reset(); //atjauno automāta stāvokli
 					automats.findNextBranch(str.charAt(i)); //atrod pirmo derīgo zaru
 					
-					if(automats.status()>0) { //pārbauda vai atrada meklēto simbolu
+					if(automats.status()>0) { //pārbauda vai automātā atrada meklēto simbolu
 						//ja atrada
 						statuss=Status.IN_WORD;
 						progress=i;
 						//pārbauda vai ar to var arī virkne beigties
 						canEndInNextStep = (automats.status()==2);
 					} else {
-						//ja neatrada, pievieno simbolu rezultātam
-						tokens.add( formToken(morphoAnalyzer, str, i, i+1, accumulatedWhitespace));
+						//ja neatrada, pievieno ne-automāta uzkrātos simbolus kā normālu vārdu
+                        tokens.add( formToken(morphoAnalyzer, str, i, i+1, accumulatedWhitespace));
 					}
 				} else {
 				   accumulatedWhitespace.append(str.charAt(i));

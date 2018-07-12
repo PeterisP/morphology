@@ -820,7 +820,15 @@ public class TokenizeTest {
 
         assertEquals("PY", tokens.get(28));
 	    assertEquals(37, tokens.size());
+    }
 
+    @Test
+    public void bom() {
+        LinkedList<Word> tokens = Splitting.tokenize(locītājs, "\uFEFFvārds");
+        assertEquals(1, tokens.size());
+
+        tokens = Splitting.tokenize(locītājs, "vārds \uFEFF vārds");
+        assertEquals(2, tokens.size());
     }
 }
  
