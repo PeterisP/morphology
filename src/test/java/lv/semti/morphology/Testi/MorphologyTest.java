@@ -3156,5 +3156,17 @@ public class MorphologyTest {
         assertEquals("xu", w.getBestWordform().getTag());
     }
 
+    @Test
+    public void softhyphen() {
+        List<Word> tokens = Splitting.tokenize(locītājs, "cirvim cir\u00ADvim");
+        assertEquals(2, tokens.size());
+        assertTrue(tokens.get(0).isRecognized());
+        assertEquals("cirvis", tokens.get(0).getBestWordform().getValue(AttributeNames.i_Lemma));
+
+        assertTrue(tokens.get(1).isRecognized());
+        assertEquals("cirvis", tokens.get(1).getBestWordform().getValue(AttributeNames.i_Lemma));
+    }
+
+
 }
 

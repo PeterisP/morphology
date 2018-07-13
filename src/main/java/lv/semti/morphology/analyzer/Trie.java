@@ -112,6 +112,7 @@ public class Trie {
         root.firstChild.firstChild=root.firstChild.nextSibling;
         root.nextSibling=new UCNode();
         root.nextSibling.firstChild=root.firstChild.nextSibling;
+        root.setAutomaton_name("n1 - Dz Dž UpperCaseLetter");
         return root;
     }
 
@@ -129,6 +130,7 @@ public class Trie {
         root.nextSibling=new StringNode("2");
         root.nextSibling.firstChild=new StringNode("0123");
         root.nextSibling.firstChild.firstChild=root.firstChild.firstChild;
+        root.setAutomaton_name("n2a - pulkstenis");
         return root;
     }
 
@@ -151,6 +153,7 @@ public class Trie {
         root2.firstChild.firstChild.canEnd=true;
         root2.firstChild.firstChild.firstChild=new StringNode(".");
         root2.firstChild.firstChild.firstChild.canEnd=true;
+        root.setAutomaton_name("n2aa - datums");
         return root;
     }
 
@@ -161,6 +164,7 @@ public class Trie {
         root.firstChild.firstChild=root.firstChild;
         root.firstChild.nextSibling=new LetterNode();
         root.firstChild.nextSibling.canEnd=true;
+        root.setAutomaton_name("n1 - māju numuri");
         return root;
     }
 
@@ -208,6 +212,7 @@ public class Trie {
         tmp.firstChild.nextSibling.nextSibling=new StringNode(" '/\\");
         tmp.firstChild.nextSibling.nextSibling.firstChild=tmp;
 
+        root.setAutomaton_name("n2b - skaitļi");
         return root;
     }
 
@@ -222,6 +227,7 @@ public class Trie {
         root.firstChild.nextSibling.canEnd=true;
         root.firstChild.nextSibling.firstChild=root.firstChild;
 
+        root.setAutomaton_name("n2c - paragrāfu numuri");
         return root;
     }
 
@@ -238,6 +244,7 @@ public class Trie {
         root.firstChild.nextSibling.firstChild.firstChild=root.firstChild.nextSibling.firstChild;
         root.firstChild.nextSibling.firstChild.nextSibling=new StringNode("_-.");
         root.firstChild.nextSibling.firstChild.nextSibling.firstChild=root.firstChild.nextSibling.firstChild;
+        root.setAutomaton_name("n3 - epasts");
         return root;
     }
 
@@ -276,6 +283,8 @@ public class Trie {
         root2.firstChild.firstChild.canEnd=true;
         root2.firstChild.firstChild.nextSibling=new StringNode("_-@:?=&%.");
         root2.firstChild.firstChild.nextSibling.firstChild=root2;
+
+        root.setAutomaton_name("n4a - URI");
         return root;
     }
 
@@ -291,6 +300,7 @@ public class Trie {
         root.firstChild.nextSibling.firstChild=new StringNode("lL");
         root.firstChild.nextSibling.firstChild.firstChild=new StringNode("vV");
         root.firstChild.nextSibling.firstChild.firstChild.canEnd=true;
+        root.setAutomaton_name("n4a - domēnvārds");
         return root;
     }
 
@@ -301,6 +311,7 @@ public class Trie {
         node root=new StringNode(".?!");
         root.canEnd=true;
         root.firstChild=root;
+        root.setAutomaton_name("n5 - pieturzīmes");
         return root;
     }
 
@@ -314,6 +325,7 @@ public class Trie {
         root.firstChild.firstChild=new LetterNode();
         root.firstChild.firstChild.canEnd=true;
         root.firstChild.firstChild.firstChild=root.firstChild;
+        root.setAutomaton_name("n6 - atstarpes");
         return root;
     }
 
@@ -334,6 +346,7 @@ public class Trie {
         root.firstChild.nextSibling.firstChild=root;
         root.firstChild.nextSibling.nextSibling=new StringNode("'");
         root.firstChild.nextSibling.nextSibling.canEnd=true;
+        root.setAutomaton_name("n7 - saliktie vārdi");
         return root;
     }
 
@@ -343,20 +356,16 @@ public class Trie {
 		int length=s.length();
 		node t=root;
 		node p;
-		while(i<length)
-		{
+		while(i<length) {
 			p=t;
 			t=t.firstChild;
-			while(t!=null)
-			{
-				if(t.contain(s.charAt(i)))
-				{
+			while(t!=null) {
+				if(t.contain(s.charAt(i))) {
 					break;
 				}
 				t=t.nextSibling;
 			}
-			if(t==null)
-			{
+			if(t==null) {
 				t=new StringNode(String.valueOf(s.charAt(i)).toLowerCase()+String.valueOf(s.charAt(i)).toUpperCase());
 				t.nextSibling=p.firstChild;
 				p.firstChild=t;
@@ -378,13 +387,10 @@ public class Trie {
 	{
 		isFirst=true;
 		branchIterator++;
-		if(branchIterator<branchList.size())
-		{
+		if (branchIterator<branchList.size()) {
 			iterator=branchList.get(branchIterator);
 			return true;
-		}
-		else
-		{
+		} else {
 			iterator=null;
 			return false;
 		}
@@ -393,35 +399,28 @@ public class Trie {
 	
 	public void findNextBranch(char c)
 	{
-		if(branchIterator>=branchList.size())
-		{
+		if(branchIterator>=branchList.size()) {
 			return;
 		}
-		do
-		{
+		do {
 			//ja atrada pirmo potenciālo zaru, ciklu beidz
-			if(this.findNext(c)>0)
-			{
+			if(this.findNext(c)>0) {
 				break;
 			}
-		}while(this.nextBranch());
+		} while(this.nextBranch());
 	}
 	
 	public int findNext(char c)
 	{
-		if(iterator==null)
-		{
+		if(iterator==null) {
 			return 0;
 		}
-		if(!isFirst)
-		{
+		if(!isFirst) {
 			iterator=iterator.firstChild;
 		}
 		isFirst=false;
-		while(iterator!=null)
-		{
-			if(iterator.contain(c))
-			{
+		while(iterator!=null) {
+			if(iterator.contain(c)) {
 				break;
 			}
 			iterator=iterator.nextSibling;
@@ -432,18 +431,12 @@ public class Trie {
 	
 	public int status()
 	{
-		if(iterator==null)
-		{
+		if(iterator == null) {
 			return 0;
-		}
-		else
-		{
-			if(iterator.canEnd)
-			{
+		} else {
+			if(iterator.canEnd) {
 				return 2;
-			}
-			else
-			{
+			} else {
 				return 1;
 			}
 		}
@@ -464,10 +457,20 @@ class node  {
 	public node firstChild = null;
 	public node nextSibling = null;
 	public boolean canEnd = false;
+	public String automaton_name = "";
 	
 	public boolean contain(char c) {
 		return false;
-	}	
+	}
+	public void setAutomaton_name(String name) {
+	    if (name.equalsIgnoreCase(automaton_name))
+	        return;
+	    automaton_name = name;
+	    if (firstChild != null)
+            firstChild.setAutomaton_name(name);
+        if (nextSibling != null)
+            nextSibling.setAutomaton_name(name);
+    }
 }
 
 class StringNode extends node {
@@ -496,7 +499,7 @@ class LCNode extends node {
 
 class LetterNode extends node {
 	public boolean contain(char c) {
-		return Character.isLetter(c);
+		return Character.isLetter(c) || c == '\u00AD';
 	}
 }
 
@@ -510,7 +513,7 @@ class LetterOrDigitNode extends node {
 	public String symbol="";
 	
 	public boolean contain(char c) {
-		return ( Character.isLetterOrDigit(c) || this.symbol.contains(String.valueOf(c)));
+		return ( Character.isLetterOrDigit(c) || c == '\u00AD' || this.symbol.contains(String.valueOf(c)));
 	}
 	
 	public LetterOrDigitNode(String c)	{

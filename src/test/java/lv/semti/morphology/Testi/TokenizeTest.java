@@ -830,5 +830,29 @@ public class TokenizeTest {
         tokens = Splitting.tokenize(locītājs, "vārds \uFEFF vārds");
         assertEquals(2, tokens.size());
     }
+    @Test
+
+    public void controlchars() {
+        LinkedList<Word> tokens = Splitting.tokenize(locītājs, "\u0001vārds");
+        assertEquals(1, tokens.size());
+
+        tokens = Splitting.tokenize(locītājs, "vārds \u0001 vārds");
+        assertEquals(2, tokens.size());
+
+        tokens = Splitting.tokenize(locītājs, "vārds \u00A0 vārds");
+        assertEquals(2, tokens.size());
+
+        tokens = Splitting.tokenize(locītājs, "vārds\u00A0vārds");
+        assertEquals(2, tokens.size());
+
+        tokens = Splitting.tokenize(locītājs, "vārds\u00ADvārds");
+        for (Word token : tokens) {
+            System.out.println(token);
+        }
+        assertEquals(1, tokens.size());  // Soft hyphen does not separate words
+
+        tokens = Splitting.tokenize(locītājs, "vārds\u00AD vārds");
+        assertEquals(2, tokens.size());
+    }
 }
  

@@ -50,11 +50,12 @@ public class Splitting {
 	 */
 	public static boolean isSpace(char c)
 	{
-	    return Character.isWhitespace(c) || c=='\u00A0' || c=='\uFEFF';
+	    return Character.isWhitespace(c) || Character.isISOControl(c) || c=='\u00A0' || c=='\uFEFF';
 	}
 
 	private static Word formToken(Analyzer morphoAnalyzer, String str, int start, int end, StringBuilder accumulatedWhitespace) {
 	    String word = str.substring(start, end);
+	    word = word.replace("\u00AD", ""); // Soft hyphen gets removed from word before analysis
         Word token = (morphoAnalyzer == null) ? new Word(word) : morphoAnalyzer.analyze(word);
         for (Wordform wf : token.wordforms) {
             wf.addAttribute(AttributeNames.i_WhitespaceBefore, accumulatedWhitespace.toString());
@@ -99,7 +100,7 @@ public class Splitting {
 						//pārbauda vai ar to var arī virkne beigties
 						canEndInNextStep = (automats.status()==2);
 					} else {
-						//ja neatrada, pievieno ne-automāta uzkrātos simbolus kā normālu vārdu
+						//ja neatrada, pievieno vienu simbolu un mēģina vēl
                         tokens.add( formToken(morphoAnalyzer, str, i, i+1, accumulatedWhitespace));
 					}
 				} else {
@@ -129,7 +130,7 @@ public class Splitting {
 					if (automats.status()==2)
 						canEndInNextStep=true;
 				} else {
-					//ja neatrada, pārbauda vai darbības laikā tika atrasta potenciālā beigu pozīcija
+					//ja neatrada, pārbauda vai automāta darbības laikā tika atrasta potenciālā beigu pozīcija
 					if (lastGoodEnd>progress) {
                         tokens.add( formToken(morphoAnalyzer, str, progress, lastGoodEnd, accumulatedWhitespace));
 						i=lastGoodEnd-1;
@@ -146,6 +147,7 @@ public class Splitting {
 								canEndInNextStep=true;
 						} else {
 							//ja neatrada, pievieno simbolu rezultātam un pēc tam dosies meklēt jauno sākumu
+                            //vispār šis ir fishy. FIXME
                             tokens.add( formToken(morphoAnalyzer, str, i,i+1, accumulatedWhitespace));
 							statuss = Status.IN_SPACE;
                             accumulatedWhitespace = new StringBuilder();
