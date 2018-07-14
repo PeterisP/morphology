@@ -41,7 +41,7 @@ public class Splitting {
 		
 	public static boolean isSeparator(char c)
 	{
-		String separators=" \t\n\r\u00A0.?:/!,;\"'`´(){}<>«»-[]—‐‑‒–―‘’‚‛“”„‟′″‴‵‶‷‹›‼‽⁈⁉․‥…&•*";
+		String separators=" \t\n\r\u00A0\u2029.?:/!,;\"'`´(){}<>«»-[]—‐‑‒–―‘’‚‛“”„‟′″‴‵‶‷‹›‼‽⁈⁉․‥…&•*";
 		return separators.contains(String.valueOf(c));
 	}
 
@@ -50,7 +50,7 @@ public class Splitting {
 	 */
 	public static boolean isSpace(char c)
 	{
-	    return Character.isWhitespace(c) || Character.isISOControl(c) || c=='\u00A0' || c=='\uFEFF';
+	    return Character.isWhitespace(c) || Character.isISOControl(c) || c == '\u00A0' || c == '\uFEFF' || c == '\u2029';
 	}
 
 	private static Word formToken(Analyzer morphoAnalyzer, String str, int start, int end, StringBuilder accumulatedWhitespace) {

@@ -846,12 +846,19 @@ public class TokenizeTest {
         assertEquals(2, tokens.size());
 
         tokens = Splitting.tokenize(locītājs, "vārds\u00ADvārds");
-        for (Word token : tokens) {
-            System.out.println(token);
-        }
+        if (tokens.size() > 1)
+            for (Word token : tokens) {
+                System.out.println(token);
+            }
         assertEquals(1, tokens.size());  // Soft hyphen does not separate words
 
         tokens = Splitting.tokenize(locītājs, "vārds\u00AD vārds");
+        assertEquals(2, tokens.size());
+
+        tokens = Splitting.tokenize(locītājs, "vārds \u2029 vārds");
+        assertEquals(2, tokens.size());
+
+        tokens = Splitting.tokenize(locītājs, "vārds\u2029vārds");
         assertEquals(2, tokens.size());
     }
 }
