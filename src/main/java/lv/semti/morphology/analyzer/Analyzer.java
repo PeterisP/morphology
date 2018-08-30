@@ -51,6 +51,7 @@ public class Analyzer extends Lexicon {
 	private Pattern p_ordinal = Pattern.compile("\\d+\\.");
 	private Pattern p_fractional = Pattern.compile("\\d+[\\\\/]\\d+");
 	private Pattern p_abbrev = Pattern.compile("\\w+\\.");
+	private Pattern p_abbrev_caps = Pattern.compile("\\p{Lu}+\\."); // abbreviation in all caps
 	private Pattern p_acronym = Pattern.compile("(\\p{Lu}){2,5}"); // all caps, repeated 2-5 times
 	private Pattern p_letter = Pattern.compile("(\\p{L})"); // an isolated letter
 	private Pattern p_url = Pattern.compile("((ht|f)tps?://)?[.\\w-]+\\.(lv|com|org|gov)(/[\\w\\d-@:?=&%.]*)?");
@@ -272,7 +273,16 @@ public class Analyzer extends Lexicon {
 				result.addWordform(wf);
 				return result;
 			}
-			if (p_abbrev.matcher(word).matches()) {
+            if (p_abbrev_caps.matcher(originalWord).matches()) {
+                Wordform wf = new Wordform(word);
+                wf.setEnding(this.endingByID(2091)); // FIXME - hardkodēts numurs saīsinājumu galotnei
+                wf.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Abbreviation);
+                wf.addAttribute(AttributeNames.i_Lemma, originalWord);
+                wf.addAttribute(AttributeNames.i_Word, originalWord);
+                result.addWordform(wf);
+                return result;
+            }
+            if (p_abbrev.matcher(word).matches()) {
 				Wordform wf = new Wordform(word);
 				wf.setEnding(this.endingByID(2091)); // FIXME - hardkodēts numurs saīsinājumu galotnei
 				wf.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Abbreviation);

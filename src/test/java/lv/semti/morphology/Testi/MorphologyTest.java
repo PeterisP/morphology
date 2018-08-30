@@ -3390,5 +3390,11 @@ public class MorphologyTest {
                 assertEquals("nespēt", wf.getValue(AttributeNames.i_Lemma));
         }
     }
+
+    @Test
+    public void initials() {
+        Word w = locītājs.analyze("J.");
+        assertEquals("J.", w.getBestWordform().getValue(AttributeNames.i_Lemma));
+    }
 }
 
