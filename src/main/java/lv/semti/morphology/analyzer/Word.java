@@ -251,28 +251,34 @@ public class Word extends Observable implements Cloneable{
 		}
 		return maxwf;
 	}
-	
+
+	@SuppressWarnings("unused")
 	public Wordform getMatchingWordform(String answerTag, boolean complain) {
 		Wordform result = null;
 		AttributeValues av = TagSet.getTagSet().fromTag(answerTag);
-		
-		//FIXME - hardcoded workaround tagera kļūdai
+        AttributeValues original_av = new AttributeValues(av);
+        av.removeAttribute(AttributeNames.i_VerbType); // Workaround tam, ka verbu tipi ir diezgan subjektīvi - bet ja leksikonā tāds nav, tad mēs vismaz zinam visu pārējo
+
+        //FIXME - hardcoded workaround tagera kļūdai
+        //TODO - notestēt vai vēl aktuāls
 		if (this.getToken().endsWith("ais") && av.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adjective) 
 										    && av.isMatchingStrong(AttributeNames.i_Definiteness, AttributeNames.v_Indefinite)) {
 			av.addAttribute(AttributeNames.i_Definiteness, AttributeNames.v_Definite);
 		}
-		
-		double maxticamība = -1;
+
+		double maxticamība = -100;
 		for (Wordform wf : this.wordforms) {
 			if (wf.isMatchingWeak(av)) {
-				double estimate = Statistics.getStatistics().getEstimate(wf);
-				if (estimate > maxticamība) {
-					maxticamība = estimate;
-					result = wf;
-				}
+                double estimate = Statistics.getStatistics().getEstimate(wf);
+                if (!wf.isMatchingWeak(original_av))
+                    estimate -= 5;
+                if (estimate > maxticamība) {
+                    maxticamība = estimate;
+                    result = wf;
+                }
 //				if (complain && result != null) 
 //					System.err.printf("Multiple valid word(lemma) options for word %s tag %s: %s and %s\n", this.getToken(), answerTag, wf.getTag(), result.getTag());
-			}
+            }
 		}
 		
 		if (result == null) {

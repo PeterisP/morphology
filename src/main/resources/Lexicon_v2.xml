@@ -6981,7 +6981,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="49" Name="noun-0" LemmaEnding="2406" Description="Ģenitīveņi (augstpapēžu, milzu)">
+	<Paradigm Stems="1" ID="49" Name="noun-g" LemmaEnding="2406" Description="Ģenitīveņi (augstpapēžu, milzu)">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="Ģenitīvenis"/>
 		<Ending ID="2406" StemChange="0" Ending="" StemID="1" LemmaEnding="2406">
 			<Attributes/>

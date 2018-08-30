@@ -3381,5 +3381,14 @@ public class MorphologyTest {
         assertTrue(w.isRecognized());
         assertEquals("zq", w.getBestWordform().getTag());
     }
+
+    @Test
+    public void nespēja() {
+        Word w = locītājs.analyze("nespēja");
+        for (Wordform wf : w.wordforms) {
+            if (wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb))
+                assertEquals("nespēt", wf.getValue(AttributeNames.i_Lemma));
+        }
+    }
 }
 
