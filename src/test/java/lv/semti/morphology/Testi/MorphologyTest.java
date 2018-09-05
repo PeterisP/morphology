@@ -77,6 +77,8 @@ public class MorphologyTest {
 
     private void assertLemma(String word, String expectedLemma) {
         Word analysis = locītājs.analyze(word);
+        if (!analysis.isRecognized())
+            System.err.printf("'%s' should be recognizable", word);
         assertTrue(analysis.isRecognized());
         Wordform forma = analysis.getBestWordform();
         assertEquals(expectedLemma, forma.getValue(AttributeNames.i_Lemma));
@@ -3395,6 +3397,18 @@ public class MorphologyTest {
     public void initials() {
         Word w = locītājs.analyze("J.");
         assertEquals("J.", w.getBestWordform().getValue(AttributeNames.i_Lemma));
+        assertTrue(w.isRecognized());
+        assertEquals("yp", w.getBestWordform().getTag());
+    }
+
+    @Test
+    public void esmāt() {
+        assertLemma("esmu", "būt");
+    }
+
+    @Test
+    public void Saeima() {
+        assertLemma("Saeimas", "Saeima");
     }
 }
 

@@ -7327,7 +7327,7 @@
 		<Ending ID="2617" StemChange="0" Ending="ot" StemID="2" LemmaEnding="2407">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Noteiktība="Nepiemīt" Izteiksme="Divdabis" Dzimte="Nepiemīt" Locījums="Nepiemīt" Lokāmība="Nelokāms" Pakāpe="Nepiemīt" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
 		</Ending>
-		<Ending ID="2618" StemChange="0" Ending="u" StemID="2" LemmaEnding="2407">
+		<Ending ID="2618" StemChange="0" Ending="mu" StemID="2" LemmaEnding="2407">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Vienskaitlis" Izteiksme="Īstenības" Persona="1" Laiks="Tagadne" Kārta="Darāmā"/>
 		</Ending>
 		<Ending ID="2619" StemChange="0" Ending="i" StemID="2" LemmaEnding="2407">
@@ -7339,9 +7339,11 @@
 		<Ending ID="2621" StemChange="0" Ending="at" StemID="2" LemmaEnding="2407">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Daudzskaitlis" Izteiksme="Īstenības" Persona="2" Laiks="Tagadne" Kārta="Darāmā"/>
 		</Ending>
+		<!-- viņš ir
 		<Ending ID="2622" StemChange="0" Ending="" StemID="2" LemmaEnding="2407">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Īstenības" Persona="3" Laiks="Tagadne" Kārta="Darāmā"/>
-		</Ending>
+		</Ending> 
+	-->
 		<Ending ID="2623" StemChange="4" Ending="t" StemID="1" LemmaEnding="2407">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Vajadzības" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Darāmā"/>
 		</Ending>
