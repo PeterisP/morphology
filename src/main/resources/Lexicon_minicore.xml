@@ -3352,6 +3352,9 @@
     <Lexeme Stem1="numur">
       <Attributes Pamatforma="numurs" Vārdšķira="Lietvārds" Locījums="Nominatīvs" Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Lietvārda_tips="Sugas vārds"/>
     </Lexeme>
+    <Lexeme Stem1="die's">
+      <Attributes Pamatforma="dievs" Vārdšķira="Lietvārds" Locījums="Nominatīvs" Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Lietvārda_tips="Sugas vārds"/>
+    </Lexeme>
   </Paradigm>
   <Paradigm ID="30" Description="Patstāvīgas divdabju noteiktās formas -ais (jaundzimušais, galvenais u.c.)">
   </Paradigm>
@@ -3461,6 +3464,7 @@
     <Lexeme Stem1="Gbps"/>
     <Lexeme Stem1="Ls"/>
     <Lexeme Stem1="m.g."/>
+    <Lexeme Stem1="N/A"/>
     <Lexeme Stem1="ASV"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
     <Lexeme Stem1="UNESCO"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
     <Lexeme Stem1="LU"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
@@ -3598,6 +3602,12 @@
       <Attributes Pieturzīmes_tips="Pēdiņa" Pamatforma="&quot;"/>
     </Lexeme>
     <Lexeme Stem1="''">
+      <Attributes Pieturzīmes_tips="Pēdiņa" Pamatforma="&quot;"/>
+    </Lexeme>
+    <Lexeme Stem1="‘’">
+      <Attributes Pieturzīmes_tips="Pēdiņa" Pamatforma="&quot;"/>
+    </Lexeme>
+    <Lexeme Stem1="’’">
       <Attributes Pieturzīmes_tips="Pēdiņa" Pamatforma="&quot;"/>
     </Lexeme>
     <Lexeme Stem1="-">

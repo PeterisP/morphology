@@ -61,7 +61,12 @@
 			<artifactId>guava</artifactId>
 			<version>25.1-jre</version>
 		</dependency>
-	</dependencies>	
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.8.1</version>
+		</dependency>
+	</dependencies>
 
 	<!-- Build even if tests fail, as we tend to build with known bugs that aren't yet fixed -->
 	<build>

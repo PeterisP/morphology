@@ -38,6 +38,9 @@ public class Trie {
         //izveido exception Trie
         exception_root = new node();
         this.add("''", exception_root);
+        this.add("’’", exception_root);
+        this.add("‘’", exception_root);
+        this.add("***", exception_root);
 	}
 
 	public static node n1_dz_initials() {
@@ -122,49 +125,87 @@ public class Trie {
         node root=new DigitNode();
         root.canEnd=true;
         root.firstChild=new DigitNode();
-        root.firstChild.canEnd=true;
-        root.firstChild.firstChild=root.firstChild;
-        root.firstChild.nextSibling=new StringNode(".");
-        root.firstChild.nextSibling.canEnd=true;
-        root.firstChild.nextSibling.firstChild=new StringNode("-‐‑‒–—―'");
-        root.firstChild.nextSibling.firstChild.canEnd=true;
-        root.firstChild.nextSibling.nextSibling=new StringNode(",");
-        root.firstChild.nextSibling.nextSibling.firstChild=new StringNode("-‐‑‒–—―'");
-        root.firstChild.nextSibling.nextSibling.firstChild.canEnd=true;
-        root.firstChild.nextSibling.nextSibling.firstChild.nextSibling=root;
-        root.firstChild.nextSibling.nextSibling.firstChild=root.firstChild.nextSibling.firstChild;
-        root.firstChild.nextSibling.nextSibling.nextSibling=new StringNode(" '/\\");
-        root.firstChild.nextSibling.nextSibling.nextSibling.firstChild=root;
+        root.firstChild.canEnd = true;
+        root.firstChild.firstChild = root.firstChild;
 
-        node tmp=root.firstChild.nextSibling.firstChild;
-        tmp.nextSibling=new DigitNode();
-        tmp=tmp.nextSibling;
-        tmp.canEnd=true;
-        tmp.firstChild=new DigitNode();
-        tmp.firstChild.canEnd=true;
-        tmp.firstChild.firstChild=tmp.firstChild;
-        tmp.firstChild.nextSibling=new StringNode(".,");
-        tmp.firstChild.nextSibling.canEnd = true;
-        tmp.firstChild.nextSibling.firstChild=new StringNode("-‐‑‒–—―'");
-        tmp.firstChild.nextSibling.firstChild.canEnd=true;
-        tmp.firstChild.nextSibling.firstChild.nextSibling=tmp;
-        tmp.firstChild.nextSibling.nextSibling=new StringNode(" '/\\");
-        tmp.firstChild.nextSibling.nextSibling.firstChild=tmp;
+        node tuukstoshi = new StringNode(" '");
+        tuukstoshi.firstChild = new DigitNode();
+        tuukstoshi.firstChild.firstChild = new DigitNode();
+        node vieni = new DigitNode();
+        vieni.canEnd = true;
+        vieni.firstChild = tuukstoshi;
+        tuukstoshi.firstChild.firstChild.firstChild = vieni;
+        root.firstChild.nextSibling=tuukstoshi;
+
+        node aizdecimaaldaljas = new DigitNode();
+        aizdecimaaldaljas.canEnd = true;
+        aizdecimaaldaljas.firstChild = new DigitNode();
+        aizdecimaaldaljas.firstChild.canEnd = true;
+        aizdecimaaldaljas.firstChild.firstChild = aizdecimaaldaljas.firstChild;
+        aizdecimaaldaljas.nextSibling = new StringNode("-‐‑‒–—―'");
+        aizdecimaaldaljas.nextSibling.canEnd = true;
+        node punkts = new StringNode(".");
+        punkts.canEnd = true; // kārtas skaitļi
+        punkts.firstChild = aizdecimaaldaljas;
+        tuukstoshi.nextSibling = punkts;
+        node komats = new StringNode(",");
+        komats.firstChild = aizdecimaaldaljas;
+        punkts.nextSibling = komats;
+
+        node fractions = new StringNode("/\\");
+        fractions.firstChild = new DigitNode();
+        fractions.firstChild.firstChild = fractions.firstChild;
+        fractions.firstChild.canEnd = true;
+        komats.nextSibling = fractions;
+
+//        root.firstChild.nextSibling=new StringNode(".");
+//        root.firstChild.nextSibling.canEnd=true;
+//        root.firstChild.nextSibling.firstChild=new StringNode("-‐‑‒–—―'");
+//        root.firstChild.nextSibling.firstChild.canEnd=true;
+//        root.firstChild.nextSibling.nextSibling=new StringNode(",");
+//        root.firstChild.nextSibling.nextSibling.firstChild=new StringNode("-‐‑‒–—―'");
+//        root.firstChild.nextSibling.nextSibling.firstChild.canEnd=true;
+//        root.firstChild.nextSibling.nextSibling.firstChild.nextSibling=root;
+//        root.firstChild.nextSibling.nextSibling.firstChild=root.firstChild.nextSibling.firstChild;
+//        root.firstChild.nextSibling.nextSibling.nextSibling=new StringNode(" '/\\");
+//        root.firstChild.nextSibling.nextSibling.nextSibling.firstChild=root;
+//
+//        node tmp=root.firstChild.nextSibling.firstChild;
+//        tmp.nextSibling=new DigitNode();
+//        tmp=tmp.nextSibling;
+//        tmp.canEnd=true;
+//        tmp.firstChild=new DigitNode();
+//        tmp.firstChild.canEnd=true;
+//        tmp.firstChild.firstChild=tmp.firstChild;
+//        tmp.firstChild.nextSibling=new StringNode(".,");
+//        tmp.firstChild.nextSibling.canEnd = true;
+//        tmp.firstChild.nextSibling.firstChild=new StringNode("-‐‑‒–—―'");
+//        tmp.firstChild.nextSibling.firstChild.canEnd=true;
+//        tmp.firstChild.nextSibling.firstChild.nextSibling=tmp;
+//        tmp.firstChild.nextSibling.nextSibling=new StringNode(" '/\\");
+//        tmp.firstChild.nextSibling.nextSibling.firstChild=tmp;
 
         root.setAutomaton_name("n2b - skaitļi");
         return root;
     }
 
     public static node n2_c_paragraphs() {
-        // 2c automāts atpazīst paragrāfus formā 1.2.3.4.
-        node root=new DigitNode();
-        root.canEnd=true;
-        root.firstChild=new DigitNode();
-        root.firstChild.canEnd=true;
-        root.firstChild.firstChild=root.firstChild;
-        root.firstChild.nextSibling=new StringNode(".");
-        root.firstChild.nextSibling.canEnd=true;
-        root.firstChild.nextSibling.firstChild=root.firstChild;
+        // 2c automāts atpazīst paragrāfus formā 1.2.3.4.  kā arī IP adreses
+        node root = new DigitNode();
+        root.firstChild = root;
+        root.nextSibling = new StringNode(".");
+        node secondlevel = new DigitNode();
+        root.nextSibling.firstChild = secondlevel;
+        secondlevel.firstChild = secondlevel;
+        secondlevel.nextSibling = new StringNode(".");
+        secondlevel.nextSibling.canEnd = true;
+        node thirdlevel = new DigitNode();
+        thirdlevel.canEnd = true;
+        secondlevel.nextSibling.firstChild = thirdlevel;
+        thirdlevel.firstChild = thirdlevel;
+        thirdlevel.nextSibling = new StringNode(".");
+        thirdlevel.nextSibling.canEnd = true;
+        thirdlevel.nextSibling.firstChild = thirdlevel;
 
         root.setAutomaton_name("n2c - paragrāfu numuri");
         return root;
@@ -320,6 +361,7 @@ public class Trie {
             return;
             // throw new AssertionError("Attempt to add tokenization exceptions after they have been finalized");
         }
+//        if (s.contains("'")) System.err.println(s);
         this.add(s, exception_root);
     }
 
@@ -337,18 +379,21 @@ public class Trie {
         // 2aaa atapzīst mājas numurus ( /[0-9]+[A-Z]/)
         branchList.add(n2_aaa_houses());
 
+        // 2c automāts atpazīst paragrāfus formā 1.2.3.4.
+        // pirms 2b, lai skaitļu automāts tos nepagrābtu pirmais
+        branchList.add(n2_c_paragraphs());
+
         // 2b automāts atpazīst skaitļus dažādos veidos
         node root=n2_b_numbers();
         branchList.add(root);
-        // optional +- in front
-        node tmp = new StringNode("+-");
-        tmp.firstChild = root;
-        tmp.firstChild.nextSibling = new StringNode(" ");
-        tmp.firstChild.nextSibling.firstChild = root;
-        branchList.add(tmp);
 
-        // 2c automāts atpazīst paragrāfus formā 1.2.3.4.
-        branchList.add(n2_c_paragraphs());
+//        // optional +- in front
+//        node tmp = new StringNode("+-");
+//        tmp.firstChild = root;
+//        tmp.firstChild.nextSibling = new StringNode(" ");
+//        tmp.firstChild.nextSibling.firstChild = root;
+//        branchList.add(tmp);
+
 
         // 3 e-pasta automāts
         branchList.add(n3_email());

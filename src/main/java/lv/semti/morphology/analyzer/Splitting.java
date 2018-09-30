@@ -21,6 +21,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 import lv.semti.morphology.attributes.AttributeNames;
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * Tools for detecting chunk and token bounds.
@@ -41,7 +42,7 @@ public class Splitting {
 		
 	public static boolean isSeparator(char c)
 	{
-		String separators=" \t\n\r\u00A0\u2029.?:/!,;\"'`´(){}<>«»-[]—‐‑‒–―‘’‚‛“”„‟′″‴‵‶‷‹›‼‽⁈⁉․‥…&•*";
+		String separators=" \t\n\r\u00A0\u2029\u200B.?:/!,;\"'`´(){}<>«»-+[]—‐‑‒–―‘’‚‛“”„‟′″‴‵‶‷‹›‼‽⁈⁉․‥…&•*";
 		return separators.contains(String.valueOf(c));
 	}
 
@@ -50,16 +51,19 @@ public class Splitting {
 	 */
 	public static boolean isSpace(char c)
 	{
-	    return Character.isWhitespace(c) || Character.isISOControl(c) || c == '\u00A0' || c == '\uFEFF' || c == '\u2029';
+	    return Character.isWhitespace(c) || Character.isISOControl(c) || c == '\u00A0' || c == '\uFEFF' || c == '\u2029' || c == '\u200B';
 	}
 
 	private static Word formToken(Analyzer morphoAnalyzer, String str, int start, int end, StringBuilder accumulatedWhitespace) {
 	    String word = str.substring(start, end);
 	    word = word.replace("\u00AD", ""); // Soft hyphen gets removed from word before analysis
         Word token = (morphoAnalyzer == null) ? new Word(word) : morphoAnalyzer.analyze(word);
+
+        String whitespace = accumulatedWhitespace.toString().replace("\u200B", ""); // zero-width spaces are used as temporary separators
+        int offset = start - StringUtils.countMatches(str.substring(0,start), '\u200B');
         for (Wordform wf : token.wordforms) {
-            wf.addAttribute(AttributeNames.i_WhitespaceBefore, accumulatedWhitespace.toString());
-            wf.addAttribute(AttributeNames.i_Offset, Integer.toString(start));
+            wf.addAttribute(AttributeNames.i_WhitespaceBefore, whitespace);
+            wf.addAttribute(AttributeNames.i_Offset, Integer.toString(offset));
         }
         return token;
     }
@@ -73,14 +77,19 @@ public class Splitting {
 		
 		Trie automats = morphoAnalyzer.automats;
 
-		// te tiek ciklā doti visi tekstā esošie vārdi uz morfoanalīzi.    
-	    int progress = 0;
 	    //bug fix - pievienota beigās whitespace
 		String str = chunk+" ";
+		//workaround dubultapostrofu izvirtībai
+        str = str.replaceAll("''", "\u200B''"); // FIXME mēs te mazliet izčakarējam accumulatedWhitespace on Offsetus
+        //workaround teikuma beigu saīsinājumiem utt
+        str = str.replaceAll("([\\p{L}\\d])\\.(\\p{Z})*$", "$1\u200B.$2"); // FIXME mēs te mazliet izčakarējam accumulatedWhitespace un offsetus
+//        str = str.replaceAll("([\\d])\\.(\\p{Z})*$", "$1\u200B.$2"); // FIXME mēs te mazliet izčakarējam accumulatedWhitespace un offsetus
+
+        // te tiek ciklā doti visi tekstā esošie vārdi uz morfoanalīzi.
+        int progress = 0;
 		boolean inApostrophes=false;
 		Status statuss = Status.IN_SPACE;
 		StringBuilder accumulatedWhitespace = new StringBuilder();
-		
 		int lastGoodEnd=0;
 		boolean canEndInNextStep=false;
 		
