@@ -19,6 +19,7 @@ package lv.semti.morphology.lexicon;
 
 import lv.semti.morphology.analyzer.AllEndings;
 import lv.semti.morphology.analyzer.Mijas;
+import lv.semti.morphology.analyzer.Trie;
 import lv.semti.morphology.analyzer.Variants;
 import lv.semti.morphology.attributes.AttributeNames;
 
@@ -70,7 +71,8 @@ public class Lexicon {
 	protected static Pattern p_doublesurname = Pattern.compile("\\p{Lu}.+-\\p{Lu}.+");
 
 	protected Multimap<String, Lexeme> hardcodedForms = ArrayListMultimap.create();
-	
+	public Trie automats = new Trie();
+
 	/**
 	 * Creates a lexicon object from the default location in JAR resources
 	 *
@@ -136,7 +138,7 @@ public class Lexicon {
 		return allEndings;
 	}
 	
-	protected void invalidateAllEndings() {
+	void invalidateAllEndings() {
 		allEndings = null;
 	}
 	
@@ -249,7 +251,9 @@ public class Lexicon {
 		prefixes.add("pie");
 		prefixes.add("sa");
 		prefixes.add("uz");
-		
+
+		this.automats.initializeExceptions();
+
 		System.err.println("Lexicon " + (revision != null ? revision : "") + " loaded");
 	}
 
@@ -315,8 +319,6 @@ public class Lexicon {
 	 * lai var būt latviešu burti atribūtos.
 	 *
 	 * @param failaVārds 	Faila vārds, kurā saglabāt.
-	 * @throws FileNotFoundException
-	 * @throws UnsupportedEncodingException
 	 * @throws IOException
 	 */
 	public void toXML(String failaVārds) throws IOException {
@@ -353,8 +355,6 @@ public class Lexicon {
 	 * Saglabā XML formātā apakšleksikona leksēmas - tikai taas, kuraam source sakriit ar noraadiito
 	 *
 	 * @param failaVārds 	Faila vārds, kurā saglabāt.
-	 * @throws FileNotFoundException
-	 * @throws UnsupportedEncodingException
 	 * @throws IOException
 	 */
 	public void toXML_sub(String failaVārds, String source) throws IOException {
@@ -454,8 +454,8 @@ public class Lexicon {
 	 *
 	 * @return	jauns leksēmas numurs
 	 */
-	int lexeme_id_counter = 1100000; 
-	public int newLexemeID() {
+	private int lexeme_id_counter = 1100000;
+	int newLexemeID() {
 		lexeme_id_counter += 1;
 		while (lexemeByID(lexeme_id_counter) != null)
 			lexeme_id_counter += 1; // ja nu ir ielādēts jau kāds virs miljona, tad būs lēni bet vismaz korekti
@@ -567,7 +567,7 @@ public class Lexicon {
 	 *
 	 * @return	lielākais galotnes numurs, vai 0, ja nav nevienas leksēmas.
 	 */
-	public int maxEndingID() {
+    int maxEndingID() {
 		int result = 0;
 		for (Paradigm paradigm : paradigms) {
 			for (Ending ending : paradigm.endings)

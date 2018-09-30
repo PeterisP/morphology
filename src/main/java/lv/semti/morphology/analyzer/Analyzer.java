@@ -58,53 +58,20 @@ public class Analyzer extends Lexicon {
 		
 	private Cache<String, Word> wordCache = new Cache<String, Word>();
 
-	public Trie automats;
-		
+
 	/**
 	 * Construct the morphological analyzer object by loading the lexicon from either the default location, a specified file name or an inputstream.
 	 * @throws Exception
 	 */
 	public Analyzer () throws Exception {
 		super();
-		loadExceptionFile();
 	}
 	public Analyzer (boolean useAuxiliaryLexicons) throws Exception {
 		super(useAuxiliaryLexicons);
-		loadExceptionFile();
 	}
 	public Analyzer (String lexiconFileName) throws Exception {
 		super(lexiconFileName);
-		loadExceptionFile();
-	}	
-
-	private void loadExceptionFile() throws IOException {
-		String exceptionName = "Exceptions.txt";
-		try {
-			InputStream stream = getClass().getClassLoader().getResourceAsStream(exceptionName);
-			if (stream != null) {
-				automats = new Trie( stream );
-				return;
-			}
-
-			String path = new File(this.filename).getParent();
-			if (path != null) exceptionName = path + java.io.File.separatorChar + exceptionName;
-			automats=new Trie(exceptionName);
-		} catch (Exception e) { 
-			System.err.append(String.format("A1\nLeksikona ceļš:%s\nException ceļš:%s\n",this.filename,exceptionName));
-			e.printStackTrace();
-			automats = new Trie("");
-			System.err.println("Failed to load exceptions");
-		}
 	}
-    
-	/* TODO - salikteņu minēšana jāuzaisa 
-	private boolean DerSalikteņaSākumam(Ending ending) {
-		if (ending.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech,AttributeNames.v_Noun))
-			return ending.isMatchingStrong(AttributeNames.i_Case,AttributeNames.v_Genitive);
-
-		return false;
-	} */
-	
 	/**
 	 * Loads the analyzer lexicon from the specified file
 	 * @param lexiconFileName - main lexicon file name
@@ -112,7 +79,6 @@ public class Analyzer extends Lexicon {
 	 */
 	public Analyzer(String lexiconFileName, boolean useAuxiliaryLexicons) throws Exception{
 		super(lexiconFileName, useAuxiliaryLexicons);
-		loadExceptionFile();
 	}
 
 	/**
@@ -122,10 +88,17 @@ public class Analyzer extends Lexicon {
 	 */
 	public Analyzer(String lexiconFileName, ArrayList<String> blacklist) throws Exception{
 		super(lexiconFileName, blacklist);
-		loadExceptionFile();
 	}
 
-	public void defaultSettings(){
+	/* TODO - salikteņu minēšana jāuzaisa
+	private boolean DerSalikteņaSākumam(Ending ending) {
+		if (ending.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech,AttributeNames.v_Noun))
+			return ending.isMatchingStrong(AttributeNames.i_Case,AttributeNames.v_Genitive);
+
+		return false;
+	} */
+
+    public void defaultSettings(){
 		enablePrefixes = true;
 		meklētsalikteņus = false;
 		enableGuessing = false;

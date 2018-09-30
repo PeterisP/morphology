@@ -211,10 +211,14 @@ public class Paradigm extends AttributeValues {
 		if (lexeme.getValue(AttributeNames.i_Lemma) == null && getLemmaEnding() != null)
 			lexeme.addAttribute(AttributeNames.i_Lemma, lexeme.getStem(getLemmaEnding().stemID-1) + getLemmaEnding().getEnding());
 
+        String pamatforma = lexeme.getValue(AttributeNames.i_Lemma);
 		if (this.id == 29 || this.id == 25) { // Hardcoded un vietniekvārdu paradigma
-			String pamatforma = lexeme.getValue(AttributeNames.i_Lemma);
 			this.lexicon.hardcodedForms.put(pamatforma, lexeme);
 		}
+
+        if (pamatforma.matches(".*[ .].*")) {
+		    this.lexicon.automats.addException(pamatforma);
+        }
 	}
 
 	public void removeLexeme (Lexeme lexeme) {

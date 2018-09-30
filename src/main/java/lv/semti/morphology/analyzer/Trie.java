@@ -17,14 +17,13 @@
  *******************************************************************************/
 package lv.semti.morphology.analyzer;
 
-import java.io.*;
 import java.util.ArrayList;
-
 
 public class Trie {
 	public int branchIterator;
 	private node iterator;
 	private ArrayList<node> branchList;
+	private node exception_root;
 	private boolean isFirst;
 
     public Trie(node root) {
@@ -33,72 +32,12 @@ public class Trie {
         this.reset();
     }
 
-	public Trie(String filename) throws IOException {
-		this(filename != null && !filename.isEmpty() ? new FileInputStream(filename) : null);
-	}
-	
-	public Trie(InputStream fstream) throws IOException {
-		node root,tmp;
+	public Trie() {
 		branchList=new ArrayList<node>();
-		root=new node();
 
         //izveido exception Trie
-		if (fstream != null) {
-			InputStreamReader in = new InputStreamReader(fstream,"UTF-8");
-			BufferedReader br = new BufferedReader(in);
-			String strLine;
-			while ((strLine = br.readLine()) != null) {
-				this.add(strLine, root);
-			}
-			br.close();
-			
-			//pievieno Exception trie branch listam
-			root=root.firstChild;
-			branchList.add(root);
-		}
-		
-		// 1. Iniciāļu automāts atpazīst Dz. Dž. UpperCaseLetter.
-		branchList.add(n1_dz_initials());
-
-		// 2a automāts atpazīst pulksteni
-		branchList.add(n2_a_clock());
-		// 2aa atpazīst datumu ISO formāta 2009-12-14 (patiesībā /[0-9][0-9][0-9][0-9][\-.][0-9][0-9][\-.][0-9][0-9]\.?/)
-		branchList.add(n2_aa_date());
-		// 2aaa atapzīst mājas numurus ( /[0-9]+[A-Z]/)
-		branchList.add(n2_aaa_houses());
-
-		// 2b automāts atpazīst skaitļus dažādos veidos
-		root=n2_b_numbers();
-		branchList.add(root);
-		// optional +- in front
-        tmp = new StringNode("+-");
-        tmp.firstChild = root;
-        tmp.firstChild.nextSibling = new StringNode(" ");
-        tmp.firstChild.nextSibling.firstChild = root;
-        branchList.add(tmp);
-
-        // 2c automāts atpazīst paragrāfus formā 1.2.3.4.
-        branchList.add(n2_c_paragraphs());
-
-		// 3 e-pasta automāts
-		branchList.add(n3_email());
-
-		// 4a web adreses automāts
-		branchList.add(n4a_url());
-        // 4b domēna automāts
-        branchList.add(n4b_domain());
-
-		// 5 Ciklojošo pieturzīmju automāts (atpazīst .?!)
-		branchList.add(n5_punctuation());
-		
-		// 6 automāts, kurš atpazīsts vārdus ar atstarpēm
-		branchList.add(n6_spaced());
-
-		// 7 automāts saliktiem vārdiem un to sastāvdaļām
-		branchList.add(n7_compound());
-
-		//sagatavojamies pirmajam meklētajam simbolam
-		this.reset();
+        exception_root = new node();
+        this.add("''", exception_root);
 	}
 
 	public static node n1_dz_initials() {
@@ -375,6 +314,62 @@ public class Trie {
 		}
 		t.canEnd=true;
 	}
+
+	public void addException(String s) {
+        if (null == exception_root) {
+            return;
+            // throw new AssertionError("Attempt to add tokenization exceptions after they have been finalized");
+        }
+        this.add(s, exception_root);
+    }
+
+    public void initializeExceptions() {
+        branchList.add(exception_root.firstChild);
+        exception_root = null;
+
+        // 1. Iniciāļu automāts atpazīst Dz. Dž. UpperCaseLetter.
+        branchList.add(n1_dz_initials());
+
+        // 2a automāts atpazīst pulksteni
+        branchList.add(n2_a_clock());
+        // 2aa atpazīst datumu ISO formāta 2009-12-14 (patiesībā /[0-9][0-9][0-9][0-9][\-.][0-9][0-9][\-.][0-9][0-9]\.?/)
+        branchList.add(n2_aa_date());
+        // 2aaa atapzīst mājas numurus ( /[0-9]+[A-Z]/)
+        branchList.add(n2_aaa_houses());
+
+        // 2b automāts atpazīst skaitļus dažādos veidos
+        node root=n2_b_numbers();
+        branchList.add(root);
+        // optional +- in front
+        node tmp = new StringNode("+-");
+        tmp.firstChild = root;
+        tmp.firstChild.nextSibling = new StringNode(" ");
+        tmp.firstChild.nextSibling.firstChild = root;
+        branchList.add(tmp);
+
+        // 2c automāts atpazīst paragrāfus formā 1.2.3.4.
+        branchList.add(n2_c_paragraphs());
+
+        // 3 e-pasta automāts
+        branchList.add(n3_email());
+
+        // 4a web adreses automāts
+        branchList.add(n4a_url());
+        // 4b domēna automāts
+        branchList.add(n4b_domain());
+
+        // 5 Ciklojošo pieturzīmju automāts (atpazīst .?!)
+        branchList.add(n5_punctuation());
+
+        // 6 automāts, kurš atpazīst vārdus ar atstarpēm
+        branchList.add(n6_spaced());
+
+        // 7 automāts saliktiem vārdiem un to sastāvdaļām
+        branchList.add(n7_compound());
+
+        //sagatavojamies pirmajam meklētajam simbolam
+        this.reset();
+    }
 	
 	public void reset()
 	{

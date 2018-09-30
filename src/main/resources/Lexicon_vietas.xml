@@ -48,7 +48,6 @@
       <Lexeme Stem1="gātciem"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Gātciems" Avots="LĢIS"/> </Lexeme>
       <Lexeme Stem1="jāņuciem"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Jāņuciems" Avots="LĢIS"/> </Lexeme>
       <Lexeme Stem1="jūrmalciem"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Jūrmalciems" Avots="LĢIS"/> </Lexeme>
-      <Lexeme Stem1="kaigu ciem"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Kaigu ciems" Avots="LĢIS"/> </Lexeme>
       <Lexeme Stem1="kākciem"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Kākciems" Avots="LĢIS"/> </Lexeme>
       <Lexeme Stem1="klapkalnciem"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Klapkalnciems" Avots="LĢIS"/> </Lexeme>
       <Lexeme Stem1="ķesterciem"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Ķesterciems" Avots="LĢIS"/> </Lexeme>
@@ -579,7 +578,6 @@
       <Lexeme Stem1="sausnēj"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Sausnēja" Avots="LĢIS"/> </Lexeme>
       <Lexeme Stem1="sēj"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Sēja" Avots="LĢIS"/> </Lexeme>
       <Lexeme Stem1="nevej"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Neveja" Avots="LĢIS"/> </Lexeme>
-      <Lexeme Stem1="balvu stacij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Balvu stacija" Avots="LĢIS"/> </Lexeme>
       <Lexeme Stem1="sēlij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Sēlija" Avots="LĢIS"/> </Lexeme>
       <Lexeme Stem1="loj"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Loja" Avots="LĢIS"/> </Lexeme>
       <Lexeme Stem1="aloj"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Aloja" Avots="LĢIS"/> </Lexeme>
@@ -861,7 +859,6 @@
       <Lexeme Stem1="dienvidkorej"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Dienvidkoreja" Avots="wiki"/> </Lexeme>
       <Lexeme Stem1="ziemeļkorej"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Ziemeļkoreja" Avots="wiki"/> </Lexeme>
       <Lexeme Stem1="eritrej"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Eritreja" Avots="wiki"/> </Lexeme>
-      <Lexeme Stem1="saūda arābij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Saūda Arābija" Avots="wiki"/> </Lexeme>
       <Lexeme Stem1="lībij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Lībija" Avots="wiki"/> </Lexeme>
       <Lexeme Stem1="namībij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Namībija" Avots="wiki"/> </Lexeme>
       <Lexeme Stem1="gambij"> <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Gambija" Avots="wiki"/> </Lexeme>
