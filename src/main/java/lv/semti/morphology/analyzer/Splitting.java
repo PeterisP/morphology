@@ -213,13 +213,15 @@ public class Splitting {
 		LinkedList<Word> sentence = new LinkedList<Word>();
 		for (Word word : tokens) {
 		    // Teikumu beigas iekšā tiešajā runā - pievelkam pēdiņu klāt
-            if (sentence.size() == 0 && (word.getToken().equals("\"") || word.getToken().equals(")"))) {
-                // Pārbaudam vai iepriekšējā teikuma beigās ir punkts
-                if (!result.isEmpty() && !result.getLast().isEmpty()){
-                    String prevtoken = result.getLast().getLast().getToken();
-                    if (prevtoken.equals(".") || prevtoken.equals("!") || prevtoken.equals("?") || prevtoken.equals("\"")) {
-                        result.getLast().add(word);
-                        continue;
+            if (sentence.size() == 0) {
+                if ((word.isRecognized() && word.getBestWordform().getTag().equalsIgnoreCase("zq")) || word.getToken().equals(")")) {
+                    // Pārbaudam vai iepriekšējā teikuma beigās ir punkts
+                    if (!result.isEmpty() && !result.getLast().isEmpty()) {
+                        String prevtoken = result.getLast().getLast().getToken();
+                        if (prevtoken.equals(".") || prevtoken.equals("!") || prevtoken.equals("?") || prevtoken.equals("\"")) {
+                            result.getLast().add(word);
+                            continue;
+                        }
                     }
                 }
             }

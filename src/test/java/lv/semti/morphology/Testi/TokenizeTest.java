@@ -861,5 +861,15 @@ public class TokenizeTest {
         tokens = Splitting.tokenize(locītājs, "vārds\u2029vārds");
         assertEquals(2, tokens.size());
     }
+
+	@Test
+    public void sentences_isolated_quotes() {
+        LinkedList<LinkedList<Word>> sentences;
+        sentences = Splitting.tokenizeSentences(locītājs,"Sertificēti ir visi produkta dzīves cikla posmi – sākot no saimniecības līdz veikala plauktam.»");
+        assertEquals(1, sentences.size());
+
+        sentences = Splitting.tokenizeSentences(locītājs,"Ar saviem smalkiem rokdarbiem RIMI apmeklētājus pārsteidza Margarita Baranova (Zemgales v.s.).");
+        assertEquals(1, sentences.size());
+    }
 }
  
