@@ -880,6 +880,9 @@ public class TokenizeTest {
         LinkedList<Word> tokens = Splitting.tokenize(locītājs, "Nauda - 5 miljoni.");
         assertEquals(5, tokens.size());
 
+        tokens = Splitting.tokenize(locītājs, "2-3 gadi");
+        assertEquals(4, tokens.size());
+
         tokens = Splitting.tokenize(locītājs, "2011.gada lielākie celtniecības un rekonstrukcijas objekti bija Latvijas Nacionālās bibliotēkas celtniecība - 3,8 miljoni latu bez pievienotās vērtības nodokļa, Atbrīvošanas alejas posma rekonstrukcija Rēzeknē - trīs miljoni latu, daudzstāvu dzīvojamās ēkas un tirdzniecības centra celtniecība Priedaines ielā 20, Rīgā - 2,97 miljoni latu, Austrumlatvijas radošo pakalpojumu centra \"Carandache\" celtniecība Rēzeknē - 2,6 miljoni latu.");
         assertEquals(62, tokens.size());
     }
