@@ -147,14 +147,6 @@ public class MorphologyTest {
     }
 
     @Test
-    public void otrajās() {
-        //2008-09-07 atrasts gļuks, ka "otrajās" analīzē kā pamatforma ir "otrais" nevis "otrā"
-        Word otrajās = locītājs.analyze("otrajās");
-        assertTrue(otrajās.isRecognized());
-        assertEquals("otrā", otrajās.wordforms.get(0).getValue(AttributeNames.i_Lemma));
-    }
-
-    @Test
     public void simtiem() {
         //2008-09-07 atrasts gļuks, ka "simtiem" analīzē kā pamatforma ir "simti" nevis "simts"
         Word simtiem = locītājs.analyze("simtiem");
@@ -921,7 +913,7 @@ public class MorphologyTest {
         // Atvasinājumiem lai ir oriģinālā vārda pamatforma redzama (pēc tās var meklēt vārdnīcas šķirkli)
         Word balta = locītājs.analyze("baltas");
         assertTrue(balta.isRecognized());
-        assertEquals("balta", balta.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+        assertEquals("balts", balta.wordforms.get(0).getValue(AttributeNames.i_Lemma));
         assertEquals("balts", balta.wordforms.get(0).getValue(AttributeNames.i_SourceLemma));
 
         locītājs.enablePrefixes = false;
@@ -1242,7 +1234,7 @@ public class MorphologyTest {
     public void mazajai() {
         Word mazajai = locītājs.analyze("mazajai");
         assertTrue(mazajai.isRecognized());
-        assertEquals("maza", mazajai.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+        assertEquals("mazs", mazajai.wordforms.get(0).getValue(AttributeNames.i_Lemma));
     }
 
     @Test
@@ -1313,15 +1305,15 @@ public class MorphologyTest {
     public void Laura10Aug() {
         Word vārds = locītājs.analyze("vienai");
         assertTrue(vārds.isRecognized());
-        assertEquals("viena", vārds.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+        assertEquals("viens", vārds.wordforms.get(0).getValue(AttributeNames.i_Lemma));
 
         vārds = locītājs.analyze("pirmajai");
         assertTrue(vārds.isRecognized());
-        assertEquals("pirmā", vārds.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+        assertEquals("pirmais", vārds.wordforms.get(0).getValue(AttributeNames.i_Lemma));
 
         vārds = locītājs.analyze("trešās");
         assertTrue(vārds.isRecognized());
-        assertEquals("trešā", vārds.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+        assertEquals("trešais", vārds.wordforms.get(0).getValue(AttributeNames.i_Lemma));
 
         vārds = locītājs.analyze("piecsimt");
         assertTrue(vārds.isRecognized());
@@ -3411,6 +3403,30 @@ public class MorphologyTest {
     @Test
     public void Saeima() {
         assertLemma("Saeimas", "Saeima");
+    }
+
+    /**
+     * Decision to update lemmatization according to UD principles - feminine adjectives and numerals will have masculine lemma
+     */
+    @Test
+    public void feminineAdjectives() {
+        Word w = locītājs.analyze("zaļais");
+        assertEquals("zaļš", w.getBestWordform().getValue(AttributeNames.i_Lemma));
+
+        w = locītājs.analyze("zaļajai");
+        assertEquals("zaļš", w.getBestWordform().getValue(AttributeNames.i_Lemma));
+
+        w = locītājs.analyze("sarkanajam");
+        assertEquals("sarkans", w.getBestWordform().getValue(AttributeNames.i_Lemma));
+
+        w = locītājs.analyze("sarkanai");
+        assertEquals("sarkans", w.getBestWordform().getValue(AttributeNames.i_Lemma));
+
+        w = locītājs.analyze("otram");
+        assertEquals("otrs", w.getBestWordform().getValue(AttributeNames.i_Lemma));
+
+        w = locītājs.analyze("otrajai");
+        assertEquals("otrais", w.getBestWordform().getValue(AttributeNames.i_Lemma));
     }
 }
 
