@@ -136,14 +136,14 @@ public class Valerijtests {
 			if (šķirklis.paradigma.equals("29")) {
 				if (šķirklis.vārds.endsWith(analizators.endingByID(136).getEnding())) {
 					Lexeme jaunais = analizators.createLexeme(šķirklis.vārds, 136, "Imports no Valērija faila");
-					jaunais.addAttribute(AttributeNames.i_CaseSpecial, AttributeNames.v_InflexibleGenitive);
+					jaunais.addAttribute(AttributeNames.i_Declension, AttributeNames.v_InflexibleGenitive);
 					jaunais.addAttribute(AttributeNames.i_Lemma, šķirklis.vārds);
 					if (šķirklis.īpašībasVārdaTips.equals("q"))
 						jaunais.addAttribute(AttributeNames.i_AdjectiveType, AttributeNames.v_QualificativeAdjective);
 					else jaunais.addAttribute(AttributeNames.i_AdjectiveType, AttributeNames.v_RelativeAdjective);
 				} else if (šķirklis.vārds.endsWith(analizators.endingByID(141).getEnding())) {
 					Lexeme jaunais = analizators.createLexeme(šķirklis.vārds, 141, "Imports no Valērija faila"); // daudzskaitliieks
-					jaunais.addAttribute(AttributeNames.i_CaseSpecial, AttributeNames.v_InflexibleGenitive);
+					jaunais.addAttribute(AttributeNames.i_Declension, AttributeNames.v_InflexibleGenitive);
 					jaunais.addAttribute(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum);
 					jaunais.addAttribute(AttributeNames.i_Lemma, šķirklis.vārds);
 					if (šķirklis.īpašībasVārdaTips.equals("q"))
@@ -151,14 +151,14 @@ public class Valerijtests {
 					else jaunais.addAttribute(AttributeNames.i_AdjectiveType, AttributeNames.v_RelativeAdjective);
 				} else if (šķirklis.vārds.endsWith(analizators.endingByID(76).getEnding())) {
 					Lexeme jaunais = analizators.createLexeme(šķirklis.vārds, 76, "Imports no Valērija faila");
-					jaunais.addAttribute(AttributeNames.i_CaseSpecial, AttributeNames.v_InflexibleGenitive);
+					jaunais.addAttribute(AttributeNames.i_Declension, AttributeNames.v_InflexibleGenitive);
 					jaunais.addAttribute(AttributeNames.i_Lemma, šķirklis.vārds);
 					if (šķirklis.īpašībasVārdaTips.equals("q"))
 						jaunais.addAttribute(AttributeNames.i_AdjectiveType, AttributeNames.v_QualificativeAdjective);
 					else jaunais.addAttribute(AttributeNames.i_AdjectiveType, AttributeNames.v_RelativeAdjective);
 				} else if (šķirklis.vārds.endsWith(analizators.endingByID(88).getEnding())) {
 					Lexeme jaunais = analizators.createLexeme(šķirklis.vārds, 88, "Imports no Valērija faila");
-					jaunais.addAttribute(AttributeNames.i_CaseSpecial, AttributeNames.v_InflexibleGenitive);
+					jaunais.addAttribute(AttributeNames.i_Declension, AttributeNames.v_InflexibleGenitive);
 					jaunais.addAttribute(AttributeNames.i_Lemma, šķirklis.vārds);
 					if (šķirklis.īpašībasVārdaTips.equals("q"))
 						jaunais.addAttribute(AttributeNames.i_AdjectiveType, AttributeNames.v_QualificativeAdjective);

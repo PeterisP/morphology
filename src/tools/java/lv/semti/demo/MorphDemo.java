@@ -31,7 +31,7 @@ public class MorphDemo {
 						out.write(word + "\t"
 								+ form.getValue(AttributeNames.i_Lemma).toUpperCase()
 								+ "\t[" + form.getValue(AttributeNames.i_PartOfSpeech)
-								+ ", " + form.getValue(AttributeNames.i_Tag) + "]");
+								+ ", " + form.getTag() + "]");
 						out.newLine();
 					}
 				} else {
@@ -147,16 +147,7 @@ public class MorphDemo {
 	
 	public static void main(String[] args) throws Exception {
 		// Create an instance of the analyzer.
-		// Provide the morphological lexicon as an input stream or as a reference to a file.
-		Analyzer morph = null;
-		if (args[0].equals("file")) {
-			morph = new Analyzer("lib/lexicon.xml");
-		}
-		if (args[0].equals("stream")) {
-			InputStream stream = new FileInputStream("lib/lexicon.xml");
-			morph = new Analyzer(stream);
-			stream.close();
-		}
+		Analyzer morph = new Analyzer();
 		
 		// Derivation rules for the diminutive forms.
 		morph.enableDiminutive = true;

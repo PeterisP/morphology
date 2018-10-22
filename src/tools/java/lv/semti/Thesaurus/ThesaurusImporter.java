@@ -147,7 +147,7 @@ public class ThesaurusImporter {
 			
 			Lexeme l = analyzer.createLexemeFromParadigm(lemma, paradigmID, importSource);
 			if (l == null) throw new Exception(String.format("createLexemeFromParadigm nofailoja uz %s / %d", lemma, paradigmID));
-			if (l.getParadigmID() == 29)
+			if (l.getParadigm().getID() == 29)
 			{ // Hardcoded unflexible words
 				l.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Residual);
 				if (((JSONObject)header.get("Gram")).get("Flags") != null)
