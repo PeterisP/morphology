@@ -3428,5 +3428,43 @@ public class MorphologyTest {
         w = locītājs.analyze("otrajai");
         assertEquals("otrais", w.getBestWordform().getValue(AttributeNames.i_Lemma));
     }
-}
 
+    private int getLexemeId(String wordform) {
+        Word w = locītājs.analyze(wordform);
+        for (Wordform wf : w.wordforms) {
+            if (wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Numeral))
+                return wf.lexeme.getID();
+        }
+        return -1;
+    }
+
+    private void assertEqualLexemes(List<String> wordforms) {
+        int mainLexemeId = getLexemeId(wordforms.get(0));
+        for (String wordform : wordforms) {
+            assertEquals(String.format("Lexeme IDs of '%s' and '%s' do not match", wordforms.get(0), wordform), mainLexemeId, getLexemeId(wordform));
+        }
+    }
+
+    @Test
+    public void testNumeralsLexemes() {
+        List<String> two = new ArrayList<String>(Arrays.asList("divi", "divas", "divos", "divās", "divām", "diviem", "divu", "divus"));
+        List<String> three = new ArrayList<String>(Arrays.asList("trīs", "trijiem", "triju", "trim", "trijām", "trijos", "trijās"));
+        List<String> third = new ArrayList<String>(Arrays.asList("trešais", "trešajiem", "trešajos", "trešajās", "trešo", "trešā", "trešās", "trešajam", "trešajai", "trešajām"));
+        List<String> seven = new ArrayList<String>(Arrays.asList("septiņi", "septiņos", "septiņiem", "septiņu", "septiņus", "septiņām", "septiņās"));
+        List<String> seventh = new ArrayList<String>(Arrays.asList("septītais", "septītajā", "septītajos", "septīto", "septītajām", "septītajai", "septītie"));
+        List<String> twelve = new ArrayList<String>(Arrays.asList("divpadsmit", "divpadsmitiem", "divpadsmitos"));
+        List<String> twelveth = new ArrayList<String>(Arrays.asList("divpadsmitais", "divpadsmitajiem", "divpadsmitajos"));
+        List<String> hundred = new ArrayList<String>(Arrays.asList("simts", "simtiem", "simtos"));
+        List<String> hundredth = new ArrayList<String>(Arrays.asList("simtais", "simtajiem", "simtajos", "simtajām", "simtajās"));
+
+        assertEqualLexemes(two);
+        assertEqualLexemes(three);
+        assertEqualLexemes(third);
+        assertEqualLexemes(seven);
+        assertEqualLexemes(seventh);
+        assertEqualLexemes(twelve);
+        assertEqualLexemes(twelveth);
+        assertEqualLexemes(hundred);
+        assertEqualLexemes(hundredth);
+    }
+}
