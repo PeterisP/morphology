@@ -1458,6 +1458,7 @@ public class MorphologyTest {
         }
         assertTrue(irPareizā);
     }
+
     @Test
     public void laura_Aug13_2() {
         locītājs.enableGuessing = true;
@@ -2070,7 +2071,7 @@ public class MorphologyTest {
         assertEquals("xu", url.wordforms.get(0).getTag());
     }
 
-//    @Ignore("Jāskatās pēc tēzaura datu pievienošanas")
+    //    @Ignore("Jāskatās pēc tēzaura datu pievienošanas")
     @Test
     public void obligātiatpazīstamie() throws IOException {
         {
@@ -2091,7 +2092,7 @@ public class MorphologyTest {
                 }
             }
             ieeja.close();
-            assertTrue("Par daudz neatpazītu vārdu", not_recognized<70);
+            assertTrue("Par daudz neatpazītu vārdu", not_recognized < 70);
         }
     }
 
@@ -2956,7 +2957,8 @@ public class MorphologyTest {
         }
     }
 
-    /** Aizdomas par tagset problēmām
+    /**
+     * Aizdomas par tagset problēmām
      */
     @Test
     public void laura_20180614() {
@@ -3137,8 +3139,7 @@ public class MorphologyTest {
     }
 
     @Test
-    public void saites()
-    {
+    public void saites() {
         Word w = locītājs.analyze("http://www.faili.lv/fails.php?id=215");
         assertTrue(w.isRecognized());
         assertEquals("xu", w.getBestWordform().getTag());
@@ -3429,19 +3430,19 @@ public class MorphologyTest {
         assertEquals("otrais", w.getBestWordform().getValue(AttributeNames.i_Lemma));
     }
 
-    private int getLexemeId(String wordform) {
+    private int getLexemeId(String partOfSpeech, String wordform) {
         Word w = locītājs.analyze(wordform);
         for (Wordform wf : w.wordforms) {
-            if (wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Numeral))
+            if (wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, partOfSpeech))
                 return wf.lexeme.getID();
         }
         return -1;
     }
 
-    private void assertEqualLexemes(List<String> wordforms) {
-        int mainLexemeId = getLexemeId(wordforms.get(0));
+    private void assertEqualLexemes(String partOfSpeech, List<String> wordforms) {
+        int mainLexemeId = getLexemeId(partOfSpeech, wordforms.get(0));
         for (String wordform : wordforms) {
-            assertEquals(String.format("Lexeme IDs of '%s' and '%s' do not match", wordforms.get(0), wordform), mainLexemeId, getLexemeId(wordform));
+            assertEquals(String.format("Lexeme IDs of '%s' and '%s' do not match", wordforms.get(0), wordform), mainLexemeId, getLexemeId(partOfSpeech, wordform));
         }
     }
 
@@ -3457,14 +3458,26 @@ public class MorphologyTest {
         List<String> hundred = new ArrayList<String>(Arrays.asList("simts", "simtiem", "simtos"));
         List<String> hundredth = new ArrayList<String>(Arrays.asList("simtais", "simtajiem", "simtajos", "simtajām", "simtajās"));
 
-        assertEqualLexemes(two);
-        assertEqualLexemes(three);
-        assertEqualLexemes(third);
-        assertEqualLexemes(seven);
-        assertEqualLexemes(seventh);
-        assertEqualLexemes(twelve);
-        assertEqualLexemes(twelveth);
-        assertEqualLexemes(hundred);
-        assertEqualLexemes(hundredth);
+        assertEqualLexemes(AttributeNames.v_Numeral, two);
+        assertEqualLexemes(AttributeNames.v_Numeral, three);
+        assertEqualLexemes(AttributeNames.v_Numeral, third);
+        assertEqualLexemes(AttributeNames.v_Numeral, seven);
+        assertEqualLexemes(AttributeNames.v_Numeral, seventh);
+        assertEqualLexemes(AttributeNames.v_Numeral, twelve);
+        assertEqualLexemes(AttributeNames.v_Numeral, twelveth);
+        assertEqualLexemes(AttributeNames.v_Numeral, hundred);
+        assertEqualLexemes(AttributeNames.v_Numeral, hundredth);
+    }
+
+    @Test
+    public void testVerbalNouns() {
+        List<String> verbalNouns = new ArrayList<String>(Arrays.asList("lēciens", "mājiens", "brauciens"));
+        for (String verbalNoun : verbalNouns) {
+            Word w = locītājs.analyze(verbalNoun);
+            for (Wordform wf : w.wordforms) {
+                assertEquals(wf.getEnding().getID(), 1);
+                assert (wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun));
+            }
+        }
     }
 }
