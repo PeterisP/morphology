@@ -2998,15 +2998,19 @@ public class MorphologyTest {
         assertTrue(nav.isRecognized());
         boolean found_m = false;
         boolean found_c = false;
+        boolean found_tag = false;
         for (Wordform wf : nav.wordforms) {
             assertEquals("nebūt", wf.getValue(AttributeNames.i_Lemma));
             if (wf.isMatchingStrong(AttributeNames.i_VerbType, AttributeNames.v_MainVerb))
                 found_m = true;
             if (wf.isMatchingStrong(AttributeNames.i_VerbType, AttributeNames.v_Buut))
                 found_c = true;
+            if (wf.getTag().equalsIgnoreCase("vmnipii30ay"))
+                found_tag = true;
         }
         assertTrue(found_m);
         assertTrue(found_c);
+        assertTrue(found_tag);
     }
 
     @Test

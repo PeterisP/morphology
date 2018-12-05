@@ -203,13 +203,6 @@ public class Lexeme extends AttributeValues {
                 }
             }
         }
-
-//        if (this.getValue(AttributeNames.i_Lemma).equalsIgnoreCase("celt")) {
-//            System.out.print(json.toJSONString());
-//            this.describe();
-//            System.out.print(stems);
-//        }
-
         paradigm.addLexeme(this);
     }
 
@@ -229,7 +222,7 @@ public class Lexeme extends AttributeValues {
             }
         }
         if (stems.get(0).isEmpty()) {
-            System.err.println(String.format("Leksēmai '%s' #%d galotne neatbilst paradigmai", lemma, this.id));
+            System.err.println(String.format("Leksēmai '%s' #%d galotne neatbilst paradigmai arī skatoties uz daudzskaitli", lemma, this.id));
             this.describe();
         } else {
             addAttribute(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum);

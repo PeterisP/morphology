@@ -257,8 +257,8 @@ public class Lexicon {
 		System.err.println("Lexicon " + (revision != null ? revision : "") + " loaded");
 	}
 
-    private void load_sublexicon_json(InputStream stream) throws ParseException {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
+    private void load_sublexicon_json(InputStream stream) throws ParseException, UnsupportedEncodingException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(stream, "UTF-8"));
         JSONParser parser = new JSONParser();
         String json_row;
         try {
