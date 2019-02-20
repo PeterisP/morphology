@@ -31,7 +31,7 @@ public class Splitting {
 	// Vārdā, atdalītājā, atstarpē
 	private enum Status {IN_WORD, IN_SPACE}; // , IN_DELIMITER, IN_EXCEPTION - tagad šo funkcionalitāti dara Trie morphoAnalyzer.automats
 	
-	public static int DEFAULT_SENTENCE_LENGTH_CAP = 50;
+	public static int DEFAULT_SENTENCE_LENGTH_CAP = 250;
 	
 	/**
 	 * Determine, if given word should split a chunk (ends a sentence, like a period or exclamation mark)
