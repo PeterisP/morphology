@@ -36,7 +36,6 @@
 						"a" : "Akuzatīvs",
 						"l" : "Lokatīvs",
 						"v" : "Vokatīvs",
-						"s" : "Ģenitīvenis",
 						"_" : "Nepiemīt",
 
 						"_next" : {
@@ -49,7 +48,8 @@
 							"5" : "5. dekl.",
 							"6" : "6. dekl.",
 							"0" : "Nepiemīt",
-							"r" : "Atgriezenisks"
+							"r" : "Atgriezenisks",
+							"g" : "Ģenitīvenis"
 						}
 					}
 				}
@@ -66,7 +66,6 @@
 			"_name" : "Tips",
 
 			"m" : "Patstāvīgs",
-			"g" : "Palīgdarbības vārds",
 			"o" : "Modāls",
 			"p" : "Fāzes",
 			"e" : "Izpausmes veida",
@@ -78,7 +77,6 @@
 
 				"n" : "Nē",
 				"y" : "Jā",
-				"0" : "Nepiemīt",
 
 				"_next" : {
 					"_name" : "Izteiksme",
@@ -144,7 +142,23 @@
 
 													"n" : "Nenoteiktā",
 													"y" : "Noteiktā",
-													"0" : "Nepiemīt"
+													"0" : "Nepiemīt",
+
+													"_next" : {
+														"_name" : "Pakāpe",
+
+														"p" : "Pamata",
+														"c" : "Pārākā",
+														"s" : "Vispārākā",
+														"0" : "Nepiemīt",
+
+														"_next" : {
+															"_name" : "Noliegums",
+
+															"y" : "Jā",
+															"n" : "Nē"
+														}
+													}
 												}
 											}
 										}
@@ -167,7 +181,6 @@
 
 							"t" : "Pārejošs",
 							"i" : "Nepārejošs",
-							"0" : "Nepiemīt",
 
 							"_next" : {
 								"_name" : "Konjugācija",
@@ -175,8 +188,7 @@
 								"1" : "1. konj.",
 								"2" : "2. konj.",
 								"3" : "3. konj.",
-								"i" : "Nekārtnais",
-								"0" : "Nepiemīt",
+								"i" : "Nekārtns",
 
 								"_next" : {
 									"_name" : "Persona",
@@ -357,7 +369,7 @@
 				"m" : "Veida",
 				"p" : "Vietas",
 				"t" : "Laika",
-				"c" : "Cēl�oņa/nolūka"
+				"c" : "Cēloņa/nolūka"
 			}
 		}
 	},
@@ -377,6 +389,7 @@
 
 				"s" : "Vienskaitlis",
 				"p" : "Daudzskaitlis",
+				"0" : "Nepiemīt",
 
 				"_next" : {
 					"_name" : "Rekcija",
@@ -384,14 +397,7 @@
 					"g" : "Ģenitīvs",
 					"d" : "Datīvs",
 					"a" : "Akuzatīvs",
-					"0" : "Nepiemīt",
-
-					"_next" : {
-						"_name" : "Vietas apstākļa nozīmē",
-
-						"y" : "Jā",
-						"n" : "Nē"
-					}
+					"0" : "Nepiemīt"
 				}
 			}
 		}
@@ -484,7 +490,18 @@
 
 	"y" : {
 		"_title" : "Saīsinājums",
-		"_desc" : "Saīsinājums"
+		"_desc" : "Saīsinājums",
+
+		"_next" : {
+			"_name" : "Tips",
+
+			"n" : "Sugasvārds",
+			"p" : "Īpašvārds",
+			"a" : "Īpašības vārds",
+			"v" : "Verbāls",
+			"r" : "Apstāklis",
+			"d" : "Diskursa iezīmētāji"
+		}
 	},
 
 	"q" : {

@@ -348,7 +348,7 @@
 </Attribute>
 
 
-<Attribute LV="Uzbūve" EN="Structure" PartOfSpeech="Izsauksmes vārds" MarkupPos="1">
+<Attribute LV="Uzbūve" EN="Structure" PartOfSpeech="Izsauksmes vārds">
 	<Value LV="Vienkāršs" EN="Simple" Tag="s"/>
 	<Value LV="Salikts" EN="Compound" Tag="c"/>
 </Attribute>
