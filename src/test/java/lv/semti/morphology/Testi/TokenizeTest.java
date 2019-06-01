@@ -18,13 +18,11 @@
 package lv.semti.morphology.Testi;
 
 
-import static java.lang.Integer.max;
 import static org.junit.Assert.*;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -34,7 +32,6 @@ import org.junit.Ignore;
 import org.junit.Test;
 import lv.semti.morphology.analyzer.*;
 import lv.semti.morphology.attributes.AttributeNames;
-import sun.font.TrueTypeFont;
 
 public class TokenizeTest {
 	private static Analyzer locītājs;
@@ -915,6 +912,33 @@ public class TokenizeTest {
     public void slashes() {
         LinkedList<Word> tokens = Splitting.tokenize(locītājs, "ANO Tautas attīstības pārskats (2002./2003. gads) .");
         assertEquals(11, tokens.size());
+    }
+
+    @Test
+    public void gunta_20190220() {
+        LinkedList<LinkedList<Word>> sentences;
+        sentences = Splitting.tokenizeSentences(locītājs, "Priecēja , ka līdzjutējos bija arī zēnu vecāki (aicinu, lai visi vecāki nāktu skatīties bērnu spēles !) un vecāko komandu futbolisti.");
+        assertEquals(1, sentences.size());
+
+        sentences = Splitting.tokenizeSentences(locītājs, "Apsvērsim visus nosacījumus un iespējas, domāju, ka startēsim tajos posmos, kas paredzēti Portugālē, Zviedrijā un Krievijā.»");
+        assertEquals(1, sentences.size());
+
+        sentences = Splitting.tokenizeSentences(locītājs, "Pēdējā laikā populārāks kļūst viedoklis « ja cilvēka mīlas objekts var būt viņš pats - kāpēc ne ?» 4. Pēc dzimuma .");
+        assertEquals(2, sentences.size());
+        assertEquals(4, sentences.get(1).size()); // Pēdiņa pie pirmā teikuma, nevis otrā
+
+        sentences = Splitting.tokenizeSentences(locītājs, "( No zāles dep. J. Urbanovičs: „ Sarunājuši! Balsosim pret!”)");
+        assertEquals(2, sentences.size()); // dalījums aiz Sarunājuši!
+
+        sentences = Splitting.tokenizeSentences(locītājs, "Par saviem novērojumiem var informēt internetā speciāli tam paredzētā portālā dabasdati.lv.");
+        assertEquals(1, sentences.size());
+    }
+
+    @Test
+    public void daudzpunktes() {
+        LinkedList<LinkedList<Word>> sentences;
+        sentences = Splitting.tokenizeSentences(locītājs, "Tie ir viņa bērni... divi puikas un meitenīte u... Ja tā ir noticis, tad... viņš mīl Elīni un bērnus arī, mīl kaut kā klusu un smagi, bet tomēr mīl. Ja viņi aizbrauks... es nemaz nevaru iedomāties, kas tad notiks");
+        assertEquals(0, sentences.size()); // te jāsaprot kas un kā
     }
 }
  

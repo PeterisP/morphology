@@ -17,9 +17,6 @@
  *******************************************************************************/
 package lv.semti.morphology.analyzer;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -29,8 +26,6 @@ import java.util.regex.Pattern;
 import lv.semti.morphology.attributes.AttributeNames;
 import lv.semti.morphology.attributes.AttributeValues;
 import lv.semti.morphology.lexicon.*;
-
-import javax.smartcardio.ATR;
 
 public class Analyzer extends Lexicon {
 
