@@ -1,0 +1,534 @@
+{
+	"_name" : "Vārdšķira",
+
+	"n" : {
+		"_title" : "Lietvārds",
+		"_desc" : "Lietvārds",
+
+		"_next" : {
+
+			"_name" : "Tips",
+
+			"c" : "Sugas vārds",
+			"p" : "Īpašvārds",
+
+			"_next" : {
+				"_name" : "Dzimte",
+
+				"m" : "Vīriešu",
+				"f" : "Sieviešu",
+				"0" : "Nepiemīt",
+
+				"_next" : {
+					"_name" : "Skaitlis",
+
+					"s" : "Vienskaitlis",
+					"p" : "Daudzskaitlis",
+					"v" : "Vienskaitlinieks",
+					"d" : "Daudzskaitlinieks",
+
+					"_next" : {
+						"_name" : "Locījums",
+
+						"n" : "Nominatīvs",
+						"g" : "Ģenitīvs",
+						"d" : "Datīvs",
+						"a" : "Akuzatīvs",
+						"l" : "Lokatīvs",
+						"v" : "Vokatīvs",
+						"s" : "Ģenitīvenis",
+						"_" : "Nepiemīt",
+
+						"_next" : {
+							"_name" : "Deklinācija",
+
+							"1" : "1. dekl.",
+							"2" : "2. dekl.",
+							"3" : "3. dekl.",
+							"4" : "4. dekl.",
+							"5" : "5. dekl.",
+							"6" : "6. dekl.",
+							"0" : "Nepiemīt",
+							"r" : "Atgriezenisks"
+						}
+					}
+				}
+			}
+
+		}
+	},
+
+	"v" : {
+		"_title" : "Darbības vārds",
+		"_desc" : "Darbības vārds",
+
+		"_next" : {
+			"_name" : "Tips",
+
+			"m" : "Patstāvīgs",
+			"g" : "Palīgdarbības vārds",
+			"o" : "Modāls",
+			"p" : "Fāzes",
+			"e" : "Izpausmes veida",
+			"c" : "Palīgverbs 'būt'",
+			"t" : "Palīgverbi 'tikt', 'tapt', 'kļūt'",
+
+			"_next" : {
+				"_name" : "Atgriezeniskums",
+
+				"n" : "Nē",
+				"y" : "Jā",
+				"0" : "Nepiemīt",
+
+				"_next" : {
+					"_name" : "Izteiksme",
+
+					"i" : "Īstenības",
+					"r" : "Atstāstījuma",
+					"c" : "Vēlējuma",
+					"d" : "Vajadzības",
+					"m" : "Pavēles",
+					"n" : "Nenoteiksme",
+					"p" : {
+						"_desc" : "Divdabis",
+						"_title" : "Divdabis",
+
+						"_next" : {
+							"_name" : "Lokāmība",
+
+							"d" : "Lokāms",
+							"p" : "Daļēji",
+							"u" : "Nelokāms",
+
+							"_next" : {
+								"_name" : "Dzimte",
+
+								"m" : "Vīriešu",
+								"f" : "Sieviešu",
+								"0" : "Nepiemīt",
+
+								"_next" : {
+									"_name" : "Skaitlis",
+
+									"s" : "Vienskaitlis",
+									"p" : "Daudzskaitlis", 
+									"0" : "Nepiemīt",
+
+									"_next" : {
+										"_name" : "Locījums",
+
+										"n" : "Nominatīvs",
+										"g" : "Ģenitīvs",
+										"d" : "Datīvs",
+										"a" : "Akuzatīvs",
+										"l" : "Lokatīvs",
+										"v" : "Vokatīvs",
+										"0" : "Nepiemīt",
+
+										"_next" : {
+											"_name" : "Kārta",
+
+											"a" : "Darāmā",
+											"p" : "Ciešamā",
+											"0" : "Nepiemīt",
+											
+											"_next" : {
+												"_name" : "Laiks",
+												
+												"p" : "Tagadne",
+												"s" : "Pagātne",
+												"0" : "Nepiemīt",
+
+												"_next" : {
+													"_name" : "Noteiktība",
+
+													"n" : "Nenoteiktā",
+													"y" : "Noteiktā",
+													"0" : "Nepiemīt"
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					},
+
+					"_next" : {
+						"_name" : "Laiks",
+
+						"p" : "Tagadne",
+						"f" : "Nākotne",
+						"s" : "Pagātne",
+						"0" : "Nepiemīt",
+
+						"_next" : {
+							"_name" : "Pārejamība",
+
+							"t" : "Pārejošs",
+							"i" : "Nepārejošs",
+							"0" : "Nepiemīt",
+
+							"_next" : {
+								"_name" : "Konjugācija",
+
+								"1" : "1. konj.",
+								"2" : "2. konj.",
+								"3" : "3. konj.",
+								"i" : "Nekārtnais",
+								"0" : "Nepiemīt",
+
+								"_next" : {
+									"_name" : "Persona",
+
+									"1" : "1. pers.",
+									"2" : "2. pers.",
+									"3" : "3. pers.",
+									"0" : "Nepiemīt",
+
+									"_next" : {
+										"_name" : "Skaitlis",
+
+										"s" : "Vienskaitlis",
+										"p" : "Daudzskaitlis",
+										"0" : "Nepiemīt",
+
+										"_next" : {
+											"_name" : "Kārta",
+
+											"a" : "Darāmā",
+											"p" : "Ciešamā",
+											"0" : "Nepiemīt",
+
+											"_next" : {
+												"_name" : "Noliegums",
+
+												"n" : "Nē",
+												"y" : "Jā"
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+
+	"a" : {
+		"_title" : "Īpašības vārds",
+		"_desc" : "Īpašības vārds",
+
+		"_next" : {
+			"_name" : "Tips",
+
+			"f" : "Kādības",
+			"r" : "Attieksmes",
+
+			"_next" : {
+				"_name" : "Dzimte",
+
+				"m" : "Vīriešu",
+				"f" : "Sieviešu",
+
+				"_next" : {
+					"_name" : "Skaitlis",
+
+					"s" : "Vienskaitlis",
+					"p" : "Daudzskaitlis",
+
+					"_next" : {
+						"_name" : "Locījums",
+
+						"n" : "Nominatīvs",
+						"g" : "Ģenitīvs",
+						"d" : "Datīvs",
+						"a" : "Akuzatīvs",
+						"l" : "Lokatīvs",
+						"v" : "Vokatīvs",
+
+						"_next" : {
+							"_name" : "Noteiktība",
+
+							"n" : "Nenoteiktā",
+							"y" : "Noteiktā",
+
+							"_next" : {
+								"_name" : "Pakāpe",
+
+								"p" : "Pamata",
+								"c" : "Pārākā",
+								"s" : "Vispārākā"
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+
+	"p" : {
+		"_title" : "Vietniekvārds",
+		"_desc" : "Vietniekvārds",
+
+		"_next" : {
+			"_name" : "Tips",
+
+			"p" : "Personas",
+			"x" : "Atgriezeniskais",
+			"s" : "Piederības",
+			"d" : "Norādāmais",
+			"i" : "Nenoteiktais",
+			"q" : "Jautājamais",
+			"r" : "Attieksmes",
+			"g" : "Noteiktais",
+
+			"_next" : {
+				"_name" : "Persona",
+
+				"1" : "1. pers.",
+				"2" : "2. pers.",
+				"3" : "3. pers.",
+				"0" : "Nepiemīt",
+
+				"_next" : {
+					"_name" : "Dzimte",
+
+					"m" : "Vīriešu",
+					"f" : "Sieviešu",
+					"0" : "Nepiemīt",
+
+					"_next" : {
+						"_name" : "Skaitlis",
+
+						"s" : "Vienskaitlis",
+						"p" : "Daudzskaitlis",
+						"0" : "Nepiemīt",
+
+						"_next" : {
+							"_name" : "Locījums",
+
+							"n" : "Nominatīvs",
+							"g" : "Ģenitīvs",
+							"d" : "Datīvs",
+							"a" : "Akuzatīvs",
+							"l" : "Lokatīvs",
+
+							"_next" : {
+								"_name" : "Noliegums",
+
+								"n" : "Nē",
+								"y" : "Jā",
+
+								"_next" : {
+									"_name" : "Anafora",
+
+									"a" : "Aizstāj adjektīvu",
+									"s" : "Aizstāj substantīvu",
+									"0" : "Nepiemīt"
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+
+	"r" : {
+		"_title" : "Apstākļa vārds",
+		"_desc" : "Apstākļa vārds",
+
+		"_next" : {
+			"_name" : "Pakāpe",
+
+			"r" : "Relatīvais",
+			"p" : "Pamata",
+			"c" : "Pārākā",
+			"s" : "Vispārākā",
+			"0" : "Nepiemīt",
+
+			"_next" : {
+				"_name" : "Tips",
+
+				"q" : "Mēra",
+				"m" : "Veida",
+				"p" : "Vietas",
+				"t" : "Laika",
+				"c" : "Cēl�oņa/nolūka"
+			}
+		}
+	},
+
+	"s" : {
+		"_title" : "Prievārds",
+		"_desc" : "Prievārds",
+
+		"_next" : {
+			"_name" : "Novietojums",
+
+			"p" : "Pirms",
+			"t" : "Pēc",
+
+			"_next" : {
+				"_name" : "Skaitlis",
+
+				"s" : "Vienskaitlis",
+				"p" : "Daudzskaitlis",
+
+				"_next" : {
+					"_name" : "Rekcija",
+
+					"g" : "Ģenitīvs",
+					"d" : "Datīvs",
+					"a" : "Akuzatīvs",
+					"0" : "Nepiemīt",
+
+					"_next" : {
+						"_name" : "Vietas apstākļa nozīmē",
+
+						"y" : "Jā",
+						"n" : "Nē"
+					}
+				}
+			}
+		}
+	},
+
+	"c" : {
+		"_title" : "Saiklis",
+		"_desc" : "Saiklis",
+
+		"_next" : {
+			"_name" : "Tips",
+
+			"c" : "Sakārtojuma",
+			"s" : "Pakārtojuma",
+
+			"_next" : {
+				"_name" : "Uzbūve",
+
+				"s" : "Vienkāršs",
+				"c" : "Salikts",
+				"d" : "Divkāršs",
+				"r" : "Atkārtots"
+			}
+		}
+	},
+
+	"m" : {
+		"_title" : "Skaitļa vārds",
+		"_desc" : "Skaitļa vārds",
+
+		"_next" : {
+			"_name" : "Tips",
+
+			"c" : "Pamata",
+			"o" : "Kārtas",
+			"f" : "Daļskaitlis",
+
+			"_next" : {
+				"_name" : "Uzbūve",
+
+				"s" : "Vienkāršs",
+				"c" : "Saliktenis",
+				"j" : "Vairākvārdu",
+
+				"_next" : {
+					"_name" : "Dzimte",
+
+					"m" : "Vīriešu",
+					"f" : "Sieviešu",
+					"0" : "Nepiemīt",
+
+					"_next" : {
+						"_name" : "Skaitlis",
+
+						"s" : "Vienskaitlis",
+						"p" : "Daudzskaitlis",
+
+						"_next" : {
+							"_name" : "Locījums",
+
+							"n" : "Nominatīvs",
+							"g" : "Ģenitīvs",
+							"d" : "Datīvs",
+							"a" : "Akuzatīvs",
+							"l" : "Lokatīvs",
+							"0" : "Nepiemīt",
+
+							"_next" : {
+								"_name" : "Skaitļu kārta",
+
+								"v" : "Vieni",
+								"p" : "Padsmiti",
+								"d" : "Desmiti",
+								"s" : "Simti",
+								"t" : "Tūkstoši",
+								"m" : "Miljoni",
+								"r" : "Miljardi"
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+
+	"i" : {
+		"_title" : "Izsauksmes vārds",
+		"_desc" : "Izsauksmes vārds"
+	},
+
+	"y" : {
+		"_title" : "Saīsinājums",
+		"_desc" : "Saīsinājums"
+	},
+
+	"q" : {
+		"_title" : "Partikula",
+		"_desc" : "Partikula",
+
+		"_next" : {
+			"_name" : "Uzbūve",
+
+			"s" : "Vienkārša",
+			"c" : "Salikta"
+		}
+	},
+
+	"z" : {
+		"_title" : "Pieturzīme",
+		"_desc" : "Pieturzīme",
+
+		"_next" : {
+			"_name" : "Tips",
+
+			"c" : "Komats",
+			"q" : "Pēdiņas",
+			"s" : "Punkts",
+			"b" : "Iekava",
+			"d" : "Defise/domu zīme",
+			"o" : "Kols",
+			"x" : "Cita"
+		}
+	},
+
+	"x" : {
+		"_title" : "Reziduālis",
+		"_desc" : "Reziduālis",
+
+		"_next" : {
+			"_name" : "Tips",
+
+			"f" : "Vārds svešvalodā",
+			"t" : "Drukas kļūda",
+			"n" : "Skaitlis cipariem",
+			"o" : "Kārtas skaitlis cipariem",
+			"u" : "URL",
+			"x" : "Cits"
+		}
+	}
+}
