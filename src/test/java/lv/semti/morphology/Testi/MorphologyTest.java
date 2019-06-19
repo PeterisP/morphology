@@ -29,6 +29,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.*;
 import java.util.Map.Entry;
 
+import org.apache.commons.lang3.builder.ToStringExclude;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Ignore;
@@ -3431,6 +3432,27 @@ public class MorphologyTest {
 
         w = locītājs.analyze("otrajai");
         assertEquals("otrais", w.getBestWordform().getValue(AttributeNames.i_Lemma));
+    }
+
+    // Ticket #40 'šitais' and 'šitas' don not get inflected
+    @Test public void šitais() {
+        ArrayList<Wordform> formas = locītājs.generateInflections("šitais");
+        AttributeValues testset = new AttributeValues();
+        assertInflection(formas, testset, "šitajam");
+
+        formas = locītājs.generateInflections("šitas");
+        assertInflection(formas, testset, "šitam");
+    }
+
+    // Ticket #41 inflexible form for 'trīs'
+    @Test public void trīs() {
+        Word w = locītājs.analyze("zaļais");
+        boolean found = false;
+        for (Wordform wf : w.wordforms) {
+            if (wf.isMatchingStrong(AttributeNames.i_Case, AttributeNames.v_NA))
+                    found = true;
+        }
+        assertTrue(found);
     }
 }
 
