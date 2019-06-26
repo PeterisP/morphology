@@ -758,7 +758,7 @@ public class Analyzer extends Lexicon {
 	}
 	
 	// removes possibilities that aren't nouns/substantivised adjectives, and don't match the filter
-	private void filterInflectionPossibilities(boolean nouns_only, AttributeValues filter, ArrayList<Wordform> possibilities) {
+	public void filterInflectionPossibilities(boolean nouns_only, AttributeValues filter, ArrayList<Wordform> possibilities) {
 		ArrayList<Wordform> unsuitable = new ArrayList<Wordform>();
 		for (Wordform wf : possibilities) {
 			boolean suitable = ! nouns_only; // if nouns_only, then we want to test for partofspeech, if not, then okay by default
@@ -773,9 +773,12 @@ public class Analyzer extends Lexicon {
 		possibilities.removeAll(unsuitable);
 	}
 
-	private ArrayList<Wordform> generateInflections_TryLemmas(String lemma, Word w) {		
+	// TODO - needs refactoring and unittests
+	// Attempts to find the "proper lemma" out of analysis options provided, possibly making a new lexeme if needed, and then generate the inflections from that lemma
+	public ArrayList<Wordform> generateInflections_TryLemmas(String lemma, Word w) {
 		for (Wordform wf : w.wordforms) {
 			// Pamēģinam katru no analīzes variantiem, vai viņš ir pamatforma (atbilst vajadzīgajai lemmai)
+			// The regular case where lemmas must be "normal"
 			if (wf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(lemma) && !wf.isMatchingStrong(AttributeNames.i_Case, AttributeNames.v_Vocative)) {				
 				Lexeme lex = wf.lexeme;
 				if (lex == null || !lex.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(lemma)) {
@@ -799,9 +802,11 @@ public class Analyzer extends Lexicon {
 					lex.getParadigm().removeLexeme(lex);
 				return result;
 			}
+
+			// The case for nominalized adjectives such as adjective-derived surnames
 			if ( wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adjective) && (
 				 (lemma.toLowerCase().endsWith("ais") && lemma.equalsIgnoreCase(wf.getValue(AttributeNames.i_Lemma).substring(0, wf.getValue(AttributeNames.i_Lemma).length()-1)+"ais")) ||
-				 (lemma.toLowerCase().endsWith("ā") && wf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(lemma.substring(0, lemma.length()-1)+"a")) ) ) {
+				 (lemma.toLowerCase().endsWith("ā") && wf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(lemma.substring(0, lemma.length()-1)+"s") && wf.isMatchingStrong(AttributeNames.i_Gender, AttributeNames.v_Feminine)) ) ) {
 				// Exception for adjective-based surnames "Lielais", "Platais" etc
 				Lexeme lex = wf.lexeme;
 				if ((lex == null && lemma.toLowerCase().endsWith("ais")) || (lex != null && !lex.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(lemma))) {

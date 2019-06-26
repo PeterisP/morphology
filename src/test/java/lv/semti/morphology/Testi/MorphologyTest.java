@@ -38,6 +38,7 @@ import org.junit.Test;
 import lv.semti.morphology.analyzer.*;
 import lv.semti.morphology.attributes.*;
 import lv.semti.morphology.lexicon.*;
+import org.w3c.dom.Attr;
 
 public class MorphologyTest {
     private static Analyzer locītājs;
@@ -1892,6 +1893,23 @@ public class MorphologyTest {
     }
 
     @Test
+    public void guessbyending_adjective_surnames () {
+        // Guess by ending should return appropriate nominative values for adjective-based surnames
+        Word possibilities = locītājs.guessByEnding("mazā", "Mazā");
+        AttributeValues filter = new AttributeValues();
+        filter.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adjective);
+        filter.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Feminine);
+        filter.addAttribute(AttributeNames.i_Case, AttributeNames.v_Nominative);
+        boolean found = false;
+        for (Wordform wf : possibilities.wordforms) {
+            if (wf.isMatchingWeak(filter)) {
+                found = true;
+            }
+        }
+        assertTrue(found);
+    }
+
+    @Test
     public void varis20130221() {
         locītājs.enableGuessing = true;
         locītājs.enableVocative = true;
@@ -1926,6 +1944,17 @@ public class MorphologyTest {
 
         formas = locītājs.generateInflections("Valdīšana", true, filter);
         assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, AttributeNames.v_Feminine, "Valdīšanai");
+    }
+
+    @Test
+    public void lemmageneration1() {
+        Word possibilities = locītājs.analyze("Biezā");
+        locītājs.filterInflectionPossibilities(true, new AttributeValues(), possibilities.wordforms);
+        assertEquals(2, possibilities.wordformsCount()); // masc genitive, fem nominative
+        ArrayList<Wordform> result = locītājs.generateInflections_TryLemmas("Biezā", possibilities);
+        for (Wordform wf : result) {
+            assertTrue(wf.isMatchingStrong(AttributeNames.i_Gender, AttributeNames.v_Feminine));
+        }
     }
 
     @Test
@@ -3446,7 +3475,7 @@ public class MorphologyTest {
 
     // Ticket #41 inflexible form for 'trīs'
     @Test public void trīs() {
-        Word w = locītājs.analyze("zaļais");
+        Word w = locītājs.analyze("trīs");
         boolean found = false;
         for (Wordform wf : w.wordforms) {
             if (wf.isMatchingStrong(AttributeNames.i_Case, AttributeNames.v_NA))
