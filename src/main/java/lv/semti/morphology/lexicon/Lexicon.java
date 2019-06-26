@@ -268,30 +268,46 @@ public class Lexicon {
                         || l.isMatchingStrong(AttributeNames.i_EntryName, "art:1")) {
                     l.addAttribute(AttributeNames.i_Frequency, AttributeNames.v_Rare);
                 }
-                if (l.isMatchingStrong(AttributeNames.i_Usage, AttributeNames.v_Regional) // Negribam apvidvārdus
-                        //FIXME - šitie visi principā ir jāpārskata un jārisina
-                        || l.getParadigm().getID() == 29  // Hardcoded pagaidām atstājam no leksikona
-                        || l.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Pronoun)  // Vietniekvārdiem leksikonā ir labāki dati
-                        || l.isMatchingStrong("Kategorija", AttributeNames.v_Pronoun)  // Vietniekvārdiem leksikonā ir labāki dati
-                        || l.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Pronoun)  // Vietniekvārdiem leksikonā ir labāki dati
-                        || l.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Numeral)  // Skaitļavārdiem leksikonā ir labāki dati
-                        || l.isMatchingStrong("Kategorija", AttributeNames.v_Numeral)  // Skaitļavārdiem leksikonā ir labāki dati
-                        || l.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Numeral)  // Skaitļavārdiem leksikonā ir labāki dati
-						|| l.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Conjunction)  // Saikļiem leksikonā ir labāki dati
-						|| l.isMatchingStrong("Kategorija", AttributeNames.v_Conjunction)  // Saikļiem leksikonā ir labāki dati
-						|| l.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Conjunction)  // Saikļiem leksikonā ir labāki dati
-						|| l.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Particle)  // Partikulām leksikonā ir labāki dati
-						|| l.isMatchingStrong("Kategorija", AttributeNames.v_Particle)  // Partikulām leksikonā ir labāki dati
-						|| l.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Particle)  // Partikulām leksikonā ir labāki dati
-                        ) {
+                if (this.is_lexeme_bad(l)) {
                     l.getParadigm().removeLexeme(l);
                 }
-
             }
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
+	}
+
+	// Filtering out certain lexemes from Tēzaurs.lv because they need to be overriden with manual lexicon
+	// FIXME - all this shouldn't exist in code but should (over time) get fixed in Tēzaurs.lv data
+	private boolean is_lexeme_bad(Lexeme l) {
+		if (l.isMatchingStrong(AttributeNames.i_Usage, AttributeNames.v_Regional) // Negribam apvidvārdus
+				|| l.getParadigm().getID() == 29  // Hardcoded pagaidām atstājam no leksikona
+				|| l.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Pronoun)  // Vietniekvārdiem leksikonā ir labāki dati
+				|| l.isMatchingStrong("Kategorija", AttributeNames.v_Pronoun)  // Vietniekvārdiem leksikonā ir labāki dati
+				|| l.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Pronoun)  // Vietniekvārdiem leksikonā ir labāki dati
+				|| l.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Numeral)  // Skaitļavārdiem leksikonā ir labāki dati
+				|| l.isMatchingStrong("Kategorija", AttributeNames.v_Numeral)  // Skaitļavārdiem leksikonā ir labāki dati
+				|| l.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Numeral)  // Skaitļavārdiem leksikonā ir labāki dati
+				|| l.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Conjunction)  // Saikļiem leksikonā ir labāki dati
+				|| l.isMatchingStrong("Kategorija", AttributeNames.v_Conjunction)  // Saikļiem leksikonā ir labāki dati
+				|| l.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Conjunction)  // Saikļiem leksikonā ir labāki dati
+				|| l.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Particle)  // Partikulām leksikonā ir labāki dati
+				|| l.isMatchingStrong("Kategorija", AttributeNames.v_Particle)  // Partikulām leksikonā ir labāki dati
+				|| l.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Particle)  // Partikulām leksikonā ir labāki dati
+		) {
+			return true;
+		}
+		for (Lexeme l2 : l.getParadigm().getLexemesByStem().get(0).get(l.getStem(0))) {
+			if (l2 == l) continue;
+			if (l.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adverb)) {
+				// Filter out overlapping adverbs - Tēzaurs.lv has more adverbs, but morpholexicon has more information about adverb types
+				if ((l.getValue(AttributeNames.i_ApstTips) == null) && (l2.getValue(AttributeNames.i_ApstTips) != null)) {
+					return true;
+				}
+			}
+		}
+		return false;
 	}
 
     private void load_sublexicon_xml(Document doc) throws Exception {

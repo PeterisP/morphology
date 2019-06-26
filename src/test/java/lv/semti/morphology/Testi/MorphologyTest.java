@@ -3144,12 +3144,7 @@ public class MorphologyTest {
     public void ticket_26() {
         Word w = locītājs.analyze("sen");
         assertTrue(w.isRecognized());
-        w.describe(System.out);
         assertEquals("rpt", w.getBestWordform().getTag());
-
-        w = locītājs.analyze("maz");
-        assertTrue(w.isRecognized());
-        assertEquals("rqt", w.getBestWordform().getTag());
 
         w = locītājs.analyze("drīz");
         assertTrue(w.isRecognized());
