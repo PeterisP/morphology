@@ -802,7 +802,7 @@ bilst	vmnipt130an	bilst	m-p11620-p9s1w9
 <g />
 ,	zc	,	m-p11620-p9s1w10
 ka	cs	ka	m-p11620-p9s1w11
-nekas	pi0msny	nekas	m-p11620-p9s1w12
+nekas	pi000ny	nekas	m-p11620-p9s1w12
 nav	vcnipii30ay	nebūt	m-p11620-p9s1w13
 viegli	rpm	viegli	m-p11620-p9s1w14
 <g />
@@ -1166,7 +1166,7 @@ Likuma	ncmsg1	likums	m-p15179-p3s1w1
 grozījumi	ncmpn1	grozījums	m-p15179-p3s1w2
 cita	pi0fsnn	cita	m-p15179-p3s1w3
 starpā	ncfsl4	starpa	m-p15179-p3s1w4
-arī	cc	arī	m-p15179-p3s1w5
+arī	q	arī	m-p15179-p3s1w5
 paredz	vmnipt330an	paredzēt	m-p15179-p3s1w6
 <g />
 ,	zc	,	m-p15179-p3s1w7
@@ -1849,7 +1849,7 @@ pārējie	armpnyp	pārējais	m-p1094-p7s1w12
 kuriem	pr0mpdn	kurš	m-p1094-p7s1w14
 viss	pg0msnn	viss	m-p1094-p7s1w15
 vēl	r0t	vēl	m-p1094-p7s1w16
-priekšā	rrp	priekšā	m-p1094-p7s1w17
+priekšā	ncfsl4	priekša	m-p1094-p7s1w17
 <g />
 .	zs	.	m-p1094-p7s1w18
 </s>
@@ -2136,7 +2136,7 @@ vai	cs	vai	m-p11639-p2s1w10
 Cēsu	npfdg6	Cēsis	m-p11639-p2s1w11
 klīnikā	ncfsl4	klīnika	m-p11639-p2s1w12
 ārstē	vmnipt230an	ārstēt	m-p11639-p2s1w13
-šo	pd0fsan	šī	m-p11639-p2s1w14
+šo	pd3fsan	šī	m-p11639-p2s1w14
 slimību	ncfsa4	slimība	m-p11639-p2s1w15
 <g />
 ?	zs	?	m-p11639-p2s1w16
@@ -2301,7 +2301,7 @@ pabučojāmies	vmyisi21pan	pabučoties	m-d21-p3s6w3
 <s>
 Aizgājām	vmnisi11pan	aiziet	m-d21-p3s7w1
 uz	spsa	uz	m-d21-p3s7w2
-kino	nc0000	kino	m-d21-p3s7w3
+kino	ncm000	kino	m-d21-p3s7w3
 <g />
 ,	zc	,	m-d21-p3s7w4
 noskatījāmies	vmyist31pan	noskatīties	m-d21-p3s7w5
@@ -2926,9 +2926,9 @@ pārdevējas	ncfpa4	pārdevēja	m-d21-p13s1w16
 viss	pg0msnn	viss	m-d21-p13s1w18
 viens	mcsmsn	viens	m-d21-p13s1w19
 —	zd	—	m-d21-p13s1w20
-jaunas	affpnnp	jauns	m-d21-p13s1w21
+jaunas	affpanp	jauns	m-d21-p13s1w21
 vai	cs	vai	m-d21-p13s1w22
-vecas	affpnnp	vecs	m-d21-p13s1w23
+vecas	affpanp	vecs	m-d21-p13s1w23
 <g />
 .	zs	.	m-d21-p13s1w24
 </s>
@@ -4230,7 +4230,7 @@ sacīt	vmnn0t3000n	sacīt	m-s82-p8s3w15
 <g />
 ,	zc	,	m-s82-p8s3w16
 ka	cs	ka	m-s82-p8s3w17
-neko	pi0msay	nekas	m-s82-p8s3w18
+neko	pi000ay	nekas	m-s82-p8s3w18
 nav	vcnipii30ay	nebūt	m-s82-p8s3w19
 zinājuši	vmnpdmpnasnpn	zināt	m-s82-p8s3w20
 par	spsa	par	m-s82-p8s3w21
@@ -4780,7 +4780,7 @@ māsu	ncfsa4	māsa	m-p3315-p3s4w8
 .	zs	.	m-p3315-p3s4w9
 </s>
 <s>
-Nezinu	vmnipt31san	nezināt	m-p3315-p3s5w1
+Nezinu	vmnipt31say	nezināt	m-p3315-p3s5w1
 <g />
 ,	zc	,	m-p3315-p3s5w2
 varbūt	q	varbūt	m-p3315-p3s5w3
@@ -4831,7 +4831,7 @@ nomira	vmnisi130an	nomirt	m-p3315-p3s8w3
 <g />
 ,	zc	,	m-p3315-p3s8w4
 māsai	ncfsd4	māsa	m-p3315-p3s8w5
-bija	vcnisii30an	būt	m-p3315-p3s8w6
+bija	vmnisii30an	būt	m-p3315-p3s8w6
 5	xn	5	m-p3315-p3s8w7
 gadi	ncmpn1	gads	m-p3315-p3s8w8
 <g />
@@ -5276,7 +5276,7 @@ pusēm	ncfpd5	puse	m-p1189-p5s2w20
 <g />
 :	zo	:	m-p1189-p5s2w21
 vai	cc	vai	m-p1189-p5s2w22
-nu	cc	nu	m-p1189-p5s2w23
+nu	q	nu	m-p1189-p5s2w23
 tādas	pd0fsgn	tāda	m-p1189-p5s2w24
 receptes	ncfsg5	recepte	m-p1189-p5s2w25
 nav	vmnipii30ay	nebūt	m-p1189-p5s2w26
@@ -5339,7 +5339,7 @@ iespējas	ncfpa4	iespēja	m-p1189-p5s3w28
 <g />
 :	zo	:	m-p1189-p5s3w29
 vai	cc	vai	m-p1189-p5s3w30
-nu	cc	nu	m-p1189-p5s3w31
+nu	q	nu	m-p1189-p5s3w31
 griezt	vmnn0t100an	griezt	m-p1189-p5s3w32
 pensijas	ncfpa4	pensija	m-p1189-p5s3w33
 <g />
@@ -5765,7 +5765,7 @@ ignorēt	vmnn0t2000n	ignorēt	m-z105-p134s2w9
 vai	cc	vai	m-z105-p134s2w10
 diskreditēt	vmnn0t2000n	diskreditēt	m-z105-p134s2w11
 kustības	ncfsg4	kustība	m-z105-p134s2w12
-definētās	vmnpdfsgpsypn	definēt	m-z105-p134s2w13
+definētās	vmnpdfpapsypn	definēt	m-z105-p134s2w13
 idejas	ncfpa4	ideja	m-z105-p134s2w14
 <g />
 ,	zc	,	m-z105-p134s2w15
@@ -6108,6 +6108,41 @@ saistītos	vmnpdmpapsypn	saistīt	m-n256-p3s1w21
 zaudējumus	ncmpa1	zaudējums	m-n256-p3s1w22
 </s>
 <s>
+Kapteiņa	ncmsg2	kapteinis	m-d181-p161s1w1
+Mordāna	npmsg1	Mordāns	m-d181-p161s1w2
+kuģa	ncmsg2	kuģis	m-d181-p161s1w3
+nosaukums	ncmsn1	nosaukums	m-d181-p161s1w4
+«	zq	«	m-d181-p161s1w5
+<g />
+Speķa	ncmsg2	speķis	m-d181-p161s1w6
+Lode	ncfsn5	lode	m-d181-p161s1w7
+<g />
+»	zq	»	m-d181-p161s1w8
+bija	vcnisii30an	būt	m-d181-p161s1w9
+izvietots	vmnpdmsnpsnpn	izvietot	m-d181-p161s1w10
+kuģa	ncmsg2	kuģis	m-d181-p161s1w11
+pakaļgalā	ncmsl1	pakaļgals	m-d181-p161s1w12
+<g />
+,	zc	,	m-d181-p161s1w13
+un	cc	un	m-d181-p161s1w14
+to	pd3msan	tas	m-d181-p161s1w15
+veidoja	vmnist230an	veidot	m-d181-p161s1w16
+varā	ncmsl1	varš	m-d181-p161s1w17
+kalti	vmnpdmpnpsnpn	kalt	m-d181-p161s1w18
+<g />
+,	zc	,	m-d181-p161s1w19
+korpusam	ncmsd1	korpuss	m-d181-p161s1w20
+pienagloti	vmnpdmpnpsnpn	pienaglot	m-d181-p161s1w21
+<g />
+,	zc	,	m-d181-p161s1w22
+spoži	r0m	spoži	m-d181-p161s1w23
+nospodrināti	vmnpdmpnpsnpn	nospodrināt	m-d181-p161s1w24
+burti	ncmpn1	burts	m-d181-p161s1w25
+<g />
+.	zs	.	m-d181-p161s1w26
+<g />
+</s>
+<s>
 5.3.3	xn	5.3.3	m-c20-p55s1w1
 Valdes	ncfsg5	valde	m-c20-p55s1w2
 sēdes	ncfpn5	sēde	m-c20-p55s1w3
@@ -6346,7 +6381,7 @@ bikses	ncfdn5	bikses	m-p8331-p4s2w10
 pārplīsa	vmnisi130an	pārplīst	m-p8331-p4s2w11
 pa	sppd	pa	m-p8331-p4s2w12
 vīlēm	ncfpd5	vīle	m-p8331-p4s2w13
-tieši	rpm	tieši	m-p8331-p4s2w14
+tieši	q	tieši	m-p8331-p4s2w14
 pa	spsd	pa	m-p8331-p4s2w15
 vidu	ncmsa3	vidus	m-p8331-p4s2w16
 dibenam	ncmsd1	dibens	m-p8331-p4s2w17
@@ -7212,129 +7247,69 @@ politiķi	ncmpa2	politiķis	m-p3388-p31s4w19
 .	zs	.	m-p3388-p31s4w20
 </s>
 <s>
-Latgales	npfsg5	Latgale	m-p12022-p3s1w1
-mākslas	ncfsg4	māksla	m-p12022-p3s1w2
-un	cc	un	m-p12022-p3s1w3
-amatniecības	ncfsg4	amatniecība	m-p12022-p3s1w4
-centrs	ncmsn1	centrs	m-p12022-p3s1w5
-jau	r0t	jau	m-p12022-p3s1w6
-sen	r0t	sen	m-p12022-p3s1w7
-vēlējās	voyisi330an	vēlēties	m-p12022-p3s1w8
-atjaunot	vmnn0t2000n	atjaunot	m-p12022-p3s1w9
-stikla	ncmsg1	stikls	m-p12022-p3s1w10
-izstrādājumu	ncmpg1	izstrādājums	m-p12022-p3s1w11
-ražošanas	ncfsg4	ražošana	m-p12022-p3s1w12
-tradīcijas	ncfpa4	tradīcija	m-p12022-p3s1w13
-pilsētā	ncfsl4	pilsēta	m-p12022-p3s1w14
+Kādu	pi0msan	kāds	m-d208-p196s1w1
+vakaru	ncmsa1	vakars	m-d208-p196s1w2
+pirms	spsg	pirms	m-d208-p196s1w3
+laišanās	ncfsgr	laišanās	m-d208-p196s1w4
+miegā	ncmsl1	miegs	m-d208-p196s1w5
+prātā	ncmsl1	prāts	m-d208-p196s1w6
+ienāca	vmnisi130an	ienākt	m-d208-p196s1w7
+Tartu	np0000	Tartu	m-d208-p196s1w8
+universitāte	ncfsn5	universitāte	m-d208-p196s1w9
 <g />
-,	zc	,	m-p12022-p3s1w15
-lai	cs	lai	m-p12022-p3s1w16
-varētu	vonc0i300an	varēt	m-p12022-p3s1w17
-nodot	vmnn0t1000n	nodot	m-p12022-p3s1w18
-stikla	ncmsg1	stikls	m-p12022-p3s1w19
-pūtēja	ncmsg1	pūtējs	m-p12022-p3s1w20
-amata	ncmsg1	amats	m-p12022-p3s1w21
-prasmes	ncfpa5	prasme	m-p12022-p3s1w22
-nākamajām	affpdyp	nākamā	m-p12022-p3s1w23
-paaudzēm	ncfpd5	paaudze	m-p12022-p3s1w24
-<g />
-.	zs	.	m-p12022-p3s1w25
+.	zs	.	m-d208-p196s1w10
 </s>
 <s>
-Ar	sppd	ar	m-p12022-p3s2w1
-Līvānu	npmdg1	Līvāni	m-p12022-p3s2w2
-novada	ncmsg1	novads	m-p12022-p3s2w3
-pašvaldības	ncfsg4	pašvaldība	m-p12022-p3s2w4
-un	cc	un	m-p12022-p3s2w5
-Valsts	ncfsg6	valsts	m-p12022-p3s2w6
-kultūrkapitāla	ncmsg1	kultūrkapitāls	m-p12022-p3s2w7
-fonda	ncmsg1	fonds	m-p12022-p3s2w8
-finansiālu	afmsanp	finansiāls	m-p12022-p3s2w9
-atbalstu	ncmsa1	atbalsts	m-p12022-p3s2w10
-Līvānos	npmdl1	Līvāni	m-p12022-p3s2w11
-izveidota	vmnpdfsnpsnpn	izveidot	m-p12022-p3s2w12
-pilnībā	ncfsl4	pilnība	m-p12022-p3s2w13
-aprīkota	vmnpdfsnpsnpn	aprīkot	m-p12022-p3s2w14
-stikla	ncmsg1	stikls	m-p12022-p3s2w15
-pūšanas	ncfsg4	pūšana	m-p12022-p3s2w16
-darbnīca	ncfsn4	darbnīca	m-p12022-p3s2w17
+Aizrakstīju	vmnist31san	aizrakstīt	m-d208-p196s2w1
+par	spsa	par	m-d208-p196s2w2
+šo	pd3msan	šis	m-d208-p196s2w3
+domu	ncfsa4	doma	m-d208-p196s2w4
+saviem	ps0mpdn	savs	m-d208-p196s2w5
+draugiem	ncmpd1	draugs	m-d208-p196s2w6
+uz	spsa	uz	m-d208-p196s2w7
+Tallinu	npfsa4	Tallina	m-d208-p196s2w8
 <g />
-,	zc	,	m-p12022-p3s2w18
-kurā	pr0fsln	kura	m-p12022-p3s2w19
-strādā	vmnipi230an	strādāt	m-p12022-p3s2w20
-Aleksandrs	npmsn1	Aleksandrs	m-p12022-p3s2w21
-Logvins	npmsn1	Logvins	m-p12022-p3s2w22
+,	zc	,	m-d208-p196s2w9
+viņi	pp3mpnn	viņš	m-d208-p196s2w10
+atbildēja	vmnist330an	atbildēt	m-d208-p196s2w11
 <g />
-.	zs	.	m-p12022-p3s2w23
+,	zc	,	m-d208-p196s2w12
+ka	cs	ka	m-d208-p196s2w13
+man	pp10sdn	es	m-d208-p196s2w14
+neesot	vmnrpii00ay	nebūt	m-d208-p196s2w15
+ne	q	ne	m-d208-p196s2w16
+mazāko	affpgyc	mazs	m-d208-p196s2w17
+cerību	ncfpg4	cerība	m-d208-p196s2w18
+tur	r0p	tur	m-d208-p196s2w19
+iekļūt	vmnn0i1000n	iekļūt	m-d208-p196s2w20
+—	zd	—	m-d208-p196s2w21
+konkurss	ncmsn1	konkurss	m-d208-p196s2w22
+pārāk	r0q	pārāk	m-d208-p196s2w23
+liels	afmsnnp	liels	m-d208-p196s2w24
+<g />
+,	zc	,	m-d208-p196s2w25
+bez	spsd	bez	m-d208-p196s2w26
+tam	pd3msdn	tas	m-d208-p196s2w27
+es	pp10snn	es	m-d208-p196s2w28
+nerunāju	vmnipi21say	nerunāt	m-d208-p196s2w29
+igauniski	r0m	igauniski	m-d208-p196s2w30
+<g />
+.	zs	.	m-d208-p196s2w31
 </s>
 <s>
-Latgales	npfsg5	Latgale	m-p12022-p3s3w1
-mākslas	ncfsg4	māksla	m-p12022-p3s3w2
-un	cc	un	m-p12022-p3s3w3
-amatniecības	ncfsg4	amatniecība	m-p12022-p3s3w4
-centra	ncmsg1	centrs	m-p12022-p3s3w5
-direktore	ncfsn5	direktore	m-p12022-p3s3w6
-Ilze	npfsn5	Ilze	m-p12022-p3s3w7
-Griezāne	npfsn5	Griezāne	m-p12022-p3s3w8
-stāsta	vmnipt330an	stāstīt	m-p12022-p3s3w9
+Noskumu	vmnisi11san	noskumt	m-d208-p196s3w1
 <g />
-:	zo	:	m-p12022-p3s3w10
-“	zq	“	m-p12022-p3s3w11
+,	zc	,	m-d208-p196s3w2
+bet	cc	bet	m-d208-p196s3w3
+nodomāju	vmnipt21san	nodomāt	m-d208-p196s3w4
 <g />
-Ir	vcnipii30an	būt	m-p12022-p3s3w12
-iegādātas	vmnpdfpnpsnpn	iegādāt	m-p12022-p3s3w13
-vairākas	pi0fpnn	vairākas	m-p12022-p3s3w14
-iekārtas	ncfpn4	iekārta	m-p12022-p3s3w15
-–	zd	–	m-p12022-p3s3w16
-stikla	ncmsg1	stikls	m-p12022-p3s3w17
-kausēšanas	ncfsg4	kausēšana	m-p12022-p3s3w18
-krāsns	ncfsn6	krāsns	m-p12022-p3s3w19
+,	zc	,	m-d208-p196s3w5
+ka	cs	ka	m-d208-p196s3w6
+tomēr	q	tomēr	m-d208-p196s3w7
+pamēģināšu	vmnift31san	pamēģināt	m-d208-p196s3w8
 <g />
-,	zc	,	m-p12022-p3s3w20
-kur	r0p	kur	m-p12022-p3s3w21
-stikls	ncmsn1	stikls	m-p12022-p3s3w22
-vārās	vmyipi330an	vārīties	m-p12022-p3s3w23
-1400	xn	1400	m-p12022-p3s3w24
-grādu	ncmpg1	grāds	m-p12022-p3s3w25
-temperatūrā	ncfsl4	temperatūra	m-p12022-p3s3w26
+.	zs	.	m-d208-p196s3w9
 <g />
-,	zc	,	m-p12022-p3s3w27
-krāsns	ncfsn6	krāsns	m-p12022-p3s3w28
-–	zd	–	m-p12022-p3s3w29
-tā	r0m	tā	m-p12022-p3s3w30
-saucamā	vmnpdfsnppypn	saukt	m-p12022-p3s3w31
-“	zq	“	m-p12022-p3s3w32
-<g />
-dzeguze	ncfsn5	dzeguze	m-p12022-p3s3w33
-<g />
-”	zq	”	m-p12022-p3s3w34
-<g />
-,	zc	,	m-p12022-p3s3w35
-kur	r0p	kur	m-p12022-p3s3w36
-tiek	vtnipi130an	tikt	m-p12022-p3s3w37
-karsēts	vmnpdmsnpsnpn	karsēt	m-p12022-p3s3w38
-stikls	ncmsn1	stikls	m-p12022-p3s3w39
-<g />
-,	zc	,	m-p12022-p3s3w40
-vēl	r0q	vēl	m-p12022-p3s3w41
-ir	vmnipii30an	būt	m-p12022-p3s3w42
-viena	mcsfsn	viena	m-p12022-p3s3w43
-stikla	ncmsg1	stikls	m-p12022-p3s3w44
-pūtēja	ncmsg1	pūtējs	m-p12022-p3s3w45
-pīpju	ncmpg2	pīpis	m-p12022-p3s3w46
-sildāmā	vmnpdfsnppypn	sildīt	m-p12022-p3s3w47
-iekārta	ncfsn4	iekārta	m-p12022-p3s3w48
-<g />
-,	zc	,	m-p12022-p3s3w49
-kā	cc	kā	m-p12022-p3s3w50
-arī	cc	arī	m-p12022-p3s3w51
-divas	mcsfpn	divas	m-p12022-p3s3w52
-atdzesēšanas	ncfsg4	atdzesēšana	m-p12022-p3s3w53
-krāsnis	ncfpn6	krāsns	m-p12022-p3s3w54
-<g />
-.	zs	.	m-p12022-p3s3w55
-<g />
-”	zq	”	m-p12022-p3s3w56
 </s>
 <s>
 Nopērku	vmnipt11san	nopirkt	m-d115-p12s1w1
@@ -7814,7 +7789,7 @@ depresijas	ncfsg4	depresija	m-p7282-p3s1w4
 un	cc	un	m-p7282-p3s1w5
 cenšas	voyipt130an	censties	m-p7282-p3s1w6
 pielāgoties	vmyn0i2000n	pielāgoties	m-p7282-p3s1w7
-šī	pd0msgn	šis	m-p7282-p3s1w8
+šī	pd3msgn	šis	m-p7282-p3s1w8
 mirkļa	ncmsg2	mirklis	m-p7282-p3s1w9
 dzīves	ncfsg5	dzīve	m-p7282-p3s1w10
 posmam	ncmsd1	posms	m-p7282-p3s1w11
@@ -8016,7 +7991,7 @@ bankas	ncfpn4	banka	m-p15381-p5s1w2
 iemaksā	vmnipt230an	iemaksāt	m-p15381-p5s1w3
 līdzekļus	ncmpa2	līdzeklis	m-p15381-p5s1w4
 ne	cc	ne	m-p15381-p5s1w5
-tikai	cc	tikai	m-p15381-p5s1w6
+tikai	q	tikai	m-p15381-p5s1w6
 NGF	yp	NGF	m-p15381-p5s1w7
 <g />
 ,	zc	,	m-p15381-p5s1w8
@@ -8034,6 +8009,45 @@ noregulējuma	ncmsg1	noregulējums	m-p15381-p5s1w18
 valde	ncfsn5	valde	m-p15381-p5s1w19
 <g />
 .	zs	.	m-p15381-p5s1w20
+</s>
+<s>
+-	zd	-	m-d193-p524s1w1
+Tu	pp20snn	tu	m-d193-p524s1w2
+-	zd	-	m-d193-p524s1w3
+man	pp10sdn	es	m-d193-p524s1w4
+<g />
+?	zs	?	m-d193-p524s1w5
+-	zd	-	m-d193-p524s2w1
+mākslotā	afmslnp	mākslots	m-d193-p524s2w2
+izbrīnā	ncmsl1	izbrīns	m-d193-p524s2w3
+viņš	pp3msnn	viņš	m-d193-p524s2w4
+atvaicā	vmnipt230an	atvaicāt	m-d193-p524s2w5
+<g />
+.	zs	.	m-d193-p524s2w6
+</s>
+<s>
+Jorge	npmsn5	Jorge	m-d193-p524s3w1
+apmulsis	vmnpdmsnasnpn	apmulst	m-d193-p524s3w2
+<g />
+.	zs	.	m-d193-p524s3w3
+</s>
+<s>
+-	zd	-	m-d193-p524s4w1
+Jorge	npmsn5	Jorge	m-d193-p524s4w2
+<g />
+,	zc	,	m-d193-p524s4w3
+man	pp10sdn	es	m-d193-p524s4w4
+kauns	ncmsn1	kauns	m-d193-p524s4w5
+<g />
+,	zc	,	m-d193-p524s4w6
+tu	pp20snn	tu	m-d193-p524s4w7
+nesapratīsi	vmnift12say	nesaprast	m-d193-p524s4w8
+<g />
+,	zc	,	m-d193-p524s4w9
+bet	cc	bet	m-d193-p524s4w10
+<g />
+..	zx	..	m-d193-p524s4w11
+<g />
 </s>
 <s>
 Lai	cs	lai	m-p11553-p2s1w1
@@ -8092,7 +8106,7 @@ pieredzi	ncfsa5	pieredze	m-p5521-p3s1w13
 Tāpat	q	tāpat	m-p5521-p3s2w1
 viņš	pp3msnn	viņš	m-p5521-p3s2w2
 reklamē	vmnipt230an	reklamēt	m-p5521-p3s2w3
-to	pd0fsan	tā	m-p5521-p3s2w4
+to	pd3fsan	tā	m-p5521-p3s2w4
 produkciju	ncfsa4	produkcija	m-p5521-p3s2w5
 <g />
 ,	zc	,	m-p5521-p3s2w6
@@ -8387,7 +8401,7 @@ datus	ncmda1	dati	m-z104-p15s2w18
 <s>
 4.	xo	4.	m-n189-p17s1w1
 Administrators	ncmsn1	administrators	m-n189-p17s1w2
-nekavējoties	vmypu0000000n	nekavēties	m-n189-p17s1w3
+nekavējoties	vmypu0000000y	nekavēties	m-n189-p17s1w3
 pēc	spsg	pēc	m-n189-p17s1w4
 maksājuma	ncmsg1	maksājums	m-n189-p17s1w5
 veikšanas	ncfsg4	veikšana	m-n189-p17s1w6
@@ -9300,6 +9314,21 @@ Sējējs	npmsn1	Sējējs	m-p17697-p5s4w10
 .	zs	.	m-p17697-p5s4w11
 </s>
 <s>
+-	zd	-	m-d193-p870s1w1
+Kur	r0p	kur	m-d193-p870s1w2
+tie	pd3mpnn	tas	m-d193-p870s1w3
+palikuši	vtnpdmpnasnpn	palikt	m-d193-p870s1w4
+<g />
+?	zs	?	m-d193-p870s1w5
+-	zd	-	m-d193-p870s2w1
+Pērs	npmsn1	Pērs	m-d193-p870s2w2
+nemierīgi	r0m	nemierīgi	m-d193-p870s2w3
+dīdās	vmyipi330an	dīdīties	m-d193-p870s2w4
+<g />
+.	zs	.	m-d193-p870s2w5
+<g />
+</s>
+<s>
 Piecpadsmit	mcs0p0	piecpadsmit	m-p7355-p4s1w1
 gadus	ncmpa1	gads	m-p7355-p4s1w2
 vecais	afmsnyp	vecs	m-p7355-p4s1w3
@@ -9588,7 +9617,7 @@ Turklāt	cs	turklāt	m-p652-p8s5w1
 bērni	ncmpn1	bērns	m-p652-p8s5w2
 padomāja	vmnisi230an	padomāt	m-p652-p8s5w3
 ne	cc	ne	m-p652-p8s5w4
-tikai	cc	tikai	m-p652-p8s5w5
+tikai	q	tikai	m-p652-p8s5w5
 par	spsa	par	m-p652-p8s5w6
 sevi	px000an	sevis	m-p652-p8s5w7
 <g />
@@ -9688,7 +9717,7 @@ raksti	ncmpn1	raksts	m-p14923-p6s1w15
 .	zs	.	m-p14923-p6s1w17
 </s>
 <s>
-Līgo	af00000	līgo	m-p14923-p6s2w1
+Līgo	i	līgo	m-p14923-p6s2w1
 nakts	ncfsg6	nakts	m-p14923-p6s2w2
 zaļumballē	ncfsl5	zaļumballe	m-p14923-p6s2w3
 ar	spsa	ar	m-p14923-p6s2w4
@@ -10013,7 +10042,7 @@ domas	ncfsg4	doma	m-p11612-p9s3w9
 <g />
 ,	zc	,	m-p11612-p9s3w10
 ka	cs	ka	m-p11612-p9s3w11
-gribas	voyipt330an	gribēties	m-p11612-p9s3w12
+gribas	vmyipt330an	gribēties	m-p11612-p9s3w12
 cukini	nc0000	cukini	m-p11612-p9s3w13
 <g />
 ,	zc	,	m-p11612-p9s3w14
@@ -10754,7 +10783,7 @@ iekārtas	ncfpn4	iekārta	m-p3753-p9s1w4
 <g />
 ,	zc	,	m-p3753-p9s1w5
 tas	pd3msnn	tas	m-p3753-p9s1w6
-ir	vcnipii30an	būt	m-p3753-p9s1w7
+ir	vmnipii30an	būt	m-p3753-p9s1w7
 <g />
 ,	zc	,	m-p3753-p9s1w8
 mājas	ncfsg4	māja	m-p3753-p9s1w9
@@ -11476,7 +11505,7 @@ iekārtām	ncfpd4	iekārta	m-p3753-p22s4w22
 <s>
 Jau	r0t	jau	m-p3753-p22s5w1
 šogad	r0t	šogad	m-p3753-p22s5w2
-ir	vcnipii30an	būt	m-p3753-p22s5w3
+ir	vmnipii30an	būt	m-p3753-p22s5w3
 jauna	affsnnp	jauns	m-p3753-p22s5w4
 "	zq	"	m-p3753-p22s5w5
 <g />
@@ -12354,7 +12383,7 @@ lielāku	afmsanc	liels	m-p3753-p35s1w8
 <s>
 Tāds	pd0msnn	tāds	m-p3753-p35s2w1
 ātrums	ncmsn1	ātrums	m-p3753-p35s2w2
-ir	vcnipii30an	būt	m-p3753-p35s2w3
+ir	vmnipii30an	būt	m-p3753-p35s2w3
 biznesa	ncmsg1	bizness	m-p3753-p35s2w4
 klientiem	ncmpd1	klients	m-p3753-p35s2w5
 <g />
@@ -12622,7 +12651,7 @@ ziņā	ncfsl4	ziņa	m-p3753-p39s3w23
 ,	zc	,	m-p3753-p39s3w24
 un	cc	un	m-p3753-p39s3w25
 ekspertiem	ncmpd1	eksperts	m-p3753-p39s3w26
-ir	vcnipii30an	būt	m-p3753-p39s3w27
+ir	vmnipii30an	būt	m-p3753-p39s3w27
 vienreizēja	arfsnnp	vienreizējs	m-p3753-p39s3w28
 iespēja	ncfsn4	iespēja	m-p3753-p39s3w29
 strādāt	vmnn0t2000n	strādāt	m-p3753-p39s3w30
@@ -13320,7 +13349,7 @@ marta	ncmsg1	marts	m-p3753-p49s1w16
 .	zs	.	m-p3753-p49s1w17
 </s>
 <s>
-Pirms	rrp	pirms	m-p3753-p49s2w1
+Pirms	spsd	pirms	m-p3753-p49s2w1
 tam	pd3msdn	tas	m-p3753-p49s2w2
 kopš	spsg	kopš	m-p3753-p49s2w3
 2009.	xo	2009.	m-p3753-p49s2w4
@@ -13351,7 +13380,7 @@ komercdirektors	ncmsn1	komercdirektors	m-p3753-p49s2w23
 .	zs	.	m-p3753-p49s2w24
 </s>
 <s>
-Pirms	rrp	pirms	m-p3753-p50s1w1
+Pirms	spsd	pirms	m-p3753-p50s1w1
 tam	pd3msdn	tas	m-p3753-p50s1w2
 strādājis	vmnpdmsnasnpn	strādāt	m-p3753-p50s1w3
 <g />
@@ -13690,7 +13719,7 @@ Vasarīgs	afmsnnp	vasarīgs	m-p6424-p3s2w1
 pozitīvisms	ncmsn1	pozitīvisms	m-p6424-p3s2w2
 un	cc	un	m-p6424-p3s2w3
 meitenīgi	rpm	meitenīgi	m-p6424-p3s2w4
-rozā	aff0000	rozā	m-p6424-p3s2w5
+rozā	affsnnp	rozā	m-p6424-p3s2w5
 krāsa	ncfsn4	krāsa	m-p6424-p3s2w6
 lieliski	rpm	lieliski	m-p6424-p3s2w7
 piestāv	vmnipt330an	piestāvēt	m-p6424-p3s2w8
@@ -13708,7 +13737,7 @@ maigāku	afmsanc	maigs	m-p6424-p3s2w17
 </s>
 <s>
 Tāpat	q	tāpat	m-p6424-p3s3w1
-rozā	af00000	rozā	m-p6424-p3s3w2
+rozā	afmsnnp	rozā	m-p6424-p3s3w2
 tonis	ncmsn2	tonis	m-p6424-p3s3w3
 piestāv	vmnipt330an	piestāvēt	m-p6424-p3s3w4
 arī	q	arī	m-p6424-p3s3w5
@@ -14332,7 +14361,7 @@ mazajiem	afmpdyp	mazs	m-p6582-p3s1w29
 ,	zc	,	m-p6582-p3s1w30
 kuri	pr0mpnn	kurš	m-p6582-p3s1w31
 par	spsa	par	m-p6582-p3s1w32
-to	pd0msan	tas	m-p6582-p3s1w33
+to	pd3msan	tas	m-p6582-p3s1w33
 priecāsies	vmyifi230an	priecāties	m-p6582-p3s1w34
 un	cc	un	m-p6582-p3s1w35
 novērtēs	vmnift230an	novērtēt	m-p6582-p3s1w36
@@ -14594,7 +14623,7 @@ Bizness	ncmsn1	bizness	m-p3750-p2s1w21
 </s>
 <s>
 No	sppd	no	m-p3750-p2s2w1
-aptuveni	rrp	aptuveni	m-p3750-p2s2w2
+aptuveni	r0p	aptuveni	m-p3750-p2s2w2
 300	xn	300	m-p3750-p2s2w3
 projektiem	ncmpd1	projekts	m-p3750-p2s2w4
 <g />
@@ -15045,7 +15074,7 @@ Vīrs	ncmsn1	vīrs	m-p654-p18s3w1
 atbalstīja	vmnisi330an	atbalstīt	m-p654-p18s3w2
 un	cc	un	m-p654-p18s3w3
 palīdzēja	vmnist330an	palīdzēt	m-p654-p18s3w4
-kā	q	kā	m-p654-p18s3w5
+kā	cs	kā	m-p654-p18s3w5
 skatuves	ncfsg5	skatuve	m-p654-p18s3w6
 strādnieks	ncmsn1	strādnieks	m-p654-p18s3w7
 <g />
@@ -15165,7 +15194,7 @@ mājasmāte	ncfsn5	mājasmāte	m-p654-p18s13w10
 .	zs	.	m-p654-p18s13w11
 </s>
 <s>
-Galvenais	afmsnyp	galvenais	m-p7950-p4s1w1
+Galvenais	armsnyp	galvenais	m-p7950-p4s1w1
 ASV	yp	ASV	m-p7950-p4s1w2
 politiķis	ncmsn2	politiķis	m-p7950-p4s1w3
 kopā	r0m	kopā	m-p7950-p4s1w4
@@ -15308,7 +15337,7 @@ izjūtu	ncfsa4	izjūta	m-p7950-p4s7w18
 .	zs	.	m-p7950-p4s7w19
 </s>
 <s>
-Galvenais	afmsnyp	galvenais	m-p7950-p4s8w1
+Galvenais	armsnyp	galvenais	m-p7950-p4s8w1
 <g />
 ,	zc	,	m-p7950-p4s8w2
 ka	cs	ka	m-p7950-p4s8w3
@@ -15871,6 +15900,35 @@ neatmaksā	vmnipt230ay	neatmaksāt	m-n224-p109s2w17
 .	zs	.	m-n224-p109s2w18
 </s>
 <s>
+—	zd	—	m-d180-p1578s1w1
+Aha	q	aha	m-d180-p1578s1w2
+<g />
+,	zc	,	m-d180-p1578s1w3
+—	zd	—	m-d180-p1578s1w4
+Melisa	npfsn4	Melisa	m-d180-p1578s1w5
+pašmauca	vmnisi130an	pašmaukt	m-d180-p1578s1w6
+viņai	pp3fsdn	viņa	m-d180-p1578s1w7
+garām	rrp	garām	m-d180-p1578s1w8
+<g />
+.	zs	.	m-d180-p1578s1w9
+</s>
+<s>
+—	zd	—	m-d180-p1578s2w1
+Ko	pq000an	kas	m-d180-p1578s2w2
+ēdīsim	vmnift11pan	ēst	m-d180-p1578s2w3
+brokastīs	ncfdl6	brokastis	m-d180-p1578s2w4
+<g />
+?	zs	?	m-d180-p1578s2w5
+</s>
+<s>
+Tev	pp20sdn	tu	m-d180-p1578s3w1
+maizīti	ncfsa5	maizīte	m-d180-p1578s3w2
+uzcept	vmnn0t1000n	uzcept	m-d180-p1578s3w3
+<g />
+?	zs	?	m-d180-p1578s3w4
+<g />
+</s>
+<s>
 Jau	r0t	jau	m-p5545-p1s1w1
 pirms	sppd	pirms	m-p5545-p1s1w2
 pāris	ncmsn2	pāris	m-p5545-p1s1w3
@@ -16078,7 +16136,7 @@ pavasara	ncmsg2	pavasaris	m-d60-p4s1w9
 urgas	ncfpn4	urga	m-d60-p4s1w10
 <g />
 ,	zc	,	m-d60-p4s1w11
-zin'	i	zin'	m-d60-p4s1w12
+zin'	i	zin	m-d60-p4s1w12
 <g />
 .	zs	.	m-d60-p4s1w13
 </s>
@@ -16244,7 +16302,7 @@ brīdī	ncmsl2	brīdis	m-d60-p5s3w3
 <g />
 ,	zc	,	m-d60-p5s3w4
 kad	r0t	kad	m-d60-p5s3w5
-ir	vcnipii30an	būt	m-d60-p5s3w6
+ir	vmnipii30an	būt	m-d60-p5s3w6
 laiks	ncmsn1	laiks	m-d60-p5s3w7
 apkārt	rrp	apkārt	m-d60-p5s3w8
 pavērties	vmyn0i1000n	pavērties	m-d60-p5s3w9
@@ -16547,7 +16605,7 @@ gaisa	ncmsg1	gaiss	m-d60-p10s4w13
 kuģis	ncmsn2	kuģis	m-d60-p10s4w14
 <g />
 ,	zc	,	m-d60-p10s4w15
-tipa	q	tipa	m-d60-p10s4w16
+tipa	cs	tipa	m-d60-p10s4w16
 lidojošais	vmnpdmsnapypn	lidot	m-d60-p10s4w17
 šķīvītis	ncmsn2	šķīvis	m-d60-p10s4w18
 <g />
@@ -16831,7 +16889,7 @@ būs	vmnifii30an	būt	m-d60-p18s4w4
 ziema	ncfsn4	ziema	m-d60-p18s4w5
 <g />
 ,	zc	,	m-d60-p18s4w6
-znač'	i	znač'	m-d60-p18s4w7
+znač'	i	znač	m-d60-p18s4w7
 <g />
 ,	zc	,	m-d60-p18s4w8
 malka	ncfsn4	malka	m-d60-p18s4w9
@@ -17024,7 +17082,7 @@ nemeklē	vmnipt230ay	nemeklēt	m-d60-p25s3w11
 ,	zc	,	m-d60-p25s3w12
 tas	pd3msnn	tas	m-d60-p25s3w13
 tīri	rpm	tīri	m-d60-p25s3w14
-kā	q	kā	m-d60-p25s3w15
+kā	cs	kā	m-d60-p25s3w15
 pa	spsd	pa	m-d60-p25s3w16
 jokam	ncmsd1	joks	m-d60-p25s3w17
 uzgrūžas	vmyipi130an	uzgrūsties	m-d60-p25s3w18
@@ -17836,7 +17894,7 @@ skatīsies	vmyift330an	skatīties	m-d60-p53s3w8
 </s>
 <s>
 Sunim	ncmsd2	suns	m-d60-p54s1w1
-ar'	q	ar'	m-d60-p54s1w2
+ar'	q	arī	m-d60-p54s1w2
 putra	ncfsn4	putra	m-d60-p54s1w3
 <g />
 .	zs	.	m-d60-p54s1w4
@@ -18916,7 +18974,7 @@ kaimiņiene	ncfsn5	kaimiņiene	m-d60-p105s6w6
 ,	zc	,	m-d60-p105s6w7
 večiem	ncmpd2	vecis	m-d60-p105s6w8
 jāpiš	vmnd0t100an	pist	m-d60-p105s6w9
-smadzenes	ncfpn5	smadzenes	m-d60-p105s6w10
+smadzenes	ncfdn5	smadzenes	m-d60-p105s6w10
 <g />
 ,	zc	,	m-d60-p105s6w11
 tad	r0t	tad	m-d60-p105s6w12
@@ -19614,7 +19672,7 @@ lasīja	vmnist330an	lasīt	m-d60-p115s8w41
 baravikas	ncfpa4	baravika	m-d60-p115s8w43
 uz	sppd	uz	m-d60-p115s8w44
 plīts	ncfsg6	plīts	m-d60-p115s8w45
-restēm	ncfpd5	restes	m-d60-p115s8w46
+restēm	ncfpd5	reste	m-d60-p115s8w46
 žāvēja	vmnist230an	žāvēt	m-d60-p115s8w47
 <g />
 ...	zs	...	m-d60-p115s8w48
@@ -20584,7 +20642,7 @@ apakšas	ncfsg4	apakša	m-d60-p137s3w27
 <g />
 ,	zc	,	m-d60-p137s3w28
 nekad	r0t	nekad	m-d60-p137s3w29
-tieši	rpm	tieši	m-d60-p137s3w30
+tieši	q	tieši	m-d60-p137s3w30
 acīs	ncfpl6	acs	m-d60-p137s3w31
 <g />
 .	zs	.	m-d60-p137s3w32
@@ -21151,7 +21209,7 @@ jēgu	ncfsa4	jēga	m-d60-p155s2w3
 Ha	i	ha	m-d60-p156s1w1
 <g />
 ,	zc	,	m-d60-p156s1w2
-kino	nc0000	kino	m-d60-p156s1w3
+kino	ncm000	kino	m-d60-p156s1w3
 laikam	q	laikam	m-d60-p156s1w4
 biju	vcnisii1san	būt	m-d60-p156s1w5
 pārskatījusies	vmypdfsnasnpn	pārskatīties	m-d60-p156s1w6
@@ -21525,7 +21583,7 @@ vēl	r0t	vēl	m-d60-p177s1w9
 niknāks	afmsnnc	nikns	m-d60-p177s1w10
 <g />
 ,	zc	,	m-d60-p177s1w11
-tieši	rpm	tieši	m-d60-p177s1w12
+tieši	q	tieši	m-d60-p177s1w12
 sejā	ncfsl4	seja	m-d60-p177s1w13
 <g />
 .	zs	.	m-d60-p177s1w14
@@ -21988,7 +22046,7 @@ dzīvi	ncfsa5	dzīve	m-d60-p195s6w10
 </s>
 <s>
 No	sppd	no	m-d60-p195s7w1
-durvju	ncfpg6	durvis	m-d60-p195s7w2
+durvju	ncfdg6	durvis	m-d60-p195s7w2
 rokturiem	ncmpd2	rokturis	m-d60-p195s7w3
 <g />
 ,	zc	,	m-d60-p195s7w4
@@ -21999,7 +22057,7 @@ pieliecās	vmyisi130an	pieliekties	m-d60-p195s7w8
 <g />
 ,	zc	,	m-d60-p195s7w9
 un	cc	un	m-d60-p195s7w10
-durvīm	ncfpd6	durvis	m-d60-p195s7w11
+durvīm	ncfdd6	durvis	m-d60-p195s7w11
 <g />
 ,	zc	,	m-d60-p195s7w12
 kas	pr000nn	kas	m-d60-p195s7w13
@@ -22568,7 +22626,7 @@ darbiniekus	ncmpa1	darbinieks	m-p9672-p10s2w13
 .	zs	.	m-p9672-p10s2w14
 </s>
 <s>
-Galvenā	affsnyp	galvenais	m-p9672-p10s3w1
+Galvenā	arfsnyp	galvenais	m-p9672-p10s3w1
 produkcija	ncfsn4	produkcija	m-p9672-p10s3w2
 -	zd	-	m-p9672-p10s3w3
 šokolādes	ncfsg5	šokolāde	m-p9672-p10s3w4
@@ -22806,7 +22864,7 @@ komandiera	ncmsg2	komandieris	m-p967-p4s2w4
 pienākumi	ncmpn1	pienākums	m-p967-p4s2w5
 uzticēti	vmnpdmpnpsnpn	uzticēt	m-p967-p4s2w6
 ne	cc	ne	m-p967-p4s2w7
-tikai	cc	tikai	m-p967-p4s2w8
+tikai	q	tikai	m-p967-p4s2w8
 puišiem	ncmpd2	puisis	m-p967-p4s2w9
 <g />
 ,	zc	,	m-p967-p4s2w10
@@ -24060,7 +24118,7 @@ noregulētai	vmnpdfsdpsnpn	noregulēt	m-n410-p80s2w25
 <g />
 ,	zc	,	m-n410-p80s2w26
 uz	spsa	uz	m-n410-p80s2w27
-neregulēto	vmnpdfsapsypn	neregulēt	m-n410-p80s2w28
+neregulēto	vmnpdfsapsypy	neregulēt	m-n410-p80s2w28
 situāciju	ncfsa4	situācija	m-n410-p80s2w29
 attiecināmas	vmnpdfpnppnpn	attiecināt	m-n410-p80s2w30
 līdzīgo	affpgyp	līdzīgs	m-n410-p80s2w31
@@ -24784,7 +24842,7 @@ priekšlikumu	ncmpg1	priekšlikums	m-s146-p20s2w5
 </s>
 <s>
 Nemaz	r0q	nemaz	m-s146-p20s3w1
-neiedziļinoties	vmypu0000000n	neiedziļināties	m-s146-p20s3w2
+neiedziļinoties	vmypu0000000y	neiedziļināties	m-s146-p20s3w2
 saturā	ncmsl1	saturs	m-s146-p20s3w3
 <g />
 ,	zc	,	m-s146-p20s3w4
@@ -24836,7 +24894,7 @@ būtības	ncfsg4	būtība	m-s146-p20s3w41
 <s>
 Aizeju	vmnipii1san	aiziet	m-d115-p34s1w1
 uz	spsa	uz	m-d115-p34s1w2
-kino	nc0000	kino	m-d115-p34s1w3
+kino	ncm000	kino	m-d115-p34s1w3
 kaut	q	kaut	m-d115-p34s1w4
 kur	r0p	kur	m-d115-p34s1w5
 nomalē	ncfsl5	nomale	m-d115-p34s1w6
@@ -24884,7 +24942,7 @@ vīrieši	ncmpn2	vīrietis	m-d115-p34s5w7
 <s>
 Pēc	spsg	pēc	m-d115-p34s6w1
 brīža	ncmsg2	brīdis	m-d115-p34s6w2
-neapmierināti	vmnpdmpnpsnpn	neapmierināt	m-d115-p34s6w3
+neapmierināti	vmnpdmpnpsnpy	neapmierināt	m-d115-p34s6w3
 aiziet	vmnn0ii000n	aiziet	m-d115-p34s6w4
 <g />
 .	zs	.	m-d115-p34s6w5
@@ -26399,7 +26457,7 @@ fotogrāfa	ncmsg1	fotogrāfs	m-d195-p6s1w2
 sapnis	ncmsn2	sapnis	m-d195-p6s1w3
 ir	vcnipii30an	būt	m-d195-p6s1w4
 noknipsēt	vmnn0t2000n	noknipsēt	m-d195-p6s1w5
-tieši	rpm	tieši	m-d195-p6s1w6
+tieši	q	tieši	m-d195-p6s1w6
 tajā	pd3fsln	tā	m-d195-p6s1w7
 sekundes	ncfsg5	sekunde	m-d195-p6s1w8
 simtdaļā	ncfsl4	simtdaļa	m-d195-p6s1w9
@@ -26954,7 +27012,11 @@ metodes	ncfpa5	metode	m-p3759-p9s1w30
 </s>
 <s>
 Blakus	r0p	blakus	m-p3759-p9s2w1
-lāzeriem-mērierīcēm	ncmpd0	lāzeriem-mērierīcēm	m-p3759-p9s2w2
+lāzeriem	ncmpd1	lāzers	m-p3759-p9s2w2
+<g />
+-	zd	-	m-p3759-p9s2w2a
+<g />
+mērierīcēm	ncmpd5	mērierīce	m-p3759-p9s2w2b
 ir	vcnipii30an	būt	m-p3759-p9s2w3
 vajadzīga	affsnnp	vajadzīgs	m-p3759-p9s2w4
 attēla	ncmsg1	attēls	m-p3759-p9s2w5
@@ -28461,6 +28523,34 @@ kopā	r0m	kopā	m-p12163-p8s2w16
 ”	zq	”	m-p12163-p8s2w18
 </s>
 <s>
+«	zq	«	m-p6397-p1s1w1
+<g />
+Oskarotā	arfsnyp	oskarots	m-p6397-p1s1w2
+<g />
+»	zq	»	m-p6397-p1s1w3
+austrāliešu	ncmpg2	austrālietis	m-p6397-p1s1w4
+aktrise	ncfsn5	aktrise	m-p6397-p1s1w5
+Nikola	npfsn4	Nikola	m-p6397-p1s1w6
+Kidmena	npfsn4	Kidmena	m-p6397-p1s1w7
+nopēlusi	vmnpdfsnasnpn	nopelt	m-p6397-p1s1w8
+Holivudas	npfsg4	Holivuda	m-p6397-p1s1w9
+filmu	ncfpg4	filma	m-p6397-p1s1w10
+industriju	ncfsa4	industrija	m-p6397-p1s1w11
+<g />
+,	zc	,	m-p6397-p1s1w12
+kurā	pr0msln	kurš	m-p6397-p1s1w13
+sievietēm	ncfpd5	sieviete	m-p6397-p1s1w14
+neesot	vmnrpii00ay	nebūt	m-p6397-p1s1w15
+tikpat	r0q	tikpat	m-p6397-p1s1w16
+plašu	affpgnp	plašs	m-p6397-p1s1w17
+iespēju	ncfpg4	iespēja	m-p6397-p1s1w18
+kā	cs	kā	m-p6397-p1s1w19
+vīriešiem	ncmpd2	vīrietis	m-p6397-p1s1w20
+<g />
+.	zs	.	m-p6397-p1s1w21
+<g />
+</s>
+<s>
 Vidzemes	npfsg5	Vidzeme	m-p11507-p1s1w1
 zvejnieku	ncmpg1	zvejnieks	m-p11507-p1s1w2
 biedrība	ncfsn4	biedrība	m-p11507-p1s1w3
@@ -29078,7 +29168,7 @@ ka	cs	ka	m-z96-p55s4w5
 ,	zc	,	m-z96-p55s4w6
 ja	cs	ja	m-z96-p55s4w7
 viņa	pp3fsnn	viņa	m-z96-p55s4w8
-neticētu	vmnc0i300an	neticēt	m-z96-p55s4w9
+neticētu	vmnc0i300ay	neticēt	m-z96-p55s4w9
 <g />
 ,	zc	,	m-z96-p55s4w10
 tad	r0t	tad	m-z96-p55s4w11
@@ -30075,7 +30165,7 @@ otrā	mosmsg	otrais	m-p15380-p7s1w2
 puslaika	ncmsg1	puslaiks	m-p15380-p7s1w3
 Krievijas	npfsg4	Krievija	m-p15380-p7s1w4
 izlases	ncfsg5	izlase	m-p15380-p7s1w5
-galvenais	afmsnyp	galvenais	m-p15380-p7s1w6
+galvenais	armsnyp	galvenais	m-p15380-p7s1w6
 treneris	ncmsn2	treneris	m-p15380-p7s1w7
 Leonīds	npmsn1	Leonīds	m-p15380-p7s1w8
 Sluckis	npmsn2	Sluckis	m-p15380-p7s1w9
@@ -30195,7 +30285,7 @@ pasniedzēju	ncmsa1	pasniedzējs	m-d115-p46s2w9
 kas	pr000nn	kas	m-d115-p46s2w11
 atgādina	vmnipt330an	atgādināt	m-d115-p46s2w12
 vai	cc	vai	m-d115-p46s2w13
-nu	cc	nu	m-d115-p46s2w14
+nu	q	nu	m-d115-p46s2w14
 mākslinieku	ncmsa1	mākslinieks	m-d115-p46s2w15
 vai	cc	vai	m-d115-p46s2w16
 pareizticīgo	armsayp	pareizticīgs	m-d115-p46s2w17
@@ -30316,7 +30406,7 @@ uz	sppd	uz	m-p1203-p1s1w5
 ,	zc	,	m-p1203-p1s1w7
 kur	r0p	kur	m-p1203-p1s1w8
 ne	cc	ne	m-p1203-p1s1w9
-tikai	cc	tikai	m-p1203-p1s1w10
+tikai	q	tikai	m-p1203-p1s1w10
 apskata	vmnipt330an	apskatīt	m-p1203-p1s1w11
 skaistākās	affpayc	skaists	m-p1203-p1s1w12
 vietas	ncfpa4	vieta	m-p1203-p1s1w13
@@ -30361,7 +30451,7 @@ centriem	ncmpd1	centrs	m-p1203-p1s2w17
 kur	r0p	kur	m-p1203-p1s2w19
 var	vonipi330an	varēt	m-p1203-p1s2w20
 ne	cc	ne	m-p1203-p1s2w21
-tikai	cc	tikai	m-p1203-p1s2w22
+tikai	q	tikai	m-p1203-p1s2w22
 spēlēt	vmnn0t2000n	spēlēt	m-p1203-p1s2w23
 spēles	ncfpa5	spēle	m-p1203-p1s2w24
 <g />
@@ -30381,7 +30471,7 @@ arī	cc	arī	m-p1203-p1s2w36
 saņemt	vmnn0t1000n	saņemt	m-p1203-p1s2w37
 biļetes	ncfpa5	biļete	m-p1203-p1s2w38
 uz	spsa	uz	m-p1203-p1s2w39
-kino	nc0000	kino	m-p1203-p1s2w40
+kino	ncm000	kino	m-p1203-p1s2w40
 vai	cc	vai	m-p1203-p1s2w41
 palūgt	vmnn0t1000n	palūgt	m-p1203-p1s2w42
 naudu	ncfsa4	nauda	m-p1203-p1s2w43
@@ -30666,7 +30756,7 @@ uz	spsa	uz	m-p15338-p4s3w2
 šķūni	ncmsa2	šķūnis	m-p15338-p4s3w3
 <g />
 ,	zc	,	m-p15338-p4s3w4
-šis	pd0msnn	šis	m-p15338-p4s3w5
+šis	pd3msnn	šis	m-p15338-p4s3w5
 apsūdzētais	vmnpdmsnpsypn	apsūdzēt	m-p15338-p4s3w6
 veica	vmnist130an	veikt	m-p15338-p4s3w7
 darbības	ncfpa4	darbība	m-p15338-p4s3w8
@@ -30719,8 +30809,8 @@ ieskata	ncmsg1	ieskats	m-n410-p20s1w4
 personas	ncfsg4	persona	m-n410-p20s1w6
 tiesības	ncfdn4	tiesības	m-n410-p20s1w7
 apbūvēt	vmnn0t2000n	apbūvēt	m-n410-p20s1w8
-tai	pd0fsdn	tā	m-n410-p20s1w9
-piederošu	vmnpdmpgapnpn	piederēt	m-n410-p20s1w10
+tai	pd3fsdn	tā	m-n410-p20s1w9
+piederošu	vmnpdmsaapnpn	piederēt	m-n410-p20s1w10
 zemes	ncfsg5	zeme	m-n410-p20s1w11
 gabalu	ncmsa1	gabals	m-n410-p20s1w12
 vai	cc	vai	m-n410-p20s1w13
@@ -30756,7 +30846,7 @@ tiktāl	r0m	tiktāl	m-n410-p20s1w39
 ,	zc	,	m-n410-p20s1w40
 ka	cs	ka	m-n410-p20s1w41
 no	spsg	no	m-n410-p20s1w42
-tā	pd0msgn	tas	m-n410-p20s1w43
+tā	pd3msgn	tas	m-n410-p20s1w43
 saglabājušies	vmypdmpnasnpn	saglabāties	m-n410-p20s1w44
 tikai	q	tikai	m-n410-p20s1w45
 pamati	ncmpn1	pamats	m-n410-p20s1w46
@@ -31683,7 +31773,7 @@ priekšnojauta	ncfsn4	priekšnojauta	m-p7239-p3s1w17
 ,	zc	,	m-p7239-p3s1w18
 ka	cs	ka	m-p7239-p3s1w19
 atgadīsies	vmyifi330an	atgadīties	m-p7239-p3s1w20
-kaut	cs	kaut	m-p7239-p3s1w21
+kaut	q	kaut	m-p7239-p3s1w21
 kas	pi000nn	kas	m-p7239-p3s1w22
 slikts	afmsnnp	slikts	m-p7239-p3s1w23
 <g />
@@ -32041,7 +32131,7 @@ laikā	ncmsl1	laiks	m-p11647-p12s2w3
 <g />
 ,	zc	,	m-p11647-p12s2w4
 kopš	cs	kopš	m-p11647-p12s2w5
-šī	pd0fsnn	šī	m-p11647-p12s2w6
+šī	pd3fsnn	šī	m-p11647-p12s2w6
 skatuve	ncfsn5	skatuve	m-p11647-p12s2w7
 tika	vtnisi130an	tikt	m-p11647-p12s2w8
 nodota	vmnpdfsnpsnpn	nodot	m-p11647-p12s2w9
@@ -33179,7 +33269,7 @@ nebūs	vmnifii30ay	nebūt	m-p3323-p8s3w20
 <s>
 Viņš	pp3msnn	viņš	m-p3323-p8s4w1
 vai	cc	vai	m-p3323-p8s4w2
-nu	cc	nu	m-p3323-p8s4w3
+nu	q	nu	m-p3323-p8s4w3
 atnāca	vmnisi130an	atnākt	m-p3323-p8s4w4
 <g />
 ,	zc	,	m-p3323-p8s4w5
@@ -33370,7 +33460,7 @@ parādīt	vmnn0t3000n	parādīt	m-p11589-p4s2w7
 ,	zc	,	m-p11589-p4s2w8
 ko	pr000an	kas	m-p11589-p4s2w9
 kurš	pr0msnn	kurš	m-p11589-p4s2w10
-māk	vonipt330an	mācēt	m-p11589-p4s2w11
+māk	vmnipt330an	mācēt	m-p11589-p4s2w11
 <g />
 .	zs	.	m-p11589-p4s2w12
 </s>
@@ -34308,7 +34398,7 @@ ka	cs	ka	m-p135-p12s2w14
 ,	zc	,	m-p135-p12s2w15
 lai	cs	lai	m-p135-p12s2w16
 darbiniece	ncfsn5	darbiniece	m-p135-p12s2w17
-varētu	vonipi330an	varēt	m-p135-p12s2w18
+varētu	vonc0i300an	varēt	m-p135-p12s2w18
 baudīt	vmnn0t3000n	baudīt	m-p135-p12s2w19
 aizsardzību	ncfsa4	aizsardzība	m-p135-p12s2w20
 pret	spsa	pret	m-p135-p12s2w21
@@ -35340,7 +35430,7 @@ konkursu	ncmsa1	konkurss	m-p214-p3s1w27
 <s>
 Vēl	r0t	vēl	m-p214-p3s2w1
 pienapuika	ncmsn4	pienapuika	m-p214-p3s2w2
-būdams	vcnpdmsnapnpn	būt	m-p214-p3s2w3
+būdams	vcnpdmsn0000n	būt	m-p214-p3s2w3
 <g />
 ,	zc	,	m-p214-p3s2w4
 viņš	pp3msnn	viņš	m-p214-p3s2w5
@@ -35690,7 +35780,7 @@ Anglijas	npfsg4	Anglija	m-p7407-p1s1w3
 miesassargi	ncmpn1	miesassargs	m-p7407-p1s1w4
 strādā	vmnipi230an	strādāt	m-p7407-p1s1w5
 karaļnama	ncmsg1	karaļnams	m-p7407-p1s1w6
-labā	affsnyp	labs	m-p7407-p1s1w7
+labā	r0m	labā	m-p7407-p1s1w7
 un	cc	un	m-p7407-p1s1w8
 pasargā	vmnipt230an	pasargāt	m-p7407-p1s1w9
 prominences	ncfpa5	prominence	m-p7407-p1s1w10
@@ -35845,7 +35935,7 @@ komplekss	ncmsn1	komplekss	m-z104-p114s1w19
 .	zs	.	m-z104-p114s1w20
 </s>
 <s>
-Šis	pd0msnn	šis	m-z104-p114s2w1
+Šis	pd3msnn	šis	m-z104-p114s2w1
 būvniecības	ncfsg4	būvniecība	m-z104-p114s2w2
 posms	ncmsn1	posms	m-z104-p114s2w3
 būtiski	rpq	būtiski	m-z104-p114s2w4
@@ -35962,7 +36052,7 @@ nesalīdzināmi	r0q	nesalīdzināmi	m-z104-p114s6w3
 kvalitatīvākas	affpnnc	kvalitatīvs	m-z104-p114s6w4
 par	sppd	par	m-z104-p114s6w5
 citām	pi0fpdn	cita	m-z104-p114s6w6
-šajā	pd0fsln	šī	m-z104-p114s6w7
+šajā	pd3fsln	šī	m-z104-p114s6w7
 būvniecības	ncfsg4	būvniecība	m-z104-p114s6w8
 posmā	ncmsl1	posms	m-z104-p114s6w9
 izmantotām	vmnpdfpdpsnpn	izmantot	m-z104-p114s6w10
@@ -36027,7 +36117,7 @@ autobusam	ncmsd1	autobuss	m-s73-p1s2w21
 </s>
 <s>
 Diemžēl	q	diemžēl	m-s73-p1s3w1
-šie	pd0mpnn	šis	m-s73-p1s3w2
+šie	pd3mpnn	šis	m-s73-p1s3w2
 notikumi	ncmpn1	notikums	m-s73-p1s3w3
 vēlreiz	r0t	vēlreiz	m-s73-p1s3w4
 atgādina	vmnipt330an	atgādināt	m-s73-p1s3w5
@@ -36052,7 +36142,7 @@ darbs	ncmsn1	darbs	m-s73-p1s3w21
 ,	zc	,	m-s73-p1s3w22
 lai	cs	lai	m-s73-p1s3w23
 sekmētu	vmnc0t200an	sekmēt	m-s73-p1s3w24
-šī	pd0msgn	šis	m-s73-p1s3w25
+šī	pd3msgn	šis	m-s73-p1s3w25
 reģiona	ncmsg1	reģions	m-s73-p1s3w26
 drošību	ncfsa4	drošība	m-s73-p1s3w27
 <g />
