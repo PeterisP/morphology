@@ -35,7 +35,16 @@ import org.w3c.dom.NodeList;
 //TODO - būtu vienkārši jāinherito HashMap<String, String>
 public class AttributeValues implements FeatureStructure, Cloneable {
 	protected HashMap<String, String> attributes = new HashMap<String, String>();
-	
+
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		for (Entry<String,String> īpašība : attributes.entrySet()) {
+			sb.append(String.format("%s = %s; ", īpašība.getKey(),īpašība.getValue()));
+		}
+		return sb.toString();
+	}
+
 	public void describe() {
 		PrintWriter izeja;
 		try {

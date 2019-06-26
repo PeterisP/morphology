@@ -86,6 +86,27 @@ public class Ending extends AttributeValues {
 	}
 
 	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder("-");
+		sb.append(ending);
+		sb.append(" #");
+		sb.append(id);
+		sb.append("; ");
+		if (mija != 0) {
+			sb.append("Mija #");
+			sb.append(mija);
+			sb.append("; ");
+		}
+		if (paradigm != null) {
+			sb.append("Paradigm #");
+			sb.append(paradigm.getID());
+			sb.append("; ");
+		}
+		return sb.toString();
+	}
+
+
+	@Override
 	public void toXML (Writer pipe) throws IOException {
 		pipe.write("<Ending");
 		pipe.write(" ID=\""+String.valueOf(id)+"\"");

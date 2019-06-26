@@ -49,6 +49,21 @@ public class Lexeme extends AttributeValues {
 	}
 
 	@Override
+    public String toString() {
+	    StringBuilder sb = new StringBuilder();
+        for (int i=0;i<stems.size();i++) {
+            sb.append(stems.get(i));
+            sb.append("; ");
+        }
+        if (paradigm != null) {
+            sb.append("Paradigm #");
+            sb.append(paradigm.getID());
+            sb.append("; ");
+        }
+        return sb.toString();
+    }
+
+	@Override
 	public void toXML (Writer pipe) throws IOException {
 		pipe.write("<Lexeme");
 		pipe.write(" ID=\""+String.valueOf(id)+"\"");
