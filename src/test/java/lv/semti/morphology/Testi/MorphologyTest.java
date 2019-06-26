@@ -644,7 +644,6 @@ public class MorphologyTest {
         // Ticket #245: nelokāmie lietvārdi vienmēr ir nominatīvā.
         Word video = locītājs.analyze("video");
         assertTrue(video.isRecognized());
-        video.describe(System.out);
         assertEquals(1, video.wordformsCount());
     }
 
@@ -3102,14 +3101,12 @@ public class MorphologyTest {
         ArrayList<Wordform> formas = locītājs.generateInflectionsFromParadigm("jaust", 15, "jaus", "jauš", "jaut");
         for (Wordform wf : formas) {
             if (wf.getToken().equalsIgnoreCase("jauš")) {
-                wf.describe();
                 assertNotEquals("2", wf.getValue(AttributeNames.i_Person));
             }
         }
         formas = locītājs.generateInflectionsFromParadigm("jaust", 15, "jaus", "jauž", "jaud");
         for (Wordform wf : formas) {
             if (wf.getToken().equalsIgnoreCase("jauš")) {
-                wf.describe();
                 assertNotEquals("2", wf.getValue(AttributeNames.i_Person));
             }
         }
@@ -3417,6 +3414,7 @@ public class MorphologyTest {
     }
 
     @Test
+    @Ignore("Initials (uppercase) conflict with valid abbreviations (lowercase) from Tēzaurs.lv data")
     public void initials() {
         Word w = locītājs.analyze("J.");
         assertEquals("J.", w.getBestWordform().getValue(AttributeNames.i_Lemma));
@@ -3458,10 +3456,12 @@ public class MorphologyTest {
         assertEquals("otrais", w.getBestWordform().getValue(AttributeNames.i_Lemma));
     }
 
-    // Ticket #40 'šitais' and 'šitas' don not get inflected
+    // Ticket #40 'šitais' and 'šitas' do not get inflected
     @Test public void šitais() {
         ArrayList<Wordform> formas = locītājs.generateInflections("šitais");
         AttributeValues testset = new AttributeValues();
+        testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Dative);
+        testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
         assertInflection(formas, testset, "šitajam");
 
         formas = locītājs.generateInflections("šitas");
