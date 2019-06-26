@@ -1711,7 +1711,7 @@
     <Lexeme Stem1="visu">
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Akuzatīvs" Vietniekvārda_tips="Noteiktie" Pamatforma="viss"/>
     </Lexeme>
-    <Lexeme Stem1="visu">
+    <Lexeme Stem1="visa">
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Ģenitīvs" Vietniekvārda_tips="Noteiktie" Pamatforma="viss"/>
     </Lexeme>
     <Lexeme Stem1="visiem">
@@ -2251,6 +2251,140 @@
     <Lexeme Stem1="viņā">
       <Attributes Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="viņa"/>
     </Lexeme>
+    <!-- Šitais u.c. -->
+    <Lexeme Stem1="šitais">
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Vīriešu" Persona="3" Locījums="Nominatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitais"/>
+    </Lexeme>    
+    <Lexeme Stem1="šitā">
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Vīriešu" Persona="3" Locījums="Ģenitīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitais"/>
+    </Lexeme>    
+    <Lexeme Stem1="šitajam">
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Vīriešu" Persona="3" Locījums="Datīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitais"/>
+    </Lexeme>    
+    <Lexeme Stem1="šito">
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Vīriešu" Persona="3" Locījums="Akuzatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitais"/>
+    </Lexeme>    
+    <Lexeme Stem1="šitai">
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Vīriešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitais"/>
+    </Lexeme>    
+    <Lexeme Stem1="šitanī">
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Vīriešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitais"/>
+    </Lexeme>    
+    <Lexeme Stem1="šitajā">
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Vīriešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitais"/>
+    </Lexeme>    
+    <Lexeme Stem1="šitie">
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Vīriešu" Persona="3" Locījums="Nominatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitais"/>
+    </Lexeme>    
+    <Lexeme Stem1="šito">
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Vīriešu" Persona="3" Locījums="Ģenitīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitais"/>
+    </Lexeme>    
+    <Lexeme Stem1="šitajiem">
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Vīriešu" Persona="3" Locījums="Datīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitais"/>
+    </Lexeme>    
+    <Lexeme Stem1="šitos">
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Vīriešu" Persona="3" Locījums="Akuzatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitais"/>
+    </Lexeme>    
+    <Lexeme Stem1="šitais">
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Vīriešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitais"/>
+    </Lexeme>  
+    <Lexeme Stem1="šitanīs">
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Vīriešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitais"/>
+    </Lexeme>  
+    <Lexeme Stem1="šitajos">
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Vīriešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitais"/>
+    </Lexeme>  
+    <Lexeme Stem1="šitas">
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Locīšanas_īpatnības="Paralēlās formas" Lietojums="Sarunvaloda" Dzimte="Vīriešu" Persona="3" Locījums="Nominatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitas"/>
+    </Lexeme>    
+    <Lexeme Stem1="šitā">
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Locīšanas_īpatnības="Paralēlās formas" Lietojums="Sarunvaloda" Dzimte="Vīriešu" Persona="3" Locījums="Ģenitīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitas"/>
+    </Lexeme>    
+    <Lexeme Stem1="šitam">
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Locīšanas_īpatnības="Paralēlās formas" Lietojums="Sarunvaloda" Dzimte="Vīriešu" Persona="3" Locījums="Datīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitas"/>
+    </Lexeme>    
+    <Lexeme Stem1="šito">
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Locīšanas_īpatnības="Paralēlās formas" Lietojums="Sarunvaloda" Dzimte="Vīriešu" Persona="3" Locījums="Akuzatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitas"/>
+    </Lexeme>    
+    <Lexeme Stem1="šitai">
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Locīšanas_īpatnības="Paralēlās formas" Lietojums="Sarunvaloda" Dzimte="Vīriešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitas"/>
+    </Lexeme>    
+    <Lexeme Stem1="šitanī">
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Locīšanas_īpatnības="Paralēlās formas" Lietojums="Sarunvaloda" Dzimte="Vīriešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitas"/>
+    </Lexeme>    
+    <Lexeme Stem1="šitajā">
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Locīšanas_īpatnības="Paralēlās formas" Lietojums="Sarunvaloda" Dzimte="Vīriešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitas"/>
+    </Lexeme>    
+    <Lexeme Stem1="šitie">
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Locīšanas_īpatnības="Paralēlās formas" Lietojums="Sarunvaloda" Dzimte="Vīriešu" Persona="3" Locījums="Nominatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitas"/>
+    </Lexeme>    
+    <Lexeme Stem1="šito">
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Locīšanas_īpatnības="Paralēlās formas" Lietojums="Sarunvaloda" Dzimte="Vīriešu" Persona="3" Locījums="Ģenitīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitas"/>
+    </Lexeme>    
+    <Lexeme Stem1="šitiem">
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Locīšanas_īpatnības="Paralēlās formas" Lietojums="Sarunvaloda" Dzimte="Vīriešu" Persona="3" Locījums="Datīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitas"/>
+    </Lexeme>    
+    <Lexeme Stem1="šitos">
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Locīšanas_īpatnības="Paralēlās formas" Lietojums="Sarunvaloda" Dzimte="Vīriešu" Persona="3" Locījums="Akuzatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitas"/>
+    </Lexeme>    
+    <Lexeme Stem1="šitais">
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Locīšanas_īpatnības="Paralēlās formas" Lietojums="Sarunvaloda" Dzimte="Vīriešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitas"/>
+    </Lexeme>  
+    <Lexeme Stem1="šitos">
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Locīšanas_īpatnības="Paralēlās formas" Lietojums="Sarunvaloda" Dzimte="Vīriešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitas"/>
+    </Lexeme>  
+    <Lexeme Stem1="šitanīs">
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Locīšanas_īpatnības="Paralēlās formas" Lietojums="Sarunvaloda" Dzimte="Vīriešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitas"/>
+    </Lexeme>  
+    <Lexeme Stem1="šitajos">
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Locīšanas_īpatnības="Paralēlās formas" Lietojums="Sarunvaloda" Dzimte="Vīriešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitas"/>
+    </Lexeme>
+    <Lexeme Stem1="šitā">
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Sieviešu" Persona="3" Locījums="Nominatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitā"/>
+    </Lexeme>    
+    <Lexeme Stem1="šitās">
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Sieviešu" Persona="3" Locījums="Ģenitīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitā"/>
+    </Lexeme>    
+    <Lexeme Stem1="šitajai">
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Sieviešu" Persona="3" Locījums="Datīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitā"/>
+    </Lexeme>    
+    <Lexeme Stem1="šito">
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Sieviešu" Persona="3" Locījums="Akuzatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitā"/>
+    </Lexeme>    
+    <Lexeme Stem1="šitai">
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Sieviešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitā"/>
+    </Lexeme>    
+    <Lexeme Stem1="šitanī">
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Sieviešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitā"/>
+    </Lexeme>    
+    <Lexeme Stem1="šitajā">
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Sieviešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitā"/>
+    </Lexeme>    
+    <Lexeme Stem1="šitās">
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Sieviešu" Persona="3" Locījums="Nominatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitā"/>
+    </Lexeme>    
+    <Lexeme Stem1="šito">
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Sieviešu" Persona="3" Locījums="Ģenitīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitā"/>
+    </Lexeme>    
+    <Lexeme Stem1="šitām">
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Sieviešu" Persona="3" Locījums="Datīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitā"/>
+    </Lexeme>    
+    <Lexeme Stem1="šitajām">
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Sieviešu" Persona="3" Locījums="Datīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitā"/>
+    </Lexeme>    
+    <Lexeme Stem1="šitās">
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Sieviešu" Persona="3" Locījums="Akuzatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitā"/>
+    </Lexeme>    
+    <Lexeme Stem1="šitais">
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Sieviešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitā"/>
+    </Lexeme>  
+    <Lexeme Stem1="šitanīs">
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Sieviešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitā"/>
+    </Lexeme>  
+    <Lexeme Stem1="šitajās">
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Sieviešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitā"/>
+    </Lexeme>  
+
   </Paradigm>
   <Paradigm Stems="1" ID="26" LemmaEnding="1196" Description="Prievārdi">
     <Attributes Vārdšķira="Prievārds"/>
