@@ -121,6 +121,9 @@
     <Lexeme Stem1="tap" Stem2="top" Stem3="tap">
       <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbi 'tikt' un 'tapt'" Pamatforma="tapt"/>
     </Lexeme>
+    <Lexeme Stem1="šķis" Stem2="šķiet" Stem3="šķit">
+      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbi 'tikt' un 'tapt'" Pamatforma="šķist"/>
+    </Lexeme>
     <Lexeme Stem1="palik" Stem2="paliek" Stem3="palik">
       <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbi 'tikt' un 'tapt'" Pamatforma="palikt"/>
     </Lexeme>
