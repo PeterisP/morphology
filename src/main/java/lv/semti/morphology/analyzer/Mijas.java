@@ -420,6 +420,19 @@ public abstract class Mijas {
                     if (celms.endsWith("iet"))
                         varianti.add(new Variants(celms.substring(0,celms.length()-3)+"ej"));
                     break;
+
+                // ------ LATGALIAN from here -----
+				case 101: // latgaliešu līdzskaņu 'automātiskā mīkstināšana' pirms -i un -e
+					if (celms.endsWith("k")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ķ", "Mija", "ķ -> k"));
+					} else if (celms.endsWith("l")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ļ", "Mija", "ļ -> l"));
+					} else if (celms.endsWith("n")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ņ", "Mija", "ņ -> n"));
+					} else {
+						varianti.add(new Variants(celms));
+					}
+					break;
 				default:
 					System.err.printf("Invalid StemChange ID, stem '%s', stemchange %d\n", celms, mija);
 			}
@@ -858,6 +871,19 @@ public abstract class Mijas {
                         varianti.add(new Variants(celms.substring(0, celms.length()-2)+"iet"));
                     else varianti.add(new Variants(celms));
                     break;
+
+				// ------ LATGALIAN from here -----
+				case 101: // latgaliešu līdzskaņu 'automātiskā mīkstināšana' pirms -i un -e
+					if (celms.endsWith("ķ")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "k"));
+					} else if (celms.endsWith("ļ")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "l"));
+					} else if (celms.endsWith("ņ")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "n"));
+					} else {
+						varianti.add(new Variants(celms));
+					}
+					break;
 
                 default:
 					System.err.printf("Invalid StemChange ID, stem '%s', stemchange %d\n", celms, mija);
