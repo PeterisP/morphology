@@ -97,6 +97,14 @@ public class Wordform extends AttributeValues implements Serializable{
 		this.token = token;
 	}
 
+	public Wordform (String token, String lemma, Ending ending, String POS) {
+		this.token = token;
+		this.setEnding(ending);
+		this.addAttribute(AttributeNames.i_Word, token);
+		this.addAttribute(AttributeNames.i_PartOfSpeech, POS);
+		if (lemma != null) this.addAttribute(AttributeNames.i_Lemma, lemma);
+	}
+
 	public Wordform(Node node) {
 		super(node);
 		if (!node.getNodeName().equalsIgnoreCase("Vārdforma")) throw new Error("Node " + node.getNodeName() + " nav Vārdforma");

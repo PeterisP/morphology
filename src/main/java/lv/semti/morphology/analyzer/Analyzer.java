@@ -211,79 +211,42 @@ public class Analyzer extends Lexicon {
 		}
 
 		if (!result.isRecognized()) {  //Hardcoded izņēmumi (ar regex) kas atpazīst ciparus, kārtas skaitļus utml
+			Ending HARDCODED_ENDING = this.endingByID(1158); // FIXME - hardkodēts numurs hardcoded grupas galotnei
 			if (p_number.matcher(word).matches()) {
-				Wordform wf = new Wordform(word);
-				wf.setEnding(this.endingByID(1158)); // FIXME - hardkodēts numurs hardcoded vārdu galotnei
-				wf.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Residual);
+				Wordform wf = new Wordform(word, word, HARDCODED_ENDING, AttributeNames.v_Residual);
 				wf.addAttribute(AttributeNames.i_ResidualType, AttributeNames.v_Number);
-				wf.addAttribute(AttributeNames.i_Lemma, word);
-				wf.addAttribute(AttributeNames.i_Word, word);
 				result.addWordform(wf);
 				return result;
 			}
 			if (p_fractional.matcher(word).matches()) {
-				Wordform wf = new Wordform(word);
-				wf.setEnding(this.endingByID(1158)); // FIXME - hardkodēts numurs hardcoded vārdu galotnei
-				wf.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Residual);
+				Wordform wf = new Wordform(word, word, HARDCODED_ENDING, AttributeNames.v_Residual);
 				wf.addAttribute(AttributeNames.i_ResidualType, AttributeNames.v_Number);
-				wf.addAttribute(AttributeNames.i_Lemma, word);
-				wf.addAttribute(AttributeNames.i_Word, word);
 				result.addWordform(wf);
 				return result;
 			}
 			if (p_ordinal.matcher(word).matches()) {
-				Wordform wf = new Wordform(word);
-				wf.setEnding(this.endingByID(1158)); // FIXME - hardkodēts numurs hardcoded vārdu galotnei
-				wf.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Residual);
+				Wordform wf = new Wordform(word, word, HARDCODED_ENDING, AttributeNames.v_Residual);
 				wf.addAttribute(AttributeNames.i_ResidualType, AttributeNames.v_Ordinal);
-				wf.addAttribute(AttributeNames.i_Lemma, word);
-				wf.addAttribute(AttributeNames.i_Word, word);
 				result.addWordform(wf);
 				return result;
 			}
-            if (p_abbrev_caps.matcher(originalWord).matches()) {
-                Wordform wf = new Wordform(word);
-                wf.setEnding(this.endingByID(2091)); // FIXME - hardkodēts numurs saīsinājumu galotnei
-                wf.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Abbreviation);
-                wf.addAttribute(AttributeNames.i_Lemma, originalWord);
-                wf.addAttribute(AttributeNames.i_Word, originalWord);
-                result.addWordform(wf);
-                return result;
+
+            if (p_abbrev_caps.matcher(originalWord).matches() ||
+					p_abbrev.matcher(word).matches() ||
+					(enableGuessing && p_acronym.matcher(originalWord).matches())
+			) {
+				Ending ABBREV_ENDING = this.endingByID(2091); // FIXME - hardkodēts numurs saīsinājumu galotnei
+				result.addWordform(new Wordform(word, word, ABBREV_ENDING, AttributeNames.v_Abbreviation));
+				return result;
             }
-            if (p_abbrev.matcher(word).matches()) {
-				Wordform wf = new Wordform(word);
-				wf.setEnding(this.endingByID(2091)); // FIXME - hardkodēts numurs saīsinājumu galotnei
-				wf.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Abbreviation);
-				wf.addAttribute(AttributeNames.i_Lemma, word);
-				wf.addAttribute(AttributeNames.i_Word, word);
-				result.addWordform(wf);
-				return result;
-			}
-			if (enableGuessing && p_acronym.matcher(originalWord).matches()) { // Treating all short allcaps words as acronyms is a form of guessing, since it's not safe and makes a brave assumption about such outofvocabulary words
-				Wordform wf = new Wordform(originalWord);
-                wf.setEnding(this.endingByID(2091)); // FIXME - hardkodēts numurs saīsinājumu galotnei
-                wf.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Abbreviation);
-                wf.addAttribute(AttributeNames.i_Lemma, originalWord);
-				wf.addAttribute(AttributeNames.i_Word, word);
-				result.addWordform(wf);
-				return result;
-			}
             if (p_letter.matcher(word).matches()) {
-                Wordform wf = new Wordform(word);
-                wf.setEnding(this.endingByID(1158)); // FIXME - hardkodēts numurs hardcoded vārdu galotnei
-                wf.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Residual);
-                wf.addAttribute(AttributeNames.i_Lemma, word);
-                wf.addAttribute(AttributeNames.i_Word, word);
-                result.addWordform(wf);
-                return result;
+				Wordform wf = new Wordform(word, word, HARDCODED_ENDING, AttributeNames.v_Residual);
+				result.addWordform(wf);
+				return result;
             }
 			if (p_url.matcher(word).matches()) {
-				Wordform wf = new Wordform(word);
-				wf.setEnding(this.endingByID(1158)); // FIXME - hardkodēts numurs hardcoded vārdu galotnei
-				wf.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Residual);
+				Wordform wf = new Wordform(word, word, HARDCODED_ENDING, AttributeNames.v_Residual);
 				wf.addAttribute(AttributeNames.i_ResidualType, AttributeNames.v_URI);
-				wf.addAttribute(AttributeNames.i_Lemma, word);
-				wf.addAttribute(AttributeNames.i_Word, word);
 				result.addWordform(wf);
 				return result;
 			}
