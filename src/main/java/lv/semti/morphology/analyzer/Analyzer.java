@@ -33,6 +33,7 @@ public class Analyzer extends Lexicon {
 	public boolean meklētsalikteņus = false;
 	public boolean enableGuessing = false;
 	public boolean enableDiminutive = true;
+	public boolean enableDerivedNouns = true; // FIXME - šim vajag saprast korektu terminu
 	public boolean enableVocative = false;
 	public boolean guessNouns = true;
     public boolean guessVerbs = true;
@@ -98,6 +99,7 @@ public class Analyzer extends Lexicon {
 		meklētsalikteņus = false;
 		enableGuessing = false;
 		enableDiminutive = true;
+		enableDerivedNouns = true;
 		enableVocative = false;
 		guessNouns = true;
 	    guessVerbs = true;
@@ -191,6 +193,9 @@ public class Analyzer extends Lexicon {
 
 				if (!foundSomethingHere && enableDiminutive) 
 					guessDeminutive(word, result, ending, celms, originalWord);
+
+				if (!foundSomethingHere && enableDerivedNouns)
+					guessDerivedNoun(word, result, ending, celms, originalWord);
 			}
 		}
 		
@@ -281,6 +286,51 @@ public class Analyzer extends Lexicon {
 		return result;
 	}
 
+	private void guessDerivedNoun(String word, Word result, Ending ending, Variants celms, String originalWord) {
+		// -tājs, -ējs, -tāja, -ēja
+		if (ending.getParadigm().getID() != 1 && ending.getParadigm().getID() != 7) return;
+
+		if (celms.celms.endsWith("tāj")) {
+			String verb_stem = celms.celms.substring(0,celms.celms.length()-3);
+			for (int paradigmID : new int[]{16, 17, 45}) {
+				Paradigm p = this.paradigmByID(paradigmID);
+				ArrayList<Lexeme> lexemes = p.getLexemesByStem().get(0).get(verb_stem);
+				if (lexemes != null) {
+					for (Lexeme lexeme : lexemes) {
+						Wordform variants = new Wordform(word, lexeme, ending);
+						variants.addAttributes(celms); // TODO - iespējams ka šis ir lieks
+						variants.addAttribute(AttributeNames.i_Source, "-tājs/-tāja formu atvasināšana");
+						variants.addAttribute(AttributeNames.i_SourceLemma, lexeme.getValue(AttributeNames.i_Lemma));
+						variants.addAttribute(AttributeNames.i_Guess, AttributeNames.v_Deminutive);
+						String lemma = lexeme.getStem(0) + "tāj" + ending.getLemmaEnding().getEnding();
+						lemma = recapitalize(lemma, originalWord);
+						variants.addAttribute(AttributeNames.i_Lemma, lemma);
+						result.addWordform(variants);
+					}
+				}
+			}
+		} else if (celms.celms.endsWith("ēj")) {
+			Paradigm p = this.paradigmByID(15); // verb-1
+			ArrayList<Variants> verb_stems = Mijas.mijuVarianti(celms.celms.substring(0,celms.celms.length()-2), 14,false); // 1. konj -is formas mija - manuprāt tas šeit ir pareizais
+			for (Variants verb_stem : verb_stems) {
+				ArrayList<Lexeme> lexemes = p.getLexemesByStem().get(2).get(verb_stem.celms);
+				if (lexemes != null) {
+					for (Lexeme lexeme : lexemes) {
+						Wordform variants = new Wordform(word, lexeme, ending);
+						variants.addAttributes(verb_stem); // ?
+						variants.addAttribute(AttributeNames.i_Source, "-ējs/-ēja formu atvasināšana");
+						variants.addAttribute(AttributeNames.i_SourceLemma, lexeme.getValue(AttributeNames.i_Lemma));
+						variants.addAttribute(AttributeNames.i_Guess, AttributeNames.v_Deminutive);
+						String lemma = lexeme.getStem(0) + "ēj" + ending.getLemmaEnding().getEnding();
+						lemma = recapitalize(lemma, originalWord);
+						variants.addAttribute(AttributeNames.i_Lemma, lemma);
+						result.addWordform(variants);
+					}
+				}
+			}
+		}
+	}
+
 	private void guessDeminutive(String word, Word rezultāts, Ending ending,
 			Variants celms, String originalWord) {
 		switch (ending.getParadigm().getID()) {
@@ -293,7 +343,7 @@ public class Analyzer extends Lexicon {
 				if (deminutīvleksēmas != null)
 					for (Lexeme leksēma : deminutīvleksēmas) {
 						Wordform variants = new Wordform(word, leksēma, ending);
-						variants.addAttributes(celms); // ?
+						variants.addAttributes(celms); // TODO - iespējams, ka šis ir lieks
 						variants.addAttribute(AttributeNames.i_Deminutive, "-īt-");
 						variants.addAttribute(AttributeNames.i_Source,"pamazināmo formu atvasināšana");
 						variants.addAttribute(AttributeNames.i_SourceLemma, leksēma.getValue(AttributeNames.i_Lemma));
@@ -539,7 +589,7 @@ public class Analyzer extends Lexicon {
 			ArrayList<Wordform> inflections1 = generateInflections(lemma.substring(0, hyphen), nouns_only, part_filter);
 			
 			if ( (inflections1.size()>1 && inflections2.size()>1) // Ja sanāk nelokāms kautkas, tad nemēģinam taisīt kā dubultuzvārdu - tie ir ļoti reti un tas salauztu vairāk nekā iegūtu
-					|| lemma.substring(0, hyphen).equalsIgnoreCase("pavļuta")) 
+					|| lemma.substring(0, hyphen).equalsIgnoreCase("pavļuta"))  // FIXME - kāpēc te ir atsauce uz konkrētu uzvārdu?
 				return mergeInflections(inflections1, inflections2, "-");
 		}
 		

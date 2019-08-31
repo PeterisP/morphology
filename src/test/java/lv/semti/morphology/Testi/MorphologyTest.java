@@ -3495,11 +3495,29 @@ public class MorphologyTest {
 
     // Ticket #48
     @Test public void overzealous_verb_guessing() {
+        locītājs.enableDerivedNouns = false;
         locītājs.enableGuessing = true;
         Word w = locītājs.analyze("uzvarētājs");
         assertTrue(w.isRecognized());
-        describe(w.wordforms);
         assertNotEquals("uzvarētājt", w.getBestWordform().getValue(AttributeNames.i_Lemma));
+    }
+
+    // Ticket #81 - noun derivation
+    @Test public void noun_derivation() {
+        locītājs.enableDerivedNouns = false; // Check that the words are OOV
+        Word w = locītājs.analyze("uzvarētājs");
+        assertFalse(w.isRecognized());
+        w = locītājs.analyze("tīkotājs");
+        assertFalse(w.isRecognized());
+        w = locītājs.analyze("atsācējs");
+        assertFalse(w.isRecognized());
+        locītājs.enableDerivedNouns = true; // Check that the automatic derivation finds them
+        w = locītājs.analyze("uzvarētājs");
+        assertTrue(w.isRecognized());
+        w = locītājs.analyze("tīkotājs");
+        assertTrue(w.isRecognized());
+        w = locītājs.analyze("atsācējs");
+        assertTrue(w.isRecognized());
     }
 }
 

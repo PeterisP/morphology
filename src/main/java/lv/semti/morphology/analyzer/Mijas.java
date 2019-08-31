@@ -475,7 +475,7 @@ public abstract class Mijas {
 	}
 
 	/***
-	 * procedūra, kas realizē visas celmu pārmaiņas - līdzskaņu mijas; darbības vārdu formas, utml.
+	 * procedūra, kas realizē visas celmu pārmaiņas - līdzskaņu mijas; darbības vārdu formas, utml. *vārdu ģenerēšanai*
 	 * @param stem
 	 * @param stemChange
 	 * @param trešāSakne
