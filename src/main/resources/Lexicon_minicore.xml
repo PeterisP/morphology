@@ -49,6 +49,9 @@
   </Paradigm>
   <Paradigm Stems="1" ID="12" LemmaEnding="111" Description="Nelokāmie lietvārdi">
     <Attributes Vārdšķira="Lietvārds" Deklinācija="Nepiemīt"/>
+    <Lexeme Stem1="Lattelecom">
+      <Attributes Lietvārda_tips="Īpašvārds"/>
+    </Lexeme>
   </Paradigm>
   <Paradigm Stems="1" ID="13" LemmaEnding="135" Description="Īpašības vārdi ar -s">
     <Attributes Vārdšķira="Īpašības vārds"/>
@@ -72,6 +75,9 @@
     </Lexeme>
     <Lexeme Stem1="nespē" Stem2="nespēj" Stem3="nespēj">
       <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Pamata darbības vārds" Pamatforma="nespēt"/>
+    </Lexeme>
+    <Lexeme Stem1="paspē" Stem2="paspēj" Stem3="paspēj">
+      <Attributes Darbības_vārda_tips="Fāzes" Pamatforma="paspēt"/>
     </Lexeme>
     <Lexeme Stem1="pagū" Stem2="pagūst" Stem3="paguv">
       <Attributes Darbības_vārda_tips="Modāls" Pamatforma="pagūt"/>
@@ -139,6 +145,9 @@
     <Lexeme Stem1="pierim" Stem2="pierimst" Stem3="pierim">
       <Attributes Darbības_vārda_tips="Fāzes" Pamatforma="pierimt"/>
     </Lexeme>
+    <Lexeme Stem1="atlik" Stem2="atliek" Stem3="atlik">
+      <Attributes Darbības_vārda_tips="Modāls" Pamatforma="atlikt"/>
+    </Lexeme>
   </Paradigm>
   <Paradigm Stems="1" ID="16" LemmaEnding="225" Description="Darbības vārdi 2. konjugācija tiešie">
     <Attributes Konjugācija="2" Atgriezeniskums="Nē"/>
@@ -150,6 +159,9 @@
     </Lexeme>
     <Lexeme Stem1="tīko">
       <Attributes Darbības_vārda_tips="Modāls" Pamatforma="tīkot"/>
+    </Lexeme>
+    <Lexeme Stem1="nozīmē">
+      <Attributes Darbības_vārda_tips="Palīgverbi 'tikt' un 'tapt'" Pamatforma="nozīmēt"/>
     </Lexeme>
   </Paradigm>
   <Paradigm Stems="1" ID="17" LemmaEnding="468" Description="Darbības vārdi 3. konjugācija tiešie">
@@ -235,6 +247,12 @@
     <Lexeme Stem1="izdo" Stem2="izdod" Stem3="izdev">
       <Attributes Konjugācija="Nekārtns" Darbības_vārda_tips="Izpausmes veida" Pamatforma="izdoties"/>
     </Lexeme>
+    <Lexeme Stem1="lik" Stem2="liek" Stem3="lik">
+      <Attributes Darbības_vārda_tips="Palīgverbi 'tikt' un 'tapt'" Pamatforma="likties"/>
+    </Lexeme>
+    <Lexeme Stem1="jus" Stem2="jūt" Stem3="jut">
+      <Attributes Darbības_vārda_tips="Palīgverbi 'tikt' un 'tapt'" Pamatforma="justies"/>
+    </Lexeme>
   </Paradigm>
   <Paradigm Stems="1" ID="19" LemmaEnding="955" Description="Darbības vārdi 2. konjugācija atgriezeniski">
     <Attributes Konjugācija="2" Atgriezeniskums="Jā"/>
@@ -299,6 +317,15 @@
     -->
     <Lexeme Stem1="trāpī">
       <Attributes Darbības_vārda_tips="Izpausmes veida" Pamatforma="trāpīties"/>
+    </Lexeme>
+    <Lexeme Stem1="izrādī">
+      <Attributes Darbības_vārda_tips="Izpausmes veida" Pamatforma="izrādīties"/>
+    </Lexeme>
+    <Lexeme Stem1="izrādī">
+      <Attributes Darbības_vārda_tips="Palīgverbi 'tikt' un 'tapt'" Pamatforma="izrādīties"/>
+    </Lexeme>
+    <Lexeme Stem1="izskatī">
+      <Attributes Darbības_vārda_tips="Palīgverbi 'tikt' un 'tapt'" Pamatforma="izskatīties"/>
     </Lexeme>
   </Paradigm>
   <Paradigm Stems="1" ID="21" LemmaEnding="954" Description="Apstākļa vārdi">
@@ -576,6 +603,9 @@
     </Lexeme>
     <Lexeme Stem1="otr">
       <Attributes Pamatforma="otrs"/>
+    </Lexeme>
+    <Lexeme Stem1="pusotr">
+      <Attributes Skaitļa_vārda_tips="Daļskaitlis" Pamatforma="pusotrs"/>
     </Lexeme>
   </Paradigm>
   <Paradigm Stems="1" ID="24" LemmaEnding="1126" Description="Pamata skaitļa vārdi dsk">
@@ -2772,6 +2802,12 @@
     <Lexeme Stem1="tiklab">
       <Attributes Saikļa_tips="Pakārtojuma" Uzbūve="Vienkāršs"/>
     </Lexeme>
+    <Lexeme Stem1="tāpat">
+      <Attributes Saikļa_tips="Pakārtojuma" Uzbūve="Vienkāršs"/>
+    </Lexeme>
+    <Lexeme Stem1="toties">
+      <Attributes Saikļa_tips="Pakārtojuma" Uzbūve="Vienkāršs"/>
+    </Lexeme>
   </Paradigm>
   <Paradigm Stems="1" ID="28" LemmaEnding="1198" Description="Partikulas">
     <Attributes Vārdšķira="Partikula"/>
@@ -2941,6 +2977,9 @@
       <Attributes Uzbūve="Vienkāršs"/>
     </Lexeme>    
     <Lexeme Stem1="aha">
+      <Attributes Uzbūve="Vienkāršs"/>
+    </Lexeme>    
+    <Lexeme Stem1="nez">
       <Attributes Uzbūve="Vienkāršs"/>
     </Lexeme>    
   </Paradigm>
@@ -3507,6 +3546,7 @@
     <Lexeme Stem1="acīsskatī"/>
   </Paradigm>
   <Paradigm Stems="1" ID="35" LemmaEnding="99" Description="Lietvārdi, 6. deklinācijas -s locīšanas izņēmumi bez mijas (auss, kūts)" AllowedGuessEndings="">  
+    <Lexeme Stem1="dalībvalst"/>
   </Paradigm>
   <Paradigm Stems="1" ID="36" LemmaEnding="2091" Description="Saīsinājumi (t.i. utt. u.c.)" AllowedGuessEndings="!">
     <Lexeme Stem1="et al."/>
@@ -3875,14 +3915,19 @@
     </Lexeme>
   </Paradigm>
   <Paradigm Stems="1" ID="38" LemmaEnding="2093" Description="Izsauksmes vārdi (ak, aha)" AllowedGuessEndings="!">
+    <Lexeme Stem1="vot"/>
   </Paradigm>
   <Paradigm Stems="1" ID="39" LemmaEnding="2094" Description="Vārdi svešvalodā (company, adaggio)" AllowedGuessEndings="!">
     <Lexeme Stem1="fon"/>
     <Lexeme Stem1="de"/>
     <Lexeme Stem1="da"/>
     <Lexeme Stem1="the"/>
+    <Lexeme Stem1="internet"/>
   </Paradigm>
   <Paradigm Stems="1" ID="40" LemmaEnding="2031" Description="Substantivizējušies noteiktās formas īpašības vārdi sieviešu dzimtē (mēnessērdzīgā, apsūdzētā)" AllowedGuessEndings="!">
+    <Lexeme Stem1="nākam"/>
+    <Lexeme Stem1="galven"/>
+    <Lexeme Stem1="pārēj"/>
   </Paradigm>
   <Paradigm Stems="1" ID="41" Description="Substantivizējušies noteiktās formas -is/-usi divdabji sieviešu dzimtē (cietusī)">
     <Lexeme Stem1="cietuš"/>

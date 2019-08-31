@@ -6981,13 +6981,13 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="49" Name="noun-g" LemmaEnding="2406" Description="Ģenitīveņi (augstpapēžu, milzu)">
+	<Paradigm Stems="1" ID="49" Name="noun-g" LemmaEnding="2406" Description="Ģenitīveņi (augstpapēžu, milzu)" AllowedGuessEndings="!">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="Ģenitīvenis"/>
 		<Ending ID="2406" StemChange="0" Ending="" StemID="1" LemmaEnding="2406">
 			<Attributes/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="3" ID="50" Name="verb-1i" LemmaEnding="2407" Description="būt, nebūt, pabūt, sabūt">
+	<Paradigm Stems="3" ID="50" Name="verb-1i" LemmaEnding="2407" Description="būt, nebūt, pabūt, sabūt" AllowedGuessEndings="!">
 		<Attributes Konjugācija="Nekārtns" Atgriezeniskums="Nē" Noliegums="Nē"/>
 		<Ending ID="2407" StemChange="0" Ending="t" StemID="1" LemmaEnding="2407">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Nenoteiksme" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Nepiemīt"/>

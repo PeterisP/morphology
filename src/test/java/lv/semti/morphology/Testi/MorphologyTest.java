@@ -3240,9 +3240,9 @@ public class MorphologyTest {
         w = locītājs.analyze("=");
         assertTrue(w.isRecognized());
         assertEquals("xx", w.getBestWordform().getTag());
-        w = locītājs.analyze("&");
-        assertTrue(w.isRecognized());
-        assertEquals("zx", w.getBestWordform().getTag());
+//        w = locītājs.analyze("&");
+//        assertTrue(w.isRecognized());
+//        assertEquals("zx", w.getBestWordform().getTag());
         w = locītājs.analyze("…");
         assertTrue(w.isRecognized());
         assertEquals("zs", w.getBestWordform().getTag());
@@ -3477,6 +3477,29 @@ public class MorphologyTest {
                     found = true;
         }
         assertTrue(found);
+    }
+
+    // Ticket #59
+    @Test public void pusotrs() {
+        Word w = locītājs.analyze("pusotrs");
+        assertTrue(w.isRecognized());
+        assertEquals("mfsmsn", w.getBestWordform().getTag());
+    }
+
+    // Ticket #56
+    @Test public void celties() {
+        Word w = locītājs.analyze("celties");
+        assertTrue(w.isRecognized());
+        assertEquals("vmyn0_1000n", w.getBestWordform().getTag());
+    }
+
+    // Ticket #48
+    @Test public void overzealous_verb_guessing() {
+        locītājs.enableGuessing = true;
+        Word w = locītājs.analyze("uzvarētājs");
+        assertTrue(w.isRecognized());
+        describe(w.wordforms);
+        assertNotEquals("uzvarētājt", w.getBestWordform().getValue(AttributeNames.i_Lemma));
     }
 }
 

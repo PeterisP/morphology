@@ -284,16 +284,16 @@ public class Lexicon {
 		if (l.isMatchingStrong(AttributeNames.i_Usage, AttributeNames.v_Regional) // Negribam apvidvārdus
 				|| l.getParadigm().getID() == 29  // Hardcoded pagaidām atstājam no leksikona
 				|| l.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Pronoun)  // Vietniekvārdiem leksikonā ir labāki dati
-				|| l.isMatchingStrong("Kategorija", AttributeNames.v_Pronoun)  // Vietniekvārdiem leksikonā ir labāki dati
+				|| l.isMatchingStrong(AttributeNames.i_TezaursCategory, AttributeNames.v_Pronoun)  // Vietniekvārdiem leksikonā ir labāki dati
 				|| l.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Pronoun)  // Vietniekvārdiem leksikonā ir labāki dati
 				|| l.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Numeral)  // Skaitļavārdiem leksikonā ir labāki dati
-				|| l.isMatchingStrong("Kategorija", AttributeNames.v_Numeral)  // Skaitļavārdiem leksikonā ir labāki dati
+				|| l.isMatchingStrong(AttributeNames.i_TezaursCategory, AttributeNames.v_Numeral)  // Skaitļavārdiem leksikonā ir labāki dati
 				|| l.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Numeral)  // Skaitļavārdiem leksikonā ir labāki dati
 				|| l.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Conjunction)  // Saikļiem leksikonā ir labāki dati
-				|| l.isMatchingStrong("Kategorija", AttributeNames.v_Conjunction)  // Saikļiem leksikonā ir labāki dati
+				|| l.isMatchingStrong(AttributeNames.i_TezaursCategory, AttributeNames.v_Conjunction)  // Saikļiem leksikonā ir labāki dati
 				|| l.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Conjunction)  // Saikļiem leksikonā ir labāki dati
 				|| l.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Particle)  // Partikulām leksikonā ir labāki dati
-				|| l.isMatchingStrong("Kategorija", AttributeNames.v_Particle)  // Partikulām leksikonā ir labāki dati
+				|| l.isMatchingStrong(AttributeNames.i_TezaursCategory, AttributeNames.v_Particle)  // Partikulām leksikonā ir labāki dati
 				|| l.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Particle)  // Partikulām leksikonā ir labāki dati
 		) {
 			return true;
