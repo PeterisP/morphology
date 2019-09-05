@@ -3511,12 +3511,16 @@ public class MorphologyTest {
         assertFalse(w.isRecognized());
         w = locītājs.analyze("atsācējs");
         assertFalse(w.isRecognized());
+        w = locītājs.analyze("kodējs");
+        assertFalse(w.isRecognized());
         locītājs.enableDerivedNouns = true; // Check that the automatic derivation finds them
         w = locītājs.analyze("uzvarētājs");
         assertTrue(w.isRecognized());
         w = locītājs.analyze("tīkotājs");
         assertTrue(w.isRecognized());
         w = locītājs.analyze("atsācējs");
+        assertTrue(w.isRecognized());
+        w = locītājs.analyze("kodējs");
         assertTrue(w.isRecognized());
     }
 }

@@ -16275,7 +16275,7 @@ bargs	afmsnnp	bargs	m-p1297-p4s2w9
 Bagātajos	afmplyp	bagāts	m-p1297-p4s3w1
 Ēdoles	npfsg5	Ēdole	m-p1297-p4s3w2
 pagasta	ncmsg1	pagasts	m-p1297-p4s3w3
-Bukos	npmpl1	Buki	m-p1297-p4s3w4
+Bukos	npmdl1	Buki	m-p1297-p4s3w4
 drīz	r0t	drīz	m-p1297-p4s3w5
 sākusi	vpnpdfsnasnpn	sākt	m-p1297-p4s3w6
 saimniekot	vmnn0i2000n	saimniekot	m-p1297-p4s3w7
@@ -23493,8 +23493,6 @@ tikai	q	tikai	m-d197-p89s3w16
 īsi	afmpnnp	īss	m-d197-p89s3w18
 <g />
 ;	zc	;	m-d197-p89s3w19
-</s>
-<s>
 un	cc	un	m-d197-p89s4w1
 blāvi	rpm	blāvi	m-d197-p89s4w2
 zaļa	affsnnp	zaļš	m-d197-p89s4w3
@@ -23980,6 +23978,7 @@ to	pd3msan	tas	m-d197-p107s1w22
 varētu	vonc0i300an	varēt	m-d197-p107s1w23
 izstāstīt	vmnn0t3000n	izstāstīt	m-d197-p107s1w24
 labāk	rcm	labi	m-d197-p107s1w25
+,	zc	,	m-d197-p107s1w30
 nekā	cs	nekā	m-d197-p107s1w26
 viņa	pp3fsnn	viņa	m-d197-p107s1w27
 man	pp10sdn	es	m-d197-p107s1w28
