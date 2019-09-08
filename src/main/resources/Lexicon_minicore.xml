@@ -65,16 +65,16 @@
   <Paradigm Stems="3" ID="15" LemmaEnding="711" Description="Darbības vārdi 1. konjugācija tiešie">
     <Attributes Konjugācija="1" Atgriezeniskums="Nē"/>
     <Lexeme Stem1="ieras" Stem2="ierod" Stem3="ierad">
-      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Modāls" Pamatforma="rast"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls" Pamatforma="rast"/>
     </Lexeme>
     <Lexeme Stem1="spē" Stem2="spēj" Stem3="spēj">
-      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Modāls" Pamatforma="spēt"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls" Pamatforma="spēt"/>
     </Lexeme>
     <Lexeme Stem1="nespē" Stem2="nespēj" Stem3="nespēj">
-      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Modāls" Pamatforma="nespēt"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls" Pamatforma="nespēt"/>
     </Lexeme>
     <Lexeme Stem1="nespē" Stem2="nespēj" Stem3="nespēj">
-      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Pamata darbības vārds" Pamatforma="nespēt"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Pamata darbības vārds" Pamatforma="nespēt"/>
     </Lexeme>
     <Lexeme Stem1="paspē" Stem2="paspēj" Stem3="paspēj">
       <Attributes Darbības_vārda_tips="Fāzes" Pamatforma="paspēt"/>
@@ -86,55 +86,55 @@
       <Attributes Darbības_vārda_tips="Modāls" Pamatforma="prast"/>
     </Lexeme>
     <Lexeme Stem1="mēg" Stem2="mēdz" Stem3="mēdz">
-      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Modāls" Pamatforma="mēgt"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls" Pamatforma="mēgt"/>
     </Lexeme>
     <Lexeme Stem1="derg" Stem2="derdz" Stem3="derdz">
       <Attributes Darbības_vārda_tips="Modāls" Pamatforma="dergties"/>
     </Lexeme>
     <Lexeme Stem1="beig" Stem2="beidz" Stem3="beidz">
-      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Fāzes" Pamatforma="beigt"/>
+      <Attributes Transitivitāte="Transitīvs" Darbības_vārda_tips="Fāzes" Pamatforma="beigt"/>
     </Lexeme>
     <Lexeme Stem1="nebeig" Stem2="nebeidz" Stem3="nebeidz">
       <Attributes Darbības_vārda_tips="Fāzes" Pamatforma="nebeigt"/>
     </Lexeme>
     <Lexeme Stem1="sāk" Stem2="sāk" Stem3="sāk">
-      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Fāzes" Pamatforma="sākt"/>
+      <Attributes Transitivitāte="Transitīvs" Darbības_vārda_tips="Fāzes" Pamatforma="sākt"/>
     </Lexeme>
     <Lexeme Stem1="atsāk" Stem2="atsāk" Stem3="atsāk">
-      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Fāzes" Pamatforma="atsākt"/>
+      <Attributes Transitivitāte="Transitīvs" Darbības_vārda_tips="Fāzes" Pamatforma="atsākt"/>
     </Lexeme>
     <Lexeme Stem1="iesāk" Stem2="iesāk" Stem3="iesāk">
-      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Fāzes" Pamatforma="iesākt"/>
+      <Attributes Transitivitāte="Transitīvs" Darbības_vārda_tips="Fāzes" Pamatforma="iesākt"/>
     </Lexeme>
     <Lexeme Stem1="uzsāk" Stem2="uzsāk" Stem3="uzsāk">
-      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Fāzes" Pamatforma="uzsākt"/>
+      <Attributes Transitivitāte="Transitīvs" Darbības_vārda_tips="Fāzes" Pamatforma="uzsākt"/>
     </Lexeme>
     <Lexeme Stem1="pārstā" Stem2="pārstāj" Stem3="pārstāj">
-      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Fāzes" Pamatforma="pārstāt"/>
+      <Attributes Transitivitāte="Transitīvs" Darbības_vārda_tips="Fāzes" Pamatforma="pārstāt"/>
     </Lexeme>
     <Lexeme Stem1="stā" Stem2="stāj" Stem3="stāj">
-      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Fāzes" Pamatforma="stāt"/>
+      <Attributes Transitivitāte="Transitīvs" Darbības_vārda_tips="Fāzes" Pamatforma="stāt"/>
     </Lexeme>
     <Lexeme Stem1="iznāk" Stem2="iznāk" Stem3="iznāc">
-      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Izpausmes veida" Pamatforma="iznākt"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Izpausmes veida" Pamatforma="iznākt"/>
     </Lexeme>
     <Lexeme Stem1="tik" Stem2="tiek" Stem3="tik">
-      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbi 'tikt' un 'tapt'" Pamatforma="tikt"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Palīgverbi 'tikt' un 'tapt'" Pamatforma="tikt"/>
     </Lexeme>
     <Lexeme Stem1="kļū" Stem2="kļūst" Stem3="kļuv">
-      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbi 'tikt' un 'tapt'" Pamatforma="kļūt"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Palīgverbi 'tikt' un 'tapt'" Pamatforma="kļūt"/>
     </Lexeme>
     <Lexeme Stem1="tap" Stem2="top" Stem3="tap">
-      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbi 'tikt' un 'tapt'" Pamatforma="tapt"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Palīgverbi 'tikt' un 'tapt'" Pamatforma="tapt"/>
     </Lexeme>
     <Lexeme Stem1="šķis" Stem2="šķiet" Stem3="šķit">
-      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbi 'tikt' un 'tapt'" Pamatforma="šķist"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Palīgverbi 'tikt' un 'tapt'" Pamatforma="šķist"/>
     </Lexeme>
     <Lexeme Stem1="palik" Stem2="paliek" Stem3="palik">
-      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbi 'tikt' un 'tapt'" Pamatforma="palikt"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Palīgverbi 'tikt' un 'tapt'" Pamatforma="palikt"/>
     </Lexeme>
     <Lexeme Stem1="palik" Stem2="paliek" Stem3="palik">
-      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Fāzes" Pamatforma="palikt"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Fāzes" Pamatforma="palikt"/>
     </Lexeme>
     <Lexeme Stem1="norim" Stem2="norimst" Stem3="norim">
       <Attributes Darbības_vārda_tips="Fāzes" Pamatforma="norimt"/>
@@ -197,31 +197,31 @@
   <Paradigm Stems="3" ID="18" LemmaEnding="1061" Description="Darbības vārdi 1. konjugācija atgriezeniskie">
     <Attributes Konjugācija="1" Atgriezeniskums="Jā"/>
     <Lexeme Stem1="nāk" Stem2="nāk" Stem3="nāc">
-      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Modāls" Pamatforma="nākties"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls" Pamatforma="nākties"/>
     </Lexeme>
     <Lexeme Stem1="pienāk" Stem2="pienāk" Stem3="pienāc">
-      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Modāls" Pamatforma="pienākties"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls" Pamatforma="pienākties"/>
     </Lexeme>
     <Lexeme Stem1="cens" Stem2="cenš" Stem3="cent">
-      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Modāls" Pamatforma="censties"/>
+      <Attributes Transitivitāte="Transitīvs" Darbības_vārda_tips="Modāls" Pamatforma="censties"/>
     </Lexeme>
     <Lexeme Stem1="apņem" Stem2="apņem" Stem3="apņēm">
-      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Modāls" Pamatforma="apņemties"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls" Pamatforma="apņemties"/>
     </Lexeme>
     <Lexeme Stem1="tiek" Stem2="tiec" Stem3="tiec">
-      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Modāls" Pamatforma="tiekties"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls" Pamatforma="tiekties"/>
     </Lexeme>
     <Lexeme Stem1="klā" Stem2="klāj" Stem3="klāj">
-      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Modāls" Pamatforma="klāties"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls" Pamatforma="klāties"/>
     </Lexeme>
     <Lexeme Stem1="pieklā" Stem2="pieklāj" Stem3="pieklāj">
-      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Modāls" Pamatforma="pieklāties"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls" Pamatforma="pieklāties"/>
     </Lexeme>
     <Lexeme Stem1="lieg" Stem2="liedz" Stem3="liedz">
       <Attributes Darbības_vārda_tips="Modāls" Pamatforma="liegties"/>
     </Lexeme>
     <Lexeme Stem1="rieb" Stem2="riebj" Stem3="rieb">
-      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Modāls" Pamatforma="riebties"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls" Pamatforma="riebties"/>
     </Lexeme>
     <Lexeme Stem1="lais" Stem2="laiž" Stem3="laid">
       <Attributes Darbības_vārda_tips="Fāzes" Pamatforma="laisties"/>
@@ -230,7 +230,7 @@
       <Attributes Darbības_vārda_tips="Fāzes" Pamatforma="mesties"/>
     </Lexeme>
     <Lexeme Stem1="ņem" Stem2="ņem" Stem3="ņēm">
-      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Fāzes" Pamatforma="ņemties"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Fāzes" Pamatforma="ņemties"/>
     </Lexeme>
     <Lexeme Stem1="aprau" Stem2="aprauj" Stem3="aprāv">
       <Attributes Darbības_vārda_tips="Fāzes" Pamatforma="aprauties"/>
@@ -257,55 +257,55 @@
   <Paradigm Stems="1" ID="19" LemmaEnding="955" Description="Darbības vārdi 2. konjugācija atgriezeniski">
     <Attributes Konjugācija="2" Atgriezeniskums="Jā"/>
     <Lexeme Stem1="mitē">
-      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Fāzes" Pamatforma="mitēties"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Fāzes" Pamatforma="mitēties"/>
     </Lexeme>
     <Lexeme Stem1="gatavo">
-      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Modāls" Pamatforma="gatavoties"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls" Pamatforma="gatavoties"/>
     </Lexeme>
     <Lexeme Stem1="kautrē">
-      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Modāls" Pamatforma="kautrēties"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls" Pamatforma="kautrēties"/>
     </Lexeme>
     <Lexeme Stem1="kavē">
-      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Modāls" Pamatforma="kavēties"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls" Pamatforma="kavēties"/>
     </Lexeme>
     <Lexeme Stem1="sargā">
-      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Modāls" Pamatforma="sargāties"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls" Pamatforma="sargāties"/>
     </Lexeme>
     <Lexeme Stem1="laimē">
-      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Izpausmes veida" Pamatforma="laimēties"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Izpausmes veida" Pamatforma="laimēties"/>
     </Lexeme>
   </Paradigm>
   <Paradigm Stems="1" ID="20" LemmaEnding="1008" Description="Darbības vārdi 3. konjugācija atgriezeniski">
     <Attributes Konjugācija="3" Atgriezeniskums="Jā"/>
     <Lexeme Stem1="vēlē">
-      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Modāls" Pamatforma="vēlēties"/>
+      <Attributes Transitivitāte="Transitīvs" Darbības_vārda_tips="Modāls" Pamatforma="vēlēties"/>
     </Lexeme>
     <Lexeme Stem1="grasī">
-      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Modāls" Pamatforma="grasīties"/>
+      <Attributes Transitivitāte="Transitīvs" Darbības_vārda_tips="Modāls" Pamatforma="grasīties"/>
     </Lexeme>
     <Lexeme Stem1="gribē">
-      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Modāls" Pamatforma="gribēties"/>
+      <Attributes Transitivitāte="Transitīvs" Darbības_vārda_tips="Modāls" Pamatforma="gribēties"/>
     </Lexeme>
     <Lexeme Stem1="iedrošinā">
-      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Modāls" Pamatforma="iedrošināties"/>
+      <Attributes Transitivitāte="Transitīvs" Darbības_vārda_tips="Modāls" Pamatforma="iedrošināties"/>
     </Lexeme>
     <Lexeme Stem1="uzdrošinā">
-      <Attributes Transitivitāte="Pārejošs" Darbības_vārda_tips="Modāls" Pamatforma="uzdrošināties"/>
+      <Attributes Transitivitāte="Transitīvs" Darbības_vārda_tips="Modāls" Pamatforma="uzdrošināties"/>
     </Lexeme>
     <Lexeme Stem1="baidī">
-      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Modāls" Pamatforma="baidīties"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls" Pamatforma="baidīties"/>
     </Lexeme>
     <Lexeme Stem1="kaunē">
-      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Modāls" Pamatforma="kaunēties"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls" Pamatforma="kaunēties"/>
     </Lexeme>
     <Lexeme Stem1="sargā">
-      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Modāls" Pamatforma="sargāties"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls" Pamatforma="sargāties"/>
     </Lexeme>
     <Lexeme Stem1="vairī">
-      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Modāls" Pamatforma="vairīties"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls" Pamatforma="vairīties"/>
     </Lexeme>
     <Lexeme Stem1="vilcinā">
-      <Attributes Transitivitāte="Nepārejošs" Darbības_vārda_tips="Modāls" Pamatforma="vilcināties"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls" Pamatforma="vilcināties"/>
     </Lexeme>
     <Lexeme Stem1="gadī">
       <Attributes Darbības_vārda_tips="Izpausmes veida" Pamatforma="gadīties"/>
@@ -2286,46 +2286,46 @@
     </Lexeme>
     <!-- Šitais u.c. -->
     <Lexeme Stem1="šitais">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Vīriešu" Persona="3" Locījums="Nominatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitais"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Lietojuma_biežums="Retāk" Dzimte="Vīriešu" Persona="3" Locījums="Nominatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitais"/>
     </Lexeme>    
     <Lexeme Stem1="šitā">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Vīriešu" Persona="3" Locījums="Ģenitīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitais"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Lietojuma_biežums="Retāk" Dzimte="Vīriešu" Persona="3" Locījums="Ģenitīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitais"/>
     </Lexeme>    
     <Lexeme Stem1="šitajam">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Vīriešu" Persona="3" Locījums="Datīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitais"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Lietojuma_biežums="Retāk" Dzimte="Vīriešu" Persona="3" Locījums="Datīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitais"/>
     </Lexeme>    
     <Lexeme Stem1="šito">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Vīriešu" Persona="3" Locījums="Akuzatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitais"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Lietojuma_biežums="Retāk" Dzimte="Vīriešu" Persona="3" Locījums="Akuzatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitais"/>
     </Lexeme>    
     <Lexeme Stem1="šitai">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Vīriešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitais"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Lietojuma_biežums="Retāk" Dzimte="Vīriešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitais"/>
     </Lexeme>    
     <Lexeme Stem1="šitanī">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Vīriešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitais"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Lietojuma_biežums="Retāk" Dzimte="Vīriešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitais"/>
     </Lexeme>    
     <Lexeme Stem1="šitajā">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Vīriešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitais"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Lietojuma_biežums="Retāk" Dzimte="Vīriešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitais"/>
     </Lexeme>    
     <Lexeme Stem1="šitie">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Vīriešu" Persona="3" Locījums="Nominatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitais"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Lietojuma_biežums="Retāk" Dzimte="Vīriešu" Persona="3" Locījums="Nominatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitais"/>
     </Lexeme>    
     <Lexeme Stem1="šito">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Vīriešu" Persona="3" Locījums="Ģenitīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitais"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Lietojuma_biežums="Retāk" Dzimte="Vīriešu" Persona="3" Locījums="Ģenitīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitais"/>
     </Lexeme>    
     <Lexeme Stem1="šitajiem">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Vīriešu" Persona="3" Locījums="Datīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitais"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Lietojuma_biežums="Retāk" Dzimte="Vīriešu" Persona="3" Locījums="Datīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitais"/>
     </Lexeme>    
     <Lexeme Stem1="šitos">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Vīriešu" Persona="3" Locījums="Akuzatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitais"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Lietojuma_biežums="Retāk" Dzimte="Vīriešu" Persona="3" Locījums="Akuzatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitais"/>
     </Lexeme>    
     <Lexeme Stem1="šitais">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Vīriešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitais"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Lietojuma_biežums="Retāk" Dzimte="Vīriešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitais"/>
     </Lexeme>  
     <Lexeme Stem1="šitanīs">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Vīriešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitais"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Lietojuma_biežums="Retāk" Dzimte="Vīriešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitais"/>
     </Lexeme>  
     <Lexeme Stem1="šitajos">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Vīriešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitais"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Lietojuma_biežums="Retāk" Dzimte="Vīriešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitais"/>
     </Lexeme>  
     <Lexeme Stem1="šitas">
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Locīšanas_īpatnības="Paralēlās formas" Lietojums="Sarunvaloda" Dzimte="Vīriešu" Persona="3" Locījums="Nominatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitas"/>
@@ -2373,296 +2373,296 @@
       <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Locīšanas_īpatnības="Paralēlās formas" Lietojums="Sarunvaloda" Dzimte="Vīriešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitas"/>
     </Lexeme>
     <Lexeme Stem1="šitā">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Sieviešu" Persona="3" Locījums="Nominatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitā"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Lietojuma_biežums="Retāk" Dzimte="Sieviešu" Persona="3" Locījums="Nominatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitā"/>
     </Lexeme>    
     <Lexeme Stem1="šitās">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Sieviešu" Persona="3" Locījums="Ģenitīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitā"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Lietojuma_biežums="Retāk" Dzimte="Sieviešu" Persona="3" Locījums="Ģenitīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitā"/>
     </Lexeme>    
     <Lexeme Stem1="šitajai">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Sieviešu" Persona="3" Locījums="Datīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitā"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Lietojuma_biežums="Retāk" Dzimte="Sieviešu" Persona="3" Locījums="Datīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitā"/>
     </Lexeme>    
     <Lexeme Stem1="šito">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Sieviešu" Persona="3" Locījums="Akuzatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitā"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Lietojuma_biežums="Retāk" Dzimte="Sieviešu" Persona="3" Locījums="Akuzatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitā"/>
     </Lexeme>    
     <Lexeme Stem1="šitai">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Sieviešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitā"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Lietojuma_biežums="Retāk" Dzimte="Sieviešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitā"/>
     </Lexeme>    
     <Lexeme Stem1="šitanī">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Sieviešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitā"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Lietojuma_biežums="Retāk" Dzimte="Sieviešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitā"/>
     </Lexeme>    
     <Lexeme Stem1="šitajā">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Sieviešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitā"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Vienskaitlis" Anafora="Aizstāj substantīvu" Lietojuma_biežums="Retāk" Dzimte="Sieviešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitā"/>
     </Lexeme>    
     <Lexeme Stem1="šitās">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Sieviešu" Persona="3" Locījums="Nominatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitā"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Lietojuma_biežums="Retāk" Dzimte="Sieviešu" Persona="3" Locījums="Nominatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitā"/>
     </Lexeme>    
     <Lexeme Stem1="šito">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Sieviešu" Persona="3" Locījums="Ģenitīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitā"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Lietojuma_biežums="Retāk" Dzimte="Sieviešu" Persona="3" Locījums="Ģenitīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitā"/>
     </Lexeme>    
     <Lexeme Stem1="šitām">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Sieviešu" Persona="3" Locījums="Datīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitā"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Lietojuma_biežums="Retāk" Dzimte="Sieviešu" Persona="3" Locījums="Datīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitā"/>
     </Lexeme>    
     <Lexeme Stem1="šitajām">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Sieviešu" Persona="3" Locījums="Datīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitā"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Lietojuma_biežums="Retāk" Dzimte="Sieviešu" Persona="3" Locījums="Datīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitā"/>
     </Lexeme>    
     <Lexeme Stem1="šitās">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Sieviešu" Persona="3" Locījums="Akuzatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitā"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Lietojuma_biežums="Retāk" Dzimte="Sieviešu" Persona="3" Locījums="Akuzatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitā"/>
     </Lexeme>    
     <Lexeme Stem1="šitais">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Sieviešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitā"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Lietojuma_biežums="Retāk" Dzimte="Sieviešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitā"/>
     </Lexeme>  
     <Lexeme Stem1="šitanīs">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Sieviešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitā"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Lietojuma_biežums="Retāk" Dzimte="Sieviešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitā"/>
     </Lexeme>  
     <Lexeme Stem1="šitajās">
-      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Biežums="Retāk" Dzimte="Sieviešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitā"/>
+      <Attributes Vārdšķira="Vietniekvārds" Skaitlis="Daudzskaitlis" Anafora="Aizstāj substantīvu" Lietojuma_biežums="Retāk" Dzimte="Sieviešu" Persona="3" Locījums="Lokatīvs" Vietniekvārda_tips="Norādāmie" Pamatforma="šitā"/>
     </Lexeme>  
 
   </Paradigm>
   <Paradigm Stems="1" ID="26" LemmaEnding="1196" Description="Prievārdi">
     <Attributes Vārdšķira="Prievārds"/>
     <Lexeme Stem1="blakus">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="blakus"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="blakus"/>
     </Lexeme>
     <Lexeme Stem1="blakus">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Datīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="blakus"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Datīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="blakus"/>
     </Lexeme>
     <Lexeme Stem1="pirms">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="pirms"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="pirms"/>
     </Lexeme>
     <Lexeme Stem1="pirms">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="pirms"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="pirms"/>
     </Lexeme>
     <Lexeme Stem1="līdz">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="līdz"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="līdz"/>
     </Lexeme>
     <Lexeme Stem1="līdz">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Datīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="līdz"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Datīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="līdz"/>
     </Lexeme>
     <Lexeme Stem1="otrpus">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="otrpus"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="otrpus"/>
     </Lexeme>
     <Lexeme Stem1="otrpus">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="otrpus"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="otrpus"/>
     </Lexeme>
     <Lexeme Stem1="augšpus">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="augšpus"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="augšpus"/>
     </Lexeme>
     <Lexeme Stem1="augšpus">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="augšpus"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="augšpus"/>
     </Lexeme>
     <Lexeme Stem1="pretim">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="pretim"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="pretim"/>
     </Lexeme>
     <Lexeme Stem1="pretim">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Datīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="pretim"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Datīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="pretim"/>
     </Lexeme>
     <Lexeme Stem1="no">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="no"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="no"/>
     </Lexeme>
     <Lexeme Stem1="no">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="no"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="no"/>
     </Lexeme>
     <Lexeme Stem1="starp">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="starp"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="starp"/>
     </Lexeme>
     <Lexeme Stem1="starp">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Akuzatīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="starp"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Akuzatīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="starp"/>
     </Lexeme>
     <Lexeme Stem1="apakšpus">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="apakšpus"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="apakšpus"/>
     </Lexeme>
     <Lexeme Stem1="apakšpus">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="apakšpus"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="apakšpus"/>
     </Lexeme>
     <Lexeme Stem1="virs">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="virs"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="virs"/>
     </Lexeme>
     <Lexeme Stem1="virs">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="virs"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="virs"/>
     </Lexeme>
     <Lexeme Stem1="iekšpus">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="iekšpus"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="iekšpus"/>
     </Lexeme>
     <Lexeme Stem1="iekšpus">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="iekšpus"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="iekšpus"/>
     </Lexeme>
     <Lexeme Stem1="par">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Nē" Pamatforma="par"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Nē" Pamatforma="par"/>
     </Lexeme>
     <Lexeme Stem1="par">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Akuzatīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Nē" Pamatforma="par"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Akuzatīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Nē" Pamatforma="par"/>
     </Lexeme>
     <Lexeme Stem1="par">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Nepiemīt" Rekcija="Nepiemīt" Novietojums="Pirms" Vietas_apstākļa_nozīme="Nē" Pamatforma="par"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Nepiemīt" Rekcija="Nepiemīt" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Nē" Pamatforma="par"/>
     </Lexeme>
     <Lexeme Stem1="uz">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="uz"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="uz"/>
     </Lexeme>
     <Lexeme Stem1="uz">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Akuzatīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="uz"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Akuzatīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="uz"/>
     </Lexeme>
     <Lexeme Stem1="uz">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="uz"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="uz"/>
     </Lexeme>
     <Lexeme Stem1="apakš">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="apakš"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="apakš"/>
     </Lexeme>
     <Lexeme Stem1="apakš">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="apakš"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="apakš"/>
     </Lexeme>
     <Lexeme Stem1="priekš">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="apakš"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="apakš"/>
     </Lexeme>
     <Lexeme Stem1="priekš">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="apakš"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="apakš"/>
     </Lexeme>    
     <Lexeme Stem1="pēc">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="pēc"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="pēc"/>
     </Lexeme>
     <Lexeme Stem1="pēc">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="pēc"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="pēc"/>
     </Lexeme>
     <Lexeme Stem1="pēc">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Ģenitīvs" Novietojums="Pēc" Vietas_apstākļa_nozīme="Jā" Pamatforma="pēc"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Ģenitīvs" Novietojums="Postpozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="pēc"/>
     </Lexeme>
     <Lexeme Stem1="pēc">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Pēc" Vietas_apstākļa_nozīme="Jā" Pamatforma="pēc"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Postpozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="pēc"/>
     </Lexeme>
     <Lexeme Stem1="kopš">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Nē" Pamatforma="kopš"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Nē" Pamatforma="kopš"/>
     </Lexeme>
     <Lexeme Stem1="kopš">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Nē" Pamatforma="kopš"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Nē" Pamatforma="kopš"/>
     </Lexeme>
     <Lexeme Stem1="pār">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="pār"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="pār"/>
     </Lexeme>
     <Lexeme Stem1="pār">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Akuzatīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="pār"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Akuzatīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="pār"/>
     </Lexeme>
     <Lexeme Stem1="virspus">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="virspus"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="virspus"/>
     </Lexeme>
     <Lexeme Stem1="virspus">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="virspus"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="virspus"/>
     </Lexeme>
     <Lexeme Stem1="dēļ">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Ģenitīvs" Novietojums="Pēc" Vietas_apstākļa_nozīme="Jā" Pamatforma="dēļ"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Ģenitīvs" Novietojums="Postpozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="dēļ"/>
     </Lexeme>
     <Lexeme Stem1="dēļ">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Pēc" Vietas_apstākļa_nozīme="Jā" Pamatforma="dēļ"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Postpozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="dēļ"/>
     </Lexeme>
     <Lexeme Stem1="iekš">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="iekš"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="iekš"/>
     </Lexeme>
     <Lexeme Stem1="iekš">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="iekš"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="iekš"/>
     </Lexeme>
     <Lexeme Stem1="viņpus">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="viņpus"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="viņpus"/>
     </Lexeme>
     <Lexeme Stem1="viņpus">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="viņpus"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="viņpus"/>
     </Lexeme>
     <Lexeme Stem1="aiz">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="aiz"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="aiz"/>
     </Lexeme>
     <Lexeme Stem1="aiz">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="aiz"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="aiz"/>
     </Lexeme>
     <Lexeme Stem1="šaipus">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="šaipus"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="šaipus"/>
     </Lexeme>
     <Lexeme Stem1="šaipus">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="šaipus"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="šaipus"/>
     </Lexeme>
     <Lexeme Stem1="labad">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Ģenitīvs" Novietojums="Pēc" Vietas_apstākļa_nozīme="Jā" Pamatforma="labad"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Ģenitīvs" Novietojums="Postpozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="labad"/>
     </Lexeme>
     <Lexeme Stem1="labad">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Pēc" Vietas_apstākļa_nozīme="Jā" Pamatforma="labad"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Postpozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="labad"/>
     </Lexeme>
     <Lexeme Stem1="ar">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Nē" Pamatforma="ar"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Nē" Pamatforma="ar"/>
     </Lexeme>
     <Lexeme Stem1="ar">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Akuzatīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Nē" Pamatforma="ar"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Akuzatīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Nē" Pamatforma="ar"/>
     </Lexeme>
     <Lexeme Stem1="pret">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="pret"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="pret"/>
     </Lexeme>
     <Lexeme Stem1="pret">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Akuzatīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="pret"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Akuzatīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="pret"/>
     </Lexeme>
     <Lexeme Stem1="pie">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="pie"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="pie"/>
     </Lexeme>
     <Lexeme Stem1="pie">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="pie"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="pie"/>
     </Lexeme>
     <Lexeme Stem1="ārpus">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="ārpus"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="ārpus"/>
     </Lexeme>
     <Lexeme Stem1="ārpus">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="ārpus"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="ārpus"/>
     </Lexeme>
     <Lexeme Stem1="gar">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="gar"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="gar"/>
     </Lexeme>
     <Lexeme Stem1="gar">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Akuzatīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="gar"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Akuzatīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="gar"/>
     </Lexeme>
     <Lexeme Stem1="bez">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Nē" Pamatforma="bez"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Nē" Pamatforma="bez"/>
     </Lexeme>
     <Lexeme Stem1="bez">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Nē" Pamatforma="bez"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Nē" Pamatforma="bez"/>
     </Lexeme>
     <Lexeme Stem1="lejpus">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="lejpus"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="lejpus"/>
     </Lexeme>
     <Lexeme Stem1="lejpus">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="lejpus"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="lejpus"/>
     </Lexeme>
     <Lexeme Stem1="caur">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="caur"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="caur"/>
     </Lexeme>
     <Lexeme Stem1="caur">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Akuzatīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="caur"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Akuzatīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="caur"/>
     </Lexeme>
     <Lexeme Stem1="ap">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="ap"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="ap"/>
     </Lexeme>
     <Lexeme Stem1="ap">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Akuzatīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="ap"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Akuzatīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="ap"/>
     </Lexeme>
     <Lexeme Stem1="pa">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="pa"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="pa"/>
     </Lexeme>
     <Lexeme Stem1="pa">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Akuzatīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="pa"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Akuzatīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="pa"/>
     </Lexeme>
     <Lexeme Stem1="pa">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Datīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="pa"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Datīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="pa"/>
     </Lexeme>
     <Lexeme Stem1="zem">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="zem"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="zem"/>
     </Lexeme>
     <Lexeme Stem1="zem">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="zem"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Ģenitīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="zem"/>
     </Lexeme>
     <Lexeme Stem1="blakām">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="blakām"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="blakām"/>
     </Lexeme>
     <Lexeme Stem1="blakām">
-      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Datīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="blakām"/>
+      <Attributes Vārdšķira="Prievārds" Skaitlis="Vienskaitlis" Rekcija="Datīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="blakām"/>
     </Lexeme>
     <Lexeme Stem1="pāri">
-      <Attributes Skaitlis="Vienskaitlis" Rekcija="Datīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="pāri"/>
+      <Attributes Skaitlis="Vienskaitlis" Rekcija="Datīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="pāri"/>
     </Lexeme>
     <Lexeme Stem1="pāri">
-      <Attributes Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Pirms" Vietas_apstākļa_nozīme="Jā" Pamatforma="pāri"/>
+      <Attributes Skaitlis="Daudzskaitlis" Rekcija="Datīvs" Novietojums="Prepozitīvs" Vietas_apstākļa_nozīme="Jā" Pamatforma="pāri"/>
     </Lexeme>
   </Paradigm>
   <Paradigm Stems="1" ID="27" LemmaEnding="1197" Description="Saikļi">
@@ -3064,7 +3064,7 @@
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Desmiti"/>
     </Lexeme>
     <Lexeme Stem1="neiet">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Jā" Pamatforma="neiet" Laiks="Tagadne" Kārta="Darāmā"/>
+      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Jā" Pamatforma="neiet" Laiks="Tagadne" Kārta="Darāmā"/>
     </Lexeme>
     <Lexeme Stem1="tūkstoti">
       <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Vienskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Akuzatīvs" Skaitļu_kārta="Tūkstoši" Pamatforma="tūkstotis"/>
@@ -3157,10 +3157,10 @@
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši"/>
     </Lexeme>
     <Lexeme Stem1="nav">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="3" Noliegums="Jā" Pamatforma="nebūt" Laiks="Tagadne" Kārta="Darāmā"/>
+      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="3" Noliegums="Jā" Pamatforma="nebūt" Laiks="Tagadne" Kārta="Darāmā"/>
     </Lexeme>
     <Lexeme Stem1="nav">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Jā" Pamatforma="nebūt" Laiks="Tagadne" Kārta="Darāmā"/>
+      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Jā" Pamatforma="nebūt" Laiks="Tagadne" Kārta="Darāmā"/>
     </Lexeme>
     <Lexeme Stem1="piecdesmit">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Desmiti"/>
@@ -3181,10 +3181,10 @@
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši"/>
     </Lexeme>
     <Lexeme Stem1="nebūsit">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="2" Noliegums="Jā" Pamatforma="nebūt" Laiks="Nākotne" Kārta="Darāmā"/>
+      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="2" Noliegums="Jā" Pamatforma="nebūt" Laiks="Nākotne" Kārta="Darāmā"/>
     </Lexeme>
     <Lexeme Stem1="nebūsit">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="2" Noliegums="Jā" Pamatforma="nebūt" Laiks="Nākotne" Kārta="Darāmā"/>
+      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="2" Noliegums="Jā" Pamatforma="nebūt" Laiks="Nākotne" Kārta="Darāmā"/>
     </Lexeme>
     <Lexeme Stem1="trīssimt">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Simti"/>
@@ -3301,10 +3301,10 @@
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Skaitļu_kārta="Padsmiti"/>
     </Lexeme>
     <Lexeme Stem1="ir">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="3" Noliegums="Nē" Pamatforma="būt" Laiks="Tagadne" Kārta="Darāmā"/>
+      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="3" Noliegums="Nē" Pamatforma="būt" Laiks="Tagadne" Kārta="Darāmā"/>
     </Lexeme>
     <Lexeme Stem1="ir">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Nepārejošs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Nē" Pamatforma="būt" Laiks="Tagadne" Kārta="Darāmā"/>
+      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Nē" Pamatforma="būt" Laiks="Tagadne" Kārta="Darāmā"/>
     </Lexeme>
     <Lexeme Stem1="septiņdesmit">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Desmiti"/>

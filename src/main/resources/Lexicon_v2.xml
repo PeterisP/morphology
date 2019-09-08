@@ -5027,7 +5027,7 @@
 			<Attributes/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="30" Name="adjdef-m" LemmaEnding="2019" Description="Substantivizējušās divdabju noteiktās formas un īpašības vārdi bez nenoteiktājām formām vīriešu dzimtē (jaundzimušais, pēdējais)" AllowedGuessEndings="!">
+	<Paradigm Stems="1" ID="30" Name="adjdef-m" LemmaEnding="2019" Description="Patstāvīgas divdabju noteiktās formas un īpašības vārdi bez nenoteiktājām formām vīriešu dzimtē (jaundzimušais, pēdējais)" AllowedGuessEndings="!">
 		<Attributes Vārdšķira="Īpašības vārds" Noteiktība="Noteiktā" Dzimte="Vīriešu" Pakāpe="Pamata"/>
 		<Ending ID="2019" Ending="ais" LemmaEnding="2019">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
@@ -5246,7 +5246,7 @@
 			<Attributes/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="40" Name="adjdef-f1" LemmaEnding="2031" Description="Substantivizējušies noteiktās formas īpašības vārdi un -ts/-ta divdabji sieviešu dzimtē (mēnessērdzīgā, apsūdzētā)" AllowedGuessEndings="!">
+	<Paradigm Stems="1" ID="40" Name="adjdef-f1" LemmaEnding="2031" Description="Patstāvīgi noteiktās formas īpašības vārdi un -ts/-ta divdabji sieviešu dzimtē (mēnessērdzīgā, apsūdzētā)" AllowedGuessEndings="!">
 		<Attributes Vārdšķira="Īpašības vārds" Noteiktība="Noteiktā" Dzimte="Sieviešu" Pakāpe="Pamata"/>
 		<Ending ID="2031" Ending="ā" LemmaEnding="2031">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
@@ -5282,7 +5282,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="41" Name="adjdef-f2" LemmaEnding="2095" Description="Substantivizējušies noteiktās formas -is/-usi divdabji sieviešu dzimtē (cietusī)" AllowedGuessEndings="!">
+	<Paradigm Stems="1" ID="41" Name="adjdef-f2" LemmaEnding="2095" Description="Patstāvīgi noteiktās formas -is/-usi divdabji sieviešu dzimtē (cietusī)" AllowedGuessEndings="!">
 		<Attributes Vārdšķira="Īpašības vārds" Noteiktība="Noteiktā" Dzimte="Sieviešu" Pakāpe="Pamata" />
 		<Ending ID="2095" StemChange="22" Ending="ī" LemmaEnding="2095">
 			<Attributes Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Nominatīvs"/>

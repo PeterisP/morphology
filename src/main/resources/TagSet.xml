@@ -89,8 +89,8 @@
 	<Value LV="Nepiemīt" EN="Not applicable" Tag="0"/>
 </Attribute>
 <Attribute LV="Transitivitāte" EN="Transitivity" PartOfSpeech="Darbības vārds" MarkupPos="5">
-	<Value LV="Pārejošs" EN="Transitive" Tag="t"/>
-	<Value LV="Nepārejošs" EN="Intransitive" Tag="i"/>
+	<Value LV="Transitīvs" EN="Transitive" Tag="t"/>
+	<Value LV="Intransitīvs" EN="Intransitive" Tag="i"/>
 </Attribute>
 <Attribute LV="Konjugācija" EN="Conjugation" PartOfSpeech="Darbības vārds" MarkupPos="6">
 	<Value LV="1" EN="1" Tag="1"/>
@@ -280,8 +280,8 @@
 </Attribute>
 
 <Attribute LV="Novietojums" EN="Position" PartOfSpeech="Prievārds" MarkupPos="1">
-	<Value LV="Pirms" EN="Preposition" Tag="p"/>
-	<Value LV="Pēc" EN="Postposition" Tag="t"/>
+	<Value LV="Prepozitīvs" EN="Preposition" Tag="p"/>
+	<Value LV="Postpozitīvs" EN="Postposition" Tag="t"/>
 </Attribute>
 <Attribute LV="Skaitlis" EN="Number" PartOfSpeech="Prievārds" MarkupPos="2">
 	<Value LV="Vienskaitlis" EN="Singular" Tag="s"/>
@@ -404,11 +404,11 @@
 	<Value LV="Vietvārds" EN="Toponym"/>
 </Attribute>
 
-<Attribute LV="Biežums" EN="Usage frequency">
+<Attribute LV="Lietojuma biežums" EN="Usage frequency">
 	<Value LV="Reti" EN="Rare"/>
 	<Value LV="Retāk" EN="Rarer"/>
 	<Value LV="Pareti" EN="Rarish"/>
-	<Value LV="Neaktuāls" EN="Obsolete"/>
+<!--	<Value LV="Neaktuāls" EN="Obsolete"/> -->
 </Attribute>
 
 <Attribute LV="Lietojums" EN="Usage">
@@ -435,7 +435,7 @@
 	<Value LV="Pārnestā nozīmē" EN="Figurative"/>
 </Attribute>
 
-<Attribute LV="Nozare" EN="Domain">
+<Attribute LV="Joma" EN="Domain">
 	<Value LV="Jurisprudence" EN="Law"/>
 	<Value LV="Botānika" EN="Botany"/>
 	<Value LV="Ornitoloģija" EN="Ornitology"/>
@@ -594,6 +594,7 @@
 </Attribute>
 
 <Attribute LV="Citi" EN="Other">
+	<Value LV="Vietvārds" EN="Toponym"/>
 	<Value LV="Neviennozīmīga paradigma" EN="Ambiguous paradigm"/>
 	<Value LV="[&quot;Neviennozīmīga paradigma&quot;,&quot;Vienskaitļa formas lieto sarunvalodā&quot;]" EN="Ambiguous paradigm/Singular forms are colloquial"/>
 	<Value LV="Neviennozīmīga vārdšķira vai kategorija" EN="Ambiguous part of speech"/>

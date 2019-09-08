@@ -171,33 +171,12 @@ public class Lexeme extends AttributeValues {
                 )) {
             removeAttribute(AttributeNames.i_TezaursCategory);
         }
-        if (isMatchingStrong(AttributeNames.i_TezaursCategory, "[\"Atgriezenisks darbības vārds\",\"Darbības vārds\"]")
-                && paradigm.isMatchingStrong(AttributeNames.i_Reflexive, AttributeNames.v_Yes)) {
-            removeAttribute(AttributeNames.i_TezaursCategory);
-        }
         if (isMatchingStrong(AttributeNames.i_Other, "Refleksīvs")
                 && paradigm.isMatchingStrong(AttributeNames.i_Reflexive, AttributeNames.v_Yes)) {
             removeAttribute(AttributeNames.i_Other);
         }
-        if (isMatchingStrong(AttributeNames.i_TezaursCategory, "[\"Darbības vārds\",\"Tiešs darbības vārds\"]")
-                && paradigm.isMatchingStrong(AttributeNames.i_Reflexive, AttributeNames.v_No)) {
-            removeAttribute(AttributeNames.i_TezaursCategory);
-        }
-        if (isMatchingStrong(AttributeNames.i_Other, AttributeNames.v_Toponym)) {
-            addAttribute(AttributeNames.i_ProperNounType, getValue(AttributeNames.i_Other));
-            addAttribute(AttributeNames.i_NounType, AttributeNames.v_ProperNoun);
-            removeAttribute(AttributeNames.i_Other);
-        }
         if (isMatchingStrong(AttributeNames.i_Domain, "Vēsturisks vietvārds")) {
             removeAttribute(AttributeNames.i_Domain);
-        }
-
-        if (paradigm.getID() == 49) {
-            if (isMatchingStrong(AttributeNames.i_Other, "Nelokāms vārds"))
-                removeAttribute(AttributeNames.i_Other);
-
-            if (isMatchingStrong("Locīšanas īpatnības", "Sastingusi forma"))
-                removeAttribute("Locīšanas īpatnības");
         }
 
         if (stems.get(0).isEmpty() && getValue(AttributeNames.i_Lemma) != null) {

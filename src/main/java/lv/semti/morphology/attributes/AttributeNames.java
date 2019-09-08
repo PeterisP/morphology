@@ -109,8 +109,8 @@ public class AttributeNames {
 	public final static String v_Pagaatne = "Pagātne";
 
 	public final static String i_Transitivity = "Transitivitāte";
-	public final static String v_Transitive = "Pārejošs";
-	public final static String v_Intransitive = "Nepārejošs";
+	public final static String v_Transitive = "Transitīvs";
+	public final static String v_Intransitive = "Intransitīvs";
 
 	public final static String i_Konjugaacija = "Konjugācija";
 	public final static String v_Nekaartns = "Nekārtns";
@@ -160,8 +160,8 @@ public class AttributeNames {
 	public final static String v_Ceelonja = "Cēloņa/nolūka";
 
 	public final static String i_Novietojums = "Novietojums";
-	public final static String v_Pirms = "Pirms";
-	public final static String v_Peec = "Pēc";
+	public final static String v_Pirms = "Prepozitīvs";
+	public final static String v_Peec = "Postpozitīvs";
 
 	public final static String i_Rekcija = "Rekcija";
 
@@ -251,7 +251,7 @@ public class AttributeNames {
     public static final String i_FormRestrictions = "Lieto tikai noteiktā formā/atvasinājumā";
     public static final String i_EntryProperties = "Šķirkļavārda īpatnības";
     public static final String i_TezaursCategory = "Kategorija";
-    public static final String i_Domain = "Nozare";
+    public static final String i_Domain = "Joma";
 
     public static final String i_Other = "Citi";
     public static final String i_ProperNounType = "Īpašvārda veids";
