@@ -147,36 +147,13 @@ public class Lexeme extends AttributeValues {
             }
         }
 
-        if (isMatchingStrong(AttributeNames.i_Gender, AttributeNames.v_Kopdzimte) &&
-                paradigm.getValue(AttributeNames.i_Gender) != null) {
-            removeAttribute(AttributeNames.i_Gender);
-            addAttribute(AttributeNames.v_Kopdzimte, AttributeNames.v_Yes);
-        }
-
-        // FIXME - šo principā būtu jāpārveido pirms datu nonākšanas Tēzaura DB
-        if (isMatchingStrong(AttributeNames.i_FormRestrictions, AttributeNames.v_Plural)
-                && paradigm.getValue(AttributeNames.i_Konjugaacija) == null) {
+        if (isMatchingStrong(AttributeNames.i_FormRestrictions, AttributeNames.v_PlurareTantum)) {
             addAttribute(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum);
             removeAttribute(AttributeNames.i_FormRestrictions);
         }
-        if (isMatchingStrong(AttributeNames.i_FormRestrictions, AttributeNames.v_Singular)) {
+        if (isMatchingStrong(AttributeNames.i_FormRestrictions, AttributeNames.v_SingulareTantum)) {
             addAttribute(AttributeNames.i_NumberSpecial, AttributeNames.v_SingulareTantum);
             removeAttribute(AttributeNames.i_FormRestrictions);
-        }
-
-        if (getValue(AttributeNames.i_TezaursCategory) != null &&
-                (getValue(AttributeNames.i_TezaursCategory).equalsIgnoreCase(paradigm.getValue(AttributeNames.i_PartOfSpeech)) // Lietvārds
-                || getValue(AttributeNames.i_TezaursCategory).equalsIgnoreCase(paradigm.getValue(AttributeNames.i_ResidualType)) // Vārds svešvalodā
-                || getValue(AttributeNames.i_TezaursCategory).equalsIgnoreCase(paradigm.getValue(AttributeNames.i_Declension)) // Ģenitīvenis
-                )) {
-            removeAttribute(AttributeNames.i_TezaursCategory);
-        }
-        if (isMatchingStrong(AttributeNames.i_Other, "Refleksīvs")
-                && paradigm.isMatchingStrong(AttributeNames.i_Reflexive, AttributeNames.v_Yes)) {
-            removeAttribute(AttributeNames.i_Other);
-        }
-        if (isMatchingStrong(AttributeNames.i_Domain, "Vēsturisks vietvārds")) {
-            removeAttribute(AttributeNames.i_Domain);
         }
 
         if (stems.get(0).isEmpty() && getValue(AttributeNames.i_Lemma) != null) {

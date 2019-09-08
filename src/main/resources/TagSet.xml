@@ -31,8 +31,8 @@
 	<Value LV="Nepiemīt" EN="Not applicable" Tag="0"/>
 </Attribute>
 <Attribute LV="Skaitlis 2" EN="Number-special" PartOfSpeech="Lietvārds" MarkupPos="3">
-	<Value LV="Vienskaitlinieks" EN="Always singular" Tag="v"/>
-	<Value LV="Daudzskaitlinieks" EN="Always plural" Tag="d"/>
+	<Value LV="Vienskaitlinieks" EN="Singulare tantum" Tag="v"/>
+	<Value LV="Daudzskaitlinieks" EN="Plurare tantum" Tag="d"/>
 </Attribute>
 <Attribute LV="Locījums" EN="Case" PartOfSpeech="Lietvārds" MarkupPos="4">
 	<Value LV="Nominatīvs" EN="Nominative" Tag="n"/>
@@ -528,6 +528,7 @@
 	<Value LV="Antropoloģija" EN="Antropology"/>
 	<Value LV="Socioloģija" EN="Sociology"/>
 	<Value LV="Papīrrūpniecība" EN="Paper manufacturing"/>
+	<Value LV="Vēsturisks vietvārds" EN="Historical toponym"/>
 	<Value LV="Attiecas uz kapitālistisko iekārtu, kapitālistisko sabiedrību" EN="Capitalism"/>
 </Attribute>
 
@@ -551,6 +552,14 @@
 <FreeAttribute LV="Pronunciations" EN="Pronunciations"/> 
 <FreeAttribute LV="Šķirkļa ID" EN="Entry ID"/>
 <FreeAttribute LV="Šķirkļa cilvēklasāmais ID" EN="Entry name"/>
+<FreeAttribute LV="Priedēklis" EN="Prefix"/> 
+
+<Attribute LV="Gramatiskās formas ierobežojumi" EN="Grammatical form restrictions">
+	<Value LV="Lieto tikai daudzskaitlī" EN="Only plural"/>
+	<Value LV="Lieto tikai trešās personas formas" EN="Only third person forms"/>
+	<Value LV="Nelieto tagadnes formas" EN="Present tense is not used"/>
+</Attribute>
+
 <FreeAttribute LV="Parasti lieto noteiktā formā/atvasinājumā" EN="Usually used in particular form"/>
 <FreeAttribute LV="Parasti lieto noteikta veida struktūrās" EN="Usually used in particular structures"/>
 <FreeAttribute LV="Lieto noteiktā formā/atvasinājumā" EN="Used in particular form"/>
@@ -562,7 +571,6 @@
 <FreeAttribute LV="Lieto kopā ar" EN="Used with"/>
 <FreeAttribute LV="Locīt kā" EN="Inflect like"/>
 <FreeAttribute LV="Šablons salikteņa vairākpunktu locīšanai" EN="Pattern for multipoint inflection"/>
-<FreeAttribute LV="Priedēklis" EN="Prefix"/> 
 
 <Attribute LV="Šķirkļavārda īpatnības" EN="Entry properties">
 	<Value LV="Daudzskaitlis" EN="Plural"/>

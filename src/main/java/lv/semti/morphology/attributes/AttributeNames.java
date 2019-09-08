@@ -76,8 +76,6 @@ public class AttributeNames {
 	public final static String v_Locative = "Lokatīvs";
 	public final static String v_Vocative = "Vokatīvs";
 
-	// public final static String i_CaseSpecial = "Locījums 2";
-
 	public final static String i_Declension = "Deklinācija";
 	public final static String v_Reflexive = "Atgriezenisks";
 	public final static String v_InflexibleGenitive = "Ģenitīvenis";
@@ -242,13 +240,13 @@ public class AttributeNames {
     public static final String i_WhitespaceBefore = "Atstarpes pirms";
     public static final String i_Offset = "Nobīde rindkopā";
 
-    public static final String i_Frequency = "Biežums";
+    public static final String i_Frequency = "Lietojuma biežums";
 	public static final String v_Rare = "Reti";
 
     public static final String i_Usage = "Lietojums";
     public static final String v_Regional = "Apvidvārds";
 
-    public static final String i_FormRestrictions = "Lieto tikai noteiktā formā/atvasinājumā";
+    public static final String i_FormRestrictions = "Gramatiskās formas ierobežojumi";
     public static final String i_EntryProperties = "Šķirkļavārda īpatnības";
     public static final String i_TezaursCategory = "Kategorija";
     public static final String i_Domain = "Joma";
