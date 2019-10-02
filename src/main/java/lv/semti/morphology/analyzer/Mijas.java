@@ -534,13 +534,8 @@ public abstract class Mijas {
 				case 0: varianti.add(new Variants(celms)); break;  // nav mijas
 
 				case 1: // lietvārdu līdzskaņu mija
-					if ( (celms.endsWith("vies") && !celms.endsWith("kvies")) || (celms.endsWith("vieš") && !celms.endsWith("evieš")) || celms.equalsIgnoreCase("cēs") || celms.endsWith("tēt") || celms.endsWith("tēš") ||
-							celms.endsWith("ast") || celms.endsWith("asš") || celms.endsWith("mat") || celms.endsWith("maš") ||
-							celms.endsWith("skat") || celms.endsWith("skaš") || (celms.endsWith("st") && !celms.endsWith("kst") && !celms.endsWith("nst")) || celms.endsWith("sš")) {
-						varianti.add(new Variants(celms));
-					}
 					// Personvārdu mijas - Valdis-Valda; Gatis-Gata. Eglīts - Eglīša.  Vēl ir literatūrā minēts izņēmums -skis -ckis (Čaikovskis, Visockis), taču tiem tāpat viss šķiet ok.
-					else if (properName && celms.endsWith("t") && !celms.endsWith("īt")) {
+					if (properName && celms.endsWith("t") && !celms.endsWith("īt")) {
 						varianti.add(new Variants(celms));
 						if (syllables(celms) > 1) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"š","Mija","t -> š"));
 					}

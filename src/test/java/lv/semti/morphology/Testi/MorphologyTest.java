@@ -2786,10 +2786,9 @@ public class MorphologyTest {
     @Test
     public void balamute() {
         AttributeValues filter = new AttributeValues();
-        filter.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Masculine);
+        filter.addAttribute(AttributeNames.i_ParadigmID, "47");
 
         List<Wordform> balamute = locītājs.generateInflections("balamute", false, filter);
-
         AttributeValues dskg = new AttributeValues();
         dskg.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
         dskg.addAttribute(AttributeNames.i_Number, AttributeNames.v_Plural);
@@ -3522,6 +3521,21 @@ public class MorphologyTest {
         assertTrue(w.isRecognized());
         w = locītājs.analyze("kodējs");
         assertTrue(w.isRecognized());
+    }
+
+    // Ticket #84 'skate' and 'apskate' get wrong inflection due to missing stem change
+    @Test public void apskate() {
+        ArrayList<Wordform> formas = locītājs.generateInflections("plate");
+        AttributeValues testset = new AttributeValues();
+        testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Genitive);
+        testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Plural);
+        assertInflection(formas, testset, "plašu");
+
+        formas = locītājs.generateInflections("skate");
+        assertInflection(formas, testset, "skašu");
+
+        formas = locītājs.generateInflections("tālskatis");
+        assertInflection(formas, testset, "tālskatu");
     }
 }
 
