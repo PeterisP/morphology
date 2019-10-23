@@ -565,22 +565,22 @@ public class MorphologyTest {
 
     @Test
     public void vairāki() {
-        // 2011-12-29 "vairāki" analizē kā skaitļa vārdu, vajag kā vietniekvārdu
-        // vietniekv., nenoteiktais, nav personas, vīr.dz., daudzsk., nominatīvs, nav noliegtais
+        // 2019-10-23 Laura apgalvo, ka sen ir izlemts ka īpašības vārds.
+        // agrāk (2011-12-29) bija pārcelts no skaitļa vārda uz vietniekvārdu
         Word vairāki = locītājs.analyze("vairāki");
         assertTrue(vairāki.isRecognized());
 
-        assertEquals(AttributeNames.v_Pronoun, vairāki.wordforms.get(0).getValue(AttributeNames.i_PartOfSpeech));
+        assertEquals(AttributeNames.v_Adjective, vairāki.wordforms.get(0).getValue(AttributeNames.i_PartOfSpeech));
     }
 
     @Test
     public void daudzus() {
-        // 2011-12-29 "daudzus" analizē kā skaitļa vārdu, vajag kā vietniekvārdu
-        // vietniekv., nenoteiktais, nav personas, vīr.dz., daudzsk., datīvs, nav noliegtais
+        // 2019-10-23 Laura apgalvo, ka sen ir izlemts ka īpašības vārds.
+        // agrāk (2011-12-29) bija pārcelts no skaitļa vārda uz vietniekvārdu
         Word daudzus = locītājs.analyze("daudzus");
         assertTrue(daudzus.isRecognized());
 
-        assertEquals(AttributeNames.v_Pronoun, daudzus.wordforms.get(0).getValue(AttributeNames.i_PartOfSpeech));
+        assertEquals(AttributeNames.v_Adjective, daudzus.wordforms.get(0).getValue(AttributeNames.i_PartOfSpeech));
     }
 
     @Test

@@ -635,10 +635,10 @@
       <Attributes Pamatforma="treji"/>
     </Lexeme>
     <Lexeme Stem1="daudz">
-      <Attributes Pamatforma="daudzi" Vārdšķira="Vietniekvārds" Persona="Nepiemīt" Vietniekvārda_tips="Nenoteiktie"/>
+      <Attributes Pamatforma="daudzi" Vārdšķira="Īpašības vārds" Īpašības_vārda_tips="Kādības"/>
     </Lexeme>
     <Lexeme Stem1="vairāk">
-      <Attributes Pamatforma="vairāki" Vārdšķira="Vietniekvārds" Persona="Nepiemīt" Vietniekvārda_tips="Nenoteiktie"/>
+      <Attributes Pamatforma="vairāki" Vārdšķira="Īpašības vārds" Īpašības_vārda_tips="Attieksmes"/>
     </Lexeme>
   </Paradigm>
   <Paradigm Stems="1" ID="25" LemmaEnding="2011" Description="Vietniekvārdi">
