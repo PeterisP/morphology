@@ -10,9 +10,7 @@ import org.junit.Test;
 
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class JSONLexiconTest {
     @Test
@@ -48,6 +46,28 @@ public class JSONLexiconTest {
             compare_lexicons(analyzer_json, "tēzaurs", analyzer_xml, "lexicon");
 
 
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    /**
+     * For some reason some lexemes have all obligatory attributes (e.g. absolvents) and some do not (e.g. lietotājs).
+     * We should guarantee uniform lexicon.
+     */
+    public void guaranteeObligatoryLexemeAttributes() {
+        try {
+            Analyzer analyzer_json = new Analyzer("Lexicon_v2.xml");
+            for (Paradigm paradigm : analyzer_json.paradigms) {
+                for (Lexeme lexeme : paradigm.lexemes) {
+                    assertNotNull("Word with lexeme ID " + lexeme.getID() + " must have lemma", lexeme.getValue(AttributeNames.i_Lemma));
+                    assertNotNull("Word `" + lexeme.getValue(AttributeNames.i_Lemma) + "` must have attribute: `" + AttributeNames.i_ParadigmID + "`", lexeme.getValue(AttributeNames.i_ParadigmID));
+                    assertNotNull("Word `" + lexeme.getValue(AttributeNames.i_Lemma) + "` must have attribute: `" + AttributeNames.i_LexemeID + "`", lexeme.getValue(AttributeNames.i_LexemeID));
+                    assertNotNull("Word `" + lexeme.getValue(AttributeNames.i_Lemma) + "` must have attribute: `" + AttributeNames.i_EntryID + "`", lexeme.getValue(AttributeNames.i_EntryID));
+                    assertEquals(Integer.valueOf(lexeme.getValue(AttributeNames.i_ParadigmID)), new Integer(paradigm.getID()));
+                }
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
