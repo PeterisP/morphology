@@ -8,7 +8,7 @@
 	<Corpus FileName="Lexicon_sv.xml" Type="core"/>
 	<Corpus FileName="Lexicon_valerijs.xml" Type="core"/>
 	<Corpus FileName="Lexicon_onomastica.xml" Type="aux"/> -->
-	<Paradigm Stems="1" ID="1" Name="noun-1a" LemmaEnding="1" Description="Lietvārdi, 1. deklinācija, vīriešu dzimte, galotne -s (tēvs)" AllowedGuessEndings="bcdfghjklmnprstvzčģķļņšž">
+	<Paradigm Stems="1" ID="1" Name="noun-1a" LemmaEnding="1" Description="Lietvārdi vīriešu dzimtē, 1. deklinācija ar galotni -s (tēvs)" AllowedGuessEndings="bcdfghjklmnprstvzčģķļņšž">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="1" Dzimte="Vīriešu"/>
 		<Ending ID="1" StemChange="0" Ending="s" StemID="1" LemmaEnding="1">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
@@ -50,7 +50,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="2" Name="noun-1b" LemmaEnding="14" Description="Lietvārdi, 1. deklinācija, vīriešu dzimte, galotne -š (ceļš)" AllowedGuessEndings="ņ">
+	<Paradigm Stems="1" ID="2" Name="noun-1b" LemmaEnding="14" Description="Lietvārdi vīriešu dzimtē, 1. deklinācija ar galotni -š (ceļš)" AllowedGuessEndings="ņ">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="1" Dzimte="Vīriešu"/>
 		<Ending ID="14" StemChange="0" Ending="š" StemID="1" LemmaEnding="14">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
@@ -92,7 +92,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="3" Name="noun-2a" LemmaEnding="27" Description="Lietvārdi, 2. deklinācija, vīriešu dzimte, galotne -is, ar miju (dzenis)" AllowedGuessEndings="bcdgklmnprstvzčģķšž">
+	<Paradigm Stems="1" ID="3" Name="noun-2a" LemmaEnding="27" Description="Lietvārdi vīriešu dzimtē, 2. deklinācija ar galotni -is, ar miju (dzenis)" AllowedGuessEndings="bcdgklmnprstvzčģķšž">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="2" Dzimte="Vīriešu"/>
 		<Ending ID="27" StemChange="0" Ending="is" StemID="1" LemmaEnding="27">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
@@ -131,7 +131,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="4" Name="noun-2c" LemmaEnding="39" Description="Lietvārdi, 2. deklinācija, vīriešu dzimte, galotne -s, vienskaitļa nominatīvs un ģenitīvs sakrīt (mēness, akmens, asmens, ūdens, rudens, zibens)" AllowedGuessEndings="ns">
+	<Paradigm Stems="1" ID="4" Name="noun-2c" LemmaEnding="39" Description="Lietvārdi vīriešu dzimtē, 2. deklinācija ar galotni -s, vienskaitļa nominatīvs un ģenitīvs sakrīt (mēness, akmens, asmens, ūdens, rudens, zibens)" AllowedGuessEndings="ns">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="2" Dzimte="Vīriešu"/>
 		<Ending ID="39" StemChange="0" Ending="s" StemID="1" LemmaEnding="39">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
@@ -173,7 +173,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="5" Name="noun-2d" LemmaEnding="1211" Description="Lietvārdi, 2. deklinācija, vīriešu dzimte, galotne -s, vienskaitļa nominatīvs un ģenitīvs nesakrīt (suns)" AllowedGuessEndings="n">
+	<Paradigm Stems="1" ID="5" Name="noun-2d" LemmaEnding="1211" Description="Lietvārdi vīriešu dzimtē, 2. deklinācija ar galotni -s, vienskaitļa nominatīvs un ģenitīvs nesakrīt (suns)" AllowedGuessEndings="n">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="2" Dzimte="Vīriešu"/>
 		<Ending ID="1211" StemChange="0" Ending="s" StemID="1" LemmaEnding="1211">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
@@ -212,7 +212,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="6" Name="noun-3m" LemmaEnding="51" Description="Lietvārdi, 3. deklinācija, vīriešu dzimte, galotne -us (medus)" AllowedGuessEndings="!">
+	<Paradigm Stems="1" ID="6" Name="noun-3m" LemmaEnding="51" Description="Lietvārdi vīriešu dzimtē, 3. deklinācija, ar  galotni -us (medus)" AllowedGuessEndings="!">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="3" Dzimte="Vīriešu"/>
 		<Ending ID="51" StemChange="0" Ending="us" StemID="1" LemmaEnding="51">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
@@ -254,7 +254,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="7" Name="noun-4f" LemmaEnding="75" Description="Lietvārdi, 4. deklinācija, sieviešu dzimte, galotne -a (liepa)" AllowedGuessEndings="bcdfghjklmnprstvzčļņšž">
+	<Paradigm Stems="1" ID="7" Name="noun-4f" LemmaEnding="75" Description="Lietvārdi sieviešu dzimtē, 4. deklinācija ar galotni -a (liepa)" AllowedGuessEndings="bcdfghjklmnprstvzčļņšž">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Dzimte="Sieviešu"/>
 		<Ending ID="75" StemChange="0" Ending="a" StemID="1" LemmaEnding="75">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
@@ -296,7 +296,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="8" Name="noun-4m" LemmaEnding="63" Description="Lietvārdi, 4. deklinācija, vīriešu dzimte, galotne -a (puika)" AllowedGuessEndings="!">
+	<Paradigm Stems="1" ID="8" Name="noun-4m" LemmaEnding="63" Description="Lietvārdi vīriešu dzimtē, 4. deklinācija ar galotni -a (puika)" AllowedGuessEndings="!">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Dzimte="Vīriešu"/>
 		<Ending ID="63" StemChange="0" Ending="a" StemID="1" LemmaEnding="63">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
@@ -335,7 +335,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="9" Name="noun-5fa" LemmaEnding="87" Description="Lietvārdi, 5. deklinācija, sieviešu dzimte, galotne -e, ar miju (egle)" AllowedGuessEndings="bcdfghjklmnprstvzčģķļšž">
+	<Paradigm Stems="1" ID="9" Name="noun-5fa" LemmaEnding="87" Description="Lietvārdi sieviešu dzimtē, 5. deklinācija ar galotni -e, ar miju (egle)" AllowedGuessEndings="bcdfghjklmnprstvzčģķļšž">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="5" Dzimte="Sieviešu"/>
 		<Ending ID="87" StemChange="0" Ending="e" StemID="1" LemmaEnding="87">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
@@ -377,7 +377,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="10" Name="noun-5ma" LemmaEnding="1146" Description="Lietvārdi, 5. deklinācija, vīriešu dzimte, galotne -e, ar miju (bende, Palle)" AllowedGuessEndings="!">
+	<Paradigm Stems="1" ID="10" Name="noun-5ma" LemmaEnding="1146" Description="Lietvārdi vīriešu dzimtē, 5. deklinācija ar galotni -e, ar miju (bende, Palle)" AllowedGuessEndings="!">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="5" Dzimte="Vīriešu"/>
 		<Ending ID="1146" StemChange="0" Ending="e" StemID="1" LemmaEnding="1146">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
@@ -416,7 +416,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="11" Name="noun-6a" LemmaEnding="99" Description="Lietvārdi, 6. deklinācija, sieviešu dzimte, galotne -s, ar miju (sirds) un vīriešu dzimtes izņēmumi (ļaudis, dzimtļaudis)" AllowedGuessEndings="!">
+	<Paradigm Stems="1" ID="11" Name="noun-6a" LemmaEnding="99" Description="Lietvārdi abās dzimtēs, 6. deklinācija ar galotni -s, ar miju (sirds, ļaudis, dzimtļaudis)" AllowedGuessEndings="!">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="6" Dzimte="Sieviešu"/>
 		<Ending ID="99" StemChange="0" Ending="s" StemID="1" LemmaEnding="99">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
@@ -461,7 +461,7 @@
 			<Attributes/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="13" Name="adj-1" LemmaEnding="135" Description="Īpašības vārdi, galotne -s (balts)" AllowedGuessEndings="bcdfgjklmnprstvzķņšž">
+	<Paradigm Stems="1" ID="13" Name="adj-1" LemmaEnding="135" Description="Īpašības vārdi ar galotni -s (balts)" AllowedGuessEndings="bcdfgjklmnprstvzķņšž">
 		<Attributes Vārdšķira="Īpašības vārds"/>
 		<Ending ID="135" StemChange="3" Ending="s" StemID="1" LemmaEnding="135">
 			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Nominatīvs"/>
@@ -602,7 +602,7 @@
 			<Attributes Vārdšķira="Apstākļa vārds"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="14" Name="adj-2" LemmaEnding="180" Description="Īpašības vārdi, galotne -š (zaļš)" AllowedGuessEndings="djmrļņ">
+	<Paradigm Stems="1" ID="14" Name="adj-2" LemmaEnding="180" Description="Īpašības vārdi ar galotni -š (zaļš)" AllowedGuessEndings="djmrļņ">
 		<Attributes Vārdšķira="Īpašības vārds"/>
 		<Ending ID="180" StemChange="0" Ending="š" StemID="1" LemmaEnding="180">
 			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Nominatīvs" Pakāpe="Pamata"/>
@@ -746,7 +746,7 @@
 			<Attributes Vārdšķira="Apstākļa vārds"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="3" ID="15" Name="verb-1" LemmaEnding="711" Description="Darbības vārdi, 1. konjugācija, tiešie (dzert, plēst, dot, iet)" AllowedGuessEndings="!">
+	<Paradigm Stems="3" ID="15" Name="verb-1" LemmaEnding="711" Description="Tiešie darbības vārdi, 1. konjugācija un nekārtnie, izņemot &quot;būt&quot; (dzert, plēst, iet, dot)" AllowedGuessEndings="!">
 		<Attributes Konjugācija="1" Atgriezeniskums="Nē" Noliegums="Nē" Darbības_vārda_tips="Patstāvīgs darbības vārds"/>
 		<Ending ID="711" StemChange="0" Ending="t" StemID="1" LemmaEnding="711">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Nenoteiksme" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
@@ -1988,7 +1988,7 @@
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Vajadzības, atstāstījuma paveids" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Darāmā"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="16" Name="verb-2" LemmaEnding="225" Description="Darbības vārdi, 2. konjugācija, tiešie (spēlēt)" AllowedGuessEndings="oāēīū">
+	<Paradigm Stems="1" ID="16" Name="verb-2" LemmaEnding="225" Description="Tiešie darbības vārdi, 2. konjugācija (spēlēt)" AllowedGuessEndings="oāēīū">
 		<Attributes Konjugācija="2" Atgriezeniskums="Nē" Noliegums="Nē" Darbības_vārda_tips="Patstāvīgs darbības vārds"/>
 		<Ending ID="225" StemChange="0" Ending="t" StemID="1" LemmaEnding="225">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Nenoteiksme" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
@@ -3197,7 +3197,7 @@
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Vajadzības, atstāstījuma paveids" Persona="Nepiemīt" Laiks="Tagadne" Kārta="Darāmā"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="17" Name="verb-3a" LemmaEnding="468" Description="Darbības vārdi, 3. konjugācija, tiešie, bez tagadnes mijas (lasīt)" AllowedGuessEndings="āēī">
+	<Paradigm Stems="1" ID="17" Name="verb-3a" LemmaEnding="468" Description="Tiešie darbības vārdi, 3. konjugācija, bez tagadnes mijas (lasīt)" AllowedGuessEndings="āēī">
 		<Attributes Konjugācija="3" Atgriezeniskums="Nē" Noliegums="Nē" Darbības_vārda_tips="Patstāvīgs darbības vārds"/>
 		<Ending ID="468" StemChange="0" Ending="t" StemID="1" LemmaEnding="468">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Nenoteiksme" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
@@ -4406,7 +4406,7 @@
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Vajadzības, atstāstījuma paveids" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Darāmā"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="3" ID="18" Name="verb-1r" LemmaEnding="1061" Description="Darbības vārdi, 1. konjugācija, atgriezeniskie (aizlauzties)" AllowedGuessEndings="!">
+	<Paradigm Stems="3" ID="18" Name="verb-1r" LemmaEnding="1061" Description="Atgriezeniskie darbības vārdi, 1. konjugācija (aizlauzties)" AllowedGuessEndings="!">
 		<Attributes Konjugācija="1" Atgriezeniskums="Jā" Noliegums="Nē" Darbības_vārda_tips="Patstāvīgs darbības vārds"/>
 		<Ending ID="1061" StemChange="0" Ending="ties" StemID="1" LemmaEnding="1061">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Nenoteiksme" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
@@ -4544,7 +4544,7 @@
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Vajadzības, atstāstījuma paveids" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Darāmā"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="19" Name="verb-2r" LemmaEnding="955" Description="Darbības vārdi, 2. konjugācija, atgriezeniskie (spēlēties)" AllowedGuessEndings="oāēī">
+	<Paradigm Stems="1" ID="19" Name="verb-2r" LemmaEnding="955" Description="Atgriezeniskie darbības vārdi, 2. konjugācija (spēlēties)" AllowedGuessEndings="oāēī">
 		<Attributes Konjugācija="2" Atgriezeniskums="Jā" Noliegums="Nē" Darbības_vārda_tips="Patstāvīgs darbības vārds"/>
 		<Ending ID="955" StemChange="0" Ending="ties" StemID="1" LemmaEnding="955">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Nenoteiksme" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
@@ -4682,7 +4682,7 @@
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Vajadzības, atstāstījuma paveids" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Darāmā"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="20" Name="verb-3ar" LemmaEnding="1008" Description="Darbības vārdi, 3. konjugācija, atgriezeniskie, bez tagadnes mijas (dīdīties)" AllowedGuessEndings="āēī">
+	<Paradigm Stems="1" ID="20" Name="verb-3ar" LemmaEnding="1008" Description="Atgriezeniskie darbības vārdi, 3. konjugācija, bez tagadnes mijas (dīdīties)" AllowedGuessEndings="āēī">
 		<Attributes Konjugācija="3" Atgriezeniskums="Jā" Noliegums="Nē" Darbības_vārda_tips="Patstāvīgs darbības vārds"/>
 		<Ending ID="1008" StemChange="0" Ending="ties" StemID="1" LemmaEnding="1008">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Nenoteiksme" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
@@ -4826,7 +4826,7 @@
 			<Attributes Vārdšķira="Apstākļa vārds"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="22" Name="ord" LemmaEnding="1102" Description="Kārtas skaitļa vārdi, noteiktā galotne (trešais)" AllowedGuessEndings="!">
+	<Paradigm Stems="1" ID="22" Name="ord" LemmaEnding="1102" Description="Kārtas skaitļa vārdi ar noteikto galotni (trešais)" AllowedGuessEndings="!">
 		<Attributes Vārdšķira="Skaitļa vārds" Skaitļa_vārda_tips="Kārtas" Uzbūve="Vienkāršs" Noteiktība="Noteiktā"/>
 		<Ending ID="1102" StemChange="0" Ending="ais" StemID="1" LemmaEnding="1102">
 			<Attributes Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Locījums="Nominatīvs"/>
@@ -4901,7 +4901,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="23" Name="card-1" LemmaEnding="1136" Description="Pamata skaitļa vārdi, vienskaitlis (viens); kārtas skaitļavārdi, nenoteiktā galotne (trešs)" AllowedGuessEndings="!">
+	<Paradigm Stems="1" ID="23" Name="card-1" LemmaEnding="1136" Description="Pamata skaitļa vārdi ar vienskaitli (viens); kārtas skaitļavārdi ar nenoteikto galotni (trešs)" AllowedGuessEndings="!">
 		<Attributes Vārdšķira="Skaitļa vārds" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā"/>
 		<Ending ID="1136" StemChange="0" Ending="s" StemID="1" LemmaEnding="1136">
 			<Attributes Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Locījums="Nominatīvs"/>
@@ -4964,7 +4964,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Lokatīvs"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="24" Name="card-2" LemmaEnding="1126" Description="Pamata skaitļa vārdi, daudzskaitlis (divi, četri); līdzīgi lokāmi vietniekvārdi (daudzi, vairāki)" AllowedGuessEndings="!">
+	<Paradigm Stems="1" ID="24" Name="card-2" LemmaEnding="1126" Description="Pamata skaitļa vārdi tikai daudzskaitlī (divi, četri); līdzīgi lokāmi vietniekvārdi (daudzi, vairāki)" AllowedGuessEndings="!">
 		<Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā"/>
 		<Ending ID="1126" StemChange="0" Ending="i" StemID="1" LemmaEnding="1126">
 			<Attributes Skaitlis="Daudzskaitlis" Dzimte="Vīriešu" Locījums="Nominatīvs"/>
@@ -5027,7 +5027,7 @@
 			<Attributes/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="30" Name="adjdef-m" LemmaEnding="2019" Description="Patstāvīgas divdabju noteiktās formas un īpašības vārdi bez nenoteiktājām formām vīriešu dzimtē (jaundzimušais, pēdējais)" AllowedGuessEndings="!">
+	<Paradigm Stems="1" ID="30" Name="adjdef-m" LemmaEnding="2019" Description="Patstāvīgas divdabju noteiktās formas un īpašības vārdi bez nenoteiktajām formām vīriešu dzimtē (jaundzimušais, pēdējais)" AllowedGuessEndings="!">
 		<Attributes Vārdšķira="Īpašības vārds" Noteiktība="Noteiktā" Dzimte="Vīriešu" Pakāpe="Pamata"/>
 		<Ending ID="2019" Ending="ais" LemmaEnding="2019">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
@@ -5066,7 +5066,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="31" Name="noun-3f" LemmaEnding="2044" Description="Lietvārdi, 3. deklinācija, sieviešu dzimte, galotne -us (personvārdi kā Aņus, vecvārdi kā pelus, ragus)" AllowedGuessEndings="!">
+	<Paradigm Stems="1" ID="31" Name="noun-3f" LemmaEnding="2044" Description="Lietvārdi sieviešu dzimtē, 3. deklinācija ar galotni -us (personvārdi kā Aņus, vecvārdi kā pelus, ragus)" AllowedGuessEndings="!">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="3" Dzimte="Sieviešu"/>
 		<Ending ID="2044" StemChange="0" Ending="us" StemID="1">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
@@ -5108,7 +5108,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="32" Name="noun-r1" LemmaEnding="2057" Description="Atgriezeniskie lietvārdi, galotnes -ājies, -ējies (klausītājies, pakaļdzinējies)" AllowedGuessEndings="!">
+	<Paradigm Stems="1" ID="32" Name="noun-r1" LemmaEnding="2057" Description="Atgriezeniskie lietvārdi ar galotnēm -ājies, -ējies (klausītājies, pakaļdzinējies)" AllowedGuessEndings="!">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="Nepiemīt"/>
 		<Ending ID="2057" StemChange="0" Ending="jies" StemID="1" Dzimte="Vīriešu">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
@@ -5147,7 +5147,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Akuzatīvs"/>
 		</Ending>
 	</Paradigm>	
-	<Paradigm Stems="1" ID="33" Name="noun-r2" LemmaEnding="2069" Description="Atgriezeniskie lietvārdi, galotne -umies (vēlējumies)" AllowedGuessEndings="!">
+	<Paradigm Stems="1" ID="33" Name="noun-r2" LemmaEnding="2069" Description="Atgriezeniskie lietvārdi ar galotni -umies (vēlējumies)" AllowedGuessEndings="!">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="Nepiemīt" Dzimte="Vīriešu"/>
 		<Ending ID="2069" StemChange="0" Ending="umies" StemID="1">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
@@ -5162,7 +5162,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Akuzatīvs"/>
 		</Ending>
 	</Paradigm>	
-	<Paradigm Stems="1" ID="34" Name="noun-r3" LemmaEnding="2073" Description="Atgriezeniskie lietvārdi, galotne -šanās (acīsskatīšanās)" AllowedGuessEndings="!">
+	<Paradigm Stems="1" ID="34" Name="noun-r3" LemmaEnding="2073" Description="Atgriezeniskie lietvārdi ar galotni -šanās (acīsskatīšanās)" AllowedGuessEndings="!">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="Nepiemīt" Dzimte="Sieviešu"/>
 		<Ending ID="2073" StemChange="0" Ending="šanās" StemID="1">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
@@ -5183,7 +5183,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Akuzatīvs"/>
 		</Ending>		
 	</Paradigm>	
-	<Paradigm Stems="1" ID="35" Name="noun-6b" LemmaEnding="2079" Description="Lietvārdi, 6. deklinācija, sieviešu dzimte, galotne -s, bez mijas (auss, balss)" AllowedGuessEndings="!">
+	<Paradigm Stems="1" ID="35" Name="noun-6b" LemmaEnding="2079" Description="Lietvārdi sieviešu dzimtē, 6. deklinācija ar galotni -s, bez mijas (auss, balss)" AllowedGuessEndings="!">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="6" Dzimte="Sieviešu"/>
 		<Ending ID="2079" StemChange="0" Ending="s" StemID="1" LemmaEnding="2079">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
@@ -5511,7 +5511,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Noteiktā" Locījums="Lokatīvs" Dzimte="Sieviešu" Ģenerēt="Nē"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="44" Name="noun-5fb" LemmaEnding="1765" Description="Lietvārdi, 5. deklinācija, sieviešu dzimte, galotne -e, bez mijas (pase)" AllowedGuessEndings="!">
+	<Paradigm Stems="1" ID="44" Name="noun-5fb" LemmaEnding="1765" Description="Lietvārdi sieviešu dzimtē, 5. deklinācija ar galotni -e, bez mijas (pase)" AllowedGuessEndings="!">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="5" Dzimte="Sieviešu"/>
 		<Ending ID="1765" StemChange="0" Ending="e" StemID="1" LemmaEnding="1765">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
@@ -5553,7 +5553,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="45" Name="verb-3b" LemmaEnding="1778" Description="Darbības vārdi, 3. konjugācija, tiešie, ar tagadnes miju (sacīt)" AllowedGuessEndings="!">
+	<Paradigm Stems="1" ID="45" Name="verb-3b" LemmaEnding="1778" Description="Tiešie darbības vārdi, 3. konjugācija, ar tagadnes miju (sacīt)" AllowedGuessEndings="!">
 		<Attributes Konjugācija="3" Atgriezeniskums="Nē" Noliegums="Nē" Darbības_vārda_tips="Patstāvīgs darbības vārds"/>
 		<Ending ID="1778" StemChange="0" Ending="t" StemID="1" LemmaEnding="1778">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Nenoteiksme" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
@@ -6762,7 +6762,7 @@
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Vajadzības, atstāstījuma paveids" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Darāmā"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="46" Name="verb-3br" LemmaEnding="2336" Description="Darbības vārdi, 3. konjugācija, atgriezeniskie, ar tagadnes miju (izsacīties)" AllowedGuessEndings="!">
+	<Paradigm Stems="1" ID="46" Name="verb-3br" LemmaEnding="2336" Description="Atgriezeniskie darbības vārdi, 3. konjugācija, ar tagadnes miju (izsacīties)" AllowedGuessEndings="!">
 		<Attributes Konjugācija="3" Atgriezeniskums="Jā" Noliegums="Nē" Darbības_vārda_tips="Patstāvīgs darbības vārds"/>
 		<Ending ID="2336" StemChange="0" Ending="ties" StemID="1" LemmaEnding="2336">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Nenoteiksme" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
@@ -6900,7 +6900,7 @@
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Vajadzības, atstāstījuma paveids" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Darāmā"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="47" Name="noun-5mb" LemmaEnding="2381" Description="Lietvārdi, 5. deklinācija, vīriešu dzimte, galotne, bez mijas (tēte, balamute)" AllowedGuessEndings="!">
+	<Paradigm Stems="1" ID="47" Name="noun-5mb" LemmaEnding="2381" Description="Lietvārdi vīriešu dzimtē, 5. deklinācija ar galotni -e, bez mijas (tēte, balamute)" AllowedGuessEndings="!">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="5" Dzimte="Vīriešu"/>
 		<Ending ID="2381" StemChange="0" Ending="e" StemID="1" LemmaEnding="2381">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
@@ -6939,7 +6939,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="48" Name="noun-2b" LemmaEnding="2393" Description="Lietvārdi, 2. deklinācija, vīriešu dzimte, galotne -is, bez mijas (tētis, viesis)" AllowedGuessEndings="!">
+	<Paradigm Stems="1" ID="48" Name="noun-2b" LemmaEnding="2393" Description="Lietvārdi vīriešu dzimtē, 2. deklinācija ar galotni -is, bez mijas (tētis, viesis)" AllowedGuessEndings="!">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="2" Dzimte="Vīriešu"/>
 		<Ending ID="2393" StemChange="0" Ending="is" StemID="1" LemmaEnding="2393">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
@@ -6981,13 +6981,13 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="49" Name="noun-g" LemmaEnding="2406" Description="Ģenitīveņi (augstpapēžu, milzu)" AllowedGuessEndings="!">
+	<Paradigm Stems="1" ID="49" Name="noun-g" LemmaEnding="2406" Description="Ģenitīveņi (augstpapēžu, milzu, pagaidu)" AllowedGuessEndings="!">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="Ģenitīvenis"/>
 		<Ending ID="2406" StemChange="0" Ending="" StemID="1" LemmaEnding="2406">
 			<Attributes/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="3" ID="50" Name="verb-1i" LemmaEnding="2407" Description="Darbības vārda būt formas un atvasinājumi (būt, pabūt, sabūt)" AllowedGuessEndings="!">
+	<Paradigm Stems="3" ID="50" Name="verb-1i" LemmaEnding="2407" Description="Darbības vārda &quot;būt&quot; formas un atvasinājumi (būt, pabūt, sabūt)" AllowedGuessEndings="!">
 		<Attributes Konjugācija="Nekārtns" Atgriezeniskums="Nē" Noliegums="Nē"/>
 		<Ending ID="2407" StemChange="0" Ending="t" StemID="1" LemmaEnding="2407">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Nenoteiksme" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
