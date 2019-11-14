@@ -746,7 +746,7 @@
 			<Attributes Vārdšķira="Apstākļa vārds"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="3" ID="15" Name="verb-1" LemmaEnding="711" Description="Tiešie darbības vārdi, 1. konjugācija un nekārtnie, izņemot &quot;būt&quot; (dzert, plēst, iet, dot)" DescriptionEN="Direct verbs, 1st conjugation and irregular except &quot;būt&quot; (dzert, plēst, iet, dot)" AllowedGuessEndings="!">
+	<Paradigm Stems="3" ID="15" Name="verb-1" LemmaEnding="711" Description="Tiešie darbības vārdi, 1. konjugācija un nekārtnie, izņemot &quot;būt&quot; atvasinājumus (dzert, plēst, iet, dot)" DescriptionEN="Direct verbs, 1st conjugation and irregular except &quot;būt&quot; derivatives (dzert, plēst, iet, dot)" AllowedGuessEndings="!">
 		<Attributes Konjugācija="1" Atgriezeniskums="Nē" Noliegums="Nē" Darbības_vārda_tips="Patstāvīgs darbības vārds"/>
 		<Ending ID="711" StemChange="0" Ending="t" StemID="1" LemmaEnding="711">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Nenoteiksme" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
@@ -4406,7 +4406,7 @@
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Vajadzības, atstāstījuma paveids" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Darāmā"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="3" ID="18" Name="verb-1r" LemmaEnding="1061" Description="Atgriezeniskie darbības vārdi, 1. konjugācija (aizlauzties)" DescriptionEN="Reflexive verbs, 1st conjugation (aizlauzties)" AllowedGuessEndings="!">
+	<Paradigm Stems="3" ID="18" Name="verb-1r" LemmaEnding="1061" Description="Atgriezeniskie darbības vārdi, 1. konjugācija un nekārtnie, izņemot &quot;būt&quot; atvasinājumus (aizlauzties, paieties, atdoties)" DescriptionEN="Reflexive verbs, 1st conjugation and irregular except &quot;būt&quot; derivatives (aizlauzties, paieties, atdoties)" AllowedGuessEndings="!">
 		<Attributes Konjugācija="1" Atgriezeniskums="Jā" Noliegums="Nē" Darbības_vārda_tips="Patstāvīgs darbības vārds"/>
 		<Ending ID="1061" StemChange="0" Ending="ties" StemID="1" LemmaEnding="1061">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Nenoteiksme" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
@@ -6987,7 +6987,7 @@
 			<Attributes/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="3" ID="50" Name="verb-1i" LemmaEnding="2407" Description="Darbības vārda &quot;būt&quot; formas un atvasinājumi (būt, pabūt, sabūt)" DescriptionEN="Forms and derivatibes of verb &quot;būt&quot; (būt, pabūt, sabūt)" AllowedGuessEndings="!">
+	<Paradigm Stems="3" ID="50" Name="verb-1i" LemmaEnding="2407" Description="Darbības vārda &quot;būt&quot; formas un atvasinājumi (būt, pabūt, sabūt)" DescriptionEN="Forms and derivatives of verb &quot;būt&quot; (būt, pabūt, sabūt)" AllowedGuessEndings="!">
 		<Attributes Konjugācija="Nekārtns" Atgriezeniskums="Nē" Noliegums="Nē"/>
 		<Ending ID="2407" StemChange="0" Ending="t" StemID="1" LemmaEnding="2407">
 			<Attributes Vārdšķira="Darbības vārds" Skaitlis="Nepiemīt" Izteiksme="Nenoteiksme" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
