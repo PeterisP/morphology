@@ -36,7 +36,7 @@
 						"a" : "Akuzatīvs",
 						"l" : "Lokatīvs",
 						"v" : "Vokatīvs",
-						"_" : "Nepiemīt",
+						"0" : "Nepiemīt",
 
 						"_next" : {
 							"_name" : "Deklinācija",
