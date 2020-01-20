@@ -52,6 +52,7 @@ public class MorphologyTest {
         assertInflection(forms, testset, validForm);
     }
 
+    // TODO - šie varbūt ir par assertThat matcheriem jāpārtaisa
     private void assertInflection(List<Wordform> forms, AttributeValues testset, String validForm) {
         boolean found = false;
         for (Wordform wf : forms) {
@@ -3536,6 +3537,34 @@ public class MorphologyTest {
 
         formas = locītājs.generateInflections("tālskatis");
         assertInflection(formas, testset, "tālskatu");
+    }
+
+    @Test public void suitableParadigms_smoketest() {
+        List<Paradigm> options;
+        options = locītājs.suitableParadigms("žikivators");
+        assertEquals(2, options.size()); // -s lietvārds, -s īpašības vārds
+//        for (Paradigm p : options) {
+//            System.out.printf("%d : %s\n", p.getID(), p.getName());
+//        }
+
+        options = locītājs.suitableParadigms("virzis");
+        assertEquals(1, options.size());
+        for (Paradigm p : options) {
+            assertNotEquals(1, p.getID()); // -s šeit nav adekvāts minējums
+        }
+
+        options = locītājs.suitableParadigms("pokemonizēt");
+        assertEquals(2, options.size());
+
+        options = locītājs.suitableParadigms("askdjasdlkjakalsdj");
+        assertEquals(1, options.size());
+        assertEquals(12, options.get(0).getID());
+
+        options = locītājs.suitableParadigms("mazpokemoni");
+        for (Paradigm p : options) {
+            System.out.printf("%d : %s\n", p.getID(), p.getName());
+        }
+
     }
 }
 

@@ -18,13 +18,12 @@
 package lv.semti.morphology.analyzer;
 
 import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 import java.util.regex.Pattern;
 
 import lv.semti.morphology.attributes.AttributeNames;
 import lv.semti.morphology.attributes.AttributeValues;
+import lv.semti.morphology.corpus.ParadigmFrequencyComparator;
 import lv.semti.morphology.lexicon.*;
 
 public class Analyzer extends Lexicon {
@@ -127,8 +126,11 @@ public class Analyzer extends Lexicon {
 	}
 
 	/**
-	 * Veic morfoloģisko analīzi
-	 *
+	 * Performs a morphological analysis of an arbitrary token according to the configuration parameters set in this
+	 * Analyzer object.
+	 * This method handles the caching and capitalization, and delegates the actual analysis to analyzeLowercase.
+	 * @param word - the token string to be analyzed
+	 * @return a Word object containing the possible analysis options
 	 */
 	public Word analyze(String word) {
 		word = word.trim();
@@ -154,7 +156,13 @@ public class Analyzer extends Lexicon {
 		wordCache.put(word, (Word) rezults.clone());
 		return rezults;
 	}
-	
+
+	/**
+	 * Implements the actual core morphological analysis algorithm
+	 * @param word - the lowercase form of the word
+	 * @param originalWord - the word with the original capitalization
+	 * @return a Word object containing the possible analysis options
+	 */
 	private Word analyzeLowercase(String word, String originalWord) {
 		Word result = new Word(word);
 		
@@ -331,6 +339,14 @@ public class Analyzer extends Lexicon {
 		}
 	}
 
+	/**
+	 * Attempts to verify if this word can be derived as a possible deminutive form of some noun in lexicon
+	 * @param word
+	 * @param rezultāts
+	 * @param ending
+	 * @param celms
+	 * @param originalWord
+	 */
 	private void guessDeminutive(String word, Word rezultāts, Ending ending,
 			Variants celms, String originalWord) {
 		switch (ending.getParadigm().getID()) {
@@ -454,6 +470,7 @@ public class Analyzer extends Lexicon {
 		vārds.notifyObservers();
 	}
 
+	// originalWord - original capitalization
 	public Word guessByEnding(String word, String originalWord) {
 		Word rezultāts = new Word(word);
 
@@ -543,17 +560,52 @@ public class Analyzer extends Lexicon {
 
 		for (Wordform vārdforma : varianti.wordforms) {			
 			Ending ending = vārdforma.getEnding();
-			
-			AttributeValues filter = new AttributeValues();
-			filter.addAttribute(AttributeNames.i_Lemma, word);
-			filter.addAttribute(AttributeNames.i_Lemma, AttributeNames.v_Singular);
-			
+
 			if ( (ending != null && ending.getLemmaEnding() == ending) ||
 				(vārdforma.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(word) && 
-						(vārdforma.isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum) || vārdforma.isMatchingStrong(AttributeNames.i_Declension, AttributeNames.v_InflexibleGenitive) )) )
+						vārdforma.isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum) ) )
 				result.addWordform(vārdforma);
 		}
 
+		return result;
+	}
+
+	/**
+	 * Provides a list of paradigms that might be suitable for a given lemma
+	 * The guessing restrictions for stem final letters and closed paradigms will be obeyed except for exceptions listed in lexicon
+	 * @param lemma the lemma that should be reviewed. Plural forms will be treated as possibly valid for the case of plurare tantum
+	 * @return a list of Paradigm objects which are possible for this case.
+	 */
+	public List<Paradigm> suitableParadigms(String lemma) {
+		List<Paradigm> result = new ArrayList<>();
+		Word lexicon_options = this.analyze(lemma);
+		Word all_options = this.guessByEnding(lemma.toLowerCase().trim(), lemma); // All analysis options as a starting point
+		for (Wordform wf : lexicon_options.wordforms) {
+			all_options.addWordform(wf); // form a joint list of both known words from lexicon and also pure guessing
+		}
+
+		AttributeValues pluraretantum = new AttributeValues();
+		pluraretantum.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
+		pluraretantum.addAttribute(AttributeNames.i_Case, AttributeNames.v_Nominative);
+		pluraretantum.addAttribute(AttributeNames.i_Number, AttributeNames.v_Plural);
+
+		for (Wordform option : all_options.wordforms) {
+			Ending ending = option.getEnding();
+			if ((ending != null && ending.getLemmaEnding() == ending) || option.isMatchingWeak(pluraretantum)) {
+				result.add(ending.getParadigm());
+			}
+		}
+
+		// sort list according to statistical frequency, and remove dublicates
+		Set result_set = new TreeSet(new Comparator<Paradigm>() {
+			@Override
+			public int compare(Paradigm a, Paradigm b) {
+				return a.getID() - b.getID();
+			}
+		});
+		result_set.addAll(result);
+		result = new ArrayList<>(result_set);
+		Collections.sort(result, new ParadigmFrequencyComparator());
 		return result;
 	}
 
