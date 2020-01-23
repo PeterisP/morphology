@@ -73,6 +73,8 @@ public class Lexicon {
 	protected Multimap<String, Lexeme> hardcodedForms = ArrayListMultimap.create();
 	public Trie automats = new Trie();
 
+	public boolean guessAllParadigms = false; // Attempt guessing words even in paradigms where AllowedGuessEndings are marked with !
+
 	/**
 	 * Creates a lexicon object from the default location in JAR resources
 	 *

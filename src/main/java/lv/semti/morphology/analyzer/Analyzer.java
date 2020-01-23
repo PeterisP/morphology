@@ -104,6 +104,7 @@ public class Analyzer extends Lexicon {
 	    guessVerbs = true;
 	    guessParticiples = true;
 	    guessAdjectives = true;
+		guessAllParadigms = false;
 	    enableAllGuesses = false;
 		guessInflexibleNouns = true;
         removeRareWords = true;
@@ -121,6 +122,7 @@ public class Analyzer extends Lexicon {
 		pipe.format("guessParticiples:\t%b\n", guessParticiples);
 		pipe.format("guessAdjectives:\t%b\n", guessAdjectives);
 		pipe.format("guessInflexibleNouns:\t%b\n", guessInflexibleNouns);
+		pipe.format("guessAllParadigms:\t%b\n", guessAllParadigms);
 	
 		pipe.flush();
 	}
@@ -522,19 +524,19 @@ public class Analyzer extends Lexicon {
                         ) ||
                                 (this.guessVerbs && ending.getParadigm().isMatchingWeak(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb)) ||
                                 (this.guessAdjectives && ending.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adjective)) ||
-                                (this.guessParticiples && variants.isMatchingStrong(AttributeNames.i_Izteiksme, AttributeNames.v_Participle)))
-                                && (i > 0 || variants.isMatchingStrong(AttributeNames.i_Declension, AttributeNames.v_NA))) // ja galotnes nav, tad vai nu nelokāms lietvārds vai neatpazīstam. Lai nav verbu bezgalotņu formas minējumos, kas parasti nav pareizās.
+                                (this.guessParticiples && variants.isMatchingStrong(AttributeNames.i_Izteiksme, AttributeNames.v_Participle)) ||
+								(this.guessNouns && this.guessInflexibleNouns && variants.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Residual))
+						)
+                                && (i > 0 || variants.isMatchingStrong(AttributeNames.i_Declension, AttributeNames.v_NA)
+										  || variants.isMatchingStrong(AttributeNames.i_Declension, AttributeNames.v_InflexibleGenitive)
+										  || variants.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Residual) )) // ja galotnes nav, tad vai nu nelokāms lietvārds vai neatpazīstam. Lai nav verbu bezgalotņu formas minējumos, kas parasti nav pareizās.
                         {
-                            if (ending.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun) &&
-                                    variants.isMatchingStrong(AttributeNames.i_Declension, AttributeNames.v_NA)) {
+
+                            if (variants.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Residual)) {
                                 char last = celms.charAt(celms.length() - 1);
-                                if (!(last == 'ā' || last == 'e' || last == 'ē' || last == 'i' || last == 'ī' || last == 'o' || last == 'ū' || celms.endsWith("as"))) {  // uzskatam, ka 'godīgi' nelokāmie lietvārdi beidzas tikai ar šiem - klasiski nelokāmie, un lietuviešu Arvydas
-                                    variants.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Residual);
-                                    if (!Character.isDigit(last)) {
-                                        variants.addAttribute(AttributeNames.i_ResidualType, AttributeNames.v_Foreign);
-                                        //Pieņemam, ka vārdi svešvalodā - 'crawling' 'Kirill' utml.
-                                    }
-                                }
+								if (Character.isDigit(last)) {
+									variants.removeAttribute(AttributeNames.i_ResidualType); // defaultais AttributeNames.v_Foreign te neatblist
+								}
                             }
                             rezultāts.wordforms.add(variants);
                         }
@@ -606,6 +608,7 @@ public class Analyzer extends Lexicon {
 		result_set.addAll(result);
 		result = new ArrayList<>(result_set);
 		Collections.sort(result, new ParadigmFrequencyComparator());
+		Collections.reverse(result); // We want the list in order of descending frequency
 		return result;
 	}
 
@@ -640,9 +643,8 @@ public class Analyzer extends Lexicon {
 			}
 			ArrayList<Wordform> inflections1 = generateInflections(lemma.substring(0, hyphen), nouns_only, part_filter);
 			
-			if ( (inflections1.size()>1 && inflections2.size()>1) // Ja sanāk nelokāms kautkas, tad nemēģinam taisīt kā dubultuzvārdu - tie ir ļoti reti un tas salauztu vairāk nekā iegūtu
-					|| lemma.substring(0, hyphen).equalsIgnoreCase("pavļuta"))  // FIXME - kāpēc te ir atsauce uz konkrētu uzvārdu?
-				return mergeInflections(inflections1, inflections2, "-");
+			if ( (inflections1.size()>1 && inflections2.size()>1)) // Ja sanāk nelokāms kautkas, tad nemēģinam taisīt kā dubultuzvārdu - tie ir ļoti reti un tas salauztu vairāk nekā iegūtu
+				return mergeInflections(inflections1, inflections2, "-"); // TODO - unittestos ir aizkomentēti piemēri Pavļuta-Deslandes un Freiberga-Žverelo, kas šo testētu
 		}
 		
 		Word possibilities = this.analyze(lemma);
@@ -851,6 +853,10 @@ public class Analyzer extends Lexicon {
 					int endingID = wf.getEnding().getID();
 					if (wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adverb))
 						endingID = 954; // FIXME - hardcoded number of Adverb paradigm main ending, must match the ending number in Lexicon.xml
+					// FIXME - es te iekodēju izņēmumgadījumu jo nevaru saprast kā pareizāk darīt vispārīgi
+					if (lemma.endsWith("šana") && wf.getEnding().getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb)) {
+						endingID = 75; // FIXME Basic -a feminine noun ending, must match the appropriate number in Lexicon.xml
+					}
 						
 					lex = this.createLexeme(lemma, endingID, "generateInflectionsFromParadigm");
 					if (lex.getValue(AttributeNames.i_PartOfSpeech) == null)
