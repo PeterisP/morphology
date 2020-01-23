@@ -1982,7 +1982,7 @@
 			<Attributes Skaitlis="Nepiemīt" Izteiksme="Vēlējuma" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Darāmā"/>
 		</Ending>
 		<Ending ID="1199" StemChange="6" Ending="sit" StemID="1" LemmaEnding="711">
-			<Attributes Skaitlis="Daudzskaitlis" Izteiksme="Īstenības" Persona="2" Laiks="Nākotne" Kārta="Darāmā" Ģenerēt="Nē"/>
+			<Attributes Skaitlis="Daudzskaitlis" Izteiksme="Īstenības" Persona="2" Laiks="Nākotne" Kārta="Darāmā"/>
 		</Ending>
 		<Ending ID="1202" StemChange="4" Ending="ot" StemID="2" LemmaEnding="711">
 			<Attributes Skaitlis="Nepiemīt" Izteiksme="Vajadzības, atstāstījuma paveids" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Darāmā"/>
@@ -3191,7 +3191,7 @@
 			<Attributes Skaitlis="Nepiemīt" Izteiksme="Vēlējuma" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Darāmā"/>
 		</Ending>
 		<Ending ID="1200" StemChange="0" Ending="sit" StemID="1" LemmaEnding="225">
-			<Attributes Skaitlis="Daudzskaitlis" Izteiksme="Īstenības" Persona="2" Laiks="Nākotne" Kārta="Darāmā" Ģenerēt="Nē"/>
+			<Attributes Skaitlis="Daudzskaitlis" Izteiksme="Īstenības" Persona="2" Laiks="Nākotne" Kārta="Darāmā"/>
 		</Ending>
 		<Ending ID="1203" StemChange="4" Ending="jot" StemID="1" LemmaEnding="225">
 			<Attributes Skaitlis="Nepiemīt" Izteiksme="Vajadzības, atstāstījuma paveids" Persona="Nepiemīt" Laiks="Tagadne" Kārta="Darāmā"/>
@@ -4400,7 +4400,7 @@
 			<Attributes Skaitlis="Nepiemīt" Izteiksme="Vēlējuma" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Darāmā"/>
 		</Ending>
 		<Ending ID="1201" StemChange="0" Ending="sit" StemID="1" LemmaEnding="468">
-			<Attributes Skaitlis="Daudzskaitlis" Izteiksme="Īstenības" Persona="2" Laiks="Nākotne" Kārta="Darāmā" Ģenerēt="Nē"/>
+			<Attributes Skaitlis="Daudzskaitlis" Izteiksme="Īstenības" Persona="2" Laiks="Nākotne" Kārta="Darāmā"/>
 		</Ending>
 		<Ending ID="1204" StemChange="19" Ending="ot" StemID="1" LemmaEnding="468">
 			<Attributes Skaitlis="Nepiemīt" Izteiksme="Vajadzības, atstāstījuma paveids" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Darāmā"/>
@@ -6756,7 +6756,7 @@
 			<Attributes Skaitlis="Nepiemīt" Izteiksme="Vēlējuma" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Darāmā"/>
 		</Ending>
 		<Ending ID="2327" StemChange="0" Ending="sit" StemID="1" LemmaEnding="1778">
-			<Attributes Skaitlis="Daudzskaitlis" Izteiksme="Īstenības" Persona="2" Laiks="Nākotne" Kārta="Darāmā" Ģenerēt="Nē"/>
+			<Attributes Skaitlis="Daudzskaitlis" Izteiksme="Īstenības" Persona="2" Laiks="Nākotne" Kārta="Darāmā"/>
 		</Ending>
 		<Ending ID="2328" StemChange="28" Ending="ot" StemID="1" LemmaEnding="1778">
 			<Attributes Skaitlis="Nepiemīt" Izteiksme="Vajadzības, atstāstījuma paveids" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Darāmā"/>
@@ -8196,7 +8196,7 @@
 			<Attributes Skaitlis="Nepiemīt" Izteiksme="Vēlējuma" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Darāmā"/>
 		</Ending>
 		<Ending ID="2903" StemChange="6" Ending="sit" StemID="1" LemmaEnding="2407">
-			<Attributes Skaitlis="Daudzskaitlis" Izteiksme="Īstenības" Persona="2" Laiks="Nākotne" Kārta="Darāmā" Ģenerēt="Nē"/>
+			<Attributes Skaitlis="Daudzskaitlis" Izteiksme="Īstenības" Persona="2" Laiks="Nākotne" Kārta="Darāmā"/>
 		</Ending>
 		<Ending ID="2904" StemChange="4" Ending="ot" StemID="2" LemmaEnding="2407">
 			<Attributes Skaitlis="Nepiemīt" Izteiksme="Vajadzības, atstāstījuma paveids" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Darāmā"/>
