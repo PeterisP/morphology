@@ -1988,7 +1988,6 @@ public class MorphologyTest {
         formas = locītājs.generateInflections("Vītola", true, filter);
         assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, "", "Vītolai");
 
-        filter.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Masculine);
         formas = locītājs.generateInflections("Kirill", true);
         assertTrue(formas.size() > 0);
         assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, "", "Kirill");
@@ -2144,7 +2143,7 @@ public class MorphologyTest {
         formas = locītājs.generateInflections("Žverelo-Freiberga", true);
         assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "Žverelo-Freibergas");
 
-//		formas = locītājs.generateInflectionsFromParadigm("Freiberga-Žverelo", true);
+//		formas = locītājs.generateInflections("Freiberga-Žverelo", true);
 //		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "Freibergas-Žverelo");
 
         formas = locītājs.generateInflections("Rīga-Best", true);
@@ -2156,9 +2155,8 @@ public class MorphologyTest {
         formas = locītājs.generateInflections("Rudaus-Rudovskis", true);
         assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "Rudaus-Rudovska");
 
-        formas = locītājs.generateInflections("Pavļuta-Deslandes", true);
-        assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "Pavļutas-Deslandes");
-
+//        formas = locītājs.generateInflections("Pavļuta-Deslandes", true);
+//        assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "Pavļutas-Deslandes");
     }
 
     @Test
@@ -3540,6 +3538,7 @@ public class MorphologyTest {
     }
 
     @Test public void suitableParadigms_smoketest() {
+        locītājs.guessAllParadigms = true;
         List<Paradigm> options;
         options = locītājs.suitableParadigms("žikivators");
         assertEquals(2, options.size()); // -s lietvārds, -s īpašības vārds
@@ -3558,13 +3557,50 @@ public class MorphologyTest {
 
         options = locītājs.suitableParadigms("askdjasdlkjakalsdj");
         assertEquals(1, options.size());
-        assertEquals(12, options.get(0).getID());
+        assertEquals(39, options.get(0).getID());
 
         options = locītājs.suitableParadigms("mazpokemoni");
         for (Paradigm p : options) {
             System.out.printf("%d : %s\n", p.getID(), p.getName());
         }
+    }
 
+    // Piemēri, kuriem Artūrs identificēja, ka neko neatrod
+    @Test public void suitableParadigms_notfound() {
+        locītājs.guessAllParadigms = true;
+        locītājs.enableAllGuesses = true;
+        List<Paradigm> options;
+        options = locītājs.suitableParadigms("gastroenterīts");
+        assertNotEquals(0, options.size());
+
+        options = locītājs.suitableParadigms("prettārpu");
+        assertNotEquals(0, options.size());
+
+        options = locītājs.suitableParadigms("Ševaljē");
+        assertNotEquals(0, options.size());
+
+        options = locītājs.suitableParadigms("INDIE");
+        assertNotEquals(0, options.size());
+
+        options = locītājs.suitableParadigms("maztauku");
+        assertEquals(3, options.size());
+    }
+
+    @Test public void ticket90() {
+        AttributeValues testset = new AttributeValues();
+        testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+        testset.addAttribute(AttributeNames.i_Person, "2");
+        testset.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Tagadne);
+        ArrayList<Wordform> formas = locītājs.generateInflections("šķist");
+        assertInflection(formas, testset, "šķieti");
+
+        testset.addAttribute(AttributeNames.i_Person, "1");
+        testset.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Naakotne);
+        formas = locītājs.generateInflections("vīkšt");
+        assertInflection(formas, testset, "vīkšīšu");
+
+        testset.addAttribute(AttributeNames.i_Person, "2");
+        assertInflection(formas, testset, "vīkšīsi");
     }
 }
 

@@ -160,7 +160,7 @@ public abstract class Mijas {
 					break;
 				case 6: // 1. konjugācijas nākotne
 					if (celms.endsWith("dī") || celms.endsWith("tī") || celms.endsWith("sī")) varianti.add(new Variants(celms.substring(0,celms.length()-2)+"s"));
-					else if (celms.endsWith("zī")) varianti.add(new Variants(celms.substring(0,celms.length()-1))); // lūzt, griezt
+					else if (celms.endsWith("zī") || celms.endsWith("šī")) varianti.add(new Variants(celms.substring(0,celms.length()-1))); // lūzt, griezt
 					else if (!celms.endsWith("d") && !celms.endsWith("t") && !celms.endsWith("s") && !celms.endsWith("z")) varianti.add(new Variants(celms));
 					break;
 				case 7: // 1. konjugācijas 2. personas tagadne
@@ -170,7 +170,7 @@ public abstract class Mijas {
 						varianti.add(new Variants(celms));   //  atnest -> atnes
 					}
 					else if ((mija == 7) && (celms.endsWith("odi") || celms.endsWith("ūdi") || celms.endsWith("opi") || celms.endsWith("ūpi") || 
-											 celms.endsWith("oti") || celms.endsWith("ūti") || celms.endsWith("īti") || celms.endsWith("sti"))) 
+											 celms.endsWith("oti") || celms.endsWith("ūti") || celms.endsWith("īti") || celms.endsWith("ieti") || celms.endsWith("sti")))
 						varianti.add(new Variants(celms.substring(0,celms.length()-1)));
 					else if ((mija == 23) && (celms.endsWith("od") || celms.endsWith("ūd") || celms.endsWith("op") || celms.endsWith("ūp") || 
 							 				  celms.endsWith("ot") || celms.endsWith("ūt") || celms.endsWith("īt") || celms.endsWith("st"))) 
@@ -609,7 +609,7 @@ public abstract class Mijas {
 						else if (trešāSakne.endsWith("t")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"tī"));
 						else if (trešāSakne.endsWith("s")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"sī"));
 						else varianti.add(new Variants(celms));
-					} else if (celms.endsWith("z")) {
+					} else if (celms.endsWith("z") || celms.endsWith("š")) {
 						varianti.add(new Variants(celms+"ī"));
 					}
 					else varianti.add(new Variants(celms));
@@ -618,7 +618,7 @@ public abstract class Mijas {
 				case 23: // 1. konjugācijas 2. personas tagadne - ja pēc tam seko garā galotne kā -iet					
 					if (celms.endsWith("š") && trešāSakne.endsWith("s")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"s"));
 					else if (celms.endsWith("š") && trešāSakne.endsWith("t")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"t"));
-					else if (celms.endsWith("od") || celms.endsWith("ūd") || celms.endsWith("op") || celms.endsWith("ūp") || celms.endsWith("ot") || celms.endsWith("ūt") || celms.endsWith("īt") || celms.endsWith("st")) {
+					else if (celms.endsWith("od") || celms.endsWith("ūd") || celms.endsWith("op") || celms.endsWith("ūp") || celms.endsWith("ot") || celms.endsWith("ūt") || celms.endsWith("īt") || celms.endsWith("iet")  || celms.endsWith("st")) {
 						if (mija == 7)
 							varianti.add(new Variants(celms+"i"));
 						else varianti.add(new Variants(celms));

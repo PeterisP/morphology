@@ -148,6 +148,9 @@
     <Lexeme Stem1="atlik" Stem2="atliek" Stem3="atlik">
       <Attributes Darbības_vārda_tips="Modāls" Pamatforma="atlikt"/>
     </Lexeme>
+    <Lexeme Stem1="vīkš" Stem2="vīkš" Stem3="vīkš">
+      <Attributes Pamatforma="vīkšt"/>
+    </Lexeme>
   </Paradigm>
   <Paradigm Stems="1" ID="16" LemmaEnding="225" Description="Darbības vārdi 2. konjugācija tiešie">
     <Attributes Konjugācija="2" Atgriezeniskums="Nē"/>
