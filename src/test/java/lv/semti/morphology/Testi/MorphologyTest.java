@@ -513,7 +513,7 @@ public class MorphologyTest {
         Word dodas = locītājs.analyze("dodas");
         assertTrue(dodas.isRecognized());
         assertEquals(AttributeNames.v_Active, dodas.wordforms.get(0).getValue(AttributeNames.i_Voice));
-        assertEquals("vmyip_130an", dodas.wordforms.get(0).getTag());
+        assertEquals("vmyip_i30an", dodas.wordforms.get(0).getTag());
     }
 
 
@@ -3601,6 +3601,12 @@ public class MorphologyTest {
 
         testset.addAttribute(AttributeNames.i_Person, "2");
         assertInflection(formas, testset, "vīkšīsi");
+    }
+
+    @Test public void adverb_degrees() {
+        Word w = locītājs.analyze("agrotehniski");
+        assertTrue(w.isRecognized());
+        assertEquals("rp_", w.getBestWordform().getTag());
     }
 }
 
