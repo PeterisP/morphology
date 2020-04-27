@@ -158,6 +158,14 @@ public class Lexeme extends AttributeValues {
 
         if (stems.get(0).isEmpty() && getValue(AttributeNames.i_Lemma) != null) {
             String lemma = getValue(AttributeNames.i_Lemma);
+
+            if (isMatchingStrong(AttributeNames.i_EntryProperties, "Sieviešu dzimte")) { // FIXME - hardkodēta vērtība 'Sieviešu dzimte'
+                // Specapstrāde priekš īpašības vārda 'ālava' plus ja nu kas vēl parādīsies
+                if (lemma.endsWith("a") && paradigm.getLemmaEnding().getEnding().equalsIgnoreCase("s")) {
+                    lemma = lemma.substring(0, lemma.length()-1) + "s";
+                }
+            }
+
             if (isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum)) {
                 constructor_try_plural();
             } else {
@@ -169,7 +177,7 @@ public class Lexeme extends AttributeValues {
                         constructor_try_plural();
                     } else {
                         System.err.println(String.format("Leksēmai '%s' #%d galotne neatbilst paradigmai", lemma, this.id));
-                        this.describe();
+                        this.describe(System.err);
                     }
                 }
             }
