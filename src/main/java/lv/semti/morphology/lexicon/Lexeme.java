@@ -22,6 +22,9 @@ import java.io.Writer;
 import java.util.ArrayList;
 import java.util.Map;
 
+import lv.semti.morphology.analyzer.Analyzer;
+import lv.semti.morphology.analyzer.Mijas;
+import lv.semti.morphology.analyzer.Variants;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;
 import org.w3c.dom.Attr;
@@ -129,10 +132,16 @@ public class Lexeme extends AttributeValues {
             addAttribute(AttributeNames.i_Lemma, (String)json.get("lemma"));
         if (json.get("stem1") != null)
             stems.set(0, (String)json.get("stem1"));
-        if (json.get("stem2") != null)
-            stems.set(1, (String)json.get("stem2"));
-        if (json.get("stem3") != null)
-            stems.set(2, (String)json.get("stem3"));
+        if (json.get("stem2") != null) {
+            if (stems.size() < 2) {
+                throw new Error("Paradigmai neatbilstošs celms " + json.toJSONString());
+            } else stems.set(1, (String) json.get("stem2"));
+        }
+        if (json.get("stem3") != null) {
+            if (stems.size() < 3) {
+                throw new Error("Paradigmai neatbilstošs celms " + json.toJSONString());
+            } else stems.set(2, (String) json.get("stem3"));
+        }
         if (json.get("attributes") != null) {
             JSONObject attrs = (JSONObject)json.get("attributes");
             for (Object key : attrs.keySet()) {
@@ -145,15 +154,6 @@ public class Lexeme extends AttributeValues {
                 }
                 this.addAttribute((String)key, value);
             }
-        }
-
-        if (isMatchingStrong(AttributeNames.i_FormRestrictions, AttributeNames.v_PlurareTantum)) {
-            addAttribute(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum);
-            removeAttribute(AttributeNames.i_FormRestrictions);
-        }
-        if (isMatchingStrong(AttributeNames.i_FormRestrictions, AttributeNames.v_SingulareTantum)) {
-            addAttribute(AttributeNames.i_NumberSpecial, AttributeNames.v_SingulareTantum);
-            removeAttribute(AttributeNames.i_FormRestrictions);
         }
 
         if (stems.get(0).isEmpty() && getValue(AttributeNames.i_Lemma) != null) {
@@ -196,7 +196,11 @@ public class Lexeme extends AttributeValues {
             if (e.isMatchingWeak(filter)) {
                 try {
                     String stem = e.stem(lemma);
-                    stems.set(0, stem);
+                    ArrayList<Variants> celmi = Mijas.mijuVarianti(stem, e.getMija(), Analyzer.p_firstcap.matcher(lemma).matches());
+                    for (Variants v : celmi) {
+                        // FIXME - ko tad darīt ar vairākiem variantiem ????
+                        stems.set(0, v.celms);
+                    }
                 } catch (Ending.WrongEndingException exc2) { /*pass*/ }
             }
         }

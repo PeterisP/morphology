@@ -246,7 +246,6 @@ public class AttributeNames {
     public static final String i_Usage = "Lietojums";
     public static final String v_Regional = "Apvidvārds";
 
-    public static final String i_FormRestrictions = "Gramatiskās formas ierobežojumi";
     public static final String i_EntryProperties = "Šķirkļavārda īpatnības";
     public static final String i_TezaursCategory = "Kategorija";
     public static final String i_Domain = "Joma";

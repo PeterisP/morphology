@@ -120,6 +120,7 @@ public class MorphoEvaluate {
 		TagSet tags = TagSet.getTagSet();
 
         Multimap<String, String> mistakes_by_lemma = ArrayListMultimap.create();
+        Map<String, Integer> oov_frequency = new HashMap();
 		List<String> mistakes = new LinkedList<String>();
 		List<String> capitalization_mistakes = new LinkedList<String>();
 		
@@ -144,7 +145,10 @@ public class MorphoEvaluate {
 				if (wf.getValue(AttributeNames.i_Guess)==null || wf.getValue(AttributeNames.i_Guess).equalsIgnoreCase("Nav")) in_voc=true;
 			}
 			//System.out.printf("%s in vocabulary:%s\n",e.wordform,Boolean.toString(in_voc));
-			if (!in_voc) oov++;
+			if (!in_voc) {
+				oov++;
+				oov_frequency.put(e.wordform, oov_frequency.getOrDefault(e.wordform, 0)+1);
+			}
 			
 			wfcount += w.wordformsCount();
 			if (w.wordformsCount() > 1) {
@@ -241,6 +245,18 @@ public class MorphoEvaluate {
                 izeja.println(mistake);
         }
         izeja.printf(".... un %d izolētas kļūdas\n", singletons);
+
+		LinkedHashMap<String, Integer> most_common_oov = new LinkedHashMap<>();
+		oov_frequency.entrySet()
+				.stream()
+				.sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
+				.forEachOrdered(x -> most_common_oov.put(x.getKey(), x.getValue()));
+
+		izeja.printf("Biežākie vārdi, kas nav leksikonā:");
+		most_common_oov.entrySet()
+				.stream()
+				.limit(10)
+				.forEachOrdered(e -> izeja.printf("\t%s : %d\n", e.getKey(), e.getValue()));
 		
 		long beigas = System.currentTimeMillis();
 		long starpība = beigas - sākums;

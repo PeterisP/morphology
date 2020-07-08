@@ -1460,6 +1460,7 @@ public class MorphologyTest {
         }
         assertTrue(irPareizā);
     }
+
     @Test
     public void laura_Aug13_2() {
         locītājs.enableGuessing = true;
@@ -1893,7 +1894,7 @@ public class MorphologyTest {
     }
 
     @Test
-    public void guessbyending_adjective_surnames () {
+    public void guessbyending_adjective_surnames() {
         // Guess by ending should return appropriate nominative values for adjective-based surnames
         Word possibilities = locītājs.guessByEnding("mazā", "Mazā");
         AttributeValues filter = new AttributeValues();
@@ -2099,7 +2100,7 @@ public class MorphologyTest {
         assertEquals("xu", url.wordforms.get(0).getTag());
     }
 
-//    @Ignore("Jāskatās pēc tēzaura datu pievienošanas")
+    //    @Ignore("Jāskatās pēc tēzaura datu pievienošanas")
     @Test
     public void obligātiatpazīstamie() throws IOException {
         {
@@ -2120,7 +2121,7 @@ public class MorphologyTest {
                 }
             }
             ieeja.close();
-            assertTrue("Par daudz neatpazītu vārdu", not_recognized<70);
+            assertTrue("Par daudz neatpazītu vārdu", not_recognized < 70);
         }
     }
 
@@ -2983,7 +2984,8 @@ public class MorphologyTest {
         }
     }
 
-    /** Aizdomas par tagset problēmām
+    /**
+     * Aizdomas par tagset problēmām
      */
     @Test
     public void laura_20180614() {
@@ -3161,8 +3163,7 @@ public class MorphologyTest {
     }
 
     @Test
-    public void saites()
-    {
+    public void saites() {
         Word w = locītājs.analyze("http://www.faili.lv/fails.php?id=215");
         assertTrue(w.isRecognized());
         assertEquals("xu", w.getBestWordform().getTag());
@@ -3455,7 +3456,8 @@ public class MorphologyTest {
     }
 
     // Ticket #40 'šitais' and 'šitas' do not get inflected
-    @Test public void šitais() {
+    @Test
+    public void šitais() {
         ArrayList<Wordform> formas = locītājs.generateInflections("šitais");
         AttributeValues testset = new AttributeValues();
         testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Dative);
@@ -3467,32 +3469,36 @@ public class MorphologyTest {
     }
 
     // Ticket #41 inflexible form for 'trīs'
-    @Test public void trīs() {
+    @Test
+    public void trīs() {
         Word w = locītājs.analyze("trīs");
         boolean found = false;
         for (Wordform wf : w.wordforms) {
             if (wf.isMatchingStrong(AttributeNames.i_Case, AttributeNames.v_NA))
-                    found = true;
+                found = true;
         }
         assertTrue(found);
     }
 
     // Ticket #59
-    @Test public void pusotrs() {
+    @Test
+    public void pusotrs() {
         Word w = locītājs.analyze("pusotrs");
         assertTrue(w.isRecognized());
         assertEquals("mfsmsn", w.getBestWordform().getTag());
     }
 
     // Ticket #56
-    @Test public void celties() {
+    @Test
+    public void celties() {
         Word w = locītājs.analyze("celties");
         assertTrue(w.isRecognized());
         assertEquals("vmyn0_1000n", w.getBestWordform().getTag());
     }
 
     // Ticket #48
-    @Test public void overzealous_verb_guessing() {
+    @Test
+    public void overzealous_verb_guessing() {
         locītājs.enableDerivedNouns = false;
         locītājs.enableGuessing = true;
         Word w = locītājs.analyze("uzvarētājs");
@@ -3501,7 +3507,8 @@ public class MorphologyTest {
     }
 
     // Ticket #81 - noun derivation
-    @Test public void noun_derivation() {
+    @Test
+    public void noun_derivation() {
         locītājs.enableDerivedNouns = false; // Check that the words are OOV
         Word w = locītājs.analyze("uzvarētājs");
         assertFalse(w.isRecognized());
@@ -3523,7 +3530,8 @@ public class MorphologyTest {
     }
 
     // Ticket #84 'skate' and 'apskate' get wrong inflection due to missing stem change
-    @Test public void apskate() {
+    @Test
+    public void apskate() {
         ArrayList<Wordform> formas = locītājs.generateInflections("plate");
         AttributeValues testset = new AttributeValues();
         testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Genitive);
@@ -3537,7 +3545,8 @@ public class MorphologyTest {
         assertInflection(formas, testset, "tālskatu");
     }
 
-    @Test public void suitableParadigms_smoketest() {
+    @Test
+    public void suitableParadigms_smoketest() {
         locītājs.guessAllParadigms = true;
         List<Paradigm> options;
         options = locītājs.suitableParadigms("žikivators");
@@ -3566,7 +3575,8 @@ public class MorphologyTest {
     }
 
     // Piemēri, kuriem Artūrs identificēja, ka neko neatrod
-    @Test public void suitableParadigms_notfound() {
+    @Test
+    public void suitableParadigms_notfound() {
         locītājs.guessAllParadigms = true;
         locītājs.enableAllGuesses = true;
         List<Paradigm> options;
@@ -3586,7 +3596,8 @@ public class MorphologyTest {
         assertEquals(3, options.size());
     }
 
-    @Test public void ticket90() {
+    @Test
+    public void ticket90() {
         AttributeValues testset = new AttributeValues();
         testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
         testset.addAttribute(AttributeNames.i_Person, "2");
@@ -3603,7 +3614,8 @@ public class MorphologyTest {
         assertInflection(formas, testset, "vīkšīsi");
     }
 
-    @Test public void adverb_degrees() {
+    @Test
+    public void adverb_degrees() {
         Word w = locītājs.analyze("ātri");
         assertTrue(w.isRecognized());
         boolean found = false;
@@ -3635,6 +3647,28 @@ public class MorphologyTest {
             }
         }
         assertTrue(found);
+    }
+
+    @Test
+    public void vocabulary_oov() {
+        locītājs.enableGuessing = false;
+
+        Word w = locītājs.analyze("latviešu");
+        assertTrue(w.isRecognized());
+        w.describe(System.out);
+
+        w = locītājs.analyze("ēkas");
+        assertTrue(w.isRecognized());
+        w.describe(System.out);
+    }
+
+    @Test
+    public void plural_entry_with_ambiguous_stemchange() {
+        locītājs.enableGuessing = false;
+
+        Word w = locītājs.analyze("nēsis"); // No "nēši" nevar izdomāt vai ir "nētis" (kā "latvieši"->"latvietis") vai "nēsis"
+        w.describe(System.out);
+        assertTrue(w.isRecognized());
     }
 }
 

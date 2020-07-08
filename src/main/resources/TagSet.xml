@@ -423,6 +423,10 @@
 	<Value LV="Barbarisms" EN="Barbaric"/>
 	<Value LV="Īsziņās" EN="SMS"/>
 	<Value LV="Bērnu valoda" EN="Children"/>
+	<Value LV="[&quot;Sarunvaloda&quot;,&quot;Vēsturisks&quot;]" EN="Historical/Colloquial"/>
+	<Value LV="[&quot;Neliterārs&quot;,&quot;Sarunvaloda&quot;]" EN="Colloquial"/>	
+	<Value LV="[&quot;Apvidvārds&quot;,&quot;Vulgārisms&quot;]" EN="Vulgar"/>
+	<Value LV="[&quot;Apvidvārds&quot;,&quot;Bērnu valoda&quot;]" EN="Children"/>
 </Attribute>
 
 <Attribute LV="Stils" EN="Style">
@@ -436,6 +440,8 @@
 </Attribute>
 
 <Attribute LV="Joma" EN="Domain">
+	<Value LV="Pārtika" EN="Food"/>
+	<Value LV="Kokapstrāde" EN="Carpentry"/>
 	<Value LV="Jurisprudence" EN="Law"/>
 	<Value LV="Botānika" EN="Botany"/>
 	<Value LV="Ornitoloģija" EN="Ornitology"/>
@@ -445,6 +451,7 @@
 	<Value LV="Bioloģija" EN="Biology"/>
 	<Value LV="[&quot;Bioloģija&quot;,&quot;Ķīmija&quot;]" EN="Biology/Chemistry"/>
 	<Value LV="Ķīmija" EN="Chemistry"/>
+	<Value LV="[&quot;Tehnoloģija&quot;,&quot;Ķīmija&quot;,&quot;Ķīmijas tehnoloģija&quot;]" EN="Chemistry technology"/>
 	<Value LV="[&quot;Ekoloģija&quot;,&quot;Ķīmija&quot;]" EN="Ecology/Chemistry"/>
 	<Value LV="[&quot;Fizika&quot;,&quot;Ķīmija&quot;]" EN="Physics/Chemistry"/>
 	<Value LV="[&quot;Bioloģija&quot;,&quot;Fizika&quot;,&quot;Ķīmija&quot;]" EN="Biology/Physics/Chemistry"/>
@@ -502,6 +509,7 @@
 	<Value LV="Tekstilrūpniecība" EN="Textiles"/>
 	<Value LV="Poligrāfija" EN="Poligraphy"/>
 	<Value LV="Lauksaimniecība" EN="Agriculture"/>
+	<Value LV="Lauksaimniecības tehnika" EN="Agriculture"/>
 	<Value LV="Agronomija" EN="Agriculture"/>
 	<Value LV="Mežsaimniecība" EN="Forestry"/>
 	<Value LV="[&quot;Lauksaimniecība&quot;,&quot;Mežsaimniecība&quot;]" EN="Agriculture/Forestry"/>
@@ -519,6 +527,7 @@
 	<Value LV="Materiālzinātne" EN="Material science"/>
 	<Value LV="Apģērbi" EN="Clothing"/>
 	<Value LV="Fototehnika" EN="Photography"/>
+	<Value LV="Fotogrāfija" EN="Photography"/>
 	<Value LV="[&quot;Fotogrāfija&quot;,&quot;Kinematogrāfija&quot;]" EN="Photography/Cinematography"/>
 	<Value LV="Aeronautika" EN="Aeronautics"/>
 	<Value LV="Bioķīmija" EN="Biochemistry"/>
@@ -548,18 +557,18 @@
 <!-- tezaurs.lv datu īpatnības -->
 <FreeAttribute LV="FreeText" EN="FreeText"/> 
 <FreeAttribute LV="Leftovers" EN="Leftovers"/> 
-<FreeAttribute LV="FormRestrictions" EN="FormRestrictions"/> 
+<FreeAttribute LV="StructuralRestrictions" EN="FormRestrictions"/> 
 <FreeAttribute LV="Pronunciations" EN="Pronunciations"/> 
 <FreeAttribute LV="Šķirkļa ID" EN="Entry ID"/>
 <FreeAttribute LV="Šķirkļa cilvēklasāmais ID" EN="Entry name"/>
 <FreeAttribute LV="Priedēklis" EN="Prefix"/> 
 
+<!--
 <Attribute LV="Gramatiskās formas ierobežojumi" EN="Grammatical form restrictions">
 	<Value LV="Lieto tikai daudzskaitlī" EN="Only plural"/>
 	<Value LV="Lieto tikai trešās personas formas" EN="Only third person forms"/>
 	<Value LV="Nelieto tagadnes formas" EN="Present tense is not used"/>
 </Attribute>
-
 <FreeAttribute LV="Parasti lieto noteiktā formā/atvasinājumā" EN="Usually used in particular form"/>
 <FreeAttribute LV="Parasti lieto noteikta veida struktūrās" EN="Usually used in particular structures"/>
 <FreeAttribute LV="Lieto noteiktā formā/atvasinājumā" EN="Used in particular form"/>
@@ -569,8 +578,30 @@
 <FreeAttribute LV="Lieto arī noteikta veida struktūrās" EN="Used also in particular structures"/>
 <FreeAttribute LV="Parasti lieto kopā ar" EN="Usually used with"/>
 <FreeAttribute LV="Lieto kopā ar" EN="Used with"/>
+-->
 <FreeAttribute LV="Locīt kā" EN="Inflect like"/>
 <FreeAttribute LV="Šablons salikteņa vairākpunktu locīšanai" EN="Pattern for multipoint inflection"/>
+
+<Attribute LV="Priedēkļa piemitība" EN="Having prefix">
+	<Value LV="Vārds bez priedēkļa" EN="No prefix"/>
+</Attribute>
+
+<Attribute LV="Konversija" EN="Conversion">
+	<Value LV="Īpašības vārds" EN="Adjective"/>
+	<Value LV="Apstākļa vārds" EN="Adverb"/>
+	<Value LV="Lietvārds" EN="Noun"/>
+	<Value LV="Pamata skaitļa vārds" EN="Cardinal numeral"/>
+	<Value LV="Prievārds" EN="Pronoun"/>
+</Attribute>
+
+<!-- FIXME - šis manuprāt jālikvidē -->
+<Attribute LV="Kategorija" EN="Category">
+	<Value LV="Darbības vārds" EN="Verb"/>
+	<Value LV="Apstākļa vārds" EN="Adverb"/>
+	<Value LV="Lietvārds" EN="Noun"/>
+	<!-- <Value LV="Vārds svešvalodā" EN="Foreign"/> -->
+</Attribute>
+
 
 <Attribute LV="Šķirkļavārda īpatnības" EN="Entry properties">
 	<Value LV="Daudzskaitlis" EN="Plural"/>
@@ -579,7 +610,11 @@
 </Attribute>
 <Attribute LV="Locīšanas īpatnības" EN="Inflection properties">
 	<Value LV="[&quot;Otrās un trešās konjugācijas paralelitāte&quot;,&quot;Paralēlās formas&quot;]" EN="2nd/3rd conjugation parallel forms"/>
+	<Value LV="[&quot;Otrās un trešās konjugācijas paralelitāte&quot;,&quot;Paralēlās formas&quot;,&quot;Pirmās konjugācijas paralēlforma visām personām&quot;]" EN="2nd/3rd conjugation parallel forms / 1st conjugation parallel forms"/>
+	<Value LV="[&quot;Otrās un trešās konjugācijas paralelitāte&quot;,&quot;Paralēlās formas&quot;,&quot;Pirmās konjugācijas paralēlforma tikai 3. personai&quot;]" EN="2nd/3rd conjugation parallel forms / 1st conjugation parallel forms"/>
 	<Value LV="[&quot;Paralēlās formas&quot;,&quot;Pirmās konjugācijas paralēlforma&quot;]" EN="1st conjugation parallel forms"/>	
+	<Value LV="[&quot;Paralēlās formas&quot;,&quot;Pirmās konjugācijas paralēlforma visām personām&quot;]" EN="1st conjugation parallel forms"/>
+	<Value LV="[&quot;Paralēlās formas&quot;,&quot;Pirmās konjugācijas paralēlforma tikai 3. personai&quot;]" EN="1st conjugation parallel forms"/>
 	<Value LV="[&quot;Nenoteiksmes homoformas&quot;,&quot;Paralēlās formas&quot;]" EN="Infinitive homoforms"/>	
 	<Value LV="[&quot;Otrās un trešās konjugācijas paralelitāte&quot;,&quot;Paralēlās formas&quot;,&quot;Pirmās konjugācijas paralēlforma&quot;]" EN="1st,2nd,3rd conjugation parallel forms"/>	
 	<Value LV="Paralēlās formas" EN="Parallel forms"/>

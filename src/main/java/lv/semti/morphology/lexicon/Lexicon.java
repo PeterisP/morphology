@@ -267,7 +267,9 @@ public class Lexicon {
             while ((json_row = reader.readLine()) != null) {
                 Lexeme l = new Lexeme((JSONObject) parser.parse(json_row), this);
                 if (l.isMatchingStrong(AttributeNames.i_EntryName, "irt:1")
-                        || l.isMatchingStrong(AttributeNames.i_EntryName, "art:1")) {
+						|| l.isMatchingStrong(AttributeNames.i_EntryName, "irt")
+						|| l.isMatchingStrong(AttributeNames.i_EntryName, "art:1")
+                        || l.isMatchingStrong(AttributeNames.i_EntryName, "art")) {
                     l.addAttribute(AttributeNames.i_Frequency, AttributeNames.v_Rare);
                 }
                 if (this.is_lexeme_bad(l)) {
