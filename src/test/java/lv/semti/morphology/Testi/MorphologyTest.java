@@ -3604,9 +3604,37 @@ public class MorphologyTest {
     }
 
     @Test public void adverb_degrees() {
-        Word w = locītājs.analyze("agrotehniski");
+        Word w = locītājs.analyze("ātri");
         assertTrue(w.isRecognized());
-        assertEquals("rp_", w.getBestWordform().getTag());
+        boolean found = false;
+        for (Wordform wf : w.wordforms) {
+            if (wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adverb)) {
+                assertEquals("rp_", wf.getTag());
+                found = true;
+            }
+        }
+        assertTrue(found);
+
+        w = locītājs.analyze("ātrāk");
+        assertTrue(w.isRecognized());
+        found = false;
+        for (Wordform wf : w.wordforms) {
+            if (wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adverb)) {
+                assertEquals("rc_", wf.getTag());
+                found = true;
+            }
+        }
+        assertTrue(found);
+        w = locītājs.analyze("visiesāņāk");
+        assertTrue(w.isRecognized());
+        found = false;
+        for (Wordform wf : w.wordforms) {
+            if (wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adverb)) {
+                assertEquals("rs_", wf.getTag());
+                found = true;
+            }
+        }
+        assertTrue(found);
     }
 }
 

@@ -8202,13 +8202,10 @@
 			<Attributes Skaitlis="Nepiemīt" Izteiksme="Vajadzības, atstāstījuma paveids" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Darāmā"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="51" Name="adverb-2" LemmaEnding="2907" Description="Apstākļa vārdi ar gradāciju (ātri)" DescriptionEN="Adverbs with degree (ātri)" AllowedGuessEndings="!">
+	<Paradigm Stems="1" ID="51" Name="adverb-2" LemmaEnding="2907" Description="Apstākļa vārdi ar gradāciju (ātri, iesāņu)" DescriptionEN="Adverbs with degree (ātri, iesāņu)" AllowedGuessEndings="!">
 		<Attributes Vārdšķira="Apstākļa vārds"/>
-		<Ending ID="2907" StemChange="0" Ending="i" StemID="1" LemmaEnding="2907">
+		<Ending ID="2907" StemChange="38" Ending="" StemID="1" LemmaEnding="2907">
 			<Attributes Vārdšķira="Apstākļa vārds" Pakāpe="Pamata"/>
-		</Ending>
-		<Ending ID="2908" StemChange="13" Ending="" StemID="1" LemmaEnding="2907">
-			<Attributes Vārdšķira="Apstākļa vārds"/>
 		</Ending>
 	</Paradigm>
 </Morphology>

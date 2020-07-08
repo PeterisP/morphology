@@ -420,6 +420,20 @@ public abstract class Mijas {
                     if (celms.endsWith("iet"))
                         varianti.add(new Variants(celms.substring(0,celms.length()-3)+"ej"));
                     break;
+				case 38: // Apstākļa vārdi ar gradāciju
+					if (celms.endsWith("āk") && celms.length() > 3) {
+						if (celms.startsWith("vis")) {
+							varianti.add(new Variants(celms.substring(3,celms.length()-2),AttributeNames.i_Degree,AttributeNames.v_Superlative));
+							varianti.add(new Variants(celms.substring(3,celms.length()-2) + "i",AttributeNames.i_Degree,AttributeNames.v_Superlative));
+							varianti.add(new Variants(celms.substring(3,celms.length()-2) + "u",AttributeNames.i_Degree,AttributeNames.v_Superlative));
+						} else {
+							varianti.add(new Variants(celms.substring(0,celms.length()-2),AttributeNames.i_Degree,AttributeNames.v_Comparative));
+							varianti.add(new Variants(celms.substring(0,celms.length()-2) + "i",AttributeNames.i_Degree,AttributeNames.v_Comparative));
+							varianti.add(new Variants(celms.substring(0,celms.length()-2) + "u",AttributeNames.i_Degree,AttributeNames.v_Comparative));
+						}
+					} else varianti.add(new Variants(celms,AttributeNames.i_Degree, AttributeNames.v_Positive));
+					break;
+
 				default:
 					System.err.printf("Invalid StemChange ID, stem '%s', stemchange %d\n", celms, mija);
 			}
@@ -853,6 +867,15 @@ public abstract class Mijas {
                         varianti.add(new Variants(celms.substring(0, celms.length()-2)+"iet"));
                     else varianti.add(new Variants(celms));
                     break;
+				case 38: // apstākļa vārdi ar gradāciju
+					varianti.add(new Variants(celms,AttributeNames.i_Degree,AttributeNames.v_Positive));
+					if (celms.endsWith("i") || celms.endsWith("u")) {
+						celms = celms.substring(0, celms.length()-1);
+					}
+					varianti.add(new Variants(celms + "āk",AttributeNames.i_Degree,AttributeNames.v_Comparative));
+					if (pieliktVisPārākoPak)
+						varianti.add(new Variants("vis" + celms + "āk",AttributeNames.i_Degree,AttributeNames.v_Superlative));
+					break;
 
                 default:
 					System.err.printf("Invalid StemChange ID, stem '%s', stemchange %d\n", celms, mija);
