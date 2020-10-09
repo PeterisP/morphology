@@ -3184,10 +3184,10 @@
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši"/>
     </Lexeme>
     <Lexeme Stem1="nebūsit">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="2" Noliegums="Jā" Pamatforma="nebūt" Laiks="Nākotne" Kārta="Darāmā"/>
+      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="2" Noliegums="Jā" Pamatforma="nebūt" Laiks="Nākotne" Kārta="Darāmā" Papildforma="Jā"/>
     </Lexeme>
     <Lexeme Stem1="nebūsit">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="2" Noliegums="Jā" Pamatforma="nebūt" Laiks="Nākotne" Kārta="Darāmā"/>
+      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="2" Noliegums="Jā" Pamatforma="nebūt" Laiks="Nākotne" Kārta="Darāmā" Papildforma="Jā"/>
     </Lexeme>
     <Lexeme Stem1="trīssimt">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Simti"/>
@@ -3376,7 +3376,7 @@
       <Attributes Pamatforma="numurs" Vārdšķira="Lietvārds" Locījums="Nominatīvs" Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Lietvārda_tips="Sugas vārds"/>
     </Lexeme>
     <Lexeme Stem1="die's">
-      <Attributes Pamatforma="dievs" Vārdšķira="Lietvārds" Locījums="Nominatīvs" Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Lietvārda_tips="Sugas vārds"/>
+      <Attributes Pamatforma="dievs" Vārdšķira="Lietvārds" Locījums="Nominatīvs" Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Lietvārda_tips="Sugas vārds" Deklinācija="1" Papildforma="Jā"/>
     </Lexeme>
   </Paradigm>
   <Paradigm ID="30" Description="Patstāvīgas divdabju noteiktās formas -ais (jaundzimušais, galvenais u.c.)">
