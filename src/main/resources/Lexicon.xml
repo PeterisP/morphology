@@ -6937,7 +6937,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="48" Name="noun-2b" LemmaEnding="2393" Description="Lietvārdi, 2. deklinācija, vīriešu dzimte, galotne -is, bez mijas (tētis, viesis)" AllowedGuessEndings="!">
+	<Paradigm Stems="1" ID="48" Name="noun-2b" LemmaEnding="2393" Description="Lietvārdi, 2. deklinācija, vīriešu dzimte, galotne -is, bez mijas (tētis, viesis, puļķis)" AllowedGuessEndings="!">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="2" Dzimte="Vīriešu"/>
 		<Ending ID="2393" StemChange="0" Ending="is" StemID="1" LemmaEnding="2393">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
