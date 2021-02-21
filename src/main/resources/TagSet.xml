@@ -425,6 +425,7 @@
 	<Value LV="Īsziņās" EN="SMS"/>
 	<Value LV="Bērnu valoda" EN="Children"/>
 	<Value LV="[&quot;Sarunvaloda&quot;,&quot;Vēsturisks&quot;]" EN="Historical/Colloquial"/>
+	<Value LV="[&quot;Novecojis&quot;,&quot;Sarunvaloda&quot;]" EN="Dated/Colloquial"/>	
 	<Value LV="[&quot;Neliterārs&quot;,&quot;Sarunvaloda&quot;]" EN="Colloquial"/>	
 	<Value LV="[&quot;Neliterārs&quot;,&quot;Sarunvaloda&quot;,&quot;Vēsturisks&quot;]" EN="Colloquial"/>
 	<Value LV="[&quot;Apvidvārds&quot;,&quot;Vulgārisms&quot;]" EN="Vulgar"/>
@@ -532,6 +533,7 @@
 	<Value LV="Fototehnika" EN="Photography"/>
 	<Value LV="Fotogrāfija" EN="Photography"/>
 	<Value LV="[&quot;Fotogrāfija&quot;,&quot;Kinematogrāfija&quot;]" EN="Photography/Cinematography"/>
+	<Value LV="[&quot;Fotogrāfija&quot;,&quot;Kinematogrāfija&quot;,&quot;Televīzija&quot;]" EN="Photography/Cinematography/Television"/>
 	<Value LV="Aeronautika" EN="Aeronautics"/>
 	<Value LV="Bioķīmija" EN="Biochemistry"/>
 	<Value LV="Glezniecība" EN="Painting"/>
@@ -606,7 +608,7 @@
 </Attribute>
 
 
-<Attribute LV="Šķirkļavārda īpatnības" EN="Entry properties">
+<Attribute LV="Leksēmas pamatformas īpatnības" EN="Entry properties">
 	<Value LV="Daudzskaitlis" EN="Plural"/>
 	<Value LV="Vienskaitlis" EN="Singular"/>
 	<Value LV="Sieviešu dzimte" EN="Feminine"/>
@@ -624,6 +626,7 @@
 	<Value LV="Kopdzimte" EN="Common gender"/>
 	<Value LV="Nenoteiksmes homoformas" EN="Infinitive homonym"/>
 	<Value LV="Vairākos punktos lokāms saliktenis" EN="Compound noun with multiple inflection points"/>
+	<Value LV="[&quot;Paralēlās formas&quot;,&quot;Vairākos punktos lokāms saliktenis&quot;]" EN="Parallel forms/Compound noun with multiple inflection points"/>
 </Attribute>
 <!--
 <Attribute LV="Kontaminācija" EN="Contamination">
@@ -648,11 +651,13 @@
 
 <Attribute LV="Citi" EN="Other">
 	<Value LV="Cita paradigma" EN="Other paradigm"/>
+	<Value LV="Deminutīvs" EN="Deminutive"/>
 	<Value LV="Pēdējie celmi lietojami retāk" EN="Latter stems are used rarely"/>
 	<Value LV="[&quot;Neviennozīmīga paradigma&quot;,&quot;Vienskaitļa formas lieto sarunvalodā&quot;]" EN="Ambiguous paradigm/Singular forms are colloquial"/>
 	<Value LV="[&quot;Oriģinālā gramatika satur karodziņos neatšifrētas nianses&quot;,&quot;Pēdējie celmi lietojami retāk&quot;]" EN="Freetext contains items not converted to attributes/Latter stems are used rarely"/>
 	<Value LV="Vienskaitļa formas lieto sarunvalodā" EN="Singular forms used in colloquial language"/>
 	<Value LV="Vienskaitļa formas lieto dialektos" EN="Singular forms used in dialects"/>
+	<Value LV="Daudzskaitļa formas lieto vienskaitļa formu nozīmē" EN="Plural forms used with singular meaning"/>
 </Attribute>
 
 

@@ -37,6 +37,7 @@ public class AttributeNames {
 	public final static String v_Nelokaams = "Nelokāms";
 
 	public final static String i_PartOfSpeech = "Vārdšķira";
+	public final static String i_Conversion = "Konversija";
 	public final static String v_Punctuation = "Pieturzīme";
 	public final static String v_Noun = "Lietvārds";
 	public final static String v_Verb = "Darbības vārds";

@@ -2588,6 +2588,7 @@ public class MorphologyTest {
         assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, "", "mēnessērdzīgajai");
 
         formas = locītājs.generateInflections("cietušais", true);
+        describe(formas);
         assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, "", "cietušajam");
 
         formas = locītājs.generateInflections("cietusī", true);
@@ -3655,7 +3656,6 @@ public class MorphologyTest {
 
         Word w = locītājs.analyze("latviešu");
         assertTrue(w.isRecognized());
-        w.describe(System.out);
 
         w = locītājs.analyze("ēkas");
         assertTrue(w.isRecognized());
