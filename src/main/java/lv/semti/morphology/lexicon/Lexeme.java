@@ -208,7 +208,8 @@ public class Lexeme extends AttributeValues {
             System.err.println(String.format("Leksēmai '%s' #%d galotne neatbilst paradigmai arī skatoties uz daudzskaitli", lemma, this.id));
             this.describe();
         } else {
-            addAttribute(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum);
+            if (getValue(AttributeNames.i_NumberSpecial) == null)
+                addAttribute(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum);
         }
     }
 

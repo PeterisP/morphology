@@ -194,4 +194,12 @@ public class TagSetTest {
         assertEquals("-", tags.toTag(null));
         assertEquals(0, tags.fromTag(null).size());
     }
+
+	@Test
+	public void partly_declinable() {
+		TagSet tags = TagSet.getTagSet();
+		AttributeValues av = tags.fromTag("voyppmsnap00n");
+		assertEquals(AttributeNames.v_DaljeejiLokaams, av.getValue(AttributeNames.i_Lokaamiiba));
+	}
+
 }

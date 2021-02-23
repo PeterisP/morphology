@@ -828,13 +828,26 @@ public class Analyzer extends Lexicon {
 	public void filterInflectionPossibilities(boolean nouns_only, AttributeValues filter, ArrayList<Wordform> possibilities) {
 		ArrayList<Wordform> unsuitable = new ArrayList<Wordform>();
 		for (Wordform wf : possibilities) {
+
+			// "nouns_only" filter and its exceptions
 			boolean suitable = ! nouns_only; // if nouns_only, then we want to test for partofspeech, if not, then okay by default
 			if (wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun)) suitable = true;
 			if (wf.isMatchingStrong(AttributeNames.i_Conversion, AttributeNames.v_Noun)) suitable = true;
-			if (wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adjective) && wf.isMatchingStrong(AttributeNames.i_Definiteness, AttributeNames.v_Definite)) suitable = true;
-			if (wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Residual) && wf.isMatchingStrong(AttributeNames.i_ResidualType, AttributeNames.v_Foreign)) suitable = true; // visādi Vadim, Kirill utml
+			if (wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adjective) &&
+					wf.isMatchingStrong(AttributeNames.i_Definiteness, AttributeNames.v_Definite)) suitable = true;
+			if (wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Residual) &&
+					wf.isMatchingStrong(AttributeNames.i_ResidualType, AttributeNames.v_Foreign)) suitable = true; // visādi Vadim, Kirill utml
+			// ------ end of nouns_only exceptions
+
+			if (wf.isMatchingStrong(AttributeNames.i_ProperNounType, AttributeNames.v_Toponym) &&
+					wf.isMatchingStrong(AttributeNames.i_Number, AttributeNames.v_Plural) &&
+					!wf.isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum)
+			) suitable = false; // Do not generate plural forms of singular toponyms
 			
-			if (!wf.isMatchingWeak(filter) && !wf.isMatchingStrong(AttributeNames.i_ResidualType, AttributeNames.v_Foreign) && !wf.isMatchingStrong(AttributeNames.i_Declension, AttributeNames.v_NA)) suitable = false; //filter overrides everything except inflexible stuff
+			if (!wf.isMatchingWeak(filter) &&
+					!wf.isMatchingStrong(AttributeNames.i_ResidualType, AttributeNames.v_Foreign) &&
+					!wf.isMatchingStrong(AttributeNames.i_Declension, AttributeNames.v_NA)
+			) suitable = false; //filter overrides everything except inflexible stuff
 			
 			if (!suitable) unsuitable.add(wf);
 		}

@@ -467,10 +467,7 @@ public class MorphologyTest {
         Word bikses = locītājs.analyze("bikses");
         assertTrue(bikses.isRecognized());
         assertEquals("bikses", bikses.wordforms.get(0).getValue(AttributeNames.i_Lemma));
-
-        Word bikse = locītājs.analyze("bikse");
-        assertFalse(bikse.isRecognized());
-
+        
         Word augstpapēžu = locītājs.analyze("augstpapēžu");
         assertTrue(augstpapēžu.isRecognized());
         assertEquals("augstpapēžu", augstpapēžu.wordforms.get(0).getValue(AttributeNames.i_Lemma));
@@ -3697,6 +3694,115 @@ public class MorphologyTest {
         wf = w.getBestWordform();
         assertEquals("vmyppf0n0000n", wf.getTag());
         assertEquals("pusjokodamies", wf.getValue(AttributeNames.i_Lemma));
+    }
+
+    @Test
+    public void ticket_101_a() {
+        Word w = locītājs.analyze("Rīgai");
+        assertTrue(w.isRecognized());
+        Wordform wf = w.getBestWordform();
+        assertEquals("npfsd4", wf.getTag());
+        assertEquals("Rīga", wf.getValue(AttributeNames.i_Lemma));
+        // Recognize singular
+
+        w = locītājs.analyze("Rīgām");
+        assertTrue(w.isRecognized());
+        wf = w.getBestWordform();
+        assertEquals("npfpd4", wf.getTag());
+        assertEquals("Rīga", wf.getValue(AttributeNames.i_Lemma));
+        // Recognize plural
+
+        List<Wordform> forms = locītājs.generateInflections("Rīga");
+        for (Wordform wf2 : forms) {
+            assertFalse(wf2.isMatchingStrong(AttributeNames.i_Number, AttributeNames.v_Plural));
+            // Do not generate plural forms for Tezaurs.lv morphology tables
+        }
+    }
+
+    @Test
+    public void ticket_101_b() {
+        Word w = locītājs.analyze("mieram");
+        assertTrue(w.isRecognized());
+        Wordform wf = w.getBestWordform();
+        assertEquals("ncmvd1", wf.getTag());
+        assertEquals("miers", wf.getValue(AttributeNames.i_Lemma));
+        // Recognize singular, with singulare_tantum in tag
+
+        w = locītājs.analyze("mieriem");
+        assertFalse(w.isRecognized());
+//        wf = w.getBestWordform();
+//        assertEquals("ncmpd1", wf.getTag());
+//        assertEquals("miers", wf.getValue(AttributeNames.i_Lemma));
+        // Do not recognize plural
+
+        List<Wordform> forms = locītājs.generateInflections("miers");
+        for (Wordform wf2 : forms) {
+            assertFalse(wf2.isMatchingStrong(AttributeNames.i_Number, AttributeNames.v_Plural));
+            // Do not generate plural forms for Tezaurs.lv morphology tables
+        }
+    }
+
+    @Test
+    public void ticket_101_c() {
+        Word w = locītājs.analyze("Limbazim");
+        assertFalse(w.isRecognized());
+        // Do not recognize singular
+
+        w = locītājs.analyze("Limbažiem");
+        assertTrue(w.isRecognized());
+        Wordform wf = w.getBestWordform();
+        assertEquals("npmdd2", wf.getTag());
+        assertEquals("Limbaži", wf.getValue(AttributeNames.i_Lemma));
+        // Recognize plural, plurare tantum in tag
+
+        List<Wordform> forms = locītājs.generateInflections("Limbaži");
+        for (Wordform wf2 : forms) {
+            assertFalse(wf2.isMatchingStrong(AttributeNames.i_Number, AttributeNames.v_Singular));
+            // Do not generate singular forms for Tezaurs.lv morphology tables
+        }
+    }
+
+    @Test
+    public void ticket_101_d() {
+        Word w = locītājs.analyze("durvij");
+        assertFalse(w.isRecognized());
+        // Do not recognize singular
+
+        w = locītājs.analyze("durvīm");
+        assertTrue(w.isRecognized());
+        Wordform wf = w.getBestWordform();
+        assertEquals("ncfdd6", wf.getTag());
+        assertEquals("durvis", wf.getValue(AttributeNames.i_Lemma));
+        // Recognize plural, plurare tantum in tag
+
+        List<Wordform> forms = locītājs.generateInflections("durvis");
+        for (Wordform wf2 : forms) {
+            assertFalse(wf2.isMatchingStrong(AttributeNames.i_Number, AttributeNames.v_Singular));
+            // Do not generate singular forms for Tezaurs.lv morphology tables
+        }
+    }
+
+    @Test
+    public void ticket_101_e() {
+        Word w = locītājs.analyze("biksei");
+        assertTrue(w.isRecognized());
+        Wordform wf = w.getBestWordform();
+        assertEquals("ncfsd5", wf.getTag());
+        assertEquals("bikses", wf.getValue(AttributeNames.i_Lemma));
+        // Recognize singular
+
+        w = locītājs.analyze("biksēm");
+        assertTrue(w.isRecognized());
+        wf = w.getBestWordform();
+        assertEquals("ncfdd5", wf.getTag());
+        assertEquals("bikses", wf.getValue(AttributeNames.i_Lemma));
+        // Recognize plural, plurare tantum in tag
+
+        List<Wordform> forms = locītājs.generateInflections("durvis");
+        for (Wordform wf2 : forms) {
+            assertFalse(wf2.isMatchingStrong(AttributeNames.i_Number, AttributeNames.v_Singular));
+            // Do not generate singular forms for Tezaurs.lv morphology tables
+        }
     }
 }
 

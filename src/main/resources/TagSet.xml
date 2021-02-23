@@ -33,6 +33,7 @@
 <Attribute LV="Skaitlis 2" EN="Number-special" PartOfSpeech="Lietvārds" MarkupPos="3">
 	<Value LV="Vienskaitlinieks" EN="Singulare tantum" Tag="v"/>
 	<Value LV="Daudzskaitlinieks" EN="Plurare tantum" Tag="d"/>
+	<Value LV="Gandrīz daudzskaitlinieks" EN="Almost plurare tantum"/>
 </Attribute>
 <Attribute LV="Locījums" EN="Case" PartOfSpeech="Lietvārds" MarkupPos="4">
 	<Value LV="Nominatīvs" EN="Nominative" Tag="n"/>
@@ -402,6 +403,7 @@
 	<Value LV="Priekšvārds" EN="Given name"/>
 	<Value LV="Uzvārds" EN="Surname"/>
 	<Value LV="Vietvārds" EN="Toponym"/>
+	<Value LV="Personvārds" EN="Person name"/>
 </Attribute>
 
 <Attribute LV="Lietojuma biežums" EN="Usage frequency">

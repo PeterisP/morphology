@@ -64,9 +64,17 @@ public class Wordform extends AttributeValues implements Serializable{
 			addAttributes(lexeme);
 			addAttribute(AttributeNames.i_SourceLemma, lexeme.getValue(AttributeNames.i_Lemma));  //TODO - šis teorētiski varētu aizstāt visus pārējos SourceLemma pieminējumus (citus varbūt var dzēst)
 			addAttribute(AttributeNames.i_LexemeID, Integer.toString(lexeme.getID()));
-			fixed_stem = lexeme.isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum)  ||
-						 lexeme.isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_SingulareTantum) ||
-						 lexeme.isMatchingStrong(AttributeNames.i_Declension, AttributeNames.v_InflexibleGenitive);
+			if (isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_AlmostPlurareTantum) &&
+					isMatchingStrong(AttributeNames.i_EntryProperties, AttributeNames.v_Plural) &&
+					isMatchingStrong(AttributeNames.i_Number, AttributeNames.v_Plural)
+				) {
+				addAttribute(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum);
+			}
+			fixed_stem = isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum)  ||
+					(isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_AlmostPlurareTantum) &&
+							isMatchingStrong(AttributeNames.i_EntryProperties, AttributeNames.v_Plural)) ||
+					isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_SingulareTantum) ||
+					isMatchingStrong(AttributeNames.i_Declension, AttributeNames.v_InflexibleGenitive);
 			// || leksēma.isMatchingStrong(AttributeNames.i_Deminutive, "-iņ-")
 		} else fixed_stem = true;
 		

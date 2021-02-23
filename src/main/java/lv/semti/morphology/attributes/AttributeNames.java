@@ -68,6 +68,7 @@ public class AttributeNames {
 	public final static String i_NumberSpecial = "Skaitlis 2";
 	public final static String v_SingulareTantum = "Vienskaitlinieks";
 	public final static String v_PlurareTantum = "Daudzskaitlinieks";
+	public final static String v_AlmostPlurareTantum = "Gandrīz daudzskaitlinieks";
 
 	public final static String i_Case = "Locījums";
 	public final static String v_Nominative = "Nominatīvs";
@@ -247,7 +248,7 @@ public class AttributeNames {
     public static final String i_Usage = "Lietojums";
     public static final String v_Regional = "Apvidvārds";
 
-    public static final String i_EntryProperties = "Šķirkļavārda īpatnības";
+    public static final String i_EntryProperties = "Leksēmas pamatformas īpatnības";
     public static final String i_TezaursCategory = "Kategorija";
     public static final String i_Domain = "Joma";
 
