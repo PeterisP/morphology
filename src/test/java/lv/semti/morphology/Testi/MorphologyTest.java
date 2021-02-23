@@ -327,7 +327,7 @@ public class MorphologyTest {
         assertFalse(w.isRecognized());
     }
 
-    @Ignore("Ir zināma problēma, ka Tēzaurs.lv JSON eksportā ir vairākas morfo-leksēmas kas nāk no vienas tēzaurs-leksēmas un tādēļ ir ar vienādu leksēmas ID")
+    @Ignore("Tēzaurs.lv JSON eksportā ir vairākas morfo-leksēmas kas nāk no vienas tēzaurs-leksēmas un tādēļ ir ar vienādu leksēmas ID - piemēram, ja ir 1. konj. verbam paralēlformas dažos celmos")
     @Test
     public void numuri() {
         // integritāte - vai nav dubulti numuri
@@ -3669,6 +3669,34 @@ public class MorphologyTest {
         Word w = locītājs.analyze("nēsis"); // No "nēši" nevar izdomāt vai ir "nētis" (kā "latvieši"->"latvietis") vai "nēsis"
         w.describe(System.out);
         assertTrue(w.isRecognized());
+    }
+
+    @Test
+    public void partially_declinable_participles() {
+        locītājs.enableGuessing = false;
+        Word w = locītājs.analyze("cenzdamies");
+        assertTrue(w.isRecognized());
+        Wordform wf = w.getBestWordform();
+        assertEquals("voyppm0n0000n", wf.getTag());
+    }
+
+    /**
+     * New paradigms for standalone partially declinable participles like 'pusjokodams' and 'pusjokodamies'
+     */
+    @Test
+    public void pusjokodams() {
+        locītājs.enableGuessing = false;
+        Word w = locītājs.analyze("pusjokodama");
+        assertTrue(w.isRecognized());
+        Wordform wf = w.getBestWordform();
+        assertEquals("vmnppfsn0000n", wf.getTag());
+        assertEquals("pusjokodams", wf.getValue(AttributeNames.i_Lemma));
+
+        w = locītājs.analyze("pusjokodamās");
+        assertTrue(w.isRecognized());
+        wf = w.getBestWordform();
+        assertEquals("vmyppf0n0000n", wf.getTag());
+        assertEquals("pusjokodamies", wf.getValue(AttributeNames.i_Lemma));
     }
 }
 
