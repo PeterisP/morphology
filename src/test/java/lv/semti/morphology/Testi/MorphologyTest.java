@@ -467,7 +467,7 @@ public class MorphologyTest {
         Word bikses = locītājs.analyze("bikses");
         assertTrue(bikses.isRecognized());
         assertEquals("bikses", bikses.wordforms.get(0).getValue(AttributeNames.i_Lemma));
-        
+
         Word augstpapēžu = locītājs.analyze("augstpapēžu");
         assertTrue(augstpapēžu.isRecognized());
         assertEquals("augstpapēžu", augstpapēžu.wordforms.get(0).getValue(AttributeNames.i_Lemma));

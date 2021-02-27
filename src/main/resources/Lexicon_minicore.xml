@@ -74,7 +74,7 @@
       <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls" Pamatforma="nespēt"/>
     </Lexeme>
     <Lexeme Stem1="nespē" Stem2="nespēj" Stem3="nespēj">
-      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Pamata darbības vārds" Pamatforma="nespēt"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="nespēt"/>
     </Lexeme>
     <Lexeme Stem1="paspē" Stem2="paspēj" Stem3="paspēj">
       <Attributes Darbības_vārda_tips="Fāzes" Pamatforma="paspēt"/>

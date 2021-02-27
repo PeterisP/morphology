@@ -275,6 +275,7 @@ public class MorphoEvaluate {
 		System.out.printf("\nEtalons: Viss pareizi 72.4%%/88.8%%, Lemma pareiza 91.0%%/98.7%%, Tags der 77.8%%/98.2%%, Nav vārdnīcā 3.9%%\n");
 		
 		System.out.printf("\nStatistika:\n");
+		System.out.printf("\tKopā vārdlietojumi:\t\t\t%6d\n", etaloni.size());
 		System.out.printf("\tNav vārdnīcā:\t\t%4.1f%%\t%6d\n", oov*100.0/etaloni.size(), oov);
 		System.out.printf("\tViennozīmīgi:\t\t%4.1f%%\t%6d\n", unambiguous*100.0/(unambiguous+ambiguous), unambiguous);
 		System.out.printf("\tDaudznozīmīgi:\t\t%4.1f%%\t%6d\n", ambiguous*100.0/(unambiguous+ambiguous), ambiguous);

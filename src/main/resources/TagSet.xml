@@ -593,6 +593,10 @@
 	<Value LV="Vārds bez priedēkļa" EN="No prefix"/>
 </Attribute>
 
+<Attribute LV="Papildforma" EN="Alternative form">
+	<Value LV="Jā" EN="Yes"/>
+</Attribute>
+
 <Attribute LV="Konversija" EN="Conversion">
 	<Value LV="Īpašības vārds" EN="Adjective"/>
 	<Value LV="Apstākļa vārds" EN="Adverb"/>
@@ -660,6 +664,7 @@
 	<Value LV="Vienskaitļa formas lieto sarunvalodā" EN="Singular forms used in colloquial language"/>
 	<Value LV="Vienskaitļa formas lieto dialektos" EN="Singular forms used in dialects"/>
 	<Value LV="Daudzskaitļa formas lieto vienskaitļa formu nozīmē" EN="Plural forms used with singular meaning"/>
+	<Value LV="Daudzskaitļa formas parasti lieto vienskaitļa formu nozīmē" EN="Plural forms usually used with singular meaning"/>
 </Attribute>
 
 
