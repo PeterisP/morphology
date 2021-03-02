@@ -418,6 +418,7 @@
 
 <Attribute LV="Lietojums" EN="Usage">
 	<Value LV="Novecojis" EN="Dated"/>
+	<Value LV="Apvidvārds" EN="Regional"/>
 	<Value LV="Neaktuāls" EN="Obsolete"/>
 	<Value LV="Vēsturisks" EN="Historical"/>
 	<Value LV="Sarunvaloda" EN="Colloquial"/>
@@ -600,6 +601,11 @@
 	<Value LV="Jā" EN="Yes"/>
 </Attribute>
 
+<Attribute LV="Dialekta iezīmes" EN="Dialect markings">
+	<Value LV="Latgaliešu" EN="Latgalian"/>
+</Attribute>
+
+
 <Attribute LV="Konversija" EN="Conversion">
 	<Value LV="Īpašības vārds" EN="Adjective"/>
 	<Value LV="Apstākļa vārds" EN="Adverb"/>
@@ -610,10 +616,10 @@
 
 <!-- FIXME - šis manuprāt jālikvidē -->
 <Attribute LV="Kategorija" EN="Category">
-	<Value LV="Darbības vārds" EN="Verb"/>
+<!--	<Value LV="Darbības vārds" EN="Verb"/>
 	<Value LV="Apstākļa vārds" EN="Adverb"/>
-	<Value LV="Lietvārds" EN="Noun"/>
-	<!-- <Value LV="Vārds svešvalodā" EN="Foreign"/> -->
+	<Value LV="Lietvārds" EN="Noun"/>-->
+	<Value LV="Saīsinājums" EN="Abbreviation"/>
 </Attribute>
 
 
@@ -661,6 +667,7 @@
 <Attribute LV="Citi" EN="Other">
 	<Value LV="Cita paradigma" EN="Other paradigm"/>
 	<Value LV="Deminutīvs" EN="Deminutive"/>
+	<Value LV="Hipotēze" EN="Hypothesis"/>
 	<Value LV="Pēdējie celmi lietojami retāk" EN="Latter stems are used rarely"/>
 	<Value LV="[&quot;Neviennozīmīga paradigma&quot;,&quot;Vienskaitļa formas lieto sarunvalodā&quot;]" EN="Ambiguous paradigm/Singular forms are colloquial"/>
 	<Value LV="[&quot;Oriģinālā gramatika satur karodziņos neatšifrētas nianses&quot;,&quot;Pēdējie celmi lietojami retāk&quot;]" EN="Freetext contains items not converted to attributes/Latter stems are used rarely"/>

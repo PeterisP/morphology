@@ -182,6 +182,11 @@ public class Lexeme extends AttributeValues {
                 }
             }
         }
+
+        if (getValue(AttributeNames.i_LemmaOverride) != null) {
+            addAttribute(AttributeNames.i_Lemma, getValue(AttributeNames.i_LemmaOverride));
+            removeAttribute(AttributeNames.i_LemmaOverride);
+        }
         paradigm.addLexeme(this);
     }
 

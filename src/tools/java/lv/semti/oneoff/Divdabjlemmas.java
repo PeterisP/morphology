@@ -34,6 +34,8 @@ public class Divdabjlemmas {
 		locītājs.paradigmByID(13).lexemesByID.clear();
 		locītājs.paradigmByID(13).getLexemesByStem().get(0).clear();
 		locītājs.enableGuessing = true;
+		locītājs.removeRareWords = false;
+		locītājs.removeRegionalWords = false;
 		PrintWriter izeja = new PrintWriter(new PrintStream(System.out, true, "UTF-8"));
 		String participle;
 		while ((participle = ieeja.readLine()) != null) {
@@ -45,9 +47,9 @@ public class Divdabjlemmas {
 				}
 			}
 			if (lemma == null) {
-//				System.out.printf("%s\n", participle);
+				System.out.printf("%s\n", participle);
 			} else {
-				System.out.printf("update lexemes set data=jsonb_set(data, '{Gram,Flags,Pamatforma}', '\"%s\"', true) where lemma = '%s'\n", lemma, participle);
+//				System.out.printf("update lexemes set data=jsonb_set(data, '{Gram,Flags,\"Pamatforma morforīkiem\"}', '\"%s\"', true) where lemma = '%s'\n", lemma, participle);
 			}
 		}
 
