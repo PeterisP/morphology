@@ -116,13 +116,11 @@ public class Lexeme extends AttributeValues {
             throw new Error("Nav paradigmas leksēmai " + json.toJSONString());
 
         int paradigmID = ((Long)json.get("paradigm")).intValue();
-        addAttribute(AttributeNames.i_ParadigmID, ((Long)json.get("paradigm")).toString());
         paradigm = lexicon.paradigmByID(paradigmID);
         setStemCount(this.paradigm.getStems());
 
         if (json.get("lexeme_id") != null) {
             setID(((Long) json.get("lexeme_id")).intValue());
-            addAttribute(AttributeNames.i_LexemeID, ((Long)json.get("lexeme_id")).toString());
         }
         if (json.get("entry_id") != null)
             addAttribute(AttributeNames.i_EntryID, ((Long)json.get("entry_id")).toString());
