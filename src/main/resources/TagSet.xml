@@ -66,8 +66,9 @@
 	<Value LV="Modāls" EN="Modal" Tag="o"/>
 	<Value LV="Fāzes" EN="Phasal" Tag="p"/>
 	<Value LV="Izpausmes veida" EN="Expression" Tag="e"/>
-	<Value LV="Palīgverbs 'būt'" EN="Auxiliary 'to be'" Tag="c"/>
-	<Value LV="Palīgverbi 'tikt' un 'tapt'" EN="Auxiliary 'become'" Tag="t"/>
+	<Value LV="Palīgverbs 'būt'" EN="'to be' as auxiliary or copula" Tag="c"/>
+	<Value LV="Saitiņas 'tikt' un 'tapt'" EN="Other copulas" Tag="t"/>
+	<Value LV="Palīgverbi 'tikt' un 'tapt'" EN="Other auxiliaries" Tag="a"/>
 </Attribute>
 <Attribute LV="Atgriezeniskums" EN="Reflexive" PartOfSpeech="Darbības vārds" MarkupPos="2">
 	<Value LV="Jā" EN="Yes" Tag="y"/>
@@ -126,8 +127,9 @@
 	<Value LV="Modāls" EN="Modal" Tag="o"/>
 	<Value LV="Fāzes" EN="Phasal" Tag="p"/>
 	<Value LV="Izpausmes veida" EN="Expression" Tag="e"/>
-	<Value LV="Palīgverbs 'būt'" EN="Auxiliary 'to be'" Tag="c"/>
-	<Value LV="Palīgverbi 'tikt' un 'tapt'" EN="Auxiliary 'become'" Tag="t"/>
+	<Value LV="Palīgverbs 'būt'" EN="'to be' as auxiliary or copula" Tag="c"/>
+	<Value LV="Saitiņas 'tikt' un 'tapt'" EN="Other copulas" Tag="t"/>
+	<Value LV="Palīgverbi 'tikt' un 'tapt'" EN="Other auxiliaries" Tag="a"/>
 </Attribute>
 <Attribute LV="Atgriezeniskums" PartOfSpeech="Divdabis" MarkupPos="2">
 	<Value LV="Jā" EN="Yes" Tag="y"/>
