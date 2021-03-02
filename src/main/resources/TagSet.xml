@@ -93,6 +93,7 @@
 <Attribute LV="Transitivitāte" EN="Transitivity" PartOfSpeech="Darbības vārds" MarkupPos="5">
 	<Value LV="Transitīvs" EN="Transitive" Tag="t"/>
 	<Value LV="Intransitīvs" EN="Intransitive" Tag="i"/>
+	<Value LV="[&quot;Intransitīvs&quot;,&quot;Transitīvs&quot;,&quot;Transitīvs un intransitīvs&quot;]"/> <!-- FIXME -->
 </Attribute>
 <Attribute LV="Konjugācija" EN="Conjugation" PartOfSpeech="Darbības vārds" MarkupPos="6">
 	<Value LV="1" EN="1" Tag="1"/>
@@ -225,14 +226,14 @@
 </Attribute>
 
 <Attribute LV="Vietniekvārda tips" EN="Pronoun type" PartOfSpeech="Vietniekvārds" MarkupPos="1">
-	<Value LV="Personu" EN="Personal" Tag="p"/>
-	<Value LV="Atgriezeniskie" EN="Reflexive" Tag="x"/>
+	<Value LV="Personas" EN="Personal" Tag="p"/>
+	<Value LV="Atgriezeniskais" EN="Reflexive" Tag="x"/>
 	<Value LV="Piederības" EN="Possesive" Tag="s"/>
-	<Value LV="Norādāmie" EN="Demonstrative" Tag="d"/>
-	<Value LV="Nenoteiktie" EN="Indefinite" Tag="i"/>
-	<Value LV="Jautājamie" EN="Interrogative" Tag="q"/>
+	<Value LV="Norādāmais" EN="Demonstrative" Tag="d"/>
+	<Value LV="Nenoteiktais" EN="Indefinite" Tag="i"/>
+	<Value LV="Jautājamais" EN="Interrogative" Tag="q"/>
 	<Value LV="Attieksmes" EN="Relative" Tag="r"/>
-	<Value LV="Noteiktie" EN="Definite" Tag="g"/>
+	<Value LV="Noteiktais" EN="Definite" Tag="g"/>
 </Attribute>
 <Attribute LV="Persona" EN="Person" PartOfSpeech="Vietniekvārds" MarkupPos="2">
 	<Value LV="1" EN="1" Tag="1"/>

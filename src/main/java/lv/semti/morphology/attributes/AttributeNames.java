@@ -142,15 +142,15 @@ public class AttributeNames {
 	public static final String v_Relative = "Relatīvais"; //tikai apst.v
 
 	public final static String i_VvTips = "Vietniekvārda tips";
-	public final static String v_Personu = "Personu";
-	public final static String v_Atgriezeniskie = "Atgriezeniskie";
+	public final static String v_Personas = "Personas";
+	public final static String v_Atgriezeniskais = "Atgriezeniskais";
 	public final static String v_Piederiibas = "Piederības";
-	public final static String v_Noraadaamie = "Norādāmie";
-	public final static String v_Nenoteiktie = "Nenoteiktie";
-	public final static String v_Jautaajamie = "Jautājamie";
+	public final static String v_Noraadaamais = "Norādāmais";
+	public final static String v_Nenoteiktais = "Nenoteiktais";
+	public final static String v_Jautaajamais = "Jautājamais";
 	public final static String v_AttieksmesVv = "Attieksmes";
-	public final static String v_Noteiktie = "Noteiktie";
-	//public final static String v_Noliegtie = "Noliegtie";
+	public final static String v_Noteiktais = "Noteiktais";
+	//public final static String v_Noliegtais = "Noliegtais";
 
 	public final static String i_ApstTips = "Apstākļa vārda tips";
 	public final static String v_Meera = "Mēra";

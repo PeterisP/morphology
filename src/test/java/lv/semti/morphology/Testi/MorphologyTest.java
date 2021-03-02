@@ -29,7 +29,6 @@ import java.io.UnsupportedEncodingException;
 import java.util.*;
 import java.util.Map.Entry;
 
-import org.apache.commons.lang3.builder.ToStringExclude;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Ignore;
@@ -38,7 +37,6 @@ import org.junit.Test;
 import lv.semti.morphology.analyzer.*;
 import lv.semti.morphology.attributes.*;
 import lv.semti.morphology.lexicon.*;
-import org.w3c.dom.Attr;
 
 public class MorphologyTest {
     private static Analyzer locītājs;
@@ -654,14 +652,14 @@ public class MorphologyTest {
 
         assertEquals(AttributeNames.v_Pronoun, neviens.wordforms.get(0).getValue(AttributeNames.i_PartOfSpeech));
         assertEquals(AttributeNames.v_Yes, neviens.wordforms.get(0).getValue(AttributeNames.i_Noliegums));
-        assertEquals(AttributeNames.v_Nenoteiktie, neviens.wordforms.get(0).getValue(AttributeNames.i_VvTips));
+        assertEquals(AttributeNames.v_Nenoteiktais, neviens.wordforms.get(0).getValue(AttributeNames.i_VvTips));
 
         Word nekas = locītājs.analyze("nekas");
         assertTrue(nekas.isRecognized());
 
         assertEquals(AttributeNames.v_Pronoun, nekas.wordforms.get(0).getValue(AttributeNames.i_PartOfSpeech));
         assertEquals(AttributeNames.v_Yes, nekas.wordforms.get(0).getValue(AttributeNames.i_Noliegums));
-        assertEquals(AttributeNames.v_Nenoteiktie, nekas.wordforms.get(0).getValue(AttributeNames.i_VvTips));
+        assertEquals(AttributeNames.v_Nenoteiktais, nekas.wordforms.get(0).getValue(AttributeNames.i_VvTips));
 
         Word nekāds = locītājs.analyze("nekāds");
         assertTrue(nekāds.isRecognized());
