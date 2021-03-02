@@ -41,7 +41,9 @@ public class Analyzer extends Lexicon {
     public boolean enableAllGuesses = false;
 	public boolean guessInflexibleNouns = true;
 	public boolean removeRareWords = true;
-	
+	public boolean removeRegionalWords = true; // Ignore regiona/dialect forms as they tend to produce unexpected overlap with forms of other common words
+
+
 	private Pattern p_number = Pattern.compile("[\\d., ]*\\d+([.,][-‐‑‒–—―])?");
 	private Pattern p_ordinal = Pattern.compile("\\d+\\.");
 	private Pattern p_fractional = Pattern.compile("\\d+[\\\\/]\\d+");
@@ -108,6 +110,7 @@ public class Analyzer extends Lexicon {
 	    enableAllGuesses = false;
 		guessInflexibleNouns = true;
         removeRareWords = true;
+        removeRegionalWords = true;
 	}
 	
 	public void describe(PrintWriter pipe) {
@@ -209,20 +212,24 @@ public class Analyzer extends Lexicon {
 			}
 		}
 		
-		if (result.isRecognized() && removeRareWords) {
+		if (result.isRecognized() && (removeRareWords || removeRegionalWords)) {
 			boolean hasNonrareOption = false;
-			for (Wordform wf : result.wordforms)
-				if (!wf.isMatchingStrong(AttributeNames.i_Frequency, AttributeNames.v_Rare))
-					hasNonrareOption = true;
-			
-			
-			if (hasNonrareOption) {
-				List<Wordform> to_remove = new LinkedList<Wordform>();
-				for (Wordform wf : result.wordforms)
-					if (wf.isMatchingStrong(AttributeNames.i_Frequency, AttributeNames.v_Rare))
-						to_remove.add(wf);
-				result.wordforms.removeAll(to_remove);
-			}			
+			for (Wordform wf : result.wordforms) {
+				if (removeRareWords && wf.isMatchingStrong(AttributeNames.i_Frequency, AttributeNames.v_Rare))
+					continue; // rare and removed
+				if (removeRegionalWords && wf.isMatchingStrong(AttributeNames.i_Usage, AttributeNames.v_Regional))
+					continue; // regional and removed
+				hasNonrareOption = true;
+			}
+
+			List<Wordform> to_remove = new LinkedList<Wordform>();
+			for (Wordform wf : result.wordforms) {
+				if (removeRareWords && hasNonrareOption && wf.isMatchingStrong(AttributeNames.i_Frequency, AttributeNames.v_Rare))
+					to_remove.add(wf); // we remove rare words only if there's a non-rare option remaining, i.e. only in overlap
+				if (removeRegionalWords && wf.isMatchingStrong(AttributeNames.i_Usage, AttributeNames.v_Regional))
+					to_remove.add(wf); // we remove regional words whenever the flag is set, even without overlap
+			}
+			result.wordforms.removeAll(to_remove);
 		}
 
 		if (!result.isRecognized()) {  //Hardcoded izņēmumi (ar regex) kas atpazīst ciparus, kārtas skaitļus utml
