@@ -3686,13 +3686,13 @@ public class MorphologyTest {
         Word w = locītājs.analyze("pusjokodama");
         assertTrue(w.isRecognized());
         Wordform wf = w.getBestWordform();
-        assertEquals("vmnppfsn0000n", wf.getTag());
+        assertEquals("arfsnnp", wf.getTag());
         assertEquals("pusjokodams", wf.getValue(AttributeNames.i_Lemma));
 
         w = locītājs.analyze("pusjokodamās");
         assertTrue(w.isRecognized());
         wf = w.getBestWordform();
-        assertEquals("vmyppf0n0000n", wf.getTag());
+        assertEquals("arfsnnp", wf.getTag());
         assertEquals("pusjokodamies", wf.getValue(AttributeNames.i_Lemma));
     }
 
