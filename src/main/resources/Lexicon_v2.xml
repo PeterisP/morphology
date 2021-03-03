@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Morphology revision="${project.version}" licence="Copyright 2008-2018 Institute of Mathematics and Computer Science, University of Latvia. This file is part of the SemTi-Kamols Chunker, see http://www.semti-kamols.lv/  This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program. If not, see http://www.gnu.org/licenses/.">
+<Morphology revision="${project.version}" licence="Copyright 2008-2021 Institute of Mathematics and Computer Science, University of Latvia. This file is part of the SemTi-Kamols Chunker, see http://www.semti-kamols.lv/  This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program. If not, see http://www.gnu.org/licenses/.">
 	<Corpus FileName="Lexicon_minicore.xml" Type="core"/>
 	<Corpus FileName="Lexicon_firstnames.xml" Type="core"/>
 	<Corpus FileName="Lexicon_vietas.xml" Type="core"/>
@@ -5146,41 +5146,41 @@
 	</Paradigm>
 	<Paradigm Stems="1" ID="32" Name="noun-r1" LemmaEnding="2057" Description="Atgriezeniskie lietvārdi ar galotnēm -ājies, -ējies (klausītājies, pakaļdzinējies)" DescriptionEN="Reflexive nouns ending -ājies, -ējies (klausītājies, pakaļdzinējies)" AllowedGuessEndings="!">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="Nepiemīt"/>
-		<Ending ID="2057" StemChange="0" Ending="jies" StemID="1" Dzimte="Vīriešu">
-			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
+		<Ending ID="2057" StemChange="0" Ending="jies" StemID="1">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs" Dzimte="Vīriešu"/>
 		</Ending>
-		<Ending ID="2058" StemChange="0" Ending="jās" StemID="1" Dzimte="Sieviešu">
-			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
+		<Ending ID="2058" StemChange="0" Ending="jās" StemID="1">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs" Dzimte="Sieviešu"/>
 		</Ending>
-		<Ending ID="2059" StemChange="0" Ending="jies" StemID="1" Dzimte="Vīriešu">
-			<Attributes Skaitlis="Daudzskaitlis" Locījums="Nominatīvs"/>
+		<Ending ID="2059" StemChange="0" Ending="jies" StemID="1">
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Nominatīvs" Dzimte="Vīriešu"/>
 		</Ending>
-		<Ending ID="2060" StemChange="0" Ending="jās" StemID="1" Dzimte="Sieviešu">
-			<Attributes Skaitlis="Daudzskaitlis" Locījums="Nominatīvs"/>
+		<Ending ID="2060" StemChange="0" Ending="jās" StemID="1">
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Nominatīvs" Dzimte="Sieviešu"/>
 		</Ending>
-		<Ending ID="2061" StemChange="0" Ending="jās" StemID="1" Dzimte="Vīriešu">
-			<Attributes Skaitlis="Vienskaitlis" Locījums="Ģenitīvs"/>
+		<Ending ID="2061" StemChange="0" Ending="jās" StemID="1">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Ģenitīvs" Dzimte="Vīriešu"/>
 		</Ending>
-		<Ending ID="2062" StemChange="0" Ending="jās" StemID="1" Dzimte="Sieviešu">
-			<Attributes Skaitlis="Vienskaitlis" Locījums="Ģenitīvs"/>
+		<Ending ID="2062" StemChange="0" Ending="jās" StemID="1">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Ģenitīvs" Dzimte="Sieviešu"/>
 		</Ending>
-		<Ending ID="2063" StemChange="0" Ending="jos" StemID="1" Dzimte="Vīriešu">
-			<Attributes Skaitlis="Daudzskaitlis" Locījums="Ģenitīvs"/>
+		<Ending ID="2063" StemChange="0" Ending="jos" StemID="1">
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Ģenitīvs" Dzimte="Vīriešu"/>
 		</Ending>
-		<Ending ID="2064" StemChange="0" Ending="jos" StemID="1" Dzimte="Sieviešu">
-			<Attributes Skaitlis="Daudzskaitlis" Locījums="Ģenitīvs"/>
+		<Ending ID="2064" StemChange="0" Ending="jos" StemID="1">
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Ģenitīvs" Dzimte="Sieviešu"/>
 		</Ending>
-		<Ending ID="2065" StemChange="0" Ending="jos" StemID="1" Dzimte="Vīriešu">
-			<Attributes Skaitlis="Vienskaitlis" Locījums="Akuzatīvs"/>
+		<Ending ID="2065" StemChange="0" Ending="jos" StemID="1">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Akuzatīvs" Dzimte="Vīriešu"/>
 		</Ending>
-		<Ending ID="2066" StemChange="0" Ending="jos" StemID="1" Dzimte="Sieviešu">
-			<Attributes Skaitlis="Vienskaitlis" Locījums="Akuzatīvs"/>
+		<Ending ID="2066" StemChange="0" Ending="jos" StemID="1">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Akuzatīvs" Dzimte="Sieviešu"/>
 		</Ending>
-		<Ending ID="2067" StemChange="0" Ending="jos" StemID="1" Dzimte="Vīriešu">
-			<Attributes Skaitlis="Daudzskaitlis" Locījums="Akuzatīvs"/>
+		<Ending ID="2067" StemChange="0" Ending="jos" StemID="1">
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Akuzatīvs" Dzimte="Vīriešu"/>
 		</Ending>
-		<Ending ID="2068" StemChange="0" Ending="jās" StemID="1" Dzimte="Sieviešu">
-			<Attributes Skaitlis="Daudzskaitlis" Locījums="Akuzatīvs"/>
+		<Ending ID="2068" StemChange="0" Ending="jās" StemID="1">
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Akuzatīvs" Dzimte="Sieviešu"/>
 		</Ending>
 	</Paradigm>	
 	<Paradigm Stems="1" ID="33" Name="noun-r2" LemmaEnding="2069" Description="Atgriezeniskie lietvārdi ar galotni -umies (vēlējumies)" DescriptionEN="Reflexive nouns ending -umies (vēlējumies)" AllowedGuessEndings="!">
