@@ -1,20 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Lexicon revision="2.0.0-SNAPSHOT" licence="Copyright 2008-2018 Institute of Mathematics and Computer Science, University of Latvia. This file is part of the SemTi-Kamols Chunker, see http://www.semti-kamols.lv/  This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program. If not, see http://www.gnu.org/licenses/.">
+<Lexicon revision="2.2.1-SNAPSHOT" licence="Copyright 2008-2021 Institute of Mathematics and Computer Science, University of Latvia. This file is part of the SemTi-Kamols Chunker, see http://www.semti-kamols.lv/  This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program. If not, see http://www.gnu.org/licenses/.">
   <Paradigm Stems="1" ID="1" LemmaEnding="1" Description="Lietvārds 1. deklinācija -s">
     <Attributes Vārdšķira="Lietvārds" Deklinācija="1" Dzimte="Vīriešu"/>
     <Lexeme Stem1="lietotāj"/>
-    <Lexeme Stem1="zinātniek"/>
-  </Paradigm>
-  <Paradigm Stems="1" ID="2" LemmaEnding="14" Description="Lietvārds 1. deklinācija -š">
-    <Attributes Vārdšķira="Lietvārds" Deklinācija="1" Dzimte="Vīriešu"/>
-  </Paradigm>
-  <Paradigm Stems="1" ID="3" LemmaEnding="27" Description="Lietvārds 2. deklinācija -is">
-    <Attributes Vārdšķira="Lietvārds" Deklinācija="2" Dzimte="Vīriešu"/>
-    <Lexeme Stem1="kvies"/>
-  </Paradigm>
-  <Paradigm Stems="1" ID="4" LemmaEnding="39" Description="Lietvārds 2. deklinācija -s (piem, mēness)">
-    <Attributes Vārdšķira="Lietvārds" Deklinācija="2" Dzimte="Vīriešu"/>
-    <Lexeme Stem1="mēnes"/>
   </Paradigm>
   <Paradigm Stems="1" ID="5" LemmaEnding="1211" Description="Lietvārds 2. deklinācija - suns">
     <Attributes Vārdšķira="Lietvārds" Deklinācija="2" Dzimte="Vīriešu"/>
@@ -24,28 +12,6 @@
     <Lexeme Stem1="ķezber">
       <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Ķezers"/>
     </Lexeme>
-  </Paradigm>
-  <Paradigm Stems="1" ID="6" LemmaEnding="51" Description="Lietvārds 3. deklinācija -us">
-    <Attributes Vārdšķira="Lietvārds" Deklinācija="3" Dzimte="Vīriešu"/>
-  </Paradigm>
-  <Paradigm Stems="1" ID="7" LemmaEnding="75" Description="Lietvārds 4. deklinācija -a siev. dz">
-    <Attributes Vārdšķira="Lietvārds" Deklinācija="4" Dzimte="Sieviešu"/>
-    <Lexeme Stem1="saeim">
-      <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Saeima"/>
-    </Lexeme>
-  </Paradigm>
-  <Paradigm Stems="1" ID="8" LemmaEnding="63" Description="Lietvārds 4. deklinācija -a vīr. dz">
-    <Attributes Vārdšķira="Lietvārds" Deklinācija="4" Dzimte="Vīriešu"/>
-  </Paradigm>
-  <Paradigm Stems="1" ID="9" LemmaEnding="87" Description="Lietvārds 5. deklinācija -e siev. dz">
-    <Attributes Vārdšķira="Lietvārds" Deklinācija="5" Dzimte="Sieviešu"/>
-  </Paradigm>
-  <Paradigm Stems="1" ID="10" LemmaEnding="1146" Description="Lietvārds 5. deklinācija -e vīr. dz.">
-    <Attributes Vārdšķira="Lietvārds" Deklinācija="5" Dzimte="Vīriešu"/>
-  </Paradigm>
-  <Paradigm Stems="1" ID="11" LemmaEnding="99" Description="Lietvārds 6. deklinācijā -s">
-    <Attributes Vārdšķira="Lietvārds" Deklinācija="6" Dzimte="Sieviešu"/>
-    <Lexeme Stem1="dalībvalst"/>
   </Paradigm>
   <Paradigm Stems="1" ID="12" LemmaEnding="111" Description="Nelokāmie lietvārdi">
     <Attributes Vārdšķira="Lietvārds" Deklinācija="Nepiemīt"/>
@@ -3781,7 +3747,6 @@
     <Lexeme Stem1="pārēj"/>
   </Paradigm>
   <Paradigm Stems="1" ID="41" Description="Substantivizējušies noteiktās formas -is/-usi divdabji sieviešu dzimtē (cietusī)">
-    <Lexeme Stem1="cietuš"/>
   </Paradigm>
   <Paradigm Stems="1" ID="42" Description="Substantivizējušās divdabju formas kā 'pusjucis'">
   </Paradigm>

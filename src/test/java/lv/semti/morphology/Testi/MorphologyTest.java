@@ -2582,12 +2582,8 @@ public class MorphologyTest {
         formas = locītājs.generateInflections("mēnessērdzīgā", true);
         assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, "", "mēnessērdzīgajai");
 
-        formas = locītājs.generateInflections("cietušais", true);
-        describe(formas);
+        formas = locītājs.generateInflections("cietušais", false);
         assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, "", "cietušajam");
-
-        formas = locītājs.generateInflections("cietusī", true);
-        assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, "", "cietušajai");
 
         formas = locītājs.generateInflections("dzeramais", true);
         assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, "", "dzeramajam");
@@ -2713,9 +2709,9 @@ public class MorphologyTest {
         assertTrue(foundLemma);
     }
 
+    @Ignore("tupmāks nav normāls vārds manuprāt, bet gan tiešām turpms forma....")
     @Test
     public void turpms() {
-        locītājs.enableGuessing = true;
         Word turpmākiem = locītājs.analyze("turpmākiem");
         assertTrue(turpmākiem.isRecognized());
         assertLemma("turpmākiem", "turpmāks");
@@ -3801,6 +3797,22 @@ public class MorphologyTest {
             assertFalse(wf2.isMatchingStrong(AttributeNames.i_Number, AttributeNames.v_Singular));
             // Do not generate singular forms for Tezaurs.lv morphology tables
         }
+    }
+
+    @Test
+    public void missing_cietusī() {
+        Word w = locītājs.analyze("cietusī");
+        assertTrue(w.isRecognized());
+        boolean found = false;
+        for (Wordform wf : w.wordforms) {
+            if (wf.getEnding().getParadigm().getID() == 41) {
+                found = true;
+            }
+        }
+        assertTrue(found);
+
+        List<Wordform> formas = locītājs.generateInflections("cietusī", false);
+        assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, "", "cietušajai");
     }
 }
 
