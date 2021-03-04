@@ -47,9 +47,10 @@ public class Divdabjlemmas {
 				}
 			}
 			if (lemma == null) {
-				System.out.printf("%s\n", participle);
+//				System.out.printf("%s\n", participle);
 			} else {
 //				System.out.printf("update lexemes set data=jsonb_set(data, '{Gram,Flags,\"Pamatforma morforīkiem\"}', '\"%s\"', true) where lemma = '%s'\n", lemma, participle);
+				System.out.printf("('%s', '%s'),\n", participle, lemma);
 			}
 		}
 

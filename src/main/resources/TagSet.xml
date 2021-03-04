@@ -556,6 +556,7 @@
 <FreeAttribute LV="Leksēmas nr" EN="Lexeme ID"/>
 <FreeAttribute LV="Galotnes nr" EN="Ending ID"/>
 <FreeAttribute LV="Pamatforma" EN="Lemma"/>
+<FreeAttribute LV="Pamatforma morforīkiem" EN="Lemma for morphology tagging"/>
 <FreeAttribute LV="Avots" EN="Source"/> 
 <FreeAttribute LV="Pirmavots" EN="Primary source"/> 
 <FreeAttribute LV="Vārds" EN="Wordform"/> 
