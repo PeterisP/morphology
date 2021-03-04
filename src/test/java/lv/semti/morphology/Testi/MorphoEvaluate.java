@@ -246,13 +246,13 @@ public class MorphoEvaluate {
                 singletons++;
                 continue;
             }
-            izeja.printf("%s : %d kļūdas\n", key, list.size());
+            izeja.printf("%s : %d atšķirības\n", key, list.size());
             Set<String> sortedlist = new TreeSet<String>();
             sortedlist.addAll(list);
             for (String mistake : sortedlist)
                 izeja.println(mistake);
         }
-        izeja.printf(".... un %d izolētas kļūdas\n", singletons);
+        izeja.printf(".... un %d izolētas atšķirības\n", singletons);
 
 		LinkedHashMap<String, Integer> most_common_oov = new LinkedHashMap<>();
 		oov_frequency.entrySet()
