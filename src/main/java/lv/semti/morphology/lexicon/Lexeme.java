@@ -105,6 +105,10 @@ public class Lexeme extends AttributeValues {
 		n = node.getAttributes().getNamedItem("ID");
 		if (n != null)
 			this.setID(Integer.parseInt(n.getTextContent()));
+
+        if (getValue(AttributeNames.i_LemmaOverride) != null) {
+            addAttribute(AttributeNames.i_Lemma, getValue(AttributeNames.i_LemmaOverride));
+        }
 	}
 
     /**

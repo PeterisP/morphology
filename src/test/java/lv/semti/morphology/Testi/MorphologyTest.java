@@ -799,8 +799,7 @@ public class MorphologyTest {
         // Noliegumu atvasinājumiem lai ir oriģinālā pamatforma atvasināta
         Word nenest = locītājs.analyze("nenesāt");
         assertTrue(nenest.isRecognized());
-        assertEquals("nenest", nenest.wordforms.get(0).getValue(AttributeNames.i_Lemma));
-        assertEquals("nest", nenest.wordforms.get(0).getValue(AttributeNames.i_SourceLemma));
+        assertEquals("nest", nenest.wordforms.get(0).getValue(AttributeNames.i_Lemma));
     }
 
     @Test
@@ -2582,6 +2581,9 @@ public class MorphologyTest {
         testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
         assertInflection(formas, testset, "ir");
 
+        formas = locītājs.generateInflections("nebūt");
+        assertInflection(formas, testset, "nav");
+
         formas = locītājs.generateInflections("viņš");
 
         testset = new AttributeValues();
@@ -3002,7 +3004,7 @@ public class MorphologyTest {
         boolean found_c = false;
         boolean found_tag = false;
         for (Wordform wf : nav.wordforms) {
-            assertEquals("nebūt", wf.getValue(AttributeNames.i_Lemma));
+            assertEquals("būt", wf.getValue(AttributeNames.i_Lemma));
             if (wf.isMatchingStrong(AttributeNames.i_VerbType, AttributeNames.v_MainVerb))
                 found_m = true;
             if (wf.isMatchingStrong(AttributeNames.i_VerbType, AttributeNames.v_Buut))
@@ -3102,6 +3104,7 @@ public class MorphologyTest {
         testset.addAttribute(AttributeNames.i_Izteiksme, AttributeNames.v_Iisteniibas);
         testset.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Tagadne);
         testset.addAttribute(AttributeNames.i_Person, "3");
+        describe(formas);
         assertInflection(formas, testset, "nepaiet");
 
         Word nepaiet = locītājs.analyze("nepaiet");
@@ -3381,7 +3384,7 @@ public class MorphologyTest {
         Word w = locītājs.analyze("nespēja");
         for (Wordform wf : w.wordforms) {
             if (wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb))
-                assertEquals("nespēt", wf.getValue(AttributeNames.i_Lemma));
+                assertEquals("spēt", wf.getValue(AttributeNames.i_Lemma));
         }
     }
 

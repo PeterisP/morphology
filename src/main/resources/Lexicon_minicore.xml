@@ -31,274 +31,273 @@
   <Paradigm Stems="3" ID="15" LemmaEnding="711" Description="Darbības vārdi 1. konjugācija tiešie">
     <Attributes Konjugācija="1" Atgriezeniskums="Nē"/>
     <Lexeme Stem1="ieras" Stem2="ierod" Stem3="ierad">
-      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls" Pamatforma="rast"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls"/>
     </Lexeme>
     <Lexeme Stem1="spē" Stem2="spēj" Stem3="spēj">
-      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls" Pamatforma="spēt"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls"/>
     </Lexeme>
     <Lexeme Stem1="nespē" Stem2="nespēj" Stem3="nespēj">
-      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls" Pamatforma="nespēt"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls" Pamatforma_morforīkiem="spēt"/>
     </Lexeme>
     <Lexeme Stem1="nespē" Stem2="nespēj" Stem3="nespēj">
-      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="nespēt"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma_morforīkiem="spēt"/>
     </Lexeme>
     <Lexeme Stem1="paspē" Stem2="paspēj" Stem3="paspēj">
-      <Attributes Darbības_vārda_tips="Fāzes" Pamatforma="paspēt"/>
+      <Attributes Darbības_vārda_tips="Fāzes"/>
     </Lexeme>
     <Lexeme Stem1="pagū" Stem2="pagūst" Stem3="paguv">
-      <Attributes Darbības_vārda_tips="Modāls" Pamatforma="pagūt"/>
+      <Attributes Darbības_vārda_tips="Modāls"/>
     </Lexeme>
     <Lexeme Stem1="pras" Stem2="prot" Stem3="prat">
-      <Attributes Darbības_vārda_tips="Modāls" Pamatforma="prast"/>
+      <Attributes Darbības_vārda_tips="Modāls"/>
     </Lexeme>
     <Lexeme Stem1="mēg" Stem2="mēdz" Stem3="mēdz">
-      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls" Pamatforma="mēgt"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls"/>
     </Lexeme>
     <Lexeme Stem1="derg" Stem2="derdz" Stem3="derdz">
-      <Attributes Darbības_vārda_tips="Modāls" Pamatforma="dergties"/>
+      <Attributes Darbības_vārda_tips="Modāls"/>
     </Lexeme>
     <Lexeme Stem1="beig" Stem2="beidz" Stem3="beidz">
-      <Attributes Transitivitāte="Transitīvs" Darbības_vārda_tips="Fāzes" Pamatforma="beigt"/>
+      <Attributes Transitivitāte="Transitīvs" Darbības_vārda_tips="Fāzes"/>
     </Lexeme>
-    <Lexeme Stem1="nebeig" Stem2="nebeidz" Stem3="nebeidz">
-      <Attributes Darbības_vārda_tips="Fāzes" Pamatforma="nebeigt"/>
+    <Lexeme Stem1="nebeig" Stem2="nebeidz" Stem3="nebeidz" Pamatforma_morforīkiem="beigt">
+      <Attributes Darbības_vārda_tips="Fāzes"/>
     </Lexeme>
     <Lexeme Stem1="sāk" Stem2="sāk" Stem3="sāk">
-      <Attributes Transitivitāte="Transitīvs" Darbības_vārda_tips="Fāzes" Pamatforma="sākt"/>
+      <Attributes Transitivitāte="Transitīvs" Darbības_vārda_tips="Fāzes"/>
     </Lexeme>
     <Lexeme Stem1="atsāk" Stem2="atsāk" Stem3="atsāk">
-      <Attributes Transitivitāte="Transitīvs" Darbības_vārda_tips="Fāzes" Pamatforma="atsākt"/>
+      <Attributes Transitivitāte="Transitīvs" Darbības_vārda_tips="Fāzes"/>
     </Lexeme>
     <Lexeme Stem1="iesāk" Stem2="iesāk" Stem3="iesāk">
-      <Attributes Transitivitāte="Transitīvs" Darbības_vārda_tips="Fāzes" Pamatforma="iesākt"/>
+      <Attributes Transitivitāte="Transitīvs" Darbības_vārda_tips="Fāzes"/>
     </Lexeme>
     <Lexeme Stem1="uzsāk" Stem2="uzsāk" Stem3="uzsāk">
-      <Attributes Transitivitāte="Transitīvs" Darbības_vārda_tips="Fāzes" Pamatforma="uzsākt"/>
+      <Attributes Transitivitāte="Transitīvs" Darbības_vārda_tips="Fāzes"/>
     </Lexeme>
     <Lexeme Stem1="pārstā" Stem2="pārstāj" Stem3="pārstāj">
-      <Attributes Transitivitāte="Transitīvs" Darbības_vārda_tips="Fāzes" Pamatforma="pārstāt"/>
+      <Attributes Transitivitāte="Transitīvs" Darbības_vārda_tips="Fāzes"/>
     </Lexeme>
     <Lexeme Stem1="stā" Stem2="stāj" Stem3="stāj">
-      <Attributes Transitivitāte="Transitīvs" Darbības_vārda_tips="Fāzes" Pamatforma="stāt"/>
+      <Attributes Transitivitāte="Transitīvs" Darbības_vārda_tips="Fāzes"/>
     </Lexeme>
     <Lexeme Stem1="iznāk" Stem2="iznāk" Stem3="iznāc">
-      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Izpausmes veida" Pamatforma="iznākt"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Izpausmes veida"/>
     </Lexeme>
     <Lexeme Stem1="tik" Stem2="tiek" Stem3="tik">
-      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Saitiņas 'tikt' un 'tapt'" Pamatforma="tikt"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Saitiņas 'tikt' un 'tapt'"/>
     </Lexeme>
     <Lexeme Stem1="tik" Stem2="tiek" Stem3="tik">
-      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Palīgverbi 'tikt' un 'tapt'" Pamatforma="tikt"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Palīgverbi 'tikt' un 'tapt'"/>
     </Lexeme>
     <Lexeme Stem1="kļū" Stem2="kļūst" Stem3="kļuv">
-      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Saitiņas 'tikt' un 'tapt'" Pamatforma="kļūt"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Saitiņas 'tikt' un 'tapt'"/>
     </Lexeme>
     <Lexeme Stem1="tap" Stem2="top" Stem3="tap">
-      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Saitiņas 'tikt' un 'tapt'" Pamatforma="tapt"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Saitiņas 'tikt' un 'tapt'"/>
     </Lexeme>
     <Lexeme Stem1="tap" Stem2="top" Stem3="tap">
-      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Palīgverbi 'tikt' un 'tapt'" Pamatforma="tapt"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Palīgverbi 'tikt' un 'tapt'"/>
     </Lexeme>
     <Lexeme Stem1="šķis" Stem2="šķiet" Stem3="šķit">
-      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Saitiņas 'tikt' un 'tapt'" Pamatforma="šķist"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Saitiņas 'tikt' un 'tapt'"/>
     </Lexeme>
     <Lexeme Stem1="palik" Stem2="paliek" Stem3="palik">
-      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Saitiņas 'tikt' un 'tapt'" Pamatforma="palikt"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Saitiņas 'tikt' un 'tapt'"/>
     </Lexeme>
     <Lexeme Stem1="palik" Stem2="paliek" Stem3="palik">
-      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Fāzes" Pamatforma="palikt"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Fāzes"/>
     </Lexeme>
     <Lexeme Stem1="norim" Stem2="norimst" Stem3="norim">
-      <Attributes Darbības_vārda_tips="Fāzes" Pamatforma="norimt"/>
+      <Attributes Darbības_vārda_tips="Fāzes"/>
     </Lexeme>
     <Lexeme Stem1="rim" Stem2="rimst" Stem3="rim">
-      <Attributes Darbības_vārda_tips="Fāzes" Pamatforma="rimt"/>
+      <Attributes Darbības_vārda_tips="Fāzes"/>
     </Lexeme>
     <Lexeme Stem1="pierim" Stem2="pierimst" Stem3="pierim">
-      <Attributes Darbības_vārda_tips="Fāzes" Pamatforma="pierimt"/>
+      <Attributes Darbības_vārda_tips="Fāzes"/>
     </Lexeme>
     <Lexeme Stem1="atlik" Stem2="atliek" Stem3="atlik">
-      <Attributes Darbības_vārda_tips="Modāls" Pamatforma="atlikt"/>
+      <Attributes Darbības_vārda_tips="Modāls"/>
     </Lexeme>
     <Lexeme Stem1="vīkš" Stem2="vīkš" Stem3="vīkš">
-      <Attributes Pamatforma="vīkšt"/>
     </Lexeme>
   </Paradigm>
   <Paradigm Stems="1" ID="16" LemmaEnding="225" Description="Darbības vārdi 2. konjugācija tiešie">
     <Attributes Konjugācija="2" Atgriezeniskums="Nē"/>
     <Lexeme Stem1="jaudā">
-      <Attributes Darbības_vārda_tips="Modāls" Pamatforma="jaudāt"/>
+      <Attributes Darbības_vārda_tips="Modāls"/>
     </Lexeme>
     <Lexeme Stem1="kāro">
-      <Attributes Darbības_vārda_tips="Modāls" Pamatforma="kārot"/>
+      <Attributes Darbības_vārda_tips="Modāls"/>
     </Lexeme>
     <Lexeme Stem1="tīko">
-      <Attributes Darbības_vārda_tips="Modāls" Pamatforma="tīkot"/>
+      <Attributes Darbības_vārda_tips="Modāls"/>
     </Lexeme>
     <Lexeme Stem1="nozīmē">
-      <Attributes Darbības_vārda_tips="Saitiņas 'tikt' un 'tapt'" Pamatforma="nozīmēt"/>
+      <Attributes Darbības_vārda_tips="Saitiņas 'tikt' un 'tapt'"/>
     </Lexeme>
   </Paradigm>
   <Paradigm Stems="1" ID="17" LemmaEnding="468" Description="Darbības vārdi 3. konjugācija tiešie">
     <Attributes Konjugācija="3" Atgriezeniskums="Nē"/>
     <Lexeme Stem1="varē">
-      <Attributes Darbības_vārda_tips="Modāls" Pamatforma="varēt"/>
+      <Attributes Darbības_vārda_tips="Modāls"/>
     </Lexeme>
     <Lexeme Stem1="nevarē">
-      <Attributes Darbības_vārda_tips="Modāls" Pamatforma="nevarēt"/>
+      <Attributes Darbības_vārda_tips="Modāls" Pamatforma_morforīkiem="varēt"/>
     </Lexeme>
     <Lexeme Stem1="gribē">
-      <Attributes Darbības_vārda_tips="Modāls" Pamatforma="gribēt"/>
+      <Attributes Darbības_vārda_tips="Modāls"/>
     </Lexeme>
     <Lexeme Stem1="negribē">
-      <Attributes Darbības_vārda_tips="Modāls" Pamatforma="negribēt"/>
+      <Attributes Darbības_vārda_tips="Modāls" Pamatforma_morforīkiem="gribēt"/>
     </Lexeme>
     <Lexeme Stem1="drīkstē">
-      <Attributes Darbības_vārda_tips="Modāls" Pamatforma="drīkstēt"/>
+      <Attributes Darbības_vārda_tips="Modāls"/>
     </Lexeme>
     <Lexeme Stem1="nedrīkstē">
-      <Attributes Darbības_vārda_tips="Modāls" Pamatforma="nedrīkstēt"/>
+      <Attributes Darbības_vārda_tips="Modāls" Pamatforma_morforīkiem="drīkstēt"/>
     </Lexeme>
     <Lexeme Stem1="mēģinā">
-      <Attributes Darbības_vārda_tips="Modāls" Pamatforma="mēģināt"/>
+      <Attributes Darbības_vārda_tips="Modāls"/>
     </Lexeme>    
     <Lexeme Stem1="derē">
-      <Attributes Darbības_vārda_tips="Modāls" Pamatforma="derēt"/>
+      <Attributes Darbības_vārda_tips="Modāls"/>
     </Lexeme>
     <Lexeme Stem1="turpinā">
-      <Attributes Darbības_vārda_tips="Fāzes" Pamatforma="turpināt"/>
+      <Attributes Darbības_vārda_tips="Fāzes"/>
     </Lexeme>
   </Paradigm>
   <Paradigm Stems="3" ID="18" LemmaEnding="1061" Description="Darbības vārdi 1. konjugācija atgriezeniskie">
     <Attributes Konjugācija="1" Atgriezeniskums="Jā"/>
     <Lexeme Stem1="nāk" Stem2="nāk" Stem3="nāc">
-      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls" Pamatforma="nākties"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls"/>
     </Lexeme>
     <Lexeme Stem1="pienāk" Stem2="pienāk" Stem3="pienāc">
-      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls" Pamatforma="pienākties"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls"/>
     </Lexeme>
     <Lexeme Stem1="cens" Stem2="cenš" Stem3="cent">
-      <Attributes Transitivitāte="Transitīvs" Darbības_vārda_tips="Modāls" Pamatforma="censties"/>
+      <Attributes Transitivitāte="Transitīvs" Darbības_vārda_tips="Modāls"/>
     </Lexeme>
     <Lexeme Stem1="apņem" Stem2="apņem" Stem3="apņēm">
-      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls" Pamatforma="apņemties"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls"/>
     </Lexeme>
     <Lexeme Stem1="tiek" Stem2="tiec" Stem3="tiec">
-      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls" Pamatforma="tiekties"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls"/>
     </Lexeme>
     <Lexeme Stem1="klā" Stem2="klāj" Stem3="klāj">
-      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls" Pamatforma="klāties"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls"/>
     </Lexeme>
     <Lexeme Stem1="pieklā" Stem2="pieklāj" Stem3="pieklāj">
-      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls" Pamatforma="pieklāties"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls"/>
     </Lexeme>
     <Lexeme Stem1="lieg" Stem2="liedz" Stem3="liedz">
-      <Attributes Darbības_vārda_tips="Modāls" Pamatforma="liegties"/>
+      <Attributes Darbības_vārda_tips="Modāls"/>
     </Lexeme>
     <Lexeme Stem1="rieb" Stem2="riebj" Stem3="rieb">
-      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls" Pamatforma="riebties"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls"/>
     </Lexeme>
     <Lexeme Stem1="lais" Stem2="laiž" Stem3="laid">
-      <Attributes Darbības_vārda_tips="Fāzes" Pamatforma="laisties"/>
+      <Attributes Darbības_vārda_tips="Fāzes"/>
     </Lexeme>
     <Lexeme Stem1="mes" Stem2="met" Stem3="met">
-      <Attributes Darbības_vārda_tips="Fāzes" Pamatforma="mesties"/>
+      <Attributes Darbības_vārda_tips="Fāzes"/>
     </Lexeme>
     <Lexeme Stem1="ņem" Stem2="ņem" Stem3="ņēm">
-      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Fāzes" Pamatforma="ņemties"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Fāzes"/>
     </Lexeme>
     <Lexeme Stem1="aprau" Stem2="aprauj" Stem3="aprāv">
-      <Attributes Darbības_vārda_tips="Fāzes" Pamatforma="aprauties"/>
+      <Attributes Darbības_vārda_tips="Fāzes"/>
     </Lexeme>
     <Lexeme Stem1="apstā" Stem2="apstāj" Stem3="apstāj">
-      <Attributes Darbības_vārda_tips="Fāzes" Pamatforma="apstāties"/>
+      <Attributes Darbības_vārda_tips="Fāzes"/>
     </Lexeme>
     <Lexeme Stem1="norim" Stem2="norimst" Stem3="norim">
-      <Attributes Darbības_vārda_tips="Fāzes" Pamatforma="norimties"/>
+      <Attributes Darbības_vārda_tips="Fāzes"/>
     </Lexeme>
     <Lexeme Stem1="rim" Stem2="rimst" Stem3="rim">
-      <Attributes Darbības_vārda_tips="Fāzes" Pamatforma="rimties"/>
+      <Attributes Darbības_vārda_tips="Fāzes"/>
     </Lexeme>
     <Lexeme Stem1="izdo" Stem2="izdod" Stem3="izdev">
-      <Attributes Konjugācija="Nekārtns" Darbības_vārda_tips="Izpausmes veida" Pamatforma="izdoties"/>
+      <Attributes Konjugācija="Nekārtns" Darbības_vārda_tips="Izpausmes veida"/>
     </Lexeme>
     <Lexeme Stem1="lik" Stem2="liek" Stem3="lik">
-      <Attributes Darbības_vārda_tips="Saitiņas 'tikt' un 'tapt'" Pamatforma="likties"/>
+      <Attributes Darbības_vārda_tips="Saitiņas 'tikt' un 'tapt'"/>
     </Lexeme>
     <Lexeme Stem1="jus" Stem2="jūt" Stem3="jut">
-      <Attributes Darbības_vārda_tips="Saitiņas 'tikt' un 'tapt'" Pamatforma="justies"/>
+      <Attributes Darbības_vārda_tips="Saitiņas 'tikt' un 'tapt'"/>
     </Lexeme>
   </Paradigm>
   <Paradigm Stems="1" ID="19" LemmaEnding="955" Description="Darbības vārdi 2. konjugācija atgriezeniski">
     <Attributes Konjugācija="2" Atgriezeniskums="Jā"/>
     <Lexeme Stem1="mitē">
-      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Fāzes" Pamatforma="mitēties"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Fāzes"/>
     </Lexeme>
     <Lexeme Stem1="gatavo">
-      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls" Pamatforma="gatavoties"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls"/>
     </Lexeme>
     <Lexeme Stem1="kautrē">
-      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls" Pamatforma="kautrēties"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls"/>
     </Lexeme>
     <Lexeme Stem1="kavē">
-      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls" Pamatforma="kavēties"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls"/>
     </Lexeme>
     <Lexeme Stem1="sargā">
-      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls" Pamatforma="sargāties"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls"/>
     </Lexeme>
     <Lexeme Stem1="laimē">
-      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Izpausmes veida" Pamatforma="laimēties"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Izpausmes veida"/>
     </Lexeme>
   </Paradigm>
   <Paradigm Stems="1" ID="20" LemmaEnding="1008" Description="Darbības vārdi 3. konjugācija atgriezeniski">
     <Attributes Konjugācija="3" Atgriezeniskums="Jā"/>
     <Lexeme Stem1="vēlē">
-      <Attributes Transitivitāte="Transitīvs" Darbības_vārda_tips="Modāls" Pamatforma="vēlēties"/>
+      <Attributes Transitivitāte="Transitīvs" Darbības_vārda_tips="Modāls"/>
     </Lexeme>
     <Lexeme Stem1="grasī">
-      <Attributes Transitivitāte="Transitīvs" Darbības_vārda_tips="Modāls" Pamatforma="grasīties"/>
+      <Attributes Transitivitāte="Transitīvs" Darbības_vārda_tips="Modāls"/>
     </Lexeme>
     <Lexeme Stem1="gribē">
-      <Attributes Transitivitāte="Transitīvs" Darbības_vārda_tips="Modāls" Pamatforma="gribēties"/>
+      <Attributes Transitivitāte="Transitīvs" Darbības_vārda_tips="Modāls"/>
     </Lexeme>
     <Lexeme Stem1="iedrošinā">
-      <Attributes Transitivitāte="Transitīvs" Darbības_vārda_tips="Modāls" Pamatforma="iedrošināties"/>
+      <Attributes Transitivitāte="Transitīvs" Darbības_vārda_tips="Modāls"/>
     </Lexeme>
     <Lexeme Stem1="uzdrošinā">
-      <Attributes Transitivitāte="Transitīvs" Darbības_vārda_tips="Modāls" Pamatforma="uzdrošināties"/>
+      <Attributes Transitivitāte="Transitīvs" Darbības_vārda_tips="Modāls"/>
     </Lexeme>
     <Lexeme Stem1="baidī">
-      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls" Pamatforma="baidīties"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls"/>
     </Lexeme>
     <Lexeme Stem1="kaunē">
-      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls" Pamatforma="kaunēties"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls"/>
     </Lexeme>
     <Lexeme Stem1="sargā">
-      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls" Pamatforma="sargāties"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls"/>
     </Lexeme>
     <Lexeme Stem1="vairī">
-      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls" Pamatforma="vairīties"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls"/>
     </Lexeme>
     <Lexeme Stem1="vilcinā">
-      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls" Pamatforma="vilcināties"/>
+      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls"/>
     </Lexeme>
     <Lexeme Stem1="gadī">
-      <Attributes Darbības_vārda_tips="Izpausmes veida" Pamatforma="gadīties"/>
+      <Attributes Darbības_vārda_tips="Izpausmes veida"/>
     </Lexeme>
     <Lexeme Stem1="gadī">
-      <Attributes Darbības_vārda_tips="Saitiņas 'tikt' un 'tapt'" Pamatforma="gadīties"/>
+      <Attributes Darbības_vārda_tips="Saitiņas 'tikt' un 'tapt'"/>
     </Lexeme>
     <Lexeme Stem1="trāpī">
-      <Attributes Darbības_vārda_tips="Izpausmes veida" Pamatforma="trāpīties"/>
+      <Attributes Darbības_vārda_tips="Izpausmes veida"/>
     </Lexeme>
     <Lexeme Stem1="izrādī">
-      <Attributes Darbības_vārda_tips="Izpausmes veida" Pamatforma="izrādīties"/>
+      <Attributes Darbības_vārda_tips="Izpausmes veida"/>
     </Lexeme>
     <Lexeme Stem1="izrādī">
-      <Attributes Darbības_vārda_tips="Saitiņas 'tikt' un 'tapt'" Pamatforma="izrādīties"/>
+      <Attributes Darbības_vārda_tips="Saitiņas 'tikt' un 'tapt'"/>
     </Lexeme>
     <Lexeme Stem1="izskatī">
-      <Attributes Darbības_vārda_tips="Saitiņas 'tikt' un 'tapt'" Pamatforma="izskatīties"/>
+      <Attributes Darbības_vārda_tips="Saitiņas 'tikt' un 'tapt'"/>
     </Lexeme>
   </Paradigm>
   <Paradigm Stems="1" ID="21" LemmaEnding="954" Description="Apstākļa vārdi">
@@ -350,263 +349,207 @@
   <Paradigm Stems="1" ID="22" LemmaEnding="1102" Description="Kārtas skaitļa vārdi">
     <Attributes Vārdšķira="Skaitļa vārds" Skaitļa_vārda_tips="Kārtas" Uzbūve="Vienkāršs" Noteiktība="Noteiktā"/>
     <Lexeme Stem1="pirm">
-      <Attributes Skaitļu_kārta="Vieni" Pamatforma="pirmais"/>
+      <Attributes Skaitļu_kārta="Vieni"/>
     </Lexeme>
     <Lexeme Stem1="otr">
-      <Attributes Skaitļu_kārta="Vieni" Pamatforma="otrais"/>
+      <Attributes Skaitļu_kārta="Vieni"/>
     </Lexeme>
     <Lexeme Stem1="treš">
-      <Attributes Skaitļu_kārta="Vieni" Pamatforma="trešais"/>
+      <Attributes Skaitļu_kārta="Vieni"/>
     </Lexeme>
     <Lexeme Stem1="ceturt">
-      <Attributes Skaitļu_kārta="Vieni" Pamatforma="ceturtais"/>
+      <Attributes Skaitļu_kārta="Vieni"/>
     </Lexeme>
     <Lexeme Stem1="piekt">
-      <Attributes Skaitļu_kārta="Vieni" Pamatforma="piektais"/>
+      <Attributes Skaitļu_kārta="Vieni"/>
     </Lexeme>
     <Lexeme Stem1="sest">
-      <Attributes Skaitļu_kārta="Vieni" Pamatforma="sestais"/>
+      <Attributes Skaitļu_kārta="Vieni"/>
     </Lexeme>
     <Lexeme Stem1="septīt">
-      <Attributes Skaitļu_kārta="Vieni" Pamatforma="septītais"/>
+      <Attributes Skaitļu_kārta="Vieni"/>
     </Lexeme>
     <Lexeme Stem1="astot">
-      <Attributes Skaitļu_kārta="Vieni" Pamatforma="astotais"/>
+      <Attributes Skaitļu_kārta="Vieni"/>
     </Lexeme>
     <Lexeme Stem1="devīt">
-      <Attributes Skaitļu_kārta="Vieni" Pamatforma="devītais"/>
+      <Attributes Skaitļu_kārta="Vieni"/>
     </Lexeme>
     <Lexeme Stem1="desmit">
-      <Attributes Skaitļu_kārta="Desmiti" Pamatforma="desmitais"/>
+      <Attributes Skaitļu_kārta="Desmiti"/>
     </Lexeme>
     <Lexeme Stem1="vienpadsmit">
-      <Attributes Skaitļu_kārta="Padsmiti" Pamatforma="vienpadsmitais"/>
+      <Attributes Skaitļu_kārta="Padsmiti"/>
     </Lexeme>
     <Lexeme Stem1="divpadsmit">
-      <Attributes Skaitļu_kārta="Padsmiti" Pamatforma="divpadsmitais"/>
+      <Attributes Skaitļu_kārta="Padsmiti"/>
     </Lexeme>
     <Lexeme Stem1="trīspadsmit">
-      <Attributes Skaitļu_kārta="Padsmiti" Pamatforma="trīspadsmitais"/>
+      <Attributes Skaitļu_kārta="Padsmiti"/>
     </Lexeme>
     <Lexeme Stem1="četrpadsmit">
-      <Attributes Skaitļu_kārta="Padsmiti" Pamatforma="četrpadsmitais"/>
+      <Attributes Skaitļu_kārta="Padsmiti"/>
     </Lexeme>
     <Lexeme Stem1="piecpadsmit">
-      <Attributes Skaitļu_kārta="Padsmiti" Pamatforma="piecpadsmitais"/>
+      <Attributes Skaitļu_kārta="Padsmiti"/>
     </Lexeme>
     <Lexeme Stem1="sešpadsmit">
-      <Attributes Skaitļu_kārta="Padsmiti" Pamatforma="sešpadsmitais"/>
+      <Attributes Skaitļu_kārta="Padsmiti"/>
     </Lexeme>
     <Lexeme Stem1="septiņpadsmit">
-      <Attributes Skaitļu_kārta="Padsmiti" Pamatforma="septiņpadsmitais"/>
+      <Attributes Skaitļu_kārta="Padsmiti"/>
     </Lexeme>
     <Lexeme Stem1="astoņpadsmit">
-      <Attributes Skaitļu_kārta="Padsmiti" Pamatforma="astoņpadsmitais"/>
+      <Attributes Skaitļu_kārta="Padsmiti"/>
     </Lexeme>
     <Lexeme Stem1="deviņpadsmit">
-      <Attributes Skaitļu_kārta="Padsmiti" Pamatforma="deviņpadsmitais"/>
+      <Attributes Skaitļu_kārta="Padsmiti"/>
     </Lexeme>
     <Lexeme Stem1="divdesmit">
-      <Attributes Skaitļu_kārta="Desmiti" Pamatforma="divdesmitais"/>
+      <Attributes Skaitļu_kārta="Desmiti"/>
     </Lexeme>
     <Lexeme Stem1="trīsdesmit">
-      <Attributes Skaitļu_kārta="Desmiti" Pamatforma="trīsdesmitais"/>
+      <Attributes Skaitļu_kārta="Desmiti"/>
     </Lexeme>
     <Lexeme Stem1="četrdesmit">
-      <Attributes Skaitļu_kārta="Desmiti" Pamatforma="četrdesmitais"/>
+      <Attributes Skaitļu_kārta="Desmiti"/>
     </Lexeme>
     <Lexeme Stem1="piecdesmit">
-      <Attributes Skaitļu_kārta="Desmiti" Pamatforma="piecdesmitais"/>
+      <Attributes Skaitļu_kārta="Desmiti"/>
     </Lexeme>
     <Lexeme Stem1="sešdesmit">
-      <Attributes Skaitļu_kārta="Desmiti" Pamatforma="sešdesmitais"/>
+      <Attributes Skaitļu_kārta="Desmiti"/>
     </Lexeme>
     <Lexeme Stem1="septiņdesmit">
-      <Attributes Skaitļu_kārta="Desmiti" Pamatforma="septiņdesmitais"/>
+      <Attributes Skaitļu_kārta="Desmiti"/>
     </Lexeme>
     <Lexeme Stem1="astoņdesmit">
-      <Attributes Skaitļu_kārta="Desmiti" Pamatforma="astoņdesmitais"/>
+      <Attributes Skaitļu_kārta="Desmiti"/>
     </Lexeme>
     <Lexeme Stem1="deviņdesmit">
-      <Attributes Skaitļu_kārta="Desmiti" Pamatforma="deviņdesmitais"/>
+      <Attributes Skaitļu_kārta="Desmiti"/>
     </Lexeme>
     <Lexeme Stem1="simt">
-      <Attributes Skaitļu_kārta="Simti" Pamatforma="simtais"/>
+      <Attributes Skaitļu_kārta="Simti"/>
     </Lexeme>
     <Lexeme Stem1="divsimt">
-      <Attributes Skaitļu_kārta="Simti" Pamatforma="divsimtais"/>
+      <Attributes Skaitļu_kārta="Simti"/>
     </Lexeme>
     <Lexeme Stem1="trīssimt">
-      <Attributes Skaitļu_kārta="Simti" Pamatforma="trīssimtais"/>
+      <Attributes Skaitļu_kārta="Simti"/>
     </Lexeme>
     <Lexeme Stem1="četrsimt">
-      <Attributes Skaitļu_kārta="Simti" Pamatforma="četrsimtais"/>
+      <Attributes Skaitļu_kārta="Simti"/>
     </Lexeme>
     <Lexeme Stem1="piecsimt">
-      <Attributes Skaitļu_kārta="Simti" Pamatforma="piecsimtais"/>
+      <Attributes Skaitļu_kārta="Simti"/>
     </Lexeme>
     <Lexeme Stem1="sešsimt">
-      <Attributes Skaitļu_kārta="Simti" Pamatforma="sešsimtais"/>
+      <Attributes Skaitļu_kārta="Simti"/>
     </Lexeme>
     <Lexeme Stem1="septiņsimt">
-      <Attributes Skaitļu_kārta="Simti" Pamatforma="septiņsimtais"/>
+      <Attributes Skaitļu_kārta="Simti"/>
     </Lexeme>
     <Lexeme Stem1="astoņsimt">
-      <Attributes Skaitļu_kārta="Simti" Pamatforma="astoņsimtais"/>
+      <Attributes Skaitļu_kārta="Simti"/>
     </Lexeme>
     <Lexeme Stem1="deviņsimt">
-      <Attributes Skaitļu_kārta="Simti" Pamatforma="deviņsimtais"/>
+      <Attributes Skaitļu_kārta="Simti"/>
     </Lexeme>
     <Lexeme Stem1="tūkstoš">
-      <Attributes Skaitļu_kārta="Tūkstoši" Pamatforma="tūkstošais"/>
+      <Attributes Skaitļu_kārta="Tūkstoši"/>
     </Lexeme>
     <Lexeme Stem1="divtūkstoš">
-      <Attributes Skaitļu_kārta="Tūkstoši" Pamatforma="divtūkstošais"/>
+      <Attributes Skaitļu_kārta="Tūkstoši"/>
     </Lexeme>
     <Lexeme Stem1="trīstūkstoš">
-      <Attributes Skaitļu_kārta="Tūkstoši" Pamatforma="trīstūkstošais"/>
+      <Attributes Skaitļu_kārta="Tūkstoši"/>
     </Lexeme>
     <Lexeme Stem1="četrtūkstoš">
-      <Attributes Skaitļu_kārta="Tūkstoši" Pamatforma="četrtūkstošais"/>
+      <Attributes Skaitļu_kārta="Tūkstoši"/>
     </Lexeme>
     <Lexeme Stem1="piectūkstoš">
-      <Attributes Skaitļu_kārta="Tūkstoši" Pamatforma="piectūkstošais"/>
+      <Attributes Skaitļu_kārta="Tūkstoši"/>
     </Lexeme>
     <Lexeme Stem1="seštūkstoš">
-      <Attributes Skaitļu_kārta="Tūkstoši" Pamatforma="seštūkstošais"/>
+      <Attributes Skaitļu_kārta="Tūkstoši"/>
     </Lexeme>
     <Lexeme Stem1="septiņtūkstoš">
-      <Attributes Skaitļu_kārta="Tūkstoši" Pamatforma="septiņtūkstošais"/>
+      <Attributes Skaitļu_kārta="Tūkstoši"/>
     </Lexeme>
     <Lexeme Stem1="astoņtūkstoš">
-      <Attributes Skaitļu_kārta="Tūkstoši" Pamatforma="astoņtūkstošais"/>
+      <Attributes Skaitļu_kārta="Tūkstoši"/>
     </Lexeme>
     <Lexeme Stem1="deviņtūkstoš">
-      <Attributes Skaitļu_kārta="Tūkstoši" Pamatforma="deviņtūkstošais"/>
+      <Attributes Skaitļu_kārta="Tūkstoši"/>
     </Lexeme>
     <Lexeme Stem1="desmittūkstoš">
-      <Attributes Skaitļu_kārta="Tūkstoši" Pamatforma="desmittūkstošais"/>
+      <Attributes Skaitļu_kārta="Tūkstoši"/>
     </Lexeme>
-    <Lexeme Stem1="vienpadsmittūkstoš">
-      <Attributes Pamatforma="vienpadsmittūkstošais"/>
-    </Lexeme>
-    <Lexeme Stem1="divpadsmittūkstoš">
-      <Attributes Pamatforma="divpadsmittūkstošais"/>
-    </Lexeme>
-    <Lexeme Stem1="trīspadsmittūkstoš">
-      <Attributes Pamatforma="trīspadsmittūkstošais"/>
-    </Lexeme>
-    <Lexeme Stem1="četrpadsmittūkstoš">
-      <Attributes Pamatforma="četrpadsmittūkstošais"/>
-    </Lexeme>
-    <Lexeme Stem1="piecpadsmittūkstoš">
-      <Attributes Pamatforma="piecpadsmittūkstošais"/>
-    </Lexeme>
-    <Lexeme Stem1="sešpadsmittūkstoš">
-      <Attributes Pamatforma="sešpadsmittūkstošais"/>
-    </Lexeme>
-    <Lexeme Stem1="septiņpadsmittūkstoš">
-      <Attributes Pamatforma="septiņpadsmittūkstošais"/>
-    </Lexeme>
-    <Lexeme Stem1="astoņpadsmittūkstoš">
-      <Attributes Pamatforma="astoņpadsmittūkstošais"/>
-    </Lexeme>
-    <Lexeme Stem1="deviņpadsmittūkstoš">
-      <Attributes Pamatforma="deviņpadsmittūkstošais"/>
-    </Lexeme>
-    <Lexeme Stem1="divdesmittūkstoš">
-      <Attributes Pamatforma="divdesmittūkstošais"/>
-    </Lexeme>
-    <Lexeme Stem1="trīsdesmittūkstoš">
-      <Attributes Pamatforma="trīsdesmittūkstošais"/>
-    </Lexeme>
-    <Lexeme Stem1="četrdesmittūkstoš">
-      <Attributes Pamatforma="četrdesmittūkstošais"/>
-    </Lexeme>
-    <Lexeme Stem1="piecdesmittūkstoš">
-      <Attributes Pamatforma="piecdesmittūkstošais"/>
-    </Lexeme>
-    <Lexeme Stem1="sešdesmittūkstoš">
-      <Attributes Pamatforma="sešdesmittūkstošais"/>
-    </Lexeme>
-    <Lexeme Stem1="septiņdesmittūkstoš">
-      <Attributes Pamatforma="septiņdesmittūkstošais"/>
-    </Lexeme>
-    <Lexeme Stem1="astoņdesmittūkstoš">
-      <Attributes Pamatforma="astoņdesmittūkstošais"/>
-    </Lexeme>
-    <Lexeme Stem1="deviņdesmittūkstoš">
-      <Attributes Pamatforma="deviņdesmittūkstošais"/>
-    </Lexeme>
-    <Lexeme Stem1="simttūkstoš">
-      <Attributes Pamatforma="simttūkstošais"/>
-    </Lexeme>
-    <Lexeme Stem1="divsimttūkstoš">
-      <Attributes Pamatforma="divsimttūkstošais"/>
-    </Lexeme>
-    <Lexeme Stem1="trīssimttūkstoš">
-      <Attributes Pamatforma="trīssimttūkstošais"/>
-    </Lexeme>
-    <Lexeme Stem1="četrsimttūkstoš">
-      <Attributes Pamatforma="četrsimttūkstošais"/>
-    </Lexeme>
-    <Lexeme Stem1="piecsimttūkstoš">
-      <Attributes Pamatforma="piecsimttūkstošais"/>
-    </Lexeme>
-    <Lexeme Stem1="sešsimttūkstoš">
-      <Attributes Pamatforma="sešsimttūkstošais"/>
-    </Lexeme>
-    <Lexeme Stem1="septiņsimttūkstoš">
-      <Attributes Pamatforma="septiņsimttūkstošais"/>
-    </Lexeme>
-    <Lexeme Stem1="astoņsimttūkstoš">
-      <Attributes Pamatforma="astoņsimttūkstošais"/>
-    </Lexeme>
-    <Lexeme Stem1="deviņsimttūkstoš">
-      <Attributes Pamatforma="deviņsimttūkstošais"/>
-    </Lexeme>
+    <Lexeme Stem1="vienpadsmittūkstoš"/>
+    <Lexeme Stem1="divpadsmittūkstoš"/>
+    <Lexeme Stem1="trīspadsmittūkstoš"/>
+    <Lexeme Stem1="četrpadsmittūkstoš"/>
+    <Lexeme Stem1="piecpadsmittūkstoš"/>
+    <Lexeme Stem1="sešpadsmittūkstoš"/>
+    <Lexeme Stem1="septiņpadsmittūkstoš"/>
+    <Lexeme Stem1="astoņpadsmittūkstoš"/>
+    <Lexeme Stem1="deviņpadsmittūkstoš"/>
+    <Lexeme Stem1="divdesmittūkstoš"/>
+    <Lexeme Stem1="trīsdesmittūkstoš"/>
+    <Lexeme Stem1="četrdesmittūkstoš"/>
+    <Lexeme Stem1="piecdesmittūkstoš"/>
+    <Lexeme Stem1="sešdesmittūkstoš"/>
+    <Lexeme Stem1="septiņdesmittūkstoš"/>
+    <Lexeme Stem1="astoņdesmittūkstoš"/>
+    <Lexeme Stem1="deviņdesmittūkstoš"/>
+    <Lexeme Stem1="simttūkstoš"/>
+    <Lexeme Stem1="divsimttūkstoš"/>
+    <Lexeme Stem1="trīssimttūkstoš"/>
+    <Lexeme Stem1="četrsimttūkstoš"/>
+    <Lexeme Stem1="piecsimttūkstoš"/>
+    <Lexeme Stem1="sešsimttūkstoš"/>
+    <Lexeme Stem1="septiņsimttūkstoš"/>
+    <Lexeme Stem1="astoņsimttūkstoš"/>
+    <Lexeme Stem1="deviņsimttūkstoš"/>
     <Lexeme Stem1="miljon">
-      <Attributes Skaitļu_kārta="Miljoni" Pamatforma="miljonais"/>
+      <Attributes Skaitļu_kārta="Miljoni"/>
     </Lexeme>
   </Paradigm>
   <Paradigm Stems="1" ID="23" LemmaEnding="1136" Description="Pamata skaitļa vārdi vsk">
     <Attributes Vārdšķira="Skaitļa vārds" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā"/>
     <Lexeme Stem1="vien">
-      <Attributes Skaitļu_kārta="Vieni" Pamatforma="viens"/>
+      <Attributes Skaitļu_kārta="Vieni"/>
     </Lexeme>
-    <Lexeme Stem1="otr">
-      <Attributes Pamatforma="otrs"/>
-    </Lexeme>
+    <Lexeme Stem1="otr"/>
     <Lexeme Stem1="pusotr">
-      <Attributes Skaitļa_vārda_tips="Daļskaitlis" Pamatforma="pusotrs"/>
+      <Attributes Skaitļa_vārda_tips="Daļskaitlis"/>
     </Lexeme>
   </Paradigm>
   <Paradigm Stems="1" ID="24" LemmaEnding="1126" Description="Pamata skaitļa vārdi dsk">
     <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā"/>
     <Lexeme Stem1="div">
-      <Attributes Skaitļu_kārta="Vieni" Pamatforma="divi"/>
+      <Attributes Skaitļu_kārta="Vieni"/>
     </Lexeme>
     <Lexeme Stem1="četr">
-      <Attributes Skaitļu_kārta="Vieni" Pamatforma="četri"/>
+      <Attributes Skaitļu_kārta="Vieni"/>
     </Lexeme>
     <Lexeme Stem1="piec">
-      <Attributes Skaitļu_kārta="Vieni" Pamatforma="pieci"/>
+      <Attributes Skaitļu_kārta="Vieni"/>
     </Lexeme>
     <Lexeme Stem1="seš">
-      <Attributes Skaitļu_kārta="Vieni" Pamatforma="seši"/>
+      <Attributes Skaitļu_kārta="Vieni"/>
     </Lexeme>
     <Lexeme Stem1="septiņ">
-      <Attributes Skaitļu_kārta="Vieni" Pamatforma="septiņi"/>
+      <Attributes Skaitļu_kārta="Vieni"/>
     </Lexeme>
     <Lexeme Stem1="astoņ">
-      <Attributes Skaitļu_kārta="Vieni" Pamatforma="astoņi"/>
+      <Attributes Skaitļu_kārta="Vieni"/>
     </Lexeme>
     <Lexeme Stem1="deviņ">
-      <Attributes Skaitļu_kārta="Vieni" Pamatforma="deviņi"/>
+      <Attributes Skaitļu_kārta="Vieni"/>
     </Lexeme>
-    <Lexeme Stem1="trej">
-      <Attributes Pamatforma="treji"/>
-    </Lexeme>
+    <Lexeme Stem1="trej"/>
     <Lexeme Stem1="daudz">
       <Attributes Pamatforma="daudzi" Vārdšķira="Īpašības vārds" Īpašības_vārda_tips="Kādības"/>
     </Lexeme>
@@ -3037,7 +2980,7 @@
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Desmiti"/>
     </Lexeme>
     <Lexeme Stem1="neiet">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Jā" Pamatforma="neiet" Laiks="Tagadne" Kārta="Darāmā"/>
+      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Jā" Pamatforma="iet" Laiks="Tagadne" Kārta="Darāmā"/>
     </Lexeme>
     <Lexeme Stem1="tūkstoti">
       <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Vienskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Akuzatīvs" Skaitļu_kārta="Tūkstoši" Pamatforma="tūkstotis"/>
@@ -3130,10 +3073,10 @@
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši"/>
     </Lexeme>
     <Lexeme Stem1="nav">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="3" Noliegums="Jā" Pamatforma="nebūt" Laiks="Tagadne" Kārta="Darāmā"/>
+      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="3" Noliegums="Jā" Pamatforma="būt" Laiks="Tagadne" Kārta="Darāmā"/>
     </Lexeme>
     <Lexeme Stem1="nav">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Jā" Pamatforma="nebūt" Laiks="Tagadne" Kārta="Darāmā"/>
+      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Jā" Pamatforma="būt" Laiks="Tagadne" Kārta="Darāmā"/>
     </Lexeme>
     <Lexeme Stem1="piecdesmit">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Desmiti"/>
@@ -3154,10 +3097,10 @@
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši"/>
     </Lexeme>
     <Lexeme Stem1="nebūsit">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="2" Noliegums="Jā" Pamatforma="nebūt" Laiks="Nākotne" Kārta="Darāmā" Papildforma="Jā"/>
+      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="2" Noliegums="Jā" Pamatforma="būt" Laiks="Nākotne" Kārta="Darāmā" Papildforma="Jā"/>
     </Lexeme>
     <Lexeme Stem1="nebūsit">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="2" Noliegums="Jā" Pamatforma="nebūt" Laiks="Nākotne" Kārta="Darāmā" Papildforma="Jā"/>
+      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="2" Noliegums="Jā" Pamatforma="būt" Laiks="Nākotne" Kārta="Darāmā" Papildforma="Jā"/>
     </Lexeme>
     <Lexeme Stem1="trīssimt">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Simti"/>

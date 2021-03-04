@@ -460,10 +460,12 @@ public class Analyzer extends Lexicon {
 						variants.setToken(word);
 						variants.addAttribute(AttributeNames.i_Source,"priedēkļu atvasināšana");
 						variants.addAttribute(AttributeNames.i_Prefix, priedēklis);
-						variants.addAttribute(AttributeNames.i_SourceLemma, variants.getValue(AttributeNames.i_Lemma));
-						variants.addAttribute(AttributeNames.i_Lemma,priedēklis+variants.getValue(AttributeNames.i_Lemma));
+						if (!priedēklis.equals("ne")) {
+							variants.addAttribute(AttributeNames.i_SourceLemma, variants.getValue(AttributeNames.i_Lemma));
+							variants.addAttribute(AttributeNames.i_Lemma,priedēklis+variants.getValue(AttributeNames.i_Lemma));
+						}
 						variants.addAttribute(AttributeNames.i_Guess, AttributeNames.v_Prefix);
-						variants.addAttribute(AttributeNames.i_Noliegums,priedēklis.equals("ne") ? AttributeNames.v_Yes : AttributeNames.v_No);
+						variants.addAttribute(AttributeNames.i_Noliegums, priedēklis.equals("ne") ? AttributeNames.v_Yes : AttributeNames.v_No);
 
 						rezultāts.wordforms.add(variants);
 					}
@@ -855,7 +857,7 @@ public class Analyzer extends Lexicon {
 					!wf.isMatchingStrong(AttributeNames.i_ResidualType, AttributeNames.v_Foreign) &&
 					!wf.isMatchingStrong(AttributeNames.i_Declension, AttributeNames.v_NA)
 			) suitable = false; //filter overrides everything except inflexible stuff
-			
+
 			if (!suitable) unsuitable.add(wf);
 		}
 		possibilities.removeAll(unsuitable);
@@ -865,13 +867,15 @@ public class Analyzer extends Lexicon {
 	// Attempts to find the "proper lemma" out of analysis options provided, possibly making a new lexeme if needed, and then generate the inflections from that lemma
 	public ArrayList<Wordform> generateInflections_TryLemmas(String lemma, Word w) {
 		for (Wordform wf : w.wordforms) {
+			if (wf.isMatchingStrong(AttributeNames.i_Case, AttributeNames.v_Vocative))
+				continue; // Vocatives often match lemmas and are false positives
+
 			// Pamēģinam katru no analīzes variantiem, vai viņš ir pamatforma (atbilst vajadzīgajai lemmai)
+			Lexeme lex = wf.lexeme;
 			// The regular case where lemmas must be "normal"
-			if ( (wf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(lemma) ||
-					lemma.equalsIgnoreCase(wf.getValue(AttributeNames.i_LemmaParadigm)) )
-					&& !wf.isMatchingStrong(AttributeNames.i_Case, AttributeNames.v_Vocative)) {
-				Lexeme lex = wf.lexeme;
-				if (lex == null || !lex.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(lemma)) {
+			if (wf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(lemma) ||
+					lemma.equalsIgnoreCase(wf.getValue(AttributeNames.i_LemmaParadigm)) ) {
+				if (lex == null || !lex.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(lemma)) { // NB! this is lex.lemma not wf.lemma that's checked earlier
                     // Ja nav pareizā leksēma (atvasināšana vai minēšana) tad uztaisam leksēmu
 					int endingID = wf.getEnding().getID();
 					if (wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adverb))
@@ -881,7 +885,7 @@ public class Analyzer extends Lexicon {
 						endingID = 75; // FIXME Basic -a feminine noun ending, must match the appropriate number in Lexicon.xml
 					}
 						
-					lex = this.createLexeme(lemma, endingID, "generateInflectionsFromParadigm");
+					lex = this.createLexeme(lemma, endingID, "generateInflectionsFromParadigm"); // Temporary lexeme
 					if (lex.getValue(AttributeNames.i_PartOfSpeech) == null)
 						lex.addAttribute(AttributeNames.i_PartOfSpeech, wf.getValue(AttributeNames.i_PartOfSpeech)); // Hardcoded vārdšķirai lai ir POS - saīsinājumi utml
 					if (p_firstcap.matcher(lemma).matches())
@@ -893,16 +897,18 @@ public class Analyzer extends Lexicon {
 				}
 				ArrayList<Wordform> result = generateInflections(lex, lemma);
 				if (lex.isMatchingStrong(AttributeNames.i_Source, "generateInflectionsFromParadigm"))
-					lex.getParadigm().removeLexeme(lex);
+					lex.getParadigm().removeLexeme(lex); // removed temporary lexeme
 				return result;
 			}
-
+			if (lemma.startsWith("ne") && lemma.equalsIgnoreCase("ne" + wf.getValue(AttributeNames.i_Lemma)) && lex != null) {
+				// inflection of negated verbs/participles
+				return generateInflections(lex, lemma);
+			}
 			// The case for nominalized adjectives such as adjective-derived surnames
 			if ( wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adjective) && (
 				 (lemma.toLowerCase().endsWith("ais") && lemma.equalsIgnoreCase(wf.getValue(AttributeNames.i_Lemma).substring(0, wf.getValue(AttributeNames.i_Lemma).length()-1)+"ais")) ||
 				 (lemma.toLowerCase().endsWith("ā") && wf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(lemma.substring(0, lemma.length()-1)+"s") && wf.isMatchingStrong(AttributeNames.i_Gender, AttributeNames.v_Feminine)) ) ) {
 				// Exception for adjective-based surnames "Lielais", "Platais" etc
-				Lexeme lex = wf.lexeme;
 				if ((lex == null && lemma.toLowerCase().endsWith("ais")) || (lex != null && !lex.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(lemma))) {
 					lex = this.createLexeme(lemma, wf.getEnding().getID(), "generateInflectionsFromParadigm");
 					if (p_firstcap.matcher(lemma).matches())
@@ -944,7 +950,8 @@ public class Analyzer extends Lexicon {
             }
             return inflections;
         }
-		
+
+        boolean noliegums = lemma.equalsIgnoreCase("ne"+lexeme.getValue(AttributeNames.i_Lemma));
 		for (Ending ending : lexeme.getParadigm().endings){
 			if ( ending.getValue(AttributeNames.i_PartOfSpeech)==null ||
 					ending.getValue(AttributeNames.i_PartOfSpeech).equals(lexeme.getValue(AttributeNames.i_PartOfSpeech)) ||
@@ -958,6 +965,7 @@ public class Analyzer extends Lexicon {
 
 		    	for (Variants celms : celmi){
 		    		vārds = celms.celms + ending.getEnding();
+					if (noliegums) vārds = "ne" + vārds;
 		    		vārds = recapitalize(vārds, lemma);
 
 		    		Wordform locījums = new Wordform(vārds, lexeme, ending);
@@ -972,12 +980,20 @@ public class Analyzer extends Lexicon {
 			}
 		}
 
-        // Pārbaudam, vai šai lemmai nav kāds hardcoded formas override (piemēram, kā formai viņš *ej -> viņš iet)
-        for (Lexeme formLexeme : this.hardcodedForms.get(lemma)) {
+		// Pārbaudam, vai šai lemmai nav kāds hardcoded formas override (piemēram, kā formai viņš *ej -> viņš iet)
+		Collection<Lexeme> hc_forms = this.hardcodedForms.get(lemma);
+		if (hc_forms.isEmpty() && lemma.startsWith("ne") && (lemma.endsWith("t") || lemma.endsWith("ties"))) {
+			hc_forms = this.hardcodedForms.get(lemma.substring(2));
+		}
+        for (Lexeme formLexeme : hc_forms) {
             Ending ending = formLexeme.getParadigm().getLemmaEnding();
             Wordform hardcoded = new Wordform(formLexeme.getStem(0), formLexeme, ending);
             if (!lexeme.getParadigm().isMatchingWeak(AttributeNames.i_PartOfSpeech, hardcoded.getValue(AttributeNames.i_PartOfSpeech)))
                 continue;
+			if (hardcoded.isMatchingStrong(AttributeNames.i_Noliegums, AttributeNames.v_Yes) && !lemma.startsWith("ne"))
+				continue;
+			if (hardcoded.isMatchingStrong(AttributeNames.i_Noliegums, AttributeNames.v_No) && lemma.startsWith("ne"))
+				continue;
             Wordform override = null;
             for (Wordform form : inflections) { // pārbaudam, vai kādu no esošajiem locījumiem nevajag izmest, jo šis hardcoded variants to aizvieto
                 if (form.isMatchingWeak(formLexeme)) {
