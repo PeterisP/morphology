@@ -188,7 +188,13 @@ public class MorphoEvaluate {
                     for (Wordform wf : w.wordforms) {
                         if (wf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(e.lemma)) found_lemma = true;
                     }
-                    if (found_lemma) any_lemma_correct++;
+                    if (found_lemma) {
+                    	any_lemma_correct++;
+					} else {
+						String mistake_description = String.format("Lemma korpusā %s, analizatoram %s (%s)", e.lemma, mainwf.getValue(AttributeNames.i_Lemma), e.id);
+						mistakes.add(mistake_description);
+						mistakes_by_lemma.put(e.lemma, mistake_description);
+					}
                 }
 				if (mainwf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(e.lemma) && mainwf.getTag().equalsIgnoreCase(e.tag))
 					first_all_correct++;

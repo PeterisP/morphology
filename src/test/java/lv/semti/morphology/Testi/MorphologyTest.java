@@ -3810,5 +3810,10 @@ public class MorphologyTest {
         assertTrue(w.isRecognized());
         assertLemma("nepieciešamās", "nepieciest");
     }
+
+    @Test
+    public void dīvainie_noliegumi () {
+        assertLemma("neesat", "būt");
+    }
 }
 
