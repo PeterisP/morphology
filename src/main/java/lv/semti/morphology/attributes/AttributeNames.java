@@ -225,6 +225,7 @@ public class AttributeNames {
 
 	public static final String i_Lemma = "Pamatforma";
 	public static final String i_LemmaOverride = "Pamatforma morforīkiem";
+	public static final String i_LemmaParadigm = "Pamatforma no locīšanas paradigmas";
 	public static final String i_SourceLemma = "Avota pamatforma";
     public static final String i_EntryID = "Šķirkļa ID";
     public static final String i_EntryName = "Šķirkļa cilvēklasāmais ID";

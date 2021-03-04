@@ -867,7 +867,9 @@ public class Analyzer extends Lexicon {
 		for (Wordform wf : w.wordforms) {
 			// Pamēģinam katru no analīzes variantiem, vai viņš ir pamatforma (atbilst vajadzīgajai lemmai)
 			// The regular case where lemmas must be "normal"
-			if (wf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(lemma) && !wf.isMatchingStrong(AttributeNames.i_Case, AttributeNames.v_Vocative)) {				
+			if ( (wf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(lemma) ||
+					lemma.equalsIgnoreCase(wf.getValue(AttributeNames.i_LemmaParadigm)) )
+					&& !wf.isMatchingStrong(AttributeNames.i_Case, AttributeNames.v_Vocative)) {
 				Lexeme lex = wf.lexeme;
 				if (lex == null || !lex.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(lemma)) {
                     // Ja nav pareizā leksēma (atvasināšana vai minēšana) tad uztaisam leksēmu

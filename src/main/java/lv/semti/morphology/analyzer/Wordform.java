@@ -62,7 +62,6 @@ public class Wordform extends AttributeValues implements Serializable{
 		Boolean fixed_stem; 
 		if (lexeme != null) {
 			addAttributes(lexeme);
-			addAttribute(AttributeNames.i_SourceLemma, lexeme.getValue(AttributeNames.i_Lemma));  //TODO - šis teorētiski varētu aizstāt visus pārējos SourceLemma pieminējumus (citus varbūt var dzēst)
 			addAttribute(AttributeNames.i_LexemeID, Integer.toString(lexeme.getID()));
 			if (isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_AlmostPlurareTantum) &&
 					isMatchingStrong(AttributeNames.i_EntryProperties, AttributeNames.v_Plural) &&
@@ -80,6 +79,7 @@ public class Wordform extends AttributeValues implements Serializable{
 		
 		Ending lemmaEnding = ending.getLemmaEnding();
 		// FIXME šis 'if' būtu jāsaprot un jāsakārto - lai ir sakarīgi, bet nesalauž specgadījumus ('vairāk' -> pamatforma 'daudz' utml)
+		// TODO - varbūt vienkārši dažām paradigmām vai galotnēm vajag karodziņu par to, ka jāģenerē pamatforma no jauna?
 		if (lemmaEnding != null && !(paradigm.getID() == 25 || paradigm.getID() == 29 || paradigm.getID() == 21)
 				&& !fixed_stem) {
 			String thirdStem = null;
@@ -95,10 +95,16 @@ public class Wordform extends AttributeValues implements Serializable{
 			}
 			String originalLemma = lexeme.getValue(AttributeNames.i_Lemma);
             lemma = Lexicon.recapitalize(lemma, originalLemma);
-			addAttribute(AttributeNames.i_Lemma, lemma );
-			// jo var pamatforma atšķirties no leksēmas pamatformas, piem. "otrās" pamatforma ir "otrā" nevis "otrais".
-			// TODO - varbūt vienkārši dažām paradigmām vai galotnēm vajag karodziņu par to, ka jāģenerē pamatforma no jauna?
-		}	
+            if (!lemma.equals(originalLemma)) {
+            	if (getValue(AttributeNames.i_LemmaOverride) == null) {
+					addAttribute(AttributeNames.i_SourceLemma, originalLemma);
+					addAttribute(AttributeNames.i_Lemma, lemma);
+					// jo var pamatforma atšķirties no leksēmas pamatformas, piem. "otrās" pamatforma ir "otrā" nevis "otrais".
+				} else {
+					addAttribute(AttributeNames.i_LemmaParadigm, lemma);
+				}
+			}
+		}
 	}
 	
 	public Wordform (String token) {
