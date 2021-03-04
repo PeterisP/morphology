@@ -2709,7 +2709,7 @@ public class MorphologyTest {
         assertTrue(foundLemma);
     }
 
-    @Ignore("tupmāks nav normāls vārds manuprāt, bet gan tiešām turpms forma....")
+    // https://github.com/PeterisP/morphology/issues/104
     @Test
     public void turpms() {
         Word turpmākiem = locītājs.analyze("turpmākiem");
@@ -3813,6 +3813,13 @@ public class MorphologyTest {
 
         List<Wordform> formas = locītājs.generateInflections("cietusī", false);
         assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, "", "cietušajai");
+    }
+
+    @Test
+    public void ticket_92() {
+        Word iedot = locītājs.analyze("iedot");
+        assertTrue(iedot.isRecognized());
+        assertEquals("vmnn0_i000n", iedot.wordforms.get(0).getTag());
     }
 }
 

@@ -170,7 +170,7 @@ public class Lexeme extends AttributeValues {
                 try {
                     String stem = paradigm.getLemmaEnding().stem(lemma);
                     int mija = paradigm.getLemmaEnding().getMija();
-                    if (mija != 0) {
+                    if (mija != 0 && mija != 3) {
                         ArrayList<Variants> varianti = Mijas.mijuVarianti(stem, mija, false);
                         for (Variants v : varianti) {
                             // FIXME - ko tad darīt ar vairākiem variantiem ????
