@@ -1112,7 +1112,7 @@ public class MorphologyTest {
         vārds = locītājs.analyze("....");
         assertTrue(vārds.isRecognized());
         for (Wordform wf : vārds.wordforms) {
-            assertEquals("....", wf.getValue(AttributeNames.i_Lemma));
+            assertEquals("...", wf.getValue(AttributeNames.i_Lemma));
         }
     }
 
@@ -2140,20 +2140,9 @@ public class MorphologyTest {
 
     @Test
     public void jaundzimushais() {
-        Word w = locītājs.analyze("jaundzimušajam");
-        assertTrue(w.isRecognized());
-        assertEquals(AttributeNames.v_Adjective, w.wordforms.get(0).getValue(AttributeNames.i_PartOfSpeech));
-        assertEquals("jaundzimis", w.wordforms.get(0).getValue(AttributeNames.i_Lemma));
-
-        w = locītājs.analyze("jaundzimusī");
-        assertTrue(w.isRecognized());
-        assertEquals(AttributeNames.v_Adjective, w.wordforms.get(0).getValue(AttributeNames.i_PartOfSpeech));
-        assertEquals("jaundzimusi", w.wordforms.get(0).getValue(AttributeNames.i_Lemma));
-
-        w = locītājs.analyze("galvenajam");
-        assertTrue(w.isRecognized());
-        assertEquals(AttributeNames.v_Adjective, w.wordforms.get(0).getValue(AttributeNames.i_PartOfSpeech));
-        assertEquals("galvenais", w.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+        assertLemma("jaundzimušajam", "jaundzimis");
+        assertLemma("jaundzimusī", "jaundzimusi");
+        assertLemma("galvenajam", "galvenais");
     }
 
     @Test
@@ -3179,6 +3168,7 @@ public class MorphologyTest {
         w = locītājs.analyze("”");
         assertTrue(w.isRecognized());
         assertEquals("zq", w.getBestWordform().getTag());
+        assertEquals("\"", w.getBestWordform().getValue(AttributeNames.i_Lemma));
         w = locītājs.analyze("«");
         assertTrue(w.isRecognized());
         assertEquals("zq", w.getBestWordform().getTag());
@@ -3812,8 +3802,29 @@ public class MorphologyTest {
     }
 
     @Test
-    public void dīvainie_noliegumi () {
+    public void dīvainie_noliegumi() {
         assertLemma("neesat", "būt");
+    }
+
+    @Test
+    public void ziemassvētki() {
+        assertLemma("Ziemassvētkos", "Ziemassvētki");
+    }
+
+    @Test
+    public void Severīns() {
+        assertLemma("Severīnam", "Severīns");
+    }
+
+    @Test
+    public void korpusa_neatpazītie_20210308() {
+        Word w = locītājs.analyze("mainīt");
+        assertTrue(w.isRecognized());
+        w.describe(System.out);
+
+        w = locītājs.analyze("jāmaina");
+        w.describe(System.out);
+        assertTrue(w.isRecognized());
     }
 }
 

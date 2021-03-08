@@ -146,6 +146,9 @@
     <Lexeme Stem1="nevarē">
       <Attributes Darbības_vārda_tips="Modāls" Pamatforma_morforīkiem="varēt"/>
     </Lexeme>
+    <Lexeme Stem1="nevarē">
+      <Attributes Darbības_vārda_tips="Pamata" Pamatforma_morforīkiem="varēt"/>
+    </Lexeme>
     <Lexeme Stem1="gribē">
       <Attributes Darbības_vārda_tips="Modāls"/>
     </Lexeme>
@@ -3031,6 +3034,12 @@
       <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Sieviešu" Locījums="Ģenitīvs" Skaitļu_kārta="Vieni" Pamatforma="trīs"/>
     </Lexeme>
     <Lexeme Stem1="triju">
+      <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Ģenitīvs" Skaitļu_kārta="Vieni" Pamatforma="trīs"/>
+    </Lexeme>
+    <Lexeme Stem1="trīs">
+      <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Sieviešu" Locījums="Ģenitīvs" Skaitļu_kārta="Vieni" Pamatforma="trīs"/>
+    </Lexeme>
+    <Lexeme Stem1="trīs">
       <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Ģenitīvs" Skaitļu_kārta="Vieni" Pamatforma="trīs"/>
     </Lexeme>
     <Lexeme Stem1="septiņdesmittūkstoš">

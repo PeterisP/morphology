@@ -49,7 +49,7 @@ import org.json.simple.parser.ParseException;
  */
 public class Lexicon {
 	public final static String DEFAULT_LEXICON_FILE = "Lexicon_v2.xml";
-	public static int proper_name_frequency_floor = 200; // When loading proper name lexemes, entries that have a frequency ("Skaits") field will be ignored and not loaded
+	public static int proper_name_frequency_floor = 2; // When loading proper name lexemes, entries that have a frequency ("Skaits") field will be ignored and not loaded
 
 	protected String filename;
 

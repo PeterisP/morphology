@@ -280,11 +280,11 @@ public class AttributeValues implements FeatureStructure, Cloneable {
 			//removeAttribute(AttributeNames.i_Number);
 		}
 		
-		//par šiem jādomā. Principā analizators no galotnes varētu izdomāt
-//		removeAttribute(AttributeNames.i_Degree);
-//		removeAttribute(AttributeNames.i_Reflexive);
+		//Principā analizators no galotnes varētu izdomāt, BET ir nepieciešams lai samazinātu klašu skaitu CRF tagerim
+		removeAttribute(AttributeNames.i_Degree);
+		removeAttribute(AttributeNames.i_Reflexive);
 //		removeAttribute(AttributeNames.i_Laiks);  // FIXME - piemēram, ēdu mēdzu zīmēju nestrādās nošķirt pagātne tagadne
-//		removeAttribute(AttributeNames.i_Voice);
+		removeAttribute(AttributeNames.i_Voice);
 	}
 	
 	public void removeTechnicalAttributes() {

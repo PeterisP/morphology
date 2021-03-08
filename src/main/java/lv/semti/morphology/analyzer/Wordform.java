@@ -80,7 +80,7 @@ public class Wordform extends AttributeValues implements Serializable{
 		Ending lemmaEnding = ending.getLemmaEnding();
 		// FIXME šis 'if' būtu jāsaprot un jāsakārto - lai ir sakarīgi, bet nesalauž specgadījumus ('vairāk' -> pamatforma 'daudz' utml)
 		// TODO - varbūt vienkārši dažām paradigmām vai galotnēm vajag karodziņu par to, ka jāģenerē pamatforma no jauna?
-		if (lemmaEnding != null && !(paradigm.getID() == 25 || paradigm.getID() == 29 || paradigm.getID() == 21)
+		if (lemmaEnding != null && !(paradigm.getID() == 25 || paradigm.getID() == 29 || paradigm.getID() == 21 || paradigm.getID() == 37)
 				&& !fixed_stem) {
 			String thirdStem = null;
 			if (paradigm.getStems() == 3) thirdStem = lexeme.getStem(2);
