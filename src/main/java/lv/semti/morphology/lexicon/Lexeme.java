@@ -20,6 +20,7 @@ package lv.semti.morphology.lexicon;
 import java.io.IOException;
 import java.io.Writer;
 import java.util.ArrayList;
+import java.util.Locale;
 import java.util.Map;
 
 import lv.semti.morphology.analyzer.Analyzer;
@@ -213,7 +214,7 @@ public class Lexeme extends AttributeValues {
                     ArrayList<Variants> celmi = Mijas.mijuVarianti(stem, e.getMija(), Analyzer.p_firstcap.matcher(lemma).matches());
                     for (Variants v : celmi) {
                         // FIXME - ko tad darīt ar vairākiem variantiem ????
-                        stems.set(0, v.celms);
+                        stems.set(0, v.celms.toLowerCase(Locale.ROOT));
                     }
                 } catch (Ending.WrongEndingException exc2) { /*pass*/ }
             }
