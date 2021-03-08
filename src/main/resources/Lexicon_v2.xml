@@ -8310,4 +8310,10 @@
 			<Attributes Dzimte="Sieviešu" Skaitlis="Daudzskaitlis" />
 		</Ending>
 	</Paradigm>
+	<Paradigm Stems="1" ID="54" Name="adj-infl" LemmaEnding="2940" Description="Nelokāmi īpašības vārdi (lillā)" DescriptionEN="Inflexible adjectives (lillā)" AllowedGuessEndings="!">
+		<Attributes Vārdšķira="Īpašības vārds" Īpašības_vārda_tips="Attieksmes" Noteiktība="Nenoteiktā" Pakāpe="Pamata" Lokāmība="Nelokāms"/>
+		<Ending ID="2940" StemChange="0" Ending="" StemID="1" LemmaEnding="2940">
+			<Attributes/>
+		</Ending>
+	</Paradigm>
 </Morphology>

@@ -3237,54 +3237,6 @@
     <Lexeme Stem1="seštūkstoš">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši"/>
     </Lexeme>
-    <Lexeme Stem1="rozā">
-      <Attributes Vārdšķira="Īpašības vārds" Lokāmība="Nelokāms" Īpašības_vārda_tips="Attieksmes"/>
-    </Lexeme>
-    <Lexeme Stem1="lillā">
-      <Attributes Vārdšķira="Īpašības vārds" Lokāmība="Nelokāms" Īpašības_vārda_tips="Attieksmes"/>
-    </Lexeme>
-    <Lexeme Stem1="neto">
-      <Attributes Vārdšķira="Īpašības vārds" Lokāmība="Nelokāms" Īpašības_vārda_tips="Attieksmes"/>
-    </Lexeme>
-    <Lexeme Stem1="bruto">
-      <Attributes Vārdšķira="Īpašības vārds" Lokāmība="Nelokāms" Īpašības_vārda_tips="Attieksmes"/>
-    </Lexeme>
-    <Lexeme Stem1="mini">
-      <Attributes Vārdšķira="Īpašības vārds" Lokāmība="Nelokāms" Īpašības_vārda_tips="Attieksmes"/>
-    </Lexeme>
-    <Lexeme Stem1="maksi">
-      <Attributes Vārdšķira="Īpašības vārds" Lokāmība="Nelokāms" Īpašības_vārda_tips="Attieksmes"/>
-    </Lexeme>
-    <Lexeme Stem1="midi">
-      <Attributes Vārdšķira="Īpašības vārds" Lokāmība="Nelokāms" Īpašības_vārda_tips="Attieksmes"/>
-    </Lexeme>
-    <Lexeme Stem1="retro">
-      <Attributes Vārdšķira="Īpašības vārds" Lokāmība="Nelokāms" Īpašības_vārda_tips="Attieksmes"/>
-    </Lexeme>
-    <Lexeme Stem1="stereo">
-      <Attributes Vārdšķira="Īpašības vārds" Lokāmība="Nelokāms" Īpašības_vārda_tips="Attieksmes"/>
-    </Lexeme>
-    <Lexeme Stem1="bordo">
-      <Attributes Vārdšķira="Īpašības vārds" Lokāmība="Nelokāms" Īpašības_vārda_tips="Attieksmes"/>
-    </Lexeme>
-    <Lexeme Stem1="milzu">
-      <Attributes Vārdšķira="Īpašības vārds" Lokāmība="Nelokāms" Īpašības_vārda_tips="Attieksmes"/>
-    </Lexeme>
-    <Lexeme Stem1="pagaidu">
-      <Attributes Vārdšķira="Īpašības vārds" Lokāmība="Nelokāms" Īpašības_vārda_tips="Attieksmes"/>
-    </Lexeme>
-    <Lexeme Stem1="bezstrīdus">
-      <Attributes Vārdšķira="Īpašības vārds" Lokāmība="Nelokāms" Īpašības_vārda_tips="Attieksmes"/>
-    </Lexeme>
-    <Lexeme Stem1="piespiedu">
-      <Attributes Vārdšķira="Īpašības vārds" Lokāmība="Nelokāms" Īpašības_vārda_tips="Attieksmes"/>
-    </Lexeme>
-    <Lexeme Stem1="papildu">
-      <Attributes Vārdšķira="Īpašības vārds" Lokāmība="Nelokāms" Īpašības_vārda_tips="Attieksmes"/>
-    </Lexeme>
-    <Lexeme Stem1="pāris">
-      <Attributes Vārdšķira="Īpašības vārds" Lokāmība="Nelokāms" Īpašības_vārda_tips="Attieksmes"/>
-    </Lexeme>
     <Lexeme Stem1="numur">
       <Attributes Pamatforma="numurs" Vārdšķira="Lietvārds" Locījums="Nominatīvs" Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Lietvārda_tips="Sugas vārds"/>
     </Lexeme>
@@ -3728,5 +3680,23 @@
 <Paradigm Stems="1" ID="52" Description="Patstāvīgi -dams/-dama divdabji (pusjokodams)">
 </Paradigm>
 <Paradigm Stems="1" ID="53" Description="Patstāvīgi -damies/-damās divdabji (pusjokodamies)">
+</Paradigm>
+<Paradigm Stems="1" ID="54" Description="Nelokāmi īpašības vārdi (lillā)">
+    <Lexeme Stem1="rozā"/>
+    <Lexeme Stem1="lillā"/>
+    <Lexeme Stem1="neto"/>
+    <Lexeme Stem1="bruto"/>
+    <Lexeme Stem1="mini"/>
+    <Lexeme Stem1="maksi"/>
+    <Lexeme Stem1="midi"/>
+    <Lexeme Stem1="retro"/>
+    <Lexeme Stem1="stereo"/>
+    <Lexeme Stem1="bordo"/>
+    <Lexeme Stem1="milzu"/>
+    <Lexeme Stem1="pagaidu"/>
+    <Lexeme Stem1="bezstrīdus"/>
+    <Lexeme Stem1="piespiedu"/>
+    <Lexeme Stem1="papildu"/>
+    <Lexeme Stem1="pāris"/>
 </Paradigm>
 </Lexicon>
