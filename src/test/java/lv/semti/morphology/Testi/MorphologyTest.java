@@ -2688,6 +2688,11 @@ public class MorphologyTest {
         Word turpmākiem = locītājs.analyze("turpmākiem");
         assertTrue(turpmākiem.isRecognized());
         assertLemma("turpmākiem", "turpmāks");
+
+        List<Wordform> formas = locītājs.generateInflections("pase");
+        for (Wordform wf : formas) {
+            assertNotEquals("turpms", wf.getToken());
+        }
     }
 
     //    https://github.com/PeterisP/morphology/issues/12
