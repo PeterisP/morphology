@@ -433,10 +433,6 @@ public class Analyzer extends Lexicon {
 				!variants.isMatchingWeak(AttributeNames.i_Number, AttributeNames.v_Singular))
 			return false;
 
-		if (variants.isMatchingStrong(AttributeNames.i_Declension, AttributeNames.v_InflexibleGenitive) &&
-				!variants.isMatchingWeak(AttributeNames.i_Case, AttributeNames.v_Genitive))
-			return false;
-		
 		return true;
 	}
 
@@ -538,7 +534,8 @@ public class Analyzer extends Lexicon {
 						)
                                 && (i > 0 || variants.isMatchingStrong(AttributeNames.i_Declension, AttributeNames.v_NA)
 										  || variants.isMatchingStrong(AttributeNames.i_Declension, AttributeNames.v_InflexibleGenitive)
-										  || variants.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Residual) )) // ja galotnes nav, tad vai nu nelokāms lietvārds vai neatpazīstam. Lai nav verbu bezgalotņu formas minējumos, kas parasti nav pareizās.
+										  || variants.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Residual)
+						)) // ja galotnes nav, tad vai nu nelokāms lietvārds vai neatpazīstam. Lai nav verbu bezgalotņu formas minējumos, kas parasti nav pareizās.
                         {
 
                             if (variants.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Residual)) {
@@ -973,7 +970,6 @@ public class Analyzer extends Lexicon {
 					boolean validOption = locījums.isMatchingWeak(AttributeNames.i_Generate, AttributeNames.v_Yes);
 					if (locījums.isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum) && locījums.isMatchingStrong(AttributeNames.i_Number, AttributeNames.v_Singular)) validOption = false;
 					if (locījums.isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_SingulareTantum) && locījums.isMatchingStrong(AttributeNames.i_Number, AttributeNames.v_Plural)) validOption = false;
-					if (locījums.isMatchingStrong(AttributeNames.i_Declension, AttributeNames.v_InflexibleGenitive) && !locījums.isMatchingStrong(AttributeNames.i_Case, AttributeNames.v_Genitive)) validOption = false;
 					if (GenerationBlacklist.blacklist(locījums)) validOption = false;
 					if (validOption) inflections.add(locījums);
 		    	}

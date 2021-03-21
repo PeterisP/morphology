@@ -2689,7 +2689,12 @@ public class MorphologyTest {
         assertTrue(turpmākiem.isRecognized());
         assertLemma("turpmākiem", "turpmāks");
 
-        List<Wordform> formas = locītājs.generateInflections("pase");
+        List<Wordform> formas = locītājs.generateInflections("turpmāks");
+        for (Wordform wf : formas) {
+            assertNotEquals("turpms", wf.getToken());
+        }
+
+        formas = locītājs.generateInflectionsFromParadigm("turpmāks", 13, new AttributeValues());
         for (Wordform wf : formas) {
             assertNotEquals("turpms", wf.getToken());
         }
@@ -3830,6 +3835,13 @@ public class MorphologyTest {
         w = locītājs.analyze("jāmaina");
         w.describe(System.out);
         assertTrue(w.isRecognized());
+    }
+
+    @Test
+    // Izskatās, ka pāreja uz ģenitīveņu paradigmu salauza ģenerēšanu, kas pieņem ka ģenerē ģenitīva formu no pilnas lietvārda paradigmas
+    public void inflexible_genitive_generation() {
+        List<Wordform> formas = locītājs.generateInflections("augstpapēžu");
+        assertEquals(1, formas.size());
     }
 }
 
