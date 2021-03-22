@@ -628,6 +628,7 @@
 	<Value LV="Daudzskaitlis" EN="Plural"/>
 	<Value LV="Vienskaitlis" EN="Singular"/>
 	<Value LV="Sieviešu dzimte" EN="Feminine"/>
+	<Value LV="Pārākā pakāpe" EN="Comparative"/>
 </Attribute>
 <Attribute LV="Locīšanas īpatnības" EN="Inflection properties">
 	<Value LV="[&quot;Otrās un trešās konjugācijas paralelitāte&quot;,&quot;Paralēlās formas&quot;]" EN="2nd/3rd conjugation parallel forms"/>
@@ -663,6 +664,12 @@
 	<Value LV="Neviennozīmīga paradigma" EN="Ambiguous paradigm"/>
 	<Value LV="Neviennozīmīga vārdšķira vai kategorija" EN="Ambiguous part of speech"/>
 	<Value LV="Oriģinālā gramatika satur karodziņos neatšifrētas nianses" EN="Freetext contains items not converted to attributes"/>
+</Attribute>
+
+<Attribute LV="Skaitļa īpatnības" EN="Number properties">
+	<Value LV="Skaitļa šķīrums semantikā nepastāv" EN="Grammatic number carries no semantic difference"/>
+	<Value LV="Daudzskaitļa formas lieto abu skaitļu nozīmē" EN="Plural forms used also in singular meaning"/>
+	<Value LV="Vienskaitli lieto neliterārā valodā" EN="Singular forms used in nonliterary language"/>
 </Attribute>
 
 <Attribute LV="Citi" EN="Other">

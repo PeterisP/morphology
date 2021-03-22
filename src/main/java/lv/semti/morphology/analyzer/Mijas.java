@@ -614,9 +614,11 @@ public abstract class Mijas {
 					break;
 				case 3: // īpašības vārdiem pieliekam -āk- un vis-
 					varianti.add(new Variants(celms,AttributeNames.i_Degree,AttributeNames.v_Positive));
-					varianti.add(new Variants(celms + "āk",AttributeNames.i_Degree,AttributeNames.v_Comparative));
-					if (pieliktVisPārākoPak)
-						varianti.add(new Variants("vis" + celms + "āk",AttributeNames.i_Degree,AttributeNames.v_Superlative));
+					if (!celms.endsWith("āk")) {
+						varianti.add(new Variants(celms + "āk", AttributeNames.i_Degree, AttributeNames.v_Comparative));
+						if (pieliktVisPārākoPak)
+							varianti.add(new Variants("vis" + celms + "āk", AttributeNames.i_Degree, AttributeNames.v_Superlative));
+					}
 					break;
 				case 6: // 1. konjugācijas nākotne
 					if (celms.endsWith("s")) {

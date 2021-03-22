@@ -494,11 +494,14 @@ public class Lexicon {
 		String stem;
 		try {
 			stem = ending.stem(word.toLowerCase());
-			ArrayList<Variants> celmi = Mijas.mijuVarianti(stem, ending.getMija(), word.matches("\\p{Lu}.*"));
-			if (celmi.size() == 0) return null; // acīmredzot neder ar miju
-			// FIXME ! Nevajadzētu te būt iespējai uz null!
-			stem = celmi.get(0).celms;
-			// FIXME - vai te ir ok naivi ņemt pirmo variantu ?
+			int mija = ending.getMija();
+			if (mija != 0 && mija != 3) { // don't try to apply comparative and superlative forms
+				ArrayList<Variants> celmi = Mijas.mijuVarianti(stem, mija, word.matches("\\p{Lu}.*"));
+				if (celmi.size() == 0) return null; // acīmredzot neder ar miju
+				// FIXME ! Nevajadzētu te būt iespējai uz null!
+				stem = celmi.get(0).celms;
+				// FIXME - vai te ir ok naivi ņemt pirmo variantu ?
+			}
 		} catch (Exception e) {
             System.err.print(word + Integer.toString(endingID) + source);
 			System.err.print(e.getStackTrace());

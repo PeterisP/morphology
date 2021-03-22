@@ -217,7 +217,8 @@ public class Analyzer extends Lexicon {
 			for (Wordform wf : result.wordforms) {
 				if (removeRareWords && wf.isMatchingStrong(AttributeNames.i_Frequency, AttributeNames.v_Rare))
 					continue; // rare and removed
-				if (removeRegionalWords && wf.isMatchingStrong(AttributeNames.i_Usage, AttributeNames.v_Regional))
+				if (removeRegionalWords && (wf.isMatchingStrong(AttributeNames.i_Usage, AttributeNames.v_Regional) ||
+						wf.isMatchingStrong(AttributeNames.i_Usage, AttributeNames.v_OldRegional)))
 					continue; // regional and removed
 				hasNonrareOption = true;
 			}
@@ -226,7 +227,8 @@ public class Analyzer extends Lexicon {
 			for (Wordform wf : result.wordforms) {
 				if (removeRareWords && hasNonrareOption && wf.isMatchingStrong(AttributeNames.i_Frequency, AttributeNames.v_Rare))
 					to_remove.add(wf); // we remove rare words only if there's a non-rare option remaining, i.e. only in overlap
-				if (removeRegionalWords && wf.isMatchingStrong(AttributeNames.i_Usage, AttributeNames.v_Regional))
+				if (removeRegionalWords && (wf.isMatchingStrong(AttributeNames.i_Usage, AttributeNames.v_Regional) ||
+						wf.isMatchingStrong(AttributeNames.i_Usage, AttributeNames.v_OldRegional)))
 					to_remove.add(wf); // we remove regional words whenever the flag is set, even without overlap
 			}
 			result.wordforms.removeAll(to_remove);
@@ -849,7 +851,11 @@ public class Analyzer extends Lexicon {
 					wf.isMatchingStrong(AttributeNames.i_Number, AttributeNames.v_Plural) &&
 					!wf.isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum)
 			) suitable = false; // Do not generate plural forms of singular toponyms
-			
+
+			if (wf.isMatchingStrong(AttributeNames.i_EntryProperties, AttributeNames.v_EntryComparative) &&
+					wf.isMatchingStrong(AttributeNames.i_Degree, AttributeNames.v_Positive)
+			) suitable = false; // Do not generate positive forms of comparative/superlative adjectives
+
 			if (!wf.isMatchingWeak(filter) &&
 					!wf.isMatchingStrong(AttributeNames.i_ResidualType, AttributeNames.v_Foreign) &&
 					!wf.isMatchingStrong(AttributeNames.i_Declension, AttributeNames.v_NA)

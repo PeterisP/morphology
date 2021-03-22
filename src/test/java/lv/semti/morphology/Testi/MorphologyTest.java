@@ -2692,11 +2692,13 @@ public class MorphologyTest {
         List<Wordform> formas = locītājs.generateInflections("turpmāks");
         for (Wordform wf : formas) {
             assertNotEquals("turpms", wf.getToken());
+            assertNotEquals("turpmākāks", wf.getToken());
         }
 
         formas = locītājs.generateInflectionsFromParadigm("turpmāks", 13, new AttributeValues());
         for (Wordform wf : formas) {
             assertNotEquals("turpms", wf.getToken());
+            assertNotEquals("turpmākāks", wf.getToken());
         }
     }
 
@@ -3842,6 +3844,21 @@ public class MorphologyTest {
     public void inflexible_genitive_generation() {
         List<Wordform> formas = locītājs.generateInflections("augstpapēžu");
         assertEquals(1, formas.size());
+    }
+
+    @Test
+    // https://github.com/PeterisP/morphology/issues/106
+    public void pārāks() {
+        Word pārākiem = locītājs.analyze("pārākiem");
+        assertTrue(pārākiem.isRecognized());
+        assertLemma("pārākiem", "pārāks");
+        assertLemma("vispārākajos", "pārāks");
+
+        List<Wordform> formas = locītājs.generateInflections("pārāks");
+        for (Wordform wf : formas) {
+            assertNotEquals("pārs", wf.getToken());
+            assertNotEquals("pārākāks", wf.getToken());
+        }
     }
 }
 

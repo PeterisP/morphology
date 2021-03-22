@@ -161,8 +161,11 @@ public class Lexeme extends AttributeValues {
 
         if (stems.get(0).isEmpty() && getValue(AttributeNames.i_Lemma) != null) {
             String lemma = getValue(AttributeNames.i_Lemma).toLowerCase();
+            if (lemma.equalsIgnoreCase("pārāks")) {
+                describe();
+            }
 
-            if (isMatchingStrong(AttributeNames.i_EntryProperties, "Sieviešu dzimte")) { // FIXME - hardkodēta vērtība 'Sieviešu dzimte'
+            if (isMatchingStrong(AttributeNames.i_EntryProperties, AttributeNames.v_EntryFeminine)) {
                 // Specapstrāde priekš īpašības vārda 'ālava' plus ja nu kas vēl parādīsies
                 if (lemma.endsWith("a") && paradigm.getLemmaEnding().getEnding().equalsIgnoreCase("s")) {
                     lemma = lemma.substring(0, lemma.length()-1) + "s";
@@ -175,14 +178,20 @@ public class Lexeme extends AttributeValues {
                 try {
                     String stem = paradigm.getLemmaEnding().stem(lemma);
                     int mija = paradigm.getLemmaEnding().getMija();
-                    if (mija != 0 && mija != 3) {
+                    if (mija != 0 && (mija != 3 || isMatchingStrong(AttributeNames.i_EntryProperties, AttributeNames.v_EntryComparative)) ) {
                         ArrayList<Variants> varianti = Mijas.mijuVarianti(stem, mija, false);
                         for (Variants v : varianti) {
+                            if (isMatchingStrong(AttributeNames.i_EntryProperties, AttributeNames.v_EntryComparative) &&
+                                    !v.isMatchingStrong(AttributeNames.i_Degree, AttributeNames.v_Comparative)
+                            ) continue;
                             // FIXME - ko tad darīt ar vairākiem variantiem ????
                             stem = v.celms;
                         }
                     }
                     stems.set(0, stem);
+                    if (isMatchingStrong(AttributeNames.i_EntryProperties, AttributeNames.v_EntryComparative)) {
+                        addAttribute(AttributeNames.i_LemmaOverride, lemma);
+                    }
                 } catch (Ending.WrongEndingException exc) {
                     if (isMatchingStrong(AttributeNames.i_EntryProperties, AttributeNames.v_Plural)) {
                         constructor_try_plural();
