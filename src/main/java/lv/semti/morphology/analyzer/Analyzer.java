@@ -1008,6 +1008,12 @@ public class Analyzer extends Lexicon {
             inflections.add(hardcoded);
         }
 
+        // For verbs, generate also negated forms
+		if (!noliegums && lexeme.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb)) {
+			ArrayList<Wordform> negated_inflections = generateInflections(lexeme,"ne"+lexeme.getValue(AttributeNames.i_Lemma));
+			inflections.addAll(negated_inflections);
+		}
+
 		return inflections;
 	}
 
