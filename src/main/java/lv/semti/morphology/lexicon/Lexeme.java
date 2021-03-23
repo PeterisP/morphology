@@ -161,9 +161,9 @@ public class Lexeme extends AttributeValues {
 
         if (stems.get(0).isEmpty() && getValue(AttributeNames.i_Lemma) != null) {
             String lemma = getValue(AttributeNames.i_Lemma).toLowerCase();
-            if (lemma.equalsIgnoreCase("pārāks")) {
-                describe();
-            }
+//            if (lemma.equalsIgnoreCase("pārāks")) {
+//                describe();
+//            }
 
             if (isMatchingStrong(AttributeNames.i_EntryProperties, AttributeNames.v_EntryFeminine)) {
                 // Specapstrāde priekš īpašības vārda 'ālava' plus ja nu kas vēl parādīsies

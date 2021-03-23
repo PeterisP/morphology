@@ -401,13 +401,11 @@ public abstract class Mijas {
                     if (celms.endsWith("āka") && celms.length() > 4) {
                         if (celms.startsWith("vis")) varianti.add(new Variants(celms.substring(3,celms.length()-3),AttributeNames.i_Degree,AttributeNames.v_Superlative));
                         else varianti.add(new Variants(celms.substring(0,celms.length()-3),AttributeNames.i_Degree,AttributeNames.v_Comparative));
-                    } else {
-                        if (celms.endsWith("a")) // zaļa-jam -> zaļ; pēdēja-jam -> pēdēj
-                            varianti.add(new Variants(celms.substring(0,celms.length()-1) ,AttributeNames.i_Degree, AttributeNames.v_Positive));
-                        else if (celms.endsWith("ē")) // pēdē-jam -> pēdēj
-                            varianti.add(new Variants(celms+"j",AttributeNames.i_Degree, AttributeNames.v_Positive));
-                        // citiem pareiziem variantiem IMHO te nevajadzētu būt
                     }
+					if (celms.endsWith("a")) // zaļa-jam -> zaļ; pēdēja-jam -> pēdēj
+						varianti.add(new Variants(celms.substring(0,celms.length()-1) ,AttributeNames.i_Degree, AttributeNames.v_Positive));
+					else if (celms.endsWith("ē")) // pēdē-jam -> pēdēj
+						varianti.add(new Variants(celms+"j",AttributeNames.i_Degree, AttributeNames.v_Positive));
                     break;
                 case 35: // substantivizējušos "īpašības vārdu" izskaņas kā -ajam: liekam nevis zaļ-š->zaļ-ajam, bet zaļ-š->zaļ-a-jam, bet pēdēj-ais -> pēdē-jam/pēdēj-a-jam; bez pārākās/vispārākās pakāpes
                     if (celms.endsWith("a")) // zaļa-jam -> zaļ; pēdēja-jam -> pēdēj

@@ -1079,7 +1079,7 @@ uz	sppd	uz	m-d123-p99s4w5
 mums	pp10pdn	mēs	m-d123-p99s4w6
 sāka	vpnisi130an	sākt	m-d123-p99s4w7
 lidot	vmnn0t2000n	lidot	m-d123-p99s4w8
-atkritumi	ncmdn1	atkritumi	m-d123-p99s4w9
+atkritumi	ncmdn1	atkritums	m-d123-p99s4w9
 <g />
 :	zo	:	m-d123-p99s4w10
 kartupeļu	ncmpg2	kartupelis	m-d123-p99s4w11
@@ -2081,7 +2081,7 @@ jāizprot	vmnd0t100an	izprast	m-s9-p18s3w4
 arī	q	arī	m-s9-p18s3w5
 šie	pd3mpnn	šis	m-s9-p18s3w6
 nemitīgie	armpnyp	nemitīgs	m-s9-p18s3w7
-centieni	ncmdn1	centieni	m-s9-p18s3w8
+centieni	ncmdn1	centiens	m-s9-p18s3w8
 visiem	pg0mpdn	viss	m-s9-p18s3w9
 spēkiem	ncmpd1	spēks	m-s9-p18s3w10
 graut	vmnn0t1000n	graut	m-s9-p18s3w11
@@ -3727,7 +3727,7 @@ piestāv	vmnipt330an	piestāvēt	m-p9308-p48s1w4
 apelsīnu	ncmpg1	apelsīns	m-p9308-p48s1w5
 aromāts	ncmsn1	aromāts	m-p9308-p48s1w6
 <g />
-…	zs	…	m-p9308-p48s1w7
+…	zs	...	m-p9308-p48s1w7
 </s>
 <s>
 Tas	pd3msnn	tas	m-p9308-p48s2w1
@@ -4157,7 +4157,7 @@ zāļu	ncfpg5	zāle	m-p10113-p4s1w42
 ražotāji	ncmpn1	ražotājs	m-p10113-p4s1w43
 sponsorē	vmnipt230an	sponsorēt	m-p10113-p4s1w44
 <g />
-…	zs	…	m-p10113-p4s1w45
+…	zs	...	m-p10113-p4s1w45
 </s>
 <s>
 Ceirei	xf	Ceirei	m-z109-p144s1w1
@@ -4755,7 +4755,7 @@ gudra	affsnnp	gudrs	m-p6416-p5s1w28
 un	cc	un	m-p6416-p5s1w29
 izrāda	vmnipt330an	izrādīt	m-p6416-p5s1w30
 patiesas	affpanp	patiess	m-p6416-p5s1w31
-rūpes	ncfda5	rūpes	m-p6416-p5s1w32
+rūpes	ncfda5	rūpe	m-p6416-p5s1w32
 <g />
 ,	zc	,	m-p6416-p5s1w33
 viņš	pp3msnn	viņš	m-p6416-p5s1w34
@@ -4949,7 +4949,7 @@ banknotes	ncfpa5	banknote	m-p17227-p9s1w16
 .	zs	.	m-p17227-p9s1w17
 </s>
 <s>
-«	zq	«	m-p8757-p13s1w1
+«	zq	"	m-p8757-p13s1w1
 <g />
 Runājot	vmnpu0000000n	runāt	m-p8757-p13s1w2
 par	spsa	par	m-p8757-p13s1w3
@@ -5030,7 +5030,7 @@ baudīts	vmnpdmsnpsnpn	baudīt	m-p8757-p13s3w27
 <g />
 ,	zc	,	m-p8757-p13s3w28
 <g />
-»	zq	»	m-p8757-p13s3w29
+»	zq	"	m-p8757-p13s3w29
 sarunas	ncfsg4	saruna	m-p8757-p13s3w30
 nobeigumā	ncmsl1	nobeigums	m-p8757-p13s3w31
 piebilst	vmnipt130an	piebilst	m-p8757-p13s3w32
@@ -6336,12 +6336,12 @@ zema	afmsgnp	zems	m-p3754-p1s1w7
 tarifa	ncmsg1	tarifs	m-p3754-p1s1w8
 nevar	vonipi330ay	varēt	m-p3754-p1s1w9
 uzbūvēt	vmnn0t2000n	uzbūvēt	m-p3754-p1s1w10
-atkritumu	ncmdg1	atkritumi	m-p3754-p1s1w11
+atkritumu	ncmdg1	atkritums	m-p3754-p1s1w11
 pārstrādes	ncfsg5	pārstrāde	m-p3754-p1s1w12
 rūpnīcu	ncfsa4	rūpnīca	m-p3754-p1s1w13
 </s>
 <s>
-Atkritumu	ncmdg1	atkritumi	m-p3754-p2s1w1
+Atkritumu	ncmdg1	atkritums	m-p3754-p2s1w1
 apsaimniekošanas	ncfsg4	apsaimniekošana	m-p3754-p2s1w2
 pakalpojumi	ncmpn1	pakalpojums	m-p3754-p2s1w3
 Latvijā	npfsl4	Latvija	m-p3754-p2s1w4
@@ -6365,7 +6365,7 @@ aģentūrai	ncfsd4	aģentūra	m-p3754-p2s1w19
 LETA	yp	Leta	m-p3754-p2s1w20
 apgalvo	vmnipt230an	apgalvot	m-p3754-p2s1w21
 Ziemeļvidzemes	npfsg5	Ziemeļvidzeme	m-p3754-p2s1w22
-atkritumu	ncmdg1	atkritumi	m-p3754-p2s1w23
+atkritumu	ncmdg1	atkritums	m-p3754-p2s1w23
 apsaimniekošanas	ncfsg4	apsaimniekošana	m-p3754-p2s1w24
 uzņēmuma	ncmsg1	uzņēmums	m-p3754-p2s1w25
 SIA	yn	SIA	m-p3754-p2s1w26
@@ -6384,7 +6384,7 @@ vadītāja	ncfsn4	vadītāja	m-p3754-p2s1w35
 Ingrīda	npfsn4	Ingrīda	m-p3754-p2s1w36
 Gubernatorova	npfsn4	Gubernatorova	m-p3754-p2s1w37
 un	cc	un	m-p3754-p2s1w38
-Atkritumu	ncmdg1	atkritumi	m-p3754-p2s1w39
+Atkritumu	ncmdg1	atkritums	m-p3754-p2s1w39
 noglabāšanas	ncfsg4	noglabāšana	m-p3754-p2s1w40
 daļas	ncfsg4	daļa	m-p3754-p2s1w41
 vadītājs	ncmsn1	vadītājs	m-p3754-p2s1w42
@@ -6401,7 +6401,7 @@ ilgtermiņā	ncmsl1	ilgtermiņš	m-p3754-p2s2w4
 Latviju	npfsa4	Latvija	m-p3754-p2s2w5
 klās	vmnift130an	klāt	m-p3754-p2s2w6
 lielas	affpnnp	liels	m-p3754-p2s2w7
-atkritumu	ncmdg1	atkritumi	m-p3754-p2s2w8
+atkritumu	ncmdg1	atkritums	m-p3754-p2s2w8
 kaudzes	ncfpn5	kaudze	m-p3754-p2s2w9
 <g />
 ,	zc	,	m-p3754-p2s2w10
@@ -6409,7 +6409,7 @@ lai	cs	lai	m-p3754-p2s2w11
 gan	cs	gan	m-p3754-p2s2w12
 <g />
 ,	zc	,	m-p3754-p2s2w13
-atkritumus	ncmda1	atkritumi	m-p3754-p2s2w14
+atkritumus	ncmda1	atkritums	m-p3754-p2s2w14
 veiksmīgi	rpm	veiksmīgi	m-p3754-p2s2w15
 pārstrādājot	vmnpu0000000n	pārstrādāt	m-p3754-p2s2w16
 <g />
@@ -6442,7 +6442,7 @@ ka	cs	ka	m-p3754-p2s3w11
 pērn	r0t	pērn	m-p3754-p2s3w12
 beidzās	vmyisi130an	beigties	m-p3754-p2s3w13
 valsts	ncfsg6	valsts	m-p3754-p2s3w14
-atkritumu	ncmdg1	atkritumi	m-p3754-p2s3w15
+atkritumu	ncmdg1	atkritums	m-p3754-p2s3w15
 apsaimniekošanas	ncfsg4	apsaimniekošana	m-p3754-p2s3w16
 plāna	afmsgnp	plāns	m-p3754-p2s3w17
 darbība	ncfsn4	darbība	m-p3754-p2s3w18
@@ -6490,7 +6490,7 @@ Kuplais	afmsnyp	Kuplais	m-p3754-p4s1w2
 Gada	ncmsg1	gads	m-p3754-p4s1w4
 laikā	ncmsl1	laiks	m-p3754-p4s1w5
 sadzīves	ncfsg5	sadzīve	m-p3754-p4s1w6
-atkritumu	ncmdg1	atkritumi	m-p3754-p4s1w7
+atkritumu	ncmdg1	atkritums	m-p3754-p4s1w7
 poligonā	ncmsl1	poligons	m-p3754-p4s1w8
 „	zq	"	m-p3754-p4s1w9
 <g />
@@ -6503,7 +6503,7 @@ apmēram	r0q	apmēram	m-p3754-p4s1w14
 27000	xn	27000	m-p3754-p4s1w15
 tonnu	ncfpg4	tonna	m-p3754-p4s1w16
 sadzīves	ncfsg5	sadzīve	m-p3754-p4s1w17
-atkritumu	ncmdg1	atkritumi	m-p3754-p4s1w18
+atkritumu	ncmdg1	atkritums	m-p3754-p4s1w18
 <g />
 .	zs	.	m-p3754-p4s1w19
 </s>
@@ -6513,14 +6513,14 @@ būvgruži	ncmpn2	būvgruzis	m-p3754-p4s2w2
 <g />
 ,	zc	,	m-p3754-p4s2w3
 ražošanas	ncfsg4	ražošana	m-p3754-p4s2w4
-atkritumi	ncmdn1	atkritumi	m-p3754-p4s2w5
+atkritumi	ncmdn1	atkritums	m-p3754-p4s2w5
 <g />
 ,	zc	,	m-p3754-p4s2w6
 lapas	ncfpn4	lapa	m-p3754-p4s2w7
 <g />
 ,	zc	,	m-p3754-p4s2w8
 kapu	ncmpg1	kaps	m-p3754-p4s2w9
-atkritumi	ncmdn1	atkritumi	m-p3754-p4s2w10
+atkritumi	ncmdn1	atkritums	m-p3754-p4s2w10
 <g />
 ,	zc	,	m-p3754-p4s2w11
 kas	pr000nn	kas	m-p3754-p4s2w12
@@ -6550,7 +6550,7 @@ līdzfinansētā	vmnpdmsgpsypn	līdzfinansēt	m-p3754-p4s3w14
 Ziemeļvidzemes	npfsg5	Ziemeļvidzeme	m-p3754-p4s3w15
 reģiona	ncmsg1	reģions	m-p3754-p4s3w16
 sadzīves	ncfsg5	sadzīve	m-p3754-p4s3w17
-atkritumu	ncmdg1	atkritumi	m-p3754-p4s3w18
+atkritumu	ncmdg1	atkritums	m-p3754-p4s3w18
 apsaimniekošanas	ncfsg4	apsaimniekošana	m-p3754-p4s3w19
 projekta	ncmsg1	projekts	m-p3754-p4s3w20
 4.	xo	4.	m-p3754-p4s3w21
@@ -6670,7 +6670,7 @@ visas	pg0fpnn	visa	m-p3754-p8s1w5
 ES	yp	ES	m-p3754-p8s1w6
 likumdošanas	ncfsg4	likumdošana	m-p3754-p8s1w7
 prasības	ncfpn4	prasība	m-p3754-p8s1w8
-atkritumu	ncmdg1	atkritumi	m-p3754-p8s1w9
+atkritumu	ncmdg1	atkritums	m-p3754-p8s1w9
 apsaimniekošanas	ncfsg4	apsaimniekošana	m-p3754-p8s1w10
 jomā	ncfsl4	joma	m-p3754-p8s1w11
 <g />
@@ -6691,7 +6691,7 @@ ierakstīts	vmnpdmsnpsnpn	ierakstīt	m-p3754-p8s2w8
 ,	zc	,	m-p3754-p8s2w9
 ka	cs	ka	m-p3754-p8s2w10
 sadzīves	ncfsg5	sadzīve	m-p3754-p8s2w11
-atkritumus	ncmda1	atkritumi	m-p3754-p8s2w12
+atkritumus	ncmda1	atkritums	m-p3754-p8s2w12
 drīkst	vonipi330an	drīkstēt	m-p3754-p8s2w13
 noglabāt	vmnn0t2000n	noglabāt	m-p3754-p8s2w14
 tikai	q	tikai	m-p3754-p8s2w15
@@ -6715,7 +6715,7 @@ ka	cs	ka	m-p3754-p8s3w4
 poligonā	ncmsl1	poligons	m-p3754-p8s3w5
 visus	pg0mpan	viss	m-p3754-p8s3w6
 sadzīves	ncfsg5	sadzīve	m-p3754-p8s3w7
-atkritumus	ncmda1	atkritumi	m-p3754-p8s3w8
+atkritumus	ncmda1	atkritums	m-p3754-p8s3w8
 maļam	vmnipt11pan	malt	m-p3754-p8s3w9
 un	cc	un	m-p3754-p8s3w10
 šķirojam	vmnipt21pan	šķirot	m-p3754-p8s3w11
@@ -6725,7 +6725,7 @@ atsevišķi	r0m	atsevišķi	m-p3754-p8s3w13
 nodalot	vmnpu0000000n	nodalīt	m-p3754-p8s3w14
 bioloģiski	r0m	bioloģiski	m-p3754-p8s3w15
 noārdāmos	vmnpdmpappypn	noārdīt	m-p3754-p8s3w16
-atkritumus	ncmda1	atkritumi	m-p3754-p8s3w17
+atkritumus	ncmda1	atkritums	m-p3754-p8s3w17
 <g />
 .	zs	.	m-p3754-p8s3w18
 </s>
@@ -6770,7 +6770,7 @@ balstīta	vmnpdfsnpsnpn	balstīt	m-p3754-p9s1w8
 uz	sppd	uz	m-p3754-p9s1w9
 Ziemeļvidzemes	npfsg5	Ziemeļvidzeme	m-p3754-p9s1w10
 reģionālajā	armslyp	reģionāls	m-p3754-p9s1w11
-atkritumu	ncmdg1	atkritumi	m-p3754-p9s1w12
+atkritumu	ncmdg1	atkritums	m-p3754-p9s1w12
 apsaimniekošanas	ncfsg4	apsaimniekošana	m-p3754-p9s1w13
 plānā	ncmsl1	plāns	m-p3754-p9s1w14
 noteiktajiem	vmnpdmpdpsypn	noteikt	m-p3754-p9s1w15
@@ -6789,7 +6789,7 @@ attīstība	ncfsn4	attīstība	m-p3754-p9s1w24
 </s>
 <s>
 Sadzīves	ncfsg5	sadzīve	m-p3754-p9s2w1
-atkritumu	ncmdg1	atkritumi	m-p3754-p9s2w2
+atkritumu	ncmdg1	atkritums	m-p3754-p9s2w2
 apsaimniekošanas	ncfsg4	apsaimniekošana	m-p3754-p9s2w3
 pakalpojums	ncmsn1	pakalpojums	m-p3754-p9s2w4
 ir	vcnipii30an	būt	m-p3754-p9s2w5
@@ -6809,14 +6809,14 @@ rajonos	ncmpl1	rajons	m-p3754-p9s2w13
 Ir	vcnipii30an	būt	m-p3754-p9s3w1
 attīstīta	vmnpdfsnpsnpn	attīstīt	m-p3754-p9s3w2
 dalītā	vmnpdfsnpsypn	dalīt	m-p3754-p9s3w3
-atkritumu	ncmdg1	atkritumi	m-p3754-p9s3w4
+atkritumu	ncmdg1	atkritums	m-p3754-p9s3w4
 vākšanas	ncfsg4	vākšana	m-p3754-p9s3w5
 sistēma	ncfsn4	sistēma	m-p3754-p9s3w6
 visā	pg0msln	viss	m-p3754-p9s3w7
 reģionā	ncmsl1	reģions	m-p3754-p9s3w8
 <g />
 ,	zc	,	m-p3754-p9s3w9
-atkritumu	ncmdg1	atkritumi	m-p3754-p9s3w10
+atkritumu	ncmdg1	atkritums	m-p3754-p9s3w10
 noglabāšana	ncfsn4	noglabāšana	m-p3754-p9s3w11
 notiek	vmnipi130an	notikt	m-p3754-p9s3w12
 atbilstoši	rpm	atbilstoši	m-p3754-p9s3w13
@@ -6831,14 +6831,14 @@ varam	vonipi31pan	varēt	m-p3754-p9s4w2
 saukt	vmnn0t1000n	saukt	m-p3754-p9s4w3
 par	spsa	par	m-p3754-p9s4w4
 reģionālās	arfsgyp	reģionāls	m-p3754-p9s4w5
-atkritumu	ncmdg1	atkritumi	m-p3754-p9s4w6
+atkritumu	ncmdg1	atkritums	m-p3754-p9s4w6
 apsaimniekošanas	ncfsg4	apsaimniekošana	m-p3754-p9s4w7
 centru	ncmsa1	centrs	m-p3754-p9s4w8
 <g />
 ,	zc	,	m-p3754-p9s4w9
 kurā	pr0msln	kurš	m-p3754-p9s4w10
 notiek	vmnipi130an	notikt	m-p3754-p9s4w11
-atkritumu	ncmdg1	atkritumi	m-p3754-p9s4w12
+atkritumu	ncmdg1	atkritums	m-p3754-p9s4w12
 sagatavošana	ncfsn4	sagatavošana	m-p3754-p9s4w13
 un	cc	un	m-p3754-p9s4w14
 apstrāde	ncfsn5	apstrāde	m-p3754-p9s4w15
@@ -6857,7 +6857,7 @@ pārstrādei	ncfsd5	pārstrāde	m-p3754-p9s4w25
 ,	zc	,	m-p3754-p9s4w26
 bioloģiski	r0m	bioloģiski	m-p3754-p9s4w27
 noārdāmo	vmnpdmpgppypn	noārdīt	m-p3754-p9s4w28
-atkritumu	ncmdg1	atkritumi	m-p3754-p9s4w29
+atkritumu	ncmdg1	atkritums	m-p3754-p9s4w29
 kompostēšana	ncfsn4	kompostēšana	m-p3754-p9s4w30
 <g />
 ,	zc	,	m-p3754-p9s4w31
@@ -6995,7 +6995,7 @@ pakalpojumus	ncmpa1	pakalpojums	m-p3754-p11s1w21
 ,	zc	,	m-p3754-p11s1w22
 cena	ncfsn4	cena	m-p3754-p11s1w23
 par	spsa	par	m-p3754-p11s1w24
-atkritumu	ncmdg1	atkritumi	m-p3754-p11s1w25
+atkritumu	ncmdg1	atkritums	m-p3754-p11s1w25
 apsaimniekošanu	ncfsa4	apsaimniekošana	m-p3754-p11s1w26
 pieaugusi	vmnpdfsnasnpn	pieaugt	m-p3754-p11s1w27
 <g />
@@ -7024,7 +7024,7 @@ tikai	q	tikai	m-p3754-p12s1w14
 <s>
 Maksa	ncfsn4	maksa	m-p3754-p12s2w1
 par	spsa	par	m-p3754-p12s2w2
-atkritumu	ncmdg1	atkritumi	m-p3754-p12s2w3
+atkritumu	ncmdg1	atkritums	m-p3754-p12s2w3
 apsaimniekošanu	ncfsa4	apsaimniekošana	m-p3754-p12s2w4
 katrā	pg0msln	katrs	m-p3754-p12s2w5
 reģionā	ncmsl1	reģions	m-p3754-p12s2w6
@@ -7039,7 +7039,7 @@ To	pd3fsan	tā	m-p3754-p12s3w1
 veido	vmnipt230an	veidot	m-p3754-p12s3w2
 pamatā	ncmsl1	pamats	m-p3754-p12s3w3
 dabas	ncfsg4	daba	m-p3754-p12s3w4
-resursu	ncmdg1	resursi	m-p3754-p12s3w5
+resursu	ncmdg1	resurss	m-p3754-p12s3w5
 nodoklis	ncmsn2	nodoklis	m-p3754-p12s3w6
 <g />
 ,	zc	,	m-p3754-p12s3w7
@@ -7052,7 +7052,7 @@ palielinās	vmyipi330an	palielināties	m-p3754-p12s3w12
 ,	zc	,	m-p3754-p12s3w13
 izmaksas	ncfdn4	izmaksa	m-p3754-p12s3w14
 par	spsa	par	m-p3754-p12s3w15
-atkritumu	ncmdg1	atkritumi	m-p3754-p12s3w16
+atkritumu	ncmdg1	atkritums	m-p3754-p12s3w16
 savākšanu	ncfsa4	savākšana	m-p3754-p12s3w17
 un	cc	un	m-p3754-p12s3w18
 transportēšanu	ncfsa4	transportēšana	m-p3754-p12s3w19
@@ -7061,7 +7061,7 @@ transportēšanu	ncfsa4	transportēšana	m-p3754-p12s3w19
 izmaksas	ncfdn4	izmaksa	m-p3754-p12s3w21
 par	spsa	par	m-p3754-p12s3w22
 dalīto	vmnpdmpgpsypn	dalīt	m-p3754-p12s3w23
-atkritumu	ncmdg1	atkritumi	m-p3754-p12s3w24
+atkritumu	ncmdg1	atkritums	m-p3754-p12s3w24
 infrastruktūras	ncfsg4	infrastruktūra	m-p3754-p12s3w25
 ieviešanu	ncfsa4	ieviesšana	m-p3754-p12s3w26
 un	cc	un	m-p3754-p12s3w27
@@ -7071,7 +7071,7 @@ uzturēšanu	ncfsa4	uzturēšana	m-p3754-p12s3w28
 kā	cc	kā	m-p3754-p12s3w30
 arī	cc	arī	m-p3754-p12s3w31
 par	spsa	par	m-p3754-p12s3w32
-atkritumu	ncmdg1	atkritumi	m-p3754-p12s3w33
+atkritumu	ncmdg1	atkritums	m-p3754-p12s3w33
 noglabāšanu	ncfsa4	noglabāšana	m-p3754-p12s3w34
 attiecīgā	armsgyp	attiecīgs	m-p3754-p12s3w35
 reģiona	ncmsg1	reģions	m-p3754-p12s3w36
@@ -7112,7 +7112,7 @@ kas	pr000nn	kas	m-p3754-p13s1w23
 veidojas	vmyipi230an	veidoties	m-p3754-p13s1w24
 no	sppd	no	m-p3754-p13s1w25
 noglabātajiem	vmnpdmpdpsypn	noglabāt	m-p3754-p13s1w26
-atkritumiem	ncmdd1	atkritumi	m-p3754-p13s1w27
+atkritumiem	ncmdd1	atkritums	m-p3754-p13s1w27
 <g />
 .	zs	.	m-p3754-p13s1w28
 </s>
@@ -7186,7 +7186,7 @@ nav	vcnipii30ay	būt	m-p3754-p13s4w9
 realizēti	vmnpdmpnpsnpn	realizēt	m-p3754-p13s4w10
 projekti	ncmpn1	projekts	m-p3754-p13s4w11
 par	spsa	par	m-p3754-p13s4w12
-atkritumu	ncmdg1	atkritumi	m-p3754-p13s4w13
+atkritumu	ncmdg1	atkritums	m-p3754-p13s4w13
 sagatavošanu	ncfsa4	sagatavošana	m-p3754-p13s4w14
 noglabāšanai	ncfsd4	noglabāšana	m-p3754-p13s4w15
 <g />
@@ -7207,7 +7207,7 @@ brauc	vmnipt130an	braukt	m-p3754-p14s1w7
 uz	spsa	uz	m-p3754-p14s1w8
 Vecpiebalgu	npfsa4	Vecpiebalga	m-p3754-p14s1w9
 un	cc	un	m-p3754-p14s1w10
-atkritumus	ncmda1	atkritumi	m-p3754-p14s1w11
+atkritumus	ncmda1	atkritums	m-p3754-p14s1w11
 vāc	vmnipt130an	vākt	m-p3754-p14s1w12
 no	sppd	no	m-p3754-p14s1w13
 viensētām	ncfpd4	viensēta	m-p3754-p14s1w14
@@ -7232,7 +7232,7 @@ iedzīvotāju	ncmpg1	iedzīvotājs	m-p3754-p14s2w13
 blīvums	ncmsn1	blīvums	m-p3754-p14s2w14
 un	cc	un	m-p3754-p14s2w15
 cits	pi0msnn	cits	m-p3754-p14s2w16
-atkritumu	ncmdg1	atkritumi	m-p3754-p14s2w17
+atkritumu	ncmdg1	atkritums	m-p3754-p14s2w17
 daudzums	ncmsn1	daudzums	m-p3754-p14s2w18
 <g />
 .	zs	.	m-p3754-p14s2w19
@@ -7481,7 +7481,7 @@ latviski	r0m	latviski	m-p3754-p17s2w13
 NAIK	yn	NAIK	m-p3754-p17s2w15
 jeb	cc	jeb	m-p3754-p17s2w16
 no	sppd	no	m-p3754-p17s2w17
-atkritumiem	ncmdd1	atkritumi	m-p3754-p17s2w18
+atkritumiem	ncmdd1	atkritums	m-p3754-p17s2w18
 iegūtais	vmnpdmsnpsypn	iegūt	m-p3754-p17s2w19
 kurināmais	vmnpdmsnppypn	kurināt	m-p3754-p17s2w20
 <g />
@@ -7720,7 +7720,7 @@ kuru	pr0fsan	kura	m-p3754-p19s5w14
 veido	vmnipt230an	veidot	m-p3754-p19s5w15
 no	sppd	no	m-p3754-p19s5w16
 sadzīves	ncfsg5	sadzīve	m-p3754-p19s5w17
-atkritumiem	ncmdd1	atkritumi	m-p3754-p19s5w18
+atkritumiem	ncmdd1	atkritums	m-p3754-p19s5w18
 nošķiroti	vmnpdmpnpsnpn	nošķirot	m-p3754-p19s5w19
 papīri	ncmpn1	papīrs	m-p3754-p19s5w20
 <g />
@@ -7743,7 +7743,7 @@ cilvēks	ncmsn1	cilvēks	m-p3754-p19s6w6
 ir	vcnipii30an	būt	m-p3754-p19s6w7
 iemetis	vmnpdmsnasnpn	iemest	m-p3754-p19s6w8
 sadzīves	ncfsg5	sadzīve	m-p3754-p19s6w9
-atkritumu	ncmdg1	atkritumi	m-p3754-p19s6w10
+atkritumu	ncmdg1	atkritums	m-p3754-p19s6w10
 konteinerā	ncmsl1	konteiners	m-p3754-p19s6w11
 un	cc	un	m-p3754-p19s6w12
 iekārta	ncfsn4	iekārta	m-p3754-p19s6w13
@@ -7939,7 +7939,7 @@ transports	ncmsn1	transports	m-p3754-p22s1w19
 varētu	vonc0i300an	varēt	m-p3754-p22s1w20
 darboties	vmyn0i2000n	darboties	m-p3754-p22s1w21
 ar	spsa	ar	m-p3754-p22s1w22
-atkritumu	ncmdg1	atkritumi	m-p3754-p22s1w23
+atkritumu	ncmdg1	atkritums	m-p3754-p22s1w23
 enerģiju	ncfsa4	enerģija	m-p3754-p22s1w24
 benzīna	ncmsg1	benzīns	m-p3754-p22s1w25
 vietā	ncfsl4	vieta	m-p3754-p22s1w26
@@ -8176,7 +8176,7 @@ jomā	ncfsl4	joma	m-p3754-p25s5w22
 Kas	pq000nn	kas	m-p3754-p26s1w1
 pašreiz	r0t	pašreiz	m-p3754-p26s1w2
 neapmierina	vmnipt330ay	apmierināt	m-p3754-p26s1w3
-atkritumu	ncmdg1	atkritumi	m-p3754-p26s1w4
+atkritumu	ncmdg1	atkritums	m-p3754-p26s1w4
 apsaimniekotājus	ncmpa1	apsaimniekotājs	m-p3754-p26s1w5
 nozarē	ncfsl5	nozare	m-p3754-p26s1w6
 <g />
@@ -8188,7 +8188,7 @@ Gubernatorova	npfsn4	Gubernatorova	m-p3754-p27s1w2
 <g />
 :	zo	:	m-p3754-p27s1w3
 Līdzšinējā	armsgyp	līdzšinējs	m-p3754-p27s1w4
-Atkritumu	ncmdg1	atkritumi	m-p3754-p27s1w5
+Atkritumu	ncmdg1	atkritums	m-p3754-p27s1w5
 apsaimniekošanas	ncfsg4	apsaimniekošana	m-p3754-p27s1w6
 valsts	ncfsg6	valsts	m-p3754-p27s1w7
 plāna	ncmsg1	plāns	m-p3754-p27s1w8
@@ -8207,7 +8207,7 @@ beidzies	vmypdmsnasnpn	beigties	m-p3754-p27s1w16
 ,	zc	,	m-p3754-p27s1w17
 bet	cc	bet	m-p3754-p27s1w18
 jaunais	afmsnyp	jauns	m-p3754-p27s1w19
-Atkritumu	ncmdg1	atkritumi	m-p3754-p27s1w20
+Atkritumu	ncmdg1	atkritums	m-p3754-p27s1w20
 apsaimniekošanas	ncfsg4	apsaimniekošana	m-p3754-p27s1w21
 valsts	ncfsg6	valsts	m-p3754-p27s1w22
 plāns	ncmsn1	plāns	m-p3754-p27s1w23
@@ -8251,7 +8251,7 @@ priekšu	ncfsa4	priekša	m-p3754-p28s2w7
 kāds	pr0msnn	kāds	m-p3754-p28s2w9
 būs	vcnifii30an	būt	m-p3754-p28s2w10
 dabas	ncfsg4	daba	m-p3754-p28s2w11
-resursu	ncmdg1	resursi	m-p3754-p28s2w12
+resursu	ncmdg1	resurss	m-p3754-p28s2w12
 nodoklis	ncmsn2	nodoklis	m-p3754-p28s2w13
 <g />
 ,	zc	,	m-p3754-p28s2w14
@@ -8276,7 +8276,7 @@ zinājām	vmnist31pan	zināt	m-p3754-p28s3w4
 ,	zc	,	m-p3754-p28s3w5
 kāds	pr0msnn	kāds	m-p3754-p28s3w6
 dabas	ncfsg4	daba	m-p3754-p28s3w7
-resursu	ncmdg1	resursi	m-p3754-p28s3w8
+resursu	ncmdg1	resurss	m-p3754-p28s3w8
 nodoklis	ncmsn2	nodoklis	m-p3754-p28s3w9
 būs	vcnifii30an	būt	m-p3754-p28s3w10
 2010.	xo	2010.	m-p3754-p28s3w11
@@ -8324,7 +8324,7 @@ instruments	ncmsn1	instruments	m-p3754-p29s1w7
 kā	r0m	kā	m-p3754-p29s1w9
 samazināt	vmnn0t3000n	samazināt	m-p3754-p29s1w10
 apglabājamo	vmnpdmpgppypn	apglabāt	m-p3754-p29s1w11
-atkritumu	ncmdg1	atkritumi	m-p3754-p29s1w12
+atkritumu	ncmdg1	atkritums	m-p3754-p29s1w12
 apjomu	ncmsa1	apjoms	m-p3754-p29s1w13
 <g />
 .	zs	.	m-p3754-p29s1w14
@@ -8347,14 +8347,14 @@ tad	r0t	tad	m-p3754-p29s2w13
 jāmaksā	vmnd0t200an	maksāt	m-p3754-p29s2w14
 mazāks	afmsnnc	mazs	m-p3754-p29s2w15
 dabas	ncfsg4	daba	m-p3754-p29s2w16
-resursu	ncmdg1	resursi	m-p3754-p29s2w17
+resursu	ncmdg1	resurss	m-p3754-p29s2w17
 nodoklis	ncmsn2	nodoklis	m-p3754-p29s2w18
 <g />
 .	zs	.	m-p3754-p29s2w19
 </s>
 <s>
 Valsts	ncfsg6	valsts	m-p3754-p30s1w1
-atkritumu	ncmdg1	atkritumi	m-p3754-p30s1w2
+atkritumu	ncmdg1	atkritums	m-p3754-p30s1w2
 apsaimniekošanas	ncfsg4	apsaimniekošana	m-p3754-p30s1w3
 plāns	ncmsn1	plāns	m-p3754-p30s1w4
 nākamajam	armsdyp	nākamais	m-p3754-p30s1w5
@@ -8433,7 +8433,7 @@ obligāta	arfsnnp	obligāts	m-p3754-p30s4w16
 </s>
 <s>
 Attiecīgā	armsgyp	attiecīgs	m-p3754-p31s1w1
-atkritumu	ncmdg1	atkritumi	m-p3754-p31s1w2
+atkritumu	ncmdg1	atkritums	m-p3754-p31s1w2
 apsaimniekošanas	ncfsg4	apsaimniekošana	m-p3754-p31s1w3
 reģiona	ncmsg1	reģions	m-p3754-p31s1w4
 pašvaldības	ncfpn4	pašvaldība	m-p3754-p31s1w5
@@ -8446,13 +8446,13 @@ sadarbojoties	vmypu0000000n	sadarboties	m-p3754-p31s1w8
 var	vonipi330an	varēt	m-p3754-p31s1w10
 organizēt	vmnn0t2000n	organizēt	m-p3754-p31s1w11
 sadzīves	ncfsg5	sadzīve	m-p3754-p31s1w12
-atkritumu	ncmdg1	atkritumi	m-p3754-p31s1w13
+atkritumu	ncmdg1	atkritums	m-p3754-p31s1w13
 apsaimniekošanas	ncfsg4	apsaimniekošana	m-p3754-p31s1w14
 reģionālā	armsgyp	reģionāls	m-p3754-p31s1w15
 plāna	ncmsg1	plāns	m-p3754-p31s1w16
 izstrādi	ncfsa5	izstrāde	m-p3754-p31s1w17
 savam	ps0msdn	savs	m-p3754-p31s1w18
-atkritumu	ncmdg1	atkritumi	m-p3754-p31s1w19
+atkritumu	ncmdg1	atkritums	m-p3754-p31s1w19
 apsaimniekošanas	ncfsg4	apsaimniekošana	m-p3754-p31s1w20
 reģionam	ncmsd1	reģions	m-p3754-p31s1w21
 <g />
@@ -8552,7 +8552,7 @@ turpmāk	r0t	turpmāk	m-p3754-p33s2w15
 </s>
 <s>
 Ja	cs	ja	m-p3754-p33s3w1
-atkritumu	ncmdg1	atkritumi	m-p3754-p33s3w2
+atkritumu	ncmdg1	atkritums	m-p3754-p33s3w2
 pārstrāde	ncfsn5	pārstrāde	m-p3754-p33s3w3
 -	zd	-	m-p3754-p33s3w4
 kāda	pq0fsnn	kāda	m-p3754-p33s3w5
@@ -8606,7 +8606,7 @@ vērtējama	vmnpdfsnppnpn	vērtēt	m-p3754-p33s6w2
 vīzija	ncfsn4	vīzija	m-p3754-p33s6w3
 par	spsa	par	m-p3754-p33s6w4
 reģionālo	armpgyp	reģionāls	m-p3754-p33s6w5
-atkritumu	ncmdg1	atkritumi	m-p3754-p33s6w6
+atkritumu	ncmdg1	atkritums	m-p3754-p33s6w6
 apsaimniekošanas	ncfsg4	apsaimniekošana	m-p3754-p33s6w7
 centru	ncmpg1	centrs	m-p3754-p33s6w8
 izveidi	ncfsa5	izveide	m-p3754-p33s6w9
@@ -8690,7 +8690,7 @@ ieceri	ncfsa5	iecere	m-p3754-p35s1w9
 komersantiem	ncmpd1	komersants	m-p3754-p35s1w11
 pašiem	pg0mpdn	pats	m-p3754-p35s1w12
 izvēlēties	vmyn0t3000n	izvēlēties	m-p3754-p35s1w13
-atkritumu	ncmdg1	atkritumi	m-p3754-p35s1w14
+atkritumu	ncmdg1	atkritums	m-p3754-p35s1w14
 apsaimniekotāju	ncmsa1	apsaimniekotājs	m-p3754-p35s1w15
 <g />
 ,	zc	,	m-p3754-p35s1w16
@@ -8712,7 +8712,7 @@ Kuplais	afmsnyp	Kuplais	m-p3754-p36s1w2
 Ministrija	ncfsn4	ministrija	m-p3754-p36s1w4
 plānoja	vmnist230an	plānot	m-p3754-p36s1w5
 atļaut	vmnn0t1000n	atļaut	m-p3754-p36s1w6
-atkritumu	ncmdg1	atkritumi	m-p3754-p36s1w7
+atkritumu	ncmdg1	atkritums	m-p3754-p36s1w7
 radītājiem	ncmpd1	radītājs	m-p3754-p36s1w8
 <g />
 ,	zc	,	m-p3754-p36s1w9
@@ -8720,14 +8720,14 @@ kuri	pr0mpnn	kurš	m-p3754-p36s1w10
 atbrīvoti	vmnpdmpnpsnpn	atbrīvot	m-p3754-p36s1w11
 no	spsg	no	m-p3754-p36s1w12
 dabas	ncfsg4	daba	m-p3754-p36s1w13
-resursu	ncmdg1	resursi	m-p3754-p36s1w14
+resursu	ncmdg1	resurss	m-p3754-p36s1w14
 nodokļa	ncmsg2	nodoklis	m-p3754-p36s1w15
 samaksas	ncfsg4	samaksa	m-p3754-p36s1w16
 un	cc	un	m-p3754-p36s1w17
 kuru	pr0mpgn	kurš	m-p3754-p36s1w18
 radīto	vmnpdmpgpsypn	radīt	m-p3754-p36s1w19
 sadzīves	ncfsg5	sadzīve	m-p3754-p36s1w20
-atkritumu	ncmdg1	atkritumi	m-p3754-p36s1w21
+atkritumu	ncmdg1	atkritums	m-p3754-p36s1w21
 apjoms	ncmsn1	apjoms	m-p3754-p36s1w22
 sasniedz	vmnipt130an	sasniegt	m-p3754-p36s1w23
 240	xn	240	m-p3754-p36s1w24
@@ -8737,7 +8737,7 @@ gadā	ncmsl1	gads	m-p3754-p36s1w26
 ,	zc	,	m-p3754-p36s1w27
 pašiem	pg0mpdn	pats	m-p3754-p36s1w28
 izvēlēties	vmyn0t3000n	izvēlēties	m-p3754-p36s1w29
-atkritumu	ncmdg1	atkritumi	m-p3754-p36s1w30
+atkritumu	ncmdg1	atkritums	m-p3754-p36s1w30
 apsaimniekotāju	ncmsa1	apsaimniekotājs	m-p3754-p36s1w31
 <g />
 .	zs	.	m-p3754-p36s1w32
@@ -8786,7 +8786,7 @@ ZAAO	yp	ZAAO	m-p3754-p36s4w7
 <g />
 "	zq	"	m-p3754-p36s4w8
 savākto	vmnpdmpgpsypn	savākt	m-p3754-p36s4w9
-atkritumu	ncmdg1	atkritumi	m-p3754-p36s4w10
+atkritumu	ncmdg1	atkritums	m-p3754-p36s4w10
 apjoms	ncmsn1	apjoms	m-p3754-p36s4w11
 <g />
 ,	zc	,	m-p3754-p36s4w12
@@ -8796,7 +8796,7 @@ atsaukties	vmyn0i1000n	atsaukties	m-p3754-p36s4w15
 uz	spsa	uz	m-p3754-p36s4w16
 maksu	ncfsa4	maksa	m-p3754-p36s4w17
 par	spsa	par	m-p3754-p36s4w18
-atkritumu	ncmdg1	atkritumi	m-p3754-p36s4w19
+atkritumu	ncmdg1	atkritums	m-p3754-p36s4w19
 apsaimniekošanu	ncfsa4	apsaimniekošana	m-p3754-p36s4w20
 iedzīvotājiem	ncmpd1	iedzīvotājs	m-p3754-p36s4w21
 <g />
@@ -8822,7 +8822,7 @@ esam	vcnipii1pan	būt	m-p3754-p36s5w9
 rēķinājušies	vmypdmpnasnpn	rēķināties	m-p3754-p36s5w10
 ar	spsa	ar	m-p3754-p36s5w11
 noteiktu	vmnpdmsapsnpn	noteikt	m-p3754-p36s5w12
-atkritumu	ncmdg1	atkritumi	m-p3754-p36s5w13
+atkritumu	ncmdg1	atkritums	m-p3754-p36s5w13
 apjomu	ncmsa1	apjoms	m-p3754-p36s5w14
 kopumā	ncmsl1	kopums	m-p3754-p36s5w15
 <g />
@@ -8847,7 +8847,7 @@ dārgāka	affsnnc	dārgs	m-p3754-p36s6w5
 varētu	vonc0i300an	varēt	m-p3754-p36s6w6
 kļūt	vtnn0i1000n	kļūt	m-p3754-p36s6w7
 dalītās	vmnpdfsgpsypn	dalīt	m-p3754-p36s6w8
-atkritumu	ncmdg1	atkritumi	m-p3754-p36s6w9
+atkritumu	ncmdg1	atkritums	m-p3754-p36s6w9
 vākšanas	ncfsg4	vākšana	m-p3754-p36s6w10
 infrastruktūras	ncfsg4	infrastruktūra	m-p3754-p36s6w11
 sakārtošana	ncfsn4	sakārtošana	m-p3754-p36s6w12
@@ -8868,7 +8868,7 @@ Proti	q	proti	m-p3754-p36s7w1
 ,	zc	,	m-p3754-p36s7w2
 dalīti	r0m	dalīti	m-p3754-p36s7w3
 vākto	vmnpdmpgpsypn	vākt	m-p3754-p36s7w4
-atkritumu	ncmdg1	atkritumi	m-p3754-p36s7w5
+atkritumu	ncmdg1	atkritums	m-p3754-p36s7w5
 apjoms	ncmsn1	apjoms	m-p3754-p36s7w6
 <g />
 ,	zc	,	m-p3754-p36s7w7
@@ -8917,7 +8917,7 @@ ka	cs	ka	m-p3754-p37s1w6
 pašvaldības	ncfsg4	pašvaldība	m-p3754-p37s1w7
 uzņēmums	ncmsn1	uzņēmums	m-p3754-p37s1w8
 kā	cs	kā	m-p3754-p37s1w9
-atkritumu	ncmdg1	atkritumi	m-p3754-p37s1w10
+atkritumu	ncmdg1	atkritums	m-p3754-p37s1w10
 apsaimniekotājs	ncmsn1	apsaimniekotājs	m-p3754-p37s1w11
 ir	vcnipii30an	būt	m-p3754-p37s1w12
 dārgāks	afmsnnc	dārgs	m-p3754-p37s1w13
@@ -8946,7 +8946,7 @@ jēdzieni	ncmpn1	jēdziens	m-p3754-p38s1w14
 </s>
 <s>
 Patiesībā	ncfsl4	patiesība	m-p3754-p38s2w1
-atkritumu	ncmdg1	atkritumi	m-p3754-p38s2w2
+atkritumu	ncmdg1	atkritums	m-p3754-p38s2w2
 apsaimniekošanas	ncfsg4	apsaimniekošana	m-p3754-p38s2w3
 pakalpojumi	ncmpn1	pakalpojums	m-p3754-p38s2w4
 Latvijā	npfsl4	Latvija	m-p3754-p38s2w5
@@ -8965,7 +8965,7 @@ izdevumiem	ncmdd1	izdevums	m-p3754-p38s3w6
 <g />
 ,	zc	,	m-p3754-p38s3w7
 sadzīves	ncfsg5	sadzīve	m-p3754-p38s3w8
-atkritumu	ncmdg1	atkritumi	m-p3754-p38s3w9
+atkritumu	ncmdg1	atkritums	m-p3754-p38s3w9
 apsaimniekošanas	ncfsg4	apsaimniekošana	m-p3754-p38s3w10
 izmaksas	ncfdn4	izmaksa	m-p3754-p38s3w11
 ir	vcnipii30an	būt	m-p3754-p38s3w12
@@ -9027,7 +9027,7 @@ Latvijā	npfsl4	Latvija	m-p3754-p38s6w6
 varētu	vonc0i300an	varēt	m-p3754-p38s6w7
 būvēt	vmnn0t2000n	būvēt	m-p3754-p38s6w8
 kādas	pi0fpan	kāda	m-p3754-p38s6w9
-atkritumu	ncmdg1	atkritumi	m-p3754-p38s6w10
+atkritumu	ncmdg1	atkritums	m-p3754-p38s6w10
 pārstrādes	ncfsg5	pārstrāde	m-p3754-p38s6w11
 rūpnīcas	ncfpa4	rūpnīca	m-p3754-p38s6w12
 <g />
@@ -9040,7 +9040,7 @@ ieviest	vmnn0t1000n	ieviest	m-p3754-p38s7w3
 modernākas	affpanc	moderns	m-p3754-p38s7w4
 tehnoloģijas	ncfpa4	tehnoloģija	m-p3754-p38s7w5
 gan	cc	gan	m-p3754-p38s7w6
-atkritumu	ncmdg1	atkritumi	m-p3754-p38s7w7
+atkritumu	ncmdg1	atkritums	m-p3754-p38s7w7
 savākšanā	ncfsl4	savākšana	m-p3754-p38s7w8
 <g />
 ,	zc	,	m-p3754-p38s7w9
@@ -9086,7 +9086,7 @@ arī	q	arī	m-p3754-p39s1w6
 iedzīvotāju	ncmpg1	iedzīvotājs	m-p3754-p39s1w7
 maksas	ncfsg4	maksa	m-p3754-p39s1w8
 par	spsa	par	m-p3754-p39s1w9
-atkritumu	ncmdg1	atkritumi	m-p3754-p39s1w10
+atkritumu	ncmdg1	atkritums	m-p3754-p39s1w10
 apsaimniekošanu	ncfsa4	apsaimniekošana	m-p3754-p39s1w11
 salīdzinājumu	ncmsa1	salīdzinājums	m-p3754-p39s1w12
 visā	pg0fsln	visa	m-p3754-p39s1w13
@@ -9109,7 +9109,7 @@ gan	q	gan	m-p3754-p39s1w27
 gala	ncmsg1	gals	m-p3754-p39s1w28
 maksa	ncfsn4	maksa	m-p3754-p39s1w29
 par	spsa	par	m-p3754-p39s1w30
-atkritumu	ncmdg1	atkritumi	m-p3754-p39s1w31
+atkritumu	ncmdg1	atkritums	m-p3754-p39s1w31
 izvešanu	ncfsa4	izvešana	m-p3754-p39s1w32
 un	cc	un	m-p3754-p39s1w33
 tas	pd3msnn	tas	m-p3754-p39s1w34
@@ -9126,7 +9126,7 @@ piemēram	ncmsd1	piemērs	m-p3754-p39s1w42
 <g />
 ,	zc	,	m-p3754-p39s1w43
 šķirojot	vmnpu0000000n	šķirot	m-p3754-p39s1w44
-atkritumus	ncmda1	atkritumi	m-p3754-p39s1w45
+atkritumus	ncmda1	atkritums	m-p3754-p39s1w45
 <g />
 .	zs	.	m-p3754-p39s1w46
 </s>
@@ -9137,7 +9137,7 @@ iedzīvotājiem	ncmpd1	iedzīvotājs	m-p3754-p40s1w3
 sniedz	vmnipt130an	sniegt	m-p3754-p40s1w4
 modernākas	affpnnc	moderns	m-p3754-p40s1w5
 tehnoloģijas	ncfpn4	tehnoloģija	m-p3754-p40s1w6
-atkritumu	ncmdg1	atkritumi	m-p3754-p40s1w7
+atkritumu	ncmdg1	atkritums	m-p3754-p40s1w7
 savākšanā	ncfsl4	savākšana	m-p3754-p40s1w8
 un	cc	un	m-p3754-p40s1w9
 pārstrādē	ncfsl5	pārstrāde	m-p3754-p40s1w10
@@ -9180,7 +9180,7 @@ mazbērniem	ncmpd1	mazbērns	m-p3754-p41s1w26
 lielas	affpanp	liels	m-p3754-p41s1w28
 kaudzes	ncfpa5	kaudze	m-p3754-p41s1w29
 ar	sppd	ar	m-p3754-p41s1w30
-atkritumiem	ncmdd1	atkritumi	m-p3754-p41s1w31
+atkritumiem	ncmdd1	atkritums	m-p3754-p41s1w31
 <g />
 ,	zc	,	m-p3754-p41s1w32
 kas	pr000nn	kas	m-p3754-p41s1w33
@@ -9202,7 +9202,7 @@ tehnoloģijas	ncfpa4	tehnoloģija	m-p3754-p41s2w4
 ,	zc	,	m-p3754-p41s2w5
 no	sppd	no	m-p3754-p41s2w6
 savāktajiem	vmnpdmpdpsypn	savākt	m-p3754-p41s2w7
-atkritumiem	ncmdd1	atkritumi	m-p3754-p41s2w8
+atkritumiem	ncmdd1	atkritums	m-p3754-p41s2w8
 pāri	rrp	pāri	m-p3754-p41s2w9
 paliek	vmnipi130an	palikt	m-p3754-p41s2w10
 tikai	q	tikai	m-p3754-p41s2w11
@@ -9263,7 +9263,7 @@ ar	spsa	ar	m-p3754-p43s1w10
 mērķi	ncmsa2	mērķis	m-p3754-p43s1w11
 sniegt	vmnn0t1000n	sniegt	m-p3754-p43s1w12
 kvalitatīvus	afmpanp	kvalitatīvs	m-p3754-p43s1w13
-atkritumu	ncmdg1	atkritumi	m-p3754-p43s1w14
+atkritumu	ncmdg1	atkritums	m-p3754-p43s1w14
 apsaimniekošanas	ncfsg4	apsaimniekošana	m-p3754-p43s1w15
 pakalpojumus	ncmpa1	pakalpojums	m-p3754-p43s1w16
 fiziskām	arfpdnp	fizisks	m-p3754-p43s1w17
@@ -9296,7 +9296,7 @@ ZAAO	yp	ZAAO	m-p3754-p44s1w1
 darbības	ncfsg4	darbība	m-p3754-p44s1w2
 virziens	ncmsn1	virziens	m-p3754-p44s1w3
 ir	vcnipii30an	būt	m-p3754-p44s1w4
-atkritumu	ncmdg1	atkritumi	m-p3754-p44s1w5
+atkritumu	ncmdg1	atkritums	m-p3754-p44s1w5
 savākšana	ncfsn4	savākšana	m-p3754-p44s1w6
 <g />
 ,	zc	,	m-p3754-p44s1w7
@@ -12741,7 +12741,7 @@ gadu	ncmsa1	gads	m-p18827-p6s1w9
 plānots	vmnpdmsnpsnpn	plānot	m-p18827-p6s1w10
 ieviest	vmnn0t1000n	ieviest	m-p18827-p6s1w11
 progresīvo	afmsayp	progresīvs	m-p18827-p6s1w12
-iedzīvotāju	ncmdg1	iedzīvotāji	m-p18827-p6s1w13
+iedzīvotāju	ncmdg1	iedzīvotājs	m-p18827-p6s1w13
 ienākumu	ncmpg1	ienākums	m-p18827-p6s1w14
 nodokļa	ncmsg2	nodoklis	m-p18827-p6s1w15
 neapliekamo	afmsayp	neapliekams	m-p18827-p6s1w16
@@ -12785,7 +12785,7 @@ nepiemērojot	vmnpu0000000y	nepiemērot	m-p18827-p6s1w44
 Vienlaikus	r0t	vienlaikus	m-p18827-p6s2w1
 plānots	vmnpdmsnpsnpn	plānot	m-p18827-p6s2w2
 paaugstināt	vmnn0t3000n	paaugstināt	m-p18827-p6s2w3
-iedzīvotāju	ncmdg1	iedzīvotāji	m-p18827-p6s2w4
+iedzīvotāju	ncmdg1	iedzīvotājs	m-p18827-p6s2w4
 ienākumu	ncmpg1	ienākums	m-p18827-p6s2w5
 nodokļa	ncmsg2	nodoklis	m-p18827-p6s2w6
 atvieglojumus	ncmpa1	atvieglojums	m-p18827-p6s2w7
@@ -12865,7 +12865,7 @@ festivāla	ncmsg1	festivāls	m-p11003-p4s1w4
 programmu	ncfsa4	programma	m-p11003-p4s1w5
 <g />
 :	zo	:	m-p11003-p4s1w6
-«	zq	«	m-p11003-p4s1w7
+«	zq	"	m-p11003-p4s1w7
 <g />
 Festivāla	ncmsg1	festivāls	m-p11003-p4s1w8
 atklāšanas	ncfsg4	atklāšana	m-p11003-p4s1w9
@@ -17126,7 +17126,7 @@ jautāts	vmnpdmsnpsnpn	jautāt	m-p10039-p13s1w2
 par	spsa	par	m-p10039-p13s1w3
 iespēju	ncfsa4	iespēja	m-p10039-p13s1w4
 šķirot	vmnn0t2000n	šķirot	m-p10039-p13s1w5
-atkritumus	ncmda1	atkritumi	m-p10039-p13s1w6
+atkritumus	ncmda1	atkritums	m-p10039-p13s1w6
 <g />
 .	zs	.	m-p10039-p13s1w7
 </s>
@@ -18316,7 +18316,7 @@ daļai	ncfsd4	daļa	m-p14137-p5s8w10
 ,	zc	,	m-p14137-p5s8w11
 tāpēc	r0c	tāpēc	m-p14137-p5s8w12
 arī	q	arī	m-p14137-p5s8w13
-sāpes	ncfdn5	sāpes	m-p14137-p5s8w14
+sāpes	ncfdn5	sāpe	m-p14137-p5s8w14
 <g />
 ,	zc	,	m-p14137-p5s8w15
 ko	pr000an	kas	m-p14137-p5s8w16
@@ -20375,7 +20375,7 @@ cits	pi0msnn	cits	m-d62-p31s1w10
 </s>
 <s>
 Vienīgās	arfpnyp	vienīgs	m-d62-p31s2w1
-rūpes	ncfpn5	rūpes	m-d62-p31s2w2
+rūpes	ncfpn5	rūpe	m-d62-p31s2w2
 <g />
 ,	zc	,	m-d62-p31s2w3
 kā	r0m	kā	m-d62-p31s2w4
@@ -22293,7 +22293,7 @@ turpināja	vmnist330an	turpināt	m-p340-p14s2w21
 <s>
 Lai	cs	lai	m-p340-p14s3w1
 šādus	pd0mpan	šāds	m-p340-p14s3w2
-maldus	ncmda1	maldi	m-p340-p14s3w3
+maldus	ncmda1	malds	m-p340-p14s3w3
 atspēkotu	vmnc0t200an	atspēkot	m-p340-p14s3w4
 <g />
 ,	zc	,	m-p340-p14s3w5
@@ -23147,7 +23147,7 @@ smaka	ncfsn4	smaka	m-d197-p15s3w19
 ,	zc	,	m-d197-p15s3w20
 pelēcīgi	afmpnnp	pelēcīgs	m-d197-p15s3w21
 gaļas	ncfsg4	gaļa	m-d197-p15s3w22
-salāti	ncmdn1	salāti	m-d197-p15s3w23
+salāti	ncmdn1	salāts	m-d197-p15s3w23
 vitrīnā	ncfsl4	vitrīna	m-d197-p15s3w24
 <g />
 ,	zc	,	m-d197-p15s3w25
@@ -23591,7 +23591,7 @@ rieva	ncfsn4	rieva	m-d197-p23s3w3
 pierē	ncfsl5	piere	m-d197-p23s3w4
 -	zd	-	m-d197-p23s3w5
 ne	cc	ne	m-d197-p23s3w6
-rūpju	ncfdg5	rūpes	m-d197-p23s3w7
+rūpju	ncfdg5	rūpe	m-d197-p23s3w7
 <g />
 ,	zc	,	m-d197-p23s3w8
 bet	cc	bet	m-d197-p23s3w9
@@ -24705,7 +24705,7 @@ redzēju	vmnist31san	redzēt	m-d197-p44s2w5
 ,	zc	,	m-d197-p44s2w6
 ka	cs	ka	m-d197-p44s2w7
 meitene	ncfsn5	meitene	m-d197-p44s2w8
-sāpēs	ncfdl5	sāpes	m-d197-p44s2w9
+sāpēs	ncfdl5	sāpe	m-d197-p44s2w9
 saviebjas	vmyipi130an	saviebties	m-d197-p44s2w10
 <g />
 .	zs	.	m-d197-p44s2w11
@@ -28951,7 +28951,7 @@ sarunās	ncfpl4	saruna	m-d119-p268s2w7
 viņu	pp3fsan	viņa	m-d119-p268s2w9
 bieži	rpq	bieži	m-d119-p268s2w10
 mocīja	vmnist330an	mocīt	m-d119-p268s2w11
-sāpes	ncfdn5	sāpes	m-d119-p268s2w12
+sāpes	ncfdn5	sāpe	m-d119-p268s2w12
 <g />
 ,	zc	,	m-d119-p268s2w13
 un	cc	un	m-d119-p268s2w14
@@ -29141,7 +29141,7 @@ Treškārt	r0m	treškārt	m-p14184-p16s1w1
 <g />
 ,	zc	,	m-p14184-p16s1w2
 cieš	vmnipi130an	ciest	m-p14184-p16s1w3
-nieres	ncfdn5	nieres	m-p14184-p16s1w4
+nieres	ncfdn5	niere	m-p14184-p16s1w4
 <g />
 .	zs	.	m-p14184-p16s1w5
 </s>
@@ -30077,7 +30077,7 @@ zemu	rpm	zemu	m-p10258-p2s6w51
 noliektu	vmnpdfsapsnpn	noliekt	m-p10258-p2s6w52
 galvu	ncfsa4	galva	m-p10258-p2s6w53
 <g />
-…	zs	…	m-p10258-p2s6w54
+…	zs	...	m-p10258-p2s6w54
 </s>
 <s>
 4.	xo	4.	m-p6552-p1s1w1
@@ -30609,7 +30609,7 @@ pie	sppd	pie	m-p10138-p1s2w20
 manām	ps0fpdn	mana	m-p10138-p1s2w21
 durvīm	ncfdd6	durvis	m-p10138-p1s2w22
 <g />
-…	zs	…	m-p10138-p1s2w23
+…	zs	...	m-p10138-p1s2w23
 </s>
 <s>
 No	spsg	no	m-p10138-p1s3w1
@@ -32771,7 +32771,7 @@ par	spsa	par	m-p3404-p6s3w4
 ,	zc	,	m-p3404-p6s3w6
 bet	cc	bet	m-p3404-p6s3w7
 šīs	pd3fpnn	šī	m-p3404-p6s3w8
-rūpes	ncfdn5	rūpes	m-p3404-p6s3w9
+rūpes	ncfdn5	rūpe	m-p3404-p6s3w9
 ir	vcnipii30an	būt	m-p3404-p6s3w10
 atšķirīgas	affpnnp	atšķirīgs	m-p3404-p6s3w11
 <g />
@@ -33047,7 +33047,7 @@ iederēsies	vmyifi330an	iederēties	m-p13508-p6s3w7
 pie	spsg	pie	m-p13508-p6s3w8
 svaigu	afmpgnp	svaigs	m-p13508-p6s3w9
 dārzeņu	ncmpg2	dārzenis	m-p13508-p6s3w10
-salātiem	ncmdd1	salāti	m-p13508-p6s3w11
+salātiem	ncmdd1	salāts	m-p13508-p6s3w11
 <g />
 ,	zc	,	m-p13508-p6s3w12
 zivīm	ncfpd6	zivs	m-p13508-p6s3w13
@@ -34863,7 +34863,7 @@ arī	q	arī	m-p136-p9s5w14
 nosaukt	vmnn0t1000n	nosaukt	m-p136-p9s5w15
 precīzu	afmsanp	precīzs	m-p136-p9s5w16
 okupācijas	ncfsg4	okupācija	m-p136-p9s5w17
-beigu	ncfpg4	beiga	m-p136-p9s5w18
+beigu	ncfpg4	beigas	m-p136-p9s5w18
 datumu	ncmsa1	datums	m-p136-p9s5w19
 <g />
 .	zs	.	m-p136-p9s5w20
@@ -35890,7 +35890,7 @@ tikai	q	tikai	m-p9994-p1s1w22
 šo	pd3mpgn	šis	m-p9994-p1s1w23
 seno	afmpgyp	sens	m-p9994-p1s1w24
 darbu	ncmpg1	darbs	m-p9994-p1s1w25
-iemaņas	ncfda4	iemaņas	m-p9994-p1s1w26
+iemaņas	ncfda4	iemaņa	m-p9994-p1s1w26
 –	zd	-	m-p9994-p1s1w27
 tāda	pd0fsnn	tāda	m-p9994-p1s1w28
 gaisotne	ncfsn5	gaisotne	m-p9994-p1s1w29
@@ -40396,7 +40396,7 @@ eksistencei	ncfsd5	eksistence	m-p10132-p3s2w20
 –	zd	-	m-p10132-p3s2w21
 stulbums	ncmsn1	stulbums	m-p10132-p3s2w22
 <g />
-…	zs	…	m-p10132-p3s2w23
+…	zs	...	m-p10132-p3s2w23
 </s>
 <s>
 Ja	cs	ja	m-p10132-p3s3w1
@@ -40432,7 +40432,7 @@ mājlopiem	ncmpd1	mājlops	m-p10132-p3s3w23
 <g />
 </s>
 <s>
-…	zs	…	m-p10132-p3s4w1
+…	zs	...	m-p10132-p3s4w1
 </s>
 <s>
 Padomāsim	vmnifi21pan	padomāt	m-p10132-p3s5w1
@@ -40462,7 +40462,7 @@ galaktikas	ncfpa4	galaktika	m-p10132-p3s5w19
 <g />
 </s>
 <s>
-…	zs	…	m-p10132-p3s6w1
+…	zs	...	m-p10132-p3s6w1
 </s>
 <s>
 Ir	vmnipii30an	būt	m-p10132-p3s7w1
@@ -40491,7 +40491,7 @@ noticēt	vmnn0i3000n	noticēt	m-p10132-p3s7w18
 <g />
 </s>
 <s>
-…	zs	…	m-p10132-p3s8w1
+…	zs	...	m-p10132-p3s8w1
 </s>
 <s>
 2008.	xo	2008.	m-z108-p199s1w1

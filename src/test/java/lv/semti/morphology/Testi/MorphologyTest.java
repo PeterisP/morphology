@@ -2702,6 +2702,13 @@ public class MorphologyTest {
         }
     }
 
+    @Test
+    public void turpms2() {
+        Word Turpmākajā = locītājs.analyze("Turpmākajā");
+        assertTrue(Turpmākajā.isRecognized());
+        assertLemma("Turpmākajā", "turpmāks");
+    }
+
     //    https://github.com/PeterisP/morphology/issues/12
     @Test
     public void pase() {
