@@ -3700,6 +3700,7 @@ public class MorphologyTest {
         List<Wordform> forms = locītājs.generateInflections("Rīga");
         for (Wordform wf2 : forms) {
             assertFalse(wf2.isMatchingStrong(AttributeNames.i_Number, AttributeNames.v_Plural));
+            assertNotEquals("Rīgām", wf2.getValue(AttributeNames.i_Lemma));
             // Do not generate plural forms for Tezaurs.lv morphology tables
         }
     }

@@ -794,6 +794,7 @@ public class Analyzer extends Lexicon {
         }
         l.addAttributes(lemmaAttributes);
         ArrayList<Wordform> result = generateInflections(l, lemma);
+		filterInflectionPossibilities(false, null, result);
         p.removeLexeme(l); // To not pollute the in-memory lexicon
 
         return result;
@@ -806,6 +807,7 @@ public class Analyzer extends Lexicon {
 	}
 
 	// generate all forms if the paradigm # and also the three lemmas (for 1st conjugation) are known
+	// FIXME - DRY, repeats previous function
 	public ArrayList<Wordform> generateInflectionsFromParadigm(String lemma, int paradigm, String stem1, String stem2, String stem3) {
 		Paradigm p = this.paradigmByID(paradigm);
 
@@ -820,13 +822,14 @@ public class Analyzer extends Lexicon {
 		}
 
 		Lexeme l = this.createLexeme(lemma, p.getLemmaEnding().getID(), "temp");
-		if (l == null) { // Couldn't create the lexeme - the word didn't wasn't compatible with the supplied paradigm
+		if (l == null) { // Couldn't create the lexeme - the word wasn't compatible with the supplied paradigm
 			return new ArrayList<Wordform>();
 		}
         l.setStem(0, stem1);
         l.setStem(1, stem2);
         l.setStem(2, stem3);
 		ArrayList<Wordform> result = generateInflections(l, lemma);
+		filterInflectionPossibilities(false, null, result);
 		p.removeLexeme(l); // To not pollute the in-memory lexicon
 
 		return result;

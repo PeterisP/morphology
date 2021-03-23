@@ -144,6 +144,7 @@ public class AttributeValues implements FeatureStructure, Cloneable {
 	 * this.
 	 */
 	public boolean isMatchingWeak(AttributeValues testSet) {
+		if (testSet == null) return true;
 		boolean der = true;
 		for (Entry<String,String> pāris : testSet.entrySet()) {
 			if (!this.isMatchingWeak(pāris.getKey(), pāris.getValue()))
