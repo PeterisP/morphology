@@ -249,7 +249,8 @@ public class AttributeNames {
 
     public static final String i_Usage = "Lietojums";
     public static final String v_Regional = "Apvidvārds";
-	public static final String v_OldRegional = "[\"Apvidvārds\",\"Novecojis\"]"; // FIXME
+	public static final String v_Outdated = "Novecojis";
+	public static final String v_RegionalOutdated = "[\"Apvidvārds\",\"Novecojis\"]";
 
     public static final String i_EntryProperties = "Leksēmas pamatformas īpatnības";
 	public final static String v_EntryComparative = "Pārākā pakāpe"; // TODO - tizls nosaukums

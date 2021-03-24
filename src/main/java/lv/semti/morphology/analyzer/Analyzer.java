@@ -215,20 +215,24 @@ public class Analyzer extends Lexicon {
 		if (result.isRecognized() && (removeRareWords || removeRegionalWords)) {
 			boolean hasNonrareOption = false;
 			for (Wordform wf : result.wordforms) {
-				if (removeRareWords && wf.isMatchingStrong(AttributeNames.i_Frequency, AttributeNames.v_Rare))
+				if (removeRareWords && (wf.isMatchingStrong(AttributeNames.i_Frequency, AttributeNames.v_Rare) ||
+						wf.isMatchingStrong(AttributeNames.i_Usage, AttributeNames.v_Outdated)))
 					continue; // rare and removed
 				if (removeRegionalWords && (wf.isMatchingStrong(AttributeNames.i_Usage, AttributeNames.v_Regional) ||
-						wf.isMatchingStrong(AttributeNames.i_Usage, AttributeNames.v_OldRegional)))
+						wf.isMatchingStrong(AttributeNames.i_Usage, AttributeNames.v_RegionalOutdated)))
 					continue; // regional and removed
 				hasNonrareOption = true;
 			}
 
 			List<Wordform> to_remove = new LinkedList<Wordform>();
 			for (Wordform wf : result.wordforms) {
-				if (removeRareWords && hasNonrareOption && wf.isMatchingStrong(AttributeNames.i_Frequency, AttributeNames.v_Rare))
+				if (removeRareWords && hasNonrareOption && (
+						wf.isMatchingStrong(AttributeNames.i_Frequency, AttributeNames.v_Rare) ||
+						wf.isMatchingStrong(AttributeNames.i_Usage, AttributeNames.v_Outdated)
+				))
 					to_remove.add(wf); // we remove rare words only if there's a non-rare option remaining, i.e. only in overlap
 				if (removeRegionalWords && (wf.isMatchingStrong(AttributeNames.i_Usage, AttributeNames.v_Regional) ||
-						wf.isMatchingStrong(AttributeNames.i_Usage, AttributeNames.v_OldRegional)))
+						wf.isMatchingStrong(AttributeNames.i_Usage, AttributeNames.v_RegionalOutdated)))
 					to_remove.add(wf); // we remove regional words whenever the flag is set, even without overlap
 			}
 			result.wordforms.removeAll(to_remove);

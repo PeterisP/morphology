@@ -20,10 +20,6 @@
     </Lexeme>
   </Paradigm>
   <Paradigm Stems="1" ID="13" LemmaEnding="135" Description="Īpašības vārdi ar -s">
-    <Attributes Vārdšķira="Īpašības vārds"/>
-    <Lexeme Stem1="pēdēj">
-      <Attributes Īpašības_vārda_tips="Attieksmes"/>
-    </Lexeme>
   </Paradigm>
   <Paradigm Stems="1" ID="14" LemmaEnding="180" Description="Īpašības vārdi ar -š">
     <Attributes Vārdšķira="Īpašības vārds"/>

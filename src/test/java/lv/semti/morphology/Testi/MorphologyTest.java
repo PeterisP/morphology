@@ -79,7 +79,7 @@ public class MorphologyTest {
     private void assertLemma(String word, String expectedLemma) {
         Word analysis = locītājs.analyze(word);
         if (!analysis.isRecognized())
-            System.err.printf("'%s' should be recognizable", word);
+            System.out.printf("'%s' should be recognizable", word);
         assertTrue(analysis.isRecognized());
         Wordform forma = analysis.getBestWordform();
         assertEquals(expectedLemma, forma.getValue(AttributeNames.i_Lemma));
@@ -2737,10 +2737,18 @@ public class MorphologyTest {
                 describe(new LinkedList<Wordform>(Collections.singletonList(forma)));
             assertNotEquals("pēdējajam", forma.getToken()); // šo formu nedrīkst ģenerēt
         }
-        assertLemma("pēdējam", "pēdējs");
-        assertLemma("pēdējajam", "pēdējs");  // bet drīkst atpazīt
-        assertLemma("vispēdējākais", "pēdējs");
-        assertLemma("vispēdējākajam", "pēdējs");
+
+        formas = locītājs.generateInflections("pēdējais");
+        for (Wordform forma : formas) {
+            if (forma.getToken().equalsIgnoreCase("pēdējajam"))
+                describe(new LinkedList<Wordform>(Collections.singletonList(forma)));
+            assertNotEquals("pēdējajam", forma.getToken()); // šo formu nedrīkst ģenerēt
+        }
+        assertLemma("pēdējam", "pēdējais");
+        assertLemma("pēdējajam", "pēdējais");  // bet drīkst atpazīt
+        assertLemma("pēdējs", "pēdējs"); // ja nu kāds tā pasaka, tad lai ir tā novecojusī lemma
+        assertLemma("vispēdējākais", "pēdējs");  // vai tā ir ok?
+        assertLemma("vispēdējākajam", "pēdējs"); // vai tā ir ok?
     }
 
     @Test
