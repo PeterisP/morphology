@@ -239,10 +239,11 @@ public class MorphoEvaluate {
 //		for (String mistake:mistakes){
 //			izeja.println(mistake);
 //		}
+		int limit_differences = 1;
         int singletons = 0;
 		for (String key : sortedByDescendingFrequency(mistakes_by_lemma).keySet()) {
             Collection<String> list = mistakes_by_lemma.get(key);
-            if (list.size()<=1) {
+            if (list.size()<limit_differences) {
                 singletons++;
                 continue;
             }
@@ -252,7 +253,7 @@ public class MorphoEvaluate {
             for (String mistake : sortedlist)
                 izeja.println(mistake);
         }
-        izeja.printf(".... un %d izolētas atšķirības\n", singletons);
+		if (singletons > 0) izeja.printf(".... un %d izolētas atšķirības\n", singletons);
 
 		LinkedHashMap<String, Integer> most_common_oov = new LinkedHashMap<>();
 		oov_frequency.entrySet()
@@ -260,10 +261,11 @@ public class MorphoEvaluate {
 				.sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
 				.forEachOrdered(x -> most_common_oov.put(x.getKey(), x.getValue()));
 
-		izeja.printf("Biežākie vārdi, kas nav leksikonā:");
+		int top_oov_words = 100;
+		izeja.printf("%d biežākie vārdi, kas nav leksikonā:", top_oov_words);
 		most_common_oov.entrySet()
 				.stream()
-				.limit(10)
+				.limit(top_oov_words)
 				.forEachOrdered(e -> izeja.printf("\t%s : %d\n", e.getKey(), e.getValue()));
 		
 		long beigas = System.currentTimeMillis();

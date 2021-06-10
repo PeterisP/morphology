@@ -18,25 +18,25 @@
 package lv.semti.morphology.Testi;
 
 
-import static org.junit.Assert.*;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.io.PrintWriter;
-import java.io.UnsupportedEncodingException;
-import java.util.*;
-import java.util.Map.Entry;
-
+import lv.semti.morphology.analyzer.Analyzer;
+import lv.semti.morphology.analyzer.Splitting;
+import lv.semti.morphology.analyzer.Word;
+import lv.semti.morphology.analyzer.Wordform;
+import lv.semti.morphology.attributes.AttributeNames;
+import lv.semti.morphology.attributes.AttributeValues;
+import lv.semti.morphology.lexicon.Ending;
+import lv.semti.morphology.lexicon.Lexeme;
+import lv.semti.morphology.lexicon.Paradigm;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Ignore;
 import org.junit.Test;
 
-import lv.semti.morphology.analyzer.*;
-import lv.semti.morphology.attributes.*;
-import lv.semti.morphology.lexicon.*;
+import java.io.*;
+import java.util.*;
+import java.util.Map.Entry;
+
+import static org.junit.Assert.*;
 
 public class MorphologyTest {
     private static Analyzer locītājs;

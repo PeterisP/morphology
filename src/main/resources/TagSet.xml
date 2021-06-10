@@ -79,7 +79,7 @@
 	<Value LV="Atstāstījuma" EN="Relative" Tag="r"/>
 	<Value LV="Vēlējuma" EN="Conditional" Tag="c"/>
 	<Value LV="Vajadzības" EN="Debitive" Tag="d"/>
-	<Value LV="Vajadzības, atstāstījuma paveids" EN="Debitive" Tag="?"/>
+	<Value LV="Vajadzības, atstāstījuma paveids" EN="Debitive" Tag="d"/>
 	<Value LV="Pavēles" EN="Imperative" Tag="m"/>
 	<Value LV="Nenoteiksme" EN="Infinitive" Tag="n"/>
 	<Value LV="Divdabis" EN="Participle" Tag="p"/>
