@@ -3824,14 +3824,19 @@ public class MorphologyTest {
 
     @Test
     public void divdabjlemmas() {
-        Word w = locītājs.analyze("nepieciešamās");
+        Word w = locītājs.analyze("nebēdņojās");
         assertTrue(w.isRecognized());
-        assertLemma("nepieciešamās", "nepieciest");
+        assertLemma("nebēdņojās", "nebēdņoties");
+
+        w = locītājs.analyze("nepieciešamās");
+        assertTrue(w.isRecognized());
+        assertLemma("nepieciešamās", "pieciest");
     }
 
     @Test
     public void dīvainie_noliegumi() {
         assertLemma("neesat", "būt");
+        assertLemma("nerakt", "rakt");
     }
 
     @Test
