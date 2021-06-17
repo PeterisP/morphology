@@ -786,8 +786,12 @@ public class Analyzer extends Lexicon {
             AttributeValues plural_nominative = new AttributeValues();
             plural_nominative.addAttribute(AttributeNames.i_Number, AttributeNames.v_Plural);
             plural_nominative.addAttribute(AttributeNames.i_Case, AttributeNames.v_Nominative);
+			if (ending.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adjective)) {
+				plural_nominative.addAttribute(AttributeNames.i_Definiteness, AttributeNames.v_Indefinite);
+				plural_nominative.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Masculine);
+			}
             for (Ending candidate_ending : ending.getParadigm().endings) {
-                if (candidate_ending.isMatchingStrong(plural_nominative)) {
+                if (candidate_ending.isMatchingStrongOneSide(plural_nominative)) {
                     ending = candidate_ending;
                 }
             }

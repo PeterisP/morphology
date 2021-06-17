@@ -3992,6 +3992,11 @@ public class MorphologyTest {
         av.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Feminine);
         List<Wordform> formas = locītājs.generateInflectionsFromParadigm("ālava", 13, av);
         assertNotEquals(0, formas.size());
+
+        av = new AttributeValues();
+        av.addAttribute(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum);
+        formas = locītājs.generateInflectionsFromParadigm("abēji", 13, av);
+        assertNotEquals(0, formas.size());
     }
 
     @Test

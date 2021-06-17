@@ -128,6 +128,19 @@ public class AttributeValues implements FeatureStructure, Cloneable {
 		}
 		return match;
 	}
+
+	/**
+	 * Returns true either if all attributes in provided test set are strongly
+	 * matching on this, i.e. they must exist and match.
+	 */
+	public boolean isMatchingStrongOneSide(AttributeValues testSet) {
+		boolean match = true;
+		for (Entry<String,String> aVPair : testSet.entrySet()) {
+			if (!this.isMatchingStrong(aVPair.getKey(), aVPair.getValue()))
+				match = false;
+		}
+		return match;
+	}
 	
 	/**
 	 * Returns true either if the attribute exists and matches the provided
