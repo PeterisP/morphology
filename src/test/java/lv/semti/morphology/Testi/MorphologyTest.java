@@ -3075,6 +3075,12 @@ public class MorphologyTest {
         testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
         testset.addAttribute(AttributeNames.i_Person, "2");
         assertInflection(formas, testset, "esi");
+
+        testset.addAttribute(AttributeNames.i_Izteiksme, AttributeNames.v_Iisteniibas);
+        testset.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Tagadne);
+        testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+        testset.addAttribute(AttributeNames.i_Person, "1");
+        assertInflection(formas, testset, "esmu");
     }
 
     @Test
@@ -3930,6 +3936,7 @@ public class MorphologyTest {
         List<Wordform> formas = locītājs.generateInflections("nebēdņot");
         for (Wordform wf : formas) {
             assertNotEquals("nenebēdņot", wf.getToken());
+            assertNotEquals("jānebēdņo", wf.getToken());
         }
 
         Word w = locītājs.analyze("nenebēdņot");
@@ -3962,6 +3969,29 @@ public class MorphologyTest {
         assertTrue(w.isRecognized());
         w.describe(System.out);
         assertEquals("būt", w.getBestWordform().getValue(AttributeNames.i_Lemma));
+    }
+
+    @Test
+    public void nebēdņot_caur_paradigmu() {
+        List<Wordform> formas = locītājs.generateInflections("nebēdņot");
+        for (Wordform wf : formas) {
+            assertNotEquals ("jānebēdņo", wf.getToken());
+        }
+
+        AttributeValues av = new AttributeValues();
+        av.addAttribute(AttributeNames.i_Noliegums, AttributeNames.v_Yes);
+        formas = locītājs.generateInflectionsFromParadigm("nebēdņot", 16, av);
+        for (Wordform wf : formas) {
+            assertNotEquals ("jānebēdņo", wf.getToken());
+        }
+    }
+
+    @Test
+    public void ticket_94() {
+        AttributeValues av = new AttributeValues();
+        av.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Feminine);
+        List<Wordform> formas = locītājs.generateInflectionsFromParadigm("ālava", 13, av);
+        assertNotEquals(0, formas.size());
     }
 }
 

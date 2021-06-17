@@ -778,7 +778,8 @@ public class Analyzer extends Lexicon {
         if (p.getStems() > 1)  // For 1st conjugation verbs, lemma is not enough info to inflect properly
             return generateInflections(lemma); // Assume that it will be in current lexicon..
 
-        Ending ending = p.getLemmaEnding();
+        Ending ending = p.getLemmaEnding(); // We expect that the lemma will be the default lemma, unless...
+		// if attributes list plurare tantum, then we look for plural nominative as the lemma
         if (lemmaAttributes.isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum)
                 && !ending.isMatchingWeak(AttributeNames.i_Number, AttributeNames.v_Plural)) {
             // Assuming that there will be only one plural nominative entry in case of daudzskaitlinieki
@@ -791,6 +792,23 @@ public class Analyzer extends Lexicon {
                 }
             }
         }
+        // if attributes list feminine gender, then we look for feminine singular nominative as the lema
+		if (lemmaAttributes.isMatchingStrong(AttributeNames.i_Gender, AttributeNames.v_Feminine)
+				&& !ending.isMatchingWeak(AttributeNames.i_Gender, AttributeNames.v_Feminine)) {
+			// Assuming that there will be only one fitting form
+			AttributeValues feminine_lemma = new AttributeValues();
+			feminine_lemma.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+			feminine_lemma.addAttribute(AttributeNames.i_Case, AttributeNames.v_Nominative);
+			feminine_lemma.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Feminine);
+			if (ending.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adjective)) {
+				feminine_lemma.addAttribute(AttributeNames.i_Definiteness, AttributeNames.v_Indefinite);
+			}
+			for (Ending candidate_ending : ending.getParadigm().endings) {
+				if (candidate_ending.isMatchingStrong(feminine_lemma)) {
+					ending = candidate_ending;
+				}
+			}
+		}
 
         if (!lemma.endsWith(ending.getEnding())) {
             System.err.printf("Attempted to generate inflections for lemma '%s' at paradigm '%d'; failed because of mismatched ending\n", lemma, paradigm);
@@ -988,9 +1006,10 @@ public class Analyzer extends Lexicon {
 					if (locījums.isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum) && locījums.isMatchingStrong(AttributeNames.i_Number, AttributeNames.v_Singular)) validOption = false;
 					if (locījums.isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_SingulareTantum) && locījums.isMatchingStrong(AttributeNames.i_Number, AttributeNames.v_Plural)) validOption = false;
 					if (GenerationBlacklist.blacklist(locījums)) validOption = false;
-					if (noliegums && (locījums.isMatchingStrong(AttributeNames.i_Izteiksme, AttributeNames.v_VajadziibasAtstaastiijuma)
-							|| locījums.isMatchingStrong(AttributeNames.i_Izteiksme, AttributeNames.v_Vajadziibas))) validOption = false;
 					if (noliegums) locījums.addAttribute(AttributeNames.i_Noliegums, AttributeNames.v_Yes);
+					if (locījums.isMatchingStrong(AttributeNames.i_Noliegums, AttributeNames.v_Yes) &&
+							(locījums.isMatchingStrong(AttributeNames.i_Izteiksme, AttributeNames.v_VajadziibasAtstaastiijuma)
+							|| locījums.isMatchingStrong(AttributeNames.i_Izteiksme, AttributeNames.v_Vajadziibas))) validOption = false;
 					if (validOption) inflections.add(locījums);
 		    	}
 			}
@@ -1004,6 +1023,8 @@ public class Analyzer extends Lexicon {
         for (Lexeme formLexeme : hc_forms) {
             Ending ending = formLexeme.getParadigm().getLemmaEnding();
             Wordform hardcoded = new Wordform(formLexeme.getStem(0), formLexeme, ending);
+            if (!hardcoded.isMatchingWeak(AttributeNames.i_Generate, AttributeNames.v_Yes))
+            	continue;
             if (!lexeme.getParadigm().isMatchingWeak(AttributeNames.i_PartOfSpeech, hardcoded.getValue(AttributeNames.i_PartOfSpeech)))
                 continue;
 			if (hardcoded.isMatchingStrong(AttributeNames.i_Noliegums, AttributeNames.v_Yes) && !lemma.startsWith("ne"))
