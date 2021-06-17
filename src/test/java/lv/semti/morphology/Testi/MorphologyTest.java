@@ -3993,5 +3993,23 @@ public class MorphologyTest {
         List<Wordform> formas = locītājs.generateInflectionsFromParadigm("ālava", 13, av);
         assertNotEquals(0, formas.size());
     }
+
+    @Test
+    public void ticket_100() {
+        List<Wordform> formas = locītājs.generateInflections("zaļš");
+        for (Wordform wf : formas) {
+            if (wf.getToken().equalsIgnoreCase("zaļi") && wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adverb)) {
+                wf.describe();
+                assertEquals(AttributeNames.v_Yes, wf.getValue(AttributeNames.i_Derivative));
+            }
+        }
+
+        formas = locītājs.generateInflections("rakt");
+        for (Wordform wf : formas) {
+            if (wf.getToken().equalsIgnoreCase("rakšana")) {
+                assertEquals(AttributeNames.v_Yes, wf.getValue(AttributeNames.i_Derivative));
+            }
+        }
+    }
 }
 

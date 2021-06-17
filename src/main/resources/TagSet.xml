@@ -432,9 +432,11 @@
 	<Value LV="Bērnu valoda" EN="Children"/>
 	<Value LV="[&quot;Sarunvaloda&quot;,&quot;Vēsturisks&quot;]" EN="Historical/Colloquial"/>
 	<Value LV="[&quot;Novecojis&quot;,&quot;Sarunvaloda&quot;]" EN="Dated/Colloquial"/>	
+	<Value LV="[&quot;Barbarisms&quot;,&quot;Sarunvaloda&quot;]" EN="Barbaric/Colloquial"/>	
 	<Value LV="[&quot;Neliterārs&quot;,&quot;Sarunvaloda&quot;]" EN="Colloquial"/>	
 	<Value LV="[&quot;Neliterārs&quot;,&quot;Sarunvaloda&quot;,&quot;Vēsturisks&quot;]" EN="Colloquial"/>
 	<Value LV="[&quot;Apvidvārds&quot;,&quot;Vulgārisms&quot;]" EN="Vulgar"/>
+	<Value LV="[&quot;Apvidvārds&quot;,&quot;Novecojis&quot;]" EN="Regional/Dated"/>
 	<Value LV="[&quot;Apvidvārds&quot;,&quot;Bērnu valoda&quot;]" EN="Children"/>
 </Attribute>
 
@@ -471,7 +473,9 @@
 	<Value LV="[&quot;Fizika&quot;,&quot;Medicīna&quot;]" EN="Physics/Medicine"/>
 	<Value LV="[&quot;Fizika&quot;,&quot;Matemātika&quot;]" EN="Physics/Mathemathics"/>
 	<Value LV="Literatūrzinātne" EN="Literary science"/>
+	<Value LV="Literatūra" EN="Literature"/>
 	<Value LV="Valodniecība" EN="Linguistics"/>
+	<Value LV="Filoloģija" EN="Philology"/>
 	<Value LV="[&quot;Literatūrzinātne&quot;,&quot;Valodniecība&quot;]" EN="Literary science/Linguistics"/>
 	<Value LV="Mūzika" EN="Music"/>
 	<Value LV="[&quot;Literatūrzinātne&quot;,&quot;Mūzika&quot;]" EN="Literary science/Music"/>
@@ -481,10 +485,13 @@
 	<Value LV="Medicīna" EN="Medicine"/>
 	<Value LV="Veterinārija" EN="Veterinary"/>
 	<Value LV="[&quot;Medicīna&quot;,&quot;Veterinārija&quot;]" EN="Medicine/Veterinary"/>
+	<Value LV="[&quot;Lopkopība&quot;,&quot;Medicīna&quot;]" EN="Animal husbandry/Medicine"/>
 	<Value LV="[&quot;Bioloģija&quot;,&quot;Medicīna&quot;]" EN="Biology/Medicine"/>
+	<Value LV="[&quot;Medicīna&quot;,&quot;Ķīmija&quot;]" EN="Medicine/Chemistry"/>
 	<Value LV="Farmakoloģija" EN="Pharmacology"/>
 	<Value LV="Arheoloģija" EN="Archeology"/>
 	<Value LV="Psiholoģija" EN="Psychology"/>
+	<Value LV="[&quot;Medicīna&quot;,&quot;Psiholoģija&quot;]" EN="Medicine/Psychology"/>
 	<Value LV="Filozofija" EN="Philosophy"/>
 	<Value LV="[&quot;Filozofija&quot;,&quot;Psiholoģija&quot;]" EN="Philosophy/Psychology"/>
 	<Value LV="Meteoroloģija" EN="Meteorology"/>
@@ -514,12 +521,15 @@
 	<Value LV="Informātika" EN="Informatics"/>
 	<Value LV="Tehnika" EN="Technical"/>
 	<Value LV="Tehnoloģija" EN="Technology"/>
-	<Value LV="Elektrotehnika" EN="Electrotechnical"/>
+	<Value LV="[&quot;Tehnoloģija&quot;,&quot;Ķīmija&quot;]" EN="Technology/Chemistry"/>
+	<Value LV="Elektrotehnika" EN="Electrotechnical"/>	
+	<Value LV="Elektronika" EN="Electronics"/>	
 	<Value LV="Hidrotehnika" EN="Hydrotechnical"/>
 	<Value LV="Tekstilrūpniecība" EN="Textiles"/>
 	<Value LV="Poligrāfija" EN="Poligraphy"/>
 	<Value LV="Lauksaimniecība" EN="Agriculture"/>
 	<Value LV="Lauksaimniecības tehnika" EN="Agriculture"/>
+	<Value LV="Lopkopība" EN="Animal husbandry"/>
 	<Value LV="Agronomija" EN="Agriculture"/>
 	<Value LV="Mežsaimniecība" EN="Forestry"/>
 	<Value LV="[&quot;Lauksaimniecība&quot;,&quot;Mežsaimniecība&quot;]" EN="Agriculture/Forestry"/>
@@ -538,9 +548,13 @@
 	<Value LV="Apģērbi" EN="Clothing"/>
 	<Value LV="Fototehnika" EN="Photography"/>
 	<Value LV="Fotogrāfija" EN="Photography"/>
+	<Value LV="Kinematogrāfija" EN="Cinematography"/>
 	<Value LV="[&quot;Fotogrāfija&quot;,&quot;Kinematogrāfija&quot;]" EN="Photography/Cinematography"/>
 	<Value LV="[&quot;Fotogrāfija&quot;,&quot;Kinematogrāfija&quot;,&quot;Televīzija&quot;]" EN="Photography/Cinematography/Television"/>
+	<Value LV="[&quot;Informātika&quot;,&quot;Tehnika&quot;,&quot;Telekomunikācijas&quot;]" EN="Informatics/Technics/Telecommunications"/>
 	<Value LV="Aeronautika" EN="Aeronautics"/>
+	<Value LV="[&quot;Aeronautika&quot;,&quot;Jūrniecība&quot;]" EN="Aeronautics/Marine"/>
+	<Value LV="[&quot;Jūrniecība&quot;,&quot;Meteoroloģija&quot;]" EN="Marine/Meteorology"/>
 	<Value LV="Bioķīmija" EN="Biochemistry"/>
 	<Value LV="Glezniecība" EN="Painting"/>
 	<Value LV="Televīzija" EN="Television"/>
@@ -549,6 +563,7 @@
 	<Value LV="Socioloģija" EN="Sociology"/>
 	<Value LV="Papīrrūpniecība" EN="Paper manufacturing"/>
 	<Value LV="Vēsturisks vietvārds" EN="Historical toponym"/>
+	<Value LV="Vēsturisks personvārds" EN="Historical person name"/>
 	<Value LV="Attiecas uz kapitālistisko iekārtu, kapitālistisko sabiedrību" EN="Capitalism"/>
 </Attribute>
 
@@ -644,6 +659,7 @@
 	<Value LV="Nenoteiksmes homoformas" EN="Infinitive homonym"/>
 	<Value LV="Vairākos punktos lokāms saliktenis" EN="Compound noun with multiple inflection points"/>
 	<Value LV="[&quot;Paralēlās formas&quot;,&quot;Vairākos punktos lokāms saliktenis&quot;]" EN="Parallel forms/Compound noun with multiple inflection points"/>
+	<Value LV="Sastingusi forma" EN="Frozen form"/>
 </Attribute>
 <!--
 <Attribute LV="Kontaminācija" EN="Contamination">

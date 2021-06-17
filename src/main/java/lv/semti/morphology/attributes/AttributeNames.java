@@ -217,7 +217,8 @@ public class AttributeNames {
 	public static final String v_Deminutive = "Deminutīvu atvasināšana";
 	public static final String v_Prefix = "Priedēkļu atvasināšana";
 	public static final String v_Ending = "Minēšana pēc galotnes";
-	
+	public static final String i_Derivative = "Sistemātisks atvasinājums";
+
 	public static final String i_CapitalLetters = "Lielo burtu lietojums";
 	public static final String v_Lowercase = "Mazie burti";
 	public static final String v_FirstUpper = "Sākas ar lielo burtu";
