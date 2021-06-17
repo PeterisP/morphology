@@ -3077,6 +3077,12 @@
     <Lexeme Stem1="divpadsmittūkstoš">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši"/>
     </Lexeme>
+    <Lexeme Stem1="nebūt">
+      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Nenoteiksme" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="Nepiemīt" Noliegums="Jā" Pamatforma="būt" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
+    </Lexeme>
+    <Lexeme Stem1="nebūt">
+      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Nenoteiksme" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="Nepiemīt" Noliegums="Jā" Pamatforma="būt" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
+    </Lexeme>
     <Lexeme Stem1="nav">
       <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="3" Noliegums="Jā" Pamatforma="būt" Laiks="Tagadne" Kārta="Darāmā"/>
     </Lexeme>
@@ -3220,6 +3226,12 @@
     </Lexeme>
     <Lexeme Stem1="deviņpadsmit">
       <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Skaitļu_kārta="Padsmiti"/>
+    </Lexeme>
+    <Lexeme Stem1="esu">
+      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="1" Noliegums="Nē" Pamatforma="būt" Laiks="Tagadne" Kārta="Darāmā" Ģenerēt="Nē"/>
+    </Lexeme>
+    <Lexeme Stem1="esu">
+      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="1" Noliegums="Nē" Pamatforma="būt" Laiks="Tagadne" Kārta="Darāmā" Ģenerēt="Nē"/>
     </Lexeme>
     <Lexeme Stem1="ir">
       <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="3" Noliegums="Nē" Pamatforma="būt" Laiks="Tagadne" Kārta="Darāmā"/>
@@ -3677,10 +3689,6 @@
     <Lexeme Stem1="bū" Stem2="es" Stem3="bij">
       <Attributes Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="būt"/>
     </Lexeme>  
-<!--    <Lexeme Stem1="nebū" Stem2="nees" Stem3="nebij">
-      <Attributes Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="būt"/>
-    </Lexeme>  
-  -->
 </Paradigm>
 <Paradigm Stems="1" ID="52" Description="Patstāvīgi -dams/-dama divdabji (pusjokodams)">
 </Paradigm>

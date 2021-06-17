@@ -2570,7 +2570,8 @@ public class MorphologyTest {
         testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
         assertInflection(formas, testset, "ir");
 
-        formas = locītājs.generateInflections("nebūt");
+        formas = locītājs.generateInflections("būt");
+        testset.addAttribute(AttributeNames.i_Noliegums, AttributeNames.v_Yes);
         assertInflection(formas, testset, "nav");
 
         formas = locītājs.generateInflections("viņš");
@@ -3827,6 +3828,7 @@ public class MorphologyTest {
         Word w = locītājs.analyze("nebēdņojās");
         assertTrue(w.isRecognized());
         assertLemma("nebēdņojās", "nebēdņoties");
+        assertEquals(AttributeNames.v_Yes, w.getBestWordform().getValue(AttributeNames.i_Noliegums));
 
         w = locītājs.analyze("nepieciešamās");
         assertTrue(w.isRecognized());
@@ -3880,6 +3882,86 @@ public class MorphologyTest {
             assertNotEquals("pārs", wf.getToken());
             assertNotEquals("pārākāks", wf.getToken());
         }
+    }
+
+    @Test
+    // https://github.com/PeterisP/morphology/issues/109
+    public void vajadzības_izteiksmes_noliegums() {
+        List<Wordform> formas = locītājs.generateInflections("skriet");
+        boolean found_negation = false;
+        for (Wordform wf : formas) {
+            if ( wf.getToken().equalsIgnoreCase("neskriet")) found_negation = true;
+            assertNotEquals("nejāskrien", wf.getToken());
+            assertNotEquals("jāneskrien", wf.getToken());
+        }
+        assertTrue("Jābūt atrastam 'neskriet'", found_negation);
+
+        formas = locītājs.generateInflections("prātot");
+        found_negation = false;
+        for (Wordform wf : formas) {
+            if ( wf.getToken().equalsIgnoreCase("neprātot")) found_negation = true;
+            assertNotEquals("nejāprāto", wf.getToken());
+            assertNotEquals("jāneprāto", wf.getToken());
+        }
+        assertTrue("Jābūt atrastam 'neprātot'", found_negation);
+    }
+
+    @Test
+    public void prefix_guessing_debitive() {
+        locītājs.enablePrefixes = false;
+        Word w = locītājs.analyze("pārsekot");
+        assertFalse(w.isRecognized());
+        w = locītājs.analyze("nesekot");
+        assertFalse(w.isRecognized());
+
+        locītājs.enablePrefixes = true;
+        w = locītājs.analyze("pārsekot");
+        assertTrue(w.isRecognized());
+        w = locītājs.analyze("jāpārseko");
+        assertTrue(w.isRecognized());
+        w = locītājs.analyze("nesekot");
+        assertTrue(w.isRecognized());
+        w = locītājs.analyze("jāneseko");
+        assertFalse(w.isRecognized());
+    }
+
+    @Test
+    public void noliegumu_noliegums() {
+        List<Wordform> formas = locītājs.generateInflections("nebēdņot");
+        for (Wordform wf : formas) {
+            assertNotEquals("nenebēdņot", wf.getToken());
+        }
+
+        Word w = locītājs.analyze("nenebēdņot");
+        assertFalse(w.isRecognized());
+    }
+
+    @Test
+    public void noliegtie_patstāvīgie_divdabji() {
+        Word w = locītājs.analyze("nepatīkams");
+        assertTrue(w.isRecognized());
+        Wordform wf = w.getBestWordform();
+        assertEquals(AttributeNames.v_Yes, wf.getValue(AttributeNames.i_Noliegums));
+    }
+
+    @Test
+    public void tabulu_trūkumi_20210706() {
+        Word w = locītājs.analyze("pabija");
+        assertTrue(w.isRecognized());
+        List<Wordform> formas = locītājs.generateInflections("pabūt");
+        boolean found = false;
+        for (Wordform wf : formas) {
+            if (wf.getToken().equalsIgnoreCase("pabija")) found = true;
+        }
+        assertTrue(found);
+    }
+
+    @Test
+    public void nebūt_lemma() {
+        Word w = locītājs.analyze("nebūt");
+        assertTrue(w.isRecognized());
+        w.describe(System.out);
+        assertEquals("būt", w.getBestWordform().getValue(AttributeNames.i_Lemma));
     }
 }
 

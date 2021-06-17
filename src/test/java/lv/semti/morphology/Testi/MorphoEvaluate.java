@@ -191,7 +191,7 @@ public class MorphoEvaluate {
                     if (found_lemma) {
                     	any_lemma_correct++;
 					} else {
-						String mistake_description = String.format("Lemma korpusā %s, analizatoram %s (%s)", e.lemma, mainwf.getValue(AttributeNames.i_Lemma), e.id);
+						String mistake_description = String.format("Lemma korpusā %s, analizatoram %s (%s - %s)", e.lemma, mainwf.getValue(AttributeNames.i_Lemma), mainwf.getToken(), e.id);
 						mistakes.add(mistake_description);
 						mistakes_by_lemma.put(e.lemma, mistake_description);
 					}

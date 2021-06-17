@@ -459,6 +459,11 @@ public class Analyzer extends Lexicon {
 				Word bezpriedēkļa = analyzeLowercase(cut_word, cut_word);
 				for (Wordform variants : bezpriedēkļa.wordforms)
 					if (variants.getEnding() != null && variants.getEnding().getParadigm() != null && variants.getEnding().getParadigm().getValue(AttributeNames.i_Konjugaacija) != null) { // Tikai no verbiem atvasinātās klases 
+						if (priedēklis.equals("ne") && (variants.isMatchingStrong(AttributeNames.i_Izteiksme, AttributeNames.v_VajadziibasAtstaastiijuma)
+								|| variants.isMatchingStrong(AttributeNames.i_Izteiksme, AttributeNames.v_Vajadziibas))
+								|| variants.isMatchingStrong(AttributeNames.i_Noliegums, AttributeNames.v_Yes) ) {
+							continue; // neģenerējam ne- atvasinājumus vajadzības izteiksmei un jau noliegtiem šķirkļiem
+						}
 						variants.setToken(word);
 						variants.addAttribute(AttributeNames.i_Source,"priedēkļu atvasināšana");
 						variants.addAttribute(AttributeNames.i_Prefix, priedēklis);
@@ -468,7 +473,6 @@ public class Analyzer extends Lexicon {
 						}
 						variants.addAttribute(AttributeNames.i_Guess, AttributeNames.v_Prefix);
 						variants.addAttribute(AttributeNames.i_Noliegums, priedēklis.equals("ne") ? AttributeNames.v_Yes : AttributeNames.v_No);
-
 						rezultāts.wordforms.add(variants);
 					}
 			}
@@ -984,6 +988,8 @@ public class Analyzer extends Lexicon {
 					if (locījums.isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum) && locījums.isMatchingStrong(AttributeNames.i_Number, AttributeNames.v_Singular)) validOption = false;
 					if (locījums.isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_SingulareTantum) && locījums.isMatchingStrong(AttributeNames.i_Number, AttributeNames.v_Plural)) validOption = false;
 					if (GenerationBlacklist.blacklist(locījums)) validOption = false;
+					if (noliegums && (locījums.isMatchingStrong(AttributeNames.i_Izteiksme, AttributeNames.v_VajadziibasAtstaastiijuma)
+							|| locījums.isMatchingStrong(AttributeNames.i_Izteiksme, AttributeNames.v_Vajadziibas))) validOption = false;
 					if (noliegums) locījums.addAttribute(AttributeNames.i_Noliegums, AttributeNames.v_Yes);
 					if (validOption) inflections.add(locījums);
 		    	}
@@ -1017,7 +1023,7 @@ public class Analyzer extends Lexicon {
         }
 
         // For verbs, generate also negated forms
-		if (!noliegums && lexeme.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb)) {
+		if (!noliegums && lexeme.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb) && !lexeme.isMatchingStrong(AttributeNames.i_Noliegums, AttributeNames.v_Yes)) {
 			ArrayList<Wordform> negated_inflections = generateInflections(lexeme,"ne"+lexeme.getValue(AttributeNames.i_Lemma));
 			inflections.addAll(negated_inflections);
 		}
