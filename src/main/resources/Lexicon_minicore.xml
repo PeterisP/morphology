@@ -2744,72 +2744,6 @@
   </Paradigm>
   <Paradigm Stems="1" ID="29" LemmaEnding="1158" Description="Hardcoded">
     <Attributes/>
-    <Lexeme Stem1="I">
-      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Skaitlis cipariem"/>
-    </Lexeme>
-    <Lexeme Stem1="II">
-      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Skaitlis cipariem"/>
-    </Lexeme>
-    <Lexeme Stem1="III">
-      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Skaitlis cipariem"/>
-    </Lexeme>
-    <Lexeme Stem1="IV">
-      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Skaitlis cipariem"/>
-    </Lexeme>
-    <Lexeme Stem1="V">
-      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Skaitlis cipariem"/>
-    </Lexeme>
-    <Lexeme Stem1="VI">
-      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Skaitlis cipariem"/>
-    </Lexeme>
-    <Lexeme Stem1="VII">
-      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Skaitlis cipariem"/>
-    </Lexeme>
-    <Lexeme Stem1="VIII">
-      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Skaitlis cipariem"/>
-    </Lexeme>
-    <Lexeme Stem1="IX">
-      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Skaitlis cipariem"/>
-    </Lexeme>
-    <Lexeme Stem1="X">
-      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Skaitlis cipariem"/>
-    </Lexeme>
-    <Lexeme Stem1="XI">
-      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Skaitlis cipariem"/>
-    </Lexeme>
-    <Lexeme Stem1="XII">
-      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Skaitlis cipariem"/>
-    </Lexeme>
-    <Lexeme Stem1="XIII">
-      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Skaitlis cipariem"/>
-    </Lexeme>
-    <Lexeme Stem1="XIV">
-      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Skaitlis cipariem"/>
-    </Lexeme>
-    <Lexeme Stem1="XV">
-      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Skaitlis cipariem"/>
-    </Lexeme>
-    <Lexeme Stem1="XVI">
-      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Skaitlis cipariem"/>
-    </Lexeme>
-    <Lexeme Stem1="XVII">
-      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Skaitlis cipariem"/>
-    </Lexeme>
-    <Lexeme Stem1="XVIII">
-      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Skaitlis cipariem"/>
-    </Lexeme>
-    <Lexeme Stem1="XIX">
-      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Skaitlis cipariem"/>
-    </Lexeme>
-    <Lexeme Stem1="XX">
-      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Skaitlis cipariem"/>
-    </Lexeme>
-    <Lexeme Stem1="trīsarpus">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt"/>
-    </Lexeme>
-    <Lexeme Stem1="divarpus">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt"/>
-    </Lexeme>
     <Lexeme Stem1="=">
       <Attributes Vārdšķira="Reziduālis"/>
     </Lexeme>
@@ -2945,87 +2879,9 @@
     <Lexeme Stem1="¤">
       <Attributes Vārdšķira="Reziduālis"/>
     </Lexeme>
-    <Lexeme Stem1="½">
-      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Skaitlis cipariem"/>
-    </Lexeme>
-    <Lexeme Stem1="¼">
-      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Skaitlis cipariem"/>
-    </Lexeme>
-    <Lexeme Stem1="¾">
-      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Skaitlis cipariem"/>
-    </Lexeme>
-    <Lexeme Stem1="¹">
-      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Skaitlis cipariem"/>
-    </Lexeme>
-    <Lexeme Stem1="²">
-      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Skaitlis cipariem"/>
-    </Lexeme>
-    <Lexeme Stem1="³">
-      <Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Skaitlis cipariem"/>
-    </Lexeme>
-    <Lexeme Stem1="trīstūkstoš">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši"/>
-    </Lexeme>
-    <Lexeme Stem1="sešpadsmit">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Skaitļu_kārta="Padsmiti"/>
-    </Lexeme>
-    <Lexeme Stem1="desmittūkstoš">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši"/>
-    </Lexeme>
-    <Lexeme Stem1="deviņtūkstoš">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši"/>
-    </Lexeme>
-    <Lexeme Stem1="divdesmit">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Desmiti"/>
-    </Lexeme>
     <Lexeme Stem1="neiet">
       <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Jā" Pamatforma="iet" Laiks="Tagadne" Kārta="Darāmā"/>
     </Lexeme>
-    <Lexeme Stem1="tūkstoti">
-      <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Vienskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Akuzatīvs" Skaitļu_kārta="Tūkstoši" Pamatforma="tūkstotis"/>
-    </Lexeme>
-    <Lexeme Stem1="divsimt">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Simti"/>
-    </Lexeme>
-    <Lexeme Stem1="divtūkstoš">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši"/>
-    </Lexeme>
-    <Lexeme Stem1="divpadsmit">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Skaitļu_kārta="Padsmiti"/>
-    </Lexeme>
-    <Lexeme Stem1="sešsimt">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Simti"/>
-    </Lexeme>
-    <Lexeme Stem1="sešpadsmittūkstoš">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši"/>
-    </Lexeme>
-    <Lexeme Stem1="četrsimttūkstoš">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši"/>
-    </Lexeme>
-    <Lexeme Stem1="četrpadsmit">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Skaitļu_kārta="Padsmiti"/>
-    </Lexeme>
-    <Lexeme Stem1="piecpadsmittūkstoš">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši"/>
-    </Lexeme>
-    <Lexeme Stem1="septiņsimt">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Simti"/>
-    </Lexeme>
-    <Lexeme Stem1="astoņpadsmit">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Skaitļu_kārta="Padsmiti"/>
-    </Lexeme>
-    <Lexeme Stem1="četrdesmittūkstoš">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši"/>
-    </Lexeme>
-    <Lexeme Stem1="piecsimt">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Simti"/>
-    </Lexeme>
-    <Lexeme Stem1="piecpadsmit">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Skaitļu_kārta="Padsmiti"/>
-    </Lexeme>
-    <Lexeme Stem1="astoņdesmittūkstoš">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši"/>
-    </Lexeme>
     <Lexeme Stem1="triju">
       <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Sieviešu" Locījums="Ģenitīvs" Skaitļu_kārta="Vieni" Pamatforma="trīs"/>
     </Lexeme>
@@ -3037,12 +2893,6 @@
     </Lexeme>
     <Lexeme Stem1="trīs">
       <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Ģenitīvs" Skaitļu_kārta="Vieni" Pamatforma="trīs"/>
-    </Lexeme>
-    <Lexeme Stem1="septiņdesmittūkstoš">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši"/>
-    </Lexeme>
-    <Lexeme Stem1="astoņpadsmittūkstoš">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši"/>
     </Lexeme>
     <Lexeme Stem1="trijām">
       <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Sieviešu" Locījums="Datīvs" Skaitļu_kārta="Vieni" Pamatforma="trīs"/>
@@ -3050,32 +2900,11 @@
     <Lexeme Stem1="trijās">
       <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Sieviešu" Locījums="Lokatīvs" Skaitļu_kārta="Vieni" Pamatforma="trīs"/>
     </Lexeme>
-    <Lexeme Stem1="deviņsimttūkstoš">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši"/>
-    </Lexeme>
     <Lexeme Stem1="trim">
       <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Sieviešu" Locījums="Datīvs" Skaitļu_kārta="Vieni" Pamatforma="trīs"/>
     </Lexeme>
     <Lexeme Stem1="trim">
       <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Datīvs" Skaitļu_kārta="Vieni" Pamatforma="trīs"/>
-    </Lexeme>
-    <Lexeme Stem1="piecdesmittūkstoš">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši"/>
-    </Lexeme>
-    <Lexeme Stem1="septiņpadsmittūkstoš">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši"/>
-    </Lexeme>
-    <Lexeme Stem1="desmit">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Skaitļu_kārta="Desmiti"/>
-    </Lexeme>
-    <Lexeme Stem1="pārdesmit">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Skaitļu_kārta="Desmiti"/>
-    </Lexeme>
-    <Lexeme Stem1="vienpadsmit">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Skaitļu_kārta="Padsmiti"/>
-    </Lexeme>
-    <Lexeme Stem1="divpadsmittūkstoš">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši"/>
     </Lexeme>
     <Lexeme Stem1="nebūt">
       <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Nenoteiksme" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="Nepiemīt" Noliegums="Jā" Pamatforma="būt" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
@@ -3089,68 +2918,11 @@
     <Lexeme Stem1="nav">
       <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Jā" Pamatforma="būt" Laiks="Tagadne" Kārta="Darāmā"/>
     </Lexeme>
-    <Lexeme Stem1="piecdesmit">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Desmiti"/>
-    </Lexeme>
-    <Lexeme Stem1="četrpadsmittūkstoš">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši"/>
-    </Lexeme>
-    <Lexeme Stem1="trīsdesmittūkstoš">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši"/>
-    </Lexeme>
-    <Lexeme Stem1="divdesmittūkstoš">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši"/>
-    </Lexeme>
-    <Lexeme Stem1="tūkstotis">
-      <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Vienskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Nominatīvs" Skaitļu_kārta="Tūkstoši" Pamatforma="tūkstotis"/>
-    </Lexeme>
-    <Lexeme Stem1="depiņpadsmittūkstoš">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši"/>
-    </Lexeme>
     <Lexeme Stem1="nebūsit">
       <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="2" Noliegums="Jā" Pamatforma="būt" Laiks="Nākotne" Kārta="Darāmā" Papildforma="Jā"/>
     </Lexeme>
     <Lexeme Stem1="nebūsit">
       <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="2" Noliegums="Jā" Pamatforma="būt" Laiks="Nākotne" Kārta="Darāmā" Papildforma="Jā"/>
-    </Lexeme>
-    <Lexeme Stem1="trīssimt">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Simti"/>
-    </Lexeme>
-    <Lexeme Stem1="trīspadsmittūkstoš">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši"/>
-    </Lexeme>
-    <Lexeme Stem1="deviņdesmittūkstoš">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši"/>
-    </Lexeme>
-    <Lexeme Stem1="septiņtūkstoš">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši"/>
-    </Lexeme>
-    <Lexeme Stem1="tūkstoš">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši"/>
-    </Lexeme>
-    <Lexeme Stem1="piectūkstoš">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši"/>
-    </Lexeme>
-    <Lexeme Stem1="simttūkstoš">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši"/>
-    </Lexeme>
-    <Lexeme Stem1="trīsdesmit">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Desmiti"/>
-    </Lexeme>
-    <Lexeme Stem1="četrdesmit">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Desmiti"/>
-    </Lexeme>
-    <Lexeme Stem1="tūkstotī">
-      <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Vienskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Lokatīvs" Skaitļu_kārta="Tūkstoši" Pamatforma="tūkstotis"/>
-    </Lexeme>
-    <Lexeme Stem1="simt">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Skaitļu_kārta="Simti"/>
-    </Lexeme>
-    <Lexeme Stem1="astoņsimttūkstoš">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši"/>
-    </Lexeme>
-    <Lexeme Stem1="deviņdesmit">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Desmiti"/>
     </Lexeme>
     <Lexeme Stem1="trīs">
       <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Nepiemīt" Locījums="Nepiemīt" Skaitļu_kārta="Vieni" Pamatforma="trīs"/>
@@ -3173,59 +2945,11 @@
     <Lexeme Stem1="trīs">
       <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Nominatīvs" Skaitļu_kārta="Vieni" Pamatforma="trīs"/>
     </Lexeme>
-    <Lexeme Stem1="astoņtūkstoš">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši"/>
-    </Lexeme>
-    <Lexeme Stem1="astoņsimt">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Simti"/>
-    </Lexeme>
-    <Lexeme Stem1="sešsimttūkstoš">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši"/>
-    </Lexeme>
-    <Lexeme Stem1="deviņsimt">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Simti"/>
-    </Lexeme>
-    <Lexeme Stem1="četrtūkstoš">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši"/>
-    </Lexeme>
-    <Lexeme Stem1="septiņpadsmit">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Skaitļu_kārta="Padsmiti"/>
-    </Lexeme>
-    <Lexeme Stem1="astoņdesmit">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Desmiti"/>
-    </Lexeme>
-    <Lexeme Stem1="sešdesmittūkstoš">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši"/>
-    </Lexeme>
-    <Lexeme Stem1="trīssimttūkstoš">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši"/>
-    </Lexeme>
-    <Lexeme Stem1="trīspadsmit">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Skaitļu_kārta="Padsmiti"/>
-    </Lexeme>
     <Lexeme Stem1="trijos">
       <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Lokatīvs" Skaitļu_kārta="Vieni" Pamatforma="trīs"/>
     </Lexeme>
-    <Lexeme Stem1="divsimttūkstoš">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši"/>
-    </Lexeme>
-    <Lexeme Stem1="tūkstoša">
-      <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Vienskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Ģenitīvs" Skaitļu_kārta="Tūkstoši" Pamatforma="tūkstotis"/>
-    </Lexeme>
-    <Lexeme Stem1="piecsimtūkstoš">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši"/>
-    </Lexeme>
-    <Lexeme Stem1="vienpadsmittūkstoš">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši"/>
-    </Lexeme>
-    <Lexeme Stem1="septiņsimttūkstoš">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši"/>
-    </Lexeme>
     <Lexeme Stem1="trijiem">
       <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Datīvs" Skaitļu_kārta="Vieni" Pamatforma="trīs"/>
-    </Lexeme>
-    <Lexeme Stem1="deviņpadsmit">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Skaitļu_kārta="Padsmiti"/>
     </Lexeme>
     <Lexeme Stem1="esu">
       <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="1" Noliegums="Nē" Pamatforma="būt" Laiks="Tagadne" Kārta="Darāmā" Ģenerēt="Nē"/>
@@ -3239,26 +2963,23 @@
     <Lexeme Stem1="ir">
       <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Nē" Pamatforma="būt" Laiks="Tagadne" Kārta="Darāmā"/>
     </Lexeme>
-    <Lexeme Stem1="septiņdesmit">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Desmiti"/>
+    <Lexeme Stem1="die's">
+      <Attributes Pamatforma="dievs" Vārdšķira="Lietvārds" Locījums="Nominatīvs" Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Lietvārda_tips="Sugas vārds" Deklinācija="1" Papildforma="Jā"/>
+    </Lexeme>
+    <Lexeme Stem1="tūkstoti">
+      <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Vienskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Akuzatīvs" Skaitļu_kārta="Tūkstoši" Pamatforma="tūkstotis"/>
+    </Lexeme>    
+    <Lexeme Stem1="tūkstoša">
+      <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Vienskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Ģenitīvs" Skaitļu_kārta="Tūkstoši" Pamatforma="tūkstotis"/>
     </Lexeme>
     <Lexeme Stem1="tūkstotim">
       <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Vienskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Datīvs" Skaitļu_kārta="Tūkstoši" Pamatforma="tūkstotis"/>
     </Lexeme>
-    <Lexeme Stem1="sešdesmit">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Desmiti"/>
+    <Lexeme Stem1="tūkstotī">
+      <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Vienskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Lokatīvs" Skaitļu_kārta="Tūkstoši" Pamatforma="tūkstotis"/>
     </Lexeme>
-    <Lexeme Stem1="četrsimt">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Simti"/>
-    </Lexeme>
-    <Lexeme Stem1="seštūkstoš">
-      <Attributes Vārdšķira="Skaitļa vārds" Locījums="Nepiemīt" Dzimte="Nepiemīt" Skaitļa_vārda_tips="Pamata" Skaitlis="Daudzskaitlis" Uzbūve="Salikts" Noteiktība="Nenoteiktā" Skaitļu_kārta="Tūkstoši"/>
-    </Lexeme>
-    <Lexeme Stem1="numur">
-      <Attributes Pamatforma="numurs" Vārdšķira="Lietvārds" Locījums="Nominatīvs" Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Lietvārda_tips="Sugas vārds"/>
-    </Lexeme>
-    <Lexeme Stem1="die's">
-      <Attributes Pamatforma="dievs" Vārdšķira="Lietvārds" Locījums="Nominatīvs" Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Lietvārda_tips="Sugas vārds" Deklinācija="1" Papildforma="Jā"/>
+    <Lexeme Stem1="tūkstotis">
+      <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Vienskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Nominatīvs" Skaitļu_kārta="Tūkstoši" Pamatforma="tūkstotis"/>
     </Lexeme>
   </Paradigm>
   <Paradigm ID="30" Description="Patstāvīgas divdabju noteiktās formas -ais (jaundzimušais, galvenais u.c.)">
@@ -3711,5 +3432,229 @@
     <Lexeme Stem1="piespiedu"/>
     <Lexeme Stem1="papildu"/>
     <Lexeme Stem1="pāris"/>
+</Paradigm>
+<Paradigm Stems="1" ID="55" Description="Nelokāmi skaitļa vārdi (divarpus, septiņtūkstoš)">
+    <Lexeme Stem1="trīsarpus"/>
+    <Lexeme Stem1="divarpus"/>
+    <Lexeme Stem1="desmit">
+      <Attributes Uzbūve="Vienkāršs" Skaitļu_kārta="Desmiti"/>
+    </Lexeme>
+    <Lexeme Stem1="pārdesmit">
+      <Attributes Uzbūve="Vienkāršs"Skaitļu_kārta="Desmiti"/>
+    </Lexeme>
+    <Lexeme Stem1="vienpadsmit">
+      <Attributes Uzbūve="Vienkāršs" Skaitļu_kārta="Padsmiti"/>
+    </Lexeme>
+    <Lexeme Stem1="divpadsmit">
+      <Attributes Uzbūve="Vienkāršs" Skaitļu_kārta="Padsmiti"/>
+    </Lexeme>
+    <Lexeme Stem1="trīspadsmit">
+      <Attributes Uzbūve="Vienkāršs" Skaitļu_kārta="Padsmiti"/>
+    </Lexeme>
+    <Lexeme Stem1="četrpadsmit">
+      <Attributes Uzbūve="Vienkāršs" Skaitļu_kārta="Padsmiti"/>
+    </Lexeme>
+    <Lexeme Stem1="piecpadsmit">
+      <Attributes Uzbūve="Vienkāršs" Skaitļu_kārta="Padsmiti"/>
+    </Lexeme>
+    <Lexeme Stem1="sešpadsmit">
+      <Attributes Uzbūve="Vienkāršs" Skaitļu_kārta="Padsmiti"/>
+    </Lexeme>
+    <Lexeme Stem1="septiņpadsmit">
+      <Attributes Uzbūve="Vienkāršs" Skaitļu_kārta="Padsmiti"/>
+    </Lexeme>    
+    <Lexeme Stem1="astoņpadsmit">
+      <Attributes Uzbūve="Vienkāršs" Skaitļu_kārta="Padsmiti"/>
+    </Lexeme>
+    <Lexeme Stem1="deviņpadsmit">
+      <Attributes Uzbūve="Vienkāršs" Skaitļu_kārta="Padsmiti"/>
+    </Lexeme>
+    <Lexeme Stem1="divdesmit">
+      <Attributes Uzbūve="Salikts" Skaitļu_kārta="Desmiti"/>
+    </Lexeme>
+    <Lexeme Stem1="trīsdesmit">
+      <Attributes Uzbūve="Salikts" Skaitļu_kārta="Desmiti"/>
+    </Lexeme>
+    <Lexeme Stem1="četrdesmit">
+      <Attributes Uzbūve="Salikts" Skaitļu_kārta="Desmiti"/>
+    </Lexeme>
+    <Lexeme Stem1="piecdesmit">
+      <Attributes Uzbūve="Salikts" Skaitļu_kārta="Desmiti"/>
+    </Lexeme>
+    <Lexeme Stem1="sešdesmit">
+      <Attributes Uzbūve="Salikts" Skaitļu_kārta="Desmiti"/>
+    </Lexeme>
+    <Lexeme Stem1="septiņdesmit">
+    <Attributes Uzbūve="Salikts" Skaitļu_kārta="Desmiti"/>
+    </Lexeme>
+    <Lexeme Stem1="astoņdesmit">
+      <Attributes Uzbūve="Salikts" Skaitļu_kārta="Desmiti"/>
+    </Lexeme>
+    <Lexeme Stem1="deviņdesmit">
+      <Attributes Uzbūve="Salikts" Skaitļu_kārta="Desmiti"/>
+    </Lexeme>
+    <Lexeme Stem1="simt">
+      <Attributes Uzbūve="Vienkāršs" Skaitļu_kārta="Simti"/>
+    </Lexeme>
+    <Lexeme Stem1="divsimt">
+      <Attributes Uzbūve="Salikts" Skaitļu_kārta="Simti"/>
+    </Lexeme>
+    <Lexeme Stem1="trīssimt">
+      <Attributes Uzbūve="Salikts" Skaitļu_kārta="Simti"/>
+    </Lexeme>
+    <Lexeme Stem1="četrsimt">
+      <Attributes Uzbūve="Salikts" Skaitļu_kārta="Simti"/>
+    </Lexeme>
+    <Lexeme Stem1="piecsimt">
+      <Attributes Uzbūve="Salikts" Skaitļu_kārta="Simti"/>
+    </Lexeme>
+    <Lexeme Stem1="sešsimt">
+      <Attributes Uzbūve="Salikts" Skaitļu_kārta="Simti"/>
+    </Lexeme>
+    <Lexeme Stem1="septiņsimt">
+      <Attributes Uzbūve="Salikts" Skaitļu_kārta="Simti"/>
+    </Lexeme>
+    <Lexeme Stem1="astoņsimt">
+      <Attributes Uzbūve="Salikts" Skaitļu_kārta="Simti"/>
+    </Lexeme>
+    <Lexeme Stem1="deviņsimt">
+      <Attributes Uzbūve="Salikts" Skaitļu_kārta="Simti"/>
+    </Lexeme>
+    <Lexeme Stem1="tūkstoš">
+      <Attributes Uzbūve="Vienkāršs" Skaitļu_kārta="Tūkstoši"/>
+    </Lexeme>
+    <Lexeme Stem1="divtūkstoš">
+      <Attributes Uzbūve="Salikts" Skaitļu_kārta="Tūkstoši"/>
+    </Lexeme>
+    <Lexeme Stem1="trīstūkstoš">
+      <Attributes Uzbūve="Salikts" Skaitļu_kārta="Tūkstoši"/>
+    </Lexeme>
+    <Lexeme Stem1="četrtūkstoš">
+      <Attributes Uzbūve="Salikts" Skaitļu_kārta="Tūkstoši"/>
+    </Lexeme>
+    <Lexeme Stem1="piectūkstoš">
+      <Attributes Uzbūve="Salikts" Skaitļu_kārta="Tūkstoši"/>
+    </Lexeme>
+    <Lexeme Stem1="seštūkstoš">
+      <Attributes Uzbūve="Salikts" Skaitļu_kārta="Tūkstoši"/>
+    </Lexeme>
+    <Lexeme Stem1="septiņtūkstoš">
+      <Attributes Uzbūve="Salikts" Skaitļu_kārta="Tūkstoši"/>
+    </Lexeme>
+    <Lexeme Stem1="astoņtūkstoš">
+      <Attributes Uzbūve="Salikts" Skaitļu_kārta="Tūkstoši"/>
+    </Lexeme>
+    <Lexeme Stem1="deviņtūkstoš">
+      <Attributes Uzbūve="Salikts" Skaitļu_kārta="Tūkstoši"/>
+    </Lexeme>
+    <Lexeme Stem1="desmittūkstoš">
+      <Attributes Uzbūve="Salikts" Skaitļu_kārta="Tūkstoši"/>
+    </Lexeme>
+    <Lexeme Stem1="vienpadsmittūkstoš">
+      <Attributes Uzbūve="Salikts" Skaitļu_kārta="Tūkstoši"/>
+    </Lexeme>
+    <Lexeme Stem1="divpadsmittūkstoš">
+      <Attributes Uzbūve="Salikts" Skaitļu_kārta="Tūkstoši"/>
+    </Lexeme>
+    <Lexeme Stem1="trīspadsmittūkstoš">
+      <Attributes Uzbūve="Salikts" Skaitļu_kārta="Tūkstoši"/>
+    </Lexeme>
+    <Lexeme Stem1="četrpadsmittūkstoš">
+      <Attributes Uzbūve="Salikts" Skaitļu_kārta="Tūkstoši"/>
+    </Lexeme>
+    <Lexeme Stem1="piecpadsmittūkstoš">
+      <Attributes Uzbūve="Salikts" Skaitļu_kārta="Tūkstoši"/>
+    </Lexeme>
+    <Lexeme Stem1="sešpadsmittūkstoš">
+      <Attributes Uzbūve="Salikts" Skaitļu_kārta="Tūkstoši"/>
+    </Lexeme>
+    <Lexeme Stem1="septiņpadsmittūkstoš">
+      <Attributes Uzbūve="Salikts" Skaitļu_kārta="Tūkstoši"/>
+    </Lexeme>
+    <Lexeme Stem1="astoņpadsmittūkstoš">
+      <Attributes Uzbūve="Salikts" Skaitļu_kārta="Tūkstoši"/>
+    </Lexeme>    
+    <Lexeme Stem1="deviņpadsmittūkstoš">
+      <Attributes Uzbūve="Salikts" Skaitļu_kārta="Tūkstoši"/>
+    </Lexeme>
+    <Lexeme Stem1="divdesmittūkstoš">
+      <Attributes Uzbūve="Salikts" Skaitļu_kārta="Tūkstoši"/>
+    </Lexeme>
+    <Lexeme Stem1="trīsdesmittūkstoš">
+      <Attributes Uzbūve="Salikts" Skaitļu_kārta="Tūkstoši"/>
+    </Lexeme>
+    <Lexeme Stem1="četrdesmittūkstoš">
+      <Attributes Uzbūve="Salikts" Skaitļu_kārta="Tūkstoši"/>
+    </Lexeme>
+    <Lexeme Stem1="piecdesmittūkstoš">
+      <Attributes Uzbūve="Salikts" Skaitļu_kārta="Tūkstoši"/>
+    </Lexeme>
+    <Lexeme Stem1="sešdesmittūkstoš">
+      <Attributes Uzbūve="Salikts" Skaitļu_kārta="Tūkstoši"/>
+    </Lexeme>
+    <Lexeme Stem1="septiņdesmittūkstoš">
+      <Attributes Uzbūve="Salikts" Skaitļu_kārta="Tūkstoši"/>
+    </Lexeme>
+    <Lexeme Stem1="astoņdesmittūkstoš">
+      <Attributes Uzbūve="Salikts" Skaitļu_kārta="Tūkstoši"/>
+    </Lexeme>
+    <Lexeme Stem1="deviņdesmittūkstoš">
+      <Attributes Uzbūve="Salikts" Skaitļu_kārta="Tūkstoši"/>
+    </Lexeme>
+    <Lexeme Stem1="simttūkstoš">
+      <Attributes Uzbūve="Salikts" Skaitļu_kārta="Tūkstoši"/>
+    </Lexeme>
+    <Lexeme Stem1="divsimttūkstoš">
+      <Attributes Uzbūve="Salikts" Skaitļu_kārta="Tūkstoši"/>
+    </Lexeme>
+    <Lexeme Stem1="trīssimttūkstoš">
+      <Attributes Uzbūve="Salikts" Skaitļu_kārta="Tūkstoši"/>
+    </Lexeme>
+    <Lexeme Stem1="četrsimttūkstoš">
+      <Attributes Uzbūve="Salikts" Skaitļu_kārta="Tūkstoši"/>
+    </Lexeme>
+    <Lexeme Stem1="piecsimtūkstoš">
+      <Attributes Uzbūve="Salikts" Skaitļu_kārta="Tūkstoši"/>
+    </Lexeme>
+    <Lexeme Stem1="sešsimttūkstoš">
+      <Attributes Uzbūve="Salikts" Skaitļu_kārta="Tūkstoši"/>
+    </Lexeme>
+    <Lexeme Stem1="septiņsimttūkstoš">
+      <Attributes Uzbūve="Salikts" Skaitļu_kārta="Tūkstoši"/>
+    </Lexeme>
+    <Lexeme Stem1="astoņsimttūkstoš">
+      <Attributes Uzbūve="Salikts" Skaitļu_kārta="Tūkstoši"/>
+    </Lexeme>
+    <Lexeme Stem1="deviņsimttūkstoš">
+      <Attributes Uzbūve="Salikts" Skaitļu_kārta="Tūkstoši"/>
+    </Lexeme>
+</Paradigm>
+<Paradigm Stems="1" ID="56" Description="Ar cipariem pierakstīti skaitļi (123, XVII)">
+    <Lexeme Stem1="I"/>
+    <Lexeme Stem1="II"/>
+    <Lexeme Stem1="III"/>
+    <Lexeme Stem1="IV"/>
+    <Lexeme Stem1="V"/>
+    <Lexeme Stem1="VI"/>
+    <Lexeme Stem1="VII"/>
+    <Lexeme Stem1="VIII"/>
+    <Lexeme Stem1="IX"/>
+    <Lexeme Stem1="X"/>
+    <Lexeme Stem1="XI"/>
+    <Lexeme Stem1="XII"/>
+    <Lexeme Stem1="XIII"/>
+    <Lexeme Stem1="XIV"/>
+    <Lexeme Stem1="XV"/>
+    <Lexeme Stem1="XVI"/>
+    <Lexeme Stem1="XVII"/>
+    <Lexeme Stem1="XVIII"/>
+    <Lexeme Stem1="XIX"/>
+    <Lexeme Stem1="XX"/>
+    <Lexeme Stem1="½"/>
+    <Lexeme Stem1="¼"/>
+    <Lexeme Stem1="¾"/>
+    <Lexeme Stem1="¹"/>
+    <Lexeme Stem1="²"/>
+    <Lexeme Stem1="³"/>
 </Paradigm>
 </Lexicon>
