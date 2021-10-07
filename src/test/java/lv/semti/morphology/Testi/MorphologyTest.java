@@ -518,7 +518,7 @@ public class MorphologyTest {
         Word simt = locītājs.analyze("simt");
         assertTrue(simt.isRecognized());
         assertEquals(AttributeNames.v_Hundreds, simt.wordforms.get(0).getValue(AttributeNames.i_Order));
-        assertEquals("mcs_p0", simt.wordforms.get(0).getTag());
+        assertEquals("mcs0p0", simt.wordforms.get(0).getTag());
     }
 
     @Test
@@ -1447,13 +1447,6 @@ public class MorphologyTest {
 
         Word numur = locītājs.analyze("numur");
         assertTrue(numur.isRecognized());
-        boolean irPareizā = false;
-        for (Wordform vārdforma : numur.wordforms) {
-            if (vārdforma.getValue(AttributeNames.i_Lemma).equals("numurs") && vārdforma.isMatchingStrong(AttributeNames.i_Case, AttributeNames.v_Nominative)) {
-                irPareizā = true;
-            }
-        }
-        assertTrue(irPareizā);
     }
 
     @Test
@@ -2523,9 +2516,9 @@ public class MorphologyTest {
         assertEquals(AttributeNames.v_VajadziibasAtstaastiijuma, jārokot.wordforms.get(0).getValue(AttributeNames.i_Izteiksme));
     }
 
-    @Test // Tezauram locīšanai - lai nelokam to, kas nav leksikonā bez minēšānas
+    @Test // Tezauram locīšanai - lai nelokam to, kas nav leksikonā bez minēšanas
     public void nelocīt() {
-        List<Wordform> formas = locītājs.generateInflections("xxx");
+        List<Wordform> formas = locītājs.generateInflections("yyyyyyy");
         assertEquals(0, formas.size());
 
         locītājs.guessVerbs = false;
@@ -3665,6 +3658,7 @@ public class MorphologyTest {
         locītājs.enableGuessing = false;
 
         Word w = locītājs.analyze("nēsis"); // No "nēši" nevar izdomāt vai ir "nētis" (kā "latvieši"->"latvietis") vai "nēsis"
+        describe(w.wordforms);
         assertTrue(w.isRecognized());
     }
 
@@ -3965,7 +3959,7 @@ public class MorphologyTest {
 
     @Test
     public void nebūt_lemma() {
-        Word w = locītājs.analyze("nebūt");
+        Word w = locītājs.analyze("nebija");
         assertTrue(w.isRecognized());
         w.describe(System.out);
         assertEquals("būt", w.getBestWordform().getValue(AttributeNames.i_Lemma));
@@ -4015,6 +4009,16 @@ public class MorphologyTest {
                 assertEquals(AttributeNames.v_Yes, wf.getValue(AttributeNames.i_Derivative));
             }
         }
+    }
+
+    @Test
+    public void vienota_vispārākā() {
+        Word vienotām = locītājs.analyze("vienotām");
+        describe(vienotām.wordforms);
+        for (Wordform wf : vienotām.wordforms) {
+            assertFalse(wf.isMatchingStrong(AttributeNames.i_Degree, AttributeNames.v_Superlative));
+        }
+
     }
 }
 

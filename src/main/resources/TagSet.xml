@@ -554,6 +554,7 @@
 	<Value LV="[&quot;Informātika&quot;,&quot;Tehnika&quot;,&quot;Telekomunikācijas&quot;]" EN="Informatics/Technics/Telecommunications"/>
 	<Value LV="Aeronautika" EN="Aeronautics"/>
 	<Value LV="[&quot;Aeronautika&quot;,&quot;Jūrniecība&quot;]" EN="Aeronautics/Marine"/>
+	<Value LV="[&quot;Aeronautika&quot;,&quot;Fizika&quot;]" EN="Aeronautics/Fizika"/>
 	<Value LV="[&quot;Jūrniecība&quot;,&quot;Meteoroloģija&quot;]" EN="Marine/Meteorology"/>
 	<Value LV="Bioķīmija" EN="Biochemistry"/>
 	<Value LV="Glezniecība" EN="Painting"/>
@@ -617,6 +618,10 @@
 	<Value LV="Jā" EN="Yes"/>
 </Attribute>
 
+<Attribute LV="Sistemātisks atvasinājums" EN="Systematic derivation">
+	<Value LV="Jā" EN="Yes"/>
+</Attribute>
+
 <Attribute LV="Dialekta iezīmes" EN="Dialect markings">
 	<Value LV="Latgaliešu" EN="Latgalian"/>
 </Attribute>
@@ -646,6 +651,7 @@
 	<Value LV="Pārākā pakāpe" EN="Comparative"/>
 </Attribute>
 <Attribute LV="Locīšanas īpatnības" EN="Inflection properties">
+	<Value LV="Otrās un trešās konjugācijas paralelitāte" EN="2nd/3rd conjugation parallel forms"/>
 	<Value LV="[&quot;Otrās un trešās konjugācijas paralelitāte&quot;,&quot;Paralēlās formas&quot;]" EN="2nd/3rd conjugation parallel forms"/>
 	<Value LV="[&quot;Otrās un trešās konjugācijas paralelitāte&quot;,&quot;Paralēlās formas&quot;,&quot;Pirmās konjugācijas paralēlforma visām personām&quot;]" EN="2nd/3rd conjugation parallel forms / 1st conjugation parallel forms"/>
 	<Value LV="[&quot;Otrās un trešās konjugācijas paralelitāte&quot;,&quot;Paralēlās formas&quot;,&quot;Pirmās konjugācijas paralēlforma tikai 3. personai&quot;]" EN="2nd/3rd conjugation parallel forms / 1st conjugation parallel forms"/>

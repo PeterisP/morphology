@@ -18,6 +18,15 @@
     <Lexeme Stem1="Lattelecom">
       <Attributes Lietvārda_tips="Īpašvārds"/>
     </Lexeme>
+    <Lexeme Stem1="Obama">
+      <Attributes Lietvārda_tips="Īpašvārds"/>
+    </Lexeme>
+    <Lexeme Stem1="Instagram">
+      <Attributes Lietvārda_tips="Īpašvārds"/>
+    </Lexeme>
+    <Lexeme Stem1="Sanī">
+      <Attributes Lietvārda_tips="Īpašvārds" Pamatforma="Ķezers"/>
+    </Lexeme>    
   </Paradigm>
   <Paradigm Stems="1" ID="13" LemmaEnding="135" Description="Īpašības vārdi ar -s">
   </Paradigm>
@@ -2582,6 +2591,12 @@
   </Paradigm>
   <Paradigm Stems="1" ID="27" LemmaEnding="1197" Description="Saikļi">
     <Attributes Vārdšķira="Saiklis"/>
+    <Lexeme Stem1="a">
+      <Attributes Saikļa_tips="Pakārtojuma" Uzbūve="Vienkāršs"/>
+    </Lexeme>
+    <Lexeme Stem1="i">
+      <Attributes Saikļa_tips="Pakārtojuma" Uzbūve="Vienkāršs"/>
+    </Lexeme>
     <Lexeme Stem1="cik">
       <Attributes Saikļa_tips="Pakārtojuma" Uzbūve="Vienkāršs"/>
     </Lexeme>
@@ -3440,7 +3455,7 @@
       <Attributes Uzbūve="Vienkāršs" Skaitļu_kārta="Desmiti"/>
     </Lexeme>
     <Lexeme Stem1="pārdesmit">
-      <Attributes Uzbūve="Vienkāršs"Skaitļu_kārta="Desmiti"/>
+      <Attributes Uzbūve="Vienkāršs" Skaitļu_kārta="Desmiti"/>
     </Lexeme>
     <Lexeme Stem1="vienpadsmit">
       <Attributes Uzbūve="Vienkāršs" Skaitļu_kārta="Padsmiti"/>
