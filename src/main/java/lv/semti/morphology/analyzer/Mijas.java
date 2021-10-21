@@ -457,8 +457,10 @@ public abstract class Mijas {
 		for (Variants locītais : atpakaļlocīti) {
 			if (locītais.celms.equalsIgnoreCase(stem)) atrasts = true;
 		}
-		
+
+
 		if (!atrasts && Arrays.asList(1,2,5,6,7,8,9,14,15,17,23,26,36,37).contains(stemChange)) { //FIXME - varbūt performance dēļ tikai šiem stemChange ir jāloka varianti
+			if (stemChange == 7 && variants.celms.endsWith("dod")) return true; // izņēmums, ka "dodi" atpazīst bet neģenerē
 //            System.err.printf("Celmam '%s' ar miju %d sanāca '%s' - noraidījām dēļ atpakaļlocīšanas verifikācijas.\n", stem, stemChange, variants.celms);
 			return false;
 		} else {
@@ -633,11 +635,11 @@ public abstract class Mijas {
 				case 23: // 1. konjugācijas 2. personas tagadne - ja pēc tam seko garā galotne kā -iet					
 					if (celms.endsWith("š") && trešāSakne.endsWith("s")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"s"));
 					else if (celms.endsWith("š") && trešāSakne.endsWith("t")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"t"));
-					else if (celms.endsWith("od") || celms.endsWith("ūd") || celms.endsWith("op") || celms.endsWith("ūp") || celms.endsWith("ot") || celms.endsWith("ūt") || celms.endsWith("īt") || celms.endsWith("iet")  || celms.endsWith("st")) {
+					else if ( (celms.endsWith("od") && !celms.endsWith("dod")) || celms.endsWith("ūd") || celms.endsWith("op") || celms.endsWith("ūp") || celms.endsWith("ot") || celms.endsWith("ūt") || celms.endsWith("īt") || celms.endsWith("iet")  || celms.endsWith("st")) {
 						if (mija == 7)
 							varianti.add(new Variants(celms+"i"));
 						else varianti.add(new Variants(celms));
-					} // else if (celms.endsWith("ž")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"d"));
+					}
 					else if (celms.endsWith("ļ")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"l"));
 					else if (celms.endsWith("mj") || celms.endsWith("bj") || celms.endsWith("pj"))	varianti.add(new Variants(celms.substring(0,celms.length()-1)));
 					else if (celms.endsWith("k")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"c"));

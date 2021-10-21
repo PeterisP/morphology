@@ -1347,8 +1347,8 @@ public class MorphologyTest {
         formas = locītājs.generateInflections("Silvija");
         assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "", "Silvij");
 
-        formas = locītājs.generateInflections("Kadrije"); //hipotētiski
-        assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "", "Kadrij");
+//        formas = locītājs.generateInflections("Kadrije"); //hipotētiski
+//        assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "", "Kadrij");
 
         formas = locītājs.generateInflections("Karlīne");
         assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "", "Karlīn");
@@ -4018,6 +4018,41 @@ public class MorphologyTest {
         for (Wordform wf : vienotām.wordforms) {
             assertFalse(wf.isMatchingStrong(AttributeNames.i_Degree, AttributeNames.v_Superlative));
         }
+    }
+
+    @Test
+    public void dodi() {
+        Word dod = locītājs.analyze("dod");
+        describe(dod.wordforms);
+        Word dodi = locītājs.analyze("dodi");
+        assertTrue(dodi.isRecognized());
+
+        List<Wordform> formas = locītājs.generateInflections("dot");
+        for (Wordform wf : formas) {
+            assertNotEquals("dodi", wf.getToken());
+        }
+    }
+
+    @Test
+    public void ticket_89() throws UnsupportedEncodingException {
+        PrintWriter izeja;
+        izeja = new PrintWriter(new OutputStreamWriter(System.out, "UTF-8"));
+
+        Paradigm p15 = locītājs.paradigmByID(15);
+
+        for (ArrayList<Lexeme> lexemes : p15.getLexemesByStem().get(0).values()) {
+            for (int i = 0; i < lexemes.size(); i++) {
+                Lexeme l = lexemes.get(i);
+                String lemma = l.getStem(0) + "t";
+                ArrayList<Wordform> wordforms = locītājs.generateInflections(l, lemma);
+                for (Wordform wf : wordforms) {
+                    if (wf.getEnding().getID()==790 && !wf.isMatchingStrong(AttributeNames.i_Noliegums, AttributeNames.v_Yes)) {
+                        izeja.printf("%s\t%s\n", lemma, wf.getToken());
+                    }
+                }
+            }
+        }
+        izeja.flush();
 
     }
 }
