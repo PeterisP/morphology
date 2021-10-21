@@ -5,7 +5,7 @@
 	<groupId>lv.ailab.morphology</groupId>
 	<artifactId>morphology</artifactId>
 	<packaging>jar</packaging>
-	<version>2.2.3-SNAPSHOT</version>
+	<version>2.2.3</version>
 	<name>Latvian morphological analysis library</name>
 	<description>Latvian morphological analysis library</description>
 	<url>https://github.com/PeterisP/morphology</url>
@@ -101,6 +101,13 @@
 					<nexusUrl>https://oss.sonatype.org/</nexusUrl>
 					<autoReleaseAfterClose>true</autoReleaseAfterClose>
 				</configuration>
+				<dependencies>
+					<dependency>
+				      <groupId>com.thoughtworks.xstream</groupId>
+				      <artifactId>xstream</artifactId>
+				      <version>1.4.15</version>
+				    </dependency>
+				</dependencies>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

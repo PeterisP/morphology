@@ -4034,6 +4034,7 @@ public class MorphologyTest {
     }
 
     @Test
+    @Ignore
     public void ticket_89() throws UnsupportedEncodingException {
         PrintWriter izeja;
         izeja = new PrintWriter(new OutputStreamWriter(System.out, "UTF-8"));
