@@ -4054,7 +4054,19 @@ public class MorphologyTest {
             }
         }
         izeja.flush();
-
+    }
+    
+    @Test
+    public void roberts_2021_11_24() {
+        // Roberts sūdzējās, ka webservisu API neatgriež daudzskaitļa formas, kaut arī tēzaurā tās rādās un it kā nekādi karodziņi tās neaizliedz
+        ArrayList<Wordform> formas = locītājs.generateInflections("nākotne");
+        describe(formas);
+        boolean found = false;
+        for (Wordform wf : formas) {
+            if (wf.getToken().equalsIgnoreCase("nākotņu"))
+                found = true;
+        }
+        assertTrue(found);
     }
 }
 
