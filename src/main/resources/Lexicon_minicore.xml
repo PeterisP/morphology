@@ -4152,6 +4152,9 @@
     <Lexeme Stem1="da"/>
     <Lexeme Stem1="the"/>
     <Lexeme Stem1="internet"/>
+    <Lexeme Stem1="Coca-Cola"/>
+    <Lexeme Stem1="make-up"/>
+    <Lexeme Stem1="pop-up"/>
   </Paradigm>
   <Paradigm Stems="1" ID="40" LemmaEnding="2031" Description="Substantivizējušies noteiktās formas īpašības vārdi sieviešu dzimtē (mēnessērdzīgā, apsūdzētā)" AllowedGuessEndings="!">
     <Lexeme Stem1="nākam"/>
