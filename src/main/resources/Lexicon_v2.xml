@@ -5480,70 +5480,70 @@
 	</Paradigm>
 	<Paradigm Stems="1" ID="43" Name="part-2" LemmaEnding="2106" Description="Patstāvīgi -ies/-usies divdabji (pusapģērbies)" DescriptionEN="Standalone -ies/-usies participles (pusapģērbies)" AllowedGuessEndings="!">
 		<Attributes Vārdšķira="Īpašības vārds" Noteiktība="Nenoteiktā"/> 
-		<Ending ID="2106" StemChange="0" Ending="ies" StemID="1" LemmaEnding="2106">
+		<Ending ID="2106" StemChange="14" Ending="ies" StemID="1" LemmaEnding="2106">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs" Dzimte="Vīriešu"/>
 		</Ending>
-		<Ending ID="2107" StemChange="0" Ending="usies" StemID="1" LemmaEnding="2107">
+		<Ending ID="2107" StemChange="11" Ending="usies" StemID="1" LemmaEnding="2107">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs" Dzimte="Sieviešu"/>
 		</Ending>
-		<Ending ID="2108" StemChange="0" Ending="ušās" StemID="1" LemmaEnding="2106">
-			<Attributes Skaitlis="Vienskaitlis" Locījums="Ģenitīvs" Dzimte="Vīriešu" Ģenerēt="Nē"/>
+		<Ending ID="2108" StemChange="11" Ending="ušās" StemID="1" LemmaEnding="2106">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Ģenitīvs" Dzimte="Vīriešu"/>
 		</Ending>
-		<Ending ID="2109" StemChange="0" Ending="ušās" StemID="1" LemmaEnding="2107">
+		<Ending ID="2109" StemChange="11" Ending="ušās" StemID="1" LemmaEnding="2107">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Ģenitīvs" Dzimte="Sieviešu"/>
 		</Ending>
-		<Ending ID="2110" StemChange="0" Ending="ušos" StemID="1" LemmaEnding="2106">
+		<Ending ID="2110" StemChange="11" Ending="ušos" StemID="1" LemmaEnding="2106">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Akuzatīvs" Dzimte="Vīriešu"/>
 		</Ending>
-		<Ending ID="2111" StemChange="0" Ending="ušos" StemID="1" LemmaEnding="2107">
+		<Ending ID="2111" StemChange="11" Ending="ušos" StemID="1" LemmaEnding="2107">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Akuzatīvs" Dzimte="Sieviešu"/>
 		</Ending>
-		<Ending ID="2112" StemChange="0" Ending="ušā" StemID="1" LemmaEnding="2106">
+		<Ending ID="2112" StemChange="11" Ending="ušā" StemID="1" LemmaEnding="2106">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Lokatīvs" Dzimte="Vīriešu" Ģenerēt="Nē"/>
 		</Ending>
-		<Ending ID="2113" StemChange="0" Ending="ušajā" StemID="1" LemmaEnding="2106">
+		<Ending ID="2113" StemChange="11" Ending="ušajā" StemID="1" LemmaEnding="2106">
 			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Noteiktā" Locījums="Lokatīvs" Dzimte="Vīriešu" Ģenerēt="Nē"/>
 		</Ending>
-		<Ending ID="2114" StemChange="0" Ending="ušā" StemID="1" LemmaEnding="2107">
+		<Ending ID="2114" StemChange="11" Ending="ušā" StemID="1" LemmaEnding="2107">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Lokatīvs" Dzimte="Sieviešu" Ģenerēt="Nē"/>
 		</Ending>
-		<Ending ID="2115" StemChange="0" Ending="ušajā" StemID="1" LemmaEnding="2107">
+		<Ending ID="2115" StemChange="11" Ending="ušajā" StemID="1" LemmaEnding="2107">
 			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Noteiktā" Locījums="Lokatīvs" Dzimte="Sieviešu" Ģenerēt="Nē"/>
 		</Ending>
-		<Ending ID="2116" StemChange="0" Ending="ušies" StemID="1" LemmaEnding="2106">
+		<Ending ID="2116" StemChange="11" Ending="ušies" StemID="1" LemmaEnding="2106">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Nominatīvs" Dzimte="Vīriešu"/>
 		</Ending>
-		<Ending ID="2117" StemChange="0" Ending="ušās" StemID="1" LemmaEnding="2107">
+		<Ending ID="2117" StemChange="11" Ending="ušās" StemID="1" LemmaEnding="2107">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Nominatīvs" Dzimte="Sieviešu"/>
 		</Ending>
-		<Ending ID="2118" StemChange="0" Ending="ušos" StemID="1" LemmaEnding="2106">
+		<Ending ID="2118" StemChange="11" Ending="ušos" StemID="1" LemmaEnding="2106">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Ģenitīvs" Dzimte="Vīriešu"/>
 		</Ending>
-		<Ending ID="2119" StemChange="0" Ending="ušos" StemID="1" LemmaEnding="2107">
+		<Ending ID="2119" StemChange="11" Ending="ušos" StemID="1" LemmaEnding="2107">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Ģenitīvs" Dzimte="Sieviešu"/>
 		</Ending>
-		<Ending ID="2120" StemChange="0" Ending="ušamies" StemID="1" LemmaEnding="2106" Ģenerēt="Nē">
+		<Ending ID="2120" StemChange="11" Ending="ušamies" StemID="1" LemmaEnding="2106" Ģenerēt="Nē">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Datīvs" Dzimte="Vīriešu"/>
 		</Ending>
-		<Ending ID="2121" StemChange="0" Ending="ušamies" StemID="1" LemmaEnding="2107" Ģenerēt="Nē">
+		<Ending ID="2121" StemChange="11" Ending="ušamies" StemID="1" LemmaEnding="2107" Ģenerēt="Nē">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Datīvs" Dzimte="Sieviešu"/>
 		</Ending>
-		<Ending ID="2122" StemChange="0" Ending="ušos" StemID="1" LemmaEnding="2106">
+		<Ending ID="2122" StemChange="11" Ending="ušos" StemID="1" LemmaEnding="2106">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Akuzatīvs" Dzimte="Vīriešu"/>
 		</Ending>
-		<Ending ID="2123" StemChange="0" Ending="ušās" StemID="1" LemmaEnding="2107">
+		<Ending ID="2123" StemChange="11" Ending="ušās" StemID="1" LemmaEnding="2107">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Akuzatīvs" Dzimte="Sieviešu"/>
 		</Ending>
-		<Ending ID="2124" StemChange="0" Ending="ušos" StemID="1" LemmaEnding="2106">
+		<Ending ID="2124" StemChange="11" Ending="ušos" StemID="1" LemmaEnding="2106">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Lokatīvs" Dzimte="Vīriešu" Ģenerēt="Nē"/>
 		</Ending>
-		<Ending ID="2125" StemChange="0" Ending="ušajos" StemID="1" LemmaEnding="2106">
+		<Ending ID="2125" StemChange="11" Ending="ušajos" StemID="1" LemmaEnding="2106">
 			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Noteiktā" Locījums="Lokatīvs" Dzimte="Vīriešu" Ģenerēt="Nē"/>
 		</Ending>
-		<Ending ID="2126" StemChange="0" Ending="ušās" StemID="1" LemmaEnding="2107">
+		<Ending ID="2126" StemChange="11" Ending="ušās" StemID="1" LemmaEnding="2107">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Lokatīvs" Dzimte="Sieviešu" Ģenerēt="Nē"/>
 		</Ending>
-		<Ending ID="2127" StemChange="0" Ending="ušajās" StemID="1" LemmaEnding="2107">
+		<Ending ID="2127" StemChange="11" Ending="ušajās" StemID="1" LemmaEnding="2107">
 			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Noteiktā" Locījums="Lokatīvs" Dzimte="Sieviešu" Ģenerēt="Nē"/>
 		</Ending>
 	</Paradigm>
