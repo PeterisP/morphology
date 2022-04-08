@@ -232,8 +232,11 @@ public class Lexeme extends AttributeValues {
             System.err.println(String.format("Leksēmai '%s' #%d galotne neatbilst paradigmai arī skatoties uz daudzskaitli", lemma, this.id));
             this.describe();
         } else {
+            /* Unclear why this was added
             if (getValue(AttributeNames.i_NumberSpecial) == null)
                 addAttribute(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum);
+
+             */
         }
     }
 

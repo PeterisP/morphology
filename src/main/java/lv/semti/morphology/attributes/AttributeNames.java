@@ -68,7 +68,6 @@ public class AttributeNames {
 	public final static String i_NumberSpecial = "Skaitlis 2";
 	public final static String v_SingulareTantum = "Vienskaitlinieks";
 	public final static String v_PlurareTantum = "Daudzskaitlinieks";
-	public final static String v_AlmostPlurareTantum = "Gandrīz daudzskaitlinieks";
 
 	public final static String i_Case = "Locījums";
 	public final static String v_Nominative = "Nominatīvs";
@@ -264,6 +263,10 @@ public class AttributeNames {
     public static final String v_GivenName = "Priekšvārds";
     public static final String v_Surname = "Uzvārds";
     public static final String v_Toponym = "Vietvārds";
+
+	public static final String i_Display_Inflection_Table = "Morfotabulas attēlošana";
+	public static final String v_No_Plural = "Nerādīt daudzskaitli";
+	public static final String v_No_Singular = "Nerādīt vienskaitlis";
 
 	// Vērtības, kuras īslaicīgi piekabina vārda objektam, lai GUI to īpaši atzīmētu
 	public static final String i_Recommended = "Rādīt zaļu - čunkera rekomendācija";

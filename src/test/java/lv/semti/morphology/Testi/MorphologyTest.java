@@ -3706,12 +3706,14 @@ public class MorphologyTest {
         assertEquals("Rīga", wf.getValue(AttributeNames.i_Lemma));
         // Recognize plural
 
+        /* Now implemented with flag 'Morfotabulas attēlošana'
         List<Wordform> forms = locītājs.generateInflections("Rīga");
         for (Wordform wf2 : forms) {
             assertFalse(wf2.isMatchingStrong(AttributeNames.i_Number, AttributeNames.v_Plural));
             assertNotEquals("Rīgām", wf2.getValue(AttributeNames.i_Lemma));
             // Do not generate plural forms for Tezaurs.lv morphology tables
         }
+        */
     }
 
     @Test
@@ -3830,9 +3832,9 @@ public class MorphologyTest {
         assertLemma("nebēdņojās", "nebēdņoties");
         assertEquals(AttributeNames.v_Yes, w.getBestWordform().getValue(AttributeNames.i_Noliegums));
 
-        w = locītājs.analyze("nepieciešamās");
+        w = locītājs.analyze("cērtamās");
         assertTrue(w.isRecognized());
-        assertLemma("nepieciešamās", "pieciest");
+        assertLemma("cērtamās", "cirst");
     }
 
     @Test
@@ -4068,5 +4070,22 @@ public class MorphologyTest {
         }
         assertTrue(found);
     }
+
+    @Test
+    public void apmācies() {
+        // Izveidojot patstāvīgu šķirkli ar 43 paradigmu apmācies parādījās problēma ar miju
+        AttributeValues av = new AttributeValues();
+        ArrayList<Wordform> formas = locītājs.generateInflectionsFromParadigm("apmākies", 43, av);
+        for (Wordform wf : formas) {
+            assertNotEquals ("apmācusies", wf.getToken());
+            assertNotEquals ("apmākies", wf.getToken());
+        }
+
+        Word w = locītājs.analyze("apmācusies");
+        assertFalse(w.isRecognized());
+        w = locītājs.analyze("apmākies");
+        assertFalse(w.isRecognized());
+    }
+
 }
 

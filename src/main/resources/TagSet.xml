@@ -562,6 +562,8 @@
 	<Value LV="Entomoloģija" EN="Entomology"/>
 	<Value LV="Antropoloģija" EN="Antropology"/>
 	<Value LV="Socioloģija" EN="Sociology"/>
+	<Value LV="Keramika" EN="Ceramics"/>
+	<Value LV="Siltumtehnika" EN="HVAC"/>
 	<Value LV="Papīrrūpniecība" EN="Paper manufacturing"/>
 	<Value LV="Vēsturisks vietvārds" EN="Historical toponym"/>
 	<Value LV="Vēsturisks personvārds" EN="Historical person name"/>
@@ -692,6 +694,11 @@
 	<Value LV="Skaitļa šķīrums semantikā nepastāv" EN="Grammatic number carries no semantic difference"/>
 	<Value LV="Daudzskaitļa formas lieto abu skaitļu nozīmē" EN="Plural forms used also in singular meaning"/>
 	<Value LV="Vienskaitli lieto neliterārā valodā" EN="Singular forms used in nonliterary language"/>
+</Attribute>
+
+<Attribute LV="Morfotabulas attēlošana" EN="Inflection table">
+	<Value LV="Nerādīt daudzskaitli" EN="Hide plural"/>
+	<Value LV="Nerādīt vienskaitli" EN="Hide singular"/>
 </Attribute>
 
 <Attribute LV="Citi" EN="Other">

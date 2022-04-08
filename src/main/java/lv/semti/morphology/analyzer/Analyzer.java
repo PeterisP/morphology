@@ -580,8 +580,9 @@ public class Analyzer extends Lexicon {
 			Ending ending = vārdforma.getEnding();
 
 			if ( (ending != null && ending.getLemmaEnding() == ending) ||
-				(vārdforma.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(word) && 
-						vārdforma.isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum) ) )
+				(vārdforma.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(word) && (
+						vārdforma.isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum) ||
+						vārdforma.isMatchingStrong(AttributeNames.i_EntryProperties, AttributeNames.v_Plural) ) ) )
 				result.addWordform(vārdforma);
 		}
 
@@ -780,7 +781,8 @@ public class Analyzer extends Lexicon {
 
         Ending ending = p.getLemmaEnding(); // We expect that the lemma will be the default lemma, unless...
 		// if attributes list plurare tantum, then we look for plural nominative as the lemma
-        if (lemmaAttributes.isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum)
+        if ((lemmaAttributes.isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum) ||
+				lemmaAttributes.isMatchingStrong(AttributeNames.i_EntryProperties, AttributeNames.v_Plural))
                 && !ending.isMatchingWeak(AttributeNames.i_Number, AttributeNames.v_Plural)) {
             // Assuming that there will be only one plural nominative entry in case of daudzskaitlinieki
             AttributeValues plural_nominative = new AttributeValues();
@@ -880,10 +882,12 @@ public class Analyzer extends Lexicon {
 					wf.isMatchingStrong(AttributeNames.i_ResidualType, AttributeNames.v_Foreign)) suitable = true; // visādi Vadim, Kirill utml
 			// ------ end of nouns_only exceptions
 
+			/* Now implemented with flag 'Morfotabulas attēlošana'
 			if (wf.isMatchingStrong(AttributeNames.i_ProperNounType, AttributeNames.v_Toponym) &&
 					wf.isMatchingStrong(AttributeNames.i_Number, AttributeNames.v_Plural) &&
 					!wf.isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum)
 			) suitable = false; // Do not generate plural forms of singular toponyms
+			 */
 
 			if (wf.isMatchingStrong(AttributeNames.i_EntryProperties, AttributeNames.v_EntryComparative) &&
 					wf.isMatchingStrong(AttributeNames.i_Degree, AttributeNames.v_Positive)

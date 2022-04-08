@@ -63,19 +63,17 @@ public class Wordform extends AttributeValues implements Serializable{
 		if (lexeme != null) {
 			addAttributes(lexeme);
 			addAttribute(AttributeNames.i_LexemeID, Integer.toString(lexeme.getID()));
-			if (isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_AlmostPlurareTantum) &&
-					isMatchingStrong(AttributeNames.i_EntryProperties, AttributeNames.v_Plural) &&
-					isMatchingStrong(AttributeNames.i_Number, AttributeNames.v_Plural)
-				) {
-				addAttribute(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum);
-			}
 			fixed_stem = isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum)  ||
-					(isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_AlmostPlurareTantum) &&
-							isMatchingStrong(AttributeNames.i_EntryProperties, AttributeNames.v_Plural)) ||
 					isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_SingulareTantum) ||
+					isMatchingStrong(AttributeNames.i_EntryProperties, AttributeNames.v_Plural) ||
 					isMatchingStrong(AttributeNames.i_Declension, AttributeNames.v_InflexibleGenitive);
 			// || leksēma.isMatchingStrong(AttributeNames.i_Deminutive, "-iņ-")
 		} else fixed_stem = true;
+
+		if (isMatchingStrong(AttributeNames.i_EntryProperties, AttributeNames.v_Plural) &&
+				isMatchingStrong(AttributeNames.i_Number, AttributeNames.v_Plural)) {
+			addAttribute(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum);
+		}
 		
 		Ending lemmaEnding = ending.getLemmaEnding();
 		// FIXME šis 'if' būtu jāsaprot un jāsakārto - lai ir sakarīgi, bet nesalauž specgadījumus ('vairāk' -> pamatforma 'daudz' utml)
