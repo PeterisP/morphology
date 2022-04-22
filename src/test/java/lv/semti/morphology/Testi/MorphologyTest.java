@@ -4104,5 +4104,6 @@ public class MorphologyTest {
         formas = locītājs.generateInflections("ķemme");
         assertInflection(formas, testset, "ķemmju");
     }
+
 }
 

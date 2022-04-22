@@ -300,6 +300,19 @@ public class AttributeValues implements FeatureStructure, Cloneable {
 //		removeAttribute(AttributeNames.i_Laiks);  // FIXME - piemēram, ēdu mēdzu zīmēju nestrādās nošķirt pagātne tagadne
 		removeAttribute(AttributeNames.i_Voice);
 	}
+
+	/**
+	 * Removes a set of attributes that are ignored in the MorphoEvaluate test for corpus comparison
+	 */
+	public void removeAttributesForCorpusTest() {
+		removeAttribute(AttributeNames.i_Transitivity);
+		removeAttribute(AttributeNames.i_ApstTips);
+		removeAttribute(AttributeNames.i_AdjectiveType);
+//		removeAttribute(AttributeNames.i_VietasApstNoziime);
+		if (isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Preposition)) {
+			removeAttribute(AttributeNames.i_Novietojums);
+		}
+	}
 	
 	public void removeTechnicalAttributes() {
 		removeAttribute(AttributeNames.i_LexemeID);

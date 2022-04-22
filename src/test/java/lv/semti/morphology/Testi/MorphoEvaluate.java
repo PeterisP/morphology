@@ -138,7 +138,7 @@ public class MorphoEvaluate {
 			if (!e.tag.equalsIgnoreCase(tags.toTag(etalonaAV))) {
 				System.out.printf("Nesavietojams tags vārdam %s : failā '%s', morfostruktūrās '%s' \t\t%s\n", e.wordform, e.tag, tags.toTag(etalonaAV), e.id);
 			}
-			etalonaAV.removeNonlexicalAttributes();
+			etalonaAV.removeAttributesForCorpusTest();
 			e.tag = tags.toTag(etalonaAV);
 
 
@@ -163,7 +163,7 @@ public class MorphoEvaluate {
 				double maxticamība = -1;
 				for (Wordform wf : w.wordforms) {  // Paskatamies visus atrastos variantus un ņemam statistiski ticamāko
 					//tag += String.format("%s\t%d\n", wf.getDescription(), MorphoServer.statistics.getTicamība(wf));
-					wf.removeNonlexicalAttributes();
+					wf.removeAttributesForCorpusTest();
 					double estimate = Statistics.getStatistics().getEstimate(wf);
 					if (estimate > maxticamība) {
 						maxticamība = estimate;
@@ -230,6 +230,9 @@ public class MorphoEvaluate {
 				mistakes.add("Nav variantu :( \t"+e.wordform+"\t"+e.lemma+"\t"+e.tag+"\t\t"+e.id+"\n");
 			}						
 		}
+
+		// No AttributeValues.removeAttributesForCorpusTest()
+		izeja.println("Tagus salīdzinot neņem vērā transitivitāti, apstākļa vārda tipu, īpašības vārda tipu, prievārdu novietojumu");
 
         Collections.sort(capitalization_mistakes);
         for (String mistake:capitalization_mistakes){
