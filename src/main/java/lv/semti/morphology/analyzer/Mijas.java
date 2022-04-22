@@ -128,7 +128,8 @@ public abstract class Mijas {
 						if (celms.endsWith("šņ")) {varianti.add(new Variants(celms.substring(0,celms.length()-2)+"sn","Mija","sn -> šņ"));}
 						else if (celms.endsWith("žņ")) {varianti.add(new Variants(celms.substring(0,celms.length()-2)+"zn","Mija","zn -> žņ"));}
 						else if (celms.endsWith("ļņ")) {varianti.add(new Variants(celms.substring(0,celms.length()-2)+"ln","Mija","ln -> ļņ"));}
-						else if (!(celms.endsWith("zņ") || celms.endsWith("sņ") || celms.endsWith("lņ"))) {
+						else if (celms.endsWith("ņņ")) {varianti.add(new Variants(celms.substring(0,celms.length()-2)+"nn","Mija","nn -> ņņ"));}
+						else if (!(celms.endsWith("zņ") || celms.endsWith("sņ") || celms.endsWith("lņ") || celms.endsWith("ņņ"))) {
 							//varianti.add(new Variants(celms.substring(0,celms.length()-1)+"l","Mija", "l -> ņ ??"));
 							varianti.add(new Variants(celms.substring(0,celms.length()-1)+"n","Mija", "n -> ņ"));
 						}
@@ -588,6 +589,7 @@ public abstract class Mijas {
 						if (celms.endsWith("sn")) {varianti.add(new Variants(celms.substring(0,celms.length()-2)+"šņ","Mija","sn -> šņ"));}
 						else if (celms.endsWith("zn")) {varianti.add(new Variants(celms.substring(0,celms.length()-2)+"žņ","Mija","zn -> žņ"));}
 						else if (celms.endsWith("ln")) {varianti.add(new Variants(celms.substring(0,celms.length()-2)+"ļņ","Mija","ln -> ļņ"));}
+						else if (celms.endsWith("nn")) {varianti.add(new Variants(celms.substring(0,celms.length()-2)+"ņņ","Mija","nn -> ņņ"));}
 						else /*if (!(celms.endsWith("zņ") || celms.endsWith("sņ") || celms.endsWith("lņ")))*/ {
 							//varianti.add(new Variants(celms.substring(0,celms.length()-1)+"ņ","Mija", "l -> ņ ??"));
 							varianti.add(new Variants(celms.substring(0,celms.length()-1)+"ņ","Mija", "n -> ņ"));

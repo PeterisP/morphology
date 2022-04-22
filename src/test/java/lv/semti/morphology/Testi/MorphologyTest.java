@@ -4087,5 +4087,22 @@ public class MorphologyTest {
         assertFalse(w.isRecognized());
     }
 
+    @Test
+    public void piņņu() {
+        // Problēma ar pinne->piņņu miju
+        AttributeValues testset = new AttributeValues();
+        testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
+        testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Genitive);
+        testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Plural);
+
+        List<Wordform> formas = locītājs.generateInflections("pinne");
+        assertInflection(formas, testset, "piņņu");
+
+        formas = locītājs.generateInflections("lelle");
+        assertInflection(formas, testset, "leļļu");
+
+        formas = locītājs.generateInflections("ķemme");
+        assertInflection(formas, testset, "ķemmju");
+    }
 }
 
