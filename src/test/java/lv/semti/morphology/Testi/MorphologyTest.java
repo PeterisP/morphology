@@ -4105,5 +4105,13 @@ public class MorphologyTest {
         assertInflection(formas, testset, "ķemmju");
     }
 
+    @Test
+    public void noliegums_tagā() {
+        Word nevarēšu = locītājs.analyze("nevarēšu");
+        assertTrue(nevarēšu.isRecognized());
+        assertEquals("Jā", nevarēšu.wordforms.get(0).getValue(AttributeNames.i_Noliegums));
+        assertEquals("vonif_31say", nevarēšu.wordforms.get(0).getTag());
+    }
+
 }
 

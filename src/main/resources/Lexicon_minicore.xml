@@ -42,10 +42,10 @@
       <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls"/>
     </Lexeme>
     <Lexeme Stem1="nespē" Stem2="nespēj" Stem3="nespēj">
-      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls" Pamatforma_morforīkiem="spēt"/>
+      <Attributes Noliegums="Jā" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Modāls" Pamatforma_morforīkiem="spēt"/>
     </Lexeme>
     <Lexeme Stem1="nespē" Stem2="nespēj" Stem3="nespēj">
-      <Attributes Transitivitāte="Intransitīvs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma_morforīkiem="spēt"/>
+      <Attributes Noliegums="Jā" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma_morforīkiem="spēt"/>
     </Lexeme>
     <Lexeme Stem1="paspē" Stem2="paspēj" Stem3="paspēj">
       <Attributes Darbības_vārda_tips="Fāzes"/>
@@ -66,7 +66,7 @@
       <Attributes Transitivitāte="Transitīvs" Darbības_vārda_tips="Fāzes"/>
     </Lexeme>
     <Lexeme Stem1="nebeig" Stem2="nebeidz" Stem3="nebeidz" Pamatforma_morforīkiem="beigt">
-      <Attributes Darbības_vārda_tips="Fāzes"/>
+      <Attributes Noliegums="Jā" Darbības_vārda_tips="Fāzes"/>
     </Lexeme>
     <Lexeme Stem1="sāk" Stem2="sāk" Stem3="sāk">
       <Attributes Transitivitāte="Transitīvs" Darbības_vārda_tips="Fāzes"/>
@@ -149,22 +149,22 @@
       <Attributes Darbības_vārda_tips="Modāls"/>
     </Lexeme>
     <Lexeme Stem1="nevarē">
-      <Attributes Darbības_vārda_tips="Modāls" Pamatforma_morforīkiem="varēt"/>
+      <Attributes Noliegums="Jā" Darbības_vārda_tips="Modāls" Pamatforma_morforīkiem="varēt"/>
     </Lexeme>
     <Lexeme Stem1="nevarē">
-      <Attributes Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma_morforīkiem="varēt"/>
+      <Attributes Noliegums="Jā" Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma_morforīkiem="varēt"/>
     </Lexeme>
     <Lexeme Stem1="gribē">
       <Attributes Darbības_vārda_tips="Modāls"/>
     </Lexeme>
     <Lexeme Stem1="negribē">
-      <Attributes Darbības_vārda_tips="Modāls" Pamatforma_morforīkiem="gribēt"/>
+      <Attributes Noliegums="Jā" Darbības_vārda_tips="Modāls" Pamatforma_morforīkiem="gribēt"/>
     </Lexeme>
     <Lexeme Stem1="drīkstē">
       <Attributes Darbības_vārda_tips="Modāls"/>
     </Lexeme>
     <Lexeme Stem1="nedrīkstē">
-      <Attributes Darbības_vārda_tips="Modāls" Pamatforma_morforīkiem="drīkstēt"/>
+      <Attributes Noliegums="Jā" Darbības_vārda_tips="Modāls" Pamatforma_morforīkiem="drīkstēt"/>
     </Lexeme>
     <Lexeme Stem1="mēģinā">
       <Attributes Darbības_vārda_tips="Modāls"/>
