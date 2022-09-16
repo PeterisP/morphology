@@ -3990,16 +3990,52 @@
       <Attributes Pieturzīmes_tips="Iekava"/>
     </Lexeme>
     <Lexeme Stem1="{">
-      <Attributes Pieturzīmes_tips="Iekava" Pamatforma="("/>
+      <Attributes Pieturzīmes_tips="Iekava"/>
     </Lexeme>
     <Lexeme Stem1="}">
-      <Attributes Pieturzīmes_tips="Iekava" Pamatforma=")"/>
+      <Attributes Pieturzīmes_tips="Iekava"/>
     </Lexeme>
     <Lexeme Stem1="&lt;">
       <Attributes Pieturzīmes_tips="Iekava"/>
     </Lexeme>
     <Lexeme Stem1="&gt;">
       <Attributes Pieturzīmes_tips="Iekava"/>
+    </Lexeme>
+    <Lexeme Stem1="❬">
+      <Attributes Pieturzīmes_tips="Iekava" Pamatforma="&lt;"/>
+    </Lexeme>
+    <Lexeme Stem1="❭">
+      <Attributes Pieturzīmes_tips="Iekava" Pamatforma="&gt;"/>
+    </Lexeme>
+    <Lexeme Stem1="❮">
+      <Attributes Pieturzīmes_tips="Iekava" Pamatforma="&lt;"/>
+    </Lexeme>
+    <Lexeme Stem1="❯">
+      <Attributes Pieturzīmes_tips="Iekava" Pamatforma="&gt;"/>
+    </Lexeme>
+    <Lexeme Stem1="❰">
+      <Attributes Pieturzīmes_tips="Iekava" Pamatforma="&lt;"/>
+    </Lexeme>
+    <Lexeme Stem1="❱">
+      <Attributes Pieturzīmes_tips="Iekava" Pamatforma="&gt;"/>
+    </Lexeme>
+    <Lexeme Stem1="⟨">
+      <Attributes Pieturzīmes_tips="Iekava" Pamatforma="&lt;"/>
+    </Lexeme>
+    <Lexeme Stem1="⟩">
+      <Attributes Pieturzīmes_tips="Iekava" Pamatforma="&gt;"/>
+    </Lexeme>
+    <Lexeme Stem1="⟪">
+      <Attributes Pieturzīmes_tips="Iekava" Pamatforma="&lt;"/>
+    </Lexeme>
+    <Lexeme Stem1="⟫">
+      <Attributes Pieturzīmes_tips="Iekava" Pamatforma="&gt;"/>
+    </Lexeme>
+    <Lexeme Stem1="⦉">
+      <Attributes Pieturzīmes_tips="Iekava" Pamatforma="&lt;"/>
+    </Lexeme>
+    <Lexeme Stem1="⦊">
+      <Attributes Pieturzīmes_tips="Iekava" Pamatforma="&gt;"/>
     </Lexeme>
     <Lexeme Stem1="«">
       <Attributes Pieturzīmes_tips="Pēdiņa" Pamatforma="&quot;"/>
@@ -4016,17 +4052,86 @@
     <Lexeme Stem1="’’">
       <Attributes Pieturzīmes_tips="Pēdiņa" Pamatforma="&quot;"/>
     </Lexeme>
+    <Lexeme Stem1="[">
+      <Attributes Pieturzīmes_tips="Iekava"/>
+    </Lexeme>
+    <Lexeme Stem1="]">
+      <Attributes Pieturzīmes_tips="Iekava"/>
+    </Lexeme>
+    <Lexeme Stem1="⟦">
+      <Attributes Pieturzīmes_tips="Iekava" Pamatforma="["/>
+    </Lexeme>
+    <Lexeme Stem1="⟧">
+      <Attributes Pieturzīmes_tips="Iekava" Pamatforma="]"/>
+    </Lexeme>
+    <Lexeme Stem1="⟬">
+      <Attributes Pieturzīmes_tips="Iekava" Pamatforma="["/>
+    </Lexeme>
+    <Lexeme Stem1="⟭">
+      <Attributes Pieturzīmes_tips="Iekava" Pamatforma="]"/>
+    </Lexeme>
+    <Lexeme Stem1="⌈">
+      <Attributes Pieturzīmes_tips="Iekava" Pamatforma="["/>
+    </Lexeme>
+    <Lexeme Stem1="⌉">
+      <Attributes Pieturzīmes_tips="Iekava" Pamatforma="]"/>
+    </Lexeme>
+    <Lexeme Stem1="⌊">
+      <Attributes Pieturzīmes_tips="Iekava" Pamatforma="["/>
+    </Lexeme>
+    <Lexeme Stem1="⌋">
+      <Attributes Pieturzīmes_tips="Iekava" Pamatforma="]"/>
+    </Lexeme>
+    <Lexeme Stem1="❨">
+      <Attributes Pieturzīmes_tips="Iekava" Pamatforma="("/>
+    </Lexeme>
+    <Lexeme Stem1="❩">
+      <Attributes Pieturzīmes_tips="Iekava" Pamatforma=")"/>
+    </Lexeme>
+    <Lexeme Stem1="❪">
+      <Attributes Pieturzīmes_tips="Iekava" Pamatforma="("/>
+    </Lexeme>
+    <Lexeme Stem1="❫">
+      <Attributes Pieturzīmes_tips="Iekava" Pamatforma=")"/>
+    </Lexeme>
+    <Lexeme Stem1="❲">
+      <Attributes Pieturzīmes_tips="Iekava" Pamatforma="("/>
+    </Lexeme>
+    <Lexeme Stem1="❳">
+      <Attributes Pieturzīmes_tips="Iekava" Pamatforma=")"/>
+    </Lexeme>
+    <Lexeme Stem1="⟮">
+      <Attributes Pieturzīmes_tips="Iekava" Pamatforma="("/>
+    </Lexeme>
+    <Lexeme Stem1="⟯">
+      <Attributes Pieturzīmes_tips="Iekava" Pamatforma=")"/>
+    </Lexeme>
+    <Lexeme Stem1="⦇">
+      <Attributes Pieturzīmes_tips="Iekava" Pamatforma="("/>
+    </Lexeme>
+    <Lexeme Stem1="⦈">
+      <Attributes Pieturzīmes_tips="Iekava" Pamatforma=")"/>
+    </Lexeme>
+    <Lexeme Stem1="❴">
+      <Attributes Pieturzīmes_tips="Iekava" Pamatforma="{"/>
+    </Lexeme>
+    <Lexeme Stem1="❵">
+      <Attributes Pieturzīmes_tips="Iekava" Pamatforma="}"/>
+    </Lexeme>
+
+
+
     <Lexeme Stem1="-">
       <Attributes Pieturzīmes_tips="Domuzīme" Pamatforma="-"/>
     </Lexeme>
-    <Lexeme Stem1="[">
-      <Attributes Pieturzīmes_tips="Iekava" Pamatforma="("/>
+    <Lexeme Stem1="--">
+      <Attributes Pieturzīmes_tips="Domuzīme" Pamatforma="–"/>
     </Lexeme>
-    <Lexeme Stem1="]">
-      <Attributes Pieturzīmes_tips="Iekava" Pamatforma=")"/>
+    <Lexeme Stem1="---">
+      <Attributes Pieturzīmes_tips="Domuzīme" Pamatforma="–"/>
     </Lexeme>
     <Lexeme Stem1="—">
-      <Attributes Pieturzīmes_tips="Domuzīme" Pamatforma="-"/>
+      <Attributes Pieturzīmes_tips="Domuzīme" Pamatforma="–"/>
     </Lexeme>
     <Lexeme Stem1="‐">
       <Attributes Pieturzīmes_tips="Domuzīme" Pamatforma="-"/>
@@ -4038,10 +4143,10 @@
       <Attributes Pieturzīmes_tips="Domuzīme" Pamatforma="-"/>
     </Lexeme>
     <Lexeme Stem1="–">
-      <Attributes Pieturzīmes_tips="Domuzīme" Pamatforma="-"/>
+      <Attributes Pieturzīmes_tips="Domuzīme" Pamatforma="–"/>
     </Lexeme>
     <Lexeme Stem1="―">
-      <Attributes Pieturzīmes_tips="Domuzīme" Pamatforma="-"/>
+      <Attributes Pieturzīmes_tips="Domuzīme" Pamatforma="–"/>
     </Lexeme>
     <Lexeme Stem1="˗">
       <Attributes Pieturzīmes_tips="Domuzīme" Pamatforma="-"/>
