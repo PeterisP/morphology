@@ -3601,9 +3601,6 @@
     <Lexeme Stem1="·">
       <Attributes Vārdšķira="Reziduālis"/>
     </Lexeme>
-    <Lexeme Stem1="∙">
-      <Attributes Vārdšķira="Reziduālis"/>
-    </Lexeme>
     <Lexeme Stem1="×">
       <Attributes Vārdšķira="Reziduālis"/>
     </Lexeme>
@@ -3685,23 +3682,11 @@
     <Lexeme Stem1="trim">
       <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Datīvs" Skaitļu_kārta="Vieni" Pamatforma="trīs"/>
     </Lexeme>
-    <Lexeme Stem1="nebūt">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Nenoteiksme" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="Nepiemīt" Noliegums="Jā" Pamatforma="būt" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
-    </Lexeme>
-    <Lexeme Stem1="nebūt">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Nenoteiksme" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="Nepiemīt" Noliegums="Jā" Pamatforma="būt" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
-    </Lexeme>
     <Lexeme Stem1="nav">
       <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="3" Noliegums="Jā" Pamatforma="būt" Laiks="Tagadne" Kārta="Darāmā"/>
     </Lexeme>
     <Lexeme Stem1="nav">
       <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Jā" Pamatforma="būt" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebūsit">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="2" Noliegums="Jā" Pamatforma="būt" Laiks="Nākotne" Kārta="Darāmā" Papildforma="Jā"/>
-    </Lexeme>
-    <Lexeme Stem1="nebūsit">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Daudzskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="2" Noliegums="Jā" Pamatforma="būt" Laiks="Nākotne" Kārta="Darāmā" Papildforma="Jā"/>
     </Lexeme>
     <Lexeme Stem1="trīs">
       <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Nepiemīt" Locījums="Nepiemīt" Skaitļu_kārta="Vieni" Pamatforma="trīs"/>
@@ -3744,21 +3729,6 @@
     </Lexeme>
     <Lexeme Stem1="die's">
       <Attributes Pamatforma="dievs" Vārdšķira="Lietvārds" Locījums="Nominatīvs" Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Lietvārda_tips="Sugas vārds" Deklinācija="1" Papildforma="Jā"/>
-    </Lexeme>
-    <Lexeme Stem1="tūkstoti">
-      <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Vienskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Akuzatīvs" Skaitļu_kārta="Tūkstoši" Pamatforma="tūkstotis"/>
-    </Lexeme>    
-    <Lexeme Stem1="tūkstoša">
-      <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Vienskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Ģenitīvs" Skaitļu_kārta="Tūkstoši" Pamatforma="tūkstotis"/>
-    </Lexeme>
-    <Lexeme Stem1="tūkstotim">
-      <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Vienskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Datīvs" Skaitļu_kārta="Tūkstoši" Pamatforma="tūkstotis"/>
-    </Lexeme>
-    <Lexeme Stem1="tūkstotī">
-      <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Vienskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Lokatīvs" Skaitļu_kārta="Tūkstoši" Pamatforma="tūkstotis"/>
-    </Lexeme>
-    <Lexeme Stem1="tūkstotis">
-      <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Vienskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Nominatīvs" Skaitļu_kārta="Tūkstoši" Pamatforma="tūkstotis"/>
     </Lexeme>
   </Paradigm>
   <Paradigm ID="30" Description="Patstāvīgas divdabju noteiktās formas -ais (jaundzimušais, galvenais u.c.)">
@@ -3899,6 +3869,9 @@
     <Lexeme Stem1="ES"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
   </Paradigm>
   <Paradigm Stems="1" ID="37" LemmaEnding="2092" Description="Pieturzīmes (! , ...)" AllowedGuessEndings="!">
+    <Lexeme Stem1="∙">
+      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Cita"/>
+    </Lexeme>
     <Lexeme Stem1="...">
       <Attributes Pieturzīmes_tips="Punkts"/>
     </Lexeme>

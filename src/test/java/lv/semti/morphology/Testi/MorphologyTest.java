@@ -3282,7 +3282,7 @@ public class MorphologyTest {
         assertEquals("xx", w.getBestWordform().getTag());
         w = locītājs.analyze("∙");
         assertTrue(w.isRecognized());
-        assertEquals("xx", w.getBestWordform().getTag());
+        assertEquals("zx", w.getBestWordform().getTag());
         w = locītājs.analyze("‒");
         assertTrue(w.isRecognized());
         assertEquals("zd", w.getBestWordform().getTag());
@@ -3503,7 +3503,7 @@ public class MorphologyTest {
     @Test
     public void noun_derivation() {
         locītājs.enableDerivedNouns = false; // Check that the words are OOV
-        Word w = locītājs.analyze("uzvarētājs");
+        Word w = locītājs.analyze("slavētājs");
         assertFalse(w.isRecognized());
         w = locītājs.analyze("tīkotājs");
         assertFalse(w.isRecognized());
@@ -3512,7 +3512,7 @@ public class MorphologyTest {
         w = locītājs.analyze("kodējs");
         assertFalse(w.isRecognized());
         locītājs.enableDerivedNouns = true; // Check that the automatic derivation finds them
-        w = locītājs.analyze("uzvarētājs");
+        w = locītājs.analyze("slavētājs");
         assertTrue(w.isRecognized());
         w = locītājs.analyze("tīkotājs");
         assertTrue(w.isRecognized());

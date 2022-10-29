@@ -418,6 +418,7 @@
 
 <Attribute LV="Lietojums" EN="Usage">
 	<Value LV="Novecojis" EN="Dated"/>
+	<Value LV="Sens, reti lietots vārds" EN="Old, rarely used"/>
 	<Value LV="Apvidvārds" EN="Regional"/>
 	<Value LV="Neaktuāls" EN="Obsolete"/>
 	<Value LV="Vēsturisks" EN="Historical"/>
@@ -428,6 +429,7 @@
 	<Value LV="Vulgārisms" EN="Vulgar"/>
 	<Value LV="Barbarisms" EN="Barbaric"/>
 	<Value LV="Biblisms" EN="Bible"/>
+	<Value LV="Jaunvārds" EN="Neologism"/>
 	<Value LV="Īsziņās" EN="SMS"/>
 	<Value LV="Bērnu valoda" EN="Children"/>
 	<Value LV="[&quot;Sarunvaloda&quot;,&quot;Vēsturisks&quot;]" EN="Historical/Colloquial"/>
@@ -436,18 +438,23 @@
 	<Value LV="[&quot;Neliterārs&quot;,&quot;Sarunvaloda&quot;]" EN="Colloquial"/>	
 	<Value LV="[&quot;Neliterārs&quot;,&quot;Sarunvaloda&quot;,&quot;Vēsturisks&quot;]" EN="Colloquial"/>
 	<Value LV="[&quot;Apvidvārds&quot;,&quot;Vulgārisms&quot;]" EN="Vulgar"/>
+	<Value LV="[&quot;Apvidvārds&quot;,&quot;Žargonvārds&quot;]" EN="Regional/Slang"/>
 	<Value LV="[&quot;Apvidvārds&quot;,&quot;Novecojis&quot;]" EN="Regional/Dated"/>
+	<Value LV="[&quot;Apvidvārds&quot;,&quot;Nevēlams&quot;]" EN="Regional/Undesirable"/>
 	<Value LV="[&quot;Apvidvārds&quot;,&quot;Bērnu valoda&quot;]" EN="Children"/>
+	<Value LV="[&quot;Nevēlams&quot;,&quot;Novecojis&quot;]" EN="Undesirable/Dated"/>
 </Attribute>
 
 <Attribute LV="Stils" EN="Style">
 	<Value LV="Nievājoša ekspresīvā nokrāsa" EN="Derogatory"/>
+	<Value LV="Nicīga ekspresīvā nokrāsa" EN="Derogatory"/>
 	<Value LV="Ironiska ekspresīvā nokrāsa" EN="Ironic"/>
 	<Value LV="Humoristiska ekspresīvā nokrāsa" EN="Jocular"/>
 	<Value LV="Poētiska stilistiskā nokrāsa" EN="Poetic"/>
 	<Value LV="[&quot;Folkloras valodai raksturīga stilistiskā nokrāsa&quot;,&quot;Poētiska stilistiskā nokrāsa&quot;]" EN="Poetic"/>
 	<Value LV="Vienkāršrunas stilistiskā nokrāsa" EN="Simplistic"/>
 	<Value LV="Sirsnīga emocionālā nokrāsa" EN="Hearty"/>
+	<Value LV="Mīlinājuma nokrāsa" EN="Affective"/>
 	<Value LV="Pārnestā nozīmē" EN="Figurative"/>
 </Attribute>
 
@@ -463,11 +470,13 @@
 	<Value LV="Bioloģija" EN="Biology"/>
 	<Value LV="[&quot;Bioloģija&quot;,&quot;Ķīmija&quot;]" EN="Biology/Chemistry"/>
 	<Value LV="Ķīmija" EN="Chemistry"/>
+	<Value LV="[&quot;Aeronautika&quot;,&quot;Ķīmija&quot;]" EN="Aeronautics/Chemistry"/>
+	<Value LV="[&quot;Ķīmija&quot;,&quot;Farmakoloģija&quot;]" EN="Chemistry/Pharmacology"/>
 	<Value LV="[&quot;Tehnoloģija&quot;,&quot;Ķīmija&quot;,&quot;Ķīmijas tehnoloģija&quot;]" EN="Chemistry technology"/>
 	<Value LV="[&quot;Ekoloģija&quot;,&quot;Ķīmija&quot;]" EN="Ecology/Chemistry"/>
 	<Value LV="[&quot;Fizika&quot;,&quot;Ķīmija&quot;]" EN="Physics/Chemistry"/>
 	<Value LV="[&quot;Bioloģija&quot;,&quot;Fizika&quot;,&quot;Ķīmija&quot;]" EN="Biology/Physics/Chemistry"/>
-	<Value LV="[&quot;Fizika&quot;,&quot;Tehnika&quot;]" EN="Physics/Technics"/>
+	<Value LV="[&quot;Fizika&quot;,&quot;Tehnika&quot;]" EN="Physics/Technology"/>
 	<Value LV="Ģeometrija" EN="Geometry"/>
 	<Value LV="[&quot;Fizika&quot;,&quot;Ģeometrija&quot;]" EN="Physics/Geometry"/>
 	<Value LV="[&quot;Fizika&quot;,&quot;Medicīna&quot;]" EN="Physics/Medicine"/>
@@ -518,8 +527,9 @@
 	<Value LV="Grāmatvedība" EN="Accounting"/>
 	<Value LV="Matemātika" EN="Mathemathics"/>
 	<Value LV="Loģika" EN="Logic"/>
+	<Value LV="Statistika" EN="Statistics"/>
 	<Value LV="Informātika" EN="Informatics"/>
-	<Value LV="Tehnika" EN="Technical"/>
+	<Value LV="Tehnika" EN="Technology"/>
 	<Value LV="Tehnoloģija" EN="Technology"/>
 	<Value LV="[&quot;Tehnoloģija&quot;,&quot;Ķīmija&quot;]" EN="Technology/Chemistry"/>
 	<Value LV="Elektrotehnika" EN="Electrotechnical"/>	
@@ -533,6 +543,8 @@
 	<Value LV="Agronomija" EN="Agriculture"/>
 	<Value LV="Mežsaimniecība" EN="Forestry"/>
 	<Value LV="[&quot;Lauksaimniecība&quot;,&quot;Mežsaimniecība&quot;]" EN="Agriculture/Forestry"/>
+	<Value LV="[&quot;Bioloģija&quot;,&quot;Mežsaimniecība&quot;]" EN="Biology/Forestry"/>
+	<Value LV="[&quot;Kokapstrāde&quot;,&quot;Mežrūpniecība&quot;]" EN="Carpentry/Forestry"/>
 	<Value LV="Medniecība" EN="Hunting"/>
 	<Value LV="Biškopība" EN="Beekeeping"/>
 	<Value LV="Būvniecība" EN="Construction"/>
@@ -551,10 +563,12 @@
 	<Value LV="Kinematogrāfija" EN="Cinematography"/>
 	<Value LV="[&quot;Fotogrāfija&quot;,&quot;Kinematogrāfija&quot;]" EN="Photography/Cinematography"/>
 	<Value LV="[&quot;Fotogrāfija&quot;,&quot;Kinematogrāfija&quot;,&quot;Televīzija&quot;]" EN="Photography/Cinematography/Television"/>
-	<Value LV="[&quot;Informātika&quot;,&quot;Tehnika&quot;,&quot;Telekomunikācijas&quot;]" EN="Informatics/Technics/Telecommunications"/>
+	<Value LV="[&quot;Informātika&quot;,&quot;Tehnika&quot;,&quot;Telekomunikācijas&quot;]" EN="Informatics/Technology/Telecommunications"/>
+	<Value LV="[&quot;Informātika&quot;,&quot;Matemātika&quot;]" EN="Informatics/Mathemathics"/>
 	<Value LV="Aeronautika" EN="Aeronautics"/>
 	<Value LV="[&quot;Aeronautika&quot;,&quot;Jūrniecība&quot;]" EN="Aeronautics/Marine"/>
-	<Value LV="[&quot;Aeronautika&quot;,&quot;Fizika&quot;]" EN="Aeronautics/Fizika"/>
+	<Value LV="[&quot;Aeronautika&quot;,&quot;Fizika&quot;]" EN="Aeronautics/Physics"/>
+	<Value LV="[&quot;Aeronautika&quot;,&quot;Tehnika&quot;]" EN="Aeronautics/Technology"/>
 	<Value LV="[&quot;Jūrniecība&quot;,&quot;Meteoroloģija&quot;]" EN="Marine/Meteorology"/>
 	<Value LV="Bioķīmija" EN="Biochemistry"/>
 	<Value LV="Glezniecība" EN="Painting"/>
@@ -562,7 +576,9 @@
 	<Value LV="Entomoloģija" EN="Entomology"/>
 	<Value LV="Antropoloģija" EN="Antropology"/>
 	<Value LV="Socioloģija" EN="Sociology"/>
+	<Value LV="Ekoloģija" EN="Ecology"/>
 	<Value LV="Keramika" EN="Ceramics"/>
+	<Value LV="Mehānika" EN="Mechanics"/>
 	<Value LV="Siltumtehnika" EN="HVAC"/>
 	<Value LV="Papīrrūpniecība" EN="Paper manufacturing"/>
 	<Value LV="Vēsturisks vietvārds" EN="Historical toponym"/>
@@ -624,8 +640,17 @@
 	<Value LV="Jā" EN="Yes"/>
 </Attribute>
 
+<Attribute LV="Deminutīvs" EN="Deminutive">
+	<Value LV="Jā" EN="Yes"/>
+</Attribute>
+
+<Attribute LV="Hipotēze" EN="Hypothesis">
+	<Value LV="Jā" EN="Yes"/>
+</Attribute>
+
 <Attribute LV="Dialekta iezīmes" EN="Dialect markings">
 	<Value LV="Latgaliešu" EN="Latgalian"/>
+	<Value LV="Augšzemnieku" EN="Upper Latvian"/>
 </Attribute>
 
 
@@ -703,8 +728,6 @@
 
 <Attribute LV="Citi" EN="Other">
 	<Value LV="Cita paradigma" EN="Other paradigm"/>
-	<Value LV="Deminutīvs" EN="Deminutive"/>
-	<Value LV="Hipotēze" EN="Hypothesis"/>
 	<Value LV="Pēdējie celmi lietojami retāk" EN="Latter stems are used rarely"/>
 	<Value LV="[&quot;Neviennozīmīga paradigma&quot;,&quot;Vienskaitļa formas lieto sarunvalodā&quot;]" EN="Ambiguous paradigm/Singular forms are colloquial"/>
 	<Value LV="[&quot;Oriģinālā gramatika satur karodziņos neatšifrētas nianses&quot;,&quot;Pēdējie celmi lietojami retāk&quot;]" EN="Freetext contains items not converted to attributes/Latter stems are used rarely"/>

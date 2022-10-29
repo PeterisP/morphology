@@ -7399,7 +7399,7 @@
 		<Ending ID="2621" StemChange="0" Ending="at" StemID="2" LemmaEnding="2407">
 			<Attributes Skaitlis="Daudzskaitlis" Izteiksme="Īstenības" Persona="2" Laiks="Tagadne" Kārta="Darāmā"/>
 		</Ending>
-		<!-- viņš ir
+		<!-- viņš ir, viņš nav
 		<Ending ID="2622" StemChange="0" Ending="" StemID="2" LemmaEnding="2407">
 			<Attributes Skaitlis="Nepiemīt" Izteiksme="Īstenības" Persona="3" Laiks="Tagadne" Kārta="Darāmā"/>
 		</Ending> 
