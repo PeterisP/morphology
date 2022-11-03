@@ -3892,7 +3892,7 @@ public class MorphologyTest {
         List<Wordform> formas = locītājs.generateInflections("skriet");
         boolean found_negation = false;
         for (Wordform wf : formas) {
-            if ( wf.getToken().equalsIgnoreCase("neskriet")) found_negation = true;
+            if (wf.getToken().equalsIgnoreCase("neskriet")) found_negation = true;
             assertNotEquals("nejāskrien", wf.getToken());
             assertNotEquals("jāneskrien", wf.getToken());
         }
@@ -3901,7 +3901,7 @@ public class MorphologyTest {
         formas = locītājs.generateInflections("prātot");
         found_negation = false;
         for (Wordform wf : formas) {
-            if ( wf.getToken().equalsIgnoreCase("neprātot")) found_negation = true;
+            if (wf.getToken().equalsIgnoreCase("neprātot")) found_negation = true;
             assertNotEquals("nejāprāto", wf.getToken());
             assertNotEquals("jāneprāto", wf.getToken());
         }
@@ -3971,14 +3971,14 @@ public class MorphologyTest {
     public void nebēdņot_caur_paradigmu() {
         List<Wordform> formas = locītājs.generateInflections("nebēdņot");
         for (Wordform wf : formas) {
-            assertNotEquals ("jānebēdņo", wf.getToken());
+            assertNotEquals("jānebēdņo", wf.getToken());
         }
 
         AttributeValues av = new AttributeValues();
         av.addAttribute(AttributeNames.i_Noliegums, AttributeNames.v_Yes);
         formas = locītājs.generateInflectionsFromParadigm("nebēdņot", 16, av);
         for (Wordform wf : formas) {
-            assertNotEquals ("jānebēdņo", wf.getToken());
+            assertNotEquals("jānebēdņo", wf.getToken());
         }
     }
 
@@ -4049,7 +4049,7 @@ public class MorphologyTest {
                 String lemma = l.getStem(0) + "t";
                 ArrayList<Wordform> wordforms = locītājs.generateInflections(l, lemma);
                 for (Wordform wf : wordforms) {
-                    if (wf.getEnding().getID()==790 && !wf.isMatchingStrong(AttributeNames.i_Noliegums, AttributeNames.v_Yes)) {
+                    if (wf.getEnding().getID() == 790 && !wf.isMatchingStrong(AttributeNames.i_Noliegums, AttributeNames.v_Yes)) {
                         izeja.printf("%s\t%s\n", lemma, wf.getToken());
                     }
                 }
@@ -4057,7 +4057,7 @@ public class MorphologyTest {
         }
         izeja.flush();
     }
-    
+
     @Test
     public void roberts_2021_11_24() {
         // Roberts sūdzējās, ka webservisu API neatgriež daudzskaitļa formas, kaut arī tēzaurā tās rādās un it kā nekādi karodziņi tās neaizliedz
@@ -4077,8 +4077,8 @@ public class MorphologyTest {
         AttributeValues av = new AttributeValues();
         ArrayList<Wordform> formas = locītājs.generateInflectionsFromParadigm("apmākies", 43, av);
         for (Wordform wf : formas) {
-            assertNotEquals ("apmācusies", wf.getToken());
-            assertNotEquals ("apmākies", wf.getToken());
+            assertNotEquals("apmācusies", wf.getToken());
+            assertNotEquals("apmākies", wf.getToken());
         }
 
         Word w = locītājs.analyze("apmācusies");
@@ -4157,8 +4157,25 @@ public class MorphologyTest {
         assertTrue(w.isRecognized());
         w = locītājs.analyze("maucēja");
         assertTrue(w.isRecognized());
-
     }
 
-}
+    @Test
+    public void ticket_85() {
+        // nepareiza mija vārdam viest (ieviest - lai nav konflikts ar viest homoformām)
+        List<Wordform> formas = locītājs.generateInflections("ieviest");
+        boolean found = false;
+        for (Wordform wf : formas) {
+            assertNotEquals("ieviešošs", wf.getToken());
+            if (wf.getToken().equalsIgnoreCase("ieviesošs"))
+                found = true;
+        }
+        assertTrue(found);
 
+
+        Word w = locītājs.analyze("ieviešošs");
+        assertFalse(w.isRecognized());
+
+        locītājs.analyze("ieviesošs");
+        assertTrue(w.isRecognized());
+    }
+}
