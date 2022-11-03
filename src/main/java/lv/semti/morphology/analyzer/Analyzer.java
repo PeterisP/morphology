@@ -322,7 +322,7 @@ public class Analyzer extends Lexicon {
 					for (Lexeme lexeme : lexemes) {
 						Wordform variants = new Wordform(word, lexeme, ending);
 						variants.addAttributes(celms); // TODO - iespējams ka šis ir lieks
-						variants.addAttribute(AttributeNames.i_Source, "-tājs/-tāja formu atvasināšana");
+						variants.addAttribute(AttributeNames.i_Source, "-tājs/-tāja sufiksāls atvasinājums");
 						variants.addAttribute(AttributeNames.i_SourceLemma, lexeme.getValue(AttributeNames.i_Lemma));
 						variants.addAttribute(AttributeNames.i_Guess, AttributeNames.v_Deminutive);
 						String lemma = lexeme.getStem(0) + "tāj" + ending.getLemmaEnding().getEnding();
@@ -341,7 +341,7 @@ public class Analyzer extends Lexicon {
 					for (Lexeme lexeme : lexemes) {
 						Wordform variants = new Wordform(word, lexeme, ending);
 						variants.addAttributes(verb_stem); // ?
-						variants.addAttribute(AttributeNames.i_Source, "-ējs/-ēja formu atvasināšana");
+						variants.addAttribute(AttributeNames.i_Source, "-ējs/-ēja sufiksāls atvasinājums");
 						variants.addAttribute(AttributeNames.i_SourceLemma, lexeme.getValue(AttributeNames.i_Lemma));
 						variants.addAttribute(AttributeNames.i_Guess, AttributeNames.v_Deminutive);
 						String lemma = verb_stem.celms + "ēj" + ending.getLemmaEnding().getEnding();

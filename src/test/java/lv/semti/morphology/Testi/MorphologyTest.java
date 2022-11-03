@@ -4144,6 +4144,8 @@ public class MorphologyTest {
         assertFalse(w.isRecognized());
         w = locītājs.analyze("atrasējs");
         assertFalse(w.isRecognized());
+        w = locītājs.analyze("maukēja");
+        assertFalse(w.isRecognized());
 
         w = locītājs.analyze("sniedzējs");
         assertTrue(w.isRecognized());
@@ -4153,6 +4155,9 @@ public class MorphologyTest {
         assertTrue(w.isRecognized());
         w = locītājs.analyze("atradējs");
         assertTrue(w.isRecognized());
+        w = locītājs.analyze("maucēja");
+        assertTrue(w.isRecognized());
+
     }
 
 }
