@@ -344,7 +344,7 @@ public class Analyzer extends Lexicon {
 						variants.addAttribute(AttributeNames.i_Source, "-ējs/-ēja formu atvasināšana");
 						variants.addAttribute(AttributeNames.i_SourceLemma, lexeme.getValue(AttributeNames.i_Lemma));
 						variants.addAttribute(AttributeNames.i_Guess, AttributeNames.v_Deminutive);
-						String lemma = lexeme.getStem(0) + "ēj" + ending.getLemmaEnding().getEnding();
+						String lemma = verb_stem.celms + "ēj" + ending.getLemmaEnding().getEnding();
 						lemma = recapitalize(lemma, originalWord);
 						variants.addAttribute(AttributeNames.i_Lemma, lemma);
 						result.addWordform(variants);

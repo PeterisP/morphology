@@ -4113,5 +4113,47 @@ public class MorphologyTest {
         assertEquals("vonif_31say", nevarēšu.wordforms.get(0).getTag());
     }
 
+    @Test
+    public void ticket_121() {
+        // nolieguma vispārākajai pakāpei ir nepareiza secība
+        List<Wordform> formas = locītājs.generateInflections("māt");
+        boolean found = false;
+        for (Wordform wf : formas) {
+            assertNotEquals("nevismājošākais", wf.getToken());
+            if (wf.getToken().equalsIgnoreCase("visnemājošākais"))
+                found = true;
+        }
+        assertTrue(found);
+
+        Word w = locītājs.analyze("nevismājošākais");
+        assertFalse(w.isRecognized());
+
+        w = locītājs.analyze("visnemājošākais");
+        assertTrue(w.isRecognized());
+    }
+
+
+    @Test
+    public void ticket_120() {
+        // -ējs atvasināšanai ne tāda mija
+        Word w = locītājs.analyze("sniegējs");
+        assertFalse(w.isRecognized());
+        w = locītājs.analyze("veikējs");
+        assertFalse(w.isRecognized());
+        w = locītājs.analyze("atklāējs");
+        assertFalse(w.isRecognized());
+        w = locītājs.analyze("atrasējs");
+        assertFalse(w.isRecognized());
+
+        w = locītājs.analyze("sniedzējs");
+        assertTrue(w.isRecognized());
+        w = locītājs.analyze("veicējs");
+        assertTrue(w.isRecognized());
+        w = locītājs.analyze("atklājējs");
+        assertTrue(w.isRecognized());
+        w = locītājs.analyze("atradējs");
+        assertTrue(w.isRecognized());
+    }
+
 }
 

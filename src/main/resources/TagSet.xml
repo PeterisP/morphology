@@ -419,6 +419,10 @@
 <!--	<Value LV="Neaktuāls" EN="Obsolete"/> -->
 </Attribute>
 
+<Attribute LV="Valodas normēšana" EN="Normative">
+	<Value LV="Nevēlams" EN="Undesirable"/>
+</Attribute>
+
 <Attribute LV="Lietojums" EN="Usage">
 	<Value LV="Novecojis" EN="Dated"/>
 	<Value LV="Sens, reti lietots vārds" EN="Old, rarely used"/>
