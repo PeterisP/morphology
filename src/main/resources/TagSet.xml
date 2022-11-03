@@ -202,10 +202,12 @@
 <Attribute LV="Dzimte" EN="Gender" PartOfSpeech="Īpašības vārds" MarkupPos="2">
 	<Value LV="Vīriešu" EN="Masculine" Tag="m"/>
 	<Value LV="Sieviešu" EN="Feminine" Tag="f"/>
+	<Value LV="Nepiemīt" EN="Not applicable" Tag="0"/>
 </Attribute>
 <Attribute LV="Skaitlis" EN="Number" PartOfSpeech="Īpašības vārds" MarkupPos="3">
 	<Value LV="Vienskaitlis" EN="Singular" Tag="s"/>
 	<Value LV="Daudzskaitlis" EN="Plural" Tag="p"/>
+	<Value LV="Nepiemīt" EN="Not applicable" Tag="0"/>
 </Attribute>
 <Attribute LV="Locījums" EN="Case" PartOfSpeech="Īpašības vārds" MarkupPos="4">
 	<Value LV="Nominatīvs" EN="Nominative" Tag="n"/>
@@ -214,6 +216,7 @@
 	<Value LV="Akuzatīvs" EN="Accusative" Tag="a"/>
 	<Value LV="Lokatīvs" EN="Locative" Tag="l"/>
 	<Value LV="Vokatīvs" EN="Vocative" Tag="v"/>
+	<Value LV="Nepiemīt" EN="Not applicable" Tag="0"/>
 </Attribute>
 <Attribute LV="Noteiktība" EN="Definiteness" PartOfSpeech="Īpašības vārds" MarkupPos="5">
 	<Value LV="Nenoteiktā" EN="Indefinite" Tag="n"/>
@@ -651,8 +654,29 @@
 <Attribute LV="Dialekta iezīmes" EN="Dialect markings">
 	<Value LV="Latgaliešu" EN="Latgalian"/>
 	<Value LV="Augšzemnieku" EN="Upper Latvian"/>
+	<Value LV="Vidus" EN="Middle Latvian"/>
+	<Value LV="Lībiskā" EN="Livonian"/>
 </Attribute>
 
+<Attribute LV="Izlokšņu grupa" EN="Subdialect group">
+	<Value LV="Kurzemes lībiskās"/>
+	<Value LV="Sēliskās"/>
+	<Value LV="Latgaliskās"/>
+	<Value LV="Kursiskās"/>
+	<Value LV="Zemgaliskās"/>
+	<Value LV="Vidzemes lībiskās"/>
+	<Value LV="Vidzemes vidus"/>
+</Attribute>
+
+<Attribute LV="Izloksne" EN="Subdialect">
+	<Value LV="Ērģemes"/>
+	<Value LV="Kalupes"/>
+	<Value LV="Vainižu"/>
+	<Value LV="Kalnienas (Kalnamuižas)"/>
+	<Value LV="Sinoles"/>
+	<Value LV="Mācienas"/>
+	<Value LV="Tilžas"/>
+</Attribute>
 
 <Attribute LV="Konversija" EN="Conversion">
 	<Value LV="Īpašības vārds" EN="Adjective"/>

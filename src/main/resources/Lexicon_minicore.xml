@@ -610,7 +610,8 @@
       <Attributes Skaitlis="Vienskaitlis" Dzimte="Nepiemīt" Persona="1" Locījums="Datīvs" Vietniekvārda_tips="Personas" Pamatforma="es" Lietojuma_biežums="Reti"/>
     </Lexeme>
     <Lexeme Stem1="manīm">
-      <Attributes Skaitlis="Vienskaitlis" Dzimte="Nepiemīt" Persona="1" Locījums="Datīvs" Vietniekvārda_tips="Personas" Pamatforma="es" Lietojuma_biežums="Reti" Lietojums="Tikai 'līdz manīm'" Ģenerēt="Nē"/>
+      <!--Lietojums="Tikai 'līdz manīm'"-->
+      <Attributes Skaitlis="Vienskaitlis" Dzimte="Nepiemīt" Persona="1" Locījums="Datīvs" Vietniekvārda_tips="Personas" Pamatforma="es" Lietojuma_biežums="Reti" Ģenerēt="Nē"/>
     </Lexeme>
     <Lexeme Stem1="pašam">
       <Attributes Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Persona="Nepiemīt" Locījums="Datīvs" Vietniekvārda_tips="Noteiktais" Pamatforma="pats"/>
