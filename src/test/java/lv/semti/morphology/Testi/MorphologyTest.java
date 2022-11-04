@@ -4196,4 +4196,11 @@ public class MorphologyTest {
         w = locītājs.analyze("Krūšu");
         assertTrue(w.isRecognized());
     }
+
+    @Test
+    public void ticket_122() {
+        // bija salūzis 'mākam' atpazīšana
+        Word w = locītājs.analyze("mākam");
+        assertTrue(w.isRecognized());
+    }
 }

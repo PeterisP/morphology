@@ -343,9 +343,9 @@ public abstract class Mijas {
                     else if (celms.endsWith("gā") )
                         varianti.add(new Variants(celms.substring(0,celms.length()-2)+"dzī")); //slodzīt -> slogu
                     else if (celms.endsWith("ka") )
-                        varianti.add(new Variants(celms.substring(0,celms.length()-1)+"cē")); //mācēt -> mākam
+                        varianti.add(new Variants(celms.substring(0,celms.length()-2)+"cē")); //mācēt -> mākam
 					else if (celms.endsWith("ža") )
-						varianti.add(new Variants(celms.substring(0,celms.length()-1)+"dē")); //sēdēt -> sēžam
+						varianti.add(new Variants(celms.substring(0,celms.length()-2)+"dē")); //sēdēt -> sēžam
                     else if (celms.endsWith("ļa")) varianti.add(new Variants(celms.substring(0,celms.length()-2)+"lē")); //gulēt -> guļam
                     else if (celms.endsWith("ga")) varianti.add(new Variants(celms.substring(0,celms.length()-2)+"dzē")); //vajadzēt -> vajag
                     break;
@@ -354,7 +354,7 @@ public abstract class Mijas {
                     else if (celms.endsWith("ka") )
                         varianti.add(new Variants(celms.substring(0,celms.length()-2)+"cī")); //sacīt
                     else if (celms.endsWith("ga"))
-                        varianti.add(new Variants(celms.substring(0,celms.length()-1)+"dzī")); //slodzīt -> sloga
+                        varianti.add(new Variants(celms.substring(0,celms.length()-2)+"dzī")); //slodzīt -> sloga
                     else if (celms.endsWith("k") )
                         varianti.add(new Variants(celms.substring(0,celms.length()-1)+"cē")); //mācēt -> māk
 					else if (celms.endsWith("ž") )
@@ -390,11 +390,11 @@ public abstract class Mijas {
                     else if (celms.endsWith("gā"))
                         varianti.add(new Variants(celms.substring(0,celms.length()-2)+"dzī", AttributeNames.i_Degree, pakāpe)); //slodzīt -> slogu
                     else if (celms.endsWith("ka"))
-                        varianti.add(new Variants(celms.substring(0,celms.length()-1)+"cē", AttributeNames.i_Degree, pakāpe)); //mācēt -> mākam
+                        varianti.add(new Variants(celms.substring(0,celms.length()-2)+"cē", AttributeNames.i_Degree, pakāpe)); //mācēt -> mākam
                     else if (celms.endsWith("ga"))
                         varianti.add(new Variants(celms.substring(0,celms.length()-2)+"dzē", AttributeNames.i_Degree, pakāpe)); //vajadzēt -> vajag
 					else if (celms.endsWith("ža") )
-						varianti.add(new Variants(celms.substring(0,celms.length()-1)+"dē", AttributeNames.i_Degree, pakāpe)); //sēdēt -> sēžam
+						varianti.add(new Variants(celms.substring(0,celms.length()-2)+"dē", AttributeNames.i_Degree, pakāpe)); //sēdēt -> sēžam
                     else if (celms.endsWith("guļa"))
                         varianti.add(new Variants(celms.substring(0,celms.length()-2)+"lē", AttributeNames.i_Degree, pakāpe)); //gulēt -> guļam
                     break;
