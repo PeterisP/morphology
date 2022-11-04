@@ -73,6 +73,12 @@ public class MorphologyTest {
         assertTrue(found);
     }
 
+    private void assertNoInflection(List<Wordform> forms, AttributeValues testset) {
+        for (Wordform wf : forms) {
+            assertFalse(wf.isMatchingWeak(testset));
+        }
+    }
+
     private void assertLemma(String word, String expectedLemma) {
         Word analysis = locītājs.analyze(word);
         if (!analysis.isRecognized())
@@ -1535,9 +1541,9 @@ public class MorphologyTest {
         testset.addAttribute(AttributeNames.i_EndingID, "1783");
         assertInflection(formas, testset, "vajag");
         testset.addAttribute(AttributeNames.i_EndingID, "1794");
-        assertInflection(formas, testset, "jāvajag");
+        assertNoInflection(formas, testset); // neģenerējam "jāvajag"
         testset.addAttribute(AttributeNames.i_EndingID, "2328");
-        assertInflection(formas, testset, "jāvajagot");
+        assertNoInflection(formas, testset); // neģenerējam "jāvajagot"
 
         formas = locītājs.generateInflections("mocīt", false, filter);
         testset.addAttribute(AttributeNames.i_EndingID, "1780");

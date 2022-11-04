@@ -1029,7 +1029,9 @@ public class Analyzer extends Lexicon {
 					if (locījums.isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_SingulareTantum) && locījums.isMatchingStrong(AttributeNames.i_Number, AttributeNames.v_Plural)) validOption = false;
 					if (GenerationBlacklist.blacklist(locījums)) validOption = false;
 					if (noliegums) locījums.addAttribute(AttributeNames.i_Noliegums, AttributeNames.v_Yes);
-					if (locījums.isMatchingStrong(AttributeNames.i_Noliegums, AttributeNames.v_Yes) &&
+
+					if ((locījums.isMatchingStrong(AttributeNames.i_Noliegums, AttributeNames.v_Yes) ||
+							lexeme.getStem(0).equalsIgnoreCase("vajadzē")) &&
 							(locījums.isMatchingStrong(AttributeNames.i_Izteiksme, AttributeNames.v_VajadziibasAtstaastiijuma)
 							|| locījums.isMatchingStrong(AttributeNames.i_Izteiksme, AttributeNames.v_Vajadziibas))) validOption = false;
 
