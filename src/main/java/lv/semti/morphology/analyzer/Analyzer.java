@@ -25,6 +25,7 @@ import lv.semti.morphology.attributes.AttributeNames;
 import lv.semti.morphology.attributes.AttributeValues;
 import lv.semti.morphology.corpus.ParadigmFrequencyComparator;
 import lv.semti.morphology.lexicon.*;
+import org.checkerframework.checker.units.qual.A;
 
 public class Analyzer extends Lexicon {
 
@@ -445,17 +446,23 @@ public class Analyzer extends Lexicon {
 	private Word guessByPrefix(String word) {
 		Word rezultāts = new Word(word);
 		if (word.contains(" ")) return rezultāts;
-		
+
 		boolean vajadzība = false;
 		if (word.startsWith("jā")) {
 			vajadzība = true;
 			word = word.substring(2);
 		}
-		
+
 		for (String priedēklis : prefixes)
-			if (word.startsWith(priedēklis)) {
-				String cut_word = word.substring(priedēklis.length());
+			if (word.startsWith(priedēklis) || word.startsWith("vis"+priedēklis)) {
+				String cut_word;
+				if (word.startsWith("vis")) {
+					cut_word = "vis"+word.substring(3+priedēklis.length());
+				} else {
+					cut_word = word.substring(priedēklis.length());
+				}
 				if (vajadzība) cut_word = "jā" + cut_word;
+
 				Word bezpriedēkļa = analyzeLowercase(cut_word, cut_word);
 				for (Wordform variants : bezpriedēkļa.wordforms)
 					if (variants.getEnding() != null && variants.getEnding().getParadigm() != null && variants.getEnding().getParadigm().getValue(AttributeNames.i_Konjugaacija) != null) { // Tikai no verbiem atvasinātās klases 
@@ -463,6 +470,9 @@ public class Analyzer extends Lexicon {
 								|| variants.isMatchingStrong(AttributeNames.i_Izteiksme, AttributeNames.v_Vajadziibas))
 								|| variants.isMatchingStrong(AttributeNames.i_Noliegums, AttributeNames.v_Yes) ) {
 							continue; // neģenerējam ne- atvasinājumus vajadzības izteiksmei un jau noliegtiem šķirkļiem
+						}
+						if (variants.isMatchingStrong(AttributeNames.i_Degree, AttributeNames.v_Superlative) && !word.startsWith("vis") ) {
+							continue; // neņemam tos, kur ir "vis" uzlicies aiz priedēkļa, kā nevisdomājošākais pavisdomājošākais
 						}
 						variants.setToken(word);
 						variants.addAttribute(AttributeNames.i_Source,"priedēkļu atvasināšana");
@@ -1005,7 +1015,11 @@ public class Analyzer extends Lexicon {
 
 		    	for (Variants celms : celmi){
 		    		vārds = celms.celms + ending.getEnding();
-					if (noliegums) vārds = "ne" + vārds;
+					if (noliegums) {
+						if (vārds.startsWith("vis") && celms.isMatchingStrong(AttributeNames.i_Degree, AttributeNames.v_Superlative)) {
+							vārds = "visne" + vārds.substring(3);
+						} else vārds = "ne" + vārds;
+					}
 		    		vārds = recapitalize(vārds, lemma);
 
 		    		Wordform locījums = new Wordform(vārds, lexeme, ending);

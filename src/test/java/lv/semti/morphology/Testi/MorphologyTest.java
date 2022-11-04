@@ -3117,7 +3117,7 @@ public class MorphologyTest {
         testset.addAttribute(AttributeNames.i_Izteiksme, AttributeNames.v_Iisteniibas);
         testset.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Tagadne);
         testset.addAttribute(AttributeNames.i_Person, "3");
-        describe(formas);
+//        describe(formas);
         assertInflection(formas, testset, "nepaiet");
 
         Word nepaiet = locītājs.analyze("nepaiet");
@@ -3655,7 +3655,7 @@ public class MorphologyTest {
         locītājs.enableGuessing = false;
 
         Word w = locītājs.analyze("nēsis"); // No "nēši" nevar izdomāt vai ir "nētis" (kā "latvieši"->"latvietis") vai "nēsis"
-        describe(w.wordforms);
+//        describe(w.wordforms);
         assertTrue(w.isRecognized());
     }
 
@@ -3960,7 +3960,6 @@ public class MorphologyTest {
     public void nebūt_lemma() {
         Word w = locītājs.analyze("nebija");
         assertTrue(w.isRecognized());
-        w.describe(System.out);
         assertEquals("būt", w.getBestWordform().getValue(AttributeNames.i_Lemma));
     }
 
@@ -4000,7 +3999,6 @@ public class MorphologyTest {
         List<Wordform> formas = locītājs.generateInflections("zaļš");
         for (Wordform wf : formas) {
             if (wf.getToken().equalsIgnoreCase("zaļi") && wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adverb)) {
-                wf.describe();
                 assertEquals(AttributeNames.v_Yes, wf.getValue(AttributeNames.i_Derivative));
             }
         }
@@ -4016,7 +4014,6 @@ public class MorphologyTest {
     @Test
     public void vienota_vispārākā() {
         Word vienotām = locītājs.analyze("vienotām");
-        describe(vienotām.wordforms);
         for (Wordform wf : vienotām.wordforms) {
             assertFalse(wf.isMatchingStrong(AttributeNames.i_Degree, AttributeNames.v_Superlative));
         }
@@ -4025,7 +4022,6 @@ public class MorphologyTest {
     @Test
     public void dodi() {
         Word dod = locītājs.analyze("dod");
-        describe(dod.wordforms);
         Word dodi = locītājs.analyze("dodi");
         assertTrue(dodi.isRecognized());
 
@@ -4062,7 +4058,6 @@ public class MorphologyTest {
     public void roberts_2021_11_24() {
         // Roberts sūdzējās, ka webservisu API neatgriež daudzskaitļa formas, kaut arī tēzaurā tās rādās un it kā nekādi karodziņi tās neaizliedz
         ArrayList<Wordform> formas = locītājs.generateInflections("nākotne");
-        describe(formas);
         boolean found = false;
         for (Wordform wf : formas) {
             if (wf.getToken().equalsIgnoreCase("nākotņu"))
@@ -4125,11 +4120,17 @@ public class MorphologyTest {
         }
         assertTrue(found);
 
-        Word w = locītājs.analyze("nevismājošākais");
+        Word w = locītājs.analyze("visnemājošākais");
+        assertTrue(w.isRecognized());
+
+        w = locītājs.analyze("nevismājošākais");
         assertFalse(w.isRecognized());
 
-        w = locītājs.analyze("visnemājošākais");
+        w = locītājs.analyze("vispiemājošākais");
         assertTrue(w.isRecognized());
+
+        w = locītājs.analyze("pievismājošākais");
+        assertFalse(w.isRecognized());
     }
 
 

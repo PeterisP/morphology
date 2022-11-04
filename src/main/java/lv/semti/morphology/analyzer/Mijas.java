@@ -452,10 +452,14 @@ public abstract class Mijas {
 	
 	public static boolean atpakaļlocīšanasVerifikācija(Variants variants, String stem, int stemChange, String trešāSakne, boolean properName) {
 		// Verifikācija, vai variantu izlokot tiešām sanāk tas kas vajag.
-		if (! Arrays.asList(1,2,5,6,7,8,9,14,15,17,23,26,36,37).contains(stemChange) && ! Arrays.asList(18,20,34,35).contains(stemChange)) {
-			// Tikai šīm mijām ir alternatīvas, kur vajag verificēt lietas
+
+		if (Arrays.asList(18,20,34,35).contains(stemChange)) {
+			// 18. mijā neierobežojam, jo tur ir nesimetrija - vokatīvu silvij! atpazīstam bet neģenerējam.
+			// 20. mijā ir arī alternatīvas - guļošs un gulošs
+			// 34/35 mijā - pēdējajam, zaļoksnējajam atpazīstam bet neģenerējam
 			return true;
 		}
+
 		if (stemChange == 6 && trešāSakne.endsWith("ī")) trešāSakne = trešāSakne.substring(0, trešāSakne.length()-1);
 		ArrayList<Variants> atpakaļlocīti = MijasLocīšanai(variants.celms, stemChange, trešāSakne, variants.isMatchingStrong(AttributeNames.i_Degree, AttributeNames.v_Superlative), properName);
 		boolean atrasts = false;
@@ -463,7 +467,7 @@ public abstract class Mijas {
 			if (locītais.celms.equalsIgnoreCase(stem)) atrasts = true;
 		}
 
-		if (!atrasts ) {
+		if (!atrasts && Arrays.asList(1,2,5,6,7,8,9,14,15,17,23,26,36,37).contains(stemChange)) {
 			if (stemChange == 7 && variants.celms.endsWith("dod")) return true; // izņēmums, ka "dodi" atpazīst bet neģenerē
 			if (properName) {
 				// pie atpazīšanas properName var būt nepareizs, jo lielie burti ir arī citos gadījumos - teikuma sākumā utt
@@ -473,8 +477,7 @@ public abstract class Mijas {
 //            System.err.printf("Celmam '%s' ar miju %d sanāca '%s' - noraidījām dēļ atpakaļlocīšanas verifikācijas.\n", stem, stemChange, variants.celms);
 			return false;
 		} else {
-			if (!atrasts && !Arrays.asList(18,20,34,35).contains(stemChange)) { //debuginfo.
-                // 18. mijā neierobežojam, jo tur ir nesimetrija - vokatīvu silvij! atpazīstam bet neģenerējam. 20. mijā ir arī alternatīvas - guļošs un gulošs; 34/35 mijā - pēdējamajam atpazīstam bet neģenerējam
+			if (!atrasts) { //debuginfo.
                 // FIXME - šo principā vajadzētu realizēt kā karodziņu - ka ieliekam Variant klasē zīmi, ka šis ir neiesakāms, un tad nebrīnamies, ja ģenerācija to neiedod; vai arī lai ģenerācija dod tos variantus ar tādu karodziņu un tad šeit tos ieraugam
 				System.err.printf("Celms '%s' ar miju %d sanāca '%s'. Bet atpakaļ lokot:\n", stem, stemChange, variants.celms);
 				for (Variants locītais : atpakaļlocīti) {
