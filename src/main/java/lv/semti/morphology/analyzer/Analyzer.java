@@ -893,6 +893,10 @@ public class Analyzer extends Lexicon {
 					wf.isMatchingStrong(AttributeNames.i_Degree, AttributeNames.v_Positive)
 			) suitable = false; // Do not generate positive forms of comparative/superlative adjectives
 
+			if (wf.isMatchingStrong(AttributeNames.i_EntryProperties, AttributeNames.v_EntryFeminine) &&
+					wf.isMatchingStrong(AttributeNames.i_Gender, AttributeNames.v_Masculine)
+			) suitable = false; // Do not generate masculine forms of feminine adjectives like ālava - TODO - doesn't work?
+
 			if (!wf.isMatchingWeak(filter) &&
 					!wf.isMatchingStrong(AttributeNames.i_ResidualType, AttributeNames.v_Foreign) &&
 					!wf.isMatchingStrong(AttributeNames.i_Declension, AttributeNames.v_NA)

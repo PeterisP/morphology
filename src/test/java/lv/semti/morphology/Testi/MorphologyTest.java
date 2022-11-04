@@ -18,10 +18,7 @@
 package lv.semti.morphology.Testi;
 
 
-import lv.semti.morphology.analyzer.Analyzer;
-import lv.semti.morphology.analyzer.Splitting;
-import lv.semti.morphology.analyzer.Word;
-import lv.semti.morphology.analyzer.Wordform;
+import lv.semti.morphology.analyzer.*;
 import lv.semti.morphology.attributes.AttributeNames;
 import lv.semti.morphology.attributes.AttributeValues;
 import lv.semti.morphology.lexicon.Ending;
@@ -3985,9 +3982,12 @@ public class MorphologyTest {
     @Test
     public void ticket_94() {
         AttributeValues av = new AttributeValues();
-        av.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Feminine);
+        av.addAttribute(AttributeNames.i_EntryProperties, AttributeNames.v_EntryFeminine);
         List<Wordform> formas = locītājs.generateInflectionsFromParadigm("ālava", 13, av);
         assertNotEquals(0, formas.size());
+        for (Wordform wf : formas) {
+            assertNotEquals("ālavs", wf.getToken());
+        }
 
         av = new AttributeValues();
         av.addAttribute(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum);
@@ -4175,7 +4175,19 @@ public class MorphologyTest {
         Word w = locītājs.analyze("ieviešošs");
         assertFalse(w.isRecognized());
 
-        locītājs.analyze("ieviesošs");
+        w = locītājs.analyze("ieviesošs");
         assertTrue(w.isRecognized());
+    }
+
+    @Test
+    public void ticket_125() {
+        // nez kāpēc nestrādā atpazīšana atsevišķiem vārdiem, ja tos padod ar lielo burtu
+        Word w = locītājs.analyze("krūšu");
+        assertTrue(w.isRecognized());
+
+        w = locītājs.analyze("Krūšu");
+        assertTrue(w.isRecognized());
+
+//        assertTrue( Mijas.atpakaļlocīšanasVerifikācija("", stemBezMijas, stemChange, trešāSakne, properName) );
     }
 }
