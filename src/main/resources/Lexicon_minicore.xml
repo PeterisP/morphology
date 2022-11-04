@@ -3819,18 +3819,9 @@
     <Lexeme Stem1="veic."/>
     <Lexeme Stem1="lauksaimn."/>
     <Lexeme Stem1="zemn."/>
-    <Lexeme Stem1="PSKP"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
-    <Lexeme Stem1="KGB"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
-    <Lexeme Stem1="PSRS"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
-    <Lexeme Stem1="PSR"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
-    <Lexeme Stem1="KP"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
-    <Lexeme Stem1="CK"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
-    <Lexeme Stem1="CIP"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
     <Lexeme Stem1="CX"/>
     <Lexeme Stem1="TIN"/>
     <Lexeme Stem1="OK"/>
-    <Lexeme Stem1="NATO"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
-    <Lexeme Stem1="ANO"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
     <Lexeme Stem1="IT"/>
     <Lexeme Stem1="TV"/>
     <Lexeme Stem1="ISO"/>
@@ -3842,32 +3833,6 @@
     <Lexeme Stem1="Ls"/>
     <Lexeme Stem1="m.g."/>
     <Lexeme Stem1="N/A"/>
-    <Lexeme Stem1="ASV"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
-    <Lexeme Stem1="UNESCO"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
-    <Lexeme Stem1="LU"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
-    <Lexeme Stem1="LLU"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
-    <Lexeme Stem1="LLA"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
-    <Lexeme Stem1="LVA"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
-    <Lexeme Stem1="LVS"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
-    <Lexeme Stem1="RPIS"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
-    <Lexeme Stem1="DR"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
-    <Lexeme Stem1="USA"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
-    <Lexeme Stem1="LZP"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
-    <Lexeme Stem1="PS"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
-    <Lexeme Stem1="LR"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
-    <Lexeme Stem1="EDSO"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
-    <Lexeme Stem1="ONAP"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
-    <Lexeme Stem1="EK"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
-    <Lexeme Stem1="LETA"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
-    <Lexeme Stem1="KNAB"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
-    <Lexeme Stem1="LNB"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
-    <Lexeme Stem1="LLC"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
-    <Lexeme Stem1="LLP"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
-    <Lexeme Stem1="LNNK"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
-    <Lexeme Stem1="OECD"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
-    <Lexeme Stem1="VK"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
-    <Lexeme Stem1="FKTK"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
-    <Lexeme Stem1="ES"><Attributes Saīsinājuma_tips="Īpašvārds"/></Lexeme>
   </Paradigm>
   <Paradigm Stems="1" ID="37" LemmaEnding="2092" Description="Pieturzīmes (! , ...)" AllowedGuessEndings="!">
     <Lexeme Stem1="∙">
