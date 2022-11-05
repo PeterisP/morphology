@@ -79,6 +79,12 @@ public class MorphologyTest {
         }
     }
 
+    private void assertNoForm(List<Wordform> forms, String invalidForm) {
+        for (Wordform wf : forms) {
+            assertFalse(invalidForm.equalsIgnoreCase(wf.getToken()));
+        }
+    }
+
     private void assertLemma(String word, String expectedLemma) {
         Word analysis = locītājs.analyze(word);
         if (!analysis.isRecognized())
@@ -3860,10 +3866,8 @@ public class MorphologyTest {
     public void korpusa_neatpazītie_20210308() {
         Word w = locītājs.analyze("mainīt");
         assertTrue(w.isRecognized());
-        w.describe(System.out);
 
         w = locītājs.analyze("jāmaina");
-        w.describe(System.out);
         assertTrue(w.isRecognized());
     }
 
@@ -4203,4 +4207,16 @@ public class MorphologyTest {
         Word w = locītājs.analyze("mākam");
         assertTrue(w.isRecognized());
     }
+
+    @Test
+    @Ignore("Gaida uz informāciju no valodniekiem par to, kā pareizi locīt")
+    public void ticket_124() {
+        // atgriezenisko verbu -ošs divdabji - nevēlami, jāatpazīst bet nav jāģenerē
+        Word w = locītājs.analyze("darbojošamies");
+        assertTrue(w.isRecognized());
+
+        List<Wordform> formas = locītājs.generateInflections("darboties");
+        assertNoForm(formas, "darbojošamies");
+    }
+
 }

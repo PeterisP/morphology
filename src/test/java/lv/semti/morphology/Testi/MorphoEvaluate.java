@@ -144,7 +144,11 @@ public class MorphoEvaluate {
 
 			boolean in_voc=false;
 			for (Wordform wf : w.wordforms) {
-				if (wf.getValue(AttributeNames.i_Guess)==null || wf.getValue(AttributeNames.i_Guess).equalsIgnoreCase("Nav")) in_voc=true;
+				if (wf.getValue(AttributeNames.i_Guess)==null
+						|| wf.isMatchingStrong(AttributeNames.i_Guess, "Nav")
+						|| (wf.getValue(AttributeNames.i_Guess).equalsIgnoreCase(AttributeNames.v_Prefix) &&
+							wf.isMatchingStrong(AttributeNames.i_Prefix, "ne"))
+				) in_voc=true;
 			}
 			//System.out.printf("%s in vocabulary:%s\n",e.wordform,Boolean.toString(in_voc));
 			if (!in_voc) {
