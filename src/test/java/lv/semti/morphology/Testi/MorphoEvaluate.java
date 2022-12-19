@@ -113,6 +113,7 @@ public class MorphoEvaluate {
 		int wrong = 0;
 		int oov=0; //out of vocabulary
 		int unambiguous=0;
+		int unambiguous_lemma=0;
 		int ambiguous=0;
 		int wfcount=0;
 		int ambig_wfcount=0;
@@ -165,6 +166,7 @@ public class MorphoEvaluate {
 			if (w.isRecognized()) {
 				Wordform mainwf = w.wordforms.get(0);
 				double maxticamība = -1;
+				boolean visas_lemmas_vienādas = true;
 				for (Wordform wf : w.wordforms) {  // Paskatamies visus atrastos variantus un ņemam statistiski ticamāko
 					//tag += String.format("%s\t%d\n", wf.getDescription(), MorphoServer.statistics.getTicamība(wf));
 					wf.removeAttributesForCorpusTest();
@@ -173,7 +175,10 @@ public class MorphoEvaluate {
 						maxticamība = estimate;
 						mainwf = wf;
 					}
+					if (! wf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(mainwf.getValue(AttributeNames.i_Lemma)))
+						visas_lemmas_vienādas = false;
 				}
+				if (visas_lemmas_vienādas) unambiguous_lemma++;
 				
 				if (mainwf.getValue(AttributeNames.i_PartOfSpeech).equalsIgnoreCase(etalonaAV.getValue(AttributeNames.i_PartOfSpeech)))
 					first_pos_correct++;
@@ -287,13 +292,15 @@ public class MorphoEvaluate {
 		System.out.printf("\tVarianti neder:\t%4.1f%%\t%6d\n", wrong*100.0/etaloni.size(), wrong);
 		System.out.printf("\tNeatpazīti:    \t%4.1f%%\t%6d\n", not_recognized*100.0/etaloni.size(), not_recognized);
         System.out.printf("\tPareizs POS:\t%4.1f%% / %4.1f%%\t%6d\t%6d\tpaliek %5d\n", first_pos_correct*100.0/etaloni.size(), (any_pos_correct+first_pos_correct)*100.0/etaloni.size(), first_pos_correct, any_pos_correct, etaloni.size()-first_pos_correct-any_pos_correct);
-		System.out.printf("\nEtalons uz 2.2.1 relīzi: Viss pareizi 78.5%%/90.2%%, Lemma pareiza 94.6%%/99.1%%, Tags der 83.0%%/98.9%%, Nav vārdnīcā 3.4%%\n");
+//		System.out.printf("\nEtalons uz 2.2.1 relīzi: Viss pareizi 78.5%%/90.2%%, Lemma pareiza 94.6%%/99.1%%, Tags der 83.0%%/98.9%%, Nav vārdnīcā 3.4%%\n");
+		System.out.printf("\nEtalons uz 2.2.7 relīzi: Viss pareizi 81.0%%/96.0%%, Lemma pareiza 95.4%%/99.6%%, Tags der 83.4%%/99.2%%, Nav vārdnīcā 2.2%%\n");
 		
 		System.out.printf("\nStatistika:\n");
 		System.out.printf("\tKopā vārdlietojumi:\t\t\t%6d\n", etaloni.size());
 		System.out.printf("\tNav vārdnīcā:\t\t%4.1f%%\t%6d\n", oov*100.0/etaloni.size(), oov);
-		System.out.printf("\tViennozīmīgi:\t\t%4.1f%%\t%6d\n", unambiguous*100.0/(unambiguous+ambiguous), unambiguous);
 		System.out.printf("\tDaudznozīmīgi:\t\t%4.1f%%\t%6d\n", ambiguous*100.0/(unambiguous+ambiguous), ambiguous);
+		System.out.printf("\tViennozīmīgi:\t\t%4.1f%%\t%6d\n", unambiguous*100.0/(unambiguous+ambiguous), unambiguous);
+		System.out.printf("\tViennozīmīga pamatforma:\t\t%4.1f%%\t%6d\n", unambiguous_lemma*100.0/(unambiguous+ambiguous), unambiguous_lemma);
 		System.out.printf("\tVariantu skaits:\t%4.2f\n", wfcount*1.0/(unambiguous+ambiguous));
 		System.out.printf("\tVariantu skaits tiem, kas daudznozīmīgi:\t%4.2f\n", ambig_wfcount*1.0/ambiguous);
 		
