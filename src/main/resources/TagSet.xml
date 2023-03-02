@@ -306,7 +306,7 @@
 	<Value LV="Nē" EN="No" Tag="n"/>
 </Attribute>
 
-<Attribute LV="Saikļa tips" EN="Conjunction type" PartOfSpeech="Saiklis" MarkupPos="1">
+<Attribute LV="Saikļa sintaktiskā funkcija" EN="Conjunction syntactic function" PartOfSpeech="Saiklis" MarkupPos="1">
 	<Value LV="Sakārtojuma" EN="Coordinating" Tag="c"/>
 	<Value LV="Pakārtojuma" EN="Subordinating" Tag="s"/>
 </Attribute>
@@ -316,6 +316,11 @@
 	<Value LV="Divkāršs" EN="Double" Tag="d"/>
 	<Value LV="Atkārtots" EN="Repeated" Tag="r"/>
 </Attribute>
+<Attribute LV="Saikļa semantiskais tips" EN="Conjunction semantic type" PartOfSpeech="Saiklis">
+	<Value LV="Vienojuma" EN="Cumulative"/>
+	<Value LV="Pretstatījuma" EN="Adversative"/>
+</Attribute>
+
 
 <Attribute LV="Skaitļa vārda tips" EN="Numeral type" PartOfSpeech="Skaitļa vārds" MarkupPos="1">
 	<Value LV="Pamata" EN="Cardinal" Tag="c"/>
@@ -440,9 +445,11 @@
 	<Value LV="Īsziņās" EN="SMS"/>
 	<Value LV="Bērnu valoda" EN="Children"/>
 	<Value LV="[&quot;Sarunvaloda&quot;,&quot;Vēsturisks&quot;]" EN="Historical/Colloquial"/>
+	<Value LV="[&quot;Novecojis&quot;,&quot;Vēsturisks&quot;]" EN="Historical"/>
 	<Value LV="[&quot;Novecojis&quot;,&quot;Sarunvaloda&quot;]" EN="Dated/Colloquial"/>	
 	<Value LV="[&quot;Barbarisms&quot;,&quot;Sarunvaloda&quot;]" EN="Barbaric/Colloquial"/>	
-	<Value LV="[&quot;Neliterārs&quot;,&quot;Sarunvaloda&quot;]" EN="Colloquial"/>	
+	<Value LV="[&quot;Neliterārs&quot;,&quot;Sarunvaloda&quot;]" EN="Colloquial"/>
+	<Value LV="[&quot;Sarunvaloda&quot;,&quot;Neliterārs&quot;]" EN="Colloquial"/>	
 	<Value LV="[&quot;Neliterārs&quot;,&quot;Sarunvaloda&quot;,&quot;Vēsturisks&quot;]" EN="Colloquial"/>
 	<Value LV="[&quot;Apvidvārds&quot;,&quot;Vulgārisms&quot;]" EN="Vulgar"/>
 	<Value LV="[&quot;Apvidvārds&quot;,&quot;Žargonvārds&quot;]" EN="Regional/Slang"/>
@@ -454,7 +461,7 @@
 
 <Attribute LV="Stils" EN="Style">
 	<Value LV="Nievājoša ekspresīvā nokrāsa" EN="Derogatory"/>
-	<Value LV="Nicīga ekspresīvā nokrāsa" EN="Derogatory"/>
+	<Value LV="Nicinoša ekspresīvā nokrāsa" EN="Derogatory"/>
 	<Value LV="Ironiska ekspresīvā nokrāsa" EN="Ironic"/>
 	<Value LV="Humoristiska ekspresīvā nokrāsa" EN="Jocular"/>
 	<Value LV="Poētiska stilistiskā nokrāsa" EN="Poetic"/>
@@ -688,6 +695,7 @@
 	<Value LV="Lietvārds" EN="Noun"/>
 	<Value LV="Pamata skaitļa vārds" EN="Cardinal numeral"/>
 	<Value LV="Prievārds" EN="Pronoun"/>
+	<Value LV="Partikula" EN="Particle"/>
 </Attribute>
 
 <!-- FIXME - šis manuprāt jālikvidē -->
@@ -752,6 +760,7 @@
 <Attribute LV="Morfotabulas attēlošana" EN="Inflection table">
 	<Value LV="Nerādīt daudzskaitli" EN="Hide plural"/>
 	<Value LV="Nerādīt vienskaitli" EN="Hide singular"/>
+	<Value LV="Rādīt vokatīvu" EN="Show vocative"/>
 </Attribute>
 
 <Attribute LV="Citi" EN="Other">

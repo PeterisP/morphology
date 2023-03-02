@@ -291,9 +291,6 @@ public class Lexicon {
 				|| l.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Numeral)  // Skaitļavārdiem leksikonā ir labāki dati
 				|| l.isMatchingStrong(AttributeNames.i_TezaursCategory, AttributeNames.v_Numeral)  // Skaitļavārdiem leksikonā ir labāki dati
 				|| l.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Numeral)  // Skaitļavārdiem leksikonā ir labāki dati
-				|| l.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Conjunction)  // Saikļiem leksikonā ir labāki dati
-				|| l.isMatchingStrong(AttributeNames.i_TezaursCategory, AttributeNames.v_Conjunction)  // Saikļiem leksikonā ir labāki dati
-				|| l.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Conjunction)  // Saikļiem leksikonā ir labāki dati
 		) {
 			return true;
 			// FIXME - this is temporary and all these things need to be moved to tezaurs.lv lexicon eventually

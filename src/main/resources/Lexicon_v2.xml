@@ -5522,10 +5522,10 @@
 		<Ending ID="2119" StemChange="11" Ending="ušos" StemID="1" LemmaEnding="2107">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Ģenitīvs" Dzimte="Sieviešu"/>
 		</Ending>
-		<Ending ID="2120" StemChange="11" Ending="ušamies" StemID="1" LemmaEnding="2106" Ģenerēt="Nē">
+		<Ending ID="2120" StemChange="11" Ending="ušamies" StemID="1" LemmaEnding="2106" Valodas_normēšana="Nevēlams">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Datīvs" Dzimte="Vīriešu"/>
 		</Ending>
-		<Ending ID="2121" StemChange="11" Ending="ušamies" StemID="1" LemmaEnding="2107" Ģenerēt="Nē">
+		<Ending ID="2121" StemChange="11" Ending="ušamies" StemID="1" LemmaEnding="2107" Valodas_normēšana="Nevēlams">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Datīvs" Dzimte="Sieviešu"/>
 		</Ending>
 		<Ending ID="2122" StemChange="11" Ending="ušos" StemID="1" LemmaEnding="2106">

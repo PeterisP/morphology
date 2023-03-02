@@ -164,7 +164,7 @@ public class AttributeNames {
 
 	public final static String i_Rekcija = "Rekcija";
 
-	public final static String i_SaikljaTips = "Saikļa tips";
+	public final static String i_SaikljaTips = "Saikļa sintaktiskā funkcija";
 	public final static String v_Sakaartojuma = "Sakārtojuma";
 	public final static String v_Pakaartojuma = "Pakārtojuma";
 

@@ -11717,13 +11717,13 @@ izmaksas	ncfda4	izmaksa	m-p3754-p36s5w24
 <s>
 Tāpat	q	tāpat	m-p3754-p36s6w1
 šādu	pd0fpgn	šāda	m-p3754-p36s6w2
-izmaiņu	ncfdg4	izmaiņa	m-p3754-p36s6w3
+izmaiņu	ncfpg4	izmaiņa	m-p3754-p36s6w3
 dēļ	stpg	dēļ	m-p3754-p36s6w4
 dārgāka	affsnnc	dārgs	m-p3754-p36s6w5
 varētu	vonc0i300an	varēt	m-p3754-p36s6w6
 kļūt	vtnn0i1000n	kļūt	m-p3754-p36s6w7
 dalītās	vmnpdfsgpsypn	dalīt	m-p3754-p36s6w8
-atkritumu	ncmdg1	atkritums	m-p3754-p36s6w9
+atkritumu	ncmpg1	atkritums	m-p3754-p36s6w9
 vākšanas	ncfsg4	vākšana	m-p3754-p36s6w10
 infrastruktūras	ncfsg4	infrastruktūra	m-p3754-p36s6w11
 sakārtošana	ncfsn4	sakārtošana	m-p3754-p36s6w12
@@ -11793,7 +11793,7 @@ ka	cs	ka	m-p3754-p37s1w6
 pašvaldības	ncfsg4	pašvaldība	m-p3754-p37s1w7
 uzņēmums	ncmsn1	uzņēmums	m-p3754-p37s1w8
 kā	cs	kā	m-p3754-p37s1w9
-atkritumu	ncmdg1	atkritums	m-p3754-p37s1w10
+atkritumu	ncmpg1	atkritums	m-p3754-p37s1w10
 apsaimniekotājs	ncmsn1	apsaimniekotājs	m-p3754-p37s1w11
 ir	vcnipii30an	būt	m-p3754-p37s1w12
 dārgāks	afmsnnc	dārgs	m-p3754-p37s1w13
@@ -25673,7 +25673,7 @@ jāsaprot	vmnd0t100an	saprast	m-p14290-p13s4w10
 ,	zc	,	m-p14290-p13s4w11
 kāpēc	r0c	kāpēc	m-p14290-p13s4w12
 nauda	ncfsn4	nauda	m-p14290-p13s4w13
-neieplūst	vmnn0i1000y	ieplūst	m-p14290-p13s4w14
+neieplūst	vmnipi130ay	ieplūst	m-p14290-p13s4w14
 Latvijas	npfsg4	Latvija	m-p14290-p13s4w15
 tautsaimniecībā	ncfsl4	tautsaimniecība	m-p14290-p13s4w16
 <g />
@@ -38265,7 +38265,7 @@ reizes	ncfpa5	reize	m-p14140-p4s3w19
 lielāks	afmsnnc	liels	m-p14140-p4s3w20
 risks	ncmsn1	risks	m-p14140-p4s3w21
 nekā	cs	nekā	m-p14140-p4s3w22
-pārējām	affpdyp	pārējie	m-p14140-p4s3w23
+pārējām	affpdyp	pārējais	m-p14140-p4s3w23
 sievietēm	ncfpd5	sieviete	m-p14140-p4s3w24
 populācijā	ncfsl4	populācija	m-p14140-p4s3w25
 <g />
