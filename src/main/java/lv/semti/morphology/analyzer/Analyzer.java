@@ -45,7 +45,7 @@ public class Analyzer extends Lexicon {
 	public boolean removeRegionalWords = true; // Ignore regiona/dialect forms as they tend to produce unexpected overlap with forms of other common words
 
 
-	private Pattern p_number = Pattern.compile("[\\d., ]*\\d+([.,][-‐‑‒–—―])?");
+	private Pattern p_number = Pattern.compile("[\\d., ]*[\\d+⁰¹²³⁴⁵⁶⁷⁸⁹₀₁₂₃₄₅₆₇₈₉]([.,][-‐‑‒–—―])?");
 	private Pattern p_ordinal = Pattern.compile("\\d+\\.");
 	private Pattern p_fractional = Pattern.compile("\\d+[\\\\/]\\d+");
 	private Pattern p_abbrev = Pattern.compile("\\w+\\.");
@@ -281,8 +281,13 @@ public class Analyzer extends Lexicon {
 			}
 		}
 		
-		if (!result.isRecognized() && enablePrefixes )
+		if (!result.isRecognized() && enablePrefixes ) {
 			result = guessByPrefix(word);
+		}
+//		else { TODO - jāpadomā, vai te nevajadzētu meklēt arī tad, ja ir kāds lietvārds, bet sākas ar ne-
+//			if (result.hasAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb))
+//		}
+
 /*
 		if (!rezultāts.isRecognized() && meklētsalikteņus )
 			for (Ending ending : allEndings())

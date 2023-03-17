@@ -63,12 +63,12 @@
 
 <Attribute LV="Darbības vārda tips" EN="Verb type" PartOfSpeech="Darbības vārds" MarkupPos="1" Description="patstāvīgs vai palīg d.v ?">
 	<Value LV="Patstāvīgs darbības vārds" EN="Main" Tag="m"/>
-	<Value LV="Modāls" EN="Modal" Tag="o"/>
-	<Value LV="Fāzes" EN="Phasal" Tag="p"/>
-	<Value LV="Izpausmes veida" EN="Expression" Tag="e"/>
+	<Value LV="Modāls modificētājs" EN="Modal modifier" Tag="o"/>
+	<Value LV="Fāzes modificētājs" EN="Phasal modifier" Tag="p"/>
+	<Value LV="Izpausmes modificētājs" EN="Expression" Tag="e"/>
 	<Value LV="Palīgverbs 'būt'" EN="'to be' as auxiliary or copula" Tag="c"/>
-	<Value LV="Saitiņas 'tikt' un 'tapt'" EN="Other copulas" Tag="t"/>
-	<Value LV="Palīgverbi 'tikt' un 'tapt'" EN="Other auxiliaries" Tag="a"/>
+	<Value LV="Saitiņa" EN="Other copulas" Tag="t"/>
+	<Value LV="Palīgverbs" EN="Other auxiliaries" Tag="a"/>
 </Attribute>
 <Attribute LV="Atgriezeniskums" EN="Reflexive" PartOfSpeech="Darbības vārds" MarkupPos="2">
 	<Value LV="Jā" EN="Yes" Tag="y"/>
@@ -124,13 +124,12 @@
 
 <Attribute LV="Darbības vārda tips" EN="Verb type" PartOfSpeech="Divdabis" MarkupPos="1" Description="patstāvīgs vai palīg d.v ?">
 	<Value LV="Patstāvīgs darbības vārds" EN="Main" Tag="m"/>
-	<Value LV="'nebūt', 'trūkt' un 'pietikt'" EN="Requires genitive - 'not be', 'lack', 'have-enough'" Tag="g"/>
-	<Value LV="Modāls" EN="Modal" Tag="o"/>
-	<Value LV="Fāzes" EN="Phasal" Tag="p"/>
-	<Value LV="Izpausmes veida" EN="Expression" Tag="e"/>
+	<Value LV="Modāls modificētājs" EN="Modal modifier" Tag="o"/>
+	<Value LV="Fāzes modificētājs" EN="Phasal modifier" Tag="p"/>
+	<Value LV="Izpausmes modificētājs" EN="Expression" Tag="e"/>
 	<Value LV="Palīgverbs 'būt'" EN="'to be' as auxiliary or copula" Tag="c"/>
-	<Value LV="Saitiņas 'tikt' un 'tapt'" EN="Other copulas" Tag="t"/>
-	<Value LV="Palīgverbi 'tikt' un 'tapt'" EN="Other auxiliaries" Tag="a"/>
+	<Value LV="Saitiņa" EN="Other copulas" Tag="t"/>
+	<Value LV="Palīgverbs" EN="Other auxiliaries" Tag="a"/>
 </Attribute>
 <Attribute LV="Atgriezeniskums" PartOfSpeech="Divdabis" MarkupPos="2">
 	<Value LV="Jā" EN="Yes" Tag="y"/>
@@ -286,6 +285,10 @@
 	<Value LV="Cēloņa/nolūka" EN="Causative" Tag="c"/>
 </Attribute>
 
+<Attribute LV="Prievārdiskais apstākļa vārds" EN="Prepositional adverb" PartOfSpeech="Apstākļa vārds">
+	<Value LV="Jā" EN="Yes"/>
+</Attribute>
+
 <Attribute LV="Novietojums" EN="Position" PartOfSpeech="Prievārds" MarkupPos="1">
 	<Value LV="Prepozitīvs" EN="Preposition" Tag="p"/>
 	<Value LV="Postpozitīvs" EN="Postposition" Tag="t"/>
@@ -436,6 +439,7 @@
 	<Value LV="Vēsturisks" EN="Historical"/>
 	<Value LV="Sarunvaloda" EN="Colloquial"/>
 	<Value LV="Nevēlams" EN="Undesirable"/>
+	<Value LV="Neliterārs" EN="Colloquial"/>
 	<Value LV="Žargonvārds" EN="Slang"/>
 	<Value LV="Slengs" EN="Slang"/>
 	<Value LV="Vulgārisms" EN="Vulgar"/>
@@ -444,12 +448,14 @@
 	<Value LV="Jaunvārds" EN="Neologism"/>
 	<Value LV="Īsziņās" EN="SMS"/>
 	<Value LV="Bērnu valoda" EN="Children"/>
+	<Value LV="[&quot;Bērnu valoda&quot;,&quot;Novecojis&quot;]" EN="Children/Dated"/>
 	<Value LV="[&quot;Sarunvaloda&quot;,&quot;Vēsturisks&quot;]" EN="Historical/Colloquial"/>
 	<Value LV="[&quot;Novecojis&quot;,&quot;Vēsturisks&quot;]" EN="Historical"/>
 	<Value LV="[&quot;Novecojis&quot;,&quot;Sarunvaloda&quot;]" EN="Dated/Colloquial"/>	
 	<Value LV="[&quot;Barbarisms&quot;,&quot;Sarunvaloda&quot;]" EN="Barbaric/Colloquial"/>	
 	<Value LV="[&quot;Neliterārs&quot;,&quot;Sarunvaloda&quot;]" EN="Colloquial"/>
 	<Value LV="[&quot;Sarunvaloda&quot;,&quot;Neliterārs&quot;]" EN="Colloquial"/>	
+	<Value LV="[&quot;Eifēmisms&quot;,&quot;Neliterārs&quot;]" EN="Euphemism/Colloquial"/>	
 	<Value LV="[&quot;Neliterārs&quot;,&quot;Sarunvaloda&quot;,&quot;Vēsturisks&quot;]" EN="Colloquial"/>
 	<Value LV="[&quot;Apvidvārds&quot;,&quot;Vulgārisms&quot;]" EN="Vulgar"/>
 	<Value LV="[&quot;Apvidvārds&quot;,&quot;Žargonvārds&quot;]" EN="Regional/Slang"/>
@@ -661,6 +667,11 @@
 <Attribute LV="Hipotēze" EN="Hypothesis">
 	<Value LV="Jā" EN="Yes"/>
 </Attribute>
+
+<Attribute LV="Taksona kandidāts" EN="Taxon candidate">
+	<Value LV="Jā" EN="Yes"/>
+</Attribute>
+
 
 <Attribute LV="Dialekta iezīmes" EN="Dialect markings">
 	<Value LV="Latgaliešu" EN="Latgalian"/>

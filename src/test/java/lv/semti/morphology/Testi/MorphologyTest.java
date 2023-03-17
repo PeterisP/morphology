@@ -864,7 +864,7 @@ public class MorphologyTest {
     public void saīsinājumi() {
         Word uc = locītājs.analyze("u.c.");
         assertTrue(uc.isRecognized());
-        assertEquals("y", uc.wordforms.get(0).getTag());
+        assertEquals("yd", uc.wordforms.get(0).getTag());
     }
 
     @Test
@@ -3610,10 +3610,10 @@ public class MorphologyTest {
         testset.addAttribute(AttributeNames.i_Person, "1");
         testset.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Naakotne);
         formas = locītājs.generateInflections("vīkšt");
-        assertInflection(formas, testset, "vīkšīšu");
+//        assertInflection(formas, testset, "vīkšīšu"); Pārbaude izņemta, jo apvidvārds
 
         testset.addAttribute(AttributeNames.i_Person, "2");
-        assertInflection(formas, testset, "vīkšīsi");
+//        assertInflection(formas, testset, "vīkšīsi");
     }
 
     @Test
@@ -3677,6 +3677,7 @@ public class MorphologyTest {
         Word w = locītājs.analyze("cenzdamies");
         assertTrue(w.isRecognized());
         Wordform wf = w.getBestWordform();
+        assertTrue(wf.isMatchingStrong(AttributeNames.i_VerbType, AttributeNames.v_Modaals));
         assertEquals("voyppm0n0000n", wf.getTag());
     }
 
@@ -4114,8 +4115,9 @@ public class MorphologyTest {
     public void noliegums_tagā() {
         Word nevarēšu = locītājs.analyze("nevarēšu");
         assertTrue(nevarēšu.isRecognized());
-        assertEquals("Jā", nevarēšu.wordforms.get(0).getValue(AttributeNames.i_Noliegums));
-        assertEquals("vonif_31say", nevarēšu.wordforms.get(0).getTag());
+        Wordform wf = nevarēšu.getBestWordform();
+        assertEquals("Jā", wf.getValue(AttributeNames.i_Noliegums));
+        assertEquals("vonift31say", wf.getTag());
     }
 
     @Test

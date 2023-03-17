@@ -83,12 +83,12 @@ public class AttributeNames {
 
 	public final static String i_VerbType = "Darbības vārda tips";
 	public final static String v_MainVerb = "Patstāvīgs darbības vārds";
-	public final static String v_PaliigDv = "Palīgdarbības vārds";
-	public final static String v_Modaals = "Modāls";
-	public final static String v_Faazes = "Fāzes";
-	public final static String v_IzpausmesVeida = "Izpausmes veida";
+	public final static String v_PaliigDv = "Palīgverbs";
+	public final static String v_Modaals = "Modāls modificētājs";
+	public final static String v_Faazes = "Fāzes modificētājs";
+	public final static String v_IzpausmesVeida = "Izpausmes modificētājs";
 	public final static String v_Buut = "Palīgverbs 'būt'";
-	public final static String v_TiktTapt = "Palīgverbi 'tikt' un 'tapt'";
+	public final static String v_TiktTapt = "Saitiņa";
 	@Deprecated public final static String v_Nebuut = "'nebūt', 'trūkt' un 'pietikt'"; // Only in old Semti-kamols annotation
 
 	public final static String i_Reflexive = "Atgriezeniskums";
