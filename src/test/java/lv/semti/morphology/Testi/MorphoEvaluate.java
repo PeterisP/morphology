@@ -61,7 +61,7 @@ public class MorphoEvaluate {
     }	
 	
 	@Test
-	public void testFile2017() throws IOException{
+	public void treebankTests() throws IOException{
 		LinkedList<Etalons> etaloni = readVertEtalons("all.txt");
 		evaluate(etaloni);
 	}

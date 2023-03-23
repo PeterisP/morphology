@@ -4221,4 +4221,14 @@ public class MorphologyTest {
         assertNoForm(formas, "darbojošamies");
     }
 
+    @Test
+    public void mistika_pie_relīzes() {
+        // Nez kāpēc pie visu vārdu izlocīšanas šiem 5 neatgrieza datus
+        Word w;
+        String [] badwords = "saaut sabāzt sasliet sastrēgt aizsliet".split("");
+        for (String badword : badwords) {
+            w = locītājs.analyze(badword);
+            assertTrue(w.isRecognized());
+        }
+    }
 }

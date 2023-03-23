@@ -281,12 +281,16 @@ public class Analyzer extends Lexicon {
 			}
 		}
 		
-		if (!result.isRecognized() && enablePrefixes ) {
-			result = guessByPrefix(word);
+		if (enablePrefixes) {
+			if (!result.isRecognized()
+					|| (word.startsWith("ne") && !result.hasAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb))) {
+				for (Wordform wf : guessByPrefix(word).wordforms) {
+					result.addWordform(wf);
+				}
+			}
+			// 			if (result.hasAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb))
 		}
-//		else { TODO - jāpadomā, vai te nevajadzētu meklēt arī tad, ja ir kāds lietvārds, bet sākas ar ne-
-//			if (result.hasAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb))
-//		}
+
 
 /*
 		if (!rezultāts.isRecognized() && meklētsalikteņus )
