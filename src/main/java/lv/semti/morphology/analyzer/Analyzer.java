@@ -304,6 +304,16 @@ public class Analyzer extends Lexicon {
 		if (!result.isRecognized() && enableGuessing )
 			result = guessByEnding(word, originalWord);
 
+		if (enableGuessing) {
+			boolean all_deminutives = true;
+			// We want to do full guessing also if there was a deminutive found - otherwise masc sg gen "Rāviņa" gets interpreted as deminutive of "rāva"
+			for (Wordform wf : result.wordforms) {
+				if (!wf.isMatchingStrong(AttributeNames.i_Guess, AttributeNames.v_Deminutive))
+					all_deminutives = false;
+			}
+			if (!result.isRecognized() || all_deminutives) result = guessByEnding(word, originalWord);
+		}
+
 		/*for (Wordform variants : rezultāts.wordforms) {
 			variants.addAttribute(AttributeNames.i_Tag, MarkupConverter.toKamolsMarkup(variants));
 			if (variants.lexeme != null) {

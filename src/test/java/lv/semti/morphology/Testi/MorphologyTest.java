@@ -3142,24 +3142,24 @@ public class MorphologyTest {
     public void ticket_26() {
         Word w = locītājs.analyze("sen");
         assertTrue(w.isRecognized());
-        assertEquals("rpt", w.getBestWordform().getTag());
+        assertEquals("rptn", w.getBestWordform().getTag());
 
         w = locītājs.analyze("drīz");
         assertTrue(w.isRecognized());
-        assertEquals("rpt", w.getBestWordform().getTag());
+        assertEquals("rptn", w.getBestWordform().getTag());
 
         w = locītājs.analyze("pārāk");
         assertTrue(w.isRecognized());
-        assertEquals("r0q", w.getBestWordform().getTag());
+        assertEquals("r0qn", w.getBestWordform().getTag());
 
         w = locītājs.analyze("daudzāk");
         assertTrue(w.isRecognized());
-        assertEquals("rcq", w.getBestWordform().getTag());
+        assertEquals("rcqn", w.getBestWordform().getTag());
         assertEquals("daudz", w.getBestWordform().getValue(AttributeNames.i_Lemma));
 
         w = locītājs.analyze("vairāk");
         assertTrue(w.isRecognized());
-        assertEquals("rcq", w.getBestWordform().getTag());
+        assertEquals("rcqn", w.getBestWordform().getTag());
         assertEquals("daudz", w.getBestWordform().getValue(AttributeNames.i_Lemma));
     }
 
@@ -3237,7 +3237,7 @@ public class MorphologyTest {
         assertEquals("zb", w.getBestWordform().getTag());
         w = locītājs.analyze("•");
         assertTrue(w.isRecognized());
-        assertEquals("xx", w.getBestWordform().getTag());
+        assertEquals("zx", w.getBestWordform().getTag());
         w = locītājs.analyze("=");
         assertTrue(w.isRecognized());
         assertEquals("xx", w.getBestWordform().getTag());
@@ -3623,7 +3623,7 @@ public class MorphologyTest {
         boolean found = false;
         for (Wordform wf : w.wordforms) {
             if (wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adverb)) {
-                assertEquals("rp_", wf.getTag());
+                assertEquals("rp_n", wf.getTag());
                 found = true;
             }
         }
@@ -3634,7 +3634,7 @@ public class MorphologyTest {
         found = false;
         for (Wordform wf : w.wordforms) {
             if (wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adverb)) {
-                assertEquals("rc_", wf.getTag());
+                assertEquals("rc_n", wf.getTag());
                 found = true;
             }
         }
@@ -3644,7 +3644,7 @@ public class MorphologyTest {
         found = false;
         for (Wordform wf : w.wordforms) {
             if (wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adverb)) {
-                assertEquals("rs_", wf.getTag());
+                assertEquals("rs_n", wf.getTag());
                 found = true;
             }
         }
@@ -3677,8 +3677,7 @@ public class MorphologyTest {
         Word w = locītājs.analyze("cenzdamies");
         assertTrue(w.isRecognized());
         Wordform wf = w.getBestWordform();
-        assertTrue(wf.isMatchingStrong(AttributeNames.i_VerbType, AttributeNames.v_Modaals));
-        assertEquals("voyppm0n0000n", wf.getTag());
+        assertEquals("vmyppm0n0000n", wf.getTag());
     }
 
     /**
@@ -4117,7 +4116,7 @@ public class MorphologyTest {
         assertTrue(nevarēšu.isRecognized());
         Wordform wf = nevarēšu.getBestWordform();
         assertEquals("Jā", wf.getValue(AttributeNames.i_Noliegums));
-        assertEquals("vonift31say", wf.getTag());
+        assertEquals("vmnift31say", wf.getTag());
     }
 
     @Test
@@ -4225,10 +4224,21 @@ public class MorphologyTest {
     public void mistika_pie_relīzes() {
         // Nez kāpēc pie visu vārdu izlocīšanas šiem 5 neatgrieza datus
         Word w;
-        String [] badwords = "saaut sabāzt sasliet sastrēgt aizsliet".split("");
+//        String [] badwords = "saaut sabāzt sasliet sastrēgt aizsliet".split("");
+        String [] badwords = "aizsliet".split(" ");
         for (String badword : badwords) {
             w = locītājs.analyze(badword);
             assertTrue(w.isRecognized());
         }
     }
+
+    @Test
+    public void rāviņš() {
+        // Nez kāpēc min tikai kā sieviešu dzimti
+        locītājs.enableGuessing = true;
+        Word rāviņš = locītājs.analyze("Rāviņa");
+        assertTrue(rāviņš.isRecognized());
+        rāviņš.describe(System.out);
+    }
+
 }

@@ -3171,9 +3171,6 @@
     <Lexeme Stem1="±">
       <Attributes Vārdšķira="Reziduālis"/>
     </Lexeme>
-    <Lexeme Stem1="•">
-      <Attributes Vārdšķira="Reziduālis"/>
-    </Lexeme>
     <Lexeme Stem1="&amp;">
       <Attributes Vārdšķira="Reziduālis"/>
     </Lexeme>
@@ -3411,6 +3408,9 @@
   </Paradigm>
   <Paradigm Stems="1" ID="37" LemmaEnding="2092" Description="Pieturzīmes (! , ...)" AllowedGuessEndings="!">
     <Lexeme Stem1="∙">
+      <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Cita"/>
+    </Lexeme>
+    <Lexeme Stem1="•">
       <Attributes Vārdšķira="Pieturzīme" Pieturzīmes_tips="Cita"/>
     </Lexeme>
     <Lexeme Stem1="...">
