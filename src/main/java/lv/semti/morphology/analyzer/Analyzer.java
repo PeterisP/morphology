@@ -827,7 +827,7 @@ public class Analyzer extends Lexicon {
                 }
             }
         }
-        // if attributes list feminine gender, then we look for feminine singular nominative as the lema
+        // if attributes list feminine gender, then we look for feminine singular nominative as the lemma
 		if (lemmaAttributes.isMatchingStrong(AttributeNames.i_Gender, AttributeNames.v_Feminine)
 				&& !ending.isMatchingWeak(AttributeNames.i_Gender, AttributeNames.v_Feminine)) {
 			// Assuming that there will be only one fitting form
@@ -1054,8 +1054,9 @@ public class Analyzer extends Lexicon {
 							(locījums.isMatchingStrong(AttributeNames.i_Izteiksme, AttributeNames.v_VajadziibasAtstaastiijuma)
 							|| locījums.isMatchingStrong(AttributeNames.i_Izteiksme, AttributeNames.v_Vajadziibas))) validOption = false;
 
-					// Īpašības vārdi ar sieviešu dzimti bet vīriešu galotnēm - ālava / ālavs
-					if (locījums.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adjective) &&
+					// Īpašības vārdi ar sieviešu dzimti bet vīriešu galotnēm - ālava / ālavs, tāpat arī skaitļa vārdu novecojošās formas 'tūkstošām'
+					if ((locījums.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adjective) ||
+							locījums.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Numeral) )&&
 						lexeme.isMatchingStrong(AttributeNames.i_Gender, AttributeNames.v_Feminine) &&
 						ending.isMatchingStrong(AttributeNames.i_Gender, AttributeNames.v_Masculine)) validOption = false;
 					if (validOption) inflections.add(locījums);

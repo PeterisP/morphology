@@ -288,21 +288,9 @@ public class Lexicon {
 				|| l.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Pronoun)  // Vietniekvārdiem leksikonā ir labāki dati
 				|| l.isMatchingStrong(AttributeNames.i_TezaursCategory, AttributeNames.v_Pronoun)  // Vietniekvārdiem leksikonā ir labāki dati
 				|| l.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Pronoun)  // Vietniekvārdiem leksikonā ir labāki dati
-				|| l.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Numeral)  // Skaitļavārdiem leksikonā ir labāki dati
-				|| l.isMatchingStrong(AttributeNames.i_TezaursCategory, AttributeNames.v_Numeral)  // Skaitļavārdiem leksikonā ir labāki dati
-				|| l.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Numeral)  // Skaitļavārdiem leksikonā ir labāki dati
 		) {
 			return true;
 			// FIXME - this is temporary and all these things need to be moved to tezaurs.lv lexicon eventually
-		}
-		for (Lexeme l2 : l.getParadigm().getLexemesByStem().get(0).get(l.getStem(0))) {
-			if (l2 == l) continue;
-			if (l.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adverb)) {
-				// Filter out overlapping adverbs - Tēzaurs.lv has more adverbs, but morpholexicon has more information about adverb types
-				if ((l.getValue(AttributeNames.i_ApstTips) == null) && (l2.getValue(AttributeNames.i_ApstTips) != null)) {
-					return true;
-				}
-			}
 		}
 		return false;
 	}

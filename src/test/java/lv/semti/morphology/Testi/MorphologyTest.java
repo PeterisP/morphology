@@ -2595,6 +2595,7 @@ public class MorphologyTest {
         }
 
         Word simtas = locītājs.analyze("simtas");
+        describe(simtas.wordforms);
         assertFalse(simtas.isRecognized());
     }
 
@@ -3677,7 +3678,7 @@ public class MorphologyTest {
         Word w = locītājs.analyze("cenzdamies");
         assertTrue(w.isRecognized());
         Wordform wf = w.getBestWordform();
-        assertEquals("vmyppm0n0000n", wf.getTag());
+        assertEquals("voyppm0n0000n", wf.getTag());
     }
 
     /**
@@ -4239,6 +4240,18 @@ public class MorphologyTest {
         Word rāviņš = locītājs.analyze("Rāviņa");
         assertTrue(rāviņš.isRecognized());
         rāviņš.describe(System.out);
+    }
+
+    @Test
+    public void tūkstošām() {
+        AttributeValues av = new AttributeValues();
+        av.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Feminine);
+        List<Wordform> formas = locītājs.generateInflectionsFromParadigm("tūkstoša", 23, av);
+        describe(formas);
+        assertNoForm(formas, "tūkstošs");
+
+        Word w = locītājs.analyze("tūkstošām");
+        assertTrue(w.isRecognized());
     }
 
 }
