@@ -20,8 +20,12 @@ package lv.semti.morphology.lexicon;
 import java.io.IOException;
 import java.io.Writer;
 import java.util.ArrayList;
+import java.util.Locale;
 import java.util.Map;
 
+import lv.semti.morphology.analyzer.Analyzer;
+import lv.semti.morphology.analyzer.Mijas;
+import lv.semti.morphology.analyzer.Variants;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;
 import org.w3c.dom.Attr;
@@ -102,6 +106,10 @@ public class Lexeme extends AttributeValues {
 		n = node.getAttributes().getNamedItem("ID");
 		if (n != null)
 			this.setID(Integer.parseInt(n.getTextContent()));
+
+        if (getValue(AttributeNames.i_LemmaOverride) != null) {
+            addAttribute(AttributeNames.i_Lemma, getValue(AttributeNames.i_LemmaOverride));
+        }
 	}
 
     /**
@@ -113,13 +121,11 @@ public class Lexeme extends AttributeValues {
             throw new Error("Nav paradigmas leksēmai " + json.toJSONString());
 
         int paradigmID = ((Long)json.get("paradigm")).intValue();
-        addAttribute(AttributeNames.i_ParadigmID, ((Long)json.get("paradigm")).toString());
         paradigm = lexicon.paradigmByID(paradigmID);
         setStemCount(this.paradigm.getStems());
 
         if (json.get("lexeme_id") != null) {
             setID(((Long) json.get("lexeme_id")).intValue());
-            addAttribute(AttributeNames.i_LexemeID, ((Long)json.get("lexeme_id")).toString());
         }
         if (json.get("entry_id") != null)
             addAttribute(AttributeNames.i_EntryID, ((Long)json.get("entry_id")).toString());
@@ -129,10 +135,16 @@ public class Lexeme extends AttributeValues {
             addAttribute(AttributeNames.i_Lemma, (String)json.get("lemma"));
         if (json.get("stem1") != null)
             stems.set(0, (String)json.get("stem1"));
-        if (json.get("stem2") != null)
-            stems.set(1, (String)json.get("stem2"));
-        if (json.get("stem3") != null)
-            stems.set(2, (String)json.get("stem3"));
+        if (json.get("stem2") != null) {
+            if (stems.size() < 2) {
+                throw new Error("Paradigmai neatbilstošs celms " + json.toJSONString());
+            } else stems.set(1, (String) json.get("stem2"));
+        }
+        if (json.get("stem3") != null) {
+            if (stems.size() < 3) {
+                throw new Error("Paradigmai neatbilstošs celms " + json.toJSONString());
+            } else stems.set(2, (String) json.get("stem3"));
+        }
         if (json.get("attributes") != null) {
             JSONObject attrs = (JSONObject)json.get("attributes");
             for (Object key : attrs.keySet()) {
@@ -147,76 +159,52 @@ public class Lexeme extends AttributeValues {
             }
         }
 
-        if (isMatchingStrong(AttributeNames.i_Gender, AttributeNames.v_Kopdzimte) &&
-                paradigm.getValue(AttributeNames.i_Gender) != null) {
-            removeAttribute(AttributeNames.i_Gender);
-            addAttribute(AttributeNames.v_Kopdzimte, AttributeNames.v_Yes);
-        }
-
-        // FIXME - šo principā būtu jāpārveido pirms datu nonākšanas Tēzaura DB
-        if (isMatchingStrong(AttributeNames.i_FormRestrictions, AttributeNames.v_Plural)
-                && paradigm.getValue(AttributeNames.i_Konjugaacija) == null) {
-            addAttribute(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum);
-            removeAttribute(AttributeNames.i_FormRestrictions);
-        }
-        if (isMatchingStrong(AttributeNames.i_FormRestrictions, AttributeNames.v_Singular)) {
-            addAttribute(AttributeNames.i_NumberSpecial, AttributeNames.v_SingulareTantum);
-            removeAttribute(AttributeNames.i_FormRestrictions);
-        }
-
-        if (getValue(AttributeNames.i_TezaursCategory) != null &&
-                (getValue(AttributeNames.i_TezaursCategory).equalsIgnoreCase(paradigm.getValue(AttributeNames.i_PartOfSpeech)) // Lietvārds
-                || getValue(AttributeNames.i_TezaursCategory).equalsIgnoreCase(paradigm.getValue(AttributeNames.i_ResidualType)) // Vārds svešvalodā
-                || getValue(AttributeNames.i_TezaursCategory).equalsIgnoreCase(paradigm.getValue(AttributeNames.i_Declension)) // Ģenitīvenis
-                )) {
-            removeAttribute(AttributeNames.i_TezaursCategory);
-        }
-        if (isMatchingStrong(AttributeNames.i_TezaursCategory, "[\"Atgriezenisks darbības vārds\",\"Darbības vārds\"]")
-                && paradigm.isMatchingStrong(AttributeNames.i_Reflexive, AttributeNames.v_Yes)) {
-            removeAttribute(AttributeNames.i_TezaursCategory);
-        }
-        if (isMatchingStrong(AttributeNames.i_Other, "Refleksīvs")
-                && paradigm.isMatchingStrong(AttributeNames.i_Reflexive, AttributeNames.v_Yes)) {
-            removeAttribute(AttributeNames.i_Other);
-        }
-        if (isMatchingStrong(AttributeNames.i_TezaursCategory, "[\"Darbības vārds\",\"Tiešs darbības vārds\"]")
-                && paradigm.isMatchingStrong(AttributeNames.i_Reflexive, AttributeNames.v_No)) {
-            removeAttribute(AttributeNames.i_TezaursCategory);
-        }
-        if (isMatchingStrong(AttributeNames.i_Other, AttributeNames.v_Toponym)) {
-            addAttribute(AttributeNames.i_ProperNounType, getValue(AttributeNames.i_Other));
-            addAttribute(AttributeNames.i_NounType, AttributeNames.v_ProperNoun);
-            removeAttribute(AttributeNames.i_Other);
-        }
-        if (isMatchingStrong(AttributeNames.i_Domain, "Vēsturisks vietvārds")) {
-            removeAttribute(AttributeNames.i_Domain);
-        }
-
-        if (paradigm.getID() == 49) {
-            if (isMatchingStrong(AttributeNames.i_Other, "Nelokāms vārds"))
-                removeAttribute(AttributeNames.i_Other);
-
-            if (isMatchingStrong("Locīšanas īpatnības", "Sastingusi forma"))
-                removeAttribute("Locīšanas īpatnības");
-        }
-
         if (stems.get(0).isEmpty() && getValue(AttributeNames.i_Lemma) != null) {
-            String lemma = getValue(AttributeNames.i_Lemma);
+            String lemma = getValue(AttributeNames.i_Lemma).toLowerCase();
+//            if (lemma.equalsIgnoreCase("pārāks")) {
+//                describe();
+//            }
+
+            if (isMatchingStrong(AttributeNames.i_EntryProperties, AttributeNames.v_EntryFeminine)) {
+                // Specapstrāde priekš īpašības vārda 'ālava' plus ja nu kas vēl parādīsies
+                if (lemma.endsWith("a") && paradigm.getLemmaEnding().getEnding().equalsIgnoreCase("s")) {
+                    lemma = lemma.substring(0, lemma.length()-1) + "s";
+                }
+            }
+
             if (isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum)) {
                 constructor_try_plural();
             } else {
                 try {
                     String stem = paradigm.getLemmaEnding().stem(lemma);
+                    int mija = paradigm.getLemmaEnding().getMija();
+                    if (mija != 0 && (mija != 3 || isMatchingStrong(AttributeNames.i_EntryProperties, AttributeNames.v_EntryComparative)) ) {
+                        ArrayList<Variants> varianti = Mijas.mijuVarianti(stem, mija, false);
+                        for (Variants v : varianti) {
+                            if (isMatchingStrong(AttributeNames.i_EntryProperties, AttributeNames.v_EntryComparative) &&
+                                    !v.isMatchingStrong(AttributeNames.i_Degree, AttributeNames.v_Comparative)
+                            ) continue;
+                            // FIXME - ko tad darīt ar vairākiem variantiem ????
+                            stem = v.celms;
+                        }
+                    }
                     stems.set(0, stem);
+                    if (isMatchingStrong(AttributeNames.i_EntryProperties, AttributeNames.v_EntryComparative)) {
+                        addAttribute(AttributeNames.i_LemmaOverride, lemma);
+                    }
                 } catch (Ending.WrongEndingException exc) {
                     if (isMatchingStrong(AttributeNames.i_EntryProperties, AttributeNames.v_Plural)) {
                         constructor_try_plural();
                     } else {
                         System.err.println(String.format("Leksēmai '%s' #%d galotne neatbilst paradigmai", lemma, this.id));
-                        this.describe();
+                        this.describe(System.err);
                     }
                 }
             }
+        }
+
+        if (getValue(AttributeNames.i_LemmaOverride) != null) {
+            addAttribute(AttributeNames.i_Lemma, getValue(AttributeNames.i_LemmaOverride));
         }
         paradigm.addLexeme(this);
     }
@@ -232,7 +220,11 @@ public class Lexeme extends AttributeValues {
             if (e.isMatchingWeak(filter)) {
                 try {
                     String stem = e.stem(lemma);
-                    stems.set(0, stem);
+                    ArrayList<Variants> celmi = Mijas.mijuVarianti(stem, e.getMija(), Analyzer.p_firstcap.matcher(lemma).matches());
+                    for (Variants v : celmi) {
+                        // FIXME - ko tad darīt ar vairākiem variantiem ????
+                        stems.set(0, v.celms.toLowerCase(Locale.ROOT));
+                    }
                 } catch (Ending.WrongEndingException exc2) { /*pass*/ }
             }
         }
@@ -240,7 +232,11 @@ public class Lexeme extends AttributeValues {
             System.err.println(String.format("Leksēmai '%s' #%d galotne neatbilst paradigmai arī skatoties uz daudzskaitli", lemma, this.id));
             this.describe();
         } else {
-            addAttribute(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum);
+            /* Unclear why this was added
+            if (getValue(AttributeNames.i_NumberSpecial) == null)
+                addAttribute(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum);
+
+             */
         }
     }
 

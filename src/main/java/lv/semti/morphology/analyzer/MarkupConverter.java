@@ -271,14 +271,14 @@ public class MarkupConverter {
 				tag.append("pp1msnn");
 			else tag.append("p______");
 
-			verifyAndSetKamolsAttribute(avs,tag,1,'p',AttributeNames.i_VvTips,AttributeNames.v_Personu);
-			verifyAndSetKamolsAttribute(avs,tag,1,'x',AttributeNames.i_VvTips,AttributeNames.v_Atgriezeniskie);
+			verifyAndSetKamolsAttribute(avs,tag,1,'p',AttributeNames.i_VvTips,AttributeNames.v_Personas);
+			verifyAndSetKamolsAttribute(avs,tag,1,'x',AttributeNames.i_VvTips,AttributeNames.v_Atgriezeniskais);
 			verifyAndSetKamolsAttribute(avs,tag,1,'s',AttributeNames.i_VvTips,AttributeNames.v_Piederiibas);
-			verifyAndSetKamolsAttribute(avs,tag,1,'d',AttributeNames.i_VvTips,AttributeNames.v_Noraadaamie);
-			verifyAndSetKamolsAttribute(avs,tag,1,'i',AttributeNames.i_VvTips,AttributeNames.v_Nenoteiktie);
-			verifyAndSetKamolsAttribute(avs,tag,1,'q',AttributeNames.i_VvTips,AttributeNames.v_Jautaajamie);
+			verifyAndSetKamolsAttribute(avs,tag,1,'d',AttributeNames.i_VvTips,AttributeNames.v_Noraadaamais);
+			verifyAndSetKamolsAttribute(avs,tag,1,'i',AttributeNames.i_VvTips,AttributeNames.v_Nenoteiktais);
+			verifyAndSetKamolsAttribute(avs,tag,1,'q',AttributeNames.i_VvTips,AttributeNames.v_Jautaajamais);
 			verifyAndSetKamolsAttribute(avs,tag,1,'r',AttributeNames.i_VvTips,AttributeNames.v_AttieksmesVv);
-			verifyAndSetKamolsAttribute(avs,tag,1,'g',AttributeNames.i_VvTips,AttributeNames.v_Noteiktie);
+			verifyAndSetKamolsAttribute(avs,tag,1,'g',AttributeNames.i_VvTips,AttributeNames.v_Noteiktais);
 
 			verifyAndSetKamolsAttribute(avs,tag,2,'1',AttributeNames.i_Person,"1");
 			verifyAndSetKamolsAttribute(avs,tag,2,'2',AttributeNames.i_Person,"2");
@@ -645,14 +645,14 @@ public class MarkupConverter {
 		case 'p':
 			attributes.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Pronoun);
 
-			verifyAndSetAVSAttribute(tag,attributes,1,'p',AttributeNames.i_VvTips,AttributeNames.v_Personu);
-			verifyAndSetAVSAttribute(tag,attributes,1,'x',AttributeNames.i_VvTips,AttributeNames.v_Atgriezeniskie);
+			verifyAndSetAVSAttribute(tag,attributes,1,'p',AttributeNames.i_VvTips,AttributeNames.v_Personas);
+			verifyAndSetAVSAttribute(tag,attributes,1,'x',AttributeNames.i_VvTips,AttributeNames.v_Atgriezeniskais);
 			verifyAndSetAVSAttribute(tag,attributes,1,'s',AttributeNames.i_VvTips,AttributeNames.v_Piederiibas);
-			verifyAndSetAVSAttribute(tag,attributes,1,'d',AttributeNames.i_VvTips,AttributeNames.v_Noraadaamie);
-			verifyAndSetAVSAttribute(tag,attributes,1,'i',AttributeNames.i_VvTips,AttributeNames.v_Nenoteiktie);
-			verifyAndSetAVSAttribute(tag,attributes,1,'q',AttributeNames.i_VvTips,AttributeNames.v_Jautaajamie);
+			verifyAndSetAVSAttribute(tag,attributes,1,'d',AttributeNames.i_VvTips,AttributeNames.v_Noraadaamais);
+			verifyAndSetAVSAttribute(tag,attributes,1,'i',AttributeNames.i_VvTips,AttributeNames.v_Nenoteiktais);
+			verifyAndSetAVSAttribute(tag,attributes,1,'q',AttributeNames.i_VvTips,AttributeNames.v_Jautaajamais);
 			verifyAndSetAVSAttribute(tag,attributes,1,'r',AttributeNames.i_VvTips,AttributeNames.v_AttieksmesVv);
-			verifyAndSetAVSAttribute(tag,attributes,1,'g',AttributeNames.i_VvTips,AttributeNames.v_Noteiktie);
+			verifyAndSetAVSAttribute(tag,attributes,1,'g',AttributeNames.i_VvTips,AttributeNames.v_Noteiktais);
 
 			verifyAndSetAVSAttribute(tag,attributes,2,'1',AttributeNames.i_Person,"1");
 			verifyAndSetAVSAttribute(tag,attributes,2,'2',AttributeNames.i_Person,"2");

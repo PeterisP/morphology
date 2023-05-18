@@ -83,6 +83,7 @@ public class MorphoSpeedTest {
 		System.out.printf("Tīrā atpazīšana: pagāja %d ms\n%d pieprasījumi sekundē\n", starpība, skaits*1000/starpība);
 		System.out.printf("\tPirmsuzlabojumu benchmark (Pētera iMac) - 850 rq/sec\n");
 		System.out.printf("\tUzlabojumu #2 benchmark (Pētera iMac) - 15 000 rq/sec\n");
+		System.out.printf("\t2021 benchmark (Pētera MBP) - 35 000 rq/sec\n");
 	}
 	
 	@Test
@@ -117,6 +118,7 @@ public class MorphoSpeedTest {
 		System.out.printf("Pilnā minēšana: pagāja %d ms\n%d pieprasījumi sekundē\n", starpība, skaits*1000/starpība);
 		System.out.printf("\tPirmsuzlabojumu benchmark (Pētera iMac) - 400 rq/sec\n");
 		System.out.printf("\tUzlabojumu benchmark (Pētera iMac) - 12 000 rq/sec\n");
+		System.out.printf("\t2021 benchmark (Pētera MBP) - 12 000 rq/sec\n");
 	}
 	
 //	@Ignore("Hardcoded path")

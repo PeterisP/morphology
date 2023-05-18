@@ -37,6 +37,7 @@ public class AttributeNames {
 	public final static String v_Nelokaams = "Nelokāms";
 
 	public final static String i_PartOfSpeech = "Vārdšķira";
+	public final static String i_Conversion = "Konversija";
 	public final static String v_Punctuation = "Pieturzīme";
 	public final static String v_Noun = "Lietvārds";
 	public final static String v_Verb = "Darbības vārds";
@@ -76,20 +77,18 @@ public class AttributeNames {
 	public final static String v_Locative = "Lokatīvs";
 	public final static String v_Vocative = "Vokatīvs";
 
-	// public final static String i_CaseSpecial = "Locījums 2";
-
 	public final static String i_Declension = "Deklinācija";
 	public final static String v_Reflexive = "Atgriezenisks";
 	public final static String v_InflexibleGenitive = "Ģenitīvenis";
 
 	public final static String i_VerbType = "Darbības vārda tips";
 	public final static String v_MainVerb = "Patstāvīgs darbības vārds";
-	public final static String v_PaliigDv = "Palīgdarbības vārds";
-	public final static String v_Modaals = "Modāls";
-	public final static String v_Faazes = "Fāzes";
-	public final static String v_IzpausmesVeida = "Izpausmes veida";
+	public final static String v_PaliigDv = "Palīgverbs";
+	public final static String v_Modaals = "Modāls modificētājs";
+	public final static String v_Faazes = "Fāzes modificētājs";
+	public final static String v_IzpausmesVeida = "Izpausmes modificētājs";
 	public final static String v_Buut = "Palīgverbs 'būt'";
-	public final static String v_TiktTapt = "Palīgverbi 'tikt' un 'tapt'";
+	public final static String v_TiktTapt = "Saitiņa";
 	@Deprecated public final static String v_Nebuut = "'nebūt', 'trūkt' un 'pietikt'"; // Only in old Semti-kamols annotation
 
 	public final static String i_Reflexive = "Atgriezeniskums";
@@ -109,8 +108,8 @@ public class AttributeNames {
 	public final static String v_Pagaatne = "Pagātne";
 
 	public final static String i_Transitivity = "Transitivitāte";
-	public final static String v_Transitive = "Pārejošs";
-	public final static String v_Intransitive = "Nepārejošs";
+	public final static String v_Transitive = "Transitīvs";
+	public final static String v_Intransitive = "Intransitīvs";
 
 	public final static String i_Konjugaacija = "Konjugācija";
 	public final static String v_Nekaartns = "Nekārtns";
@@ -142,15 +141,15 @@ public class AttributeNames {
 	public static final String v_Relative = "Relatīvais"; //tikai apst.v
 
 	public final static String i_VvTips = "Vietniekvārda tips";
-	public final static String v_Personu = "Personu";
-	public final static String v_Atgriezeniskie = "Atgriezeniskie";
+	public final static String v_Personas = "Personas";
+	public final static String v_Atgriezeniskais = "Atgriezeniskais";
 	public final static String v_Piederiibas = "Piederības";
-	public final static String v_Noraadaamie = "Norādāmie";
-	public final static String v_Nenoteiktie = "Nenoteiktie";
-	public final static String v_Jautaajamie = "Jautājamie";
+	public final static String v_Noraadaamais = "Norādāmais";
+	public final static String v_Nenoteiktais = "Nenoteiktais";
+	public final static String v_Jautaajamais = "Jautājamais";
 	public final static String v_AttieksmesVv = "Attieksmes";
-	public final static String v_Noteiktie = "Noteiktie";
-	//public final static String v_Noliegtie = "Noliegtie";
+	public final static String v_Noteiktais = "Noteiktais";
+	//public final static String v_Noliegtais = "Noliegtais";
 
 	public final static String i_ApstTips = "Apstākļa vārda tips";
 	public final static String v_Meera = "Mēra";
@@ -160,12 +159,12 @@ public class AttributeNames {
 	public final static String v_Ceelonja = "Cēloņa/nolūka";
 
 	public final static String i_Novietojums = "Novietojums";
-	public final static String v_Pirms = "Pirms";
-	public final static String v_Peec = "Pēc";
+	public final static String v_Pirms = "Prepozitīvs";
+	public final static String v_Peec = "Postpozitīvs";
 
 	public final static String i_Rekcija = "Rekcija";
 
-	public final static String i_SaikljaTips = "Saikļa tips";
+	public final static String i_SaikljaTips = "Saikļa sintaktiskā funkcija";
 	public final static String v_Sakaartojuma = "Sakārtojuma";
 	public final static String v_Pakaartojuma = "Pakārtojuma";
 
@@ -217,13 +216,16 @@ public class AttributeNames {
 	public static final String v_Deminutive = "Deminutīvu atvasināšana";
 	public static final String v_Prefix = "Priedēkļu atvasināšana";
 	public static final String v_Ending = "Minēšana pēc galotnes";
-	
+	public static final String i_Derivative = "Sistemātisks atvasinājums";
+
 	public static final String i_CapitalLetters = "Lielo burtu lietojums";
 	public static final String v_Lowercase = "Mazie burti";
 	public static final String v_FirstUpper = "Sākas ar lielo burtu";
 	public static final String v_AllUpper = "Rakstīts ar lielajiem burtiem";
 
 	public static final String i_Lemma = "Pamatforma";
+	public static final String i_LemmaOverride = "Pamatforma morforīkiem";
+	public static final String i_LemmaParadigm = "Pamatforma no locīšanas paradigmas";
 	public static final String i_SourceLemma = "Avota pamatforma";
     public static final String i_EntryID = "Šķirkļa ID";
     public static final String i_EntryName = "Šķirkļa cilvēklasāmais ID";
@@ -242,22 +244,29 @@ public class AttributeNames {
     public static final String i_WhitespaceBefore = "Atstarpes pirms";
     public static final String i_Offset = "Nobīde rindkopā";
 
-    public static final String i_Frequency = "Biežums";
+    public static final String i_Frequency = "Lietojuma biežums";
 	public static final String v_Rare = "Reti";
 
     public static final String i_Usage = "Lietojums";
     public static final String v_Regional = "Apvidvārds";
+	public static final String v_Outdated = "Novecojis";
+	public static final String v_RegionalOutdated = "[\"Apvidvārds\",\"Novecojis\"]";
 
-    public static final String i_FormRestrictions = "Lieto tikai noteiktā formā/atvasinājumā";
-    public static final String i_EntryProperties = "Šķirkļavārda īpatnības";
+    public static final String i_EntryProperties = "Leksēmas pamatformas īpatnības";
+	public final static String v_EntryComparative = "Pārākā pakāpe"; // TODO - tizls nosaukums
+	public final static String v_EntryFeminine = "Sieviešu dzimte"; // TODO - tizls nosaukums
     public static final String i_TezaursCategory = "Kategorija";
-    public static final String i_Domain = "Nozare";
+    public static final String i_Domain = "Joma";
 
     public static final String i_Other = "Citi";
     public static final String i_ProperNounType = "Īpašvārda veids";
     public static final String v_GivenName = "Priekšvārds";
     public static final String v_Surname = "Uzvārds";
     public static final String v_Toponym = "Vietvārds";
+
+	public static final String i_Display_Inflection_Table = "Morfotabulas attēlošana";
+	public static final String v_No_Plural = "Nerādīt daudzskaitli";
+	public static final String v_No_Singular = "Nerādīt vienskaitlis";
 
 	// Vērtības, kuras īslaicīgi piekabina vārda objektam, lai GUI to īpaši atzīmētu
 	public static final String i_Recommended = "Rādīt zaļu - čunkera rekomendācija";

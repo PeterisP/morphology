@@ -49,7 +49,7 @@ import org.json.simple.parser.ParseException;
  */
 public class Lexicon {
 	public final static String DEFAULT_LEXICON_FILE = "Lexicon_v2.xml";
-	public static int proper_name_frequency_floor = 200; // When loading proper name lexemes, entries that have a frequency ("Skaits") field will be ignored and not loaded
+	public static int proper_name_frequency_floor = 2; // When loading proper name lexemes, entries that have a frequency ("Skaits") field will be ignored and not loaded
 
 	protected String filename;
 
@@ -73,6 +73,7 @@ public class Lexicon {
 	protected Multimap<String, Lexeme> hardcodedForms = ArrayListMultimap.create();
 	public Trie automats = new Trie();
 
+	public boolean guessAllParadigms = false; // Attempt guessing words even in paradigms where AllowedGuessEndings are marked with !
 	/**
 	 * Creates a lexicon object from the default location in JAR resources
 	 *
@@ -265,7 +266,9 @@ public class Lexicon {
             while ((json_row = reader.readLine()) != null) {
                 Lexeme l = new Lexeme((JSONObject) parser.parse(json_row), this);
                 if (l.isMatchingStrong(AttributeNames.i_EntryName, "irt:1")
-                        || l.isMatchingStrong(AttributeNames.i_EntryName, "art:1")) {
+						|| l.isMatchingStrong(AttributeNames.i_EntryName, "irt")
+						|| l.isMatchingStrong(AttributeNames.i_EntryName, "art:1")
+                        || l.isMatchingStrong(AttributeNames.i_EntryName, "art")) {
                     l.addAttribute(AttributeNames.i_Frequency, AttributeNames.v_Rare);
                 }
                 if (this.is_lexeme_bad(l)) {
@@ -281,31 +284,13 @@ public class Lexicon {
 	// Filtering out certain lexemes from Tēzaurs.lv because they need to be overriden with manual lexicon
 	// FIXME - all this shouldn't exist in code but should (over time) get fixed in Tēzaurs.lv data
 	private boolean is_lexeme_bad(Lexeme l) {
-		if (l.isMatchingStrong(AttributeNames.i_Usage, AttributeNames.v_Regional) // Negribam apvidvārdus
-				|| l.getParadigm().getID() == 29  // Hardcoded pagaidām atstājam no leksikona
+		if (l.getParadigm().getID() == 29  // Hardcoded pagaidām atstājam no leksikona
 				|| l.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Pronoun)  // Vietniekvārdiem leksikonā ir labāki dati
-				|| l.isMatchingStrong("Kategorija", AttributeNames.v_Pronoun)  // Vietniekvārdiem leksikonā ir labāki dati
+				|| l.isMatchingStrong(AttributeNames.i_TezaursCategory, AttributeNames.v_Pronoun)  // Vietniekvārdiem leksikonā ir labāki dati
 				|| l.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Pronoun)  // Vietniekvārdiem leksikonā ir labāki dati
-				|| l.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Numeral)  // Skaitļavārdiem leksikonā ir labāki dati
-				|| l.isMatchingStrong("Kategorija", AttributeNames.v_Numeral)  // Skaitļavārdiem leksikonā ir labāki dati
-				|| l.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Numeral)  // Skaitļavārdiem leksikonā ir labāki dati
-				|| l.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Conjunction)  // Saikļiem leksikonā ir labāki dati
-				|| l.isMatchingStrong("Kategorija", AttributeNames.v_Conjunction)  // Saikļiem leksikonā ir labāki dati
-				|| l.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Conjunction)  // Saikļiem leksikonā ir labāki dati
-				|| l.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Particle)  // Partikulām leksikonā ir labāki dati
-				|| l.isMatchingStrong("Kategorija", AttributeNames.v_Particle)  // Partikulām leksikonā ir labāki dati
-				|| l.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Particle)  // Partikulām leksikonā ir labāki dati
 		) {
 			return true;
-		}
-		for (Lexeme l2 : l.getParadigm().getLexemesByStem().get(0).get(l.getStem(0))) {
-			if (l2 == l) continue;
-			if (l.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adverb)) {
-				// Filter out overlapping adverbs - Tēzaurs.lv has more adverbs, but morpholexicon has more information about adverb types
-				if ((l.getValue(AttributeNames.i_ApstTips) == null) && (l2.getValue(AttributeNames.i_ApstTips) != null)) {
-					return true;
-				}
-			}
+			// FIXME - this is temporary and all these things need to be moved to tezaurs.lv lexicon eventually
 		}
 		return false;
 	}
@@ -494,11 +479,14 @@ public class Lexicon {
 		String stem;
 		try {
 			stem = ending.stem(word.toLowerCase());
-			ArrayList<Variants> celmi = Mijas.mijuVarianti(stem, ending.getMija(), word.matches("\\p{Lu}.*"));
-			if (celmi.size() == 0) return null; // acīmredzot neder ar miju
-			// FIXME ! Nevajadzētu te būt iespējai uz null!
-			stem = celmi.get(0).celms;
-			// FIXME - vai te ir ok naivi ņemt pirmo variantu ?
+			int mija = ending.getMija();
+			if (mija != 0 && mija != 3) { // don't try to apply comparative and superlative forms
+				ArrayList<Variants> celmi = Mijas.mijuVarianti(stem, mija, word.matches("\\p{Lu}.*"));
+				if (celmi.size() == 0) return null; // acīmredzot neder ar miju
+				// FIXME ! Nevajadzētu te būt iespējai uz null!
+				stem = celmi.get(0).celms;
+				// FIXME - vai te ir ok naivi ņemt pirmo variantu ?
+			}
 		} catch (Exception e) {
             System.err.print(word + Integer.toString(endingID) + source);
 			System.err.print(e.getStackTrace());

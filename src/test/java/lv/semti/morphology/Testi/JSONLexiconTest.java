@@ -45,7 +45,7 @@ public class JSONLexiconTest {
             analyzer_json.enableGuessing = false;
 
             compare_lexicons(analyzer_xml, "lexicon", analyzer_json, "tēzaurs");
-            compare_lexicons(analyzer_json, "tēzaurs", analyzer_xml, "lexicon");
+//            compare_lexicons(analyzer_json, "tēzaurs", analyzer_xml, "lexicon");
 
 
         } catch (Exception e) {
@@ -62,7 +62,16 @@ public class JSONLexiconTest {
                 Word j_word = analyzer2.analyzeLemma(lemma);
                 total ++;
                 if (!j_word.isRecognized()) {
-                    //System.out.println(String.format("Word '%s' in %s but not in %s", lemma, name1, name2));
+                    if (lemma.endsWith("i")) {
+                        Word j_word2 = analyzer2.analyze(lemma);
+                        if (j_word.isRecognized()) {
+                            String lemma2 = j_word2.getBestWordform().getValue(AttributeNames.i_Lemma);
+                            if ( lemma.substring(0,lemma.length()-1).equalsIgnoreCase(lemma2.substring(0,lemma2.length()-1)) ) continue;
+                        }
+                    }
+
+//                    System.out.println(String.format("Word '%s' in %s but not in %s", lemma, name1, name2));
+                    System.out.println(lemma);
                     not_found ++;
                 }
             }

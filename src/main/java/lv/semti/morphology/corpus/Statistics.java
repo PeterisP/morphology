@@ -46,7 +46,8 @@ public class Statistics {
 	 * Default filename for statistics file.
 	 */
 	public final static String DEFAULT_STATISTICS_FILE = "Statistics.xml";
-	public double lexemeWeight = 1000; //How much lexeme count should be weighed as a multiple of ending count 
+	public double lexemeWeight = 1000; //How much lexeme count should be weighed as a multiple of ending count
+	// Determined/verified empirically by testing on corpus; coefficient of 100 instead of 1000 gives 0.2% decrease
 	
 	/**
 	 * Lexeme frequencies, indexed by lexeme IDs.
@@ -94,7 +95,9 @@ public class Statistics {
 
 		stream.write("<Leksēmu_biežums\n");
 		for (Entry<Integer,Integer> tuple : lexemeFrequency.entrySet()) {
-			stream.write(" Leksēma_"+tuple.getKey().toString()+"=\""+tuple.getValue().toString()+"\"");
+			if (tuple.getValue()>1) {
+				stream.write(" Leksēma_" + tuple.getKey().toString() + "=\"" + tuple.getValue().toString() + "\"");
+			}
 		}
 		stream.write("/>\n");
 		stream.write("</Statistika>\n");

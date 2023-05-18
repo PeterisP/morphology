@@ -119,6 +119,7 @@ class FixedAttribute extends Attribute {
 			if (av.valueLV.equalsIgnoreCase(value))
 				the_av = av;
 		if (the_av == null) return tag;
+		if (the_av.markupTag == ' ') return tag;
 		
 		StringBuilder result;
 		if (tag.equalsIgnoreCase("") && the_av.defaultTags != null) 

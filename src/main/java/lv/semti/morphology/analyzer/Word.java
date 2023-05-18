@@ -327,7 +327,13 @@ public class Word extends Observable implements Cloneable{
 		}
 			
 	}
-	
+
+	/**
+	 *
+	 * @param attribute
+	 * @param value
+	 * @return Checks if any of the wordforms has this attribute with the specified value
+	 */
 	public boolean hasAttribute(String attribute, String value){
 		boolean results = false;
 		for (Wordform vārdforma : wordforms)

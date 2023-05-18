@@ -39,7 +39,7 @@ public class Paradigm extends AttributeValues {
 	public ArrayList <Ending> endings = new ArrayList <Ending>();  //FIXME - nevajag iisti buut public, vajag tikai read-only iterēt
 	private Ending lemmaEnding = null;  // kura no galotnēm uzskatāma par pamatformu
 	private int stems = 1;      // cik saknes ir šai vārdgrupai (tipiski 1; darbībasvārdiem 3)
-	private char[] allowedGuessEndings = {};
+	private String allowedGuessEndings = "";
 	public String description = "";
 
 	public Paradigm (Lexicon lexicon) {
@@ -114,7 +114,7 @@ public class Paradigm extends AttributeValues {
 		
 		n = node.getAttributes().getNamedItem("AllowedGuessEndings");
 		if (n != null)
-			this.setAllowedGuessEndings(n.getTextContent());
+			this.allowedGuessEndings = n.getTextContent();
 
 		for (int i = 0; i < nodes.getLength(); i++) {
 			if (nodes.item(i).getNodeName().equals("Lexeme")) {
@@ -122,10 +122,6 @@ public class Paradigm extends AttributeValues {
 				addLexeme(l);
 			}
 		}
-	}
-	
-	private void setAllowedGuessEndings(String textContent) {
-		this.allowedGuessEndings = textContent.toCharArray();
 	}
 
 	/***
@@ -301,12 +297,13 @@ public class Paradigm extends AttributeValues {
 
 	// Verifies if this stem is a valid stem for this paradigm, based on the last letter(s?) of that stem 
 	public boolean allowedGuess(String stem) {
-		if (allowedGuessEndings.length == 0) return true; // FIXME - workaround until all paradigms have this data filled
+		if (allowedGuessEndings.isEmpty()) return true; // FIXME - workaround until all paradigms have this data filled
+		if ((allowedGuessEndings.indexOf('!') >= 0) && !this.lexicon.guessAllParadigms) return false;
 		if (stem.isEmpty()) return false;
+
+		if (this.id == 12 && stem.endsWith("as")) return true; // Hardcoded -as inflexible nouns like Lithuanian derived surnames Arvydas etc
 		
 		char lastchar = stem.charAt(stem.length()-1);
-		for (char c : allowedGuessEndings) 
-			if (c==lastchar) return true;
-		return false;
+		return (allowedGuessEndings.indexOf(lastchar) >= 0);
 	}
 }

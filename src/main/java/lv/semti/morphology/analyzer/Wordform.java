@@ -62,17 +62,23 @@ public class Wordform extends AttributeValues implements Serializable{
 		Boolean fixed_stem; 
 		if (lexeme != null) {
 			addAttributes(lexeme);
-			addAttribute(AttributeNames.i_SourceLemma, lexeme.getValue(AttributeNames.i_Lemma));  //TODO - šis teorētiski varētu aizstāt visus pārējos SourceLemma pieminējumus (citus varbūt var dzēst)
 			addAttribute(AttributeNames.i_LexemeID, Integer.toString(lexeme.getID()));
-			fixed_stem = lexeme.isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum)  ||
-						 lexeme.isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_SingulareTantum) ||
-						 lexeme.isMatchingStrong(AttributeNames.i_Declension, AttributeNames.v_InflexibleGenitive);
+			fixed_stem = isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum)  ||
+					isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_SingulareTantum) ||
+					isMatchingStrong(AttributeNames.i_EntryProperties, AttributeNames.v_Plural) ||
+					isMatchingStrong(AttributeNames.i_Declension, AttributeNames.v_InflexibleGenitive);
 			// || leksēma.isMatchingStrong(AttributeNames.i_Deminutive, "-iņ-")
 		} else fixed_stem = true;
+
+		if (isMatchingStrong(AttributeNames.i_EntryProperties, AttributeNames.v_Plural) &&
+				isMatchingStrong(AttributeNames.i_Number, AttributeNames.v_Plural)) {
+			addAttribute(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum);
+		}
 		
 		Ending lemmaEnding = ending.getLemmaEnding();
 		// FIXME šis 'if' būtu jāsaprot un jāsakārto - lai ir sakarīgi, bet nesalauž specgadījumus ('vairāk' -> pamatforma 'daudz' utml)
-		if (lemmaEnding != null && !(paradigm.getID() == 25 || paradigm.getID() == 29 || paradigm.getID() == 21)
+		// TODO - varbūt vienkārši dažām paradigmām vai galotnēm vajag karodziņu par to, ka jāģenerē pamatforma no jauna?
+		if (lemmaEnding != null && !(paradigm.getID() == 25 || paradigm.getID() == 29 || paradigm.getID() == 21 || paradigm.getID() == 37)
 				&& !fixed_stem) {
 			String thirdStem = null;
 			if (paradigm.getStems() == 3) thirdStem = lexeme.getStem(2);
@@ -87,14 +93,28 @@ public class Wordform extends AttributeValues implements Serializable{
 			}
 			String originalLemma = lexeme.getValue(AttributeNames.i_Lemma);
             lemma = Lexicon.recapitalize(lemma, originalLemma);
-			addAttribute(AttributeNames.i_Lemma, lemma );
-			// jo var pamatforma atšķirties no leksēmas pamatformas, piem. "otrās" pamatforma ir "otrā" nevis "otrais".
-			// TODO - varbūt vienkārši dažām paradigmām vai galotnēm vajag karodziņu par to, ka jāģenerē pamatforma no jauna?
-		}	
+            if (!lemma.equals(originalLemma)) {
+            	if (getValue(AttributeNames.i_LemmaOverride) == null) {
+					addAttribute(AttributeNames.i_SourceLemma, originalLemma);
+					addAttribute(AttributeNames.i_Lemma, lemma);
+					// jo var pamatforma atšķirties no leksēmas pamatformas, piem. "otrās" pamatforma ir "otrā" nevis "otrais".
+				} else {
+					addAttribute(AttributeNames.i_LemmaParadigm, lemma);
+				}
+			}
+		}
 	}
 	
 	public Wordform (String token) {
 		this.token = token;
+	}
+
+	public Wordform (String token, String lemma, Ending ending, String POS) {
+		this.token = token;
+		this.setEnding(ending);
+		this.addAttribute(AttributeNames.i_Word, token);
+		this.addAttribute(AttributeNames.i_PartOfSpeech, POS);
+		if (lemma != null) this.addAttribute(AttributeNames.i_Lemma, lemma);
 	}
 
 	public Wordform(Node node) {

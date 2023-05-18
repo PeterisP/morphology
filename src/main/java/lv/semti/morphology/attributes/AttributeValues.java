@@ -128,6 +128,19 @@ public class AttributeValues implements FeatureStructure, Cloneable {
 		}
 		return match;
 	}
+
+	/**
+	 * Returns true either if all attributes in provided test set are strongly
+	 * matching on this, i.e. they must exist and match.
+	 */
+	public boolean isMatchingStrongOneSide(AttributeValues testSet) {
+		boolean match = true;
+		for (Entry<String,String> aVPair : testSet.entrySet()) {
+			if (!this.isMatchingStrong(aVPair.getKey(), aVPair.getValue()))
+				match = false;
+		}
+		return match;
+	}
 	
 	/**
 	 * Returns true either if the attribute exists and matches the provided
@@ -144,6 +157,7 @@ public class AttributeValues implements FeatureStructure, Cloneable {
 	 * this.
 	 */
 	public boolean isMatchingWeak(AttributeValues testSet) {
+		if (testSet == null) return true;
 		boolean der = true;
 		for (Entry<String,String> pāris : testSet.entrySet()) {
 			if (!this.isMatchingWeak(pāris.getKey(), pāris.getValue()))
@@ -280,11 +294,24 @@ public class AttributeValues implements FeatureStructure, Cloneable {
 			//removeAttribute(AttributeNames.i_Number);
 		}
 		
-		//par šiem jādomā. Principā analizators no galotnes varētu izdomāt
+		//Principā analizators no galotnes varētu izdomāt, BET ir nepieciešams lai samazinātu klašu skaitu CRF tagerim
 		removeAttribute(AttributeNames.i_Degree);
 		removeAttribute(AttributeNames.i_Reflexive);
 //		removeAttribute(AttributeNames.i_Laiks);  // FIXME - piemēram, ēdu mēdzu zīmēju nestrādās nošķirt pagātne tagadne
 		removeAttribute(AttributeNames.i_Voice);
+	}
+
+	/**
+	 * Removes a set of attributes that are ignored in the MorphoEvaluate test for corpus comparison
+	 */
+	public void removeAttributesForCorpusTest() {
+		removeAttribute(AttributeNames.i_Transitivity);
+		removeAttribute(AttributeNames.i_ApstTips);
+		removeAttribute(AttributeNames.i_AdjectiveType);
+//		removeAttribute(AttributeNames.i_VietasApstNoziime);
+		if (isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Preposition)) {
+			removeAttribute(AttributeNames.i_Novietojums);
+		}
 	}
 	
 	public void removeTechnicalAttributes() {

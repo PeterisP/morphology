@@ -5,7 +5,7 @@
 	<Value LV="Darbības vārds" EN="Verb" Tag="v" DefaultTags="vm_________"/>
 	<Value LV="Īpašības vārds" EN="Adjective" Tag="a" DefaultTags="af_____"/>
 	<Value LV="Vietniekvārds" EN="Pronoun" Tag="p" DefaultTags="p______"/>
-	<Value LV="Apstākļa vārds" EN="Adverb" Tag="r" DefaultTags="r__"/>
+	<Value LV="Apstākļa vārds" EN="Adverb" Tag="r" DefaultTags="r__n"/>
 	<Value LV="Prievārds" EN="Preposition" Tag="s" DefaultTags="sp__"/>
 	<Value LV="Saiklis" EN="Conjunction" Tag="c"/>
 	<Value LV="Skaitļa vārds" EN="Numeral" Tag="m" DefaultTags="m_____"/>
@@ -31,8 +31,9 @@
 	<Value LV="Nepiemīt" EN="Not applicable" Tag="0"/>
 </Attribute>
 <Attribute LV="Skaitlis 2" EN="Number-special" PartOfSpeech="Lietvārds" MarkupPos="3">
-	<Value LV="Vienskaitlinieks" EN="Always singular" Tag="v"/>
-	<Value LV="Daudzskaitlinieks" EN="Always plural" Tag="d"/>
+	<Value LV="Vienskaitlinieks" EN="Singulare tantum" Tag="v"/>
+	<Value LV="Daudzskaitlinieks" EN="Plurare tantum" Tag="d"/>
+	<Value LV="Gandrīz daudzskaitlinieks" EN="Almost plurare tantum"/>
 </Attribute>
 <Attribute LV="Locījums" EN="Case" PartOfSpeech="Lietvārds" MarkupPos="4">
 	<Value LV="Nominatīvs" EN="Nominative" Tag="n"/>
@@ -62,11 +63,12 @@
 
 <Attribute LV="Darbības vārda tips" EN="Verb type" PartOfSpeech="Darbības vārds" MarkupPos="1" Description="patstāvīgs vai palīg d.v ?">
 	<Value LV="Patstāvīgs darbības vārds" EN="Main" Tag="m"/>
-	<Value LV="Modāls" EN="Modal" Tag="o"/>
-	<Value LV="Fāzes" EN="Phasal" Tag="p"/>
-	<Value LV="Izpausmes veida" EN="Expression" Tag="e"/>
-	<Value LV="Palīgverbs 'būt'" EN="Auxiliary 'to be'" Tag="c"/>
-	<Value LV="Palīgverbi 'tikt' un 'tapt'" EN="Auxiliary 'become'" Tag="t"/>
+	<Value LV="Modāls modificētājs" EN="Modal modifier" Tag="o"/>
+	<Value LV="Fāzes modificētājs" EN="Phasal modifier" Tag="p"/>
+	<Value LV="Izpausmes modificētājs" EN="Expression" Tag="e"/>
+	<Value LV="Palīgverbs 'būt'" EN="'to be' as auxiliary or copula" Tag="c"/>
+	<Value LV="Saitiņa" EN="Other copulas" Tag="t"/>
+	<Value LV="Palīgverbs" EN="Other auxiliaries" Tag="a"/>
 </Attribute>
 <Attribute LV="Atgriezeniskums" EN="Reflexive" PartOfSpeech="Darbības vārds" MarkupPos="2">
 	<Value LV="Jā" EN="Yes" Tag="y"/>
@@ -77,7 +79,7 @@
 	<Value LV="Atstāstījuma" EN="Relative" Tag="r"/>
 	<Value LV="Vēlējuma" EN="Conditional" Tag="c"/>
 	<Value LV="Vajadzības" EN="Debitive" Tag="d"/>
-	<Value LV="Vajadzības, atstāstījuma paveids" EN="Debitive" Tag="?"/>
+	<Value LV="Vajadzības, atstāstījuma paveids" EN="Debitive" Tag="d"/>
 	<Value LV="Pavēles" EN="Imperative" Tag="m"/>
 	<Value LV="Nenoteiksme" EN="Infinitive" Tag="n"/>
 	<Value LV="Divdabis" EN="Participle" Tag="p"/>
@@ -89,8 +91,9 @@
 	<Value LV="Nepiemīt" EN="Not applicable" Tag="0"/>
 </Attribute>
 <Attribute LV="Transitivitāte" EN="Transitivity" PartOfSpeech="Darbības vārds" MarkupPos="5">
-	<Value LV="Pārejošs" EN="Transitive" Tag="t"/>
-	<Value LV="Nepārejošs" EN="Intransitive" Tag="i"/>
+	<Value LV="Transitīvs" EN="Transitive" Tag="t"/>
+	<Value LV="Intransitīvs" EN="Intransitive" Tag="i"/>
+	<Value LV="[&quot;Intransitīvs&quot;,&quot;Transitīvs&quot;,&quot;Transitīvs un intransitīvs&quot;]"/> <!-- FIXME -->
 </Attribute>
 <Attribute LV="Konjugācija" EN="Conjugation" PartOfSpeech="Darbības vārds" MarkupPos="6">
 	<Value LV="1" EN="1" Tag="1"/>
@@ -121,12 +124,12 @@
 
 <Attribute LV="Darbības vārda tips" EN="Verb type" PartOfSpeech="Divdabis" MarkupPos="1" Description="patstāvīgs vai palīg d.v ?">
 	<Value LV="Patstāvīgs darbības vārds" EN="Main" Tag="m"/>
-	<Value LV="'nebūt', 'trūkt' un 'pietikt'" EN="Requires genitive - 'not be', 'lack', 'have-enough'" Tag="g"/>
-	<Value LV="Modāls" EN="Modal" Tag="o"/>
-	<Value LV="Fāzes" EN="Phasal" Tag="p"/>
-	<Value LV="Izpausmes veida" EN="Expression" Tag="e"/>
-	<Value LV="Palīgverbs 'būt'" EN="Auxiliary 'to be'" Tag="c"/>
-	<Value LV="Palīgverbi 'tikt' un 'tapt'" EN="Auxiliary 'become'" Tag="t"/>
+	<Value LV="Modāls modificētājs" EN="Modal modifier" Tag="o"/>
+	<Value LV="Fāzes modificētājs" EN="Phasal modifier" Tag="p"/>
+	<Value LV="Izpausmes modificētājs" EN="Expression" Tag="e"/>
+	<Value LV="Palīgverbs 'būt'" EN="'to be' as auxiliary or copula" Tag="c"/>
+	<Value LV="Saitiņa" EN="Other copulas" Tag="t"/>
+	<Value LV="Palīgverbs" EN="Other auxiliaries" Tag="a"/>
 </Attribute>
 <Attribute LV="Atgriezeniskums" PartOfSpeech="Divdabis" MarkupPos="2">
 	<Value LV="Jā" EN="Yes" Tag="y"/>
@@ -198,10 +201,12 @@
 <Attribute LV="Dzimte" EN="Gender" PartOfSpeech="Īpašības vārds" MarkupPos="2">
 	<Value LV="Vīriešu" EN="Masculine" Tag="m"/>
 	<Value LV="Sieviešu" EN="Feminine" Tag="f"/>
+	<Value LV="Nepiemīt" EN="Not applicable" Tag="0"/>
 </Attribute>
 <Attribute LV="Skaitlis" EN="Number" PartOfSpeech="Īpašības vārds" MarkupPos="3">
 	<Value LV="Vienskaitlis" EN="Singular" Tag="s"/>
 	<Value LV="Daudzskaitlis" EN="Plural" Tag="p"/>
+	<Value LV="Nepiemīt" EN="Not applicable" Tag="0"/>
 </Attribute>
 <Attribute LV="Locījums" EN="Case" PartOfSpeech="Īpašības vārds" MarkupPos="4">
 	<Value LV="Nominatīvs" EN="Nominative" Tag="n"/>
@@ -210,6 +215,7 @@
 	<Value LV="Akuzatīvs" EN="Accusative" Tag="a"/>
 	<Value LV="Lokatīvs" EN="Locative" Tag="l"/>
 	<Value LV="Vokatīvs" EN="Vocative" Tag="v"/>
+	<Value LV="Nepiemīt" EN="Not applicable" Tag="0"/>
 </Attribute>
 <Attribute LV="Noteiktība" EN="Definiteness" PartOfSpeech="Īpašības vārds" MarkupPos="5">
 	<Value LV="Nenoteiktā" EN="Indefinite" Tag="n"/>
@@ -222,14 +228,14 @@
 </Attribute>
 
 <Attribute LV="Vietniekvārda tips" EN="Pronoun type" PartOfSpeech="Vietniekvārds" MarkupPos="1">
-	<Value LV="Personu" EN="Personal" Tag="p"/>
-	<Value LV="Atgriezeniskie" EN="Reflexive" Tag="x"/>
+	<Value LV="Personas" EN="Personal" Tag="p"/>
+	<Value LV="Atgriezeniskais" EN="Reflexive" Tag="x"/>
 	<Value LV="Piederības" EN="Possesive" Tag="s"/>
-	<Value LV="Norādāmie" EN="Demonstrative" Tag="d"/>
-	<Value LV="Nenoteiktie" EN="Indefinite" Tag="i"/>
-	<Value LV="Jautājamie" EN="Interrogative" Tag="q"/>
+	<Value LV="Norādāmais" EN="Demonstrative" Tag="d"/>
+	<Value LV="Nenoteiktais" EN="Indefinite" Tag="i"/>
+	<Value LV="Jautājamais" EN="Interrogative" Tag="q"/>
 	<Value LV="Attieksmes" EN="Relative" Tag="r"/>
-	<Value LV="Noteiktie" EN="Definite" Tag="g"/>
+	<Value LV="Noteiktais" EN="Definite" Tag="g"/>
 </Attribute>
 <Attribute LV="Persona" EN="Person" PartOfSpeech="Vietniekvārds" MarkupPos="2">
 	<Value LV="1" EN="1" Tag="1"/>
@@ -265,7 +271,6 @@
 </Attribute>
 
 <Attribute LV="Pakāpe" EN="Degree" PartOfSpeech="Apstākļa vārds" MarkupPos="1">
-	<Value LV="Relatīvais" EN="Relative" Tag="r"/>
 	<Value LV="Pamata" EN="Positive" Tag="p"/>
 	<Value LV="Pārākā" EN="Comparative" Tag="c"/>
 	<Value LV="Vispārākā" EN="Superlative" Tag="s"/>
@@ -278,10 +283,13 @@
 	<Value LV="Laika" EN="Time" Tag="t"/>
 	<Value LV="Cēloņa/nolūka" EN="Causative" Tag="c"/>
 </Attribute>
+<Attribute LV="Prievārdiskais apstākļa vārds" EN="Prepositional adverb" PartOfSpeech="Apstākļa vārds" MarkupPos="3">
+	<Value LV="Jā" EN="Yes" Tag="y"/>
+</Attribute>
 
 <Attribute LV="Novietojums" EN="Position" PartOfSpeech="Prievārds" MarkupPos="1">
-	<Value LV="Pirms" EN="Preposition" Tag="p"/>
-	<Value LV="Pēc" EN="Postposition" Tag="t"/>
+	<Value LV="Prepozitīvs" EN="Preposition" Tag="p"/>
+	<Value LV="Postpozitīvs" EN="Postposition" Tag="t"/>
 </Attribute>
 <Attribute LV="Skaitlis" EN="Number" PartOfSpeech="Prievārds" MarkupPos="2">
 	<Value LV="Vienskaitlis" EN="Singular" Tag="s"/>
@@ -299,7 +307,7 @@
 	<Value LV="Nē" EN="No" Tag="n"/>
 </Attribute>
 
-<Attribute LV="Saikļa tips" EN="Conjunction type" PartOfSpeech="Saiklis" MarkupPos="1">
+<Attribute LV="Saikļa sintaktiskā funkcija" EN="Conjunction syntactic function" PartOfSpeech="Saiklis" MarkupPos="1">
 	<Value LV="Sakārtojuma" EN="Coordinating" Tag="c"/>
 	<Value LV="Pakārtojuma" EN="Subordinating" Tag="s"/>
 </Attribute>
@@ -309,6 +317,11 @@
 	<Value LV="Divkāršs" EN="Double" Tag="d"/>
 	<Value LV="Atkārtots" EN="Repeated" Tag="r"/>
 </Attribute>
+<Attribute LV="Saikļa semantiskais tips" EN="Conjunction semantic type" PartOfSpeech="Saiklis">
+	<Value LV="Vienojuma" EN="Cumulative"/>
+	<Value LV="Pretstatījuma" EN="Adversative"/>
+</Attribute>
+
 
 <Attribute LV="Skaitļa vārda tips" EN="Numeral type" PartOfSpeech="Skaitļa vārds" MarkupPos="1">
 	<Value LV="Pamata" EN="Cardinal" Tag="c"/>
@@ -402,69 +415,129 @@
 	<Value LV="Priekšvārds" EN="Given name"/>
 	<Value LV="Uzvārds" EN="Surname"/>
 	<Value LV="Vietvārds" EN="Toponym"/>
+	<Value LV="Personvārds" EN="Person name"/>
 </Attribute>
 
-<Attribute LV="Biežums" EN="Usage frequency">
+<Attribute LV="Lietojuma biežums" EN="Usage frequency">
 	<Value LV="Reti" EN="Rare"/>
 	<Value LV="Retāk" EN="Rarer"/>
 	<Value LV="Pareti" EN="Rarish"/>
-	<Value LV="Neaktuāls" EN="Obsolete"/>
+<!--	<Value LV="Neaktuāls" EN="Obsolete"/> -->
+</Attribute>
+
+<Attribute LV="Valodas normēšana" EN="Normative">
+	<Value LV="Nevēlams" EN="Undesirable"/>
 </Attribute>
 
 <Attribute LV="Lietojums" EN="Usage">
 	<Value LV="Novecojis" EN="Dated"/>
+	<Value LV="Sens, reti lietots vārds" EN="Old, rarely used"/>
+	<Value LV="Apvidvārds" EN="Regional"/>
 	<Value LV="Neaktuāls" EN="Obsolete"/>
 	<Value LV="Vēsturisks" EN="Historical"/>
 	<Value LV="Sarunvaloda" EN="Colloquial"/>
 	<Value LV="Nevēlams" EN="Undesirable"/>
+	<Value LV="Neliterārs" EN="Colloquial"/>
 	<Value LV="Žargonvārds" EN="Slang"/>
+	<Value LV="Slengs" EN="Slang"/>
 	<Value LV="Vulgārisms" EN="Vulgar"/>
 	<Value LV="Barbarisms" EN="Barbaric"/>
+	<Value LV="Biblisms" EN="Bible"/>
+	<Value LV="Jaunvārds" EN="Neologism"/>
 	<Value LV="Īsziņās" EN="SMS"/>
 	<Value LV="Bērnu valoda" EN="Children"/>
+	<Value LV="[&quot;Bērnu valoda&quot;,&quot;Novecojis&quot;]" EN="Children/Dated"/>
+	<Value LV="[&quot;Sarunvaloda&quot;,&quot;Vēsturisks&quot;]" EN="Historical/Colloquial"/>
+	<Value LV="[&quot;Novecojis&quot;,&quot;Vēsturisks&quot;]" EN="Historical"/>
+	<Value LV="[&quot;Novecojis&quot;,&quot;Sarunvaloda&quot;]" EN="Dated/Colloquial"/>	
+	<Value LV="[&quot;Barbarisms&quot;,&quot;Sarunvaloda&quot;]" EN="Barbaric/Colloquial"/>	
+	<Value LV="[&quot;Neliterārs&quot;,&quot;Sarunvaloda&quot;]" EN="Colloquial"/>
+	<Value LV="[&quot;Sarunvaloda&quot;,&quot;Neliterārs&quot;]" EN="Colloquial"/>	
+	<Value LV="[&quot;Eifēmisms&quot;,&quot;Neliterārs&quot;]" EN="Euphemism/Colloquial"/>	
+	<Value LV="[&quot;Neliterārs&quot;,&quot;Sarunvaloda&quot;,&quot;Vēsturisks&quot;]" EN="Colloquial"/>
+	<Value LV="[&quot;Apvidvārds&quot;,&quot;Vulgārisms&quot;]" EN="Vulgar"/>
+	<Value LV="[&quot;Apvidvārds&quot;,&quot;Žargonvārds&quot;]" EN="Regional/Slang"/>
+	<Value LV="[&quot;Apvidvārds&quot;,&quot;Novecojis&quot;]" EN="Regional/Dated"/>
+	<Value LV="[&quot;Apvidvārds&quot;,&quot;Nevēlams&quot;]" EN="Regional/Undesirable"/>
+	<Value LV="[&quot;Apvidvārds&quot;,&quot;Bērnu valoda&quot;]" EN="Children"/>
+	<Value LV="[&quot;Nevēlams&quot;,&quot;Novecojis&quot;]" EN="Undesirable/Dated"/>
 </Attribute>
 
 <Attribute LV="Stils" EN="Style">
 	<Value LV="Nievājoša ekspresīvā nokrāsa" EN="Derogatory"/>
+	<Value LV="Nicinoša ekspresīvā nokrāsa" EN="Derogatory"/>
 	<Value LV="Ironiska ekspresīvā nokrāsa" EN="Ironic"/>
 	<Value LV="Humoristiska ekspresīvā nokrāsa" EN="Jocular"/>
 	<Value LV="Poētiska stilistiskā nokrāsa" EN="Poetic"/>
+	<Value LV="[&quot;Folkloras valodai raksturīga stilistiskā nokrāsa&quot;,&quot;Poētiska stilistiskā nokrāsa&quot;]" EN="Poetic"/>
 	<Value LV="Vienkāršrunas stilistiskā nokrāsa" EN="Simplistic"/>
 	<Value LV="Sirsnīga emocionālā nokrāsa" EN="Hearty"/>
+	<Value LV="Mīlinājuma nokrāsa" EN="Affective"/>
 	<Value LV="Pārnestā nozīmē" EN="Figurative"/>
 </Attribute>
 
-<Attribute LV="Nozare" EN="Domain">
-	<Value LV="Literatūrzinātne" EN="Literary science"/>
+<Attribute LV="Joma" EN="Domain">
+	<Value LV="Pārtika" EN="Food"/>
+	<Value LV="Kokapstrāde" EN="Carpentry"/>
 	<Value LV="Jurisprudence" EN="Law"/>
-	<Value LV="Ķīmija" EN="Chemistry"/>
-	<Value LV="Bioloģija" EN="Biology"/>
 	<Value LV="Botānika" EN="Botany"/>
 	<Value LV="Ornitoloģija" EN="Ornitology"/>
 	<Value LV="Zooloģija" EN="Zoology"/>
-	<Value LV="Veterinārija" EN="Veterinary"/>
 	<Value LV="Anatomija" EN="Anatomy"/>
-	<Value LV="Fizioloģija" EN="Physiology"/>
 	<Value LV="Fizika" EN="Physics"/>
-	<Value LV="Valodniecība" EN="Linguistics"/>
-	<Value LV="Arhitektūra" EN="Architecture"/>
-	<Value LV="Medicīna" EN="Medicine"/>
-	<Value LV="Farmakoloģija" EN="Pharmacology"/>
-	<Value LV="Psiholoģija" EN="Psychology"/>
-	<Value LV="Arheoloģija" EN="Archeology"/>
-	<Value LV="Meteoroloģija" EN="Meteorology"/>
-	<Value LV="Astronomija" EN="Astronomy"/>
-	<Value LV="Filozofija" EN="Philosophy"/>
-	<Value LV="Ģeogrāfija" EN="Geography"/>
-	<Value LV="Ģeodēzija" EN="Geodesy"/>
-	<Value LV="Ģeoloģija" EN="Geology"/>
+	<Value LV="Bioloģija" EN="Biology"/>
+	<Value LV="[&quot;Bioloģija&quot;,&quot;Ķīmija&quot;]" EN="Biology/Chemistry"/>
+	<Value LV="Ķīmija" EN="Chemistry"/>
+	<Value LV="[&quot;Aeronautika&quot;,&quot;Ķīmija&quot;]" EN="Aeronautics/Chemistry"/>
+	<Value LV="[&quot;Ķīmija&quot;,&quot;Farmakoloģija&quot;]" EN="Chemistry/Pharmacology"/>
+	<Value LV="[&quot;Tehnoloģija&quot;,&quot;Ķīmija&quot;,&quot;Ķīmijas tehnoloģija&quot;]" EN="Chemistry technology"/>
+	<Value LV="[&quot;Ekoloģija&quot;,&quot;Ķīmija&quot;]" EN="Ecology/Chemistry"/>
+	<Value LV="[&quot;Fizika&quot;,&quot;Ķīmija&quot;]" EN="Physics/Chemistry"/>
+	<Value LV="[&quot;Bioloģija&quot;,&quot;Fizika&quot;,&quot;Ķīmija&quot;]" EN="Biology/Physics/Chemistry"/>
+	<Value LV="[&quot;Fizika&quot;,&quot;Tehnika&quot;]" EN="Physics/Technology"/>
 	<Value LV="Ģeometrija" EN="Geometry"/>
+	<Value LV="[&quot;Fizika&quot;,&quot;Ģeometrija&quot;]" EN="Physics/Geometry"/>
+	<Value LV="[&quot;Fizika&quot;,&quot;Medicīna&quot;]" EN="Physics/Medicine"/>
+	<Value LV="[&quot;Fizika&quot;,&quot;Matemātika&quot;]" EN="Physics/Mathemathics"/>
+	<Value LV="Literatūrzinātne" EN="Literary science"/>
+	<Value LV="Literatūra" EN="Literature"/>
+	<Value LV="Valodniecība" EN="Linguistics"/>
+	<Value LV="Filoloģija" EN="Philology"/>
+	<Value LV="[&quot;Literatūrzinātne&quot;,&quot;Valodniecība&quot;]" EN="Literary science/Linguistics"/>
+	<Value LV="Mūzika" EN="Music"/>
+	<Value LV="[&quot;Literatūrzinātne&quot;,&quot;Mūzika&quot;]" EN="Literary science/Music"/>
+	<Value LV="Arhitektūra" EN="Architecture"/>
+	<Value LV="Fizioloģija" EN="Physiology"/>
+	<Value LV="[&quot;Fizioloģija&quot;,&quot;Medicīna&quot;]" EN="Physiology/Medicine"/>
+	<Value LV="Medicīna" EN="Medicine"/>
+	<Value LV="Veterinārija" EN="Veterinary"/>
+	<Value LV="[&quot;Medicīna&quot;,&quot;Veterinārija&quot;]" EN="Medicine/Veterinary"/>
+	<Value LV="[&quot;Lopkopība&quot;,&quot;Medicīna&quot;]" EN="Animal husbandry/Medicine"/>
+	<Value LV="[&quot;Bioloģija&quot;,&quot;Medicīna&quot;]" EN="Biology/Medicine"/>
+	<Value LV="[&quot;Medicīna&quot;,&quot;Ķīmija&quot;]" EN="Medicine/Chemistry"/>
+	<Value LV="Farmakoloģija" EN="Pharmacology"/>
+	<Value LV="Arheoloģija" EN="Archeology"/>
+	<Value LV="Psiholoģija" EN="Psychology"/>
+	<Value LV="[&quot;Medicīna&quot;,&quot;Psiholoģija&quot;]" EN="Medicine/Psychology"/>
+	<Value LV="Filozofija" EN="Philosophy"/>
+	<Value LV="[&quot;Filozofija&quot;,&quot;Psiholoģija&quot;]" EN="Philosophy/Psychology"/>
+	<Value LV="Meteoroloģija" EN="Meteorology"/>
+	<Value LV="Ģeogrāfija" EN="Geography"/>
+	<Value LV="[&quot;Meteoroloģija&quot;,&quot;Ģeogrāfija&quot;]" EN="Meteorology/Geography"/>
+	<Value LV="Astronomija" EN="Astronomy"/>
+	<Value LV="[&quot;Astronomija&quot;,&quot;Fizika&quot;]" EN="Astronomy/Physics"/>
+	<Value LV="Ģeodēzija" EN="Geodesy"/>
+	<Value LV="[&quot;Astronomija&quot;,&quot;Ģeodēzija&quot;]" EN="Astronomy/Geodesy"/>
+	<Value LV="Kartogrāfija" EN="Cartography"/>
+	<Value LV="Ģeoloģija" EN="Geology"/>
+	<Value LV="Ģenētika" EN="Genetics"/>
 	<Value LV="Mineraloģija" EN="Mineralogy"/>
 	<Value LV="Reliģija" EN="Religion"/>
 	<Value LV="Mitoloģija" EN="Mythology"/>
-	<Value LV="Etnogrāfija" EN="Etnography"/>
+	<Value LV="[&quot;Mitoloģija&quot;,&quot;Reliģija&quot;]" EN="Mythology/Religion"/>
 	<Value LV="Folklora" EN="Folklore"/>
-	<Value LV="Mūzika" EN="Music"/>
+	<Value LV="[&quot;Folklora&quot;,&quot;Mitoloģija&quot;]" EN="Folklore/Mythology"/>
+	<Value LV="Etnogrāfija" EN="Etnography"/>
 	<Value LV="Kulinārija" EN="Culinary"/>
 	<Value LV="Politika" EN="Politics"/>
 	<Value LV="Ekonomika" EN="Economics"/>
@@ -472,14 +545,24 @@
 	<Value LV="Grāmatvedība" EN="Accounting"/>
 	<Value LV="Matemātika" EN="Mathemathics"/>
 	<Value LV="Loģika" EN="Logic"/>
+	<Value LV="Statistika" EN="Statistics"/>
 	<Value LV="Informātika" EN="Informatics"/>
-	<Value LV="Tehnika" EN="Technical"/>
-	<Value LV="Elektrotehnika" EN="Electrotechnical"/>
+	<Value LV="Tehnika" EN="Technology"/>
+	<Value LV="Tehnoloģija" EN="Technology"/>
+	<Value LV="[&quot;Tehnoloģija&quot;,&quot;Ķīmija&quot;]" EN="Technology/Chemistry"/>
+	<Value LV="Elektrotehnika" EN="Electrotechnical"/>	
+	<Value LV="Elektronika" EN="Electronics"/>	
 	<Value LV="Hidrotehnika" EN="Hydrotechnical"/>
 	<Value LV="Tekstilrūpniecība" EN="Textiles"/>
 	<Value LV="Poligrāfija" EN="Poligraphy"/>
 	<Value LV="Lauksaimniecība" EN="Agriculture"/>
+	<Value LV="Lauksaimniecības tehnika" EN="Agriculture"/>
+	<Value LV="Lopkopība" EN="Animal husbandry"/>
+	<Value LV="Agronomija" EN="Agriculture"/>
 	<Value LV="Mežsaimniecība" EN="Forestry"/>
+	<Value LV="[&quot;Lauksaimniecība&quot;,&quot;Mežsaimniecība&quot;]" EN="Agriculture/Forestry"/>
+	<Value LV="[&quot;Bioloģija&quot;,&quot;Mežsaimniecība&quot;]" EN="Biology/Forestry"/>
+	<Value LV="[&quot;Kokapstrāde&quot;,&quot;Mežrūpniecība&quot;]" EN="Carpentry/Forestry"/>
 	<Value LV="Medniecība" EN="Hunting"/>
 	<Value LV="Biškopība" EN="Beekeeping"/>
 	<Value LV="Būvniecība" EN="Construction"/>
@@ -494,13 +577,30 @@
 	<Value LV="Materiālzinātne" EN="Material science"/>
 	<Value LV="Apģērbi" EN="Clothing"/>
 	<Value LV="Fototehnika" EN="Photography"/>
+	<Value LV="Fotogrāfija" EN="Photography"/>
+	<Value LV="Kinematogrāfija" EN="Cinematography"/>
+	<Value LV="[&quot;Fotogrāfija&quot;,&quot;Kinematogrāfija&quot;]" EN="Photography/Cinematography"/>
+	<Value LV="[&quot;Fotogrāfija&quot;,&quot;Kinematogrāfija&quot;,&quot;Televīzija&quot;]" EN="Photography/Cinematography/Television"/>
+	<Value LV="[&quot;Informātika&quot;,&quot;Tehnika&quot;,&quot;Telekomunikācijas&quot;]" EN="Informatics/Technology/Telecommunications"/>
+	<Value LV="[&quot;Informātika&quot;,&quot;Matemātika&quot;]" EN="Informatics/Mathemathics"/>
 	<Value LV="Aeronautika" EN="Aeronautics"/>
-	<Value LV="Agronomija" EN="Agriculture"/>
+	<Value LV="[&quot;Aeronautika&quot;,&quot;Jūrniecība&quot;]" EN="Aeronautics/Marine"/>
+	<Value LV="[&quot;Aeronautika&quot;,&quot;Fizika&quot;]" EN="Aeronautics/Physics"/>
+	<Value LV="[&quot;Aeronautika&quot;,&quot;Tehnika&quot;]" EN="Aeronautics/Technology"/>
+	<Value LV="[&quot;Jūrniecība&quot;,&quot;Meteoroloģija&quot;]" EN="Marine/Meteorology"/>
 	<Value LV="Bioķīmija" EN="Biochemistry"/>
 	<Value LV="Glezniecība" EN="Painting"/>
 	<Value LV="Televīzija" EN="Television"/>
 	<Value LV="Entomoloģija" EN="Entomology"/>
 	<Value LV="Antropoloģija" EN="Antropology"/>
+	<Value LV="Socioloģija" EN="Sociology"/>
+	<Value LV="Ekoloģija" EN="Ecology"/>
+	<Value LV="Keramika" EN="Ceramics"/>
+	<Value LV="Mehānika" EN="Mechanics"/>
+	<Value LV="Siltumtehnika" EN="HVAC"/>
+	<Value LV="Papīrrūpniecība" EN="Paper manufacturing"/>
+	<Value LV="Vēsturisks vietvārds" EN="Historical toponym"/>
+	<Value LV="Vēsturisks personvārds" EN="Historical person name"/>
 	<Value LV="Attiecas uz kapitālistisko iekārtu, kapitālistisko sabiedrību" EN="Capitalism"/>
 </Attribute>
 
@@ -508,6 +608,7 @@
 <FreeAttribute LV="Leksēmas nr" EN="Lexeme ID"/>
 <FreeAttribute LV="Galotnes nr" EN="Ending ID"/>
 <FreeAttribute LV="Pamatforma" EN="Lemma"/>
+<FreeAttribute LV="Pamatforma morforīkiem" EN="Lemma for morphology tagging"/>
 <FreeAttribute LV="Avots" EN="Source"/> 
 <FreeAttribute LV="Pirmavots" EN="Primary source"/> 
 <FreeAttribute LV="Vārds" EN="Wordform"/> 
@@ -520,51 +621,166 @@
 <!-- tezaurs.lv datu īpatnības -->
 <FreeAttribute LV="FreeText" EN="FreeText"/> 
 <FreeAttribute LV="Leftovers" EN="Leftovers"/> 
-<FreeAttribute LV="FormRestrictions" EN="FormRestrictions"/> 
-<FreeAttribute LV="Pronunciation" EN="Pronunciation"/> 
+<FreeAttribute LV="StructuralRestrictions" EN="FormRestrictions"/> 
+<FreeAttribute LV="Pronunciations" EN="Pronunciations"/> 
 <FreeAttribute LV="Šķirkļa ID" EN="Entry ID"/>
 <FreeAttribute LV="Šķirkļa cilvēklasāmais ID" EN="Entry name"/>
-<FreeAttribute LV="Parasti lieto noteiktā formā/atvasinājumā" EN="Usually used in"/>
-<FreeAttribute LV="Lieto noteiktā formā/atvasinājumā" EN="Used in"/>
-<FreeAttribute LV="Parasti lieto kopā ar" EN="Usually used with"/>
-<FreeAttribute LV="Lieto kopā ar" EN="Used with"/>
-<FreeAttribute LV="Locīt kā" EN="Inflect like"/>
-<FreeAttribute LV="Šablons salikteņa vairākpunktu locīšanai" EN="Pattern for multipoint inflection"/>
 <FreeAttribute LV="Priedēklis" EN="Prefix"/> 
 
-<Attribute LV="Šķirkļavārda īpatnības" EN="Entry properties">
+<!--
+<Attribute LV="Gramatiskās formas ierobežojumi" EN="Grammatical form restrictions">
+	<Value LV="Lieto tikai daudzskaitlī" EN="Only plural"/>
+	<Value LV="Lieto tikai trešās personas formas" EN="Only third person forms"/>
+	<Value LV="Nelieto tagadnes formas" EN="Present tense is not used"/>
+</Attribute>
+<FreeAttribute LV="Parasti lieto noteiktā formā/atvasinājumā" EN="Usually used in particular form"/>
+<FreeAttribute LV="Parasti lieto noteikta veida struktūrās" EN="Usually used in particular structures"/>
+<FreeAttribute LV="Lieto noteiktā formā/atvasinājumā" EN="Used in particular form"/>
+<FreeAttribute LV="Lieto tikai noteiktā formā/atvasinājumā" EN="Used only in particular form"/>
+<FreeAttribute LV="Lieto arī noteiktā formā/atvasinājumā" EN="Used also in particular form"/>
+<FreeAttribute LV="Lieto noteikta veida struktūrās" EN="Used in particular structures"/>
+<FreeAttribute LV="Lieto arī noteikta veida struktūrās" EN="Used also in particular structures"/>
+<FreeAttribute LV="Parasti lieto kopā ar" EN="Usually used with"/>
+<FreeAttribute LV="Lieto kopā ar" EN="Used with"/>
+-->
+<FreeAttribute LV="Locīt kā" EN="Inflect like"/>
+<FreeAttribute LV="Šablons salikteņa vairākpunktu locīšanai" EN="Pattern for multipoint inflection"/>
+
+<Attribute LV="Priedēkļa piemitība" EN="Having prefix">
+	<Value LV="Vārds bez priedēkļa" EN="No prefix"/>
+</Attribute>
+
+<Attribute LV="Papildforma" EN="Alternative form">
+	<Value LV="Jā" EN="Yes"/>
+</Attribute>
+
+<Attribute LV="Sistemātisks atvasinājums" EN="Systematic derivation">
+	<Value LV="Jā" EN="Yes"/>
+</Attribute>
+
+<Attribute LV="Deminutīvs" EN="Deminutive">
+	<Value LV="Jā" EN="Yes"/>
+</Attribute>
+
+<Attribute LV="Hipotēze" EN="Hypothesis">
+	<Value LV="Jā" EN="Yes"/>
+</Attribute>
+
+<Attribute LV="Taksona kandidāts" EN="Taxon candidate">
+	<Value LV="Jā" EN="Yes"/>
+</Attribute>
+
+
+<Attribute LV="Dialekta iezīmes" EN="Dialect markings">
+	<Value LV="Latgaliešu" EN="Latgalian"/>
+	<Value LV="Augšzemnieku" EN="Upper Latvian"/>
+	<Value LV="Vidus" EN="Middle Latvian"/>
+	<Value LV="Lībiskā" EN="Livonian"/>
+</Attribute>
+
+<Attribute LV="Izlokšņu grupa" EN="Subdialect group">
+	<Value LV="Kurzemes lībiskās"/>
+	<Value LV="Sēliskās"/>
+	<Value LV="Latgaliskās"/>
+	<Value LV="Kursiskās"/>
+	<Value LV="Zemgaliskās"/>
+	<Value LV="Vidzemes lībiskās"/>
+	<Value LV="Vidzemes vidus"/>
+</Attribute>
+
+<Attribute LV="Izloksne" EN="Subdialect">
+	<Value LV="Ērģemes"/>
+	<Value LV="Kalupes"/>
+	<Value LV="Vainižu"/>
+	<Value LV="Kalnienas (Kalnamuižas)"/>
+	<Value LV="Sinoles"/>
+	<Value LV="Mācienas"/>
+	<Value LV="Tilžas"/>
+</Attribute>
+
+<Attribute LV="Konversija" EN="Conversion">
+	<Value LV="Īpašības vārds" EN="Adjective"/>
+	<Value LV="Apstākļa vārds" EN="Adverb"/>
+	<Value LV="Lietvārds" EN="Noun"/>
+	<Value LV="Pamata skaitļa vārds" EN="Cardinal numeral"/>
+	<Value LV="Prievārds" EN="Pronoun"/>
+	<Value LV="Partikula" EN="Particle"/>
+</Attribute>
+
+<!-- FIXME - šis manuprāt jālikvidē -->
+<Attribute LV="Kategorija" EN="Category">
+<!--	<Value LV="Darbības vārds" EN="Verb"/>
+	<Value LV="Apstākļa vārds" EN="Adverb"/>
+	<Value LV="Lietvārds" EN="Noun"/>-->
+	<Value LV="Saīsinājums" EN="Abbreviation"/>
+</Attribute>
+
+
+<Attribute LV="Leksēmas pamatformas īpatnības" EN="Entry properties">
 	<Value LV="Daudzskaitlis" EN="Plural"/>
 	<Value LV="Vienskaitlis" EN="Singular"/>
 	<Value LV="Sieviešu dzimte" EN="Feminine"/>
+	<Value LV="Pārākā pakāpe" EN="Comparative"/>
 </Attribute>
 <Attribute LV="Locīšanas īpatnības" EN="Inflection properties">
+	<Value LV="Otrās un trešās konjugācijas paralelitāte" EN="2nd/3rd conjugation parallel forms"/>
 	<Value LV="[&quot;Otrās un trešās konjugācijas paralelitāte&quot;,&quot;Paralēlās formas&quot;]" EN="2nd/3rd conjugation parallel forms"/>
+	<Value LV="[&quot;Otrās un trešās konjugācijas paralelitāte&quot;,&quot;Paralēlās formas&quot;,&quot;Pirmās konjugācijas paralēlforma visām personām&quot;]" EN="2nd/3rd conjugation parallel forms / 1st conjugation parallel forms"/>
+	<Value LV="[&quot;Otrās un trešās konjugācijas paralelitāte&quot;,&quot;Paralēlās formas&quot;,&quot;Pirmās konjugācijas paralēlforma tikai 3. personai&quot;]" EN="2nd/3rd conjugation parallel forms / 1st conjugation parallel forms"/>
 	<Value LV="[&quot;Paralēlās formas&quot;,&quot;Pirmās konjugācijas paralēlforma&quot;]" EN="1st conjugation parallel forms"/>	
+	<Value LV="[&quot;Paralēlās formas&quot;,&quot;Pirmās konjugācijas paralēlforma visām personām&quot;]" EN="1st conjugation parallel forms"/>
+	<Value LV="[&quot;Paralēlās formas&quot;,&quot;Pirmās konjugācijas paralēlforma tikai 3. personai&quot;]" EN="1st conjugation parallel forms"/>
 	<Value LV="[&quot;Nenoteiksmes homoformas&quot;,&quot;Paralēlās formas&quot;]" EN="Infinitive homoforms"/>	
 	<Value LV="[&quot;Otrās un trešās konjugācijas paralelitāte&quot;,&quot;Paralēlās formas&quot;,&quot;Pirmās konjugācijas paralēlforma&quot;]" EN="1st,2nd,3rd conjugation parallel forms"/>	
 	<Value LV="Paralēlās formas" EN="Parallel forms"/>
+	<Value LV="Kopdzimte" EN="Common gender"/>
 	<Value LV="Nenoteiksmes homoformas" EN="Infinitive homonym"/>
+	<Value LV="Vairākos punktos lokāms saliktenis" EN="Compound noun with multiple inflection points"/>
+	<Value LV="[&quot;Paralēlās formas&quot;,&quot;Vairākos punktos lokāms saliktenis&quot;]" EN="Parallel forms/Compound noun with multiple inflection points"/>
+	<Value LV="Sastingusi forma" EN="Frozen form"/>
 </Attribute>
+<!--
 <Attribute LV="Kontaminācija" EN="Contamination">
 	<Value LV="Lietvārds" EN="Noun"/>
 	<Value LV="Īpašības vārds" EN="Adjective"/>
+	<Value LV="Apstākļa vārds" EN="Adverb"/>
 	<Value LV="Pamata skaitļa vārds" EN="Numeral"/>
-</Attribute>
-<Attribute LV="Kopdzimte" EN="Common gender">
-	<Value LV="Jā" EN="Yes"/>
+	<Value LV="Prievārds" EN="Preposition"/>
 </Attribute>
 <Attribute LV="Lieto tikai noteiktā formā/atvasinājumā" EN="Used only in specific form">
 	<Value LV="Trešā persona" EN="Third person"/>
 	<Value LV="Daudzskaitlis" EN="Plural"/>
 	<Value LV="Nelieto tagadnes formas" EN="Not in present tense"/>
 </Attribute>
+-->
 
-<Attribute LV="Citi" EN="Other">
+<Attribute LV="Gramatiku analīzes problēmas" EN="Thesaurus analysis problems">
 	<Value LV="Neviennozīmīga paradigma" EN="Ambiguous paradigm"/>
 	<Value LV="Neviennozīmīga vārdšķira vai kategorija" EN="Ambiguous part of speech"/>
 	<Value LV="Oriģinālā gramatika satur karodziņos neatšifrētas nianses" EN="Freetext contains items not converted to attributes"/>
-	<Value LV="Vairākos punktos lokāms saliktenis" EN="Compound noun with middle inflection point"/>
+</Attribute>
+
+<Attribute LV="Skaitļa īpatnības" EN="Number properties">
+	<Value LV="Skaitļa šķīrums semantikā nepastāv" EN="Grammatic number carries no semantic difference"/>
+	<Value LV="Daudzskaitļa formas lieto abu skaitļu nozīmē" EN="Plural forms used also in singular meaning"/>
+	<Value LV="Vienskaitli lieto neliterārā valodā" EN="Singular forms used in nonliterary language"/>
+</Attribute>
+
+<Attribute LV="Morfotabulas attēlošana" EN="Inflection table">
+	<Value LV="Nerādīt daudzskaitli" EN="Hide plural"/>
+	<Value LV="Nerādīt vienskaitli" EN="Hide singular"/>
+	<Value LV="Rādīt vokatīvu" EN="Show vocative"/>
+</Attribute>
+
+<Attribute LV="Citi" EN="Other">
+	<Value LV="Cita paradigma" EN="Other paradigm"/>
+	<Value LV="Pēdējie celmi lietojami retāk" EN="Latter stems are used rarely"/>
+	<Value LV="[&quot;Neviennozīmīga paradigma&quot;,&quot;Vienskaitļa formas lieto sarunvalodā&quot;]" EN="Ambiguous paradigm/Singular forms are colloquial"/>
+	<Value LV="[&quot;Oriģinālā gramatika satur karodziņos neatšifrētas nianses&quot;,&quot;Pēdējie celmi lietojami retāk&quot;]" EN="Freetext contains items not converted to attributes/Latter stems are used rarely"/>
 	<Value LV="Vienskaitļa formas lieto sarunvalodā" EN="Singular forms used in colloquial language"/>
+	<Value LV="Vienskaitļa formas lieto dialektos" EN="Singular forms used in dialects"/>
+	<Value LV="Daudzskaitļa formas lieto vienskaitļa formu nozīmē" EN="Plural forms used with singular meaning"/>
+	<Value LV="Daudzskaitļa formas parasti lieto vienskaitļa formu nozīmē" EN="Plural forms usually used with singular meaning"/>
 </Attribute>
 
 

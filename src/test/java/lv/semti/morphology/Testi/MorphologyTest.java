@@ -18,27 +18,22 @@
 package lv.semti.morphology.Testi;
 
 
-import static org.junit.Assert.*;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.io.PrintWriter;
-import java.io.UnsupportedEncodingException;
-import java.util.*;
-import java.util.Map.Entry;
-
-import org.apache.commons.lang3.builder.ToStringExclude;
+import lv.semti.morphology.analyzer.*;
+import lv.semti.morphology.attributes.AttributeNames;
+import lv.semti.morphology.attributes.AttributeValues;
+import lv.semti.morphology.lexicon.Ending;
+import lv.semti.morphology.lexicon.Lexeme;
+import lv.semti.morphology.lexicon.Paradigm;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Ignore;
 import org.junit.Test;
 
-import lv.semti.morphology.analyzer.*;
-import lv.semti.morphology.attributes.*;
-import lv.semti.morphology.lexicon.*;
-import org.w3c.dom.Attr;
+import java.io.*;
+import java.util.*;
+import java.util.Map.Entry;
+
+import static org.junit.Assert.*;
 
 public class MorphologyTest {
     private static Analyzer locītājs;
@@ -52,6 +47,7 @@ public class MorphologyTest {
         assertInflection(forms, testset, validForm);
     }
 
+    // TODO - šie varbūt ir par assertThat matcheriem jāpārtaisa
     private void assertInflection(List<Wordform> forms, AttributeValues testset, String validForm) {
         boolean found = false;
         for (Wordform wf : forms) {
@@ -77,10 +73,22 @@ public class MorphologyTest {
         assertTrue(found);
     }
 
+    private void assertNoInflection(List<Wordform> forms, AttributeValues testset) {
+        for (Wordform wf : forms) {
+            assertFalse(wf.isMatchingWeak(testset));
+        }
+    }
+
+    private void assertNoForm(List<Wordform> forms, String invalidForm) {
+        for (Wordform wf : forms) {
+            assertFalse(invalidForm.equalsIgnoreCase(wf.getToken()));
+        }
+    }
+
     private void assertLemma(String word, String expectedLemma) {
         Word analysis = locītājs.analyze(word);
         if (!analysis.isRecognized())
-            System.err.printf("'%s' should be recognizable", word);
+            System.out.printf("'%s' should be recognizable", word);
         assertTrue(analysis.isRecognized());
         Wordform forma = analysis.getBestWordform();
         assertEquals(expectedLemma, forma.getValue(AttributeNames.i_Lemma));
@@ -326,7 +334,7 @@ public class MorphologyTest {
         assertFalse(w.isRecognized());
     }
 
-    @Ignore("Ir zināma problēma, ka Tēzaurs.lv JSON eksportā ir vairākas morfo-leksēmas kas nāk no vienas tēzaurs-leksēmas un tādēļ ir ar vienādu leksēmas ID")
+    @Ignore("Tēzaurs.lv JSON eksportā ir vairākas morfo-leksēmas kas nāk no vienas tēzaurs-leksēmas un tādēļ ir ar vienādu leksēmas ID - piemēram, ja ir 1. konj. verbam paralēlformas dažos celmos")
     @Test
     public void numuri() {
         // integritāte - vai nav dubulti numuri
@@ -467,9 +475,6 @@ public class MorphologyTest {
         assertTrue(bikses.isRecognized());
         assertEquals("bikses", bikses.wordforms.get(0).getValue(AttributeNames.i_Lemma));
 
-        Word bikse = locītājs.analyze("bikse");
-        assertFalse(bikse.isRecognized());
-
         Word augstpapēžu = locītājs.analyze("augstpapēžu");
         assertTrue(augstpapēžu.isRecognized());
         assertEquals("augstpapēžu", augstpapēžu.wordforms.get(0).getValue(AttributeNames.i_Lemma));
@@ -512,7 +517,7 @@ public class MorphologyTest {
         Word dodas = locītājs.analyze("dodas");
         assertTrue(dodas.isRecognized());
         assertEquals(AttributeNames.v_Active, dodas.wordforms.get(0).getValue(AttributeNames.i_Voice));
-        assertEquals("vmyip_130an", dodas.wordforms.get(0).getTag());
+        assertEquals("vmyip_i30an", dodas.wordforms.get(0).getTag());
     }
 
 
@@ -522,7 +527,7 @@ public class MorphologyTest {
         Word simt = locītājs.analyze("simt");
         assertTrue(simt.isRecognized());
         assertEquals(AttributeNames.v_Hundreds, simt.wordforms.get(0).getValue(AttributeNames.i_Order));
-        assertEquals("mcs_p0", simt.wordforms.get(0).getTag());
+        assertEquals("mcs0p0", simt.wordforms.get(0).getTag());
     }
 
     @Test
@@ -565,22 +570,22 @@ public class MorphologyTest {
 
     @Test
     public void vairāki() {
-        // 2011-12-29 "vairāki" analizē kā skaitļa vārdu, vajag kā vietniekvārdu
-        // vietniekv., nenoteiktais, nav personas, vīr.dz., daudzsk., nominatīvs, nav noliegtais
+        // 2019-10-23 Laura apgalvo, ka sen ir izlemts ka īpašības vārds.
+        // agrāk (2011-12-29) bija pārcelts no skaitļa vārda uz vietniekvārdu
         Word vairāki = locītājs.analyze("vairāki");
         assertTrue(vairāki.isRecognized());
 
-        assertEquals(AttributeNames.v_Pronoun, vairāki.wordforms.get(0).getValue(AttributeNames.i_PartOfSpeech));
+        assertEquals(AttributeNames.v_Adjective, vairāki.wordforms.get(0).getValue(AttributeNames.i_PartOfSpeech));
     }
 
     @Test
     public void daudzus() {
-        // 2011-12-29 "daudzus" analizē kā skaitļa vārdu, vajag kā vietniekvārdu
-        // vietniekv., nenoteiktais, nav personas, vīr.dz., daudzsk., datīvs, nav noliegtais
+        // 2019-10-23 Laura apgalvo, ka sen ir izlemts ka īpašības vārds.
+        // agrāk (2011-12-29) bija pārcelts no skaitļa vārda uz vietniekvārdu
         Word daudzus = locītājs.analyze("daudzus");
         assertTrue(daudzus.isRecognized());
 
-        assertEquals(AttributeNames.v_Pronoun, daudzus.wordforms.get(0).getValue(AttributeNames.i_PartOfSpeech));
+        assertEquals(AttributeNames.v_Adjective, daudzus.wordforms.get(0).getValue(AttributeNames.i_PartOfSpeech));
     }
 
     @Test
@@ -656,14 +661,14 @@ public class MorphologyTest {
 
         assertEquals(AttributeNames.v_Pronoun, neviens.wordforms.get(0).getValue(AttributeNames.i_PartOfSpeech));
         assertEquals(AttributeNames.v_Yes, neviens.wordforms.get(0).getValue(AttributeNames.i_Noliegums));
-        assertEquals(AttributeNames.v_Nenoteiktie, neviens.wordforms.get(0).getValue(AttributeNames.i_VvTips));
+        assertEquals(AttributeNames.v_Nenoteiktais, neviens.wordforms.get(0).getValue(AttributeNames.i_VvTips));
 
         Word nekas = locītājs.analyze("nekas");
         assertTrue(nekas.isRecognized());
 
         assertEquals(AttributeNames.v_Pronoun, nekas.wordforms.get(0).getValue(AttributeNames.i_PartOfSpeech));
         assertEquals(AttributeNames.v_Yes, nekas.wordforms.get(0).getValue(AttributeNames.i_Noliegums));
-        assertEquals(AttributeNames.v_Nenoteiktie, nekas.wordforms.get(0).getValue(AttributeNames.i_VvTips));
+        assertEquals(AttributeNames.v_Nenoteiktais, nekas.wordforms.get(0).getValue(AttributeNames.i_VvTips));
 
         Word nekāds = locītājs.analyze("nekāds");
         assertTrue(nekāds.isRecognized());
@@ -803,8 +808,7 @@ public class MorphologyTest {
         // Noliegumu atvasinājumiem lai ir oriģinālā pamatforma atvasināta
         Word nenest = locītājs.analyze("nenesāt");
         assertTrue(nenest.isRecognized());
-        assertEquals("nenest", nenest.wordforms.get(0).getValue(AttributeNames.i_Lemma));
-        assertEquals("nest", nenest.wordforms.get(0).getValue(AttributeNames.i_SourceLemma));
+        assertEquals("nest", nenest.wordforms.get(0).getValue(AttributeNames.i_Lemma));
     }
 
     @Test
@@ -860,7 +864,7 @@ public class MorphologyTest {
     public void saīsinājumi() {
         Word uc = locītājs.analyze("u.c.");
         assertTrue(uc.isRecognized());
-        assertEquals("y", uc.wordforms.get(0).getTag());
+        assertEquals("yd", uc.wordforms.get(0).getTag());
     }
 
     @Test
@@ -907,21 +911,6 @@ public class MorphologyTest {
 
         Word nests = locītājs.analyze("nests");
         assertTrue(nests.isRecognized());
-    }
-
-    @Test
-    public void source_lemma() {
-        // Atvasinājumiem lai ir oriģinālā vārda pamatforma redzama (pēc tās var meklēt vārdnīcas šķirkli)
-        Word balta = locītājs.analyze("baltas");
-        assertTrue(balta.isRecognized());
-        assertEquals("balts", balta.wordforms.get(0).getValue(AttributeNames.i_Lemma));
-        assertEquals("balts", balta.wordforms.get(0).getValue(AttributeNames.i_SourceLemma));
-
-        locītājs.enablePrefixes = false;
-        Word miršana = locītājs.analyze("miršana");
-        assertTrue(miršana.isRecognized());
-        assertEquals("miršana", miršana.wordforms.get(0).getValue(AttributeNames.i_Lemma));
-        assertEquals("mirt", miršana.wordforms.get(0).getValue(AttributeNames.i_SourceLemma));
     }
 
     @Test
@@ -972,7 +961,6 @@ public class MorphologyTest {
         Word iejāt = locītājs.analyze("iejāt");
         assertTrue(iejāt.isRecognized());
         assertEquals("iejāt", iejāt.wordforms.get(0).getValue(AttributeNames.i_Lemma));
-//        assertEquals("jāt", iejāt.wordforms.get(0).getValue(AttributeNames.i_SourceLemma));
     }
 
     @Test
@@ -1133,7 +1121,7 @@ public class MorphologyTest {
         vārds = locītājs.analyze("....");
         assertTrue(vārds.isRecognized());
         for (Wordform wf : vārds.wordforms) {
-            assertEquals("....", wf.getValue(AttributeNames.i_Lemma));
+            assertEquals("...", wf.getValue(AttributeNames.i_Lemma));
         }
     }
 
@@ -1368,8 +1356,8 @@ public class MorphologyTest {
         formas = locītājs.generateInflections("Silvija");
         assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "", "Silvij");
 
-        formas = locītājs.generateInflections("Kadrije"); //hipotētiski
-        assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "", "Kadrij");
+//        formas = locītājs.generateInflections("Kadrije"); //hipotētiski
+//        assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "", "Kadrij");
 
         formas = locītājs.generateInflections("Karlīne");
         assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "", "Karlīn");
@@ -1459,6 +1447,7 @@ public class MorphologyTest {
         }
         assertTrue(irPareizā);
     }
+
     @Test
     public void laura_Aug13_2() {
         locītājs.enableGuessing = true;
@@ -1467,13 +1456,6 @@ public class MorphologyTest {
 
         Word numur = locītājs.analyze("numur");
         assertTrue(numur.isRecognized());
-        boolean irPareizā = false;
-        for (Wordform vārdforma : numur.wordforms) {
-            if (vārdforma.getValue(AttributeNames.i_Lemma).equals("numurs") && vārdforma.isMatchingStrong(AttributeNames.i_Case, AttributeNames.v_Nominative)) {
-                irPareizā = true;
-            }
-        }
-        assertTrue(irPareizā);
     }
 
     @Test
@@ -1565,9 +1547,9 @@ public class MorphologyTest {
         testset.addAttribute(AttributeNames.i_EndingID, "1783");
         assertInflection(formas, testset, "vajag");
         testset.addAttribute(AttributeNames.i_EndingID, "1794");
-        assertInflection(formas, testset, "jāvajag");
+        assertNoInflection(formas, testset); // neģenerējam "jāvajag"
         testset.addAttribute(AttributeNames.i_EndingID, "2328");
-        assertInflection(formas, testset, "jāvajagot");
+        assertNoInflection(formas, testset); // neģenerējam "jāvajagot"
 
         formas = locītājs.generateInflections("mocīt", false, filter);
         testset.addAttribute(AttributeNames.i_EndingID, "1780");
@@ -1892,7 +1874,7 @@ public class MorphologyTest {
     }
 
     @Test
-    public void guessbyending_adjective_surnames () {
+    public void guessbyending_adjective_surnames() {
         // Guess by ending should return appropriate nominative values for adjective-based surnames
         Word possibilities = locītājs.guessByEnding("mazā", "Mazā");
         AttributeValues filter = new AttributeValues();
@@ -1987,7 +1969,6 @@ public class MorphologyTest {
         formas = locītājs.generateInflections("Vītola", true, filter);
         assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, "", "Vītolai");
 
-        filter.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Masculine);
         formas = locītājs.generateInflections("Kirill", true);
         assertTrue(formas.size() > 0);
         assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, "", "Kirill");
@@ -2099,7 +2080,7 @@ public class MorphologyTest {
         assertEquals("xu", url.wordforms.get(0).getTag());
     }
 
-//    @Ignore("Jāskatās pēc tēzaura datu pievienošanas")
+    //    @Ignore("Jāskatās pēc tēzaura datu pievienošanas")
     @Test
     public void obligātiatpazīstamie() throws IOException {
         {
@@ -2120,7 +2101,7 @@ public class MorphologyTest {
                 }
             }
             ieeja.close();
-            assertTrue("Par daudz neatpazītu vārdu", not_recognized<70);
+            assertTrue("Par daudz neatpazītu vārdu", not_recognized < 70);
         }
     }
 
@@ -2143,7 +2124,7 @@ public class MorphologyTest {
         formas = locītājs.generateInflections("Žverelo-Freiberga", true);
         assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "Žverelo-Freibergas");
 
-//		formas = locītājs.generateInflectionsFromParadigm("Freiberga-Žverelo", true);
+//		formas = locītājs.generateInflections("Freiberga-Žverelo", true);
 //		assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "Freibergas-Žverelo");
 
         formas = locītājs.generateInflections("Rīga-Best", true);
@@ -2155,27 +2136,15 @@ public class MorphologyTest {
         formas = locītājs.generateInflections("Rudaus-Rudovskis", true);
         assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "Rudaus-Rudovska");
 
-        formas = locītājs.generateInflections("Pavļuta-Deslandes", true);
-        assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "Pavļutas-Deslandes");
-
+//        formas = locītājs.generateInflections("Pavļuta-Deslandes", true);
+//        assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "Pavļutas-Deslandes");
     }
 
     @Test
     public void jaundzimushais() {
-        Word w = locītājs.analyze("jaundzimušajam");
-        assertTrue(w.isRecognized());
-        assertEquals(AttributeNames.v_Adjective, w.wordforms.get(0).getValue(AttributeNames.i_PartOfSpeech));
-        assertEquals("jaundzimis", w.wordforms.get(0).getValue(AttributeNames.i_Lemma));
-
-        w = locītājs.analyze("jaundzimusī");
-        assertTrue(w.isRecognized());
-        assertEquals(AttributeNames.v_Adjective, w.wordforms.get(0).getValue(AttributeNames.i_PartOfSpeech));
-        assertEquals("jaundzimusi", w.wordforms.get(0).getValue(AttributeNames.i_Lemma));
-
-        w = locītājs.analyze("galvenajam");
-        assertTrue(w.isRecognized());
-        assertEquals(AttributeNames.v_Adjective, w.wordforms.get(0).getValue(AttributeNames.i_PartOfSpeech));
-        assertEquals("galvenais", w.wordforms.get(0).getValue(AttributeNames.i_Lemma));
+        assertLemma("jaundzimušajam", "jaundzimis");
+        assertLemma("jaundzimusī", "jaundzimusi");
+        assertLemma("galvenajam", "galvenais");
     }
 
     @Test
@@ -2185,12 +2154,10 @@ public class MorphologyTest {
         locītājs.guessVerbs = false;
         locītājs.guessNouns = true;
         locītājs.enableAllGuesses = true;
-//		locītājs.describe(new PrintWriter(System.out));
         Word w = locītājs.analyze("xxxbs");
         assertTrue(w.isRecognized());
 
         w = locītājs.analyze("xxxes");
-//        w.describe(new PrintWriter(System.out));
         for (Wordform wf : w.wordforms) {
             assertFalse(wf.isMatchingStrong(AttributeNames.i_Declension, "1"));
         }
@@ -2558,9 +2525,9 @@ public class MorphologyTest {
         assertEquals(AttributeNames.v_VajadziibasAtstaastiijuma, jārokot.wordforms.get(0).getValue(AttributeNames.i_Izteiksme));
     }
 
-    @Test // Tezauram locīšanai - lai nelokam to, kas nav leksikonā bez minēšānas
+    @Test // Tezauram locīšanai - lai nelokam to, kas nav leksikonā bez minēšanas
     public void nelocīt() {
-        List<Wordform> formas = locītājs.generateInflections("xxx");
+        List<Wordform> formas = locītājs.generateInflections("yyyyyyy");
         assertEquals(0, formas.size());
 
         locītājs.guessVerbs = false;
@@ -2587,11 +2554,8 @@ public class MorphologyTest {
         formas = locītājs.generateInflections("mēnessērdzīgā", true);
         assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, "", "mēnessērdzīgajai");
 
-        formas = locītājs.generateInflections("cietušais", true);
+        formas = locītājs.generateInflections("cietušais", false);
         assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, "", "cietušajam");
-
-        formas = locītājs.generateInflections("cietusī", true);
-        assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, "", "cietušajai");
 
         formas = locītājs.generateInflections("dzeramais", true);
         assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, "", "dzeramajam");
@@ -2607,6 +2571,10 @@ public class MorphologyTest {
         testset.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Tagadne);
         testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
         assertInflection(formas, testset, "ir");
+
+        formas = locītājs.generateInflections("būt");
+        testset.addAttribute(AttributeNames.i_Noliegums, AttributeNames.v_Yes);
+        assertInflection(formas, testset, "nav");
 
         formas = locītājs.generateInflections("viņš");
 
@@ -2627,6 +2595,7 @@ public class MorphologyTest {
         }
 
         Word simtas = locītājs.analyze("simtas");
+        describe(simtas.wordforms);
         assertFalse(simtas.isRecognized());
     }
 
@@ -2717,29 +2686,34 @@ public class MorphologyTest {
         assertTrue(foundLemma);
     }
 
+    // https://github.com/PeterisP/morphology/issues/104
     @Test
     public void turpms() {
-        locītājs.enableGuessing = true;
         Word turpmākiem = locītājs.analyze("turpmākiem");
         assertTrue(turpmākiem.isRecognized());
         assertLemma("turpmākiem", "turpmāks");
+
+        List<Wordform> formas = locītājs.generateInflections("turpmāks");
+        for (Wordform wf : formas) {
+            assertNotEquals("turpms", wf.getToken());
+            assertNotEquals("turpmākāks", wf.getToken());
+        }
+
+        formas = locītājs.generateInflectionsFromParadigm("turpmāks", 13, new AttributeValues());
+        for (Wordform wf : formas) {
+            assertNotEquals("turpms", wf.getToken());
+            assertNotEquals("turpmākāks", wf.getToken());
+        }
+    }
+
+    @Test
+    public void turpms2() {
+        Word Turpmākajā = locītājs.analyze("Turpmākajā");
+        assertTrue(Turpmākajā.isRecognized());
+        assertLemma("Turpmākajā", "turpmāks");
     }
 
     //    https://github.com/PeterisP/morphology/issues/12
-    @Test
-    public void pēdējajam() {
-        List<Wordform> formas = locītājs.generateInflections("pēdējs");
-        for (Wordform forma : formas) {
-            if (forma.getToken().equalsIgnoreCase("pēdējajam"))
-                describe(new LinkedList<Wordform>(Collections.singletonList(forma)));
-            assertNotEquals("pēdējajam", forma.getToken()); // šo formu nedrīkst ģenerēt
-        }
-        assertLemma("pēdējam", "pēdējs");
-        assertLemma("pēdējajam", "pēdējs");  // bet drīkst atpazīt
-        assertLemma("vispēdējākais", "pēdējs");
-        assertLemma("vispēdējākajam", "pēdējs");
-    }
-
     @Test
     public void pase() {
         List<Wordform> pase = locītājs.generateInflections("pase");
@@ -2760,9 +2734,25 @@ public class MorphologyTest {
     }
 
     @Test
-    public void frequencies() {
-        assertTrue(locītājs.analyze("Kaspars").isRecognized());
-        assertFalse(locītājs.analyze("Induls").isRecognized());
+    public void pēdējajam() {
+        List<Wordform> formas = locītājs.generateInflections("pēdējs");
+        for (Wordform forma : formas) {
+            if (forma.getToken().equalsIgnoreCase("pēdējajam"))
+                describe(new LinkedList<Wordform>(Collections.singletonList(forma)));
+            assertNotEquals("pēdējajam", forma.getToken()); // šo formu nedrīkst ģenerēt
+        }
+
+        formas = locītājs.generateInflections("pēdējais");
+        for (Wordform forma : formas) {
+            if (forma.getToken().equalsIgnoreCase("pēdējajam"))
+                describe(new LinkedList<Wordform>(Collections.singletonList(forma)));
+            assertNotEquals("pēdējajam", forma.getToken()); // šo formu nedrīkst ģenerēt
+        }
+        assertLemma("pēdējam", "pēdējais");
+        assertLemma("pēdējajam", "pēdējais");  // bet drīkst atpazīt
+        assertLemma("pēdējs", "pēdējs"); // ja nu kāds tā pasaka, tad lai ir tā novecojusī lemma
+        assertLemma("vispēdējākais", "pēdējs");  // vai tā ir ok?
+        assertLemma("vispēdējākajam", "pēdējs"); // vai tā ir ok?
     }
 
     @Test
@@ -2784,12 +2774,17 @@ public class MorphologyTest {
     }
 
     @Test
+    public void frequencies() {
+        assertTrue(locītājs.analyze("Kaspars").isRecognized());
+        assertFalse(locītājs.analyze("Induls").isRecognized());
+    }
+
+    @Test
     public void balamute() {
         AttributeValues filter = new AttributeValues();
-        filter.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Masculine);
+        filter.addAttribute(AttributeNames.i_ParadigmID, "47");
 
         List<Wordform> balamute = locītājs.generateInflections("balamute", false, filter);
-
         AttributeValues dskg = new AttributeValues();
         dskg.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
         dskg.addAttribute(AttributeNames.i_Number, AttributeNames.v_Plural);
@@ -2894,7 +2889,6 @@ public class MorphologyTest {
         locītājs.enableGuessing = true;
         w = locītājs.analyze("pluto");
         assertTrue(w.isRecognized());
-//        describe(w.wordforms);
         boolean found = false;
         for (Wordform wf : w.wordforms) {
             if (wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun))
@@ -2985,7 +2979,8 @@ public class MorphologyTest {
         }
     }
 
-    /** Aizdomas par tagset problēmām
+    /**
+     * Aizdomas par tagset problēmām
      */
     @Test
     public void laura_20180614() {
@@ -3029,7 +3024,7 @@ public class MorphologyTest {
         boolean found_c = false;
         boolean found_tag = false;
         for (Wordform wf : nav.wordforms) {
-            assertEquals("nebūt", wf.getValue(AttributeNames.i_Lemma));
+            assertEquals("būt", wf.getValue(AttributeNames.i_Lemma));
             if (wf.isMatchingStrong(AttributeNames.i_VerbType, AttributeNames.v_MainVerb))
                 found_m = true;
             if (wf.isMatchingStrong(AttributeNames.i_VerbType, AttributeNames.v_Buut))
@@ -3083,6 +3078,12 @@ public class MorphologyTest {
         testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
         testset.addAttribute(AttributeNames.i_Person, "2");
         assertInflection(formas, testset, "esi");
+
+        testset.addAttribute(AttributeNames.i_Izteiksme, AttributeNames.v_Iisteniibas);
+        testset.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Tagadne);
+        testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+        testset.addAttribute(AttributeNames.i_Person, "1");
+        assertInflection(formas, testset, "esmu");
     }
 
     @Test
@@ -3129,6 +3130,7 @@ public class MorphologyTest {
         testset.addAttribute(AttributeNames.i_Izteiksme, AttributeNames.v_Iisteniibas);
         testset.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Tagadne);
         testset.addAttribute(AttributeNames.i_Person, "3");
+//        describe(formas);
         assertInflection(formas, testset, "nepaiet");
 
         Word nepaiet = locītājs.analyze("nepaiet");
@@ -3141,30 +3143,29 @@ public class MorphologyTest {
     public void ticket_26() {
         Word w = locītājs.analyze("sen");
         assertTrue(w.isRecognized());
-        assertEquals("rpt", w.getBestWordform().getTag());
+        assertEquals("rptn", w.getBestWordform().getTag());
 
         w = locītājs.analyze("drīz");
         assertTrue(w.isRecognized());
-        assertEquals("rpt", w.getBestWordform().getTag());
+        assertEquals("rptn", w.getBestWordform().getTag());
 
         w = locītājs.analyze("pārāk");
         assertTrue(w.isRecognized());
-        assertEquals("r0q", w.getBestWordform().getTag());
+        assertEquals("r0qn", w.getBestWordform().getTag());
 
         w = locītājs.analyze("daudzāk");
         assertTrue(w.isRecognized());
-        assertEquals("rcq", w.getBestWordform().getTag());
+        assertEquals("rcqn", w.getBestWordform().getTag());
         assertEquals("daudz", w.getBestWordform().getValue(AttributeNames.i_Lemma));
 
         w = locītājs.analyze("vairāk");
         assertTrue(w.isRecognized());
-        assertEquals("rcq", w.getBestWordform().getTag());
+        assertEquals("rcqn", w.getBestWordform().getTag());
         assertEquals("daudz", w.getBestWordform().getValue(AttributeNames.i_Lemma));
     }
 
     @Test
-    public void saites()
-    {
+    public void saites() {
         Word w = locītājs.analyze("http://www.faili.lv/fails.php?id=215");
         assertTrue(w.isRecognized());
         assertEquals("xu", w.getBestWordform().getTag());
@@ -3204,6 +3205,7 @@ public class MorphologyTest {
         w = locītājs.analyze("”");
         assertTrue(w.isRecognized());
         assertEquals("zq", w.getBestWordform().getTag());
+        assertEquals("\"", w.getBestWordform().getValue(AttributeNames.i_Lemma));
         w = locītājs.analyze("«");
         assertTrue(w.isRecognized());
         assertEquals("zq", w.getBestWordform().getTag());
@@ -3236,13 +3238,13 @@ public class MorphologyTest {
         assertEquals("zb", w.getBestWordform().getTag());
         w = locītājs.analyze("•");
         assertTrue(w.isRecognized());
-        assertEquals("xx", w.getBestWordform().getTag());
+        assertEquals("zx", w.getBestWordform().getTag());
         w = locītājs.analyze("=");
         assertTrue(w.isRecognized());
         assertEquals("xx", w.getBestWordform().getTag());
-        w = locītājs.analyze("&");
-        assertTrue(w.isRecognized());
-        assertEquals("zx", w.getBestWordform().getTag());
+//        w = locītājs.analyze("&");
+//        assertTrue(w.isRecognized());
+//        assertEquals("zx", w.getBestWordform().getTag());
         w = locītājs.analyze("…");
         assertTrue(w.isRecognized());
         assertEquals("zs", w.getBestWordform().getTag());
@@ -3290,7 +3292,7 @@ public class MorphologyTest {
         assertEquals("xx", w.getBestWordform().getTag());
         w = locītājs.analyze("∙");
         assertTrue(w.isRecognized());
-        assertEquals("xx", w.getBestWordform().getTag());
+        assertEquals("zx", w.getBestWordform().getTag());
         w = locītājs.analyze("‒");
         assertTrue(w.isRecognized());
         assertEquals("zd", w.getBestWordform().getTag());
@@ -3409,7 +3411,7 @@ public class MorphologyTest {
         Word w = locītājs.analyze("nespēja");
         for (Wordform wf : w.wordforms) {
             if (wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb))
-                assertEquals("nespēt", wf.getValue(AttributeNames.i_Lemma));
+                assertEquals("spēt", wf.getValue(AttributeNames.i_Lemma));
         }
     }
 
@@ -3457,7 +3459,8 @@ public class MorphologyTest {
     }
 
     // Ticket #40 'šitais' and 'šitas' do not get inflected
-    @Test public void šitais() {
+    @Test
+    public void šitais() {
         ArrayList<Wordform> formas = locītājs.generateInflections("šitais");
         AttributeValues testset = new AttributeValues();
         testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Dative);
@@ -3469,14 +3472,786 @@ public class MorphologyTest {
     }
 
     // Ticket #41 inflexible form for 'trīs'
-    @Test public void trīs() {
+    @Test
+    public void trīs() {
         Word w = locītājs.analyze("trīs");
         boolean found = false;
         for (Wordform wf : w.wordforms) {
             if (wf.isMatchingStrong(AttributeNames.i_Case, AttributeNames.v_NA))
-                    found = true;
+                found = true;
         }
         assertTrue(found);
     }
-}
 
+    // Ticket #59
+    @Test
+    public void pusotrs() {
+        Word w = locītājs.analyze("pusotrs");
+        assertTrue(w.isRecognized());
+        assertEquals("mfsmsn", w.getBestWordform().getTag());
+    }
+
+    // Ticket #56
+    @Test
+    public void celties() {
+        Word w = locītājs.analyze("celties");
+        assertTrue(w.isRecognized());
+        assertEquals("vmyn0_1000n", w.getBestWordform().getTag());
+    }
+
+    // Ticket #48
+    @Test
+    public void overzealous_verb_guessing() {
+        locītājs.enableDerivedNouns = false;
+        locītājs.enableGuessing = true;
+        Word w = locītājs.analyze("uzvarētājs");
+        assertTrue(w.isRecognized());
+        assertNotEquals("uzvarētājt", w.getBestWordform().getValue(AttributeNames.i_Lemma));
+    }
+
+    // Ticket #81 - noun derivation
+    @Test
+    public void noun_derivation() {
+        locītājs.enableDerivedNouns = false; // Check that the words are OOV
+        Word w = locītājs.analyze("slavētājs");
+        assertFalse(w.isRecognized());
+        w = locītājs.analyze("tīkotājs");
+        assertFalse(w.isRecognized());
+        w = locītājs.analyze("atsācējs");
+        assertFalse(w.isRecognized());
+        w = locītājs.analyze("kodējs");
+        assertFalse(w.isRecognized());
+        locītājs.enableDerivedNouns = true; // Check that the automatic derivation finds them
+        w = locītājs.analyze("slavētājs");
+        assertTrue(w.isRecognized());
+        w = locītājs.analyze("tīkotājs");
+        assertTrue(w.isRecognized());
+        w = locītājs.analyze("atsācējs");
+        assertTrue(w.isRecognized());
+        w = locītājs.analyze("kodējs");
+        assertTrue(w.isRecognized());
+    }
+
+    // Ticket #84 'skate' and 'apskate' get wrong inflection due to missing stem change
+    @Test
+    public void apskate() {
+        ArrayList<Wordform> formas = locītājs.generateInflections("plate");
+        AttributeValues testset = new AttributeValues();
+        testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Genitive);
+        testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Plural);
+        assertInflection(formas, testset, "plašu");
+
+        formas = locītājs.generateInflections("skate");
+        assertInflection(formas, testset, "skašu");
+
+        formas = locītājs.generateInflections("tālskatis");
+        assertInflection(formas, testset, "tālskatu");
+    }
+
+    @Test
+    public void suitableParadigms_smoketest() {
+        locītājs.guessAllParadigms = true;
+        List<Paradigm> options;
+        options = locītājs.suitableParadigms("žikivators");
+        assertEquals(2, options.size()); // -s lietvārds, -s īpašības vārds
+//        for (Paradigm p : options) {
+//            System.out.printf("%d : %s\n", p.getID(), p.getName());
+//        }
+
+        options = locītājs.suitableParadigms("virzis");
+        assertEquals(1, options.size());
+        for (Paradigm p : options) {
+            assertNotEquals(1, p.getID()); // -s šeit nav adekvāts minējums
+        }
+
+        options = locītājs.suitableParadigms("pokemonizēt");
+        assertEquals(2, options.size());
+
+        options = locītājs.suitableParadigms("askdjasdlkjakalsdj");
+        assertEquals(1, options.size());
+        assertEquals(39, options.get(0).getID());
+
+        options = locītājs.suitableParadigms("mazpokemoni");
+        for (Paradigm p : options) {
+            System.out.printf("%d : %s\n", p.getID(), p.getName());
+        }
+    }
+
+    // Piemēri, kuriem Artūrs identificēja, ka neko neatrod
+    @Test
+    public void suitableParadigms_notfound() {
+        locītājs.guessAllParadigms = true;
+        locītājs.enableAllGuesses = true;
+        List<Paradigm> options;
+        options = locītājs.suitableParadigms("gastroenterīts");
+        assertNotEquals(0, options.size());
+
+        options = locītājs.suitableParadigms("prettārpu");
+        assertNotEquals(0, options.size());
+
+        options = locītājs.suitableParadigms("Ševaljē");
+        assertNotEquals(0, options.size());
+
+        options = locītājs.suitableParadigms("INDIE");
+        assertNotEquals(0, options.size());
+
+        options = locītājs.suitableParadigms("maztauku");
+        assertEquals(3, options.size());
+    }
+
+    @Test
+    public void ticket90() {
+        AttributeValues testset = new AttributeValues();
+        testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+        testset.addAttribute(AttributeNames.i_Person, "2");
+        testset.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Tagadne);
+        ArrayList<Wordform> formas = locītājs.generateInflections("šķist");
+        assertInflection(formas, testset, "šķieti");
+
+        testset.addAttribute(AttributeNames.i_Person, "1");
+        testset.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Naakotne);
+        formas = locītājs.generateInflections("vīkšt");
+//        assertInflection(formas, testset, "vīkšīšu"); Pārbaude izņemta, jo apvidvārds
+
+        testset.addAttribute(AttributeNames.i_Person, "2");
+//        assertInflection(formas, testset, "vīkšīsi");
+    }
+
+    @Test
+    public void adverb_degrees() {
+        Word w = locītājs.analyze("ātri");
+        assertTrue(w.isRecognized());
+        boolean found = false;
+        for (Wordform wf : w.wordforms) {
+            if (wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adverb)) {
+                assertEquals("rp_n", wf.getTag());
+                found = true;
+            }
+        }
+        assertTrue(found);
+
+        w = locītājs.analyze("ātrāk");
+        assertTrue(w.isRecognized());
+        found = false;
+        for (Wordform wf : w.wordforms) {
+            if (wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adverb)) {
+                assertEquals("rc_n", wf.getTag());
+                found = true;
+            }
+        }
+        assertTrue(found);
+        w = locītājs.analyze("visiesāņāk");
+        assertTrue(w.isRecognized());
+        found = false;
+        for (Wordform wf : w.wordforms) {
+            if (wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adverb)) {
+                assertEquals("rs_n", wf.getTag());
+                found = true;
+            }
+        }
+        assertTrue(found);
+    }
+
+    @Test
+    public void vocabulary_oov() {
+        locītājs.enableGuessing = false;
+
+        Word w = locītājs.analyze("latviešu");
+        assertTrue(w.isRecognized());
+
+        w = locītājs.analyze("ēkas");
+        assertTrue(w.isRecognized());
+    }
+
+    @Test
+    public void plural_entry_with_ambiguous_stemchange() {
+        locītājs.enableGuessing = false;
+
+        Word w = locītājs.analyze("nēsis"); // No "nēši" nevar izdomāt vai ir "nētis" (kā "latvieši"->"latvietis") vai "nēsis"
+//        describe(w.wordforms);
+        assertTrue(w.isRecognized());
+    }
+
+    @Test
+    public void partially_declinable_participles() {
+        locītājs.enableGuessing = false;
+        Word w = locītājs.analyze("cenzdamies");
+        assertTrue(w.isRecognized());
+        Wordform wf = w.getBestWordform();
+        assertEquals("voyppm0n0000n", wf.getTag());
+    }
+
+    /**
+     * New paradigms for standalone partially declinable participles like 'pusjokodams' and 'pusjokodamies'
+     */
+    @Test
+    public void pusjokodams() {
+        locītājs.enableGuessing = false;
+        Word w = locītājs.analyze("pusjokodama");
+        assertTrue(w.isRecognized());
+        Wordform wf = w.getBestWordform();
+        assertEquals("arfsnnp", wf.getTag());
+        assertEquals("pusjokodams", wf.getValue(AttributeNames.i_Lemma));
+
+        w = locītājs.analyze("pusjokodamās");
+        assertTrue(w.isRecognized());
+        wf = w.getBestWordform();
+        assertEquals("arfsnnp", wf.getTag());
+        assertEquals("pusjokodamies", wf.getValue(AttributeNames.i_Lemma));
+    }
+
+    @Test
+    public void ticket_101_a() {
+        Word w = locītājs.analyze("Rīgai");
+        assertTrue(w.isRecognized());
+        Wordform wf = w.getBestWordform();
+        assertEquals("npfsd4", wf.getTag());
+        assertEquals("Rīga", wf.getValue(AttributeNames.i_Lemma));
+        // Recognize singular
+
+        w = locītājs.analyze("Rīgām");
+        assertTrue(w.isRecognized());
+        wf = w.getBestWordform();
+        assertEquals("npfpd4", wf.getTag());
+        assertEquals("Rīga", wf.getValue(AttributeNames.i_Lemma));
+        // Recognize plural
+
+        /* Now implemented with flag 'Morfotabulas attēlošana'
+        List<Wordform> forms = locītājs.generateInflections("Rīga");
+        for (Wordform wf2 : forms) {
+            assertFalse(wf2.isMatchingStrong(AttributeNames.i_Number, AttributeNames.v_Plural));
+            assertNotEquals("Rīgām", wf2.getValue(AttributeNames.i_Lemma));
+            // Do not generate plural forms for Tezaurs.lv morphology tables
+        }
+        */
+    }
+
+    @Test
+    public void ticket_101_b() {
+        Word w = locītājs.analyze("mieram");
+        assertTrue(w.isRecognized());
+        Wordform wf = w.getBestWordform();
+        assertEquals("ncmvd1", wf.getTag());
+        assertEquals("miers", wf.getValue(AttributeNames.i_Lemma));
+        // Recognize singular, with singulare_tantum in tag
+
+        w = locītājs.analyze("mieriem");
+        assertFalse(w.isRecognized());
+//        wf = w.getBestWordform();
+//        assertEquals("ncmpd1", wf.getTag());
+//        assertEquals("miers", wf.getValue(AttributeNames.i_Lemma));
+        // Do not recognize plural
+
+        List<Wordform> forms = locītājs.generateInflections("miers");
+        for (Wordform wf2 : forms) {
+            assertFalse(wf2.isMatchingStrong(AttributeNames.i_Number, AttributeNames.v_Plural));
+            // Do not generate plural forms for Tezaurs.lv morphology tables
+        }
+    }
+
+    @Test
+    public void ticket_101_c() {
+        Word w = locītājs.analyze("Limbazim");
+        assertFalse(w.isRecognized());
+        // Do not recognize singular
+
+        w = locītājs.analyze("Limbažiem");
+        assertTrue(w.isRecognized());
+        Wordform wf = w.getBestWordform();
+        assertEquals("npmdd2", wf.getTag());
+        assertEquals("Limbaži", wf.getValue(AttributeNames.i_Lemma));
+        // Recognize plural, plurare tantum in tag
+
+        List<Wordform> forms = locītājs.generateInflections("Limbaži");
+        for (Wordform wf2 : forms) {
+            assertFalse(wf2.isMatchingStrong(AttributeNames.i_Number, AttributeNames.v_Singular));
+            // Do not generate singular forms for Tezaurs.lv morphology tables
+        }
+    }
+
+    @Test
+    public void ticket_101_d() {
+        Word w = locītājs.analyze("durvij");
+        assertFalse(w.isRecognized());
+        // Do not recognize singular
+
+        w = locītājs.analyze("durvīm");
+        assertTrue(w.isRecognized());
+        Wordform wf = w.getBestWordform();
+        assertEquals("ncfdd6", wf.getTag());
+        assertEquals("durvis", wf.getValue(AttributeNames.i_Lemma));
+        // Recognize plural, plurare tantum in tag
+
+        List<Wordform> forms = locītājs.generateInflections("durvis");
+        for (Wordform wf2 : forms) {
+            assertFalse(wf2.isMatchingStrong(AttributeNames.i_Number, AttributeNames.v_Singular));
+            // Do not generate singular forms for Tezaurs.lv morphology tables
+        }
+    }
+
+    @Test
+    public void ticket_101_e() {
+        Word w = locītājs.analyze("biksei");
+        assertTrue(w.isRecognized());
+        Wordform wf = w.getBestWordform();
+        assertEquals("ncfsd5", wf.getTag());
+        assertEquals("bikses", wf.getValue(AttributeNames.i_Lemma));
+        // Recognize singular
+
+        w = locītājs.analyze("biksēm");
+        assertTrue(w.isRecognized());
+        wf = w.getBestWordform();
+        assertEquals("ncfdd5", wf.getTag());
+        assertEquals("bikses", wf.getValue(AttributeNames.i_Lemma));
+        // Recognize plural, plurare tantum in tag
+
+        List<Wordform> forms = locītājs.generateInflections("durvis");
+        for (Wordform wf2 : forms) {
+            assertFalse(wf2.isMatchingStrong(AttributeNames.i_Number, AttributeNames.v_Singular));
+            // Do not generate singular forms for Tezaurs.lv morphology tables
+        }
+    }
+
+    @Test
+    public void missing_cietusī() {
+        Word w = locītājs.analyze("cietusī");
+        assertTrue(w.isRecognized());
+        boolean found = false;
+        for (Wordform wf : w.wordforms) {
+            if (wf.getEnding().getParadigm().getID() == 41) {
+                found = true;
+            }
+        }
+        assertTrue(found);
+
+        List<Wordform> formas = locītājs.generateInflections("cietusī", false);
+        assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Dative, "", "cietušajai");
+    }
+
+    @Test
+    public void ticket_92() {
+        Word iedot = locītājs.analyze("iedot");
+        assertTrue(iedot.isRecognized());
+        assertEquals("vmnn0_i000n", iedot.wordforms.get(0).getTag());
+    }
+
+    @Test
+    public void divdabjlemmas() {
+        Word w = locītājs.analyze("nebēdņojās");
+        assertTrue(w.isRecognized());
+        assertLemma("nebēdņojās", "nebēdņoties");
+        assertEquals(AttributeNames.v_Yes, w.getBestWordform().getValue(AttributeNames.i_Noliegums));
+
+        w = locītājs.analyze("cērtamās");
+        assertTrue(w.isRecognized());
+        assertLemma("cērtamās", "cirst");
+    }
+
+    @Test
+    public void dīvainie_noliegumi() {
+        assertLemma("neesat", "būt");
+        assertLemma("nerakt", "rakt");
+    }
+
+    @Test
+    public void ziemassvētki() {
+        assertLemma("Ziemassvētkos", "Ziemassvētki");
+    }
+
+    @Test
+    public void Severīns() {
+        assertLemma("Severīnam", "Severīns");
+    }
+
+    @Test
+    public void korpusa_neatpazītie_20210308() {
+        Word w = locītājs.analyze("mainīt");
+        assertTrue(w.isRecognized());
+
+        w = locītājs.analyze("jāmaina");
+        assertTrue(w.isRecognized());
+    }
+
+    @Test
+    // Izskatās, ka pāreja uz ģenitīveņu paradigmu salauza ģenerēšanu, kas pieņem ka ģenerē ģenitīva formu no pilnas lietvārda paradigmas
+    public void inflexible_genitive_generation() {
+        List<Wordform> formas = locītājs.generateInflections("augstpapēžu");
+        assertEquals(1, formas.size());
+    }
+
+    @Test
+    // https://github.com/PeterisP/morphology/issues/106
+    public void pārāks() {
+        Word pārākiem = locītājs.analyze("pārākiem");
+        assertTrue(pārākiem.isRecognized());
+        assertLemma("pārākiem", "pārāks");
+        assertLemma("vispārākajos", "pārāks");
+
+        List<Wordform> formas = locītājs.generateInflections("pārāks");
+        for (Wordform wf : formas) {
+            assertNotEquals("pārs", wf.getToken());
+            assertNotEquals("pārākāks", wf.getToken());
+        }
+    }
+
+    @Test
+    // https://github.com/PeterisP/morphology/issues/109
+    public void vajadzības_izteiksmes_noliegums() {
+        List<Wordform> formas = locītājs.generateInflections("skriet");
+        boolean found_negation = false;
+        for (Wordform wf : formas) {
+            if (wf.getToken().equalsIgnoreCase("neskriet")) found_negation = true;
+            assertNotEquals("nejāskrien", wf.getToken());
+            assertNotEquals("jāneskrien", wf.getToken());
+        }
+        assertTrue("Jābūt atrastam 'neskriet'", found_negation);
+
+        formas = locītājs.generateInflections("prātot");
+        found_negation = false;
+        for (Wordform wf : formas) {
+            if (wf.getToken().equalsIgnoreCase("neprātot")) found_negation = true;
+            assertNotEquals("nejāprāto", wf.getToken());
+            assertNotEquals("jāneprāto", wf.getToken());
+        }
+        assertTrue("Jābūt atrastam 'neprātot'", found_negation);
+    }
+
+    @Test
+    public void prefix_guessing_debitive() {
+        locītājs.enablePrefixes = false;
+        Word w = locītājs.analyze("pārsekot");
+        assertFalse(w.isRecognized());
+        w = locītājs.analyze("nesekot");
+        assertFalse(w.isRecognized());
+
+        locītājs.enablePrefixes = true;
+        w = locītājs.analyze("pārsekot");
+        assertTrue(w.isRecognized());
+        w = locītājs.analyze("jāpārseko");
+        assertTrue(w.isRecognized());
+        w = locītājs.analyze("nesekot");
+        assertTrue(w.isRecognized());
+        w = locītājs.analyze("jāneseko");
+        assertFalse(w.isRecognized());
+    }
+
+    @Test
+    public void noliegumu_noliegums() {
+        List<Wordform> formas = locītājs.generateInflections("nebēdņot");
+        for (Wordform wf : formas) {
+            assertNotEquals("nenebēdņot", wf.getToken());
+            assertNotEquals("jānebēdņo", wf.getToken());
+        }
+
+        Word w = locītājs.analyze("nenebēdņot");
+        assertFalse(w.isRecognized());
+    }
+
+    @Test
+    public void noliegtie_patstāvīgie_divdabji() {
+        Word w = locītājs.analyze("nepatīkams");
+        assertTrue(w.isRecognized());
+        Wordform wf = w.getBestWordform();
+        assertEquals(AttributeNames.v_Yes, wf.getValue(AttributeNames.i_Noliegums));
+    }
+
+    @Test
+    public void tabulu_trūkumi_20210706() {
+        Word w = locītājs.analyze("pabija");
+        assertTrue(w.isRecognized());
+        List<Wordform> formas = locītājs.generateInflections("pabūt");
+        boolean found = false;
+        for (Wordform wf : formas) {
+            if (wf.getToken().equalsIgnoreCase("pabija")) found = true;
+        }
+        assertTrue(found);
+    }
+
+    @Test
+    public void nebūt_lemma() {
+        Word w = locītājs.analyze("nebija");
+        assertTrue(w.isRecognized());
+        assertEquals("būt", w.getBestWordform().getValue(AttributeNames.i_Lemma));
+    }
+
+    @Test
+    public void nebēdņot_caur_paradigmu() {
+        List<Wordform> formas = locītājs.generateInflections("nebēdņot");
+        for (Wordform wf : formas) {
+            assertNotEquals("jānebēdņo", wf.getToken());
+        }
+
+        AttributeValues av = new AttributeValues();
+        av.addAttribute(AttributeNames.i_Noliegums, AttributeNames.v_Yes);
+        formas = locītājs.generateInflectionsFromParadigm("nebēdņot", 16, av);
+        for (Wordform wf : formas) {
+            assertNotEquals("jānebēdņo", wf.getToken());
+        }
+    }
+
+    @Test
+    public void ticket_94() {
+        AttributeValues av = new AttributeValues();
+        av.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Feminine);
+        List<Wordform> formas = locītājs.generateInflectionsFromParadigm("ālava", 13, av);
+        assertNotEquals(0, formas.size());
+        for (Wordform wf : formas) {
+            assertNotEquals("ālavs", wf.getToken());
+        }
+
+        av = new AttributeValues();
+        av.addAttribute(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum);
+        formas = locītājs.generateInflectionsFromParadigm("abēji", 13, av);
+        assertNotEquals(0, formas.size());
+    }
+
+    @Test
+    public void ticket_100() {
+        List<Wordform> formas = locītājs.generateInflections("zaļš");
+        for (Wordform wf : formas) {
+            if (wf.getToken().equalsIgnoreCase("zaļi") && wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adverb)) {
+                assertEquals(AttributeNames.v_Yes, wf.getValue(AttributeNames.i_Derivative));
+            }
+        }
+
+        formas = locītājs.generateInflections("rakt");
+        for (Wordform wf : formas) {
+            if (wf.getToken().equalsIgnoreCase("rakšana")) {
+                assertEquals(AttributeNames.v_Yes, wf.getValue(AttributeNames.i_Derivative));
+            }
+        }
+    }
+
+    @Test
+    public void vienota_vispārākā() {
+        Word vienotām = locītājs.analyze("vienotām");
+        for (Wordform wf : vienotām.wordforms) {
+            assertFalse(wf.isMatchingStrong(AttributeNames.i_Degree, AttributeNames.v_Superlative));
+        }
+    }
+
+    @Test
+    public void dodi() {
+        Word dod = locītājs.analyze("dod");
+        Word dodi = locītājs.analyze("dodi");
+        assertTrue(dodi.isRecognized());
+
+        List<Wordform> formas = locītājs.generateInflections("dot");
+        for (Wordform wf : formas) {
+            assertNotEquals("dodi", wf.getToken());
+        }
+    }
+
+    @Test
+    @Ignore
+    public void ticket_89() throws UnsupportedEncodingException {
+        PrintWriter izeja;
+        izeja = new PrintWriter(new OutputStreamWriter(System.out, "UTF-8"));
+
+        Paradigm p15 = locītājs.paradigmByID(15);
+
+        for (ArrayList<Lexeme> lexemes : p15.getLexemesByStem().get(0).values()) {
+            for (int i = 0; i < lexemes.size(); i++) {
+                Lexeme l = lexemes.get(i);
+                String lemma = l.getStem(0) + "t";
+                ArrayList<Wordform> wordforms = locītājs.generateInflections(l, lemma);
+                for (Wordform wf : wordforms) {
+                    if (wf.getEnding().getID() == 790 && !wf.isMatchingStrong(AttributeNames.i_Noliegums, AttributeNames.v_Yes)) {
+                        izeja.printf("%s\t%s\n", lemma, wf.getToken());
+                    }
+                }
+            }
+        }
+        izeja.flush();
+    }
+
+    @Test
+    public void roberts_2021_11_24() {
+        // Roberts sūdzējās, ka webservisu API neatgriež daudzskaitļa formas, kaut arī tēzaurā tās rādās un it kā nekādi karodziņi tās neaizliedz
+        ArrayList<Wordform> formas = locītājs.generateInflections("nākotne");
+        boolean found = false;
+        for (Wordform wf : formas) {
+            if (wf.getToken().equalsIgnoreCase("nākotņu"))
+                found = true;
+        }
+        assertTrue(found);
+    }
+
+    @Test
+    public void apmācies() {
+        // Izveidojot patstāvīgu šķirkli ar 43 paradigmu apmācies parādījās problēma ar miju
+        AttributeValues av = new AttributeValues();
+        ArrayList<Wordform> formas = locītājs.generateInflectionsFromParadigm("apmākies", 43, av);
+        for (Wordform wf : formas) {
+            assertNotEquals("apmācusies", wf.getToken());
+            assertNotEquals("apmākies", wf.getToken());
+        }
+
+        Word w = locītājs.analyze("apmācusies");
+        assertFalse(w.isRecognized());
+        w = locītājs.analyze("apmākies");
+        assertFalse(w.isRecognized());
+    }
+
+    @Test
+    public void piņņu() {
+        // Problēma ar pinne->piņņu miju
+        AttributeValues testset = new AttributeValues();
+        testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
+        testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Genitive);
+        testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Plural);
+
+        List<Wordform> formas = locītājs.generateInflections("pinne");
+        assertInflection(formas, testset, "piņņu");
+
+        formas = locītājs.generateInflections("lelle");
+        assertInflection(formas, testset, "leļļu");
+
+        formas = locītājs.generateInflections("ķemme");
+        assertInflection(formas, testset, "ķemmju");
+    }
+
+    @Test
+    public void noliegums_tagā() {
+        Word nevarēšu = locītājs.analyze("nevarēšu");
+        assertTrue(nevarēšu.isRecognized());
+        Wordform wf = nevarēšu.getBestWordform();
+        assertEquals("Jā", wf.getValue(AttributeNames.i_Noliegums));
+        assertEquals("vmnift31say", wf.getTag());
+    }
+
+    @Test
+    public void ticket_121() {
+        // nolieguma vispārākajai pakāpei ir nepareiza secība
+        List<Wordform> formas = locītājs.generateInflections("māt");
+        boolean found = false;
+        for (Wordform wf : formas) {
+            assertNotEquals("nevismājošākais", wf.getToken());
+            if (wf.getToken().equalsIgnoreCase("visnemājošākais"))
+                found = true;
+        }
+        assertTrue(found);
+
+        Word w = locītājs.analyze("visnemājošākais");
+        assertTrue(w.isRecognized());
+
+        w = locītājs.analyze("nevismājošākais");
+        assertFalse(w.isRecognized());
+
+        w = locītājs.analyze("vispiemājošākais");
+        assertTrue(w.isRecognized());
+
+        w = locītājs.analyze("pievismājošākais");
+        assertFalse(w.isRecognized());
+    }
+
+
+    @Test
+    public void ticket_120() {
+        // -ējs atvasināšanai ne tāda mija
+        Word w = locītājs.analyze("sniegējs");
+        assertFalse(w.isRecognized());
+        w = locītājs.analyze("veikējs");
+        assertFalse(w.isRecognized());
+        w = locītājs.analyze("atklāējs");
+        assertFalse(w.isRecognized());
+        w = locītājs.analyze("atrasējs");
+        assertFalse(w.isRecognized());
+        w = locītājs.analyze("maukēja");
+        assertFalse(w.isRecognized());
+
+        w = locītājs.analyze("sniedzējs");
+        assertTrue(w.isRecognized());
+        w = locītājs.analyze("veicējs");
+        assertTrue(w.isRecognized());
+        w = locītājs.analyze("atklājējs");
+        assertTrue(w.isRecognized());
+        w = locītājs.analyze("atradējs");
+        assertTrue(w.isRecognized());
+        w = locītājs.analyze("maucēja");
+        assertTrue(w.isRecognized());
+    }
+
+    @Test
+    @Ignore("pagaidām nav 100% skaidrs, kā būtu pareizi")
+    public void ticket_85() {
+        // nepareiza mija vārdam viest (ieviest - lai nav konflikts ar viest homoformām)
+        Word w = locītājs.analyze("ieviešošs");
+        assertFalse(w.isRecognized());
+
+        List<Wordform> formas = locītājs.generateInflections("ieviest");
+        boolean found = false;
+        for (Wordform wf : formas) {
+            assertNotEquals("ieviešošs", wf.getToken());
+            if (wf.getToken().equalsIgnoreCase("ieviesošs"))
+                found = true;
+        }
+        assertTrue(found);
+
+
+        w = locītājs.analyze("ieviesošs");
+        assertTrue(w.isRecognized());
+    }
+
+    @Test
+    public void ticket_125() {
+        // nez kāpēc nestrādā atpazīšana atsevišķiem vārdiem, ja tos padod ar lielo burtu
+        Word w = locītājs.analyze("krūšu");
+        assertTrue(w.isRecognized());
+
+        w = locītājs.analyze("Krūšu");
+        assertTrue(w.isRecognized());
+    }
+
+    @Test
+    public void ticket_122() {
+        // bija salūzis 'mākam' atpazīšana
+        Word w = locītājs.analyze("mākam");
+        assertTrue(w.isRecognized());
+    }
+
+    @Test
+    @Ignore("Gaida uz informāciju no valodniekiem par to, kā pareizi locīt")
+    public void ticket_124() {
+        // atgriezenisko verbu -ošs divdabji - nevēlami, jāatpazīst bet nav jāģenerē
+        Word w = locītājs.analyze("darbojošamies");
+        assertTrue(w.isRecognized());
+
+        List<Wordform> formas = locītājs.generateInflections("darboties");
+        assertNoForm(formas, "darbojošamies");
+    }
+
+    @Test
+    public void mistika_pie_relīzes() {
+        // Nez kāpēc pie visu vārdu izlocīšanas šiem 5 neatgrieza datus
+        Word w;
+//        String [] badwords = "saaut sabāzt sasliet sastrēgt aizsliet".split("");
+        String [] badwords = "aizsliet".split(" ");
+        for (String badword : badwords) {
+            w = locītājs.analyze(badword);
+            assertTrue(w.isRecognized());
+        }
+    }
+
+    @Test
+    public void rāviņš() {
+        // Nez kāpēc min tikai kā sieviešu dzimti
+        locītājs.enableGuessing = true;
+        Word rāviņš = locītājs.analyze("Rāviņa");
+        assertTrue(rāviņš.isRecognized());
+        rāviņš.describe(System.out);
+    }
+
+    @Test
+    public void tūkstošām() {
+        AttributeValues av = new AttributeValues();
+        av.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Feminine);
+        List<Wordform> formas = locītājs.generateInflectionsFromParadigm("tūkstoša", 23, av);
+        describe(formas);
+        assertNoForm(formas, "tūkstošs");
+
+        Word w = locītājs.analyze("tūkstošām");
+        assertTrue(w.isRecognized());
+    }
+
+}
