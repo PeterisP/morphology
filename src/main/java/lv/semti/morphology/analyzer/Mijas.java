@@ -420,20 +420,32 @@ public abstract class Mijas {
                     if (celms.endsWith("iet"))
                         varianti.add(new Variants(celms.substring(0,celms.length()-3)+"ej"));
                     break;
-				case 38: // Apstākļa vārdi ar gradāciju
-					if (celms.endsWith("āk") && celms.length() > 3) {
-						if (celms.startsWith("vis")) {
-							varianti.add(new Variants(celms.substring(3,celms.length()-2),AttributeNames.i_Degree,AttributeNames.v_Superlative));
-							varianti.add(new Variants(celms.substring(3,celms.length()-2) + "i",AttributeNames.i_Degree,AttributeNames.v_Superlative));
-							varianti.add(new Variants(celms.substring(3,celms.length()-2) + "u",AttributeNames.i_Degree,AttributeNames.v_Superlative));
-						} else {
-							varianti.add(new Variants(celms.substring(0,celms.length()-2),AttributeNames.i_Degree,AttributeNames.v_Comparative));
-							varianti.add(new Variants(celms.substring(0,celms.length()-2) + "i",AttributeNames.i_Degree,AttributeNames.v_Comparative));
-							varianti.add(new Variants(celms.substring(0,celms.length()-2) + "u",AttributeNames.i_Degree,AttributeNames.v_Comparative));
-						}
-					} else varianti.add(new Variants(celms,AttributeNames.i_Degree, AttributeNames.v_Positive));
-					break;
-
+                case 38: // Apstākļa vārdi ar gradāciju
+                  if (celms.endsWith("āk") && celms.length() > 3) {
+                    if (celms.startsWith("vis")) {
+                      varianti.add(new Variants(celms.substring(3,celms.length()-2),AttributeNames.i_Degree,AttributeNames.v_Superlative));
+                      varianti.add(new Variants(celms.substring(3,celms.length()-2) + "i",AttributeNames.i_Degree,AttributeNames.v_Superlative));
+                      varianti.add(new Variants(celms.substring(3,celms.length()-2) + "u",AttributeNames.i_Degree,AttributeNames.v_Superlative));
+                    } else {
+                      varianti.add(new Variants(celms.substring(0,celms.length()-2),AttributeNames.i_Degree,AttributeNames.v_Comparative));
+                      varianti.add(new Variants(celms.substring(0,celms.length()-2) + "i",AttributeNames.i_Degree,AttributeNames.v_Comparative));
+                      varianti.add(new Variants(celms.substring(0,celms.length()-2) + "u",AttributeNames.i_Degree,AttributeNames.v_Comparative));
+                    }
+                  } else varianti.add(new Variants(celms,AttributeNames.i_Degree, AttributeNames.v_Positive));
+                  break;
+                  // ------ LATGALIAN from here -----
+                  case 101: // latgaliešu līdzskaņu 'automātiskā mīkstināšana' pirms -i un -e
+                    if (celms.endsWith("k")) {
+                      varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ķ", "Mija", "ķ -> k"));
+                    } else if (celms.endsWith("l")) {
+                      varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ļ", "Mija", "ļ -> l"));
+                    } else if (celms.endsWith("n")) {
+                      varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ņ", "Mija", "ņ -> n"));
+                    } else {
+                      varianti.add(new Variants(celms));
+                    }
+                    break;
+          
 				default:
 					System.err.printf("Invalid StemChange ID, stem '%s', stemchange %d\n", celms, mija);
 			}
@@ -883,15 +895,28 @@ public abstract class Mijas {
                         varianti.add(new Variants(celms.substring(0, celms.length()-2)+"iet"));
                     else varianti.add(new Variants(celms));
                     break;
-				case 38: // apstākļa vārdi ar gradāciju
-					varianti.add(new Variants(celms,AttributeNames.i_Degree,AttributeNames.v_Positive));
-					if (celms.endsWith("i") || celms.endsWith("u")) {
-						celms = celms.substring(0, celms.length()-1);
-					}
-					varianti.add(new Variants(celms + "āk",AttributeNames.i_Degree,AttributeNames.v_Comparative));
-					if (pieliktVisPārākoPak)
-						varianti.add(new Variants("vis" + celms + "āk",AttributeNames.i_Degree,AttributeNames.v_Superlative));
-					break;
+                case 38: // apstākļa vārdi ar gradāciju
+                  varianti.add(new Variants(celms,AttributeNames.i_Degree,AttributeNames.v_Positive));
+                  if (celms.endsWith("i") || celms.endsWith("u")) {
+                    celms = celms.substring(0, celms.length()-1);
+                  }
+                  varianti.add(new Variants(celms + "āk",AttributeNames.i_Degree,AttributeNames.v_Comparative));
+                  if (pieliktVisPārākoPak)
+                    varianti.add(new Variants("vis" + celms + "āk",AttributeNames.i_Degree,AttributeNames.v_Superlative));
+                  break;
+
+                  // ------ LATGALIAN from here -----
+                  case 101: // latgaliešu līdzskaņu 'automātiskā mīkstināšana' pirms -i un -e
+                    if (celms.endsWith("ķ")) {
+                      varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "k"));
+                    } else if (celms.endsWith("ļ")) {
+                      varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "l"));
+                    } else if (celms.endsWith("ņ")) {
+                      varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "n"));
+                    } else {
+                      varianti.add(new Variants(celms));
+                    }
+                    break;
 
                 default:
 					System.err.printf("Invalid StemChange ID, stem '%s', stemchange %d\n", celms, mija);
