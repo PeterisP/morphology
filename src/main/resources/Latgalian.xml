@@ -2,7 +2,7 @@
 <Morphology revision="${project.version}" licence="Copyright 2019 Institute of Mathematics and Computer Science, University of Latvia. This file is part of the morphology project at https://github.com/PeterisP/morphology This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program. If not, see http://www.gnu.org/licenses/.">
 	<Corpus FileName="Latgalian_minicore.xml" Type="core"/>
 	<!-- Paradigmu sākotnējā versija no http://genling.spbu.ru/baltist/Publicat/LatgVol1.pdf -->
-	<Paradigm Stems="1" ID="1" Name="noun-1a" LemmaEnding="1" Description="Lietvārdi, 1. deklinācija, vīriešu dzimte, galotne -s (tāvs)" AllowedGuessEndings="">
+	<Paradigm Stems="1" ID="1" Name="noun-1a-ltg" LemmaEnding="1" Description="Lietvārdi, 1. deklinācija, vīriešu dzimte, galotne -s (tāvs)" AllowedGuessEndings="">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="1" Dzimte="Vīriešu"/>
 		<Ending ID="1" StemChange="0" Ending="s" StemID="1" LemmaEnding="1">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
@@ -44,7 +44,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="2" Name="noun-1b" LemmaEnding="14" Description="Lietvārdi, 1. deklinācija, vīriešu dzimte, galotne -ys (kuorklys)" AllowedGuessEndings="">
+	<Paradigm Stems="1" ID="2" Name="noun-1b-ltg" LemmaEnding="14" Description="Lietvārdi, 1. deklinācija, vīriešu dzimte, galotne -ys (kuorklys)" AllowedGuessEndings="">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="1" Dzimte="Vīriešu"/>
 		<Ending ID="14" StemChange="0" Ending="ys" StemID="1" LemmaEnding="14">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
@@ -86,7 +86,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="3" Name="noun-1c" LemmaEnding="27" Description="Lietvārdi, 1. deklinācija, vīriešu dzimte, galotne -š (ceļš)" AllowedGuessEndings="">
+	<Paradigm Stems="1" ID="3" Name="noun-1c-ltg" LemmaEnding="27" Description="Lietvārdi, 1. deklinācija, vīriešu dzimte, galotne -š (ceļš)" AllowedGuessEndings="">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="1" Dzimte="Vīriešu"/>
 		<Ending ID="27" StemChange="0" Ending="š" StemID="1" LemmaEnding="27">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
@@ -125,7 +125,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="4" Name="noun-2a" LemmaEnding="39" Description="Lietvārdi, 2. deklinācija, vīriešu dzimte, galotne -s (bruoļs)" AllowedGuessEndings="">
+	<Paradigm Stems="1" ID="4" Name="noun-2a-ltg" LemmaEnding="39" Description="Lietvārdi, 2. deklinācija, vīriešu dzimte, galotne -s (bruoļs)" AllowedGuessEndings="">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="2" Dzimte="Vīriešu"/>
 		<Ending ID="39" StemChange="0" Ending="s" StemID="1" LemmaEnding="39">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
@@ -164,7 +164,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="5" Name="noun-2b" LemmaEnding="51" Description="Lietvārdi, 2. deklinācija, vīriešu dzimte, galotne -is (kakis)" AllowedGuessEndings="">
+	<Paradigm Stems="1" ID="5" Name="noun-2b-ltg" LemmaEnding="51" Description="Lietvārdi, 2. deklinācija, vīriešu dzimte, galotne -is (kakis)" AllowedGuessEndings="">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="3" Dzimte="Vīriešu"/>
 		<Ending ID="51" StemChange="101" Ending="is" StemID="1" LemmaEnding="51">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
