@@ -423,6 +423,21 @@ public class Lexicon {
 	}
 
 	/**
+	 * Sameklē leksikonā vārdgrupu ar norādīto numuru.
+	 *
+	 * @param name	vārdgrupas vārdiskais identifikators
+	 * @return		atrastā vārdgrupa, vai arī null, ja nav atrasts.
+	 */
+	public Paradigm paradigmByName(String name) {
+		Paradigm rezults = null;
+		for (Paradigm vārdgrupa : paradigms) {
+			if (vārdgrupa.getName() == name)
+				rezults = vārdgrupa;
+		}
+		return rezults;
+	}
+
+	/**
 	 * Sameklē leksikonā galotni ar norādīto numuru.
 	 *
 	 * @param nr	galotnes numurs.
