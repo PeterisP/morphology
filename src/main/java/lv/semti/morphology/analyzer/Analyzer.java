@@ -524,7 +524,7 @@ public class Analyzer extends Lexicon {
 			for (Ending ending : getAllEndings().matchedEndings(word))
 				if (ending.getEnding().length()==i) {
                     Paradigm p = ending.getParadigm();
-                    if (p.getName().equals("Hardcoded"))
+                    if (p.getName().equalsIgnoreCase("hardcoded"))
                         continue; // Hardcoded vārdgrupa minēšanai nav aktuāla
 
                     String stem;

@@ -431,7 +431,7 @@ public class Lexicon {
 	public Paradigm paradigmByName(String name) {
 		Paradigm rezults = null;
 		for (Paradigm vārdgrupa : paradigms) {
-			if (vārdgrupa.getName() == name)
+			if (vārdgrupa.getName().equalsIgnoreCase(name))
 				rezults = vārdgrupa;
 		}
 		return rezults;

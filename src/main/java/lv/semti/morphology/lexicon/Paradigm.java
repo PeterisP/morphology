@@ -30,6 +30,7 @@ import lv.semti.morphology.attributes.*;
 public class Paradigm extends AttributeValues {
 	private Lexicon lexicon;
 	private int id = 0;  // numurs pēc kārtas - ID
+	public String name = ""; // vārdiskais ID
 	private ArrayList < HashMap < String, ArrayList<Lexeme> > > lexemesByStem
 		= new ArrayList <HashMap <String, ArrayList<Lexeme>>>();
 		// 1-3 hashmapi, kuros pēc saknes var atrast tai atbilstošās leksēmas
@@ -52,6 +53,7 @@ public class Paradigm extends AttributeValues {
 		straume.write("<Paradigm");
 		straume.write(" Stems=\""+String.valueOf(stems)+"\"");
 		straume.write(" ID=\""+String.valueOf(id)+"\"");
+		straume.write(" ID=\""+String.valueOf(name)+"\"");
 		if (lemmaEnding != null)
 			straume.write(" LemmaEnding=\""+String.valueOf(lemmaEnding.getID())+"\"");
 		straume.write(" Description=\""+description+"\"");
@@ -97,6 +99,10 @@ public class Paradigm extends AttributeValues {
 		n = node.getAttributes().getNamedItem("ID");
 		if (n != null)
 			this.setID(Integer.parseInt(n.getTextContent()));
+
+		n = node.getAttributes().getNamedItem("Name");
+		if (n != null)
+			this.name = n.getTextContent();
 
 		n = node.getAttributes().getNamedItem("Description");
 		if (n != null)
@@ -276,11 +282,11 @@ public class Paradigm extends AttributeValues {
 	}
 
 	public String getName() {
-		return description;
+		return name;
 	}
 
-	public void setDescription(String name) {
-		this.description = name;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 	public Ending endingByNr(int endingNr) {
