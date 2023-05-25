@@ -170,7 +170,6 @@ public class LatgalianTest {
     @Test
     public void bruoļs() {
         List<Wordform> bruoļs = analyzer.generateInflections("bruoļs");
-        describe(bruoļs);
         AttributeValues testset = new AttributeValues();
         testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
         testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Dative);
@@ -193,8 +192,7 @@ public class LatgalianTest {
 
     @Test
     public void kakis() {
-        List<Wordform> kakis = analyzer.generateInflections("kakis");
-        describe(kakis);
+        List<Wordform> kakis = analyzer.generateInflectionsFromParadigm("kakis", 5);
         AttributeValues testset = new AttributeValues();
         testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
         testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Locative);
@@ -205,7 +203,6 @@ public class LatgalianTest {
     @Test
     public void akmiņs() {
         List<Wordform> akmiņs = analyzer.generateInflections("akmiņs");
-        describe(akmiņs);
         AttributeValues testset = new AttributeValues();
         testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
         testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Locative);
@@ -216,7 +213,6 @@ public class LatgalianTest {
     @Test
     public void Jezus() {
         List<Wordform> Jezus = analyzer.generateInflections("Jezus");
-        describe(Jezus);
         AttributeValues testset = new AttributeValues();
         testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
         testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Genitive);
@@ -224,6 +220,41 @@ public class LatgalianTest {
         assertInflectionMultiple(Jezus, testset, new HashSet<String>(){{ add("Jezus"); add("Jeza");}});
     }
 
-    // TODO izņemt liekos describe
+
+    @Test
+    public void mijas() {
+        AttributeValues vsk_gen = new AttributeValues();
+        vsk_gen.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
+        vsk_gen.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+        vsk_gen.addAttribute(AttributeNames.i_Case, AttributeNames.v_Genitive);
+        AttributeValues vsk_acc = new AttributeValues();
+        vsk_acc.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
+        vsk_acc.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+        vsk_acc.addAttribute(AttributeNames.i_Case, AttributeNames.v_Accusative);
+        AttributeValues dsk_dat = new AttributeValues();
+        dsk_dat.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
+        dsk_dat.addAttribute(AttributeNames.i_Number, AttributeNames.v_Plural);
+        dsk_dat.addAttribute(AttributeNames.i_Case, AttributeNames.v_Dative);
+
+        List<Wordform> kačs = analyzer.generateInflectionsFromParadigm("kačs", 4);
+        assertInflection(kačs, vsk_gen, "kača");
+        assertInflection(kačs, vsk_acc, "kači");
+        assertInflection(kačs, dsk_dat, "kačim");
+        List<Wordform> bruoļs = analyzer.generateInflectionsFromParadigm("bruoļs", 4);
+        assertInflection(bruoļs, vsk_gen, "bruoļa");
+        assertInflection(bruoļs, vsk_acc, "bruoli");
+        assertInflection(bruoļs, dsk_dat, "bruolim");
+        List<Wordform> vecs = analyzer.generateInflectionsFromParadigm("vecs", 4);
+        assertInflection(vecs, vsk_gen, "veča");
+        assertInflection(vecs, vsk_acc, "veci");
+        assertInflection(vecs, dsk_dat, "večim");
+        List<Wordform> bruoleits = analyzer.generateInflectionsFromParadigm("bruoleits", 4);
+        assertInflection(bruoleits, vsk_gen, "bruoleiša");
+        assertInflection(bruoleits, vsk_acc, "bruoleiti");
+        assertInflection(bruoleits, dsk_dat, "bruoleišim");
+        List<Wordform> eļksnis = analyzer.generateInflectionsFromParadigm("eļksnis", 5);
+        assertInflection(eļksnis, vsk_gen, "eļksņa"); // TODO - jāpārbauda vai tā ir pareizi vai nav elkšņa
+
+    }
 }
 

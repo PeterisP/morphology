@@ -434,32 +434,54 @@ public abstract class Mijas {
                   } else varianti.add(new Variants(celms,AttributeNames.i_Degree, AttributeNames.v_Positive));
                   break;
                   // ------ LATGALIAN from here -----
-                  case 101: // latgaliešu līdzskaņu mīkstināšana lietvārdiem, parastās galotnes
-                    if (celms.endsWith("k")) {
-                      varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ķ", "Mija", "k -> ķ"));
-					} else if (celms.endsWith("c")) {
-						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "č", "Mija", "c -> č"));
-					} else if (celms.endsWith("t")) {
-						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "š", "Mija", "t -> š"));
-					} else if (celms.endsWith("l")) {
-                      varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ļ", "Mija", "l -> ļ"));
-                    } else if (celms.endsWith("n")) {
-                      varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ņ", "Mija", "n -> ņ"));
-                    } else {
-                      varianti.add(new Variants(celms));
-                    }
-                    break;
-				  case 102: // latgaliešu līdzskaņu mīkstināšana lietvārdiem, e un i galotnes
-					if (celms.endsWith("k")) {
-						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ķ", "Mija", "k -> ķ"));
-					} else if (celms.endsWith("c")) {
-						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "č", "Mija", "c -> č"));
-					} else if (celms.endsWith("t")) {
-						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "š", "Mija", "t -> š"));
+				  case 100: // latgaliešu 'burtu mija', kur pirms -e un -i (arī -ī?) ļ kļūst par l un ņ par n
+					if (celms.endsWith("l")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ļ", "Mija", "ļ -> l"));
+					} else if (celms.endsWith("n")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ņ", "Mija", "ņ -> n"));
 					} else {
 						varianti.add(new Variants(celms));
 					}
 					break;
+				  case 101: // latgaliešu līdzskaņu mija lietvārdiem, parastās galotnes (izņemot -i un -e)
+                    if (celms.endsWith("ķ")) {
+                      varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "k", "Mija", "k -> ķ"));
+					} else if (celms.endsWith("č")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "c", "Mija", "c -> č"));
+					} else if (celms.endsWith("š")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "t", "Mija", "t -> š"));
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "s", "Mija", "s -> š"));
+					} else if (celms.endsWith("ž")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "d", "Mija", "d -> ž"));
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "z", "Mija", "z -> ž"));
+					} else if (celms.endsWith("ļ")) {
+                        varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "l", "Mija", "l -> ļ"));
+                    } else if (celms.endsWith("ņ")) {
+						// TODO - jautājums vai nav arī sn-šķ elksnim
+                      varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "n", "Mija", "n -> ņ"));
+                    } else {
+                      varianti.add(new Variants(celms));
+                    }
+                    break;
+				  case 102: // latgaliešu līdzskaņu mīkstināšana lietvārdiem, e un i galotnes - TODO
+					  if (celms.endsWith("ķ")) {
+						  varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "k", "Mija", "k -> ķ"));
+					  } else if (celms.endsWith("č")) {
+						  varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "c", "Mija", "c -> č"));
+					  } else if (celms.endsWith("š")) {
+						  varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "t", "Mija", "t -> š"));
+						  varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "s", "Mija", "s -> š"));
+					  } else if (celms.endsWith("ž")) {
+						  varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "d", "Mija", "d -> ž"));
+						  varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "z", "Mija", "z -> ž"));
+					  } else if (celms.endsWith("l")) {
+						  varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ļ", "Mija", "ļ -> l"));
+					  } else if (celms.endsWith("n")) {
+						  varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ņ", "Mija", "ņ -> n"));
+					  } else {
+						  varianti.add(new Variants(celms));
+					  }
+					  break;
           
 				default:
 					System.err.printf("Invalid StemChange ID, stem '%s', stemchange %d\n", celms, mija);
@@ -921,28 +943,53 @@ public abstract class Mijas {
                   break;
 
                   // ------ LATGALIAN from here -----
-                  case 101: // latgaliešu līdzskaņu mīkstināšana lietvārdiem, parastās galotnes
-                    if (celms.endsWith("ķ")) {
-                      varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "k"));
-                    } else if (celms.endsWith("č")) {
-                      varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "c"));
-					} else if (celms.endsWith("š")) {
-						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "t"));
-					} else if (celms.endsWith("ļ")) {
+				  case 100: // latgaliešu 'burtu mija', kur pirms -e un -i (arī -ī?) ļ kļūst par l un ņ par n (bruoļs -> bruoli)
+				    if (celms.endsWith("ļ")) {
 						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "l"));
 					} else if (celms.endsWith("ņ")) {
-                      varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "n"));
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "n"));
+					} else {
+						varianti.add(new Variants(celms));
+					}
+					break;
+                  case 101: // latgaliešu līdzskaņu mīkstināšana lietvārdiem, parastās galotnes
+                    if (celms.endsWith("k")) {
+                      varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ķ"));
+                    } else if (celms.endsWith("c")) {
+                      varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "č"));
+					} else if (celms.endsWith("s")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "š"));
+					} else if (celms.endsWith("t")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "š"));
+					} else if (celms.endsWith("z")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ž"));
+					} else if (celms.endsWith("d")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ž"));
+					} else if (celms.endsWith("l")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ļ"));
+					} else if (celms.endsWith("n")) {
+                      varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ņ"));
                     } else {
                       varianti.add(new Variants(celms));
                     }
                     break;
 				case 102: // latgaliešu līdzskaņu mīkstināšana lietvārdiem, i un e galotnes
-					if (celms.endsWith("ķ")) {
-						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "k"));
-					} else if (celms.endsWith("č")) {
-						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "c"));
-					} else if (celms.endsWith("š")) {
-						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "t"));
+					if (celms.endsWith("k")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ķ"));
+					} else if (celms.endsWith("c")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "č"));
+					} else if (celms.endsWith("s")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "š"));
+					} else if (celms.endsWith("t")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "š"));
+					} else if (celms.endsWith("z")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ž"));
+					} else if (celms.endsWith("d")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ž"));
+					} else if (celms.endsWith("ļ")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "l"));
+					} else if (celms.endsWith("ņ")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "n"));
 					} else {
 						varianti.add(new Variants(celms));
 					}
