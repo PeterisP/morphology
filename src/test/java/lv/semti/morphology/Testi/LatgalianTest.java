@@ -185,5 +185,17 @@ public class LatgalianTest {
         testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
         assertInflection(akmiņs, testset, "akminī");
     }
+
+    @Test
+    public void Jezus() {
+        List<Wordform> Jezus = analyzer.generateInflections("Jezus");
+        describe(Jezus);
+        AttributeValues testset = new AttributeValues();
+        testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
+        testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Genitive);
+        testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+        assertInflection(Jezus, testset, "Jezus");
+        assertInflection(Jezus, testset, "Jeza");
+    }
 }
 

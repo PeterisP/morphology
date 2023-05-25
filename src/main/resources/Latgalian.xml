@@ -203,4 +203,52 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>
+	<Paradigm Stems="1" ID="5" Name="noun-3-ltg" LemmaEnding="63" Description="Lietvārdi vīriešu dzimtē, 3. deklinācija, galotne -us (Jezus)" AllowedGuessEndings="">
+		<Attributes Vārdšķira="Lietvārds" Deklinācija="3" Dzimte="Vīriešu"/>
+		<Ending ID="63" StemChange="0" Ending="us" StemID="1" LemmaEnding="63">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
+		</Ending>
+		<Ending ID="64" StemChange="0" Ending="us" StemID="1" LemmaEnding="63">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Ģenitīvs"/>
+		</Ending>
+		<Ending ID="65" StemChange="0" Ending="a" StemID="1" LemmaEnding="63">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Ģenitīvs"/>
+		</Ending>
+		<Ending ID="66" StemChange="0" Ending="um" StemID="1" LemmaEnding="63">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Datīvs"/>
+		</Ending>
+		<Ending ID="67" StemChange="0" Ending="am" StemID="1" LemmaEnding="63">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Datīvs"/>
+		</Ending>
+		<Ending ID="68" StemChange="0" Ending="u" StemID="1" LemmaEnding="63">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Akuzatīvs"/>
+		</Ending>
+		<Ending ID="69" StemChange="0" Ending="ū" StemID="1" LemmaEnding="63">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Lokatīvs"/>
+		</Ending>
+		<Ending ID="70" StemChange="0" Ending="ā" StemID="1" LemmaEnding="63">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Lokatīvs"/>
+		</Ending>
+		<Ending ID="71" StemChange="0" Ending="u" StemID="1" LemmaEnding="63">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs"/>
+		</Ending>
+		<Ending ID="72" StemChange="101" Ending="i" StemID="1" LemmaEnding="63">
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Nominatīvs"/>
+		</Ending>
+		<Ending ID="73" StemChange="0" Ending="u" StemID="1" LemmaEnding="63">
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Ģenitīvs"/>
+		</Ending>
+		<Ending ID="74" StemChange="101" Ending="im" StemID="1" LemmaEnding="63">
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Datīvs"/>
+		</Ending>
+		<Ending ID="75" StemChange="0" Ending="us" StemID="1" LemmaEnding="63">
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Akuzatīvs"/>
+		</Ending>
+		<Ending ID="75" StemChange="0" Ending="ūs" StemID="1" LemmaEnding="63">
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Lokatīvs"/>
+		</Ending>
+		<Ending ID="76" StemChange="101" Ending="i" StemID="1" LemmaEnding="63">
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
+		</Ending>
+	</Paradigm>
 </Morphology>
