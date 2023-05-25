@@ -159,7 +159,7 @@ public class LatgalianTest {
     @Test
     public void ceļš() {
         List<Wordform> ceļš = analyzer.generateInflections("ceļš");
-        describe(ceļš);
+        //describe(ceļš);
         AttributeValues testset = new AttributeValues();
         testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
         testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Dative);
@@ -182,7 +182,7 @@ public class LatgalianTest {
     public void pasauļs() {
         analyzer.enableGuessing = true;
         List<Wordform> pasauļs = analyzer.generateInflectionsFromParadigm("pasauļs", 4);
-        describe(pasauļs);
+        //describe(pasauļs);
         assertTrue(pasauļs != null && !pasauļs.isEmpty());
         AttributeValues testset = new AttributeValues();
         testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
