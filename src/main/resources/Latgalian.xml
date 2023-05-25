@@ -203,7 +203,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="5" Name="noun-3-ltg" LemmaEnding="63" Description="Lietvārdi vīriešu dzimtē, 3. deklinācija, galotne -us (Jezus)" AllowedGuessEndings="">
+	<Paradigm Stems="1" ID="6" Name="noun-3-ltg" LemmaEnding="63" Description="Lietvārdi vīriešu dzimtē, 3. deklinācija, galotne -us (Jezus)" AllowedGuessEndings="">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="3" Dzimte="Vīriešu"/>
 		<Ending ID="63" StemChange="0" Ending="us" StemID="1" LemmaEnding="63">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>

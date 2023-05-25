@@ -165,6 +165,19 @@ public class LatgalianTest {
     }
 
     @Test
+    public void pasauļs() {
+        analyzer.enableGuessing = true;
+        List<Wordform> pasauļs = analyzer.generateInflectionsFromParadigm("pasauļs", 4);
+        describe(pasauļs);
+        assertTrue(pasauļs != null && !pasauļs.isEmpty());
+        AttributeValues testset = new AttributeValues();
+        testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
+        testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Accusative);
+        testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+        assertInflection(pasauļs, testset, "pasauli");
+    }
+
+    @Test
     public void kakis() {
         List<Wordform> kakis = analyzer.generateInflections("kakis");
         describe(kakis);
@@ -196,6 +209,7 @@ public class LatgalianTest {
         testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
         assertInflection(Jezus, testset, "Jezus");
         assertInflection(Jezus, testset, "Jeza");
+        // TODO
     }
 }
 
