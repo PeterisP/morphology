@@ -75,6 +75,20 @@ public class LatgalianTest {
         assertTrue(found);
     }
 
+    private void assertInflectionMultiple(List<Wordform> forms, AttributeValues testset, Set<String> validForms) {
+        HashSet<String> foundCorrect = new HashSet<>();
+        HashSet<String> foundOther = new HashSet<>();
+        for (Wordform wf : forms) {
+            if (wf.isMatchingWeak(testset)) {
+                if (validForms.contains(wf.getToken())) foundCorrect.add(wf.getToken());
+                else foundOther.add(wf.getToken());
+            }
+        }
+
+        assertTrue(foundOther.isEmpty());
+        assertEquals(validForms.size(), foundCorrect.size());
+    }
+
     private void assertLemma(String word, String expectedLemma) {
         Word analysis = analyzer.analyze(word);
         if (!analysis.isRecognized())
@@ -207,9 +221,9 @@ public class LatgalianTest {
         testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
         testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Genitive);
         testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
-        assertInflection(Jezus, testset, "Jezus");
-        assertInflection(Jezus, testset, "Jeza");
-        // TODO
+        assertInflectionMultiple(Jezus, testset, new HashSet<String>(){{ add("Jezus"); add("Jeza");}});
     }
+
+    // TODO izņemt liekos describe
 }
 
