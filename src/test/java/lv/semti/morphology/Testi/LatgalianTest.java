@@ -253,7 +253,9 @@ public class LatgalianTest {
         assertInflection(bruoleits, vsk_acc, "bruoleiti");
         assertInflection(bruoleits, dsk_dat, "bruoleišim");
         List<Wordform> eļksnis = analyzer.generateInflectionsFromParadigm("eļksnis", 5);
-        assertInflection(eļksnis, vsk_gen, "eļksņa"); // TODO - jāpārbauda vai tā ir pareizi vai nav elkšņa
+        assertInflection(eļksnis, vsk_gen, "eļkšņa");
+        assertInflection(eļksnis, vsk_acc, "eļksni");
+        assertInflection(eļksnis, dsk_dat, "eļkšnim");
 
     }
 }

@@ -421,20 +421,21 @@ public abstract class Mijas {
                         varianti.add(new Variants(celms.substring(0,celms.length()-3)+"ej"));
                     break;
                 case 38: // Apstākļa vārdi ar gradāciju
-                  if (celms.endsWith("āk") && celms.length() > 3) {
-                    if (celms.startsWith("vis")) {
-                      varianti.add(new Variants(celms.substring(3,celms.length()-2),AttributeNames.i_Degree,AttributeNames.v_Superlative));
-                      varianti.add(new Variants(celms.substring(3,celms.length()-2) + "i",AttributeNames.i_Degree,AttributeNames.v_Superlative));
-                      varianti.add(new Variants(celms.substring(3,celms.length()-2) + "u",AttributeNames.i_Degree,AttributeNames.v_Superlative));
-                    } else {
-                      varianti.add(new Variants(celms.substring(0,celms.length()-2),AttributeNames.i_Degree,AttributeNames.v_Comparative));
-                      varianti.add(new Variants(celms.substring(0,celms.length()-2) + "i",AttributeNames.i_Degree,AttributeNames.v_Comparative));
-                      varianti.add(new Variants(celms.substring(0,celms.length()-2) + "u",AttributeNames.i_Degree,AttributeNames.v_Comparative));
-                    }
-                  } else varianti.add(new Variants(celms,AttributeNames.i_Degree, AttributeNames.v_Positive));
-                  break;
-                  // ------ LATGALIAN from here -----
-				  case 100: // latgaliešu 'burtu mija', kur pirms -e, -i, -ī, -ē, -ie ļ, ņ, ķ, ģ kļūst par l, n, k, g
+					if (celms.endsWith("āk") && celms.length() > 3) {
+                    	if (celms.startsWith("vis")) {
+                      		varianti.add(new Variants(celms.substring(3,celms.length()-2),AttributeNames.i_Degree,AttributeNames.v_Superlative));
+                      		varianti.add(new Variants(celms.substring(3,celms.length()-2) + "i",AttributeNames.i_Degree,AttributeNames.v_Superlative));
+                      		varianti.add(new Variants(celms.substring(3,celms.length()-2) + "u",AttributeNames.i_Degree,AttributeNames.v_Superlative));
+						} else {
+						  	varianti.add(new Variants(celms.substring(0,celms.length()-2),AttributeNames.i_Degree,AttributeNames.v_Comparative));
+						  	varianti.add(new Variants(celms.substring(0,celms.length()-2) + "i",AttributeNames.i_Degree,AttributeNames.v_Comparative));
+						  	varianti.add(new Variants(celms.substring(0,celms.length()-2) + "u",AttributeNames.i_Degree,AttributeNames.v_Comparative));
+						}
+                  	} else varianti.add(new Variants(celms,AttributeNames.i_Degree, AttributeNames.v_Positive));
+                  	break;
+
+				// ------ LATGALIAN from here -----
+				case 100: // latgaliešu 'burtu mija', kur pirms -e, -i, -ī, -ē, -ie ļ, ņ, ķ, ģ kļūst par l, n, k, g
 					if (celms.endsWith("l")) {
 						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ļ", "Mija", "ļ -> l"));
 					} else if (celms.endsWith("n")) {
@@ -447,9 +448,50 @@ public abstract class Mijas {
 						varianti.add(new Variants(celms));
 					}
 					break;
-				  case 101: // latgaliešu līdzskaņu mija lietvārdiem, parastās galotnes (izņemot -i un -e)
-                    if (celms.endsWith("ķ")) {
-                      varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "k", "Mija", "k -> ķ"));
+				case 101: // latgaliešu līdzskaņu mija lietvārdiem, parastās galotnes (izņemot -i, -e, -ī, -ē, -ie, -ei)
+					// Mijas no Leikumas "Vasals!"
+					if (celms.endsWith("šļ")) {
+						  varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "sl", "Mija", "sl -> šļ"));
+					} else if (celms.endsWith("žļ")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "zl", "Mija", "zl -> žļ"));
+					} else if (celms.endsWith("šņ")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "sn", "Mija", "sn -> šņ"));
+					} else if (celms.endsWith("žņ")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "zn", "Mija", "zn -> žņ"));
+					} else if (celms.endsWith("č")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "c", "Mija", "c -> č"));
+					} else if (celms.endsWith("ž")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "d", "Mija", "d -> ž"));
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "z", "Mija", "z -> ž"));
+					} else if (celms.endsWith("š")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "t", "Mija", "t -> š"));
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "s", "Mija", "s -> š"));
+					// Citas mijas
+					} else if (celms.endsWith("ķ")) { // Andronovs?
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "k", "Mija", "k -> ķ"));
+					} else if (celms.endsWith("ļ")) {
+                        varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "l", "Mija", "l -> ļ"));
+                    } else if (celms.endsWith("ņ")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "n", "Mija", "n -> ņ"));
+                    } else {
+						varianti.add(new Variants(celms));
+                    }
+                    break;
+				case 102: // latgaliešu līdzskaņu mīkstināšana lietvārdiem, e, i, ē, ī, ie galotnes
+					// Burtu miju ietekmētās vairāksimbolu mijas
+					if (celms.endsWith("šl")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "šļ", "Mija", "šļ -> šl"));
+						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "sl", "Mija", "sl -> šl"));
+					} else if (celms.endsWith("žl")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "žļ", "Mija", "žļ -> žl"));
+						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "zl", "Mija", "zl -> žl"));
+					} else if (celms.endsWith("šn")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "šņ", "Mija", "šņ -> šn"));
+						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "sn", "Mija", "sn -> šn"));
+					} else if (celms.endsWith("žn")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "žņ", "Mija", "žņ -> žn"));
+						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "zn", "Mija", "zn -> žn"));
+					// Parastās, mijīgās, mijas
 					} else if (celms.endsWith("č")) {
 						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "c", "Mija", "c -> č"));
 					} else if (celms.endsWith("š")) {
@@ -458,38 +500,19 @@ public abstract class Mijas {
 					} else if (celms.endsWith("ž")) {
 						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "d", "Mija", "d -> ž"));
 						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "z", "Mija", "z -> ž"));
-					} else if (celms.endsWith("ļ")) {
-                        varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "l", "Mija", "l -> ļ"));
-                    } else if (celms.endsWith("ņ")) {
-						// TODO - jautājums vai nav arī sn-šķ elksnim
-                      varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "n", "Mija", "n -> ņ"));
-                    } else {
-                      varianti.add(new Variants(celms));
-                    }
-                    break;
-				  case 102: // latgaliešu līdzskaņu mīkstināšana lietvārdiem, e, i, ē, ī, ie galotnes
-					  // Parastās, mijīgās, mijas
-					  if (celms.endsWith("č")) {
-						  varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "c", "Mija", "c -> č"));
-					  } else if (celms.endsWith("š")) {
-						  varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "t", "Mija", "t -> š"));
-						  varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "s", "Mija", "s -> š"));
-					  } else if (celms.endsWith("ž")) {
-						  varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "d", "Mija", "d -> ž"));
-						  varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "z", "Mija", "z -> ž"));
-					  // Burtu miju ietekmētais
-					  } else if (celms.endsWith("l")) {
-						  varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ļ", "Mija", "ļ -> l"));
-					  } else if (celms.endsWith("n")) {
-						  varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ņ", "Mija", "ņ -> n"));
-					  } else if (celms.endsWith("k")) {
-						  varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ķ", "Mija", "ķ -> k"));
-					  } else if (celms.endsWith("g")) {
-						  varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ģ", "Mija", "ģ -> g"));
-					  } else {
-						  varianti.add(new Variants(celms));
-					  }
-					  break;
+					// Burtu miju ietekmētās viensimbola mijas
+					} else if (celms.endsWith("l")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ļ", "Mija", "ļ -> l"));
+					} else if (celms.endsWith("n")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ņ", "Mija", "ņ -> n"));
+					} else if (celms.endsWith("k")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ķ", "Mija", "ķ -> k"));
+					} else if (celms.endsWith("g")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ģ", "Mija", "ģ -> g"));
+					} else {
+						varianti.add(new Variants(celms));
+					}
+					break;
           
 				default:
 					System.err.printf("Invalid StemChange ID, stem '%s', stemchange %d\n", celms, mija);
@@ -941,17 +964,17 @@ public abstract class Mijas {
                     else varianti.add(new Variants(celms));
                     break;
                 case 38: // apstākļa vārdi ar gradāciju
-                  varianti.add(new Variants(celms,AttributeNames.i_Degree,AttributeNames.v_Positive));
-                  if (celms.endsWith("i") || celms.endsWith("u")) {
-                    celms = celms.substring(0, celms.length()-1);
-                  }
-                  varianti.add(new Variants(celms + "āk",AttributeNames.i_Degree,AttributeNames.v_Comparative));
-                  if (pieliktVisPārākoPak)
-                    varianti.add(new Variants("vis" + celms + "āk",AttributeNames.i_Degree,AttributeNames.v_Superlative));
-                  break;
+					varianti.add(new Variants(celms,AttributeNames.i_Degree,AttributeNames.v_Positive));
+                  	if (celms.endsWith("i") || celms.endsWith("u")) {
+                    	celms = celms.substring(0, celms.length()-1);
+                  	}
+                  	varianti.add(new Variants(celms + "āk",AttributeNames.i_Degree,AttributeNames.v_Comparative));
+                  	if (pieliktVisPārākoPak)
+                    	varianti.add(new Variants("vis" + celms + "āk",AttributeNames.i_Degree,AttributeNames.v_Superlative));
+                  	break;
 
-                  // ------ LATGALIAN from here -----
-				  case 100: // // latgaliešu 'burtu mija', kur pirms -e, -i, -ī, -ē, -ie ļ, ņ, ķ, ģ kļūst par l, n, k, g (bruoļs -> bruoli)
+				// ------ LATGALIAN from here -----
+				case 100: // // latgaliešu 'burtu mija', kur pirms -e, -i, -ī, -ē, -ie ļ, ņ, ķ, ģ kļūst par l, n, k, g (bruoļs -> bruoli)
 				    if (celms.endsWith("ļ")) {
 						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "l"));
 					} else if (celms.endsWith("ņ")) {
@@ -964,19 +987,29 @@ public abstract class Mijas {
 						varianti.add(new Variants(celms));
 					}
 					break;
-                  case 101: // latgaliešu līdzskaņu mīkstināšana lietvārdiem, parastās galotnes
-                    if (celms.endsWith("k")) {
-                      varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ķ"));
-                    } else if (celms.endsWith("c")) {
-                      varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "č"));
+                case 101: // latgaliešu līdzskaņu mija lietvārdiem, parastās galotnes (izņemot -i, -e, -ī, -ē, -ie, -ei)
+					// Mijas no Leikumas "Vasals!"
+					if (celms.endsWith("sl")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "šļ"));
+					} else if (celms.endsWith("zl")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "žļ"));
+					} else if (celms.endsWith("sn")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "šņ"));
+					} else if (celms.endsWith("zn")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "žņ"));
+					} else if (celms.endsWith("c")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "č"));
+					} else if (celms.endsWith("d")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ž"));
 					} else if (celms.endsWith("s")) {
 						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "š"));
 					} else if (celms.endsWith("t")) {
 						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "š"));
 					} else if (celms.endsWith("z")) {
 						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ž"));
-					} else if (celms.endsWith("d")) {
-						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ž"));
+					// Citas mijas
+					} else if (celms.endsWith("k")) { // Andronovs?
+                      varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ķ"));
 					} else if (celms.endsWith("l")) {
 						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ļ"));
 					} else if (celms.endsWith("n")) {
@@ -986,8 +1019,17 @@ public abstract class Mijas {
                     }
                     break;
 				case 102: // // latgaliešu līdzskaņu mīkstināšana lietvārdiem, e, i, ē, ī, ie galotnes
+					// Burtu miju ietekmētās vairāksimbolu mijas
+					if (celms.endsWith("šļ") || celms.endsWith("sl")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "šl"));
+					} else if (celms.endsWith("žļ") || celms.endsWith("zl")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "žl"));
+					} else if (celms.endsWith("šņ") || celms.endsWith("sn")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "šn"));
+					} else if (celms.endsWith("žņ") || celms.endsWith("zn")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "žn"));
 					// Parastās, mijīgās, mijas
-					if (celms.endsWith("c")) {
+					} else if (celms.endsWith("c")) {
 						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "č"));
 					} else if (celms.endsWith("s")) {
 						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "š"));
@@ -997,7 +1039,7 @@ public abstract class Mijas {
 						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ž"));
 					} else if (celms.endsWith("d")) {
 						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ž"));
-					// Burtu miju ietekmētais
+					// Burtu miju ietekmētās viensimbola mijas
 					} else if (celms.endsWith("ļ")) {
 						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "l"));
 					} else if (celms.endsWith("ņ")) {
