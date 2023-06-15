@@ -21927,8 +21927,8 @@ atrakcijā	ncfsl4	atrakcija	m-p6552-p5s1w13
 </s>
 <s>
 Viņa	pp3fsnn	viņa	m-d178-p447s1w1
-bija	vcnis_i30an	būt	m-d178-p447s1w2
-simtreiz	r0_n	simtreiz	m-d178-p447s1w3
+bija	vcnisii30an	būt	m-d178-p447s1w2
+simtreiz	r0qn	simtreiz	m-d178-p447s1w3
 spējīgāka	affsnnc	spējīgs	m-d178-p447s1w4
 nekā	cs	nekā	m-d178-p447s1w5
 es	pp10snn	es	m-d178-p447s1w6
@@ -21937,8 +21937,8 @@ es	pp10snn	es	m-d178-p447s1w6
 </s>
 <s>
 Viņai	pp3fsdn	viņa	m-d178-p447s2w1
-viegli	rp_n	viegli	m-d178-p447s2w2
-padevās	vmyis_i30an	padoties	m-d178-p447s2w3
+viegli	rpmn	viegli	m-d178-p447s2w2
+padevās	vmyisii30an	padoties	m-d178-p447s2w3
 dejošana	ncfsn4	dejošana	m-d178-p447s2w4
 <g />
 ,	zc	,	m-d178-p447s2w5
@@ -23189,20 +23189,20 @@ kājām	ncfpd4	kāja	m-p6616-p4s1w24
 .	zs	.	m-p6616-p4s1w25
 </s>
 <s>
-Neliegšos	vmyif_11say	liegties	m-d176-p21s1w1
+Neliegšos	vmyifi11say	liegties	m-d176-p21s1w1
 –	zd	–	m-d176-p21s1w2
 man	pp10sdn	es	m-d176-p21s1w3
-patīk	vmnipi130an	patikt	m-d176-p21s1w4
+patīk	vonipi130an	patikt	m-d176-p21s1w4
 rakstīt	vmnn0t3000n	rakstīt	m-d176-p21s1w5
 <g />
 ,	zc	,	m-d176-p21s1w6
 un	cc	un	m-d176-p21s1w7
-daudzreiz	r0_n	daudzreiz	m-d176-p21s1w8
+daudzreiz	r0tn	daudzreiz	m-d176-p21s1w8
 tas	pd3msnn	tas	m-d176-p21s1w9
-padodas	vmyip_i30an	padoties	m-d176-p21s1w10
-viegli	rp_n	viegli	m-d176-p21s1w11
+padodas	vmyipii30an	padoties	m-d176-p21s1w10
+viegli	rpmn	viegli	m-d176-p21s1w11
 un	cc	un	m-d176-p21s1w12
-dabiski	rp_n	dabiski	m-d176-p21s1w13
+dabiski	rpmn	dabiski	m-d176-p21s1w13
 <g />
 .	zs	.	m-d176-p21s1w14
 </s>
@@ -23218,7 +23218,7 @@ kuros	pr0mpln	kurš	m-d176-p21s2w7
 ar	spsa	ar	m-d176-p21s2w8
 lielu	affsanp	liels	m-d176-p21s2w9
 patiku	ncfsa4	patika	m-d176-p21s2w10
-esmu	vcnip_i1san	būt	m-d176-p21s2w11
+esmu	vcnipii1san	būt	m-d176-p21s2w11
 aiz	spsg	aiz	m-d176-p21s2w12
 apkakles	ncfsg5	apkakle	m-d176-p21s2w13
 pakratījis	vmnpdmsnasnpn	pakratīt	m-d176-p21s2w14
@@ -23239,8 +23239,8 @@ ik	q	ik	m-d176-p21s3w4
 reizi	ncfsa5	reize	m-d176-p21s3w5
 <g />
 ,	zc	,	m-d176-p21s3w6
-kad	r0_n	kad	m-d176-p21s3w7
-atkal	r0_n	atkal	m-d176-p21s3w8
+kad	r0tn	kad	m-d176-p21s3w7
+atkal	r0tn	atkal	m-d176-p21s3w8
 kāds	pi0msnn	kāds	m-d176-p21s3w9
 velta	vmnipt330an	veltīt	m-d176-p21s3w10
 labus	afmpanp	labs	m-d176-p21s3w11
@@ -23254,7 +23254,7 @@ Piedzīvojumi	ncmpn1	piedzīvojums	m-d176-p21s3w17
 <g />
 ”	zq	"	m-d176-p21s3w18
 –	zd	–	m-d176-p21s3w19
-staroju	vmnip_21san	starot	m-d176-p21s3w20
+staroju	vmnipi21san	starot	m-d176-p21s3w20
 priekā	ncmsl1	prieks	m-d176-p21s3w21
 un	cc	un	m-d176-p21s3w22
 pateicībā	ncfsl4	pateicība	m-d176-p21s3w23
@@ -43537,6 +43537,1977 @@ bojā	r0pn	bojā	m-p12841-p1s1w11
 šoferis	ncmsn2	šoferis	m-p12841-p1s1w12
 <g />
 .	zs	.	m-p12841-p1s1w13
+</s>
+<s>
+Pagaidu	nc00gg	pagaidu	m-p134-p1s1w1
+noregulējums	ncmsn1	noregulējums	m-p134-p1s1w2
+administratīvajā	afmslyp	administratīvs	m-p134-p1s1w3
+procesā	ncmsl1	process	m-p134-p1s1w4
+</s>
+<s>
+Francijā	npfsl4	Francija	m-p134-p2s1w1
+tiek	vanipi130an	tikt	m-p134-p2s1w2
+uzskatīts	vmnpdmsnpsnpn	uzskatīt	m-p134-p2s1w3
+<g />
+,	zc	,	m-p134-p2s1w4
+ka	cs	ka	m-p134-p2s1w5
+administratīvā	armsgyp	administratīvs	m-p134-p2s1w6
+akta	ncmsg1	akts	m-p134-p2s1w7
+darbības	ncfsg4	darbība	m-p134-p2s1w8
+apturēšana	ncfsn4	apturēšana	m-p134-p2s1w9
+var	vonipi330an	varēt	m-p134-p2s1w10
+tikt	vann0i1000n	tikt	m-p134-p2s1w11
+piemērota	vmnpdfsnpsnpn	piemērot	m-p134-p2s1w12
+ne	cc	ne	m-p134-p2s1w13
+tikai	q	tikai	m-p134-p2s1w14
+attiecībā	ncfsl4	attiecība	m-p134-p2s1w15
+uz	spsa	uz	m-p134-p2s1w16
+"	zq	"	m-p134-p2s1w17
+<g />
+pozitīvu	afmsanp	pozitīvs	m-p134-p2s1w18
+lēmumu	ncmsa1	lēmums	m-p134-p2s1w19
+<g />
+"	zq	"	m-p134-p2s1w20
+<g />
+,	zc	,	m-p134-p2s1w21
+bet	cc	bet	m-p134-p2s1w22
+arī	q	arī	m-p134-p2s1w23
+attiecībā	ncfsl4	attiecība	m-p134-p2s1w24
+uz	spsa	uz	m-p134-p2s1w25
+lēmumu	ncmsa1	lēmums	m-p134-p2s1w26
+-	zd	-	m-p134-p2s1w27
+atteikšanos	ncfsar	atteikšanās	m-p134-p2s1w28
+izlemt	vmnn0t1000n	izlemt	m-p134-p2s1w29
+par	sppd	par	m-p134-p2s1w30
+labu	afmsanp	labs	m-p134-p2s1w31
+iesniedzējam	ncmsd1	iesniedzējs	m-p134-p2s1w32
+<g />
+,	zc	,	m-p134-p2s1w33
+kad	r0tn	kad	m-p134-p2s1w34
+šāds	pd0msnn	šāds	m-p134-p2s1w35
+lēmums	ncmsn1	lēmums	m-p134-p2s1w36
+groza	vmnipt330an	grozīt	m-p134-p2s1w37
+vai	cc	vai	m-p134-p2s1w38
+maina	vmnipt330an	mainīt	m-p134-p2s1w39
+(	zb	(	m-p134-p2s1w40
+<g />
+tiesiski	rpmn	tiesiski	m-p134-p2s1w41
+vai	cc	vai	m-p134-p2s1w42
+faktiski	r0mn	faktiski	m-p134-p2s1w43
+<g />
+)	zb	)	m-p134-p2s1w44
+iesniedzēja	ncmsg1	iesniedzējs	m-p134-p2s1w45
+situāciju	ncfsa4	situācija	m-p134-p2s1w46
+<g />
+.	zs	.	m-p134-p2s1w47
+</s>
+<s>
+Piemēram	ncmsd1	piemērs	m-p134-p3s1w1
+<g />
+,	zc	,	m-p134-p3s1w2
+nereti	r0tn	nereti	m-p134-p3s1w3
+pilntiesīgs	afmsnnp	pilntiesīgs	m-p134-p3s1w4
+ieceļotājs	ncmsn1	ieceļotājs	m-p134-p3s1w5
+Francijā	npfsl4	Francija	m-p134-p3s1w6
+nedrīkst	vonipi330ay	drīkstēt	m-p134-p3s1w7
+vairāk	rcqn	daudz	m-p134-p3s1w8
+Francijā	npfsl4	Francija	m-p134-p3s1w9
+tiesiski	rpmn	tiesiski	m-p134-p3s1w10
+uzturēties	vmyn0i3000n	uzturēties	m-p134-p3s1w11
+<g />
+,	zc	,	m-p134-p3s1w12
+ja	cs	ja	m-p134-p3s1w13
+vien	q	vien	m-p134-p3s1w14
+viņš	pp3msnn	viņš	m-p134-p3s1w15
+neiegūst	vmnipt130ay	iegūt	m-p134-p3s1w16
+carte	xf	carte	m-p134-p3s1w17
+de	xf	de	m-p134-p3s1w18
+séjour	xf	séjour	m-p134-p3s1w19
+noteiktā	vmnpdmslpsnpn	noteikt	m-p134-p3s1w20
+periodā	ncmsl1	periods	m-p134-p3s1w21
+<g />
+.	zs	.	m-p134-p3s1w22
+</s>
+<s>
+Ja	cs	ja	m-p134-p3s2w1
+šādas	pd0fsgn	šāda	m-p134-p3s2w2
+carte	xf	carte	m-p134-p3s2w3
+de	xf	de	m-p134-p3s2w4
+séjour	xf	séjour	m-p134-p3s2w5
+izdošana	ncfsn4	izdošana	m-p134-p3s2w6
+tiek	vanipi130an	tikt	m-p134-p3s2w7
+atteikta	vmnpdfsnpsnpn	atteikt	m-p134-p3s2w8
+<g />
+,	zc	,	m-p134-p3s2w9
+ieceļotājs	ncmsn1	ieceļotājs	m-p134-p3s2w10
+automātiski	rpmn	automātiski	m-p134-p3s2w11
+kļūst	vtnipt130an	kļūt	m-p134-p3s2w12
+par	spsa	par	m-p134-p3s2w13
+nelikumīgu	armsanp	nelikumīgs	m-p134-p3s2w14
+ieceļotāju	ncmsa1	ieceļotājs	m-p134-p3s2w15
+brīdī	ncmsl2	brīdis	m-p134-p3s2w16
+<g />
+,	zc	,	m-p134-p3s2w17
+kad	r0tn	kad	m-p134-p3s2w18
+beidzas	vmyipi130an	beigties	m-p134-p3s2w19
+jaunas	affsgnp	jauns	m-p134-p3s2w20
+uzturēšanās	ncfsgr	uzturēšanās	m-p134-p3s2w21
+atļaujas	ncfsg4	atļauja	m-p134-p3s2w22
+iegūšanas	ncfsg4	iegūšana	m-p134-p3s2w23
+termiņš	ncmsn1	termiņš	m-p134-p3s2w24
+<g />
+,	zc	,	m-p134-p3s2w25
+ja	cs	ja	m-p134-p3s2w26
+vien	q	vien	m-p134-p3s2w27
+lēmums	ncmsn1	lēmums	m-p134-p3s2w28
+<g />
+,	zc	,	m-p134-p3s2w29
+ar	spsa	ar	m-p134-p3s2w30
+kuru	pq0msan	kurš	m-p134-p3s2w31
+atteikts	vmnpdmsnpsnpn	atteikt	m-p134-p3s2w32
+izdot	vmnn0ti000n	izdot	m-p134-p3s2w33
+carte	xf	carte	m-p134-p3s2w34
+de	xf	de	m-p134-p3s2w35
+séjour	xf	séjour	m-p134-p3s2w36
+,	zc	,	m-p134-p3s2w40
+tiek	vanipi130an	tikt	m-p134-p3s2w37
+apturēts	vmnpdmsnpsnpn	apturēt	m-p134-p3s2w38
+<g />
+.	zs	.	m-p134-p3s2w39
+</s>
+<s>
+Šādā	pd0fsln	šāda	m-p134-p4s1w1
+gadījumā	ncmsl1	gadījums	m-p134-p4s1w2
+netieši	rpmn	netieši	m-p134-p4s1w3
+administrācija	ncfsn4	administrācija	m-p134-p4s1w4
+ir	vcnipii30an	būt	m-p134-p4s1w5
+spiesta	vmnpdfsnpsnpn	spiest	m-p134-p4s1w6
+pieņemt	vmnn0t1000n	pieņemt	m-p134-p4s1w7
+pagaidu	nc00gg	pagaidu	m-p134-p4s1w8
+lēmumu	ncmsa1	lēmums	m-p134-p4s1w9
+par	spsd	par	m-p134-p4s1w10
+labu	afmsanp	labs	m-p134-p4s1w11
+iesniedzējam	ncmsd1	iesniedzējs	m-p134-p4s1w12
+<g />
+.	zs	.	m-p134-p4s1w13
+</s>
+<s>
+Taču	cc	taču	m-p134-p4s2w1
+sursis	xf	sursis	m-p134-p4s2w2
+(	zb	(	m-p134-p4s2w3
+<g />
+apturēšana	ncfsn4	apturēšana	m-p134-p4s2w4
+<g />
+)	zb	)	m-p134-p4s2w5
+Francijas	npfsg4	Francija	m-p134-p4s2w6
+tiesībās	ncfpl4	tiesība	m-p134-p4s2w7
+netiks	vanift130ay	tikt	m-p134-p4s2w8
+piemērota	vmnpdfsnpsnpn	piemērot	m-p134-p4s2w9
+<g />
+,	zc	,	m-p134-p4s2w10
+ja	cs	ja	m-p134-p4s2w11
+tiks	vanifi130an	tikt	m-p134-p4s2w12
+noraidīts	vmnpdmsnpsnpn	noraidīt	m-p134-p4s2w13
+iesniegums	ncmsn1	iesniegums	m-p134-p4s2w14
+par	spsa	par	m-p134-p4s2w15
+plānotas	vmnpdfsgpsnpn	plānot	m-p134-p4s2w16
+un	cc	un	m-p134-p4s2w17
+jaunas	affsgnp	jauns	m-p134-p4s2w18
+atļaujas	ncfsg4	atļauja	m-p134-p4s2w19
+saņemšanu	ncfsa4	saņemšana	m-p134-p4s2w20
+<g />
+,	zc	,	m-p134-p4s2w21
+jo	cs	jo	m-p134-p4s2w22
+iesniedzēja	ncmsg1	iesniedzējs	m-p134-p4s2w23
+situācija	ncfsn4	situācija	m-p134-p4s2w24
+ar	spsa	ar	m-p134-p4s2w25
+šādu	pd0msan	šāds	m-p134-p4s2w26
+atteikumu	ncmsa1	atteikums	m-p134-p4s2w27
+netiek	vanipt130ay	tikt	m-p134-p4s2w28
+izmainīta	vmnpdfsnpsnpn	izmainīt	m-p134-p4s2w29
+<g />
+.	zs	.	m-p134-p4s2w30
+</s>
+<s>
+Tādējādi	r0mn	tādējādi	m-p134-p5s1w1
+redzams	vmnpdmsnppnpn	redzēt	m-p134-p5s1w2
+<g />
+,	zc	,	m-p134-p5s1w3
+ka	cs	ka	m-p134-p5s1w4
+Francijā	npfsl4	Francija	m-p134-p5s1w5
+administratīvā	armsgyp	administratīvs	m-p134-p5s1w6
+akta	ncmsg1	akts	m-p134-p5s1w7
+darbības	ncfsg4	darbība	m-p134-p5s1w8
+apturēšana	ncfsn4	apturēšana	m-p134-p5s1w9
+tiek	vanipi130an	tikt	m-p134-p5s1w10
+piemērota	vmnpdfsnpsnpn	piemērot	m-p134-p5s1w11
+arī	q	arī	m-p134-p5s1w12
+gadījumos	ncmpl1	gadījums	m-p134-p5s1w13
+un	cc	un	m-p134-p5s1w14
+attiecībā	ncfsl4	attiecība	m-p134-p5s1w15
+uz	spsa	uz	m-p134-p5s1w16
+nelabvēlīgu	afmsanp	nelabvēlīgs	m-p134-p5s1w17
+administratīvu	armsanp	administratīvs	m-p134-p5s1w18
+aktu	ncmsa1	akts	m-p134-p5s1w19
+<g />
+,	zc	,	m-p134-p5s1w20
+kad	r0tn	kad	m-p134-p5s1w21
+ir	vcnipii30an	būt	m-p134-p5s1w22
+noraidīts	vmnpdmsnpsnpn	noraidīt	m-p134-p5s1w23
+iesniegums	ncmsn1	iesniegums	m-p134-p5s1w24
+par	spsa	par	m-p134-p5s1w25
+labvēlīga	afmsgnp	labvēlīgs	m-p134-p5s1w26
+administratīva	armsgnp	administratīvs	m-p134-p5s1w27
+akta	ncmsg1	akts	m-p134-p5s1w28
+izdošanu	ncfsa4	izdošana	m-p134-p5s1w29
+<g />
+,	zc	,	m-p134-p5s1w30
+respektīvi	r0cn	respektīvi	m-p134-p5s1w31
+<g />
+,	zc	,	m-p134-p5s1w32
+Francijā	npfsl4	Francija	m-p134-p5s1w33
+netiek	vanipt130ay	tikt	m-p134-p5s1w34
+izšķirts	vmnpdmsnpsnpn	izšķirt	m-p134-p5s1w35
+pagaidu	nc00gg	pagaidu	m-p134-p5s1w36
+noregulējuma	ncmsg1	noregulējums	m-p134-p5s1w37
+līdzeklis	ncmsn2	līdzeklis	m-p134-p5s1w38
+un	cc	un	m-p134-p5s1w39
+tiek	vanipi130an	tikt	m-p134-p5s1w40
+paplašināti	rpmn	paplašināti	m-p134-p5s1w41
+tulkots	vmnpdmsnpsnpn	tulkot	m-p134-p5s1w42
+un	cc	un	m-p134-p5s1w43
+izprasts	vmnpdmsnpsnpn	izprast	m-p134-p5s1w44
+administratīvā	armsgyp	administratīvs	m-p134-p5s1w45
+akta	ncmsg1	akts	m-p134-p5s1w46
+darbības	ncfsg4	darbība	m-p134-p5s1w47
+apturēšanas	ncfsg4	apturēšana	m-p134-p5s1w48
+institūts	ncmsn1	institūts	m-p134-p5s1w49
+<g />
+.	zs	.	m-p134-p5s1w50
+</s>
+<s>
+Savukārt	r0cn	savukārt	m-p134-p6s1w1
+Vācijā	npfsl4	Vācija	m-p134-p6s1w2
+tiek	vanipi130an	tikt	m-p134-p6s1w3
+skaidri	rpcn	skaidri	m-p134-p6s1w4
+nošķirti	vmnpdmpnpsnpn	nošķirt	m-p134-p6s1w5
+tiesību	ncfpg4	tiesība	m-p134-p6s1w6
+institūti	ncmpn1	institūts	m-p134-p6s1w7
+-	zd	-	m-p134-p6s1w8
+administratīvā	afmsgyp	administratīvs	m-p134-p6s1w9
+akta	ncmsg1	akts	m-p134-p6s1w10
+darbības	ncfsg4	darbība	m-p134-p6s1w11
+apturēšana	ncfsn4	apturēšana	m-p134-p6s1w12
+un	cc	un	m-p134-p6s1w13
+pagaidu	nc00gg	pagaidu	m-p134-p6s1w14
+noregulējums	ncmsn1	noregulējums	m-p134-p6s1w15
+<g />
+.	zs	.	m-p134-p6s1w16
+</s>
+<s>
+Administratīvā	armsgyp	administratīvs	m-p134-p6s2w1
+akta	ncmsg1	akts	m-p134-p6s2w2
+darbības	ncfsg4	darbība	m-p134-p6s2w3
+apturēšanas	ncfsg4	apturēšana	m-p134-p6s2w4
+institūts	ncmsn1	institūts	m-p134-p6s2w5
+ir	vcnipii30an	būt	m-p134-p6s2w6
+piemērojams	vmnpdmsnppnpn	piemērot	m-p134-p6s2w7
+tikai	q	tikai	m-p134-p6s2w8
+gadījumos	ncmpl1	gadījums	m-p134-p6s2w9
+<g />
+,	zc	,	m-p134-p6s2w10
+kad	r0tn	kad	m-p134-p6s2w11
+ir	vcnipii30an	būt	m-p134-p6s2w12
+iesniegts	vmnpdmsnpsnpn	iesniegt	m-p134-p6s2w13
+pieteikums	ncmsn1	pieteikums	m-p134-p6s2w14
+par	spsa	par	m-p134-p6s2w15
+administratīvā	armsgyp	administratīvs	m-p134-p6s2w16
+akta	ncmsg1	akts	m-p134-p6s2w17
+"	zq	"	m-p134-p6s2w18
+<g />
+nederīgumu	ncmsa1	nederīgums	m-p134-p6s2w19
+<g />
+"	zq	"	m-p134-p6s2w20
+jeb	cc	jeb	m-p134-p6s2w21
+atcelšanu	ncfsa4	atcelšana	m-p134-p6s2w22
+<g />
+.	zs	.	m-p134-p6s2w23
+</s>
+<s>
+Savukārt	r0cn	savukārt	m-p134-p7s1w1
+pagaidu	nc00gg	pagaidu	m-p134-p7s1w2
+noregulējums	ncmsn1	noregulējums	m-p134-p7s1w3
+var	vonipi330an	varēt	m-p134-p7s1w4
+tikt	vann0i1000n	tikt	m-p134-p7s1w5
+piemērots	vmnpdmsnpsnpn	piemērot	m-p134-p7s1w6
+<g />
+,	zc	,	m-p134-p7s1w7
+lai	cs	lai	m-p134-p7s1w8
+nodrošinātu	vmnc0t300an	nodrošināt	m-p134-p7s1w9
+status	xf	status	m-p134-p7s1w10
+quo	xf	quo	m-p134-p7s1w11
+stāvokļa	ncmsg2	stāvoklis	m-p134-p7s1w12
+saglabāšanu	ncfsa4	saglabāšana	m-p134-p7s1w13
+<g />
+,	zc	,	m-p134-p7s1w14
+proti	q	proti	m-p134-p7s1w15
+<g />
+,	zc	,	m-p134-p7s1w16
+gadījumos	ncmpl1	gadījums	m-p134-p7s1w17
+<g />
+,	zc	,	m-p134-p7s1w18
+kad	r0tn	kad	m-p134-p7s1w19
+esošās	vmnpdfsgapypn	būt	m-p134-p7s1w20
+situācijas	ncfsg4	situācija	m-p134-p7s1w21
+izmaiņas	ncfpn4	izmaiņa	m-p134-p7s1w22
+var	vonipi330an	varēt	m-p134-p7s1w23
+aizskart	vmnn0t1000n	aizskart	m-p134-p7s1w24
+indivīda	ncmsg1	indivīds	m-p134-p7s1w25
+tiesības	ncfpa4	tiesība	m-p134-p7s1w26
+<g />
+.	zs	.	m-p134-p7s1w27
+</s>
+<s>
+Tāpat	q	tāpat	m-p134-p7s2w1
+pagaidu	nc00gg	pagaidu	m-p134-p7s2w2
+noregulējumu	ncmsa1	noregulējums	m-p134-p7s2w3
+var	vonipi330an	varēt	m-p134-p7s2w4
+piemērot	vmnn0t2000n	piemērot	m-p134-p7s2w5
+gadījumos	ncmpl1	gadījums	m-p134-p7s2w6
+<g />
+,	zc	,	m-p134-p7s2w7
+kad	r0tn	kad	m-p134-p7s2w8
+nepieciešams	afmsnnp	nepieciešams	m-p134-p7s2w9
+uz	spsa	uz	m-p134-p7s2w10
+laiku	ncmsa1	laiks	m-p134-p7s2w11
+noregulēt	vmnn0t2000n	noregulēt	m-p134-p7s2w12
+apstrīdētās	vmnpdfpapsypn	apstrīdēt	m-p134-p7s2w13
+tiesiskās	affpayp	tiesisks	m-p134-p7s2w14
+attiecības	ncfpa4	attiecība	m-p134-p7s2w15
+<g />
+.	zs	.	m-p134-p7s2w16
+</s>
+<s>
+Administratīvā	armsgyp	administratīvs	m-p134-p8s1w1
+procesa	ncmsg1	process	m-p134-p8s1w2
+likums	ncmsn1	likums	m-p134-p8s1w3
+balstīts	vmnpdmsnpsnpn	balstīt	m-p134-p8s1w4
+galvenokārt	r0mn	galvenokārt	m-p134-p8s1w5
+uz	spsa	uz	m-p134-p8s1w6
+Vācijas	npfsg4	Vācija	m-p134-p8s1w7
+tiesību	ncfpg4	tiesība	m-p134-p8s1w8
+izpratni	ncfsa5	izpratne	m-p134-p8s1w9
+<g />
+,	zc	,	m-p134-p8s1w10
+vēl	r0qn	vēl	m-p134-p8s1w11
+jo	q	jo	m-p134-p8s1w12
+vairāk	rcqn	daudz	m-p134-p8s1w13
+Administratīvā	armsgyp	administratīvs	m-p134-p8s1w14
+procesa	ncmsg1	process	m-p134-p8s1w15
+likumā	ncmsl1	likums	m-p134-p8s1w16
+ietvertie	vmnpdmpnpsypn	ietvert	m-p134-p8s1w17
+pagaidu	nc00gg	pagaidu	m-p134-p8s1w18
+aizsardzības	ncfsg4	aizsardzība	m-p134-p8s1w19
+līdzekļi	ncmpn2	līdzeklis	m-p134-p8s1w20
+ir	vcnipii30an	būt	m-p134-p8s1w21
+analoģiski	afmpnnp	analoģisks	m-p134-p8s1w22
+Vācijas	npfsg4	Vācija	m-p134-p8s1w23
+normatīvajos	armplyp	normatīvs	m-p134-p8s1w24
+aktos	ncmpl1	akts	m-p134-p8s1w25
+ietvertajiem	vmnpdmpdpsypn	ietvert	m-p134-p8s1w26
+pagaidu	nc00gg	pagaidu	m-p134-p8s1w27
+aizsardzības	ncfsg4	aizsardzība	m-p134-p8s1w28
+līdzekļiem	ncmpd2	līdzeklis	m-p134-p8s1w29
+<g />
+.	zs	.	m-p134-p8s1w30
+</s>
+<s>
+Administratīvā	afmsgyp	administratīvs	m-p134-p9s1w1
+procesa	ncmsg1	process	m-p134-p9s1w2
+likuma	ncmsg1	likums	m-p134-p9s1w3
+196.	xo	196.	m-p134-p9s1w4
+<g />
+pantā	ncmsl1	pants	m-p134-p9s1w5
+ir	vcnipii30an	būt	m-p134-p9s1w6
+uzskaitīti	vmnpdmpnpsnpn	uzskaitīt	m-p134-p9s1w7
+pagaidu	nc00gg	pagaidu	m-p134-p9s1w8
+noregulējuma	ncmsg1	noregulējums	m-p134-p9s1w9
+līdzekļi	ncmpn2	līdzeklis	m-p134-p9s1w10
+<g />
+:	zo	:	m-p134-p9s1w11
+pirmkārt	r0mn	pirmkārt	m-p134-p9s1w12
+<g />
+,	zc	,	m-p134-p9s1w13
+tas	pd3msnn	tas	m-p134-p9s1w14
+ir	vcnipii30an	būt	m-p134-p9s1w15
+tiesas	ncfsg4	tiesa	m-p134-p9s1w16
+lēmums	ncmsn1	lēmums	m-p134-p9s1w17
+<g />
+,	zc	,	m-p134-p9s1w18
+kas	pr000nn	kas	m-p134-p9s1w19
+līdz	spsd	līdz	m-p134-p9s1w20
+tiesas	ncfsg4	tiesa	m-p134-p9s1w21
+spriedumam	ncmsd1	spriedums	m-p134-p9s1w22
+aizstāj	vmnipi130an	aizstāt	m-p134-p9s1w23
+pieprasīto	vmnpdmsapsypn	pieprasīt	m-p134-p9s1w24
+administratīvo	armsayp	administratīvs	m-p134-p9s1w25
+aktu	ncmsa1	akts	m-p134-p9s1w26
+vai	cc	vai	m-p134-p9s1w27
+iestādes	ncfsg5	iestāde	m-p134-p9s1w28
+faktisko	arfsayp	faktisks	m-p134-p9s1w29
+rīcību	ncfsa4	rīcība	m-p134-p9s1w30
+<g />
+,	zc	,	m-p134-p9s1w31
+un	cc	un	m-p134-p9s1w32
+<g />
+,	zc	,	m-p134-p9s1w33
+otrkārt	r0mn	otrkārt	m-p134-p9s1w34
+<g />
+,	zc	,	m-p134-p9s1w35
+tas	pd3msnn	tas	m-p134-p9s1w36
+ir	vcnipii30an	būt	m-p134-p9s1w37
+tiesas	ncfsg4	tiesa	m-p134-p9s1w38
+lēmums	ncmsn1	lēmums	m-p134-p9s1w39
+<g />
+,	zc	,	m-p134-p9s1w40
+kas	pr000nn	kas	m-p134-p9s1w41
+uzliek	vmnipt130an	uzlikt	m-p134-p9s1w42
+attiecīgajai	arfsdyp	attiecīgs	m-p134-p9s1w43
+iestādei	ncfsd5	iestāde	m-p134-p9s1w44
+par	spsa	par	m-p134-p9s1w45
+pienākumu	ncmsa1	pienākums	m-p134-p9s1w46
+noteiktā	vmnpdmslpsnpn	noteikt	m-p134-p9s1w47
+termiņā	ncmsl1	termiņš	m-p134-p9s1w48
+izdarīt	vmnn0t3000n	izdarīt	m-p134-p9s1w49
+noteiktu	vmnpdfsapsnpn	noteikt	m-p134-p9s1w50
+darbību	ncfsa4	darbība	m-p134-p9s1w51
+vai	cc	vai	m-p134-p9s1w52
+aizliedz	vmnipt130an	aizliegt	m-p134-p9s1w53
+noteiktu	vmnpdfsapsnpn	noteikt	m-p134-p9s1w54
+darbību	ncfsa4	darbība	m-p134-p9s1w55
+<g />
+.	zs	.	m-p134-p9s1w56
+</s>
+<s>
+Kā	r0mn	kā	m-p134-p10s1w1
+redzams	vmnpdmsnppnpn	redzēt	m-p134-p10s1w2
+<g />
+,	zc	,	m-p134-p10s1w3
+tad	q	tad	m-p134-p10s1w4
+pirmais	mosmsn	pirmais	m-p134-p10s1w5
+pagaidu	nc00gg	pagaidu	m-p134-p10s1w6
+noregulējuma	ncmsg1	noregulējums	m-p134-p10s1w7
+līdzeklis	ncmsn2	līdzeklis	m-p134-p10s1w8
+ir	vcnipii30an	būt	m-p134-p10s1w9
+identisks	afmsnnp	identisks	m-p134-p10s1w10
+Vācijas	npfsg4	Vācija	m-p134-p10s1w11
+tiesību	ncfpg4	tiesība	m-p134-p10s1w12
+sistēmā	ncfsl4	sistēma	m-p134-p10s1w13
+sastopamajam	vmnpdmsdppypn	sastapt	m-p134-p10s1w14
+tiesību	ncfpg4	tiesība	m-p134-p10s1w15
+aizsardzības	ncfsg4	aizsardzība	m-p134-p10s1w16
+līdzeklim	ncmsd2	līdzeklis	m-p134-p10s1w17
+<g />
+,	zc	,	m-p134-p10s1w18
+kas	pr000nn	kas	m-p134-p10s1w19
+uz	spsa	uz	m-p134-p10s1w20
+laiku	ncmsa1	laiks	m-p134-p10s1w21
+noregulē	vmnipt230an	noregulēt	m-p134-p10s1w22
+apstrīdētās	vmnpdfpapsypn	apstrīdēt	m-p134-p10s1w23
+tiesiskās	arfpayp	tiesisks	m-p134-p10s1w24
+attiecības	ncfpa4	attiecība	m-p134-p10s1w25
+<g />
+.	zs	.	m-p134-p10s1w26
+</s>
+<s>
+Savukārt	r0qn	savukārt	m-p134-p10s2w1
+otrs	mcsmsn	otrs	m-p134-p10s2w2
+pagaidu	nc00gg	pagaidu	m-p134-p10s2w3
+noregulējuma	ncmsg1	noregulējums	m-p134-p10s2w4
+līdzeklis	ncmsn2	līdzeklis	m-p134-p10s2w5
+ir	vcnipii30an	būt	m-p134-p10s2w6
+vērsts	vmnpdmsnpsnpn	vērst	m-p134-p10s2w7
+uz	spsg	uz	m-p134-p10s2w8
+tiesiskā	armsgyp	tiesisks	m-p134-p10s2w9
+un	cc	un	m-p134-p10s2w10
+faktiskā	armsgyp	faktisks	m-p134-p10s2w11
+stāvokļa	ncmsg2	stāvoklis	m-p134-p10s2w12
+-	zd	-	m-p134-p10s2w13
+status	xf	status	m-p134-p10s2w14
+quo	xf	quo	m-p134-p10s2w15
+saglabāšanu	ncfsa4	saglabāšana	m-p134-p10s2w16
+<g />
+.	zs	.	m-p134-p10s2w17
+</s>
+<s>
+Abos	pg0mpln	abi	m-p134-p11s1w1
+gadījumos	ncmpl1	gadījums	m-p134-p11s1w2
+tiesai	ncfsd4	tiesa	m-p134-p11s1w3
+ir	vcnipii30an	būt	m-p134-p11s1w4
+jāvadās	vmyd0i300an	vadīties	m-p134-p11s1w5
+no	sppd	no	m-p134-p11s1w6
+tai	pd3fsdn	tā	m-p134-p11s1w7
+pieejamajiem	vmnpdmpdppypn	pieiet	m-p134-p11s1w8
+lietas	ncfsg4	lieta	m-p134-p11s1w9
+materiāliem	ncmpd1	materiāls	m-p134-p11s1w10
+un	cc	un	m-p134-p11s1w11
+jāvērtē	vmnd0t200an	vērtēt	m-p134-p11s1w12
+pieteicēja	ncmsg1	pieteicējs	m-p134-p11s1w13
+pieteikums	ncmsn1	pieteikums	m-p134-p11s1w14
+pēc	spsg	pēc	m-p134-p11s1w15
+būtības	ncfsg4	būtība	m-p134-p11s1w16
+<g />
+,	zc	,	m-p134-p11s1w17
+jo	cs	jo	m-p134-p11s1w18
+pretējā	armslnp	pretējs	m-p134-p11s1w19
+gadījumā	ncmsl1	gadījums	m-p134-p11s1w20
+nav	vcnipii30ay	būt	m-p134-p11s1w21
+iespējams	afmsnnp	iespējams	m-p134-p11s1w22
+tiesai	ncfsd4	tiesa	m-p134-p11s1w23
+piemērot	vmnn0t2000n	piemērot	m-p134-p11s1w24
+pagaidu	nc00gg	pagaidu	m-p134-p11s1w25
+noregulējumu	ncmsa1	noregulējums	m-p134-p11s1w26
+<g />
+,	zc	,	m-p134-p11s1w27
+piemēram	ncmsd1	piemērs	m-p134-p11s1w28
+<g />
+,	zc	,	m-p134-p11s1w29
+ja	cs	ja	m-p134-p11s1w30
+tas	pd3msnn	tas	m-p134-p11s1w31
+ir	vcnipii30an	būt	m-p134-p11s1w32
+vērsts	vmnpdmsnpsnpn	vērst	m-p134-p11s1w33
+uz	spsa	uz	m-p134-p11s1w34
+tūlītēju	afmsanp	tūlītējs	m-p134-p11s1w35
+apstrīdēto	vmnpdfpgpsypn	apstrīdēt	m-p134-p11s1w36
+tiesisko	arfpgyp	tiesisks	m-p134-p11s1w37
+attiecību	ncfpg4	attiecība	m-p134-p11s1w38
+noregulējumu	ncmsa1	noregulējums	m-p134-p11s1w39
+<g />
+.	zs	.	m-p134-p11s1w40
+</s>
+<s>
+Respektīvi	r0cn	respektīvi	m-p134-p11s2w1
+<g />
+,	zc	,	m-p134-p11s2w2
+tiesai	ncfsd4	tiesa	m-p134-p11s2w3
+<g />
+,	zc	,	m-p134-p11s2w4
+piemērojot	vmnpu0000000n	piemērot	m-p134-p11s2w5
+pagaidu	nc00gg	pagaidu	m-p134-p11s2w6
+noregulējumu	ncmsa1	noregulējums	m-p134-p11s2w7
+<g />
+,	zc	,	m-p134-p11s2w8
+ir	vcnipii30an	būt	m-p134-p11s2w9
+jātaisa	vmnd0t300an	taisīt	m-p134-p11s2w10
+kvazispriedums	ncmsn1	kvazispriedums	m-p134-p11s2w11
+<g />
+.	zs	.	m-p134-p11s2w12
+</s>
+<s>
+Administratīvā	afmsgyp	administratīvs	m-p134-p12s1w1
+procesa	ncmsg1	process	m-p134-p12s1w2
+likuma	ncmsg1	likums	m-p134-p12s1w3
+grozījumos	ncmpl1	grozījums	m-p134-p12s1w4
+expressis	xf	expressis	m-p134-p12s1w5
+verbis	xf	verbis	m-p134-p12s1w6
+ir	vcnipii30an	būt	m-p134-p12s1w7
+noteikts	vmnpdmsnpsnpn	noteikt	m-p134-p12s1w8
+<g />
+,	zc	,	m-p134-p12s1w9
+ka	cs	ka	m-p134-p12s1w10
+gadījumos	ncmpl1	gadījums	m-p134-p12s1w11
+<g />
+,	zc	,	m-p134-p12s1w12
+kad	r0tn	kad	m-p134-p12s1w13
+<g />
+,	zc	,	m-p134-p12s1w14
+izvērtējot	vmnpu0000000n	izvērtēt	m-p134-p12s1w15
+tiesas	ncfsg4	tiesa	m-p134-p12s1w16
+rīcībā	ncfsl4	rīcība	m-p134-p12s1w17
+esošo	vmnpdfsaapypn	būt	m-p134-p12s1w18
+informāciju	ncfsa4	informācija	m-p134-p12s1w19
+<g />
+,	zc	,	m-p134-p12s1w20
+konstatējams	vmnpdmsnppnpn	konstatēt	m-p134-p12s1w21
+<g />
+,	zc	,	m-p134-p12s1w22
+ka	cs	ka	m-p134-p12s1w23
+pārsūdzētais	vmnpdmsnpsypn	pārsūdzēt	m-p134-p12s1w24
+administratīvais	afmsnyp	administratīvs	m-p134-p12s1w25
+akts	ncmsn1	akts	m-p134-p12s1w26
+ir	vcnipii30an	būt	m-p134-p12s1w27
+pirmsšķietami	r0mn	pirmsšķietami	m-p134-p12s1w28
+(	zb	(	m-p134-p12s1w29
+<g />
+prima	xf	prima	m-p134-p12s1w30
+facie	xf	facie	m-p134-p12s1w31
+<g />
+)	zb	)	m-p134-p12s1w32
+prettiesisks	armsnnp	prettiesisks	m-p134-p12s1w33
+<g />
+,	zc	,	m-p134-p12s1w34
+tiesa	ncfsn4	tiesa	m-p134-p12s1w35
+pēc	spsg	pēc	m-p134-p12s1w36
+pieteicēja	ncmsg1	pieteicējs	m-p134-p12s1w37
+motivēta	vmnpdmsgpsnpn	motivēt	m-p134-p12s1w38
+pieteikuma	ncmsg1	pieteikums	m-p134-p12s1w39
+var	vonipi330an	varēt	m-p134-p12s1w40
+pieņemt	vmnn0t1000n	pieņemt	m-p134-p12s1w41
+lēmumu	ncmsa1	lēmums	m-p134-p12s1w42
+par	spsa	par	m-p134-p12s1w43
+pagaidu	nc00gg	pagaidu	m-p134-p12s1w44
+noregulējumu	ncmsa1	noregulējums	m-p134-p12s1w45
+<g />
+.	zs	.	m-p134-p12s1w46
+</s>
+<s>
+Taču	cc	taču	m-p134-p13s1w1
+<g />
+,	zc	,	m-p134-p13s1w2
+autora	ncmsg1	autors	m-p134-p13s1w3
+ieskatā	ncmsl1	ieskats	m-p134-p13s1w4
+<g />
+,	zc	,	m-p134-p13s1w5
+minētie	vmnpdmpnpsypn	minēt	m-p134-p13s1w6
+grozījumi	ncmpn1	grozījums	m-p134-p13s1w7
+ietver	vmnipt130an	ietvert	m-p134-p13s1w8
+arī	q	arī	m-p134-p13s1w9
+visai	r0qn	visai	m-p134-p13s1w10
+neskaidru	afmsanp	neskaidrs	m-p134-p13s1w11
+pagaidu	nc00gg	pagaidu	m-p134-p13s1w12
+noregulējuma	ncmsg1	noregulējums	m-p134-p13s1w13
+piemērošanas	ncfsg4	piemērošana	m-p134-p13s1w14
+priekšnosacījumu	ncmsa1	priekšnosacījums	m-p134-p13s1w15
+<g />
+,	zc	,	m-p134-p13s1w16
+kas	pr000nn	kas	m-p134-p13s1w17
+var	vonipi330an	varēt	m-p134-p13s1w18
+radīt	vmnn0t3000n	radīt	m-p134-p13s1w19
+grūtības	ncfpa4	grūtība	m-p134-p13s1w20
+tā	pd3msgn	tas	m-p134-p13s1w21
+izpratnē	ncfsl5	izpratne	m-p134-p13s1w22
+<g />
+.	zs	.	m-p134-p13s1w23
+</s>
+<s>
+Proti	q	proti	m-p134-p13s2w1
+<g />
+,	zc	,	m-p134-p13s2w2
+Administratīvā	afmsgyp	administratīvs	m-p134-p13s2w3
+procesa	ncmsg1	process	m-p134-p13s2w4
+195.	xo	195.	m-p134-p13s2w5
+<g />
+panta	ncmsg1	pants	m-p134-p13s2w6
+pirmajā	mosfsl	pirmais	m-p134-p13s2w7
+daļā	ncfsl4	daļa	m-p134-p13s2w8
+tiek	vanipi130an	tikt	m-p134-p13s2w9
+noteikts	vmnpdmsnpsnpn	noteikt	m-p134-p13s2w10
+<g />
+,	zc	,	m-p134-p13s2w11
+ka	cs	ka	m-p134-p13s2w12
+pagaidu	nc00gg	pagaidu	m-p134-p13s2w13
+noregulējumu	ncmsa1	noregulējums	m-p134-p13s2w14
+citu	pi0fpgn	cita	m-p134-p13s2w15
+starpā	ncfsl4	starpa	m-p134-p13s2w16
+var	vonipi330an	varēt	m-p134-p13s2w17
+piemērot	vmnn0t2000n	piemērot	m-p134-p13s2w18
+gadījumā	ncmsl1	gadījums	m-p134-p13s2w19
+<g />
+,	zc	,	m-p134-p13s2w20
+ja	cs	ja	m-p134-p13s2w21
+ir	vmnipii30an	būt	m-p134-p13s2w22
+pamats	ncmsn1	pamats	m-p134-p13s2w23
+uzskatīt	vmnn0t3000n	uzskatīt	m-p134-p13s2w24
+<g />
+,	zc	,	m-p134-p13s2w25
+ka	cs	ka	m-p134-p13s2w26
+pārsūdzētā	vmnpdmsgpsypn	pārsūdzēt	m-p134-p13s2w27
+administratīvā	armsgyp	administratīvs	m-p134-p13s2w28
+akta	ncmsg1	akts	m-p134-p13s2w29
+darbība	ncfsn4	darbība	m-p134-p13s2w30
+varētu	vonc0i300an	varēt	m-p134-p13s2w31
+radīt	vmnn0t3000n	radīt	m-p134-p13s2w32
+būtisku	afmsanp	būtisks	m-p134-p13s2w33
+kaitējumu	ncmsa1	kaitējums	m-p134-p13s2w34
+vai	cc	vai	m-p134-p13s2w35
+zaudējumus	ncmpa1	zaudējums	m-p134-p13s2w36
+<g />
+.	zs	.	m-p134-p13s2w37
+</s>
+<s>
+Autors	ncmsn1	autors	m-p134-p13s3w1
+uzskata	vmnipt330an	uzskatīt	m-p134-p13s3w2
+<g />
+,	zc	,	m-p134-p13s3w3
+ka	cs	ka	m-p134-p13s3w4
+<g />
+,	zc	,	m-p134-p13s3w5
+gramatiski	r0mn	gramatiski	m-p134-p13s3w6
+interpretējot	vmnpu0000000n	interpretēt	m-p134-p13s3w7
+šo	pd3msan	šis	m-p134-p13s3w8
+grozījumu	ncmpg1	grozījums	m-p134-p13s3w9
+tekstu	ncmsa1	teksts	m-p134-p13s3w10
+<g />
+,	zc	,	m-p134-p13s3w11
+var	vonipi330an	varēt	m-p134-p13s3w12
+rasties	vmyn0i1000n	rasties	m-p134-p13s3w13
+iespaids	ncmsn1	iespaids	m-p134-p13s3w14
+<g />
+,	zc	,	m-p134-p13s3w15
+ka	cs	ka	m-p134-p13s3w16
+pagaidu	nc00gg	pagaidu	m-p134-p13s3w17
+noregulējums	ncmsn1	noregulējums	m-p134-p13s3w18
+tiek	vanipi130an	tikt	m-p134-p13s3w19
+attiecināts	vmnpdmsnpsnpn	attiecināt	m-p134-p13s3w20
+tikai	q	tikai	m-p134-p13s3w21
+uz	spsa	uz	m-p134-p13s3w22
+administratīvā	armsgyp	administratīvs	m-p134-p13s3w23
+akta	ncmsg1	akts	m-p134-p13s3w24
+apstrīdēšanu	ncfsa4	apstrīdēšana	m-p134-p13s3w25
+<g />
+,	zc	,	m-p134-p13s3w26
+turklāt	q	turklāt	m-p134-p13s3w27
+piemērošanas	ncfsg4	piemērošana	m-p134-p13s3w28
+priekšnoteikums	ncmsn1	priekšnoteikums	m-p134-p13s3w29
+ir	vcnipii30an	būt	m-p134-p13s3w30
+ar	spsa	ar	m-p134-p13s3w31
+administratīvā	armsgyp	administratīvs	m-p134-p13s3w32
+akta	ncmsg1	akts	m-p134-p13s3w33
+darbību	ncfsa4	darbība	m-p134-p13s3w34
+radītās	vmnpdfpnpsypn	radīt	m-p134-p13s3w35
+sekas	ncfpn4	seka	m-p134-p13s3w36
+<g />
+.	zs	.	m-p134-p13s3w37
+</s>
+<s>
+Šāda	pd0fsnn	šāda	m-p134-p13s4w1
+izpratne	ncfsn5	izpratne	m-p134-p13s4w2
+līdzinās	vmyipi330an	līdzināties	m-p134-p13s4w3
+iepriekš	r0tn	iepriekš	m-p134-p13s4w4
+aprakstītajā	vmnpdfslpsypn	aprakstīt	m-p134-p13s4w5
+Francijas	npfsg4	Francija	m-p134-p13s4w6
+tiesību	ncfpg4	tiesība	m-p134-p13s4w7
+sistēmā	ncfsl4	sistēma	m-p134-p13s4w8
+izprotamajam	vmnpdmsdppypn	izprast	m-p134-p13s4w9
+apturēšanas	ncfsg4	apturēšana	m-p134-p13s4w10
+institūtam	ncmsd1	institūts	m-p134-p13s4w11
+<g />
+,	zc	,	m-p134-p13s4w12
+kad	r0tn	kad	m-p134-p13s4w13
+gadījumā	ncmsl1	gadījums	m-p134-p13s4w14
+<g />
+,	zc	,	m-p134-p13s4w15
+ja	cs	ja	m-p134-p13s4w16
+lūgums	ncmsn1	lūgums	m-p134-p13s4w17
+par	spsa	par	m-p134-p13s4w18
+labvēlīga	afmsgnp	labvēlīgs	m-p134-p13s4w19
+administratīvā	armsgyp	administratīvs	m-p134-p13s4w20
+akta	ncmsg1	akts	m-p134-p13s4w21
+izdošanu	ncfsa4	izdošana	m-p134-p13s4w22
+tiek	vanipi130an	tikt	m-p134-p13s4w23
+noraidīts	vmnpdmsnpsnpn	noraidīt	m-p134-p13s4w24
+,	zs	,	m-p134-p13s4w46
+un	cc	un	m-p134-p13s4w25
+<g />
+,	zc	,	m-p134-p13s4w26
+lai	cs	lai	m-p134-p13s4w27
+iegūtu	vmnc0t100an	iegūt	m-p134-p13s4w28
+pagaidu	nc00gg	pagaidu	m-p134-p13s4w29
+rezultātu	ncmsa1	rezultāts	m-p134-p13s4w30
+<g />
+,	zc	,	m-p134-p13s4w31
+tiek	vanipi130an	tikt	m-p134-p13s4w32
+apturēta	vmnpdfsnpsnpn	apturēt	m-p134-p13s4w33
+administratīvā	armsgyp	administratīvs	m-p134-p13s4w34
+akta	ncmsg1	akts	m-p134-p13s4w35
+darbība	ncfsn4	darbība	m-p134-p13s4w36
+izdodot	vmnpu0000000n	izdot	m-p134-p13s4w37
+pagaidu	nc00gg	pagaidu	m-p134-p13s4w38
+rīkojumu	ncmsa1	rīkojums	m-p134-p13s4w39
+-	zd	-	m-p134-p13s4w40
+faktiski	r0mn	faktiski	m-p134-p13s4w41
+jaunu	afmsanp	jauns	m-p134-p13s4w42
+administratīvo	armsayp	administratīvs	m-p134-p13s4w43
+aktu	ncmsa1	akts	m-p134-p13s4w44
+<g />
+.	zs	.	m-p134-p13s4w45
+</s>
+<s>
+Pēc	sppd	pēc	m-p134-p14s1w1
+autora	ncmsg1	autors	m-p134-p14s1w2
+domām	ncfpd4	doma	m-p134-p14s1w3
+<g />
+,	zc	,	m-p134-p14s1w4
+šāda	pd0fsnn	šāda	m-p134-p14s1w5
+pieeja	ncfsn4	pieeja	m-p134-p14s1w6
+ir	vcnipii30an	būt	m-p134-p14s1w7
+principiāli	rpmn	principiāli	m-p134-p14s1w8
+nepareiza	affsnnp	nepareizs	m-p134-p14s1w9
+<g />
+.	zs	.	m-p134-p14s1w10
+</s>
+<s>
+Nav	vcnipii30ay	būt	m-p134-p14s2w1
+iespējams	afmsnnp	iespējams	m-p134-p14s2w2
+apturēt	vmnn0t3000n	apturēt	m-p134-p14s2w3
+tādu	pd0msan	tāds	m-p134-p14s2w4
+administratīvo	armsayp	administratīvs	m-p134-p14s2w5
+aktu	ncmsa1	akts	m-p134-p14s2w6
+<g />
+,	zc	,	m-p134-p14s2w7
+kurš	pr0msnn	kurš	m-p134-p14s2w8
+pēc	spsg	pēc	m-p134-p14s2w9
+būtības	ncfsg4	būtība	m-p134-p14s2w10
+nav	vcnipii30ay	būt	m-p134-p14s2w11
+izpildāms	vmnpdmsnppnpn	izpildīt	m-p134-p14s2w12
+<g />
+,	zc	,	m-p134-p14s2w13
+proti	q	proti	m-p134-p14s2w14
+<g />
+,	zc	,	m-p134-p14s2w15
+ja	cs	ja	m-p134-p14s2w16
+ar	spsa	ar	m-p134-p14s2w17
+administratīvo	armsayp	administratīvs	m-p134-p14s2w18
+aktu	ncmsa1	akts	m-p134-p14s2w19
+atsaka	vmnipt330an	atsacīt	m-p134-p14s2w20
+pieņemt	vmnn0t1000n	pieņemt	m-p134-p14s2w21
+kādu	pi0msan	kāds	m-p134-p14s2w22
+lēmumu	ncmsa1	lēmums	m-p134-p14s2w23
+<g />
+.	zs	.	m-p134-p14s2w24
+</s>
+<s>
+Šajā	pd3msln	šis	m-p134-p14s3w1
+gadījumā	ncmsl1	gadījums	m-p134-p14s3w2
+tiesiskās	arfpnyp	tiesisks	m-p134-p14s3w3
+sekas	ncfpn4	seka	m-p134-p14s3w4
+var	vonipi330an	varēt	m-p134-p14s3w5
+izpausties	vmyn0i1000n	izpausties	m-p134-p14s3w6
+kā	cs	kā	m-p134-p14s3w7
+atteikums	ncmsn1	atteikums	m-p134-p14s3w8
+nodibināt	vmnn0t3000n	nodibināt	m-p134-p14s3w9
+<g />
+,	zc	,	m-p134-p14s3w10
+grozīt	vmnn0t3000n	grozīt	m-p134-p14s3w11
+<g />
+,	zc	,	m-p134-p14s3w12
+izbeigt	vmnn0t1000n	izbeigt	m-p134-p14s3w13
+un	cc	un	m-p134-p14s3w14
+konstatēt	vmnn0t2000n	konstatēt	m-p134-p14s3w15
+tiesiskās	affpayp	tiesisks	m-p134-p14s3w16
+attiecības	ncfpa4	attiecība	m-p134-p14s3w17
+<g />
+.	zs	.	m-p134-p14s3w18
+</s>
+<s>
+Tādējādi	r0mn	tādējādi	m-p134-p15s1w1
+<g />
+,	zc	,	m-p134-p15s1w2
+apturot	vmnpu0000000n	apturēt	m-p134-p15s1w3
+šādu	pd0msan	šāds	m-p134-p15s1w4
+administratīvo	armsayp	administratīvs	m-p134-p15s1w5
+aktu	ncmsa1	akts	m-p134-p15s1w6
+<g />
+,	zc	,	m-p134-p15s1w7
+netiek	vanipi130ay	tikt	m-p134-p15s1w8
+panākts	vmnpdmsnpsnpn	panākt	m-p134-p15s1w9
+vēlamais	vmnpdmsnppypn	vēlēt	m-p134-p15s1w10
+rezultāts	ncmsn1	rezultāts	m-p134-p15s1w11
+-	zd	-	m-p134-p15s1w12
+netiek	vanipi130ay	tikt	m-p134-p15s1w13
+nodibinātas	vmnpdfpnpsnpn	nodibināt	m-p134-p15s1w14
+<g />
+,	zc	,	m-p134-p15s1w15
+grozītas	vmnpdfpnpsnpn	grozīt	m-p134-p15s1w16
+<g />
+,	zc	,	m-p134-p15s1w17
+izbeigtas	vmnpdfpnpsnpn	izbeigt	m-p134-p15s1w18
+un	cc	un	m-p134-p15s1w19
+konstatētas	vmnpdfpnpsnpn	konstatēt	m-p134-p15s1w20
+tiesiskās	arfpnyp	tiesisks	m-p134-p15s1w21
+attiecības	ncfpn4	attiecība	m-p134-p15s1w22
+<g />
+.	zs	.	m-p134-p15s1w23
+</s>
+<s>
+Tādēļ	r0cn	tādēļ	m-p134-p15s2w1
+objektīvi	rpmn	objektīvi	m-p134-p15s2w2
+ir	vcnipii30an	būt	m-p134-p15s2w3
+nepieciešams	afmsnnp	nepieciešams	m-p134-p15s2w4
+administratīvs	afmsnnp	administratīvs	m-p134-p15s2w5
+akts	ncmsn1	akts	m-p134-p15s2w6
+<g />
+,	zc	,	m-p134-p15s2w7
+kas	pr000nn	kas	m-p134-p15s2w8
+šādas	pd0fpan	šāda	m-p134-p15s2w9
+tiesiskās	arfpayp	tiesisks	m-p134-p15s2w10
+attiecības	ncfpa4	attiecība	m-p134-p15s2w11
+nodibina	vmnipt330an	nodibināt	m-p134-p15s2w12
+<g />
+.	zs	.	m-p134-p15s2w13
+</s>
+<s>
+Lai	cs	lai	m-p134-p15s3w1
+izvairītos	vmyc0i300an	izvairīties	m-p134-p15s3w2
+no	spsg	no	m-p134-p15s3w3
+grozījumos	ncmpl1	grozījums	m-p134-p15s3w4
+ietvertā	vmnpdmsgpsypn	ietvert	m-p134-p15s3w5
+formulējuma	ncmsg1	formulējums	m-p134-p15s3w6
+nepareizas	affsgnp	nepareizs	m-p134-p15s3w7
+interpretācijas	ncfsg4	interpretācija	m-p134-p15s3w8
+<g />
+,	zc	,	m-p134-p15s3w9
+tajā	pd3fsln	tā	m-p134-p15s3w10
+minētās	vmnpdfpnpsypn	minēt	m-p134-p15s3w11
+administratīvā	armsgyp	administratīvs	m-p134-p15s3w12
+akta	ncmsg1	akts	m-p134-p15s3w13
+darbības	ncfsg4	darbība	m-p134-p15s3w14
+sekas	ncfpn4	seka	m-p134-p15s3w15
+ir	vcnipii30an	būt	m-p134-p15s3w16
+jāizprot	vmnd0t100an	izprast	m-p134-p15s3w17
+citādi	rpmn	citādi	m-p134-p15s3w18
+<g />
+.	zs	.	m-p134-p15s3w19
+</s>
+<s>
+Pirmkārt	r0mn	pirmkārt	m-p134-p16s1w1
+<g />
+,	zc	,	m-p134-p16s1w2
+tās	pd3fpnn	tā	m-p134-p16s1w3
+jāinterpretē	vmnd0t200an	interpretēt	m-p134-p16s1w4
+nevis	cc	nevis	m-p134-p16s1w5
+kā	cs	kā	m-p134-p16s1w6
+tiešas	affpanp	tiešs	m-p134-p16s1w7
+ar	spsa	ar	m-p134-p16s1w8
+administratīvo	armsayp	administratīvs	m-p134-p16s1w9
+aktu	ncmsa1	akts	m-p134-p16s1w10
+radītās	vmnpdfpapsypn	radīt	m-p134-p16s1w11
+sekas	ncfpa4	seka	m-p134-p16s1w12
+<g />
+,	zc	,	m-p134-p16s1w13
+bet	cc	bet	m-p134-p16s1w14
+gan	q	gan	m-p134-p16s1w15
+kā	cs	kā	m-p134-p16s1w16
+sekas	ncfpa4	seka	m-p134-p16s1w17
+<g />
+,	zc	,	m-p134-p16s1w18
+kas	pr000nn	kas	m-p134-p16s1w19
+rodas	vmyipi130an	rasties	m-p134-p16s1w20
+pieteicējam	ncmsd1	pieteicējs	m-p134-p16s1w21
+(	zb	(	m-p134-p16s1w22
+<g />
+arī	q	arī	m-p134-p16s1w23
+administratīvā	afmsgyp	administratīvs	m-p134-p16s1w24
+akta	ncmsg1	akts	m-p134-p16s1w25
+adresātam	ncmsd1	adresāts	m-p134-p16s1w26
+<g />
+)	zb	)	m-p134-p16s1w27
+<g />
+,	zc	,	m-p134-p16s1w28
+ja	cs	ja	m-p134-p16s1w29
+netiek	vanipi130ay	tikt	m-p134-p16s1w30
+nelabvēlīga	afmsgnp	nelabvēlīgs	m-p134-p16s1w31
+administratīvā	armsgyp	administratīvs	m-p134-p16s1w32
+akta	ncmsg1	akts	m-p134-p16s1w33
+vietā	ncfsl4	vieta	m-p134-p16s1w34
+pieņemts	vmnpdmsnpsnpn	pieņemt	m-p134-p16s1w35
+pozitīvs	afmsnnp	pozitīvs	m-p134-p16s1w36
+administratīvais	armsnyp	administratīvs	m-p134-p16s1w37
+akts	ncmsn1	akts	m-p134-p16s1w38
+<g />
+,	zc	,	m-p134-p16s1w39
+ar	spsa	ar	m-p134-p16s1w40
+kuru	pr0msan	kurš	m-p134-p16s1w41
+nodibina	vmnipt330an	nodibināt	m-p134-p16s1w42
+<g />
+,	zc	,	m-p134-p16s1w43
+groza	vmnipt330an	grozīt	m-p134-p16s1w44
+<g />
+,	zc	,	m-p134-p16s1w45
+izbeidz	vmnipt130an	izbeigt	m-p134-p16s1w46
+vai	cc	vai	m-p134-p16s1w47
+konstatē	vmnipt230an	konstatēt	m-p134-p16s1w48
+tiesiskās	arfpayp	tiesisks	m-p134-p16s1w49
+attiecības	ncfpa4	attiecība	m-p134-p16s1w50
+<g />
+.	zs	.	m-p134-p16s1w51
+</s>
+<s>
+Otrkārt	r0mn	otrkārt	m-p134-p17s1w1
+<g />
+,	zc	,	m-p134-p17s1w2
+lai	cs	lai	m-p134-p17s1w3
+izvairītos	vmyc0i300an	izvairīties	m-p134-p17s1w4
+no	spsg	no	m-p134-p17s1w5
+nepareizas	affsgnp	nepareizs	m-p134-p17s1w6
+interpretācijas	ncfsg4	interpretācija	m-p134-p17s1w7
+<g />
+,	zc	,	m-p134-p17s1w8
+ir	vcnipii30an	būt	m-p134-p17s1w9
+nepieciešams	afmsnnp	nepieciešams	m-p134-p17s1w10
+papildināt	vmnn0t3000n	papildināt	m-p134-p17s1w11
+Administratīvā	afmsgyp	administratīvs	m-p134-p17s1w12
+procesa	ncmsg1	process	m-p134-p17s1w13
+likuma	ncmsg1	likums	m-p134-p17s1w14
+195.	xo	195.	m-p134-p17s1w15
+<g />
+panta	ncmsg1	pants	m-p134-p17s1w16
+pirmo	mosfsa	pirmais	m-p134-p17s1w17
+daļu	ncfsa4	daļa	m-p134-p17s1w18
+aiz	sppd	aiz	m-p134-p17s1w19
+vārdiem	ncmpd1	vārds	m-p134-p17s1w20
+"	zq	"	m-p134-p17s1w21
+<g />
+ja	cs	ja	m-p134-p17s1w22
+ir	vmnipii30an	būt	m-p134-p17s1w23
+pamats	ncmsn1	pamats	m-p134-p17s1w24
+uzskatīt	vmnn0t3000n	uzskatīt	m-p134-p17s1w25
+<g />
+,	zc	,	m-p134-p17s1w26
+ka	cs	ka	m-p134-p17s1w27
+pārsūdzētā	vmnpdmsgpsypn	pārsūdzēt	m-p134-p17s1w28
+administratīvā	armsgyp	administratīvs	m-p134-p17s1w29
+akta	ncmsg1	akts	m-p134-p17s1w30
+darbība	ncfsn4	darbība	m-p134-p17s1w31
+<g />
+"	zq	"	m-p134-p17s1w32
+ar	sppd	ar	m-p134-p17s1w33
+vārdiem	ncmpd1	vārds	m-p134-p17s1w34
+"	zq	"	m-p134-p17s1w35
+<g />
+ar	spsa	ar	m-p134-p17s1w36
+kuru	pr0fsan	kurš	m-p134-p17s1w37
+atteikts	vmnpdmsnpsnpn	atteikt	m-p134-p17s1w38
+nodibināt	vmnn0t3000n	nodibināt	m-p134-p17s1w39
+<g />
+,	zc	,	m-p134-p17s1w40
+grozīt	vmnn0t3000n	grozīt	m-p134-p17s1w41
+<g />
+,	zc	,	m-p134-p17s1w42
+izbeigt	vmnn0t1000n	izbeigt	m-p134-p17s1w43
+vai	cc	vai	m-p134-p17s1w44
+konstatēt	vmnn0t2000n	konstatēt	m-p134-p17s1w45
+tiesiskās	arfpayp	tiesisks	m-p134-p17s1w46
+attiecības	ncfpa4	attiecība	m-p134-p17s1w47
+<g />
+"	zq	"	m-p134-p17s1w48
+<g />
+.	zs	.	m-p134-p17s1w49
+</s>
+<s>
+Taču	cc	taču	m-p134-p18s1w1
+,	zc	,	m-p134-p18s1w40
+lai	cs	lai	m-p134-p18s1w2
+pilnībā	ncfsl4	pilnība	m-p134-p18s1w3
+izvairītos	vmyc0i300an	izvairīties	m-p134-p18s1w4
+no	spsg	no	m-p134-p18s1w5
+nepareizas	affsgnp	nepareizs	m-p134-p18s1w6
+interpretācijas	ncfsg4	interpretācija	m-p134-p18s1w7
+un	cc	un	m-p134-p18s1w8
+pagaidu	nc00gg	pagaidu	m-p134-p18s1w9
+noregulējuma	ncmsg1	noregulējums	m-p134-p18s1w10
+sasaistes	ncfsg5	sasaiste	m-p134-p18s1w11
+ar	spsa	ar	m-p134-p18s1w12
+administratīvā	armsgyp	administratīvs	m-p134-p18s1w13
+akta	ncmsg1	akts	m-p134-p18s1w14
+darbības	ncfsg4	darbība	m-p134-p18s1w15
+apturēšanas	ncfsg4	apturēšana	m-p134-p18s1w16
+institūtu	ncmsa1	institūts	m-p134-p18s1w17
+<g />
+,	zc	,	m-p134-p18s1w18
+būtu	vcnc0ii00an	būt	m-p134-p18s1w19
+no	spsg	no	m-p134-p18s1w20
+Administratīvā	armsgyp	administratīvs	m-p134-p18s1w21
+procesa	ncmsg1	process	m-p134-p18s1w22
+likuma	ncmsg1	likums	m-p134-p18s1w23
+195.	xo	195.	m-p134-p18s1w24
+<g />
+panta	ncmsg1	pants	m-p134-p18s1w25
+pirmās	mosfsg	pirmais	m-p134-p18s1w26
+daļas	ncfsg4	daļa	m-p134-p18s1w27
+izslēdzams	vmnpdmsnppnpn	izslēgt	m-p134-p18s1w28
+vārds	ncmsn1	vārds	m-p134-p18s1w29
+"	zq	"	m-p134-p18s1w30
+<g />
+darbība	ncfsn4	darbība	m-p134-p18s1w31
+<g />
+"	zq	"	m-p134-p18s1w32
+un	cc	un	m-p134-p18s1w33
+attiecīgi	r0mn	attiecīgi	m-p134-p18s1w34
+jāveic	vmnd0t100an	veikt	m-p134-p18s1w35
+labojumi	ncmpn1	labojums	m-p134-p18s1w36
+vārdu	ncmpg1	vārds	m-p134-p18s1w37
+locījumos	ncmpl1	locījums	m-p134-p18s1w38
+<g />
+.	zs	.	m-p134-p18s1w39
+</s>
+<s>
+Papildus	r0mn	papildus	m-p134-p18s2w1
+jānorāda	vmnd0t300an	norādīt	m-p134-p18s2w2
+<g />
+,	zc	,	m-p134-p18s2w3
+ka	cs	ka	m-p134-p18s2w4
+grozījumos	ncmpl1	grozījums	m-p134-p18s2w5
+ietvertais	vmnpdmsnpsypn	ietvert	m-p134-p18s2w6
+formulējums	ncmsn1	formulējums	m-p134-p18s2w7
+nenorāda	vmnipt330ay	norādīt	m-p134-p18s2w8
+<g />
+,	zc	,	m-p134-p18s2w9
+ka	cs	ka	m-p134-p18s2w10
+grūtības	ncfpn4	grūtība	m-p134-p18s2w11
+seku	ncfpg4	seka	m-p134-p18s2w12
+novēršanā	ncfsl4	novēršana	m-p134-p18s2w13
+un	cc	un	m-p134-p18s2w14
+prima	xf	prima	m-p134-p18s2w15
+facie	xf	facie	m-p134-p18s2w16
+prettiesiskums	ncmsn1	prettiesiskums	m-p134-p18s2w17
+ir	vcnipii30an	būt	m-p134-p18s2w18
+kumulatīvi	armpnnp	kumulatīvs	m-p134-p18s2w19
+priekšnoteikumi	ncmpn1	priekšnoteikums	m-p134-p18s2w20
+pagaidu	nc00gg	pagaidu	m-p134-p18s2w21
+aizsardzības	ncfsg4	aizsardzība	m-p134-p18s2w22
+līdzekļa	ncmsg2	līdzeklis	m-p134-p18s2w23
+piemērošanai	ncfsd4	piemērošana	m-p134-p18s2w24
+<g />
+,	zc	,	m-p134-p18s2w25
+tādējādi	r0mn	tādējādi	m-p134-p18s2w26
+ļaujot	vmnpu0000000n	ļaut	m-p134-p18s2w27
+tiesām	ncfpd4	tiesa	m-p134-p18s2w28
+piemērot	vmnn0t2000n	piemērot	m-p134-p18s2w29
+pagaidu	nc00gg	pagaidu	m-p134-p18s2w30
+noregulējumu	ncmsa1	noregulējums	m-p134-p18s2w31
+<g />
+,	zc	,	m-p134-p18s2w32
+konstatējot	vmnpu0000000n	konstatēt	m-p134-p18s2w33
+tikai	q	tikai	m-p134-p18s2w34
+vienu	mcsfsa	viens	m-p134-p18s2w35
+šo	pd3fsan	šī	m-p134-p18s2w36
+pazīmi	ncfsa5	pazīme	m-p134-p18s2w37
+<g />
+.	zs	.	m-p134-p18s2w38
+</s>
+<s>
+Ņemot	vmnpu0000000n	ņemt	m-p134-p19s1w1
+vērā	r0cn	vērā	m-p134-p19s1w2
+minēto	vmnpdmsapsypn	minēt	m-p134-p19s1w3
+<g />
+,	zc	,	m-p134-p19s1w4
+autors	ncmsn1	autors	m-p134-p19s1w5
+uzskata	vmnipt330an	uzskatīt	m-p134-p19s1w6
+<g />
+,	zc	,	m-p134-p19s1w7
+ka	cs	ka	m-p134-p19s1w8
+Administratīvā	afmsgyp	administratīvs	m-p134-p19s1w9
+procesa	ncmsg1	process	m-p134-p19s1w10
+likuma	ncmsg1	likums	m-p134-p19s1w11
+195.	xo	195.	m-p134-p19s1w12
+<g />
+panta	ncmsg1	pants	m-p134-p19s1w13
+pirmajai	mosfsd	pirmais	m-p134-p19s1w14
+daļai	ncfsd4	daļa	m-p134-p19s1w15
+būtu	vcnc0ii00an	būt	m-p134-p19s1w16
+jābūt	vcnd0ii00an	būt	m-p134-p19s1w17
+izteiktai	vmnpdfsdpsnpn	izteikt	m-p134-p19s1w18
+šādā	pd0fsln	šāda	m-p134-p19s1w19
+redakcijā	ncfsl4	redakcija	m-p134-p19s1w20
+<g />
+:	zo	:	m-p134-p19s1w21
+</s>
+<s>
+"	zq	"	m-p134-p19s2w1
+<g />
+Ja	cs	ja	m-p134-p19s2w2
+ir	vmnipii30an	būt	m-p134-p19s2w3
+pamats	ncmsn1	pamats	m-p134-p19s2w4
+uzskatīt	vmnn0t3000n	uzskatīt	m-p134-p19s2w5
+<g />
+,	zc	,	m-p134-p19s2w6
+ka	cs	ka	m-p134-p19s2w7
+pārsūdzētais	vmnpdmsnpsypn	pārsūdzēt	m-p134-p19s2w8
+administratīvais	armsnyp	administratīvs	m-p134-p19s2w9
+akts	ncmsn1	akts	m-p134-p19s2w10
+<g />
+,	zc	,	m-p134-p19s2w11
+ar	spsa	ar	m-p134-p19s2w12
+kuru	pr0msan	kurš	m-p134-p19s2w13
+atteikts	vmnpdmsnpsnpn	atteikt	m-p134-p19s2w14
+nodibināt	vmnn0t3000n	nodibināt	m-p134-p19s2w15
+<g />
+,	zc	,	m-p134-p19s2w16
+grozīt	vmnn0t3000n	grozīt	m-p134-p19s2w17
+<g />
+,	zc	,	m-p134-p19s2w18
+izbeigt	vmnn0t1000n	izbeigt	m-p134-p19s2w19
+vai	cc	vai	m-p134-p19s2w20
+konstatēt	vmnn0t2000n	konstatēt	m-p134-p19s2w21
+tiesiskās	arfpayp	tiesisks	m-p134-p19s2w22
+attiecības	ncfpa4	attiecība	m-p134-p19s2w23
+<g />
+,	zc	,	m-p134-p19s2w24
+varētu	vonc0i300an	varēt	m-p134-p19s2w25
+radīt	vmnn0t3000n	radīt	m-p134-p19s2w26
+būtisku	afmsanp	būtisks	m-p134-p19s2w27
+kaitējumu	ncmsa1	kaitējums	m-p134-p19s2w28
+vai	cc	vai	m-p134-p19s2w29
+zaudējumus	ncmpa1	zaudējums	m-p134-p19s2w30
+<g />
+,	zc	,	m-p134-p19s2w31
+kuru	pr0mpgn	kurš	m-p134-p19s2w32
+novēršana	ncfsn4	novēršana	m-p134-p19s2w33
+vai	cc	vai	m-p134-p19s2w34
+atlīdzināšana	ncfsn4	atlīdzināšana	m-p134-p19s2w35
+būtu	vcnc0ii00an	būt	m-p134-p19s2w36
+ievērojami	rpqn	ievērojami	m-p134-p19s2w37
+apgrūtināta	vmnpdfsnpsnpn	apgrūtināt	m-p134-p19s2w38
+vai	cc	vai	m-p134-p19s2w39
+prasītu	vmnc0t300an	prasīt	m-p134-p19s2w40
+nesamērīgus	afmpanp	nesamērīgs	m-p134-p19s2w41
+resursus	ncmpa1	resurss	m-p134-p19s2w42
+<g />
+,	zc	,	m-p134-p19s2w43
+un	cc	un	m-p134-p19s2w44
+,	zc	,	m-p134-p19s2w78
+izvērtējot	vmnpu0000000n	izvērtēt	m-p134-p19s2w45
+tiesas	ncfsg4	tiesa	m-p134-p19s2w46
+rīcībā	ncfsl4	rīcība	m-p134-p19s2w47
+esošo	vmnpdfsaapypn	būt	m-p134-p19s2w48
+informāciju	ncfsa4	informācija	m-p134-p19s2w49
+<g />
+,	zc	,	m-p134-p19s2w50
+konstatējams	vmnpdmsnppnpn	konstatēt	m-p134-p19s2w51
+<g />
+,	zc	,	m-p134-p19s2w52
+ka	cs	ka	m-p134-p19s2w53
+pārsūdzētais	vmnpdmsnpsypn	pārsūdzēt	m-p134-p19s2w54
+administratīvais	armsnyp	administratīvs	m-p134-p19s2w55
+akts	ncmsn1	akts	m-p134-p19s2w56
+ir	vcnipii30an	būt	m-p134-p19s2w57
+pirmsšķietami	r0mn	pirmsšķietami	m-p134-p19s2w58
+(	zb	(	m-p134-p19s2w59
+<g />
+prima	xf	prima	m-p134-p19s2w60
+facie	xf	facie	m-p134-p19s2w61
+<g />
+)	zb	)	m-p134-p19s2w62
+prettiesisks	armsnnp	prettiesisks	m-p134-p19s2w63
+<g />
+,	zc	,	m-p134-p19s2w64
+tiesa	ncfsn4	tiesa	m-p134-p19s2w65
+pēc	spsg	pēc	m-p134-p19s2w66
+pieteicēja	ncmsg1	pieteicējs	m-p134-p19s2w67
+motivēta	vmnpdmsgpsnpn	motivēt	m-p134-p19s2w68
+pieteikuma	ncmsg1	pieteikums	m-p134-p19s2w69
+var	vonipi330an	varēt	m-p134-p19s2w70
+pieņemt	vmnn0t1000n	pieņemt	m-p134-p19s2w71
+lēmumu	ncmsa1	lēmums	m-p134-p19s2w72
+par	spsa	par	m-p134-p19s2w73
+pagaidu	nc00gg	pagaidu	m-p134-p19s2w74
+noregulējumu	ncmsa1	noregulējums	m-p134-p19s2w75
+<g />
+.	zs	.	m-p134-p19s2w76
+<g />
+"	zq	"	m-p134-p19s2w77
+</s>
+<s>
+Neskatoties	vmypu0000000y	skatīties	m-p134-p20s1w1
+uz	spsa	uz	m-p134-p20s1w2
+autora	ncmsg1	autors	m-p134-p20s1w3
+piedāvāto	vmnpdfsapsypn	piedāvāt	m-p134-p20s1w4
+Administratīvā	afmsgyp	administratīvs	m-p134-p20s1w5
+procesa	ncmsg1	process	m-p134-p20s1w6
+likuma	ncmsg1	likums	m-p134-p20s1w7
+195.	xo	195.	m-p134-p20s1w8
+<g />
+panta	ncmsg1	pants	m-p134-p20s1w9
+pirmās	mosfsg	pirmais	m-p134-p20s1w10
+daļas	ncfsg4	daļa	m-p134-p20s1w11
+redakciju	ncfsa4	redakcija	m-p134-p20s1w12
+<g />
+,	zc	,	m-p134-p20s1w13
+tas	pd3msnn	tas	m-p134-p20s1w14
+nenovērš	vmnipt130ay	novērst	m-p134-p20s1w15
+visas	pg0fpan	visa	m-p134-p20s1w16
+iespējamās	affpayp	iespējams	m-p134-p20s1w17
+neskaidrības	ncfpa4	neskaidrība	m-p134-p20s1w18
+saistībā	ncfsl4	saistība	m-p134-p20s1w19
+ar	spsa	ar	m-p134-p20s1w20
+pagaidu	nc00gg	pagaidu	m-p134-p20s1w21
+noregulējuma	ncmsg1	noregulējums	m-p134-p20s1w22
+piemērošanu	ncfsa4	piemērošana	m-p134-p20s1w23
+<g />
+.	zs	.	m-p134-p20s1w24
+</s>
+<s>
+Galvenā	arfsnyp	galvenais	m-p134-p21s1w1
+problēma	ncfsn4	problēma	m-p134-p21s1w2
+ir	vcnipii30an	būt	m-p134-p21s1w3
+meklējama	vmnpdfsnppnpn	meklēt	m-p134-p21s1w4
+apstāklī	ncmsl2	apstāklis	m-p134-p21s1w5
+<g />
+,	zc	,	m-p134-p21s1w6
+ka	cs	ka	m-p134-p21s1w7
+gadījumā	ncmsl1	gadījums	m-p134-p21s1w8
+<g />
+,	zc	,	m-p134-p21s1w9
+ja	cs	ja	m-p134-p21s1w10
+"	zq	"	m-p134-p21s1w11
+<g />
+jautājums	ncmsn1	jautājums	m-p134-p21s1w12
+<g />
+par	spsa	par	m-p134-p21s1w13
+administratīvā	armsgyp	administratīvs	m-p134-p21s1w14
+akta	ncmsg1	akts	m-p134-p21s1w15
+apturēšanu	ncfsa4	apturēšana	m-p134-p21s1w16
+nebūtu	vcnc0ii00ay	būt	m-p134-p21s1w17
+jau	r0tn	jau	m-p134-p21s1w18
+vienreiz	r0tn	vienreiz	m-p134-p21s1w19
+skatīts	vmnpdmsnpsnpn	skatīt	m-p134-p21s1w20
+Administratīvajā	arfslyp	administratīvs	m-p134-p21s1w21
+rajona	ncmsg1	rajons	m-p134-p21s1w22
+tiesā	ncfsl4	tiesa	m-p134-p21s1w23
+<g />
+,	zc	,	m-p134-p21s1w24
+pieteicējam	ncmsd1	pieteicējs	m-p134-p21s1w25
+nebūtu	vmnc0ii00ay	būt	m-p134-p21s1w26
+tiesības	ncfsg4	tiesība	m-p134-p21s1w27
+iesniegt	vmnn0t1000n	iesniegt	m-p134-p21s1w28
+pieteikumu	ncmsa1	pieteikums	m-p134-p21s1w29
+par	spsa	par	m-p134-p21s1w30
+administratīvā	armsgyp	administratīvs	m-p134-p21s1w31
+akta	ncmsg1	akts	m-p134-p21s1w32
+apturēšanu	ncfsa4	apturēšana	m-p134-p21s1w33
+Administratīvajā	arfslyp	administratīvs	m-p134-p21s1w34
+apgabaltiesā	ncfsl4	apgabaltiesa	m-p134-p21s1w35
+<g />
+.	zs	.	m-p134-p21s1w36
+</s>
+<s>
+Savukārt	r0cn	savukārt	m-p134-p21s2w1
+saskaņā	ncfsl4	saskaņa	m-p134-p21s2w2
+ar	spsa	ar	m-p134-p21s2w3
+Administratīvā	afmsgyp	administratīvs	m-p134-p21s2w4
+procesa	ncmsg1	process	m-p134-p21s2w5
+likuma	ncmsg1	likums	m-p134-p21s2w6
+195.	xo	195.	m-p134-p21s2w7
+<g />
+panta	ncmsg1	pants	m-p134-p21s2w8
+otro	mosfsa	otrais	m-p134-p21s2w9
+daļu	ncfsa4	daļa	m-p134-p21s2w10
+pagaidu	nc00gg	pagaidu	m-p134-p21s2w11
+noregulējumu	ncmsa1	noregulējums	m-p134-p21s2w12
+var	vonipi330an	varēt	m-p134-p21s2w13
+piemērot	vmnn0t2000n	piemērot	m-p134-p21s2w14
+jebkurā	pi0fsln	jebkura	m-p134-p21s2w15
+lietas	ncfsg4	lieta	m-p134-p21s2w16
+stadijā	ncfsl4	stadija	m-p134-p21s2w17
+<g />
+,	zc	,	m-p134-p21s2w18
+tajā	pd3msln	tas	m-p134-p21s2w19
+skaitā	ncmsl1	skaits	m-p134-p21s2w20
+izskatot	vmnrpt300an	izskatīt	m-p134-p21s2w21
+lietu	ncfsa4	lieta	m-p134-p21s2w22
+apelācijas	ncfsg4	apelācija	m-p134-p21s2w23
+un	cc	un	m-p134-p21s2w24
+pat	q	pat	m-p134-p21s2w25
+kasācijas	ncfsg4	kasācija	m-p134-p21s2w26
+kārtībā	ncfsl4	kārtība	m-p134-p21s2w27
+<g />
+.	zs	.	m-p134-p21s2w28
+<g />
+"	zq	"	m-p134-p21s2w29
+</s>
+<s>
+Lai	cs	lai	m-p134-p22s1w1
+novērstu	vmnc0t100an	novērst	m-p134-p22s1w2
+abu	pg0mpgn	abi	m-p134-p22s1w3
+tiesību	ncfpg4	tiesība	m-p134-p22s1w4
+institūtu	ncmpg1	institūts	m-p134-p22s1w5
+-	zd	-	m-p134-p22s1w6
+administratīvā	armsgyp	administratīvs	m-p134-p22s1w7
+akta	ncmsg1	akts	m-p134-p22s1w8
+darbības	ncfsg4	darbība	m-p134-p22s1w9
+apturēšanas	ncfsg4	apturēšana	m-p134-p22s1w10
+un	cc	un	m-p134-p22s1w11
+pagaidu	nc00gg	pagaidu	m-p134-p22s1w12
+noregulējuma	ncmsg1	noregulējums	m-p134-p22s1w13
+-	zd	-	m-p134-p22s1w41
+norobežošanas	ncfsg4	norobežošana	m-p134-p22s1w14
+problēmas	ncfpa4	problēma	m-p134-p22s1w15
+<g />
+,	zc	,	m-p134-p22s1w16
+ir	vcnipii30an	būt	m-p134-p22s1w17
+nepieciešams	afmsnnp	nepieciešams	m-p134-p22s1w18
+piemērot	vmnn0t2000n	piemērot	m-p134-p22s1w19
+administratīvā	armsgyp	administratīvs	m-p134-p22s1w20
+akta	ncmsg1	akts	m-p134-p22s1w21
+apturēšanas	ncfsg4	apturēšana	m-p134-p22s1w22
+institūtu	ncmsa1	institūts	m-p134-p22s1w23
+visā	pg0msln	viss	m-p134-p22s1w24
+tiesas	ncfsg4	tiesa	m-p134-p22s1w25
+procesā	ncmsl1	process	m-p134-p22s1w26
+tāpat	r0mn	tāpat	m-p134-p22s1w27
+kā	cs	kā	m-p134-p22s1w28
+pagaidu	nc00gg	pagaidu	m-p134-p22s1w29
+noregulējumu	ncmsa1	noregulējums	m-p134-p22s1w30
+<g />
+,	zc	,	m-p134-p22s1w31
+turklāt	q	turklāt	m-p134-p22s1w32
+to	pd3msan	tas	m-p134-p22s1w33
+attiecinot	vmnrpt300an	attiecināt	m-p134-p22s1w34
+uz	sppd	uz	m-p134-p22s1w35
+visām	pg0fpdn	visa	m-p134-p22s1w36
+iespējamām	affpdnp	iespējams	m-p134-p22s1w37
+izpildes	ncfsg5	izpilde	m-p134-p22s1w38
+sekām	ncfpd4	seka	m-p134-p22s1w39
+<g />
+.	zs	.	m-p134-p22s1w40
+</s>
+<s>
+Tādējādi	r0mn	tādējādi	m-p134-p23s1w1
+tiktu	vanc0i100an	tikt	m-p134-p23s1w2
+novērsta	vmnpdfsnpsnpn	novērst	m-p134-p23s1w3
+šo	pd3mpgn	šis	m-p134-p23s1w4
+abu	pg0mpgn	abi	m-p134-p23s1w5
+tiesību	ncfpg4	tiesība	m-p134-p23s1w6
+institūtu	ncmpg1	institūts	m-p134-p23s1w7
+savstarpējā	arfsnyp	savstarpējs	m-p134-p23s1w8
+"	zq	"	m-p134-p23s1w9
+<g />
+dublēšanās	ncfsnr	dublēšanās	m-p134-p23s1w10
+<g />
+"	zq	"	m-p134-p23s1w11
+jeb	cc	jeb	m-p134-p23s1w12
+pakārtota	vmnpdfsnpsnpn	pakārtot	m-p134-p23s1w13
+piemērošana	ncfsn4	piemērošana	m-p134-p23s1w14
+atkarībā	ncfsl4	atkarība	m-p134-p23s1w15
+no	spsg	no	m-p134-p23s1w16
+tiesas	ncfsg4	tiesa	m-p134-p23s1w17
+instances	ncfsg5	instance	m-p134-p23s1w18
+<g />
+,	zc	,	m-p134-p23s1w19
+kurā	pr0fsln	kura	m-p134-p23s1w20
+lieta	ncfsn4	lieta	m-p134-p23s1w21
+tiek	vanipi130an	tikt	m-p134-p23s1w22
+skatīta	vmnpdfsnpsnpn	skatīt	m-p134-p23s1w23
+<g />
+.	zs	.	m-p134-p23s1w24
+</s>
+<s>
+Tāpat	q	tāpat	m-p134-p23s2w1
+neveidotos	vmyc0i200ay	veidoties	m-p134-p23s2w2
+<g />
+,	zc	,	m-p134-p23s2w3
+pēc	sppd	pēc	m-p134-p23s2w4
+autora	ncmsg1	autors	m-p134-p23s2w5
+domām	ncfpd4	doma	m-p134-p23s2w6
+<g />
+,	zc	,	m-p134-p23s2w7
+nepareiza	affsnnp	nepareizs	m-p134-p23s2w8
+tiesību	ncfpg4	tiesība	m-p134-p23s2w9
+normu	ncfpg4	norma	m-p134-p23s2w10
+piemērošana	ncfsn4	piemērošana	m-p134-p23s2w11
+<g />
+,	zc	,	m-p134-p23s2w12
+proti	q	proti	m-p134-p23s2w13
+<g />
+,	zc	,	m-p134-p23s2w14
+"	zq	"	m-p134-p23s2w15
+<g />
+gadījumā	ncmsl1	gadījums	m-p134-p23s2w16
+<g />
+,	zc	,	m-p134-p23s2w17
+kad	r0tn	kad	m-p134-p23s2w18
+ir	vcnipii30an	būt	m-p134-p23s2w19
+pieņemts	vmnpdmsnpsnpn	pieņemt	m-p134-p23s2w20
+lēmums	ncmsn1	lēmums	m-p134-p23s2w21
+par	spsa	par	m-p134-p23s2w22
+bezstrīdus	arfsnnp	bezstrīdus	m-p134-p23s2w23
+izpildi	ncfsa5	izpilde	m-p134-p23s2w24
+<g />
+,	zc	,	m-p134-p23s2w25
+pieteicēja	ncmsg1	pieteicējs	m-p134-p23s2w26
+vienīgā	arfsnyp	vienīgs	m-p134-p23s2w27
+iespēja	ncfsn4	iespēja	m-p134-p23s2w28
+ir	vcnipii30an	būt	m-p134-p23s2w29
+lūgt	vmnn0t1000n	lūgt	m-p134-p23s2w30
+šo	pd3msan	šis	m-p134-p23s2w31
+lēmumu	ncmsa1	lēmums	m-p134-p23s2w32
+apturēt	vmnn0t3000n	apturēt	m-p134-p23s2w33
+<g />
+,	zc	,	m-p134-p23s2w34
+lūdzot	vmnpu0000000n	lūgt	m-p134-p23s2w35
+piemērot	vmnn0t2000n	piemērot	m-p134-p23s2w36
+pagaidu	nc00gg	pagaidu	m-p134-p23s2w37
+noregulējumu	ncmsa1	noregulējums	m-p134-p23s2w38
+<g />
+.	zs	.	m-p134-p23s2w39
+</s>
+<s>
+Tādējādi	r0mn	tādējādi	m-p134-p23s3w1
+<g />
+,	zc	,	m-p134-p23s3w2
+ievērojot	vmnpu0000000n	ievērot	m-p134-p23s3w3
+procesuālās	arfsgyp	procesuāls	m-p134-p23s3w4
+ekonomijas	ncfsg4	ekonomija	m-p134-p23s3w5
+principu	ncmsa1	princips	m-p134-p23s3w6
+<g />
+,	zc	,	m-p134-p23s3w7
+pieteicējam	ncmsd1	pieteicējs	m-p134-p23s3w8
+nav	vcnipii30ay	būt	m-p134-p23s3w9
+nepieciešams	afmsnnp	nepieciešams	m-p134-p23s3w10
+iesniegt	vmnn0t1000n	iesniegt	m-p134-p23s3w11
+atsevišķu	afmsanp	atsevišķs	m-p134-p23s3w12
+pieteikumu	ncmsa1	pieteikums	m-p134-p23s3w13
+par	spsa	par	m-p134-p23s3w14
+lēmuma	ncmsg1	lēmums	m-p134-p23s3w15
+par	spsa	par	m-p134-p23s3w16
+nodokļu	ncmpg2	nodoklis	m-p134-p23s3w17
+parāda	ncmsg1	parāds	m-p134-p23s3w18
+bezstrīdus	arfpgnp	bezstrīdus	m-p134-p23s3w19
+piedziņu	ncfpg4	piedziņa	m-p134-p23s3w20
+atcelšanu	ncfsa4	atcelšana	m-p134-p23s3w21
+un	cc	un	m-p134-p23s3w22
+šīs	pd3fsgn	šī	m-p134-p23s3w23
+lietas	ncfsg4	lieta	m-p134-p23s3w24
+ietvaros	ncmpl1	ietvars	m-p134-p23s3w25
+lūgt	vmnn0t1000n	lūgt	m-p134-p23s3w26
+pārsūdzētā	vmnpdmsgpsypn	pārsūdzēt	m-p134-p23s3w27
+lēmuma	ncmsg1	lēmums	m-p134-p23s3w28
+darbības	ncfsg4	darbība	m-p134-p23s3w29
+apturēšanu	ncfsa4	apturēšana	m-p134-p23s3w30
+<g />
+.	zs	.	m-p134-p23s3w31
+</s>
+<s>
+Tā	pd3msgn	tas	m-p134-p24s1w1
+vietā	ncfsl4	vieta	m-p134-p24s1w2
+gadījumā	ncmsl1	gadījums	m-p134-p24s1w3
+<g />
+,	zc	,	m-p134-p24s1w4
+ja	cs	ja	m-p134-p24s1w5
+pieteicējs	ncmsn1	pieteicējs	m-p134-p24s1w6
+neapšauba	vmnipt330ay	apšaubīt	m-p134-p24s1w7
+lēmuma	ncmsg1	lēmums	m-p134-p24s1w8
+par	spsa	par	m-p134-p24s1w9
+nodokļu	ncmpg2	nodoklis	m-p134-p24s1w10
+parāda	ncmsg1	parāds	m-p134-p24s1w11
+bezstrīdus	arfpgnp	bezstrīdus	m-p134-p24s1w12
+piedziņu	ncfpg4	piedziņa	m-p134-p24s1w13
+tiesiskumu	ncmsa1	tiesiskums	m-p134-p24s1w14
+<g />
+,	zc	,	m-p134-p24s1w15
+bet	cc	bet	m-p134-p24s1w16
+vienīgi	q	vienīgi	m-p134-p24s1w17
+vēlas	vmyipi330an	vēlēties	m-p134-p24s1w18
+<g />
+,	zc	,	m-p134-p24s1w19
+lai	cs	lai	m-p134-p24s1w20
+neiestātos	vmyc0i100ay	iestāties	m-p134-p24s1w21
+šajā	pd3msln	šis	m-p134-p24s1w22
+lēmumā	ncmsl1	lēmums	m-p134-p24s1w23
+paredzētās	vmnpdfpnpsypn	paredzēt	m-p134-p24s1w24
+tiesiskās	arfpnyp	tiesisks	m-p134-p24s1w25
+sekas	ncfpn4	seka	m-p134-p24s1w26
+<g />
+,	zc	,	m-p134-p24s1w27
+jautājumu	ncmsa1	jautājums	m-p134-p24s1w28
+par	spsa	par	m-p134-p24s1w29
+šā	pd3msgn	šis	m-p134-p24s1w30
+lēmuma	ncmsg1	lēmums	m-p134-p24s1w31
+darbības	ncfsg4	darbība	m-p134-p24s1w32
+apturēšanu	ncfsa4	apturēšana	m-p134-p24s1w33
+ir	vcnipii30an	būt	m-p134-p24s1w34
+iespējams	afmsnnp	iespējams	m-p134-p24s1w35
+izskatīt	vmnn0t3000n	izskatīt	m-p134-p24s1w36
+kā	cs	kā	m-p134-p24s1w37
+pagaidu	nc00gg	pagaidu	m-p134-p24s1w38
+noregulējumu	ncmsa1	noregulējums	m-p134-p24s1w39
+lietā	ncfsl4	lieta	m-p134-p24s1w40
+par	spsa	par	m-p134-p24s1w41
+paša	pg0msgn	pats	m-p134-p24s1w42
+nodokļu	ncmpg2	nodoklis	m-p134-p24s1w43
+parāda	ncmsg1	parāds	m-p134-p24s1w44
+apmēra	ncmsg1	apmērs	m-p134-p24s1w45
+pamatotību	ncfsa4	pamatotība	m-p134-p24s1w46
+<g />
+,	zc	,	m-p134-p24s1w47
+un	cc	un	m-p134-p24s1w48
+nav	vcnipii30ay	būt	m-p134-p24s1w49
+nepieciešams	afmsnnp	nepieciešams	m-p134-p24s1w50
+uzsākt	vmnn0t1000n	uzsākt	m-p134-p24s1w51
+jaunu	affsanp	jauns	m-p134-p24s1w52
+administratīvo	arfsayp	administratīvs	m-p134-p24s1w53
+lietu	ncfsa4	lieta	m-p134-p24s1w54
+<g />
+"	zq	"	m-p134-p24s1w55
+<g />
+.	zs	.	m-p134-p24s1w56
+</s>
+<s>
+Autors	ncmsn1	autors	m-p134-p25s1w1
+nesaskata	vmnipt330ay	saskatīt	m-p134-p25s1w2
+šķērsli	ncmsa2	šķērslis	m-p134-p25s1w3
+piemērot	vmnn0t2000n	piemērot	m-p134-p25s1w4
+administratīvā	armsgyp	administratīvs	m-p134-p25s1w5
+akta	ncmsg1	akts	m-p134-p25s1w6
+darbības	ncfsg4	darbība	m-p134-p25s1w7
+apturēšanas	ncfsg4	apturēšana	m-p134-p25s1w8
+institūtu	ncmsa1	institūts	m-p134-p25s1w9
+arī	q	arī	m-p134-p25s1w10
+citās	pi0fpln	cita	m-p134-p25s1w11
+tiesu	ncfpg4	tiesa	m-p134-p25s1w12
+instancēs	ncfpl5	instance	m-p134-p25s1w13
+<g />
+,	zc	,	m-p134-p25s1w14
+it	q	it	m-p134-p25s1w15
+īpaši	rpmn	īpaši	m-p134-p25s1w16
+ņemot	vmnpu0000000n	ņemt	m-p134-p25s1w17
+vērā	r0pn	vērā	m-p134-p25s1w18
+to	pd3msan	tas	m-p134-p25s1w19
+<g />
+,	zc	,	m-p134-p25s1w20
+ka	cs	ka	m-p134-p25s1w21
+pagaidu	nc00gg	pagaidu	m-p134-p25s1w22
+noregulējuma	ncmsg1	noregulējums	m-p134-p25s1w23
+institūts	ncmsn1	institūts	m-p134-p25s1w24
+un	cc	un	m-p134-p25s1w25
+administratīvā	armsgyp	administratīvs	m-p134-p25s1w26
+akta	ncmsg1	akts	m-p134-p25s1w27
+darbības	ncfsg4	darbība	m-p134-p25s1w28
+apturēšanas	ncfsg4	apturēšana	m-p134-p25s1w29
+institūts	ncmsn1	institūts	m-p134-p25s1w30
+ir	vcnipii30an	būt	m-p134-p25s1w31
+savstarpēji	r0mn	savstarpēji	m-p134-p25s1w32
+nošķirami	vmnpdmpnppnpn	nošķirt	m-p134-p25s1w33
+<g />
+.	zs	.	m-p134-p25s1w34
+</s>
+<s>
+Turklāt	q	turklāt	m-p134-p26s1w1
+<g />
+,	zc	,	m-p134-p26s1w2
+ja	cs	ja	m-p134-p26s1w3
+tiesa	ncfsn4	tiesa	m-p134-p26s1w4
+<g />
+,	zc	,	m-p134-p26s1w5
+lemjot	vmnpu0000000n	lemt	m-p134-p26s1w6
+jautājumu	ncmsa1	jautājums	m-p134-p26s1w7
+par	spsa	par	m-p134-p26s1w8
+administratīvā	armsgyp	administratīvs	m-p134-p26s1w9
+akta	ncmsg1	akts	m-p134-p26s1w10
+darbības	ncfsg4	darbība	m-p134-p26s1w11
+apturēšanu	ncfsa4	apturēšana	m-p134-p26s1w12
+<g />
+,	zc	,	m-p134-p26s1w13
+vērtē	vmnipt230an	vērtēt	m-p134-p26s1w14
+potenciāli	r0mn	potenciāli	m-p134-p26s1w15
+grūti	rpmn	grūti	m-p134-p26s1w16
+novēršamās	vmnpdfpappypn	novērst	m-p134-p26s1w17
+izpildes	ncfsg5	izpilde	m-p134-p26s1w18
+sekas	ncfpa4	seka	m-p134-p26s1w19
+un	cc	un	m-p134-p26s1w20
+prima	xf	prima	m-p134-p26s1w21
+facie	xf	facie	m-p134-p26s1w22
+administratīvā	armsgyp	administratīvs	m-p134-p26s1w23
+akta	ncmsg1	akts	m-p134-p26s1w24
+prettiesiskumu	ncmsa1	prettiesiskums	m-p134-p26s1w25
+<g />
+,	zc	,	m-p134-p26s1w26
+tad	r0tn	tad	m-p134-p26s1w27
+tiesai	ncfsd4	tiesa	m-p134-p26s1w28
+šie	pd3mpnn	šis	m-p134-p26s1w29
+paši	pg0mpnn	pats	m-p134-p26s1w30
+apstākļi	ncmpn2	apstāklis	m-p134-p26s1w31
+tāpat	q	tāpat	m-p134-p26s1w32
+būtu	vcnc0ii00an	būt	m-p134-p26s1w33
+jāskata	vmnd0t300an	skatīt	m-p134-p26s1w34
+un	cc	un	m-p134-p26s1w35
+arī	q	arī	m-p134-p26s1w36
+jāvērtē	vmnd0t200an	vērtēt	m-p134-p26s1w37
+<g />
+,	zc	,	m-p134-p26s1w38
+piemērojot	vmnpu0000000n	piemērot	m-p134-p26s1w39
+pagaidu	nc00gg	pagaidu	m-p134-p26s1w40
+noregulējumu	ncmsa1	noregulējums	m-p134-p26s1w41
+pēc	spsg	pēc	m-p134-p26s1w42
+iepriekš	r0tn	iepriekš	m-p134-p26s1w43
+citētā	vmnpdmsgpsypn	citēt	m-p134-p26s1w44
+tiesību	ncfpg4	tiesība	m-p134-p26s1w45
+normu	ncfpg4	norma	m-p134-p26s1w46
+piemērošanas	ncfsg4	piemērošana	m-p134-p26s1w47
+modeļa	ncmsg2	modelis	m-p134-p26s1w48
+<g />
+.	zs	.	m-p134-p26s1w49
+</s>
+<s>
+Autora	ncmsg1	autors	m-p134-p27s1w1
+ieskatā	ncmsl1	ieskats	m-p134-p27s1w2
+<g />
+,	zc	,	m-p134-p27s1w3
+šādi	r0mn	šādi	m-p134-p27s1w4
+piemērojot	vmnpu0000000n	piemērot	m-p134-p27s1w5
+tiesību	ncfpg4	tiesība	m-p134-p27s1w6
+normas	ncfpa4	norma	m-p134-p27s1w7
+<g />
+,	zc	,	m-p134-p27s1w8
+tiek	vanipi130an	tikt	m-p134-p27s1w9
+veikta	vmnpdfsnpsnpn	veikt	m-p134-p27s1w10
+ačgārna	affsnnp	ačgārns	m-p134-p27s1w11
+tiesību	ncfpg4	tiesība	m-p134-p27s1w12
+normu	ncfpg4	norma	m-p134-p27s1w13
+un	cc	un	m-p134-p27s1w14
+tiesību	ncfpg4	tiesība	m-p134-p27s1w15
+institūtu	ncmpg1	institūts	m-p134-p27s1w16
+piemērošana	ncfsn4	piemērošana	m-p134-p27s1w17
+<g />
+,	zc	,	m-p134-p27s1w18
+proti	q	proti	m-p134-p27s1w19
+<g />
+,	zc	,	m-p134-p27s1w20
+tiesību	ncfpg4	tiesība	m-p134-p27s1w21
+piemērotājs	ncmsn1	piemērotājs	m-p134-p27s1w22
+<g />
+,	zc	,	m-p134-p27s1w23
+redzot	vmnpu0000000n	redzēt	m-p134-p27s1w24
+<g />
+,	zc	,	m-p134-p27s1w25
+ka	cs	ka	m-p134-p27s1w26
+pieteicējs	ncmsn1	pieteicējs	m-p134-p27s1w27
+kādu	pi0mpgn	kāds	m-p134-p27s1w28
+apstākļu	ncmpg2	apstāklis	m-p134-p27s1w29
+dēļ	stpg	dēļ	m-p134-p27s1w30
+nav	vcnipii30ay	būt	m-p134-p27s1w31
+lūdzis	vmnpdmsnasnpn	lūgt	m-p134-p27s1w32
+administratīvā	armsgyp	administratīvs	m-p134-p27s1w33
+akta	ncmsg1	akts	m-p134-p27s1w34
+darbības	ncfsg4	darbība	m-p134-p27s1w35
+apturēšanu	ncfsa4	apturēšana	m-p134-p27s1w36
+pirmajā	mosfsl	pirmais	m-p134-p27s1w37
+instancē	ncfsl5	instance	m-p134-p27s1w38
+<g />
+,	zc	,	m-p134-p27s1w39
+un	cc	un	m-p134-p27s1w40
+to	pd3msan	tas	m-p134-p27s1w41
+<g />
+,	zc	,	m-p134-p27s1w42
+ka	cs	ka	m-p134-p27s1w43
+šādu	pd0msan	šāds	m-p134-p27s1w44
+lūgumu	ncmsa1	lūgums	m-p134-p27s1w45
+pieteicējs	ncmsn1	pieteicējs	m-p134-p27s1w46
+nevar	vonipi330ay	varēt	m-p134-p27s1w47
+izteikt	vmnn0t1000n	izteikt	m-p134-p27s1w48
+citās	pi0fpln	cita	m-p134-p27s1w49
+instancēs	ncfpl5	instance	m-p134-p27s1w50
+<g />
+,	zc	,	m-p134-p27s1w51
+taču	cc	taču	m-p134-p27s1w52
+,	zc	,	m-p134-p27s1w53
+saprotot	vmnpu0000000n	saprast	m-p134-p27s1w54
+<g />
+,	zc	,	m-p134-p27s1w55
+ka	cs	ka	m-p134-p27s1w56
+administratīvā	armsgyp	administratīvs	m-p134-p27s1w57
+akta	ncmsg1	akts	m-p134-p27s1w58
+izpildes	ncfsg5	izpilde	m-p134-p27s1w59
+sekas	ncfpn4	seka	m-p134-p27s1w60
+var	vonipi330an	varēt	m-p134-p27s1w61
+radīt	vmnn0t3000n	radīt	m-p134-p27s1w62
+grūti	rpmn	grūti	m-p134-p27s1w63
+kompensējamas	vmnpdfpappnpn	kompensēt	m-p134-p27s1w64
+sekas	ncfpa4	seka	m-p134-p27s1w65
+<g />
+,	zc	,	m-p134-p27s1w66
+piemēro	vmnipt230an	piemērot	m-p134-p27s1w67
+tiesību	ncfpg4	tiesība	m-p134-p27s1w68
+institūtu	ncmsa1	institūts	m-p134-p27s1w69
+<g />
+,	zc	,	m-p134-p27s1w70
+kurš	pr0msnn	kurš	m-p134-p27s1w71
+principā	ncmsl1	princips	m-p134-p27s1w72
+ir	vcnipii30an	būt	m-p134-p27s1w73
+paredzēts	vmnpdmsnpsnpn	paredzēt	m-p134-p27s1w74
+citam	pi0msdn	cits	m-p134-p27s1w75
+tiesiskajam	armsdyp	tiesisks	m-p134-p27s1w76
+gadījumam	ncmsd1	gadījums	m-p134-p27s1w77
+<g />
+.	zs	.	m-p134-p27s1w78
+</s>
+<s>
+Ja	cs	ja	m-p134-p28s1w1
+arī	q	arī	m-p134-p28s1w2
+likumdevējs	ncmsn1	likumdevējs	m-p134-p28s1w3
+,	zc	,	m-p134-p28s1w61
+īpašu	afmpgnp	īpašs	m-p134-p28s1w4
+apsvērumu	ncmpg1	apsvērums	m-p134-p28s1w5
+vadīts	vmnpdmsnpsnpn	vadīt	m-p134-p28s1w6
+,	zc	,	m-p134-p28s1w62
+ir	vcnipii30an	būt	m-p134-p28s1w7
+likumā	ncmsl1	likums	m-p134-p28s1w8
+noteicis	vmnpdmsnasnpn	noteikt	m-p134-p28s1w9
+<g />
+,	zc	,	m-p134-p28s1w10
+ka	cs	ka	m-p134-p28s1w11
+administratīvā	armsgyp	administratīvs	m-p134-p28s1w12
+akta	ncmsg1	akts	m-p134-p28s1w13
+apturēšanu	ncfsa4	apturēšana	m-p134-p28s1w14
+var	vonipi330an	varēt	m-p134-p28s1w15
+lūgt	vmnn0t1000n	lūgt	m-p134-p28s1w16
+piemērot	vmnn0t2000n	piemērot	m-p134-p28s1w17
+tikai	q	tikai	m-p134-p28s1w18
+pirmās	mosfsg	pirmais	m-p134-p28s1w19
+instances	ncfsg5	instance	m-p134-p28s1w20
+tiesai	ncfsd4	tiesa	m-p134-p28s1w21
+<g />
+,	zc	,	m-p134-p28s1w22
+tad	r0tn	tad	m-p134-p28s1w23
+<g />
+,	zc	,	m-p134-p28s1w24
+ja	cs	ja	m-p134-p28s1w25
+šāds	pd0msnn	šāds	m-p134-p28s1w26
+lūgums	ncmsn1	lūgums	m-p134-p28s1w27
+netiek	vanipt130ay	tikt	m-p134-p28s1w28
+izteikts	vmnpdmsnpsnpn	izteikt	m-p134-p28s1w29
+vai	cc	vai	m-p134-p28s1w30
+atteikts	vmnpdmsnpsnpn	atteikt	m-p134-p28s1w31
+piemērot	vmnn0t2000n	piemērot	m-p134-p28s1w32
+<g />
+,	zc	,	m-p134-p28s1w33
+tad	r0tn	tad	m-p134-p28s1w34
+ir	vcnipii30an	būt	m-p134-p28s1w35
+jāsamierinās	vmyd0i300an	samierināties	m-p134-p28s1w36
+ar	sppd	ar	m-p134-p28s1w37
+šādām	pd0fpdn	šāda	m-p134-p28s1w38
+tiesiskajām	arfpdyp	tiesisks	m-p134-p28s1w39
+sekām	ncfpd4	seka	m-p134-p28s1w40
+<g />
+,	zc	,	m-p134-p28s1w41
+jo	cs	jo	m-p134-p28s1w42
+tiesa	ncfsn4	tiesa	m-p134-p28s1w43
+pēdējā	armslyp	pēdējais	m-p134-p28s1w44
+gadījumā	ncmsl1	gadījums	m-p134-p28s1w45
+jau	r0tn	jau	m-p134-p28s1w46
+ir	vcnipii30an	būt	m-p134-p28s1w47
+vērtējusi	vmnpdfsnasnpn	vērtēt	m-p134-p28s1w48
+tos	pd3mpan	tas	m-p134-p28s1w49
+apstākļus	ncmpa2	apstāklis	m-p134-p28s1w50
+<g />
+,	zc	,	m-p134-p28s1w51
+kas	pr000nn	kas	m-p134-p28s1w52
+būtu	vcnc0ii00an	būt	m-p134-p28s1w53
+bijuši	vcnpdmpnasnpn	būt	m-p134-p28s1w54
+par	spsa	par	m-p134-p28s1w55
+pamatu	ncmsa1	pamats	m-p134-p28s1w56
+grūti	rpmn	grūti	m-p134-p28s1w57
+kompensējamām	vmnpdfpdppnpn	kompensēt	m-p134-p28s1w58
+sekām	ncfpd4	seka	m-p134-p28s1w59
+<g />
+.	zs	.	m-p134-p28s1w60
+</s>
+<s>
+Vēl	r0qn	vēl	m-p134-p29s1w1
+jo	q	jo	m-p134-p29s1w2
+vairāk	rpqn	daudz	m-p134-p29s1w3
+<g />
+,	zc	,	m-p134-p29s1w4
+autora	ncmsg1	autors	m-p134-p29s1w5
+ieskatā	ncmsl1	ieskats	m-p134-p29s1w6
+<g />
+,	zc	,	m-p134-p29s1w7
+nepareizi	rpmn	nepareizi	m-p134-p29s1w8
+būtu	vcnc0ii00an	būt	m-p134-p29s1w9
+piemērot	vmnn0t2000n	piemērot	m-p134-p29s1w10
+pagaidu	nc00gg	pagaidu	m-p134-p29s1w11
+noregulējumu	ncmsa1	noregulējums	m-p134-p29s1w12
+kā	cs	kā	m-p134-p29s1w13
+administratīvā	armsgyp	administratīvs	m-p134-p29s1w14
+akta	ncmsg1	akts	m-p134-p29s1w15
+apturēšanas	ncfsg4	apturēšana	m-p134-p29s1w16
+līdzekli	ncmsa2	līdzeklis	m-p134-p29s1w17
+citās	pi0fpln	cita	m-p134-p29s1w18
+instancēs	ncfpl5	instance	m-p134-p29s1w19
+tikai	q	tikai	m-p134-p29s1w20
+tādēļ	r0cn	tādēļ	m-p134-p29s1w21
+<g />
+,	zc	,	m-p134-p29s1w22
+ka	cs	ka	m-p134-p29s1w23
+pastāv	vmnipi330an	pastāvēt	m-p134-p29s1w24
+iespēja	ncfsn4	iespēja	m-p134-p29s1w25
+to	pd3msan	tas	m-p134-p29s1w26
+piemērot	vmnn0t2000n	piemērot	m-p134-p29s1w27
+<g />
+,	zc	,	m-p134-p29s1w28
+neskatoties	vmypu0000000y	skatīties	m-p134-p29s1w29
+šī	pd3msgn	šis	m-p134-p29s1w30
+tiesību	ncfpg4	tiesība	m-p134-p29s1w31
+institūta	ncmsg1	institūts	m-p134-p29s1w32
+jēgu	ncfsa4	jēga	m-p134-p29s1w33
+<g />
+,	zc	,	m-p134-p29s1w34
+piemērošanas	ncfsg4	piemērošana	m-p134-p29s1w35
+priekšnoteikumus	ncmpa1	priekšnoteikums	m-p134-p29s1w36
+un	cc	un	m-p134-p29s1w37
+mērķi	ncmsa2	mērķis	m-p134-p29s1w38
+<g />
+.	zs	.	m-p134-p29s1w39
+</s>
+<s>
+Savukārt	r0cn	savukārt	m-p134-p30s1w1
+<g />
+,	zc	,	m-p134-p30s1w2
+ja	cs	ja	m-p134-p30s1w3
+pagaidu	nc00gg	pagaidu	m-p134-p30s1w4
+noregulējuma	ncmsg1	noregulējums	m-p134-p30s1w5
+piemērošanas	ncfsg4	piemērošana	m-p134-p30s1w6
+pamatā	ncmsl1	pamats	m-p134-p30s1w7
+ir	vcnipii30an	būt	m-p134-p30s1w8
+prima	xf	prima	m-p134-p30s1w9
+facie	xf	facie	m-p134-p30s1w10
+administratīvā	armsgyp	administratīvs	m-p134-p30s1w11
+akta	ncmsg1	akts	m-p134-p30s1w12
+prettiesiskums	ncmsn1	prettiesiskums	m-p134-p30s1w13
+un	cc	un	m-p134-p30s1w14
+grūti	rpmn	grūti	m-p134-p30s1w15
+kompensējamu	vmnpdfpgppnpn	kompensēt	m-p134-p30s1w16
+seku	ncfpg4	seka	m-p134-p30s1w17
+iestāšanās	ncfsnr	iestāšanās	m-p134-p30s1w18
+<g />
+,	zc	,	m-p134-p30s1w19
+tad	r0tn	tad	m-p134-p30s1w20
+diezgan	r0qn	diezgan	m-p134-p30s1w21
+absurdi	rpmn	absurdi	m-p134-p30s1w22
+būtu	vcnc0ii00an	būt	m-p134-p30s1w23
+piemērot	vmnn0t2000n	piemērot	m-p134-p30s1w24
+pagaidu	nc00gg	pagaidu	m-p134-p30s1w25
+noregulējumu	ncmsa1	noregulējums	m-p134-p30s1w26
+tādā	pd0msln	tāds	m-p134-p30s1w27
+gadījumā	ncmsl1	gadījums	m-p134-p30s1w28
+<g />
+,	zc	,	m-p134-p30s1w29
+ja	cs	ja	m-p134-p30s1w30
+neapšauba	vmnipt330ay	apšaubīt	m-p134-p30s1w31
+lēmuma	ncmsg1	lēmums	m-p134-p30s1w32
+par	spsa	par	m-p134-p30s1w33
+nodokļu	ncmpg2	nodoklis	m-p134-p30s1w34
+parāda	ncmsg1	parāds	m-p134-p30s1w35
+bezstrīdus	arfpgnp	bezstrīdus	m-p134-p30s1w36
+piedziņu	ncfpg4	piedziņa	m-p134-p30s1w37
+tiesiskumu	ncmsa1	tiesiskums	m-p134-p30s1w38
+<g />
+,	zc	,	m-p134-p30s1w39
+bet	cc	bet	m-p134-p30s1w40
+vienīgi	q	vienīgi	m-p134-p30s1w41
+vēlas	vmyipi330an	vēlēties	m-p134-p30s1w42
+<g />
+,	zc	,	m-p134-p30s1w43
+lai	cs	lai	m-p134-p30s1w44
+neiestātos	vmyc0i100ay	iestāties	m-p134-p30s1w45
+šajā	pd3msln	šis	m-p134-p30s1w46
+lēmumā	ncmsl1	lēmums	m-p134-p30s1w47
+paredzētās	vmnpdfpnpsypn	paredzēt	m-p134-p30s1w48
+tiesiskās	arfpnyp	tiesisks	m-p134-p30s1w49
+sekas	ncfpn4	seka	m-p134-p30s1w50
+<g />
+.	zs	.	m-p134-p30s1w51
 </s>
 <s>
 «	zq	"	m-p6178-p10s1w1

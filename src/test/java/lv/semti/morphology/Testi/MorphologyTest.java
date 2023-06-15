@@ -522,12 +522,13 @@ public class MorphologyTest {
 
 
     @Test
+    @Ignore("2023-06-15 - skaitļa vārdiem pie pārnešanas uz tēzauru likvidējām kārtas datus")
     public void ticket76() {
         // Ticket #76 - skaitļa vārdiem neaiziet uz marķējumu skaitļa vārda kārta
         Word simt = locītājs.analyze("simt");
         assertTrue(simt.isRecognized());
         assertEquals(AttributeNames.v_Hundreds, simt.wordforms.get(0).getValue(AttributeNames.i_Order));
-        assertEquals("mcs0p0", simt.wordforms.get(0).getTag());
+        assertEquals("mc_0p0", simt.wordforms.get(0).getTag());
     }
 
     @Test
@@ -1306,7 +1307,7 @@ public class MorphologyTest {
 
         vārds = locītājs.analyze("piecsimt");
         assertTrue(vārds.isRecognized());
-        assertEquals("mcc0p0", vārds.wordforms.get(0).getTag());
+        assertEquals("mc_0p0", vārds.wordforms.get(0).getTag());
     }
 
     @Test
@@ -2584,9 +2585,10 @@ public class MorphologyTest {
     }
 
     @Test
-    // Bija vārdiem simts, miljons utml sieviešu dzimtes formas arī. Pārklājas ar https://github.com/PeterisP/morphology/issues/10
+    // Bija vārdiem simts, miljons utml sieviešu dzimtes formas arī. Pārklājas ar https://github.com/PeterisP/morphology/issues/1
     public void simtas() {
         List<Wordform> formas = locītājs.generateInflections("simts");
+
         for (Wordform forma : formas) {
             if (forma.getToken().equalsIgnoreCase("simtas")) {
                 forma.describe();
@@ -2594,9 +2596,10 @@ public class MorphologyTest {
             assertNotEquals("simtas", forma.getToken());
         }
 
-        Word simtas = locītājs.analyze("simtas");
-        describe(simtas.wordforms);
-        assertFalse(simtas.isRecognized());
+        // 2023-06-15 - tagad tēzaurā ir arī skaitļavārda leksēma 'simts'
+//        Word simtas = locītājs.analyze("simtas");
+//        describe(simtas.wordforms);
+//        assertFalse(simtas.isRecognized());
     }
 
     @Test // Problēma ar vārdu krāties, kur bija formas 'krāos' u.c.
@@ -4117,7 +4120,7 @@ public class MorphologyTest {
         assertTrue(nevarēšu.isRecognized());
         Wordform wf = nevarēšu.getBestWordform();
         assertEquals("Jā", wf.getValue(AttributeNames.i_Noliegums));
-        assertEquals("vmnift31say", wf.getTag());
+        assertEquals("vonift31say", wf.getTag());
     }
 
     @Test
