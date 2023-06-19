@@ -19,6 +19,7 @@ package lv.semti.morphology.analyzer;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import lv.semti.morphology.attributes.AttributeNames;
 import org.apache.commons.lang3.StringUtils;
@@ -71,7 +72,7 @@ public class Splitting {
 	/*
 	 * Tokenizes the string (sentence?) and runs morphoanalysis on each word.
 	 */
-	public static LinkedList<Word> tokenize(Analyzer morphoAnalyzer, String chunk) {		
+	public static LinkedList<Word> tokenize(Analyzer morphoAnalyzer, String chunk) {
 		LinkedList<Word> tokens = new LinkedList<Word>();
 		if (chunk == null) return tokens;
 		
@@ -168,10 +169,12 @@ public class Splitting {
 		} // for i..
 		
 		
-		if (statuss == Status.IN_WORD) { 
+		if (statuss == Status.IN_WORD) {
 			tokens.add( formToken(morphoAnalyzer, str, progress, str.length(), accumulatedWhitespace));
 		}
-		
+
+		tokens = new LinkedList<>(tokens.stream().filter(s -> s.getToken().length() > 0).collect(Collectors.toList()));
+
 		return tokens;
 	}
 	
