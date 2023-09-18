@@ -22,26 +22,26 @@ import java.util.ArrayList;
 public class Trie {
 	public int branchIterator;
 	private node iterator;
-	private ArrayList<node> branchList;
-	private node exception_root;
+	private static ArrayList<node> branchList;
+	private static node exception_root;
 	private boolean isFirst;
 
-    public Trie(node root) {
+    static{
         branchList=new ArrayList<node>();
-        branchList.add(root);
+
+        exception_root = new node();
+        add("''", exception_root);
+        add("’’", exception_root);
+        add("‘’", exception_root);
+        add("***", exception_root);
+
+        initializeExceptions();
+    }
+
+    public Trie () {
         this.reset();
     }
 
-	public Trie() {
-		branchList=new ArrayList<node>();
-
-        //izveido exception Trie
-        exception_root = new node();
-        this.add("''", exception_root);
-        this.add("’’", exception_root);
-        this.add("‘’", exception_root);
-        this.add("***", exception_root);
-	}
 
 	public static node n1_dz_initials() {
         /* 1
@@ -330,7 +330,7 @@ public class Trie {
         return root;
     }
 
-	public void add(String s, node root)
+	public static void add(String s, node root)
 	{
 		int i=0;
 		int length=s.length();
@@ -365,7 +365,7 @@ public class Trie {
         this.add(s, exception_root);
     }
 
-    public void initializeExceptions() {
+    public static void initializeExceptions() {
         branchList.add(exception_root.firstChild);
         exception_root = null;
 
@@ -413,7 +413,6 @@ public class Trie {
         branchList.add(n7_compound());
 
         //sagatavojamies pirmajam meklētajam simbolam
-        this.reset();
     }
 	
 	public void reset()
