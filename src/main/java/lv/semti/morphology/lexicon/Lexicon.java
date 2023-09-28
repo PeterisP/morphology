@@ -253,8 +253,6 @@ public class Lexicon {
 		prefixes.add("sa");
 		prefixes.add("uz");
 
-		this.automats.initializeExceptions();
-
 		System.err.println("Lexicon " + (revision != null ? revision : "") + " loaded");
 	}
 

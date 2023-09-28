@@ -758,15 +758,15 @@ public class TokenizeTest {
 
     @Test
     public void trie_automatons() {
-        Trie n1 = new Trie(Trie.n1_dz_initials());
+        Trie n1 = new Trie();
         assertTrue(n1.match("Dz."));
         assertTrue(n1.match("Dž."));
         assertFalse(n1.match("Dz"));
 
-        Trie n2c = new Trie(Trie.n2_c_paragraphs());
+        Trie n2c = new Trie();
         assertTrue(n2c.match("4.1."));
 
-        Trie n2b = new Trie(Trie.n2_b_numbers());
+        Trie n2b = new Trie();
         assertTrue(n2b.match("5.-"));
         assertFalse(n2b.match("/2003"));
         assertFalse(n2b.match("7,8-"));
