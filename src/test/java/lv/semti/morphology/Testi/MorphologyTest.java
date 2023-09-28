@@ -3146,24 +3146,24 @@ public class MorphologyTest {
     public void ticket_26() {
         Word w = locītājs.analyze("sen");
         assertTrue(w.isRecognized());
-        assertEquals("rptn", w.getBestWordform().getTag());
+        assertEquals("rpn", w.getBestWordform().getTag());
 
         w = locītājs.analyze("drīz");
         assertTrue(w.isRecognized());
-        assertEquals("rptn", w.getBestWordform().getTag());
+        assertEquals("rpn", w.getBestWordform().getTag());
 
         w = locītājs.analyze("pārāk");
         assertTrue(w.isRecognized());
-        assertEquals("r0qn", w.getBestWordform().getTag());
+        assertEquals("r0n", w.getBestWordform().getTag());
 
         w = locītājs.analyze("daudzāk");
         assertTrue(w.isRecognized());
-        assertEquals("rcqn", w.getBestWordform().getTag());
+        assertEquals("rcn", w.getBestWordform().getTag());
         assertEquals("daudz", w.getBestWordform().getValue(AttributeNames.i_Lemma));
 
         w = locītājs.analyze("vairāk");
         assertTrue(w.isRecognized());
-        assertEquals("rcqn", w.getBestWordform().getTag());
+        assertEquals("rcn", w.getBestWordform().getTag());
         assertEquals("daudz", w.getBestWordform().getValue(AttributeNames.i_Lemma));
     }
 
@@ -3627,7 +3627,7 @@ public class MorphologyTest {
         boolean found = false;
         for (Wordform wf : w.wordforms) {
             if (wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adverb)) {
-                assertEquals("rp_n", wf.getTag());
+                assertEquals("rpn", wf.getTag());
                 found = true;
             }
         }
@@ -3638,7 +3638,7 @@ public class MorphologyTest {
         found = false;
         for (Wordform wf : w.wordforms) {
             if (wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adverb)) {
-                assertEquals("rc_n", wf.getTag());
+                assertEquals("rcn", wf.getTag());
                 found = true;
             }
         }
@@ -3648,7 +3648,7 @@ public class MorphologyTest {
         found = false;
         for (Wordform wf : w.wordforms) {
             if (wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adverb)) {
-                assertEquals("rs_n", wf.getTag());
+                assertEquals("rsn", wf.getTag());
                 found = true;
             }
         }
@@ -3681,7 +3681,7 @@ public class MorphologyTest {
         Word w = locītājs.analyze("cenzdamies");
         assertTrue(w.isRecognized());
         Wordform wf = w.getBestWordform();
-        assertEquals("voyppm0n0000n", wf.getTag());
+        assertEquals("vmyppm0n0000n", wf.getTag());
     }
 
     /**
@@ -4120,7 +4120,7 @@ public class MorphologyTest {
         assertTrue(nevarēšu.isRecognized());
         Wordform wf = nevarēšu.getBestWordform();
         assertEquals("Jā", wf.getValue(AttributeNames.i_Noliegums));
-        assertEquals("vonift31say", wf.getTag());
+        assertEquals("vmnift31say", wf.getTag());
     }
 
     @Test

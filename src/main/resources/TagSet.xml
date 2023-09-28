@@ -5,7 +5,7 @@
 	<Value LV="Darbības vārds" EN="Verb" Tag="v" DefaultTags="vm_________"/>
 	<Value LV="Īpašības vārds" EN="Adjective" Tag="a" DefaultTags="af_____"/>
 	<Value LV="Vietniekvārds" EN="Pronoun" Tag="p" DefaultTags="p______"/>
-	<Value LV="Apstākļa vārds" EN="Adverb" Tag="r" DefaultTags="r__n"/>
+	<Value LV="Apstākļa vārds" EN="Adverb" Tag="r" DefaultTags="r_n"/>
 	<Value LV="Prievārds" EN="Preposition" Tag="s" DefaultTags="sp__"/>
 	<Value LV="Saiklis" EN="Conjunction" Tag="c"/>
 	<Value LV="Skaitļa vārds" EN="Numeral" Tag="m" DefaultTags="m_____"/>
@@ -276,14 +276,7 @@
 	<Value LV="Vispārākā" EN="Superlative" Tag="s"/>
 	<Value LV="Nepiemīt" EN="Not applicable" Tag="0"/>
 </Attribute>
-<Attribute LV="Apstākļa vārda tips" EN="Adverb type" PartOfSpeech="Apstākļa vārds" MarkupPos="2">
-	<Value LV="Mēra" EN="Quantitative" Tag="q"/>
-	<Value LV="Veida" EN="Manner" Tag="m"/>
-	<Value LV="Vietas" EN="Place" Tag="p"/>
-	<Value LV="Laika" EN="Time" Tag="t"/>
-	<Value LV="Cēloņa/nolūka" EN="Causative" Tag="c"/>
-</Attribute>
-<Attribute LV="Prievārdiskais apstākļa vārds" EN="Prepositional adverb" PartOfSpeech="Apstākļa vārds" MarkupPos="3">
+<Attribute LV="Prievārdiskais apstākļa vārds" EN="Prepositional adverb" PartOfSpeech="Apstākļa vārds" MarkupPos="2">
 	<Value LV="Jā" EN="Yes" Tag="y"/>
 </Attribute>
 

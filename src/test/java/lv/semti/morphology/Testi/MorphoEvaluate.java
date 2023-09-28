@@ -292,10 +292,12 @@ public class MorphoEvaluate {
 		System.out.printf("\tVarianti neder:\t%4.1f%%\t%6d\n", wrong*100.0/etaloni.size(), wrong);
 		System.out.printf("\tNeatpazīti:    \t%4.1f%%\t%6d\n", not_recognized*100.0/etaloni.size(), not_recognized);
         System.out.printf("\tPareizs POS:\t%4.1f%% / %4.1f%%\t%6d\t%6d\tpaliek %5d\n", first_pos_correct*100.0/etaloni.size(), (any_pos_correct+first_pos_correct)*100.0/etaloni.size(), first_pos_correct, any_pos_correct, etaloni.size()-first_pos_correct-any_pos_correct);
-//		System.out.printf("\nEtalons uz 2.2.1 relīzi: Viss pareizi 78.5%%/90.2%%, Lemma pareiza 94.6%%/99.1%%, Tags der 83.0%%/98.9%%, Nav vārdnīcā 3.4%%\n");
-//		System.out.printf("\nEtalons uz 2.2.7 relīzi: Viss pareizi 81.0%%/96.0%%, Lemma pareiza 95.4%%/99.6%%, Tags der 83.4%%/99.2%%, Nav vārdnīcā 2.2%%\n");
-		System.out.printf("\nEtalons uz 2.2.8 relīzi: Viss pareizi 81.2%%/96.1%%, Lemma pareiza 95.4%%/99.6%%, Tags der 83.5%%/99.2%%, Nav vārdnīcā 2.1%%\n");
+		System.out.printf("\nEtalons uz 2.5.0 relīzi: Viss pareizi 81.9%%/96.0%%, Lemma pareiza 96.7%%/99.6%%, Tags der 84.3%%/99.3%%, Nav vārdnīcā 2.1%%\n");
 		System.out.printf("\nEtalons uz 2.3.0 relīzi: Viss pareizi 80.4%%/96.2%%, Lemma pareiza 95.4%%/99.6%%, Tags der 82.6%%/99.3%%, Nav vārdnīcā 2.2%%\n");
+		System.out.printf("\nEtalons uz 2.2.8 relīzi: Viss pareizi 81.2%%/96.1%%, Lemma pareiza 95.4%%/99.6%%, Tags der 83.5%%/99.2%%, Nav vārdnīcā 2.1%%\n");
+//		System.out.printf("\nEtalons uz 2.2.7 relīzi: Viss pareizi 81.0%%/96.0%%, Lemma pareiza 95.4%%/99.6%%, Tags der 83.4%%/99.2%%, Nav vārdnīcā 2.2%%\n");
+//		System.out.printf("\nEtalons uz 2.2.1 relīzi: Viss pareizi 78.5%%/90.2%%, Lemma pareiza 94.6%%/99.1%%, Tags der 83.0%%/98.9%%, Nav vārdnīcā 3.4%%\n");
+
 		
 		System.out.printf("\nStatistika:\n");
 		System.out.printf("\tKopā vārdlietojumi:\t\t\t%6d\n", etaloni.size());
