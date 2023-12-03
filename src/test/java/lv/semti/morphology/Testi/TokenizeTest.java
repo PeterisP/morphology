@@ -947,5 +947,51 @@ public class TokenizeTest {
 		LinkedList<Word> tokens = Splitting.tokenize(locītājs, "Vispirms manu uz \u00AD manību piesaistīja solā sēdošs puisis");
 		assertEquals(8, tokens.size());
 	}
+
+	@Test
+	public void following_whitespace() {
+		LinkedList<Word> tokens;
+
+		tokens = Splitting.tokenize(locītājs, "valoda (koks)", false);
+		assertEquals(4, tokens.size());
+		assertTrue(tokens.get(0).hasAttribute(AttributeNames.i_WhitespaceBefore, ""));
+		assertTrue(tokens.get(1).hasAttribute(AttributeNames.i_WhitespaceBefore, " "));
+		assertTrue(tokens.get(2).hasAttribute(AttributeNames.i_WhitespaceBefore, ""));
+		assertTrue(tokens.get(3).hasAttribute(AttributeNames.i_WhitespaceBefore, ""));
+		assertEquals("0", tokens.get(0).getBestWordform().getValue(AttributeNames.i_Offset));
+		assertEquals("7", tokens.get(1).getBestWordform().getValue(AttributeNames.i_Offset));
+		assertEquals("8", tokens.get(2).getBestWordform().getValue(AttributeNames.i_Offset));
+		assertEquals("12", tokens.get(3).getBestWordform().getValue(AttributeNames.i_Offset));
+
+		tokens = Splitting.tokenize(locītājs, "un „vislabāk pārvaldītā valoda”", false);
+		assertEquals(6, tokens.size());
+		assertTrue(tokens.get(0).hasAttribute(AttributeNames.i_WhitespaceBefore, ""));
+		assertTrue(tokens.get(1).hasAttribute(AttributeNames.i_WhitespaceBefore, " "));
+		assertTrue(tokens.get(2).hasAttribute(AttributeNames.i_WhitespaceBefore, ""));
+		assertTrue(tokens.get(3).hasAttribute(AttributeNames.i_WhitespaceBefore, " "));
+		assertTrue(tokens.get(4).hasAttribute(AttributeNames.i_WhitespaceBefore, " "));
+		assertTrue(tokens.get(5).hasAttribute(AttributeNames.i_WhitespaceBefore, ""));
+		assertEquals("0", tokens.get(0).getBestWordform().getValue(AttributeNames.i_Offset));
+		assertEquals("3", tokens.get(1).getBestWordform().getValue(AttributeNames.i_Offset));
+		assertEquals("4", tokens.get(2).getBestWordform().getValue(AttributeNames.i_Offset));
+		assertEquals("13", tokens.get(3).getBestWordform().getValue(AttributeNames.i_Offset));
+		assertEquals("24", tokens.get(4).getBestWordform().getValue(AttributeNames.i_Offset));
+		assertEquals("30", tokens.get(5).getBestWordform().getValue(AttributeNames.i_Offset));
+
+		tokens = Splitting.tokenize(locītājs, "un a/b/c", false);
+		assertEquals(6, tokens.size());
+		assertTrue(tokens.get(0).hasAttribute(AttributeNames.i_WhitespaceBefore, ""));
+		assertTrue(tokens.get(1).hasAttribute(AttributeNames.i_WhitespaceBefore, " "));
+		assertTrue(tokens.get(2).hasAttribute(AttributeNames.i_WhitespaceBefore, ""));
+		assertTrue(tokens.get(3).hasAttribute(AttributeNames.i_WhitespaceBefore, ""));
+		assertTrue(tokens.get(4).hasAttribute(AttributeNames.i_WhitespaceBefore, ""));
+		assertTrue(tokens.get(5).hasAttribute(AttributeNames.i_WhitespaceBefore, ""));
+		assertEquals("0", tokens.get(0).getBestWordform().getValue(AttributeNames.i_Offset));
+		assertEquals("3", tokens.get(1).getBestWordform().getValue(AttributeNames.i_Offset));
+		assertEquals("4", tokens.get(2).getBestWordform().getValue(AttributeNames.i_Offset));
+		assertEquals("5", tokens.get(3).getBestWordform().getValue(AttributeNames.i_Offset));
+		assertEquals("6", tokens.get(4).getBestWordform().getValue(AttributeNames.i_Offset));
+		assertEquals("7", tokens.get(5).getBestWordform().getValue(AttributeNames.i_Offset));
+	}
 }
  
