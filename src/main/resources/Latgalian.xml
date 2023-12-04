@@ -566,7 +566,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs" Lietojums="Novecojis"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="13" Name="noun-r1" LemmaEnding="177" Description="Atgriezeniskie lietvārdi ar -šonuos (mozguošonuos)" AllowedGuessEndings="">
+	<Paradigm Stems="1" ID="13" Name="noun-r1-ltg" LemmaEnding="177" Description="Atgriezeniskie lietvārdi ar -šonuos (mozguošonuos)" AllowedGuessEndings="">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="Nepiemīt" Dzimte="Sieviešu"/>
 		<Ending ID="177" StemChange="0" Ending="šonuos" StemID="1" LemmaEnding="177">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
