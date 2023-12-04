@@ -254,7 +254,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="7" Name="noun-4fa-ltg" LemmaEnding="79" Description="Lietvārdi sieviešu dzimtē, 4. deklinācija -a, vienskaitļa ģenitīvs -ys (muosa)" AllowedGuessEndings="">
+	<Paradigm Stems="1" ID="7" Name="noun-4fa-ltg" LemmaEnding="79" Description="Lietvārdi sieviešu dzimtē, 4. deklinācija, galotne -a, vienskaitļa ģenitīvs -ys (muosa)" AllowedGuessEndings="">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Dzimte="Sieviešu"/>
 		<Ending ID="79" StemChange="0" Ending="a" StemID="1" LemmaEnding="79">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
@@ -302,7 +302,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="8" Name="noun-4fb-ltg" LemmaEnding="94" Description="Lietvārdi sieviešu dzimtē, 4. deklinācija -a, vienskaitļa ģenitīvs -is (kuoja)" AllowedGuessEndings="">
+	<Paradigm Stems="1" ID="8" Name="noun-4fb-ltg" LemmaEnding="94" Description="Lietvārdi sieviešu dzimtē, 4. deklinācija, galotne -a, vienskaitļa ģenitīvs -is (kuoja)" AllowedGuessEndings="">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Dzimte="Sieviešu"/>
 		<Ending ID="94" StemChange="0" Ending="a" StemID="1" LemmaEnding="94">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
@@ -353,7 +353,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="9" Name="noun-5fa-ltg" LemmaEnding="110" Description="Lietvārdi sieviešu dzimtē, 5. deklinācija -e, vienskaitļa lokatīvs -ē (muote)" AllowedGuessEndings="">
+	<Paradigm Stems="1" ID="9" Name="noun-5fa-ltg" LemmaEnding="110" Description="Lietvārdi sieviešu dzimtē, 5. deklinācija, galotne -e, vienskaitļa lokatīvs -ē (muote)" AllowedGuessEndings="">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="5" Dzimte="Sieviešu"/>
 		<Ending ID="110" StemChange="0" Ending="e" StemID="1" LemmaEnding="110">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
@@ -404,7 +404,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="10" Name="noun-5fb-ltg" LemmaEnding="126" Description="Lietvārdi sieviešu dzimtē, 5. deklinācija -e, vienskaitļa lokatīvs -ie/-ī (egle)" AllowedGuessEndings="">
+	<Paradigm Stems="1" ID="10" Name="noun-5fb-ltg" LemmaEnding="126" Description="Lietvārdi sieviešu dzimtē, 5. deklinācija, galotne -e, vienskaitļa lokatīvs -ie/-ī (egle)" AllowedGuessEndings="">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="5" Dzimte="Sieviešu"/>
 		<Ending ID="126" StemChange="0" Ending="e" StemID="1" LemmaEnding="126">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
@@ -452,7 +452,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="11" Name="noun-6a-ltg" LemmaEnding="141" Description="Lietvārdi sieviešu dzimtē, 6. deklinācija -s, ar miju (sirds)" AllowedGuessEndings="">
+	<Paradigm Stems="1" ID="11" Name="noun-6a-ltg" LemmaEnding="141" Description="Lietvārdi sieviešu dzimtē, 6. deklinācija, galotne -s, ar miju (sirds)" AllowedGuessEndings="">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="6" Dzimte="Sieviešu"/>
 		<Ending ID="141" StemChange="0" Ending="s" StemID="1" LemmaEnding="141">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
@@ -509,7 +509,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs" Lietojums="Novecojis"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="12" Name="noun-6b-ltg" LemmaEnding="159" Description="Lietvārdi sieviešu dzimtē, 6. deklinācija -s, bez mijas (zūss)" AllowedGuessEndings="">
+	<Paradigm Stems="1" ID="12" Name="noun-6b-ltg" LemmaEnding="159" Description="Lietvārdi sieviešu dzimtē, 6. deklinācija, galotne -s, bez mijas (zūss)" AllowedGuessEndings="">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="6" Dzimte="Sieviešu"/>
 		<Ending ID="159" StemChange="0" Ending="s" StemID="1" LemmaEnding="159">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
