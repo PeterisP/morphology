@@ -222,6 +222,54 @@ public class LatgalianTest {
 
 
 	@Test
+	public void dekl4() {
+		AttributeValues vsk_gen = new AttributeValues();
+		vsk_gen.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
+		vsk_gen.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+		vsk_gen.addAttribute(AttributeNames.i_Case, AttributeNames.v_Genitive);
+
+		List<Wordform> muosa = analyzer.generateInflectionsFromParadigm("muosa", 7);
+		assertInflection(muosa, vsk_gen, "muosys");
+
+		List<Wordform> kuoja = analyzer.generateInflectionsFromParadigm("kuoja", 8);
+		assertInflection(kuoja, vsk_gen, "kuojis");
+	}
+
+	@Test
+	public void dekl5() {
+		AttributeValues vsk_loc = new AttributeValues();
+		vsk_loc.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
+		vsk_loc.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+		vsk_loc.addAttribute(AttributeNames.i_Case, AttributeNames.v_Locative);
+		AttributeValues dsk_gen = new AttributeValues();
+		dsk_gen.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
+		dsk_gen.addAttribute(AttributeNames.i_Number, AttributeNames.v_Plural);
+		dsk_gen.addAttribute(AttributeNames.i_Case, AttributeNames.v_Genitive);
+
+		List<Wordform> muote = analyzer.generateInflectionsFromParadigm("muote", 9);
+		assertInflection(muote, vsk_loc, "muotē");
+		assertInflection(muote, dsk_gen, "muošu");
+
+		List<Wordform> egle = analyzer.generateInflectionsFromParadigm("egle", 10);
+		assertInflection(egle, vsk_loc, "eglie");
+	}
+
+	@Test
+	public void dekl6()
+	{
+		AttributeValues dsk_gen = new AttributeValues();
+		dsk_gen.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
+		dsk_gen.addAttribute(AttributeNames.i_Number, AttributeNames.v_Plural);
+		dsk_gen.addAttribute(AttributeNames.i_Case, AttributeNames.v_Genitive);
+
+		List<Wordform> sirds = analyzer.generateInflectionsFromParadigm("sirds", 11);
+		assertInflection(sirds, dsk_gen, "siržu");
+
+		List<Wordform> zūss = analyzer.generateInflectionsFromParadigm("zūss", 12);
+		assertInflection(zūss, dsk_gen, "zūsu");
+	}
+
+	@Test
 	public void mijas() {
 		AttributeValues vsk_gen = new AttributeValues();
 		vsk_gen.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);

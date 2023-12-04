@@ -450,7 +450,9 @@ public abstract class Mijas {
 					break;
 				case 101: // latgaliešu līdzskaņu mija lietvārdiem, parastās galotnes (izņemot -i, -e, -ī, -ē, -ie, -ei)
 					// Mijas no Leikumas "Vasals!"
-					if (celms.endsWith("šļ")) {
+					if (celms.endsWith("kš")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "kst", "Mija", "kst -> kš"));
+					} else if (celms.endsWith("šļ")) {
 						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "sl", "Mija", "sl -> šļ"));
 					} else if (celms.endsWith("žļ")) {
 						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "zl", "Mija", "zl -> žļ"));
@@ -478,7 +480,9 @@ public abstract class Mijas {
 					}
 					break;
 				case 102: // latgaliešu līdzskaņu mīkstināšana lietvārdiem, e, i, ē, ī, ie galotnes
-					// Burtu miju ietekmētās vairāksimbolu mijas
+					if (celms.endsWith("kš")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "kst", "Mija", "kst -> kš"));
+					} else // Burtu miju ietekmētās vairāksimbolu mijas
 					if (celms.endsWith("šl")) {
 						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "šļ", "Mija", "šļ -> šl"));
 						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "sl", "Mija", "sl -> šl"));
@@ -989,7 +993,9 @@ public abstract class Mijas {
 					break;
 				case 101: // latgaliešu līdzskaņu mija lietvārdiem, parastās galotnes (izņemot -i, -e, -ī, -ē, -ie, -ei)
 					// Mijas no Leikumas "Vasals!"
-					if (celms.endsWith("sl")) {
+					if (celms.endsWith("kst")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 3) + "kš"));
+					} else if (celms.endsWith("sl")) {
 						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "šļ"));
 					} else if (celms.endsWith("zl")) {
 						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "žļ"));
@@ -1019,7 +1025,9 @@ public abstract class Mijas {
 					}
 					break;
 				case 102: // // latgaliešu līdzskaņu mīkstināšana lietvārdiem, e, i, ē, ī, ie galotnes
-					// Burtu miju ietekmētās vairāksimbolu mijas
+					if (celms.endsWith("kst")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 3) + "kš"));
+					} else // Burtu miju ietekmētās vairāksimbolu mijas
 					if (celms.endsWith("šļ") || celms.endsWith("sl")) {
 						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "šl"));
 					} else if (celms.endsWith("žļ") || celms.endsWith("zl")) {
