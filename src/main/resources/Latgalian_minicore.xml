@@ -15,9 +15,31 @@
     <Lexeme Stem1="akmiņ"/>
   </Paradigm>
   <Paradigm Stems="1" ID="5" Description="Lietvārds 2. deklinācija -is">
-    <Lexeme Stem1="kaķ"/>
+    <Lexeme Stem1="kak"/>
   </Paradigm>
   <Paradigm Stems="1" ID="6" Description="Lietvārds 3. deklinācija -us">
     <Lexeme Stem1="Jez"/>
   </Paradigm>
+  <Paradigm Stems="1" ID="7" Description="Lietvārds 4. deklinācija -a, ģenitīvs -ys">
+    <Lexeme Stem1="muos"/>
+  </Paradigm>
+  <Paradigm Stems="1" ID="8" Description="Lietvārds 4. deklinācija -us, ģenitīvs -is">
+    <Lexeme Stem1="kuoj"/>
+  </Paradigm>
+  <Paradigm Stems="1" ID="9" Description="Lietvārds 5. deklinācija -e, lokatīvs -ē">
+    <Lexeme Stem1="muot"/>
+  </Paradigm>
+  <Paradigm Stems="1" ID="10" Description="Lietvārds 5. deklinācija -e, lokatīvs -ie/-ī">
+    <Lexeme Stem1="egl"/>
+  </Paradigm>
+  <Paradigm Stems="1" ID="11" Description="Lietvārds 6. deklinācija -s, ar miju">
+    <Lexeme Stem1="sird"/>
+  </Paradigm>
+  <Paradigm Stems="1" ID="12" Description="Lietvārds 6. deklinācija -s, bez mijas">
+    <Lexeme Stem1="zūs"/>
+  </Paradigm>
+  <Paradigm Stems="1" ID="13" Description="Atgriezeniskie lietvārdi">
+    <Lexeme Stem1="mozguo"/>
+  </Paradigm>
+
 </Lexicon>
