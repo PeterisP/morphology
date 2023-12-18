@@ -277,6 +277,7 @@ public class LatgalianTest {
 		dsk_nom.addAttribute(AttributeNames.i_Number, AttributeNames.v_Plural);
 		dsk_nom.addAttribute(AttributeNames.i_Case, AttributeNames.v_Nominative);
 
+		// Testing recognising plurare tantum
 		List<Wordform> iuza_bad = analyzer.generateInflectionsFromParadigm("iuza", 7);
 		assertInflection(iuza_bad, dsk_nom, "iuzys");
 
@@ -284,14 +285,13 @@ public class LatgalianTest {
 		plTan.addAttribute(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum);
 		plTan.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Feminine);
 
-		List<Wordform> formas = analyzer.generateInflectionsFromParadigm("iuzys", 7, plTan);
-		for (Wordform forma : formas) {
-			assertFalse(forma.isMatchingStrong(AttributeNames.i_Number, AttributeNames.v_Singular));
-			assertTrue(forma.isMatchingStrong(AttributeNames.i_Gender, AttributeNames.v_Feminine));
+		List<Wordform> forms = analyzer.generateInflectionsFromParadigm("iuzys", 7, plTan);
+		for (Wordform form : forms) {
+			assertFalse(form.isMatchingStrong(AttributeNames.i_Number, AttributeNames.v_Singular));
+			assertTrue(form.isMatchingStrong(AttributeNames.i_Gender, AttributeNames.v_Feminine));
 		}
+		assertFalse(forms.isEmpty());
 
-		//Word iuzys = analyzer.analyze("iuzys");
-		//assertTrue(iuzys.isRecognized());
 	}
 
 	@Test

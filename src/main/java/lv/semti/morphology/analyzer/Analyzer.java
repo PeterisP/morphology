@@ -822,7 +822,8 @@ public class Analyzer extends Lexicon {
 				plural_nominative.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Masculine);
 			}
             for (Ending candidate_ending : ending.getParadigm().endings) {
-                if (candidate_ending.isMatchingStrongOneSide(plural_nominative)) {
+                if (candidate_ending.isMatchingStrongOneSide(plural_nominative)
+						&& lemma.endsWith(candidate_ending.getEnding())) {
                     ending = candidate_ending;
                 }
             }
@@ -839,15 +840,18 @@ public class Analyzer extends Lexicon {
 				feminine_lemma.addAttribute(AttributeNames.i_Definiteness, AttributeNames.v_Indefinite);
 			}
 			for (Ending candidate_ending : ending.getParadigm().endings) {
-				if (candidate_ending.isMatchingStrong(feminine_lemma)) {
+				if (candidate_ending.isMatchingStrong(feminine_lemma)
+						&& lemma.endsWith(candidate_ending.getEnding())) {
 					ending = candidate_ending;
 				}
 			}
 		}
 
-        if (!lemma.endsWith(ending.getEnding())) {
+		// did not found appropriate ending
+        if (ending == null || !lemma.endsWith(ending.getEnding())) {
             System.err.printf("Attempted to generate inflections for lemma '%s' at paradigm '%d'; failed because of mismatched ending\n", lemma, paradigm);
         }
+		if (ending == null) return new ArrayList<>();
 
         Lexeme l = this.createLexeme(lemma, ending.getID(), "temp");
         if (l == null) { // Couldn't create the lexeme - the word wasn't compatible with the supplied paradigm
