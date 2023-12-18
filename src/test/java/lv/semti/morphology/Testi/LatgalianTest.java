@@ -270,6 +270,31 @@ public class LatgalianTest {
 	}
 
 	@Test
+	public void iuzys()
+	{
+		AttributeValues dsk_nom = new AttributeValues();
+		dsk_nom.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
+		dsk_nom.addAttribute(AttributeNames.i_Number, AttributeNames.v_Plural);
+		dsk_nom.addAttribute(AttributeNames.i_Case, AttributeNames.v_Nominative);
+
+		List<Wordform> iuza_bad = analyzer.generateInflectionsFromParadigm("iuza", 7);
+		assertInflection(iuza_bad, dsk_nom, "iuzys");
+
+		AttributeValues plTan = new AttributeValues();
+		plTan.addAttribute(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum);
+		plTan.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Feminine);
+
+		List<Wordform> formas = analyzer.generateInflectionsFromParadigm("iuzys", 7, plTan);
+		for (Wordform forma : formas) {
+			assertFalse(forma.isMatchingStrong(AttributeNames.i_Number, AttributeNames.v_Singular));
+			assertTrue(forma.isMatchingStrong(AttributeNames.i_Gender, AttributeNames.v_Feminine));
+		}
+
+		//Word iuzys = analyzer.analyze("iuzys");
+		//assertTrue(iuzys.isRecognized());
+	}
+
+	@Test
 	public void mijas() {
 		AttributeValues vsk_gen = new AttributeValues();
 		vsk_gen.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
