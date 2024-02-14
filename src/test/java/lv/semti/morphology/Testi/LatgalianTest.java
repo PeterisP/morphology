@@ -135,17 +135,6 @@ public class LatgalianTest {
 	// Testi latgaliešu vārdu locīšanai atbilstoši http://genling.spbu.ru/baltist/Publicat/LatgVol1.pdf
 
 	@Test
-	public void tāvs() {
-		List<Wordform> tāvs = analyzer.generateInflections("tāvs");
-//        describe(tāvs);
-		AttributeValues testset = new AttributeValues();
-		testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
-		testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Genitive);
-		testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
-		assertInflection(tāvs, testset, "tāva");
-	}
-
-	@Test
 	public void viejs() {
 		List<Wordform> viejs = analyzer.generateInflections("viejs");
 //        describe(viejs);
@@ -220,6 +209,21 @@ public class LatgalianTest {
 		assertInflectionMultiple(Jezus, testset, new HashSet<String>(){{ add("Jezus"); add("Jeza");}});
 	}
 
+	@Test
+	public void dekl1()
+	{
+		AttributeValues vsk_gen = new AttributeValues();
+		vsk_gen.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
+		vsk_gen.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+		vsk_gen.addAttribute(AttributeNames.i_Case, AttributeNames.v_Genitive);
+
+		List<Wordform> muosa = analyzer.generateInflectionsFromParadigm("tāvs", 1);
+		assertInflection(muosa, vsk_gen, "tāva");
+
+		List<Wordform> muote = analyzer.generateInflectionsFromParadigm("ols", 15);
+		assertInflectionMultiple(muote, vsk_gen, new HashSet<String>(){{ add("ols"); add("ola");}});
+	}
+
 
 	@Test
 	public void dekl4() {
@@ -233,6 +237,9 @@ public class LatgalianTest {
 
 		List<Wordform> kuoja = analyzer.generateInflectionsFromParadigm("kuoja", 8);
 		assertInflection(kuoja, vsk_gen, "kuojis");
+
+		List<Wordform> puika = analyzer.generateInflectionsFromParadigm("puika", 16);
+		assertInflectionMultiple(puika, vsk_gen, new HashSet<String>(){{ add("puikys"); add("puikas");}});
 	}
 
 	@Test
@@ -252,6 +259,9 @@ public class LatgalianTest {
 
 		List<Wordform> egle = analyzer.generateInflectionsFromParadigm("egle", 10);
 		assertInflection(egle, vsk_loc, "eglie");
+
+		List<Wordform> šaļte = analyzer.generateInflectionsFromParadigm("šaļte", 17);
+		assertInflection(šaļte, dsk_gen, "šaļtu");
 	}
 
 	@Test
@@ -267,6 +277,23 @@ public class LatgalianTest {
 
 		List<Wordform> zūss = analyzer.generateInflectionsFromParadigm("zūss", 12);
 		assertInflection(zūss, dsk_gen, "zūsu");
+	}
+
+	@Test
+	public void adj()
+	{
+		AttributeValues dsk_nom_masc_comp = new AttributeValues();
+		dsk_nom_masc_comp.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adjective);
+		dsk_nom_masc_comp.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+		dsk_nom_masc_comp.addAttribute(AttributeNames.i_Case, AttributeNames.v_Nominative);
+		dsk_nom_masc_comp.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Masculine);
+		dsk_nom_masc_comp.addAttribute(AttributeNames.i_Degree, AttributeNames.v_Comparative);
+
+		List<Wordform> lobs = analyzer.generateInflectionsFromParadigm("lobs", 20);
+		assertInflection(lobs, dsk_nom_masc_comp, "lobuoks");
+
+		List<Wordform> agrys = analyzer.generateInflectionsFromParadigm("agrys", 21);
+		assertInflection(agrys, dsk_nom_masc_comp, "agruokys");
 	}
 
 	@Test

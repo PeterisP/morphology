@@ -41,5 +41,26 @@
   <Paradigm Stems="1" ID="13" Description="Atgriezeniskie lietvārdi">
     <Lexeme Stem1="mozguo"/>
   </Paradigm>
+  <Paradigm Stems="1" ID="14" Description="Nelokāmie lievārdi">
+    <Lexeme Stem1="metro"/>
+  </Paradigm>
+  <Paradigm Stems="1" ID="15" Description="Lietvārdi vīriešu dzimtē, 1. deklinācija, galotne -s, ģenitīva paralēlformas">
+    <Lexeme Stem1="ol"/>
+  </Paradigm>
+  <Paradigm Stems="1" ID="16" Description="Lietvārdi vīriešu dzimtē, 4. deklinācija, galotne -a, vienskaitļa ģenitīvs -ys">
+    <Lexeme Stem1="puik"/>
+  </Paradigm>
+  <Paradigm Stems="1" ID="17" Description="Lietvārdi sieviešu dzimtē, 5. deklinācija, galotne -e, vienskaitļa lokatīvs -ē, bez mijas">
+    <Lexeme Stem1="šaļt"/>
+  </Paradigm>
+  <Paradigm Stems="1" ID="18" Description="Lietvārdi vīriešu dzimtē, 5. deklinācija, galotne -e, vienskaitļa lokatīvs -ē, bez mijas">
+    <Lexeme Stem1="tēt"/>
+  </Paradigm>
+  <Paradigm Stems="1" ID="20" Description="Īpašības vārdi, galotne -s">
+    <Lexeme Stem1="lob"/>
+  </Paradigm>
+  <Paradigm Stems="1" ID="21" Description="Īpašības vārdi, galotne -ys">
+    <Lexeme Stem1="agr"/>
+  </Paradigm>
 
 </Lexicon>
