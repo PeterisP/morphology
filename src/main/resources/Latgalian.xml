@@ -852,7 +852,7 @@
 
 
 	<!-- Te sākas īpašības vārdi -->
-	<Paradigm Stems="1" ID="20" Name="adj-1" LemmaEnding="272" Description="Īpašības vārdi, galotne -s (lobs)" AllowedGuessEndings="">
+	<Paradigm Stems="1" ID="20" Name="adj-1-ltg" LemmaEnding="272" Description="Īpašības vārdi, galotne -s (lobs)" AllowedGuessEndings="">
 		<Attributes Vārdšķira="Īpašības vārds"/>
 		<Ending ID="272" StemChange="103" Ending="s" StemID="1" LemmaEnding="272">
 			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Nominatīvs"/>
@@ -1005,7 +1005,7 @@
 			<Attributes Vārdšķira="Apstākļa vārds"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="21" Name="adj-2" LemmaEnding="322" Description="Īpašības vārdi, galotne -ys (agrys)" AllowedGuessEndings="">
+	<Paradigm Stems="1" ID="21" Name="adj-2-ltg" LemmaEnding="322" Description="Īpašības vārdi, galotne -ys (agrys)" AllowedGuessEndings="">
 		<Attributes Vārdšķira="Īpašības vārds"/>
 		<Ending ID="322" StemChange="103" Ending="ys" StemID="1" LemmaEnding="322">
 			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Nominatīvs"/>
