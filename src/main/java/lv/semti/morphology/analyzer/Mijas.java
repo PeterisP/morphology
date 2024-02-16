@@ -574,7 +574,33 @@ public abstract class Mijas {
 						varianti.add(new Variants(celms));
 					}
 					break;
-
+				case 108: // 107 + 106 priekš slapnis
+					String tmpCelms = celms;
+					String degree = null;
+					if (celms.endsWith("uok") && celms.length() > 3) {
+						if (celms.startsWith("vys"))
+						{
+							tmpCelms = celms.substring(3,celms.length()-3);
+							degree = AttributeNames.v_Superlative;
+						}
+						else
+						{
+							tmpCelms = celms.substring(0,celms.length()-3);
+							degree = AttributeNames.v_Comparative;
+						}
+					}
+					if (tmpCelms.endsWith("ļ")) {
+						varianti.add(new Variants(tmpCelms.substring(0, tmpCelms.length() - 1) + "l", AttributeNames.i_Degree, degree));
+					} else if (celms.endsWith("ņ")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "n", AttributeNames.i_Degree, degree));
+					} else if (celms.endsWith("ķ")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "k", AttributeNames.i_Degree, degree));
+					} else if (celms.endsWith("ģ")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "g", AttributeNames.i_Degree, degree));
+					} else {
+						varianti.add(new Variants(celms));
+					}
+					break;
 				default:
 					System.err.printf("Invalid StemChange ID, stem '%s', stemchange %d\n", celms, mija);
 			}
@@ -1175,6 +1201,23 @@ public abstract class Mijas {
 						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ģ"));
 					} else {
 						varianti.add(new Variants(celms));
+					}
+					break;
+				case 108: // 107 + 106 priekš slapnis
+					if (!celms.endsWith("uok")) {
+						String tmpCelms = celms;
+						if (celms.endsWith("l")) {
+							tmpCelms = celms.substring(0, celms.length() - 1) + "ļ";
+						} else if (celms.endsWith("n")) {
+							tmpCelms =celms.substring(0, celms.length() - 1) + "ņ";
+						} else if (celms.endsWith("k")) {
+							tmpCelms = celms.substring(0, celms.length() - 1) + "ķ";
+						} else if (celms.endsWith("g")) {
+							tmpCelms =celms.substring(0, celms.length() - 1) + "ģ";
+						}
+						varianti.add(new Variants(tmpCelms + "uok", AttributeNames.i_Degree, AttributeNames.v_Comparative));
+						if (pieliktVisPārākoPak)
+							varianti.add(new Variants("vys" + tmpCelms + "uok", AttributeNames.i_Degree, AttributeNames.v_Superlative));
 					}
 					break;
 
