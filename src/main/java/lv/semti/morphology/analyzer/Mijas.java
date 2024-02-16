@@ -533,8 +533,7 @@ public abstract class Mijas {
 					if (celms.endsWith("uok") && celms.length() > 3) {
 						if (celms.startsWith("vys")) varianti.add(new Variants(celms.substring(3,celms.length()-2),AttributeNames.i_Degree,AttributeNames.v_Superlative));
 						else varianti.add(new Variants(celms.substring(0,celms.length()-2),AttributeNames.i_Degree,AttributeNames.v_Comparative));
-					}
-					if (celms.endsWith("l")) {
+					} else if (celms.endsWith("l")) {
 						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ļ", AttributeNames.i_Degree, AttributeNames.v_Positive));
 					} else if (celms.endsWith("n")) {
 						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ņ", AttributeNames.i_Degree, AttributeNames.v_Positive));
