@@ -524,15 +524,15 @@ public abstract class Mijas {
 					break;
 				case 103: // līdzīgi `case 3` - īpašības vārdiem -uok- un vys-
 					if (celms.endsWith("uok") && celms.length() > 3) {
-						if (celms.startsWith("vys")) varianti.add(new Variants(celms.substring(3,celms.length()-2),AttributeNames.i_Degree,AttributeNames.v_Superlative));
-						else varianti.add(new Variants(celms.substring(0,celms.length()-2),AttributeNames.i_Degree,AttributeNames.v_Comparative));
+						if (celms.startsWith("vys")) varianti.add(new Variants(celms.substring(3,celms.length()-3),AttributeNames.i_Degree,AttributeNames.v_Superlative));
+						else varianti.add(new Variants(celms.substring(0,celms.length()-3),AttributeNames.i_Degree,AttributeNames.v_Comparative));
 					}
 					varianti.add(new Variants(celms,AttributeNames.i_Degree, AttributeNames.v_Positive));
 					break;
 				case 104: //  īpašības vārdiem -uok- un vys-, pamata pakāpei burtu mija
 					if (celms.endsWith("uok") && celms.length() > 3) {
-						if (celms.startsWith("vys")) varianti.add(new Variants(celms.substring(3,celms.length()-2),AttributeNames.i_Degree,AttributeNames.v_Superlative));
-						else varianti.add(new Variants(celms.substring(0,celms.length()-2),AttributeNames.i_Degree,AttributeNames.v_Comparative));
+						if (celms.startsWith("vys")) varianti.add(new Variants(celms.substring(3,celms.length()-3),AttributeNames.i_Degree,AttributeNames.v_Superlative));
+						else varianti.add(new Variants(celms.substring(0,celms.length()-3),AttributeNames.i_Degree,AttributeNames.v_Comparative));
 					} else if (celms.endsWith("l")) {
 						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ļ", AttributeNames.i_Degree, AttributeNames.v_Positive));
 					} else if (celms.endsWith("n")) {
@@ -547,8 +547,8 @@ public abstract class Mijas {
 					break;
 				case 105: // līdzīgi kā `case 34` - īpašības vārdiem -uok- un vys- izskaņām kā -ajam: liekam nevis moz-s->moz-ajam, bet moz-s->moz-a-jam, bet senej-ais -> sene-jam/senej-a-jam
 					if (celms.endsWith("uoka") && celms.length() > 4) {
-						if (celms.startsWith("vys")) varianti.add(new Variants(celms.substring(3,celms.length()-3),AttributeNames.i_Degree,AttributeNames.v_Superlative));
-						else varianti.add(new Variants(celms.substring(0,celms.length()-3),AttributeNames.i_Degree,AttributeNames.v_Comparative));
+						if (celms.startsWith("vys")) varianti.add(new Variants(celms.substring(3,celms.length()-4),AttributeNames.i_Degree,AttributeNames.v_Superlative));
+						else varianti.add(new Variants(celms.substring(0,celms.length()-4),AttributeNames.i_Degree,AttributeNames.v_Comparative));
 					}
 					if (celms.endsWith("a")) // moz-jam -> moz; seneja-jam -> senej
 						varianti.add(new Variants(celms.substring(0,celms.length()-1) ,AttributeNames.i_Degree, AttributeNames.v_Positive));
@@ -557,8 +557,8 @@ public abstract class Mijas {
 					break;
 				case 106: // līdzīgi `case 13` - apstākļa vārdiem -uok- un vys-
 					if (celms.endsWith("uok") && celms.length() > 3) {
-						if (celms.startsWith("vys")) varianti.add(new Variants(celms.substring(3,celms.length()-2),AttributeNames.i_Degree,AttributeNames.v_Superlative));
-						else varianti.add(new Variants(celms.substring(0,celms.length()-2),AttributeNames.i_Degree,AttributeNames.v_Comparative));
+						if (celms.startsWith("vys")) varianti.add(new Variants(celms.substring(3,celms.length()-3),AttributeNames.i_Degree,AttributeNames.v_Superlative));
+						else varianti.add(new Variants(celms.substring(0,celms.length()-3),AttributeNames.i_Degree,AttributeNames.v_Comparative));
 					}
 					break;
 				case 107: // latgaliešu 'burtu mijas' inverss - kad pamatformas galotne ir -e, -i, -ī, -ē, -ie, un l, n, k, g kļūst par ļ, ņ, ķ, ģ pirms citām galotnēm (slapnis)
