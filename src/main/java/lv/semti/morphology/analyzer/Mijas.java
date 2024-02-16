@@ -562,6 +562,19 @@ public abstract class Mijas {
 						else varianti.add(new Variants(celms.substring(0,celms.length()-2),AttributeNames.i_Degree,AttributeNames.v_Comparative));
 					}
 					break;
+				case 107: // latgaliešu 'burtu mijas' inverss - kad pamatformas galotne ir -e, -i, -ī, -ē, -ie, un l, n, k, g kļūst par ļ, ņ, ķ, ģ pirms citām galotnēm (slapnis)
+					if (celms.endsWith("ļ")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "l", "Mija", "l -> ļ"));
+					} else if (celms.endsWith("ņ")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "n", "Mija", "n -> ņ"));
+					} else if (celms.endsWith("ķ")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "k", "Mija", "k -> ķ"));
+					} else if (celms.endsWith("ģ")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "g", "Mija", "g -> ģ"));
+					} else {
+						varianti.add(new Variants(celms));
+					}
+					break;
 
 				default:
 					System.err.printf("Invalid StemChange ID, stem '%s', stemchange %d\n", celms, mija);
@@ -1031,7 +1044,7 @@ public abstract class Mijas {
 					} else if (celms.endsWith("ķ")) {
 						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "k"));
 					} else if (celms.endsWith("ģ")) {
-						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ģ"));
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "g"));
 					} else {
 						varianti.add(new Variants(celms));
 					}
@@ -1150,6 +1163,19 @@ public abstract class Mijas {
 						varianti.add(new Variants(celms + "uok", AttributeNames.i_Degree, AttributeNames.v_Comparative));
 						if (pieliktVisPārākoPak)
 							varianti.add(new Variants("vys" + celms + "uok", AttributeNames.i_Degree, AttributeNames.v_Superlative));
+					}
+					break;
+				case 107: // latgaliešu 'burtu mijas' inverss - kad pamatformas galotne ir -e, -i, -ī, -ē, -ie, un l, n, k, g kļūst par ļ, ņ, ķ, ģ pirms citām galotnēm (slapnis)
+					if (celms.endsWith("l")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ļ"));
+					} else if (celms.endsWith("n")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ņ"));
+					} else if (celms.endsWith("k")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ķ"));
+					} else if (celms.endsWith("g")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ģ"));
+					} else {
+						varianti.add(new Variants(celms));
 					}
 					break;
 
