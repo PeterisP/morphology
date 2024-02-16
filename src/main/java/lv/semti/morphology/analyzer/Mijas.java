@@ -522,16 +522,16 @@ public abstract class Mijas {
 						varianti.add(new Variants(celms));
 					}
 					break;
-				case 103: // līdzīgi `case 3` - īpašības vārdiem -uok- un vis-
+				case 103: // līdzīgi `case 3` - īpašības vārdiem -uok- un vys-
 					if (celms.endsWith("uok") && celms.length() > 3) {
-						if (celms.startsWith("vis")) varianti.add(new Variants(celms.substring(3,celms.length()-2),AttributeNames.i_Degree,AttributeNames.v_Superlative));
+						if (celms.startsWith("vys")) varianti.add(new Variants(celms.substring(3,celms.length()-2),AttributeNames.i_Degree,AttributeNames.v_Superlative));
 						else varianti.add(new Variants(celms.substring(0,celms.length()-2),AttributeNames.i_Degree,AttributeNames.v_Comparative));
 					}
 					varianti.add(new Variants(celms,AttributeNames.i_Degree, AttributeNames.v_Positive));
 					break;
-				case 104: //  īpašības vārdiem -uok- un vis-, pamata pakāpei burtu mija
+				case 104: //  īpašības vārdiem -uok- un vys-, pamata pakāpei burtu mija
 					if (celms.endsWith("uok") && celms.length() > 3) {
-						if (celms.startsWith("vis")) varianti.add(new Variants(celms.substring(3,celms.length()-2),AttributeNames.i_Degree,AttributeNames.v_Superlative));
+						if (celms.startsWith("vys")) varianti.add(new Variants(celms.substring(3,celms.length()-2),AttributeNames.i_Degree,AttributeNames.v_Superlative));
 						else varianti.add(new Variants(celms.substring(0,celms.length()-2),AttributeNames.i_Degree,AttributeNames.v_Comparative));
 					}
 					if (celms.endsWith("l")) {
@@ -546,9 +546,9 @@ public abstract class Mijas {
 						varianti.add(new Variants(celms, AttributeNames.i_Degree, AttributeNames.v_Positive));
 					}
 					break;
-				case 105: // līdzīgi kā `case 34` - īpašības vārdiem -uok- un vis- izskaņām kā -ajam: liekam nevis moz-s->moz-ajam, bet moz-s->moz-a-jam, bet senej-ais -> sene-jam/senej-a-jam
+				case 105: // līdzīgi kā `case 34` - īpašības vārdiem -uok- un vys- izskaņām kā -ajam: liekam nevis moz-s->moz-ajam, bet moz-s->moz-a-jam, bet senej-ais -> sene-jam/senej-a-jam
 					if (celms.endsWith("uoka") && celms.length() > 4) {
-						if (celms.startsWith("vis")) varianti.add(new Variants(celms.substring(3,celms.length()-3),AttributeNames.i_Degree,AttributeNames.v_Superlative));
+						if (celms.startsWith("vys")) varianti.add(new Variants(celms.substring(3,celms.length()-3),AttributeNames.i_Degree,AttributeNames.v_Superlative));
 						else varianti.add(new Variants(celms.substring(0,celms.length()-3),AttributeNames.i_Degree,AttributeNames.v_Comparative));
 					}
 					if (celms.endsWith("a")) // moz-jam -> moz; seneja-jam -> senej
@@ -556,9 +556,9 @@ public abstract class Mijas {
 					else if (celms.endsWith("ē") || celms.endsWith("e")) // sene-jam -> senej
 						varianti.add(new Variants(celms+"j",AttributeNames.i_Degree, AttributeNames.v_Positive));
 					break;
-				case 106: // līdzīgi `case 13` - apstākļa vārdiem -uok- un vis-
+				case 106: // līdzīgi `case 13` - apstākļa vārdiem -uok- un vys-
 					if (celms.endsWith("uok") && celms.length() > 3) {
-						if (celms.startsWith("vis")) varianti.add(new Variants(celms.substring(3,celms.length()-2),AttributeNames.i_Degree,AttributeNames.v_Superlative));
+						if (celms.startsWith("vys")) varianti.add(new Variants(celms.substring(3,celms.length()-2),AttributeNames.i_Degree,AttributeNames.v_Superlative));
 						else varianti.add(new Variants(celms.substring(0,celms.length()-2),AttributeNames.i_Degree,AttributeNames.v_Comparative));
 					}
 					break;
@@ -1109,15 +1109,15 @@ public abstract class Mijas {
 						varianti.add(new Variants(celms));
 					}
 					break;
-				case 103: // līdzīgi 'case 3' - īpašības vārdiem pieliekam -uok- un vis-
+				case 103: // līdzīgi 'case 3' - īpašības vārdiem pieliekam -uok- un vys-
 					varianti.add(new Variants(celms,AttributeNames.i_Degree,AttributeNames.v_Positive));
 					if (!celms.endsWith("uok")) {
 						varianti.add(new Variants(celms + "uok", AttributeNames.i_Degree, AttributeNames.v_Comparative));
 						if (pieliktVisPārākoPak)
-							varianti.add(new Variants("vis" + celms + "uok", AttributeNames.i_Degree, AttributeNames.v_Superlative));
+							varianti.add(new Variants("vys" + celms + "uok", AttributeNames.i_Degree, AttributeNames.v_Superlative));
 					}
 					break;
-				case 104: // īpašības vārdiem pieliekam -uok- un vis- + burtu mija
+				case 104: // īpašības vārdiem pieliekam -uok- un vys- + burtu mija
 					if (celms.endsWith("ļ")) {
 						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "l", AttributeNames.i_Degree,AttributeNames.v_Positive));
 					} else if (celms.endsWith("ņ")) {
@@ -1132,10 +1132,10 @@ public abstract class Mijas {
 					if (!celms.endsWith("uok")) {
 						varianti.add(new Variants(celms + "uok", AttributeNames.i_Degree, AttributeNames.v_Comparative));
 						if (pieliktVisPārākoPak)
-							varianti.add(new Variants("vis" + celms + "uok", AttributeNames.i_Degree, AttributeNames.v_Superlative));
+							varianti.add(new Variants("vys" + celms + "uok", AttributeNames.i_Degree, AttributeNames.v_Superlative));
 					}
 					break;
-				case 105: // līdzīgi kā case 34 -  īpašības vārdiem -uok- un vis- izskaņām kā -ajam: liekam nevis moz-s->moz-ajam, bet moz-s->moz-a-jam, bet senej-ais -> sene-jam/sene-a-jam
+				case 105: // līdzīgi kā case 34 -  īpašības vārdiem -uok- un vys- izskaņām kā -ajam: liekam nevis moz-s->moz-ajam, bet moz-s->moz-a-jam, bet senej-ais -> sene-jam/sene-a-jam
 					if (celms.endsWith("ēj") || celms.endsWith("ej")) // senej-ais -> sene-jam
 						varianti.add(new Variants(celms.substring(0, celms.length()-1),AttributeNames.i_Degree,AttributeNames.v_Positive));
 					else // moz-s -> moza-jam
@@ -1143,13 +1143,13 @@ public abstract class Mijas {
 
 					varianti.add(new Variants(celms + "uoka",AttributeNames.i_Degree,AttributeNames.v_Comparative));
 					if (pieliktVisPārākoPak)
-						varianti.add(new Variants("vis" + celms + "uoka",AttributeNames.i_Degree,AttributeNames.v_Superlative));
+						varianti.add(new Variants("vys" + celms + "uoka",AttributeNames.i_Degree,AttributeNames.v_Superlative));
 					break;
-				case 106: // līdzīgi 'case 13' - apstākļa vārdiem pieliekam -uok- un vis-
+				case 106: // līdzīgi 'case 13' - apstākļa vārdiem pieliekam -uok- un vys-
 					if (!celms.endsWith("uok")) {
 						varianti.add(new Variants(celms + "uok", AttributeNames.i_Degree, AttributeNames.v_Comparative));
 						if (pieliktVisPārākoPak)
-							varianti.add(new Variants("vis" + celms + "uok", AttributeNames.i_Degree, AttributeNames.v_Superlative));
+							varianti.add(new Variants("vys" + celms + "uok", AttributeNames.i_Degree, AttributeNames.v_Superlative));
 					}
 					break;
 
