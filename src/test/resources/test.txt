@@ -573,7 +573,7 @@ pret	spsa	pret	m-p3326-p8s2w7
 partneri	ncmsa2	partneris	m-p3326-p8s2w8
 ir	vcnipii30an	būt	m-p3326-p8s2w9
 aizgājušas	vmnpdfpnasnpn	aiziet	m-p3326-p8s2w10
-otrajā	mosfsl	otrais	m-p3326-p8s2w11
+otrajā	mosmsl	otrais	m-p3326-p8s2w11
 plānā	ncmsl1	plāns	m-p3326-p8s2w12
 un	cc	un	m-p3326-p8s2w13
 šīm	pd3fpdn	šī	m-p3326-p8s2w14
@@ -3234,7 +3234,7 @@ lejā	r0n	leja	m-p1094-p2s5w9
 ,	zc	,	m-p1094-p2s5w10
 bet	cc	bet	m-p1094-p2s5w11
 varbūt	q	varbūt	m-p1094-p2s5w12
-arī	cc	arī	m-p1094-p2s5w13
+arī	q	arī	m-p1094-p2s5w13
 kādu	pi0msan	kāds	m-p1094-p2s5w14
 uzvarēt	vmnn0t3000n	uzvarēt	m-p1094-p2s5w15
 <g />
@@ -12180,7 +12180,7 @@ uzņemti	vmnpdmpnpsnpn	uzņemt	m-p13856-p12s1w20
 dotumi	ncmpn1	dotums	m-p13856-p12s2w2
 acīmredzami	rpn	acīmredzami	m-p13856-p12s2w3
 ir	vcnipii30an	būt	m-p13856-p12s2w4
-otrā	mosfsn	otrs	m-p13856-p12s2w5
+otrā	mosmsg	otrais	m-p13856-p12s2w5
 <g />
 ,	zc	,	m-p13856-p12s2w6
 ja	cs	ja	m-p13856-p12s2w7
@@ -13478,7 +13478,7 @@ kundze	ncfsn5	kundze	m-p650-p8s13w22
 .	zs	.	m-p650-p8s13w23
 </s>
 <s>
-Otrs	mosmsn	otrs	m-p650-p8s14w1
+Otrs	mcsmsn	otrs	m-p650-p8s14w1
 padoms	ncmsn1	padoms	m-p650-p8s14w2
 <g />
 ,	zc	,	m-p650-p8s14w3
@@ -19822,7 +19822,7 @@ pieaugs	vmnifi130an	pieaugt	m-p3753-p45s1w4
 un	cc	un	m-p3753-p45s1w6
 tas	pd3msnn	tas	m-p3753-p45s1w7
 izraisīs	vmnift330an	izraisīt	m-p3753-p45s1w8
-otru	mcsmsa	otrs	m-p3753-p45s1w9
+otru	mcsfsa	otrs	m-p3753-p45s1w9
 lietu	ncfsa4	lieta	m-p3753-p45s1w10
 <g />
 ,	zc	,	m-p3753-p45s1w11
@@ -41616,7 +41616,7 @@ centu	ncmsa1	cents	m-p6470-p5s1w8
 ko	pr000an	kas	m-p6470-p5s1w10
 kāds	pi0msnn	kāds	m-p6470-p5s1w11
 cits	pi0msnn	cits	m-p6470-p5s1w12
-varētu	vmnc0t300an	varēt	m-p6470-p5s1w13
+varētu	vonc0t300an	varēt	m-p6470-p5s1w13
 saņemt	vmnn0t1000n	saņemt	m-p6470-p5s1w14
 vairāk	rcn	daudz	m-p6470-p5s1w15
 nekā	cs	nekā	m-p6470-p5s1w16
@@ -43101,7 +43101,7 @@ drosmi	ncfsa5	drosme	m-dXYZ-Mazais-princis-p13s3w3
 mana	ps0fsnn	mana	m-dXYZ-Mazais-princis-p13s3w4
 pirmā	mosmsg	pirmais	m-dXYZ-Mazais-princis-p13s3w5
 un	cc	un	m-dXYZ-Mazais-princis-p13s3w6
-otrā	mcsmsg	otrs	m-dXYZ-Mazais-princis-p13s3w7
+otrā	mosmsg	otrais	m-dXYZ-Mazais-princis-p13s3w7
 zīmējuma	ncmsg1	zīmējums	m-dXYZ-Mazais-princis-p13s3w8
 neveiksme	ncfsn5	neveiksme	m-dXYZ-Mazais-princis-p13s3w9
 <g />
@@ -45612,6 +45612,1798 @@ noskaidroja	vmnist230an	noskaidrot	m-p11587-p1s1w30
 tiesā	ncfsl4	tiesa	m-p11587-p1s1w31
 <g />
 .	zs	.	m-p11587-p1s1w32
+</s>
+<s>
+Grūtnieču	ncfpg5	grūtniece	m-p135-p1s1w1
+atlaišanas	ncfsg4	atlaišana	m-p135-p1s1w2
+ierobežojumi	ncmpn1	ierobežojums	m-p135-p1s1w3
+</s>
+<s>
+Prasības	ncfpn4	prasība	m-p135-p2s1w1
+<g />
+,	zc	,	m-p135-p2s1w2
+regulējums	ncmsn1	regulējums	m-p135-p2s1w3
+<g />
+,	zc	,	m-p135-p2s1w4
+piemērošana	ncfsn4	piemērošana	m-p135-p2s1w5
+</s>
+<s>
+Raksta	ncmsg1	raksts	m-p135-p3s1w1
+mērķis	ncmsn2	mērķis	m-p135-p3s1w2
+ir	vcnipii30an	būt	m-p135-p3s1w3
+atspoguļot	vmnn0t2000n	atspoguļot	m-p135-p3s1w4
+Eiropas	npfsg4	Eiropa	m-p135-p3s1w5
+Savienības	ncfsg4	savienība	m-p135-p3s1w6
+tiesību	ncfpg4	tiesība	m-p135-p3s1w7
+prasības	ncfpa4	prasība	m-p135-p3s1w8
+attiecībā	ncfsl4	attiecība	m-p135-p3s1w9
+uz	sppd	uz	m-p135-p3s1w10
+grūtnieču	ncfpg5	grūtniece	m-p135-p3s1w11
+atlaišanas	ncfsg4	atlaišana	m-p135-p3s1w12
+ierobežojumiem	ncmpd1	ierobežojums	m-p135-p3s1w13
+un	cc	un	m-p135-p3s1w14
+nepilnīgo	afmsayp	nepilnīgs	m-p135-p3s1w15
+šī	pd3msgn	šis	m-p135-p3s1w16
+jautājuma	ncmsg1	jautājums	m-p135-p3s1w17
+regulējumu	ncmsa1	regulējums	m-p135-p3s1w18
+Darba	ncmsg1	darbs	m-p135-p3s1w19
+likumā	ncmsl1	likums	m-p135-p3s1w20
+(	zb	(	m-p135-p3s1w21
+<g />
+DL	yn	DL	m-p135-p3s1w22
+<g />
+)	zb	)	m-p135-p3s1w23
+<g />
+.	zs	.	m-p135-p3s1w24
+</s>
+<s>
+Ideja	ncfsn4	ideja	m-p135-p3s2w1
+par	spsa	par	m-p135-p3s2w2
+šo	pd3msan	šis	m-p135-p3s2w3
+rakstu	ncmsa1	raksts	m-p135-p3s2w4
+autorei	ncfsd5	autore	m-p135-p3s2w5
+radās	vmyisi130an	rasties	m-p135-p3s2w6
+<g />
+,	zc	,	m-p135-p3s2w7
+iepazīstoties	vmypu0000000n	iepazīties	m-p135-p3s2w8
+ar	spsa	ar	m-p135-p3s2w9
+vienu	mcsmsa	viens	m-p135-p3s2w10
+Latvijas	npfsg4	Latvija	m-p135-p3s2w11
+tiesas	ncfsg4	tiesa	m-p135-p3s2w12
+spriedumu	ncmsa1	spriedums	m-p135-p3s2w13
+<g />
+,	zc	,	m-p135-p3s2w14
+kurā	pr0msln	kurš	m-p135-p3s2w15
+parādās	vmyipi330an	parādīties	m-p135-p3s2w16
+DL	yn	DL	m-p135-p3s2w17
+nepilnības	ncfpn4	nepilnība	m-p135-p3s2w18
+grūtnieču	ncfpg5	grūtniece	m-p135-p3s2w19
+atlaišanas	ncfsg4	atlaišana	m-p135-p3s2w20
+regulējumā	ncmsl1	regulējums	m-p135-p3s2w21
+<g />
+.	zs	.	m-p135-p3s2w22
+</s>
+<s>
+DL	yn	DL	m-p135-p4s1w1
+109.	xo	109.	m-p135-p4s1w2
+<g />
+pants	ncmsn1	pants	m-p135-p4s1w3
+nosaka	vmnipt330an	nosacīt	m-p135-p4s1w4
+ierobežojumus	ncmpa1	ierobežojums	m-p135-p4s1w5
+darba	ncmsg1	darbs	m-p135-p4s1w6
+devēja	ncmsg1	devējs	m-p135-p4s1w7
+uzteikumam	ncmsd1	uzteikums	m-p135-p4s1w8
+grūtniecei	ncfsd5	grūtniece	m-p135-p4s1w9
+<g />
+.	zs	.	m-p135-p4s1w10
+</s>
+<s>
+Tas	pd3msnn	tas	m-p135-p4s2w1
+paredz	vmnipt330an	paredzēt	m-p135-p4s2w2
+<g />
+,	zc	,	m-p135-p4s2w3
+ka	cs	ka	m-p135-p4s2w4
+grūtniecības	ncfsg4	grūtniecība	m-p135-p4s2w5
+dēļ	stsg	dēļ	m-p135-p4s2w6
+darbu	ncmsa1	darbs	m-p135-p4s2w7
+nav	vcnipii30ay	būt	m-p135-p4s2w8
+atļauts	vmnpdmsnpsnpn	atļaut	m-p135-p4s2w9
+uzteikt	vmnn0t1000n	uzteikt	m-p135-p4s2w10
+<g />
+.	zs	.	m-p135-p4s2w11
+</s>
+<s>
+Grūtniecei	ncfsd5	grūtniece	m-p135-p4s3w1
+darbu	ncmsa1	darbs	m-p135-p4s3w2
+var	vonipi330an	varēt	m-p135-p4s3w3
+uzteikt	vmnn0t1000n	uzteikt	m-p135-p4s3w4
+tikai	q	tikai	m-p135-p4s3w5
+DL	yn	DL	m-p135-p4s3w6
+101.	xo	101.	m-p135-p4s3w7
+<g />
+panta	ncmsg1	pants	m-p135-p4s3w8
+pirmās	mosfsg	pirmais	m-p135-p4s3w9
+daļas	ncfsg4	daļa	m-p135-p4s3w10
+1.	xo	1.	m-p135-p4s3w11
+<g />
+,	zc	,	m-p135-p4s3w12
+2.	xo	2.	m-p135-p4s3w13
+<g />
+,	zc	,	m-p135-p4s3w14
+3.	xo	3.	m-p135-p4s3w15
+<g />
+,	zc	,	m-p135-p4s3w16
+4.	xo	4.	m-p135-p4s3w17
+<g />
+,	zc	,	m-p135-p4s3w18
+5.	xo	5.	m-p135-p4s3w19
+un	cc	un	m-p135-p4s3w20
+10.	xo	10.	m-p135-p4s3w21
+<g />
+punktā	ncmsl1	punkts	m-p135-p4s3w22
+noteiktajos	vmnpdmplpsypn	noteikt	m-p135-p4s3w23
+gadījumos	ncmpl1	gadījums	m-p135-p4s3w24
+<g />
+.	zs	.	m-p135-p4s3w25
+</s>
+<s>
+Direktīvas	ncfsg4	direktīva	m-p135-p5s1w1
+92	xn	92	m-p135-p5s1w2
+<g />
+/	zx	/	m-p135-p5s1w3
+<g />
+85	xn	85	m-p135-p5s1w4
+10.	xo	10.	m-p135-p5s1w5
+<g />
+pants	ncmsn1	pants	m-p135-p5s1w6
+uzliek	vmnipt130an	uzlikt	m-p135-p5s1w7
+par	spsa	par	m-p135-p5s1w8
+pienākumu	ncmsa1	pienākums	m-p135-p5s1w9
+Dalībvalstīm	ncfpd6	dalībvalsts	m-p135-p5s1w10
+nodrošināt	vmnn0t3000n	nodrošināt	m-p135-p5s1w11
+grūtnieču	ncfpg5	grūtniece	m-p135-p5s1w12
+atlaišanas	ncfsg4	atlaišana	m-p135-p5s1w13
+aizliegumu	ncmsa1	aizliegums	m-p135-p5s1w14
+<g />
+.	zs	.	m-p135-p5s1w15
+</s>
+<s>
+Atkāpe	ncfsn5	atkāpe	m-p135-p5s2w1
+no	spsg	no	m-p135-p5s2w2
+šī	pd3msgn	šis	m-p135-p5s2w3
+aizlieguma	ncmsg1	aizliegums	m-p135-p5s2w4
+ir	vcnipii30an	būt	m-p135-p5s2w5
+pieļaujama	vmnpdfsnppnpn	pieļaut	m-p135-p5s2w6
+tikai	q	tikai	m-p135-p5s2w7
+izņēmuma	ncmsg1	izņēmums	m-p135-p5s2w8
+gadījumos	ncmpl1	gadījums	m-p135-p5s2w9
+<g />
+,	zc	,	m-p135-p5s2w10
+kas	pr000nn	kas	m-p135-p5s2w11
+nekādā	pi0msly	nekāds	m-p135-p5s2w12
+veidā	ncmsl1	veids	m-p135-p5s2w13
+nav	vcnipii30ay	būt	m-p135-p5s2w14
+saistīti	vmnpdmpnpsnpn	saistīt	m-p135-p5s2w15
+ar	spsa	ar	m-p135-p5s2w16
+grūtniecību	ncfsa4	grūtniecība	m-p135-p5s2w17
+un	cc	un	m-p135-p5s2w18
+noteikti	vmnpdmpnpsnpn	noteikt	m-p135-p5s2w19
+ar	sppd	ar	m-p135-p5s2w20
+nacionālajiem	armpdyp	nacionāls	m-p135-p5s2w21
+tiesību	ncfpg4	tiesība	m-p135-p5s2w22
+aktiem	ncmpd1	akts	m-p135-p5s2w23
+vai	cc	vai	m-p135-p5s2w24
+praksi	ncfsa5	prakse	m-p135-p5s2w25
+<g />
+.	zs	.	m-p135-p5s2w26
+</s>
+<s>
+Lietā	ncfsl4	lieta	m-p135-p5s3w1
+"	zq	"	m-p135-p5s3w2
+<g />
+Hertz	xf	Hertz	m-p135-p5s3w3
+<g />
+"	zq	"	m-p135-p5s3w4
+Eiropas	npfsg4	Eiropa	m-p135-p5s3w5
+Kopienu	ncfpg4	kopiena	m-p135-p5s3w6
+tiesa	ncfsn4	tiesa	m-p135-p5s3w7
+(	zb	(	m-p135-p5s3w8
+<g />
+EKT	yp	EKT	m-p135-p5s3w9
+<g />
+)	zb	)	m-p135-p5s3w10
+ir	vcnipii30an	būt	m-p135-p5s3w11
+noteikusi	vmnpdfsnasnpn	noteikt	m-p135-p5s3w12
+<g />
+,	zc	,	m-p135-p5s3w13
+ka	cs	ka	m-p135-p5s3w14
+atlaišana	ncfsn4	atlaišana	m-p135-p5s3w15
+grūtniecības	ncfsg4	grūtniecība	m-p135-p5s3w16
+dēļ	stsg	dēļ	m-p135-p5s3w17
+ir	vcnipii30an	būt	m-p135-p5s3w18
+atzīstama	vmnpdfsnppnpn	atzīt	m-p135-p5s3w19
+par	spsa	par	m-p135-p5s3w20
+tiešu	affsanp	tiešs	m-p135-p5s3w21
+diskrimināciju	ncfsa4	diskriminācija	m-p135-p5s3w22
+arī	q	arī	m-p135-p5s3w23
+Direktīvas	ncfsg4	direktīva	m-p135-p5s3w24
+76	xn	76	m-p135-p5s3w25
+<g />
+/	zx	/	m-p135-p5s3w26
+<g />
+207	xn	207	m-p135-p5s3w27
+izpratnē	ncfsl5	izpratne	m-p135-p5s3w28
+<g />
+.	zs	.	m-p135-p5s3w29
+</s>
+<s>
+Tātad	cc	tātad	m-p135-p5s4w1
+grūtnieču	ncfpg5	grūtniece	m-p135-p5s4w2
+atlaišanas	ncfsg4	atlaišana	m-p135-p5s4w3
+aizliegumu	ncmsa1	aizliegums	m-p135-p5s4w4
+grūtniecības	ncfsg4	grūtniecība	m-p135-p5s4w5
+dēļ	stsg	dēļ	m-p135-p5s4w6
+nosaka	vmnipt330an	nosacīt	m-p135-p5s4w7
+divas	mcsfpn	divi	m-p135-p5s4w8
+ES	yp	ES	m-p135-p5s4w9
+direktīvas	ncfpn4	direktīva	m-p135-p5s4w10
+<g />
+,	zc	,	m-p135-p5s4w11
+no	sppd	no	m-p135-p5s4w12
+kurām	pr0fpdn	kura	m-p135-p5s4w13
+Direktīva	ncfsn4	direktīva	m-p135-p5s4w14
+92	xn	92	m-p135-p5s4w15
+<g />
+/	zx	/	m-p135-p5s4w16
+<g />
+85	xn	85	m-p135-p5s4w17
+ir	vcnipii30an	būt	m-p135-p5s4w18
+darba	ncmsg1	darbs	m-p135-p5s4w19
+aizsardzības	ncfsg4	aizsardzība	m-p135-p5s4w20
+<g />
+,	zc	,	m-p135-p5s4w21
+bet	cc	bet	m-p135-p5s4w22
+Direktīva	ncfsn4	direktīva	m-p135-p5s4w23
+76	xn	76	m-p135-p5s4w24
+<g />
+/	zx	/	m-p135-p5s4w25
+<g />
+207	xn	207	m-p135-p5s4w26
+diskriminācijas	ncfsg4	diskriminācija	m-p135-p5s4w27
+novēršanas	ncfsg4	novēršana	m-p135-p5s4w28
+jomas	ncfsg4	joma	m-p135-p5s4w29
+direktīva	ncfsn4	direktīva	m-p135-p5s4w30
+<g />
+.	zs	.	m-p135-p5s4w31
+</s>
+<s>
+Tātad	cc	tātad	m-p135-p6s1w1
+DL	yp	DL	m-p135-p6s1w2
+aizliedz	vmnipt130an	aizliegt	m-p135-p6s1w3
+uzteikt	vmnn0t1000n	uzteikt	m-p135-p6s1w4
+darbu	ncmsa1	darbs	m-p135-p6s1w5
+grūtniecei	ncfsd5	grūtniece	m-p135-p6s1w6
+grūtniecības	ncfsg4	grūtniecība	m-p135-p6s1w7
+dēļ	stsg	dēļ	m-p135-p6s1w8
+<g />
+,	zc	,	m-p135-p6s1w9
+bet	cc	bet	m-p135-p6s1w10
+ES	yp	ES	m-p135-p6s1w11
+direktīvas	ncfpn4	direktīva	m-p135-p6s1w12
+pieprasa	vmnipt330an	pieprasīt	m-p135-p6s1w13
+nodrošināt	vmnn0t3000n	nodrošināt	m-p135-p6s1w14
+grūtnieces	ncfpa5	grūtniece	m-p135-p6s1w15
+pret	spsa	pret	m-p135-p6s1w16
+atlaišanu	ncfsa4	atlaišana	m-p135-p6s1w17
+grūtniecības	ncfsg4	grūtniecība	m-p135-p6s1w18
+dēļ	stsg	dēļ	m-p135-p6s1w19
+<g />
+.	zs	.	m-p135-p6s1w20
+</s>
+<s>
+Jautājums	ncmsn1	jautājums	m-p135-p6s2w1
+ir	vmnipii30an	būt	m-p135-p6s2w2
+<g />
+,	zc	,	m-p135-p6s2w3
+vai	q	vai	m-p135-p6s2w4
+<g />
+,	zc	,	m-p135-p6s2w5
+nosakot	vmnpu0000000n	nosacīt	m-p135-p6s2w6
+aizliegumu	ncmsa1	aizliegums	m-p135-p6s2w7
+uzteikt	vmnn0t1000n	uzteikt	m-p135-p6s2w8
+darba	ncmsg1	darbs	m-p135-p6s2w9
+līgumu	ncmsa1	līgums	m-p135-p6s2w10
+grūtniecības	ncfsg4	grūtniecība	m-p135-p6s2w11
+dēļ	stsg	dēļ	m-p135-p6s2w12
+<g />
+,	zc	,	m-p135-p6s2w13
+tiek	vanipi130an	tikt	m-p135-p6s2w14
+nodrošināts	vmnpdmsnpsnpn	nodrošināt	m-p135-p6s2w15
+<g />
+,	zc	,	m-p135-p6s2w16
+ka	cs	ka	m-p135-p6s2w17
+sieviete	ncfsn5	sieviete	m-p135-p6s2w18
+netiek	vanipt130ay	tikt	m-p135-p6s2w19
+atlaista	vmnpdfsnpsnpn	atlaist	m-p135-p6s2w20
+grūtniecības	ncfsg4	grūtniecība	m-p135-p6s2w21
+dēļ	stsg	dēļ	m-p135-p6s2w22
+<g />
+.	zs	.	m-p135-p6s2w23
+</s>
+<s>
+Realitāte	ncfsn5	realitāte	m-p135-p6s3w1
+rāda	vmnipt330an	rādīt	m-p135-p6s3w2
+<g />
+,	zc	,	m-p135-p6s3w3
+ka	cs	ka	m-p135-p6s3w4
+ne	q	ne	m-p135-p6s3w5
+<g />
+.	zs	.	m-p135-p6s3w6
+</s>
+<s>
+Vienā	mcsfsl	viens	m-p135-p6s4w1
+situācijā	ncfsl4	situācija	m-p135-p6s4w2
+sieviete	ncfsn5	sieviete	m-p135-p6s4w3
+var	vonipi330an	varēt	m-p135-p6s4w4
+palikt	vtnn0i1000n	palikt	m-p135-p6s4w5
+stāvoklī	ncmsl2	stāvoklis	m-p135-p6s4w6
+periodā	ncmsl1	periods	m-p135-p6s4w7
+starp	spsa	starp	m-p135-p6s4w8
+uzteikuma	ncmsg1	uzteikums	m-p135-p6s4w9
+saņemšanu	ncfsa4	saņemšana	m-p135-p6s4w10
+un	cc	un	m-p135-p6s4w11
+atlaišanas	ncfsg4	atlaišana	m-p135-p6s4w12
+brīdi	ncmsa2	brīdis	m-p135-p6s4w13
+<g />
+.	zs	.	m-p135-p6s4w14
+</s>
+<s>
+Citā	pi0msln	cits	m-p135-p6s5w1
+gadījumā	ncmsl1	gadījums	m-p135-p6s5w2
+darba	ncmsg1	darbs	m-p135-p6s5w3
+devējs	ncmsn1	devējs	m-p135-p6s5w4
+sievietes	ncfsg5	sieviete	m-p135-p6s5w5
+nepiesardzību	ncfsa4	nepiesardzība	m-p135-p6s5w6
+<g />
+,	zc	,	m-p135-p6s5w7
+paziņojot	vmnpu0000000n	paziņot	m-p135-p6s5w8
+par	spsa	par	m-p135-p6s5w9
+grūtniecību	ncfsa4	grūtniecība	m-p135-p6s5w10
+neoficiāli	rpn	neoficiāli	m-p135-p6s5w11
+<g />
+,	zc	,	m-p135-p6s5w12
+var	vonipi330an	varēt	m-p135-p6s5w13
+izmantot	vmnn0t2000n	izmantot	m-p135-p6s5w14
+ļaunprātīgi	rpn	ļaunprātīgi	m-p135-p6s5w15
+<g />
+.	zs	.	m-p135-p6s5w16
+</s>
+<s>
+Iespējams	afmsnnp	iespējams	m-p135-p6s6w1
+<g />
+,	zc	,	m-p135-p6s6w2
+ka	cs	ka	m-p135-p6s6w3
+tieši	rpn	tieši	m-p135-p6s6w4
+tā	r0n	tā	m-p135-p6s6w5
+arī	q	arī	m-p135-p6s6w6
+noticis	vmnpdmsnasnpn	notikt	m-p135-p6s6w7
+manis	pp10sgn	es	m-p135-p6s6w8
+minētajā	vmnpdmslpsypn	minēt	m-p135-p6s6w9
+Latvijas	npfsg4	Latvija	m-p135-p6s6w10
+tiesas	ncfsg4	tiesa	m-p135-p6s6w11
+izskatītajā	vmnpdmslpsypn	izskatīt	m-p135-p6s6w12
+gadījumā	ncmsl1	gadījums	m-p135-p6s6w13
+<g />
+.	zs	.	m-p135-p6s6w14
+</s>
+<s>
+Sieviete	ncfsn5	sieviete	m-p135-p6s7w1
+prasībā	ncfsl4	prasība	m-p135-p6s7w2
+un	cc	un	m-p135-p6s7w3
+arī	cc	arī	m-p135-p6s7w4
+tiesā	ncfsl4	tiesa	m-p135-p6s7w5
+norādīja	vmnist330an	norādīt	m-p135-p6s7w6
+<g />
+,	zc	,	m-p135-p6s7w7
+ka	cs	ka	m-p135-p6s7w8
+darba	ncmsg1	darbs	m-p135-p6s7w9
+devēja	ncmsg1	devējs	m-p135-p6s7w10
+uzteikumu	ncmsa1	uzteikums	m-p135-p6s7w11
+saņēmusi	vmnpdfsnasnpn	saņemt	m-p135-p6s7w12
+pēc	sppd	pēc	m-p135-p6s7w13
+tam	pd3msdn	tas	m-p135-p6s7w14
+<g />
+,	zc	,	m-p135-p6s7w15
+kad	r0n	kad	m-p135-p6s7w16
+darba	ncmsg1	darbs	m-p135-p6s7w17
+devējam	ncmsd1	devējs	m-p135-p6s7w18
+mutiski	r0n	mutiski	m-p135-p6s7w19
+esot	vcnrpii00an	būt	m-p135-p6s7w20
+paziņojusi	vmnpdfsnasnpn	paziņot	m-p135-p6s7w21
+par	spsa	par	m-p135-p6s7w22
+grūtniecību	ncfsa4	grūtniecība	m-p135-p6s7w23
+<g />
+.	zs	.	m-p135-p6s7w24
+</s>
+<s>
+Arī	q	arī	m-p135-p7s1w1
+tiesa	ncfsn4	tiesa	m-p135-p7s1w2
+norāda	vmnipt330an	norādīt	m-p135-p7s1w3
+<g />
+,	zc	,	m-p135-p7s1w4
+ka	cs	ka	m-p135-p7s1w5
+darba	ncmsg1	darbs	m-p135-p7s1w6
+līguma	ncmsg1	līgums	m-p135-p7s1w7
+uzteikums	ncmsn1	uzteikums	m-p135-p7s1w8
+un	cc	un	m-p135-p7s1w9
+darbinieka	ncmsg1	darbinieks	m-p135-p7s1w10
+atlaišana	ncfsn4	atlaišana	m-p135-p7s1w11
+nav	vcnipii30ay	būt	m-p135-p7s1w12
+viens	mcsmsn	viens	m-p135-p7s1w13
+un	cc	un	m-p135-p7s1w14
+tas	pd3msnn	tas	m-p135-p7s1w15
+pats	pg0msnn	pats	m-p135-p7s1w16
+<g />
+.	zs	.	m-p135-p7s1w17
+</s>
+<s>
+Līdz	r0n	līdz	m-p135-p7s2w1
+ar	spsa	ar	m-p135-p7s2w2
+to	pd3msan	tas	m-p135-p7s2w3
+lietas	ncfsg4	lieta	m-p135-p7s2w4
+iznākums	ncmsn1	iznākums	m-p135-p7s2w5
+tiesai	ncfsd4	tiesa	m-p135-p7s2w6
+ir	vcnipii30an	būt	m-p135-p7s2w7
+skaidrs	afmsnnp	skaidrs	m-p135-p7s2w8
+<g />
+.	zs	.	m-p135-p7s2w9
+</s>
+<s>
+Lai	cs	lai	m-p135-p7s3w1
+gan	q	gan	m-p135-p7s3w2
+pēc	spsg	pēc	m-p135-p7s3w3
+uzteikuma	ncmsg1	uzteikums	m-p135-p7s3w4
+saņemšanas	ncfsg4	saņemšana	m-p135-p7s3w5
+darbiniece	ncfsn5	darbiniece	m-p135-p7s3w6
+ir	vcnipii30an	būt	m-p135-p7s3w7
+iesniegusi	vmnpdfsnasnpn	iesniegt	m-p135-p7s3w8
+ārsta	ncmsg1	ārsts	m-p135-p7s3w9
+zīmi	ncfsa5	zīme	m-p135-p7s3w10
+par	spsa	par	m-p135-p7s3w11
+grūtniecību	ncfsa4	grūtniecība	m-p135-p7s3w12
+<g />
+,	zc	,	m-p135-p7s3w13
+tomēr	cc	tomēr	m-p135-p7s3w14
+formāli	rpn	formāli	m-p135-p7s3w15
+darba	ncmsg1	darbs	m-p135-p7s3w16
+devējs	ncmsn1	devējs	m-p135-p7s3w17
+nav	vcnipii30ay	būt	m-p135-p7s3w18
+pārkāpis	vmnpdmsnasnpn	pārkāpt	m-p135-p7s3w19
+109.	xo	109.	m-p135-p7s3w20
+<g />
+panta	ncmsg1	pants	m-p135-p7s3w21
+pirmās	mosfsg	pirmais	m-p135-p7s3w22
+daļas	ncfsg4	daļa	m-p135-p7s3w23
+prasības	ncfpa4	prasība	m-p135-p7s3w24
+<g />
+.	zs	.	m-p135-p7s3w25
+</s>
+<s>
+Tādēļ	r0n	tādēļ	m-p135-p7s4w1
+darbinieces	ncfsg5	darbiniece	m-p135-p7s4w2
+prasība	ncfsn4	prasība	m-p135-p7s4w3
+par	spsa	par	m-p135-p7s4w4
+atjaunošanu	ncfsa4	atjaunošana	m-p135-p7s4w5
+darbā	ncmsl1	darbs	m-p135-p7s4w6
+ir	vcnipii30an	būt	m-p135-p7s4w7
+noraidāma	vmnpdfsnppnpn	noraidīt	m-p135-p7s4w8
+<g />
+.	zs	.	m-p135-p7s4w9
+</s>
+<s>
+Skaidrs	afmsnnp	skaidrs	m-p135-p8s1w1
+<g />
+,	zc	,	m-p135-p8s1w2
+ka	cs	ka	m-p135-p8s1w3
+daļa	ncfsn4	daļa	m-p135-p8s1w4
+vainas	ncfsg4	vaina	m-p135-p8s1w5
+ir	vmnipii30an	būt	m-p135-p8s1w6
+neprecīzi	rpn	neprecīzi	m-p135-p8s1w7
+ieviestās	vmnpdfplpsnpn	ieviest	m-p135-p8s1w8
+ES	yp	ES	m-p135-p8s1w9
+tiesību	ncfpg4	tiesība	m-p135-p8s1w10
+prasībās	ncfpl4	prasība	m-p135-p8s1w11
+<g />
+,	zc	,	m-p135-p8s1w12
+tomēr	cc	tomēr	m-p135-p8s1w13
+ne	q	ne	m-p135-p8s1w14
+tikai	q	tikai	m-p135-p8s1w15
+<g />
+.	zs	.	m-p135-p8s1w16
+</s>
+<s>
+Minēto	vmnpdfsapsypn	minēt	m-p135-p9s1w1
+lietu	ncfsa4	lieta	m-p135-p9s1w2
+sarežģī	vmnipt230an	sarežģīt	m-p135-p9s1w3
+apstāklis	ncmsn2	apstāklis	m-p135-p9s1w4
+<g />
+,	zc	,	m-p135-p9s1w5
+ka	cs	ka	m-p135-p9s1w6
+sieviete	ncfsn5	sieviete	m-p135-p9s1w7
+atlaista	vmnpdfsnpsnpn	atlaist	m-p135-p9s1w8
+pārbaudes	ncfsg5	pārbaude	m-p135-p9s1w9
+laikā	ncmsl1	laiks	m-p135-p9s1w10
+<g />
+.	zs	.	m-p135-p9s1w11
+</s>
+<s>
+Kā	cs	kā	m-p135-p9s2w1
+zināms	vmnpdmsnppnpn	zināt	m-p135-p9s2w2
+<g />
+,	zc	,	m-p135-p9s2w3
+DL	yn	DL	m-p135-p9s2w4
+47.	xo	47.	m-p135-p9s2w5
+<g />
+panta	ncmsg1	pants	m-p135-p9s2w6
+pirmā	mosfsn	pirmais	m-p135-p9s2w7
+daļa	ncfsn4	daļa	m-p135-p9s2w8
+ļauj	vmnipt130an	ļaut	m-p135-p9s2w9
+darba	ncmsg1	darbs	m-p135-p9s2w10
+devējam	ncmsd1	devējs	m-p135-p9s2w11
+pārbaudes	ncfsg5	pārbaude	m-p135-p9s2w12
+laikā	ncmsl1	laiks	m-p135-p9s2w13
+uzteikt	vmnn0t1000n	uzteikt	m-p135-p9s2w14
+darbu	ncmsa1	darbs	m-p135-p9s2w15
+<g />
+,	zc	,	m-p135-p9s2w16
+nenorādot	vmnpu0000000y	norādīt	m-p135-p9s2w17
+pamatojumu	ncmsa1	pamatojums	m-p135-p9s2w18
+<g />
+.	zs	.	m-p135-p9s2w19
+</s>
+<s>
+Latvijas	npfsg4	Latvija	m-p135-p9s3w1
+tiesību	ncfpg4	tiesība	m-p135-p9s3w2
+zinātnieki	ncmpn1	zinātnieks	m-p135-p9s3w3
+ir	vcnipii30an	būt	m-p135-p9s3w4
+izteikuši	vmnpdmpnasnpn	izteikt	m-p135-p9s3w5
+pretrunīgus	afmpanp	pretrunīgs	m-p135-p9s3w6
+viedokļus	ncmpa2	viedoklis	m-p135-p9s3w7
+par	spsa	par	m-p135-p9s3w8
+to	pd3msan	tas	m-p135-p9s3w9
+<g />
+,	zc	,	m-p135-p9s3w10
+vai	cs	vai	m-p135-p9s3w11
+<g />
+,	zc	,	m-p135-p9s3w12
+atlaižot	vmnpu0000000n	atlaist	m-p135-p9s3w13
+pārbaudes	ncfsg5	pārbaude	m-p135-p9s3w14
+laikā	ncmsl1	laiks	m-p135-p9s3w15
+<g />
+,	zc	,	m-p135-p9s3w16
+ir	vcnipii30an	būt	m-p135-p9s3w17
+jābūt	vmnd0ii00an	būt	m-p135-p9s3w18
+pamatojumam	ncmsd1	pamatojums	m-p135-p9s3w19
+vai	cc	vai	m-p135-p9s3w20
+tam	pd3msdn	tas	m-p135-p9s3w21
+nav	vcnipii30ay	būt	m-p135-p9s3w22
+jābūt	vmnd0ii00an	būt	m-p135-p9s3w23
+<g />
+.	zs	.	m-p135-p9s3w24
+</s>
+<s>
+Vadoties	vmypu0000000n	vadīties	m-p135-p9s4w1
+no	spsg	no	m-p135-p9s4w2
+tās	pd3fsgn	tā	m-p135-p9s4w3
+pašas	pg0fsgn	pati	m-p135-p9s4w4
+Direktīvas	ncfsg4	direktīva	m-p135-p9s4w5
+92	xn	92	m-p135-p9s4w6
+<g />
+/	zx	/	m-p135-p9s4w7
+<g />
+85	xn	85	m-p135-p9s4w8
+10.	xo	10.	m-p135-p9s4w9
+<g />
+panta	ncmsg1	pants	m-p135-p9s4w10
+otrās	mosfsg	otrais	m-p135-p9s4w11
+daļas	ncfsg4	daļa	m-p135-p9s4w12
+prasībām	ncfpd4	prasība	m-p135-p9s4w13
+<g />
+,	zc	,	m-p135-p9s4w14
+iemeslam	ncmsd1	iemesls	m-p135-p9s4w15
+vajag	vonipi330an	vajadzēt	m-p135-p9s4w16
+būt	vmnn0ii000n	būt	m-p135-p9s4w17
+<g />
+.	zs	.	m-p135-p9s4w18
+</s>
+<s>
+Proti	q	proti	m-p135-p9s5w1
+<g />
+,	zc	,	m-p135-p9s5w2
+šī	pd3fsnn	šī	m-p135-p9s5w3
+norma	ncfsn4	norma	m-p135-p9s5w4
+<g />
+,	zc	,	m-p135-p9s5w5
+atlaižot	vmnpu0000000n	atlaist	m-p135-p9s5w6
+grūtnieci	ncfsa5	grūtniece	m-p135-p9s5w7
+,	zc	,	m-p135-p9s5w8
+vienmēr	r0n	vienmēr	m-p135-p9s5w9
+pieprasa	vmnipt330an	pieprasīt	m-p135-p9s5w10
+pamatot	vmnn0t2000n	pamatot	m-p135-p9s5w11
+atlaišanas	ncfsg4	atlaišana	m-p135-p9s5w12
+iemeslu	ncmsa1	iemesls	m-p135-p9s5w13
+rakstiski	r0n	rakstiski	m-p135-p9s5w14
+<g />
+.	zs	.	m-p135-p9s5w15
+</s>
+<s>
+Tātad	cc	tātad	m-p135-p9s6w1
+gadījumā	ncmsl1	gadījums	m-p135-p9s6w2
+<g />
+,	zc	,	m-p135-p9s6w3
+ja	cs	ja	m-p135-p9s6w4
+pārbaudes	ncfsg5	pārbaude	m-p135-p9s6w5
+laikā	ncmsl1	laiks	m-p135-p9s6w6
+atlaižamā	vmnpdfsnppypn	atlaist	m-p135-p9s6w7
+darbiniece	ncfsn5	darbiniece	m-p135-p9s6w8
+ir	vcnipii30an	būt	m-p135-p9s6w9
+grūtniece	ncfsn5	grūtniece	m-p135-p9s6w10
+<g />
+,	zc	,	m-p135-p9s6w11
+darba	ncmsg1	darbs	m-p135-p9s6w12
+devējam	ncmsd1	devējs	m-p135-p9s6w13
+ir	vcnipii30an	būt	m-p135-p9s6w14
+pienākums	ncmsn1	pienākums	m-p135-p9s6w15
+uzteikumā	ncmsl1	uzteikums	m-p135-p9s6w16
+norādīt	vmnn0t3000n	norādīt	m-p135-p9s6w17
+uzteikuma	ncmsg1	uzteikums	m-p135-p9s6w18
+iemeslus	ncmpa1	iemesls	m-p135-p9s6w19
+<g />
+,	zc	,	m-p135-p9s6w20
+kas	pr000nn	kas	m-p135-p9s6w21
+attiecīgi	r0n	attiecīgi	m-p135-p9s6w22
+var	vonipi330an	varēt	m-p135-p9s6w23
+būt	vcnn0ii000n	būt	m-p135-p9s6w24
+tikai	q	tikai	m-p135-p9s6w25
+109.	xo	109.	m-p135-p9s6w26
+<g />
+panta	ncmsg1	pants	m-p135-p9s6w27
+pirmajā	mosfsl	pirmais	m-p135-p9s6w28
+daļā	ncfsl4	daļa	m-p135-p9s6w29
+minētie	vmnpdmpnpsypn	minēt	m-p135-p9s6w30
+<g />
+.	zs	.	m-p135-p9s6w31
+</s>
+<s>
+Tomēr	cc	tomēr	m-p135-p10s1w1
+Direktīvā	ncfsl4	direktīva	m-p135-p10s1w2
+92	xn	92	m-p135-p10s1w3
+<g />
+/	zx	/	m-p135-p10s1w4
+<g />
+85	xn	85	m-p135-p10s1w5
+noteiktā	vmnpdfsnpsypn	noteikt	m-p135-p10s1w6
+aizsardzība	ncfsn4	aizsardzība	m-p135-p10s1w7
+saskaņā	ncfsl4	saskaņa	m-p135-p10s1w8
+ar	spsa	ar	m-p135-p10s1w9
+tās	pd3fsgn	tā	m-p135-p10s1w10
+2.	xo	2.	m-p135-p10s1w11
+<g />
+pantu	ncmsa1	pants	m-p135-p10s1w12
+ir	vcnipii30an	būt	m-p135-p10s1w13
+attiecināma	vmnpdfsnppnpn	attiecināt	m-p135-p10s1w14
+tikai	q	tikai	m-p135-p10s1w15
+uz	sppd	uz	m-p135-p10s1w16
+tām	pd3fpdn	tā	m-p135-p10s1w17
+darbiniecēm	ncfpd5	darbiniece	m-p135-p10s1w18
+<g />
+,	zc	,	m-p135-p10s1w19
+kuras	pr0fpnn	kura	m-p135-p10s1w20
+ir	vcnipii30an	būt	m-p135-p10s1w21
+informējušas	vmnpdfpnasnpn	informēt	m-p135-p10s1w22
+darba	ncmsg1	darbs	m-p135-p10s1w23
+devēju	ncmsa1	devējs	m-p135-p10s1w24
+par	spsa	par	m-p135-p10s1w25
+savu	ps0fsan	sava	m-p135-p10s1w26
+grūtniecību	ncfsa4	grūtniecība	m-p135-p10s1w27
+nacionālajos	armplyp	nacionāls	m-p135-p10s1w28
+normatīvajos	armplyp	normatīvs	m-p135-p10s1w29
+aktos	ncmpl1	akts	m-p135-p10s1w30
+noteiktā	vmnpdfslpsnpn	noteikt	m-p135-p10s1w31
+kārtībā	ncfsl4	kārtība	m-p135-p10s1w32
+<g />
+.	zs	.	m-p135-p10s1w33
+</s>
+<s>
+Latvijā	npfsl4	Latvija	m-p135-p10s2w1
+šī	pd3fsnn	šī	m-p135-p10s2w2
+kārtība	ncfsn4	kārtība	m-p135-p10s2w3
+ir	vcnipii30an	būt	m-p135-p10s2w4
+noteikta	vmnpdfsnpsnpn	noteikt	m-p135-p10s2w5
+ar	spsa	ar	m-p135-p10s2w6
+DL	yn	DL	m-p135-p10s2w7
+37.	xo	37.	m-p135-p10s2w8
+<g />
+panta	ncmsg1	pants	m-p135-p10s2w9
+septīto	mosfsa	septītais	m-p135-p10s2w10
+daļu	ncfsa4	daļa	m-p135-p10s2w11
+<g />
+,	zc	,	m-p135-p10s2w12
+kas	pr000nn	kas	m-p135-p10s2w13
+paredz	vmnipt330an	paredzēt	m-p135-p10s2w14
+darbinieces	ncfsg5	darbiniece	m-p135-p10s2w15
+pienākumu	ncmsa1	pienākums	m-p135-p10s2w16
+iesniegt	vmnn0t1000n	iesniegt	m-p135-p10s2w17
+ārsta	ncmsg1	ārsts	m-p135-p10s2w18
+atzinumu	ncmsa1	atzinums	m-p135-p10s2w19
+<g />
+,	zc	,	m-p135-p10s2w20
+lai	cs	lai	m-p135-p10s2w21
+darba	ncmsg1	darbs	m-p135-p10s2w22
+devējam	ncmsd1	devējs	m-p135-p10s2w23
+rastos	vmyc0i100an	rasties	m-p135-p10s2w24
+pienākums	ncmsn1	pienākums	m-p135-p10s2w25
+grūtniecei	ncfsd5	grūtniece	m-p135-p10s2w26
+nodrošināt	vmnn0t3000n	nodrošināt	m-p135-p10s2w27
+veselībai	ncfsd4	veselība	m-p135-p10s2w28
+un	cc	un	m-p135-p10s2w29
+drošībai	ncfsd4	drošība	m-p135-p10s2w30
+nekaitīgus	afmpanp	nekaitīgs	m-p135-p10s2w31
+darba	ncmsg1	darbs	m-p135-p10s2w32
+apstākļus	ncmpa2	apstāklis	m-p135-p10s2w33
+<g />
+,	zc	,	m-p135-p10s2w34
+starp	sppd	starp	m-p135-p10s2w35
+kuriem	pr0mpdn	kurš	m-p135-p10s2w36
+saskaņā	ncfsl4	saskaņa	m-p135-p10s2w37
+ar	spsa	ar	m-p135-p10s2w38
+Direktīvas	ncfsg4	direktīva	m-p135-p10s2w39
+92	xn	92	m-p135-p10s2w40
+<g />
+/	zx	/	m-p135-p10s2w41
+<g />
+85	xn	85	m-p135-p10s2w42
+10.	xo	10.	m-p135-p10s2w43
+<g />
+pantu	ncmsa1	pants	m-p135-p10s2w44
+ir	vmnipii30an	būt	m-p135-p10s2w45
+arī	cc	arī	m-p135-p10s2w46
+aizsardzība	ncfsn4	aizsardzība	m-p135-p10s2w47
+pret	spsa	pret	m-p135-p10s2w48
+atlaišanu	ncfsa4	atlaišana	m-p135-p10s2w49
+<g />
+.	zs	.	m-p135-p10s2w50
+</s>
+<s>
+Analizējamā	vmnpdfslppnpn	analizēt	m-p135-p11s1w1
+lietā	ncfsl4	lieta	m-p135-p11s1w2
+sieviete	ncfsn5	sieviete	m-p135-p11s1w3
+nespēja	vonisi130ay	spēt	m-p135-p11s1w4
+pierādīt	vmnn0t3000n	pierādīt	m-p135-p11s1w5
+<g />
+,	zc	,	m-p135-p11s1w6
+ka	cs	ka	m-p135-p11s1w7
+par	spsa	par	m-p135-p11s1w8
+grūtniecību	ncfsa4	grūtniecība	m-p135-p11s1w9
+būtu	vcnc0ii00an	būt	m-p135-p11s1w10
+informējusi	vmnpdfsnasnpn	informēt	m-p135-p11s1w11
+darba	ncmsg1	darbs	m-p135-p11s1w12
+devēju	ncmsa1	devējs	m-p135-p11s1w13
+pirms	spsg	pirms	m-p135-p11s1w14
+uzteikuma	ncmsg1	uzteikums	m-p135-p11s1w15
+saņemšanas	ncfsg4	saņemšana	m-p135-p11s1w16
+<g />
+,	zc	,	m-p135-p11s1w17
+līdz	r0n	līdz	m-p135-p11s1w18
+ar	spsa	ar	m-p135-p11s1w19
+to	pd3msan	tas	m-p135-p11s1w20
+uz	spsa	uz	m-p135-p11s1w21
+viņu	pp3fsan	viņa	m-p135-p11s1w22
+nevar	vonipi330ay	varēt	m-p135-p11s1w23
+attiecināt	vmnn0t3000n	attiecināt	m-p135-p11s1w24
+ar	spsa	ar	m-p135-p11s1w25
+Direktīvu	ncfsa4	direktīva	m-p135-p11s1w26
+92	xn	92	m-p135-p11s1w27
+<g />
+/	zx	/	m-p135-p11s1w28
+<g />
+85	xn	85	m-p135-p11s1w29
+noteikto	vmnpdfsapsypn	noteikt	m-p135-p11s1w30
+aizsardzību	ncfsa4	aizsardzība	m-p135-p11s1w31
+<g />
+.	zs	.	m-p135-p11s1w32
+</s>
+<s>
+Tomēr	cc	tomēr	m-p135-p12s1w1
+aizliegums	ncmsn1	aizliegums	m-p135-p12s1w2
+atlaist	vmnn0t1000n	atlaist	m-p135-p12s1w3
+grūtnieci	ncfsa5	grūtniece	m-p135-p12s1w4
+ir	vcnipii30an	būt	m-p135-p12s1w5
+noteikts	vmnpdmsnpsnpn	noteikt	m-p135-p12s1w6
+arī	q	arī	m-p135-p12s1w7
+ar	spsa	ar	m-p135-p12s1w8
+Direktīvu	ncfsa4	direktīva	m-p135-p12s1w9
+76	xn	76	m-p135-p12s1w10
+<g />
+/	zx	/	m-p135-p12s1w11
+<g />
+207	xn	207	m-p135-p12s1w12
+atbilstoši	rpn	atbilstoši	m-p135-p12s1w13
+EKT	yp	EKT	m-p135-p12s1w14
+sniegtajai	vmnpdfsdpsypn	sniegt	m-p135-p12s1w15
+šīs	pd3fsgn	šī	m-p135-p12s1w16
+direktīvas	ncfsg4	direktīva	m-p135-p12s1w17
+normu	ncfpg4	norma	m-p135-p12s1w18
+interpretācijai	ncfsd4	interpretācija	m-p135-p12s1w19
+<g />
+.	zs	.	m-p135-p12s1w20
+</s>
+<s>
+Direktīva	ncfsn4	direktīva	m-p135-p12s2w1
+76	xn	76	m-p135-p12s2w2
+<g />
+/	zx	/	m-p135-p12s2w3
+<g />
+207	xn	207	m-p135-p12s2w4
+pretēji	r0y	pretēji	m-p135-p12s2w5
+Direktīvas	ncfsg4	direktīva	m-p135-p12s2w6
+92	xn	92	m-p135-p12s2w7
+<g />
+/	zx	/	m-p135-p12s2w8
+<g />
+85	xn	85	m-p135-p12s2w9
+noteikumiem	ncmpd1	noteikums	m-p135-p12s2w10
+nepieprasa	vmnipt330ay	pieprasīt	m-p135-p12s2w11
+<g />
+,	zc	,	m-p135-p12s2w12
+ka	cs	ka	m-p135-p12s2w13
+<g />
+,	zc	,	m-p135-p12s2w14
+lai	cs	lai	m-p135-p12s2w15
+darbiniece	ncfsn5	darbiniece	m-p135-p12s2w16
+varētu	vonc0i300an	varēt	m-p135-p12s2w17
+baudīt	vmnn0t3000n	baudīt	m-p135-p12s2w18
+aizsardzību	ncfsa4	aizsardzība	m-p135-p12s2w19
+pret	spsa	pret	m-p135-p12s2w20
+diskriminējošu	vmnpdfsaapnpn	diskriminēt	m-p135-p12s2w21
+atlaišanu	ncfsa4	atlaišana	m-p135-p12s2w22
+grūtniecības	ncfsg4	grūtniecība	m-p135-p12s2w23
+dēļ	stsg	dēļ	m-p135-p12s2w24
+<g />
+,	zc	,	m-p135-p12s2w25
+viņai	pp3fsdn	viņa	m-p135-p12s2w26
+pirms	sppd	pirms	m-p135-p12s2w27
+tam	pd3msdn	tas	m-p135-p12s2w28
+darba	ncmsg1	darbs	m-p135-p12s2w29
+devējs	ncmsn1	devējs	m-p135-p12s2w30
+par	spsa	par	m-p135-p12s2w31
+grūtniecību	ncfsa4	grūtniecība	m-p135-p12s2w32
+ir	vcnipii30an	būt	m-p135-p12s2w33
+jāinformē	vmnd0t200an	informēt	m-p135-p12s2w34
+<g />
+.	zs	.	m-p135-p12s2w35
+</s>
+<s>
+Un	cc	un	m-p135-p12s3w1
+tas	pd3msnn	tas	m-p135-p12s3w2
+ir	vcnipii30an	būt	m-p135-p12s3w3
+gluži	r0n	gluži	m-p135-p12s3w4
+loģiski	rpn	loģiski	m-p135-p12s3w5
+<g />
+,	zc	,	m-p135-p12s3w6
+jo	cs	jo	m-p135-p12s3w7
+Direktīvas	ncfsg4	direktīva	m-p135-p12s3w8
+76	xn	76	m-p135-p12s3w9
+<g />
+/	zx	/	m-p135-p12s3w10
+<g />
+207	xn	207	m-p135-p12s3w11
+mērķis	ncmsn2	mērķis	m-p135-p12s3w12
+ir	vcnipii30an	būt	m-p135-p12s3w13
+diskriminācijas	ncfsg4	diskriminācija	m-p135-p12s3w14
+novēršana	ncfsn4	novēršana	m-p135-p12s3w15
+<g />
+.	zs	.	m-p135-p12s3w16
+</s>
+<s>
+Diemžēl	q	diemžēl	m-p135-p12s4w1
+DL	yn	DL	m-p135-p12s4w2
+nekur	r0n	nekur	m-p135-p12s4w3
+neatspoguļo	vmnipt230ay	atspoguļot	m-p135-p12s4w4
+ES	yp	ES	m-p135-p12s4w5
+tiesībās	ncfpl4	tiesība	m-p135-p12s4w6
+noteikto	vmnpdmsapsypn	noteikt	m-p135-p12s4w7
+principu	ncmsa1	princips	m-p135-p12s4w8
+<g />
+,	zc	,	m-p135-p12s4w9
+ka	cs	ka	m-p135-p12s4w10
+īpašā	affslnp	īpašs	m-p135-p12s4w11
+aizsardzība	ncfsn4	aizsardzība	m-p135-p12s4w12
+grūtniecības	ncfsg4	grūtniecība	m-p135-p12s4w13
+un	cc	un	m-p135-p12s4w14
+maternitātes	ncfsg5	maternitāte	m-p135-p12s4w15
+laikā	ncmsl1	laiks	m-p135-p12s4w16
+ir	vcnipii30an	būt	m-p135-p12s4w17
+skatāma	vmnpdfsnppnpn	skatīt	m-p135-p12s4w18
+ne	cc	ne	m-p135-p12s4w19
+tikai	q	tikai	m-p135-p12s4w20
+darba	ncmsg1	darbs	m-p135-p12s4w21
+drošības	ncfsg4	drošība	m-p135-p12s4w22
+<g />
+,	zc	,	m-p135-p12s4w23
+bet	cc	bet	m-p135-p12s4w24
+arī	q	arī	m-p135-p12s4w25
+diskriminācijas	ncfsg4	diskriminācija	m-p135-p12s4w26
+aizlieguma	ncmsg1	aizliegums	m-p135-p12s4w27
+kontekstā	ncmsl1	konteksts	m-p135-p12s4w28
+<g />
+.	zs	.	m-p135-p12s4w29
+</s>
+<s>
+Iztirzājamā	vmnpdfslppnpn	iztirzāt	m-p135-p13s1w1
+lietā	ncfsl4	lieta	m-p135-p13s1w2
+tiesa	ncfsn4	tiesa	m-p135-p13s1w3
+analizē	vmnipt230an	analizēt	m-p135-p13s1w4
+tikai	q	tikai	m-p135-p13s1w5
+DL	yn	DL	m-p135-p13s1w6
+109.	xo	109.	m-p135-p13s1w7
+<g />
+panta	ncmsg1	pants	m-p135-p13s1w8
+pirmo	mosfsa	pirmais	m-p135-p13s1w9
+daļu	ncfsa4	daļa	m-p135-p13s1w10
+<g />
+,	zc	,	m-p135-p13s1w11
+bet	cc	bet	m-p135-p13s1w12
+neskata	vmnipt330ay	skatīt	m-p135-p13s1w13
+situāciju	ncfsa4	situācija	m-p135-p13s1w14
+DL	yn	DL	m-p135-p13s1w15
+48.	xo	48.	m-p135-p13s1w16
+<g />
+panta	ncmsg1	pants	m-p135-p13s1w17
+kontekstā	ncmsl1	konteksts	m-p135-p13s1w18
+<g />
+.	zs	.	m-p135-p13s1w19
+</s>
+<s>
+Proti	q	proti	m-p135-p13s2w1
+<g />
+,	zc	,	m-p135-p13s2w2
+ļoti	r0n	ļoti	m-p135-p13s2w3
+iespējams	afmsnnp	iespējams	m-p135-p13s2w4
+<g />
+,	zc	,	m-p135-p13s2w5
+ka	cs	ka	m-p135-p13s2w6
+darbinieces	ncfsg5	darbiniece	m-p135-p13s2w7
+atlaišana	ncfsn4	atlaišana	m-p135-p13s2w8
+pārbaudes	ncfsg5	pārbaude	m-p135-p13s2w9
+laikā	ncmsl1	laiks	m-p135-p13s2w10
+notikusi	vmnpdfsnasnpn	notikt	m-p135-p13s2w11
+diskriminācijas	ncfsg4	diskriminācija	m-p135-p13s2w12
+aizlieguma	ncmsg1	aizliegums	m-p135-p13s2w13
+pārkāpuma	ncmsg1	pārkāpums	m-p135-p13s2w14
+dēļ	stsg	dēļ	m-p135-p13s2w15
+<g />
+,	zc	,	m-p135-p13s2w16
+t.i.	yd	t.i.	m-p135-p13s2w17
+<g />
+,	zc	,	m-p135-p13s2w18
+darbinieces	ncfsg5	darbiniece	m-p135-p13s2w19
+grūtniecības	ncfsg4	grūtniecība	m-p135-p13s2w20
+dēļ	stsg	dēļ	m-p135-p13s2w21
+<g />
+.	zs	.	m-p135-p13s2w22
+</s>
+<s>
+Skatot	vmnpu0000000n	skatīt	m-p135-p13s3w1
+lietu	ncfsa4	lieta	m-p135-p13s3w2
+DL	yn	DL	m-p135-p13s3w3
+48.	xo	48.	m-p135-p13s3w4
+<g />
+panta	ncmsg1	pants	m-p135-p13s3w5
+kontekstā	ncmsl1	konteksts	m-p135-p13s3w6
+<g />
+,	zc	,	m-p135-p13s3w7
+mainās	vmyipi330an	mainīties	m-p135-p13s3w8
+arī	q	arī	m-p135-p13s3w9
+tiesas	ncfsg4	tiesa	m-p135-p13s3w10
+spriedumā	ncmsl1	spriedums	m-p135-p13s3w11
+minētais	vmnpdmsnpsypn	minēt	m-p135-p13s3w12
+prasības	ncfsg4	prasība	m-p135-p13s3w13
+galvenais	armsnyp	galvenais	m-p135-p13s3w14
+noraidīšanas	ncfsg4	noraidīšana	m-p135-p13s3w15
+iemesls	ncmsn1	iemesls	m-p135-p13s3w16
+<g />
+.	zs	.	m-p135-p13s3w17
+</s>
+<s>
+Proti	q	proti	m-p135-p13s4w1
+<g />
+,	zc	,	m-p135-p13s4w2
+prasītāja	ncfsn4	prasītāja	m-p135-p13s4w3
+nespēja	vonisi130ay	spēt	m-p135-p13s4w4
+pierādīt	vmnn0t3000n	pierādīt	m-p135-p13s4w5
+<g />
+,	zc	,	m-p135-p13s4w6
+ka	cs	ka	m-p135-p13s4w7
+viņa	pp3fsnn	viņa	m-p135-p13s4w8
+paziņojusi	vmnpdfsnasnpn	paziņot	m-p135-p13s4w9
+darba	ncmsg1	darbs	m-p135-p13s4w10
+devējam	ncmsd1	devējs	m-p135-p13s4w11
+par	spsa	par	m-p135-p13s4w12
+savu	ps0fsan	sava	m-p135-p13s4w13
+grūtniecību	ncfsa4	grūtniecība	m-p135-p13s4w14
+pirms	spsg	pirms	m-p135-p13s4w15
+uzteikuma	ncmsg1	uzteikums	m-p135-p13s4w16
+saņemšanas	ncfsg4	saņemšana	m-p135-p13s4w17
+<g />
+.	zs	.	m-p135-p13s4w18
+</s>
+<s>
+Saskaņā	ncfsl4	saskaņa	m-p135-p13s5w1
+ar	spsa	ar	m-p135-p13s5w2
+DL	yn	DL	m-p135-p13s5w3
+29.	xo	29.	m-p135-p13s5w4
+<g />
+panta	ncmsg1	pants	m-p135-p13s5w5
+trešajā	mosfsl	trešais	m-p135-p13s5w6
+daļā	ncfsl4	daļa	m-p135-p13s5w7
+noteikto	vmnpdmsapsypn	noteikt	m-p135-p13s5w8
+apgriezto	vmnpdmsapsypn	apgriezt	m-p135-p13s5w9
+pierādīšanas	ncfsg4	pierādīšana	m-p135-p13s5w10
+pienākuma	ncmsg1	pienākums	m-p135-p13s5w11
+principu	ncmsa1	princips	m-p135-p13s5w12
+<g />
+,	zc	,	m-p135-p13s5w13
+kas	pr000nn	kas	m-p135-p13s5w14
+ievieš	vmnipt130an	ieviest	m-p135-p13s5w15
+Direktīvas	ncfsg4	direktīva	m-p135-p13s5w16
+97	xn	97	m-p135-p13s5w17
+<g />
+/	zx	/	m-p135-p13s5w18
+<g />
+80	xn	80	m-p135-p13s5w19
+prasības	ncfpa4	prasība	m-p135-p13s5w20
+<g />
+,	zc	,	m-p135-p13s5w21
+fakts	ncmsn1	fakts	m-p135-p13s5w22
+<g />
+,	zc	,	m-p135-p13s5w23
+ka	cs	ka	m-p135-p13s5w24
+prasītāja	ncfsn4	prasītāja	m-p135-p13s5w25
+ir	vcnipii30an	būt	m-p135-p13s5w26
+informējusi	vmnpdfsnasnpn	informēt	m-p135-p13s5w27
+darba	ncmsg1	darbs	m-p135-p13s5w28
+devēju	ncmsa1	devējs	m-p135-p13s5w29
+par	spsa	par	m-p135-p13s5w30
+grūtniecību	ncfsa4	grūtniecība	m-p135-p13s5w31
+pirms	spsg	pirms	m-p135-p13s5w32
+uzteikuma	ncmsg1	uzteikums	m-p135-p13s5w33
+saņemšanas	ncfsg4	saņemšana	m-p135-p13s5w34
+<g />
+,	zc	,	m-p135-p13s5w35
+viņai	pp3fsdn	viņa	m-p135-p13s5w36
+nemaz	r0n	nemaz	m-p135-p13s5w37
+nebija	vcnisii30ay	būt	m-p135-p13s5w38
+jāpierāda	vmnd0t300an	pierādīt	m-p135-p13s5w39
+<g />
+,	zc	,	m-p135-p13s5w40
+bet	cc	bet	m-p135-p13s5w41
+gan	q	gan	m-p135-p13s5w42
+tikai	q	tikai	m-p135-p13s5w43
+jānorāda	vmnd0t300an	norādīt	m-p135-p13s5w44
+uz	spsa	uz	m-p135-p13s5w45
+to	pd3msan	tas	m-p135-p13s5w46
+<g />
+.	zs	.	m-p135-p13s5w47
+</s>
+<s>
+Lai	cs	lai	m-p135-p13s6w1
+gan	q	gan	m-p135-p13s6w2
+EKT	yp	EKT	m-p135-p13s6w3
+ir	vcnipii30an	būt	m-p135-p13s6w4
+noteikusi	vmnpdfsnasnpn	noteikt	m-p135-p13s6w5
+<g />
+,	zc	,	m-p135-p13s6w6
+ka	cs	ka	m-p135-p13s6w7
+jautājums	ncmsn1	jautājums	m-p135-p13s6w8
+<g />
+,	zc	,	m-p135-p13s6w9
+kā	r0n	kā	m-p135-p13s6w10
+un	cc	un	m-p135-p13s6w11
+kad	r0n	kad	m-p135-p13s6w12
+pierādīšanas	ncfsg4	pierādīšana	m-p135-p13s6w13
+pienākums	ncmsn1	pienākums	m-p135-p13s6w14
+pārceļas	vmyipt130an	pārcelties	m-p135-p13s6w15
+uz	spsa	uz	m-p135-p13s6w16
+atbildētāju	ncmsa1	atbildētājs	m-p135-p13s6w17
+<g />
+,	zc	,	m-p135-p13s6w18
+ietilpst	vmnipi130an	ietilpt	m-p135-p13s6w19
+nacionālās	arfsgyp	nacionāls	m-p135-p13s6w20
+tiesas	ncfsg4	tiesa	m-p135-p13s6w21
+kompetencē	ncfsl5	kompetence	m-p135-p13s6w22
+<g />
+.	zs	.	m-p135-p13s6w23
+</s>
+<s>
+Tomēr	cc	tomēr	m-p135-p14s1w1
+EKT	yp	EKT	m-p135-p14s1w2
+judikatūrā	ncfsl4	judikatūra	m-p135-p14s1w3
+ir	vcnipii30an	būt	m-p135-p14s1w4
+atrodami	vmnpdmpnppnpn	atrast	m-p135-p14s1w5
+daži	pi0mpnn	dažs	m-p135-p14s1w6
+vispārīgi	armpnnp	vispārīgs	m-p135-p14s1w7
+principi	ncmpn1	princips	m-p135-p14s1w8
+<g />
+,	zc	,	m-p135-p14s1w9
+pēc	sppd	pēc	m-p135-p14s1w10
+kuriem	pr0mpdn	kurš	m-p135-p14s1w11
+nacionālajai	arfsdyp	nacionāls	m-p135-p14s1w12
+tiesai	ncfsd4	tiesa	m-p135-p14s1w13
+ir	vcnipii30an	būt	m-p135-p14s1w14
+jāvadās	vmyd0i300an	vadīties	m-p135-p14s1w15
+<g />
+,	zc	,	m-p135-p14s1w16
+nosakot	vmnpu0000000n	nosacīt	m-p135-p14s1w17
+<g />
+,	zc	,	m-p135-p14s1w18
+kā	r0n	kā	m-p135-p14s1w19
+un	cc	un	m-p135-p14s1w20
+kad	r0n	kad	m-p135-p14s1w21
+pierādīšanas	ncfsg4	pierādīšana	m-p135-p14s1w22
+pienākums	ncmsn1	pienākums	m-p135-p14s1w23
+pārceļams	vmnpdmsnppnpn	pārcelt	m-p135-p14s1w24
+uz	spsa	uz	m-p135-p14s1w25
+darba	ncmsg1	darbs	m-p135-p14s1w26
+devēju	ncmsa1	devējs	m-p135-p14s1w27
+<g />
+.	zs	.	m-p135-p14s1w28
+</s>
+<s>
+Pirmkārt	r0n	pirmkārt	m-p135-p14s2w1
+<g />
+,	zc	,	m-p135-p14s2w2
+prasītājam	ncmsd1	prasītājs	m-p135-p14s2w3
+ir	vcnipii30an	būt	m-p135-p14s2w4
+jānorāda	vmnd0t300an	norādīt	m-p135-p14s2w5
+uz	sppd	uz	m-p135-p14s2w6
+faktiem	ncmpd1	fakts	m-p135-p14s2w7
+vai	cc	vai	m-p135-p14s2w8
+apstākļiem	ncmpd2	apstāklis	m-p135-p14s2w9
+<g />
+,	zc	,	m-p135-p14s2w10
+kas	pr000nn	kas	m-p135-p14s2w11
+liecinātu	vmnc0t300an	liecināt	m-p135-p14s2w12
+par	spsa	par	m-p135-p14s2w13
+varbūtēju	arfsanp	varbūtējs	m-p135-p14s2w14
+diskrimināciju	ncfsa4	diskriminācija	m-p135-p14s2w15
+<g />
+.	zs	.	m-p135-p14s2w16
+</s>
+<s>
+Tas	pd3msnn	tas	m-p135-p15s1w1
+nozīmē	vmnipt230an	nozīmēt	m-p135-p15s1w2
+<g />
+,	zc	,	m-p135-p15s1w3
+ka	cs	ka	m-p135-p15s1w4
+tiem	pd3mpdn	tas	m-p135-p15s1w5
+nav	vcnipii30ay	būt	m-p135-p15s1w6
+jābūt	vcnd0ii00an	būt	m-p135-p15s1w7
+pierādījumiem	ncmpd1	pierādījums	m-p135-p15s1w8
+<g />
+,	zc	,	m-p135-p15s1w9
+jo	cs	jo	m-p135-p15s1w10
+pierādījumi	ncmpn1	pierādījums	m-p135-p15s1w11
+saskaņā	ncfsl4	saskaņa	m-p135-p15s1w12
+ar	spsa	ar	m-p135-p15s1w13
+Civilprocesa	ncmsg1	civilprocess	m-p135-p15s1w14
+likumu	ncmsa1	likums	m-p135-p15s1w15
+ir	vcnipii30an	būt	m-p135-p15s1w16
+"	zq	"	m-p135-p15s1w17
+<g />
+ziņas	ncfpn4	ziņa	m-p135-p15s1w18
+<g />
+,	zc	,	m-p135-p15s1w19
+uz	spsg	uz	m-p135-p15s1w20
+kuru	pr0fpgn	kura	m-p135-p15s1w21
+pamata	ncmsg1	pamats	m-p135-p15s1w22
+tiesa	ncfsn4	tiesa	m-p135-p15s1w23
+nosaka	vmnipt330an	nosacīt	m-p135-p15s1w24
+tādu	pd0mpgn	tāds	m-p135-p15s1w25
+faktu	ncmpg1	fakts	m-p135-p15s1w26
+esamību	ncfsa4	esamība	m-p135-p15s1w27
+vai	cc	vai	m-p135-p15s1w28
+neesamību	ncfsa4	neesamība	m-p135-p15s1w29
+<g />
+,	zc	,	m-p135-p15s1w30
+kuriem	pr0mpdn	kurš	m-p135-p15s1w31
+ir	vmnipii30an	būt	m-p135-p15s1w32
+nozīme	ncfsn5	nozīme	m-p135-p15s1w33
+lietā	ncfsl4	lieta	m-p135-p15s1w34
+<g />
+"	zq	"	m-p135-p15s1w35
+<g />
+,	zc	,	m-p135-p15s1w36
+savukārt	r0n	savukārt	m-p135-p15s1w37
+diskriminācijas	ncfsg4	diskriminācija	m-p135-p15s1w38
+lietās	ncfpl4	lieta	m-p135-p15s1w39
+pierādīšanas	ncfsg4	pierādīšana	m-p135-p15s1w40
+pienākums	ncmsn1	pienākums	m-p135-p15s1w41
+nosakāms	vmnpdmsnppnpn	nosacīt	m-p135-p15s1w42
+<g />
+,	zc	,	m-p135-p15s1w43
+nevis	cc	nevis	m-p135-p15s1w44
+pamatojoties	vmypu0000000n	pamatoties	m-p135-p15s1w45
+uz	sppd	uz	m-p135-p15s1w46
+pierādījumiem	ncmpd1	pierādījums	m-p135-p15s1w47
+<g />
+,	zc	,	m-p135-p15s1w48
+kas	pr000nn	kas	m-p135-p15s1w49
+pierāda	vmnipt330an	pierādīt	m-p135-p15s1w50
+kāda	pi0msgn	kāds	m-p135-p15s1w51
+fakta	ncmsg1	fakts	m-p135-p15s1w52
+esamību	ncfsa4	esamība	m-p135-p15s1w53
+<g />
+,	zc	,	m-p135-p15s1w54
+bet	cc	bet	m-p135-p15s1w55
+gan	q	gan	m-p135-p15s1w56
+norāda	vmnipt330an	norādīt	m-p135-p15s1w57
+uz	spsg	uz	m-p135-p15s1w58
+fakta	ncmsg1	fakts	m-p135-p15s1w59
+esamības	ncfsg4	esamība	m-p135-p15s1w60
+iespējamību	ncfsa4	iespējamība	m-p135-p15s1w61
+<g />
+.	zs	.	m-p135-p15s1w62
+</s>
+<s>
+Līdz	cs	līdz	m-p135-p15s2w1
+ar	spsa	ar	m-p135-p15s2w2
+to	pd3msan	tas	m-p135-p15s2w3
+līdzeklis	ncmsn2	līdzeklis	m-p135-p15s2w4
+<g />
+,	zc	,	m-p135-p15s2w5
+ar	spsa	ar	m-p135-p15s2w6
+kuru	pr0msan	kurš	m-p135-p15s2w7
+diskriminācijas	ncfsg4	diskriminācija	m-p135-p15s2w8
+lietās	ncfpl4	lieta	m-p135-p15s2w9
+pierāda	vmnipt330an	pierādīt	m-p135-p15s2w10
+varbūtēju	arfsanp	varbūtējs	m-p135-p15s2w11
+diskrimināciju	ncfsa4	diskriminācija	m-p135-p15s2w12
+<g />
+,	zc	,	m-p135-p15s2w13
+nav	vcnipii30ay	būt	m-p135-p15s2w14
+uzskatāms	vmnpdmsnppnpn	uzskatīt	m-p135-p15s2w15
+par	spsa	par	m-p135-p15s2w16
+pierādījumu	ncmsa1	pierādījums	m-p135-p15s2w17
+Civilprocesa	ncmsg1	civilprocess	m-p135-p15s2w18
+likuma	ncmsg1	likums	m-p135-p15s2w19
+92.	xo	92.	m-p135-p15s2w20
+<g />
+panta	ncmsg1	pants	m-p135-p15s2w21
+izpratnē	ncfsl5	izpratne	m-p135-p15s2w22
+<g />
+.	zs	.	m-p135-p15s2w23
+</s>
+<s>
+To	pd3msan	tas	m-p135-p15s3w1
+pierāda	vmnipt330an	pierādīt	m-p135-p15s3w2
+arī	q	arī	m-p135-p15s3w3
+EKT	yp	EKT	m-p135-p15s3w4
+noteiktais	vmnpdmsnpsypn	noteikt	m-p135-p15s3w5
+princips	ncmsn1	princips	m-p135-p15s3w6
+<g />
+,	zc	,	m-p135-p15s3w7
+ka	cs	ka	m-p135-p15s3w8
+pierādīšanas	ncfsg4	pierādīšana	m-p135-p15s3w9
+pienākums	ncmsn1	pienākums	m-p135-p15s3w10
+pārceļas	vmyipt130an	pārcelties	m-p135-p15s3w11
+uz	spsa	uz	m-p135-p15s3w12
+atbildētāju	ncmsa1	atbildētājs	m-p135-p15s3w13
+<g />
+,	zc	,	m-p135-p15s3w14
+ja	cs	ja	m-p135-p15s3w15
+prasītājs	ncmsn1	prasītājs	m-p135-p15s3w16
+var	vonipi330an	varēt	m-p135-p15s3w17
+norādīt	vmnn0t3000n	norādīt	m-p135-p15s3w18
+uz	sppd	uz	m-p135-p15s3w19
+faktiem	ncmpd1	fakts	m-p135-p15s3w20
+<g />
+,	zc	,	m-p135-p15s3w21
+kas	pr000nn	kas	m-p135-p15s3w22
+liecina	vmnipt330an	liecināt	m-p135-p15s3w23
+par	spsa	par	m-p135-p15s3w24
+prima	xf	prima	m-p135-p15s3w25
+facie	xf	facie	m-p135-p15s3w26
+diskrimināciju	ncfsa4	diskriminācija	m-p135-p15s3w27
+<g />
+,	zc	,	m-p135-p15s3w28
+t.i.	yd	t.i.	m-p135-p15s3w29
+<g />
+,	zc	,	m-p135-p15s3w30
+faktiem	ncmpd1	fakts	m-p135-p15s3w31
+<g />
+,	zc	,	m-p135-p15s3w32
+kas	pr000nn	kas	m-p135-p15s3w33
+no	spsg	no	m-p135-p15s3w34
+pirmā	mosmsg	pirmais	m-p135-p15s3w35
+acu	ncfpg6	acs	m-p135-p15s3w36
+uzmetiena	ncmsg1	uzmetiens	m-p135-p15s3w37
+liecina	vmnipt330an	liecināt	m-p135-p15s3w38
+par	spsa	par	m-p135-p15s3w39
+diskrimināciju	ncfsa4	diskriminācija	m-p135-p15s3w40
+<g />
+,	zc	,	m-p135-p15s3w41
+bet	cc	bet	m-p135-p15s3w42
+kas	pr000nn	kas	m-p135-p15s3w43
+tālākajā	affslyc	tāls	m-p135-p15s3w44
+gaitā	ncfsl4	gaita	m-p135-p15s3w45
+ir	vcnipii30an	būt	m-p135-p15s3w46
+pārbaudāmi	vmnpdmpnppnpn	pārbaudīt	m-p135-p15s3w47
+rūpīgāk	rcn	rūpīgi	m-p135-p15s3w48
+<g />
+.	zs	.	m-p135-p15s3w49
+</s>
+<s>
+Analizējamā	vmnpdmslppnpn	analizēt	m-p135-p15s4w1
+gadījumā	ncmsl1	gadījums	m-p135-p15s4w2
+prasītājas	ncfsg4	prasītāja	m-p135-p15s4w3
+norādītais	vmnpdmsnpsypn	norādīt	m-p135-p15s4w4
+<g />
+,	zc	,	m-p135-p15s4w5
+ka	cs	ka	m-p135-p15s4w6
+viņa	pp3fsnn	viņa	m-p135-p15s4w7
+neoficiāli	rpn	neoficiāli	m-p135-p15s4w8
+darba	ncmsg1	darbs	m-p135-p15s4w9
+devēju	ncmsa1	devējs	m-p135-p15s4w10
+informējusi	vmnpdfsnasnpn	informēt	m-p135-p15s4w11
+par	spsa	par	m-p135-p15s4w12
+grūtniecību	ncfsa4	grūtniecība	m-p135-p15s4w13
+<g />
+,	zc	,	m-p135-p15s4w14
+ir	vcnipii30an	būt	m-p135-p15s4w15
+fakts	ncmsn1	fakts	m-p135-p15s4w16
+<g />
+,	zc	,	m-p135-p15s4w17
+kas	pr000nn	kas	m-p135-p15s4w18
+varētu	vonc0i300an	varēt	m-p135-p15s4w19
+liecināt	vmnn0t3000n	liecināt	m-p135-p15s4w20
+par	spsa	par	m-p135-p15s4w21
+diskriminācijas	ncfsg4	diskriminācija	m-p135-p15s4w22
+iespējamību	ncfsa4	iespējamība	m-p135-p15s4w23
+<g />
+,	zc	,	m-p135-p15s4w24
+līdz	cs	līdz	m-p135-p15s4w25
+ar	spsa	ar	m-p135-p15s4w26
+to	pd3msan	tas	m-p135-p15s4w27
+pierādīšanas	ncfsg4	pierādīšana	m-p135-p15s4w28
+pienākums	ncmsn1	pienākums	m-p135-p15s4w29
+bija	vcnisii30an	būt	m-p135-p15s4w30
+pārceļams	vmnpdmsnppnpn	pārcelt	m-p135-p15s4w31
+uz	spsa	uz	m-p135-p15s4w32
+darba	ncmsg1	darbs	m-p135-p15s4w33
+devēju	ncmsa1	devējs	m-p135-p15s4w34
+<g />
+,	zc	,	m-p135-p15s4w35
+nepieprasot	vmnpu0000000y	pieprasīt	m-p135-p15s4w36
+pierādīt	vmnn0t3000n	pierādīt	m-p135-p15s4w37
+<g />
+,	zc	,	m-p135-p15s4w38
+ka	cs	ka	m-p135-p15s4w39
+informēšana	ncfsn4	informēšana	m-p135-p15s4w40
+par	spsa	par	m-p135-p15s4w41
+grūtniecību	ncfsa4	grūtniecība	m-p135-p15s4w42
+ir	vcnipii30an	būt	m-p135-p15s4w43
+notikusi	vmnpdfsnasnpn	notikt	m-p135-p15s4w44
+<g />
+.	zs	.	m-p135-p15s4w45
+</s>
+<s>
+Turpinājumā	ncmsl1	turpinājums	m-p135-p16s1w1
+ir	vcnipii30an	būt	m-p135-p16s1w2
+jārunā	vmnd0t200an	runāt	m-p135-p16s1w3
+par	spsa	par	m-p135-p16s1w4
+tiesas	ncfsg4	tiesa	m-p135-p16s1w5
+atbildību	ncfsa4	atbildība	m-p135-p16s1w6
+nepareizā	affslnp	nepareizs	m-p135-p16s1w7
+lietas	ncfsg4	lieta	m-p135-p16s1w8
+izspriešanā	ncfsl4	izspriešana	m-p135-p16s1w9
+<g />
+,	zc	,	m-p135-p16s1w10
+kas	pr000nn	kas	m-p135-p16s1w11
+radusies	vmypdfsnasnpn	rasties	m-p135-p16s1w12
+nepareizu	affpgnp	nepareizs	m-p135-p16s1w13
+tiesību	ncfpg4	tiesība	m-p135-p16s1w14
+normu	ncfpg4	norma	m-p135-p16s1w15
+piemērošanas	ncfsg4	piemērošana	m-p135-p16s1w16
+un	cc	un	m-p135-p16s1w17
+interpretācijas	ncfsg4	interpretācija	m-p135-p16s1w18
+dēļ	stsg	dēļ	m-p135-p16s1w19
+<g />
+.	zs	.	m-p135-p16s1w20
+</s>
+<s>
+ES	yp	ES	m-p135-p16s2w1
+tiesībās	ncfpl4	tiesība	m-p135-p16s2w2
+nostiprinātais	vmnpdmsnpsypn	nostiprināt	m-p135-p16s2w3
+valsts	ncfsg6	valsts	m-p135-p16s2w4
+atbildības	ncfsg4	atbildība	m-p135-p16s2w5
+princips	ncmsn1	princips	m-p135-p16s2w6
+ir	vcnipii30an	būt	m-p135-p16s2w7
+attiecināms	vmnpdmsnppnpn	attiecināt	m-p135-p16s2w8
+arī	q	arī	m-p135-p16s2w9
+uz	sppd	uz	m-p135-p16s2w10
+personām	ncfpd4	persona	m-p135-p16s2w11
+nodarītiem	vmnpdmpdpsnpn	nodarīt	m-p135-p16s2w12
+zaudējumiem	ncmpd1	zaudējums	m-p135-p16s2w13
+<g />
+,	zc	,	m-p135-p16s2w14
+kas	pr000nn	kas	m-p135-p16s2w15
+radušies	vmypdmpnasnpn	rasties	m-p135-p16s2w16
+nacionālās	arfsgyp	nacionāls	m-p135-p16s2w17
+tiesas	ncfsg4	tiesa	m-p135-p16s2w18
+darbības	ncfsg4	darbība	m-p135-p16s2w19
+rezultātā	ncmsl1	rezultāts	m-p135-p16s2w20
+<g />
+,	zc	,	m-p135-p16s2w21
+nopietni	rpn	nopietni	m-p135-p16s2w22
+pārkāpjot	vmnpu0000000n	pārkāpt	m-p135-p16s2w23
+ES	yp	ES	m-p135-p16s2w24
+tiesības	ncfpa4	tiesība	m-p135-p16s2w25
+<g />
+.	zs	.	m-p135-p16s2w26
+</s>
+<s>
+Par	spsa	par	m-p135-p16s3w1
+pietiekami	r0n	pietiekami	m-p135-p16s3w2
+nopietnu	afmsanp	nopietns	m-p135-p16s3w3
+ES	yp	ES	m-p135-p16s3w4
+tiesību	ncfpg4	tiesība	m-p135-p16s3w5
+pārkāpumu	ncmsa1	pārkāpums	m-p135-p16s3w6
+ir	vcnipii30an	būt	m-p135-p16s3w7
+atzīta	vmnpdfsnpsnpn	atzīt	m-p135-p16s3w8
+EKT	yp	EKT	m-p135-p16s3w9
+judikatūras	ncfsg4	judikatūra	m-p135-p16s3w10
+neņemšana	ncfsn4	neņemšana	m-p135-p16s3w11
+vērā	r0n	vērā	m-p135-p16s3w12
+<g />
+.	zs	.	m-p135-p16s3w13
+</s>
+<s>
+Tomēr	cc	tomēr	m-p135-p16s4w1
+šeit	r0n	šeit	m-p135-p16s4w2
+varētu	vonc0i300an	varēt	m-p135-p16s4w3
+jautāt	vmnn0t2000n	jautāt	m-p135-p16s4w4
+<g />
+,	zc	,	m-p135-p16s4w5
+kāds	pr0msnn	kāds	m-p135-p16s4w6
+ir	vcnipii30an	būt	m-p135-p16s4w7
+tiesas	ncfsg4	tiesa	m-p135-p16s4w8
+pienākums	ncmsn1	pienākums	m-p135-p16s4w9
+pašai	pg0fsdn	pati	m-p135-p16s4w10
+vērst	vmnn0t1000n	vērst	m-p135-p16s4w11
+pušu	ncfpg5	puse	m-p135-p16s4w12
+uzmanību	ncfsa4	uzmanība	m-p135-p16s4w13
+uz	sppd	uz	m-p135-p16s4w14
+attiecīgām	arfpdnp	attiecīgs	m-p135-p16s4w15
+ES	yp	ES	m-p135-p16s4w16
+tiesību	ncfpg4	tiesība	m-p135-p16s4w17
+normām	ncfpd4	norma	m-p135-p16s4w18
+un	cc	un	m-p135-p16s4w19
+EKT	yp	EKT	m-p135-p16s4w20
+judikatūru	ncfsa4	judikatūra	m-p135-p16s4w21
+<g />
+,	zc	,	m-p135-p16s4w22
+ja	cs	ja	m-p135-p16s4w23
+puses	ncfpn5	puse	m-p135-p16s4w24
+uz	spsa	uz	m-p135-p16s4w25
+to	pd3msan	tas	m-p135-p16s4w26
+nenorāda	vmnipt330ay	norādīt	m-p135-p16s4w27
+<g />
+.	zs	.	m-p135-p16s4w28
+</s>
+<s>
+EKT	yp	EKT	m-p135-p17s1w1
+lietā	ncfsl4	lieta	m-p135-p17s1w2
+"	zq	"	m-p135-p17s1w3
+<g />
+Schijndel	xf	Schijndel	m-p135-p17s1w4
+<g />
+"	zq	"	m-p135-p17s1w5
+ir	vcnipii30an	būt	m-p135-p17s1w6
+noteikusi	vmnpdfsnasnpn	noteikt	m-p135-p17s1w7
+<g />
+,	zc	,	m-p135-p17s1w8
+ka	cs	ka	m-p135-p17s1w9
+nacionālajai	arfsdyp	nacionāls	m-p135-p17s1w10
+tiesai	ncfsd4	tiesa	m-p135-p17s1w11
+civilprocesā	ncmsl1	civilprocess	m-p135-p17s1w12
+<g />
+,	zc	,	m-p135-p17s1w13
+kas	pr000nn	kas	m-p135-p17s1w14
+paredz	vmnipt330an	paredzēt	m-p135-p17s1w15
+pušu	ncfpg5	puse	m-p135-p17s1w16
+sacīkstes	ncfsg5	sacīkste	m-p135-p17s1w17
+principu	ncmsa1	princips	m-p135-p17s1w18
+un	cc	un	m-p135-p17s1w19
+nosacītu	vmnpdfsapsnpn	nosacīt	m-p135-p17s1w20
+tiesas	ncfsg4	tiesa	m-p135-p17s1w21
+pasivitāti	ncfsa5	pasivitāte	m-p135-p17s1w22
+<g />
+,	zc	,	m-p135-p17s1w23
+nav	vmnipii30ay	būt	m-p135-p17s1w24
+pienākuma	ncmsg1	pienākums	m-p135-p17s1w25
+pārsniegt	vmnn0t1000n	pārsniegt	m-p135-p17s1w26
+prasības	ncfsg4	prasība	m-p135-p17s1w27
+priekšmeta	ncmsg1	priekšmets	m-p135-p17s1w28
+robežas	ncfpa4	robeža	m-p135-p17s1w29
+vai	cc	vai	m-p135-p17s1w30
+pamatoties	vmyn0i2000n	pamatoties	m-p135-p17s1w31
+uz	sppd	uz	m-p135-p17s1w32
+faktiem	ncmpd1	fakts	m-p135-p17s1w33
+vai	cc	vai	m-p135-p17s1w34
+apstākļiem	ncmpd2	apstāklis	m-p135-p17s1w35
+<g />
+,	zc	,	m-p135-p17s1w36
+kas	pr000nn	kas	m-p135-p17s1w37
+nav	vcnipii30ay	būt	m-p135-p17s1w38
+minēti	vmnpdmpnpsnpn	minēt	m-p135-p17s1w39
+pušu	ncfpg5	puse	m-p135-p17s1w40
+prasībās	ncfpl4	prasība	m-p135-p17s1w41
+<g />
+,	zc	,	m-p135-p17s1w42
+nolūkā	ncmsl1	nolūks	m-p135-p17s1w43
+piemērot	vmnn0t2000n	piemērot	m-p135-p17s1w44
+ES	yp	ES	m-p135-p17s1w45
+tiesību	ncfpg4	tiesība	m-p135-p17s1w46
+normas	ncfpa4	norma	m-p135-p17s1w47
+<g />
+.	zs	.	m-p135-p17s1w48
+</s>
+<s>
+Analizējamā	vmnpdfslppnpn	analizēt	m-p135-p17s2w1
+lietā	ncfsl4	lieta	m-p135-p17s2w2
+prasības	ncfsg4	prasība	m-p135-p17s2w3
+priekšmets	ncmsn1	priekšmets	m-p135-p17s2w4
+ir	vcnipii30an	būt	m-p135-p17s2w5
+atjaunošana	ncfsn4	atjaunošana	m-p135-p17s2w6
+darbā	ncmsl1	darbs	m-p135-p17s2w7
+un	cc	un	m-p135-p17s2w8
+atlīdzība	ncfsn4	atlīdzība	m-p135-p17s2w9
+par	spsa	par	m-p135-p17s2w10
+piespiedu	nc00gg	piespiedu	m-p135-p17s2w11
+darba	ncmsg1	darbs	m-p135-p17s2w12
+kavējumu	ncmsa1	kavējums	m-p135-p17s2w13
+<g />
+.	zs	.	m-p135-p17s2w14
+</s>
+<s>
+Prasība	ncfsn4	prasība	m-p135-p17s3w1
+balstīta	vmnpdfsnpsnpn	balstīt	m-p135-p17s3w2
+uz	spsa	uz	m-p135-p17s3w3
+DL	yn	DL	m-p135-p17s3w4
+<g />
+,	zc	,	m-p135-p17s3w5
+nenorādot	vmnpu0000000y	norādīt	m-p135-p17s3w6
+konkrētas	affpanp	konkrēts	m-p135-p17s3w7
+normas	ncfpa4	norma	m-p135-p17s3w8
+<g />
+.	zs	.	m-p135-p17s3w9
+</s>
+<s>
+No	spsg	no	m-p135-p17s4w1
+minētā	vmnpdmsgpsypn	minēt	m-p135-p17s4w2
+izriet	vmnipi330an	izrietēt	m-p135-p17s4w3
+<g />
+,	zc	,	m-p135-p17s4w4
+ka	cs	ka	m-p135-p17s4w5
+tiesai	ncfsd4	tiesa	m-p135-p17s4w6
+<g />
+,	zc	,	m-p135-p17s4w7
+lai	cs	lai	m-p135-p17s4w8
+atsauktos	vmyc0i100an	atsaukties	m-p135-p17s4w9
+uz	sppd	uz	m-p135-p17s4w10
+ES	yp	ES	m-p135-p17s4w11
+tiesībām	ncfpd4	tiesība	m-p135-p17s4w12
+<g />
+,	zc	,	m-p135-p17s4w13
+nebūtu	vcnc0ii00ay	būt	m-p135-p17s4w14
+bijis	vcnpdmsnasnpn	būt	m-p135-p17s4w15
+jāpārkāpj	vmnd0i100an	pārkāpt	m-p135-p17s4w16
+prasības	ncfsg4	prasība	m-p135-p17s4w17
+priekšmeta	ncmsg1	priekšmets	m-p135-p17s4w18
+robežas	ncfpa4	robeža	m-p135-p17s4w19
+<g />
+,	zc	,	m-p135-p17s4w20
+kā	cc	kā	m-p135-p17s4w21
+arī	q	arī	m-p135-p17s4w22
+nebūtu	vcnc0ii00ay	būt	m-p135-p17s4w23
+jāatsaucas	vmyd0i100an	atsaukties	m-p135-p17s4w24
+uz	sppd	uz	m-p135-p17s4w25
+faktiem	ncmpd1	fakts	m-p135-p17s4w26
+vai	cc	vai	m-p135-p17s4w27
+apstākļiem	ncmpd2	apstāklis	m-p135-p17s4w28
+<g />
+,	zc	,	m-p135-p17s4w29
+kurus	pr0mpan	kurš	m-p135-p17s4w30
+nebūtu	vcnc0ii00ay	būt	m-p135-p17s4w31
+minējusi	vmnpdfsnasnpn	minēt	m-p135-p17s4w32
+kāda	pi0fsnn	kāda	m-p135-p17s4w33
+no	sppd	no	m-p135-p17s4w34
+iesaistītajām	vmnpdfpdpsypn	iesaistīt	m-p135-p17s4w35
+pusēm	ncfpd5	puse	m-p135-p17s4w36
+<g />
+.	zs	.	m-p135-p17s4w37
+</s>
+<s>
+EKT	yp	EKT	m-p135-p18s1w1
+ir	vcnipii30an	būt	m-p135-p18s1w2
+norādījusi	vmnpdfsnasnpn	norādīt	m-p135-p18s1w3
+<g />
+,	zc	,	m-p135-p18s1w4
+ka	cs	ka	m-p135-p18s1w5
+valsts	ncfsg6	valsts	m-p135-p18s1w6
+atbildība	ncfsn4	atbildība	m-p135-p18s1w7
+iestājas	vmyipi130an	iestāties	m-p135-p18s1w8
+arī	q	arī	m-p135-p18s1w9
+tajā	pd3msln	tas	m-p135-p18s1w10
+gadījumā	ncmsl1	gadījums	m-p135-p18s1w11
+<g />
+,	zc	,	m-p135-p18s1w12
+ja	cs	ja	m-p135-p18s1w13
+indivīdam	ncmsd1	indivīds	m-p135-p18s1w14
+nodarīti	vmnpdmpnpsnpn	nodarīt	m-p135-p18s1w15
+zaudējumi	ncmpn1	zaudējums	m-p135-p18s1w16
+tādēļ	r0n	tādēļ	m-p135-p18s1w17
+<g />
+,	zc	,	m-p135-p18s1w18
+ka	cs	ka	m-p135-p18s1w19
+nacionālā	arfslnp	nacionāls	m-p135-p18s1w20
+tiesa	ncfsn4	tiesa	m-p135-p18s1w21
+nepareizi	rpn	nepareizi	m-p135-p18s1w22
+interpretējusi	vmnpdfsnasnpn	interpretēt	m-p135-p18s1w23
+tiesības	ncfpa4	tiesība	m-p135-p18s1w24
+vai	cc	vai	m-p135-p18s1w25
+nepareizi	rpn	nepareizi	m-p135-p18s1w26
+novērtējusi	vmnpdfsnasnpn	novērtēt	m-p135-p18s1w27
+faktus	ncmpa1	fakts	m-p135-p18s1w28
+vai	cc	vai	m-p135-p18s1w29
+pierādījumus	ncmpa1	pierādījums	m-p135-p18s1w30
+lietā	ncfsl4	lieta	m-p135-p18s1w31
+<g />
+.	zs	.	m-p135-p18s1w32
+</s>
+<s>
+Izskatāmajā	vmnpdmslppypn	izskatīt	m-p135-p18s2w1
+gadījumā	ncmsl1	gadījums	m-p135-p18s2w2
+Latvijas	npfsg4	Latvija	m-p135-p18s2w3
+tiesa	ncfsn4	tiesa	m-p135-p18s2w4
+Darba	ncmsg1	darbs	m-p135-p18s2w5
+likuma	ncmsg1	likums	m-p135-p18s2w6
+normas	ncfpa4	norma	m-p135-p18s2w7
+interpretējusi	vmnpdfsnasnpn	interpretēt	m-p135-p18s2w8
+nepilnīgi	rpn	nepilnīgi	m-p135-p18s2w9
+<g />
+,	zc	,	m-p135-p18s2w10
+proti	q	proti	m-p135-p18s2w11
+<g />
+,	zc	,	m-p135-p18s2w12
+nepiemērojot	vmnpu0000000y	piemērot	m-p135-p18s2w13
+sistēmiskās	affsgyp	sistēmisks	m-p135-p18s2w14
+interpretācijas	ncfsg4	interpretācija	m-p135-p18s2w15
+metodi	ncfsa5	metode	m-p135-p18s2w16
+<g />
+,	zc	,	m-p135-p18s2w17
+kā	cc	kā	m-p135-p18s2w18
+arī	q	arī	m-p135-p18s2w19
+nav	vcnipii30ay	būt	m-p135-p18s2w20
+ievērojusi	vmnpdfsnasnpn	ievērot	m-p135-p18s2w21
+EKT	yp	EKT	m-p135-p18s2w22
+noteikto	vmnpdmsapsypn	noteikt	m-p135-p18s2w23
+"	zq	"	m-p135-p18s2w24
+<g />
+netiešās	affsgyp	netiešs	m-p135-p18s2w25
+iedarbības	ncfsg4	iedarbība	m-p135-p18s2w26
+principu	ncmsa1	princips	m-p135-p18s2w27
+<g />
+"	zq	"	m-p135-p18s2w28
+<g />
+,	zc	,	m-p135-p18s2w29
+kurš	pr0msnn	kurš	m-p135-p18s2w30
+uzliek	vmnipt130an	uzlikt	m-p135-p18s2w31
+pienākumu	ncmsa1	pienākums	m-p135-p18s2w32
+nacionālajai	arfsdyp	nacionāls	m-p135-p18s2w33
+tiesai	ncfsd4	tiesa	m-p135-p18s2w34
+interpretēt	vmnn0t2000n	interpretēt	m-p135-p18s2w35
+tās	pd3fpan	tā	m-p135-p18s2w36
+nacionālo	arfpgyp	nacionāls	m-p135-p18s2w37
+tiesību	ncfpg4	tiesība	m-p135-p18s2w38
+normas	ncfpa4	norma	m-p135-p18s2w39
+<g />
+,	zc	,	m-p135-p18s2w40
+kas	pr000nn	kas	m-p135-p18s2w41
+ievieš	vmnipt130an	ieviest	m-p135-p18s2w42
+ES	yp	ES	m-p135-p18s2w43
+tiesību	ncfpg4	tiesība	m-p135-p18s2w44
+normas	ncfpa4	norma	m-p135-p18s2w45
+<g />
+,	zc	,	m-p135-p18s2w46
+atbilstoši	rpn	atbilstoši	m-p135-p18s2w47
+ES	yp	ES	m-p135-p18s2w48
+tiesību	ncfpg4	tiesība	m-p135-p18s2w49
+(	zb	(	m-p135-p18s2w50
+<g />
+direktīvas	ncfsg4	direktīva	m-p135-p18s2w51
+<g />
+)	zb	)	m-p135-p18s2w52
+noteiktajam	vmnpdmsdpsypn	noteikt	m-p135-p18s2w53
+mērķim	ncmsd2	mērķis	m-p135-p18s2w54
+un	cc	un	m-p135-p18s2w55
+jēgai	ncfsd4	jēga	m-p135-p18s2w56
+<g />
+.	zs	.	m-p135-p18s2w57
+</s>
+<s>
+Tiesa	ncfsn4	tiesa	m-p135-p18s3w1
+nav	vcnipii30ay	būt	m-p135-p18s3w2
+ielūkojusies	vmypdfsnasnpn	ielūkoties	m-p135-p18s3w3
+ES	yp	ES	m-p135-p18s3w4
+direktīvās	ncfpl4	direktīva	m-p135-p18s3w5
+<g />
+,	zc	,	m-p135-p18s3w6
+no	sppd	no	m-p135-p18s3w7
+kurām	pr0fpdn	kura	m-p135-p18s3w8
+attiecīgās	arfpnyp	attiecīgs	m-p135-p18s3w9
+DL	yn	DL	m-p135-p18s3w10
+normas	ncfpn4	norma	m-p135-p18s3w11
+ir	vcnipii30an	būt	m-p135-p18s3w12
+ieviestas	vmnpdfpnpsnpn	ieviest	m-p135-p18s3w13
+<g />
+,	zc	,	m-p135-p18s3w14
+un	cc	un	m-p135-p18s3w15
+šo	pd3fpgn	šī	m-p135-p18s3w16
+direktīvu	ncfpg4	direktīva	m-p135-p18s3w17
+normu	ncfpg4	norma	m-p135-p18s3w18
+interpretācijā	ncfsl4	interpretācija	m-p135-p18s3w19
+<g />
+,	zc	,	m-p135-p18s3w20
+ko	pr000an	kas	m-p135-p18s3w21
+sniegusi	vmnpdfsnasnpn	sniegt	m-p135-p18s3w22
+EKT	yp	EKT	m-p135-p18s3w23
+savā	ps0fsln	sava	m-p135-p18s3w24
+judikatūrā	ncfsl4	judikatūra	m-p135-p18s3w25
+<g />
+.	zs	.	m-p135-p18s3w26
+</s>
+<s>
+Līdz	cs	līdz	m-p135-p18s4w1
+ar	spsa	ar	m-p135-p18s4w2
+to	pd3msan	tas	m-p135-p18s4w3
+radusies	vmypdfsnasnpn	rasties	m-p135-p18s4w4
+situācija	ncfsn4	situācija	m-p135-p18s4w5
+<g />
+,	zc	,	m-p135-p18s4w6
+kur	r0n	kur	m-p135-p18s4w7
+personai	ncfsd4	persona	m-p135-p18s4w8
+nav	vcnipii30ay	būt	m-p135-p18s4w9
+tikušas	vanpdfpnasnpn	tikt	m-p135-p18s4w10
+nodrošinātas	vmnpdfpnpsnpn	nodrošināt	m-p135-p18s4w11
+ar	sppd	ar	m-p135-p18s4w12
+ES	yp	ES	m-p135-p18s4w13
+normām	ncfpd4	norma	m-p135-p18s4w14
+piešķirtās	vmnpdfpnpsypn	piešķirt	m-p135-p18s4w15
+tiesības	ncfpn4	tiesība	m-p135-p18s4w16
+<g />
+,	zc	,	m-p135-p18s4w17
+bet	cc	bet	m-p135-p18s4w18
+Latvijas	npfsg4	Latvija	m-p135-p18s4w19
+valsts	ncfsn6	valsts	m-p135-p18s4w20
+nav	vcnipii30ay	būt	m-p135-p18s4w21
+nodrošinājusi	vmnpdfsnasnpn	nodrošināt	m-p135-p18s4w22
+sev	px000dn	sevis	m-p135-p18s4w23
+uzliktās	vmnpdfpapsypn	uzlikt	m-p135-p18s4w24
+saistības	ncfpa4	saistība	m-p135-p18s4w25
+<g />
+.	zs	.	m-p135-p18s4w26
 </s>
 <s>
 Visu	pg0msan	viss	m-d181-p1179s1w1
