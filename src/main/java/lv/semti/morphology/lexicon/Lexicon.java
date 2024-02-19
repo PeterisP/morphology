@@ -282,14 +282,14 @@ public class Lexicon {
 	// Filtering out certain lexemes from Tēzaurs.lv because they need to be overriden with manual lexicon
 	// FIXME - all this shouldn't exist in code but should (over time) get fixed in Tēzaurs.lv data
 	private boolean is_lexeme_bad(Lexeme l) {
-		if (l.getParadigm().getID() == 29  // Hardcoded pagaidām atstājam no leksikona
-				|| l.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Pronoun)  // Vietniekvārdiem leksikonā ir labāki dati
-				|| l.isMatchingStrong(AttributeNames.i_TezaursCategory, AttributeNames.v_Pronoun)  // Vietniekvārdiem leksikonā ir labāki dati
-				|| l.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Pronoun)  // Vietniekvārdiem leksikonā ir labāki dati
-		) {
-			return true;
-			// FIXME - this is temporary and all these things need to be moved to tezaurs.lv lexicon eventually
-		}
+//		if (l.getParadigm().getID() == 29  // Hardcoded pagaidām atstājam no leksikona
+//				|| l.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Pronoun)  // Vietniekvārdiem leksikonā ir labāki dati
+//				|| l.isMatchingStrong(AttributeNames.i_TezaursCategory, AttributeNames.v_Pronoun)  // Vietniekvārdiem leksikonā ir labāki dati
+//				|| l.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Pronoun)  // Vietniekvārdiem leksikonā ir labāki dati
+//		) {
+//			return true;
+//			// FIXME - this is temporary and all these things need to be moved to tezaurs.lv lexicon eventually
+//		}
 		return false;
 	}
 

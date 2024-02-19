@@ -22,7 +22,7 @@ import java.util.LinkedHashMap;
 
 public class Cache<K, V> extends LinkedHashMap<K, V> {
 	private static final long serialVersionUID = -6922479578059244274L;
-	private int maxSize = 100000;
+	private int maxSize = 10000;
 	
 	public Cache(){
 		super(10, 0.75f, true);
