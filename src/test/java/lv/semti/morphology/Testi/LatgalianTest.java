@@ -85,6 +85,11 @@ public class LatgalianTest {
 			}
 		}
 
+		if (!foundOther.isEmpty())
+		{
+			System.err.print("assertInflectionMultiple failed with spare forms:\n");
+			System.err.println (foundOther);
+		}
 		assertTrue(foundOther.isEmpty());
 		assertEquals(validForms.size(), foundCorrect.size());
 	}
@@ -289,11 +294,25 @@ public class LatgalianTest {
 		dsk_nom_masc_comp.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Masculine);
 		dsk_nom_masc_comp.addAttribute(AttributeNames.i_Degree, AttributeNames.v_Comparative);
 
+		AttributeValues vsk_gen_fem_pos_indef = new AttributeValues();
+		vsk_gen_fem_pos_indef.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adjective);
+		vsk_gen_fem_pos_indef.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+		vsk_gen_fem_pos_indef.addAttribute(AttributeNames.i_Case, AttributeNames.v_Genitive);
+		vsk_gen_fem_pos_indef.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Feminine);
+		vsk_gen_fem_pos_indef.addAttribute(AttributeNames.i_Degree, AttributeNames.v_Positive);
+		vsk_gen_fem_pos_indef.addAttribute(AttributeNames.i_Definiteness, AttributeNames.v_Indefinite);
+
 		List<Wordform> lobs = analyzer.generateInflectionsFromParadigm("lobs", 20);
 		assertInflection(lobs, dsk_nom_masc_comp, "lobuoks");
+		assertInflectionMultiple(lobs, vsk_gen_fem_pos_indef, new HashSet<String>(){{ add("lobys"); add("lobas");}});
 
 		List<Wordform> agrys = analyzer.generateInflectionsFromParadigm("agrys", 21);
 		assertInflection(agrys, dsk_nom_masc_comp, "agruokys");
+		assertInflectionMultiple(agrys, vsk_gen_fem_pos_indef, new HashSet<String>(){{ add("agrys"); add("agras");}});
+
+		List<Wordform> slapnis = analyzer.generateInflectionsFromParadigm("slapnis", 22);
+		assertInflection(slapnis, dsk_nom_masc_comp, "slapņuoks");
+		assertInflectionMultiple(slapnis, vsk_gen_fem_pos_indef, new HashSet<String>(){{ add("slapnis"); add("slapņas");}});
 	}
 
 	@Test
