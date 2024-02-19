@@ -1158,7 +1158,7 @@
 			<Attributes Vārdšķira="Apstākļa vārds"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="22" Name="adj-3-ltg" LemmaEnding="372" Description="Īpašības vārdi, galotne -is, ar burtu miju (slapnis)" AllowedGuessEndings="">
+	<Paradigm Stems="1" ID="22" Name="adj-3-ltg" LemmaEnding="372" Description="Īpašības vārdi, galotne -is, ar burtu miju locījumos (slapnis)" AllowedGuessEndings="nlgk">
 		<!-- FIXME šeit var samazināt galotņu skaitu, uztaisot vēl vienu miju tām rindām, kas šobrīd ir 107 + 108. -->
 		<Attributes Vārdšķira="Īpašības vārds"/>
 		<Ending ID="372" StemChange="0" Ending="is" StemID="1" LemmaEnding="372">
