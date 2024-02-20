@@ -1247,11 +1247,11 @@
 		<Ending ID="399" StemChange="108" Ending="ū" StemID="1" LemmaEnding="372">
 			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Noteiktā" Dzimte="Vīriešu" Locījums="Akuzatīvs" Pakāpe="Pārākā"/>
 		</Ending>
-		<Ending ID="400" StemChange="107" Ending="jā" StemID="1" LemmaEnding="372">
+		<Ending ID="400" StemChange="107" Ending="ajā" StemID="1" LemmaEnding="372">
 			<!-- NB: Jāskatās, kas nonāks šajā paradigmā, iespējams, ka te vajadzēs uztaisīt 105. mijas analogu kopā ar burtu mijas inversu, tad vajag galotni "jā". -->
 			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Noteiktā" Dzimte="Vīriešu" Locījums="Lokatīvs" Pakāpe="Pamata"/>
 		</Ending>
-		<Ending ID="401" StemChange="108" Ending="jā" StemID="1" LemmaEnding="372">
+		<Ending ID="401" StemChange="108" Ending="ajā" StemID="1" LemmaEnding="372">
 			<!-- NB: Jāskatās, kas nonāks šajā paradigmā, iespējams, ka te vajadzēs uztaisīt 105. mijas analogu kopā ar burtu mijas inversu, tad vajag galotni "jā". -->
 			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Noteiktā" Dzimte="Vīriešu" Locījums="Lokatīvs" Pakāpe="Pārākā"/>
 		</Ending>
