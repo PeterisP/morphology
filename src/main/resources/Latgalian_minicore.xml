@@ -15,9 +15,55 @@
     <Lexeme Stem1="akmiņ"/>
   </Paradigm>
   <Paradigm Stems="1" ID="5" Description="Lietvārds 2. deklinācija -is">
-    <Lexeme Stem1="kaķ"/>
+    <Lexeme Stem1="kak"/>
   </Paradigm>
   <Paradigm Stems="1" ID="6" Description="Lietvārds 3. deklinācija -us">
     <Lexeme Stem1="Jez"/>
   </Paradigm>
+  <Paradigm Stems="1" ID="7" Description="Lietvārds 4. deklinācija -a, ģenitīvs -ys">
+    <Lexeme Stem1="muos"/>
+  </Paradigm>
+  <Paradigm Stems="1" ID="8" Description="Lietvārds 4. deklinācija -us, ģenitīvs -is">
+    <Lexeme Stem1="kuoj"/>
+  </Paradigm>
+  <Paradigm Stems="1" ID="9" Description="Lietvārds 5. deklinācija -e, lokatīvs -ē">
+    <Lexeme Stem1="muot"/>
+  </Paradigm>
+  <Paradigm Stems="1" ID="10" Description="Lietvārds 5. deklinācija -e, lokatīvs -ie/-ī">
+    <Lexeme Stem1="egl"/>
+  </Paradigm>
+  <Paradigm Stems="1" ID="11" Description="Lietvārds 6. deklinācija -s, ar miju">
+    <Lexeme Stem1="sird"/>
+  </Paradigm>
+  <Paradigm Stems="1" ID="12" Description="Lietvārds 6. deklinācija -s, bez mijas">
+    <Lexeme Stem1="zūs"/>
+  </Paradigm>
+  <Paradigm Stems="1" ID="13" Description="Atgriezeniskie lietvārdi">
+    <Lexeme Stem1="mozguo"/>
+  </Paradigm>
+  <Paradigm Stems="1" ID="14" Description="Nelokāmie lievārdi">
+    <Lexeme Stem1="metro"/>
+  </Paradigm>
+  <Paradigm Stems="1" ID="15" Description="Lietvārdi vīriešu dzimtē, 1. deklinācija, galotne -s, ģenitīva paralēlformas">
+    <Lexeme Stem1="ol"/>
+  </Paradigm>
+  <Paradigm Stems="1" ID="16" Description="Lietvārdi vīriešu dzimtē, 4. deklinācija, galotne -a, vienskaitļa ģenitīvs -ys">
+    <Lexeme Stem1="puik"/>
+  </Paradigm>
+  <Paradigm Stems="1" ID="17" Description="Lietvārdi sieviešu dzimtē, 5. deklinācija, galotne -e, vienskaitļa lokatīvs -ē, bez mijas">
+    <Lexeme Stem1="šaļt"/>
+  </Paradigm>
+  <Paradigm Stems="1" ID="18" Description="Lietvārdi vīriešu dzimtē, 5. deklinācija, galotne -e, vienskaitļa lokatīvs -ē, bez mijas">
+    <Lexeme Stem1="tēt"/>
+  </Paradigm>
+  <Paradigm Stems="1" ID="20" Description="Īpašības vārdi, galotne -s">
+    <Lexeme Stem1="lob"/>
+  </Paradigm>
+  <Paradigm Stems="1" ID="21" Description="Īpašības vārdi, galotne -ys">
+    <Lexeme Stem1="agr"/>
+  </Paradigm>
+  <Paradigm Stems="1" ID="21" Description="Īpašības vārdi, galotne -is, burtu mija">
+    <Lexeme Stem1="slapn"/>
+  </Paradigm>
+
 </Lexicon>

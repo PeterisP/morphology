@@ -307,7 +307,7 @@ public class Paradigm extends AttributeValues {
 		if ((allowedGuessEndings.indexOf('!') >= 0) && !this.lexicon.guessAllParadigms) return false;
 		if (stem.isEmpty()) return false;
 
-		if (this.id == 12 && stem.endsWith("as")) return true; // Hardcoded -as inflexible nouns like Lithuanian derived surnames Arvydas etc
+		if (this.id == 12 && stem.endsWith("as")) return true; // FIXME Hardcoded -as inflexible nouns like Lithuanian derived surnames Arvydas etc
 		
 		char lastchar = stem.charAt(stem.length()-1);
 		return (allowedGuessEndings.indexOf(lastchar) >= 0);

@@ -85,6 +85,11 @@ public class LatgalianTest {
 			}
 		}
 
+		if (!foundOther.isEmpty())
+		{
+			System.err.print("assertInflectionMultiple failed with spare forms:\n");
+			System.err.println (foundOther);
+		}
 		assertTrue(foundOther.isEmpty());
 		assertEquals(validForms.size(), foundCorrect.size());
 	}
@@ -133,17 +138,6 @@ public class LatgalianTest {
 	//FIXME - jāpārtaisa uz parametrizētiem testiem...
 
 	// Testi latgaliešu vārdu locīšanai atbilstoši http://genling.spbu.ru/baltist/Publicat/LatgVol1.pdf
-
-	@Test
-	public void tāvs() {
-		List<Wordform> tāvs = analyzer.generateInflections("tāvs");
-//        describe(tāvs);
-		AttributeValues testset = new AttributeValues();
-		testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
-		testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Genitive);
-		testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
-		assertInflection(tāvs, testset, "tāva");
-	}
 
 	@Test
 	public void viejs() {
@@ -220,6 +214,131 @@ public class LatgalianTest {
 		assertInflectionMultiple(Jezus, testset, new HashSet<String>(){{ add("Jezus"); add("Jeza");}});
 	}
 
+	@Test
+	public void dekl1()
+	{
+		AttributeValues vsk_gen = new AttributeValues();
+		vsk_gen.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
+		vsk_gen.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+		vsk_gen.addAttribute(AttributeNames.i_Case, AttributeNames.v_Genitive);
+
+		List<Wordform> muosa = analyzer.generateInflectionsFromParadigm("tāvs", 1);
+		assertInflection(muosa, vsk_gen, "tāva");
+
+		List<Wordform> muote = analyzer.generateInflectionsFromParadigm("ols", 15);
+		assertInflectionMultiple(muote, vsk_gen, new HashSet<String>(){{ add("ols"); add("ola");}});
+	}
+
+
+	@Test
+	public void dekl4() {
+		AttributeValues vsk_gen = new AttributeValues();
+		vsk_gen.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
+		vsk_gen.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+		vsk_gen.addAttribute(AttributeNames.i_Case, AttributeNames.v_Genitive);
+
+		List<Wordform> muosa = analyzer.generateInflectionsFromParadigm("muosa", 7);
+		assertInflection(muosa, vsk_gen, "muosys");
+
+		List<Wordform> kuoja = analyzer.generateInflectionsFromParadigm("kuoja", 8);
+		assertInflection(kuoja, vsk_gen, "kuojis");
+
+		List<Wordform> puika = analyzer.generateInflectionsFromParadigm("puika", 16);
+		assertInflectionMultiple(puika, vsk_gen, new HashSet<String>(){{ add("puikys"); add("puikas");}});
+	}
+
+	@Test
+	public void dekl5() {
+		AttributeValues vsk_loc = new AttributeValues();
+		vsk_loc.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
+		vsk_loc.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+		vsk_loc.addAttribute(AttributeNames.i_Case, AttributeNames.v_Locative);
+		AttributeValues dsk_gen = new AttributeValues();
+		dsk_gen.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
+		dsk_gen.addAttribute(AttributeNames.i_Number, AttributeNames.v_Plural);
+		dsk_gen.addAttribute(AttributeNames.i_Case, AttributeNames.v_Genitive);
+
+		List<Wordform> muote = analyzer.generateInflectionsFromParadigm("muote", 9);
+		assertInflection(muote, vsk_loc, "muotē");
+		assertInflection(muote, dsk_gen, "muošu");
+
+		List<Wordform> egle = analyzer.generateInflectionsFromParadigm("egle", 10);
+		assertInflection(egle, vsk_loc, "eglie");
+
+		List<Wordform> šaļte = analyzer.generateInflectionsFromParadigm("šaļte", 17);
+		assertInflection(šaļte, dsk_gen, "šaļtu");
+	}
+
+	@Test
+	public void dekl6()
+	{
+		AttributeValues dsk_gen = new AttributeValues();
+		dsk_gen.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
+		dsk_gen.addAttribute(AttributeNames.i_Number, AttributeNames.v_Plural);
+		dsk_gen.addAttribute(AttributeNames.i_Case, AttributeNames.v_Genitive);
+
+		List<Wordform> sirds = analyzer.generateInflectionsFromParadigm("sirds", 11);
+		assertInflection(sirds, dsk_gen, "siržu");
+
+		List<Wordform> zūss = analyzer.generateInflectionsFromParadigm("zūss", 12);
+		assertInflection(zūss, dsk_gen, "zūsu");
+	}
+
+	@Test
+	public void adj()
+	{
+		AttributeValues dsk_nom_masc_comp = new AttributeValues();
+		dsk_nom_masc_comp.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adjective);
+		dsk_nom_masc_comp.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+		dsk_nom_masc_comp.addAttribute(AttributeNames.i_Case, AttributeNames.v_Nominative);
+		dsk_nom_masc_comp.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Masculine);
+		dsk_nom_masc_comp.addAttribute(AttributeNames.i_Degree, AttributeNames.v_Comparative);
+
+		AttributeValues vsk_gen_fem_pos_indef = new AttributeValues();
+		vsk_gen_fem_pos_indef.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adjective);
+		vsk_gen_fem_pos_indef.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+		vsk_gen_fem_pos_indef.addAttribute(AttributeNames.i_Case, AttributeNames.v_Genitive);
+		vsk_gen_fem_pos_indef.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Feminine);
+		vsk_gen_fem_pos_indef.addAttribute(AttributeNames.i_Degree, AttributeNames.v_Positive);
+		vsk_gen_fem_pos_indef.addAttribute(AttributeNames.i_Definiteness, AttributeNames.v_Indefinite);
+
+		List<Wordform> lobs = analyzer.generateInflectionsFromParadigm("lobs", 20);
+		assertInflection(lobs, dsk_nom_masc_comp, "lobuoks");
+		assertInflectionMultiple(lobs, vsk_gen_fem_pos_indef, new HashSet<String>(){{ add("lobys"); add("lobas");}});
+
+		List<Wordform> agrys = analyzer.generateInflectionsFromParadigm("agrys", 21);
+		assertInflection(agrys, dsk_nom_masc_comp, "agruokys");
+		assertInflectionMultiple(agrys, vsk_gen_fem_pos_indef, new HashSet<String>(){{ add("agrys"); add("agras");}});
+
+		List<Wordform> slapnis = analyzer.generateInflectionsFromParadigm("slapnis", 22);
+		assertInflection(slapnis, dsk_nom_masc_comp, "slapņuoks");
+		assertInflectionMultiple(slapnis, vsk_gen_fem_pos_indef, new HashSet<String>(){{ add("slapnis"); add("slapņas");}});
+	}
+
+	@Test
+	public void iuzys()
+	{
+		AttributeValues dsk_nom = new AttributeValues();
+		dsk_nom.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
+		dsk_nom.addAttribute(AttributeNames.i_Number, AttributeNames.v_Plural);
+		dsk_nom.addAttribute(AttributeNames.i_Case, AttributeNames.v_Nominative);
+
+		// Testing recognising plurare tantum
+		List<Wordform> iuza_bad = analyzer.generateInflectionsFromParadigm("iuza", 7);
+		assertInflection(iuza_bad, dsk_nom, "iuzys");
+
+		AttributeValues plTan = new AttributeValues();
+		plTan.addAttribute(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum);
+		plTan.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Feminine);
+
+		List<Wordform> forms = analyzer.generateInflectionsFromParadigm("iuzys", 7, plTan);
+		for (Wordform form : forms) {
+			assertFalse(form.isMatchingStrong(AttributeNames.i_Number, AttributeNames.v_Singular));
+			assertTrue(form.isMatchingStrong(AttributeNames.i_Gender, AttributeNames.v_Feminine));
+		}
+		assertFalse(forms.isEmpty());
+
+	}
 
 	@Test
 	public void mijas() {
