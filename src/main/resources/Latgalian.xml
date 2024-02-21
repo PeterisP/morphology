@@ -1469,6 +1469,75 @@
 			<Attributes Vārdšķira="Apstākļa vārds"/>
 		</Ending>
 	</Paradigm>
-
+	<Paradigm Stems="1" ID="23" Name="adj-4-ltg" LemmaEnding="467" Description="Īpašības vārdi, izskaņas -iņš, -ine, (dzeļziņs, kūcine)" AllowedGuessEndings="ņn">
+		<Attributes Vārdšķira="Īpašības vārds" Noteiktība="Nenoteiktā"/>
+		<Ending ID="467" StemChange="0" Ending="š" StemID="1" LemmaEnding="467">
+			<Attributes Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Locījums="Nominatīvs"/>
+		</Ending>
+		<Ending ID="468" StemChange="0" Ending="a" StemID="1" LemmaEnding="467">
+			<Attributes Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Locījums="Ģenitīvs"/>
+		</Ending>
+		<Ending ID="469" StemChange="0" Ending="am" StemID="1" LemmaEnding="467">
+			<Attributes Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Locījums="Datīvs"/>
+		</Ending>
+		<Ending ID="470" StemChange="100" Ending="i" StemID="1" LemmaEnding="467">
+			<Attributes Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Locījums="Akuzatīvs"/>
+		</Ending>
+		<Ending ID="471" StemChange="100" Ending="ī" StemID="1" LemmaEnding="467">
+			<Attributes Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Locījums="Lokatīvs"/>
+		</Ending>
+		<Ending ID="472" StemChange="100" Ending="i" StemID="1" LemmaEnding="467">
+			<Attributes Skaitlis="Daudzskaitlis" Dzimte="Vīriešu" Locījums="Nominatīvs"/>
+		</Ending>
+		<Ending ID="473" StemChange="0" Ending="u" StemID="1" LemmaEnding="467">
+			<Attributes Skaitlis="Daudzskaitlis" Dzimte="Vīriešu" Locījums="Ģenitīvs"/>
+		</Ending>
+		<Ending ID="474" StemChange="100" Ending="im" StemID="1" LemmaEnding="467">
+			<Attributes Skaitlis="Daudzskaitlis" Dzimte="Vīriešu" Locījums="Datīvs"/>
+		</Ending>
+		<Ending ID="475" StemChange="0" Ending="us" StemID="1" LemmaEnding="467">
+			<Attributes Skaitlis="Daudzskaitlis" Dzimte="Vīriešu" Locījums="Akuzatīvs"/>
+		</Ending>
+		<Ending ID="476" StemChange="0" Ending="ūs" StemID="1" LemmaEnding="467">
+			<Attributes Skaitlis="Daudzskaitlis" Dzimte="Vīriešu" Locījums="Lokatīvs"/>
+		</Ending>
+		<Ending ID="477" StemChange="100" Ending="e" StemID="1" LemmaEnding="477">
+			<Attributes Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Nominatīvs"/>
+		</Ending>
+		<Ending ID="478" StemChange="100" Ending="is" StemID="1" LemmaEnding="477">
+			<Attributes Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Ģenitīvs"/>
+		</Ending>
+		<Ending ID="479" StemChange="100" Ending="ei" StemID="1" LemmaEnding="477">
+			<Attributes Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Datīvs"/>
+		</Ending>
+		<Ending ID="480" StemChange="100" Ending="i" StemID="1" LemmaEnding="477">
+			<Attributes Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Akuzatīvs"/>
+		</Ending>
+		<Ending ID="481" StemChange="100" Ending="ē" StemID="1" LemmaEnding="477">
+			<Attributes Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Lokatīvs"/>
+		</Ending>
+		<Ending ID="482" StemChange="100" Ending="is" StemID="1" LemmaEnding="477">
+			<Attributes Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Nominatīvs"/>
+		</Ending>
+		<Ending ID="483" StemChange="0" Ending="u" StemID="1" LemmaEnding="477">
+			<Attributes Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Ģenitīvs"/>
+		</Ending>
+		<Ending ID="484" StemChange="100" Ending="em" StemID="1" LemmaEnding="477">
+			<Attributes Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Datīvs"/>
+		</Ending>
+		<Ending ID="485" StemChange="100" Ending="is" StemID="1" LemmaEnding="477">
+			<Attributes Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Akuzatīvs"/>
+		</Ending>
+		<Ending ID="486" StemChange="100" Ending="ēs" StemID="1" LemmaEnding="477">
+			<Attributes Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Lokatīvs"/>
+		</Ending>
+		<!-- Nav skaidrs, vai šiem ir apstākļa vārdi.
+		<Ending ID="487" StemChange="100" Ending="i" StemID="1" LemmaEnding="487">
+			<Attributes Vārdšķira="Apstākļa vārds" Pakāpe="Pamata"/>
+		</Ending>
+		<Ending ID="488" StemChange="0" Ending="ai" StemID="1" LemmaEnding="488">
+			<Attributes Vārdšķira="Apstākļa vārds" Pakāpe="Pamata"/>
+		</Ending>
+	</Paradigm> -->
 
 </Morphology>
