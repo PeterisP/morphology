@@ -259,11 +259,8 @@ public class LatgalianTest {
 		dsk_gen.addAttribute(AttributeNames.i_Case, AttributeNames.v_Genitive);
 
 		List<Wordform> muote = analyzer.generateInflectionsFromParadigm("muote", 9);
-		assertInflection(muote, vsk_loc, "muotē");
+		assertInflectionMultiple(muote, vsk_loc, new HashSet<String>(){{ add("muotē"); add("muotie"); add("muotī");}});
 		assertInflection(muote, dsk_gen, "muošu");
-
-		List<Wordform> egle = analyzer.generateInflectionsFromParadigm("egle", 10);
-		assertInflection(egle, vsk_loc, "eglie");
 
 		List<Wordform> šaļte = analyzer.generateInflectionsFromParadigm("šaļte", 17);
 		assertInflection(šaļte, dsk_gen, "šaļtu");

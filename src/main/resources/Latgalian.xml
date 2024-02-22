@@ -658,7 +658,7 @@
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Ģenitīvs"/>
 		</Ending>
 		<Ending ID="216" StemChange="0" Ending="es" StemID="1" LemmaEnding="214">
-			<Attributes Skaitlis="Vienskaitlis" Locījums="Ģenitīvs"Vispārīgais_lietojuma_biežums="Reti"/>
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Ģenitīvs" Vispārīgais_lietojuma_biežums="Reti"/>
 		</Ending>
 		<Ending ID="217" StemChange="0" Ending="ei" StemID="1" LemmaEnding="214">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Datīvs"/>
@@ -1515,7 +1515,7 @@
 		</Ending>
 		<Ending ID="488" StemChange="0" Ending="ai" StemID="1" LemmaEnding="488">
 			<Attributes Vārdšķira="Apstākļa vārds" Pakāpe="Pamata"/>
-		</Ending>
-	</Paradigm> -->
+		</Ending> -->
+	</Paradigm> 
 
 </Morphology>
