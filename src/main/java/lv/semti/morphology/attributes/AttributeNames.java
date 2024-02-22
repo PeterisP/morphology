@@ -252,6 +252,9 @@ public class AttributeNames {
 	public static final String v_Outdated = "Novecojis";
 	public static final String v_RegionalOutdated = "[\"Apvidvārds\",\"Novecojis\"]";
 
+	public static final String i_Normative = "Valodas normēšana";
+	public static final String v_Undesirable = "Nevēlams";
+
     public static final String i_EntryProperties = "Leksēmas pamatformas īpatnības";
 	public final static String v_EntryComparative = "Pārākā pakāpe"; // TODO - tizls nosaukums
 	public final static String v_EntryFeminine = "Sieviešu dzimte"; // TODO - tizls nosaukums

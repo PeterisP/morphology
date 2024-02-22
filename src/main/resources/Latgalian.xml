@@ -23,7 +23,7 @@
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 		<Ending ID="7" StemChange="0" Ending="s" StemID="1" LemmaEnding="1">
-			<Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs" Vispārīgais_lietojuma_biežums="Reti"/>
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs" Lietojuma_biežums="Reti"/>
 		</Ending>
 		<Ending ID="8" StemChange="100" Ending="i" StemID="1" LemmaEnding="1">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Nominatīvs"/>
@@ -65,7 +65,7 @@
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 		<Ending ID="20" StemChange="0" Ending="š" StemID="1" LemmaEnding="14">
-			<Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs" Vispārīgais_lietojuma_biežums="Reti"/>
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs" Lietojuma_biežums="Reti"/>
 		</Ending>
 		<Ending ID="21" StemChange="100" Ending="i" StemID="1" LemmaEnding="14">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Nominatīvs"/>
@@ -265,7 +265,7 @@
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Ģenitīvs"/>
 		</Ending>
 		<Ending ID="81" StemChange="0" Ending="as" StemID="1" LemmaEnding="79">
-			<Attributes Skaitlis="Vienskaitlis" Locījums="Ģenitīvs" Vispārīgais_lietojuma_biežums="Reti"/>
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Ģenitīvs" Lietojuma_biežums="Reti"/>
 		</Ending>
 		<Ending ID="82" StemChange="0" Ending="ai" StemID="1" LemmaEnding="79">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Datīvs"/>
@@ -283,7 +283,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Nominatīvs"/>
 		</Ending>
 		<Ending ID="87" StemChange="0" Ending="as" StemID="1" LemmaEnding="79">
-			<Attributes Skaitlis="Daudzskaitlis" Locījums="Nominatīvs" Vispārīgais_lietojuma_biežums="Reti"/>
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Nominatīvs" Lietojuma_biežums="Reti"/>
 		</Ending>
 		<Ending ID="88" StemChange="0" Ending="u" StemID="1" LemmaEnding="79">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Ģenitīvs"/>
@@ -295,7 +295,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Akuzatīvs"/>
 		</Ending>
 		<Ending ID="91" StemChange="0" Ending="as" StemID="1" LemmaEnding="79">
-			<Attributes Skaitlis="Daudzskaitlis" Locījums="Akuzatīvs" Vispārīgais_lietojuma_biežums="Reti"/>
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Akuzatīvs" Lietojuma_biežums="Reti"/>
 		</Ending>
 		<Ending ID="92" StemChange="0" Ending="uos" StemID="1" LemmaEnding="79">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Lokatīvs"/>
@@ -313,7 +313,7 @@
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Ģenitīvs"/>
 		</Ending>
 		<Ending ID="96" StemChange="0" Ending="as" StemID="1" LemmaEnding="94">
-			<Attributes Skaitlis="Vienskaitlis" Locījums="Ģenitīvs" Vispārīgais_lietojuma_biežums="Reti"/>
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Ģenitīvs" Lietojuma_biežums="Reti"/>
 		</Ending>
 		<Ending ID="97" StemChange="0" Ending="ai" StemID="1" LemmaEnding="94">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Datīvs"/>
@@ -334,7 +334,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Nominatīvs"/>
 		</Ending>
 		<Ending ID="103" StemChange="0" Ending="as" StemID="1" LemmaEnding="94">
-			<Attributes Skaitlis="Daudzskaitlis" Locījums="Nominatīvs" Vispārīgais_lietojuma_biežums="Reti"/>
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Nominatīvs" Lietojuma_biežums="Reti"/>
 		</Ending>
 		<Ending ID="104" StemChange="0" Ending="u" StemID="1" LemmaEnding="94">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Ģenitīvs"/>
@@ -346,7 +346,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Akuzatīvs"/>
 		</Ending>
 		<Ending ID="107" StemChange="0" Ending="as" StemID="1" LemmaEnding="94">
-			<Attributes Skaitlis="Daudzskaitlis" Locījums="Akuzatīvs" Vispārīgais_lietojuma_biežums="Reti"/>
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Akuzatīvs" Lietojuma_biežums="Reti"/>
 		</Ending>
 		<Ending ID="108" StemChange="0" Ending="uos" StemID="1" LemmaEnding="94">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Lokatīvs"/>
@@ -364,7 +364,7 @@
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Ģenitīvs"/>
 		</Ending>
 		<Ending ID="112" StemChange="0" Ending="es" StemID="1" LemmaEnding="110">
-			<Attributes Skaitlis="Vienskaitlis" Locījums="Ģenitīvs" Vispārīgais_lietojuma_biežums="Reti"/>
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Ģenitīvs" Lietojuma_biežums="Reti"/>
 		</Ending>
 		<Ending ID="113" StemChange="0" Ending="ei" StemID="1" LemmaEnding="110">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Datīvs"/>
@@ -385,13 +385,13 @@
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 		<Ending ID="117" StemChange="0" Ending="" StemID="1" LemmaEnding="110">
-			<Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs" Vispārīgais_lietojuma_biežums="Reti"/>
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs" Lietojuma_biežums="Reti"/>
 		</Ending>
 		<Ending ID="118" StemChange="0" Ending="is" StemID="1" LemmaEnding="110">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Nominatīvs"/>
 		</Ending>
 		<Ending ID="119" StemChange="0" Ending="es" StemID="1" LemmaEnding="110">
-			<Attributes Skaitlis="Daudzskaitlis" Locījums="Nominatīvs" Vispārīgais_lietojuma_biežums="Reti"/>
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Nominatīvs" Lietojuma_biežums="Reti"/>
 		</Ending>
 		<Ending ID="120" StemChange="101" Ending="u" StemID="1" LemmaEnding="110">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Ģenitīvs"/>
@@ -403,7 +403,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Akuzatīvs"/>
 		</Ending>
 		<Ending ID="123" StemChange="0" Ending="es" StemID="1" LemmaEnding="110">
-			<Attributes Skaitlis="Daudzskaitlis" Locījums="Akuzatīvs" Vispārīgais_lietojuma_biežums="Reti"/>
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Akuzatīvs" Lietojuma_biežums="Reti"/>
 		</Ending>
 		<Ending ID="124" StemChange="0" Ending="ēs" StemID="1" LemmaEnding="110">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Lokatīvs"/>
@@ -439,7 +439,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Nominatīvs"/>
 		</Ending>
 		<Ending ID="149" StemChange="0" Ending="is" StemID="1" LemmaEnding="141">
-			<Attributes Skaitlis="Daudzskaitlis" Locījums="Nominatīvs" Vispārīgais_lietojuma_biežums="Reti"/>
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Nominatīvs" Lietojuma_biežums="Reti"/>
 		</Ending>
 		<Ending ID="150" StemChange="101" Ending="u" StemID="1" LemmaEnding="141">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Ģenitīvs"/>
@@ -457,7 +457,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Akuzatīvs"/>
 		</Ending>
 		<Ending ID="155" StemChange="100" Ending="is" StemID="1" LemmaEnding="141">
-			<Attributes Skaitlis="Daudzskaitlis" Locījums="Akuzatīvs" Vispārīgais_lietojuma_biežums="Reti"/>
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Akuzatīvs" Lietojuma_biežums="Reti"/>
 		</Ending>
 		<Ending ID="156" StemChange="100" Ending="īs" StemID="1" LemmaEnding="141">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Lokatīvs"/>
@@ -466,7 +466,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 		<Ending ID="158" StemChange="100" Ending="is" StemID="1" LemmaEnding="141">
-			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs" Vispārīgais_lietojuma_biežums="Reti"/>
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs" Lietojuma_biežums="Reti"/>
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="12" Name="noun-6b-ltg" LemmaEnding="159" Description="Lietvārdi sieviešu dzimtē, 6. deklinācija, galotne -s, bez mijas (zūss)" AllowedGuessEndings="">
@@ -496,7 +496,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Nominatīvs"/>
 		</Ending>
 		<Ending ID="167" StemChange="0" Ending="is" StemID="1" LemmaEnding="159">
-			<Attributes Skaitlis="Daudzskaitlis" Locījums="Nominatīvs" Vispārīgais_lietojuma_biežums="Reti"/>
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Nominatīvs" Lietojuma_biežums="Reti"/>
 		</Ending>
 		<Ending ID="168" StemChange="0" Ending="u" StemID="1" LemmaEnding="159">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Ģenitīvs"/>
@@ -514,7 +514,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Akuzatīvs"/>
 		</Ending>
 		<Ending ID="173" StemChange="100" Ending="is" StemID="1" LemmaEnding="159">
-			<Attributes Skaitlis="Daudzskaitlis" Locījums="Akuzatīvs" Vispārīgais_lietojuma_biežums="Reti"/>
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Akuzatīvs" Lietojuma_biežums="Reti"/>
 		</Ending>
 		<Ending ID="174" StemChange="100" Ending="īs" StemID="1" LemmaEnding="159">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Lokatīvs"/>
@@ -562,7 +562,7 @@
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Ģenitīvs"/>
 		</Ending>
 		<Ending ID="185" StemChange="0" Ending="s" StemID="1"  LemmaEnding="184">
-			<Attributes Skaitlis="Vienskaitlis" Locījums="Ģenitīvs" Vispārīgais_lietojuma_biežums="Reti"/>
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Ģenitīvs" Lietojuma_biežums="Reti"/>
 		</Ending>
 		<Ending ID="187" StemChange="0" Ending="am" StemID="1"  LemmaEnding="184">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Datīvs"/>
@@ -577,7 +577,7 @@
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 		<Ending ID="191" StemChange="0" Ending="s" StemID="1"  LemmaEnding="184">
-			<Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs" Vispārīgais_lietojuma_biežums="Reti"/>
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs" Lietojuma_biežums="Reti"/>
 		</Ending>
 		<Ending ID="192" StemChange="100" Ending="i" StemID="1"  LemmaEnding="184">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Nominatīvs"/>
@@ -607,13 +607,13 @@
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Ģenitīvs"/>
 		</Ending>
 		<Ending ID="200" StemChange="0" Ending="as" StemID="1" LemmaEnding="198">
-			<Attributes Skaitlis="Vienskaitlis" Locījums="Ģenitīvs" Vispārīgais_lietojuma_biežums="Reti"/>
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Ģenitīvs" Lietojuma_biežums="Reti"/>
 		</Ending>
 		<Ending ID="201" StemChange="0" Ending="ai" StemID="1" LemmaEnding="198">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Datīvs"/>
 		</Ending>
 		<Ending ID="202" StemChange="0" Ending="am" StemID="1" LemmaEnding="198">
-			<Attributes Skaitlis="Vienskaitlis" Locījums="Datīvs" Vispārīgais_lietojuma_biežums="Reti"/>
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Datīvs" Lietojuma_biežums="Reti"/>
 		</Ending>
 		<Ending ID="203" StemChange="0" Ending="u" StemID="1" LemmaEnding="198">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Akuzatīvs"/>
@@ -628,7 +628,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Nominatīvs"/>
 		</Ending>
 		<Ending ID="207" StemChange="0" Ending="as" StemID="1" LemmaEnding="198">
-			<Attributes Skaitlis="Daudzskaitlis" Locījums="Nominatīvs" Vispārīgais_lietojuma_biežums="Reti"/>
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Nominatīvs" Lietojuma_biežums="Reti"/>
 		</Ending>
 		<Ending ID="208" StemChange="0" Ending="u" StemID="1" LemmaEnding="198">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Ģenitīvs"/>
@@ -640,7 +640,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Akuzatīvs"/>
 		</Ending>
 		<Ending ID="211" StemChange="0" Ending="as" StemID="1" LemmaEnding="198">
-			<Attributes Skaitlis="Daudzskaitlis" Locījums="Akuzatīvs" Vispārīgais_lietojuma_biežums="Reti"/>
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Akuzatīvs" Lietojuma_biežums="Reti"/>
 		</Ending>
 		<Ending ID="212" StemChange="0" Ending="uos" StemID="1" LemmaEnding="198">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Lokatīvs"/>
@@ -658,7 +658,7 @@
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Ģenitīvs"/>
 		</Ending>
 		<Ending ID="216" StemChange="0" Ending="es" StemID="1" LemmaEnding="214">
-			<Attributes Skaitlis="Vienskaitlis" Locījums="Ģenitīvs" Vispārīgais_lietojuma_biežums="Reti"/>
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Ģenitīvs" Lietojuma_biežums="Reti"/>
 		</Ending>
 		<Ending ID="217" StemChange="0" Ending="ei" StemID="1" LemmaEnding="214">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Datīvs"/>
@@ -679,13 +679,13 @@
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 		<Ending ID="221" StemChange="0" Ending="" StemID="1" LemmaEnding="214">
-			<Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs" Vispārīgais_lietojuma_biežums="Reti"/>
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs" Lietojuma_biežums="Reti"/>
 		</Ending>
 		<Ending ID="222" StemChange="0" Ending="is" StemID="1" LemmaEnding="214">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Nominatīvs"/>
 		</Ending>
 		<Ending ID="223" StemChange="0" Ending="es" StemID="1" LemmaEnding="214">
-			<Attributes Skaitlis="Daudzskaitlis" Locījums="Nominatīvs" Vispārīgais_lietojuma_biežums="Reti"/>
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Nominatīvs" Lietojuma_biežums="Reti"/>
 		</Ending>
 		<Ending ID="224" StemChange="0" Ending="u" StemID="1" LemmaEnding="214">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Ģenitīvs"/>
@@ -697,7 +697,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Akuzatīvs"/>
 		</Ending>
 		<Ending ID="227" StemChange="0" Ending="es" StemID="1" LemmaEnding="214">
-			<Attributes Skaitlis="Daudzskaitlis" Locījums="Akuzatīvs" Vispārīgais_lietojuma_biežums="Reti"/>
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Akuzatīvs" Lietojuma_biežums="Reti"/>
 		</Ending>
 		<Ending ID="228" StemChange="0" Ending="ēs" StemID="1" LemmaEnding="214">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Lokatīvs"/>
@@ -715,13 +715,13 @@
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Ģenitīvs"/>
 		</Ending>
 		<Ending ID="232" StemChange="0" Ending="es" StemID="1" LemmaEnding="230">
-			<Attributes Skaitlis="Vienskaitlis" Locījums="Ģenitīvs" Vispārīgais_lietojuma_biežums="Reti"/>
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Ģenitīvs" Lietojuma_biežums="Reti"/>
 		</Ending>
 		<Ending ID="233" StemChange="0" Ending="ei" StemID="1" LemmaEnding="230">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Datīvs"/>
 		</Ending>
 		<Ending ID="234" StemChange="0" Ending="em" StemID="1" LemmaEnding="230">
-			<Attributes Skaitlis="Vienskaitlis" Locījums="Datīvs" Vispārīgais_lietojuma_biežums="Reti"/>
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Datīvs" Lietojuma_biežums="Reti"/>
 		</Ending>
 		<Ending ID="235" StemChange="0" Ending="i" StemID="1" LemmaEnding="230">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Akuzatīvs"/>
@@ -739,13 +739,13 @@
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 		<Ending ID="238" StemChange="0" Ending="" StemID="1" LemmaEnding="230">
-			<Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs" Vispārīgais_lietojuma_biežums="Reti"/>
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs" Lietojuma_biežums="Reti"/>
 		</Ending>
 		<Ending ID="239" StemChange="0" Ending="is" StemID="1" LemmaEnding="230">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Nominatīvs"/>
 		</Ending>
 		<Ending ID="240" StemChange="0" Ending="es" StemID="1" LemmaEnding="230">
-			<Attributes Skaitlis="Daudzskaitlis" Locījums="Nominatīvs" Vispārīgais_lietojuma_biežums="Reti"/>
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Nominatīvs" Lietojuma_biežums="Reti"/>
 		</Ending>
 		<Ending ID="241" StemChange="0" Ending="u" StemID="1" LemmaEnding="230">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Ģenitīvs"/>
@@ -757,7 +757,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Akuzatīvs"/>
 		</Ending>
 		<Ending ID="244" StemChange="0" Ending="es" StemID="1" LemmaEnding="230">
-			<Attributes Skaitlis="Daudzskaitlis" Locījums="Akuzatīvs" Vispārīgais_lietojuma_biežums="Reti"/>
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Akuzatīvs" Lietojuma_biežums="Reti"/>
 		</Ending>
 		<Ending ID="245" StemChange="0" Ending="ēs" StemID="1" LemmaEnding="230">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Lokatīvs"/>
@@ -776,13 +776,13 @@
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Ģenitīvs"/>
 		</Ending>
 		<Ending ID="249" StemChange="0" Ending="es" StemID="1" LemmaEnding="247">
-			<Attributes Skaitlis="Vienskaitlis" Locījums="Ģenitīvs" Vispārīgais_lietojuma_biežums="Reti"/>
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Ģenitīvs" Lietojuma_biežums="Reti"/>
 		</Ending>
 		<Ending ID="250" StemChange="0" Ending="ei" StemID="1" LemmaEnding="247">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Datīvs"/>
 		</Ending>
 		<Ending ID="251" StemChange="0" Ending="em" StemID="1" LemmaEnding="247">
-			<Attributes Skaitlis="Vienskaitlis" Locījums="Datīvs" Vispārīgais_lietojuma_biežums="Reti"/>
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Datīvs" Lietojuma_biežums="Reti"/>
 		</Ending>
 		<Ending ID="252" StemChange="0" Ending="i" StemID="1" LemmaEnding="247">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Akuzatīvs"/>
@@ -800,13 +800,13 @@
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 		<Ending ID="255" StemChange="0" Ending="" StemID="1" LemmaEnding="247">
-			<Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs" Vispārīgais_lietojuma_biežums="Reti"/>
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs" Lietojuma_biežums="Reti"/>
 		</Ending>
 		<Ending ID="256" StemChange="0" Ending="is" StemID="1" LemmaEnding="247">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Nominatīvs"/>
 		</Ending>
 		<Ending ID="257" StemChange="0" Ending="es" StemID="1" LemmaEnding="247">
-			<Attributes Skaitlis="Daudzskaitlis" Locījums="Nominatīvs" Vispārīgais_lietojuma_biežums="Reti"/>
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Nominatīvs" Lietojuma_biežums="Reti"/>
 		</Ending>
 		<Ending ID="258" StemChange="101" Ending="u" StemID="1" LemmaEnding="247">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Ģenitīvs"/>
