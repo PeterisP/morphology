@@ -328,9 +328,9 @@ public class LatgalianTest {
 		pl_masc_gen.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Masculine);
 
 		List<Wordform> pīci = analyzer.generateInflectionsFromParadigm("pīci", 25);
-		System.out.println ("Bop! " + pīci);
-		for (Wordform wf: pīci)
-			wf.describe(System.err);
+		// System.out.println ("Bop! " + pīci);
+		//for (Wordform wf: pīci)
+		//	wf.describe(System.err);
 		assertInflection(pīci, pl_masc_gen, "pīci");
 
 		List<Wordform> trešs = analyzer.generateInflectionsFromParadigm("trešs", 26);
