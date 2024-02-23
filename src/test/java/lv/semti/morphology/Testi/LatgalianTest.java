@@ -140,6 +140,35 @@ public class LatgalianTest {
 	// Testi latgaliešu vārdu locīšanai atbilstoši http://genling.spbu.ru/baltist/Publicat/LatgVol1.pdf
 
 	@Test
+	public void idIntegrity() {
+		// integritāte - vai nav dubulti numuri
+		HashMap<Integer, Paradigm> vārdgrupuNr = new HashMap<Integer, Paradigm>();
+		HashMap<Integer, Lexeme> leksēmuNr = new HashMap<Integer, Lexeme>();
+		HashMap<Integer, Ending> galotņuNr = new HashMap<Integer, Ending>();
+
+		for (Paradigm vārdgrupa : analyzer.paradigms) {
+			if (vārdgrupuNr.get(vārdgrupa.getID()) != null)
+				fail("Atkārtojas vārdgrupas nr " + vārdgrupa.getID());
+			vārdgrupuNr.put(vārdgrupa.getID(), vārdgrupa);
+
+			for (Lexeme leksēma : vārdgrupa.lexemes) {
+				if (leksēmuNr.get(leksēma.getID()) != null) {
+					leksēma.describe(new PrintWriter(System.err));
+					leksēmuNr.get(leksēma.getID()).describe(new PrintWriter(System.err));
+					fail(String.format("Atkārtojas leksēmas nr %d : '%s' un '%s'", leksēma.getID(), leksēma.getStem(0), leksēmuNr.get(leksēma.getID()).getStem(0)));
+				}
+				leksēmuNr.put(leksēma.getID(), leksēma);
+			}
+
+			for (Ending ending : vārdgrupa.endings) {
+				if (galotņuNr.get(ending.getID()) != null)
+					fail("Atkārtojas galotnes nr " + ending.getID());
+				galotņuNr.put(ending.getID(), ending);
+			}
+		}
+	}
+
+	@Test
 	public void viejs() {
 		List<Wordform> viejs = analyzer.generateInflections("viejs");
 //        describe(viejs);
