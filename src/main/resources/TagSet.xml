@@ -404,6 +404,12 @@
 	<Value LV="Minēšana pēc galotnes" EN="Guess based on endings"/>
 </Attribute>
 
+<Attribute LV="Paradigmai atļautie atvasinājumi" EN="Paradigm supported derivations">
+	<Value LV="-tājs, -ējs, -tāja, -ēja" EN="-tājs, -ējs, -tāja, -ēja"/>
+	<Value LV="Deminutīvs -īt" EN="Diminutive -īt"/>
+	<Value LV="Deminutīvs -iņ" EN="Diminutive -iņ"/>
+</Attribute>
+
 <Attribute LV="Īpašvārda veids" EN="Proper noun type" PartOfSpeech="Lietvārds" >
 	<Value LV="Priekšvārds" EN="Given name"/>
 	<Value LV="Uzvārds" EN="Surname"/>
