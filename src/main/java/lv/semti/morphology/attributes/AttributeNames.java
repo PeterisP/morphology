@@ -271,8 +271,13 @@ public class AttributeNames {
 	public static final String v_No_Plural = "Nerādīt daudzskaitli";
 	public static final String v_No_Singular = "Nerādīt vienskaitlis";
 
-	public static final String i_Inflection_Properties = "Locīšanas īpatnības";
-	public static final String v_Hardcoded_Wordforms = "Pielasīt visas izņēmumformas";
+	public static final String i_InflectionProperties = "Locīšanas īpatnības";
+	public static final String v_HardcodedWordforms = "Pielasīt visas izņēmumformas";
+
+	public static final String i_ParadigmSupportedDerivations = "Paradigmai atļautie atvasinājumi";
+	public static final String v_Derivation_tājs_tāja_ējs_ēja = "-tājs, -ējs, -tāja, -ēja";
+	public static final String v_Diminutive_īt = "Deminutīvs -īt";
+	public static final String v_Diminutive_iņ = "Deminutīvs -iņ";
 
 	// Vērtības, kuras īslaicīgi piekabina vārda objektam, lai 2012. gada Javas GUI to īpaši atzīmētu
 	public static final String i_Recommended = "Rādīt zaļu - čunkera rekomendācija";

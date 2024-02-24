@@ -404,7 +404,7 @@ public class Analyzer extends Lexicon {
 		}
 
 		if (celms.celms.endsWith("iņ") &&
-				ending.getParadigm().isMatchingStrong(AttributeNames.i_ParadigmSupportedDerivations, AttributeNames.v_Diminutive_īt)) {
+				ending.getParadigm().isMatchingStrong(AttributeNames.i_ParadigmSupportedDerivations, AttributeNames.v_Diminutive_iņ)) {
 			String pamatforma = celms.celms.substring(0,celms.celms.length()-2);
 			String pamatforma2 = pamatforma;
 			if (pamatforma.endsWith("dz")) pamatforma2 = pamatforma.substring(0,pamatforma.length()-2)+"g";

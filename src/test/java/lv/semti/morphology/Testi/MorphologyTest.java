@@ -4269,4 +4269,13 @@ public class MorphologyTest {
 //        describe(formas);
     }
 
+    @Test
+    public void multivaluetags() {
+        AttributeValues p = locītājs.paradigmByID(7);
+//        System.out.print(p.getValue(AttributeNames.i_ParadigmSupportedDerivations));
+        assertTrue(p.isMatchingStrong(AttributeNames.i_ParadigmSupportedDerivations, AttributeNames.v_Derivation_tājs_tāja_ējs_ēja));
+        assertTrue(p.isMatchingStrong(AttributeNames.i_ParadigmSupportedDerivations, AttributeNames.v_Diminutive_iņ));
+        assertTrue(p.isMatchingWeak(AttributeNames.i_ParadigmSupportedDerivations, AttributeNames.v_Derivation_tājs_tāja_ējs_ēja));
+        assertTrue(p.isMatchingWeak(AttributeNames.i_ParadigmSupportedDerivations, AttributeNames.v_Diminutive_iņ));
+    }
 }
