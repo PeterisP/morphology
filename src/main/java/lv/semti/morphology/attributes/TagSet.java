@@ -125,12 +125,18 @@ public class TagSet {
 			LinkedList<Attribute> attrs = getAttribute(pāris.getKey(), language);
 			if (attributes.size() < 1)
 				return String.format("Nesaprasta īpašība %s !!", pāris.getKey());
-			boolean allowed = false;
-			for (Attribute a : attrs)
-				if (a.isAllowed(pāris.getValue())) allowed = true;
-			
-			if (!allowed)
-				return String.format("Īpašība %s : %s neder!", pāris.getKey(), pāris.getValue());
+
+			for (String value : pāris.getValue().split("\\|")) {
+				boolean allowed = false;
+				for (Attribute a : attrs)
+					if (a.isAllowed(value)) allowed = true;
+				if (!allowed) {
+					if (pāris.getValue().contains("|"))
+						return String.format("Īpašība %s : %s (%s) neder!", pāris.getKey(), value, pāris.getValue());
+					else
+						return String.format("Īpašība %s : %s neder!", pāris.getKey(), pāris.getValue());
+				}
+			}
 		}
 		return null;
 	}
