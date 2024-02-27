@@ -26,11 +26,8 @@
   <Paradigm Stems="1" ID="8" Description="Lietvārds 4. deklinācija -us, ģenitīvs -is">
     <Lexeme Stem1="kuoj"/>
   </Paradigm>
-  <Paradigm Stems="1" ID="9" Description="Lietvārds 5. deklinācija -e, lokatīvs -ē">
+  <Paradigm Stems="1" ID="9" Description="Lietvārds 5. deklinācija -e, ar miju">
     <Lexeme Stem1="muot"/>
-  </Paradigm>
-  <Paradigm Stems="1" ID="10" Description="Lietvārds 5. deklinācija -e, lokatīvs -ie/-ī">
-    <Lexeme Stem1="egl"/>
   </Paradigm>
   <Paradigm Stems="1" ID="11" Description="Lietvārds 6. deklinācija -s, ar miju">
     <Lexeme Stem1="sird"/>
@@ -62,8 +59,18 @@
   <Paradigm Stems="1" ID="21" Description="Īpašības vārdi, galotne -ys">
     <Lexeme Stem1="agr"/>
   </Paradigm>
-  <Paradigm Stems="1" ID="21" Description="Īpašības vārdi, galotne -is, burtu mija">
+  <Paradigm Stems="1" ID="22" Description="Īpašības vārdi, galotne -is, burtu mija">
     <Lexeme Stem1="slapn"/>
+  </Paradigm>
+
+  <Paradigm Stems="1" ID="25" Description="Pamata skaitļa vārdi daudskaitlī">
+    <Lexeme Stem1="pīc"/>
+  </Paradigm>
+  <Paradigm Stems="1" ID="26" Description="Kārtas skaitļa vārdi ar nenoteikto galotni">
+    <Lexeme Stem1="treš"/>
+  </Paradigm>
+  <Paradigm Stems="1" ID="27" Description="Kārtas skaitļa vārdi ar noteikto galotni">
+    <Lexeme Stem1="pyrm"/>
   </Paradigm>
 
 </Lexicon>

@@ -140,6 +140,35 @@ public class LatgalianTest {
 	// Testi latgaliešu vārdu locīšanai atbilstoši http://genling.spbu.ru/baltist/Publicat/LatgVol1.pdf
 
 	@Test
+	public void idIntegrity() {
+		// integritāte - vai nav dubulti numuri
+		HashMap<Integer, Paradigm> vārdgrupuNr = new HashMap<Integer, Paradigm>();
+		HashMap<Integer, Lexeme> leksēmuNr = new HashMap<Integer, Lexeme>();
+		HashMap<Integer, Ending> galotņuNr = new HashMap<Integer, Ending>();
+
+		for (Paradigm vārdgrupa : analyzer.paradigms) {
+			if (vārdgrupuNr.get(vārdgrupa.getID()) != null)
+				fail("Atkārtojas vārdgrupas nr " + vārdgrupa.getID());
+			vārdgrupuNr.put(vārdgrupa.getID(), vārdgrupa);
+
+			for (Lexeme leksēma : vārdgrupa.lexemes) {
+				if (leksēmuNr.get(leksēma.getID()) != null) {
+					leksēma.describe(new PrintWriter(System.err));
+					leksēmuNr.get(leksēma.getID()).describe(new PrintWriter(System.err));
+					fail(String.format("Atkārtojas leksēmas nr %d : '%s' un '%s'", leksēma.getID(), leksēma.getStem(0), leksēmuNr.get(leksēma.getID()).getStem(0)));
+				}
+				leksēmuNr.put(leksēma.getID(), leksēma);
+			}
+
+			for (Ending ending : vārdgrupa.endings) {
+				if (galotņuNr.get(ending.getID()) != null)
+					fail("Atkārtojas galotnes nr " + ending.getID());
+				galotņuNr.put(ending.getID(), ending);
+			}
+		}
+	}
+
+	@Test
 	public void viejs() {
 		List<Wordform> viejs = analyzer.generateInflections("viejs");
 //        describe(viejs);
@@ -259,11 +288,8 @@ public class LatgalianTest {
 		dsk_gen.addAttribute(AttributeNames.i_Case, AttributeNames.v_Genitive);
 
 		List<Wordform> muote = analyzer.generateInflectionsFromParadigm("muote", 9);
-		assertInflection(muote, vsk_loc, "muotē");
+		assertInflectionMultiple(muote, vsk_loc, new HashSet<String>(){{ add("muotē"); add("muotie"); add("muotī");}});
 		assertInflection(muote, dsk_gen, "muošu");
-
-		List<Wordform> egle = analyzer.generateInflectionsFromParadigm("egle", 10);
-		assertInflection(egle, vsk_loc, "eglie");
 
 		List<Wordform> šaļte = analyzer.generateInflectionsFromParadigm("šaļte", 17);
 		assertInflection(šaļte, dsk_gen, "šaļtu");
@@ -287,32 +313,60 @@ public class LatgalianTest {
 	@Test
 	public void adj()
 	{
-		AttributeValues dsk_nom_masc_comp = new AttributeValues();
-		dsk_nom_masc_comp.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adjective);
-		dsk_nom_masc_comp.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
-		dsk_nom_masc_comp.addAttribute(AttributeNames.i_Case, AttributeNames.v_Nominative);
-		dsk_nom_masc_comp.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Masculine);
-		dsk_nom_masc_comp.addAttribute(AttributeNames.i_Degree, AttributeNames.v_Comparative);
+		AttributeValues sg_nom_masc_comp = new AttributeValues();
+		sg_nom_masc_comp.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adjective);
+		sg_nom_masc_comp.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+		sg_nom_masc_comp.addAttribute(AttributeNames.i_Case, AttributeNames.v_Nominative);
+		sg_nom_masc_comp.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Masculine);
+		sg_nom_masc_comp.addAttribute(AttributeNames.i_Degree, AttributeNames.v_Comparative);
 
-		AttributeValues vsk_gen_fem_pos_indef = new AttributeValues();
-		vsk_gen_fem_pos_indef.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adjective);
-		vsk_gen_fem_pos_indef.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
-		vsk_gen_fem_pos_indef.addAttribute(AttributeNames.i_Case, AttributeNames.v_Genitive);
-		vsk_gen_fem_pos_indef.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Feminine);
-		vsk_gen_fem_pos_indef.addAttribute(AttributeNames.i_Degree, AttributeNames.v_Positive);
-		vsk_gen_fem_pos_indef.addAttribute(AttributeNames.i_Definiteness, AttributeNames.v_Indefinite);
+		AttributeValues sg_gen_fem_pos_indef = new AttributeValues();
+		sg_gen_fem_pos_indef.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adjective);
+		sg_gen_fem_pos_indef.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+		sg_gen_fem_pos_indef.addAttribute(AttributeNames.i_Case, AttributeNames.v_Genitive);
+		sg_gen_fem_pos_indef.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Feminine);
+		sg_gen_fem_pos_indef.addAttribute(AttributeNames.i_Degree, AttributeNames.v_Positive);
+		sg_gen_fem_pos_indef.addAttribute(AttributeNames.i_Definiteness, AttributeNames.v_Indefinite);
 
 		List<Wordform> lobs = analyzer.generateInflectionsFromParadigm("lobs", 20);
-		assertInflection(lobs, dsk_nom_masc_comp, "lobuoks");
-		assertInflectionMultiple(lobs, vsk_gen_fem_pos_indef, new HashSet<String>(){{ add("lobys"); add("lobas");}});
+		assertInflection(lobs, sg_nom_masc_comp, "lobuoks");
+		assertInflectionMultiple(lobs, sg_gen_fem_pos_indef, new HashSet<String>(){{ add("lobys"); add("lobas");}});
 
 		List<Wordform> agrys = analyzer.generateInflectionsFromParadigm("agrys", 21);
-		assertInflection(agrys, dsk_nom_masc_comp, "agruokys");
-		assertInflectionMultiple(agrys, vsk_gen_fem_pos_indef, new HashSet<String>(){{ add("agrys"); add("agras");}});
+		assertInflection(agrys, sg_nom_masc_comp, "agruokys");
+		assertInflectionMultiple(agrys, sg_gen_fem_pos_indef, new HashSet<String>(){{ add("agrys"); add("agras");}});
 
 		List<Wordform> slapnis = analyzer.generateInflectionsFromParadigm("slapnis", 22);
-		assertInflection(slapnis, dsk_nom_masc_comp, "slapņuoks");
-		assertInflectionMultiple(slapnis, vsk_gen_fem_pos_indef, new HashSet<String>(){{ add("slapnis"); add("slapņas");}});
+		assertInflection(slapnis, sg_nom_masc_comp, "slapņuoks");
+		assertInflectionMultiple(slapnis, sg_gen_fem_pos_indef, new HashSet<String>(){{ add("slapnis"); add("slapņas");}});
+	}
+
+	@Test
+	public void numerals()
+	{
+		AttributeValues sg_masc_gen = new AttributeValues();
+		sg_masc_gen.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Numeral);
+		sg_masc_gen.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+		sg_masc_gen.addAttribute(AttributeNames.i_Case, AttributeNames.v_Genitive);
+		sg_masc_gen.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Masculine);
+
+		AttributeValues pl_masc_gen = new AttributeValues();
+		pl_masc_gen.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Numeral);
+		pl_masc_gen.addAttribute(AttributeNames.i_Number, AttributeNames.v_Plural);
+		pl_masc_gen.addAttribute(AttributeNames.i_Case, AttributeNames.v_Genitive);
+		pl_masc_gen.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Masculine);
+
+		List<Wordform> pīci = analyzer.generateInflectionsFromParadigm("pīci", 25);
+		assertInflection(pīci, pl_masc_gen, "pīcu");
+
+		List<Wordform> trešs = analyzer.generateInflectionsFromParadigm("trešs", 26);
+		assertInflection(trešs, sg_masc_gen, "treša");
+		assertInflection(trešs, pl_masc_gen, "trešu");
+
+		List<Wordform> pyrmais = analyzer.generateInflectionsFromParadigm("pyrmais", 27);
+		assertInflection(pyrmais, sg_masc_gen, "pyrmuo");
+		assertInflectionMultiple(pyrmais, pl_masc_gen, new HashSet<String>(){{ add("pyrmū"); add("pyrmūs");}});
+
 	}
 
 	@Test

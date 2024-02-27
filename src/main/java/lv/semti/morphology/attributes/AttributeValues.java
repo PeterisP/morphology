@@ -108,7 +108,12 @@ public class AttributeValues implements FeatureStructure, Cloneable {
 	public boolean isMatchingStrong (String attribute, String value) {
 		String result = attributes.get(attribute);
 		if (result == null && value == null) return true;
-		return (result == null) ? false : result.equalsIgnoreCase(value);
+		if (result == null) return false;
+		if (result.contains("|")) {  // Multivalue support
+			for (String v : result.split("\\|"))
+				if (v.equals(value)) return true;
+			return false;
+		} else return result.equalsIgnoreCase(value);
 	}
 
 	/**
@@ -148,7 +153,12 @@ public class AttributeValues implements FeatureStructure, Cloneable {
 	 */
 	public boolean isMatchingWeak (String attribute, String value) {
 		String result = attributes.get(attribute);
-		return (result == null) ? true : result.equalsIgnoreCase(value);
+		if (result == null) return true;
+		if (result.contains("|")) {  // Multivalue support
+			for (String v : result.split("\\|"))
+				if (v.equals(value)) return true;
+			return false;
+		} else return result.equalsIgnoreCase(value);
 	}	// Atshkjiriiba no checkAttribute - ja atribuuta nav, bet padotaa veertiiba nav null.
 		// Shii metode dod true, check attribute - false.
 

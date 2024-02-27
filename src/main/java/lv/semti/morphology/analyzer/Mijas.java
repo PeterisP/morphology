@@ -437,13 +437,17 @@ public abstract class Mijas {
 				// ------ LATGALIAN from here -----
 				case 100: // latgaliešu 'burtu mija', kur pirms -e, -i, -ī, -ē, -ie ļ, ņ, ķ, ģ kļūst par l, n, k, g
 					if (celms.endsWith("l")) {
-						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ļ", "Mija", "ļ -> l"));
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ļ", "Mija", "ļ/l -> l"));
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "l", "Mija", "ļ/l -> l"));
 					} else if (celms.endsWith("n")) {
-						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ņ", "Mija", "ņ -> n"));
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ņ", "Mija", "ņ/n -> n"));
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "n", "Mija", "ņ/n -> n"));
 					} else if (celms.endsWith("k")) {
-						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ķ", "Mija", "ķ -> k"));
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ķ", "Mija", "ķ/k -> k"));
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "k", "Mija", "ķ/k -> k"));
 					} else if (celms.endsWith("g")) {
-						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ģ", "Mija", "ģ -> g"));
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ģ", "Mija", "ģ/g -> g"));
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "g", "Mija", "ģ/g -> g"));
 					} else {
 						varianti.add(new Variants(celms));
 					}

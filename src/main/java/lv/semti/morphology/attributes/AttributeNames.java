@@ -252,6 +252,9 @@ public class AttributeNames {
 	public static final String v_Outdated = "Novecojis";
 	public static final String v_RegionalOutdated = "[\"Apvidvārds\",\"Novecojis\"]";
 
+	public static final String i_Normative = "Valodas normēšana";
+	public static final String v_Undesirable = "Nevēlams";
+
     public static final String i_EntryProperties = "Leksēmas pamatformas īpatnības";
 	public final static String v_EntryComparative = "Pārākā pakāpe"; // TODO - tizls nosaukums
 	public final static String v_EntryFeminine = "Sieviešu dzimte"; // TODO - tizls nosaukums
@@ -268,7 +271,15 @@ public class AttributeNames {
 	public static final String v_No_Plural = "Nerādīt daudzskaitli";
 	public static final String v_No_Singular = "Nerādīt vienskaitlis";
 
-	// Vērtības, kuras īslaicīgi piekabina vārda objektam, lai GUI to īpaši atzīmētu
+	public static final String i_InflectionProperties = "Locīšanas īpatnības";
+	public static final String v_HardcodedWordforms = "Pielasīt visas izņēmumformas";
+
+	public static final String i_ParadigmSupportedDerivations = "Paradigmai atļautie atvasinājumi";
+	public static final String v_Derivation_tājs_tāja_ējs_ēja = "-tājs, -ējs, -tāja, -ēja";
+	public static final String v_Diminutive_īt = "Deminutīvs -īt";
+	public static final String v_Diminutive_iņ = "Deminutīvs -iņ";
+
+	// Vērtības, kuras īslaicīgi piekabina vārda objektam, lai 2012. gada Javas GUI to īpaši atzīmētu
 	public static final String i_Recommended = "Rādīt zaļu - čunkera rekomendācija";
 	public static final String i_Tagged = "Tagera rekomendācija";
 

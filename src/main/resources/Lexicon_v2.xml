@@ -9,7 +9,7 @@
 	<Corpus FileName="Lexicon_valerijs.xml" Type="core"/>
 	<Corpus FileName="Lexicon_onomastica.xml" Type="aux"/> -->
 	<Paradigm Stems="1" ID="1" Name="noun-1a" LemmaEnding="1" Description="Lietvārdi vīriešu dzimtē, 1. deklinācija ar galotni -s (tēvs)" DescriptionEN="Masculine nouns, 1st declension ending -s (tēvs)" AllowedGuessEndings="bcdfghjklmnprstvzčģķļņšž">
-		<Attributes Vārdšķira="Lietvārds" Deklinācija="1" Dzimte="Vīriešu"/>
+		<Attributes Vārdšķira="Lietvārds" Deklinācija="1" Dzimte="Vīriešu" Paradigmai_atļautie_atvasinājumi="-tājs, -ējs, -tāja, -ēja"/>
 		<Ending ID="1" StemChange="0" Ending="s" StemID="1" LemmaEnding="1">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
 		</Ending>
@@ -51,7 +51,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="2" Name="noun-1b" LemmaEnding="14" Description="Lietvārdi vīriešu dzimtē, 1. deklinācija ar galotni -š (ceļš)" DescriptionEN="Masculine nouns, 1st declension ending -š (ceļš)" AllowedGuessEndings="ņ">
-		<Attributes Vārdšķira="Lietvārds" Deklinācija="1" Dzimte="Vīriešu"/>
+		<Attributes Vārdšķira="Lietvārds" Deklinācija="1" Dzimte="Vīriešu" Paradigmai_atļautie_atvasinājumi="Deminutīvs -iņ"/>
 		<Ending ID="14" StemChange="0" Ending="š" StemID="1" LemmaEnding="14">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
 		</Ending>
@@ -93,7 +93,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="3" Name="noun-2a" LemmaEnding="27" Description="Lietvārdi vīriešu dzimtē, 2. deklinācija ar galotni -is, ar miju (dzenis)" DescriptionEN="Masculine nouns, 2nd declension ending -is, with stemchange (dzenis)" AllowedGuessEndings="bcdgklmnprstvzčšž">
-		<Attributes Vārdšķira="Lietvārds" Deklinācija="2" Dzimte="Vīriešu"/>
+		<Attributes Vārdšķira="Lietvārds" Deklinācija="2" Dzimte="Vīriešu" Paradigmai_atļautie_atvasinājumi="Deminutīvs -īt"/>
 		<Ending ID="27" StemChange="0" Ending="is" StemID="1" LemmaEnding="27">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
 		</Ending>
@@ -255,7 +255,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="7" Name="noun-4f" LemmaEnding="75" Description="Lietvārdi sieviešu dzimtē, 4. deklinācija ar galotni -a (liepa)" DescriptionEN="Feminine nouns, 4th declension ending -a (liepa)" AllowedGuessEndings="bcdfghjklmnprstvzčļņšž">
-		<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Dzimte="Sieviešu"/>
+		<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Dzimte="Sieviešu" Paradigmai_atļautie_atvasinājumi="-tājs, -ējs, -tāja, -ēja|Deminutīvs -iņ"/>
 		<Ending ID="75" StemChange="0" Ending="a" StemID="1" LemmaEnding="75">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
 		</Ending>
@@ -336,7 +336,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="9" Name="noun-5fa" LemmaEnding="87" Description="Lietvārdi sieviešu dzimtē, 5. deklinācija ar galotni -e, ar miju (egle)" DescriptionEN="Feminine nouns, 5th declension ending -e, with stemchange (egle)" AllowedGuessEndings="bcdfghklmnprstvzļšž">
-		<Attributes Vārdšķira="Lietvārds" Deklinācija="5" Dzimte="Sieviešu"/>
+		<Attributes Vārdšķira="Lietvārds" Deklinācija="5" Dzimte="Sieviešu" Paradigmai_atļautie_atvasinājumi="Deminutīvs -īt"/>
 		<Ending ID="87" StemChange="0" Ending="e" StemID="1" LemmaEnding="87">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
 		</Ending>
@@ -378,7 +378,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="10" Name="noun-5ma" LemmaEnding="1146" Description="Lietvārdi vīriešu dzimtē, 5. deklinācija ar galotni -e, ar miju (bende, Palle)" DescriptionEN="Masculine nouns, 5th declension ending -e, with stemchange (bende, Palle)" AllowedGuessEndings="!">
-		<Attributes Vārdšķira="Lietvārds" Deklinācija="5" Dzimte="Vīriešu"/>
+		<Attributes Vārdšķira="Lietvārds" Deklinācija="5" Dzimte="Vīriešu" Paradigmai_atļautie_atvasinājumi="Deminutīvs -īt"/>
 		<Ending ID="1146" StemChange="0" Ending="e" StemID="1" LemmaEnding="1146">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
 		</Ending>
@@ -5034,7 +5034,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="25" Name="pron" LemmaEnding="2329" Description="Vietniekvārdi (es, kas, tāds)" DescriptionEN="Propnouns (es, kas, tāds)" AllowedGuessEndings="!">
-		<Attributes Vārdšķira="Vietniekvārds" Noliegums="Nē"/>
+		<Attributes Vārdšķira="Vietniekvārds" Noliegums="Nē" Locīšanas_īpatnības="Pielasīt visas izņēmumformas"/>
 		<Ending ID="2329" StemChange="0" Ending="" StemID="1" LemmaEnding="2329">
 			<Attributes/>
 		</Ending>
@@ -5058,7 +5058,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="29" Name="hardcoded" LemmaEnding="1158" Description="Pārpalikumi - nelokāmie skaitļa vārdi, kā arī izņēmumgadījumi un atsevišķas formas, kas neiederas nevienā citā grupā (trīsarpus)" DescriptionEN="Hardcoded exceptions, non-inflective numerals and forms not fitting in any other group (trīsarpus)">
-		<Attributes/>
+		<Attributes Locīšanas_īpatnības="Pielasīt visas izņēmumformas"/>
 		<Ending ID="1158" StemChange="0" Ending="" StemID="1" LemmaEnding="1158">
 			<Attributes/>
 		</Ending>

@@ -404,6 +404,12 @@
 	<Value LV="Minēšana pēc galotnes" EN="Guess based on endings"/>
 </Attribute>
 
+<Attribute LV="Paradigmai atļautie atvasinājumi" EN="Paradigm supported derivations">
+	<Value LV="-tājs, -ējs, -tāja, -ēja" EN="-tājs, -ējs, -tāja, -ēja"/>
+	<Value LV="Deminutīvs -īt" EN="Diminutive -īt"/>
+	<Value LV="Deminutīvs -iņ" EN="Diminutive -iņ"/>
+</Attribute>
+
 <Attribute LV="Īpašvārda veids" EN="Proper noun type" PartOfSpeech="Lietvārds" >
 	<Value LV="Priekšvārds" EN="Given name"/>
 	<Value LV="Uzvārds" EN="Surname"/>
@@ -431,7 +437,7 @@
 	<Value LV="Sarunvaloda" EN="Colloquial"/>
 	<Value LV="Nevēlams" EN="Undesirable"/>
 	<Value LV="Neliterārs" EN="Colloquial"/>
-	<Value LV="Žargonvārds" EN="Slang"/>
+	<Value LV="Žargonisms" EN="Slang"/>
 	<Value LV="Slengs" EN="Slang"/>
 	<Value LV="Vulgārisms" EN="Vulgar"/>
 	<Value LV="Barbarisms" EN="Barbaric"/>
@@ -439,21 +445,6 @@
 	<Value LV="Jaunvārds" EN="Neologism"/>
 	<Value LV="Īsziņās" EN="SMS"/>
 	<Value LV="Bērnu valoda" EN="Children"/>
-	<Value LV="[&quot;Bērnu valoda&quot;,&quot;Novecojis&quot;]" EN="Children/Dated"/>
-	<Value LV="[&quot;Sarunvaloda&quot;,&quot;Vēsturisks&quot;]" EN="Historical/Colloquial"/>
-	<Value LV="[&quot;Novecojis&quot;,&quot;Vēsturisks&quot;]" EN="Historical"/>
-	<Value LV="[&quot;Novecojis&quot;,&quot;Sarunvaloda&quot;]" EN="Dated/Colloquial"/>	
-	<Value LV="[&quot;Barbarisms&quot;,&quot;Sarunvaloda&quot;]" EN="Barbaric/Colloquial"/>	
-	<Value LV="[&quot;Neliterārs&quot;,&quot;Sarunvaloda&quot;]" EN="Colloquial"/>
-	<Value LV="[&quot;Sarunvaloda&quot;,&quot;Neliterārs&quot;]" EN="Colloquial"/>	
-	<Value LV="[&quot;Eifēmisms&quot;,&quot;Neliterārs&quot;]" EN="Euphemism/Colloquial"/>	
-	<Value LV="[&quot;Neliterārs&quot;,&quot;Sarunvaloda&quot;,&quot;Vēsturisks&quot;]" EN="Colloquial"/>
-	<Value LV="[&quot;Apvidvārds&quot;,&quot;Vulgārisms&quot;]" EN="Vulgar"/>
-	<Value LV="[&quot;Apvidvārds&quot;,&quot;Žargonvārds&quot;]" EN="Regional/Slang"/>
-	<Value LV="[&quot;Apvidvārds&quot;,&quot;Novecojis&quot;]" EN="Regional/Dated"/>
-	<Value LV="[&quot;Apvidvārds&quot;,&quot;Nevēlams&quot;]" EN="Regional/Undesirable"/>
-	<Value LV="[&quot;Apvidvārds&quot;,&quot;Bērnu valoda&quot;]" EN="Children"/>
-	<Value LV="[&quot;Nevēlams&quot;,&quot;Novecojis&quot;]" EN="Undesirable/Dated"/>
 </Attribute>
 
 <Attribute LV="Stils" EN="Style">
@@ -462,7 +453,7 @@
 	<Value LV="Ironiska ekspresīvā nokrāsa" EN="Ironic"/>
 	<Value LV="Humoristiska ekspresīvā nokrāsa" EN="Jocular"/>
 	<Value LV="Poētiska stilistiskā nokrāsa" EN="Poetic"/>
-	<Value LV="[&quot;Folkloras valodai raksturīga stilistiskā nokrāsa&quot;,&quot;Poētiska stilistiskā nokrāsa&quot;]" EN="Poetic"/>
+	<Value LV="Folkloras valodai raksturīga stilistiskā nokrāsa" EN="Folklore"/>
 	<Value LV="Vienkāršrunas stilistiskā nokrāsa" EN="Simplistic"/>
 	<Value LV="Sirsnīga emocionālā nokrāsa" EN="Hearty"/>
 	<Value LV="Mīlinājuma nokrāsa" EN="Affective"/>
@@ -471,127 +462,104 @@
 
 <Attribute LV="Joma" EN="Domain">
 	<Value LV="Pārtika" EN="Food"/>
-	<Value LV="Kokapstrāde" EN="Carpentry"/>
-	<Value LV="Jurisprudence" EN="Law"/>
+	<Value LV="Kulinārija" EN="Culinary"/>
+
+	<Value LV="Medicīna" EN="Medicine"/>
+	<Value LV="Anatomija" EN="Anatomy"/>
+	<Value LV="Fizioloģija" EN="Physiology"/>
+	<Value LV="Veterinārija" EN="Veterinary"/>
+	<Value LV="Farmakoloģija" EN="Pharmacology"/>
+	<Value LV="Ģenētika" EN="Genetics"/>
+	<Value LV="Bioķīmija" EN="Biochemistry"/>
+
+	<Value LV="Fizika" EN="Physics"/>
+	<Value LV="Mehānika" EN="Mechanics"/>
+	<Value LV="Meteoroloģija" EN="Meteorology"/>
+	<Value LV="Ķīmija" EN="Chemistry"/>
+	<Value LV="Ķīmijas tehnoloģija" EN="Chemistry"/>
+	<Value LV="Materiālzinātne" EN="Material science"/>
+	
+	<Value LV="Bioloģija" EN="Biology"/>
+	<Value LV="Zooloģija" EN="Zoology"/>
 	<Value LV="Botānika" EN="Botany"/>
 	<Value LV="Ornitoloģija" EN="Ornitology"/>
-	<Value LV="Zooloģija" EN="Zoology"/>
-	<Value LV="Anatomija" EN="Anatomy"/>
-	<Value LV="Fizika" EN="Physics"/>
-	<Value LV="Bioloģija" EN="Biology"/>
-	<Value LV="[&quot;Bioloģija&quot;,&quot;Ķīmija&quot;]" EN="Biology/Chemistry"/>
-	<Value LV="Ķīmija" EN="Chemistry"/>
-	<Value LV="[&quot;Aeronautika&quot;,&quot;Ķīmija&quot;]" EN="Aeronautics/Chemistry"/>
-	<Value LV="[&quot;Ķīmija&quot;,&quot;Farmakoloģija&quot;]" EN="Chemistry/Pharmacology"/>
-	<Value LV="[&quot;Tehnoloģija&quot;,&quot;Ķīmija&quot;,&quot;Ķīmijas tehnoloģija&quot;]" EN="Chemistry technology"/>
-	<Value LV="[&quot;Ekoloģija&quot;,&quot;Ķīmija&quot;]" EN="Ecology/Chemistry"/>
-	<Value LV="[&quot;Fizika&quot;,&quot;Ķīmija&quot;]" EN="Physics/Chemistry"/>
-	<Value LV="[&quot;Bioloģija&quot;,&quot;Fizika&quot;,&quot;Ķīmija&quot;]" EN="Biology/Physics/Chemistry"/>
-	<Value LV="[&quot;Fizika&quot;,&quot;Tehnika&quot;]" EN="Physics/Technology"/>
-	<Value LV="Ģeometrija" EN="Geometry"/>
-	<Value LV="[&quot;Fizika&quot;,&quot;Ģeometrija&quot;]" EN="Physics/Geometry"/>
-	<Value LV="[&quot;Fizika&quot;,&quot;Medicīna&quot;]" EN="Physics/Medicine"/>
-	<Value LV="[&quot;Fizika&quot;,&quot;Matemātika&quot;]" EN="Physics/Mathemathics"/>
+	<Value LV="Entomoloģija" EN="Entomology"/>
+	
 	<Value LV="Literatūrzinātne" EN="Literary science"/>
 	<Value LV="Literatūra" EN="Literature"/>
 	<Value LV="Valodniecība" EN="Linguistics"/>
 	<Value LV="Filoloģija" EN="Philology"/>
-	<Value LV="[&quot;Literatūrzinātne&quot;,&quot;Valodniecība&quot;]" EN="Literary science/Linguistics"/>
-	<Value LV="Mūzika" EN="Music"/>
-	<Value LV="[&quot;Literatūrzinātne&quot;,&quot;Mūzika&quot;]" EN="Literary science/Music"/>
-	<Value LV="Arhitektūra" EN="Architecture"/>
-	<Value LV="Fizioloģija" EN="Physiology"/>
-	<Value LV="[&quot;Fizioloģija&quot;,&quot;Medicīna&quot;]" EN="Physiology/Medicine"/>
-	<Value LV="Medicīna" EN="Medicine"/>
-	<Value LV="Veterinārija" EN="Veterinary"/>
-	<Value LV="[&quot;Medicīna&quot;,&quot;Veterinārija&quot;]" EN="Medicine/Veterinary"/>
-	<Value LV="[&quot;Lopkopība&quot;,&quot;Medicīna&quot;]" EN="Animal husbandry/Medicine"/>
-	<Value LV="[&quot;Bioloģija&quot;,&quot;Medicīna&quot;]" EN="Biology/Medicine"/>
-	<Value LV="[&quot;Medicīna&quot;,&quot;Ķīmija&quot;]" EN="Medicine/Chemistry"/>
-	<Value LV="Farmakoloģija" EN="Pharmacology"/>
-	<Value LV="Arheoloģija" EN="Archeology"/>
-	<Value LV="Psiholoģija" EN="Psychology"/>
-	<Value LV="[&quot;Medicīna&quot;,&quot;Psiholoģija&quot;]" EN="Medicine/Psychology"/>
-	<Value LV="Filozofija" EN="Philosophy"/>
-	<Value LV="[&quot;Filozofija&quot;,&quot;Psiholoģija&quot;]" EN="Philosophy/Psychology"/>
-	<Value LV="Meteoroloģija" EN="Meteorology"/>
-	<Value LV="Ģeogrāfija" EN="Geography"/>
-	<Value LV="[&quot;Meteoroloģija&quot;,&quot;Ģeogrāfija&quot;]" EN="Meteorology/Geography"/>
-	<Value LV="Astronomija" EN="Astronomy"/>
-	<Value LV="[&quot;Astronomija&quot;,&quot;Fizika&quot;]" EN="Astronomy/Physics"/>
-	<Value LV="Ģeodēzija" EN="Geodesy"/>
-	<Value LV="[&quot;Astronomija&quot;,&quot;Ģeodēzija&quot;]" EN="Astronomy/Geodesy"/>
-	<Value LV="Kartogrāfija" EN="Cartography"/>
-	<Value LV="Ģeoloģija" EN="Geology"/>
-	<Value LV="Ģenētika" EN="Genetics"/>
-	<Value LV="Mineraloģija" EN="Mineralogy"/>
-	<Value LV="Reliģija" EN="Religion"/>
-	<Value LV="Mitoloģija" EN="Mythology"/>
-	<Value LV="[&quot;Mitoloģija&quot;,&quot;Reliģija&quot;]" EN="Mythology/Religion"/>
-	<Value LV="Folklora" EN="Folklore"/>
-	<Value LV="[&quot;Folklora&quot;,&quot;Mitoloģija&quot;]" EN="Folklore/Mythology"/>
-	<Value LV="Etnogrāfija" EN="Etnography"/>
-	<Value LV="Kulinārija" EN="Culinary"/>
-	<Value LV="Politika" EN="Politics"/>
-	<Value LV="Ekonomika" EN="Economics"/>
-	<Value LV="Finanses" EN="Finance"/>
-	<Value LV="Grāmatvedība" EN="Accounting"/>
-	<Value LV="Matemātika" EN="Mathemathics"/>
-	<Value LV="Loģika" EN="Logic"/>
-	<Value LV="Statistika" EN="Statistics"/>
-	<Value LV="Informātika" EN="Informatics"/>
+	
 	<Value LV="Tehnika" EN="Technology"/>
 	<Value LV="Tehnoloģija" EN="Technology"/>
-	<Value LV="[&quot;Tehnoloģija&quot;,&quot;Ķīmija&quot;]" EN="Technology/Chemistry"/>
+	<Value LV="Informātika" EN="Informatics"/>
 	<Value LV="Elektrotehnika" EN="Electrotechnical"/>	
 	<Value LV="Elektronika" EN="Electronics"/>	
 	<Value LV="Hidrotehnika" EN="Hydrotechnical"/>
-	<Value LV="Tekstilrūpniecība" EN="Textiles"/>
-	<Value LV="Poligrāfija" EN="Poligraphy"/>
+	<Value LV="Aeronautika" EN="Aeronautics"/>
+
+	<Value LV="Filozofija" EN="Philosophy"/>
+	<Value LV="Jurisprudence" EN="Law"/>
+	<Value LV="Mūzika" EN="Music"/>
+	<Value LV="Arhitektūra" EN="Architecture"/>
+	<Value LV="Būvniecība" EN="Construction"/>
+	<Value LV="Arheoloģija" EN="Archeology"/>
+	<Value LV="Historiogrāfija" EN="Historiography"/>
+	<Value LV="Psiholoģija" EN="Psychology"/>
+	<Value LV="Astronomija" EN="Astronomy"/>
+	<Value LV="Ģeoloģija" EN="Geology"/>
+	<Value LV="Mineraloģija" EN="Mineralogy"/>
+	<Value LV="Ģeogrāfija" EN="Geography"/>
+	<Value LV="Ģeodēzija" EN="Geodesy"/>
+	<Value LV="Kartogrāfija" EN="Cartography"/>
+	<Value LV="Ekoloģija" EN="Ecology"/>
+
+	<Value LV="Socioloģija" EN="Sociology"/>
+	<Value LV="Antropoloģija" EN="Antropology"/>
+	<Value LV="Reliģija" EN="Religion"/>
+	<Value LV="Mitoloģija" EN="Mythology"/>
+	<Value LV="Folklora" EN="Folklore"/>
+	<Value LV="Etnogrāfija" EN="Etnography"/>
+	<Value LV="Politika" EN="Politics"/>
+
+	<Value LV="Ekonomika" EN="Economics"/>
+	<Value LV="Finanses" EN="Finance"/>
+	<Value LV="Grāmatvedība" EN="Accounting"/>
+
+	<Value LV="Matemātika" EN="Mathemathics"/>
+	<Value LV="Ģeometrija" EN="Geometry"/>
+	<Value LV="Loģika" EN="Logic"/>
+	<Value LV="Statistika" EN="Statistics"/>
+
 	<Value LV="Lauksaimniecība" EN="Agriculture"/>
+	<Value LV="Agronomija" EN="Agriculture"/>
 	<Value LV="Lauksaimniecības tehnika" EN="Agriculture"/>
 	<Value LV="Lopkopība" EN="Animal husbandry"/>
-	<Value LV="Agronomija" EN="Agriculture"/>
-	<Value LV="Mežsaimniecība" EN="Forestry"/>
-	<Value LV="[&quot;Lauksaimniecība&quot;,&quot;Mežsaimniecība&quot;]" EN="Agriculture/Forestry"/>
-	<Value LV="[&quot;Bioloģija&quot;,&quot;Mežsaimniecība&quot;]" EN="Biology/Forestry"/>
-	<Value LV="[&quot;Kokapstrāde&quot;,&quot;Mežrūpniecība&quot;]" EN="Carpentry/Forestry"/>
 	<Value LV="Medniecība" EN="Hunting"/>
 	<Value LV="Biškopība" EN="Beekeeping"/>
-	<Value LV="Būvniecība" EN="Construction"/>
-	<Value LV="Fiziskā kultūra un sports" EN="Sports"/>
-	<Value LV="Militārās zinātnes" EN="Military"/>
-	<Value LV="Aviācija" EN="Aviation"/>
+	<Value LV="Mežsaimniecība" EN="Forestry"/>
+	<Value LV="Kokapstrāde" EN="Carpentry"/>
 	<Value LV="Jūrniecība" EN="Marine"/>
 	<Value LV="Zvejniecība" EN="Fishing"/>
-	<Value LV="Kalnrūpniecība" EN="Mining"/>
+
+	<Value LV="Fiziskā kultūra un sports" EN="Sports"/>
+	<Value LV="Militārās zinātnes" EN="Military"/>
+	<Value LV="Telekomunikācijas" EN="Telecommunications"/>
+	<Value LV="Aviācija" EN="Aviation"/>
 	<Value LV="Dzelzceļš" EN="Railroad"/>
-	<Value LV="Historiogrāfija" EN="Historiography"/>
-	<Value LV="Materiālzinātne" EN="Material science"/>
+	<Value LV="Kalnrūpniecība" EN="Mining"/>
+	<Value LV="Silikātu tehnoloģija" EN="Silicate technology"/>
+	<Value LV="Tekstilrūpniecība" EN="Textiles"/>
 	<Value LV="Apģērbi" EN="Clothing"/>
+	<Value LV="Papīrrūpniecība" EN="Paper manufacturing"/>
+	<Value LV="Poligrāfija" EN="Poligraphy"/>
+	<Value LV="Siltumtehnika" EN="HVAC"/>
+	<Value LV="Keramika" EN="Ceramics"/>
+	<Value LV="Glezniecība" EN="Painting"/>
 	<Value LV="Fototehnika" EN="Photography"/>
 	<Value LV="Fotogrāfija" EN="Photography"/>
 	<Value LV="Kinematogrāfija" EN="Cinematography"/>
-	<Value LV="[&quot;Fotogrāfija&quot;,&quot;Kinematogrāfija&quot;]" EN="Photography/Cinematography"/>
-	<Value LV="[&quot;Fotogrāfija&quot;,&quot;Kinematogrāfija&quot;,&quot;Televīzija&quot;]" EN="Photography/Cinematography/Television"/>
-	<Value LV="[&quot;Informātika&quot;,&quot;Tehnika&quot;,&quot;Telekomunikācijas&quot;]" EN="Informatics/Technology/Telecommunications"/>
-	<Value LV="[&quot;Informātika&quot;,&quot;Matemātika&quot;]" EN="Informatics/Mathemathics"/>
-	<Value LV="Aeronautika" EN="Aeronautics"/>
-	<Value LV="[&quot;Aeronautika&quot;,&quot;Jūrniecība&quot;]" EN="Aeronautics/Marine"/>
-	<Value LV="[&quot;Aeronautika&quot;,&quot;Fizika&quot;]" EN="Aeronautics/Physics"/>
-	<Value LV="[&quot;Aeronautika&quot;,&quot;Tehnika&quot;]" EN="Aeronautics/Technology"/>
-	<Value LV="[&quot;Jūrniecība&quot;,&quot;Meteoroloģija&quot;]" EN="Marine/Meteorology"/>
-	<Value LV="Bioķīmija" EN="Biochemistry"/>
-	<Value LV="Glezniecība" EN="Painting"/>
 	<Value LV="Televīzija" EN="Television"/>
-	<Value LV="Entomoloģija" EN="Entomology"/>
-	<Value LV="Antropoloģija" EN="Antropology"/>
-	<Value LV="Socioloģija" EN="Sociology"/>
-	<Value LV="Ekoloģija" EN="Ecology"/>
-	<Value LV="Keramika" EN="Ceramics"/>
-	<Value LV="Mehānika" EN="Mechanics"/>
-	<Value LV="Siltumtehnika" EN="HVAC"/>
-	<Value LV="Papīrrūpniecība" EN="Paper manufacturing"/>
 	<Value LV="Vēsturisks vietvārds" EN="Historical toponym"/>
 	<Value LV="Vēsturisks personvārds" EN="Historical person name"/>
 	<Value LV="Attiecas uz kapitālistisko iekārtu, kapitālistisko sabiedrību" EN="Capitalism"/>
@@ -716,6 +684,7 @@
 	<Value LV="Pārākā pakāpe" EN="Comparative"/>
 </Attribute>
 <Attribute LV="Locīšanas īpatnības" EN="Inflection properties">
+	<Value LV="Pielasīt visas izņēmumformas" EN="Gather hardcoded wordforms"/>
 	<Value LV="Otrās un trešās konjugācijas paralelitāte" EN="2nd/3rd conjugation parallel forms"/>
 	<Value LV="[&quot;Otrās un trešās konjugācijas paralelitāte&quot;,&quot;Paralēlās formas&quot;]" EN="2nd/3rd conjugation parallel forms"/>
 	<Value LV="[&quot;Otrās un trešās konjugācijas paralelitāte&quot;,&quot;Paralēlās formas&quot;,&quot;Pirmās konjugācijas paralēlforma visām personām&quot;]" EN="2nd/3rd conjugation parallel forms / 1st conjugation parallel forms"/>

@@ -25,7 +25,6 @@ import lv.semti.morphology.attributes.AttributeNames;
 import lv.semti.morphology.attributes.AttributeValues;
 import lv.semti.morphology.corpus.ParadigmFrequencyComparator;
 import lv.semti.morphology.lexicon.*;
-import org.checkerframework.checker.units.qual.A;
 
 public class Analyzer extends Lexicon {
 
@@ -331,7 +330,8 @@ public class Analyzer extends Lexicon {
 
 	private void guessDerivedNoun(String word, Word result, Ending ending, Variants celms, String originalWord) {
 		// -tājs, -ējs, -tāja, -ēja
-		if (ending.getParadigm().getID() != 1 && ending.getParadigm().getID() != 7) return;
+		if (!ending.getParadigm().isMatchingStrong(AttributeNames.i_ParadigmSupportedDerivations, AttributeNames.v_Derivation_tājs_tāja_ējs_ēja))
+			return;
 
 		if (celms.celms.endsWith("tāj")) {
 			String verb_stem = celms.celms.substring(0,celms.celms.length()-3);
@@ -384,66 +384,61 @@ public class Analyzer extends Lexicon {
 	 */
 	private void guessDeminutive(String word, Word rezultāts, Ending ending,
 			Variants celms, String originalWord) {
-		switch (ending.getParadigm().getID()) {
-		// FIXME - neforšs hack, paļaujamies uz 'maģiskiem' vārdgrupu numuriem
-		case 3: // 2. deklinācijas -is
-		case 9:
-		case 10: // 5. deklinācijas -e
-			if (celms.celms.endsWith("īt")) {
-				ArrayList<Lexeme> deminutīvleksēmas = ending.getEndingLexemes(celms.celms.substring(0,celms.celms.length()-2));
-				if (deminutīvleksēmas != null)
-					for (Lexeme leksēma : deminutīvleksēmas) {
-						Wordform variants = new Wordform(word, leksēma, ending);
-						variants.addAttributes(celms); // TODO - iespējams, ka šis ir lieks
-						variants.addAttribute(AttributeNames.i_Deminutive, "-īt-");
-						variants.addAttribute(AttributeNames.i_Source,"pamazināmo formu atvasināšana");
-						variants.addAttribute(AttributeNames.i_SourceLemma, leksēma.getValue(AttributeNames.i_Lemma));
-						variants.addAttribute(AttributeNames.i_Guess, AttributeNames.v_Deminutive);
-						String lemma = leksēma.getStem(0) + "īt" + ending.getLemmaEnding().getEnding();
-						lemma = recapitalize(lemma, originalWord);
-						variants.addAttribute(AttributeNames.i_Lemma, lemma);
-						rezultāts.addWordform(variants);										
-					}
-			}
-			break;
-		case 2: // 1. deklinācijas -š
-		case 7: // 4. deklinācijas -a						
-			if (celms.celms.endsWith("iņ")) {
-				String pamatforma = celms.celms.substring(0,celms.celms.length()-2);
-				String pamatforma2 = pamatforma;
-				if (pamatforma.endsWith("dz")) pamatforma2 = pamatforma.substring(0,pamatforma.length()-2)+"g";
-				if (pamatforma.endsWith("c")) pamatforma2 = pamatforma.substring(0,pamatforma.length()-1)+"k";
 
-				ArrayList<Lexeme> deminutīvleksēmas = ending.getEndingLexemes(pamatforma2);
-
-				if (ending.getParadigm().getID() == 2) {  // mainās deklinācija galds -> galdiņš, tāpēc īpaši
-					deminutīvleksēmas = endingByID(1).getEndingLexemes(pamatforma2);
-					//FIXME - nedroša atsauce uz galotni nr. 1
-
-					if (pamatforma.endsWith("l")) pamatforma2 = pamatforma.substring(0,pamatforma.length()-1)+"ļ";
-					ArrayList<Lexeme> deminutīvleksēmas2 = ending.getEndingLexemes(pamatforma2);
-						// bet ir arī ceļš->celiņš, kur paliek 2. deklinācija
-					if (deminutīvleksēmas == null) deminutīvleksēmas = deminutīvleksēmas2;
-					else if (deminutīvleksēmas2 != null) deminutīvleksēmas.addAll(deminutīvleksēmas2);
+		if (celms.celms.endsWith("īt") &&
+				ending.getParadigm().isMatchingStrong(AttributeNames.i_ParadigmSupportedDerivations, AttributeNames.v_Diminutive_īt)) {
+			ArrayList<Lexeme> deminutīvleksēmas = ending.getEndingLexemes(celms.celms.substring(0,celms.celms.length()-2));
+			if (deminutīvleksēmas != null)
+				for (Lexeme leksēma : deminutīvleksēmas) {
+					Wordform variants = new Wordform(word, leksēma, ending);
+					variants.addAttributes(celms); // TODO - iespējams, ka šis ir lieks
+					variants.addAttribute(AttributeNames.i_Deminutive, "-īt-");
+					variants.addAttribute(AttributeNames.i_Source,"pamazināmo formu atvasināšana");
+					variants.addAttribute(AttributeNames.i_SourceLemma, leksēma.getValue(AttributeNames.i_Lemma));
+					variants.addAttribute(AttributeNames.i_Guess, AttributeNames.v_Deminutive);
+					String lemma = leksēma.getStem(0) + "īt" + ending.getLemmaEnding().getEnding();
+					lemma = recapitalize(lemma, originalWord);
+					variants.addAttribute(AttributeNames.i_Lemma, lemma);
+					rezultāts.addWordform(variants);
 				}
-				if ((pamatforma.endsWith("ļ") && ending.getParadigm().getID() == 2) || pamatforma.endsWith("k") || pamatforma.endsWith("g"))
-					deminutīvleksēmas = null; // nepieļaujam nepareizās mijas 'ceļiņš', 'pīrāgiņš', 'druskiņa'
+		}
 
-				if (deminutīvleksēmas != null)
-					for (Lexeme leksēma : deminutīvleksēmas) {
-						Wordform variants = new Wordform(word, leksēma, ending);
-						variants.addAttributes(celms); // ?
-						variants.addAttribute(AttributeNames.i_Deminutive, "-iņ-");
-						variants.addAttribute(AttributeNames.i_Source,"pamazināmo formu atvasināšana");
-						variants.addAttribute(AttributeNames.i_SourceLemma, leksēma.getValue(AttributeNames.i_Lemma));
-						variants.addAttribute(AttributeNames.i_Guess, AttributeNames.v_Deminutive);
-						String lemma = pamatforma + "iņ" + ending.getLemmaEnding().getEnding();
-						lemma = recapitalize(lemma, originalWord);
-						variants.addAttribute(AttributeNames.i_Lemma, lemma);
-						
-						rezultāts.addWordform(variants);										
-					}
+		if (celms.celms.endsWith("iņ") &&
+				ending.getParadigm().isMatchingStrong(AttributeNames.i_ParadigmSupportedDerivations, AttributeNames.v_Diminutive_iņ)) {
+			String pamatforma = celms.celms.substring(0,celms.celms.length()-2);
+			String pamatforma2 = pamatforma;
+			if (pamatforma.endsWith("dz")) pamatforma2 = pamatforma.substring(0,pamatforma.length()-2)+"g";
+			if (pamatforma.endsWith("c")) pamatforma2 = pamatforma.substring(0,pamatforma.length()-1)+"k";
+
+			ArrayList<Lexeme> deminutīvleksēmas = ending.getEndingLexemes(pamatforma2);
+
+			if (ending.getParadigm().getID() == 2) {  // mainās deklinācija galds -> galdiņš, tāpēc īpaši
+				deminutīvleksēmas = endingByID(1).getEndingLexemes(pamatforma2);
+				//FIXME - nedroša atsauce uz galotni nr. 1
+
+				if (pamatforma.endsWith("l")) pamatforma2 = pamatforma.substring(0,pamatforma.length()-1)+"ļ";
+				ArrayList<Lexeme> deminutīvleksēmas2 = ending.getEndingLexemes(pamatforma2);
+					// bet ir arī ceļš->celiņš, kur paliek 2. deklinācija
+				if (deminutīvleksēmas == null) deminutīvleksēmas = deminutīvleksēmas2;
+				else if (deminutīvleksēmas2 != null) deminutīvleksēmas.addAll(deminutīvleksēmas2);
 			}
+			if ((pamatforma.endsWith("ļ") && ending.getParadigm().getID() == 2) || pamatforma.endsWith("k") || pamatforma.endsWith("g"))
+				deminutīvleksēmas = null; // nepieļaujam nepareizās mijas 'ceļiņš', 'pīrāgiņš', 'druskiņa'
+
+			if (deminutīvleksēmas != null)
+				for (Lexeme leksēma : deminutīvleksēmas) {
+					Wordform variants = new Wordform(word, leksēma, ending);
+					variants.addAttributes(celms); // ?
+					variants.addAttribute(AttributeNames.i_Deminutive, "-iņ-");
+					variants.addAttribute(AttributeNames.i_Source,"pamazināmo formu atvasināšana");
+					variants.addAttribute(AttributeNames.i_SourceLemma, leksēma.getValue(AttributeNames.i_Lemma));
+					variants.addAttribute(AttributeNames.i_Guess, AttributeNames.v_Deminutive);
+					String lemma = pamatforma + "iņ" + ending.getLemmaEnding().getEnding();
+					lemma = recapitalize(lemma, originalWord);
+					variants.addAttribute(AttributeNames.i_Lemma, lemma);
+
+					rezultāts.addWordform(variants);
+				}
 		}
 	}
 
@@ -644,8 +639,8 @@ public class Analyzer extends Lexicon {
 			}
 		}
 
-		// sort list according to statistical frequency, and remove dublicates
-		Set result_set = new TreeSet(new Comparator<Paradigm>() {
+		// sort list according to statistical frequency, and remove duplicates
+		Set result_set = new TreeSet(new Comparator<Paradigm>() { //comparator to eliminate duplicates
 			@Override
 			public int compare(Paradigm a, Paradigm b) {
 				return a.getID() - b.getID();
@@ -653,7 +648,7 @@ public class Analyzer extends Lexicon {
 		});
 		result_set.addAll(result);
 		result = new ArrayList<>(result_set);
-		Collections.sort(result, new ParadigmFrequencyComparator());
+		Collections.sort(result, new ParadigmFrequencyComparator()); //comparator for statistical frequency
 		Collections.reverse(result); // We want the list in order of descending frequency
 		return result;
 	}
@@ -1013,7 +1008,7 @@ public class Analyzer extends Lexicon {
 			trešāSakne = lexeme.getStem(2);
 		}
 
-        if (lexeme.getParadigm().getID() == 29 || lexeme.getParadigm().getID() == 25 ) { // Hardcoded paradigma un vietniekvārdi
+        if (lexeme.getParadigm().isMatchingStrong(AttributeNames.i_InflectionProperties, AttributeNames.v_HardcodedWordforms)) { // Hardcoded paradigma un vietniekvārdi
             // Ja vārds ir hardcoded, tad salasam visas hardcoded formas ar attiecīgo lemmu un tās arī atgriežam
             Ending ending = lexeme.getParadigm().getLemmaEnding();
             for (Lexeme formLexeme : this.hardcodedForms.get(lemma)) {
