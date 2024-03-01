@@ -1771,7 +1771,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="28" Name="cart-i-ltg" LemmaEnding="572" Description="Neregulārie skaitļa vārdi (vīns, divi, treis)" AllowedGuessEndings="!">
+	<Paradigm Stems="1" ID="28" Name="card-i-ltg" LemmaEnding="572" Description="Neregulārie skaitļa vārdi (vīns, divi, treis)" AllowedGuessEndings="!">
 		<Attributes Vārdšķira="Skaitļa vārds" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Locīšanas_īpatnības="Pielasīt visas izņēmumformas"/>
 		<Ending ID="572" StemChange="0" Ending="" StemID="1" LemmaEnding="572">
 			<Attributes/>
