@@ -117,11 +117,14 @@ public class Lexeme extends AttributeValues {
      * @param json
      */
     public Lexeme(JSONObject json, Lexicon lexicon) {
-        if (json.get("paradigm") == null)
-            throw new Error("Nav paradigmas leksēmai " + json.toJSONString());
+        if (json.get("paradigm") != null) {
+            int paradigmID = ((Long)json.get("paradigm")).intValue();
+            this.paradigm = lexicon.paradigmByID(paradigmID);
+        } else if (json.get("paradigm_name") != null) {
+            String paradigmName = ((String)json.get("paradigm_name"));
+            this.paradigm = lexicon.paradigmByName(paradigmName);
+        } else throw new Error("Nav paradigmas leksēmai " + json.toJSONString());
 
-        int paradigmID = ((Long)json.get("paradigm")).intValue();
-        paradigm = lexicon.paradigmByID(paradigmID);
         setStemCount(this.paradigm.getStems());
 
         if (json.get("lexeme_id") != null) {

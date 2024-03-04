@@ -412,9 +412,8 @@ public class Analyzer extends Lexicon {
 
 			ArrayList<Lexeme> deminutīvleksēmas = ending.getEndingLexemes(pamatforma2);
 
-			if (ending.getParadigm().getID() == 2) {  // mainās deklinācija galds -> galdiņš, tāpēc īpaši
-				deminutīvleksēmas = endingByID(1).getEndingLexemes(pamatforma2);
-				//FIXME - nedroša atsauce uz galotni nr. 1
+			if (ending.getParadigm().getName().equalsIgnoreCase("noun-1b")) {  // mainās deklinācija galds -> galdiņš, tāpēc īpaši
+				deminutīvleksēmas = this.paradigmByName("noun-1a").getLemmaEnding().getEndingLexemes(pamatforma2);
 
 				if (pamatforma.endsWith("l")) pamatforma2 = pamatforma.substring(0,pamatforma.length()-1)+"ļ";
 				ArrayList<Lexeme> deminutīvleksēmas2 = ending.getEndingLexemes(pamatforma2);
@@ -422,7 +421,7 @@ public class Analyzer extends Lexicon {
 				if (deminutīvleksēmas == null) deminutīvleksēmas = deminutīvleksēmas2;
 				else if (deminutīvleksēmas2 != null) deminutīvleksēmas.addAll(deminutīvleksēmas2);
 			}
-			if ((pamatforma.endsWith("ļ") && ending.getParadigm().getID() == 2) || pamatforma.endsWith("k") || pamatforma.endsWith("g"))
+			if ((pamatforma.endsWith("ļ") && ending.getParadigm().getName().equalsIgnoreCase("noun-1b")) || pamatforma.endsWith("k") || pamatforma.endsWith("g"))
 				deminutīvleksēmas = null; // nepieļaujam nepareizās mijas 'ceļiņš', 'pīrāgiņš', 'druskiņa'
 
 			if (deminutīvleksēmas != null)
@@ -534,14 +533,11 @@ public class Analyzer extends Lexicon {
                         String celms = celma_variants.celms;
 
                         if (!p.allowedGuess(celms))
-                            if (p_firstcap.matcher(originalWord).matches() && (p.getID() == 8 || p.getID() == 10 || p.getID() == 31)) {
+                            if (p_firstcap.matcher(originalWord).matches() && (p.getName().equalsIgnoreCase("noun-4m") ||
+									p.getName().equalsIgnoreCase("noun-4ma") || p.getName().equalsIgnoreCase("noun-3f"))) {
                             } // Ja ir īpašvārds ar -a -e galotni, tad mēģina arī vīriešu dzimtes variantus uzvārdiem
                             else
                                 continue; // citos gadījumos, ja beigu burti izskatās neadekvāti tam, kas leksikonā pie paradigmas norādīts - tad neminam.
-                        if (p.getID() == 5 && !celms.endsWith("sun"))
-                            continue; // der tikai -suns salikteņi
-                        //TODO - varbūt drīzāk whitelist datos - pie paradigmas karodziņu, ka tā ir atvērta un tajā drīkst minēt?
-                        //TODO te var vēl heiristikas salikt, lai uzlabotu minēšanu - ne katrs burts var būt darbībasvārdam beigās utml
 
                         Wordform variants = new Wordform(word, null, ending);
                         variants.addAttribute(AttributeNames.i_Source, "minējums pēc galotnes");
