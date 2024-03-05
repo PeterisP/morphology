@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Morphology licence="Copyright 2008-2021 Institute of Mathematics and Computer Science, University of Latvia. This file is part of the SemTi-Kamols Chunker, see http://www.semti-kamols.lv/  This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program. If not, see http://www.gnu.org/licenses/." revision="${project.version}">
+    <Corpus FileName="Phonetic_minicore.xml" Type="core"/>
+    <Corpus FileName="tezaurs_phonetic.json" Type="core"/>
+    <!--	<Corpus FileName="Lexicon_core.xml" Type="core"/>
+				<Corpus FileName="Lexicon_sv.xml" Type="core"/>
+				<Corpus FileName="Lexicon_valerijs.xml" Type="core"/>
+				<Corpus FileName="Lexicon_onomastica.xml" Type="aux"/> -->
+    <Paradigm AllowedGuessEndings="GJKLSZbcdfgjklmnprstvxz" Description="Lietvārdi vīriešu dzimtē, 1. deklinācija ar galotni -s (tēvs)" DescriptionEN="Masculine nouns, 1st declension ending -s (tēvs)" ID="1" LemmaEnding="1" Name="noun-1a-phono" Stems="1">
+        <Attributes Deklinācija="1" Dzimte="Vīriešu" Paradigmai_atļautie_atvasinājumi="-tājs, -ējs, -tāja, -ēja" Vārdšķira="Lietvārds"/>
+        <Ending Ending="s" ID="1" LemmaEnding="1" StemChange="200" StemID="1">
+            <Attributes Locījums="Nominatīvs" Skaitlis="Vienskaitlis"/>
+        </Ending>
+        <Ending Ending="ax" ID="2" LemmaEnding="1" StemChange="200" StemID="1">
+            <Attributes Locījums="Ģenitīvs" Skaitlis="Vienskaitlis"/>
+        </Ending>
+        <Ending Ending="a m" ID="3" LemmaEnding="1" StemChange="200" StemID="1">
+            <Attributes Locījums="Datīvs" Skaitlis="Vienskaitlis"/>
+        </Ending>
+        <Ending Ending="ux" ID="4" LemmaEnding="1" StemChange="200" StemID="1">
+            <Attributes Locījums="Akuzatīvs" Skaitlis="Vienskaitlis"/>
+        </Ending>
+        <Ending Ending="aa" ID="5" LemmaEnding="1" StemChange="200" StemID="1">
+            <Attributes Locījums="Lokatīvs" Skaitlis="Vienskaitlis"/>
+        </Ending>
+        <Ending Ending="s" ID="6" LemmaEnding="1" StemChange="200" StemID="1">
+            <Attributes Locījums="Vokatīvs" Skaitlis="Vienskaitlis" Ģenerēt="Nē"/>
+        </Ending>
+        <Ending Ending="" ID="7" LemmaEnding="1" StemChange="200" StemID="1">
+            <Attributes Locījums="Vokatīvs" Skaitlis="Vienskaitlis"/>
+        </Ending>
+        <Ending Ending="ix" ID="8" LemmaEnding="1" StemChange="200" StemID="1">
+            <Attributes Locījums="Nominatīvs" Skaitlis="Daudzskaitlis"/>
+        </Ending>
+        <Ending Ending="ux" ID="9" LemmaEnding="1" StemChange="200" StemID="1">
+            <Attributes Locījums="Ģenitīvs" Skaitlis="Daudzskaitlis"/>
+        </Ending>
+        <Ending Ending="ie m" ID="10" LemmaEnding="1" StemChange="200" StemID="1">
+            <Attributes Locījums="Datīvs" Skaitlis="Daudzskaitlis"/>
+        </Ending>
+        <Ending Ending="u s" ID="11" LemmaEnding="1" StemChange="200" StemID="1">
+            <Attributes Locījums="Akuzatīvs" Skaitlis="Daudzskaitlis"/>
+        </Ending>
+        <Ending Ending="uo s" ID="12" LemmaEnding="1" StemChange="200" StemID="1">
+            <Attributes Locījums="Lokatīvs" Skaitlis="Daudzskaitlis"/>
+        </Ending>
+        <Ending Ending="ix" ID="13" LemmaEnding="1" StemChange="200" StemID="1">
+            <Attributes Locījums="Vokatīvs" Skaitlis="Daudzskaitlis"/>
+        </Ending>
+    </Paradigm>
+    <Paradigm AllowedGuessEndings="J" Description="Lietvārdi vīriešu dzimtē, 1. deklinācija ar galotni -š (ceļš)" DescriptionEN="Masculine nouns, 1st declension ending -š (ceļš)" ID="2" LemmaEnding="14" Name="noun-1b-phono" Stems="1">
+        <Attributes Deklinācija="1" Dzimte="Vīriešu" Paradigmai_atļautie_atvasinājumi="Deminutīvs -iņ" Vārdšķira="Lietvārds"/>
+        <Ending Ending="S" ID="14" LemmaEnding="14" StemChange="200" StemID="1">
+            <Attributes Locījums="Nominatīvs" Skaitlis="Vienskaitlis"/>
+        </Ending>
+        <Ending Ending="ax" ID="15" LemmaEnding="14" StemChange="200" StemID="1">
+            <Attributes Locījums="Ģenitīvs" Skaitlis="Vienskaitlis"/>
+        </Ending>
+        <Ending Ending="a m" ID="16" LemmaEnding="14" StemChange="200" StemID="1">
+            <Attributes Locījums="Datīvs" Skaitlis="Vienskaitlis"/>
+        </Ending>
+        <Ending Ending="ux" ID="17" LemmaEnding="14" StemChange="200" StemID="1">
+            <Attributes Locījums="Akuzatīvs" Skaitlis="Vienskaitlis"/>
+        </Ending>
+        <Ending Ending="aa" ID="18" LemmaEnding="14" StemChange="200" StemID="1">
+            <Attributes Locījums="Lokatīvs" Skaitlis="Vienskaitlis"/>
+        </Ending>
+        <Ending Ending="S" ID="19" LemmaEnding="14" StemChange="200" StemID="1">
+            <Attributes Locījums="Vokatīvs" Skaitlis="Vienskaitlis" Ģenerēt="Nē"/>
+        </Ending>
+        <Ending Ending="" ID="20" LemmaEnding="14" StemChange="200" StemID="1">
+            <Attributes Locījums="Vokatīvs" Skaitlis="Vienskaitlis"/>
+        </Ending>
+        <Ending Ending="ix" ID="21" LemmaEnding="14" StemChange="200" StemID="1">
+            <Attributes Locījums="Nominatīvs" Skaitlis="Daudzskaitlis"/>
+        </Ending>
+        <Ending Ending="ux" ID="22" LemmaEnding="14" StemChange="200" StemID="1">
+            <Attributes Locījums="Ģenitīvs" Skaitlis="Daudzskaitlis"/>
+        </Ending>
+        <Ending Ending="ie m" ID="23" LemmaEnding="14" StemChange="200" StemID="1">
+            <Attributes Locījums="Datīvs" Skaitlis="Daudzskaitlis"/>
+        </Ending>
+        <Ending Ending="u s" ID="24" LemmaEnding="14" StemChange="200" StemID="1">
+            <Attributes Locījums="Akuzatīvs" Skaitlis="Daudzskaitlis"/>
+        </Ending>
+        <Ending Ending="uo s" ID="25" LemmaEnding="14" StemChange="200" StemID="1">
+            <Attributes Locījums="Lokatīvs" Skaitlis="Daudzskaitlis"/>
+        </Ending>
+        <Ending Ending="ix" ID="26" LemmaEnding="14" StemChange="200" StemID="1">
+            <Attributes Locījums="Vokatīvs" Skaitlis="Daudzskaitlis"/>
+        </Ending>
+    </Paradigm>
+    <Paradigm AllowedGuessEndings="!" Description='Tiešie darbības vārdi, 1. konjugācija un nekārtnie, izņemot "būt" atvasinājumus (dzert, plēst, iet, dot)' DescriptionEN='Direct verbs, 1st conjugation and irregular except "būt" derivatives (dzert, plēst, iet, dot)' ID="15" LemmaEnding="711" Name="verb-1-phono" Stems="3">
+        <Attributes Atgriezeniskums="Nē" Darbības_vārda_tips="Patstāvīgs darbības vārds" Konjugācija="1" Noliegums="Nē" Vārdšķira="Darbības vārds"/>
+        <Ending Ending="t" ID="711" LemmaEnding="711" StemChange="200" StemID="1">
+            <Attributes Izteiksme="Nenoteiksme" Kārta="Nepiemīt" Laiks="Nepiemīt" Persona="Nepiemīt" Skaitlis="Nepiemīt"/>
+        </Ending>
+        <Ending Ending="S ux" ID="712" LemmaEnding="711" StemChange="206" StemID="1">
+            <Attributes Izteiksme="Īstenības" Kārta="Darāmā" Laiks="Nākotne" Persona="1" Skaitlis="Vienskaitlis"/>
+        </Ending>
+        <Ending Ending="s ix" ID="713" LemmaEnding="711" StemChange="206" StemID="1">
+            <Attributes Izteiksme="Īstenības" Kārta="Darāmā" Laiks="Nākotne" Persona="2" Skaitlis="Vienskaitlis"/>
+        </Ending>
+        <Ending Ending="s i m" ID="715" LemmaEnding="711" StemChange="206" StemID="1">
+            <Attributes Izteiksme="Īstenības" Kārta="Darāmā" Laiks="Nākotne" Persona="1" Skaitlis="Daudzskaitlis"/>
+        </Ending>
+        <Ending Ending="s ie t" ID="716" LemmaEnding="711" StemChange="206" StemID="1">
+            <Attributes Izteiksme="Īstenības" Kārta="Darāmā" Laiks="Nākotne" Persona="2" Skaitlis="Daudzskaitlis"/>
+        </Ending>
+        <Ending Ending="s" ID="717" LemmaEnding="711" StemChange="206" StemID="1">
+            <Attributes Izteiksme="Īstenības" Kārta="Darāmā" Laiks="Nākotne" Persona="3" Skaitlis="Nepiemīt"/>
+        </Ending>
+        <Ending Ending="S uo t" ID="721" LemmaEnding="711" StemChange="206" StemID="1">
+            <Attributes Izteiksme="Atstāstījuma" Kārta="Darāmā" Laiks="Nākotne" Persona="Nepiemīt" Skaitlis="Nepiemīt"/>
+        </Ending>
+
+        <Ending Ending="ux" ID="789" LemmaEnding="711" StemChange="200" StemID="2">
+            <Attributes Izteiksme="Īstenības" Kārta="Darāmā" Laiks="Tagadne" Persona="1" Skaitlis="Vienskaitlis"/>
+        </Ending>
+        <Ending Ending="" ID="790" LemmaEnding="711" StemChange="207" StemID="2">
+            <Attributes Izteiksme="Īstenības" Kārta="Darāmā" Laiks="Tagadne" Persona="2" Skaitlis="Vienskaitlis"/>
+        </Ending>
+        <Ending Ending="a m" ID="792" LemmaEnding="711" StemChange="200" StemID="2">
+            <Attributes Izteiksme="Īstenības" Kārta="Darāmā" Laiks="Tagadne" Persona="1" Skaitlis="Daudzskaitlis"/>
+        </Ending>
+        <Ending Ending="a t" ID="793" LemmaEnding="711" StemChange="200" StemID="2">
+            <Attributes Izteiksme="Īstenības" Kārta="Darāmā" Laiks="Tagadne" Persona="2" Skaitlis="Daudzskaitlis"/>
+        </Ending>
+        <Ending Ending="" ID="794" LemmaEnding="711" StemChange="236" StemID="2">
+            <Attributes Izteiksme="Īstenības" Kārta="Darāmā" Laiks="Tagadne" Persona="3" Skaitlis="Nepiemīt"/>
+        </Ending>
+        <Ending Ending="" ID="795" LemmaEnding="711" StemChange="237" StemID="2">
+            <Attributes Izteiksme="Vajadzības" Kārta="Darāmā" Laiks="Nepiemīt" Persona="Nepiemīt" Skaitlis="Nepiemīt"/>
+        </Ending>
+        <Ending Ending="uo t" ID="796" LemmaEnding="711" StemChange="200" StemID="2">
+            <Attributes Izteiksme="Atstāstījuma" Kārta="Darāmā" Laiks="Tagadne" Persona="Nepiemīt" Skaitlis="Nepiemīt"/>
+        </Ending>
+        <Ending Ending="" ID="797" LemmaEnding="711" StemChange="207" StemID="2">
+            <Attributes Izteiksme="Pavēles" Kārta="Darāmā" Laiks="Nepiemīt" Persona="2" Skaitlis="Vienskaitlis"/>
+        </Ending>
+        <Ending Ending="ie t" ID="798" LemmaEnding="711" StemChange="223" StemID="2">
+            <Attributes Izteiksme="Pavēles" Kārta="Darāmā" Laiks="Nepiemīt" Persona="2" Skaitlis="Daudzskaitlis"/>
+        </Ending>
+
+        <Ending Ending="ux" ID="891" LemmaEnding="711" StemChange="200" StemID="3">
+            <Attributes Izteiksme="Īstenības" Kārta="Darāmā" Laiks="Pagātne" Persona="1" Skaitlis="Vienskaitlis"/>
+        </Ending>
+        <Ending Ending="ix" ID="892" LemmaEnding="711" StemChange="200" StemID="3">
+            <Attributes Izteiksme="Īstenības" Kārta="Darāmā" Laiks="Pagātne" Persona="2" Skaitlis="Vienskaitlis"/>
+        </Ending>
+        <Ending Ending="aa m" ID="894" LemmaEnding="711" StemChange="200" StemID="3">
+            <Attributes Izteiksme="Īstenības" Kārta="Darāmā" Laiks="Pagātne" Persona="1" Skaitlis="Daudzskaitlis"/>
+        </Ending>
+        <Ending Ending="aa t" ID="895" LemmaEnding="711" StemChange="200" StemID="3">
+            <Attributes Izteiksme="Īstenības" Kārta="Darāmā" Laiks="Pagātne" Persona="2" Skaitlis="Daudzskaitlis"/>
+        </Ending>
+        <Ending Ending="ax" ID="896" LemmaEnding="711" StemChange="200" StemID="3">
+            <Attributes Izteiksme="Īstenības" Kārta="Darāmā" Laiks="Pagātne" Persona="3" Skaitlis="Nepiemīt"/>
+        </Ending>
+    </Paradigm>
+</Morphology>

@@ -475,6 +475,7 @@ public class Lexicon {
 		String stem;
 		try {
 			stem = ending.stem(word.toLowerCase());
+			System.err.println(stem+"}}}");
 			int mija = ending.getMija();
 			if (mija != 0 && mija != 3) { // don't try to apply comparative and superlative forms
 				ArrayList<Variants> celmi = Mijas.mijuVarianti(stem, mija, word.matches("\\p{Lu}.*"));

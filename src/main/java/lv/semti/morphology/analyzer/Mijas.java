@@ -605,8 +605,19 @@ public abstract class Mijas {
 						varianti.add(new Variants(celms));
 					}
 					break;
+
+				// ------ PHONETIC from here -----
+				case 200:
+					varianti.add(new Variants(celms)); break;
+				case 206:
+					if (celms.endsWith("d ii ") || celms.endsWith("t ii ") || celms.endsWith("s ii ")) varianti.add(new Variants(celms.substring(0,celms.length()-5)+"s "));
+					else if (celms.endsWith("z ii ") || celms.endsWith("S ii ")) varianti.add(new Variants(celms.substring(0,celms.length()-5))); // lūzt, griezt
+					else if (!celms.endsWith("d ") && !celms.endsWith("t ") && !celms.endsWith("s ") && !celms.endsWith("z ")) varianti.add(new Variants(celms));
+					break;
+				case 207: //
+
 				default:
-					System.err.printf("Invalid StemChange ID, stem '%s', stemchange %d\n", celms, mija);
+					System.err.printf("Invalid StemChange ID1, stem '%s', stemchange %d\n", celms, mija);
 			}
 		} catch (StringIndexOutOfBoundsException e){
 			try {
@@ -722,6 +733,10 @@ public abstract class Mijas {
 				case 37: // vajadzības izteiksme 1. konjugācijai ar miju
 					celms = "jā" + stem;
 					mija = 36;
+					break;
+				case 237: // fonētiskā vajadzības izteiksme 1. konjugācijai ar miju
+					celms = "j aa " + stem;
+					mija = 236;
 					break;
 				default:
 					celms = stem;
@@ -1225,8 +1240,38 @@ public abstract class Mijas {
 					}
 					break;
 
+				// ------ PHONETIC from here -----
+				case 200:
+					varianti.add(new Variants(celms)); break;
+				case 206: // 1. konjugācijas nākotne
+					if (celms.endsWith("s ")) {
+						if (trešāSakne.endsWith("d ")) varianti.add(new Variants(celms.substring(0,celms.length()-2)+"d ii "));
+						else if (trešāSakne.endsWith("t ")) varianti.add(new Variants(celms.substring(0,celms.length()-2)+"t ii "));
+						else if (trešāSakne.endsWith("s ")) varianti.add(new Variants(celms.substring(0,celms.length()-2)+"s ii "));
+						else varianti.add(new Variants(celms));
+					} else if (celms.endsWith("z ") || celms.endsWith("S ")) {
+						varianti.add(new Variants(celms+"ii "));
+					}
+					else varianti.add(new Variants(celms));
+					break;
+				case 207: // 1. konjugācijas 2. personas tagadne
+//					if (celms.endsWith(" ")) varianti.add(new Variants(celms.replace("é", "e").substring(0,celms.length()-1)));
+//					else varianti.add(new Variants(celms.replace("é", "e")));
+//					break;
+				case 223:
+					if (celms.endsWith("ļ ")) varianti.add(new Variants(celms.substring(0,celms.length()-2)+"l"));
+					else if (celms.endsWith("mj ") || celms.endsWith("bj ") || celms.endsWith("pj "))	varianti.add(new Variants(celms.substring(0,celms.length()-2)));
+					else if (celms.endsWith("k ")) varianti.add(new Variants(celms.substring(0,celms.length()-2)+"c"));
+					else if (celms.endsWith("g ")) varianti.add(new Variants(celms.substring(0,celms.length()-2)+"dz"));
+					else if (celms.endsWith("ž ")) {
+						// varianti.add(new Variants(celms.substring(0,celms.length()-1)+"z")); // griez -> griežu
+						varianti.add(new Variants(trešāSakne)); // skaužu -> skaud, laužu -> lauz; sanāk atbilstoši pagātnes celmam
+					} else varianti.add(new Variants(celms.replace("é", "e").substring(0,celms.length()-1)));
+					break;
+				case 236: varianti.add(new Variants(celms)); break; //
+
 				default:
-					System.err.printf("Invalid StemChange ID, stem '%s', stemchange %d\n", celms, mija);
+					System.err.printf("Invalid StemChange ID2, stem '%s', stemchange %d\n", celms, mija);
 			}
 		} catch (StringIndexOutOfBoundsException e){
 			try {
