@@ -1266,7 +1266,7 @@ public abstract class Mijas {
 					else if (celms.endsWith("ž ")) {
 						// varianti.add(new Variants(celms.substring(0,celms.length()-1)+"z")); // griez -> griežu
 						varianti.add(new Variants(trešāSakne)); // skaužu -> skaud, laužu -> lauz; sanāk atbilstoši pagātnes celmam
-					} else varianti.add(new Variants(celms.replace("é", "e").substring(0,celms.length()-1)));
+					} else varianti.add(new Variants(celms.replace("æ", "e").substring(0,celms.length()-1)));
 					break;
 				case 236: varianti.add(new Variants(celms)); break; //
 

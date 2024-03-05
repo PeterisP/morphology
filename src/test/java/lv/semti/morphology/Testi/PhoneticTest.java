@@ -170,26 +170,26 @@ public class PhoneticTest {
 
     @Test
     public void tēls() {
-        List<Wordform> tēls = analyzer.generateInflections("t éé l s");
+        List<Wordform> tēls = analyzer.generateInflections("t ææ l s");
 //        describe(viejs);
         AttributeValues testset = new AttributeValues();
         testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
         testset.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Masculine);
         testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Nominative);
         testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Plural);
-        assertInflection(tēls, testset, "t éé l ix");
+        assertInflection(tēls, testset, "t ææ l ix");
     }
 
     @Test
     public void džouls() {
-        List<Wordform> tēls = analyzer.generateInflections("dž óu l s");
+        List<Wordform> tēls = analyzer.generateInflections("dž ɔu l s");
 //        describe(viejs);
         AttributeValues testset = new AttributeValues();
         testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
         testset.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Masculine);
         testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Locative);
         testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Plural);
-        assertInflection(tēls, testset, "dž óu l uo s");
+        assertInflection(tēls, testset, "dž ɔu l uo s");
     }
 
     @Test
@@ -201,7 +201,7 @@ public class PhoneticTest {
         testset.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Tagadne);
         testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
         testset.addAttribute(AttributeNames.i_Person, "1");
-        assertInflection(tēls, testset, "éé d ux");
+        assertInflection(tēls, testset, "ææ d ux");
 
         AttributeValues testset2 = new AttributeValues();
         testset2.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
