@@ -1862,7 +1862,7 @@
 			<Attributes Vārdšķira="Apstākļa vārds" Pakāpe="Pamata"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="33" Name="adverb-2b-ltg" LemmaEnding="594" Description="Apstākļa vārdi ar salīdzināmām pakāpēm, ar burtu miju (slapni)" AllowedGuessEndings="nlgk">
+	<Paradigm Stems="1" ID="33" Name="adverb-2b-ltg" LemmaEnding="594" Description="Apstākļa vārdi ar salīdzināmām pakāpēm, ar burtu miju (slapni, taišni)" AllowedGuessEndings="nlgk">
 		<Attributes Vārdšķira="Apstākļa vārds"/>
 		<Ending ID="594" StemChange="0" Ending="i" StemID="1" LemmaEnding="594">
 			<Attributes Vārdšķira="Apstākļa vārds" Pakāpe="Pamata"/>
