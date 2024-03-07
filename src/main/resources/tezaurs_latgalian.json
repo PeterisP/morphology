@@ -21,11 +21,12 @@
 {"lexeme_id": 6253, "entry_id": 4526, "human_id": "grāda:1", "paradigm_name": "noun-4fa-ltg", "lemma": "grāda"}
 {"lexeme_id": 4947, "entry_id": 3609, "human_id": "abādys:1", "paradigm_name": "noun-4fa-ltg", "lemma": "abādys", "attributes": {"Morfotabulas attēlošana": "Nerādīt vienskaitli", "Leksēmas pamatformas īpatnības": "Daudzskaitlis"}}
 {"lexeme_id": 4948, "entry_id": 3609, "human_id": "abādys:1", "paradigm_name": "noun-1a-ltg", "lemma": "abāds"}
-{"lexeme_id": 5077, "entry_id": 3702, "human_id": "aļteņš:1", "paradigm_name": "noun-1a-ltg", "lemma": "aļteņš", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 5014, "entry_id": 3654, "human_id": "aizgavieņs:1", "paradigm_name": "noun-2a-ltg", "lemma": "aizgavieņs"}
 {"lexeme_id": 5008, "entry_id": 3649, "human_id": "aizdavums:1", "paradigm_name": "noun-1a-ltg", "lemma": "aizdavums"}
+{"lexeme_id": 5077, "entry_id": 3702, "human_id": "aļteņš:1", "paradigm_name": "noun-1c-ltg", "lemma": "aļteņš", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 5179, "entry_id": 3783, "human_id": "ass:1", "paradigm_name": "noun-6b-ltg", "lemma": "ass"}
 {"lexeme_id": 6316, "entry_id": 4574, "human_id": "guņs:1", "paradigm_name": "noun-6a-ltg", "lemma": "guņs"}
+{"lexeme_id": 5371, "entry_id": 3910, "human_id": "bednys:1", "paradigm_name": "adj-1-ltg", "lemma": "bedns"}
 {"lexeme_id": 5457, "entry_id": 3968, "human_id": "bondars:1", "paradigm_name": "noun-1a-ltg", "lemma": "bondars"}
 {"lexeme_id": 5537, "entry_id": 4022, "human_id": "būgons:1", "paradigm_name": "noun-1a-ltg", "lemma": "būgons"}
 {"lexeme_id": 5497, "entry_id": 3993, "human_id": "brīdakls:1", "paradigm_name": "noun-1a-ltg", "lemma": "brīdakls"}
@@ -52,6 +53,7 @@
 {"lexeme_id": 6991, "entry_id": 5086, "human_id": "kuoss:1", "paradigm_name": "noun-1a-ltg", "lemma": "kuoss"}
 {"lexeme_id": 6930, "entry_id": 5041, "human_id": "kryuts:1", "paradigm_name": "noun-6a-ltg", "lemma": "kryuts"}
 {"lexeme_id": 6931, "entry_id": 5041, "human_id": "kryuts:1", "paradigm_name": "noun-6a-ltg", "lemma": "kriuts"}
+{"lexeme_id": 7350, "entry_id": 5354, "human_id": "mežakačs:1", "paradigm_name": "noun-1a-ltg", "lemma": "mežakačs"}
 {"lexeme_id": 7454, "entry_id": 5435, "human_id": "nakryškuons:1", "paradigm_name": "noun-1a-ltg", "lemma": "nakryškuons"}
 {"lexeme_id": 7553, "entry_id": 5513, "human_id": "nuoss:1", "paradigm_name": "noun-6a-ltg", "lemma": "nuoss"}
 {"lexeme_id": 7535, "entry_id": 5498, "human_id": "nūceja:1", "paradigm_name": "noun-4fb-ltg", "lemma": "nūceja"}
@@ -177,7 +179,6 @@
 {"lexeme_id": 10271, "entry_id": 7445, "human_id": "mēle:1", "paradigm_name": "noun-5fa-ltg", "lemma": "mēleite", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 5442, "entry_id": 3959, "human_id": "bļuzņa:1", "paradigm_name": "noun-4fb-ltg", "lemma": "bļuzņa", "attributes": {"Lietojums": "Sarunvaloda", "Locīšanas īpatnības": "Kopdzimte", "Dzimtes semantiskās īpatnības": "Lieto abu dzimšu nozīmē"}}
 {"lexeme_id": 8003, "entry_id": 5851, "human_id": "pļakša:1", "paradigm_name": "noun-4fa-ltg", "lemma": "pļakša", "attributes": {"Neskaidra paradigma": "Kopdzimtes vārdiem arī vīriešu dzimtē vsk. datīvā var būt galotne: -ai/ -ei (Vasals, 23.lpp.)", "Locīšanas īpatnības": "Kopdzimte"}}
-{"lexeme_id": 10074, "entry_id": 3959, "human_id": "bļuzņa:1", "paradigm_name": "noun-1c-ltg", "lemma": "bļuzņa", "attributes": {"Lietojums": "Sarunvaloda", "Locīšanas īpatnības": "Kopdzimte", "Dzimtes semantiskās īpatnības": "Lieto abu dzimšu nozīmē"}}
 {"lexeme_id": 10065, "entry_id": 7281, "human_id": "kaudze:1", "paradigm_name": "noun-5fa-ltg", "lemma": "kaudze"}
 {"lexeme_id": 10066, "entry_id": 7282, "human_id": "usne:1", "paradigm_name": "noun-5fa-ltg", "lemma": "usne"}
 {"lexeme_id": 10067, "entry_id": 7283, "human_id": "reikste:1", "paradigm_name": "noun-5fa-ltg", "lemma": "reikste"}
@@ -206,6 +207,7 @@
 {"lexeme_id": 10096, "entry_id": 7295, "human_id": "klouga:1", "paradigm_name": "noun-4ma-ltg", "lemma": "klouga", "attributes": {"Dzimte": "Vīriešu", "Locīšanas īpatnības": "Kopdzimte"}}
 {"lexeme_id": 10083, "entry_id": 5851, "human_id": "pļakša:1", "paradigm_name": "noun-4ma-ltg", "lemma": "pļakša", "attributes": {"Dzimte": "Vīriešu", "Locīšanas īpatnības": "Kopdzimte"}}
 {"lexeme_id": 10100, "entry_id": 7297, "human_id": "murza:1", "paradigm_name": "noun-4ma-ltg", "lemma": "murza", "attributes": {"Dzimte": "Vīriešu", "Locīšanas īpatnības": "Kopdzimte"}}
+{"lexeme_id": 10074, "entry_id": 3959, "human_id": "bļuzņa:1", "paradigm_name": "noun-4ma-ltg", "lemma": "bļuzņa", "attributes": {"Dzimte": "Vīriešu", "Lietojums": "Sarunvaloda", "Locīšanas īpatnības": "Kopdzimte", "Dzimtes semantiskās īpatnības": "Lieto abu dzimšu nozīmē"}}
 {"lexeme_id": 10103, "entry_id": 7299, "human_id": "nasapraška:1", "paradigm_name": "noun-4fa-ltg", "lemma": "nasapraška", "attributes": {"Locīšanas īpatnības": "Kopdzimte"}}
 {"lexeme_id": 10105, "entry_id": 6343, "human_id": "snauška:1", "paradigm_name": "noun-4ma-ltg", "lemma": "snauška", "attributes": {"Dzimte": "Vīriešu", "Locīšanas īpatnības": "Kopdzimte"}}
 {"lexeme_id": 8666, "entry_id": 6343, "human_id": "snauška:1", "paradigm_name": "noun-4fa-ltg", "lemma": "snauška", "attributes": {"Locīšanas īpatnības": "Kopdzimte"}}
@@ -472,3 +474,5 @@
 {"lexeme_id": 10365, "entry_id": 7509, "human_id": "uors:1", "paradigm_name": "noun-1d-ltg", "lemma": "ōrs"}
 {"lexeme_id": 10366, "entry_id": 7436, "human_id": "mirta:1", "paradigm_name": "noun-5fa-ltg", "lemma": "mirte"}
 {"lexeme_id": 6668, "entry_id": 4843, "human_id": "kārmyns:1", "paradigm_name": "noun-1a-ltg", "lemma": "kārmans"}
+{"lexeme_id": 10392, "entry_id": 3910, "human_id": "bednys:1", "paradigm_name": "adj-2-ltg", "lemma": "bednys"}
+{"lexeme_id": 10050, "entry_id": 7276, "human_id": "zivs:1", "paradigm_name": "hardcoded", "lemma": "zivs", "stem1": "zyvu", "attributes": {"Skaitlis": "Daudzskaitlis", "Locījums": "Ģenitīvs"}}
