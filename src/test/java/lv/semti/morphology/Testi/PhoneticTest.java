@@ -238,4 +238,23 @@ public class PhoneticTest {
         assertInflection(tēls, testset2, "p e l");
     }
 
+
+    @Test
+    public void intonācijas() {
+        List<Wordform> stiepta = analyzer.generateInflections("z aa= l ex");
+        AttributeValues testset = new AttributeValues();
+        testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
+        testset.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Feminine);
+        testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Locative);
+        testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Plural);
+        assertInflection(stiepta, testset, "z aa= l ee s");
+
+        List<Wordform> lauzta = analyzer.generateInflections("z aaq l ex");
+        AttributeValues testset2 = new AttributeValues();
+        testset2.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
+        testset2.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Feminine);
+        testset2.addAttribute(AttributeNames.i_Case, AttributeNames.v_Locative);
+        testset2.addAttribute(AttributeNames.i_Number, AttributeNames.v_Plural);
+        assertInflection(lauzta, testset2, "z aaq l ee s");
+    }
 }

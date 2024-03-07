@@ -90,6 +90,48 @@
             <Attributes Locījums="Vokatīvs" Skaitlis="Daudzskaitlis"/>
         </Ending>
     </Paradigm>
+    <Paradigm Stems="1" ID="9" Name="noun-5fa-phono" LemmaEnding="87" Description="Lietvārdi sieviešu dzimtē, 5. deklinācija ar galotni -e, ar miju (egle)" DescriptionEN="Feminine nouns, 5th declension ending -e, with stemchange (egle)" AllowedGuessEndings="bcdfghklmnprstvzLSZ">
+        <Attributes Vārdšķira="Lietvārds" Deklinācija="5" Dzimte="Sieviešu" Paradigmai_atļautie_atvasinājumi="Deminutīvs -īt"/>
+        <Ending ID="87" StemChange="0" Ending="ex" StemID="1" LemmaEnding="87">
+            <Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
+        </Ending>
+        <Ending ID="88" StemChange="0" Ending="ex s" StemID="1" LemmaEnding="87">
+            <Attributes Skaitlis="Vienskaitlis" Locījums="Ģenitīvs"/>
+        </Ending>
+        <Ending ID="89" StemChange="0" Ending="ei" StemID="1" LemmaEnding="87">
+            <Attributes Skaitlis="Vienskaitlis" Locījums="Datīvs"/>
+        </Ending>
+        <Ending ID="90" StemChange="0" Ending="i" StemID="1" LemmaEnding="87">
+            <Attributes Skaitlis="Vienskaitlis" Locījums="Akuzatīvs"/>
+        </Ending>
+        <Ending ID="91" StemChange="0" Ending="ee" StemID="1" LemmaEnding="87">
+            <Attributes Skaitlis="Vienskaitlis" Locījums="Lokatīvs"/>
+        </Ending>
+        <Ending ID="92" StemChange="18" Ending="e" StemID="1" LemmaEnding="87">
+            <Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs"/>
+        </Ending>
+        <Ending ID="1175" StemChange="17" Ending="" StemID="1" LemmaEnding="87">
+            <Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs"/>
+        </Ending>
+        <Ending ID="93" StemChange="0" Ending="ex s" StemID="1" LemmaEnding="87">
+            <Attributes Skaitlis="Daudzskaitlis" Locījums="Nominatīvs"/>
+        </Ending>
+        <Ending ID="94" StemChange="1" Ending="u" StemID="1" LemmaEnding="87">
+            <Attributes Skaitlis="Daudzskaitlis" Locījums="Ģenitīvs"/>
+        </Ending>
+        <Ending ID="95" StemChange="0" Ending="ee m" StemID="1" LemmaEnding="87">
+            <Attributes Skaitlis="Daudzskaitlis" Locījums="Datīvs"/>
+        </Ending>
+        <Ending ID="96" StemChange="0" Ending="e s" StemID="1" LemmaEnding="87">
+            <Attributes Skaitlis="Daudzskaitlis" Locījums="Akuzatīvs"/>
+        </Ending>
+        <Ending ID="97" StemChange="0" Ending="ee s" StemID="1" LemmaEnding="87">
+            <Attributes Skaitlis="Daudzskaitlis" Locījums="Lokatīvs"/>
+        </Ending>
+        <Ending ID="98" StemChange="0" Ending="e s" StemID="1" LemmaEnding="87">
+            <Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
+        </Ending>
+    </Paradigm>
     <Paradigm AllowedGuessEndings="!" Description='Tiešie darbības vārdi, 1. konjugācija un nekārtnie, izņemot "būt" atvasinājumus (dzert, plēst, iet, dot)' DescriptionEN='Direct verbs, 1st conjugation and irregular except "būt" derivatives (dzert, plēst, iet, dot)' ID="15" LemmaEnding="711" Name="verb-1-phono" Stems="3">
         <Attributes Atgriezeniskums="Nē" Darbības_vārda_tips="Patstāvīgs darbības vārds" Konjugācija="1" Noliegums="Nē" Vārdšķira="Darbības vārds"/>
         <Ending Ending="t" ID="711" LemmaEnding="711" StemChange="200" StemID="1">
