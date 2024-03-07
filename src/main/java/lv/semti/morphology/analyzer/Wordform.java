@@ -128,6 +128,22 @@ public class Wordform extends AttributeValues implements Serializable{
 	}
 
 
+	public String applyPhonotactics(String pronunciation) {
+		return pronunciation;
+	}
+
+
+	public void setSAMPA() {
+		String pronunciation = Pronunciation.toSAMPA(this.token);
+		pronunciation = applyPhonotactics(pronunciation);
+
+		this.addAttribute(AttributeNames.i_Pronunciation, pronunciation);
+		System.err.println(getValue(AttributeNames.i_Pronunciation));
+	}
+
+	public String getSAMPA() { return this.getValue(AttributeNames.i_Pronunciation); }
+
+
 	//getLocījumuDemo
 /*	public String getDemo() {
 		return this.getValue("LocījumuDemo");

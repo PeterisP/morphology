@@ -58,7 +58,8 @@ public class PhoneticTest {
                     System.err.printf("Found a different form");
                     wf.describe(new PrintWriter(System.err));
                 }
-                assertEquals(validForm, wf.getToken());
+                wf.setSAMPA();
+                assertEquals(validForm, wf.getSAMPA());
                 found = true;
                 break;
             }
@@ -177,7 +178,7 @@ public class PhoneticTest {
         testset.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Masculine);
         testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Nominative);
         testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Plural);
-        assertInflection(tēls, testset, "t ææ l ix");
+        assertInflection(tēls, testset, "t EE l ix");
     }
 
     @Test
@@ -189,7 +190,7 @@ public class PhoneticTest {
         testset.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Masculine);
         testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Locative);
         testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Plural);
-        assertInflection(tēls, testset, "dž ɔu l uo s");
+        assertInflection(tēls, testset, "dZ Ou l uo s");
     }
 
     @Test
@@ -201,7 +202,7 @@ public class PhoneticTest {
         testset.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Tagadne);
         testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
         testset.addAttribute(AttributeNames.i_Person, "1");
-        assertInflection(tēls, testset, "ææ d ux");
+        assertInflection(tēls, testset, "EE d ux");
 
         AttributeValues testset2 = new AttributeValues();
         testset2.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
@@ -209,6 +210,13 @@ public class PhoneticTest {
         testset2.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
         testset2.addAttribute(AttributeNames.i_Person, "2");
         assertInflection(tēls, testset2, "ee d");
+
+        AttributeValues testset3 = new AttributeValues();
+        testset3.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+        testset3.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Tagadne);
+        testset3.addAttribute(AttributeNames.i_Person, "3");
+        testset3.addAttribute(AttributeNames.i_Noliegums, AttributeNames.v_Yes);
+        assertInflection(tēls, testset3, "n e EE d");
     }
 
     @Test
@@ -220,7 +228,7 @@ public class PhoneticTest {
         testset.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Tagadne);
         testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
         testset.addAttribute(AttributeNames.i_Person, "1");
-        assertInflection(tēls, testset, "p e ļ ux");
+        assertInflection(tēls, testset, "p e L ux");
 
         AttributeValues testset2 = new AttributeValues();
         testset2.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);

@@ -1028,14 +1028,13 @@ public class Analyzer extends Lexicon {
 
 		    	for (Variants celms : celmi){
 		    		vārds = celms.celms + ending.getEnding();
-//					System.err.println(lemma);
+
 					if (noliegums) {
 						if (vārds.startsWith("vis") && celms.isMatchingStrong(AttributeNames.i_Degree, AttributeNames.v_Superlative)) {
 							vārds = "visne" + vārds.substring(3);
 						} else vārds = "ne" + vārds;
 					}
 		    		vārds = recapitalize(vārds, lemma);
-					System.err.println(vārds);
 		    		Wordform locījums = new Wordform(vārds, lexeme, ending);
 					locījums.addAttributes(celms);
 					boolean validOption = locījums.isMatchingWeak(AttributeNames.i_Generate, AttributeNames.v_Yes);
