@@ -274,6 +274,9 @@ public class LatgalianTest {
 
 		List<Wordform> puika = analyzer.generateInflectionsFromParadigm("puika", 16);
 		assertInflectionMultiple(puika, vsk_gen, new HashSet<String>(){{ add("puikys"); add("puikas");}});
+
+		List<Wordform> bļuzņa = analyzer.generateInflectionsFromParadigm("bļuzņa", 30);
+		assertInflectionMultiple(bļuzņa, vsk_gen, new HashSet<String>(){{ add("bļuznis"); add("bļuzņas");}});
 	}
 
 	@Test
@@ -366,6 +369,21 @@ public class LatgalianTest {
 		List<Wordform> pyrmais = analyzer.generateInflectionsFromParadigm("pyrmais", 27);
 		assertInflection(pyrmais, sg_masc_gen, "pyrmuo");
 		assertInflectionMultiple(pyrmais, pl_masc_gen, new HashSet<String>(){{ add("pyrmū"); add("pyrmūs");}});
+
+	}
+
+	@Test
+	public void adv()
+	{
+		AttributeValues comp = new AttributeValues();
+		comp.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adverb);
+		comp.addAttribute(AttributeNames.i_Degree, AttributeNames.v_Comparative);
+
+		List<Wordform> cīši = analyzer.generateInflectionsFromParadigm("cīši", 32);
+		assertInflection(cīši, comp, "cīšuok");
+
+		List<Wordform> slapni = analyzer.generateInflectionsFromParadigm("slapni", 33);
+		assertInflection(slapni, comp, "slapņuok");
 
 	}
 

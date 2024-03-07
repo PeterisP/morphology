@@ -614,6 +614,26 @@ public abstract class Mijas {
 						varianti.add(new Variants(celms));
 					}
 					break;
+				case 109: // Apstākļa vārdi ar gradāciju, bet bez burtu mijas
+					if (celms.endsWith("uok") && celms.length() > 4) {
+						if (celms.startsWith("vysu")) {
+							varianti.add(new Variants(celms.substring(4,celms.length()-3),AttributeNames.i_Degree,AttributeNames.v_Superlative));
+							varianti.add(new Variants(celms.substring(4,celms.length()-3) + "i",AttributeNames.i_Degree,AttributeNames.v_Superlative));
+							varianti.add(new Variants(celms.substring(4,celms.length()-3) + "a",AttributeNames.i_Degree,AttributeNames.v_Superlative));
+							varianti.add(new Variants(celms.substring(4,celms.length()-3) + "ai",AttributeNames.i_Degree,AttributeNames.v_Superlative));
+						} else if (celms.startsWith("vys")) {
+							varianti.add(new Variants(celms.substring(3,celms.length()-3),AttributeNames.i_Degree,AttributeNames.v_Superlative));
+							varianti.add(new Variants(celms.substring(3,celms.length()-3) + "i",AttributeNames.i_Degree,AttributeNames.v_Superlative));
+							varianti.add(new Variants(celms.substring(3,celms.length()-3) + "a",AttributeNames.i_Degree,AttributeNames.v_Superlative));
+							varianti.add(new Variants(celms.substring(3,celms.length()-3) + "ai",AttributeNames.i_Degree,AttributeNames.v_Superlative));
+						} else {
+							varianti.add(new Variants(celms.substring(0,celms.length()-3),AttributeNames.i_Degree,AttributeNames.v_Comparative));
+							varianti.add(new Variants(celms.substring(0,celms.length()-3) + "i",AttributeNames.i_Degree,AttributeNames.v_Comparative));
+							varianti.add(new Variants(celms.substring(0,celms.length()-3) + "a",AttributeNames.i_Degree,AttributeNames.v_Comparative));
+							varianti.add(new Variants(celms.substring(0,celms.length()-3) + "ai",AttributeNames.i_Degree,AttributeNames.v_Comparative));
+						}
+					} else varianti.add(new Variants(celms,AttributeNames.i_Degree, AttributeNames.v_Positive));
+					break;
 				default:
 					System.err.printf("Invalid StemChange ID, stem '%s', stemchange %d\n", celms, mija);
 			}
@@ -1241,6 +1261,19 @@ public abstract class Mijas {
 							varianti.add(new Variants("vys" + tmpCelms + "uok", AttributeNames.i_Degree, AttributeNames.v_Superlative));
 							varianti.add(new Variants("vysu" + tmpCelms + "uok", AttributeNames.i_Degree, AttributeNames.v_Superlative));
 						}
+					}
+					break;
+				case 109: // apstākļa vārdi ar gradāciju, bet bez burtu mijas
+					varianti.add(new Variants(celms,AttributeNames.i_Degree,AttributeNames.v_Positive));
+					if (celms.endsWith("ai")) {
+						celms = celms.substring(0, celms.length()-2);
+					} else if (celms.endsWith("i") || celms.endsWith("a")) {
+						celms = celms.substring(0, celms.length()-1);
+					}
+					varianti.add(new Variants(celms + "uok",AttributeNames.i_Degree,AttributeNames.v_Comparative));
+					if (pieliktVisPārākoPak) {
+						varianti.add(new Variants("vys" + celms + "uok", AttributeNames.i_Degree, AttributeNames.v_Superlative));
+						varianti.add(new Variants("vysu" + celms + "uok", AttributeNames.i_Degree, AttributeNames.v_Superlative));
 					}
 					break;
 

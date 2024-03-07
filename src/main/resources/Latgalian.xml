@@ -1848,6 +1848,33 @@
 		</Ending>
 	</Paradigm>
 
+	<!-- Apstākļa vārdi -->
+
+	<Paradigm Stems="1" ID="31" Name="adverb-1" LemmaEnding="592" Description="Apstākļa vārdi bez salīdzināmām pakāpēm (tur)" DescriptionEN="Adverbs without degree of comparison (vienmēr, lielākoties)" AllowedGuessEndings="abcdeklmnoprstuzāēīļņšūž">
+		<Attributes Vārdšķira="Apstākļa vārds" Pakāpe="Nepiemīt"/>
+		<Ending ID="592" StemChange="0" Ending="" StemID="1" LemmaEnding="592">
+			<Attributes Vārdšķira="Apstākļa vārds"/>
+		</Ending>
+	</Paradigm>
+	<Paradigm Stems="1" ID="32" Name="adverb-2a" LemmaEnding="593" Description="Apstākļa vārdi ar salīdzināmām pakāpēm, bez burtu mijas (cīši)" DescriptionEN="Adverbs with degree of comparison (ātri, iesāņu)" AllowedGuessEndings="!">
+		<Attributes Vārdšķira="Apstākļa vārds"/>
+		<Ending ID="593" StemChange="109" Ending="" StemID="1" LemmaEnding="593">
+			<Attributes Vārdšķira="Apstākļa vārds" Pakāpe="Pamata"/>
+		</Ending>
+	</Paradigm>
+	<Paradigm Stems="1" ID="33" Name="adverb-2b" LemmaEnding="594" Description="Apstākļa vārdi ar salīdzināmām pakāpēm, ar burtu miju (slapni)" DescriptionEN="Adverbs with degree of comparison (ātri, iesāņu)" AllowedGuessEndings="!">
+		<Attributes Vārdšķira="Apstākļa vārds"/>
+		<Ending ID="594" StemChange="0" Ending="i" StemID="1" LemmaEnding="594">
+			<Attributes Vārdšķira="Apstākļa vārds" Pakāpe="Pamata"/>
+		</Ending>
+		<Ending ID="594" StemChange="108" Ending="" StemID="1" LemmaEnding="594">
+			<Attributes Vārdšķira="Apstākļa vārds"/>
+		</Ending>
+	</Paradigm>
+
+
+	<!-- Citas nelokāmās vārdšķiras -->
+
 <!--
 	<Paradigm Stems="1" ID="36" Name="abbr" LemmaEnding="2091" Description="Saīsinājumi (t.i., utt., u.c.)" DescriptionEN="Abbreviation (t.i., utt., u.c.)" AllowedGuessEndings="!">
 		<Attributes Vārdšķira="Saīsinājums"/>
