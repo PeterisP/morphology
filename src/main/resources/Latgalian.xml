@@ -1875,24 +1875,55 @@
 
 	<!-- Citas nelokāmās vārdšķiras -->
 
-<!--
-	<Paradigm Stems="1" ID="36" Name="abbr" LemmaEnding="2091" Description="Saīsinājumi (t.i., utt., u.c.)" DescriptionEN="Abbreviation (t.i., utt., u.c.)" AllowedGuessEndings="!">
+	<Paradigm Stems="1" ID="34" Name="prep-ltg" LemmaEnding="596" Description="Prievārdi (iz, piec, pi)" AllowedGuessEndings="!">
+		<Attributes Vārdšķira="Prievārds"/>
+		<Ending ID="596" StemChange="0" Ending="" StemID="1" LemmaEnding="596">
+			<Attributes/>
+		</Ending>
+	</Paradigm>
+	<Paradigm Stems="1" ID="35" Name="conj-ltg" LemmaEnding="597" Description="Saikļi (voi, a, i)" AllowedGuessEndings="!">
+		<Attributes Vārdšķira="Saiklis"/>
+		<Ending ID="597" StemChange="0" Ending="" StemID="1" LemmaEnding="597">
+			<Attributes/>
+		</Ending>
+	</Paradigm>
+	<Paradigm Stems="1" ID="36" Name="particle-ltg" LemmaEnding="598" Description="Partikulas (koč, ari)" AllowedGuessEndings="!">
+		<Attributes Vārdšķira="Partikula"/>
+		<Ending ID="598" StemChange="0" Ending="" StemID="1" LemmaEnding="098">
+			<Attributes/>
+		</Ending>
+	</Paradigm>
+	<Paradigm Stems="1" ID="37" Name="excl-ltg" LemmaEnding="599" Description="Izsauksmes vārdi (paļdis, aļo, oi)" AllowedGuessEndings="!">
+		<Attributes Vārdšķira="Izsauksmes vārds" Uzbūve="Vienkāršs"/>
+		<Ending ID="599" StemChange="0" Ending="" StemID="1" LemmaEnding="599">
+			<Attributes/>
+		</Ending>
+	</Paradigm>
+
+	<Paradigm Stems="1" ID="38" Name="abbr-ltg" LemmaEnding="600" Description="Saīsinājumi (t.i., utt., u.c.)" AllowedGuessEndings="!">
 		<Attributes Vārdšķira="Saīsinājums"/>
-		<Ending ID="2091" StemChange="0" Ending="" StemID="1" LemmaEnding="2091">
+		<Ending ID="600" StemChange="0" Ending="" StemID="1" LemmaEnding="600">
 			<Attributes/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="37" Name="punct" LemmaEnding="2092" Description="Pieturzīmes (! , ...)" DescriptionEN="Punctuation (! , ...)" AllowedGuessEndings="!">
-		<Attributes Vārdšķira="Pieturzīme"/>
-		<Ending ID="2092" StemChange="0" Ending="" StemID="1" LemmaEnding="2092">
-			<Attributes/>
-		</Ending>
-	</Paradigm>
-	<Paradigm Stems="1" ID="39" Name="foreign" LemmaEnding="2094" Description="Vārdi svešvalodā (company, adaggio)" DescriptionEN="Foreign words (company, adaggio)" AllowedGuessEndings="aābcčdeēfgģhiījkķlļmnņopqrsštuūvwxyzž1234567890">
+	<Paradigm Stems="1" ID="39" Name="foreign-ltg" LemmaEnding="601" Description="Vārdi svešvalodā (company, adaggio)" DescriptionEN="Foreign words (company, adaggio)" AllowedGuessEndings="aābcčdeēfgģhiījkķlļmnņopqrsštuūvwxyzž1234567890">
 		<Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Vārds svešvalodā"/>
-		<Ending ID="2094" StemChange="0" Ending="" StemID="1" LemmaEnding="2094">
+		<Ending ID="601" StemChange="0" Ending="" StemID="1" LemmaEnding="601">
 			<Attributes/>
 		</Ending>
-	</Paradigm> -->
+	</Paradigm>
+	<Paradigm Stems="1" ID="40" Name="number-ltg" LemmaEnding="602" Description="Ar cipariem pierakstīti skaitļi (123, XVII)" DescriptionEN="Number sequences (123, XVII)" AllowedGuessEndings="!">
+		<Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Skaitlis cipariem"/>
+		<Ending ID="602" StemChange="0" Ending="" StemID="1" LemmaEnding="602">
+			<Attributes/>
+		</Ending>
+	</Paradigm>	
+	<Paradigm Stems="1" ID="41" Name="punct-ltg" LemmaEnding="603" Description="Pieturzīmes (! , ...)" AllowedGuessEndings="!">
+		<Attributes Vārdšķira="Pieturzīme"/>
+		<Ending ID="603" StemChange="0" Ending="" StemID="1" LemmaEnding="603">
+			<Attributes/>
+		</Ending>
+	</Paradigm>
+	
 
 </Morphology>
