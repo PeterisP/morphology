@@ -1900,7 +1900,7 @@
 		</Ending>
 	</Paradigm>
 
-	<Paradigm Stems="1" ID="38" Name="abbr-ltg" LemmaEnding="600" Description="Saīsinājumi (t.i., utt., u.c.)" AllowedGuessEndings="!">
+	<Paradigm Stems="1" ID="38" Name="abbr-ltg" LemmaEnding="600" Description="Saīsinājumi (t.i., pīm.)" AllowedGuessEndings="!">
 		<Attributes Vārdšķira="Saīsinājums"/>
 		<Ending ID="600" StemChange="0" Ending="" StemID="1" LemmaEnding="600">
 			<Attributes/>
