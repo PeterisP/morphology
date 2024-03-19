@@ -609,6 +609,10 @@ public abstract class Mijas {
 				// ------ PHONETIC from here -----
 				case 200:
 					varianti.add(new Variants(celms)); break;
+				case 201:
+					if (celms.endsWith("t")) varianti.add(new Variants(celms+" "));
+					else if (celms.endsWith("i^ ")) varianti.add(new Variants(celms.substring(0,celms.length()-3)+"j "));
+					else if (celms.endsWith("u^ ")) varianti.add(new Variants(celms.substring(0,celms.length()-3)+"v "));
 				case 206:
 					if (celms.endsWith("d ii ") || celms.endsWith("t ii ") || celms.endsWith("s ii ")) varianti.add(new Variants(celms.substring(0,celms.length()-5)+"s "));
 					else if (celms.endsWith("z ii ") || celms.endsWith("S ii ")) varianti.add(new Variants(celms.substring(0,celms.length()-5))); // lūzt, griezt
@@ -673,7 +677,7 @@ public abstract class Mijas {
 	private static int syllables(String word) {
 		int counter = 0;
 		boolean in_vowel = false;
-		HashSet<Character> vowels = new HashSet<Character>( Arrays.asList(new Character[] {'a','ā','e','ē','i','ī','o','u','ū'}));
+		HashSet<Character> vowels = new HashSet<Character>( Arrays.asList(new Character[] {'a','ā','e','ē','i','ī','o','u','ū','æ','ɔ'}));
 
 		for (char c : word.toCharArray()) {
 			if (!in_vowel && vowels.contains(c))
@@ -846,7 +850,9 @@ public abstract class Mijas {
 					else if (celms.endsWith("ž")) {
 						// varianti.add(new Variants(celms.substring(0,celms.length()-1)+"z")); // griez -> griežu
 						varianti.add(new Variants(trešāSakne)); // skaužu -> skaud, laužu -> lauz; sanāk atbilstoši pagātnes celmam
-					} else varianti.add(new Variants(celms));
+					} else {
+						varianti.add(new Variants(celms.replace("æ", "e")));
+					}
 					break;
 				case 8: // -ams -āms 3. konjugācijai bezmiju gadījums
 					if (celms.endsWith("inā")) varianti.add(new Variants(celms, "Garā", "ā"));
@@ -1241,34 +1247,7 @@ public abstract class Mijas {
 					break;
 
 				// ------ PHONETIC from here -----
-				case 200:
-					varianti.add(new Variants(celms)); break;
-				case 206: // 1. konjugācijas nākotne
-					if (celms.endsWith("s ")) {
-						if (trešāSakne.endsWith("d ")) varianti.add(new Variants(celms.substring(0,celms.length()-2)+"d ii "));
-						else if (trešāSakne.endsWith("t ")) varianti.add(new Variants(celms.substring(0,celms.length()-2)+"t ii "));
-						else if (trešāSakne.endsWith("s ")) varianti.add(new Variants(celms.substring(0,celms.length()-2)+"s ii "));
-						else varianti.add(new Variants(celms));
-					} else if (celms.endsWith("z ") || celms.endsWith("S ")) {
-						varianti.add(new Variants(celms+"ii "));
-					}
-					else varianti.add(new Variants(celms));
-					break;
-				case 207: // 1. konjugācijas 2. personas tagadne
-//					if (celms.endsWith(" ")) varianti.add(new Variants(celms.replace("é", "e").substring(0,celms.length()-1)));
-//					else varianti.add(new Variants(celms.replace("é", "e")));
-//					break;
-				case 223:
-					if (celms.endsWith("ļ ")) varianti.add(new Variants(celms.substring(0,celms.length()-2)+"l"));
-					else if (celms.endsWith("mj ") || celms.endsWith("bj ") || celms.endsWith("pj "))	varianti.add(new Variants(celms.substring(0,celms.length()-2)));
-					else if (celms.endsWith("k ")) varianti.add(new Variants(celms.substring(0,celms.length()-2)+"c"));
-					else if (celms.endsWith("g ")) varianti.add(new Variants(celms.substring(0,celms.length()-2)+"dz"));
-					else if (celms.endsWith("ž ")) {
-						// varianti.add(new Variants(celms.substring(0,celms.length()-1)+"z")); // griez -> griežu
-						varianti.add(new Variants(trešāSakne)); // skaužu -> skaud, laužu -> lauz; sanāk atbilstoši pagātnes celmam
-					} else varianti.add(new Variants(celms.replace("æ", "e").substring(0,celms.length()-1)));
-					break;
-				case 236: varianti.add(new Variants(celms)); break; //
+
 
 				default:
 					System.err.printf("Invalid StemChange ID2, stem '%s', stemchange %d\n", celms, mija);

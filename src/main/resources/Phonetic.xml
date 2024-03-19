@@ -50,7 +50,7 @@
     </Paradigm>
     <Paradigm AllowedGuessEndings="J" Description="Lietvārdi vīriešu dzimtē, 1. deklinācija ar galotni -š (ceļš)" DescriptionEN="Masculine nouns, 1st declension ending -š (ceļš)" ID="2" LemmaEnding="14" Name="noun-1b-phono" Stems="1">
         <Attributes Deklinācija="1" Dzimte="Vīriešu" Paradigmai_atļautie_atvasinājumi="Deminutīvs -iņ" Vārdšķira="Lietvārds"/>
-        <Ending Ending="S" ID="14" LemmaEnding="14" StemChange="200" StemID="1">
+        <Ending Ending="S" ID="14" LemmaEnding="14" StemChange="201" StemID="1">
             <Attributes Locījums="Nominatīvs" Skaitlis="Vienskaitlis"/>
         </Ending>
         <Ending Ending="ax" ID="15" LemmaEnding="14" StemChange="200" StemID="1">
@@ -65,7 +65,7 @@
         <Ending Ending="aa" ID="18" LemmaEnding="14" StemChange="200" StemID="1">
             <Attributes Locījums="Lokatīvs" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="S" ID="19" LemmaEnding="14" StemChange="200" StemID="1">
+        <Ending Ending="S" ID="19" LemmaEnding="14" StemChange="201" StemID="1">
             <Attributes Locījums="Vokatīvs" Skaitlis="Vienskaitlis" Ģenerēt="Nē"/>
         </Ending>
         <Ending Ending="" ID="20" LemmaEnding="14" StemChange="200" StemID="1">

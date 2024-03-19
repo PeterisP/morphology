@@ -123,7 +123,7 @@ public class PhoneticTest {
     @BeforeClass
     public static void setUpBeforeClass() {
         try {
-            analyzer = new Analyzer("Phonetic.xml", false);
+            analyzer = new Analyzer("Phonetic_v2.xml", false);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -171,90 +171,139 @@ public class PhoneticTest {
 
     @Test
     public void tēls() {
-        List<Wordform> tēls = analyzer.generateInflections("t ææ l s");
-//        describe(viejs);
+        List<Wordform> tēls = analyzer.generateInflections("#tææls");
+
         AttributeValues testset = new AttributeValues();
         testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
         testset.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Masculine);
         testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Nominative);
         testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Plural);
-        assertInflection(tēls, testset, "t EE l ix");
+        assertInflection(tēls, testset, "#tEElix");
+    }
+
+    @Test
+    public void lats() {
+        List<Wordform> lats = analyzer.generateInflections("#lats");
+
+        AttributeValues testset = new AttributeValues();
+        testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
+        testset.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Masculine);
+        testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Nominative);
+        testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+        assertInflection(lats, testset, "#lats");
+
+        AttributeValues testset2 = new AttributeValues();
+        testset2.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
+        testset2.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Masculine);
+        testset2.addAttribute(AttributeNames.i_Case, AttributeNames.v_Nominative);
+        testset2.addAttribute(AttributeNames.i_Number, AttributeNames.v_Plural);
+        assertInflection(lats, testset2, "#lattix");
     }
 
     @Test
     public void džouls() {
-        List<Wordform> tēls = analyzer.generateInflections("dž ɔu l s");
-//        describe(viejs);
+        List<Wordform> tēls = analyzer.generateInflections("#džɔuls");
+
         AttributeValues testset = new AttributeValues();
         testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
         testset.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Masculine);
         testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Locative);
         testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Plural);
-        assertInflection(tēls, testset, "dZ Ou l uo s");
+        assertInflection(tēls, testset, "#dZOuluos");
+    }
+
+    @Test
+    public void vējš() {
+        List<Wordform> vējš = analyzer.generateInflections("#veei^š");
+
+        AttributeValues testset = new AttributeValues();
+        testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
+        testset.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Masculine);
+        testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Nominative);
+        testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+        assertInflection(vējš, testset, "#veei^S");
     }
 
     @Test
     public void ēst() {
-        List<Wordform> tēls = analyzer.generateInflections("ee s t");
-//        describe(viejs);
+        List<Wordform> tēls = analyzer.generateInflections("#eest");
+
         AttributeValues testset = new AttributeValues();
         testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
         testset.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Tagadne);
         testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
         testset.addAttribute(AttributeNames.i_Person, "1");
-        assertInflection(tēls, testset, "EE d ux");
+        assertInflection(tēls, testset, "#EEdux");
 
         AttributeValues testset2 = new AttributeValues();
         testset2.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
         testset2.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Tagadne);
         testset2.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
         testset2.addAttribute(AttributeNames.i_Person, "2");
-        assertInflection(tēls, testset2, "ee d");
+        assertInflection(tēls, testset2, "#eed");
 
         AttributeValues testset3 = new AttributeValues();
         testset3.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
         testset3.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Tagadne);
         testset3.addAttribute(AttributeNames.i_Person, "3");
         testset3.addAttribute(AttributeNames.i_Noliegums, AttributeNames.v_Yes);
-        assertInflection(tēls, testset3, "n e EE d");
+        assertInflection(tēls, testset3, "#ne-EEd");
+
+        AttributeValues testset4 = new AttributeValues();
+        testset4.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+        testset4.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Tagadne);
+        testset4.addAttribute(AttributeNames.i_Izteiksme, AttributeNames.v_Atstaastiijuma);
+//        testset4.addAttribute(AttributeNames.i_Noliegums, AttributeNames.v_Yes);
+        assertInflection(tēls, testset4, "#EEduot");
+
     }
 
     @Test
     public void pelt() {
-        List<Wordform> tēls = analyzer.generateInflections("p e l t");
-//        describe(viejs);
-        AttributeValues testset = new AttributeValues();
-        testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
-        testset.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Tagadne);
-        testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
-        testset.addAttribute(AttributeNames.i_Person, "1");
-        assertInflection(tēls, testset, "p e L ux");
+        List<Wordform> tēls = analyzer.generateInflections("#pelt");
 
         AttributeValues testset2 = new AttributeValues();
         testset2.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
         testset2.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Tagadne);
         testset2.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
         testset2.addAttribute(AttributeNames.i_Person, "2");
-        assertInflection(tēls, testset2, "p e l");
+        assertInflection(tēls, testset2, "#pel");
+
+
+        AttributeValues testset = new AttributeValues();
+        testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+        testset.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Tagadne);
+        testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+        testset.addAttribute(AttributeNames.i_Person, "1");
+        assertInflection(tēls, testset, "#peLux");
+
     }
 
 
     @Test
-    public void intonācijas() {
-        List<Wordform> stiepta = analyzer.generateInflections("z aa= l ex");
+    public void asimilācija() {
+        List<Wordform> augs = analyzer.generateInflections("#auqks");
+
         AttributeValues testset = new AttributeValues();
         testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
-        testset.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Feminine);
+        testset.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Masculine);
         testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Locative);
         testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Plural);
-        assertInflection(stiepta, testset, "z aa= l ee s");
+        assertInflection(augs, testset, "#auqguos");
 
-        List<Wordform> lauzta = analyzer.generateInflections("z aaq l ex");
         AttributeValues testset2 = new AttributeValues();
         testset2.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
-        testset2.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Feminine);
-        testset2.addAttribute(AttributeNames.i_Case, AttributeNames.v_Locative);
-        testset2.addAttribute(AttributeNames.i_Number, AttributeNames.v_Plural);
-        assertInflection(lauzta, testset2, "z aaq l ee s");
+        testset2.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Masculine);
+        testset2.addAttribute(AttributeNames.i_Case, AttributeNames.v_Nominative);
+        testset2.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+        assertInflection(augs, testset2, "#auqks");
+
+        List<Wordform> apģērbs = analyzer.generateInflections("#abģæærps");
+        AttributeValues testset3 = new AttributeValues();
+        testset3.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
+        testset3.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Masculine);
+        testset3.addAttribute(AttributeNames.i_Case, AttributeNames.v_Accusative);
+        testset3.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+        assertInflection(apģērbs, testset3, "#abGEErbux");
     }
 }

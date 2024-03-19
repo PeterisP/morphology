@@ -181,7 +181,6 @@ public class Analyzer extends Lexicon {
 			int stemChange = ending.getMija();
 			boolean properName = p_firstcap.matcher(originalWord).matches();
 			ArrayList<Variants> celmi = Mijas.mijuVarianti(stemBezMijas, stemChange, properName);
-
 			for (Variants celms : celmi) {
 				ArrayList<Lexeme> lexemes = ending.getEndingLexemes(celms.celms);
 				boolean foundSomethingHere = false;
@@ -1028,7 +1027,6 @@ public class Analyzer extends Lexicon {
 
 		    	for (Variants celms : celmi){
 		    		vārds = celms.celms + ending.getEnding();
-
 					if (noliegums) {
 						if (vārds.startsWith("vis") && celms.isMatchingStrong(AttributeNames.i_Degree, AttributeNames.v_Superlative)) {
 							vārds = "visne" + vārds.substring(3);

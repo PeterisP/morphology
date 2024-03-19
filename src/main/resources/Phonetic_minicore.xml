@@ -5,6 +5,10 @@
         <Lexeme Stem1="m ee r "/>
         <Lexeme Stem1="v æ n ts p i l "/>
         <Lexeme Stem1="dž ɔu l "/>
+        <Lexeme Stem1="l a t " />
+    </Paradigm>
+    <Paradigm AllowedGuessEndings="J" Description="Lietvārdi vīriešu dzimtē, 1. deklinācija ar galotni -š (ceļš)" DescriptionEN="Masculine nouns, 1st declension ending -š (ceļš)" ID="2" LemmaEnding="14" Name="noun-1b-phono" Stems="1">
+        <Lexeme Stem1="v ee j "/>
     </Paradigm>
     <Paradigm Stems="1" ID="9" Name="noun-5fa-phono" LemmaEnding="87" Description="Lietvārdi sieviešu dzimtē, 5. deklinācija ar galotni -e, ar miju (egle)">
         <Lexeme Stem1="z aa= l "/>

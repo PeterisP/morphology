@@ -283,6 +283,7 @@ public class AttributeNames {
 	public static final String i_Recommended = "Rādīt zaļu - čunkera rekomendācija";
 	public static final String i_Tagged = "Tagera rekomendācija";
 
-
+	public final static String i_Orthography = "Pamatformas pieraksts";
+	public final static String i_PhonoStem = "Izrunas sakne";
 	public final static String i_Pronunciation = "Izruna";
 }

@@ -25,6 +25,7 @@ import java.util.Map;
 
 import lv.semti.morphology.analyzer.Analyzer;
 import lv.semti.morphology.analyzer.Mijas;
+import lv.semti.morphology.analyzer.Pronunciation;
 import lv.semti.morphology.analyzer.Variants;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;
@@ -42,7 +43,7 @@ import lv.semti.morphology.attributes.*;
 public class Lexeme extends AttributeValues {
 	private int id = 0;		// numurs pēc kārtas - ID
 	private ArrayList <String> stems = new ArrayList<String>();    // Saknes - 1 vai 3 eksemplāri.
-	private Paradigm paradigm = null;
+    private Paradigm paradigm = null;
 
 	protected void setParadigm(Paradigm paradigm) {
 		this.paradigm = paradigm;
@@ -126,6 +127,8 @@ public class Lexeme extends AttributeValues {
         } else throw new Error("Nav paradigmas leksēmai " + json.toJSONString());
 
         setStemCount(this.paradigm.getStems());
+//        // TODO: (っ °Д °;)っ fonētiskos celmus kaut kā vajag labāk savienot
+//        setPhonoStemCount(this.paradigm.getStems());
 
         if (json.get("lexeme_id") != null) {
             setID(((Long) json.get("lexeme_id")).intValue());
@@ -148,6 +151,10 @@ public class Lexeme extends AttributeValues {
                 throw new Error("Paradigmai neatbilstošs celms " + json.toJSONString());
             } else stems.set(2, (String) json.get("stem3"));
         }
+        if (json.get("ortho") != null) {
+            addAttribute(AttributeNames.i_Orthography, (String)json.get("ortho"));
+        }
+
         if (json.get("attributes") != null) {
             JSONObject attrs = (JSONObject)json.get("attributes");
             for (Object key : attrs.keySet()) {
@@ -209,6 +216,16 @@ public class Lexeme extends AttributeValues {
         if (getValue(AttributeNames.i_LemmaOverride) != null) {
             addAttribute(AttributeNames.i_Lemma, getValue(AttributeNames.i_LemmaOverride));
         }
+
+        // TODO: Man šķiet šo vajag kaut kā labāk realizēt（；´д｀）ゞ
+        // FIXME: Šo nevajadzētu izsaukt, ja ir dotas saknes, t.i. Stem1-Stem3
+        if (json.get("ortho") != null && json.get("stem1") == null) {
+            String ortho = this.getValue(AttributeNames.i_Orthography);
+            String orthoStem = ortho.substring(0, ortho.length()-this.paradigm.endings.get(0).getEnding().length());
+            addAttribute(AttributeNames.i_PhonoStem, Pronunciation.restoreStem(this.stems.get(0), orthoStem));
+            System.out.println("* "+Pronunciation.restoreStem(this.stems.get(0), orthoStem));
+        }
+
         paradigm.addLexeme(this);
     }
 
