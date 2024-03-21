@@ -180,12 +180,12 @@ public class MorphoEvaluate {
 				}
 				if (visas_lemmas_vienādas) unambiguous_lemma++;
 				
-				if (mainwf.getValue(AttributeNames.i_PartOfSpeech).equalsIgnoreCase(etalonaAV.getValue(AttributeNames.i_PartOfSpeech)))
+				if (mainwf.getValue(AttributeNames.i_PartOfSpeech) != null && mainwf.getValue(AttributeNames.i_PartOfSpeech).equalsIgnoreCase(etalonaAV.getValue(AttributeNames.i_PartOfSpeech)))
 					first_pos_correct++;
 				else {
                     boolean found_pos = false;
                     for (Wordform wf : w.wordforms) {
-                        if (wf.getValue(AttributeNames.i_PartOfSpeech).equalsIgnoreCase(etalonaAV.getValue(AttributeNames.i_PartOfSpeech)))
+                        if (wf.getValue(AttributeNames.i_PartOfSpeech) != null && wf.getValue(AttributeNames.i_PartOfSpeech).equalsIgnoreCase(etalonaAV.getValue(AttributeNames.i_PartOfSpeech)))
                             found_pos = true;
                     }
                     if (found_pos) any_pos_correct++;
