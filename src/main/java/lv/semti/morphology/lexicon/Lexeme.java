@@ -123,7 +123,9 @@ public class Lexeme extends AttributeValues {
         } else if (json.get("paradigm_name") != null) {
             String paradigmName = ((String)json.get("paradigm_name"));
             this.paradigm = lexicon.paradigmByName(paradigmName);
-        } else throw new Error("Nav paradigmas leksēmai " + json.toJSONString());
+        }
+        if (this.paradigm == null)
+            throw new Error("Nav paradigmas leksēmai " + json.toJSONString());
 
         setStemCount(this.paradigm.getStems());
 

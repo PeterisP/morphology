@@ -3683,7 +3683,7 @@ public class MorphologyTest {
         Word w = locītājs.analyze("cenzdamies");
         assertTrue(w.isRecognized());
         Wordform wf = w.getBestWordform();
-        assertEquals("vmyppm0n0000n", wf.getTag());
+        assertEquals("voyppm0n0000n", wf.getTag());
     }
 
     /**
@@ -4122,7 +4122,7 @@ public class MorphologyTest {
         assertTrue(nevarēšu.isRecognized());
         Wordform wf = nevarēšu.getBestWordform();
         assertEquals("Jā", wf.getValue(AttributeNames.i_Noliegums));
-        assertEquals("vmnift31say", wf.getTag());
+        assertEquals("vonift31say", wf.getTag());
     }
 
     @Test
