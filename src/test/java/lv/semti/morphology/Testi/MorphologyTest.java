@@ -4278,4 +4278,15 @@ public class MorphologyTest {
         assertTrue(p.isMatchingWeak(AttributeNames.i_ParadigmSupportedDerivations, AttributeNames.v_Derivation_tājs_tāja_ējs_ēja));
         assertTrue(p.isMatchingWeak(AttributeNames.i_ParadigmSupportedDerivations, AttributeNames.v_Diminutive_iņ));
     }
+
+    @Test
+    public void izgrebt() {
+        // aizdomas par crash pie 2.5.2 relīzes
+        Word w = locītājs.analyze("izgrebt");
+        assertTrue(w.isRecognized());
+
+        List<Wordform> formas = locītājs.generateInflections("izgrebt");
+        describe(formas);
+    }
+
 }

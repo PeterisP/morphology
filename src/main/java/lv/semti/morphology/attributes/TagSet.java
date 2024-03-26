@@ -191,7 +191,7 @@ public class TagSet {
 		if (postag == null) return values;
 		AttributeValue av_pos = postag.getTagValue(tag.charAt(0));
 		if (av_pos==null) {
-			System.out.println("nesapratu pos tagam '"+tag+"'");
+			System.err.println("fromTag izsaukts ar nekorektu tagu - nesapratu pos tagam '"+tag+"'");
 			return values;
 		}
 		String pos = av_pos.valueLV;
