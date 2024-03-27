@@ -62,6 +62,7 @@
 {"lexeme_id": 7553, "entry_id": 5513, "human_id": "nuoss:1", "paradigm_name": "noun-6a-ltg", "lemma": "nuoss"}
 {"lexeme_id": 7535, "entry_id": 5498, "human_id": "nūceja:1", "paradigm_name": "noun-4fb-ltg", "lemma": "nūceja"}
 {"lexeme_id": 7651, "entry_id": 5582, "human_id": "pāds:1", "paradigm_name": "noun-4fa-ltg", "lemma": "pāda"}
+{"lexeme_id": 7676, "entry_id": 5606, "human_id": "pajiemīņs:1", "paradigm_name": "noun-1a-ltg", "lemma": "pajiemīņs"}
 {"lexeme_id": 7782, "entry_id": 5688, "human_id": "pasauka:1", "paradigm_name": "noun-4fa-ltg", "lemma": "pasauka"}
 {"lexeme_id": 7822, "entry_id": 5719, "human_id": "patmaļnīks:1", "paradigm_name": "noun-1a-ltg", "lemma": "patmaļnīks"}
 {"lexeme_id": 8537, "entry_id": 6241, "human_id": "sirdeigs:1", "paradigm_name": "adj-1-ltg", "lemma": "sirdeigs"}
@@ -115,7 +116,10 @@
 {"lexeme_id": 9876, "entry_id": 4381, "human_id": "dzeraune:1", "paradigm_name": "noun-4fb-ltg", "lemma": "dzerauņa", "attributes": {"Izloksne": "Tilžas"}}
 {"lexeme_id": 9898, "entry_id": 7201, "human_id": "aile:1", "paradigm_name": "noun-5fa-ltg", "lemma": "aile"}
 {"lexeme_id": 9880, "entry_id": 7195, "human_id": "Aizkaļne:1", "paradigm_name": "noun-5fa-ltg", "lemma": "Aizkaļne", "attributes": {"Lietvārda tips": "Īpašvārds", "Īpašvārda veids": "Vietvārds"}}
+{"lexeme_id": 9862, "entry_id": 7186, "human_id": "da:2", "paradigm_name": "conj-ltg", "lemma": "da"}
 {"lexeme_id": 9894, "entry_id": 7199, "human_id": "cikom:2", "paradigm_name": "adverb-1-ltg", "lemma": "cikom"}
+{"lexeme_id": 9863, "entry_id": 7187, "human_id": "da:3", "paradigm_name": "particle-ltg", "lemma": "da"}
+{"lexeme_id": 5794, "entry_id": 4201, "human_id": "da:1", "paradigm_name": "prep-ltg", "lemma": "da", "attributes": {"StructuralRestrictions": {"OR": [{"Value": {"Flags": {"Locījums": ["Datīvs"]}}, "Restriction": "Kopā ar"}, {"Value": {"Flags": {"Locījums": ["Ģenitīvs"]}}, "Restriction": "Kopā ar"}]}}}
 {"lexeme_id": 9900, "entry_id": 7201, "human_id": "aile:1", "paradigm_name": "noun-4fb-ltg", "lemma": "aiļa", "attributes": {"Piezīmes": "Izv., Adt"}}
 {"lexeme_id": 9899, "entry_id": 7201, "human_id": "aile:1", "paradigm_name": "noun-4fb-ltg", "lemma": "aileņa"}
 {"lexeme_id": 9904, "entry_id": 3626, "human_id": "agrysta:1", "paradigm_name": "noun-1a-ltg", "lemma": "agrists"}
@@ -506,22 +510,24 @@
 {"lexeme_id": 10401, "entry_id": 6241, "human_id": "sirdeigs:1", "paradigm_name": "adverb-2b-ltg", "lemma": "sirdeigai", "attributes": {"Vārdšķira": "Apstākļa vārds"}}
 {"lexeme_id": 10404, "entry_id": 7536, "human_id": "sirdeitīs:1", "paradigm_name": "noun-r1-ltg", "lemma": "sirdeišonuos"}
 {"lexeme_id": 10416, "entry_id": 7543, "human_id": "es:1", "paradigm_name": "pron-ltg", "lemma": "es", "attributes": {"Vietniekvārda tips": "Personas", "Morfotabulas attēlošana": "Nerādīt daudzskaitli"}}
-{"lexeme_id": 10417, "entry_id": 7544, "human_id": "pīci:1", "paradigm_name": "card-pl-ltg", "lemma": "pīci"}
 {"lexeme_id": 10418, "entry_id": 7545, "human_id": "jiemiejs:1", "paradigm_name": "noun-1a-ltg", "lemma": "jiemiejs"}
 {"lexeme_id": 10393, "entry_id": 3910, "human_id": "bednys:1", "paradigm_name": "adverb-2a-ltg", "lemma": "bednai", "attributes": {"Vārdšķira": "Apstākļa vārds"}}
-{"lexeme_id": 10421, "entry_id": 7545, "human_id": "jiemiejs:1", "paradigm_name": "noun-4fb-ltg", "lemma": "jiemieja"}
 {"lexeme_id": 10419, "entry_id": 7545, "human_id": "jiemiejs:1", "paradigm_name": "noun-1a-ltg", "lemma": "jēmējs", "attributes": {"Lietojums": "Apvidvārds"}}
-{"lexeme_id": 10422, "entry_id": 7545, "human_id": "jiemiejs:1", "paradigm_name": "noun-4fb-ltg", "lemma": "jēmēja", "attributes": {"Lietojums": "Apvidvārds"}}
-{"lexeme_id": 10423, "entry_id": 7545, "human_id": "jiemiejs:1", "paradigm_name": "noun-4fb-ltg", "lemma": "jāmuoja", "attributes": {"Lietojums": "Apvidvārds"}}
+{"lexeme_id": 10417, "entry_id": 7544, "human_id": "pīci:1", "paradigm_name": "card-pl-ltg", "lemma": "pīci", "attributes": {"Vārdšķira": "Skaitļa vārds"}}
 {"lexeme_id": 10420, "entry_id": 7545, "human_id": "jiemiejs:1", "paradigm_name": "noun-1a-ltg", "lemma": "jāmuojs", "attributes": {"Lietojums": "Apvidvārds"}}
 {"lexeme_id": 7738, "entry_id": 5652, "human_id": "paprīšku:1", "paradigm_name": "adverb-1-ltg", "lemma": "paprīšku"}
-{"lexeme_id": 10416, "entry_id": 7543, "human_id": "es:1", "paradigm_name": "hardcoded", "lemma": "es", "stem1": "es", "attributes": {"Vietniekvārda tips": "Personas", "Morfotabulas attēlošana": ["Nerādīt daudzskaitli"], "Locījums": "Nominatīvs"}}
-{"lexeme_id": 10416, "entry_id": 7543, "human_id": "es:1", "paradigm_name": "hardcoded", "lemma": "es", "stem1": "maņ", "attributes": {"Vietniekvārda tips": "Personas", "Morfotabulas attēlošana": ["Nerādīt daudzskaitli"], "Locījums": "Datīvs"}}
-{"lexeme_id": 10416, "entry_id": 7543, "human_id": "es:1", "paradigm_name": "hardcoded", "lemma": "es", "stem1": "mane", "attributes": {"Vietniekvārda tips": "Personas", "Morfotabulas attēlošana": ["Nerādīt daudzskaitli"], "Locījums": "Ģenitīvs"}}
-{"lexeme_id": 10416, "entry_id": 7543, "human_id": "es:1", "paradigm_name": "hardcoded", "lemma": "es", "stem1": "man", "attributes": {"Vietniekvārda tips": "Personas", "Morfotabulas attēlošana": ["Nerādīt daudzskaitli"], "Valodas normēšana": "Nevēlams", "Papildforma": "Jā"}}
-{"lexeme_id": 10416, "entry_id": 7543, "human_id": "es:1", "paradigm_name": "hardcoded", "lemma": "es", "stem1": "manis", "attributes": {"Vietniekvārda tips": "Personas", "Morfotabulas attēlošana": ["Nerādīt daudzskaitli"], "Locījums": "Ģenitīvs", "Valodas normēšana": "Nevēlams", "Papildforma": "Jā"}}
-{"lexeme_id": 10416, "entry_id": 7543, "human_id": "es:1", "paradigm_name": "hardcoded", "lemma": "es", "stem1": "maņa", "attributes": {"Vietniekvārda tips": "Personas", "Morfotabulas attēlošana": ["Nerādīt daudzskaitli"], "Locījums": "Ģenitīvs", "Valodas normēšana": "Nevēlams", "Papildforma": "Jā"}}
-{"lexeme_id": 10416, "entry_id": 7543, "human_id": "es:1", "paradigm_name": "hardcoded", "lemma": "es", "stem1": "mani", "attributes": {"Vietniekvārda tips": "Personas", "Morfotabulas attēlošana": ["Nerādīt daudzskaitli"], "Locījums": "Ģenitīvs", "Papildforma": "Jā"}}
-{"lexeme_id": 10416, "entry_id": 7543, "human_id": "es:1", "paradigm_name": "hardcoded", "lemma": "es", "stem1": "as", "attributes": {"Vietniekvārda tips": "Personas", "Morfotabulas attēlošana": ["Nerādīt daudzskaitli"], "Locījums": "Nominatīvs", "Valodas normēšana": "Nevēlams", "Papildforma": "Jā"}}
-{"lexeme_id": 10049, "entry_id": 7275, "human_id": "acs:1", "paradigm_name": "hardcoded", "lemma": "acs", "stem1": "ocu", "attributes": {"Skaitlis": "Daudzskaitlis", "Locījums": "Ģenitīvs"}}
-{"lexeme_id": 10050, "entry_id": 7276, "human_id": "zivs:1", "paradigm_name": "hardcoded", "lemma": "zivs", "stem1": "zyvu", "attributes": {"Skaitlis": "Daudzskaitlis", "Locījums": "Ģenitīvs"}}
+{"lexeme_id": 10421, "entry_id": 7545, "human_id": "jiemiejs:1", "paradigm_name": "noun-4fb-ltg", "lemma": "jiemieja"}
+{"lexeme_id": 10422, "entry_id": 7545, "human_id": "jiemiejs:1", "paradigm_name": "noun-4fb-ltg", "lemma": "jēmēja", "attributes": {"Lietojums": "Apvidvārds"}}
+{"lexeme_id": 10423, "entry_id": 7545, "human_id": "jiemiejs:1", "paradigm_name": "noun-4fb-ltg", "lemma": "jāmuoja", "attributes": {"Lietojums": "Apvidvārds"}}
+{"lexeme_id": 10435, "entry_id": 5606, "human_id": "pajiemīņs:1", "paradigm_name": "noun-1a-ltg", "lemma": "pajēmīņs"}
+{"lexeme_id": 10436, "entry_id": 5606, "human_id": "pajiemīņs:1", "paradigm_name": "noun-2a-ltg", "lemma": "pajēmīneits", "attributes": {"Deminutīvs": "Jā"}}
+{"lexeme_id": 10416, "entry_id": 7543, "human_id": "es:1", "paradigm_name": "hardcoded", "lemma": "es", "stem1": "es", "attributes": {"Noliegums": "Nē", "Vārdšķira": "Vietniekvārds", "Locīšanas īpatnības": "Pielasīt visas izņēmumformas", "Vietniekvārda tips": "Personas", "Morfotabulas attēlošana": "Nerādīt daudzskaitli", "Locījums": "Nominatīvs"}}
+{"lexeme_id": 10416, "entry_id": 7543, "human_id": "es:1", "paradigm_name": "hardcoded", "lemma": "es", "stem1": "maņ", "attributes": {"Noliegums": "Nē", "Vārdšķira": "Vietniekvārds", "Locīšanas īpatnības": "Pielasīt visas izņēmumformas", "Vietniekvārda tips": "Personas", "Morfotabulas attēlošana": "Nerādīt daudzskaitli", "Locījums": "Datīvs"}}
+{"lexeme_id": 10416, "entry_id": 7543, "human_id": "es:1", "paradigm_name": "hardcoded", "lemma": "es", "stem1": "mane", "attributes": {"Noliegums": "Nē", "Vārdšķira": "Vietniekvārds", "Locīšanas īpatnības": "Pielasīt visas izņēmumformas", "Vietniekvārda tips": "Personas", "Morfotabulas attēlošana": "Nerādīt daudzskaitli", "Locījums": "Ģenitīvs"}}
+{"lexeme_id": 10416, "entry_id": 7543, "human_id": "es:1", "paradigm_name": "hardcoded", "lemma": "es", "stem1": "man", "attributes": {"Noliegums": "Nē", "Vārdšķira": "Vietniekvārds", "Locīšanas īpatnības": "Pielasīt visas izņēmumformas", "Vietniekvārda tips": "Personas", "Morfotabulas attēlošana": "Nerādīt daudzskaitli", "Valodas normēšana": "Nevēlams", "Papildforma": "Jā"}}
+{"lexeme_id": 10416, "entry_id": 7543, "human_id": "es:1", "paradigm_name": "hardcoded", "lemma": "es", "stem1": "manis", "attributes": {"Noliegums": "Nē", "Vārdšķira": "Vietniekvārds", "Locīšanas īpatnības": "Pielasīt visas izņēmumformas", "Vietniekvārda tips": "Personas", "Morfotabulas attēlošana": "Nerādīt daudzskaitli", "Locījums": "Ģenitīvs", "Valodas normēšana": "Nevēlams", "Papildforma": "Jā"}}
+{"lexeme_id": 10416, "entry_id": 7543, "human_id": "es:1", "paradigm_name": "hardcoded", "lemma": "es", "stem1": "maņa", "attributes": {"Noliegums": "Nē", "Vārdšķira": "Vietniekvārds", "Locīšanas īpatnības": "Pielasīt visas izņēmumformas", "Vietniekvārda tips": "Personas", "Morfotabulas attēlošana": "Nerādīt daudzskaitli", "Locījums": "Ģenitīvs", "Valodas normēšana": "Nevēlams", "Papildforma": "Jā"}}
+{"lexeme_id": 10416, "entry_id": 7543, "human_id": "es:1", "paradigm_name": "hardcoded", "lemma": "es", "stem1": "mani", "attributes": {"Noliegums": "Nē", "Vārdšķira": "Vietniekvārds", "Locīšanas īpatnības": "Pielasīt visas izņēmumformas", "Vietniekvārda tips": "Personas", "Morfotabulas attēlošana": "Nerādīt daudzskaitli", "Locījums": "Ģenitīvs", "Papildforma": "Jā"}}
+{"lexeme_id": 10416, "entry_id": 7543, "human_id": "es:1", "paradigm_name": "hardcoded", "lemma": "es", "stem1": "as", "attributes": {"Noliegums": "Nē", "Vārdšķira": "Vietniekvārds", "Locīšanas īpatnības": "Pielasīt visas izņēmumformas", "Vietniekvārda tips": "Personas", "Morfotabulas attēlošana": "Nerādīt daudzskaitli", "Locījums": "Nominatīvs", "Valodas normēšana": "Nevēlams", "Papildforma": "Jā"}}
+{"lexeme_id": 10049, "entry_id": 7275, "human_id": "acs:1", "paradigm_name": "hardcoded", "lemma": "acs", "stem1": "ocu", "attributes": {"Dzimte": "Sieviešu", "Deklinācija": "6", "Vārdšķira": "Lietvārds", "Skaitlis": "Daudzskaitlis", "Locījums": "Ģenitīvs"}}
+{"lexeme_id": 10050, "entry_id": 7276, "human_id": "zivs:1", "paradigm_name": "hardcoded", "lemma": "zivs", "stem1": "zyvu", "attributes": {"Dzimte": "Sieviešu", "Deklinācija": "6", "Vārdšķira": "Lietvārds", "Skaitlis": "Daudzskaitlis", "Locījums": "Ģenitīvs"}}

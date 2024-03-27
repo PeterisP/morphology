@@ -48,7 +48,7 @@ public class AttributeValues implements FeatureStructure, Cloneable {
 	public void describe() {
 		PrintWriter izeja;
 		try {
-			izeja = new PrintWriter(new OutputStreamWriter(System.out, "UTF-8"));
+			izeja = new PrintWriter(new OutputStreamWriter(System.err, "UTF-8"));
 			this.describe(izeja);
 			izeja.flush();
 		} catch (UnsupportedEncodingException e) {
