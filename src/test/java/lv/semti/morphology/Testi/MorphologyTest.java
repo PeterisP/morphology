@@ -610,7 +610,7 @@ public class MorphologyTest {
         Word viņi = locītājs.analyze("viņi");
         assertTrue(viņi.isRecognized());
         describe(viņi.wordforms);
-        assertEquals(1, viņi.wordformsCount());
+        assertEquals(3, viņi.wordformsCount());
     }
 
     @Test
@@ -4289,5 +4289,17 @@ public class MorphologyTest {
 
         List<Wordform> formas = locītājs.generateInflections("izgrebt");
     }
+
+    @Test
+    public void vietniekvārdu_veidi() {
+        Word kas = locītājs.analyze("kas");
+        assertTrue(kas.isRecognized());
+
+        AttributeValues testset = new AttributeValues();
+        testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Pronoun);
+        kas.filterByAttributes(testset);
+        assertEquals(3, kas.wordformsCount());
+    }
+
 
 }

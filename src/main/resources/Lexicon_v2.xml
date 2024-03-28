@@ -5033,11 +5033,11 @@
 			<Attributes Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Lokatīvs"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="25" Name="pron" LemmaEnding="2329" Description="Vietniekvārdi (es, kas, tāds)" DescriptionEN="Propnouns (es, kas, tāds)" AllowedGuessEndings="!">
-		<Attributes Vārdšķira="Vietniekvārds" Noliegums="Nē" Locīšanas_īpatnības="Pielasīt visas izņēmumformas"/>
-		<Ending ID="2329" StemChange="0" Ending="" StemID="1" LemmaEnding="2329">
+	<Paradigm Stems="1" ID="25" Name="pron" Description="Vietniekvārdi (es, kas, tāds)" DescriptionEN="Pronouns (es, kas, tāds)" AllowedGuessEndings="!">
+		<Attributes Vārdšķira="Vietniekvārds" Noliegums="Nē" Locīšanas_īpatnības="Tikai izņēmumformas"/>
+<!-- 		<Ending ID="2329" StemChange="0" Ending="" StemID="1" LemmaEnding="2329">
 			<Attributes Ģenerēt="Nē"/>
-		</Ending>
+		</Ending> -->
 	</Paradigm>
 	<Paradigm Stems="1" ID="26" Name="prep" LemmaEnding="1196" Description="Prievārdi (ar, uz, no, dēļ)" DescriptionEN="Adpositions (ar, uz, no, dēļ)" AllowedGuessEndings="!">
 		<Attributes Vārdšķira="Prievārds"/>
