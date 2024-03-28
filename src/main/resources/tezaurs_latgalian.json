@@ -7,8 +7,8 @@
 {"lexeme_id": 6, "entry_id": 5, "human_id": "bruoļs:1", "paradigm_name": "noun-2a-ltg", "lemma": "brōļs"}
 {"lexeme_id": 5, "entry_id": 5, "human_id": "bruoļs:1", "paradigm_name": "noun-2a-ltg", "lemma": "bruoļs"}
 {"lexeme_id": 10, "entry_id": 8, "human_id": "muote:1", "paradigm_name": "noun-5fa-ltg", "lemma": "mōte"}
-{"lexeme_id": 7, "entry_id": 6, "human_id": "volūda:1", "paradigm_name": "noun-4fa-ltg", "lemma": "volūda"}
-{"lexeme_id": 14, "entry_id": 11, "human_id": "baba:1", "paradigm_name": "noun-4fa-ltg", "lemma": "baba"}
+{"lexeme_id": 7, "entry_id": 6, "human_id": "volūda:1", "paradigm_name": "noun-4fa-ltg", "lemma": "volūda", "attributes": {"pronunciations": "volu^da"}}
+{"lexeme_id": 14, "entry_id": 11, "human_id": "baba:1", "paradigm_name": "noun-4fa-ltg", "lemma": "baba", "attributes": {"pronunciations": "baba"}}
 {"lexeme_id": 11, "entry_id": 9, "human_id": "apleik:1", "paradigm_name": "adverb-1-ltg", "lemma": "apleik", "attributes": {"Vārdšķira": "Apstākļa vārds"}}
 {"lexeme_id": 56, "entry_id": 35, "human_id": "dzīsme:1", "paradigm_name": "noun-5fa-ltg", "lemma": "dzīsmeite", "attributes": {"Stils": "Sirsnīga emocionālā nokrāsa", "Deminutīvs": "Jā"}}
 {"lexeme_id": 38, "entry_id": 23, "human_id": "parkū:1", "paradigm_name": "adverb-1-ltg", "lemma": "parkū"}
@@ -175,7 +175,7 @@
 {"lexeme_id": 9923, "entry_id": 5718, "human_id": "patmalis:1", "paradigm_name": "noun-5fa-ltg", "lemma": "patmaleitis", "attributes": {"Deminutīvs": "Jā", "Leksēmas pamatformas īpatnības": "Daudzskaitlis", "Skaitlis 2": "Daudzskaitlinieks"}}
 {"lexeme_id": 9925, "entry_id": 5718, "human_id": "patmalis:1", "paradigm_name": "noun-5fa-ltg", "lemma": "patmaleites", "attributes": {"Deminutīvs": "Jā", "Leksēmas pamatformas īpatnības": "Daudzskaitlis", "Skaitlis 2": "Daudzskaitlinieks"}}
 {"lexeme_id": 6067, "entry_id": 4383, "human_id": "dziernovys:1", "paradigm_name": "noun-4fa-ltg", "lemma": "dziernovys", "attributes": {"Leksēmas pamatformas īpatnības": "Daudzskaitlis", "Skaitlis 2": "Daudzskaitlinieks"}}
-{"lexeme_id": 8654, "entry_id": 6333, "human_id": "smierts:1", "paradigm_name": "noun-6b-ltg", "lemma": "smierts", "attributes": {"Morfotabulas attēlošana": "Nerādīt daudzskaitli", "Leksēmas pamatformas īpatnības": "Vienskaitlis"}}
+{"lexeme_id": 8654, "entry_id": 6333, "human_id": "smierts:1", "paradigm_name": "noun-6b-ltg", "lemma": "smierts", "attributes": {"Morfotabulas attēlošana": "Nerādīt daudzskaitli", "Leksēmas pamatformas īpatnības": "Vienskaitlis", "pronunciations": "s%m%iert%s%"}}
 {"lexeme_id": 9488, "entry_id": 6932, "human_id": "vāza:1", "paradigm_name": "noun-4fa-ltg", "lemma": "vāzda"}
 {"lexeme_id": 10034, "entry_id": 6932, "human_id": "vāza:1", "paradigm_name": "noun-4fb-ltg", "lemma": "vēzdeņa", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 10033, "entry_id": 6932, "human_id": "vāza:1", "paradigm_name": "noun-4fb-ltg", "lemma": "vēzeņa", "attributes": {"Deminutīvs": "Jā"}}

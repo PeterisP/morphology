@@ -5034,7 +5034,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="25" Name="pron" Description="Vietniekvārdi (es, kas, tāds)" DescriptionEN="Pronouns (es, kas, tāds)" AllowedGuessEndings="!">
-		<Attributes Vārdšķira="Vietniekvārds" Noliegums="Nē" Locīšanas_īpatnības="Tikai izņēmumformas"/>
+		<Attributes Vārdšķira="Vietniekvārds" Noliegums="Nē" Locīšanas_īpatnības="Pielasīt visas izņēmumformas"/>
 <!-- 		<Ending ID="2329" StemChange="0" Ending="" StemID="1" LemmaEnding="2329">
 			<Attributes Ģenerēt="Nē"/>
 		</Ending> -->
