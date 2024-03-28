@@ -239,7 +239,11 @@ public class Analyzer extends Lexicon {
 		}
 
 		if (!result.isRecognized()) {  //Hardcoded izņēmumi (ar regex) kas atpazīst ciparus, kārtas skaitļus utml
-			Ending HARDCODED_ENDING = this.endingByID(1158); // FIXME - hardkodēts numurs hardcoded grupas galotnei
+			Ending HARDCODED_ENDING = this.paradigmByName("hardcoded").getLemmaEnding();
+			if (HARDCODED_ENDING == null) {
+				System.err.println("Hardcoded ending not found");
+				return result;
+			}
 			if (p_number.matcher(word).matches()) {
 				Wordform wf = new Wordform(word, word, HARDCODED_ENDING, AttributeNames.v_Residual);
 				wf.addAttribute(AttributeNames.i_ResidualType, AttributeNames.v_Number);
@@ -263,7 +267,11 @@ public class Analyzer extends Lexicon {
 					p_abbrev.matcher(word).matches() ||
 					(enableGuessing && p_acronym.matcher(originalWord).matches())
 			) {
-				Ending ABBREV_ENDING = this.endingByID(2091); // FIXME - hardkodēts numurs saīsinājumu galotnei
+				Ending ABBREV_ENDING = this.paradigmByName("abbr").getLemmaEnding();
+				if (ABBREV_ENDING == null) {
+					System.err.println("Abbreviation ending not found");
+					return result;
+				}
 				result.addWordform(new Wordform(word, word, ABBREV_ENDING, AttributeNames.v_Abbreviation));
 				return result;
             }
@@ -518,7 +526,7 @@ public class Analyzer extends Lexicon {
 			for (Ending ending : getAllEndings().matchedEndings(word))
 				if (ending.getEnding().length()==i) {
                     Paradigm p = ending.getParadigm();
-                    if (p.getName().equalsIgnoreCase("hardcoded"))
+                    if (p.isMatchingStrong(AttributeNames.i_InflectionProperties, AttributeNames.v_HardcodedWordforms))
                         continue; // Hardcoded vārdgrupa minēšanai nav aktuāla
 
                     String stem;
@@ -943,10 +951,10 @@ public class Analyzer extends Lexicon {
                     // Ja nav pareizā leksēma (atvasināšana vai minēšana) tad uztaisam leksēmu
 					int endingID = wf.getEnding().getID();
 					if (wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adverb))
-						endingID = 954; // FIXME - hardcoded number of Adverb paradigm main ending, must match the ending number in Lexicon.xml
+						endingID = this.paradigmByName("adverb").getLemmaEnding().getID();
 					// FIXME - es te iekodēju izņēmumgadījumu jo nevaru saprast kā pareizāk darīt vispārīgi
 					if (lemma.endsWith("šana") && wf.getEnding().getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb)) {
-						endingID = 75; // FIXME Basic -a feminine noun ending, must match the appropriate number in Lexicon.xml
+						endingID = this.paradigmByName("noun-4f").getLemmaEnding().getID();
 					}
 						
 					lex = this.createLexeme(lemma, endingID, "generateInflectionsFromParadigm"); // Temporary lexeme
@@ -1004,17 +1012,6 @@ public class Analyzer extends Lexicon {
 			trešāSakne = lexeme.getStem(2);
 		}
 
-        if (lexeme.getParadigm().isMatchingStrong(AttributeNames.i_InflectionProperties, AttributeNames.v_HardcodedWordforms)) { // Hardcoded paradigma un vietniekvārdi
-            // Ja vārds ir hardcoded, tad salasam visas hardcoded formas ar attiecīgo lemmu un tās arī atgriežam
-            Ending ending = lexeme.getParadigm().getLemmaEnding();
-            for (Lexeme formLexeme : this.hardcodedForms.get(lemma)) {
-            	Wordform wf = new Wordform(formLexeme.getStem(0), formLexeme, ending);
-            	if (wf.isMatchingWeak(AttributeNames.i_Generate, AttributeNames.v_Yes))
-                    inflections.add(wf);
-            }
-            return inflections;
-        }
-
         boolean noliegums = lemma.equalsIgnoreCase("ne"+lexeme.getValue(AttributeNames.i_Lemma));
 		for (Ending ending : lexeme.getParadigm().endings){
 			if ( ending.getValue(AttributeNames.i_PartOfSpeech)==null ||
@@ -1059,6 +1056,9 @@ public class Analyzer extends Lexicon {
 			}
 		}
 
+		if (lexeme.getParadigm().isMatchingStrong(AttributeNames.i_InflectionProperties, AttributeNames.v_OnlyHardcodedWordforms)) {
+			inflections =  new ArrayList<Wordform>(1); // Šai gadījumā mēs nepieliekam "galotņu vārdformu nemaz
+		}
 		// Pārbaudam, vai šai lemmai nav kāds hardcoded formas override (piemēram, kā formai viņš *ej -> viņš iet)
 		Collection<Lexeme> hc_forms = this.hardcodedForms.get(lemma);
 		if (hc_forms.isEmpty() && lemma.startsWith("ne") && (lemma.endsWith("t") || lemma.endsWith("ties"))) {

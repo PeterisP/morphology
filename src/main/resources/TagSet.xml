@@ -596,6 +596,7 @@
 <FreeAttribute LV="Šķirkļa ID" EN="Entry ID"/>
 <FreeAttribute LV="Šķirkļa cilvēklasāmais ID" EN="Entry name"/>
 <FreeAttribute LV="Priedēklis" EN="Prefix"/> 
+<FreeAttribute LV="pronunciations" EN="Pronunciations"/> 
 
 <!--
 <Attribute LV="Gramatiskās formas ierobežojumi" EN="Grammatical form restrictions">
@@ -697,6 +698,7 @@
 
 <Attribute LV="Locīšanas īpatnības" EN="Inflection properties">
 	<Value LV="Pielasīt visas izņēmumformas" EN="Gather hardcoded wordforms"/>
+	<Value LV="Tikai izņēmumformas" EN="Only hardcoded wordforms"/>
 	<Value LV="Otrās un trešās konjugācijas paralelitāte" EN="2nd/3rd conjugation parallel forms"/>
 	<Value LV="Pirmās konjugācijas paralēlforma" EN="1st conjugation parallel forms"/>	
 	<Value LV="Pirmās konjugācijas paralēlforma visām personām" EN="1st conjugation parallel forms"/>

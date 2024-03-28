@@ -1985,7 +1985,7 @@ public class MorphologyTest {
         // Vietniekvārdiem neieliek pēdējo pozīciju tagā (noliegumu); -šana atvasinātās formas nav ok
         Word viņš = locītājs.analyze("viņš");
         assertTrue(viņš.isRecognized());
-        assertEquals("pp3msnn", viņš.wordforms.get(0).getTag());
+        assertEquals("ps3msnn", viņš.getBestWordform().getTag());
 
         Word ciršana = locītājs.analyze("ciršana");
         assertTrue(ciršana.isRecognized());

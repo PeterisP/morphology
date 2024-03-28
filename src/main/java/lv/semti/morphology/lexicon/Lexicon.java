@@ -131,7 +131,8 @@ public class Lexicon {
 		if (allEndings == null) {
 			ArrayList<Ending> endings = new ArrayList<Ending>();
 			for (Paradigm paradigm : paradigms) {
-				endings.addAll(paradigm.endings);
+				if (!paradigm.isMatchingStrong(AttributeNames.i_InflectionProperties, AttributeNames.v_OnlyHardcodedWordforms))
+					endings.addAll(paradigm.endings);
 			}
 			allEndings = new AllEndings(endings);
 		}
