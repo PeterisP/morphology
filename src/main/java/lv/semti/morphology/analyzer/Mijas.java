@@ -1247,7 +1247,23 @@ public abstract class Mijas {
 					break;
 
 				// ------ PHONETIC from here -----
-
+				case 200:
+					varianti.add(new Variants(celms.replace("e", "æ")));
+				case 211:
+					if (celms.endsWith("ts")) varianti.add(new Variants(celms.replace("e", "æ").substring(0,celms.length()-2)+"k"));
+					else if (celms.endsWith("dz")) varianti.add(new Variants(celms.replace("e", "æ").substring(0,celms.length()-2)+"g"));
+					else varianti.add(new Variants(celms.replace("e", "æ")));
+					break;
+				case 215:
+					if (celms.endsWith("s") && (trešāSakne.endsWith("t") || trešāSakne.endsWith("d"))) {
+						varianti.add(new Variants(celms.replace("e", "æ").substring(0,celms.length()-1)+"z"));
+					} else varianti.add(new Variants(celms.replace("e", "æ")));
+					break;
+				case 221:
+					varianti.add(new Variants(celms.replace("e", "æ"), AttributeNames.i_Degree, AttributeNames.v_Comparative));
+					if (pieliktVisPārākoPak)
+						varianti.add(new Variants("vis" + celms.replace("e", "æ"), AttributeNames.i_Degree, AttributeNames.v_Superlative));
+					break;
 
 				default:
 					System.err.printf("Invalid StemChange ID2, stem '%s', stemchange %d\n", celms, mija);

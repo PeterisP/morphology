@@ -63,11 +63,15 @@ public class Pronunciation {
             sampa = sampa.substring(2,sampa.length());
         }
 
-        // Vārdu saknes mijas
+        // Vārdu saknes modifikācijas
         sampa = sampa.replaceAll("ā", "aa");
         sampa = sampa.replaceAll("ī", "ii");
         sampa = sampa.replaceAll("ū", "uu");
         sampa = sampa.replaceAll("ē", "ee");
+
+        sampa = sampa.replaceAll("c", "ts");
+        sampa = sampa.replaceAll("č", "tš");
+
 
         // Vokalizēto līdzskaņu atpakaļ pārveidošana pirms patskaņiem
         sampa = sampa.replaceAll("i\\^(?=[aeiuoæɔ])", "j");
@@ -88,10 +92,10 @@ public class Pronunciation {
                 if (sounds[counter].matches("^[aeæioɔu]+[xq\\^=]?")) {
                     if (zilbe==0 && sounds[counter].matches("^[aeæioɔu][xq\\^=]?")) geminate = true;
                     if (zilbe==1 && geminate & līdzskaņi==1) {
-                        sounds[counter-1] = sounds[counter-1]+sounds[counter-1];
+                        sounds[counter-1] = sounds[counter-1].charAt(0)+sounds[counter-1];
                     }
                     zilbe++;
-                } else if (sounds[counter].matches("^[ptķksšf]$") && geminate) {
+                } else if (sounds[counter].matches("^([ptķksšf]|t[sš])$") && geminate) {
                     līdzskaņi++;
                 } else geminate = false;
             }

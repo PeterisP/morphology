@@ -1,14 +1,17 @@
-{"lexeme_id": 1, "entry_id": 1, "human_id": "tēls:1", "paradigm_name": "noun-1a-phono", "lemma": "#tææls"}
-{"lexeme_id": 2, "entry_id": 2, "human_id": "mērs:1", "paradigm_name": "noun-1a-phono", "lemma": "#meers"}
-{"lexeme_id": 200, "entry_id": 200, "human_id": "mērs:2", "paradigm_name": "noun-1a-phono", "lemma": "#mæærs"}
-{"lexeme_id": 3, "entry_id": 3, "human_id": "ēst:1", "paradigm_name": "verb-1-phono", "lemma": "#eest", "stem1": "#ees", "stem2": "#ææd", "stem3": "#eed"}
-{"lexeme_id": 4, "entry_id": 4, "human_id": "džouls:1", "paradigm_name": "noun-1a-phono", "lemma": "#džɔuls"}
-{"lexeme_id": 5, "entry_id": 5, "human_id": "pelt:1", "paradigm_name": "verb-1-phono", "lemma": "#pelt", "stem1": "#pel", "stem2": "#peļ", "stem3": "#peel"}
-{"lexeme_id": 6, "entry_id": 6, "human_id": "kaps:1", "paradigm_name": "noun-1a-phono", "lemma": "#kaps"}
-{"lexeme_id": 7, "entry_id": 7, "human_id": "zāle:1", "paradigm_name": "noun-5fa-phono", "lemma": "#zaa=lex"}
-{"lexeme_id": 8, "entry_id": 8, "human_id": "zāle:2", "paradigm_name": "noun-5fa-phono", "lemma": "#zaaqlex"}
-{"lexeme_id": 9, "entry_id": 9, "human_id": "augs:2", "paradigm_name": "noun-1a-phono", "lemma": "#auqks", "ortho": "augs"}
-{"lexeme_id": 10, "entry_id": 10, "human_id": "apģērbs:1", "paradigm_name": "noun-1a-phono", "lemma": "#abģæærps", "ortho": "apģērbs"}
-{"lexeme_id": 11, "entry_id": 11, "human_id": "lats:1", "paradigm_name": "noun-1a-phono", "lemma": "#lats"}
-{"lexeme_id": 12, "entry_id": 12, "human_id": "vējš:1", "paradigm_name": "noun-1b-phono", "lemma": "#veei^š"}
-{"lexeme_id": 13, "entry_id": 13, "human_id": "ķert:1", "paradigm_name": "verb-1-phono", "lemma": "#ķerqt", "stem1": "#ķer", "stem2": "#ķær", "stem3": "#ķeer"}
+{"lexeme_id": 2201, "entry_id": 2201, "human_id": "tēls:1", "paradigm_name": "noun-1a-phono", "lemma": "#tææls"}
+{"lexeme_id": 2202, "entry_id": 2202, "human_id": "mērs:1", "paradigm_name": "noun-1a-phono", "lemma": "#meers"}
+{"lexeme_id": 2302, "entry_id": 2202, "human_id": "mērs:2", "paradigm_name": "noun-1a-phono", "lemma": "#mæærs"}
+{"lexeme_id": 2206, "entry_id": 2206, "human_id": "kaps:1", "paradigm_name": "noun-1a-phono", "lemma": "#kaps"}
+{"lexeme_id": 2211, "entry_id": 2211, "human_id": "lats:1", "paradigm_name": "noun-1a-phono", "lemma": "#lats"}
+{"lexeme_id": 2204, "entry_id": 2204, "human_id": "džouls:1", "paradigm_name": "noun-1a-phono", "lemma": "#džɔuls"}
+{"lexeme_id": 2209, "entry_id": 2209, "human_id": "augs:2", "paradigm_name": "noun-1a-phono", "lemma": "#auqks", "ortho": "augs"}
+{"lexeme_id": 2209, "entry_id": 2209, "human_id": "leds:1", "paradigm_name": "noun-1a-phono", "lemma": "#læts", "ortho": "leds"}
+{"lexeme_id": 2210, "entry_id": 2210, "human_id": "apģērbs:1", "paradigm_name": "noun-1a-phono", "lemma": "#abģæærps", "ortho": "apģērbs"}
+{"lexeme_id": 2212, "entry_id": 2212, "human_id": "vējš:1", "paradigm_name": "noun-1b-phono", "lemma": "#veei^š"}
+{"lexeme_id": 2207, "entry_id": 2207, "human_id": "zāle:1", "paradigm_name": "noun-5fa-phono", "lemma": "#zaa=lex"}
+{"lexeme_id": 2208, "entry_id": 2208, "human_id": "zāle:2", "paradigm_name": "noun-5fa-phono", "lemma": "#zaaqlex"}
+{"lexeme_id": 2203, "entry_id": 2203, "human_id": "ēst:1", "paradigm_name": "verb-1-phono", "lemma": "#eest", "stem1": "#ees", "stem2": "#ææd", "stem3": "#eed"}
+{"lexeme_id": 2205, "entry_id": 2205, "human_id": "pelt:1", "paradigm_name": "verb-1-phono", "lemma": "#pelt", "stem1": "#pel", "stem2": "#peļ", "stem3": "#peel"}
+{"lexeme_id": 2213, "entry_id": 2213, "human_id": "ķert:1", "paradigm_name": "verb-1-phono", "lemma": "#ķerqt", "stem1": "#ķer", "stem2": "#ķær", "stem3": "#ķeer"}
+{"lexeme_id": 2213, "entry_id": 2213, "human_id": "lekt:1", "paradigm_name": "verb-1-phono", "lemma": "#lekt", "stem1": "#lek", "stem2": "#læts", "stem3": "#lets"}
+{"lexeme_id": 2225, "entry_id": 2225, "human_id": "augt:1", "paradigm_name": "verb-1-phono", "lemma": "#auqkt", "stem1": "#aug", "stem2": "#aug", "stem3": "#aug"}

@@ -6,7 +6,7 @@
     <Corpus FileName="tezaurs_phonetic.json" Type="core"/>
     <!--	<Corpus FileName="Lexicon_core.xml" Type="core"/>	
 				<Corpus FileName="Lexicon_sv.xml" Type="core"/>
-				<Corpus FileName="Lexicon_valerijs.xml" Type="core"/>
+				<Corpus FileName="Lexicon_valerijs.xml" Type="core"/>20
 				<Corpus FileName="Lexicon_onomastica.xml" Type="aux"/> -->
     <Paradigm AllowedGuessEndings="bcdfghjklmnprstvzģķļņšž" Description="Lietvārdi vīriešu dzimtē, 1. deklinācija ar galotni -s (tēvs)" DescriptionEN="Masculine nouns, 1st declension ending -s (tēvs)" ID="1" LemmaEnding="1" Name="noun-1a-phono" Stems="1">
         <Attributes Deklinācija="1" Dzimte="Vīriešu" Paradigmai_atļautie_atvasinājumi="-tājs, -ējs, -tāja, -ēja" Vārdšķira="Lietvārds"/>
@@ -769,268 +769,268 @@
         <Ending Ending="šuot" ID="721" LemmaEnding="711" StemChange="6" StemID="1">
             <Attributes Izteiksme="Atstāstījuma" Kārta="Darāmā" Laiks="Nākotne" Persona="Nepiemīt" Skaitlis="Nepiemīt"/>
         </Ending>
-        <Ending Ending="ts" ID="722" LemmaEnding="711" StemChange="0" StemID="1">
+        <Ending Ending="ts" ID="722" LemmaEnding="711" StemChange="200" StemID="1">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Nominatīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Pakāpe="Pamata" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="tax" ID="723" LemmaEnding="711" StemChange="0" StemID="1">
+        <Ending Ending="tax" ID="723" LemmaEnding="711" StemChange="200" StemID="1">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Ģenitīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Pakāpe="Pamata" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="tam" ID="724" LemmaEnding="711" StemChange="0" StemID="1">
+        <Ending Ending="tam" ID="724" LemmaEnding="711" StemChange="200" StemID="1">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Datīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Pakāpe="Pamata" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="tux" ID="725" LemmaEnding="711" StemChange="0" StemID="1">
+        <Ending Ending="tux" ID="725" LemmaEnding="711" StemChange="200" StemID="1">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Akuzatīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Pakāpe="Pamata" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="taa" ID="726" LemmaEnding="711" StemChange="0" StemID="1">
+        <Ending Ending="taa" ID="726" LemmaEnding="711" StemChange="200" StemID="1">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Lokatīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Pakāpe="Pamata" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="tix" ID="727" LemmaEnding="711" StemChange="0" StemID="1">
+        <Ending Ending="tix" ID="727" LemmaEnding="711" StemChange="200" StemID="1">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Nominatīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Pakāpe="Pamata" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="tux" ID="728" LemmaEnding="711" StemChange="0" StemID="1">
+        <Ending Ending="tux" ID="728" LemmaEnding="711" StemChange="200" StemID="1">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Ģenitīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Pakāpe="Pamata" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="tiem" ID="729" LemmaEnding="711" StemChange="0" StemID="1">
+        <Ending Ending="tiem" ID="729" LemmaEnding="711" StemChange="200" StemID="1">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Datīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Pakāpe="Pamata" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="tuxs" ID="730" LemmaEnding="711" StemChange="0" StemID="1">
+        <Ending Ending="tuxs" ID="730" LemmaEnding="711" StemChange="200" StemID="1">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Akuzatīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Pakāpe="Pamata" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="tuos" ID="731" LemmaEnding="711" StemChange="0" StemID="1">
+        <Ending Ending="tuos" ID="731" LemmaEnding="711" StemChange="200" StemID="1">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Lokatīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Pakāpe="Pamata" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="tais" ID="732" LemmaEnding="711" StemChange="0" StemID="1">
+        <Ending Ending="tais" ID="732" LemmaEnding="711" StemChange="200" StemID="1">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Nominatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Pakāpe="Pamata" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="taa" ID="733" LemmaEnding="711" StemChange="0" StemID="1">
+        <Ending Ending="taa" ID="733" LemmaEnding="711" StemChange="200" StemID="1">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Ģenitīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Pakāpe="Pamata" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="tajam" ID="734" LemmaEnding="711" StemChange="0" StemID="1">
+        <Ending Ending="tajam" ID="734" LemmaEnding="711" StemChange="200" StemID="1">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Datīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Pakāpe="Pamata" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="tuo" ID="735" LemmaEnding="711" StemChange="0" StemID="1">
+        <Ending Ending="tuo" ID="735" LemmaEnding="711" StemChange="200" StemID="1">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Akuzatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Pakāpe="Pamata" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="tajaa" ID="736" LemmaEnding="711" StemChange="0" StemID="1">
+        <Ending Ending="tajaa" ID="736" LemmaEnding="711" StemChange="200" StemID="1">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Lokatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Pakāpe="Pamata" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="tais" ID="737" LemmaEnding="711" StemChange="0" StemID="1">
+        <Ending Ending="tais" ID="737" LemmaEnding="711" StemChange="200" StemID="1">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Vokatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Pakāpe="Pamata" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="tie" ID="739" LemmaEnding="711" StemChange="0" StemID="1">
+        <Ending Ending="tie" ID="739" LemmaEnding="711" StemChange="200" StemID="1">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Nominatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Pakāpe="Pamata" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="tuo" ID="740" LemmaEnding="711" StemChange="0" StemID="1">
+        <Ending Ending="tuo" ID="740" LemmaEnding="711" StemChange="200" StemID="1">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Ģenitīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Pakāpe="Pamata" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="tajiem" ID="741" LemmaEnding="711" StemChange="0" StemID="1">
+        <Ending Ending="tajiem" ID="741" LemmaEnding="711" StemChange="200" StemID="1">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Datīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Pakāpe="Pamata" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="tuos" ID="742" LemmaEnding="711" StemChange="0" StemID="1">
+        <Ending Ending="tuos" ID="742" LemmaEnding="711" StemChange="200" StemID="1">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Akuzatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Pakāpe="Pamata" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="tajuos" ID="743" LemmaEnding="711" StemChange="0" StemID="1">
+        <Ending Ending="tajuos" ID="743" LemmaEnding="711" StemChange="200" StemID="1">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Lokatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Pakāpe="Pamata" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="tie" ID="744" LemmaEnding="711" StemChange="0" StemID="1">
+        <Ending Ending="tie" ID="744" LemmaEnding="711" StemChange="200" StemID="1">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Vokatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Pakāpe="Pamata" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="tax" ID="745" LemmaEnding="711" StemChange="0" StemID="1">
+        <Ending Ending="tax" ID="745" LemmaEnding="711" StemChange="200" StemID="1">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Nominatīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Pakāpe="Pamata" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="taxs" ID="746" LemmaEnding="711" StemChange="0" StemID="1">
+        <Ending Ending="taxs" ID="746" LemmaEnding="711" StemChange="200" StemID="1">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Ģenitīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Pakāpe="Pamata" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="tai" ID="747" LemmaEnding="711" StemChange="0" StemID="1">
+        <Ending Ending="tai" ID="747" LemmaEnding="711" StemChange="200" StemID="1">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Datīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Pakāpe="Pamata" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="tux" ID="748" LemmaEnding="711" StemChange="0" StemID="1">
+        <Ending Ending="tux" ID="748" LemmaEnding="711" StemChange="200" StemID="1">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Akuzatīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Pakāpe="Pamata" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="taa" ID="749" LemmaEnding="711" StemChange="0" StemID="1">
+        <Ending Ending="taa" ID="749" LemmaEnding="711" StemChange="200" StemID="1">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Lokatīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Pakāpe="Pamata" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="taxs" ID="750" LemmaEnding="711" StemChange="0" StemID="1">
+        <Ending Ending="taxs" ID="750" LemmaEnding="711" StemChange="200" StemID="1">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Nominatīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Pakāpe="Pamata" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="tux" ID="751" LemmaEnding="711" StemChange="0" StemID="1">
+        <Ending Ending="tux" ID="751" LemmaEnding="711" StemChange="200" StemID="1">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Ģenitīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Pakāpe="Pamata" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="taam" ID="752" LemmaEnding="711" StemChange="0" StemID="1">
+        <Ending Ending="taam" ID="752" LemmaEnding="711" StemChange="200" StemID="1">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Datīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Pakāpe="Pamata" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="taxs" ID="753" LemmaEnding="711" StemChange="0" StemID="1">
+        <Ending Ending="taxs" ID="753" LemmaEnding="711" StemChange="200" StemID="1">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Akuzatīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Pakāpe="Pamata" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="taas" ID="754" LemmaEnding="711" StemChange="0" StemID="1">
+        <Ending Ending="taas" ID="754" LemmaEnding="711" StemChange="200" StemID="1">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Lokatīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Pakāpe="Pamata" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="taa" ID="755" LemmaEnding="711" StemChange="0" StemID="1">
+        <Ending Ending="taa" ID="755" LemmaEnding="711" StemChange="200" StemID="1">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Nominatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Pakāpe="Pamata" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="taas" ID="756" LemmaEnding="711" StemChange="0" StemID="1">
+        <Ending Ending="taas" ID="756" LemmaEnding="711" StemChange="200" StemID="1">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Ģenitīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Pakāpe="Pamata" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="tajai" ID="757" LemmaEnding="711" StemChange="0" StemID="1">
+        <Ending Ending="tajai" ID="757" LemmaEnding="711" StemChange="200" StemID="1">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Datīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Pakāpe="Pamata" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="tuo" ID="758" LemmaEnding="711" StemChange="0" StemID="1">
+        <Ending Ending="tuo" ID="758" LemmaEnding="711" StemChange="200" StemID="1">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Akuzatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Pakāpe="Pamata" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="tajaa" ID="759" LemmaEnding="711" StemChange="0" StemID="1">
+        <Ending Ending="tajaa" ID="759" LemmaEnding="711" StemChange="200" StemID="1">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Lokatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Pakāpe="Pamata" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="taa" ID="760" LemmaEnding="711" StemChange="0" StemID="1">
+        <Ending Ending="taa" ID="760" LemmaEnding="711" StemChange="200" StemID="1">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Vokatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Pakāpe="Pamata" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="taas" ID="761" LemmaEnding="711" StemChange="0" StemID="1">
+        <Ending Ending="taas" ID="761" LemmaEnding="711" StemChange="200" StemID="1">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Nominatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Pakāpe="Pamata" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="tuo" ID="762" LemmaEnding="711" StemChange="0" StemID="1">
+        <Ending Ending="tuo" ID="762" LemmaEnding="711" StemChange="200" StemID="1">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Ģenitīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Pakāpe="Pamata" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="tajaam" ID="763" LemmaEnding="711" StemChange="0" StemID="1">
+        <Ending Ending="tajaam" ID="763" LemmaEnding="711" StemChange="200" StemID="1">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Datīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Pakāpe="Pamata" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="taas" ID="764" LemmaEnding="711" StemChange="0" StemID="1">
+        <Ending Ending="taas" ID="764" LemmaEnding="711" StemChange="200" StemID="1">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Akuzatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Pakāpe="Pamata" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="tajaas" ID="765" LemmaEnding="711" StemChange="0" StemID="1">
+        <Ending Ending="tajaas" ID="765" LemmaEnding="711" StemChange="200" StemID="1">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Lokatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Pakāpe="Pamata" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="taas" ID="766" LemmaEnding="711" StemChange="0" StemID="1">
+        <Ending Ending="taas" ID="766" LemmaEnding="711" StemChange="200" StemID="1">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Vokatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Pakāpe="Pamata" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="taaks" ID="1357" LemmaEnding="711" StemChange="21" StemID="1">
+        <Ending Ending="taaks" ID="1357" LemmaEnding="711" StemChange="221" StemID="1">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Nominatīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="taakax" ID="1358" LemmaEnding="711" StemChange="21" StemID="1">
+        <Ending Ending="taakax" ID="1358" LemmaEnding="711" StemChange="221" StemID="1">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Ģenitīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="taakam" ID="1359" LemmaEnding="711" StemChange="21" StemID="1">
+        <Ending Ending="taakam" ID="1359" LemmaEnding="711" StemChange="221" StemID="1">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Datīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="taakux" ID="1360" LemmaEnding="711" StemChange="21" StemID="1">
+        <Ending Ending="taakux" ID="1360" LemmaEnding="711" StemChange="221" StemID="1">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Akuzatīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="taakaa" ID="1361" LemmaEnding="711" StemChange="21" StemID="1">
+        <Ending Ending="taakaa" ID="1361" LemmaEnding="711" StemChange="221" StemID="1">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Lokatīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="taakix" ID="1362" LemmaEnding="711" StemChange="21" StemID="1">
+        <Ending Ending="taakix" ID="1362" LemmaEnding="711" StemChange="221" StemID="1">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Nominatīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="taakux" ID="1363" LemmaEnding="711" StemChange="21" StemID="1">
+        <Ending Ending="taakux" ID="1363" LemmaEnding="711" StemChange="221" StemID="1">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Ģenitīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="taakiem" ID="1364" LemmaEnding="711" StemChange="21" StemID="1">
+        <Ending Ending="taakiem" ID="1364" LemmaEnding="711" StemChange="221" StemID="1">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Datīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="taakuxs" ID="1365" LemmaEnding="711" StemChange="21" StemID="1">
+        <Ending Ending="taakuxs" ID="1365" LemmaEnding="711" StemChange="221" StemID="1">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Akuzatīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="taakuos" ID="1366" LemmaEnding="711" StemChange="21" StemID="1">
+        <Ending Ending="taakuos" ID="1366" LemmaEnding="711" StemChange="221" StemID="1">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Lokatīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="taakais" ID="1367" LemmaEnding="711" StemChange="21" StemID="1">
+        <Ending Ending="taakais" ID="1367" LemmaEnding="711" StemChange="221" StemID="1">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Nominatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="taakaa" ID="1368" LemmaEnding="711" StemChange="21" StemID="1">
+        <Ending Ending="taakaa" ID="1368" LemmaEnding="711" StemChange="221" StemID="1">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Ģenitīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="taakajam" ID="1369" LemmaEnding="711" StemChange="21" StemID="1">
+        <Ending Ending="taakajam" ID="1369" LemmaEnding="711" StemChange="221" StemID="1">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Datīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="taakuo" ID="1370" LemmaEnding="711" StemChange="21" StemID="1">
+        <Ending Ending="taakuo" ID="1370" LemmaEnding="711" StemChange="221" StemID="1">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Akuzatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="taakajaa" ID="1371" LemmaEnding="711" StemChange="21" StemID="1">
+        <Ending Ending="taakajaa" ID="1371" LemmaEnding="711" StemChange="221" StemID="1">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Lokatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="taakais" ID="1372" LemmaEnding="711" StemChange="21" StemID="1">
+        <Ending Ending="taakais" ID="1372" LemmaEnding="711" StemChange="221" StemID="1">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Vokatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="taakie" ID="1373" LemmaEnding="711" StemChange="21" StemID="1">
+        <Ending Ending="taakie" ID="1373" LemmaEnding="711" StemChange="221" StemID="1">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Nominatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="taakuo" ID="1374" LemmaEnding="711" StemChange="21" StemID="1">
+        <Ending Ending="taakuo" ID="1374" LemmaEnding="711" StemChange="221" StemID="1">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Ģenitīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="taakajiem" ID="1375" LemmaEnding="711" StemChange="21" StemID="1">
+        <Ending Ending="taakajiem" ID="1375" LemmaEnding="711" StemChange="221" StemID="1">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Datīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="taakuos" ID="1376" LemmaEnding="711" StemChange="21" StemID="1">
+        <Ending Ending="taakuos" ID="1376" LemmaEnding="711" StemChange="221" StemID="1">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Akuzatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="taakajuos" ID="1377" LemmaEnding="711" StemChange="21" StemID="1">
+        <Ending Ending="taakajuos" ID="1377" LemmaEnding="711" StemChange="221" StemID="1">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Lokatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="taakie" ID="1378" LemmaEnding="711" StemChange="21" StemID="1">
+        <Ending Ending="taakie" ID="1378" LemmaEnding="711" StemChange="221" StemID="1">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Vokatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="taakax" ID="1379" LemmaEnding="711" StemChange="21" StemID="1">
+        <Ending Ending="taakax" ID="1379" LemmaEnding="711" StemChange="221" StemID="1">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Nominatīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="taakaxs" ID="1380" LemmaEnding="711" StemChange="21" StemID="1">
+        <Ending Ending="taakaxs" ID="1380" LemmaEnding="711" StemChange="221" StemID="1">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Ģenitīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="taakai" ID="1381" LemmaEnding="711" StemChange="21" StemID="1">
+        <Ending Ending="taakai" ID="1381" LemmaEnding="711" StemChange="221" StemID="1">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Datīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="taakux" ID="1382" LemmaEnding="711" StemChange="21" StemID="1">
+        <Ending Ending="taakux" ID="1382" LemmaEnding="711" StemChange="221" StemID="1">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Akuzatīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="taakaa" ID="1383" LemmaEnding="711" StemChange="21" StemID="1">
+        <Ending Ending="taakaa" ID="1383" LemmaEnding="711" StemChange="221" StemID="1">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Lokatīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="taakaxs" ID="1384" LemmaEnding="711" StemChange="21" StemID="1">
+        <Ending Ending="taakaxs" ID="1384" LemmaEnding="711" StemChange="221" StemID="1">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Nominatīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="taakux" ID="1385" LemmaEnding="711" StemChange="21" StemID="1">
+        <Ending Ending="taakux" ID="1385" LemmaEnding="711" StemChange="221" StemID="1">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Ģenitīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="taakaam" ID="1386" LemmaEnding="711" StemChange="21" StemID="1">
+        <Ending Ending="taakaam" ID="1386" LemmaEnding="711" StemChange="221" StemID="1">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Datīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="taakaxs" ID="1387" LemmaEnding="711" StemChange="21" StemID="1">
+        <Ending Ending="taakaxs" ID="1387" LemmaEnding="711" StemChange="221" StemID="1">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Akuzatīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="taakaas" ID="1388" LemmaEnding="711" StemChange="21" StemID="1">
+        <Ending Ending="taakaas" ID="1388" LemmaEnding="711" StemChange="221" StemID="1">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Lokatīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="taakaa" ID="1389" LemmaEnding="711" StemChange="21" StemID="1">
+        <Ending Ending="taakaa" ID="1389" LemmaEnding="711" StemChange="221" StemID="1">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Nominatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="taakaas" ID="1390" LemmaEnding="711" StemChange="21" StemID="1">
+        <Ending Ending="taakaas" ID="1390" LemmaEnding="711" StemChange="221" StemID="1">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Ģenitīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="taakajai" ID="1391" LemmaEnding="711" StemChange="21" StemID="1">
+        <Ending Ending="taakajai" ID="1391" LemmaEnding="711" StemChange="221" StemID="1">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Datīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="taakuo" ID="1392" LemmaEnding="711" StemChange="21" StemID="1">
+        <Ending Ending="taakuo" ID="1392" LemmaEnding="711" StemChange="221" StemID="1">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Akuzatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="taakajaa" ID="1393" LemmaEnding="711" StemChange="21" StemID="1">
+        <Ending Ending="taakajaa" ID="1393" LemmaEnding="711" StemChange="221" StemID="1">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Lokatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="taakaa" ID="1394" LemmaEnding="711" StemChange="21" StemID="1">
+        <Ending Ending="taakaa" ID="1394" LemmaEnding="711" StemChange="221" StemID="1">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Vokatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="taakaas" ID="1395" LemmaEnding="711" StemChange="21" StemID="1">
+        <Ending Ending="taakaas" ID="1395" LemmaEnding="711" StemChange="221" StemID="1">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Nominatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="taakuo" ID="1396" LemmaEnding="711" StemChange="21" StemID="1">
+        <Ending Ending="taakuo" ID="1396" LemmaEnding="711" StemChange="221" StemID="1">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Ģenitīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="taakajaam" ID="1397" LemmaEnding="711" StemChange="21" StemID="1">
+        <Ending Ending="taakajaam" ID="1397" LemmaEnding="711" StemChange="221" StemID="1">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Datīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="taakaas" ID="1398" LemmaEnding="711" StemChange="21" StemID="1">
+        <Ending Ending="taakaas" ID="1398" LemmaEnding="711" StemChange="221" StemID="1">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Akuzatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="taakajaas" ID="1399" LemmaEnding="711" StemChange="21" StemID="1">
+        <Ending Ending="taakajaas" ID="1399" LemmaEnding="711" StemChange="221" StemID="1">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Lokatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="taakaas" ID="1400" LemmaEnding="711" StemChange="21" StemID="1">
+        <Ending Ending="taakaas" ID="1400" LemmaEnding="711" StemChange="221" StemID="1">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Ciešamā" Laiks="Pagātne" Locījums="Vokatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Skaitlis="Daudzskaitlis"/>
         </Ending>
         <Ending Ending="šanax" ID="768" LemmaEnding="768" StemChange="16" StemID="1">
@@ -1069,28 +1069,28 @@
         <Ending Ending="šanaxs" ID="780" LemmaEnding="768" StemChange="16" StemID="1">
             <Attributes Deklinācija="4" Dzimte="Sieviešu" Lietvārda_tips="Sugas vārds" Locījums="Vokatīvs" Sistemātisks_atvasinājums="Jā" Skaitlis="Daudzskaitlis" Vārdšķira="Lietvārds"/>
         </Ending>
-        <Ending Ending="dams" ID="781" LemmaEnding="711" StemChange="15" StemID="1">
+        <Ending Ending="dams" ID="781" LemmaEnding="711" StemChange="215" StemID="1">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Nepiemīt" Laiks="Nepiemīt" Locījums="Nominatīvs" Lokāmība="Daļēji lokāms" Noteiktība="Nepiemīt" Pakāpe="Nepiemīt" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="damax" ID="782" LemmaEnding="711" StemChange="15" StemID="1">
+        <Ending Ending="damax" ID="782" LemmaEnding="711" StemChange="215" StemID="1">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Nepiemīt" Laiks="Nepiemīt" Locījums="Nominatīvs" Lokāmība="Daļēji lokāms" Noteiktība="Nepiemīt" Pakāpe="Nepiemīt" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="damix" ID="783" LemmaEnding="711" StemChange="15" StemID="1">
+        <Ending Ending="damix" ID="783" LemmaEnding="711" StemChange="215" StemID="1">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Nepiemīt" Laiks="Nepiemīt" Locījums="Nominatīvs" Lokāmība="Daļēji lokāms" Noteiktība="Nepiemīt" Pakāpe="Nepiemīt" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="damaxs" ID="784" LemmaEnding="711" StemChange="15" StemID="1">
+        <Ending Ending="damaxs" ID="784" LemmaEnding="711" StemChange="215" StemID="1">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Nepiemīt" Laiks="Nepiemīt" Locījums="Nominatīvs" Lokāmība="Daļēji lokāms" Noteiktība="Nepiemīt" Pakāpe="Nepiemīt" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="damam" ID="2920" LemmaEnding="711" StemChange="15" StemID="1">
+        <Ending Ending="damam" ID="2920" LemmaEnding="711" StemChange="215" StemID="1">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Nepiemīt" Laiks="Nepiemīt" Locījums="Datīvs" Lokāmība="Daļēji lokāms" Noteiktība="Nepiemīt" Pakāpe="Nepiemīt" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="damai" ID="2921" LemmaEnding="711" StemChange="15" StemID="1">
+        <Ending Ending="damai" ID="2921" LemmaEnding="711" StemChange="215" StemID="1">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Nepiemīt" Laiks="Nepiemīt" Locījums="Datīvs" Lokāmība="Daļēji lokāms" Noteiktība="Nepiemīt" Pakāpe="Nepiemīt" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="damiem" ID="2922" LemmaEnding="711" StemChange="15" StemID="1">
+        <Ending Ending="damiem" ID="2922" LemmaEnding="711" StemChange="215" StemID="1">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Nepiemīt" Laiks="Nepiemīt" Locījums="Datīvs" Lokāmība="Daļēji lokāms" Noteiktība="Nepiemīt" Pakāpe="Nepiemīt" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="damaam" ID="2923" LemmaEnding="711" StemChange="15" StemID="1">
+        <Ending Ending="damaam" ID="2923" LemmaEnding="711" StemChange="215" StemID="1">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Nepiemīt" Laiks="Nepiemīt" Locījums="Datīvs" Lokāmība="Daļēji lokāms" Noteiktība="Nepiemīt" Pakāpe="Nepiemīt" Skaitlis="Daudzskaitlis"/>
         </Ending>
         <Ending Ending="uot" ID="785" LemmaEnding="711" StemChange="0" StemID="2">
@@ -1687,265 +1687,265 @@
         <Ending Ending="ixs" ID="897" LemmaEnding="711" StemChange="14" StemID="3">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Nominatīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Pakāpe="Pamata" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="ušax" ID="898" LemmaEnding="711" StemChange="11" StemID="3">
+        <Ending Ending="ušax" ID="898" LemmaEnding="711" StemChange="211" StemID="3">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Ģenitīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Pakāpe="Pamata" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="ušam" ID="899" LemmaEnding="711" StemChange="11" StemID="3">
+        <Ending Ending="ušam" ID="899" LemmaEnding="711" StemChange="211" StemID="3">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Datīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Pakāpe="Pamata" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="ušux" ID="900" LemmaEnding="711" StemChange="11" StemID="3">
+        <Ending Ending="ušux" ID="900" LemmaEnding="711" StemChange="211" StemID="3">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Akuzatīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Pakāpe="Pamata" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="ušaa" ID="901" LemmaEnding="711" StemChange="11" StemID="3">
+        <Ending Ending="ušaa" ID="901" LemmaEnding="711" StemChange="211" StemID="3">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Lokatīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Pakāpe="Pamata" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="ušix" ID="902" LemmaEnding="711" StemChange="11" StemID="3">
+        <Ending Ending="ušix" ID="902" LemmaEnding="711" StemChange="211" StemID="3">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Nominatīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Pakāpe="Pamata" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="ušux" ID="903" LemmaEnding="711" StemChange="11" StemID="3">
+        <Ending Ending="ušux" ID="903" LemmaEnding="711" StemChange="211" StemID="3">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Ģenitīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Pakāpe="Pamata" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="ušiem" ID="904" LemmaEnding="711" StemChange="11" StemID="3">
+        <Ending Ending="ušiem" ID="904" LemmaEnding="711" StemChange="211" StemID="3">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Datīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Pakāpe="Pamata" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="ušuxs" ID="905" LemmaEnding="711" StemChange="11" StemID="3">
+        <Ending Ending="ušuxs" ID="905" LemmaEnding="711" StemChange="211" StemID="3">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Akuzatīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Pakāpe="Pamata" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="ušuos" ID="906" LemmaEnding="711" StemChange="11" StemID="3">
+        <Ending Ending="ušuos" ID="906" LemmaEnding="711" StemChange="211" StemID="3">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Lokatīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Pakāpe="Pamata" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="ušais" ID="907" LemmaEnding="711" StemChange="11" StemID="3">
+        <Ending Ending="ušais" ID="907" LemmaEnding="711" StemChange="211" StemID="3">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Nominatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Pakāpe="Pamata" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="ušaa" ID="908" LemmaEnding="711" StemChange="11" StemID="3">
+        <Ending Ending="ušaa" ID="908" LemmaEnding="711" StemChange="211" StemID="3">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Ģenitīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Pakāpe="Pamata" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="ušajam" ID="909" LemmaEnding="711" StemChange="11" StemID="3">
+        <Ending Ending="ušajam" ID="909" LemmaEnding="711" StemChange="211" StemID="3">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Datīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Pakāpe="Pamata" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="ušuo" ID="910" LemmaEnding="711" StemChange="11" StemID="3">
+        <Ending Ending="ušuo" ID="910" LemmaEnding="711" StemChange="211" StemID="3">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Akuzatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Pakāpe="Pamata" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="ušajaa" ID="911" LemmaEnding="711" StemChange="11" StemID="3">
+        <Ending Ending="ušajaa" ID="911" LemmaEnding="711" StemChange="211" StemID="3">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Lokatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Pakāpe="Pamata" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="ušais" ID="912" LemmaEnding="711" StemChange="11" StemID="3">
+        <Ending Ending="ušais" ID="912" LemmaEnding="711" StemChange="211" StemID="3">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Vokatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Pakāpe="Pamata" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="ušie" ID="913" LemmaEnding="711" StemChange="11" StemID="3">
+        <Ending Ending="ušie" ID="913" LemmaEnding="711" StemChange="211" StemID="3">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Nominatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Pakāpe="Pamata" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="ušuo" ID="914" LemmaEnding="711" StemChange="11" StemID="3">
+        <Ending Ending="ušuo" ID="914" LemmaEnding="711" StemChange="211" StemID="3">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Ģenitīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Pakāpe="Pamata" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="ušajiem" ID="915" LemmaEnding="711" StemChange="11" StemID="3">
+        <Ending Ending="ušajiem" ID="915" LemmaEnding="711" StemChange="211" StemID="3">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Datīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Pakāpe="Pamata" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="ušuos" ID="916" LemmaEnding="711" StemChange="11" StemID="3">
+        <Ending Ending="ušuos" ID="916" LemmaEnding="711" StemChange="211" StemID="3">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Akuzatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Pakāpe="Pamata" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="ušajuos" ID="917" LemmaEnding="711" StemChange="11" StemID="3">
+        <Ending Ending="ušajuos" ID="917" LemmaEnding="711" StemChange="211" StemID="3">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Lokatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Pakāpe="Pamata" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="ušie" ID="918" LemmaEnding="711" StemChange="11" StemID="3">
+        <Ending Ending="ušie" ID="918" LemmaEnding="711" StemChange="211" StemID="3">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Vokatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Pakāpe="Pamata" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="usix" ID="919" LemmaEnding="711" StemChange="11" StemID="3">
+        <Ending Ending="usix" ID="919" LemmaEnding="711" StemChange="211" StemID="3">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Nominatīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Pakāpe="Pamata" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="ušaxs" ID="920" LemmaEnding="711" StemChange="11" StemID="3">
+        <Ending Ending="ušaxs" ID="920" LemmaEnding="711" StemChange="211" StemID="3">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Ģenitīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Pakāpe="Pamata" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="ušai" ID="921" LemmaEnding="711" StemChange="11" StemID="3">
+        <Ending Ending="ušai" ID="921" LemmaEnding="711" StemChange="211" StemID="3">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Datīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Pakāpe="Pamata" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="ušux" ID="922" LemmaEnding="711" StemChange="11" StemID="3">
+        <Ending Ending="ušux" ID="922" LemmaEnding="711" StemChange="211" StemID="3">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Akuzatīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Pakāpe="Pamata" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="ušaa" ID="923" LemmaEnding="711" StemChange="11" StemID="3">
+        <Ending Ending="ušaa" ID="923" LemmaEnding="711" StemChange="211" StemID="3">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Lokatīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Pakāpe="Pamata" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="ušaxs" ID="924" LemmaEnding="711" StemChange="11" StemID="3">
+        <Ending Ending="ušaxs" ID="924" LemmaEnding="711" StemChange="211" StemID="3">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Nominatīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Pakāpe="Pamata" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="ušux" ID="925" LemmaEnding="711" StemChange="11" StemID="3">
+        <Ending Ending="ušux" ID="925" LemmaEnding="711" StemChange="211" StemID="3">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Ģenitīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Pakāpe="Pamata" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="ušaam" ID="926" LemmaEnding="711" StemChange="11" StemID="3">
+        <Ending Ending="ušaam" ID="926" LemmaEnding="711" StemChange="211" StemID="3">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Datīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Pakāpe="Pamata" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="ušaxs" ID="927" LemmaEnding="711" StemChange="11" StemID="3">
+        <Ending Ending="ušaxs" ID="927" LemmaEnding="711" StemChange="211" StemID="3">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Akuzatīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Pakāpe="Pamata" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="ušaas" ID="928" LemmaEnding="711" StemChange="11" StemID="3">
+        <Ending Ending="ušaas" ID="928" LemmaEnding="711" StemChange="211" StemID="3">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Lokatīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Pakāpe="Pamata" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="usii" ID="929" LemmaEnding="711" StemChange="11" StemID="3">
+        <Ending Ending="usii" ID="929" LemmaEnding="711" StemChange="211" StemID="3">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Nominatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Pakāpe="Pamata" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="ušaas" ID="930" LemmaEnding="711" StemChange="11" StemID="3">
+        <Ending Ending="ušaas" ID="930" LemmaEnding="711" StemChange="211" StemID="3">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Ģenitīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Pakāpe="Pamata" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="ušajai" ID="931" LemmaEnding="711" StemChange="11" StemID="3">
+        <Ending Ending="ušajai" ID="931" LemmaEnding="711" StemChange="211" StemID="3">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Datīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Pakāpe="Pamata" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="ušuo" ID="932" LemmaEnding="711" StemChange="11" StemID="3">
+        <Ending Ending="ušuo" ID="932" LemmaEnding="711" StemChange="211" StemID="3">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Akuzatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Pakāpe="Pamata" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="ušajaa" ID="933" LemmaEnding="711" StemChange="11" StemID="3">
+        <Ending Ending="ušajaa" ID="933" LemmaEnding="711" StemChange="211" StemID="3">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Lokatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Pakāpe="Pamata" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="usii" ID="934" LemmaEnding="711" StemChange="11" StemID="3">
+        <Ending Ending="usii" ID="934" LemmaEnding="711" StemChange="211" StemID="3">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Vokatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Pakāpe="Pamata" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="ušaas" ID="935" LemmaEnding="711" StemChange="11" StemID="3">
+        <Ending Ending="ušaas" ID="935" LemmaEnding="711" StemChange="211" StemID="3">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Nominatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Pakāpe="Pamata" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="ušuo" ID="936" LemmaEnding="711" StemChange="11" StemID="3">
+        <Ending Ending="ušuo" ID="936" LemmaEnding="711" StemChange="211" StemID="3">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Ģenitīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Pakāpe="Pamata" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="ušajaam" ID="937" LemmaEnding="711" StemChange="11" StemID="3">
+        <Ending Ending="ušajaam" ID="937" LemmaEnding="711" StemChange="211" StemID="3">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Datīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Pakāpe="Pamata" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="ušaas" ID="938" LemmaEnding="711" StemChange="11" StemID="3">
+        <Ending Ending="ušaas" ID="938" LemmaEnding="711" StemChange="211" StemID="3">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Akuzatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Pakāpe="Pamata" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="ušajaas" ID="939" LemmaEnding="711" StemChange="11" StemID="3">
+        <Ending Ending="ušajaas" ID="939" LemmaEnding="711" StemChange="211" StemID="3">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Lokatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Pakāpe="Pamata" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="ušaas" ID="940" LemmaEnding="711" StemChange="11" StemID="3">
+        <Ending Ending="ušaas" ID="940" LemmaEnding="711" StemChange="211" StemID="3">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Vokatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Pakāpe="Pamata" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="ušaaks" ID="1225" LemmaEnding="711" StemChange="21" StemID="3">
+        <Ending Ending="ušaaks" ID="1225" LemmaEnding="711" StemChange="221" StemID="3">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Nominatīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="ušaakax" ID="1226" LemmaEnding="711" StemChange="21" StemID="3">
+        <Ending Ending="ušaakax" ID="1226" LemmaEnding="711" StemChange="221" StemID="3">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Ģenitīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="ušaakam" ID="1227" LemmaEnding="711" StemChange="21" StemID="3">
+        <Ending Ending="ušaakam" ID="1227" LemmaEnding="711" StemChange="221" StemID="3">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Datīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="ušaakux" ID="1228" LemmaEnding="711" StemChange="21" StemID="3">
+        <Ending Ending="ušaakux" ID="1228" LemmaEnding="711" StemChange="221" StemID="3">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Akuzatīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="ušaakaa" ID="1229" LemmaEnding="711" StemChange="21" StemID="3">
+        <Ending Ending="ušaakaa" ID="1229" LemmaEnding="711" StemChange="221" StemID="3">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Lokatīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="ušaakix" ID="1230" LemmaEnding="711" StemChange="21" StemID="3">
+        <Ending Ending="ušaakix" ID="1230" LemmaEnding="711" StemChange="221" StemID="3">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Nominatīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="ušaakux" ID="1231" LemmaEnding="711" StemChange="21" StemID="3">
+        <Ending Ending="ušaakux" ID="1231" LemmaEnding="711" StemChange="221" StemID="3">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Ģenitīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="ušaakiem" ID="1232" LemmaEnding="711" StemChange="21" StemID="3">
+        <Ending Ending="ušaakiem" ID="1232" LemmaEnding="711" StemChange="221" StemID="3">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Datīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="ušaakuxs" ID="1233" LemmaEnding="711" StemChange="21" StemID="3">
+        <Ending Ending="ušaakuxs" ID="1233" LemmaEnding="711" StemChange="221" StemID="3">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Akuzatīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="ušaakuos" ID="1234" LemmaEnding="711" StemChange="21" StemID="3">
+        <Ending Ending="ušaakuos" ID="1234" LemmaEnding="711" StemChange="221" StemID="3">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Lokatīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="ušaakais" ID="1235" LemmaEnding="711" StemChange="21" StemID="3">
+        <Ending Ending="ušaakais" ID="1235" LemmaEnding="711" StemChange="221" StemID="3">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Nominatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="ušaakaa" ID="1236" LemmaEnding="711" StemChange="21" StemID="3">
+        <Ending Ending="ušaakaa" ID="1236" LemmaEnding="711" StemChange="221" StemID="3">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Ģenitīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="ušaakajam" ID="1237" LemmaEnding="711" StemChange="21" StemID="3">
+        <Ending Ending="ušaakajam" ID="1237" LemmaEnding="711" StemChange="221" StemID="3">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Datīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="ušaakuo" ID="1238" LemmaEnding="711" StemChange="21" StemID="3">
+        <Ending Ending="ušaakuo" ID="1238" LemmaEnding="711" StemChange="221" StemID="3">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Akuzatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="ušaakajaa" ID="1239" LemmaEnding="711" StemChange="21" StemID="3">
+        <Ending Ending="ušaakajaa" ID="1239" LemmaEnding="711" StemChange="221" StemID="3">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Lokatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="ušaakais" ID="1240" LemmaEnding="711" StemChange="21" StemID="3">
+        <Ending Ending="ušaakais" ID="1240" LemmaEnding="711" StemChange="221" StemID="3">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Vokatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="ušaakie" ID="1241" LemmaEnding="711" StemChange="21" StemID="3">
+        <Ending Ending="ušaakie" ID="1241" LemmaEnding="711" StemChange="221" StemID="3">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Nominatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="ušaakuo" ID="1242" LemmaEnding="711" StemChange="21" StemID="3">
+        <Ending Ending="ušaakuo" ID="1242" LemmaEnding="711" StemChange="221" StemID="3">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Ģenitīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="ušaakajiem" ID="1243" LemmaEnding="711" StemChange="21" StemID="3">
+        <Ending Ending="ušaakajiem" ID="1243" LemmaEnding="711" StemChange="221" StemID="3">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Datīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="ušaakuos" ID="1244" LemmaEnding="711" StemChange="21" StemID="3">
+        <Ending Ending="ušaakuos" ID="1244" LemmaEnding="711" StemChange="221" StemID="3">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Akuzatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="ušaakajuos" ID="1245" LemmaEnding="711" StemChange="21" StemID="3">
+        <Ending Ending="ušaakajuos" ID="1245" LemmaEnding="711" StemChange="221" StemID="3">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Lokatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="ušaakie" ID="1246" LemmaEnding="711" StemChange="21" StemID="3">
+        <Ending Ending="ušaakie" ID="1246" LemmaEnding="711" StemChange="221" StemID="3">
             <Attributes Dzimte="Vīriešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Vokatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="ušaakax" ID="1247" LemmaEnding="711" StemChange="21" StemID="3">
+        <Ending Ending="ušaakax" ID="1247" LemmaEnding="711" StemChange="221" StemID="3">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Nominatīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="ušaakaxs" ID="1248" LemmaEnding="711" StemChange="21" StemID="3">
+        <Ending Ending="ušaakaxs" ID="1248" LemmaEnding="711" StemChange="221" StemID="3">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Ģenitīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="ušaakai" ID="1249" LemmaEnding="711" StemChange="21" StemID="3">
+        <Ending Ending="ušaakai" ID="1249" LemmaEnding="711" StemChange="221" StemID="3">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Datīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="ušaakux" ID="1250" LemmaEnding="711" StemChange="21" StemID="3">
+        <Ending Ending="ušaakux" ID="1250" LemmaEnding="711" StemChange="221" StemID="3">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Akuzatīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="ušaakaa" ID="1251" LemmaEnding="711" StemChange="21" StemID="3">
+        <Ending Ending="ušaakaa" ID="1251" LemmaEnding="711" StemChange="221" StemID="3">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Lokatīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="ušaakaxs" ID="1252" LemmaEnding="711" StemChange="21" StemID="3">
+        <Ending Ending="ušaakaxs" ID="1252" LemmaEnding="711" StemChange="221" StemID="3">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Nominatīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="ušaakux" ID="1253" LemmaEnding="711" StemChange="21" StemID="3">
+        <Ending Ending="ušaakux" ID="1253" LemmaEnding="711" StemChange="221" StemID="3">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Ģenitīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="ušaakaam" ID="1254" LemmaEnding="711" StemChange="21" StemID="3">
+        <Ending Ending="ušaakaam" ID="1254" LemmaEnding="711" StemChange="221" StemID="3">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Datīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="ušaakaxs" ID="1255" LemmaEnding="711" StemChange="21" StemID="3">
+        <Ending Ending="ušaakaxs" ID="1255" LemmaEnding="711" StemChange="221" StemID="3">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Akuzatīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="ušaakaas" ID="1256" LemmaEnding="711" StemChange="21" StemID="3">
+        <Ending Ending="ušaakaas" ID="1256" LemmaEnding="711" StemChange="221" StemID="3">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Lokatīvs" Lokāmība="Lokāms" Noteiktība="Nenoteiktā" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="usii" ID="1257" LemmaEnding="711" StemChange="21" StemID="3">
+        <Ending Ending="usii" ID="1257" LemmaEnding="711" StemChange="221" StemID="3">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Nominatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Skaitlis="Vienskaitlis"/>
         </Ending>
         <Ending Ending="ušaakaas" ID="1258" LemmaEnding="711" StemChange="21" StemID="3">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Ģenitīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="ušaakajai" ID="1259" LemmaEnding="711" StemChange="21" StemID="3">
+        <Ending Ending="ušaakajai" ID="1259" LemmaEnding="711" StemChange="221" StemID="3">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Datīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="ušaakuo" ID="1260" LemmaEnding="711" StemChange="21" StemID="3">
+        <Ending Ending="ušaakuo" ID="1260" LemmaEnding="711" StemChange="221" StemID="3">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Akuzatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="ušaakajaa" ID="1261" LemmaEnding="711" StemChange="21" StemID="3">
+        <Ending Ending="ušaakajaa" ID="1261" LemmaEnding="711" StemChange="221" StemID="3">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Lokatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="ušaakaa" ID="1262" LemmaEnding="711" StemChange="21" StemID="3">
+        <Ending Ending="ušaakaa" ID="1262" LemmaEnding="711" StemChange="221" StemID="3">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Vokatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Skaitlis="Vienskaitlis"/>
         </Ending>
-        <Ending Ending="ušaakaas" ID="1263" LemmaEnding="711" StemChange="21" StemID="3">
+        <Ending Ending="ušaakaas" ID="1263" LemmaEnding="711" StemChange="221" StemID="3">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Nominatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="ušaakuo" ID="1264" LemmaEnding="711" StemChange="21" StemID="3">
+        <Ending Ending="ušaakuo" ID="1264" LemmaEnding="711" StemChange="221" StemID="3">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Ģenitīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="ušaakajaam" ID="1265" LemmaEnding="711" StemChange="21" StemID="3">
+        <Ending Ending="ušaakajaam" ID="1265" LemmaEnding="711" StemChange="221" StemID="3">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Datīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="ušaakaas" ID="1266" LemmaEnding="711" StemChange="21" StemID="3">
+        <Ending Ending="ušaakaas" ID="1266" LemmaEnding="711" StemChange="221" StemID="3">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Akuzatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="ušaakajaas" ID="1267" LemmaEnding="711" StemChange="21" StemID="3">
+        <Ending Ending="ušaakajaas" ID="1267" LemmaEnding="711" StemChange="221" StemID="3">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Lokatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Skaitlis="Daudzskaitlis"/>
         </Ending>
-        <Ending Ending="ušaakaas" ID="1268" LemmaEnding="711" StemChange="21" StemID="3">
+        <Ending Ending="ušaakaas" ID="1268" LemmaEnding="711" StemChange="221" StemID="3">
             <Attributes Dzimte="Sieviešu" Izteiksme="Divdabis" Kārta="Darāmā" Laiks="Pagātne" Locījums="Vokatīvs" Lokāmība="Lokāms" Noteiktība="Noteiktā" Skaitlis="Daudzskaitlis"/>
         </Ending>
         <Ending Ending="iens" ID="941" LemmaEnding="941" StemChange="14" StemID="3">
@@ -1990,7 +1990,7 @@
         <Ending Ending="am" ID="1177" LemmaEnding="711" StemChange="0" StemID="2">
             <Attributes Dzimte="Nepiemīt" Izteiksme="Divdabis" Kārta="Nepiemīt" Laiks="Nepiemīt" Locījums="Nepiemīt" Lokāmība="Nelokāms" Noteiktība="Nepiemīt" Pakāpe="Nepiemīt" Skaitlis="Nepiemīt"/>
         </Ending>
-        <Ending Ending="tux" ID="1184" LemmaEnding="711" StemChange="0" StemID="1">
+        <Ending Ending="tux" ID="1184" LemmaEnding="711" StemChange="200" StemID="1">
             <Attributes Izteiksme="Vēlējuma" Kārta="Darāmā" Laiks="Nepiemīt" Persona="Nepiemīt" Skaitlis="Nepiemīt"/>
         </Ending>
         <Ending Ending="sit" ID="1199" LemmaEnding="711" StemChange="6" StemID="1">
