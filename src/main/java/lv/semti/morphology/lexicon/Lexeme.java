@@ -117,7 +117,7 @@ public class Lexeme extends AttributeValues {
      * Constructs a lexeme from a JSON object
      * @param json
      */
-    public Lexeme(JSONObject json, Lexicon lexicon) {
+    public Lexeme(JSONObject json, Lexicon lexicon, Boolean isPhonetic) {
         if (json.get("paradigm") != null) {
             int paradigmID = ((Long)json.get("paradigm")).intValue();
             this.paradigm = lexicon.paradigmByID(paradigmID);
@@ -127,8 +127,6 @@ public class Lexeme extends AttributeValues {
         } else throw new Error("Nav paradigmas leksēmai " + json.toJSONString());
 
         setStemCount(this.paradigm.getStems());
-//        // TODO: (っ °Д °;)っ fonētiskos celmus kaut kā vajag labāk savienot
-//        setPhonoStemCount(this.paradigm.getStems());
 
         if (json.get("lexeme_id") != null) {
             setID(((Long) json.get("lexeme_id")).intValue());
@@ -137,22 +135,45 @@ public class Lexeme extends AttributeValues {
             addAttribute(AttributeNames.i_EntryID, ((Long)json.get("entry_id")).toString());
         if (json.get("human_id") != null)
             addAttribute(AttributeNames.i_EntryName, (String)json.get("human_id"));
-        if (json.get("lemma") != null)
-            addAttribute(AttributeNames.i_Lemma, (String)json.get("lemma"));
-        if (json.get("stem1") != null)
-            stems.set(0, (String)json.get("stem1"));
-        if (json.get("stem2") != null) {
-            if (stems.size() < 2) {
-                throw new Error("Paradigmai neatbilstošs celms " + json.toJSONString());
-            } else stems.set(1, (String) json.get("stem2"));
-        }
-        if (json.get("stem3") != null) {
-            if (stems.size() < 3) {
-                throw new Error("Paradigmai neatbilstošs celms " + json.toJSONString());
-            } else stems.set(2, (String) json.get("stem3"));
-        }
-        if (json.get("ortho") != null) {
-            addAttribute(AttributeNames.i_Orthography, (String)json.get("ortho"));
+
+        if (!isPhonetic) {
+            if (json.get("lemma") != null)
+                addAttribute(AttributeNames.i_Lemma, (String)json.get("lemma"));
+            if (json.get("stem1") != null)
+                stems.set(0, (String)json.get("stem1"));
+            if (json.get("stem2") != null) {
+                if (stems.size() < 2) {
+                    throw new Error("Paradigmai neatbilstošs celms " + json.toJSONString());
+                } else stems.set(1, (String) json.get("stem2"));
+            }
+            if (json.get("stem3") != null) {
+                if (stems.size() < 3) {
+                    throw new Error("Paradigmai neatbilstošs celms " + json.toJSONString());
+                } else stems.set(2, (String) json.get("stem3"));
+            }
+        } else {
+            if (json.get("lemma") != null)
+                addAttribute(AttributeNames.i_Orthography, (String) json.get("lemma"));
+            // FIXME: Kaut kur jāapstrādā ar "|" atdalītās potenciālās variantformas
+            // TODO: Pārstrādāt tēzaura fonētikso formātu par pielietoto modificēto SAMPA formātu
+            if (json.get("attributes") != null) {
+                JSONObject attrs = (JSONObject) json.get("attributes");
+                if (attrs.get("pronunciations") != null)
+                    addAttribute(AttributeNames.i_Lemma, (String) attrs.get("pronunciations"));
+                // Nezinu kā ir ar šīm vērtībām labāk rīkoties
+                if (attrs.get("phono-stem1") != null)
+                    stems.set(0, (String) attrs.get("phono-stem1"));
+                if (attrs.get("phono-stem2") != null) {
+                    if (stems.size() < 2) {
+                        throw new Error("Paradigmai neatbilstošs celms " + json.toJSONString());
+                    } else stems.set(1, (String) attrs.get("phono-stem2"));
+                }
+                if (attrs.get("phono-stem3") != null) {
+                    if (stems.size() < 3) {
+                        throw new Error("Paradigmai neatbilstošs celms " + json.toJSONString());
+                    } else stems.set(2, (String) attrs.get("phono-stem3"));
+                }
+            }
         }
 
         if (json.get("attributes") != null) {
@@ -186,6 +207,7 @@ public class Lexeme extends AttributeValues {
                 constructor_try_plural();
             } else {
                 try {
+                    // TODO: Papētīt šo fragmentu un pielikt fonētiskā celma atjaunošanu šeit
                     String stem = paradigm.getLemmaEnding().stem(lemma);
                     int mija = paradigm.getLemmaEnding().getMija();
                     if (mija != 0 && (mija != 3 || isMatchingStrong(AttributeNames.i_EntryProperties, AttributeNames.v_EntryComparative)) ) {
@@ -219,7 +241,7 @@ public class Lexeme extends AttributeValues {
 
         // TODO: Man šķiet šo vajag kaut kā labāk realizēt（；´д｀）ゞ
         // FIXME: Šo nevajadzētu izsaukt, ja ir dotas saknes, t.i. Stem1-Stem3
-        if (json.get("ortho") != null && json.get("stem1") == null) {
+        if (isPhonetic && json.get("lemma") != null && json.get("stem1") == null) {
             String ortho = this.getValue(AttributeNames.i_Orthography);
             String orthoStem = ortho.substring(0, ortho.length()-this.paradigm.endings.get(0).getEnding().length());
             addAttribute(AttributeNames.i_PhonoStem, Pronunciation.restoreStem(this.stems.get(0), orthoStem));

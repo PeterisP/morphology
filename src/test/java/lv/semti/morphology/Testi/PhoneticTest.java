@@ -268,6 +268,7 @@ public class PhoneticTest {
         testset3.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Tagadne);
         testset3.addAttribute(AttributeNames.i_Person, "3");
         testset3.addAttribute(AttributeNames.i_Noliegums, AttributeNames.v_Yes);
+        testset3.addAttribute(AttributeNames.i_Izteiksme, AttributeNames.v_Iisteniibas);
         assertInflection(ēst, testset3, "#ne-EEd");
 
         AttributeValues testset4 = new AttributeValues();

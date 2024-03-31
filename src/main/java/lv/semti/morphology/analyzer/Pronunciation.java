@@ -84,7 +84,8 @@ public class Pronunciation {
         // Otrās zilbes nebalsīgā līdzskaņa dubultošana
         // TODO: Pārbaudām vai nav norādīts uzsvars uz ne-pirmās zilbes.
         // FIXME: Izstrādāt vispārīgam gadījumam.
-        if (!sampa.contains("%") || sounds[0].startsWith("%")) {
+        String MAIN_STRESS = "%";
+        if (!sampa.contains(MAIN_STRESS) || sounds[0].startsWith(MAIN_STRESS)) {
             int zilbe = 0;
             int līdzskaņi = 0;
             boolean geminate = false;
@@ -141,5 +142,11 @@ public class Pronunciation {
         String[] sounds = base.split("");
         Character change = ortho.charAt(ortho.length()-1);
         return voiceAssimilation(sounds, change);
+    }
+
+
+    public static String tezaurs_to_internal(String tezaurs) {
+
+        return tezaurs;
     }
 }

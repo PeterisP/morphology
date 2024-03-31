@@ -262,7 +262,9 @@ public class Lexicon {
         String json_row;
         try {
             while ((json_row = reader.readLine()) != null) {
-                Lexeme l = new Lexeme((JSONObject) parser.parse(json_row), this);
+				Boolean isPhonetic = Boolean.FALSE;
+				if (this.filename.startsWith("Phonetic")) isPhonetic = Boolean.TRUE;
+                Lexeme l = new Lexeme((JSONObject) parser.parse(json_row), this, isPhonetic);
                 if (l.isMatchingStrong(AttributeNames.i_EntryName, "irt:1")
 						|| l.isMatchingStrong(AttributeNames.i_EntryName, "irt")
 						|| l.isMatchingStrong(AttributeNames.i_EntryName, "art:1")
