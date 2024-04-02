@@ -124,7 +124,9 @@ public class Lexeme extends AttributeValues {
         } else if (json.get("paradigm_name") != null) {
             String paradigmName = ((String)json.get("paradigm_name"));
             this.paradigm = lexicon.paradigmByName(paradigmName);
-        } else throw new Error("Nav paradigmas leksēmai " + json.toJSONString());
+        }
+        if (this.paradigm == null)
+            throw new Error("Nav paradigmas leksēmai " + json.toJSONString());
 
         setStemCount(this.paradigm.getStems());
 
@@ -192,9 +194,6 @@ public class Lexeme extends AttributeValues {
 
         if (stems.get(0).isEmpty() && getValue(AttributeNames.i_Lemma) != null) {
             String lemma = getValue(AttributeNames.i_Lemma).toLowerCase();
-//            if (lemma.equalsIgnoreCase("pārāks")) {
-//                describe();
-//            }
 
             if (isMatchingStrong(AttributeNames.i_EntryProperties, AttributeNames.v_EntryFeminine)) {
                 // Specapstrāde priekš īpašības vārda 'ālava' plus ja nu kas vēl parādīsies
@@ -203,7 +202,9 @@ public class Lexeme extends AttributeValues {
                 }
             }
 
-            if (isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum)) {
+            if (paradigm.getLemmaEnding() == null) {
+                stems.set(0, lemma);
+            } else if (isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum)) {
                 constructor_try_plural();
             } else {
                 try {

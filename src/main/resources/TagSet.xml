@@ -4,7 +4,7 @@
 	<Value LV="Lietvārds" EN="Noun" Tag="n" DefaultTags="nc____"/>
 	<Value LV="Darbības vārds" EN="Verb" Tag="v" DefaultTags="vm_________"/>
 	<Value LV="Īpašības vārds" EN="Adjective" Tag="a" DefaultTags="af_____"/>
-	<Value LV="Vietniekvārds" EN="Pronoun" Tag="p" DefaultTags="p______"/>
+	<Value LV="Vietniekvārds" EN="Pronoun" Tag="p" DefaultTags="p_____n"/>
 	<Value LV="Apstākļa vārds" EN="Adverb" Tag="r" DefaultTags="r_n"/>
 	<Value LV="Prievārds" EN="Preposition" Tag="s" DefaultTags="sp__"/>
 	<Value LV="Saiklis" EN="Conjunction" Tag="c"/>
@@ -93,7 +93,7 @@
 <Attribute LV="Transitivitāte" EN="Transitivity" PartOfSpeech="Darbības vārds" MarkupPos="5">
 	<Value LV="Transitīvs" EN="Transitive" Tag="t"/>
 	<Value LV="Intransitīvs" EN="Intransitive" Tag="i"/>
-	<Value LV="[&quot;Intransitīvs&quot;,&quot;Transitīvs&quot;,&quot;Transitīvs un intransitīvs&quot;]"/> <!-- FIXME -->
+	<Value LV="Transitīvs un intransitīvs" EN="Transitive or intransitive"/>
 </Attribute>
 <Attribute LV="Konjugācija" EN="Conjugation" PartOfSpeech="Darbības vārds" MarkupPos="6">
 	<Value LV="1" EN="1" Tag="1"/>
@@ -279,6 +279,13 @@
 <Attribute LV="Prievārdiskais apstākļa vārds" EN="Prepositional adverb" PartOfSpeech="Apstākļa vārds" MarkupPos="2">
 	<Value LV="Jā" EN="Yes" Tag="y"/>
 </Attribute>
+<Attribute LV="Apstākļa vārda semantiskais tips" EN="Adverb type" PartOfSpeech="Apstākļa vārds">
+	<Value LV="Mēra" EN="Quantitative" Tag="q"/>
+	<Value LV="Veida" EN="Manner" Tag="m"/>
+	<Value LV="Vietas" EN="Place" Tag="p"/>
+	<Value LV="Laika" EN="Time" Tag="t"/>
+	<Value LV="Cēloņa/nolūka" EN="Causative" Tag="c"/>
+</Attribute>
 
 <Attribute LV="Novietojums" EN="Position" PartOfSpeech="Prievārds" MarkupPos="1">
 	<Value LV="Prepozitīvs" EN="Preposition" Tag="p"/>
@@ -445,6 +452,7 @@
 	<Value LV="Jaunvārds" EN="Neologism"/>
 	<Value LV="Īsziņās" EN="SMS"/>
 	<Value LV="Bērnu valoda" EN="Children"/>
+	<Value LV="Eifēmisms" EN="Euphemism"/>
 </Attribute>
 
 <Attribute LV="Stils" EN="Style">
@@ -538,6 +546,7 @@
 	<Value LV="Medniecība" EN="Hunting"/>
 	<Value LV="Biškopība" EN="Beekeeping"/>
 	<Value LV="Mežsaimniecība" EN="Forestry"/>
+	<Value LV="Mežrūpniecība" EN="Forestry"/>
 	<Value LV="Kokapstrāde" EN="Carpentry"/>
 	<Value LV="Jūrniecība" EN="Marine"/>
 	<Value LV="Zvejniecība" EN="Fishing"/>
@@ -587,6 +596,7 @@
 <FreeAttribute LV="Šķirkļa ID" EN="Entry ID"/>
 <FreeAttribute LV="Šķirkļa cilvēklasāmais ID" EN="Entry name"/>
 <FreeAttribute LV="Priedēklis" EN="Prefix"/> 
+<FreeAttribute LV="pronunciations" EN="Pronunciations"/> 
 
 <!--
 <Attribute LV="Gramatiskās formas ierobežojumi" EN="Grammatical form restrictions">
@@ -631,6 +641,9 @@
 	<Value LV="Jā" EN="Yes"/>
 </Attribute>
 
+<Attribute LV="Transliterācija" EN="Transliteration">
+	<Value LV="Jā" EN="Yes"/>
+</Attribute>
 
 <Attribute LV="Dialekta iezīmes" EN="Dialect markings">
 	<Value LV="Latgaliešu" EN="Latgalian"/>
@@ -676,29 +689,25 @@
 	<Value LV="Saīsinājums" EN="Abbreviation"/>
 </Attribute>
 
-
 <Attribute LV="Leksēmas pamatformas īpatnības" EN="Entry properties">
 	<Value LV="Daudzskaitlis" EN="Plural"/>
 	<Value LV="Vienskaitlis" EN="Singular"/>
 	<Value LV="Sieviešu dzimte" EN="Feminine"/>
 	<Value LV="Pārākā pakāpe" EN="Comparative"/>
 </Attribute>
+
 <Attribute LV="Locīšanas īpatnības" EN="Inflection properties">
 	<Value LV="Pielasīt visas izņēmumformas" EN="Gather hardcoded wordforms"/>
+	<Value LV="Tikai izņēmumformas" EN="Only hardcoded wordforms"/>
 	<Value LV="Otrās un trešās konjugācijas paralelitāte" EN="2nd/3rd conjugation parallel forms"/>
-	<Value LV="[&quot;Otrās un trešās konjugācijas paralelitāte&quot;,&quot;Paralēlās formas&quot;]" EN="2nd/3rd conjugation parallel forms"/>
-	<Value LV="[&quot;Otrās un trešās konjugācijas paralelitāte&quot;,&quot;Paralēlās formas&quot;,&quot;Pirmās konjugācijas paralēlforma visām personām&quot;]" EN="2nd/3rd conjugation parallel forms / 1st conjugation parallel forms"/>
-	<Value LV="[&quot;Otrās un trešās konjugācijas paralelitāte&quot;,&quot;Paralēlās formas&quot;,&quot;Pirmās konjugācijas paralēlforma tikai 3. personai&quot;]" EN="2nd/3rd conjugation parallel forms / 1st conjugation parallel forms"/>
-	<Value LV="[&quot;Paralēlās formas&quot;,&quot;Pirmās konjugācijas paralēlforma&quot;]" EN="1st conjugation parallel forms"/>	
-	<Value LV="[&quot;Paralēlās formas&quot;,&quot;Pirmās konjugācijas paralēlforma visām personām&quot;]" EN="1st conjugation parallel forms"/>
-	<Value LV="[&quot;Paralēlās formas&quot;,&quot;Pirmās konjugācijas paralēlforma tikai 3. personai&quot;]" EN="1st conjugation parallel forms"/>
-	<Value LV="[&quot;Nenoteiksmes homoformas&quot;,&quot;Paralēlās formas&quot;]" EN="Infinitive homoforms"/>	
-	<Value LV="[&quot;Otrās un trešās konjugācijas paralelitāte&quot;,&quot;Paralēlās formas&quot;,&quot;Pirmās konjugācijas paralēlforma&quot;]" EN="1st,2nd,3rd conjugation parallel forms"/>	
+	<Value LV="Pirmās konjugācijas paralēlforma" EN="1st conjugation parallel forms"/>	
+	<Value LV="Pirmās konjugācijas paralēlforma visām personām" EN="1st conjugation parallel forms"/>
+	<Value LV="Pirmās konjugācijas paralēlforma tikai 3. personai" EN="1st conjugation parallel forms for third person"/>
+	<Value LV="Nenoteiksmes homoformas" EN="Infinitive homoforms"/>	
 	<Value LV="Paralēlās formas" EN="Parallel forms"/>
 	<Value LV="Kopdzimte" EN="Common gender"/>
 	<Value LV="Nenoteiksmes homoformas" EN="Infinitive homonym"/>
 	<Value LV="Vairākos punktos lokāms saliktenis" EN="Compound noun with multiple inflection points"/>
-	<Value LV="[&quot;Paralēlās formas&quot;,&quot;Vairākos punktos lokāms saliktenis&quot;]" EN="Parallel forms/Compound noun with multiple inflection points"/>
 	<Value LV="Sastingusi forma" EN="Frozen form"/>
 </Attribute>
 <!--
@@ -737,8 +746,9 @@
 <Attribute LV="Citi" EN="Other">
 	<Value LV="Cita paradigma" EN="Other paradigm"/>
 	<Value LV="Pēdējie celmi lietojami retāk" EN="Latter stems are used rarely"/>
-	<Value LV="[&quot;Neviennozīmīga paradigma&quot;,&quot;Vienskaitļa formas lieto sarunvalodā&quot;]" EN="Ambiguous paradigm/Singular forms are colloquial"/>
+<!-- 	<Value LV="[&quot;Neviennozīmīga paradigma&quot;,&quot;Vienskaitļa formas lieto sarunvalodā&quot;]" EN="Ambiguous paradigm/Singular forms are colloquial"/>
 	<Value LV="[&quot;Oriģinālā gramatika satur karodziņos neatšifrētas nianses&quot;,&quot;Pēdējie celmi lietojami retāk&quot;]" EN="Freetext contains items not converted to attributes/Latter stems are used rarely"/>
+ -->	
 	<Value LV="Vienskaitļa formas lieto sarunvalodā" EN="Singular forms used in colloquial language"/>
 	<Value LV="Vienskaitļa formas lieto dialektos" EN="Singular forms used in dialects"/>
 	<Value LV="Daudzskaitļa formas lieto vienskaitļa formu nozīmē" EN="Plural forms used with singular meaning"/>

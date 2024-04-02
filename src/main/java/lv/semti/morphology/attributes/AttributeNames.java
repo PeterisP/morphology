@@ -273,6 +273,7 @@ public class AttributeNames {
 
 	public static final String i_InflectionProperties = "Locīšanas īpatnības";
 	public static final String v_HardcodedWordforms = "Pielasīt visas izņēmumformas";
+	public static final String v_OnlyHardcodedWordforms = "Tikai izņēmumformas";
 
 	public static final String i_ParadigmSupportedDerivations = "Paradigmai atļautie atvasinājumi";
 	public static final String v_Derivation_tājs_tāja_ējs_ēja = "-tājs, -ējs, -tāja, -ēja";
