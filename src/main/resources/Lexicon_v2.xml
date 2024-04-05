@@ -456,7 +456,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="12" Name="noun-0" LemmaEnding="111" Description="Nelokāmi lietvārdi (kino)" DescriptionEN="Non-inflective nouns (kino)" AllowedGuessEndings="āeēiīouū">
-		<Attributes Vārdšķira="Lietvārds" Deklinācija="Nepiemīt"/>
+		<Attributes Vārdšķira="Lietvārds" Deklinācija="Nepiemīt" Dzimte="Nepiemīt" Locījums="Nepiemīt" Skaitlis="Nepiemīt"/>
 		<Ending ID="111" StemChange="0" Ending="" StemID="1" LemmaEnding="111">
 			<Attributes/>
 		</Ending>
@@ -5034,7 +5034,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="25" Name="pron" LemmaEnding="2329" Description="Vietniekvārdi (es, kas, tāds)" DescriptionEN="Pronouns (es, kas, tāds)" AllowedGuessEndings="!">
-		<Attributes Vārdšķira="Vietniekvārds" Noliegums="Nē" Locīšanas_īpatnības="Tikai izņēmumformas"/>
+		<Attributes Vārdšķira="Vietniekvārds" Noliegums="Nē" Locīšanas_īpatnības="Pielasīt visas izņēmumformas" Dzimte="Nepiemīt" Persona="Nepiemīt" Skaitlis="Nepiemīt"/>
 		<Ending ID="2329" StemChange="0" Ending="" StemID="1" LemmaEnding="2329">
 			<Attributes/>
 		</Ending>
@@ -7030,7 +7030,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="49" Name="noun-g" LemmaEnding="2406" Description="Ģenitīveņi (augstpapēžu, milzu, pagaidu)" DescriptionEN="Genitive-only (augstpapēžu, milzu, pagaidu)" AllowedGuessEndings="!u">
-		<Attributes Vārdšķira="Lietvārds" Deklinācija="Ģenitīvenis"/>
+		<Attributes Vārdšķira="Lietvārds" Deklinācija="Ģenitīvenis" Dzimte="Nepiemīt" Locījums="Ģenitīvs" Skaitlis="Nepiemīt"/>
 		<Ending ID="2406" StemChange="0" Ending="" StemID="1" LemmaEnding="2406">
 			<Attributes/>
 		</Ending>
