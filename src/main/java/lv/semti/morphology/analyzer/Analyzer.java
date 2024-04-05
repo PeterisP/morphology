@@ -454,11 +454,11 @@ public class Analyzer extends Lexicon {
 			return false;
 
 		if (variants.isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum) &&
-				!variants.isMatchingWeak(AttributeNames.i_Number, AttributeNames.v_Plural))
+				!(variants.isMatchingWeak(AttributeNames.i_Number, AttributeNames.v_Plural) || variants.isMatchingWeak(AttributeNames.i_Number, AttributeNames.v_NA)))
 			return false;
 
 		if (variants.isMatchingStrong(AttributeNames.i_NumberSpecial, AttributeNames.v_SingulareTantum) &&
-				!variants.isMatchingWeak(AttributeNames.i_Number, AttributeNames.v_Singular))
+				!(variants.isMatchingWeak(AttributeNames.i_Number, AttributeNames.v_Singular) || variants.isMatchingWeak(AttributeNames.i_Number, AttributeNames.v_NA)))
 			return false;
 
 		return true;
