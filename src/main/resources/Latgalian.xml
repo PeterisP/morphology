@@ -549,7 +549,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="14" Name="noun-0-ltg" LemmaEnding="183" Description="Nelokāmi lietvārdi (metro)" AllowedGuessEndings="">
-		<Attributes Vārdšķira="Lietvārds" Deklinācija="Nepiemīt"/>
+		<Attributes Vārdšķira="Lietvārds" Deklinācija="Nepiemīt" Dzimte="Nepiemīt" Locījums="Nepiemīt" Skaitlis="Nepiemīt"/>
 		<Ending ID="183" StemChange="0" Ending="" StemID="1" LemmaEnding="183">
 			<Attributes/>
 		</Ending>
@@ -1836,7 +1836,7 @@
 
 	<!-- Izņēmumformu vārdšķiras -->
 	<Paradigm Stems="1" ID="29" Name="pron-ltg" LemmaEnding="573" Description="Vietniekvārdi (es, tu)" AllowedGuessEndings="!">
-		<Attributes Vārdšķira="Vietniekvārds" Noliegums="Nē" Locīšanas_īpatnības="Pielasīt visas izņēmumformas"/>
+		<Attributes Vārdšķira="Vietniekvārds" Noliegums="Nē" Locīšanas_īpatnības="Pielasīt visas izņēmumformas" Dzimte="Nepiemīt" Persona="Nepiemīt" Skaitlis="Nepiemīt"/>
 		<Ending ID="573" StemChange="0" Ending="" StemID="1" LemmaEnding="573">
 			<Attributes/>
 		</Ending>
