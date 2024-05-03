@@ -417,6 +417,8 @@ public class LatgalianTest {
 	@Test
 	public void valodasNormēšana()
 	{
+		// Tests, ka ir formas, kam ir norādīts `Valodas_normēšana="Ieteicams"`
+		// Tests jāpamaina, ja mainās, kurām formām šo vajag.
 		AttributeValues sg_fem_gen_rec = new AttributeValues();
 		sg_fem_gen_rec.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
 		sg_fem_gen_rec.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
@@ -427,6 +429,8 @@ public class LatgalianTest {
 		List<Wordform> muosa = analyzer.generateInflectionsFromParadigm("muosa", 7);
 		assertInflection(muosa, sg_fem_gen_rec, "muosys");
 
+		// Tests, ka ir formas, kam ir norādīts `Valodas_normēšana="Nevēlams"`
+		// Tests jāpamaina, ja mainās, kurām formām šo vajag.
 		AttributeValues sg_fem_loc_und = new AttributeValues();
 		sg_fem_loc_und.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
 		sg_fem_loc_und.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
