@@ -390,6 +390,16 @@ public class LatgalianTest {
 	}
 
 	@Test
+	public void prep()
+	{
+		AttributeValues prep = new AttributeValues();
+		prep.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Preposition);
+
+		List<Wordform> da = analyzer.generateInflectionsFromParadigm("da", 34);
+		assertInflection(da, prep, "da");
+	}
+
+	@Test
 	public void iuzys()
 	{
 		AttributeValues dsk_nom = new AttributeValues();
