@@ -244,7 +244,8 @@ public class Lexeme extends AttributeValues {
         // FIXME: Šo nevajadzētu izsaukt, ja ir dotas saknes, t.i. Stem1-Stem3
         if (isPhonetic && json.get("lemma") != null && json.get("stem1") == null) {
             String ortho = this.getValue(AttributeNames.i_Orthography);
-            String orthoStem = ortho.substring(0, ortho.length()-this.paradigm.endings.get(0).getEnding().length());
+            String sampa_ending = this.paradigm.endings.get(0).getEnding();
+            String orthoStem = ortho.substring(0, ortho.length()-Pronunciation.ending_length(sampa_ending));
             addAttribute(AttributeNames.i_PhonoStem, Pronunciation.restoreStem(this.stems.get(0), orthoStem));
         }
 

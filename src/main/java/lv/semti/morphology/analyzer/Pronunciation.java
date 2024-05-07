@@ -148,4 +148,20 @@ public class Pronunciation {
     public static String tezaurs_to_internal(String tezaurs) {
         return tezaurs;
     }
+
+
+    public static Integer ending_length(String sampa_end) {
+        sampa_end = sampa_end.replaceAll("x", "");
+        sampa_end = sampa_end.replaceAll("q", "");
+        sampa_end = sampa_end.replaceAll("=", "");
+        sampa_end = sampa_end.replaceAll("x", "");
+        sampa_end = sampa_end.replaceAll("aa", "ā");
+        sampa_end = sampa_end.replaceAll("ee", "ē");
+        sampa_end = sampa_end.replaceAll("ii", "ī");
+        sampa_end = sampa_end.replaceAll("oo", "o");
+        sampa_end = sampa_end.replaceAll("uu", "u");
+        sampa_end = sampa_end.replaceAll("i\\^", "j");
+        sampa_end = sampa_end.replaceAll("u\\^", "v");
+        return sampa_end.length();
+    }
 }

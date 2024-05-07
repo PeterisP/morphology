@@ -183,6 +183,19 @@ public class PhoneticTest {
 
 
     @Test
+    public void roka() {
+        List<Wordform> tēls = analyzer.generateInflections("#ruokax");
+
+        AttributeValues testset = new AttributeValues();
+        testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
+        testset.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Feminine);
+        testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Accusative);
+        testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+        assertInflection(tēls, testset, "#ruokux");
+    }
+
+
+    @Test
     public void leds() {
         List<Wordform> tēls = analyzer.generateInflections("#læts");
 
