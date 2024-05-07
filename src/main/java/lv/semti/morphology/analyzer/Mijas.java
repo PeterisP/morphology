@@ -1331,7 +1331,6 @@ public abstract class Mijas {
 					varianti.add(new Variants(celms.replace("e", "æ")));
 				case 206: // 1. konjugācijas nākotne
 					if (celms.endsWith("s")) {
-						System.out.println(trešāSakne);
 						if (trešāSakne.endsWith("d")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"dii"));
 						else if (trešāSakne.endsWith("t")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"tii"));
 						else if (trešāSakne.endsWith("s")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"sii"));

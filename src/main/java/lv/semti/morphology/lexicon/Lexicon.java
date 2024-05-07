@@ -264,7 +264,10 @@ public class Lexicon {
         try {
             while ((json_row = reader.readLine()) != null) {
 				Boolean isPhonetic = Boolean.FALSE;
-				if (this.filename.startsWith("Phonetic")) isPhonetic = Boolean.TRUE;
+				if (this.filename != null) {
+					if (this.filename.startsWith("Phonetic")) isPhonetic = Boolean.TRUE;
+				}
+
                 Lexeme l = new Lexeme((JSONObject) parser.parse(json_row), this, isPhonetic);
                 if (l.isMatchingStrong(AttributeNames.i_EntryName, "irt:1")
 						|| l.isMatchingStrong(AttributeNames.i_EntryName, "irt")

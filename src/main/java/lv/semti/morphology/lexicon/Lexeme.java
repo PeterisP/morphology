@@ -246,7 +246,6 @@ public class Lexeme extends AttributeValues {
             String ortho = this.getValue(AttributeNames.i_Orthography);
             String orthoStem = ortho.substring(0, ortho.length()-this.paradigm.endings.get(0).getEnding().length());
             addAttribute(AttributeNames.i_PhonoStem, Pronunciation.restoreStem(this.stems.get(0), orthoStem));
-            System.out.println("* "+Pronunciation.restoreStem(this.stems.get(0), orthoStem));
         }
 
         paradigm.addLexeme(this);
