@@ -254,6 +254,7 @@ public class AttributeNames {
 
 	public static final String i_Normative = "Valodas normēšana";
 	public static final String v_Undesirable = "Nevēlams";
+	public static final String v_Recommended = "Ieteicams";
 
     public static final String i_EntryProperties = "Leksēmas pamatformas īpatnības";
 	public final static String v_EntryComparative = "Pārākā pakāpe"; // TODO - tizls nosaukums

@@ -53,7 +53,7 @@ public class LatgalianTest {
 	private void assertInflection(List<Wordform> forms, AttributeValues testset, String validForm) {
 		boolean found = false;
 		for (Wordform wf : forms) {
-			if (wf.isMatchingWeak(testset)) {
+			if (wf.isMatchingStrongOneSide(testset)) {
 				if (!validForm.equalsIgnoreCase(wf.getToken())) {
 					System.err.printf("Found a different form");
 					wf.describe(new PrintWriter(System.err));
@@ -79,7 +79,7 @@ public class LatgalianTest {
 		HashSet<String> foundCorrect = new HashSet<>();
 		HashSet<String> foundOther = new HashSet<>();
 		for (Wordform wf : forms) {
-			if (wf.isMatchingWeak(testset)) {
+			if (wf.isMatchingStrongOneSide(testset)) {
 				if (validForms.contains(wf.getToken())) foundCorrect.add(wf.getToken());
 				else foundOther.add(wf.getToken());
 			}
@@ -390,6 +390,16 @@ public class LatgalianTest {
 	}
 
 	@Test
+	public void prep()
+	{
+		AttributeValues prep = new AttributeValues();
+		prep.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Preposition);
+
+		List<Wordform> da = analyzer.generateInflectionsFromParadigm("da", 34);
+		assertInflection(da, prep, "da");
+	}
+
+	@Test
 	public void iuzys()
 	{
 		AttributeValues dsk_nom = new AttributeValues();
@@ -411,6 +421,35 @@ public class LatgalianTest {
 			assertTrue(form.isMatchingStrong(AttributeNames.i_Gender, AttributeNames.v_Feminine));
 		}
 		assertFalse(forms.isEmpty());
+
+	}
+
+	@Test
+	public void valodasNormēšana()
+	{
+		// Tests, ka ir formas, kam ir norādīts `Valodas_normēšana="Ieteicams"`
+		// Tests jāpamaina, ja mainās, kurām formām šo vajag.
+		AttributeValues sg_fem_gen_rec = new AttributeValues();
+		sg_fem_gen_rec.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
+		sg_fem_gen_rec.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+		sg_fem_gen_rec.addAttribute(AttributeNames.i_Case, AttributeNames.v_Genitive);
+		sg_fem_gen_rec.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Feminine);
+		sg_fem_gen_rec.addAttribute(AttributeNames.i_Normative, AttributeNames.v_Recommended);
+
+		List<Wordform> muosa = analyzer.generateInflectionsFromParadigm("muosa", 7);
+		assertInflection(muosa, sg_fem_gen_rec, "muosys");
+
+		// Tests, ka ir formas, kam ir norādīts `Valodas_normēšana="Nevēlams"`
+		// Tests jāpamaina, ja mainās, kurām formām šo vajag.
+		AttributeValues sg_fem_loc_und = new AttributeValues();
+		sg_fem_loc_und.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
+		sg_fem_loc_und.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+		sg_fem_loc_und.addAttribute(AttributeNames.i_Case, AttributeNames.v_Locative);
+		sg_fem_loc_und.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Feminine);
+		sg_fem_loc_und.addAttribute(AttributeNames.i_Normative, AttributeNames.v_Undesirable);
+
+		List<Wordform> muote = analyzer.generateInflectionsFromParadigm("muote", 9);
+		assertInflectionMultiple(muote, sg_fem_loc_und, new HashSet<String>(){{ add("muotie"); add("muotī");}});
 
 	}
 
