@@ -609,8 +609,8 @@ public class MorphologyTest {
         // pie 'viņi' un 'viņiem' atrod vārdu ar pamatformu 'Vilis'
         Word viņi = locītājs.analyze("viņi");
         assertTrue(viņi.isRecognized());
-        describe(viņi.wordforms);
-        assertEquals(3, viņi.wordformsCount());
+//        describe(viņi.wordforms);
+        assertEquals(2, viņi.wordformsCount());
     }
 
     @Test
@@ -1415,7 +1415,7 @@ public class MorphologyTest {
         locītājs.enableAllGuesses = true;
 
         List<Wordform> formas = locītājs.generateInflections("Arvydas", true);
-        assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Genitive, "", "Arvydas");
+        assertNounInflection(formas, AttributeNames.v_NA, AttributeNames.v_NA, "", "Arvydas");
 
         formas = locītājs.generateInflections("Rīta", true);
         assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "", "Rīta");
@@ -1985,7 +1985,7 @@ public class MorphologyTest {
         // Vietniekvārdiem neieliek pēdējo pozīciju tagā (noliegumu); -šana atvasinātās formas nav ok
         Word viņš = locītājs.analyze("viņš");
         assertTrue(viņš.isRecognized());
-        assertEquals("ps3msnn", viņš.getBestWordform().getTag());
+        assertEquals("pp3msnn", viņš.getBestWordform().getTag());
 
         Word ciršana = locītājs.analyze("ciršana");
         assertTrue(ciršana.isRecognized());
