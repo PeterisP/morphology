@@ -707,7 +707,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="18" Name="noun-5mc-ltg" LemmaEnding="230" Description="Lietvārdi vīriešu dzimtē, 5. deklinācija, galotne -e, vienskaitļa lokatīvs -ē, bez mijas (tēte)" AllowedGuessEndings="">
+	<Paradigm Stems="1" ID="18" Name="noun-5mc-ltg" LemmaEnding="230" Description="Lietvārdi vīriešu dzimtē, 5. deklinācija, galotne -e, bez mijas (tēte)" AllowedGuessEndings="">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="5" Dzimte="Vīriešu"/>
 		<Ending ID="230" StemChange="0" Ending="e" StemID="1" LemmaEnding="230">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
@@ -768,7 +768,7 @@
 		</Ending>
 	</Paradigm>
 	<!-- Iespējams, ka šo būs jāizņem, ja latgaliešu grupa sapratīs, ka nav piemēru -->
-	<Paradigm Stems="1" ID="19" Name="noun-5ma-ltg" LemmaEnding="247" Description="Lietvārdi vīriešu dzimtē, 5. deklinācija, galotne -e, vienskaitļa lokatīvs -ē, ar miju (uzvārdi?)" AllowedGuessEndings="">
+	<Paradigm Stems="1" ID="19" Name="noun-5ma-ltg" LemmaEnding="247" Description="Lietvārdi vīriešu dzimtē, 5. deklinācija, galotne -e, ar miju (uzvārdi?)" AllowedGuessEndings="">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="5" Dzimte="Vīriešu"/>
 		<Ending ID="247" StemChange="0" Ending="e" StemID="1" LemmaEnding="247">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
