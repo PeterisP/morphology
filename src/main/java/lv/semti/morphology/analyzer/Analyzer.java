@@ -181,7 +181,6 @@ public class Analyzer extends Lexicon {
 			int stemChange = ending.getMija();
 			boolean properName = p_firstcap.matcher(originalWord).matches();
 			ArrayList<Variants> celmi = Mijas.mijuVarianti(stemBezMijas, stemChange, properName);
-
 			for (Variants celms : celmi) {
 				ArrayList<Lexeme> lexemes = ending.getEndingLexemes(celms.celms);
 				boolean foundSomethingHere = false;
@@ -702,6 +701,7 @@ public class Analyzer extends Lexicon {
 		// If result is null, it means that all the suggested lemma can be (and was) generated from another lemma - i.e. "Dīcis" from "dīkt"; but not from an existing lexicon lemma
 		// We assume that a true lemma was passed by the caller, and we need to generate/guess the wordforms as if the lemma was correct.
 		if ((result == null || result.size()==0) && this.enableGuessing) {
+
 			possibilities = this.guessByEnding(lemma.toLowerCase(), lemma);
 			filterInflectionPossibilities(nouns_only, filter, possibilities.wordforms);		
 			
@@ -711,7 +711,6 @@ public class Analyzer extends Lexicon {
 		// If guessing didn't work, return an empty list
 		if (result == null)
 			result = new ArrayList<Wordform>();
-		
 		return result;
 	}
 	
@@ -1014,7 +1013,7 @@ public class Analyzer extends Lexicon {
 	public ArrayList<Wordform> generateInflections(Lexeme lexeme, String lemma)
 	{
 		String trešāSakne = null, vārds;
-		//Vārds rezultāts = new Vārds(leksēma.īpašības.Īpašība(IpasibuNosaukumi.i_Pamatforma));
+//		Vārds rezultāts = new Vārds(leksēma.īpašības.Īpašība(IpasibuNosaukumi.i_Pamatforma));
 		ArrayList <Wordform> inflections =  new ArrayList<Wordform>(1);
 
 		//priekš 1. konj nākotnes mijas nepieciešams zināt 3. sakni
@@ -1027,7 +1026,6 @@ public class Analyzer extends Lexicon {
 			if ( ending.getValue(AttributeNames.i_PartOfSpeech)==null ||
 					ending.getValue(AttributeNames.i_PartOfSpeech).equals(lexeme.getValue(AttributeNames.i_PartOfSpeech)) ||
 					lexeme.getValue(AttributeNames.i_PartOfSpeech) == null) {
-				
 				boolean vispārākāPak = ending.isMatchingStrong(AttributeNames.i_Definiteness, AttributeNames.v_Definite) ||
 						                ending.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adverb);
 				boolean properName = lexeme.isMatchingStrong(AttributeNames.i_NounType, AttributeNames.v_ProperNoun);
@@ -1042,7 +1040,6 @@ public class Analyzer extends Lexicon {
 						} else vārds = "ne" + vārds;
 					}
 		    		vārds = recapitalize(vārds, lemma);
-
 		    		Wordform locījums = new Wordform(vārds, lexeme, ending);
 					locījums.addAttributes(celms);
 					boolean validOption = locījums.isMatchingWeak(AttributeNames.i_Generate, AttributeNames.v_Yes);

@@ -263,7 +263,12 @@ public class Lexicon {
         String json_row;
         try {
             while ((json_row = reader.readLine()) != null) {
-                Lexeme l = new Lexeme((JSONObject) parser.parse(json_row), this);
+				Boolean isPhonetic = Boolean.FALSE;
+				if (this.filename != null) {
+					if (this.filename.startsWith("Phonetic")) isPhonetic = Boolean.TRUE;
+				}
+
+                Lexeme l = new Lexeme((JSONObject) parser.parse(json_row), this, isPhonetic);
                 if (l.isMatchingStrong(AttributeNames.i_EntryName, "irt:1")
 						|| l.isMatchingStrong(AttributeNames.i_EntryName, "irt")
 						|| l.isMatchingStrong(AttributeNames.i_EntryName, "art:1")
@@ -476,6 +481,7 @@ public class Lexicon {
 		String stem;
 		try {
 			stem = ending.stem(word.toLowerCase());
+			System.err.println(stem+"}}}");
 			int mija = ending.getMija();
 			if (mija != 0 && mija != 3) { // don't try to apply comparative and superlative forms
 				ArrayList<Variants> celmi = Mijas.mijuVarianti(stem, mija, word.matches("\\p{Lu}.*"));

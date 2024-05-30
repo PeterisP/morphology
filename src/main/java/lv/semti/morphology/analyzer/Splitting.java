@@ -112,6 +112,7 @@ public class Splitting {
 					} else {
 						//ja neatrada, pievieno vienu simbolu un mēģina vēl
                         tokens.add( formToken(morphoAnalyzer, str, i, i+1, accumulatedWhitespace));
+						accumulatedWhitespace = new StringBuilder();
 					}
 				} else {
 				   accumulatedWhitespace.append(str.charAt(i));
