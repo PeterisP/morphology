@@ -869,28 +869,38 @@ public class Analyzer extends Lexicon {
 		return generateInflectionsFromParadigm(lemma, paradigm, new AttributeValues());
 	}
 
+	public ArrayList<Wordform> generateInflectionsFromParadigm(String lemma, int paradigm, String stem1, String stem2, String stem3){
+		return generateInflectionsFromParadigm(lemma, paradigm, stem1, stem2, stem3, new AttributeValues());
+	}
+
 	// generate all forms if the paradigm # and also the three lemmas (for 1st conjugation) are known
 	// FIXME - DRY, repeats previous function
-	public ArrayList<Wordform> generateInflectionsFromParadigm(String lemma, int paradigm, String stem1, String stem2, String stem3) {
+	public ArrayList<Wordform> generateInflectionsFromParadigm(String lemma, int paradigm, String stem1, String stem2, String stem3, AttributeValues lemmaAttributes) {
 		Paradigm p = this.paradigmByID(paradigm);
 
 		if (p == null)
 			return generateInflections(lemma); // If the supplied paradigm is invalid, we ignore it
 
-		if (p.getStems() == 1)  // If it's not 1st conjugation verb, perform as if we didn't know the stems
-			return generateInflectionsFromParadigm(lemma, paradigm);
+//		if (p.getStems() == 1)  // If it's not 1st conjugation verb, perform as if we didn't know the stems
+//			return generateInflectionsFromParadigm(lemma, paradigm, lemmaAttributes);
 
 		if (!lemma.endsWith(p.getLemmaEnding().getEnding())) {
 			//FIXME - should check for plural nouns, etc
 		}
 
-		Lexeme l = this.createLexeme(lemma, p.getLemmaEnding().getID(), "temp");
+		Ending e = p.getLemmaEnding();
+		String normallemma = stem1 + e.getEnding();
+		Lexeme l = this.createLexeme(normallemma, e.getID(), "temp");
+		l.addAttribute(AttributeNames.i_Lemma, lemma);
+		l.addAttributes(lemmaAttributes);
 		if (l == null) { // Couldn't create the lexeme - the word wasn't compatible with the supplied paradigm
 			return new ArrayList<Wordform>();
 		}
         l.setStem(0, stem1);
-        l.setStem(1, stem2);
-        l.setStem(2, stem3);
+		if (p.getStems()>1) {
+			l.setStem(1, stem2);
+			l.setStem(2, stem3);
+		}
 		ArrayList<Wordform> result = generateInflections(l, lemma);
 		filterInflectionPossibilities(false, null, result);
 		p.removeLexeme(l); // To not pollute the in-memory lexicon

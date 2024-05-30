@@ -488,7 +488,21 @@ public class LatgalianTest {
 		assertInflection(eļksnis, vsk_gen, "eļkšņa");
 		assertInflection(eļksnis, vsk_acc, "eļksni");
 		assertInflection(eļksnis, dsk_dat, "eļkšnim");
-
 	}
+
+	@Test // Bugreport, ka varbanis nepaņem pareizo celmu un izloka
+	public void vargani() {
+		AttributeValues plTan = new AttributeValues();
+		plTan.addAttribute(AttributeNames.i_NumberSpecial, AttributeNames.v_PlurareTantum);
+
+		ArrayList<Wordform> vargani = analyzer.generateInflectionsFromParadigm("vargani", 1, "vargan", "", "", plTan);
+//		describe(vargani);
+		AttributeValues dsk_gen = new AttributeValues();
+		dsk_gen.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
+		dsk_gen.addAttribute(AttributeNames.i_Number, AttributeNames.v_Plural);
+		dsk_gen.addAttribute(AttributeNames.i_Case, AttributeNames.v_Genitive);
+//		assertInflection(vargani, dsk_gen, "varganu");
+	}
+
 }
 
