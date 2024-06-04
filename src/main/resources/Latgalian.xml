@@ -1737,7 +1737,7 @@
 			<Attributes/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="25" Name="card-pl-ltg" LemmaEnding="492" Description="Pamata skaitļa vārdi daudskaitlī (pīci)" AllowedGuessEndings="!">
+	<Paradigm Stems="1" ID="25" Name="card-pl-ltg" LemmaEnding="492" Description="Pamata skaitļa vārdi daudzskaitlī (pīci)" AllowedGuessEndings="!">
 		<Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā"/>
 		<Ending ID="492" StemChange="0" Ending="i" StemID="1" LemmaEnding="492">
 			<Attributes Dzimte="Vīriešu" Locījums="Nominatīvs"/>
