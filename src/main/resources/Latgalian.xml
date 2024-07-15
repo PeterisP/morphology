@@ -1503,9 +1503,9 @@
 			<Attributes Vārdšķira="Apstākļa vārds"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="23" Name="adj-4-ltg" LemmaEnding="469" Description="Īpašības vārdi, izskaņas -iņš, -ine, (dzeļziņs, kūcine)" AllowedGuessEndings="ņn">
+	<Paradigm Stems="1" ID="23" Name="adj-4-ltg" LemmaEnding="469" Description="Īpašības vārdi, izskaņas -iņs, -ine, (dzeļziņs, kūcine)" AllowedGuessEndings="ņn">
 		<Attributes Vārdšķira="Īpašības vārds" Noteiktība="Nenoteiktā"/>
-		<Ending ID="469" StemChange="0" Ending="š" StemID="1" LemmaEnding="469">
+		<Ending ID="469" StemChange="0" Ending="s" StemID="1" LemmaEnding="469">
 			<Attributes Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Locījums="Nominatīvs"/>
 		</Ending>
 		<Ending ID="470" StemChange="0" Ending="a" StemID="1" LemmaEnding="469">
