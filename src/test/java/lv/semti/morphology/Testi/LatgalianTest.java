@@ -504,5 +504,12 @@ public class LatgalianTest {
 //		assertInflection(vargani, dsk_gen, "varganu");
 	}
 
+	@Test
+	public void ticket_138() {
+		ArrayList<Wordform> formas = analyzer.generateInflectionsFromParadigm("es", 29);
+		describe(formas);
+		assertTrue("Jābūt vairākām formām 'es' tabulai no hardcoded", formas.size()>4);
+	}
+
 }
 

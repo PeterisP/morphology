@@ -4301,5 +4301,10 @@ public class MorphologyTest {
         assertEquals(3, kas.wordformsCount());
     }
 
+    @Test
+    public void ticket_138() {
+        ArrayList<Wordform> formas = locītājs.generateInflectionsFromParadigm("jebkas", 25);
+        assertTrue("Jābūt vairākām formām 'jebkas' tabulai no hardcoded", formas.size()>1);
+    }
 
 }

@@ -465,14 +465,11 @@ public class Lexicon {
 	 * NB! If the paradigm needs multiple stems (1st conjugation verbs) then only the lemma stem will be added, and the other stems will be empty and need to be filled later
 	 *
 	 * @param word		full wordform of the word to be added
-	 * @param endingID	ID of the ending
+	 * @param ending	ending object of the word's lemma
 	 * @param source	Description field of the lexeme source
 	 * @return			The created lexeme or NULL if it couldn't be created
 	 */
-	public Lexeme createLexeme(String word, int endingID, String source) {
-		//System.out.printf("Inserting lexeme %s with ending %d\n", word, endingID);
-	//FIXME - vajadzētu galotnes objektu, nevis numuru.
-		Ending ending = endingByID(endingID);
+	public Lexeme createLexeme(String word, Ending ending, String source) {
 		String stem;
 		try {
 			stem = ending.stem(word.toLowerCase());
@@ -485,7 +482,7 @@ public class Lexicon {
 				// FIXME - vai te ir ok naivi ņemt pirmo variantu ?
 			}
 		} catch (Exception e) {
-            System.err.print(word + Integer.toString(endingID) + source);
+            System.err.print(word + Integer.toString(ending.getID()) + source);
 			System.err.print(e.getStackTrace());
 			return null;
 		}
@@ -522,7 +519,7 @@ public class Lexicon {
 			throw new Exception(String.format("createLexemeFromParadigm - null lemma ending at paradigm id %d for lexeme %s", paradigmID, word));
 		
 		if (word.endsWith(p.getLemmaEnding().getEnding())) // If we've been passed the appropriate lemma already 
-			return this.createLexeme(word, p.getLemmaEnding().getID(), source);
+			return this.createLexeme(word, p.getLemmaEnding(), source);
 		
 		// if there's some other wordform, then we'll try to find it. 
 		// TODO - this assumes that the lemma will be the same regardless of which wordform we choose. Maybe that's not true for some stemchanges.
@@ -530,7 +527,7 @@ public class Lexicon {
 			if (e.isMatchingStrong(AttributeNames.i_Case, AttributeNames.v_Vocative))
 				continue;
 			if (word.endsWith(e.getEnding()))
-				return this.createLexeme(word, e.getID(), source);
+				return this.createLexeme(word, e, source);
 		}
 		
 		throw new Exception(String.format("createLexemeFromParadigm - couldn't create lexeme %s with paradigm %d", word, paradigmID));

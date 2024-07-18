@@ -852,14 +852,14 @@ public class Analyzer extends Lexicon {
         }
 		if (ending == null) return new ArrayList<>();
 
-        Lexeme l = this.createLexeme(lemma, ending.getID(), "temp");
+        Lexeme l = this.createLexeme(lemma, ending, "temp");
         if (l == null) { // Couldn't create the lexeme - the word wasn't compatible with the supplied paradigm
             return new ArrayList<Wordform>();
         }
         l.addAttributes(lemmaAttributes);
         ArrayList<Wordform> result = generateInflections(l, lemma);
 		filterInflectionPossibilities(false, null, result);
-        p.removeLexeme(l); // To not pollute the in-memory lexicon
+        p.removeLexeme(l); // To not pollute the in-memory lexicon - FIXME - this temporary lexeme does have temporary pollution which could have multithreading race conditions
 
         return result;
     }
@@ -891,7 +891,7 @@ public class Analyzer extends Lexicon {
 
 		Ending e = p.getLemmaEnding();
 		String normallemma = stem1 + e.getEnding();
-		Lexeme l = this.createLexeme(normallemma, e.getID(), "temp");
+		Lexeme l = this.createLexeme(normallemma, e, "temp");
 		l.addAttribute(AttributeNames.i_Lemma, lemma);
 		l.addAttributes(lemmaAttributes);
 		if (l == null) { // Couldn't create the lexeme - the word wasn't compatible with the supplied paradigm
@@ -959,15 +959,15 @@ public class Analyzer extends Lexicon {
 					lemma.equalsIgnoreCase(wf.getValue(AttributeNames.i_LemmaParadigm)) ) {
 				if (lex == null || !lex.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(lemma)) { // NB! this is lex.lemma not wf.lemma that's checked earlier
                     // Ja nav pareizā leksēma (atvasināšana vai minēšana) tad uztaisam leksēmu
-					int endingID = wf.getEnding().getID();
+					Ending ending = wf.getEnding();
 					if (wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adverb))
-						endingID = this.paradigmByName("adverb").getLemmaEnding().getID();
+						ending = this.paradigmByName("adverb").getLemmaEnding();
 					// FIXME - es te iekodēju izņēmumgadījumu jo nevaru saprast kā pareizāk darīt vispārīgi
 					if (lemma.endsWith("šana") && wf.getEnding().getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb)) {
-						endingID = this.paradigmByName("noun-4f").getLemmaEnding().getID();
+						ending = this.paradigmByName("noun-4f").getLemmaEnding();
 					}
 						
-					lex = this.createLexeme(lemma, endingID, "generateInflectionsFromParadigm"); // Temporary lexeme
+					lex = this.createLexeme(lemma, ending, "generateInflectionsFromParadigm"); // Temporary lexeme
 					if (lex.getValue(AttributeNames.i_PartOfSpeech) == null)
 						lex.addAttribute(AttributeNames.i_PartOfSpeech, wf.getValue(AttributeNames.i_PartOfSpeech)); // Hardcoded vārdšķirai lai ir POS - saīsinājumi utml
 					if (p_firstcap.matcher(lemma).matches())
@@ -992,7 +992,7 @@ public class Analyzer extends Lexicon {
 				 (lemma.toLowerCase().endsWith("ā") && wf.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(lemma.substring(0, lemma.length()-1)+"s") && wf.isMatchingStrong(AttributeNames.i_Gender, AttributeNames.v_Feminine)) ) ) {
 				// Exception for adjective-based surnames "Lielais", "Platais" etc
 				if ((lex == null && lemma.toLowerCase().endsWith("ais")) || (lex != null && !lex.getValue(AttributeNames.i_Lemma).equalsIgnoreCase(lemma))) {
-					lex = this.createLexeme(lemma, wf.getEnding().getID(), "generateInflectionsFromParadigm");
+					lex = this.createLexeme(lemma, wf.getEnding(), "generateInflectionsFromParadigm");
 					if (p_firstcap.matcher(lemma).matches())
 						lex.addAttribute(AttributeNames.i_NounType, AttributeNames.v_ProperNoun); //FIXME - hack personvārdu 'Valdis' utml locīšanai
 				}

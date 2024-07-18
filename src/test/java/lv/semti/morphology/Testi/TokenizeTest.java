@@ -947,5 +947,11 @@ public class TokenizeTest {
 		LinkedList<Word> tokens = Splitting.tokenize(locītājs, "Vispirms manu uz \u00AD manību piesaistīja solā sēdošs puisis");
 		assertEquals(8, tokens.size());
 	}
+
+	@Test
+	public void dienas() {
+		LinkedList<Word> tokens = Splitting.tokenize(locītājs, "3diena");
+		assertEquals(1, tokens.size());
+	}
 }
  
