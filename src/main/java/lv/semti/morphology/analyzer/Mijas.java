@@ -91,6 +91,13 @@ public abstract class Mijas {
 						mija = 36;
 					} else return varianti;
 					break;
+				// latgaliešu vajadzības izteiksmes
+				case 150: // vajadzības izteiksme 2. konjugācijai ar miju
+					if (stem.startsWith("juo") && stem.length() >= 5) {
+						celms = stem.substring(3,stem.length());
+						mija = 110;
+					} else return varianti;
+					break;
 				default:
 					celms = stem;
 					mija = stemChange;
@@ -698,6 +705,13 @@ public abstract class Mijas {
 						varianti.add(new Variants(celms));
 					}
 					break;
+				case 114: // 2. konjugācija, vēlējuma izteiksme un supīns
+					if (celms.endsWith("ā")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ē", "Mija", "ē -> ā"));
+					} else if (celms.endsWith("uo") || celms.endsWith("ei")) {
+						varianti.add(new Variants(celms));
+					}
+					break;
 				default:
 					System.err.printf("Invalid StemChange ID, stem '%s', stemchange %d\n", celms, mija);
 			}
@@ -815,6 +829,11 @@ public abstract class Mijas {
 				case 37: // vajadzības izteiksme 1. konjugācijai ar miju
 					celms = "jā" + stem;
 					mija = 36;
+					break;
+				// latgaliešu vajadzības izteiksmes
+				case 150: // vajadzības izteiksme 2. konjugācijai ar miju
+					celms = "juo" + stem;
+					mija = 110;
 					break;
 				default:
 					celms = stem;
@@ -1397,6 +1416,13 @@ public abstract class Mijas {
 				case 113: // 2. konjugācija, vienkāršās nākotnes vsk. 1., 2. pers. mija
 					if (celms.endsWith("ē")) {
 						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ie"));
+					} else if (celms.endsWith("ei") || celms.endsWith("uo")) {
+						varianti.add(new Variants(celms));
+					}
+					break;
+				case 114: // 2. konjugācija, vēlējuma izteiksme un supīns
+					if (celms.endsWith("ē")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ā"));
 					} else if (celms.endsWith("ei") || celms.endsWith("uo")) {
 						varianti.add(new Variants(celms));
 					}
