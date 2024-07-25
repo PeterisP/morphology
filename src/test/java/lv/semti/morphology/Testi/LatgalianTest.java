@@ -19,7 +19,6 @@ package lv.semti.morphology.Testi;
 
 
 import lv.semti.morphology.analyzer.Analyzer;
-import lv.semti.morphology.analyzer.Splitting;
 import lv.semti.morphology.analyzer.Word;
 import lv.semti.morphology.analyzer.Wordform;
 import lv.semti.morphology.attributes.AttributeNames;
@@ -29,12 +28,10 @@ import lv.semti.morphology.lexicon.Lexeme;
 import lv.semti.morphology.lexicon.Paradigm;
 import org.junit.Before;
 import org.junit.BeforeClass;
-import org.junit.Ignore;
 import org.junit.Test;
 
 import java.io.*;
 import java.util.*;
-import java.util.Map.Entry;
 
 import static org.junit.Assert.*;
 
@@ -75,7 +72,7 @@ public class LatgalianTest {
 		assertTrue(found);
 	}
 
-	private void assertInflectionMultiple(List<Wordform> forms, AttributeValues testset, Set<String> validForms) {
+	private void assertInflectionMultipleStrong(List<Wordform> forms, AttributeValues testset, Set<String> validForms) {
 		HashSet<String> foundCorrect = new HashSet<>();
 		HashSet<String> foundOther = new HashSet<>();
 		for (Wordform wf : forms) {
@@ -90,7 +87,27 @@ public class LatgalianTest {
 			System.err.print("assertInflectionMultiple failed with spare forms:\n");
 			System.err.println (foundOther);
 		}
+		if (validForms.size() != foundCorrect.size())
+		{
+			System.err.print("assertInflectionMultiple failed with not enough correct:\n");
+			System.err.println (foundCorrect);
+		}
 		assertTrue(foundOther.isEmpty());
+		assertEquals(validForms.size(), foundCorrect.size());
+	}
+
+	private void assertInflectionMultipleWeak(List<Wordform> forms, AttributeValues testset, Set<String> validForms) {
+		HashSet<String> foundCorrect = new HashSet<>();
+		for (Wordform wf : forms) {
+			if (wf.isMatchingStrongOneSide(testset)) {
+				if (validForms.contains(wf.getToken())) foundCorrect.add(wf.getToken());
+			}
+		}
+		if (validForms.size() != foundCorrect.size())
+		{
+			System.err.print("assertInflectionMultiple failed with not enough correct:\n");
+			System.err.println (foundCorrect);
+		}
 		assertEquals(validForms.size(), foundCorrect.size());
 	}
 
@@ -242,7 +259,7 @@ public class LatgalianTest {
 		testset.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
 		testset.addAttribute(AttributeNames.i_Case, AttributeNames.v_Genitive);
 		testset.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
-		assertInflectionMultiple(Jezus, testset, new HashSet<String>(){{ add("Jezus"); add("Jeza");}});
+		assertInflectionMultipleStrong(Jezus, testset, new HashSet<String>(){{ add("Jezus"); add("Jeza");}});
 	}
 
 	@Test
@@ -257,7 +274,7 @@ public class LatgalianTest {
 		assertInflection(muosa, vsk_gen, "tāva");
 
 		List<Wordform> muote = analyzer.generateInflectionsFromParadigm("ols", 15);
-		assertInflectionMultiple(muote, vsk_gen, new HashSet<String>(){{ add("ols"); add("ola");}});
+		assertInflectionMultipleStrong(muote, vsk_gen, new HashSet<String>(){{ add("ols"); add("ola");}});
 	}
 
 
@@ -275,10 +292,10 @@ public class LatgalianTest {
 		assertInflection(kuoja, vsk_gen, "kuojis");
 
 		List<Wordform> puika = analyzer.generateInflectionsFromParadigm("puika", 16);
-		assertInflectionMultiple(puika, vsk_gen, new HashSet<String>(){{ add("puikys"); add("puikas");}});
+		assertInflectionMultipleStrong(puika, vsk_gen, new HashSet<String>(){{ add("puikys"); add("puikas");}});
 
 		List<Wordform> bļuzņa = analyzer.generateInflectionsFromParadigm("bļuzņa", 30);
-		assertInflectionMultiple(bļuzņa, vsk_gen, new HashSet<String>(){{ add("bļuznis"); add("bļuzņas");}});
+		assertInflectionMultipleStrong(bļuzņa, vsk_gen, new HashSet<String>(){{ add("bļuznis"); add("bļuzņas");}});
 	}
 
 	@Test
@@ -293,7 +310,7 @@ public class LatgalianTest {
 		dsk_gen.addAttribute(AttributeNames.i_Case, AttributeNames.v_Genitive);
 
 		List<Wordform> muote = analyzer.generateInflectionsFromParadigm("muote", 9);
-		assertInflectionMultiple(muote, vsk_loc, new HashSet<String>(){{ add("muotē"); add("muotie"); add("muotī");}});
+		assertInflectionMultipleStrong(muote, vsk_loc, new HashSet<String>(){{ add("muotē"); add("muotie"); add("muotī");}});
 		assertInflection(muote, dsk_gen, "muošu");
 
 		List<Wordform> šaļte = analyzer.generateInflectionsFromParadigm("šaļte", 17);
@@ -335,15 +352,15 @@ public class LatgalianTest {
 
 		List<Wordform> lobs = analyzer.generateInflectionsFromParadigm("lobs", 20);
 		assertInflection(lobs, sg_nom_masc_comp, "lobuoks");
-		assertInflectionMultiple(lobs, sg_gen_fem_pos_indef, new HashSet<String>(){{ add("lobys"); add("lobas");}});
+		assertInflectionMultipleStrong(lobs, sg_gen_fem_pos_indef, new HashSet<String>(){{ add("lobys"); add("lobas");}});
 
 		List<Wordform> agrys = analyzer.generateInflectionsFromParadigm("agrys", 21);
 		assertInflection(agrys, sg_nom_masc_comp, "agruokys");
-		assertInflectionMultiple(agrys, sg_gen_fem_pos_indef, new HashSet<String>(){{ add("agrys"); add("agras");}});
+		assertInflectionMultipleStrong(agrys, sg_gen_fem_pos_indef, new HashSet<String>(){{ add("agrys"); add("agras");}});
 
 		List<Wordform> slapnis = analyzer.generateInflectionsFromParadigm("slapnis", 22);
 		assertInflection(slapnis, sg_nom_masc_comp, "slapņuoks");
-		assertInflectionMultiple(slapnis, sg_gen_fem_pos_indef, new HashSet<String>(){{ add("slapnis"); add("slapņas");}});
+		assertInflectionMultipleStrong(slapnis, sg_gen_fem_pos_indef, new HashSet<String>(){{ add("slapnis"); add("slapņas");}});
 	}
 
 	@Test
@@ -370,7 +387,7 @@ public class LatgalianTest {
 
 		List<Wordform> pyrmais = analyzer.generateInflectionsFromParadigm("pyrmais", 27);
 		assertInflection(pyrmais, sg_masc_gen, "pyrmuo");
-		assertInflectionMultiple(pyrmais, pl_masc_gen, new HashSet<String>(){{ add("pyrmū"); add("pyrmūs");}});
+		assertInflectionMultipleStrong(pyrmais, pl_masc_gen, new HashSet<String>(){{ add("pyrmū"); add("pyrmūs");}});
 
 	}
 
@@ -449,7 +466,7 @@ public class LatgalianTest {
 		sg_fem_loc_und.addAttribute(AttributeNames.i_Normative, AttributeNames.v_Undesirable);
 
 		List<Wordform> muote = analyzer.generateInflectionsFromParadigm("muote", 9);
-		assertInflectionMultiple(muote, sg_fem_loc_und, new HashSet<String>(){{ add("muotie"); add("muotī");}});
+		assertInflectionMultipleStrong(muote, sg_fem_loc_und, new HashSet<String>(){{ add("muotie"); add("muotī");}});
 
 	}
 
@@ -510,6 +527,88 @@ public class LatgalianTest {
 		describe(formas);
 		assertTrue("Jābūt vairākām formām 'es' tabulai no hardcoded", formas.size()>4);
 	}
+
+	@Test
+	public void konj2() {
+		List<Wordform> dūmuot = analyzer.generateInflectionsFromParadigm("dūmuot", 44);
+		List<Wordform> teireit = analyzer.generateInflectionsFromParadigm("teireit", 44);
+		List<Wordform> auklēt = analyzer.generateInflectionsFromParadigm("auklēt", 44);
+
+		// Tagadne: 110. mija
+		AttributeValues īst_tag_1_vsk = new AttributeValues();
+		īst_tag_1_vsk.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+		īst_tag_1_vsk.addAttribute(AttributeNames.i_Izteiksme, AttributeNames.v_Iisteniibas);
+		īst_tag_1_vsk.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Tagadne);
+		īst_tag_1_vsk.addAttribute(AttributeNames.i_Person, "1");
+		īst_tag_1_vsk.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+
+		assertInflection(dūmuot, īst_tag_1_vsk, "dūmoju");
+		assertInflection(teireit, īst_tag_1_vsk, "teireju");
+		assertInflection(auklēt, īst_tag_1_vsk, "aukleju");
+
+		// Pagātne: 111. un 112. mija
+
+		AttributeValues īst_pag_1_vsk = new AttributeValues();
+		īst_pag_1_vsk.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+		īst_pag_1_vsk.addAttribute(AttributeNames.i_Izteiksme, AttributeNames.v_Iisteniibas);
+		īst_pag_1_vsk.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Pagaatne);
+		īst_pag_1_vsk.addAttribute(AttributeNames.i_Person, "1");
+		īst_pag_1_vsk.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+
+		assertInflectionMultipleWeak(dūmuot, īst_pag_1_vsk, new HashSet<String>(){{ add("dūmuoju"); add("dūmovu");}});
+		assertInflection(teireit, īst_pag_1_vsk, "teireju");
+		assertInflection(auklēt, īst_pag_1_vsk, "auklieju");
+
+		AttributeValues īst_pag_3 = new AttributeValues();
+		īst_pag_3.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+		īst_pag_3.addAttribute(AttributeNames.i_Izteiksme, AttributeNames.v_Iisteniibas);
+		īst_pag_3.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Pagaatne);
+		īst_pag_3.addAttribute(AttributeNames.i_Person, "3");
+
+		assertInflectionMultipleWeak(dūmuot, īst_pag_3, new HashSet<String>(){{ add("dūmuoja"); add("dūmova");}});
+		assertInflection(teireit, īst_pag_3, "teireja");
+		assertInflection(auklēt, īst_pag_3, "auklēja");
+
+		// Nākotne: 113. un 0. mija
+
+		AttributeValues īst_nāk_1_vsk = new AttributeValues();
+		īst_nāk_1_vsk.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+		īst_nāk_1_vsk.addAttribute(AttributeNames.i_Izteiksme, AttributeNames.v_Iisteniibas);
+		īst_nāk_1_vsk.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Naakotne);
+		īst_nāk_1_vsk.addAttribute(AttributeNames.i_Person, "1");
+		īst_nāk_1_vsk.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+
+		assertInflection(dūmuot, īst_nāk_1_vsk, "dūmuošu");
+		assertInflection(teireit, īst_nāk_1_vsk, "teireišu");
+		assertInflection(auklēt, īst_nāk_1_vsk, "aukliešu");
+
+		AttributeValues īst_nāk_3 = new AttributeValues();
+		īst_nāk_3.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+		īst_nāk_3.addAttribute(AttributeNames.i_Izteiksme, AttributeNames.v_Iisteniibas);
+		īst_nāk_3.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Naakotne);
+		īst_nāk_3.addAttribute(AttributeNames.i_Person, "3");
+
+		assertInflection(dūmuot, īst_nāk_3, "dūmuos");
+		assertInflection(teireit, īst_nāk_3, "teireis");
+		assertInflection(auklēt, īst_nāk_3, "auklēs");
+
+	}
+
+	@Test
+	public void verbNeg() {
+		List<Wordform> dūmuot = analyzer.generateInflectionsFromParadigm("dūmuot", 44);
+
+		AttributeValues testParams = new AttributeValues();
+		testParams.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+		testParams.addAttribute(AttributeNames.i_Izteiksme, AttributeNames.v_Iisteniibas);
+		testParams.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Pagaatne);
+		testParams.addAttribute(AttributeNames.i_Person, "1");
+		testParams.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+		testParams.addAttribute(AttributeNames.i_Noliegums, AttributeNames.v_Yes);
+
+		assertInflectionMultipleWeak(dūmuot, testParams, new HashSet<String>(){{ add("nadūmuoju"); add("nadūmovu");}});
+	}
+
 
 }
 

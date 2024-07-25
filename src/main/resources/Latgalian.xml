@@ -2131,57 +2131,63 @@
 	
 	<!-- Darbības vārdi -->
 
-<!--<Paradigm Stems="1" ID="44" Name="verb-2-ltg" LemmaEnding="670" Description="Tiešie darbības vārdi, 2. konjugācija ()" DescriptionEN="Direct verbs, 2nd conjugation ()" AllowedGuessEndings="oāēīū">
+	<Paradigm Stems="1" ID="44" Name="verb-2-ltg" LemmaEnding="670" Description="Tiešie darbības vārdi, 2. konjugācija (dūmuot, teireit, auklēt)" DescriptionEN="Direct verbs, 2nd conjugation ()" AllowedGuessEndings="oiē">
 		<Attributes Vārdšķira="Darbības vārds" Konjugācija="2" Atgriezeniskums="Nē" Noliegums="Nē" Darbības_vārda_tips="Patstāvīgs darbības vārds"/>
-		<Ending ID="670" StemChange="0" Ending="t" StemID="1" LemmaEnding="655">
+		<Ending ID="670" StemChange="0" Ending="t" StemID="1" LemmaEnding="670">
 			<Attributes Skaitlis="Nepiemīt" Izteiksme="Nenoteiksme" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
 		</Ending>
-		<Ending ID="226" StemChange="0" Ending="ju" StemID="1" LemmaEnding="225">
+
+		<Ending ID="671" StemChange="110" Ending="ju" StemID="1" LemmaEnding="670">
 			<Attributes Skaitlis="Vienskaitlis" Izteiksme="Īstenības" Persona="1" Laiks="Tagadne" Kārta="Darāmā"/>
 		</Ending>
-		
-		<Ending ID="227" StemChange="0" Ending="" StemID="1" LemmaEnding="225">
+		<Ending ID="672" StemChange="110" Ending="j" StemID="1" LemmaEnding="670">
 			<Attributes Skaitlis="Vienskaitlis" Izteiksme="Īstenības" Persona="2" Laiks="Tagadne" Kārta="Darāmā"/>
 		</Ending>
-		<Ending ID="228" StemChange="0" Ending="" StemID="1" LemmaEnding="225">
-			<Attributes Skaitlis="Nepiemīt" Izteiksme="Īstenības" Persona="3" Laiks="Tagadne" Kārta="Darāmā"/>
-		</Ending>
-		<Ending ID="229" StemChange="0" Ending="jam" StemID="1" LemmaEnding="225">
+		<Ending ID="673" StemChange="110" Ending="jam" StemID="1" LemmaEnding="670">
 			<Attributes Skaitlis="Daudzskaitlis" Izteiksme="Īstenības" Persona="1" Laiks="Tagadne" Kārta="Darāmā"/>
 		</Ending>
-		<Ending ID="230" StemChange="0" Ending="jat" StemID="1" LemmaEnding="225">
+		<Ending ID="674" StemChange="110" Ending="jat" StemID="1" LemmaEnding="670">
 			<Attributes Skaitlis="Daudzskaitlis" Izteiksme="Īstenības" Persona="2" Laiks="Tagadne" Kārta="Darāmā"/>
 		</Ending>
-		<Ending ID="232" StemChange="0" Ending="ju" StemID="1" LemmaEnding="225">
+		<Ending ID="675" StemChange="110" Ending="j" StemID="1" LemmaEnding="670">
+			<Attributes Skaitlis="Nepiemīt" Izteiksme="Īstenības" Persona="3" Laiks="Tagadne" Kārta="Darāmā"/>
+		</Ending>
+
+		<Ending ID="676" StemChange="111" Ending="u" StemID="1" LemmaEnding="670">
 			<Attributes Skaitlis="Vienskaitlis" Izteiksme="Īstenības" Persona="1" Laiks="Pagātne" Kārta="Darāmā"/>
 		</Ending>
-		<Ending ID="233" StemChange="0" Ending="ji" StemID="1" LemmaEnding="225">
+		<Ending ID="677" StemChange="111" Ending="i" StemID="1" LemmaEnding="670">
 			<Attributes Skaitlis="Vienskaitlis" Izteiksme="Īstenības" Persona="2" Laiks="Pagātne" Kārta="Darāmā"/>
 		</Ending>
-		<Ending ID="235" StemChange="0" Ending="jām" StemID="1" LemmaEnding="225">
+		<Ending ID="678" StemChange="112" Ending="om" StemID="1" LemmaEnding="670">
 			<Attributes Skaitlis="Daudzskaitlis" Izteiksme="Īstenības" Persona="1" Laiks="Pagātne" Kārta="Darāmā"/>
 		</Ending>
-		<Ending ID="236" StemChange="0" Ending="jāt" StemID="1" LemmaEnding="225">
+		<Ending ID="679" StemChange="112" Ending="ot" StemID="1" LemmaEnding="670">
 			<Attributes Skaitlis="Daudzskaitlis" Izteiksme="Īstenības" Persona="2" Laiks="Pagātne" Kārta="Darāmā"/>
 		</Ending>
-		<Ending ID="237" StemChange="0" Ending="ja" StemID="1" LemmaEnding="225">
+		<Ending ID="680" StemChange="112" Ending="a" StemID="1" LemmaEnding="670">
 			<Attributes Skaitlis="Nepiemīt" Izteiksme="Īstenības" Persona="3" Laiks="Pagātne" Kārta="Darāmā"/>
 		</Ending>
-		<Ending ID="238" StemChange="0" Ending="šu" StemID="1" LemmaEnding="225">
+
+		<Ending ID="681" StemChange="113" Ending="šu" StemID="1" LemmaEnding="670">
 			<Attributes Skaitlis="Vienskaitlis" Izteiksme="Īstenības" Persona="1" Laiks="Nākotne" Kārta="Darāmā"/>
 		</Ending>
-		<Ending ID="239" StemChange="0" Ending="si" StemID="1" LemmaEnding="225">
+		<Ending ID="682" StemChange="113" Ending="si" StemID="1" LemmaEnding="670">
 			<Attributes Skaitlis="Vienskaitlis" Izteiksme="Īstenības" Persona="2" Laiks="Nākotne" Kārta="Darāmā"/>
 		</Ending>
-		<Ending ID="241" StemChange="0" Ending="sim" StemID="1" LemmaEnding="225">
+		<Ending ID="683" StemChange="0" Ending="sim" StemID="1" LemmaEnding="670">
 			<Attributes Skaitlis="Daudzskaitlis" Izteiksme="Īstenības" Persona="1" Laiks="Nākotne" Kārta="Darāmā"/>
 		</Ending>
-		<Ending ID="242" StemChange="0" Ending="siet" StemID="1" LemmaEnding="225">
+		<Ending ID="684" StemChange="0" Ending="sit" StemID="1" LemmaEnding="225">
 			<Attributes Skaitlis="Daudzskaitlis" Izteiksme="Īstenības" Persona="2" Laiks="Nākotne" Kārta="Darāmā"/>
 		</Ending>
-		<Ending ID="243" StemChange="0" Ending="s" StemID="1" LemmaEnding="225">
+		<Ending ID="685" StemChange="0" Ending="s" StemID="1" LemmaEnding="225">
 			<Attributes Skaitlis="Nepiemīt" Izteiksme="Īstenības" Persona="3" Laiks="Nākotne" Kārta="Darāmā"/>
 		</Ending>
+
+	</Paradigm>
+		<!--		
+		
 		<Ending ID="244" StemChange="4" Ending="" StemID="1" LemmaEnding="225">
 			<Attributes Skaitlis="Nepiemīt" Izteiksme="Vajadzības" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Darāmā"/>
 		</Ending>

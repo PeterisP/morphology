@@ -660,6 +660,44 @@ public abstract class Mijas {
 						}
 					} else varianti.add(new Variants(celms,AttributeNames.i_Degree, AttributeNames.v_Positive));
 					break;
+				// Te sākas verbu mijas
+				case 110: // 2. konjugācija, vienkāršās tagadnes mija
+					if (celms.endsWith("e")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ei", "Mija", "ei -> e"));
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ē", "Mija", "ē -> e"));
+					} else if (celms.endsWith("o")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "uo", "Mija", "uo -> o"));
+					}
+					break;
+				case 111: // 2. konjugācija, vienkāršās pagātnes vsk. 1., 2. pers. mija
+					if (celms.endsWith("uoj")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1), "Mija", "uo -> uoj"));
+					} else if (celms.endsWith("ov")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "uo", "Mija", "uo -> ov"));
+					} else if (celms.endsWith("iej")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 3) + "ē", "Mija", "ē -> iej"));
+					} else if (celms.endsWith("ej")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "ie", "Mija", "ei -> ej"));
+					}
+					break;
+				case 112: // 2. konjugācija, vienkāršās pagātnes dsk. un 3. pers. mija
+					if (celms.endsWith("uoj")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1), "Mija", "uo -> uoj"));
+					} else if (celms.endsWith("ov")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "uo", "Mija", "uo -> ov"));
+					} else if (celms.endsWith("ēj")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1), "Mija", "ē -> ēj"));
+					} else if (celms.endsWith("ej")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "ie", "Mija", "ei -> ej"));
+					}
+					break;
+				case 113: // 2. konjugācija, vienkāršās nākotnes vsk. 1., 2. pers. mija
+					if (celms.endsWith("ie")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "ē", "Mija", "ē -> ie"));
+					} else if (celms.endsWith("uo") || celms.endsWith("ei")) {
+						varianti.add(new Variants(celms));
+					}
+					break;
 				default:
 					System.err.printf("Invalid StemChange ID, stem '%s', stemchange %d\n", celms, mija);
 			}
@@ -1326,7 +1364,43 @@ public abstract class Mijas {
 						varianti.add(new Variants("vysu" + celms + "uok", AttributeNames.i_Degree, AttributeNames.v_Superlative));
 					}
 					break;
-
+				// Te sākas verbu mijas
+				case 110: // 2. konjugācija, vienkāršās tagadnes mija
+					if (celms.endsWith("uo")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "o"));
+					} else if (celms.endsWith("ei")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "e"));
+					} else if (celms.endsWith("ē")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "e"));
+					}
+					break;
+				case 111: // 2. konjugācija, vienkāršās pagātnes vsk. 1., 2. pers. mija
+					if (celms.endsWith("uo")) {
+						varianti.add(new Variants(celms + "j"));
+						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "ov"));
+					} else if (celms.endsWith("ei")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "ej"));
+					} else if (celms.endsWith("ē")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "iej"));
+					}
+					break;
+				case 112: // 2. konjugācija, vienkāršās pagātnes dsk. un 3. pers. mija
+					if (celms.endsWith("uo")) {
+						varianti.add(new Variants(celms + "j"));
+						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "ov"));
+					} else if (celms.endsWith("ei")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "ej"));
+					} else if (celms.endsWith("ē")) {
+						varianti.add(new Variants(celms + "j"));
+					}
+					break;
+				case 113: // 2. konjugācija, vienkāršās nākotnes vsk. 1., 2. pers. mija
+					if (celms.endsWith("ē")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ie"));
+					} else if (celms.endsWith("ei") || celms.endsWith("uo")) {
+						varianti.add(new Variants(celms));
+					}
+					break;
 				default:
 					System.err.printf("Invalid StemChange ID, stem '%s', stemchange %d\n", celms, mija);
 			}
