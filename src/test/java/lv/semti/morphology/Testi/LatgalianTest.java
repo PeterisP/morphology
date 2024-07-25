@@ -537,8 +537,8 @@ public class LatgalianTest {
 		// Tagadne: 110. mija
 		AttributeValues īst_tag_1_vsk = new AttributeValues();
 		īst_tag_1_vsk.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
-		īst_tag_1_vsk.addAttribute(AttributeNames.i_Izteiksme, AttributeNames.v_Iisteniibas);
-		īst_tag_1_vsk.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Tagadne);
+		īst_tag_1_vsk.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Indicative);
+		īst_tag_1_vsk.addAttribute(AttributeNames.i_Tense, AttributeNames.v_Present);
 		īst_tag_1_vsk.addAttribute(AttributeNames.i_Person, "1");
 		īst_tag_1_vsk.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
 
@@ -550,8 +550,8 @@ public class LatgalianTest {
 
 		AttributeValues īst_pag_1_vsk = new AttributeValues();
 		īst_pag_1_vsk.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
-		īst_pag_1_vsk.addAttribute(AttributeNames.i_Izteiksme, AttributeNames.v_Iisteniibas);
-		īst_pag_1_vsk.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Pagaatne);
+		īst_pag_1_vsk.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Indicative);
+		īst_pag_1_vsk.addAttribute(AttributeNames.i_Tense, AttributeNames.v_Past);
 		īst_pag_1_vsk.addAttribute(AttributeNames.i_Person, "1");
 		īst_pag_1_vsk.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
 
@@ -561,8 +561,8 @@ public class LatgalianTest {
 
 		AttributeValues īst_pag_3 = new AttributeValues();
 		īst_pag_3.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
-		īst_pag_3.addAttribute(AttributeNames.i_Izteiksme, AttributeNames.v_Iisteniibas);
-		īst_pag_3.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Pagaatne);
+		īst_pag_3.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Indicative);
+		īst_pag_3.addAttribute(AttributeNames.i_Tense, AttributeNames.v_Past);
 		īst_pag_3.addAttribute(AttributeNames.i_Person, "3");
 
 		assertInflectionMultipleWeak(dūmuot, īst_pag_3, new HashSet<String>(){{ add("dūmuoja"); add("dūmova");}});
@@ -573,8 +573,8 @@ public class LatgalianTest {
 
 		AttributeValues īst_nāk_1_vsk = new AttributeValues();
 		īst_nāk_1_vsk.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
-		īst_nāk_1_vsk.addAttribute(AttributeNames.i_Izteiksme, AttributeNames.v_Iisteniibas);
-		īst_nāk_1_vsk.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Naakotne);
+		īst_nāk_1_vsk.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Indicative);
+		īst_nāk_1_vsk.addAttribute(AttributeNames.i_Tense, AttributeNames.v_Future);
 		īst_nāk_1_vsk.addAttribute(AttributeNames.i_Person, "1");
 		īst_nāk_1_vsk.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
 
@@ -584,8 +584,8 @@ public class LatgalianTest {
 
 		AttributeValues īst_nāk_3 = new AttributeValues();
 		īst_nāk_3.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
-		īst_nāk_3.addAttribute(AttributeNames.i_Izteiksme, AttributeNames.v_Iisteniibas);
-		īst_nāk_3.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Naakotne);
+		īst_nāk_3.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Indicative);
+		īst_nāk_3.addAttribute(AttributeNames.i_Tense, AttributeNames.v_Future);
 		īst_nāk_3.addAttribute(AttributeNames.i_Person, "3");
 
 		assertInflection(dūmuot, īst_nāk_3, "dūmuos");
@@ -600,8 +600,8 @@ public class LatgalianTest {
 
 		AttributeValues testParams = new AttributeValues();
 		testParams.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
-		testParams.addAttribute(AttributeNames.i_Izteiksme, AttributeNames.v_Iisteniibas);
-		testParams.addAttribute(AttributeNames.i_Laiks, AttributeNames.v_Pagaatne);
+		testParams.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Indicative);
+		testParams.addAttribute(AttributeNames.i_Tense, AttributeNames.v_Past);
 		testParams.addAttribute(AttributeNames.i_Person, "1");
 		testParams.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
 		testParams.addAttribute(AttributeNames.i_Noliegums, AttributeNames.v_Yes);

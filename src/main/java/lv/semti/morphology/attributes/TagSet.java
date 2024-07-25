@@ -29,8 +29,6 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
-import lv.semti.morphology.analyzer.Wordform;
-
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -228,7 +226,7 @@ public class TagSet {
 			
 			assert postag != null;
 			result = postag.markValue(values, "");
-			if (structure == structureTypes.POS_BASED_SEMTI && pos.equalsIgnoreCase(AttributeNames.v_Verb) && values.isMatchingStrong(AttributeNames.i_Izteiksme, AttributeNames.v_Participle)) {
+			if (structure == structureTypes.POS_BASED_SEMTI && pos.equalsIgnoreCase(AttributeNames.v_Verb) && values.isMatchingStrong(AttributeNames.i_Mood, AttributeNames.v_Participle)) {
 				// Semti kamola tagseta exception - divdabis norādīts izteiksmē
 				pos = AttributeNames.v_Participle;
 			}
@@ -255,7 +253,7 @@ public class TagSet {
 	public AttributeValues toEnglish(AttributeValues latvian) {
 		AttributeValues result = new AttributeValues();
 		String pos = latvian.getValue(AttributeNames.i_PartOfSpeech);
-		if (structure == structureTypes.POS_BASED_SEMTI && AttributeNames.v_Verb.equalsIgnoreCase(pos) && latvian.isMatchingStrong(AttributeNames.i_Izteiksme, AttributeNames.v_Participle)) {
+		if (structure == structureTypes.POS_BASED_SEMTI && AttributeNames.v_Verb.equalsIgnoreCase(pos) && latvian.isMatchingStrong(AttributeNames.i_Mood, AttributeNames.v_Participle)) {
 			// Semti kamola tagseta exception - divdabis norādīts izteiksmē
 			pos = AttributeNames.v_Participle;
 		}

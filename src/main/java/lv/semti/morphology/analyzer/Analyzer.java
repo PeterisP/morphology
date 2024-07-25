@@ -487,8 +487,8 @@ public class Analyzer extends Lexicon {
 				Word bezpriedēkļa = analyzeLowercase(cut_word, cut_word);
 				for (Wordform variants : bezpriedēkļa.wordforms)
 					if (variants.getEnding() != null && variants.getEnding().getParadigm() != null && variants.getEnding().getParadigm().getValue(AttributeNames.i_Konjugaacija) != null) { // Tikai no verbiem atvasinātās klases 
-						if (priedēklis.equals("ne") && (variants.isMatchingStrong(AttributeNames.i_Izteiksme, AttributeNames.v_VajadziibasAtstaastiijuma)
-								|| variants.isMatchingStrong(AttributeNames.i_Izteiksme, AttributeNames.v_Vajadziibas))
+						if (priedēklis.equals("ne") && (variants.isMatchingStrong(AttributeNames.i_Mood, AttributeNames.v_DebitiveQuotative)
+								|| variants.isMatchingStrong(AttributeNames.i_Mood, AttributeNames.v_Debitive))
 								|| variants.isMatchingStrong(AttributeNames.i_Noliegums, AttributeNames.v_Yes) ) {
 							continue; // neģenerējam ne- atvasinājumus vajadzības izteiksmei un jau noliegtiem šķirkļiem
 						}
@@ -567,7 +567,7 @@ public class Analyzer extends Lexicon {
                         ) ||
                                 (this.guessVerbs && ending.getParadigm().isMatchingWeak(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb)) ||
                                 (this.guessAdjectives && ending.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adjective)) ||
-                                (this.guessParticiples && variants.isMatchingStrong(AttributeNames.i_Izteiksme, AttributeNames.v_Participle)) ||
+                                (this.guessParticiples && variants.isMatchingStrong(AttributeNames.i_Mood, AttributeNames.v_Participle)) ||
 								(this.guessNouns && this.guessInflexibleNouns && variants.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Residual))
 						)
                                 && (i > 0 || variants.isMatchingStrong(AttributeNames.i_Declension, AttributeNames.v_NA)
@@ -1053,8 +1053,8 @@ public class Analyzer extends Lexicon {
 
 					if ((locījums.isMatchingStrong(AttributeNames.i_Noliegums, AttributeNames.v_Yes) ||
 							lexeme.getStem(0).equalsIgnoreCase("vajadzē")) &&
-							(locījums.isMatchingStrong(AttributeNames.i_Izteiksme, AttributeNames.v_VajadziibasAtstaastiijuma)
-							|| locījums.isMatchingStrong(AttributeNames.i_Izteiksme, AttributeNames.v_Vajadziibas))) validOption = false;
+							(locījums.isMatchingStrong(AttributeNames.i_Mood, AttributeNames.v_DebitiveQuotative)
+							|| locījums.isMatchingStrong(AttributeNames.i_Mood, AttributeNames.v_Debitive))) validOption = false;
 
 					// Īpašības vārdi ar sieviešu dzimti bet vīriešu galotnēm - ālava / ālavs, tāpat arī skaitļa vārdu novecojošās formas 'tūkstošām'
 					if ((locījums.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adjective) ||

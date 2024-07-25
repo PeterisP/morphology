@@ -112,7 +112,7 @@ public class MarkupConverter {
 			verifyAndSetKamolsAttribute(avs,tag,5,'r',AttributeNames.i_Declension,AttributeNames.v_Reflexive);
 			verifyAndSetKamolsAttribute(avs,tag,5,'0',AttributeNames.i_Declension,AttributeNames.v_NA);
 		}
-		else if (pos.equalsIgnoreCase(AttributeNames.v_Verb) && !avs.isMatchingStrong(AttributeNames.i_Izteiksme, AttributeNames.v_Participle)) {
+		else if (pos.equalsIgnoreCase(AttributeNames.v_Verb) && !avs.isMatchingStrong(AttributeNames.i_Mood, AttributeNames.v_Participle)) {
 
 			tag.setLength(0);
 			if (defaults)
@@ -132,18 +132,18 @@ public class MarkupConverter {
 			verifyAndSetKamolsAttribute(avs,tag,2,'n',AttributeNames.i_Reflexive,AttributeNames.v_No);
 			verifyAndSetKamolsAttribute(avs,tag,2,'y',AttributeNames.i_Reflexive,AttributeNames.v_Yes);
 
-			verifyAndSetKamolsAttribute(avs,tag,3,'i',AttributeNames.i_Izteiksme,AttributeNames.v_Iisteniibas);
-			verifyAndSetKamolsAttribute(avs,tag,3,'r',AttributeNames.i_Izteiksme,AttributeNames.v_Atstaastiijuma);
-			verifyAndSetKamolsAttribute(avs,tag,3,'c',AttributeNames.i_Izteiksme,AttributeNames.v_Veeleejuma);
-			verifyAndSetKamolsAttribute(avs,tag,3,'d',AttributeNames.i_Izteiksme,AttributeNames.v_Vajadziibas);
-			verifyAndSetKamolsAttribute(avs,tag,3,'m',AttributeNames.i_Izteiksme,AttributeNames.v_Paveeles);
-			verifyAndSetKamolsAttribute(avs,tag,3,'n',AttributeNames.i_Izteiksme,AttributeNames.v_Nenoteiksme);
-			verifyAndSetKamolsAttribute(avs,tag,3,'p',AttributeNames.i_Izteiksme,AttributeNames.v_Participle);
+			verifyAndSetKamolsAttribute(avs,tag,3,'i',AttributeNames.i_Mood,AttributeNames.v_Indicative);
+			verifyAndSetKamolsAttribute(avs,tag,3,'r',AttributeNames.i_Mood,AttributeNames.v_Quotative);
+			verifyAndSetKamolsAttribute(avs,tag,3,'c',AttributeNames.i_Mood,AttributeNames.v_Conditional);
+			verifyAndSetKamolsAttribute(avs,tag,3,'d',AttributeNames.i_Mood,AttributeNames.v_Debitive);
+			verifyAndSetKamolsAttribute(avs,tag,3,'m',AttributeNames.i_Mood,AttributeNames.v_Imperative);
+			verifyAndSetKamolsAttribute(avs,tag,3,'n',AttributeNames.i_Mood,AttributeNames.v_Infinitive);
+			verifyAndSetKamolsAttribute(avs,tag,3,'p',AttributeNames.i_Mood,AttributeNames.v_Participle);
 
-			verifyAndSetKamolsAttribute(avs,tag,4,'p',AttributeNames.i_Laiks,AttributeNames.v_Tagadne);
-			verifyAndSetKamolsAttribute(avs,tag,4,'f',AttributeNames.i_Laiks,AttributeNames.v_Naakotne);
-			verifyAndSetKamolsAttribute(avs,tag,4,'s',AttributeNames.i_Laiks,AttributeNames.v_Pagaatne);
-			verifyAndSetKamolsAttribute(avs,tag,4,'0',AttributeNames.i_Laiks,AttributeNames.v_NA);
+			verifyAndSetKamolsAttribute(avs,tag,4,'p',AttributeNames.i_Tense,AttributeNames.v_Present);
+			verifyAndSetKamolsAttribute(avs,tag,4,'f',AttributeNames.i_Tense,AttributeNames.v_Future);
+			verifyAndSetKamolsAttribute(avs,tag,4,'s',AttributeNames.i_Tense,AttributeNames.v_Past);
+			verifyAndSetKamolsAttribute(avs,tag,4,'0',AttributeNames.i_Tense,AttributeNames.v_NA);
 
 			verifyAndSetKamolsAttribute(avs,tag,5,'t',AttributeNames.i_Transitivity,AttributeNames.v_Transitive);
 			verifyAndSetKamolsAttribute(avs,tag,5,'i',AttributeNames.i_Transitivity,AttributeNames.v_Intransitive);
@@ -173,7 +173,7 @@ public class MarkupConverter {
 			
 			//verifyAndSetKamolsAttribute(avs,tag,10,'n',AttributeNames.i_Noliegums,null);
 		}
-		else if (pos.equalsIgnoreCase(AttributeNames.v_Verb) && avs.isMatchingStrong(AttributeNames.i_Izteiksme, AttributeNames.v_Participle)) {
+		else if (pos.equalsIgnoreCase(AttributeNames.v_Verb) && avs.isMatchingStrong(AttributeNames.i_Mood, AttributeNames.v_Participle)) {
 			tag.setLength(0);
 			if (defaults)
 				tag.append("vmnpdmsnapn");
@@ -192,13 +192,13 @@ public class MarkupConverter {
 			verifyAndSetKamolsAttribute(avs,tag,2,'n',AttributeNames.i_Reflexive,AttributeNames.v_No);
 			verifyAndSetKamolsAttribute(avs,tag,2,'y',AttributeNames.i_Reflexive,AttributeNames.v_Yes);
 
-			verifyAndSetKamolsAttribute(avs,tag,3,'i',AttributeNames.i_Izteiksme,AttributeNames.v_Iisteniibas);
-			verifyAndSetKamolsAttribute(avs,tag,3,'r',AttributeNames.i_Izteiksme,AttributeNames.v_Atstaastiijuma);
-			verifyAndSetKamolsAttribute(avs,tag,3,'c',AttributeNames.i_Izteiksme,AttributeNames.v_Veeleejuma);
-			verifyAndSetKamolsAttribute(avs,tag,3,'d',AttributeNames.i_Izteiksme,AttributeNames.v_Vajadziibas);
-			verifyAndSetKamolsAttribute(avs,tag,3,'m',AttributeNames.i_Izteiksme,AttributeNames.v_Paveeles);
-			verifyAndSetKamolsAttribute(avs,tag,3,'n',AttributeNames.i_Izteiksme,AttributeNames.v_Nenoteiksme);
-			verifyAndSetKamolsAttribute(avs,tag,3,'p',AttributeNames.i_Izteiksme,AttributeNames.v_Participle);
+			verifyAndSetKamolsAttribute(avs,tag,3,'i',AttributeNames.i_Mood,AttributeNames.v_Indicative);
+			verifyAndSetKamolsAttribute(avs,tag,3,'r',AttributeNames.i_Mood,AttributeNames.v_Quotative);
+			verifyAndSetKamolsAttribute(avs,tag,3,'c',AttributeNames.i_Mood,AttributeNames.v_Conditional);
+			verifyAndSetKamolsAttribute(avs,tag,3,'d',AttributeNames.i_Mood,AttributeNames.v_Debitive);
+			verifyAndSetKamolsAttribute(avs,tag,3,'m',AttributeNames.i_Mood,AttributeNames.v_Imperative);
+			verifyAndSetKamolsAttribute(avs,tag,3,'n',AttributeNames.i_Mood,AttributeNames.v_Infinitive);
+			verifyAndSetKamolsAttribute(avs,tag,3,'p',AttributeNames.i_Mood,AttributeNames.v_Participle);
 
 			verifyAndSetKamolsAttribute(avs,tag,4,'d',AttributeNames.i_Lokaamiiba,AttributeNames.v_Lokaams);
 			verifyAndSetKamolsAttribute(avs,tag,4,'p',AttributeNames.i_Lokaamiiba,AttributeNames.v_DaljeejiLokaams);
@@ -224,10 +224,10 @@ public class MarkupConverter {
 			verifyAndSetKamolsAttribute(avs,tag,8,'p',AttributeNames.i_Voice,AttributeNames.v_Passive);
 			verifyAndSetKamolsAttribute(avs,tag,8,'0',AttributeNames.i_Voice,AttributeNames.v_NA);
 
-			verifyAndSetKamolsAttribute(avs,tag,9,'p',AttributeNames.i_Laiks,AttributeNames.v_Tagadne);
-			verifyAndSetKamolsAttribute(avs,tag,9,'s',AttributeNames.i_Laiks,AttributeNames.v_Pagaatne);
-			verifyAndSetKamolsAttribute(avs,tag,9,'f',AttributeNames.i_Laiks,AttributeNames.v_Naakotne);
-			verifyAndSetKamolsAttribute(avs,tag,9,'0',AttributeNames.i_Laiks,AttributeNames.v_NA);
+			verifyAndSetKamolsAttribute(avs,tag,9,'p',AttributeNames.i_Tense,AttributeNames.v_Present);
+			verifyAndSetKamolsAttribute(avs,tag,9,'s',AttributeNames.i_Tense,AttributeNames.v_Past);
+			verifyAndSetKamolsAttribute(avs,tag,9,'f',AttributeNames.i_Tense,AttributeNames.v_Future);
+			verifyAndSetKamolsAttribute(avs,tag,9,'0',AttributeNames.i_Tense,AttributeNames.v_NA);
 
 			verifyAndSetKamolsAttribute(avs,tag,10,'n',AttributeNames.i_Definiteness,AttributeNames.v_Indefinite);
 			verifyAndSetKamolsAttribute(avs,tag,10,'y',AttributeNames.i_Definiteness,AttributeNames.v_Definite);
@@ -542,17 +542,17 @@ public class MarkupConverter {
 
 				verifyAndSetAVSAttribute(tag,attributes,2,'n',AttributeNames.i_Reflexive,AttributeNames.v_No);
 				verifyAndSetAVSAttribute(tag,attributes,2,'y',AttributeNames.i_Reflexive,AttributeNames.v_Yes);
-				verifyAndSetAVSAttribute(tag,attributes,3,'i',AttributeNames.i_Izteiksme,AttributeNames.v_Iisteniibas);
-				verifyAndSetAVSAttribute(tag,attributes,3,'r',AttributeNames.i_Izteiksme,AttributeNames.v_Atstaastiijuma);
-				verifyAndSetAVSAttribute(tag,attributes,3,'c',AttributeNames.i_Izteiksme,AttributeNames.v_Veeleejuma);
-				verifyAndSetAVSAttribute(tag,attributes,3,'d',AttributeNames.i_Izteiksme,AttributeNames.v_Vajadziibas);
-				verifyAndSetAVSAttribute(tag,attributes,3,'m',AttributeNames.i_Izteiksme,AttributeNames.v_Paveeles);
-				verifyAndSetAVSAttribute(tag,attributes,3,'n',AttributeNames.i_Izteiksme,AttributeNames.v_Nenoteiksme);
-				verifyAndSetAVSAttribute(tag,attributes,3,'p',AttributeNames.i_Izteiksme,AttributeNames.v_Participle);
-				verifyAndSetAVSAttribute(tag,attributes,4,'p',AttributeNames.i_Laiks,AttributeNames.v_Tagadne);
-				verifyAndSetAVSAttribute(tag,attributes,4,'f',AttributeNames.i_Laiks,AttributeNames.v_Naakotne);
-				verifyAndSetAVSAttribute(tag,attributes,4,'s',AttributeNames.i_Laiks,AttributeNames.v_Pagaatne);
-				verifyAndSetAVSAttribute(tag,attributes,4,'0',AttributeNames.i_Laiks,AttributeNames.v_NA);
+				verifyAndSetAVSAttribute(tag,attributes,3,'i',AttributeNames.i_Mood,AttributeNames.v_Indicative);
+				verifyAndSetAVSAttribute(tag,attributes,3,'r',AttributeNames.i_Mood,AttributeNames.v_Quotative);
+				verifyAndSetAVSAttribute(tag,attributes,3,'c',AttributeNames.i_Mood,AttributeNames.v_Conditional);
+				verifyAndSetAVSAttribute(tag,attributes,3,'d',AttributeNames.i_Mood,AttributeNames.v_Debitive);
+				verifyAndSetAVSAttribute(tag,attributes,3,'m',AttributeNames.i_Mood,AttributeNames.v_Imperative);
+				verifyAndSetAVSAttribute(tag,attributes,3,'n',AttributeNames.i_Mood,AttributeNames.v_Infinitive);
+				verifyAndSetAVSAttribute(tag,attributes,3,'p',AttributeNames.i_Mood,AttributeNames.v_Participle);
+				verifyAndSetAVSAttribute(tag,attributes,4,'p',AttributeNames.i_Tense,AttributeNames.v_Present);
+				verifyAndSetAVSAttribute(tag,attributes,4,'f',AttributeNames.i_Tense,AttributeNames.v_Future);
+				verifyAndSetAVSAttribute(tag,attributes,4,'s',AttributeNames.i_Tense,AttributeNames.v_Past);
+				verifyAndSetAVSAttribute(tag,attributes,4,'0',AttributeNames.i_Tense,AttributeNames.v_NA);
 				verifyAndSetAVSAttribute(tag,attributes,5,'t',AttributeNames.i_Transitivity,AttributeNames.v_Transitive);
 				verifyAndSetAVSAttribute(tag,attributes,5,'i',AttributeNames.i_Transitivity,AttributeNames.v_Intransitive);
 				verifyAndSetAVSAttribute(tag,attributes,5,'0',AttributeNames.i_Transitivity,AttributeNames.v_NA);
@@ -586,13 +586,13 @@ public class MarkupConverter {
 
 				verifyAndSetAVSAttribute(tag,attributes,2,'n',AttributeNames.i_Reflexive,AttributeNames.v_No);
 				verifyAndSetAVSAttribute(tag,attributes,2,'y',AttributeNames.i_Reflexive,AttributeNames.v_Yes);
-				verifyAndSetAVSAttribute(tag,attributes,3,'i',AttributeNames.i_Izteiksme,AttributeNames.v_Iisteniibas);
-				verifyAndSetAVSAttribute(tag,attributes,3,'r',AttributeNames.i_Izteiksme,AttributeNames.v_Atstaastiijuma);
-				verifyAndSetAVSAttribute(tag,attributes,3,'c',AttributeNames.i_Izteiksme,AttributeNames.v_Veeleejuma);
-				verifyAndSetAVSAttribute(tag,attributes,3,'d',AttributeNames.i_Izteiksme,AttributeNames.v_Vajadziibas);
-				verifyAndSetAVSAttribute(tag,attributes,3,'m',AttributeNames.i_Izteiksme,AttributeNames.v_Paveeles);
-				verifyAndSetAVSAttribute(tag,attributes,3,'n',AttributeNames.i_Izteiksme,AttributeNames.v_Nenoteiksme);
-				verifyAndSetAVSAttribute(tag,attributes,3,'p',AttributeNames.i_Izteiksme,AttributeNames.v_Participle);
+				verifyAndSetAVSAttribute(tag,attributes,3,'i',AttributeNames.i_Mood,AttributeNames.v_Indicative);
+				verifyAndSetAVSAttribute(tag,attributes,3,'r',AttributeNames.i_Mood,AttributeNames.v_Quotative);
+				verifyAndSetAVSAttribute(tag,attributes,3,'c',AttributeNames.i_Mood,AttributeNames.v_Conditional);
+				verifyAndSetAVSAttribute(tag,attributes,3,'d',AttributeNames.i_Mood,AttributeNames.v_Debitive);
+				verifyAndSetAVSAttribute(tag,attributes,3,'m',AttributeNames.i_Mood,AttributeNames.v_Imperative);
+				verifyAndSetAVSAttribute(tag,attributes,3,'n',AttributeNames.i_Mood,AttributeNames.v_Infinitive);
+				verifyAndSetAVSAttribute(tag,attributes,3,'p',AttributeNames.i_Mood,AttributeNames.v_Participle);
 				verifyAndSetAVSAttribute(tag,attributes,4,'d',AttributeNames.i_Lokaamiiba,AttributeNames.v_Lokaams);
 				verifyAndSetAVSAttribute(tag,attributes,4,'p',AttributeNames.i_Lokaamiiba,AttributeNames.v_DaljeejiLokaams);
 				verifyAndSetAVSAttribute(tag,attributes,4,'u',AttributeNames.i_Lokaamiiba,AttributeNames.v_Nelokaams);
@@ -612,10 +612,10 @@ public class MarkupConverter {
 				verifyAndSetAVSAttribute(tag,attributes,8,'a',AttributeNames.i_Voice,AttributeNames.v_Active);
 				verifyAndSetAVSAttribute(tag,attributes,8,'p',AttributeNames.i_Voice,AttributeNames.v_Passive);
 				verifyAndSetAVSAttribute(tag,attributes,8,'0',AttributeNames.i_Voice,AttributeNames.v_NA);
-				verifyAndSetAVSAttribute(tag,attributes,9,'p',AttributeNames.i_Laiks,AttributeNames.v_Tagadne);
-				verifyAndSetAVSAttribute(tag,attributes,9,'f',AttributeNames.i_Laiks,AttributeNames.v_Naakotne);
-				verifyAndSetAVSAttribute(tag,attributes,9,'s',AttributeNames.i_Laiks,AttributeNames.v_Pagaatne);
-				verifyAndSetAVSAttribute(tag,attributes,9,'0',AttributeNames.i_Laiks,AttributeNames.v_NA);
+				verifyAndSetAVSAttribute(tag,attributes,9,'p',AttributeNames.i_Tense,AttributeNames.v_Present);
+				verifyAndSetAVSAttribute(tag,attributes,9,'f',AttributeNames.i_Tense,AttributeNames.v_Future);
+				verifyAndSetAVSAttribute(tag,attributes,9,'s',AttributeNames.i_Tense,AttributeNames.v_Past);
+				verifyAndSetAVSAttribute(tag,attributes,9,'0',AttributeNames.i_Tense,AttributeNames.v_NA);
 				verifyAndSetAVSAttribute(tag,attributes,10,'n',AttributeNames.i_Definiteness,AttributeNames.v_Indefinite);
 				verifyAndSetAVSAttribute(tag,attributes,10,'y',AttributeNames.i_Definiteness,AttributeNames.v_Definite);
 				verifyAndSetAVSAttribute(tag,attributes,10,'0',AttributeNames.i_Definiteness,AttributeNames.v_NA);

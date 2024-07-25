@@ -93,19 +93,19 @@ public class AttributeNames {
 
 	public final static String i_Reflexive = "Atgriezeniskums";
 
-	public final static String i_Izteiksme = "Izteiksme";
-	public final static String v_Iisteniibas = "Īstenības";
-	public final static String v_Atstaastiijuma = "Atstāstījuma";
-	public final static String v_Veeleejuma = "Vēlējuma";
-	public final static String v_Vajadziibas = "Vajadzības";
-	public final static String v_VajadziibasAtstaastiijuma = "Vajadzības, atstāstījuma paveids";
-	public final static String v_Paveeles = "Pavēles";
-	public final static String v_Nenoteiksme = "Nenoteiksme";
+	public final static String i_Mood = "Izteiksme";
+	public final static String v_Indicative = "Īstenības";
+	public final static String v_Quotative = "Atstāstījuma";
+	public final static String v_Conditional = "Vēlējuma";
+	public final static String v_Debitive = "Vajadzības";
+	public final static String v_DebitiveQuotative = "Vajadzības, atstāstījuma paveids";
+	public final static String v_Imperative = "Pavēles";
+	public final static String v_Infinitive = "Nenoteiksme";
 
-	public final static String i_Laiks = "Laiks";
-	public final static String v_Tagadne = "Tagadne";
-	public final static String v_Naakotne = "Nākotne";
-	public final static String v_Pagaatne = "Pagātne";
+	public final static String i_Tense = "Laiks";
+	public final static String v_Present = "Tagadne";
+	public final static String v_Future = "Nākotne";
+	public final static String v_Past = "Pagātne";
 
 	public final static String i_Transitivity = "Transitivitāte";
 	public final static String v_Transitive = "Transitīvs";
