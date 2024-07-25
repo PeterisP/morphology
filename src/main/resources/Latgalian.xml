@@ -2201,15 +2201,39 @@
 			<Attributes Skaitlis="Nepiemīt" Izteiksme="Supīns" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Darāmā"/>
 		</Ending>
 
+		<Ending ID="691" StemChange="110" Ending="jūt" StemID="1" LemmaEnding="670">
+			<Attributes Skaitlis="Vienskaitlis" Dzimte="Nepiemīt" Izteiksme="Atstāstījuma" Persona="Nepiemīt" Laiks="Tagadne" Kārta="Darāmā"/>
+		</Ending>
+		<Ending ID="692" StemChange="110" Ending="js" StemID="1" LemmaEnding="670">
+			<Attributes Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Izteiksme="Atstāstījuma" Persona="Nepiemīt" Laiks="Tagadne" Kārta="Darāmā"/>
+		</Ending>
+		<Ending ID="693" StemChange="110" Ending="jūte" StemID="1" LemmaEnding="670">
+			<Attributes Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Izteiksme="Atstāstījuma" Persona="Nepiemīt" Laiks="Tagadne" Kārta="Darāmā"/>
+		</Ending>
+		<Ending ID="694" StemChange="110" Ending="jūts" StemID="1" LemmaEnding="670">
+			<Attributes Skaitlis="Daudzskaitlis" Dzimte="Vīriešu" Izteiksme="Atstāstījuma" Persona="Nepiemīt" Laiks="Tagadne" Kārta="Darāmā"/>
+		</Ending>
+		<Ending ID="695" StemChange="110" Ending="jūts" StemID="1" LemmaEnding="670">
+			<Attributes Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Izteiksme="Atstāstījuma" Persona="Nepiemīt" Laiks="Tagadne" Kārta="Darāmā"/>
+		</Ending>
+		<Ending ID="696" StemChange="113" Ending="šūt" StemID="1" LemmaEnding="670">
+			<Attributes Skaitlis="Vienskaitlis" Dzimte="Nepiemīt" Izteiksme="Atstāstījuma" Persona="Nepiemīt" Laiks="Nākotne" Kārta="Darāmā"/>
+		</Ending>
+		<Ending ID="697" StemChange="113" Ending="škys" StemID="1" LemmaEnding="670">
+			<Attributes Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Izteiksme="Atstāstījuma" Persona="Nepiemīt" Laiks="Nākotne" Kārta="Darāmā"/>
+		</Ending>
+		<Ending ID="698" StemChange="113" Ending="škūte" StemID="1" LemmaEnding="670">
+			<Attributes Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Izteiksme="Atstāstījuma" Persona="Nepiemīt" Laiks="Nākotne" Kārta="Darāmā"/>
+		</Ending>
+		<Ending ID="699" StemChange="113" Ending="škūši" StemID="1" LemmaEnding="670">
+			<Attributes Skaitlis="Daudzskaitlis" Dzimte="Vīriešu" Izteiksme="Atstāstījuma" Persona="Nepiemīt" Laiks="Nākotne" Kārta="Darāmā"/>
+		</Ending>
+		<Ending ID="700" StemChange="113" Ending="škūšys" StemID="1" LemmaEnding="670">
+			<Attributes Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Izteiksme="Atstāstījuma" Persona="Nepiemīt" Laiks="Nākotne" Kārta="Darāmā"/>
+		</Ending>
+		
 	</Paradigm>
 		<!--		
-		
-		<Ending ID="248" StemChange="0" Ending="jot" StemID="1" LemmaEnding="225">
-			<Attributes Skaitlis="Nepiemīt" Izteiksme="Atstāstījuma" Persona="Nepiemīt" Laiks="Tagadne" Kārta="Darāmā"/>
-		</Ending>
-		<Ending ID="249" StemChange="0" Ending="šot" StemID="1" LemmaEnding="225">
-			<Attributes Skaitlis="Nepiemīt" Izteiksme="Atstāstījuma" Persona="Nepiemīt" Laiks="Nākotne" Kārta="Darāmā"/>
-		</Ending>
 		
 		<Ending ID="252" StemChange="0" Ending="jošs" StemID="1" LemmaEnding="225">
 			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Nenoteiktā" Izteiksme="Divdabis" Dzimte="Vīriešu" Locījums="Nominatīvs" Lokāmība="Lokāms" Pakāpe="Pamata" Laiks="Tagadne" Kārta="Darāmā"/>
@@ -3358,9 +3382,6 @@
 			<Attributes Skaitlis="Nepiemīt" Noteiktība="Nepiemīt" Izteiksme="Divdabis" Dzimte="Nepiemīt" Locījums="Nepiemīt" Lokāmība="Nelokāms" Pakāpe="Nepiemīt" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
 		</Ending>
 		
-		<Ending ID="1200" StemChange="0" Ending="sit" StemID="1" LemmaEnding="225">
-			<Attributes Skaitlis="Daudzskaitlis" Izteiksme="Īstenības" Persona="2" Laiks="Nākotne" Kārta="Darāmā"/>
-		</Ending>
 		<Ending ID="1203" StemChange="4" Ending="jot" StemID="1" LemmaEnding="225">
 			<Attributes Skaitlis="Nepiemīt" Izteiksme="Vajadzības, atstāstījuma paveids" Persona="Nepiemīt" Laiks="Tagadne" Kārta="Darāmā"/>
 		</Ending> 

@@ -610,6 +610,26 @@ public class LatgalianTest {
 		assertInflection(teireit, deb, "teireitu");
 		assertInflection(auklēt, deb, "auklātu");
 
+		AttributeValues quot_pres_nogen_sg = new AttributeValues();
+		quot_pres_nogen_sg.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+		quot_pres_nogen_sg.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Quotative);
+		quot_pres_nogen_sg.addAttribute(AttributeNames.i_Tense, AttributeNames.v_Present);
+		quot_pres_nogen_sg.addAttribute(AttributeNames.i_Gender, AttributeNames.v_NA);
+		quot_pres_nogen_sg.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+		assertInflection(dūmuot, quot_pres_nogen_sg, "dūmojūt");
+		assertInflection(teireit, quot_pres_nogen_sg, "teirejūt");
+		assertInflection(auklēt, quot_pres_nogen_sg, "auklejūt");
+
+		AttributeValues quot_fut_fem_pl = new AttributeValues();
+		quot_fut_fem_pl.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+		quot_fut_fem_pl.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Quotative);
+		quot_fut_fem_pl.addAttribute(AttributeNames.i_Tense, AttributeNames.v_Future);
+		quot_fut_fem_pl.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Feminine);
+		quot_fut_fem_pl.addAttribute(AttributeNames.i_Number, AttributeNames.v_Plural);
+		assertInflection(dūmuot, quot_fut_fem_pl, "dūmuoškūšys");
+		assertInflection(teireit, quot_fut_fem_pl, "teireiškūšys");
+		assertInflection(auklēt, quot_fut_fem_pl, "auklieškūšys");
+
 	}
 
 	@Test
