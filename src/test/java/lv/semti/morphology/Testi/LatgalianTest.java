@@ -535,62 +535,80 @@ public class LatgalianTest {
 		List<Wordform> auklēt = analyzer.generateInflectionsFromParadigm("auklēt", 44);
 
 		// Tagadne: 110. mija
-		AttributeValues īst_tag_1_vsk = new AttributeValues();
-		īst_tag_1_vsk.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
-		īst_tag_1_vsk.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Indicative);
-		īst_tag_1_vsk.addAttribute(AttributeNames.i_Tense, AttributeNames.v_Present);
-		īst_tag_1_vsk.addAttribute(AttributeNames.i_Person, "1");
-		īst_tag_1_vsk.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
-
-		assertInflection(dūmuot, īst_tag_1_vsk, "dūmoju");
-		assertInflection(teireit, īst_tag_1_vsk, "teireju");
-		assertInflection(auklēt, īst_tag_1_vsk, "aukleju");
+		AttributeValues ind_pres_1_sg = new AttributeValues();
+		ind_pres_1_sg.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+		ind_pres_1_sg.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Indicative);
+		ind_pres_1_sg.addAttribute(AttributeNames.i_Tense, AttributeNames.v_Present);
+		ind_pres_1_sg.addAttribute(AttributeNames.i_Person, "1");
+		ind_pres_1_sg.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+		assertInflection(dūmuot, ind_pres_1_sg, "dūmoju");
+		assertInflection(teireit, ind_pres_1_sg, "teireju");
+		assertInflection(auklēt, ind_pres_1_sg, "aukleju");
 
 		// Pagātne: 111. un 112. mija
 
-		AttributeValues īst_pag_1_vsk = new AttributeValues();
-		īst_pag_1_vsk.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
-		īst_pag_1_vsk.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Indicative);
-		īst_pag_1_vsk.addAttribute(AttributeNames.i_Tense, AttributeNames.v_Past);
-		īst_pag_1_vsk.addAttribute(AttributeNames.i_Person, "1");
-		īst_pag_1_vsk.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+		AttributeValues ind_past_1_sg = new AttributeValues();
+		ind_past_1_sg.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+		ind_past_1_sg.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Indicative);
+		ind_past_1_sg.addAttribute(AttributeNames.i_Tense, AttributeNames.v_Past);
+		ind_past_1_sg.addAttribute(AttributeNames.i_Person, "1");
+		ind_past_1_sg.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+		assertInflectionMultipleWeak(dūmuot, ind_past_1_sg, new HashSet<String>(){{ add("dūmuoju"); add("dūmovu");}});
+		assertInflection(teireit, ind_past_1_sg, "teireju");
+		assertInflection(auklēt, ind_past_1_sg, "auklieju");
 
-		assertInflectionMultipleWeak(dūmuot, īst_pag_1_vsk, new HashSet<String>(){{ add("dūmuoju"); add("dūmovu");}});
-		assertInflection(teireit, īst_pag_1_vsk, "teireju");
-		assertInflection(auklēt, īst_pag_1_vsk, "auklieju");
-
-		AttributeValues īst_pag_3 = new AttributeValues();
-		īst_pag_3.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
-		īst_pag_3.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Indicative);
-		īst_pag_3.addAttribute(AttributeNames.i_Tense, AttributeNames.v_Past);
-		īst_pag_3.addAttribute(AttributeNames.i_Person, "3");
-
-		assertInflectionMultipleWeak(dūmuot, īst_pag_3, new HashSet<String>(){{ add("dūmuoja"); add("dūmova");}});
-		assertInflection(teireit, īst_pag_3, "teireja");
-		assertInflection(auklēt, īst_pag_3, "auklēja");
+		AttributeValues ind_past_3 = new AttributeValues();
+		ind_past_3.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+		ind_past_3.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Indicative);
+		ind_past_3.addAttribute(AttributeNames.i_Tense, AttributeNames.v_Past);
+		ind_past_3.addAttribute(AttributeNames.i_Person, "3");
+		assertInflectionMultipleWeak(dūmuot, ind_past_3, new HashSet<String>(){{ add("dūmuoja"); add("dūmova");}});
+		assertInflection(teireit, ind_past_3, "teireja");
+		assertInflection(auklēt, ind_past_3, "auklēja");
 
 		// Nākotne: 113. un 0. mija
 
-		AttributeValues īst_nāk_1_vsk = new AttributeValues();
-		īst_nāk_1_vsk.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
-		īst_nāk_1_vsk.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Indicative);
-		īst_nāk_1_vsk.addAttribute(AttributeNames.i_Tense, AttributeNames.v_Future);
-		īst_nāk_1_vsk.addAttribute(AttributeNames.i_Person, "1");
-		īst_nāk_1_vsk.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+		AttributeValues inf_fut_1_sg = new AttributeValues();
+		inf_fut_1_sg.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+		inf_fut_1_sg.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Indicative);
+		inf_fut_1_sg.addAttribute(AttributeNames.i_Tense, AttributeNames.v_Future);
+		inf_fut_1_sg.addAttribute(AttributeNames.i_Person, "1");
+		inf_fut_1_sg.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+		assertInflection(dūmuot, inf_fut_1_sg, "dūmuošu");
+		assertInflection(teireit, inf_fut_1_sg, "teireišu");
+		assertInflection(auklēt, inf_fut_1_sg, "aukliešu");
 
-		assertInflection(dūmuot, īst_nāk_1_vsk, "dūmuošu");
-		assertInflection(teireit, īst_nāk_1_vsk, "teireišu");
-		assertInflection(auklēt, īst_nāk_1_vsk, "aukliešu");
+		AttributeValues ind_fut_3 = new AttributeValues();
+		ind_fut_3.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+		ind_fut_3.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Indicative);
+		ind_fut_3.addAttribute(AttributeNames.i_Tense, AttributeNames.v_Future);
+		ind_fut_3.addAttribute(AttributeNames.i_Person, "3");
+		assertInflection(dūmuot, ind_fut_3, "dūmuos");
+		assertInflection(teireit, ind_fut_3, "teireis");
+		assertInflection(auklēt, ind_fut_3, "auklēs");
 
-		AttributeValues īst_nāk_3 = new AttributeValues();
-		īst_nāk_3.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
-		īst_nāk_3.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Indicative);
-		īst_nāk_3.addAttribute(AttributeNames.i_Tense, AttributeNames.v_Future);
-		īst_nāk_3.addAttribute(AttributeNames.i_Person, "3");
+		// Citas izteiksmes
 
-		assertInflection(dūmuot, īst_nāk_3, "dūmuos");
-		assertInflection(teireit, īst_nāk_3, "teireis");
-		assertInflection(auklēt, īst_nāk_3, "auklēs");
+		AttributeValues imp = new AttributeValues();
+		imp.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+		imp.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Imperative);
+		assertInflectionMultipleWeak(dūmuot, imp, new HashSet<String>(){{ add("dūmoj"); add("dūmojit");}});
+		assertInflectionMultipleWeak(teireit, imp, new HashSet<String>(){{ add("teirej"); add("teirejit");}});
+		assertInflectionMultipleWeak(auklēt, imp, new HashSet<String>(){{ add("auklej"); add("auklejit");}});
+
+		AttributeValues deb = new AttributeValues();
+		deb.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+		deb.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Debitive);
+		assertInflection(dūmuot, deb, "juodūmoj");
+		assertInflection(teireit, deb, "juoteirej");
+		assertInflection(auklēt, deb, "juoauklej");
+
+		AttributeValues cond = new AttributeValues();
+		deb.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+		deb.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Conditional);
+		assertInflection(dūmuot, deb, "dūmuotu");
+		assertInflection(teireit, deb, "teireitu");
+		assertInflection(auklēt, deb, "auklātu");
 
 	}
 
