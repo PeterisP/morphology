@@ -712,6 +712,23 @@ public abstract class Mijas {
 						varianti.add(new Variants(celms));
 					}
 					break;
+				case 115: //  // 2. konjugācija, divdabju formu vispārākā pakāpe + tagadnes mija (110.)
+					degree = AttributeNames.v_Comparative;
+					if (celms.startsWith("vysu")) {
+						degree = AttributeNames.v_Superlative;
+						celms = celms.substring(4,celms.length());
+					} else if (celms.startsWith("vys")) {
+						degree = AttributeNames.v_Superlative;
+						celms = celms.substring(3,celms.length());
+					}
+
+					if (celms.endsWith("e")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ei", AttributeNames.i_Degree, degree));
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ē", AttributeNames.i_Degree, degree));
+					} else if (celms.endsWith("o")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "uo", AttributeNames.i_Degree, degree));
+					}
+					break;
 				default:
 					System.err.printf("Invalid StemChange ID, stem '%s', stemchange %d\n", celms, mija);
 			}
@@ -1425,6 +1442,27 @@ public abstract class Mijas {
 						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ā"));
 					} else if (celms.endsWith("ei") || celms.endsWith("uo")) {
 						varianti.add(new Variants(celms));
+					}
+					break;
+				case 115: // 2. konjugācija, divdabju formu vispārākā pakāpe + tagadnes mija (110.)
+					if (celms.endsWith("uo")) {
+						String atvCelms = celms.substring(0, celms.length() - 2) + "o";
+						varianti.add(new Variants(atvCelms, AttributeNames.i_Degree, AttributeNames.v_Comparative));
+						if (pieliktVisPārākoPak)
+							varianti.add(new Variants("vys" + atvCelms, AttributeNames.i_Degree, AttributeNames.v_Superlative));
+						varianti.add(new Variants("vysu" + atvCelms, AttributeNames.i_Degree, AttributeNames.v_Superlative));
+					} else if (celms.endsWith("ei")) {
+						String atvCelms = celms.substring(0, celms.length() - 2) + "e";
+						varianti.add(new Variants(atvCelms, AttributeNames.i_Degree, AttributeNames.v_Comparative));
+						if (pieliktVisPārākoPak)
+							varianti.add(new Variants("vys" + atvCelms, AttributeNames.i_Degree, AttributeNames.v_Superlative));
+						varianti.add(new Variants("vysu" + atvCelms, AttributeNames.i_Degree, AttributeNames.v_Superlative));
+					} else if (celms.endsWith("ē")) {
+						String atvCelms = celms.substring(0, celms.length() - 1) + "e";
+						varianti.add(new Variants(atvCelms, AttributeNames.i_Degree, AttributeNames.v_Comparative));
+						if (pieliktVisPārākoPak)
+							varianti.add(new Variants("vys" + atvCelms, AttributeNames.i_Degree, AttributeNames.v_Superlative));
+						varianti.add(new Variants("vysu" + atvCelms, AttributeNames.i_Degree, AttributeNames.v_Superlative));
 					}
 					break;
 				default:
