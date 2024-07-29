@@ -705,7 +705,7 @@ public abstract class Mijas {
 						varianti.add(new Variants(celms));
 					}
 					break;
-				case 114: // 2. konjugācija, vēlējuma izteiksme, supīns un ciešamās kārtas pagātnes (-ts) divdabis
+				case 114: // 2. konjugācija, vēlējuma izteiksme, supīns un ciešamās kārtas pagātnes (-ts) divdabis, dams divdabis
 					if (celms.endsWith("ā")) {
 						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ē", "Mija", "ē -> ā"));
 					} else if (celms.endsWith("uo") || celms.endsWith("ei")) {
@@ -742,6 +742,33 @@ public abstract class Mijas {
 					if (celms.endsWith("ā")) {
 						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ē", AttributeNames.i_Degree, degree));
 					} else if (celms.endsWith("uo") || celms.endsWith("ei")) {
+						varianti.add(new Variants(celms, AttributeNames.i_Degree, degree));
+					}
+					break;
+				case 117:  // 2. konjugācija, pagātnes mija -s, -use divdabim (vienkāršota 111.)
+					if (celms.endsWith("uo")) {
+						varianti.add(new Variants(celms));
+					} else if (celms.endsWith("ie")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "ē", "Mija", "ē -> ie"));
+					} else if (celms.endsWith("e")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ie", "Mija", "ei -> e"));
+					}
+					break;
+				case 118: // 2. konjugācija, divdabju formu vispārākā pakāpe + pag. mija -s, -use divdabim (117.)
+					degree = AttributeNames.v_Comparative;
+					if (celms.startsWith("vysu")) {
+						degree = AttributeNames.v_Superlative;
+						celms = celms.substring(4,celms.length());
+					} else if (celms.startsWith("vys")) {
+						degree = AttributeNames.v_Superlative;
+						celms = celms.substring(3,celms.length());
+					}
+
+					if (celms.endsWith("ie")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "ē", AttributeNames.i_Degree, degree));
+					} else if (celms.endsWith("e")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ie", AttributeNames.i_Degree, degree));
+					} else if (celms.endsWith("uo")) {
 						varianti.add(new Variants(celms, AttributeNames.i_Degree, degree));
 					}
 					break;
@@ -1453,7 +1480,7 @@ public abstract class Mijas {
 						varianti.add(new Variants(celms));
 					}
 					break;
-				case 114: // 2. konjugācija, vēlējuma izteiksme, supīns un ciešamās kārtas pagātnes (-ts) divdabis
+				case 114: // 2. konjugācija, vēlējuma izteiksme, supīns un ciešamās kārtas pagātnes (-ts) divdabis, -dams divdabis
 					if (celms.endsWith("ē")) {
 						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ā"));
 					} else if (celms.endsWith("ei") || celms.endsWith("uo")) {
@@ -1489,6 +1516,35 @@ public abstract class Mijas {
 							varianti.add(new Variants("vys" + atvCelms, AttributeNames.i_Degree, AttributeNames.v_Superlative));
 						varianti.add(new Variants("vysu" + atvCelms, AttributeNames.i_Degree, AttributeNames.v_Superlative));
 					} else if (celms.endsWith("ei") || celms.endsWith("uo")) {
+						varianti.add(new Variants(celms, AttributeNames.i_Degree, AttributeNames.v_Comparative));
+						if (pieliktVisPārākoPak)
+							varianti.add(new Variants("vys" + celms, AttributeNames.i_Degree, AttributeNames.v_Superlative));
+						varianti.add(new Variants("vysu" + celms, AttributeNames.i_Degree, AttributeNames.v_Superlative));
+					}
+					break;
+				case 117: // 2. konjugācija, pagātnes mija -s, -use divdabim (vienkāršota 111.)
+					if (celms.endsWith("uo")) {
+						varianti.add(new Variants(celms));
+					} else if (celms.endsWith("ei")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "e"));
+					} else if (celms.endsWith("ē")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ie"));
+					}
+					break;
+				case 118: // 2. konjugācija, divdabju formu vispārākā pakāpe + pag. mija -s, -use divdabim (117.)
+					if (celms.endsWith("ei")) {
+						String atvCelms = celms.substring(0, celms.length() - 2) + "e";
+						varianti.add(new Variants(atvCelms, AttributeNames.i_Degree, AttributeNames.v_Comparative));
+						if (pieliktVisPārākoPak)
+							varianti.add(new Variants("vys" + atvCelms, AttributeNames.i_Degree, AttributeNames.v_Superlative));
+						varianti.add(new Variants("vysu" + atvCelms, AttributeNames.i_Degree, AttributeNames.v_Superlative));
+					} else if (celms.endsWith("ē")) {
+						String atvCelms = celms.substring(0, celms.length() - 1) + "ie";
+						varianti.add(new Variants(atvCelms, AttributeNames.i_Degree, AttributeNames.v_Comparative));
+						if (pieliktVisPārākoPak)
+							varianti.add(new Variants("vys" + atvCelms, AttributeNames.i_Degree, AttributeNames.v_Superlative));
+						varianti.add(new Variants("vysu" + atvCelms, AttributeNames.i_Degree, AttributeNames.v_Superlative));
+					} else if (celms.endsWith("uo")) {
 						varianti.add(new Variants(celms, AttributeNames.i_Degree, AttributeNames.v_Comparative));
 						if (pieliktVisPārākoPak)
 							varianti.add(new Variants("vys" + celms, AttributeNames.i_Degree, AttributeNames.v_Superlative));
