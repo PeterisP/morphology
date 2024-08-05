@@ -82,6 +82,7 @@
 	<Value LV="Vajadzības, atstāstījuma paveids" EN="Debitive" Tag="d"/>
 	<Value LV="Pavēles" EN="Imperative" Tag="m"/>
 	<Value LV="Nenoteiksme" EN="Infinitive" Tag="n"/>
+	<Value LV="Supīns" EN="Supine" Tag="s"/>
 	<Value LV="Divdabis" EN="Participle" Tag="p"/>
 </Attribute>
 <Attribute LV="Laiks" EN="Tense" PartOfSpeech="Darbības vārds" MarkupPos="4">
