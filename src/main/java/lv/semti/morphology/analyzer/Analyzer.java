@@ -526,7 +526,7 @@ public class Analyzer extends Lexicon {
 			for (Ending ending : getAllEndings().matchedEndings(word))
 				if (ending.getEnding().length()==i) {
                     Paradigm p = ending.getParadigm();
-                    if (p.isMatchingStrong(AttributeNames.i_InflectionProperties, AttributeNames.v_HardcodedWordforms))
+                    if (p.isMatchingStrong(AttributeNames.i_ParadigmProperties, AttributeNames.v_HardcodedWordforms))
                         continue; // Hardcoded vārdgrupa minēšanai nav aktuāla
 
                     String stem;
@@ -1066,7 +1066,7 @@ public class Analyzer extends Lexicon {
 			}
 		}
 
-		if (lexeme.getParadigm().isMatchingStrong(AttributeNames.i_InflectionProperties, AttributeNames.v_OnlyHardcodedWordforms)) {
+		if (lexeme.getParadigm().isMatchingStrong(AttributeNames.i_ParadigmProperties, AttributeNames.v_OnlyHardcodedWordforms)) {
 			inflections =  new ArrayList<Wordform>(1); // Šai gadījumā mēs nepieliekam "galotņu vārdformu nemaz
 		}
 		// Pārbaudam, vai šai lemmai nav kāds hardcoded formas override (piemēram, kā formai viņš *ej -> viņš iet)
@@ -1085,15 +1085,17 @@ public class Analyzer extends Lexicon {
 				continue;
 			if (hardcoded.isMatchingStrong(AttributeNames.i_Noliegums, AttributeNames.v_No) && lemma.startsWith(this.NEGATION_PREFIX))
 				continue;
-            Wordform override = null;
-            for (Wordform form : inflections) { // pārbaudam, vai kādu no esošajiem locījumiem nevajag izmest, jo šis hardcoded variants to aizvieto
-                if (form.isMatchingWeak(formLexeme)) {
-                    override = form;
-                }
-            }
-            if (override != null) {
-                inflections.remove(override);
-            }
+			if (!hardcoded.isMatchingStrong(AttributeNames.i_ExtraForm, AttributeNames.v_Yes)) {
+				Wordform override = null;
+				for (Wordform form : inflections) { // pārbaudam, vai kādu no esošajiem locījumiem nevajag izmest, jo šis hardcoded variants to aizvieto
+					if (form.isMatchingWeak(formLexeme)) {
+						override = form;
+					}
+				}
+				if (override != null) {
+					inflections.remove(override);
+				}
+			}
             inflections.add(hardcoded);
         }
 

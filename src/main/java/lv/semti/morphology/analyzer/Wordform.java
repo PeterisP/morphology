@@ -58,7 +58,7 @@ public class Wordform extends AttributeValues implements Serializable{
 		addAttributes(ending);
 		addAttribute(AttributeNames.i_EndingID, Integer.toString(ending.getID()));
 		addAttribute(AttributeNames.i_ParadigmID, Integer.toString(paradigm.getID()));
-		removeAttribute(AttributeNames.i_InflectionProperties);
+		removeAttribute(AttributeNames.i_ParadigmProperties);
 		removeAttribute(AttributeNames.i_ParadigmSupportedDerivations);
 		
 		Boolean fixed_stem; 
@@ -80,7 +80,7 @@ public class Wordform extends AttributeValues implements Serializable{
 		Ending lemmaEnding = ending.getLemmaEnding();
 		// FIXME šis 'if' būtu jāsaprot un jāsakārto - lai ir sakarīgi, bet nesalauž specgadījumus ('vairāk' -> pamatforma 'daudz' utml)
 		// TODO - varbūt vienkārši dažām paradigmām vai galotnēm vajag karodziņu par to, ka jāģenerē pamatforma no jauna?
-		if (lemmaEnding != null && !(paradigm.isMatchingStrong(AttributeNames.i_InflectionProperties, AttributeNames.v_HardcodedWordforms) ||
+		if (lemmaEnding != null && !(paradigm.isMatchingStrong(AttributeNames.i_ParadigmProperties, AttributeNames.v_HardcodedWordforms) ||
 				// paradigm.getName().equalsIgnoreCase("adverb") ||    // 2024.03.01 aizkomentējām jo šķita ka lieks
 				paradigm.getName().equalsIgnoreCase("punct"))
 				&& !fixed_stem) {

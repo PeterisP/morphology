@@ -256,6 +256,8 @@ public class AttributeNames {
 	public static final String v_Undesirable = "Nevēlams";
 	public static final String v_Recommended = "Ieteicams";
 
+	public static final String i_ExtraForm = "Papildforma";
+
     public static final String i_EntryProperties = "Leksēmas pamatformas īpatnības";
 	public final static String v_EntryComparative = "Pārākā pakāpe"; // TODO - tizls nosaukums
 	public final static String v_EntryFeminine = "Sieviešu dzimte"; // TODO - tizls nosaukums
@@ -272,9 +274,9 @@ public class AttributeNames {
 	public static final String v_No_Plural = "Nerādīt daudzskaitli";
 	public static final String v_No_Singular = "Nerādīt vienskaitlis";
 
-	public static final String i_InflectionProperties = "Locīšanas īpatnības";
-	public static final String v_HardcodedWordforms = "Pielasīt visas izņēmumformas";
-	public static final String v_OnlyHardcodedWordforms = "Tikai izņēmumformas";
+	public static final String i_ParadigmProperties = "Paradigmas īpatnības";
+	public static final String v_HardcodedWordforms = "Satur pielasāmās izņēmumformas";
+	public static final String v_OnlyHardcodedWordforms = "Nelieto lemmas galotni, bet tikai pielasītās izņēmumformas";
 
 	public static final String i_ParadigmSupportedDerivations = "Paradigmai atļautie atvasinājumi";
 	public static final String v_Derivation_tājs_tāja_ējs_ēja = "-tājs, -ējs, -tāja, -ēja";

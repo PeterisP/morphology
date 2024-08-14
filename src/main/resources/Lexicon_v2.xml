@@ -5052,7 +5052,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="25" Name="pron" LemmaEnding="2329" Description="Vietniekvārdi (es, kas, tāds)" DescriptionEN="Pronouns (es, kas, tāds)" AllowedGuessEndings="!">
-		<Attributes Vārdšķira="Vietniekvārds" Noliegums="Nē" Locīšanas_īpatnības="Tikai izņēmumformas" Dzimte="Nepiemīt" Persona="Nepiemīt" Skaitlis="Nepiemīt"/>
+		<Attributes Vārdšķira="Vietniekvārds" Noliegums="Nē" Paradigmas_īpatnības="Nelieto lemmas galotni, bet tikai pielasītās izņēmumformas" Dzimte="Nepiemīt" Persona="Nepiemīt" Skaitlis="Nepiemīt"/>
 		<Ending ID="2329" StemChange="0" Ending="" StemID="1" LemmaEnding="2329">
 			<Attributes/>
 		</Ending>
@@ -5076,7 +5076,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="29" Name="hardcoded" LemmaEnding="1158" Description="Pārpalikumi - nelokāmie skaitļa vārdi, kā arī izņēmumgadījumi un atsevišķas formas, kas neiederas nevienā citā grupā (trīsarpus)" DescriptionEN="Hardcoded exceptions, non-inflective numerals and forms not fitting in any other group (trīsarpus)">
-		<Attributes Locīšanas_īpatnības="Pielasīt visas izņēmumformas"/>
+		<Attributes Paradigmas_īpatnības="Satur pielasāmās izņēmumformas"/>
 		<Ending ID="1158" StemChange="0" Ending="" StemID="1" LemmaEnding="1158">
 			<Attributes/>
 		</Ending>

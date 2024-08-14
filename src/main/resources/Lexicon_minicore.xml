@@ -535,62 +535,11 @@
     <Lexeme Stem1="neiet">
       <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Jā" Pamatforma="iet" Laiks="Tagadne" Kārta="Darāmā"/>
     </Lexeme>
-    <Lexeme Stem1="triju">
-      <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Sieviešu" Locījums="Ģenitīvs" Skaitļu_kārta="Vieni" Pamatforma="trīs"/>
-    </Lexeme>
-    <Lexeme Stem1="triju">
-      <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Ģenitīvs" Skaitļu_kārta="Vieni" Pamatforma="trīs"/>
-    </Lexeme>
-    <Lexeme Stem1="trīs">
-      <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Sieviešu" Locījums="Ģenitīvs" Skaitļu_kārta="Vieni" Pamatforma="trīs"/>
-    </Lexeme>
-    <Lexeme Stem1="trīs">
-      <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Ģenitīvs" Skaitļu_kārta="Vieni" Pamatforma="trīs"/>
-    </Lexeme>
-    <Lexeme Stem1="trijām">
-      <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Sieviešu" Locījums="Datīvs" Skaitļu_kārta="Vieni" Pamatforma="trīs"/>
-    </Lexeme>
-    <Lexeme Stem1="trijās">
-      <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Sieviešu" Locījums="Lokatīvs" Skaitļu_kārta="Vieni" Pamatforma="trīs"/>
-    </Lexeme>
-    <Lexeme Stem1="trim">
-      <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Sieviešu" Locījums="Datīvs" Skaitļu_kārta="Vieni" Pamatforma="trīs"/>
-    </Lexeme>
-    <Lexeme Stem1="trim">
-      <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Datīvs" Skaitļu_kārta="Vieni" Pamatforma="trīs"/>
-    </Lexeme>
     <Lexeme Stem1="nav">
       <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="3" Noliegums="Jā" Pamatforma="būt" Laiks="Tagadne" Kārta="Darāmā"/>
     </Lexeme>
     <Lexeme Stem1="nav">
       <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Jā" Pamatforma="būt" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="trīs">
-      <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Nepiemīt" Locījums="Nepiemīt" Skaitļu_kārta="Vieni" Pamatforma="trīs"/>
-    </Lexeme>
-    <Lexeme Stem1="trīs">
-      <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Sieviešu" Locījums="Akuzatīvs" Skaitļu_kārta="Vieni" Pamatforma="trīs"/>
-    </Lexeme>
-    <Lexeme Stem1="trīs">
-      <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Sieviešu" Locījums="Lokatīvs" Skaitļu_kārta="Vieni" Pamatforma="trīs"/>
-    </Lexeme>
-    <Lexeme Stem1="trīs">
-      <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Sieviešu" Locījums="Nominatīvs" Skaitļu_kārta="Vieni" Pamatforma="trīs"/>
-    </Lexeme>
-    <Lexeme Stem1="trīs">
-      <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Akuzatīvs" Skaitļu_kārta="Vieni" Pamatforma="trīs"/>
-    </Lexeme>
-    <Lexeme Stem1="trīs">
-      <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Lokatīvs" Skaitļu_kārta="Vieni" Pamatforma="trīs"/>
-    </Lexeme>
-    <Lexeme Stem1="trīs">
-      <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Nominatīvs" Skaitļu_kārta="Vieni" Pamatforma="trīs"/>
-    </Lexeme>
-    <Lexeme Stem1="trijos">
-      <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Lokatīvs" Skaitļu_kārta="Vieni" Pamatforma="trīs"/>
-    </Lexeme>
-    <Lexeme Stem1="trijiem">
-      <Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Datīvs" Skaitļu_kārta="Vieni" Pamatforma="trīs"/>
     </Lexeme>
     <Lexeme Stem1="esu">
       <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="1" Noliegums="Nē" Pamatforma="būt" Laiks="Tagadne" Kārta="Darāmā" Ģenerēt="Nē"/>

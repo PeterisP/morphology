@@ -3488,6 +3488,10 @@ public class MorphologyTest {
                 found = true;
         }
         assertTrue(found);
+
+        List<Wordform> formas = locītājs.generateInflectionsFromParadigm("trīs", 29);
+        assertNotEquals(0, formas.size());
+        describe(formas);
     }
 
     // Ticket #59
@@ -4306,5 +4310,7 @@ public class MorphologyTest {
         ArrayList<Wordform> formas = locītājs.generateInflectionsFromParadigm("jebkas", 25);
         assertTrue("Jābūt vairākām formām 'jebkas' tabulai no hardcoded", formas.size()>1);
     }
+
+
 
 }
