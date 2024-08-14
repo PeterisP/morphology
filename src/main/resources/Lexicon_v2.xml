@@ -8345,5 +8345,12 @@
 		<Ending ID="2942" StemChange="0" Ending="" StemID="1" LemmaEnding="2942">
 			<Attributes/>
 		</Ending>
-	</Paradigm>		
+	</Paradigm>
+	<Paradigm Stems="1" ID="57" Name="card-ireg" LemmaEnding="2943" Description="Neregulārie skaitļavārdi (trīs, pustrīs)" DescriptionEN="Irregular cardinal numbers (trīs, pustrīs)" AllowedGuessEndings="!">
+		<Attributes Vārdšķira="Skaitļa vārds" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Paradigmas_īpatnības="Nelieto lemmas galotni, bet tikai pielasītās izņēmumformas"/>
+		<Ending ID="2943" StemChange="0" Ending="" StemID="1" LemmaEnding="2943">
+			<Attributes/>
+		</Ending>
+	</Paradigm>
+
 </Morphology>
