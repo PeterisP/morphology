@@ -290,7 +290,7 @@ public class Analyzer extends Lexicon {
 		
 		if (enablePrefixes) {
 			if (!result.isRecognized()
-					|| (word.startsWith("ne") && !result.hasAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb))) {
+					|| (word.startsWith(this.NEGATION_PREFIX) && !result.hasAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb))) {
 				for (Wordform wf : guessByPrefix(word).wordforms) {
 					result.addWordform(wf);
 				}
@@ -469,41 +469,41 @@ public class Analyzer extends Lexicon {
 		if (word.contains(" ")) return rezultāts;
 
 		boolean vajadzība = false;
-		if (word.startsWith("jā")) {
+		if (word.startsWith(this.DEBITIVE_PREFIX)) {
 			vajadzība = true;
 			word = word.substring(2);
 		}
 
 		for (String priedēklis : prefixes)
-			if (word.startsWith(priedēklis) || word.startsWith("vis"+priedēklis)) {
+			if (word.startsWith(priedēklis) || word.startsWith(this.SUPERLATIVE_PREFIX+priedēklis)) {
 				String cut_word;
-				if (word.startsWith("vis")) {
-					cut_word = "vis"+word.substring(3+priedēklis.length());
+				if (word.startsWith(this.SUPERLATIVE_PREFIX)) {
+					cut_word = this.SUPERLATIVE_PREFIX+word.substring(3+priedēklis.length());
 				} else {
 					cut_word = word.substring(priedēklis.length());
 				}
-				if (vajadzība) cut_word = "jā" + cut_word;
+				if (vajadzība) cut_word = this.DEBITIVE_PREFIX + cut_word;
 
 				Word bezpriedēkļa = analyzeLowercase(cut_word, cut_word);
 				for (Wordform variants : bezpriedēkļa.wordforms)
 					if (variants.getEnding() != null && variants.getEnding().getParadigm() != null && variants.getEnding().getParadigm().getValue(AttributeNames.i_Konjugaacija) != null) { // Tikai no verbiem atvasinātās klases 
-						if (priedēklis.equals("ne") && (variants.isMatchingStrong(AttributeNames.i_Mood, AttributeNames.v_DebitiveQuotative)
+						if (priedēklis.equals(this.NEGATION_PREFIX) && (variants.isMatchingStrong(AttributeNames.i_Mood, AttributeNames.v_DebitiveQuotative)
 								|| variants.isMatchingStrong(AttributeNames.i_Mood, AttributeNames.v_Debitive))
 								|| variants.isMatchingStrong(AttributeNames.i_Noliegums, AttributeNames.v_Yes) ) {
 							continue; // neģenerējam ne- atvasinājumus vajadzības izteiksmei un jau noliegtiem šķirkļiem
 						}
-						if (variants.isMatchingStrong(AttributeNames.i_Degree, AttributeNames.v_Superlative) && !word.startsWith("vis") ) {
+						if (variants.isMatchingStrong(AttributeNames.i_Degree, AttributeNames.v_Superlative) && !word.startsWith(this.SUPERLATIVE_PREFIX) ) {
 							continue; // neņemam tos, kur ir "vis" uzlicies aiz priedēkļa, kā nevisdomājošākais pavisdomājošākais
 						}
 						variants.setToken(word);
 						variants.addAttribute(AttributeNames.i_Source,"priedēkļu atvasināšana");
 						variants.addAttribute(AttributeNames.i_Prefix, priedēklis);
-						if (!priedēklis.equals("ne")) {
+						if (!priedēklis.equals(this.NEGATION_PREFIX)) {
 							variants.addAttribute(AttributeNames.i_SourceLemma, variants.getValue(AttributeNames.i_Lemma));
 							variants.addAttribute(AttributeNames.i_Lemma,priedēklis+variants.getValue(AttributeNames.i_Lemma));
 						}
 						variants.addAttribute(AttributeNames.i_Guess, AttributeNames.v_Prefix);
-						variants.addAttribute(AttributeNames.i_Noliegums, priedēklis.equals("ne") ? AttributeNames.v_Yes : AttributeNames.v_No);
+						variants.addAttribute(AttributeNames.i_Noliegums, priedēklis.equals(this.NEGATION_PREFIX) ? AttributeNames.v_Yes : AttributeNames.v_No);
 						rezultāts.wordforms.add(variants);
 					}
 			}
@@ -982,7 +982,7 @@ public class Analyzer extends Lexicon {
 					lex.getParadigm().removeLexeme(lex); // removed temporary lexeme
 				return result;
 			}
-			if (lemma.startsWith("ne") && lemma.equalsIgnoreCase("ne" + wf.getValue(AttributeNames.i_Lemma)) && lex != null) {
+			if (lemma.startsWith(this.NEGATION_PREFIX) && lemma.equalsIgnoreCase(this.NEGATION_PREFIX + wf.getValue(AttributeNames.i_Lemma)) && lex != null) {
 				// inflection of negated verbs/participles
 				return generateInflections(lex, lemma);
 			}
@@ -1022,7 +1022,7 @@ public class Analyzer extends Lexicon {
 			trešāSakne = lexeme.getStem(2);
 		}
 
-        boolean noliegums = lemma.equalsIgnoreCase("ne"+lexeme.getValue(AttributeNames.i_Lemma));
+        boolean noliegums = lemma.equalsIgnoreCase(this.NEGATION_PREFIX+lexeme.getValue(AttributeNames.i_Lemma));
 		for (Ending ending : lexeme.getParadigm().endings){
 			if ( ending.getValue(AttributeNames.i_PartOfSpeech)==null ||
 					ending.getValue(AttributeNames.i_PartOfSpeech).equals(lexeme.getValue(AttributeNames.i_PartOfSpeech)) ||
@@ -1037,9 +1037,9 @@ public class Analyzer extends Lexicon {
 		    	for (Variants celms : celmi){
 		    		vārds = celms.celms + ending.getEnding();
 					if (noliegums) {
-						if (vārds.startsWith("vis") && celms.isMatchingStrong(AttributeNames.i_Degree, AttributeNames.v_Superlative)) {
-							vārds = "visne" + vārds.substring(3);
-						} else vārds = "ne" + vārds;
+						if (vārds.startsWith(this.SUPERLATIVE_PREFIX) && celms.isMatchingStrong(AttributeNames.i_Degree, AttributeNames.v_Superlative)) {
+							vārds = this.SUPERLATIVE_PREFIX + this.NEGATION_PREFIX + vārds.substring(this.SUPERLATIVE_PREFIX.length());
+						} else vārds = this.NEGATION_PREFIX + vārds;
 					}
 		    		vārds = recapitalize(vārds, lemma);
 
@@ -1071,7 +1071,7 @@ public class Analyzer extends Lexicon {
 		}
 		// Pārbaudam, vai šai lemmai nav kāds hardcoded formas override (piemēram, kā formai viņš *ej -> viņš iet)
 		Collection<Lexeme> hc_forms = this.hardcodedForms.get(lemma);
-		if (hc_forms.isEmpty() && lemma.startsWith("ne") && (lemma.endsWith("t") || lemma.endsWith("ties"))) {
+		if (hc_forms.isEmpty() && lemma.startsWith(this.NEGATION_PREFIX) && (lemma.endsWith("t") || lemma.endsWith("ties"))) {
 			hc_forms = this.hardcodedForms.get(lemma.substring(2));
 		}
         for (Lexeme formLexeme : hc_forms) {
@@ -1081,9 +1081,9 @@ public class Analyzer extends Lexicon {
             	continue;
             if (!lexeme.getParadigm().isMatchingWeak(AttributeNames.i_PartOfSpeech, hardcoded.getValue(AttributeNames.i_PartOfSpeech)))
                 continue;
-			if (hardcoded.isMatchingStrong(AttributeNames.i_Noliegums, AttributeNames.v_Yes) && !lemma.startsWith("ne"))
+			if (hardcoded.isMatchingStrong(AttributeNames.i_Noliegums, AttributeNames.v_Yes) && !lemma.startsWith(this.NEGATION_PREFIX))
 				continue;
-			if (hardcoded.isMatchingStrong(AttributeNames.i_Noliegums, AttributeNames.v_No) && lemma.startsWith("ne"))
+			if (hardcoded.isMatchingStrong(AttributeNames.i_Noliegums, AttributeNames.v_No) && lemma.startsWith(this.NEGATION_PREFIX))
 				continue;
             Wordform override = null;
             for (Wordform form : inflections) { // pārbaudam, vai kādu no esošajiem locījumiem nevajag izmest, jo šis hardcoded variants to aizvieto
@@ -1099,7 +1099,7 @@ public class Analyzer extends Lexicon {
 
         // For verbs, generate also negated forms
 		if (!noliegums && lexeme.getParadigm().isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb) && !lexeme.isMatchingStrong(AttributeNames.i_Noliegums, AttributeNames.v_Yes)) {
-			ArrayList<Wordform> negated_inflections = generateInflections(lexeme,"ne"+lexeme.getValue(AttributeNames.i_Lemma));
+			ArrayList<Wordform> negated_inflections = generateInflections(lexeme,this.NEGATION_PREFIX+lexeme.getValue(AttributeNames.i_Lemma));
 			inflections.addAll(negated_inflections);
 		}
 

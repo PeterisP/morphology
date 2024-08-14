@@ -644,14 +644,18 @@ public class LatgalianTest {
 		testParams.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
 		testParams.addAttribute(AttributeNames.i_Noliegums, AttributeNames.v_Yes);
 
+		for (Wordform wf : dūmuot) {
+			assertNotEquals(wf.getToken(), "nedūmuot");
+		}
 		assertInflectionMultipleWeak(dūmuot, testParams, new HashSet<String>(){{ add("nadūmuoju"); add("nadūmovu");}});
 	}
 
 	@Test
 	public void verbGuess() {
-		//analyzer.enableGuessing = true;
+		analyzer.enableGuessing = true;
 		// pokemonizēt
 		Word debitive = analyzer.analyze("juopokemonizej");
+//		debitive.describe(System.out);
 		assertTrue(debitive.isRecognized());
 		Word negative = analyzer.analyze("napokemonizēt");
 		assertTrue(negative.isRecognized());
@@ -670,7 +674,6 @@ public class LatgalianTest {
 
 		Word negativeWithPred = analyzer.analyze("naapsapokemonizēt");
 		assertTrue(negativeWithPred.isRecognized());
-
 	}
 
 

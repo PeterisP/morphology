@@ -52,6 +52,9 @@ public class Lexicon {
 	public static int proper_name_frequency_floor = 2; // When loading proper name lexemes, entries that have a frequency ("Skaits") field will be ignored and not loaded
 
 	protected String filename;
+	protected String NEGATION_PREFIX = "ne";
+	protected String DEBITIVE_PREFIX = "jā";
+	protected String SUPERLATIVE_PREFIX = "vis";
 
 	public String getRevision() {
 		return revision;
@@ -197,9 +200,10 @@ public class Lexicon {
 		Node nodeLicence = node.getAttributes().getNamedItem("licence");
 		if (nodeLicence != null)
 			licence = nodeLicence.getTextContent();
-		
+
 		NodeList nodes = node.getChildNodes();
 
+		prefixes = new ArrayList<String>();
 		paradigms = new ArrayList<Paradigm>();
 
 		for (int i = 0; i < nodes.getLength(); i++) {
@@ -213,6 +217,9 @@ public class Lexicon {
 				
 				if (corpusFileName != null && (useAuxiliaryLexicons || (isCore && useCore)))
 					corpusFileNames.add(corpusFileName.getTextContent());
+			}
+			if (nodes.item(i).getNodeName().equals("Prefixes")) {
+				this.loadPrefixes(nodes.item(i));
 			}
 		}
 		
@@ -239,25 +246,28 @@ public class Lexicon {
             } else throw new Error(String.format("Unsupported file format for sublexicon '%s'", filename));
 		}
 
-		//TODO - nav īsti smuki šāds hardcoded saraksts.
-		prefixes = new ArrayList<String>();
-		prefixes.add("aiz");
-		prefixes.add("ap");
-		prefixes.add("at");
-		prefixes.add("ie");
-		prefixes.add("iz");
-		prefixes.add("ne");
-		prefixes.add("no");
-		prefixes.add("pa");
-		prefixes.add("pār");
-		prefixes.add("pie");
-		prefixes.add("sa");
-		prefixes.add("uz");
-
 		System.err.println("Lexicon " + (revision != null ? revision : "") + " loaded");
 	}
 
-    private void load_sublexicon_json(InputStream stream) throws ParseException, UnsupportedEncodingException {
+	private void loadPrefixes(Node node) {
+		NodeList nodes = node.getChildNodes();
+		for (int i = 0; i < nodes.getLength(); i++) {
+			if (nodes.item(i).getNodeName().equals("Negation")) {
+				this.NEGATION_PREFIX = nodes.item(i).getTextContent();
+			}
+			if (nodes.item(i).getNodeName().equals("Superlative")) {
+				this.SUPERLATIVE_PREFIX = nodes.item(i).getTextContent();
+			}
+			if (nodes.item(i).getNodeName().equals("Debitive")) {
+				this.DEBITIVE_PREFIX = nodes.item(i).getTextContent();
+			}
+			if (nodes.item(i).getNodeName().equals("VerbPrefix")) {
+				this.prefixes.add(nodes.item(i).getTextContent());
+			}
+		}
+	}
+
+	private void load_sublexicon_json(InputStream stream) throws ParseException, UnsupportedEncodingException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(stream, "UTF-8"));
         JSONParser parser = new JSONParser();
         String json_row;
