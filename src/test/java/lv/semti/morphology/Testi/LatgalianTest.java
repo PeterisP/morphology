@@ -647,6 +647,32 @@ public class LatgalianTest {
 		assertInflectionMultipleWeak(dūmuot, testParams, new HashSet<String>(){{ add("nadūmuoju"); add("nadūmovu");}});
 	}
 
+	@Test
+	public void verbGuess() {
+		//analyzer.enableGuessing = true;
+		// pokemonizēt
+		Word debitive = analyzer.analyze("juopokemonizej");
+		assertTrue(debitive.isRecognized());
+		Word negative = analyzer.analyze("napokemonizēt");
+		assertTrue(negative.isRecognized());
+
+		Word izPred = analyzer.analyze("izpokemonizēt");
+		assertTrue(izPred.isRecognized());
+		Word izPredRefl = analyzer.analyze("izapokemonizēt");
+		assertTrue(izPredRefl.isRecognized());
+
+		Word puorPred = analyzer.analyze("puorpokemonizēt");
+		assertTrue(puorPred.isRecognized());
+		Word puorPredRefl1 = analyzer.analyze("puorsapokemonizēt");
+		assertTrue(puorPredRefl1.isRecognized());
+		Word puorPredRefl2 = analyzer.analyze("puorzapokemonizēt");
+		assertTrue(puorPredRefl2.isRecognized());
+
+		Word negativeWithPred = analyzer.analyze("naapsapokemonizēt");
+		assertTrue(negativeWithPred.isRecognized());
+
+	}
+
 
 }
 
