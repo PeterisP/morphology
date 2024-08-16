@@ -76,7 +76,7 @@ public class Splitting {
 		LinkedList<Word> tokens = new LinkedList<Word>();
 		if (chunk == null) return tokens;
 		
-		Trie automats = new Trie();
+		Trie automats = new Trie(morphoAnalyzer.automats);
 
 	    //bug fix - pievienota beigās whitespace
 		String str = chunk+" ";

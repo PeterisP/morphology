@@ -22,11 +22,11 @@ import java.util.ArrayList;
 public class Trie {
 	public int branchIterator;
 	private node iterator;
-	private static ArrayList<node> branchList;
-	private static node exception_root;
+	private ArrayList<node> branchList;
+	private node exception_root;
 	private boolean isFirst;
 
-    static{
+    public Trie () {
         branchList=new ArrayList<node>();
 
         exception_root = new node();
@@ -35,15 +35,17 @@ public class Trie {
         add("‘’", exception_root);
         add("***", exception_root);
 
-        initializeExceptions();
+        // Will be ready for use only after initialize_exceptions is called, after any custom exceptions are loaded
     }
 
-    public Trie () {
-        this.reset();
+    // Create a clone with the same content but a separate iterator
+    public Trie(Trie source) {
+        branchList = source.branchList;
+        exception_root = source.exception_root;
+        reset();
     }
 
-
-	public static node n1_dz_initials() {
+	public node n1_dz_initials() {
         /* 1
          * Iniciāļu automāts atpazīst Dz. Dž. UpperCaseLetter.
          */
@@ -358,14 +360,12 @@ public class Trie {
 
 	public void addException(String s) {
         if (null == exception_root) {
-            return;
-            // throw new AssertionError("Attempt to add tokenization exceptions after they have been finalized");
+            throw new AssertionError("Attempt to add tokenization exceptions after they have been finalized");
         }
-//        if (s.contains("'")) System.err.println(s);
         this.add(s, exception_root);
     }
 
-    public static void initializeExceptions() {
+    public void initializeExceptions() {
         branchList.add(exception_root.firstChild);
         exception_root = null;
 

@@ -246,6 +246,7 @@ public class Lexicon {
             } else throw new Error(String.format("Unsupported file format for sublexicon '%s'", filename));
 		}
 
+		automats.initializeExceptions();
 		System.err.println("Lexicon " + (revision != null ? revision : "") + " loaded");
 	}
 

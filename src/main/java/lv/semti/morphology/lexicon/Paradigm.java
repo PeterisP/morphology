@@ -218,7 +218,7 @@ public class Paradigm extends AttributeValues {
 			this.lexicon.hardcodedForms.put(pamatforma, lexeme);
 		}
 
-        if (pamatforma.matches(".*[ ./']+.*") && pamatforma.length() > 1 && !pamatforma.matches("\\.+")
+        if (pamatforma.matches(".*[ ./'\\d]+.*") && pamatforma.length() > 1 && !pamatforma.matches("\\.+")
 //                || (this.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Punctuation) && pamatforma.length() > 1)
             ) {
 		    this.lexicon.automats.addException(pamatforma);
