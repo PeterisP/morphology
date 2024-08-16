@@ -360,7 +360,8 @@ public class Trie {
 
 	public void addException(String s) {
         if (null == exception_root) {
-            throw new AssertionError("Attempt to add tokenization exceptions after they have been finalized");
+            //aizkomentēts, jo tēzaura webserviss mēdz pieliek dīvainas pagaidu leksēmas
+            //throw new AssertionError("Attempt to add tokenization exceptions after they have been finalized");
         }
         this.add(s, exception_root);
     }
