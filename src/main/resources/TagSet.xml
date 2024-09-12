@@ -425,7 +425,7 @@
 	<Value LV="Personvārds" EN="Person name"/>
 </Attribute>
 
-<Attribute LV="Lietojuma biežums" EN="Usage frequency">
+<Attribute LV="Vispārīgais lietojuma biežums" EN="Usage frequency">
 	<Value LV="Reti" EN="Rare"/>
 	<Value LV="Retāk" EN="Rarer"/>
 	<Value LV="Pareti" EN="Rarish"/>
@@ -435,6 +435,11 @@
 <Attribute LV="Valodas normēšana" EN="Normative">
 	<Value LV="Nevēlams" EN="Undesirable"/>
 </Attribute>
+
+<Attribute LV="Valodas normēšana" EN="Normative">
+	<Value LV="Nevēlams" EN="Undesirable"/>
+</Attribute>
+
 
 <Attribute LV="Lietojums" EN="Usage">
 	<Value LV="Novecojis" EN="Dated"/>
@@ -454,6 +459,7 @@
 	<Value LV="Īsziņās" EN="SMS"/>
 	<Value LV="Bērnu valoda" EN="Children"/>
 	<Value LV="Eifēmisms" EN="Euphemism"/>
+	<Value LV="Dialektisms" EN="Dialect"/>
 </Attribute>
 
 <Attribute LV="Stils" EN="Style">
@@ -738,11 +744,37 @@
 	<Value LV="Vienskaitli lieto neliterārā valodā" EN="Singular forms used in nonliterary language"/>
 </Attribute>
 
+<Attribute LV="Paradigmas īpatnības" EN="Paradigm specialty">
+	<Value LV="Nelieto lemmas galotni, bet tikai pielasītās izņēmumformas" EN="Skip lemma ending, use only extra exception forms"/>
+	<Value LV="Satur pielasāmās izņēmumformas" EN="Contains the extra exception forms"/>
+</Attribute>
+
 <Attribute LV="Morfotabulas attēlošana" EN="Inflection table">
 	<Value LV="Nerādīt daudzskaitli" EN="Hide plural"/>
 	<Value LV="Nerādīt vienskaitli" EN="Hide singular"/>
 	<Value LV="Rādīt vokatīvu" EN="Show vocative"/>
 </Attribute>
+
+
+<Attribute LV="UD vārdšķira" EN="UD POS">
+	<Value LV="ADJ" EN="ADJ"/>
+	<Value LV="ADP" EN="ADP"/>
+	<Value LV="ADV" EN="ADV"/>
+	<Value LV="PUNCT" EN="PUNCT"/>
+	<Value LV="AUX" EN="AUX"/>
+	<Value LV="SYM" EN="SYM"/>
+	<Value LV="INTJ" EN="INTJ"/>
+	<Value LV="CCONJ" EN="CCONJ"/>
+	<Value LV="SCONJ" EN="SCONJ"/>
+	<Value LV="NOUN" EN="NOUN"/>
+	<Value LV="DET" EN="DET"/>
+	<Value LV="PRON" EN="PRON"/>
+	<Value LV="PROPN" EN="PROPN"/>
+	<Value LV="NUM" EN="NUM"/>
+	<Value LV="PART" EN="PART"/>
+	<Value LV="X" EN="X"/>
+</Attribute>
+
 
 <Attribute LV="Citi" EN="Other">
 	<Value LV="Cita paradigma" EN="Other paradigm"/>

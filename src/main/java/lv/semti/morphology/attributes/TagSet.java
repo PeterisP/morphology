@@ -130,9 +130,9 @@ public class TagSet {
 					if (a.isAllowed(value)) allowed = true;
 				if (!allowed) {
 					if (pāris.getValue().contains("|"))
-						return String.format("Īpašība %s : %s (%s) neder!", pāris.getKey(), value, pāris.getValue());
+						return String.format("Īpašība `%s` : `%s` (%s) neder!", pāris.getKey(), value, pāris.getValue());
 					else
-						return String.format("Īpašība %s : %s neder!", pāris.getKey(), pāris.getValue());
+						return String.format("Īpašība `%s` : `%s` neder!", pāris.getKey(), pāris.getValue());
 				}
 			}
 		}
