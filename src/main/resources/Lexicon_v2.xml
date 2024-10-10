@@ -4875,7 +4875,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="21" Name="adverb" LemmaEnding="954" Description="Apstākļa vārdi bez salīdzināmām pakāpēm (vienmēr, lielākoties)" DescriptionEN="Adverbs without degree of comparison (vienmēr, lielākoties)" AllowedGuessEndings="abcdeklmnoprstuzāēīļņšūž">
-		<Attributes Vārdšķira="Apstākļa vārds" Pakāpe="Nepiemīt"/>
+		<Attributes Vārdšķira="Apstākļa vārds" Pakāpe="Nepiemīt" Prievārdiskais_apstākļa_vārds="Nē"/>
 		<Ending ID="954" StemChange="0" Ending="" StemID="1" LemmaEnding="954">
 			<Attributes Vārdšķira="Apstākļa vārds"/>
 		</Ending>
@@ -8281,7 +8281,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="51" Name="adverb-2" LemmaEnding="2907" Description="Apstākļa vārdi ar salīdzināmām pakāpēm (ātri, iesāņu)" DescriptionEN="Adverbs with degree of comparison (ātri, iesāņu)" AllowedGuessEndings="!">
-		<Attributes Vārdšķira="Apstākļa vārds"/>
+		<Attributes Vārdšķira="Apstākļa vārds" Prievārdiskais_apstākļa_vārds="Nē"/>
 		<Ending ID="2907" StemChange="38" Ending="" StemID="1" LemmaEnding="2907">
 			<Attributes Vārdšķira="Apstākļa vārds" Pakāpe="Pamata"/>
 		</Ending>
