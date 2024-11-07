@@ -1775,7 +1775,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="25" Name="card-pl1-ltg" LemmaEnding="492" Description="Pamata skaitļa vārdi daudzskaitlī, siev dz. galotne -ys (pīci)" AllowedGuessEndings="!">
-		<Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā"/>
+		<Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Morfotabulas_tips="Skaitļa vārds"/>
 		<Ending ID="492" StemChange="0" Ending="i" StemID="1" LemmaEnding="492">
 			<Attributes Dzimte="Vīriešu" Locījums="Nominatīvs"/>
 		</Ending>
@@ -1823,7 +1823,7 @@
 		</Ending>
 	</Paradigm>	
 	<Paradigm Stems="1" ID="42" Name="card-pl2-ltg" LemmaEnding="655" Description="Pamata skaitļa vārdi daudzskaitlī, siev dz. galotne -is (deveni)" AllowedGuessEndings="!">
-		<Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā"/>
+		<Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Morfotabulas_tips="Skaitļa vārds"/>
 		<Ending ID="655" StemChange="0" Ending="i" StemID="1" LemmaEnding="655">
 			<Attributes Dzimte="Vīriešu" Locījums="Nominatīvs"/>
 		</Ending>
@@ -1871,7 +1871,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="26" Name="ord-indef-ltg" LemmaEnding="508" Description="Kārtas skaitļa vārdi ar nenoteikto galotni (trešs)" AllowedGuessEndings="!">
-		<Attributes Vārdšķira="Skaitļa vārds" Skaitļa_vārda_tips="Kārtas" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā"/>
+		<Attributes Vārdšķira="Skaitļa vārds" Skaitļa_vārda_tips="Kārtas" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Morfotabulas_tips="Skaitļa vārds"/>
 		<Ending ID="508" StemChange="0" Ending="s" StemID="1" LemmaEnding="508">
 			<Attributes Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Locījums="Nominatīvs"/>
 		</Ending>
@@ -1958,7 +1958,7 @@
 		</Ending>-->
 	</Paradigm>
 	<Paradigm Stems="1" ID="27" Name="ord-def-ltg" LemmaEnding="536" Description="Kārtas skaitļa vārdi ar noteikto galotni (pyrmais)" AllowedGuessEndings="!">
-		<Attributes Vārdšķira="Skaitļa vārds" Skaitļa_vārda_tips="Kārtas" Uzbūve="Vienkāršs" Noteiktība="Noteiktā"/>
+		<Attributes Vārdšķira="Skaitļa vārds" Skaitļa_vārda_tips="Kārtas" Uzbūve="Vienkāršs" Noteiktība="Noteiktā" Morfotabulas_tips="Skaitļa vārds"/>
 		<Ending ID="536" StemChange="0" Ending="ais" StemID="1" LemmaEnding="536">
 			<Attributes Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Locījums="Nominatīvs"/>
 		</Ending>
@@ -2069,7 +2069,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="28" Name="card-i-ltg" LemmaEnding="572" Description="Neregulārie skaitļa vārdi (vīns, divi, treis)" AllowedGuessEndings="!">
-		<Attributes Vārdšķira="Skaitļa vārds" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Paradigmas_īpatnības="Nelieto lemmas galotni, bet tikai pielasītās izņēmumformas"/>
+		<Attributes Vārdšķira="Skaitļa vārds" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Paradigmas_īpatnības="Nelieto lemmas galotni, bet tikai pielasītās izņēmumformas" Morfotabulas_tips="Skaitļa vārds"/>
 		<Ending ID="572" StemChange="0" Ending="" StemID="1" LemmaEnding="572">
 			<Attributes/>
 		</Ending>
