@@ -4311,6 +4311,10 @@ public class MorphologyTest {
         assertTrue("Jābūt vairākām formām 'jebkas' tabulai no hardcoded", formas.size()>1);
     }
 
-
+    @Test
+    public void pustrīs() {
+        ArrayList<Wordform> formas = locītājs.generateInflectionsFromParadigm("pustrīs", 25);
+        assertTrue("Jābūt vairākām formām 'pustrīs' tabulai no hardcoded", formas.size()>1);
+    }
 
 }

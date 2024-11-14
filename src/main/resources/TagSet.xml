@@ -752,6 +752,7 @@
 <Attribute LV="Morfotabulas attēlošana" EN="Inflection table">
 	<Value LV="Nerādīt daudzskaitli" EN="Hide plural"/>
 	<Value LV="Nerādīt vienskaitli" EN="Hide singular"/>
+	<Value LV="Skaitlis nepiemīt" EN="No number"/>
 	<Value LV="Rādīt vokatīvu" EN="Show vocative"/>
 </Attribute>
 
