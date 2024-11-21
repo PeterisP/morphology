@@ -2301,7 +2301,7 @@
 			<Attributes/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="39" Name="foreign-ltg" LemmaEnding="601" Description="Vārdi svešvalodā (company, adaggio)" DescriptionEN="Foreign words (company, adaggio)" AllowedGuessEndings="aābcčdeēfgģhiījkķlļmnņopqrsštuūvwxyzž1234567890">
+	<Paradigm Stems="1" ID="39" Name="foreign-ltg" LemmaEnding="601" Description="Vārdi svešvalodā (company, allegro)" DescriptionEN="Foreign words (company, allegro)" AllowedGuessEndings="aābcčdeēfgģhiījkķlļmnņopqrsštuūvwxyzž1234567890">
 		<Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Vārds svešvalodā"/>
 		<Ending ID="601" StemChange="0" Ending="" StemID="1" LemmaEnding="601">
 			<Attributes/>
