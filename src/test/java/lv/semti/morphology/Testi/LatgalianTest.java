@@ -381,6 +381,12 @@ public class LatgalianTest {
 		List<Wordform> pīci = analyzer.generateInflectionsFromParadigm("pīci", 25);
 		assertInflection(pīci, pl_masc_gen, "pīcu");
 
+		List<Wordform> vairuoki = analyzer.generateInflectionsFromParadigm("vairuoki", 25);
+		assertInflection(vairuoki, pl_masc_gen, "vairuoku");
+
+		List<Wordform> deveni = analyzer.generateInflectionsFromParadigm("deveni", 42);
+		assertInflection(deveni, pl_masc_gen, "deveņu");
+
 		List<Wordform> trešs = analyzer.generateInflectionsFromParadigm("trešs", 26);
 		assertInflection(trešs, sg_masc_gen, "treša");
 		assertInflection(trešs, pl_masc_gen, "trešu");

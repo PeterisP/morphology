@@ -41,7 +41,7 @@
 		<VerbPrefix>na</VerbPrefix>
 	</Prefixes>
 	<Paradigm Stems="1" ID="1" Name="noun-1a-ltg" LemmaEnding="1" Description="Lietvārdi vīriešu dzimtē, 1. deklinācija, galotne -s (tāvs)" AllowedGuessEndings="">
-		<Attributes Vārdšķira="Lietvārds" Deklinācija="1" Dzimte="Vīriešu"/>
+		<Attributes Vārdšķira="Lietvārds" Deklinācija="1" Dzimte="Vīriešu" Morfotabulas_tips="Lietvārds"/>
 		<Ending ID="1" StemChange="0" Ending="s" StemID="1" LemmaEnding="1">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
 		</Ending>
@@ -83,7 +83,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="2" Name="noun-1b-ltg" LemmaEnding="14" Description="Lietvārdi vīriešu dzimtē, 1. deklinācija, galotne -ys (kuorklys)" AllowedGuessEndings="">
-		<Attributes Vārdšķira="Lietvārds" Deklinācija="1" Dzimte="Vīriešu"/>
+		<Attributes Vārdšķira="Lietvārds" Deklinācija="1" Dzimte="Vīriešu" Morfotabulas_tips="Lietvārds"/>
 		<Ending ID="14" StemChange="0" Ending="ys" StemID="1" LemmaEnding="14">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
 		</Ending>
@@ -125,7 +125,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="3" Name="noun-1c-ltg" LemmaEnding="27" Description="Lietvārdi vīriešu dzimtē, 1. deklinācija, galotne -š (ceļš)" AllowedGuessEndings="">
-		<Attributes Vārdšķira="Lietvārds" Deklinācija="1" Dzimte="Vīriešu"/>
+		<Attributes Vārdšķira="Lietvārds" Deklinācija="1" Dzimte="Vīriešu" Morfotabulas_tips="Lietvārds"/>
 		<Ending ID="27" StemChange="0" Ending="š" StemID="1" LemmaEnding="27">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
 		</Ending>
@@ -164,7 +164,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="4" Name="noun-2a-ltg" LemmaEnding="39" Description="Lietvārdi vīriešu dzimtē, 2. deklinācija, galotne -s (bruoļs)" AllowedGuessEndings="">
-		<Attributes Vārdšķira="Lietvārds" Deklinācija="2" Dzimte="Vīriešu"/>
+		<Attributes Vārdšķira="Lietvārds" Deklinācija="2" Dzimte="Vīriešu" Morfotabulas_tips="Lietvārds"/>
 		<Ending ID="39" StemChange="0" Ending="s" StemID="1" LemmaEnding="39">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
 		</Ending>
@@ -203,7 +203,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="5" Name="noun-2b-ltg" LemmaEnding="51" Description="Lietvārdi vīriešu dzimtē, 2. deklinācija, galotne -is (kakis)" AllowedGuessEndings="">
-		<Attributes Vārdšķira="Lietvārds" Deklinācija="3" Dzimte="Vīriešu"/>
+		<Attributes Vārdšķira="Lietvārds" Deklinācija="3" Dzimte="Vīriešu" Morfotabulas_tips="Lietvārds"/>
 		<Ending ID="51" StemChange="0" Ending="is" StemID="1" LemmaEnding="51">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
 		</Ending>
@@ -242,7 +242,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="6" Name="noun-3-ltg" LemmaEnding="63" Description="Lietvārdi vīriešu dzimtē, 3. deklinācija, galotne -us (Jezus)" AllowedGuessEndings="">
-		<Attributes Vārdšķira="Lietvārds" Deklinācija="3" Dzimte="Vīriešu"/>
+		<Attributes Vārdšķira="Lietvārds" Deklinācija="3" Dzimte="Vīriešu" Morfotabulas_tips="Lietvārds"/>
 		<Ending ID="63" StemChange="0" Ending="us" StemID="1" LemmaEnding="63">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
 		</Ending>
@@ -295,7 +295,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="7" Name="noun-4fa-ltg" LemmaEnding="79" Description="Lietvārdi sieviešu dzimtē, 4. deklinācija, galotne -a, vienskaitļa ģenitīvs -ys (muosa)" AllowedGuessEndings="">
-		<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Dzimte="Sieviešu"/>
+		<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Dzimte="Sieviešu" Morfotabulas_tips="Lietvārds"/>
 		<Ending ID="79" StemChange="0" Ending="a" StemID="1" LemmaEnding="79">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
 		</Ending>
@@ -343,7 +343,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="8" Name="noun-4fb-ltg" LemmaEnding="94" Description="Lietvārdi sieviešu dzimtē, 4. deklinācija, galotne -a, vienskaitļa ģenitīvs -is (kuoja)" AllowedGuessEndings="">
-		<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Dzimte="Sieviešu"/>
+		<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Dzimte="Sieviešu" Morfotabulas_tips="Lietvārds"/>
 		<Ending ID="94" StemChange="0" Ending="a" StemID="1" LemmaEnding="94">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
 		</Ending>
@@ -394,7 +394,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="9" Name="noun-5fa-ltg" LemmaEnding="110" Description="Lietvārdi sieviešu dzimtē, 5. deklinācija, galotne -e, ar miju (muote)" AllowedGuessEndings="">
-		<Attributes Vārdšķira="Lietvārds" Deklinācija="5" Dzimte="Sieviešu"/>
+		<Attributes Vārdšķira="Lietvārds" Deklinācija="5" Dzimte="Sieviešu" Morfotabulas_tips="Lietvārds"/>
 		<Ending ID="110" StemChange="0" Ending="e" StemID="1" LemmaEnding="110">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
 		</Ending>
@@ -451,7 +451,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="11" Name="noun-6a-ltg" LemmaEnding="141" Description="Lietvārdi sieviešu dzimtē, 6. deklinācija, galotne -s, ar miju (sirds)" AllowedGuessEndings="">
-		<Attributes Vārdšķira="Lietvārds" Deklinācija="6" Dzimte="Sieviešu"/>
+		<Attributes Vārdšķira="Lietvārds" Deklinācija="6" Dzimte="Sieviešu" Morfotabulas_tips="Lietvārds"/>
 		<Ending ID="141" StemChange="0" Ending="s" StemID="1" LemmaEnding="141">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
 		</Ending>
@@ -508,7 +508,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="12" Name="noun-6b-ltg" LemmaEnding="159" Description="Lietvārdi sieviešu dzimtē, 6. deklinācija, galotne -s, bez mijas (zūss)" AllowedGuessEndings="">
-		<Attributes Vārdšķira="Lietvārds" Deklinācija="6" Dzimte="Sieviešu"/>
+		<Attributes Vārdšķira="Lietvārds" Deklinācija="6" Dzimte="Sieviešu" Morfotabulas_tips="Lietvārds"/>
 		<Ending ID="159" StemChange="0" Ending="s" StemID="1" LemmaEnding="159">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
 		</Ending>
@@ -565,7 +565,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="13" Name="noun-r1-ltg" LemmaEnding="177" Description="Atgriezeniskie lietvārdi ar -šonuos (mozguošonuos)" AllowedGuessEndings="">
-		<Attributes Vārdšķira="Lietvārds" Deklinācija="Nepiemīt" Dzimte="Sieviešu"/>
+		<Attributes Vārdšķira="Lietvārds" Deklinācija="Nepiemīt" Dzimte="Sieviešu" Morfotabulas_tips="Lietvārds"/>
 		<Ending ID="177" StemChange="0" Ending="šonuos" StemID="1" LemmaEnding="177">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
 		</Ending>
@@ -592,7 +592,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="15" Name="noun-1d-ltg"  LemmaEnding="184" Description="Lietvārdi vīriešu dzimtē, 1. deklinācija, galotne -s, ģenitīva paralēlformas (ols)" AllowedGuessEndings="">
-		<Attributes Vārdšķira="Lietvārds" Deklinācija="1" Dzimte="Vīriešu"/>
+		<Attributes Vārdšķira="Lietvārds" Deklinācija="1" Dzimte="Vīriešu" Morfotabulas_tips="Lietvārds"/>
 		<Ending ID="184" StemChange="0" Ending="s" StemID="1"  LemmaEnding="184">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
 		</Ending>
@@ -637,7 +637,7 @@
 		</Ending>
 	</Paradigm>	
     <Paradigm Stems="1" ID="16" Name="noun-4ma-ltg" LemmaEnding="198" Description="Lietvārdi vīriešu dzimtē, 4. deklinācija, galotne -a, vienskaitļa ģenitīvs -ys (puika)" AllowedGuessEndings="">
-		<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Dzimte="Vīriešu"/>
+		<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Dzimte="Vīriešu" Morfotabulas_tips="Lietvārds"/>
 		<Ending ID="198" StemChange="0" Ending="a" StemID="1" LemmaEnding="198">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
 		</Ending>
@@ -688,7 +688,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="17" Name="noun-5fc-ltg" LemmaEnding="214" Description="Lietvārdi sieviešu dzimtē, 5. deklinācija, galotne -e, bez mijas (šaļte)" AllowedGuessEndings="">
-		<Attributes Vārdšķira="Lietvārds" Deklinācija="5" Dzimte="Sieviešu"/>
+		<Attributes Vārdšķira="Lietvārds" Deklinācija="5" Dzimte="Sieviešu" Morfotabulas_tips="Lietvārds"/>
 		<Ending ID="214" StemChange="0" Ending="e" StemID="1" LemmaEnding="214">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
 		</Ending>
@@ -745,7 +745,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="18" Name="noun-5mc-ltg" LemmaEnding="230" Description="Lietvārdi vīriešu dzimtē, 5. deklinācija, galotne -e, bez mijas (tēte)" AllowedGuessEndings="">
-		<Attributes Vārdšķira="Lietvārds" Deklinācija="5" Dzimte="Vīriešu"/>
+		<Attributes Vārdšķira="Lietvārds" Deklinācija="5" Dzimte="Vīriešu" Morfotabulas_tips="Lietvārds"/>
 		<Ending ID="230" StemChange="0" Ending="e" StemID="1" LemmaEnding="230">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
 		</Ending>
@@ -806,7 +806,7 @@
 	</Paradigm>
 	<!-- Iespējams, ka šo būs jāizņem, ja latgaliešu grupa sapratīs, ka nav piemēru -->
 	<Paradigm Stems="1" ID="19" Name="noun-5ma-ltg" LemmaEnding="247" Description="Lietvārdi vīriešu dzimtē, 5. deklinācija, galotne -e, ar miju (uzvārdi?)" AllowedGuessEndings="">
-		<Attributes Vārdšķira="Lietvārds" Deklinācija="5" Dzimte="Vīriešu"/>
+		<Attributes Vārdšķira="Lietvārds" Deklinācija="5" Dzimte="Vīriešu" Morfotabulas_tips="Lietvārds"/>
 		<Ending ID="247" StemChange="0" Ending="e" StemID="1" LemmaEnding="247">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
 		</Ending>
@@ -867,7 +867,7 @@
 	</Paradigm>
 	
 	<Paradigm Stems="1" ID="30" Name="noun-4mb-ltg" LemmaEnding="575" Description="Lietvārdi vīriešu dzimtē, 4. deklinācija, galotne -a, vienskaitļa ģenitīvs -is (bļuzņa)" AllowedGuessEndings="">
-		<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Dzimte="Vīriešu"/>
+		<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Dzimte="Vīriešu" Morfotabulas_tips="Lietvārds"/>
 		<Ending ID="575" StemChange="0" Ending="a" StemID="1" LemmaEnding="575">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
 		</Ending>
@@ -924,7 +924,7 @@
 
 	<!-- Te sākas īpašības vārdi -->
 	<Paradigm Stems="1" ID="20" Name="adj-1-ltg" LemmaEnding="272" Description="Īpašības vārdi, galotne -s, siev. dz. ģen. galotne -ys (lobs)" AllowedGuessEndings="">
-		<Attributes Vārdšķira="Īpašības vārds"/>
+		<Attributes Vārdšķira="Īpašības vārds" Morfotabulas_tips="Īpašības vārds"/>
 		<Ending ID="272" StemChange="103" Ending="s" StemID="1" LemmaEnding="272">
 			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Nominatīvs"/>
 		</Ending>
@@ -1077,7 +1077,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="21" Name="adj-2-ltg" LemmaEnding="322" Description="Īpašības vārdi, galotne -ys (agrys)" AllowedGuessEndings="">
-		<Attributes Vārdšķira="Īpašības vārds"/>
+		<Attributes Vārdšķira="Īpašības vārds" Morfotabulas_tips="Īpašības vārds"/>
 		<Ending ID="322" StemChange="103" Ending="ys" StemID="1" LemmaEnding="322">
 			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Nominatīvs"/>
 		</Ending>
@@ -1231,7 +1231,7 @@
 	</Paradigm>
 	<Paradigm Stems="1" ID="22" Name="adj-3-ltg" LemmaEnding="372" Description="Īpašības vārdi, galotne -is, ar burtu miju locījumos (slapnis)" AllowedGuessEndings="nlgk">
 		<!-- FIXME šeit var samazināt galotņu skaitu, uztaisot vēl vienu miju tām rindām, kas šobrīd ir 107 + 108. -->
-		<Attributes Vārdšķira="Īpašības vārds"/>
+		<Attributes Vārdšķira="Īpašības vārds" Morfotabulas_tips="Īpašības vārds"/>
 		<Ending ID="372" StemChange="0" Ending="is" StemID="1" LemmaEnding="372">
 			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Nominatīvs" Pakāpe="Pamata"/>
 		</Ending>
@@ -1541,7 +1541,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="23" Name="adj-4-ltg" LemmaEnding="469" Description="Īpašības vārdi, izskaņas -iņs, -ine, (dzeļziņs, kūcine)" AllowedGuessEndings="ņn">
-		<Attributes Vārdšķira="Īpašības vārds" Noteiktība="Nenoteiktā"/>
+		<Attributes Vārdšķira="Īpašības vārds" Noteiktība="Nenoteiktā" Morfotabulas_tips="Īpašības vārds"/>
 		<Ending ID="469" StemChange="0" Ending="s" StemID="1" LemmaEnding="469">
 			<Attributes Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Locījums="Nominatīvs"/>
 		</Ending>
@@ -1611,7 +1611,7 @@
 		</Ending> -->
 	</Paradigm>
 	<Paradigm Stems="1" ID="43" Name="adj-5-ltg" LemmaEnding="604" Description="Īpašības vārdi, galotne -š, siev. dz. ģen. galotne -is (zaļš)" AllowedGuessEndings="">
-		<Attributes Vārdšķira="Īpašības vārds"/>
+		<Attributes Vārdšķira="Īpašības vārds" Morfotabulas_tips="Īpašības vārds"/>
 		<Ending ID="604" StemChange="0" Ending="š" StemID="1" LemmaEnding="604">
 			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Nominatīvs"/>
 		</Ending>
@@ -1766,6 +1766,160 @@
 			<Attributes Vārdšķira="Apstākļa vārds"/>
 		</Ending>
 	</Paradigm>
+	<Paradigm Stems="1" ID="45" Name="adj-6-ltg" LemmaEnding="1139" Description="Īpašības vārdi, galotne -s, siev. dz. ģen. galotne -is (parnejs)" AllowedGuessEndings="j">
+		<Attributes Vārdšķira="Īpašības vārds" Morfotabulas_tips="Īpašības vārds"/>
+		<Ending ID="1139" StemChange="103" Ending="s" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Nominatīvs"/>
+		</Ending>
+		<Ending ID="1140" StemChange="103" Ending="a" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Ģenitīvs"/>
+		</Ending>
+		<Ending ID="1141" StemChange="103" Ending="am" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Datīvs"/>
+		</Ending>
+		<Ending ID="1142" StemChange="103" Ending="u" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Akuzatīvs"/>
+		</Ending>
+		<Ending ID="1143" StemChange="103" Ending="ā" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Lokatīvs"/>
+		</Ending>
+		<Ending ID="1145" StemChange="104" Ending="i" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Nominatīvs"/>
+		</Ending>
+		<Ending ID="1146" StemChange="103" Ending="u" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Ģenitīvs"/>
+		</Ending>
+		<Ending ID="1147" StemChange="104" Ending="im" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Datīvs"/>
+		</Ending>
+		<Ending ID="1148" StemChange="103" Ending="us" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Akuzatīvs"/>
+		</Ending>
+		<Ending ID="1149" StemChange="103" Ending="ūs" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Lokatīvs"/>
+		</Ending>
+		<Ending ID="1150" StemChange="103" Ending="ais" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Noteiktā" Dzimte="Vīriešu" Locījums="Nominatīvs"/>
+		</Ending>
+		<Ending ID="1151" StemChange="103" Ending="uo" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Noteiktā" Dzimte="Vīriešu" Locījums="Ģenitīvs"/>
+		</Ending>
+		<Ending ID="1152" StemChange="105" Ending="jam" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Noteiktā" Dzimte="Vīriešu" Locījums="Datīvs"/>
+		</Ending>
+		<Ending ID="1153" StemChange="103" Ending="ū" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Noteiktā" Dzimte="Vīriešu" Locījums="Akuzatīvs"/>
+		</Ending>
+		<Ending ID="1154" StemChange="105" Ending="jā" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Noteiktā" Dzimte="Vīriešu" Locījums="Lokatīvs"/>
+		</Ending>
+		<Ending ID="1155" StemChange="103" Ending="ais" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Noteiktā" Dzimte="Vīriešu" Locījums="Vokatīvs"/>
+		</Ending>
+		<Ending ID="1156" StemChange="104" Ending="ī" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Noteiktā" Dzimte="Vīriešu" Locījums="Nominatīvs"/>
+		</Ending>
+		<Ending ID="1157" StemChange="103" Ending="ūs" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Noteiktā" Dzimte="Vīriešu" Locījums="Ģenitīvs"/>
+		</Ending>
+		<Ending ID="1158" StemChange="105" Ending="jim" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Noteiktā" Dzimte="Vīriešu" Locījums="Datīvs"/>
+		</Ending>
+		<Ending ID="1159" StemChange="103" Ending="ūs" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Noteiktā" Dzimte="Vīriešu" Locījums="Akuzatīvs"/>
+		</Ending>
+		<Ending ID="1160" StemChange="105" Ending="jūs" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Noteiktā" Dzimte="Vīriešu" Locījums="Lokatīvs"/>
+		</Ending>
+		<Ending ID="1161" StemChange="104" Ending="ī" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Noteiktā" Dzimte="Vīriešu" Locījums="Vokatīvs"/>
+		</Ending>
+		<Ending ID="1162" StemChange="103" Ending="a" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Nenoteiktā" Dzimte="Sieviešu" Locījums="Nominatīvs"/>
+		</Ending>
+		<Ending ID="1163" StemChange="104" Ending="is" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Nenoteiktā" Dzimte="Sieviešu" Locījums="Ģenitīvs" Valodas_normēšana="Ieteicams"/>
+		</Ending>
+		<Ending ID="1164" StemChange="103" Ending="as" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Nenoteiktā" Dzimte="Sieviešu" Locījums="Ģenitīvs"/>
+		</Ending>
+		<Ending ID="1165" StemChange="103" Ending="ai" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Nenoteiktā" Dzimte="Sieviešu" Locījums="Datīvs"/>
+		</Ending>
+		<Ending ID="1166" StemChange="103" Ending="u" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Nenoteiktā" Dzimte="Sieviešu" Locījums="Akuzatīvs"/>
+		</Ending>
+		<Ending ID="1167" StemChange="103" Ending="ā" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Nenoteiktā" Dzimte="Sieviešu" Locījums="Lokatīvs"/>
+		</Ending>
+		<Ending ID="1168" StemChange="104" Ending="is" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Nenoteiktā" Dzimte="Sieviešu" Locījums="Nominatīvs" Valodas_normēšana="Ieteicams"/>
+		</Ending>
+		<Ending ID="1169" StemChange="103" Ending="as" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Nenoteiktā" Dzimte="Sieviešu" Locījums="Nominatīvs"/>
+		</Ending>
+		<Ending ID="1170" StemChange="103" Ending="u" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Nenoteiktā" Dzimte="Sieviešu" Locījums="Ģenitīvs"/>
+		</Ending>
+		<Ending ID="1171" StemChange="103" Ending="om" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Nenoteiktā" Dzimte="Sieviešu" Locījums="Datīvs"/>
+		</Ending>
+		<Ending ID="1172" StemChange="104" Ending="is" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Nenoteiktā" Dzimte="Sieviešu" Locījums="Akuzatīvs" Valodas_normēšana="Ieteicams"/>
+		</Ending>
+		<Ending ID="1173" StemChange="103" Ending="as" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Nenoteiktā" Dzimte="Sieviešu" Locījums="Akuzatīvs"/>
+		</Ending>
+		<Ending ID="1174" StemChange="103" Ending="uos" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Nenoteiktā" Dzimte="Sieviešu" Locījums="Lokatīvs"/>
+		</Ending>
+		<Ending ID="1175" StemChange="103" Ending="uo" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Noteiktā" Dzimte="Sieviešu" Locījums="Nominatīvs"/>
+		</Ending>
+		<Ending ID="1176" StemChange="103" Ending="uos" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Noteiktā" Dzimte="Sieviešu" Locījums="Ģenitīvs"/>
+		</Ending>
+		<Ending ID="1177" StemChange="105" Ending="jai" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Noteiktā" Dzimte="Sieviešu" Locījums="Datīvs"/>
+		</Ending>
+		<Ending ID="1178" StemChange="103" Ending="ū" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Noteiktā" Dzimte="Sieviešu" Locījums="Akuzatīvs"/>
+		</Ending>
+		<Ending ID="1179" StemChange="105" Ending="jā" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Noteiktā" Dzimte="Sieviešu" Locījums="Lokatīvs"/>
+		</Ending>
+		<Ending ID="1180" StemChange="103" Ending="uo" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Noteiktā" Dzimte="Sieviešu" Locījums="Vokatīvs"/>
+		</Ending>
+		<Ending ID="1181" StemChange="103" Ending="uos" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Noteiktā" Dzimte="Sieviešu" Locījums="Nominatīvs"/>
+		</Ending>
+		<Ending ID="1182" StemChange="103" Ending="ūs" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Noteiktā" Dzimte="Sieviešu" Locījums="Ģenitīvs"/>
+		</Ending>
+		<Ending ID="1183" StemChange="105" Ending="jom" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Noteiktā" Dzimte="Sieviešu" Locījums="Datīvs"/>
+		</Ending>
+		<Ending ID="1184" StemChange="103" Ending="uos" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Noteiktā" Dzimte="Sieviešu" Locījums="Akuzatīvs"/>
+		</Ending>
+		<Ending ID="1185" StemChange="105" Ending="juos" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Noteiktā" Dzimte="Sieviešu" Locījums="Lokatīvs"/>
+		</Ending>
+		<Ending ID="1186" StemChange="103" Ending="uos" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Noteiktā" Dzimte="Sieviešu" Locījums="Vokatīvs"/>
+		</Ending>
+		<Ending ID="1187" StemChange="100" Ending="i" StemID="1" LemmaEnding="1187">
+			<Attributes Vārdšķira="Apstākļa vārds" Pakāpe="Pamata" Valodas_normēšana="Ieteicams"/>
+		</Ending>
+		<Ending ID="1188" StemChange="0" Ending="ai" StemID="1" LemmaEnding="1188">
+			<Attributes Vārdšķira="Apstākļa vārds" Pakāpe="Pamata"/>
+		</Ending>
+		<Ending ID="1189" StemChange="106" Ending="" StemID="1" LemmaEnding="1187">
+			<Attributes Vārdšķira="Apstākļa vārds"/>
+		</Ending>
+	</Paradigm>
+
 
 	<!-- Te sākas skaitļa vārdi -->
 	<Paradigm Stems="1" ID="24" Name="card-infl-ltg" LemmaEnding="491" Description="Nelokāmi skaitļa vārdi (divarpus, pīcpadsmit)" AllowedGuessEndings="!">
@@ -1774,21 +1928,21 @@
 			<Attributes/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="25" Name="card-pl1-ltg" LemmaEnding="492" Description="Pamata skaitļa vārdi daudzskaitlī, siev dz. galotne -ys (pīci)" AllowedGuessEndings="!">
-		<Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā"/>
+	<Paradigm Stems="1" ID="25" Name="card-pl1-ltg" LemmaEnding="492" Description="Pamata skaitļa vārdi daudzskaitlī, siev dz. galotne -ys, bez burtu mijas locījumos (pīci)" AllowedGuessEndings="!">
+		<Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Morfotabulas_tips="Skaitļa vārds"/>
 		<Ending ID="492" StemChange="0" Ending="i" StemID="1" LemmaEnding="492">
 			<Attributes Dzimte="Vīriešu" Locījums="Nominatīvs"/>
 		</Ending>
-		<Ending ID="493" StemChange="107" Ending="u" StemID="1" LemmaEnding="492">
+		<Ending ID="493" StemChange="0" Ending="u" StemID="1" LemmaEnding="492">
 			<Attributes Dzimte="Vīriešu" Locījums="Ģenitīvs"/>
 		</Ending>
 		<Ending ID="494" StemChange="0" Ending="im" StemID="1" LemmaEnding="492">
 			<Attributes Dzimte="Vīriešu" Locījums="Datīvs"/>
 		</Ending>
-		<Ending ID="495" StemChange="107" Ending="us" StemID="1" LemmaEnding="492">
+		<Ending ID="495" StemChange="0" Ending="us" StemID="1" LemmaEnding="492">
 			<Attributes Dzimte="Vīriešu" Locījums="Akuzatīvs"/>
 		</Ending>
-		<Ending ID="496" StemChange="107" Ending="ūs" StemID="1" LemmaEnding="492">
+		<Ending ID="496" StemChange="0" Ending="ūs" StemID="1" LemmaEnding="492">
 			<Attributes Dzimte="Vīriešu" Locījums="Lokatīvs"/>
 		</Ending>
 		<Ending ID="497" StemChange="0" Ending="i" StemID="1" LemmaEnding="492">
@@ -1797,33 +1951,33 @@
 		<Ending ID="498" StemChange="0" Ending="ys" StemID="1" LemmaEnding="492">
 			<Attributes Dzimte="Sieviešu" Locījums="Nominatīvs" Valodas_normēšana="Ieteicams"/>
 		</Ending>
-		<Ending ID="499" StemChange="107" Ending="as" StemID="1" LemmaEnding="492">
+		<Ending ID="499" StemChange="0" Ending="as" StemID="1" LemmaEnding="492">
 			<Attributes Dzimte="Sieviešu" Locījums="Nominatīvs"/>
 		</Ending>
-		<Ending ID="500" StemChange="107" Ending="u" StemID="1" LemmaEnding="492">
+		<Ending ID="500" StemChange="0" Ending="u" StemID="1" LemmaEnding="492">
 			<Attributes Dzimte="Sieviešu" Locījums="Ģenitīvs"/>
 		</Ending>
-		<Ending ID="501" StemChange="107" Ending="om" StemID="1" LemmaEnding="492">
+		<Ending ID="501" StemChange="0" Ending="om" StemID="1" LemmaEnding="492">
 			<Attributes Dzimte="Sieviešu" Locījums="Datīvs"/>
 		</Ending>
 		<Ending ID="502" StemChange="0" Ending="ys" StemID="1" LemmaEnding="492">
 			<Attributes Dzimte="Sieviešu" Locījums="Akuzatīvs" Valodas_normēšana="Ieteicams"/>
 		</Ending>
-		<Ending ID="503" StemChange="107" Ending="as" StemID="1" LemmaEnding="492">
+		<Ending ID="503" StemChange="0" Ending="as" StemID="1" LemmaEnding="492">
 			<Attributes Dzimte="Sieviešu" Locījums="Akuzatīvs"/>
 		</Ending>
-		<Ending ID="504" StemChange="107" Ending="uos" StemID="1" LemmaEnding="492">
+		<Ending ID="504" StemChange="0" Ending="uos" StemID="1" LemmaEnding="492">
 			<Attributes Dzimte="Sieviešu" Locījums="Lokatīvs"/>
 		</Ending>
 		<Ending ID="506" StemChange="0" Ending="ys" StemID="1" LemmaEnding="492">
 			<Attributes Dzimte="Sieviešu" Locījums="Vokatīvs" Valodas_normēšana="Ieteicams"/>
 		</Ending>
-		<Ending ID="507" StemChange="107" Ending="as" StemID="1" LemmaEnding="492">
+		<Ending ID="507" StemChange="0" Ending="as" StemID="1" LemmaEnding="492">
 			<Attributes Dzimte="Sieviešu" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>	
-	<Paradigm Stems="1" ID="42" Name="card-pl2-ltg" LemmaEnding="655" Description="Pamata skaitļa vārdi daudzskaitlī, siev dz. galotne -is (deveni)" AllowedGuessEndings="!">
-		<Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā"/>
+	<Paradigm Stems="1" ID="42" Name="card-pl2-ltg" LemmaEnding="655" Description="Pamata skaitļa vārdi daudzskaitlī, siev dz. galotne -is, ar burtu miju locījumos (deveni)" AllowedGuessEndings="!">
+		<Attributes Vārdšķira="Skaitļa vārds" Skaitlis="Daudzskaitlis" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Morfotabulas_tips="Skaitļa vārds"/>
 		<Ending ID="655" StemChange="0" Ending="i" StemID="1" LemmaEnding="655">
 			<Attributes Dzimte="Vīriešu" Locījums="Nominatīvs"/>
 		</Ending>
@@ -1871,7 +2025,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="26" Name="ord-indef-ltg" LemmaEnding="508" Description="Kārtas skaitļa vārdi ar nenoteikto galotni (trešs)" AllowedGuessEndings="!">
-		<Attributes Vārdšķira="Skaitļa vārds" Skaitļa_vārda_tips="Kārtas" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā"/>
+		<Attributes Vārdšķira="Skaitļa vārds" Skaitļa_vārda_tips="Kārtas" Uzbūve="Vienkāršs" Noteiktība="Nenoteiktā" Morfotabulas_tips="Skaitļa vārds"/>
 		<Ending ID="508" StemChange="0" Ending="s" StemID="1" LemmaEnding="508">
 			<Attributes Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Locījums="Nominatīvs"/>
 		</Ending>
@@ -1958,7 +2112,7 @@
 		</Ending>-->
 	</Paradigm>
 	<Paradigm Stems="1" ID="27" Name="ord-def-ltg" LemmaEnding="536" Description="Kārtas skaitļa vārdi ar noteikto galotni (pyrmais)" AllowedGuessEndings="!">
-		<Attributes Vārdšķira="Skaitļa vārds" Skaitļa_vārda_tips="Kārtas" Uzbūve="Vienkāršs" Noteiktība="Noteiktā"/>
+		<Attributes Vārdšķira="Skaitļa vārds" Skaitļa_vārda_tips="Kārtas" Uzbūve="Vienkāršs" Noteiktība="Noteiktā" Morfotabulas_tips="Skaitļa vārds"/>
 		<Ending ID="536" StemChange="0" Ending="ais" StemID="1" LemmaEnding="536">
 			<Attributes Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Locījums="Nominatīvs"/>
 		</Ending>
@@ -2069,7 +2223,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="28" Name="card-i-ltg" LemmaEnding="572" Description="Neregulārie skaitļa vārdi (vīns, divi, treis)" AllowedGuessEndings="!">
-		<Attributes Vārdšķira="Skaitļa vārds" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Paradigmas_īpatnības="Nelieto lemmas galotni, bet tikai pielasītās izņēmumformas"/>
+		<Attributes Vārdšķira="Skaitļa vārds" Skaitļa_vārda_tips="Pamata" Uzbūve="Vienkāršs" Paradigmas_īpatnības="Nelieto lemmas galotni, bet tikai pielasītās izņēmumformas" Morfotabulas_tips="Skaitļa vārds"/>
 		<Ending ID="572" StemChange="0" Ending="" StemID="1" LemmaEnding="572">
 			<Attributes/>
 		</Ending>
@@ -2077,7 +2231,7 @@
 
 	<!-- Izņēmumformu vārdšķiras -->
 	<Paradigm Stems="1" ID="29" Name="pron-ltg" LemmaEnding="573" Description="Vietniekvārdi (es, tu)" AllowedGuessEndings="!">
-		<Attributes Vārdšķira="Vietniekvārds" Noliegums="Nē" Paradigmas_īpatnības="Nelieto lemmas galotni, bet tikai pielasītās izņēmumformas" Dzimte="Nepiemīt" Persona="Nepiemīt" Skaitlis="Nepiemīt"/>
+		<Attributes Vārdšķira="Vietniekvārds" Noliegums="Nē" Paradigmas_īpatnības="Nelieto lemmas galotni, bet tikai pielasītās izņēmumformas" Dzimte="Nepiemīt" Persona="Nepiemīt" Skaitlis="Nepiemīt" Morfotabulas_tips="Lietvārds"/>
 		<Ending ID="573" StemChange="0" Ending="" StemID="1" LemmaEnding="573">
 			<Attributes/>
 		</Ending>
@@ -2094,17 +2248,17 @@
 	<Paradigm Stems="1" ID="31" Name="adverb-1-ltg" LemmaEnding="592" Description="Apstākļa vārdi bez salīdzināmām pakāpēm (tī, šūgod)" AllowedGuessEndings="">
 		<Attributes Vārdšķira="Apstākļa vārds" Pakāpe="Nepiemīt"/>
 		<Ending ID="592" StemChange="0" Ending="" StemID="1" LemmaEnding="592">
-			<Attributes Vārdšķira="Apstākļa vārds"/>
+			<Attributes Vārdšķira="Apstākļa vārds" Prievārdiskais_apstākļa_vārds="Nē"/>
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="32" Name="adverb-2a-ltg" LemmaEnding="593" Description="Apstākļa vārdi ar salīdzināmām pakāpēm, bez burtu mijas (cīši, vīglai, dreiž)" AllowedGuessEndings="">
-		<Attributes Vārdšķira="Apstākļa vārds"/>
+		<Attributes Vārdšķira="Apstākļa vārds" Prievārdiskais_apstākļa_vārds="Nē"/>
 		<Ending ID="593" StemChange="109" Ending="" StemID="1" LemmaEnding="593">
 			<Attributes Vārdšķira="Apstākļa vārds" Pakāpe="Pamata"/>
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="33" Name="adverb-2b-ltg" LemmaEnding="594" Description="Apstākļa vārdi ar salīdzināmām pakāpēm, ar burtu miju (slapni, taišni)" AllowedGuessEndings="nlgk">
-		<Attributes Vārdšķira="Apstākļa vārds"/>
+		<Attributes Vārdšķira="Apstākļa vārds" Prievārdiskais_apstākļa_vārds="Nē"/>
 		<Ending ID="594" StemChange="0" Ending="i" StemID="1" LemmaEnding="594">
 			<Attributes Vārdšķira="Apstākļa vārds" Pakāpe="Pamata"/>
 		</Ending>
@@ -2169,7 +2323,7 @@
 	<!-- Darbības vārdi -->
 
 	<Paradigm Stems="1" ID="44" Name="verb-2-ltg" LemmaEnding="670" Description="Darbības vārdi, 2. konjugācija (dūmuot, teireit, auklēt)" DescriptionEN="Verbs, 2nd conjugation (dūmuot, teireit, auklēt)" AllowedGuessEndings="oiē">
-		<Attributes Vārdšķira="Darbības vārds" Konjugācija="2" Atgriezeniskums="Nē" Noliegums="Nē" Darbības_vārda_tips="Patstāvīgs darbības vārds"/>
+		<Attributes Vārdšķira="Darbības vārds" Konjugācija="2" Atgriezeniskums="Nē" Noliegums="Nē" Darbības_vārda_tips="Patstāvīgs darbības vārds" Morfotabulas_tips="Darbības vārds"/>
 		<Ending ID="670" StemChange="0" Ending="t" StemID="1" LemmaEnding="670">
 			<Attributes Skaitlis="Nepiemīt" Izteiksme="Nenoteiksme" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
 		</Ending>

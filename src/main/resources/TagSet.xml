@@ -279,6 +279,7 @@
 </Attribute>
 <Attribute LV="Prievārdiskais apstākļa vārds" EN="Prepositional adverb" PartOfSpeech="Apstākļa vārds" MarkupPos="2">
 	<Value LV="Jā" EN="Yes" Tag="y"/>
+	<Value LV="Nē" EN="No" Tag="n"/>
 </Attribute>
 <Attribute LV="Apstākļa vārda semantiskais tips" EN="Adverb type" PartOfSpeech="Apstākļa vārds">
 	<Value LV="Mēra" EN="Quantitative" Tag="q"/>
