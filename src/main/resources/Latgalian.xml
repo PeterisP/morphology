@@ -1541,7 +1541,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="23" Name="adj-4-ltg" LemmaEnding="469" Description="Īpašības vārdi, izskaņas -iņs, -ine, (dzeļziņs, kūcine)" AllowedGuessEndings="ņn">
-		<Attributes Vārdšķira="Īpašības vārds" Noteiktība="Nenoteiktā" Morfotabulas_tips="Īpašības vārds"/>
+		<Attributes Vārdšķira="Īpašības vārds" Noteiktība="Nenoteiktā" Morfotabulas_tips="Skaitļa vārds"/>
 		<Ending ID="469" StemChange="0" Ending="s" StemID="1" LemmaEnding="469">
 			<Attributes Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Locījums="Nominatīvs"/>
 		</Ending>
