@@ -610,21 +610,22 @@ public class LatgalianTest {
 		assertInflection(auklēt, deb, "juoauklej");
 
 		AttributeValues cond = new AttributeValues();
-		deb.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
-		deb.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Conditional);
-		assertInflection(dūmuot, deb, "dūmuotu");
-		assertInflection(teireit, deb, "teireitu");
-		assertInflection(auklēt, deb, "auklātu");
+		cond.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+		cond.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Conditional);
+		cond.addAttribute(AttributeNames.i_Person, "3");
+		assertInflection(dūmuot, cond, "dūmuotu");
+		assertInflection(teireit, cond, "teireitu");
+		assertInflection(auklēt, cond, "auklātu");
 
-		AttributeValues quot_pres_nogen_sg = new AttributeValues();
-		quot_pres_nogen_sg.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
-		quot_pres_nogen_sg.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Quotative);
-		quot_pres_nogen_sg.addAttribute(AttributeNames.i_Tense, AttributeNames.v_Present);
-		quot_pres_nogen_sg.addAttribute(AttributeNames.i_Gender, AttributeNames.v_NA);
-		quot_pres_nogen_sg.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
-		assertInflection(dūmuot, quot_pres_nogen_sg, "dūmojūt");
-		assertInflection(teireit, quot_pres_nogen_sg, "teirejūt");
-		assertInflection(auklēt, quot_pres_nogen_sg, "auklejūt");
+		AttributeValues quot_pres_nogen_nonum = new AttributeValues();
+		quot_pres_nogen_nonum.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+		quot_pres_nogen_nonum.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Quotative);
+		quot_pres_nogen_nonum.addAttribute(AttributeNames.i_Tense, AttributeNames.v_Present);
+		quot_pres_nogen_nonum.addAttribute(AttributeNames.i_Gender, AttributeNames.v_NA);
+		quot_pres_nogen_nonum.addAttribute(AttributeNames.i_Number, AttributeNames.v_NA);
+		assertInflection(dūmuot, quot_pres_nogen_nonum, "dūmojūt");
+		assertInflection(teireit, quot_pres_nogen_nonum, "teirejūt");
+		assertInflection(auklēt, quot_pres_nogen_nonum, "auklejūt");
 
 		AttributeValues quot_fut_fem_pl = new AttributeValues();
 		quot_fut_fem_pl.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
