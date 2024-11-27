@@ -2403,7 +2403,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Izteiksme="Vēlējuma" Persona="2" Laiks="Nepiemīt" Kārta="Darāmā"/>
 		</Ending>
 		<Ending ID="1111" StemChange="114" Ending="tu" StemID="1" LemmaEnding="670">
-			<Attributes Skaitlis="Nepiemīt" Izteiksme="Vēlējuma" Persona="3" Laiks="Nepiemīt" Kārta="Darāmā"/>
+			<Attributes Skaitlis="Nepiemīt" Izteiksme="Vēlējuma" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Darāmā"/>
 		</Ending>
 
 		<Ending ID="691" StemChange="110" Ending="jūt" StemID="1" LemmaEnding="670">

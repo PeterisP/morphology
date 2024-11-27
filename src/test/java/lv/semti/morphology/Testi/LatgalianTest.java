@@ -612,7 +612,7 @@ public class LatgalianTest {
 		AttributeValues cond = new AttributeValues();
 		cond.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
 		cond.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Conditional);
-		cond.addAttribute(AttributeNames.i_Person, "3");
+		cond.addAttribute(AttributeNames.i_Person, "Nepiemīt");
 		assertInflection(dūmuot, cond, "dūmuotu");
 		assertInflection(teireit, cond, "teireitu");
 		assertInflection(auklēt, cond, "auklātu");
