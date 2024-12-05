@@ -211,15 +211,15 @@ public abstract class Mijas {
 						varianti.add(new Variants(celms));
 					break;
 				case 8: // -ams -āms 3. konjugācijai bezmiju gadījumam, un arī mēs/jūs formas
-					if (celms.endsWith("inā")) varianti.add(new Variants(celms)); // nav else, jo piemēram vārdam "mainās" arī ir beigās -inās, bet tam vajag -īties likumu;
+					if (celms.endsWith("inā") || celms.endsWith("sargā")) varianti.add(new Variants(celms)); // nav else, jo piemēram vārdam "mainās" arī ir beigās -inās, bet tam vajag -īties likumu;
 					if (celms.endsWith("ā")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"ī"));
 					if (celms.endsWith("a")) {
 						varianti.add(new Variants(celms.substring(0,celms.length()-1)+"ē"));
-						if (!celms.endsWith("ina")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"ā"));
+						if (!celms.endsWith("ina") && !celms.endsWith("sarga")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"ā"));
 					}
 					break;
 				case 9: // 3. konjugācija 3. pers. tagadne bez mijas
-					if (celms.endsWith("ina")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"ā")); // nav else, jo piemēram vārdam "jāmaina" arī ir beigās -ina, bet tam vajag -a nevis -ina likumu;
+					if (celms.endsWith("ina") || celms.endsWith("sarga")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"ā")); // nav else, jo piemēram vārdam "jāmaina" arī ir beigās -ina, bet tam vajag -a nevis -ina likumu;
 					if (celms.endsWith("a")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"ī"));
 					else {
 						varianti.add(new Variants(celms+"ē")); // if (celms.endsWith("i")) varianti.add(celms.substring(0,celms.length()-1)+"ē");
@@ -322,11 +322,11 @@ public abstract class Mijas {
 						pakāpe = AttributeNames.v_Superlative;
 						celms = celms.substring(3,celms.length());
 					}
-					if (celms.endsWith("inā")) varianti.add(new Variants(celms, AttributeNames.i_Degree, pakāpe)); // nav else, jo piemēram vārdam "mainās" arī ir beigās -inās, bet tam vajag -īties likumu;
+					if (celms.endsWith("inā") || celms.endsWith("sargā")) varianti.add(new Variants(celms, AttributeNames.i_Degree, pakāpe)); // nav else, jo piemēram vārdam "mainās" arī ir beigās -inās, bet tam vajag -īties likumu;
 					if (celms.endsWith("ā")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"ī", AttributeNames.i_Degree, pakāpe));
 					else if (celms.endsWith("a")) {
 						varianti.add(new Variants(celms.substring(0,celms.length()-1)+"ē", AttributeNames.i_Degree, pakāpe));
-						if (!celms.endsWith("ina")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"ā", AttributeNames.i_Degree, pakāpe));
+						if (!celms.endsWith("ina") && !celms.endsWith("sarga")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"ā", AttributeNames.i_Degree, pakāpe));
 					}
 					break;
 				case 26: //  dv. 3. konjugācijas miju gadījuma formas - otrās personas tagadne, pavēles izteiksme
@@ -964,7 +964,7 @@ public abstract class Mijas {
 						varianti.add(new Variants(celms));
 					break;
 				case 2: //  dv. 3. konjugācijas tagadne, kas noņem celma pēdējo burtu
-					if (celms.endsWith("ī") || celms.endsWith("inā"))
+					if (celms.endsWith("ī") || celms.endsWith("inā") || celms.endsWith("sargā"))
 						varianti.add(new Variants(celms.substring(0,celms.length()-1), "Garā", "ā"));
 					else varianti.add(new Variants(celms.substring(0,celms.length()-1)));
 					break;
@@ -1006,7 +1006,7 @@ public abstract class Mijas {
 					} else varianti.add(new Variants(celms));
 					break;
 				case 8: // -ams -āms 3. konjugācijai bezmiju gadījums
-					if (celms.endsWith("inā")) varianti.add(new Variants(celms, "Garā", "ā"));
+					if (celms.endsWith("inā") || celms.endsWith("sargā")) varianti.add(new Variants(celms, "Garā", "ā"));
 					else if (celms.endsWith("ī")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"ā", "Garā", "ā"));
 					else if (celms.endsWith("ē")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"a"));
 					else if (celms.endsWith("ā")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"a"));
@@ -1084,25 +1084,25 @@ public abstract class Mijas {
 						varianti.add(new Variants(celms.substring(0,celms.length()-2)+"us"));
 					break;
 				case 24: //  analoģiski 2, bet ar pārākajām / vispārākajām pakāpēm
-					if (celms.endsWith("ī") || celms.endsWith("inā"))
+					if (celms.endsWith("ī") || celms.endsWith("inā") || celms.endsWith("sargā"))
 						varianti.add(new Variants(celms.substring(0,celms.length()-1), AttributeNames.i_Degree, AttributeNames.v_Comparative));
 					else varianti.add(new Variants(celms.substring(0,celms.length()-1), AttributeNames.i_Degree, AttributeNames.v_Comparative));
 
 					if (pieliktVisPārākoPak) {
-						if (celms.endsWith("ī") || celms.endsWith("inā"))
+						if (celms.endsWith("ī") || celms.endsWith("inā") || celms.endsWith("sargā"))
 							varianti.add(new Variants("vis" + celms.substring(0,celms.length()-1), AttributeNames.i_Degree, AttributeNames.v_Superlative));
 						else varianti.add(new Variants("vis" + celms.substring(0,celms.length()-1), AttributeNames.i_Degree, AttributeNames.v_Superlative));
 					}
 					break;
 				case 25: //  analoģiski 8, bet ar pārākajām / vispārākajām pakāpēm. DRY :( :(
-					if (celms.endsWith("inā")) varianti.add(new Variants(celms, AttributeNames.i_Degree, AttributeNames.v_Comparative));
+					if (celms.endsWith("inā") || celms.endsWith("sargā")) varianti.add(new Variants(celms, AttributeNames.i_Degree, AttributeNames.v_Comparative));
 					else if (celms.endsWith("ī")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"ā", AttributeNames.i_Degree, AttributeNames.v_Comparative));
 					else if (celms.endsWith("ē")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"a", AttributeNames.i_Degree, AttributeNames.v_Comparative));
 					else if (celms.endsWith("ā")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"a", AttributeNames.i_Degree, AttributeNames.v_Comparative));
 					else varianti.add(new Variants(celms, AttributeNames.i_Degree, AttributeNames.v_Comparative));
 
 					if (pieliktVisPārākoPak) {
-						if (celms.endsWith("inā")) varianti.add(new Variants("vis" + celms, AttributeNames.i_Degree, AttributeNames.v_Superlative));
+						if (celms.endsWith("inā") || celms.endsWith("sargā")) varianti.add(new Variants("vis" + celms, AttributeNames.i_Degree, AttributeNames.v_Superlative));
 						else if (celms.endsWith("ī")) varianti.add(new Variants("vis" + celms.substring(0,celms.length()-1)+"ā", AttributeNames.i_Degree, AttributeNames.v_Superlative));
 						else if (celms.endsWith("ē")) varianti.add(new Variants("vis" + celms.substring(0,celms.length()-1)+"a", AttributeNames.i_Degree, AttributeNames.v_Superlative));
 						else if (celms.endsWith("ā")) varianti.add(new Variants("vis" + celms.substring(0,celms.length()-1)+"a", AttributeNames.i_Degree, AttributeNames.v_Superlative));

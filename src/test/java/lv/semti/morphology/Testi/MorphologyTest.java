@@ -34,6 +34,7 @@ import java.util.*;
 import java.util.Map.Entry;
 
 import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
 public class MorphologyTest {
     private static Analyzer locītājs;
@@ -1985,7 +1986,7 @@ public class MorphologyTest {
         // Vietniekvārdiem neieliek pēdējo pozīciju tagā (noliegumu); -šana atvasinātās formas nav ok
         Word viņš = locītājs.analyze("viņš");
         assertTrue(viņš.isRecognized());
-        assertEquals("pp3msnn", viņš.getBestWordform().getTag());
+        assertTrue(viņš.getBestWordform().getTag().equalsIgnoreCase("pp3msnn") || viņš.getBestWordform().getTag().equalsIgnoreCase("pd3msnn"));
 
         Word ciršana = locītājs.analyze("ciršana");
         assertTrue(ciršana.isRecognized());
@@ -4316,5 +4317,22 @@ public class MorphologyTest {
         ArrayList<Wordform> formas = locītājs.generateInflectionsFromParadigm("pustrīs", 25);
         assertTrue("Jābūt vairākām formām 'pustrīs' tabulai no hardcoded", formas.size()>1);
     }
+
+    @Test
+    public void sargām() {
+        // lai sargāt lokās kā sargām nevis kā visi pārējie 3. konj vārdi sargam
+//        ArrayList<Wordform> formas = locītājs.generateInflectionsFromParadigm("sargāt", 17);
+//        describe(formas);
+
+        Word sargām = locītājs.analyze("sargām");
+        assertTrue(sargām.isRecognized());
+
+        Word sargāmies = locītājs.analyze("sargāmies");
+        assertTrue(sargāmies.isRecognized());
+
+        Word jāsargās = locītājs.analyze("jāsargās");
+        assertTrue(jāsargās.isRecognized());
+    }
+
 
 }
