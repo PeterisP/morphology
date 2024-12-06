@@ -8352,5 +8352,11 @@
 			<Attributes/>
 		</Ending>
 	</Paradigm>
+	<Paradigm Stems="1" ID="58" Name="residual" LemmaEnding="2944" Description="Citi reziduāļi (€, A1, 221B)" DescriptionEN="Other residuals (€, A1, 221B)" AllowedGuessEndings="!">
+		<Attributes Vārdšķira="Reziduālis" Reziduāļa_tips="Cits"/>
+		<Ending ID="2944" StemChange="0" Ending="" StemID="1" LemmaEnding="2944">
+			<Attributes/>
+		</Ending>
+	</Paradigm>
 
 </Morphology>

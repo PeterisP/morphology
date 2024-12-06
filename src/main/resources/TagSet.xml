@@ -388,6 +388,7 @@
 	<Value LV="Drukas kļūda" EN="Typo" Tag="t"/>
 	<Value LV="Skaitlis cipariem" EN="Numeral" Tag="n"/>
 	<Value LV="Kārtas skaitlis cipariem" EN="Ordinal" Tag="o"/>
+	<Value LV="Apzīmējums ar burtiem un cipariem" EN="Alphanumeric designation" Tag="d"/>
 	<Value LV="URI" EN="URI" Tag="u"/>
 	<Value LV="Cits" EN="Other" Tag="x"/>
 </Attribute>
