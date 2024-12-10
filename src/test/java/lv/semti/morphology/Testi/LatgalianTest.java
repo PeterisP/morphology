@@ -350,17 +350,33 @@ public class LatgalianTest {
 		sg_gen_fem_pos_indef.addAttribute(AttributeNames.i_Degree, AttributeNames.v_Positive);
 		sg_gen_fem_pos_indef.addAttribute(AttributeNames.i_Definiteness, AttributeNames.v_Indefinite);
 
+		AttributeValues sg_gen_fem_comp_indef = new AttributeValues();
+		sg_gen_fem_comp_indef.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adjective);
+		sg_gen_fem_comp_indef.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+		sg_gen_fem_comp_indef.addAttribute(AttributeNames.i_Case, AttributeNames.v_Genitive);
+		sg_gen_fem_comp_indef.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Feminine);
+		sg_gen_fem_comp_indef.addAttribute(AttributeNames.i_Degree, AttributeNames.v_Comparative);
+		sg_gen_fem_comp_indef.addAttribute(AttributeNames.i_Definiteness, AttributeNames.v_Indefinite);
+
 		List<Wordform> lobs = analyzer.generateInflectionsFromParadigm("lobs", 20);
 		assertInflection(lobs, sg_nom_masc_comp, "lobuoks");
 		assertInflectionMultipleStrong(lobs, sg_gen_fem_pos_indef, new HashSet<String>(){{ add("lobys"); add("lobas");}});
+		assertInflectionMultipleStrong(lobs, sg_gen_fem_comp_indef, new HashSet<String>(){{ add("lobuokys"); add("lobuokas");}});
 
 		List<Wordform> agrys = analyzer.generateInflectionsFromParadigm("agrys", 21);
 		assertInflection(agrys, sg_nom_masc_comp, "agruokys");
 		assertInflectionMultipleStrong(agrys, sg_gen_fem_pos_indef, new HashSet<String>(){{ add("agrys"); add("agras");}});
+		assertInflectionMultipleStrong(agrys, sg_gen_fem_comp_indef, new HashSet<String>(){{ add("agruokys"); add("agruokas");}});
 
 		List<Wordform> slapnis = analyzer.generateInflectionsFromParadigm("slapnis", 22);
 		assertInflection(slapnis, sg_nom_masc_comp, "slapņuoks");
 		assertInflectionMultipleStrong(slapnis, sg_gen_fem_pos_indef, new HashSet<String>(){{ add("slapnis"); add("slapņas");}});
+		assertInflectionMultipleStrong(slapnis, sg_gen_fem_comp_indef, new HashSet<String>(){{ add("slapņuokys"); add("slapņuokas");}});
+
+		List<Wordform> malejs = analyzer.generateInflectionsFromParadigm("malejs", 45);
+		assertInflection(malejs, sg_nom_masc_comp, "malejuoks");
+		assertInflectionMultipleStrong(malejs, sg_gen_fem_pos_indef, new HashSet<String>(){{ add("malejis"); add("malejas");}});
+		assertInflectionMultipleStrong(malejs, sg_gen_fem_comp_indef, new HashSet<String>(){{ add("malejuokys"); add("malejuokas");}});
 	}
 
 	@Test

@@ -1381,7 +1381,7 @@ public abstract class Mijas {
 						varianti.add(new Variants("vysu" + celms + "uoka", AttributeNames.i_Degree, AttributeNames.v_Superlative));
 					}
 					break;
-				case 106: // līdzīgi 'case 13' - apstākļa vārdiem pieliekam -uok- un vys- / vysu-
+				case 106: // līdzīgi 'case 13' - apstākļa vārdiem pieliekam -uok- un vys- / vysu- - būtībā 103, bet bez pamatformas
 					if (!celms.endsWith("uok")) {
 						varianti.add(new Variants(celms + "uok", AttributeNames.i_Degree, AttributeNames.v_Comparative));
 						if (pieliktVisPārākoPak) {

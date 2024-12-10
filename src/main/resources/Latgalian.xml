@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Morphology revision="${project.version}" licence="Copyright 2019 Institute of Mathematics and Computer Science, University of Latvia. This file is part of the morphology project at https://github.com/PeterisP/morphology This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program. If not, see http://www.gnu.org/licenses/.">
-<!-- Pa vidu brīvi idi, izdzēstu 2. konjugācijas galotņu dēļ: 1115–1120 -->
+<!-- Pa vidu brīvi idi, izdzēstu 2. konjugācijas galotņu dēļ: 1118–1120 -->
 	<Corpus FileName="Latgalian_minicore.xml" Type="core"/>
 	<Corpus FileName="tezaurs_latgalian.json" Type="core"/>
 	<Prefixes>
@@ -1838,8 +1838,11 @@
 		<Ending ID="1162" StemChange="103" Ending="a" StemID="1" LemmaEnding="1139">
 			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Nenoteiktā" Dzimte="Sieviešu" Locījums="Nominatīvs"/>
 		</Ending>
-		<Ending ID="1163" StemChange="104" Ending="is" StemID="1" LemmaEnding="1139">
-			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Nenoteiktā" Dzimte="Sieviešu" Locījums="Ģenitīvs" Valodas_normēšana="Ieteicams"/>
+		<Ending ID="1163" StemChange="0" Ending="is" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Nenoteiktā" Dzimte="Sieviešu" Locījums="Ģenitīvs" Pakāpe="Pamata" Valodas_normēšana="Ieteicams"/>
+		</Ending>
+		<Ending ID="1115" StemChange="106" Ending="ys" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Nenoteiktā" Dzimte="Sieviešu" Locījums="Ģenitīvs"  Pakāpe="Pārākā" Valodas_normēšana="Ieteicams"/>
 		</Ending>
 		<Ending ID="1164" StemChange="103" Ending="as" StemID="1" LemmaEnding="1139">
 			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Nenoteiktā" Dzimte="Sieviešu" Locījums="Ģenitīvs"/>
@@ -1853,8 +1856,11 @@
 		<Ending ID="1167" StemChange="103" Ending="ā" StemID="1" LemmaEnding="1139">
 			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Nenoteiktā" Dzimte="Sieviešu" Locījums="Lokatīvs"/>
 		</Ending>
-		<Ending ID="1168" StemChange="104" Ending="is" StemID="1" LemmaEnding="1139">
-			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Nenoteiktā" Dzimte="Sieviešu" Locījums="Nominatīvs" Valodas_normēšana="Ieteicams"/>
+		<Ending ID="1168" StemChange="0" Ending="is" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Nenoteiktā" Dzimte="Sieviešu" Locījums="Nominatīvs"  Pakāpe="Pamata" Valodas_normēšana="Ieteicams"/>
+		</Ending>
+		<Ending ID="1116" StemChange="106" Ending="ys" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Nenoteiktā" Dzimte="Sieviešu" Locījums="Nominatīvs"  Pakāpe="Pārākā" Valodas_normēšana="Ieteicams"/>
 		</Ending>
 		<Ending ID="1169" StemChange="103" Ending="as" StemID="1" LemmaEnding="1139">
 			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Nenoteiktā" Dzimte="Sieviešu" Locījums="Nominatīvs"/>
@@ -1865,8 +1871,11 @@
 		<Ending ID="1171" StemChange="103" Ending="om" StemID="1" LemmaEnding="1139">
 			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Nenoteiktā" Dzimte="Sieviešu" Locījums="Datīvs"/>
 		</Ending>
-		<Ending ID="1172" StemChange="104" Ending="is" StemID="1" LemmaEnding="1139">
-			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Nenoteiktā" Dzimte="Sieviešu" Locījums="Akuzatīvs" Valodas_normēšana="Ieteicams"/>
+		<Ending ID="1172" StemChange="0" Ending="is" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Nenoteiktā" Dzimte="Sieviešu" Locījums="Akuzatīvs"  Pakāpe="Pamata" Valodas_normēšana="Ieteicams"/>
+		</Ending>
+		<Ending ID="1117" StemChange="104" Ending="ys" StemID="1" LemmaEnding="1139">
+			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Nenoteiktā" Dzimte="Sieviešu" Locījums="Akuzatīvs"  Pakāpe="Pārākā" Valodas_normēšana="Ieteicams"/>
 		</Ending>
 		<Ending ID="1173" StemChange="103" Ending="as" StemID="1" LemmaEnding="1139">
 			<Attributes Skaitlis="Daudzskaitlis" Noteiktība="Nenoteiktā" Dzimte="Sieviešu" Locījums="Akuzatīvs"/>
