@@ -377,6 +377,9 @@ public class LatgalianTest {
 		assertInflection(malejs, sg_nom_masc_comp, "malejuoks");
 		assertInflectionMultipleStrong(malejs, sg_gen_fem_pos_indef, new HashSet<String>(){{ add("malejis"); add("malejas");}});
 		assertInflectionMultipleStrong(malejs, sg_gen_fem_comp_indef, new HashSet<String>(){{ add("malejuokys"); add("malejuokas");}});
+		for (Wordform wf : malejs) {
+			assertNotEquals(wf.getToken(), "malejys");
+		}
 	}
 
 	@Test
