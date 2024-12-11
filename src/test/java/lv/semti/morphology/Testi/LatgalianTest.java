@@ -547,10 +547,13 @@ public class LatgalianTest {
 	}
 
 	@Test
-	public void ticket_138() {
-		ArrayList<Wordform> formas = analyzer.generateInflectionsFromParadigm("es", 29);
-		describe(formas);
-		assertTrue("Jābūt vairākām formām 'es' tabulai no hardcoded", formas.size()>4);
+	public void pronounSpecforms() { //ticket_138
+		ArrayList<Wordform> esFormas = analyzer.generateInflectionsFromParadigm("es", 29);
+		//describe(esFormas);
+		assertTrue("Jābūt vairākām formām 'es' tabulai no hardcoded", esFormas.size()>4);
+		ArrayList<Wordform> nazkasFormas = analyzer.generateInflectionsFromParadigm("nazkas", 29);
+		describe(nazkasFormas);
+		assertTrue("Jābūt vairākām formām 'nazkas' tabulai no hardcoded", nazkasFormas.size()>0);
 	}
 
 	@Test
