@@ -1081,9 +1081,9 @@ public class Analyzer extends Lexicon {
             	continue;
             if (!lexeme.getParadigm().isMatchingWeak(AttributeNames.i_PartOfSpeech, hardcoded.getValue(AttributeNames.i_PartOfSpeech)))
                 continue;
-			if (hardcoded.isMatchingStrong(AttributeNames.i_Noliegums, AttributeNames.v_Yes) && !lemma.startsWith(this.NEGATION_PREFIX))
+			if (hardcoded.isMatchingStrong(AttributeNames.i_Noliegums, AttributeNames.v_Yes) && !hardcoded.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Pronoun) && !lemma.startsWith(this.NEGATION_PREFIX))
 				continue;
-			if (hardcoded.isMatchingStrong(AttributeNames.i_Noliegums, AttributeNames.v_No) && lemma.startsWith(this.NEGATION_PREFIX))
+			if (hardcoded.isMatchingStrong(AttributeNames.i_Noliegums, AttributeNames.v_No) && !hardcoded.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Pronoun) && lemma.startsWith(this.NEGATION_PREFIX))
 				continue;
 			if (!hardcoded.isMatchingStrong(AttributeNames.i_ExtraForm, AttributeNames.v_Yes)) {
 				Wordform override = null;
