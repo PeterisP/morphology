@@ -561,6 +561,7 @@ public class LatgalianTest {
 		List<Wordform> dūmuot = analyzer.generateInflectionsFromParadigm("dūmuot", 44);
 		List<Wordform> teireit = analyzer.generateInflectionsFromParadigm("teireit", 44);
 		List<Wordform> auklēt = analyzer.generateInflectionsFromParadigm("auklēt", 44);
+		List<Wordform> mērcēt = analyzer.generateInflectionsFromParadigm("mērcēt", 46);
 
 		// Tagadne: 110. mija
 		AttributeValues ind_pres_1_sg = new AttributeValues();
@@ -572,6 +573,7 @@ public class LatgalianTest {
 		assertInflection(dūmuot, ind_pres_1_sg, "dūmoju");
 		assertInflection(teireit, ind_pres_1_sg, "teireju");
 		assertInflection(auklēt, ind_pres_1_sg, "aukleju");
+		assertInflection(mērcēt, ind_pres_1_sg, "mērceju");
 
 		// Pagātne: 111. un 112. mija
 
@@ -584,6 +586,7 @@ public class LatgalianTest {
 		assertInflectionMultipleWeak(dūmuot, ind_past_1_sg, new HashSet<String>(){{ add("dūmuoju"); add("dūmovu");}});
 		assertInflection(teireit, ind_past_1_sg, "teireju");
 		assertInflection(auklēt, ind_past_1_sg, "auklieju");
+		assertInflection(mērcēt, ind_past_1_sg, "mērcieju");
 
 		AttributeValues ind_past_3 = new AttributeValues();
 		ind_past_3.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
@@ -593,6 +596,7 @@ public class LatgalianTest {
 		assertInflectionMultipleWeak(dūmuot, ind_past_3, new HashSet<String>(){{ add("dūmuoja"); add("dūmova");}});
 		assertInflection(teireit, ind_past_3, "teireja");
 		assertInflection(auklēt, ind_past_3, "auklēja");
+		assertInflection(mērcēt, ind_past_3, "mērcēja");
 
 		// Nākotne: 113. un 0. mija
 
@@ -605,6 +609,7 @@ public class LatgalianTest {
 		assertInflection(dūmuot, inf_fut_1_sg, "dūmuošu");
 		assertInflection(teireit, inf_fut_1_sg, "teireišu");
 		assertInflection(auklēt, inf_fut_1_sg, "aukliešu");
+		assertInflection(mērcēt, inf_fut_1_sg, "mērciešu");
 
 		AttributeValues ind_fut_3 = new AttributeValues();
 		ind_fut_3.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
@@ -614,6 +619,7 @@ public class LatgalianTest {
 		assertInflection(dūmuot, ind_fut_3, "dūmuos");
 		assertInflection(teireit, ind_fut_3, "teireis");
 		assertInflection(auklēt, ind_fut_3, "auklēs");
+		assertInflection(mērcēt, ind_fut_3, "mērcēs");
 
 		// Citas izteiksmes
 
@@ -623,6 +629,8 @@ public class LatgalianTest {
 		assertInflectionMultipleWeak(dūmuot, imp, new HashSet<String>(){{ add("dūmoj"); add("dūmojit");}});
 		assertInflectionMultipleWeak(teireit, imp, new HashSet<String>(){{ add("teirej"); add("teirejit");}});
 		assertInflectionMultipleWeak(auklēt, imp, new HashSet<String>(){{ add("auklej"); add("auklejit");}});
+		assertInflectionMultipleWeak(auklēt, imp, new HashSet<String>(){{ add("auklej"); add("auklejit");}});
+		assertInflectionMultipleWeak(mērcēt, imp, new HashSet<String>(){{ add("mērcej"); add("mērcejit");}});
 
 		AttributeValues deb = new AttributeValues();
 		deb.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
@@ -630,6 +638,7 @@ public class LatgalianTest {
 		assertInflection(dūmuot, deb, "juodūmoj");
 		assertInflection(teireit, deb, "juoteirej");
 		assertInflection(auklēt, deb, "juoauklej");
+		assertInflection(mērcēt, deb, "juomērcej");
 
 		AttributeValues cond = new AttributeValues();
 		cond.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
@@ -638,6 +647,7 @@ public class LatgalianTest {
 		assertInflection(dūmuot, cond, "dūmuotu");
 		assertInflection(teireit, cond, "teireitu");
 		assertInflection(auklēt, cond, "auklātu");
+		assertInflection(mērcēt, cond, "mārcātu");
 
 		AttributeValues quot_pres_nogen_nonum = new AttributeValues();
 		quot_pres_nogen_nonum.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
@@ -648,6 +658,7 @@ public class LatgalianTest {
 		assertInflection(dūmuot, quot_pres_nogen_nonum, "dūmojūt");
 		assertInflection(teireit, quot_pres_nogen_nonum, "teirejūt");
 		assertInflection(auklēt, quot_pres_nogen_nonum, "auklejūt");
+		assertInflection(mērcēt, quot_pres_nogen_nonum, "mērcejūt");
 
 		AttributeValues quot_fut_fem_pl = new AttributeValues();
 		quot_fut_fem_pl.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
@@ -658,6 +669,7 @@ public class LatgalianTest {
 		assertInflection(dūmuot, quot_fut_fem_pl, "dūmuoškūšys");
 		assertInflection(teireit, quot_fut_fem_pl, "teireiškūšys");
 		assertInflection(auklēt, quot_fut_fem_pl, "auklieškūšys");
+		assertInflection(mērcēt, quot_fut_fem_pl, "mērcieškūšys");
 
 	}
 
