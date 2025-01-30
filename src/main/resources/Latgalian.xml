@@ -2404,7 +2404,7 @@
 		<Ending ID="689" StemChange="114" Ending="tum" StemID="1" LemmaEnding="670">
 			<Attributes Skaitlis="Vienskaitlis" Izteiksme="Vēlējuma" Persona="1" Laiks="Nepiemīt" Kārta="Darāmā"/>
 		</Ending>
-		<Ending ID="1108" StemChange="114" Ending="tim" StemID="1" LemmaEnding="670">
+		<Ending ID="1108" StemChange="0" Ending="tim" StemID="1" LemmaEnding="670">
 			<Attributes Skaitlis="Vienskaitlis" Izteiksme="Vēlējuma" Persona="2" Laiks="Nepiemīt" Kārta="Darāmā"/>
 		</Ending>
 		<Ending ID="1109" StemChange="114" Ending="tumem" StemID="1" LemmaEnding="670">
@@ -3653,7 +3653,7 @@
 			<Attributes Skaitlis="Nepiemīt" Noteiktība="Nepiemīt" Izteiksme="Divdabis" Dzimte="Nepiemīt" Locījums="Nepiemīt" Lokāmība="Nelokāms" Pakāpe="Nepiemīt" Laiks="Tagadne" Kārta="Ciešamā"/>
 		</Ending>--> <!-- izņemts kā neproduktīvi rets -->
 
-		<Ending ID="1122" StemChange="110" Ending="ūt" StemID="1" LemmaEnding="670">
+		<Ending ID="1122" StemChange="110" Ending="jūt" StemID="1" LemmaEnding="670">
 			<Attributes Skaitlis="Nepiemīt" Noteiktība="Nepiemīt" Izteiksme="Divdabis" Dzimte="Nepiemīt" Locījums="Nepiemīt" Lokāmība="Nelokāms" Pakāpe="Nepiemīt" Laiks="Tagadne" Kārta="Darāmā"/>
 		</Ending>
 		<!--<Ending ID="1123" StemChange="113" Ending="šūt" StemID="1" LemmaEnding="670">
@@ -3777,7 +3777,7 @@
 		<Ending ID="1210" StemChange="160" Ending="tum" StemID="1" LemmaEnding="1190">
 			<Attributes Skaitlis="Vienskaitlis" Izteiksme="Vēlējuma" Persona="1" Laiks="Nepiemīt" Kārta="Darāmā"/>
 		</Ending>
-		<Ending ID="1211" StemChange="160" Ending="tim" StemID="1" LemmaEnding="1190">
+		<Ending ID="1211" StemChange="0" Ending="tim" StemID="1" LemmaEnding="1190">
 			<Attributes Skaitlis="Vienskaitlis" Izteiksme="Vēlējuma" Persona="2" Laiks="Nepiemīt" Kārta="Darāmā"/>
 		</Ending>
 		<Ending ID="1212" StemChange="160" Ending="tumem" StemID="1" LemmaEnding="1190">
@@ -5026,7 +5026,7 @@
 			<Attributes Skaitlis="Nepiemīt" Noteiktība="Nepiemīt" Izteiksme="Divdabis" Dzimte="Nepiemīt" Locījums="Nepiemīt" Lokāmība="Nelokāms" Pakāpe="Nepiemīt" Laiks="Tagadne" Kārta="Ciešamā"/>
 		</Ending>--> <!-- izņemts kā neproduktīvi rets -->
 
-		<Ending ID="1624" StemChange="110" Ending="ūt" StemID="1" LemmaEnding="1190">
+		<Ending ID="1624" StemChange="110" Ending="jūt" StemID="1" LemmaEnding="1190">
 			<Attributes Skaitlis="Nepiemīt" Noteiktība="Nepiemīt" Izteiksme="Divdabis" Dzimte="Nepiemīt" Locījums="Nepiemīt" Lokāmība="Nelokāms" Pakāpe="Nepiemīt" Laiks="Tagadne" Kārta="Darāmā"/>
 		</Ending>
 		<!--<Ending ID="1625" StemChange="113" Ending="šūt" StemID="1" LemmaEnding="1190">

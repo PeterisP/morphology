@@ -649,6 +649,17 @@ public class LatgalianTest {
 		assertInflection(auklēt, cond, "auklātu");
 		assertInflection(mērcēt, cond, "mārcātu");
 
+		// Nikole 2025-01-30 saka, ka šie atšķiras no pārējās vēlējuma izteiksmes
+		AttributeValues cond_2pers_sg = new AttributeValues();
+		cond_2pers_sg.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+		cond_2pers_sg.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Conditional);
+		cond_2pers_sg.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+		cond_2pers_sg.addAttribute(AttributeNames.i_Person, "2");
+		assertInflection(dūmuot, cond_2pers_sg, "dūmuotim");
+		assertInflection(teireit, cond_2pers_sg, "teireitim");
+		assertInflection(auklēt, cond_2pers_sg, "auklētim");
+		assertInflection(mērcēt, cond_2pers_sg, "mērcētim");
+
 		AttributeValues quot_pres_nogen_nonum = new AttributeValues();
 		quot_pres_nogen_nonum.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
 		quot_pres_nogen_nonum.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Quotative);
