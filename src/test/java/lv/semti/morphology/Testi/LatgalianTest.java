@@ -728,6 +728,11 @@ public class LatgalianTest {
 		assertTrue(negativeWithPred.isRecognized());
 	}
 
-
+	@Test
+	public void šys() {
+		ArrayList<Wordform> formas = analyzer.generateInflectionsFromParadigm("šys", 29);
+		describe(formas);
+		assertTrue("Jābūt vairākām formām 'šys' tabulai no hardcoded", formas.size()>4);
+	}
 }
 
