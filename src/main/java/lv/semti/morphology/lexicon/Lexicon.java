@@ -73,7 +73,7 @@ public class Lexicon {
 	protected static Pattern p_allcaps = Pattern.compile("(\\p{Lu})*");
 	protected static Pattern p_doublesurname = Pattern.compile("\\p{Lu}.+-\\p{Lu}.+");
 
-	protected Multimap<String, Lexeme> hardcodedForms = ArrayListMultimap.create();
+	protected Multimap<Integer, Lexeme> hardcodedForms = ArrayListMultimap.create();
 	public Trie automats = new Trie();
 
 	public boolean guessAllParadigms = false; // Attempt guessing words even in paradigms where AllowedGuessEndings are marked with !

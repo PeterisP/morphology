@@ -857,6 +857,14 @@ public class Analyzer extends Lexicon {
             return new ArrayList<Wordform>();
         }
         l.addAttributes(lemmaAttributes);
+		// Workaround priekš tā, ka vajag leksēmas ID lai atrastu atbilstošās papildformas
+		ArrayList<Lexeme> matching_lexemes = p.getLexemesByStem().get(0).get(l.getStem(0));
+		for (Lexeme l2: matching_lexemes) {
+			// FIXME - salūzīs, ja būs vairākas homoformas vienā paradigmā
+			if (l != l2) {
+				l.setID(l2.getID());
+			}
+		}
         ArrayList<Wordform> result = generateInflections(l, lemma);
 		filterInflectionPossibilities(false, null, result);
         p.removeLexeme(l); // To not pollute the in-memory lexicon - FIXME - this temporary lexeme does have temporary pollution which could have multithreading race conditions
@@ -891,6 +899,7 @@ public class Analyzer extends Lexicon {
 
 		Ending e = p.getLemmaEnding();
 		String normallemma = stem1 + e.getEnding();
+
 		Lexeme l = this.createLexeme(normallemma, e, "temp");
 		l.addAttribute(AttributeNames.i_Lemma, lemma);
 		l.addAttributes(lemmaAttributes);
@@ -901,6 +910,14 @@ public class Analyzer extends Lexicon {
 		if (p.getStems()>1) {
 			l.setStem(1, stem2);
 			l.setStem(2, stem3);
+		}
+		// Workaround priekš tā, ka vajag leksēmas ID lai atrastu atbilstošās papildformas
+		ArrayList<Lexeme> matching_lexemes = p.getLexemesByStem().get(0).get(l.getStem(0));
+		for (Lexeme l2: matching_lexemes) {
+			// FIXME - salūzīs, ja būs vairākas homoformas vienā paradigmā
+			if (l != l2) {
+				l.setID(l2.getID());
+			}
 		}
 		ArrayList<Wordform> result = generateInflections(l, lemma);
 		filterInflectionPossibilities(false, null, result);
@@ -1070,17 +1087,15 @@ public class Analyzer extends Lexicon {
 			inflections =  new ArrayList<Wordform>(1); // Šai gadījumā mēs nepieliekam "galotņu vārdformu nemaz
 		}
 		// Pārbaudam, vai šai lemmai nav kāds hardcoded formas override (piemēram, kā formai viņš *ej -> viņš iet)
-		Collection<Lexeme> hc_forms = this.hardcodedForms.get(lemma);
-		if (hc_forms.isEmpty() && lemma.startsWith(this.NEGATION_PREFIX) && (lemma.endsWith("t") || lemma.endsWith("ties"))) {
-			hc_forms = this.hardcodedForms.get(lemma.substring(2));
-		}
+		Collection<Lexeme> hc_forms = this.hardcodedForms.get(lexeme.getID());
+//		if (hc_forms.isEmpty() && lemma.startsWith(this.NEGATION_PREFIX) && (lemma.endsWith("t") || lemma.endsWith("ties"))) {
+//			hc_forms = this.hardcodedForms.get(lemma.substring(2));
+//		}
         for (Lexeme formLexeme : hc_forms) {
             Ending ending = formLexeme.getParadigm().getLemmaEnding();
             Wordform hardcoded = new Wordform(formLexeme.getStem(0), formLexeme, ending);
             if (!hardcoded.isMatchingWeak(AttributeNames.i_Generate, AttributeNames.v_Yes))
             	continue;
-            if (!lexeme.getParadigm().isMatchingWeak(AttributeNames.i_PartOfSpeech, hardcoded.getValue(AttributeNames.i_PartOfSpeech)))
-                continue;
 			if (hardcoded.isMatchingStrong(AttributeNames.i_Noliegums, AttributeNames.v_Yes) && !hardcoded.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Pronoun) && !lemma.startsWith(this.NEGATION_PREFIX))
 				continue;
 			if (hardcoded.isMatchingStrong(AttributeNames.i_Noliegums, AttributeNames.v_No) && !hardcoded.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Pronoun) && lemma.startsWith(this.NEGATION_PREFIX))

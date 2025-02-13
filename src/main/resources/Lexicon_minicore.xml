@@ -532,30 +532,6 @@
     <Lexeme Stem1="¤">
       <Attributes Vārdšķira="Reziduālis"/>
     </Lexeme>
-    <Lexeme Stem1="neiet">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Jā" Pamatforma="iet" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nav">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="3" Noliegums="Jā" Pamatforma="būt" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="nav">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Jā" Pamatforma="būt" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="esu">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="1" Noliegums="Nē" Pamatforma="būt" Laiks="Tagadne" Kārta="Darāmā" Ģenerēt="Nē"/>
-    </Lexeme>
-    <Lexeme Stem1="esu">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Vienskaitlis" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="1" Noliegums="Nē" Pamatforma="būt" Laiks="Tagadne" Kārta="Darāmā" Ģenerēt="Nē"/>
-    </Lexeme>
-    <Lexeme Stem1="ir">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Palīgverbs 'būt'" Persona="3" Noliegums="Nē" Pamatforma="būt" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="ir">
-      <Attributes Vārdšķira="Darbības vārds" Konjugācija="Nekārtns" Skaitlis="Nepiemīt" Atgriezeniskums="Nē" Izteiksme="Īstenības" Transitivitāte="Intransitīvs" Darbības_vārda_tips="Patstāvīgs darbības vārds" Persona="3" Noliegums="Nē" Pamatforma="būt" Laiks="Tagadne" Kārta="Darāmā"/>
-    </Lexeme>
-    <Lexeme Stem1="die's">
-      <Attributes Pamatforma="dievs" Vārdšķira="Lietvārds" Locījums="Nominatīvs" Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Lietvārda_tips="Sugas vārds" Deklinācija="1" Papildforma="Jā"/>
-    </Lexeme>
   </Paradigm>
   <Paradigm ID="30" Description="Patstāvīgas divdabju noteiktās formas -ais (jaundzimušais, galvenais u.c.)">
   </Paradigm>

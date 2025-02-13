@@ -3027,6 +3027,7 @@ public class MorphologyTest {
         // Jābūt gan variantam kā saitiņai, gan patstāvīgajā nozīmē 'man nav mājas'
         Word nav = locītājs.analyze("nav");
         assertTrue(nav.isRecognized());
+        nav.describe(System.out);
         boolean found_m = false;
         boolean found_c = false;
         boolean found_tag = false;

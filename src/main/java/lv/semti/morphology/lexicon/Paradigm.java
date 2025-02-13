@@ -213,11 +213,12 @@ public class Paradigm extends AttributeValues {
 		if (lexeme.getValue(AttributeNames.i_Lemma) == null && getLemmaEnding() != null)
 			lexeme.addAttribute(AttributeNames.i_Lemma, lexeme.getStem(getLemmaEnding().stemID-1) + getLemmaEnding().getEnding());
 
-        String pamatforma = lexeme.getValue(AttributeNames.i_Lemma);
 		if (this.isMatchingStrong(AttributeNames.i_ParadigmProperties, AttributeNames.v_HardcodedWordforms)) { // Hardcoded un vietniekvārdu paradigma
-			this.lexicon.hardcodedForms.put(pamatforma, lexeme);
+			lexeme.describe();
+			this.lexicon.hardcodedForms.put(lexeme.getID(), lexeme);
 		}
 
+		String pamatforma = lexeme.getValue(AttributeNames.i_Lemma);
         if (pamatforma.matches(".*[ ./'\\d]+.*") && pamatforma.length() > 1 && !pamatforma.matches("\\.+")
 //                || (this.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Punctuation) && pamatforma.length() > 1)
             ) {
@@ -236,7 +237,7 @@ public class Paradigm extends AttributeValues {
 				if (matchingstems.size()==0) lexemesByStem.get(i).remove(lexeme.getStem(i));
 			}
 		}
-		this.lexicon.hardcodedForms.remove(lexeme.getValue(AttributeNames.i_Lemma), lexeme);
+		this.lexicon.hardcodedForms.remove(lexeme.getID(), lexeme);
 	}
 
 	public void addEnding (Ending ending) {
