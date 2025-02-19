@@ -1018,12 +1018,6 @@
 <Paradigm Stems="1" ID="49" Description="Ģenitīveņi (augstpapēžu, milzu)">
 </Paradigm>
 <Paradigm Stems="3" ID="50" Description="būt, nebūt, pabūt, sabūt">
-    <Lexeme Stem1="bū" Stem2="es" Stem3="bij">
-      <Attributes Darbības_vārda_tips="Palīgverbs 'būt'" Pamatforma="būt"/>
-    </Lexeme>  
-    <Lexeme Stem1="bū" Stem2="es" Stem3="bij">
-      <Attributes Darbības_vārda_tips="Patstāvīgs darbības vārds" Pamatforma="būt"/>
-    </Lexeme>  
 </Paradigm>
 <Paradigm Stems="1" ID="52" Description="Patstāvīgi -dams/-dama divdabji (pusjokodams)">
 </Paradigm>

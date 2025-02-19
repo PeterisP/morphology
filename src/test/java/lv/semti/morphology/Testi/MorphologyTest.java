@@ -2912,7 +2912,7 @@ public class MorphologyTest {
     public void plāns_B() {
         Word w = locītājs.analyze("B");
         assertTrue(w.isRecognized());
-        assertEquals("xx", w.getBestWordform().getTag());
+        assertEquals("y", w.getBestWordform().getTag());
     }
 
     @Test
@@ -4317,6 +4317,9 @@ public class MorphologyTest {
     public void pustrīs() {
         ArrayList<Wordform> formas = locītājs.generateInflectionsFromParadigm("pustrīs", 25);
         assertTrue("Jābūt vairākām formām 'pustrīs' tabulai no hardcoded", formas.size()>1);
+
+        formas = locītājs.generateInflectionsFromParadigm("pustrīs", 55);
+        assertEquals("Jābūt tikai vienai nelokāmajam 'pustrīs' formai", 1, formas.size());
     }
 
     @Test
