@@ -41,7 +41,7 @@
 
 		<VerbPrefix>na</VerbPrefix>
 	</Prefixes>
-	<Paradigm Stems="1" ID="1" Name="noun-1a-ltg" LemmaEnding="1" Description="Lietvārdi vīriešu dzimtē, 1. deklinācija, galotne -s (tāvs)" AllowedGuessEndings="">
+	<Paradigm Stems="1" ID="1" Name="noun-1a-ltg" LemmaEnding="1" Description="Lietvārdi vīriešu dzimtē, 1. deklinācija, galotne -s (tāvs)" AllowedGuessEndings="bcdfghjklmnprstvz">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="1" Dzimte="Vīriešu" Morfotabulas_tips="Lietvārds"/>
 		<Ending ID="1" StemChange="0" Ending="s" StemID="1" LemmaEnding="1">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
@@ -64,13 +64,13 @@
 		<Ending ID="7" StemChange="0" Ending="s" StemID="1" LemmaEnding="1">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
-		<Ending ID="8" StemChange="100" Ending="i" StemID="1" LemmaEnding="1">
+		<Ending ID="8" StemChange="0" Ending="i" StemID="1" LemmaEnding="1">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Nominatīvs"/>
 		</Ending>
 		<Ending ID="9" StemChange="0" Ending="u" StemID="1" LemmaEnding="1">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Ģenitīvs"/>
 		</Ending>
-		<Ending ID="10" StemChange="100" Ending="im" StemID="1" LemmaEnding="1">
+		<Ending ID="10" StemChange="0" Ending="im" StemID="1" LemmaEnding="1">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Datīvs"/>
 		</Ending>
 		<Ending ID="11" StemChange="0" Ending="us" StemID="1" LemmaEnding="1">
@@ -79,7 +79,7 @@
 		<Ending ID="12" StemChange="0" Ending="ūs" StemID="1" LemmaEnding="1">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Lokatīvs"/>
 		</Ending>
-		<Ending ID="13" StemChange="100" Ending="i" StemID="1" LemmaEnding="1">
+		<Ending ID="13" StemChange="0" Ending="i" StemID="1" LemmaEnding="1">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>
@@ -125,7 +125,7 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="3" Name="noun-1c-ltg" LemmaEnding="27" Description="Lietvārdi vīriešu dzimtē, 1. deklinācija, galotne -š (ceļš)" AllowedGuessEndings="">
+	<Paradigm Stems="1" ID="3" Name="noun-1c-ltg" LemmaEnding="27" Description="Lietvārdi vīriešu dzimtē, 1. deklinācija, galotne -š (ceļš)" AllowedGuessEndings="čģķļņšž">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="1" Dzimte="Vīriešu" Morfotabulas_tips="Lietvārds"/>
 		<Ending ID="27" StemChange="0" Ending="š" StemID="1" LemmaEnding="27">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
@@ -145,13 +145,13 @@
 		<Ending ID="32" StemChange="0" Ending="" StemID="1" LemmaEnding="27">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
-		<Ending ID="33" StemChange="100" Ending="i" StemID="1" LemmaEnding="27">
+		<Ending ID="33" StemChange="99" Ending="i" StemID="1" LemmaEnding="27">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Nominatīvs"/>
 		</Ending>
 		<Ending ID="34" StemChange="0" Ending="u" StemID="1" LemmaEnding="27">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Ģenitīvs"/>
 		</Ending>
-		<Ending ID="35" StemChange="100" Ending="im" StemID="1" LemmaEnding="27">
+		<Ending ID="35" StemChange="99" Ending="im" StemID="1" LemmaEnding="27">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Datīvs"/>
 		</Ending>
 		<Ending ID="36" StemChange="0" Ending="us" StemID="1" LemmaEnding="27">
@@ -160,7 +160,7 @@
 		<Ending ID="37" StemChange="0" Ending="ūs" StemID="1" LemmaEnding="27">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Lokatīvs"/>
 		</Ending>
-		<Ending ID="38" StemChange="100" Ending="i" StemID="1" LemmaEnding="27">
+		<Ending ID="38" StemChange="99" Ending="i" StemID="1" LemmaEnding="27">
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>

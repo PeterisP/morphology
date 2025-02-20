@@ -452,6 +452,23 @@ public abstract class Mijas {
 					break;
 
 				// ------ LATGALIAN from here -----
+				case 99: // puse no latgaliešu 'burtu mijas' (case 100) - tikai paradigmām, kur ir garantēts, ka bezmijas celms beidzas mīkstu līdzskani
+					if (celms.endsWith("ll")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "ļļ", "Mija", "ļļ -> ll"));
+					} else if (celms.endsWith("nn")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "ņņ", "Mija", "ņņ -> nn"));
+					} else if (celms.endsWith("l")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ļ", "Mija", "ļ -> l"));
+					} else if (celms.endsWith("n")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ņ", "Mija", "ņ -> n"));
+					} else if (celms.endsWith("k")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ķ", "Mija", "ķ -> k"));
+					} else if (celms.endsWith("g")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ģ", "Mija", "ģ -> g"));
+					} else {
+						varianti.add(new Variants(celms));
+					}
+					break;
 				case 100: // latgaliešu 'burtu mija', kur pirms -e, -i, -ī, -ē, -ie ļ, ņ, ķ, ģ kļūst par l, n, k, g
 					if (celms.endsWith("ll")) {
 						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "ļļ", "Mija", "ļļ/ll -> ll"));
@@ -1260,6 +1277,23 @@ public abstract class Mijas {
 					break;
 
 				// ------ LATGALIAN from here -----
+				case 99: // puse no latgaliešu 'burtu mijas' (case 100) - tikai paradigmām, kur ir garantēts, ka bezmijas celms beidzas mīkstu līdzskani
+					if (celms.endsWith("ļļ")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "ll"));
+					} else if (celms.endsWith("ņņ")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "nn"));
+					} else if (celms.endsWith("ļ")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "l"));
+					} else if (celms.endsWith("ņ")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "n"));
+					} else if (celms.endsWith("ķ")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "k"));
+					} else if (celms.endsWith("ģ")) {
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "g"));
+					} else {
+						varianti.add(new Variants(celms));
+					}
+					break;
 				case 100: // // latgaliešu 'burtu mija', kur pirms -e, -i, -ī, -ē, -ie ļ, ņ, ķ, ģ kļūst par l, n, k, g (bruoļs -> bruoli)
 					if (celms.endsWith("ļļ")) {
 						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "ll"));
