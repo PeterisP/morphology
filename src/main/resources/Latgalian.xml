@@ -164,7 +164,52 @@
 			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="47" Name="noun-1d-ltg" LemmaEnding="1641" Description="Lietvārdi vīriešu dzimtē, 1. deklinācija, galotne -s, mīksts celms (ceļs, kumeļs)" AllowedGuessEndings="!">
+	<Paradigm Stems="1" ID="15" Name="noun-1d-ltg"  LemmaEnding="184" Description="Lietvārdi vīriešu dzimtē, 1. deklinācija, galotne -s, ģenitīva paralēlformas (ols)" AllowedGuessEndings="">
+		<Attributes Vārdšķira="Lietvārds" Deklinācija="1" Dzimte="Vīriešu" Morfotabulas_tips="Lietvārds"/>
+		<Ending ID="184" StemChange="0" Ending="s" StemID="1"  LemmaEnding="184">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
+		</Ending>
+		<Ending ID="185" StemChange="0" Ending="a" StemID="1"  LemmaEnding="184">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Ģenitīvs" Valodas_normēšana="Ieteicams"/>
+		</Ending>
+		<Ending ID="186" StemChange="0" Ending="s" StemID="1"  LemmaEnding="184">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Ģenitīvs"/>
+		</Ending>
+		<Ending ID="187" StemChange="0" Ending="am" StemID="1"  LemmaEnding="184">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Datīvs"/>
+		</Ending>
+		<Ending ID="188" StemChange="0" Ending="u" StemID="1"  LemmaEnding="184">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Akuzatīvs"/>
+		</Ending>
+		<Ending ID="189" StemChange="0" Ending="ā" StemID="1"  LemmaEnding="184">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Lokatīvs"/>
+		</Ending>
+		<Ending ID="190" StemChange="0" Ending="" StemID="1"  LemmaEnding="184">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs" Valodas_normēšana="Ieteicams"/>
+		</Ending>
+		<Ending ID="191" StemChange="0" Ending="s" StemID="1"  LemmaEnding="184">
+			<Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs"/>
+		</Ending>
+		<Ending ID="192" StemChange="100" Ending="i" StemID="1"  LemmaEnding="184">
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Nominatīvs"/>
+		</Ending>
+		<Ending ID="193" StemChange="0" Ending="u" StemID="1"  LemmaEnding="184">
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Ģenitīvs"/>
+		</Ending>
+		<Ending ID="194" StemChange="100" Ending="im" StemID="1"  LemmaEnding="184">
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Datīvs"/>
+		</Ending>
+		<Ending ID="195" StemChange="0" Ending="us" StemID="1"  LemmaEnding="184">
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Akuzatīvs"/>
+		</Ending>
+		<Ending ID="196" StemChange="0" Ending="ūs" StemID="1"  LemmaEnding="184">
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Lokatīvs"/>
+		</Ending>
+		<Ending ID="197" StemChange="100" Ending="i" StemID="1"  LemmaEnding="184">
+			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
+		</Ending>
+	</Paradigm>	
+	<Paradigm Stems="1" ID="47" Name="noun-1e-ltg" LemmaEnding="1641" Description="Lietvārdi vīriešu dzimtē, 1. deklinācija, galotne -s, mīksts celms (ceļs, kumeļs)" AllowedGuessEndings="!">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="1" Dzimte="Vīriešu" Morfotabulas_tips="Lietvārds"/>
 		<Ending ID="1641" StemChange="0" Ending="š" StemID="1" LemmaEnding="1641">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
@@ -632,51 +677,6 @@
 			<Attributes/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="15" Name="noun-1d-ltg"  LemmaEnding="184" Description="Lietvārdi vīriešu dzimtē, 1. deklinācija, galotne -s, ģenitīva paralēlformas (ols)" AllowedGuessEndings="">
-		<Attributes Vārdšķira="Lietvārds" Deklinācija="1" Dzimte="Vīriešu" Morfotabulas_tips="Lietvārds"/>
-		<Ending ID="184" StemChange="0" Ending="s" StemID="1"  LemmaEnding="184">
-			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
-		</Ending>
-		<Ending ID="185" StemChange="0" Ending="a" StemID="1"  LemmaEnding="184">
-			<Attributes Skaitlis="Vienskaitlis" Locījums="Ģenitīvs" Valodas_normēšana="Ieteicams"/>
-		</Ending>
-		<Ending ID="186" StemChange="0" Ending="s" StemID="1"  LemmaEnding="184">
-			<Attributes Skaitlis="Vienskaitlis" Locījums="Ģenitīvs"/>
-		</Ending>
-		<Ending ID="187" StemChange="0" Ending="am" StemID="1"  LemmaEnding="184">
-			<Attributes Skaitlis="Vienskaitlis" Locījums="Datīvs"/>
-		</Ending>
-		<Ending ID="188" StemChange="0" Ending="u" StemID="1"  LemmaEnding="184">
-			<Attributes Skaitlis="Vienskaitlis" Locījums="Akuzatīvs"/>
-		</Ending>
-		<Ending ID="189" StemChange="0" Ending="ā" StemID="1"  LemmaEnding="184">
-			<Attributes Skaitlis="Vienskaitlis" Locījums="Lokatīvs"/>
-		</Ending>
-		<Ending ID="190" StemChange="0" Ending="" StemID="1"  LemmaEnding="184">
-			<Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs" Valodas_normēšana="Ieteicams"/>
-		</Ending>
-		<Ending ID="191" StemChange="0" Ending="s" StemID="1"  LemmaEnding="184">
-			<Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs"/>
-		</Ending>
-		<Ending ID="192" StemChange="100" Ending="i" StemID="1"  LemmaEnding="184">
-			<Attributes Skaitlis="Daudzskaitlis" Locījums="Nominatīvs"/>
-		</Ending>
-		<Ending ID="193" StemChange="0" Ending="u" StemID="1"  LemmaEnding="184">
-			<Attributes Skaitlis="Daudzskaitlis" Locījums="Ģenitīvs"/>
-		</Ending>
-		<Ending ID="194" StemChange="100" Ending="im" StemID="1"  LemmaEnding="184">
-			<Attributes Skaitlis="Daudzskaitlis" Locījums="Datīvs"/>
-		</Ending>
-		<Ending ID="195" StemChange="0" Ending="us" StemID="1"  LemmaEnding="184">
-			<Attributes Skaitlis="Daudzskaitlis" Locījums="Akuzatīvs"/>
-		</Ending>
-		<Ending ID="196" StemChange="0" Ending="ūs" StemID="1"  LemmaEnding="184">
-			<Attributes Skaitlis="Daudzskaitlis" Locījums="Lokatīvs"/>
-		</Ending>
-		<Ending ID="197" StemChange="100" Ending="i" StemID="1"  LemmaEnding="184">
-			<Attributes Skaitlis="Daudzskaitlis" Locījums="Vokatīvs"/>
-		</Ending>
-	</Paradigm>	
     <Paradigm Stems="1" ID="16" Name="noun-4ma-ltg" LemmaEnding="198" Description="Lietvārdi vīriešu dzimtē, 4. deklinācija, galotne -a, vienskaitļa ģenitīvs -ys (puika)" AllowedGuessEndings="">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Dzimte="Vīriešu" Morfotabulas_tips="Lietvārds"/>
 		<Ending ID="198" StemChange="0" Ending="a" StemID="1" LemmaEnding="198">
