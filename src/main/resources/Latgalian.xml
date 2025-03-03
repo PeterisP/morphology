@@ -211,7 +211,7 @@
 	</Paradigm>	
 	<Paradigm Stems="1" ID="47" Name="noun-1e-ltg" LemmaEnding="1641" Description="Lietvārdi vīriešu dzimtē, 1. deklinācija, galotne -s, mīksts celms (ceļs, kumeļs)" AllowedGuessEndings="!">
 		<Attributes Vārdšķira="Lietvārds" Deklinācija="1" Dzimte="Vīriešu" Morfotabulas_tips="Lietvārds"/>
-		<Ending ID="1641" StemChange="0" Ending="š" StemID="1" LemmaEnding="1641">
+		<Ending ID="1641" StemChange="0" Ending="s" StemID="1" LemmaEnding="1641">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
 		</Ending>
 		<Ending ID="1642" StemChange="0" Ending="a" StemID="1" LemmaEnding="1641">
