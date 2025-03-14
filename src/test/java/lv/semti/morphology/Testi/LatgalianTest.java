@@ -684,6 +684,160 @@ public class LatgalianTest {
 
 	}
 
+	public void konj3eit() {
+		List<Wordform> dareit = analyzer.generateInflectionsFromParadigm("dareit", 48);
+		//List<Wordform> saceit = analyzer.generateInflectionsFromParadigm("saceit", 49);
+
+		// Īstenības izteiksme
+		// Tagadne: 162. mija
+		AttributeValues ind_pres_1_sg = new AttributeValues();
+		ind_pres_1_sg.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+		ind_pres_1_sg.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Indicative);
+		ind_pres_1_sg.addAttribute(AttributeNames.i_Tense, AttributeNames.v_Present);
+		ind_pres_1_sg.addAttribute(AttributeNames.i_Person, "1");
+		ind_pres_1_sg.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+		assertInflection(dareit, ind_pres_1_sg, "doru");
+		//assertInflection(saceit, ind_pres_1_sg, "soku");
+
+		// Pagātne: 119. mija
+		AttributeValues ind_past_1_sg = new AttributeValues();
+		ind_past_1_sg.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+		ind_past_1_sg.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Indicative);
+		ind_past_1_sg.addAttribute(AttributeNames.i_Tense, AttributeNames.v_Past);
+		ind_past_1_sg.addAttribute(AttributeNames.i_Person, "1");
+		ind_past_1_sg.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+		assertInflection(dareit, ind_past_1_sg, "dareju");
+		//assertInflection(saceit, ind_past_1_sg, "saceju");
+
+		// Nākotne:  0. mija
+		AttributeValues inf_fut_1_sg = new AttributeValues();
+		inf_fut_1_sg.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+		inf_fut_1_sg.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Indicative);
+		inf_fut_1_sg.addAttribute(AttributeNames.i_Tense, AttributeNames.v_Future);
+		inf_fut_1_sg.addAttribute(AttributeNames.i_Person, "1");
+		inf_fut_1_sg.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+		assertInflection(dareit, inf_fut_1_sg, "dareišu");
+		//assertInflection(saceit, inf_fut_1_sg, "saceišu");
+
+		// Citas izteiksmes
+		// Pavēles: 162. mija
+		AttributeValues imp = new AttributeValues();
+		imp.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+		imp.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Imperative);
+		assertInflectionMultipleWeak(dareit, imp, new HashSet<String>(){{ add("dori"); add("dorit");}});
+		//assertInflectionMultipleWeak(saceit, imp, new HashSet<String>(){{ add("soki"); add("sokit");}});
+
+		// Vajadzības: 151: mija
+		AttributeValues deb = new AttributeValues();
+		deb.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+		deb.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Debitive);
+		assertInflection(dareit, deb, "juodora");
+		//assertInflection(saceit, deb, "juosoka");
+
+		// Vēlējuma: 0. mija
+		AttributeValues cond = new AttributeValues();
+		cond.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+		cond.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Conditional);
+		cond.addAttribute(AttributeNames.i_Person, "Nepiemīt");
+		assertInflection(dareit, cond, "darietu");
+		//assertInflection(saceit, cond, "saceitu");
+
+		AttributeValues cond_2pers_sg = new AttributeValues();
+		cond_2pers_sg.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+		cond_2pers_sg.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Conditional);
+		cond_2pers_sg.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+		cond_2pers_sg.addAttribute(AttributeNames.i_Person, "2");
+		assertInflection(dareit, cond_2pers_sg, "dareitim");
+		//assertInflection(saceit, cond_2pers_sg, "saceitim");
+
+		// Atstāstījuma: 162. mija
+		AttributeValues quot_pres_nogen_nonum = new AttributeValues();
+		quot_pres_nogen_nonum.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+		quot_pres_nogen_nonum.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Quotative);
+		quot_pres_nogen_nonum.addAttribute(AttributeNames.i_Tense, AttributeNames.v_Present);
+		quot_pres_nogen_nonum.addAttribute(AttributeNames.i_Gender, AttributeNames.v_NA);
+		quot_pres_nogen_nonum.addAttribute(AttributeNames.i_Number, AttributeNames.v_NA);
+		assertInflection(dareit, quot_pres_nogen_nonum, "dorūt");
+		//assertInflection(saceit, quot_pres_nogen_nonum, "sokūt");
+
+		// 0. mija
+		AttributeValues quot_fut_fem_pl = new AttributeValues();
+		quot_fut_fem_pl.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+		quot_fut_fem_pl.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Quotative);
+		quot_fut_fem_pl.addAttribute(AttributeNames.i_Tense, AttributeNames.v_Future);
+		quot_fut_fem_pl.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Feminine);
+		quot_fut_fem_pl.addAttribute(AttributeNames.i_Number, AttributeNames.v_Plural);
+		assertInflection(dareit, quot_fut_fem_pl, "dareiškūšys");
+		//assertInflection(saceit, quot_fut_fem_pl, "saceiškūšys");
+
+		// Divdabji.
+		// Tagadnes darāmās kārtas: 162. mija
+		AttributeValues part_act_pres = new AttributeValues();
+		part_act_pres.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+		part_act_pres.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Participle);
+		part_act_pres.addAttribute(AttributeNames.i_Tense, AttributeNames.v_Present);
+		part_act_pres.addAttribute(AttributeNames.i_Voice, AttributeNames.v_Active);
+		part_act_pres.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Masculine);
+		part_act_pres.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+		part_act_pres.addAttribute(AttributeNames.i_Case, AttributeNames.v_Nominative);
+		part_act_pres.addAttribute(AttributeNames.i_Degree, AttributeNames.v_Positive);
+		part_act_pres.addAttribute(AttributeNames.i_Definiteness, AttributeNames.v_Indefinite);
+		assertInflection(dareit, part_act_pres, "dorūšs");
+		//assertInflection(saceit, part_act_pres, "sokūšs");
+
+		// Tagadnes ciešamās kārtas: 162. mija
+		AttributeValues part_pass_pres = new AttributeValues();
+		part_pass_pres.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+		part_pass_pres.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Participle);
+		part_pass_pres.addAttribute(AttributeNames.i_Tense, AttributeNames.v_Present);
+		part_pass_pres.addAttribute(AttributeNames.i_Voice, AttributeNames.v_Passive);
+		part_pass_pres.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Masculine);
+		part_pass_pres.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+		part_pass_pres.addAttribute(AttributeNames.i_Case, AttributeNames.v_Nominative);
+		part_pass_pres.addAttribute(AttributeNames.i_Degree, AttributeNames.v_Positive);
+		part_pass_pres.addAttribute(AttributeNames.i_Definiteness, AttributeNames.v_Indefinite);
+		assertInflection(dareit, part_pass_pres, "doroms");
+		//assertInflection(saceit, part_pass_pres, "sokoms");
+
+		// Pagātnes ciešamās kārtas: 0. mija
+		AttributeValues part_pass_past = new AttributeValues();
+		part_pass_past.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+		part_pass_past.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Participle);
+		part_pass_past.addAttribute(AttributeNames.i_Tense, AttributeNames.v_Past);
+		part_pass_past.addAttribute(AttributeNames.i_Voice, AttributeNames.v_Passive);
+		part_pass_past.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Masculine);
+		part_pass_past.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+		part_pass_past.addAttribute(AttributeNames.i_Case, AttributeNames.v_Nominative);
+		part_pass_past.addAttribute(AttributeNames.i_Degree, AttributeNames.v_Positive);
+		part_pass_past.addAttribute(AttributeNames.i_Definiteness, AttributeNames.v_Indefinite);
+		assertInflection(dareit, part_pass_past, "dareits");
+		//assertInflection(saceit, part_pass_past, "saceits");
+
+		// Pagātnes darāmās kārtas: 119. mija
+		AttributeValues part_act_past = new AttributeValues();
+		part_act_past.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+		part_act_past.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Participle);
+		part_act_past.addAttribute(AttributeNames.i_Tense, AttributeNames.v_Past);
+		part_act_past.addAttribute(AttributeNames.i_Voice, AttributeNames.v_Active);
+		part_act_past.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Masculine);
+		part_act_past.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+		part_act_past.addAttribute(AttributeNames.i_Case, AttributeNames.v_Nominative);
+		part_act_past.addAttribute(AttributeNames.i_Degree, AttributeNames.v_Positive);
+		part_act_past.addAttribute(AttributeNames.i_Definiteness, AttributeNames.v_Indefinite);
+		assertInflection(dareit, part_act_past, "darejs");
+		//assertInflection(saceit, part_act_past, "sacejs");
+
+		// Lietvārds: 0. mija
+		AttributeValues noun = new AttributeValues();
+		noun.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun);
+		noun.addAttribute(AttributeNames.i_NounType, AttributeNames.v_CommonNoun);
+		noun.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Feminine);
+		noun.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+		noun.addAttribute(AttributeNames.i_Case, AttributeNames.v_Nominative);
+		assertInflection(dareit, noun, "dareišona");
+		//assertInflection(saceit, noun, "saceišona");
+	}
+
 	@Test
 	public void verbNeg() {
 		List<Wordform> dūmuot = analyzer.generateInflectionsFromParadigm("dūmuot", 44);
