@@ -29,6 +29,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import lv.semti.morphology.attributes.AttributeNames;
+import lv.semti.morphology.attributes.AttributeValues;
 
 
 public abstract class Mijas {
@@ -605,60 +606,60 @@ public abstract class Mijas {
 				case 103: // līdzīgi `case 3` - īpašības vārdiem -uok- un vys- / vysu-
 					if (celms.endsWith("uok") && celms.length() > 3) {
 						if (celms.startsWith("vysu"))
-							varianti.add(new Variants(celms.substring(4,celms.length()-3),AttributeNames.i_Degree,AttributeNames.v_Superlative));
+							varianti.add(new Variants(celms.substring(4, celms.length()-3), ltgDegreeFlags(AttributeNames.v_Superlative)));
 						else if (celms.startsWith("vys"))
-							varianti.add(new Variants(celms.substring(3,celms.length()-3),AttributeNames.i_Degree,AttributeNames.v_Superlative));
+							varianti.add(new Variants(celms.substring(3, celms.length()-3), ltgDegreeFlags(AttributeNames.v_Superlative)));
 						else
-							varianti.add(new Variants(celms.substring(0,celms.length()-3),AttributeNames.i_Degree,AttributeNames.v_Comparative));
+							varianti.add(new Variants(celms.substring(0, celms.length()-3), ltgDegreeFlags(AttributeNames.v_Comparative)));
 					}
-					varianti.add(new Variants(celms,AttributeNames.i_Degree, AttributeNames.v_Positive));
+					varianti.add(new Variants(celms, ltgDegreeFlags(AttributeNames.v_Positive)));
 					break;
 				case 104: //  īpašības vārdiem -uok- un vys- / vysu-, pamata pakāpei burtu mija
 					if (celms.endsWith("uok") && celms.length() > 3) {
 						if (celms.startsWith("vysu"))
-							varianti.add(new Variants(celms.substring(4,celms.length()-3),AttributeNames.i_Degree,AttributeNames.v_Superlative));
+							varianti.add(new Variants(celms.substring(4, celms.length()-3), ltgDegreeFlags(AttributeNames.v_Superlative)));
 						else if (celms.startsWith("vys"))
-							varianti.add(new Variants(celms.substring(3,celms.length()-3),AttributeNames.i_Degree,AttributeNames.v_Superlative));
+							varianti.add(new Variants(celms.substring(3, celms.length()-3), ltgDegreeFlags(AttributeNames.v_Superlative)));
 						else
-							varianti.add(new Variants(celms.substring(0,celms.length()-3),AttributeNames.i_Degree,AttributeNames.v_Comparative));
+							varianti.add(new Variants(celms.substring(0, celms.length()-3), ltgDegreeFlags(AttributeNames.v_Comparative)));
 					} else if (celms.endsWith("ll")) {
-						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "ļļ", AttributeNames.i_Degree, AttributeNames.v_Positive));
+						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "ļļ", ltgDegreeFlags(AttributeNames.v_Positive)));
 					} else if (celms.endsWith("nn")) {
-						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "ņņ", AttributeNames.i_Degree, AttributeNames.v_Positive));
+						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "ņņ", ltgDegreeFlags(AttributeNames.v_Positive)));
 					} else if (celms.endsWith("l")) {
-						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ļ", AttributeNames.i_Degree, AttributeNames.v_Positive));
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ļ", ltgDegreeFlags(AttributeNames.v_Positive)));
 					} else if (celms.endsWith("n")) {
-						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ņ", AttributeNames.i_Degree, AttributeNames.v_Positive));
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ņ", ltgDegreeFlags(AttributeNames.v_Positive)));
 					} else if (celms.endsWith("k")) {
-						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ķ", AttributeNames.i_Degree, AttributeNames.v_Positive));
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ķ", ltgDegreeFlags(AttributeNames.v_Positive)));
 					} else if (celms.endsWith("g")) {
-						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ģ", AttributeNames.i_Degree, AttributeNames.v_Positive));
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ģ", ltgDegreeFlags(AttributeNames.v_Positive)));
 					} else {
-						varianti.add(new Variants(celms, AttributeNames.i_Degree, AttributeNames.v_Positive));
+						varianti.add(new Variants(celms, ltgDegreeFlags(AttributeNames.v_Positive)));
 					}
 					break;
 				case 105: // līdzīgi kā `case 34` - īpašības vārdiem -uok- un vys- / vysu- izskaņām kā -ajam: liekam nevis moz-s->moz-ajam, bet moz-s->moz-a-jam, bet senej-ais -> sene-jam/senej-a-jam
 					if (celms.endsWith("uoka") && celms.length() > 4) {
 						if (celms.startsWith("vysu"))
-							varianti.add(new Variants(celms.substring(4,celms.length()-4),AttributeNames.i_Degree,AttributeNames.v_Superlative));
+							varianti.add(new Variants(celms.substring(4, celms.length()-4), ltgDegreeFlags(AttributeNames.v_Superlative)));
 						else if (celms.startsWith("vys"))
-							varianti.add(new Variants(celms.substring(3,celms.length()-4),AttributeNames.i_Degree,AttributeNames.v_Superlative));
+							varianti.add(new Variants(celms.substring(3, celms.length()-4), ltgDegreeFlags(AttributeNames.v_Superlative)));
 						else
-							varianti.add(new Variants(celms.substring(0,celms.length()-4),AttributeNames.i_Degree,AttributeNames.v_Comparative));
+							varianti.add(new Variants(celms.substring(0, celms.length()-4), ltgDegreeFlags(AttributeNames.v_Comparative)));
 					}
 					if (celms.endsWith("a")) // moz-jam -> moz; seneja-jam -> senej
-						varianti.add(new Variants(celms.substring(0,celms.length()-1) ,AttributeNames.i_Degree, AttributeNames.v_Positive));
+						varianti.add(new Variants(celms.substring(0, celms.length()-1), ltgDegreeFlags(AttributeNames.v_Positive)));
 					else if (celms.endsWith("ē") || celms.endsWith("e")) // sene-jam -> senej
-						varianti.add(new Variants(celms+"j",AttributeNames.i_Degree, AttributeNames.v_Positive));
+						varianti.add(new Variants(celms+"j", ltgDegreeFlags(AttributeNames.v_Positive)));
 					break;
 				case 106: // līdzīgi `case 13` - apstākļa vārdiem -uok- un vys- / vysu-
 					if (celms.endsWith("uok") && celms.length() > 3) {
 						if (celms.startsWith("vysu"))
-							varianti.add(new Variants(celms.substring(4,celms.length()-3),AttributeNames.i_Degree,AttributeNames.v_Superlative));
+							varianti.add(new Variants(celms.substring(4, celms.length()-3), ltgDegreeFlags(AttributeNames.v_Superlative)));
 						else if (celms.startsWith("vys"))
-							varianti.add(new Variants(celms.substring(3,celms.length()-3),AttributeNames.i_Degree,AttributeNames.v_Superlative));
+							varianti.add(new Variants(celms.substring(3, celms.length()-3), ltgDegreeFlags(AttributeNames.v_Superlative)));
 						else
-							varianti.add(new Variants(celms.substring(0,celms.length()-3),AttributeNames.i_Degree,AttributeNames.v_Comparative));
+							varianti.add(new Variants(celms.substring(0, celms.length()-3), ltgDegreeFlags(AttributeNames.v_Comparative)));
 					}
 					break;
 				case 107: // latgaliešu 'burtu mijas' inverss - kad pamatformas galotne ir -e, -i, -ī, -ē, -ie, un l, n, k, g kļūst par ļ, ņ, ķ, ģ pirms citām galotnēm (slapnis)
@@ -698,18 +699,19 @@ public abstract class Mijas {
 							degree = AttributeNames.v_Comparative;
 						}
 					}
+
 					if (tmpCelms.endsWith("ļļ")) {
-						varianti.add(new Variants(tmpCelms.substring(0, tmpCelms.length() - 2) + "ll", AttributeNames.i_Degree, degree));
+						varianti.add(new Variants(tmpCelms.substring(0, tmpCelms.length() - 2) + "ll", ltgDegreeFlags(degree)));
 					} else if (celms.endsWith("ņņ")) {
-						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "nn", AttributeNames.i_Degree, degree));
+						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "nn", ltgDegreeFlags(degree)));
 					} else if (tmpCelms.endsWith("ļ")) {
-						varianti.add(new Variants(tmpCelms.substring(0, tmpCelms.length() - 1) + "l", AttributeNames.i_Degree, degree));
+						varianti.add(new Variants(tmpCelms.substring(0, tmpCelms.length() - 1) + "l", ltgDegreeFlags(degree)));
 					} else if (celms.endsWith("ņ")) {
-						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "n", AttributeNames.i_Degree, degree));
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "n", ltgDegreeFlags(degree)));
 					} else if (celms.endsWith("ķ")) {
-						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "k", AttributeNames.i_Degree, degree));
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "k", ltgDegreeFlags(degree)));
 					} else if (celms.endsWith("ģ")) {
-						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "g", AttributeNames.i_Degree, degree));
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "g", ltgDegreeFlags(degree)));
 					} else {
 						varianti.add(new Variants(celms));
 					}
@@ -717,22 +719,22 @@ public abstract class Mijas {
 				case 109: // Apstākļa vārdi ar gradāciju, bet bez burtu mijas
 					if (celms.endsWith("uok") && celms.length() > 4) {
 						if (celms.startsWith("vysu")) {
-							varianti.add(new Variants(celms.substring(4,celms.length()-3),AttributeNames.i_Degree,AttributeNames.v_Superlative));
-							varianti.add(new Variants(celms.substring(4,celms.length()-3) + "i",AttributeNames.i_Degree,AttributeNames.v_Superlative));
-							varianti.add(new Variants(celms.substring(4,celms.length()-3) + "a",AttributeNames.i_Degree,AttributeNames.v_Superlative));
-							varianti.add(new Variants(celms.substring(4,celms.length()-3) + "ai",AttributeNames.i_Degree,AttributeNames.v_Superlative));
+							varianti.add(new Variants(celms.substring(4, celms.length()-3), ltgDegreeFlags(AttributeNames.v_Superlative)));
+							varianti.add(new Variants(celms.substring(4, celms.length()-3) + "i", ltgDegreeFlags(AttributeNames.v_Superlative)));
+							varianti.add(new Variants(celms.substring(4, celms.length()-3) + "a", ltgDegreeFlags(AttributeNames.v_Superlative)));
+							varianti.add(new Variants(celms.substring(4, celms.length()-3) + "ai", ltgDegreeFlags(AttributeNames.v_Superlative)));
 						} else if (celms.startsWith("vys")) {
-							varianti.add(new Variants(celms.substring(3,celms.length()-3),AttributeNames.i_Degree,AttributeNames.v_Superlative));
-							varianti.add(new Variants(celms.substring(3,celms.length()-3) + "i",AttributeNames.i_Degree,AttributeNames.v_Superlative));
-							varianti.add(new Variants(celms.substring(3,celms.length()-3) + "a",AttributeNames.i_Degree,AttributeNames.v_Superlative));
-							varianti.add(new Variants(celms.substring(3,celms.length()-3) + "ai",AttributeNames.i_Degree,AttributeNames.v_Superlative));
+							varianti.add(new Variants(celms.substring(3, celms.length()-3), ltgDegreeFlags(AttributeNames.v_Superlative)));
+							varianti.add(new Variants(celms.substring(3, celms.length()-3) + "i", ltgDegreeFlags(AttributeNames.v_Superlative)));
+							varianti.add(new Variants(celms.substring(3, celms.length()-3) + "a", ltgDegreeFlags(AttributeNames.v_Superlative)));
+							varianti.add(new Variants(celms.substring(3, celms.length()-3) + "ai", ltgDegreeFlags(AttributeNames.v_Superlative)));
 						} else {
-							varianti.add(new Variants(celms.substring(0,celms.length()-3),AttributeNames.i_Degree,AttributeNames.v_Comparative));
-							varianti.add(new Variants(celms.substring(0,celms.length()-3) + "i",AttributeNames.i_Degree,AttributeNames.v_Comparative));
-							varianti.add(new Variants(celms.substring(0,celms.length()-3) + "a",AttributeNames.i_Degree,AttributeNames.v_Comparative));
-							varianti.add(new Variants(celms.substring(0,celms.length()-3) + "ai",AttributeNames.i_Degree,AttributeNames.v_Comparative));
+							varianti.add(new Variants(celms.substring(0, celms.length()-3), ltgDegreeFlags(AttributeNames.v_Comparative)));
+							varianti.add(new Variants(celms.substring(0, celms.length()-3) + "i", ltgDegreeFlags(AttributeNames.v_Comparative)));
+							varianti.add(new Variants(celms.substring(0, celms.length()-3) + "a", ltgDegreeFlags(AttributeNames.v_Comparative)));
+							varianti.add(new Variants(celms.substring(0, celms.length()-3) + "ai", ltgDegreeFlags(AttributeNames.v_Comparative)));
 						}
-					} else varianti.add(new Variants(celms,AttributeNames.i_Degree, AttributeNames.v_Positive));
+					} else varianti.add(new Variants(celms, ltgDegreeFlags(AttributeNames.v_Positive)));
 					break;
 				// Te sākas verbu mijas
 				case 110: // 2. konjugācija, vienkāršās tagadnes mija
@@ -790,10 +792,10 @@ public abstract class Mijas {
 					}
 
 					if (celms.endsWith("e")) {
-						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ei", AttributeNames.i_Degree, degree));
-						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ē", AttributeNames.i_Degree, degree));
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ei", ltgDegreeFlags(degree)));
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ē", ltgDegreeFlags(degree)));
 					} else if (celms.endsWith("o")) {
-						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "uo", AttributeNames.i_Degree, degree));
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "uo", ltgDegreeFlags(degree)));
 					}
 					break;
 				case 116: // 2. konjugācija, divdabju formu vispārākā pakāpe (121.) + vēlējuma/supīna mija (114.) (-ts divdabim)
@@ -807,9 +809,9 @@ public abstract class Mijas {
 					}
 
 					if (celms.endsWith("ā")) {
-						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ē", AttributeNames.i_Degree, degree));
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ē", ltgDegreeFlags(degree)));
 					} else if (celms.endsWith("uo") || celms.endsWith("ei")) {
-						varianti.add(new Variants(celms, AttributeNames.i_Degree, degree));
+						varianti.add(new Variants(celms, ltgDegreeFlags(degree)));
 					}
 					break;
 				case 117:  // 2. konjugācija, pagātnes mija -s, -use divdabim (vienkāršota 111.)
@@ -832,11 +834,11 @@ public abstract class Mijas {
 					}
 
 					if (celms.endsWith("ie")) {
-						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "ē", AttributeNames.i_Degree, degree));
+						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "ē", ltgDegreeFlags(degree)));
 					} else if (celms.endsWith("e")) {
-						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ie", AttributeNames.i_Degree, degree));
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ie", ltgDegreeFlags(degree)));
 					} else if (celms.endsWith("uo")) {
-						varianti.add(new Variants(celms, AttributeNames.i_Degree, degree));
+						varianti.add(new Variants(celms, ltgDegreeFlags(degree)));
 					}
 					break;
 				case 119: // 3. konjugācija, cietā standarta grupa, tagadne un pagātne (līdzskaņu mijas nekad nav)
@@ -851,7 +853,8 @@ public abstract class Mijas {
 						degree = AttributeNames.v_Superlative;
 						celms = celms.substring(3);
 					}
-					varianti.add(new Variants(celms + "ei", AttributeNames.i_Degree, degree));
+
+					varianti.add(new Variants(celms + "ei", ltgDegreeFlags(degree)));
 					break;
 				case 121: // 3. konjugācija, divdabju formu vispārākā pakāpe bez mijas
 					degree = AttributeNames.v_Comparative;
@@ -862,7 +865,7 @@ public abstract class Mijas {
 						degree = AttributeNames.v_Superlative;
 						celms = celms.substring(3);
 					}
-					varianti.add(new Variants(celms, AttributeNames.i_Degree, degree));
+					varianti.add(new Variants(celms, ltgDegreeFlags(degree)));
 					break;
 				case 122: // 3. konjugācija, cietā standarta grupa, tagadne ar līdzskaņu miju
 					if (celms.endsWith("ld")) {
@@ -888,18 +891,19 @@ public abstract class Mijas {
 						degree = AttributeNames.v_Superlative;
 						celms = celms.substring(3);
 					}
+
 					if (celms.endsWith("ld")) {
-						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "ļdei", AttributeNames.i_Degree, degree));
+						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "ļdei", ltgDegreeFlags(degree)));
 					} else if (celms.endsWith("nd")) {
-						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "ņdei", AttributeNames.i_Degree, degree));
+						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "ņdei", ltgDegreeFlags(degree)));
 					} else if (celms.endsWith("g")) {
-						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "dzei", AttributeNames.i_Degree, degree));
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "dzei", ltgDegreeFlags(degree)));
 					} else if (celms.endsWith("k")) {
-						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "cei", AttributeNames.i_Degree, degree));
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "cei", ltgDegreeFlags(degree)));
 					} else if (celms.endsWith("ļ")) {
-						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "lei", AttributeNames.i_Degree, degree));
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "lei", ltgDegreeFlags(degree)));
 					} else if (celms.endsWith("ņ")) {
-						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "nei", AttributeNames.i_Degree, degree));
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "nei", ltgDegreeFlags(degree)));
 					}
 					break;
 				default:
@@ -1520,57 +1524,57 @@ public abstract class Mijas {
 					}
 					break;
 				case 103: // līdzīgi 'case 3' - īpašības vārdiem pieliekam -uok- un vys- / vysu-
-					varianti.add(new Variants(celms,AttributeNames.i_Degree,AttributeNames.v_Positive));
+					varianti.add(new Variants(celms, ltgDegreeFlags(AttributeNames.v_Positive)));
 					if (!celms.endsWith("uok")) {
-						varianti.add(new Variants(celms + "uok", AttributeNames.i_Degree, AttributeNames.v_Comparative));
+						varianti.add(new Variants(celms + "uok", ltgDegreeFlags(AttributeNames.v_Comparative)));
 						if (pieliktVisPārākoPak) {
-							varianti.add(new Variants("vys" + celms + "uok", AttributeNames.i_Degree, AttributeNames.v_Superlative));
-							varianti.add(new Variants("vysu" + celms + "uok", AttributeNames.i_Degree, AttributeNames.v_Superlative));
+							varianti.add(new Variants("vys" + celms + "uok", ltgDegreeFlags(AttributeNames.v_Superlative)));
+							varianti.add(new Variants("vysu" + celms + "uok", ltgDegreeFlags(AttributeNames.v_Superlative)));
 						}
 					}
 					break;
 				case 104: // īpašības vārdiem pieliekam -uok- un vys- / vysu- + burtu mija
 					if (celms.endsWith("ļļ")) {
-						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "ll", AttributeNames.i_Degree,AttributeNames.v_Positive));
+						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "ll", ltgDegreeFlags(AttributeNames.v_Positive)));
 					} else if (celms.endsWith("ņņ")) {
-						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "nn", AttributeNames.i_Degree,AttributeNames.v_Positive));
+						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "nn", ltgDegreeFlags(AttributeNames.v_Positive)));
 					} else if (celms.endsWith("ļ")) {
-						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "l", AttributeNames.i_Degree,AttributeNames.v_Positive));
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "l", ltgDegreeFlags(AttributeNames.v_Positive)));
 					} else if (celms.endsWith("ņ")) {
-						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "n", AttributeNames.i_Degree,AttributeNames.v_Positive));
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "n", ltgDegreeFlags(AttributeNames.v_Positive)));
 					} else if (celms.endsWith("ķ")) {
-						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "k", AttributeNames.i_Degree,AttributeNames.v_Positive));
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "k", ltgDegreeFlags(AttributeNames.v_Positive)));
 					} else if (celms.endsWith("ģ")) {
-						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ģ", AttributeNames.i_Degree,AttributeNames.v_Positive));
+						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "ģ", ltgDegreeFlags(AttributeNames.v_Positive)));
 					} else {
-						varianti.add(new Variants(celms, AttributeNames.i_Degree,AttributeNames.v_Positive));
+						varianti.add(new Variants(celms, ltgDegreeFlags(AttributeNames.v_Positive)));
 					}
 					if (!celms.endsWith("uok")) {
-						varianti.add(new Variants(celms + "uok", AttributeNames.i_Degree, AttributeNames.v_Comparative));
+						varianti.add(new Variants(celms + "uok", ltgDegreeFlags(AttributeNames.v_Comparative)));
 						if (pieliktVisPārākoPak) {
-							varianti.add(new Variants("vys" + celms + "uok", AttributeNames.i_Degree, AttributeNames.v_Superlative));
-							varianti.add(new Variants("vysu" + celms + "uok", AttributeNames.i_Degree, AttributeNames.v_Superlative));
+							varianti.add(new Variants("vys" + celms + "uok", ltgDegreeFlags(AttributeNames.v_Superlative)));
+							varianti.add(new Variants("vysu" + celms + "uok", ltgDegreeFlags(AttributeNames.v_Superlative)));
 						}
 					}
 					break;
 				case 105: // līdzīgi kā case 34 -  īpašības vārdiem -uok- un vys- / vysu- izskaņām kā -ajam: liekam nevis moz-s->moz-ajam, bet moz-s->moz-a-jam, bet senej-ais -> sene-jam/sene-a-jam
 					if (celms.endsWith("ēj") || celms.endsWith("ej")) // senej-ais -> sene-jam
-						varianti.add(new Variants(celms.substring(0, celms.length()-1),AttributeNames.i_Degree,AttributeNames.v_Positive));
+						varianti.add(new Variants(celms.substring(0, celms.length()-1), ltgDegreeFlags(AttributeNames.v_Positive)));
 					else // moz-s -> moza-jam
-						varianti.add(new Variants(celms+"a",AttributeNames.i_Degree,AttributeNames.v_Positive));
+						varianti.add(new Variants(celms+"a", ltgDegreeFlags(AttributeNames.v_Positive)));
 
-					varianti.add(new Variants(celms + "uoka",AttributeNames.i_Degree,AttributeNames.v_Comparative));
+					varianti.add(new Variants(celms + "uoka", ltgDegreeFlags(AttributeNames.v_Comparative)));
 					if (pieliktVisPārākoPak) {
-						varianti.add(new Variants("vys" + celms + "uoka", AttributeNames.i_Degree, AttributeNames.v_Superlative));
-						varianti.add(new Variants("vysu" + celms + "uoka", AttributeNames.i_Degree, AttributeNames.v_Superlative));
+						varianti.add(new Variants("vys" + celms + "uoka", ltgDegreeFlags(AttributeNames.v_Superlative)));
+						varianti.add(new Variants("vysu" + celms + "uoka", ltgDegreeFlags(AttributeNames.v_Superlative)));
 					}
 					break;
 				case 106: // līdzīgi 'case 13' - apstākļa vārdiem pieliekam -uok- un vys- / vysu- - būtībā 103, bet bez pamatformas
 					if (!celms.endsWith("uok")) {
-						varianti.add(new Variants(celms + "uok", AttributeNames.i_Degree, AttributeNames.v_Comparative));
+						varianti.add(new Variants(celms + "uok", ltgDegreeFlags(AttributeNames.v_Comparative)));
 						if (pieliktVisPārākoPak) {
-							varianti.add(new Variants("vys" + celms + "uok", AttributeNames.i_Degree, AttributeNames.v_Superlative));
-							varianti.add(new Variants("vysu" + celms + "uok", AttributeNames.i_Degree, AttributeNames.v_Superlative));
+							varianti.add(new Variants("vys" + celms + "uok", ltgDegreeFlags(AttributeNames.v_Superlative)));
+							varianti.add(new Variants("vysu" + celms + "uok", ltgDegreeFlags(AttributeNames.v_Superlative)));
 						}
 					}
 					break;
@@ -1607,24 +1611,24 @@ public abstract class Mijas {
 						} else if (celms.endsWith("g")) {
 							tmpCelms =celms.substring(0, celms.length() - 1) + "ģ";
 						}
-						varianti.add(new Variants(tmpCelms + "uok", AttributeNames.i_Degree, AttributeNames.v_Comparative));
+						varianti.add(new Variants(tmpCelms + "uok", ltgDegreeFlags(AttributeNames.v_Comparative)));
 						if (pieliktVisPārākoPak) {
-							varianti.add(new Variants("vys" + tmpCelms + "uok", AttributeNames.i_Degree, AttributeNames.v_Superlative));
-							varianti.add(new Variants("vysu" + tmpCelms + "uok", AttributeNames.i_Degree, AttributeNames.v_Superlative));
+							varianti.add(new Variants("vys" + tmpCelms + "uok", ltgDegreeFlags(AttributeNames.v_Superlative)));
+							varianti.add(new Variants("vysu" + tmpCelms + "uok", ltgDegreeFlags(AttributeNames.v_Superlative)));
 						}
 					}
 					break;
 				case 109: // apstākļa vārdi ar gradāciju, bet bez burtu mijas
-					varianti.add(new Variants(celms,AttributeNames.i_Degree,AttributeNames.v_Positive));
+					varianti.add(new Variants(celms, ltgDegreeFlags(AttributeNames.v_Positive)));
 					if (celms.endsWith("ai")) {
 						celms = celms.substring(0, celms.length()-2);
 					} else if (celms.endsWith("i") || celms.endsWith("a")) {
 						celms = celms.substring(0, celms.length()-1);
 					}
-					varianti.add(new Variants(celms + "uok",AttributeNames.i_Degree,AttributeNames.v_Comparative));
+					varianti.add(new Variants(celms + "uok", ltgDegreeFlags(AttributeNames.v_Comparative)));
 					if (pieliktVisPārākoPak) {
-						varianti.add(new Variants("vys" + celms + "uok", AttributeNames.i_Degree, AttributeNames.v_Superlative));
-						varianti.add(new Variants("vysu" + celms + "uok", AttributeNames.i_Degree, AttributeNames.v_Superlative));
+						varianti.add(new Variants("vys" + celms + "uok", ltgDegreeFlags(AttributeNames.v_Superlative)));
+						varianti.add(new Variants("vysu" + celms + "uok", ltgDegreeFlags(AttributeNames.v_Superlative)));
 					}
 					break;
 				// Te sākas verbu mijas
@@ -1674,40 +1678,40 @@ public abstract class Mijas {
 				case 115: // 2. konjugācija, divdabju formu vispārākā pakāpe (121.) + tagadnes mija (110.)
 					if (celms.endsWith("uo")) {
 						String atvCelms = celms.substring(0, celms.length() - 2) + "o";
-						varianti.add(new Variants(atvCelms, AttributeNames.i_Degree, AttributeNames.v_Comparative));
+						varianti.add(new Variants(atvCelms, ltgDegreeFlags(AttributeNames.v_Comparative)));
 						if (pieliktVisPārākoPak) {
-							varianti.add(new Variants("vys" + atvCelms, AttributeNames.i_Degree, AttributeNames.v_Superlative));
-							varianti.add(new Variants("vysu" + atvCelms, AttributeNames.i_Degree, AttributeNames.v_Superlative));
+							varianti.add(new Variants("vys" + atvCelms, ltgDegreeFlags(AttributeNames.v_Superlative)));
+							varianti.add(new Variants("vysu" + atvCelms, ltgDegreeFlags(AttributeNames.v_Superlative)));
 						}
 					} else if (celms.endsWith("ei")) {
 						String atvCelms = celms.substring(0, celms.length() - 2) + "e";
-						varianti.add(new Variants(atvCelms, AttributeNames.i_Degree, AttributeNames.v_Comparative));
+						varianti.add(new Variants(atvCelms, ltgDegreeFlags(AttributeNames.v_Comparative)));
 						if (pieliktVisPārākoPak) {
-							varianti.add(new Variants("vys" + atvCelms, AttributeNames.i_Degree, AttributeNames.v_Superlative));
-							varianti.add(new Variants("vysu" + atvCelms, AttributeNames.i_Degree, AttributeNames.v_Superlative));
+							varianti.add(new Variants("vys" + atvCelms, ltgDegreeFlags(AttributeNames.v_Superlative)));
+							varianti.add(new Variants("vysu" + atvCelms, ltgDegreeFlags(AttributeNames.v_Superlative)));
 						}
 					} else if (celms.endsWith("ē")) {
 						String atvCelms = celms.substring(0, celms.length() - 1) + "e";
-						varianti.add(new Variants(atvCelms, AttributeNames.i_Degree, AttributeNames.v_Comparative));
+						varianti.add(new Variants(atvCelms, ltgDegreeFlags(AttributeNames.v_Comparative)));
 						if (pieliktVisPārākoPak) {
-							varianti.add(new Variants("vys" + atvCelms, AttributeNames.i_Degree, AttributeNames.v_Superlative));
-							varianti.add(new Variants("vysu" + atvCelms, AttributeNames.i_Degree, AttributeNames.v_Superlative));
+							varianti.add(new Variants("vys" + atvCelms, ltgDegreeFlags(AttributeNames.v_Superlative)));
+							varianti.add(new Variants("vysu" + atvCelms, ltgDegreeFlags(AttributeNames.v_Superlative)));
 						}
 					}
 					break;
 				case 116: // 2. konjugācija, divdabju formu vispārākā pakāpe (121.) + vēlējuma/supīna mija (114.) (-ts divdabim)
 					if (celms.endsWith("ē")) {
 						String atvCelms = celms.substring(0, celms.length() - 1) + "ā";
-						varianti.add(new Variants(atvCelms, AttributeNames.i_Degree, AttributeNames.v_Comparative));
+						varianti.add(new Variants(atvCelms, ltgDegreeFlags(AttributeNames.v_Comparative)));
 						if (pieliktVisPārākoPak) {
-							varianti.add(new Variants("vys" + atvCelms, AttributeNames.i_Degree, AttributeNames.v_Superlative));
-							varianti.add(new Variants("vysu" + atvCelms, AttributeNames.i_Degree, AttributeNames.v_Superlative));
+							varianti.add(new Variants("vys" + atvCelms, ltgDegreeFlags(AttributeNames.v_Superlative)));
+							varianti.add(new Variants("vysu" + atvCelms, ltgDegreeFlags(AttributeNames.v_Superlative)));
 						}
 					} else if (celms.endsWith("ei") || celms.endsWith("uo")) {
-						varianti.add(new Variants(celms, AttributeNames.i_Degree, AttributeNames.v_Comparative));
+						varianti.add(new Variants(celms, ltgDegreeFlags(AttributeNames.v_Comparative)));
 						if (pieliktVisPārākoPak) {
-							varianti.add(new Variants("vys" + celms, AttributeNames.i_Degree, AttributeNames.v_Superlative));
-							varianti.add(new Variants("vysu" + celms, AttributeNames.i_Degree, AttributeNames.v_Superlative));
+							varianti.add(new Variants("vys" + celms, ltgDegreeFlags(AttributeNames.v_Superlative)));
+							varianti.add(new Variants("vysu" + celms, ltgDegreeFlags(AttributeNames.v_Superlative)));
 						}
 					}
 					break;
@@ -1723,23 +1727,23 @@ public abstract class Mijas {
 				case 118: // 2. konjugācija, divdabju formu vispārākā pakāpe (121.) + pag. mija -s, -use divdabim (117.)
 					if (celms.endsWith("ei")) {
 						String atvCelms = celms.substring(0, celms.length() - 2) + "e";
-						varianti.add(new Variants(atvCelms, AttributeNames.i_Degree, AttributeNames.v_Comparative));
+						varianti.add(new Variants(atvCelms, ltgDegreeFlags(AttributeNames.v_Comparative)));
 						if (pieliktVisPārākoPak) {
-							varianti.add(new Variants("vys" + atvCelms, AttributeNames.i_Degree, AttributeNames.v_Superlative));
-							varianti.add(new Variants("vysu" + atvCelms, AttributeNames.i_Degree, AttributeNames.v_Superlative));
+							varianti.add(new Variants("vys" + atvCelms, ltgDegreeFlags(AttributeNames.v_Superlative)));
+							varianti.add(new Variants("vysu" + atvCelms, ltgDegreeFlags(AttributeNames.v_Superlative)));
 						}
 					} else if (celms.endsWith("ē")) {
 						String atvCelms = celms.substring(0, celms.length() - 1) + "ie";
-						varianti.add(new Variants(atvCelms, AttributeNames.i_Degree, AttributeNames.v_Comparative));
+						varianti.add(new Variants(atvCelms, ltgDegreeFlags(AttributeNames.v_Comparative)));
 						if (pieliktVisPārākoPak) {
-							varianti.add(new Variants("vys" + atvCelms, AttributeNames.i_Degree, AttributeNames.v_Superlative));
-							varianti.add(new Variants("vysu" + atvCelms, AttributeNames.i_Degree, AttributeNames.v_Superlative));
+							varianti.add(new Variants("vys" + atvCelms, ltgDegreeFlags(AttributeNames.v_Superlative)));
+							varianti.add(new Variants("vysu" + atvCelms, ltgDegreeFlags(AttributeNames.v_Superlative)));
 						}
 					} else if (celms.endsWith("uo")) {
-						varianti.add(new Variants(celms, AttributeNames.i_Degree, AttributeNames.v_Comparative));
+						varianti.add(new Variants(celms, ltgDegreeFlags(AttributeNames.v_Comparative)));
 						if (pieliktVisPārākoPak) {
-							varianti.add(new Variants("vys" + celms, AttributeNames.i_Degree, AttributeNames.v_Superlative));
-							varianti.add(new Variants("vysu" + celms, AttributeNames.i_Degree, AttributeNames.v_Superlative));
+							varianti.add(new Variants("vys" + celms, ltgDegreeFlags(AttributeNames.v_Superlative)));
+							varianti.add(new Variants("vysu" + celms, ltgDegreeFlags(AttributeNames.v_Superlative)));
 						}
 					}
 					break;
@@ -1751,18 +1755,18 @@ public abstract class Mijas {
 				case 120: // 3. konjugācija, cietā standarta grupa bez līdskaņu mijas, divdabju formu vispārākā pakāpe + tagadnes un pagātnes mija (119.)
 					if (celms.endsWith("ei")) {
 						String atvCelms = celms.substring(0, celms.length() - 2);
-						varianti.add(new Variants(atvCelms, AttributeNames.i_Degree, AttributeNames.v_Comparative));
+						varianti.add(new Variants(atvCelms, ltgDegreeFlags(AttributeNames.v_Comparative)));
 						if (pieliktVisPārākoPak) {
-							varianti.add(new Variants("vys" + atvCelms, AttributeNames.i_Degree, AttributeNames.v_Superlative));
-							varianti.add(new Variants("vysu" + atvCelms, AttributeNames.i_Degree, AttributeNames.v_Superlative));
+							varianti.add(new Variants("vys" + atvCelms, ltgDegreeFlags(AttributeNames.v_Superlative)));
+							varianti.add(new Variants("vysu" + atvCelms, ltgDegreeFlags(AttributeNames.v_Superlative)));
 						}
 					}
 					break;
 				case 121: // 3. konjugācija, divdabju formu vispārākā pakāpe bez mijas
-					varianti.add(new Variants(celms, AttributeNames.i_Degree, AttributeNames.v_Comparative));
+					varianti.add(new Variants(celms, ltgDegreeFlags(AttributeNames.v_Comparative)));
 					if (pieliktVisPārākoPak) {
-						varianti.add(new Variants("vys" + celms, AttributeNames.i_Degree, AttributeNames.v_Superlative));
-						varianti.add(new Variants("vysu" + celms, AttributeNames.i_Degree, AttributeNames.v_Superlative));
+						varianti.add(new Variants("vys" + celms, ltgDegreeFlags(AttributeNames.v_Superlative)));
+						varianti.add(new Variants("vysu" + celms, ltgDegreeFlags(AttributeNames.v_Superlative)));
 					}
 					break;
 				case 122: // 3. konjugācija, cietā standarta grupa, tagadne ar līdzskaņu miju
@@ -1796,10 +1800,10 @@ public abstract class Mijas {
 						atvCelms = celms.substring(0, celms.length() - 3) + "ņ";
 					} else break;
 
-					varianti.add(new Variants(atvCelms, AttributeNames.i_Degree, AttributeNames.v_Comparative));
+					varianti.add(new Variants(atvCelms, ltgDegreeFlags(AttributeNames.v_Comparative)));
 					if (pieliktVisPārākoPak) {
-						varianti.add(new Variants("vys" + atvCelms, AttributeNames.i_Degree, AttributeNames.v_Superlative));
-						varianti.add(new Variants("vysu" + atvCelms, AttributeNames.i_Degree, AttributeNames.v_Superlative));
+						varianti.add(new Variants("vys" + atvCelms, ltgDegreeFlags(AttributeNames.v_Superlative)));
+						varianti.add(new Variants("vysu" + atvCelms, ltgDegreeFlags(AttributeNames.v_Superlative)));
 					}
 					break;
 				default:
@@ -1854,5 +1858,19 @@ public abstract class Mijas {
 			}
 		}
 		return celms;
+	}
+
+	/**
+	 * For latgalian superlative degree made with `vys` or `vysu` is always
+	 * undesirable. The grammatically correct way to make superlative is to make
+	 * an analytical form with `pots`.
+	 */
+	protected static AttributeValues ltgDegreeFlags (String degree)
+	{
+		AttributeValues feats = new AttributeValues();
+		feats.addAttribute(AttributeNames.i_Degree, degree);
+		if (degree != null && degree.equals(AttributeNames.v_Superlative))
+			feats.addAttribute(AttributeNames.i_Normative, AttributeNames.v_Undesirable);
+		return feats;
 	}
 }
