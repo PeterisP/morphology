@@ -31,4 +31,10 @@ public class Variants extends AttributeValues{
 		celms = _celms;
 		addAttribute(īpašība, vērtība );
 	}
+
+	protected Variants (String _celms, String īpašība, String vērtība, String īpašība2, String vērtība2) {
+		celms = _celms;
+		addAttribute(īpašība, vērtība);
+		addAttribute(īpašība2, vērtība2);
+	}
 }	
