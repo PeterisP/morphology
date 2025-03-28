@@ -373,6 +373,11 @@ public class LatgalianTest {
 		assertInflectionMultipleStrong(slapnis, sg_gen_fem_pos_indef, new HashSet<String>(){{ add("slapnis"); add("slapņas");}});
 		assertInflectionMultipleStrong(slapnis, sg_gen_fem_comp_indef, new HashSet<String>(){{ add("slapņuokys"); add("slapņuokas");}});
 
+		List<Wordform> zaļš = analyzer.generateInflectionsFromParadigm("zaļš", 43);
+		assertInflection(zaļš, sg_nom_masc_comp, "zaļuoks");
+		assertInflectionMultipleStrong(zaļš, sg_gen_fem_pos_indef, new HashSet<String>(){{ add("zalis"); add("zaļas");}});
+		assertInflectionMultipleStrong(zaļš, sg_gen_fem_comp_indef, new HashSet<String>(){{ add("zaļuokis"); add("zaļuokas");}});
+
 		List<Wordform> malejs = analyzer.generateInflectionsFromParadigm("malejs", 45);
 		assertInflection(malejs, sg_nom_masc_comp, "malejuoks");
 		assertInflectionMultipleStrong(malejs, sg_gen_fem_pos_indef, new HashSet<String>(){{ add("malejis"); add("malejas");}});
