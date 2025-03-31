@@ -835,6 +835,9 @@ public abstract class Mijas {
 				case 124: // 3. konjugācija, mīkstā standarta grupa, tagadne un pagātne bez līdskaņu mijas
 					varianti.add(new Variants(celms + "ē", "Mija", "ē -> "));
 					break;
+				case 125: // 3. konjugācija, mīkstā standarta grupa, tagadne bez līdskaņu mijas ar burtu miju
+					varianti.add(new Variants(ltgBurtuMija(celms) + "ē", "Mija", "ē -> "));
+					break;
 				default:
 					System.err.printf("Invalid StemChange ID, stem '%s', stemchange %d\n", celms, mija);
 			}
@@ -1674,6 +1677,11 @@ public abstract class Mijas {
 						varianti.add(new Variants(celms.substring(0, celms.length() - 1)));
 					}
 					break;
+				case 125: // 3. konjugācija, mīkstā standarta grupa, tagadne bez līdzskaņu mijas ar inverso burtu miju
+					if (celms.endsWith("ē")) {
+						varianti.add(new Variants(ltgBurtuMijaAtpakaļViennoz(celms.substring(0, celms.length() - 1))));
+					}
+					break;
 				default:
 					System.err.printf("Invalid StemChange ID, stem '%s', stemchange %d\n", celms, mija);
 			}
@@ -1688,7 +1696,7 @@ public abstract class Mijas {
 
 	protected static String ltgPatskaņuMijaLocīšanai(String celms)
 	{
-		Pattern p = Pattern.compile("(.*)([aeēi]|ai|ei|ui|oi|ie)([bcčdfgģhjkķlļmnņprŗsštvzž]+[aāeēiīyoōuū]*)$");
+		Pattern p = Pattern.compile("(.*)(ai|ei|ui|oi|ie|[aeēi])([bcčdfgģhjkķlļmnņprŗsštvzž]+[aāeēiīyoōuū]*)$");
 		Matcher m = p.matcher(celms);
 		if (m.matches()) {
 			switch (m.group(2)) {

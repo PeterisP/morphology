@@ -691,6 +691,7 @@ public class LatgalianTest {
 
 	public void konj3eit() {
 		List<Wordform> dareit = analyzer.generateInflectionsFromParadigm("dareit", 48);
+		List<Wordform> taiseit = analyzer.generateInflectionsFromParadigm("taiseit", 48);
 		List<Wordform> saceit = analyzer.generateInflectionsFromParadigm("saceit", 49);
 
 		// Īstenības izteiksme
@@ -702,6 +703,7 @@ public class LatgalianTest {
 		ind_pres_1_sg.addAttribute(AttributeNames.i_Person, "1");
 		ind_pres_1_sg.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
 		assertInflection(dareit, ind_pres_1_sg, "doru");
+		assertInflection(taiseit, ind_pres_1_sg, "taisu");
 		assertInflection(saceit, ind_pres_1_sg, "soku");
 
 		// Pagātne: 119. mija
@@ -712,6 +714,7 @@ public class LatgalianTest {
 		ind_past_1_sg.addAttribute(AttributeNames.i_Person, "1");
 		ind_past_1_sg.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
 		assertInflection(dareit, ind_past_1_sg, "dareju");
+		assertInflection(taiseit, ind_past_1_sg, "taiseju");
 		assertInflection(saceit, ind_past_1_sg, "saceju");
 
 		// Nākotne:  0. mija
@@ -722,6 +725,7 @@ public class LatgalianTest {
 		inf_fut_1_sg.addAttribute(AttributeNames.i_Person, "1");
 		inf_fut_1_sg.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
 		assertInflection(dareit, inf_fut_1_sg, "dareišu");
+		assertInflection(taiseit, inf_fut_1_sg, "taiseišu");
 		assertInflection(saceit, inf_fut_1_sg, "saceišu");
 
 		// Citas izteiksmes
@@ -730,6 +734,7 @@ public class LatgalianTest {
 		imp.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
 		imp.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Imperative);
 		assertInflectionMultipleWeak(dareit, imp, new HashSet<String>(){{ add("dori"); add("dorit");}});
+		assertInflectionMultipleWeak(taiseit, imp, new HashSet<String>(){{ add("taisi"); add("taisit");}});
 		assertInflectionMultipleWeak(saceit, imp, new HashSet<String>(){{ add("soki"); add("sokit");}});
 
 		// Vajadzības: 151: mija
@@ -737,6 +742,7 @@ public class LatgalianTest {
 		deb.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
 		deb.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Debitive);
 		assertInflection(dareit, deb, "juodora");
+		assertInflection(taiseit, deb, "juotaisa");
 		assertInflection(saceit, deb, "juosoka");
 
 		// Vēlējuma: 0. mija
@@ -745,6 +751,7 @@ public class LatgalianTest {
 		cond.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Conditional);
 		cond.addAttribute(AttributeNames.i_Person, "Nepiemīt");
 		assertInflection(dareit, cond, "darietu");
+		assertInflection(taiseit, cond, "taiseitu");
 		assertInflection(saceit, cond, "saceitu");
 
 		AttributeValues cond_2pers_sg = new AttributeValues();
@@ -753,6 +760,7 @@ public class LatgalianTest {
 		cond_2pers_sg.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
 		cond_2pers_sg.addAttribute(AttributeNames.i_Person, "2");
 		assertInflection(dareit, cond_2pers_sg, "dareitim");
+		assertInflection(taiseit, cond_2pers_sg, "taiseitim");
 		assertInflection(saceit, cond_2pers_sg, "saceitim");
 
 		// Atstāstījuma: 162. mija
@@ -763,6 +771,7 @@ public class LatgalianTest {
 		quot_pres_nogen_nonum.addAttribute(AttributeNames.i_Gender, AttributeNames.v_NA);
 		quot_pres_nogen_nonum.addAttribute(AttributeNames.i_Number, AttributeNames.v_NA);
 		assertInflection(dareit, quot_pres_nogen_nonum, "dorūt");
+		assertInflection(taiseit, quot_pres_nogen_nonum, "taiseitu");
 		assertInflection(saceit, quot_pres_nogen_nonum, "sokūt");
 
 		// 0. mija
@@ -773,6 +782,7 @@ public class LatgalianTest {
 		quot_fut_fem_pl.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Feminine);
 		quot_fut_fem_pl.addAttribute(AttributeNames.i_Number, AttributeNames.v_Plural);
 		assertInflection(dareit, quot_fut_fem_pl, "dareiškūšys");
+		assertInflection(taiseit, quot_fut_fem_pl, "taiseiškūšys");
 		assertInflection(saceit, quot_fut_fem_pl, "saceiškūšys");
 
 		// Divdabji.
@@ -788,6 +798,7 @@ public class LatgalianTest {
 		part_act_pres.addAttribute(AttributeNames.i_Degree, AttributeNames.v_Positive);
 		part_act_pres.addAttribute(AttributeNames.i_Definiteness, AttributeNames.v_Indefinite);
 		assertInflection(dareit, part_act_pres, "dorūšs");
+		assertInflection(taiseit, part_act_pres, "taisūšs");
 		assertInflection(saceit, part_act_pres, "sokūšs");
 
 		// Tagadnes ciešamās kārtas: 162. mija
@@ -802,6 +813,7 @@ public class LatgalianTest {
 		part_pass_pres.addAttribute(AttributeNames.i_Degree, AttributeNames.v_Positive);
 		part_pass_pres.addAttribute(AttributeNames.i_Definiteness, AttributeNames.v_Indefinite);
 		assertInflection(dareit, part_pass_pres, "doroms");
+		assertInflection(taiseit, part_pass_pres, "taisoms");
 		assertInflection(saceit, part_pass_pres, "sokoms");
 
 		// Pagātnes ciešamās kārtas: 0. mija
@@ -816,6 +828,7 @@ public class LatgalianTest {
 		part_pass_past.addAttribute(AttributeNames.i_Degree, AttributeNames.v_Positive);
 		part_pass_past.addAttribute(AttributeNames.i_Definiteness, AttributeNames.v_Indefinite);
 		assertInflection(dareit, part_pass_past, "dareits");
+		assertInflection(taiseit, part_pass_past, "taiseits");
 		assertInflection(saceit, part_pass_past, "saceits");
 
 		// Pagātnes darāmās kārtas: 119. mija
@@ -830,6 +843,7 @@ public class LatgalianTest {
 		part_act_past.addAttribute(AttributeNames.i_Degree, AttributeNames.v_Positive);
 		part_act_past.addAttribute(AttributeNames.i_Definiteness, AttributeNames.v_Indefinite);
 		assertInflection(dareit, part_act_past, "darejs");
+		assertInflection(taiseit, part_act_past, "taisejs");
 		assertInflection(saceit, part_act_past, "sacejs");
 
 		// Lietvārds: 0. mija
@@ -840,7 +854,43 @@ public class LatgalianTest {
 		noun.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
 		noun.addAttribute(AttributeNames.i_Case, AttributeNames.v_Nominative);
 		assertInflection(dareit, noun, "dareišona");
+		assertInflection(taiseit, noun, "taiseišona");
 		assertInflection(saceit, noun, "saceišona");
+	}
+
+	public void konj3ēt()
+	{
+		List<Wordform> ticēt = analyzer.generateInflectionsFromParadigm("ticēt", 50);
+		List<Wordform> gulēt = analyzer.generateInflectionsFromParadigm("gulēt", 50);
+
+		// Īstenības izteiksme
+		// Tagadne: 165., 124 un 125. mija
+		AttributeValues ind_pres_1_sg = new AttributeValues();
+		ind_pres_1_sg.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+		ind_pres_1_sg.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Indicative);
+		ind_pres_1_sg.addAttribute(AttributeNames.i_Tense, AttributeNames.v_Present);
+		ind_pres_1_sg.addAttribute(AttributeNames.i_Person, "1");
+		ind_pres_1_sg.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+		assertInflection(ticēt, ind_pres_1_sg, "tycu");
+		assertInflection(gulēt, ind_pres_1_sg, "gulu");
+
+		AttributeValues ind_pres_2_sg = new AttributeValues();
+		ind_pres_2_sg.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+		ind_pres_2_sg.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Indicative);
+		ind_pres_2_sg.addAttribute(AttributeNames.i_Tense, AttributeNames.v_Present);
+		ind_pres_2_sg.addAttribute(AttributeNames.i_Person, "2");
+		ind_pres_2_sg.addAttribute(AttributeNames.i_Number, AttributeNames.v_Singular);
+		assertInflection(ticēt, ind_pres_2_sg, "tici");
+		assertInflection(gulēt, ind_pres_2_sg, "guli");
+
+		AttributeValues ind_pres_3 = new AttributeValues();
+		ind_pres_3.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
+		ind_pres_3.addAttribute(AttributeNames.i_Mood, AttributeNames.v_Indicative);
+		ind_pres_3.addAttribute(AttributeNames.i_Tense, AttributeNames.v_Present);
+		ind_pres_3.addAttribute(AttributeNames.i_Person, "3");
+		assertInflection(ticēt, ind_pres_3, "tic");
+		assertInflection(gulēt, ind_pres_3, "guļ");
+
 	}
 
 	@Test
