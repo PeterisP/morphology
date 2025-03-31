@@ -115,7 +115,7 @@ public abstract class Mijas {
 					break;
 				case 153: // vajadzības izteiksme 3. konjugācijai -ēt ar patskaņu miju bez līdzskaņu mijas
 					if (stem.startsWith("juo") && stem.length() >= 5) {
-						celms = ltgPatkaņuMijaAtpakaļlocīšanai(stem.substring(3));
+						celms = stem.substring(3);
 						mija = 125;
 					} else return varianti;
 					break;
@@ -994,7 +994,7 @@ public abstract class Mijas {
 					mija = 122;
 					break;
 				case 153: // vajadzības izteiksme 3. konjugācijai -ēt ar patskaņu miju bez līdzskaņu mijas
-					celms = "juo" + ltgPatskaņuMijaLocīšanai(stem);
+					celms = "juo" + stem;
 					mija = 125;
 					break;
 				// patskaņu mijas verbiem
@@ -1734,7 +1734,7 @@ public abstract class Mijas {
 
 	protected static String ltgPatskaņuMijaLocīšanai(String celms)
 	{
-		Pattern p = Pattern.compile("(.*)(ai|ei|ui|oi|ie|[aeēi])([bcčdfgģhjkķlļmnņprŗsštvzž]+[aāeēiīyoōuū]*)$");
+		Pattern p = Pattern.compile("(.*?)(ai|ei|ui|oi|ie|[aeēi])([bcčdfgģhjkķlļmnņprŗsštvzž]+[aāeēiīyoōuū]*)$");
 		Matcher m = p.matcher(celms);
 		if (m.matches()) {
 			switch (m.group(2)) {
@@ -1755,7 +1755,7 @@ public abstract class Mijas {
 
 	protected static String ltgPatkaņuMijaAtpakaļlocīšanai (String celms)
 	{
-		Pattern p = Pattern.compile("(.*)([aāoy]|uo)([bcčdfgģhjkķlļmnņprŗsštvzž]+[aāeēiīyoōuū]*)$");
+		Pattern p = Pattern.compile("(.*?)(uo|[aāoy]|)([bcčdfgģhjkķlļmnņprŗsštvzž]+[aāeēiīyoōuū]*)$");
 		Matcher m = p.matcher(celms);
 		if (m.matches()) {
 			switch (m.group(2)) {
