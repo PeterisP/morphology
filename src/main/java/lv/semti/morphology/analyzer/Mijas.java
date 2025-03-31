@@ -101,16 +101,22 @@ public abstract class Mijas {
 						mija = 110;
 					} else return varianti;
 					break;
-				case 151: // vajadzības izteiksme 3. konjugācijai ar patskaņu miju bez līdzskaņu mijas
+				case 151: // vajadzības izteiksme 3. konjugācijai -eit ar patskaņu miju bez līdzskaņu mijas
 					if (stem.startsWith("juo") && stem.length() >= 5) {
 						celms = ltgPatkaņuMijaAtpakaļlocīšanai(stem.substring(3));
 						mija = 119;
 					} else return varianti;
 					break;
-				case 152: // vajadzības izteiksme 3. konjugācijai ar patskaņu miju ar līdzskaņu miju
+				case 152: // vajadzības izteiksme 3. konjugācijai -eit ar patskaņu miju ar līdzskaņu miju
 					if (stem.startsWith("juo") && stem.length() >= 5) {
 						celms = ltgPatkaņuMijaAtpakaļlocīšanai(stem.substring(3));
 						mija = 122;
+					} else return varianti;
+					break;
+				case 153: // vajadzības izteiksme 3. konjugācijai -ēt ar patskaņu miju bez līdzskaņu mijas
+					if (stem.startsWith("juo") && stem.length() >= 5) {
+						celms = ltgPatkaņuMijaAtpakaļlocīšanai(stem.substring(3));
+						mija = 125;
 					} else return varianti;
 					break;
 				case 160: // patskaņu mija 2. konjugācijas supīnam, vēlējuma izteiksmei un pagātnes divdabim
@@ -121,25 +127,29 @@ public abstract class Mijas {
 					celms = ltgPatkaņuMijaAtpakaļlocīšanai(stem);
 					mija = 116;
 					break;
-				case 162: // patskaņu mija 3. konjugācijas cietās standarta grupas tagadnei bez līdzskaņu mijas
+				case 162: // patskaņu mija 3. konjugācijas standarta -eit tagadnei bez līdzskaņu mijas
 					celms = ltgPatkaņuMijaAtpakaļlocīšanai(stem);
 					mija = 119;
 					break;
-				case 163: // patskaņu mija 3. konjugācijas cietās standarta grupas bez līdzskaņu mijas tagadnes divdabja pārākajai un vispārākajai pakāpei
+				case 163: // patskaņu mija 3. konjugācijas standarta -eit bez līdzskaņu mijas tagadnes divdabja pārākajai un vispārākajai pakāpei
 					celms = ltgPatkaņuMijaAtpakaļlocīšanai(stem);
 					mija = 120;
 					break;
-				case 164: // patskaņu mija 3. konjugācijas cietās standarta grupas tagadnei ar līdzskaņu miju
+				case 164: // patskaņu mija 3. konjugācijas standarta -eit tagadnei ar līdzskaņu miju
 					celms = ltgPatkaņuMijaAtpakaļlocīšanai(stem);
 					mija = 122;
 					break;
-				case 165: // patskaņu mija 3. konjugācijas cietās standarta grupas līdzskaņu mijas tagadnes divdabja pārākajai un vispārākajai pakāpei
+				case 165: // patskaņu mija 3. konjugācijas standarta -eit līdzskaņu mijas tagadnes divdabja pārākajai un vispārākajai pakāpei
 					celms = ltgPatkaņuMijaAtpakaļlocīšanai(stem);
 					mija = 123;
 					break;
-				case 166: // patskaņu mija 3. konjugācijas mīkstās standarta grupas 1. pers. tagadnei bez līdzskaņu mijas
+				case 166: // patskaņu mija 3. konjugācijas standarta -ēt 1. pers. tagadnei bez līdzskaņu mijas
 					celms = ltgPatkaņuMijaAtpakaļlocīšanai(stem);
 					mija = 124;
+					break;
+				case 167: // patskaņu mija 3. konjugācijas standarta -ēt bez līdzskaņu mijas tagadnes divdabja pārākajai un vispārākajai pakāpei
+					celms = ltgPatkaņuMijaAtpakaļlocīšanai(stem);
+					mija = 126;
 					break;
 				default:
 					celms = stem;
@@ -767,10 +777,10 @@ public abstract class Mijas {
 						varianti.add(new Variants(celms, ltgDegreeFlags(degree)));
 					}
 					break;
-				case 119: // 3. konjugācija, cietā standarta grupa, tagadne un pagātne (līdzskaņu mijas nekad nav)
+				case 119: // 3. konjugācija, standarta -eit, tagadne un pagātne (līdzskaņu mijas nekad nav)
 					varianti.add(new Variants(celms + "ei", "Mija", "ei -> "));
 					break;
-				case 120: // 3. konjugācija, cietā standarta grupa bez līdskaņu mijas, divdabju formu vispārākā pakāpe + tagadnes un pagātnes mija (119.)
+				case 120: // 3. konjugācija, standarta -eit bez līdskaņu mijas, divdabju formu vispārākā pakāpe + tagadnes un pagātnes mija (119.)
 					degree = AttributeNames.v_Comparative;
 					if (celms.startsWith("vysu")) {
 						degree = AttributeNames.v_Superlative;
@@ -779,7 +789,6 @@ public abstract class Mijas {
 						degree = AttributeNames.v_Superlative;
 						celms = celms.substring(3);
 					}
-
 					varianti.add(new Variants(celms + "ei", ltgDegreeFlags(degree)));
 					break;
 				case 121: // 3. konjugācija, divdabju formu vispārākā pakāpe bez mijas
@@ -793,7 +802,7 @@ public abstract class Mijas {
 					}
 					varianti.add(new Variants(celms, ltgDegreeFlags(degree)));
 					break;
-				case 122: // 3. konjugācija, cietā standarta grupa, tagadne ar līdzskaņu miju
+				case 122: // 3. konjugācija, standarta -eit, tagadne ar līdzskaņu miju
 					if (celms.endsWith("ld")) {
 						varianti.add(new Variants(celms.substring(0, celms.length() - 2) + "ļdei", "Mija", "ļdei -> ld"));
 					} else if (celms.endsWith("nd")) {
@@ -808,7 +817,7 @@ public abstract class Mijas {
 						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "nei", "Mija", "nei -> ņ"));
 					}
 					break;
-				case 123: // 3. konjugācija, cietā standarta grupa ar līdskaņu miju, divdabju formu vispārākā pakāpe + tagadnes mija (122.)
+				case 123: // 3. konjugācija, standarta -eit ar līdskaņu miju, divdabju formu vispārākā pakāpe + tagadnes mija (122.)
 					degree = AttributeNames.v_Comparative;
 					if (celms.startsWith("vysu")) {
 						degree = AttributeNames.v_Superlative;
@@ -832,11 +841,22 @@ public abstract class Mijas {
 						varianti.add(new Variants(celms.substring(0, celms.length() - 1) + "nei", ltgDegreeFlags(degree)));
 					}
 					break;
-				case 124: // 3. konjugācija, mīkstā standarta grupa, tagadne un pagātne bez līdskaņu mijas
+				case 124: // 3. konjugācija, standarta -ēt, tagadne un pagātne bez līdskaņu mijas
 					varianti.add(new Variants(celms + "ē", "Mija", "ē -> "));
 					break;
-				case 125: // 3. konjugācija, mīkstā standarta grupa, tagadne bez līdskaņu mijas ar burtu miju
+				case 125: // 3. konjugācija, standarta -ēt, tagadne bez līdskaņu mijas ar burtu miju
 					varianti.add(new Variants(ltgBurtuMija(celms) + "ē", "Mija", "ē -> "));
+					break;
+				case 126: // 3. konjugācija, standarta -ēt bez līdskaņu mijas, divdabju formu vispārākā pakāpe + tagadnes un pagātnes mija (119.)
+					degree = AttributeNames.v_Comparative;
+					if (celms.startsWith("vysu")) {
+						degree = AttributeNames.v_Superlative;
+						celms = celms.substring(4);
+					} else if (celms.startsWith("vys")) {
+						degree = AttributeNames.v_Superlative;
+						celms = celms.substring(3);
+					}
+					varianti.add(new Variants(celms + "ē", ltgDegreeFlags(degree)));
 					break;
 				default:
 					System.err.printf("Invalid StemChange ID, stem '%s', stemchange %d\n", celms, mija);
@@ -965,13 +985,17 @@ public abstract class Mijas {
 					celms = "juo" + stem;
 					mija = 110;
 					break;
-				case 151: // vajadzības izteiksme 3. konjugācijai ar patskaņu miju bez līdzskaņu mijas
+				case 151: // vajadzības izteiksme 3. konjugācijai -eit ar patskaņu miju bez līdzskaņu mijas
 					celms = "juo" + ltgPatskaņuMijaLocīšanai(stem);
 					mija = 119;
 					break;
-				case 152: // vajadzības izteiksme 3. konjugācijai ar patskaņu miju ar līdzskaņu miju
+				case 152: // vajadzības izteiksme 3. konjugācijai -eit ar patskaņu miju ar līdzskaņu miju
 					celms = "juo" + ltgPatskaņuMijaLocīšanai(stem);
 					mija = 122;
+					break;
+				case 153: // vajadzības izteiksme 3. konjugācijai -ēt ar patskaņu miju bez līdzskaņu mijas
+					celms = "juo" + ltgPatskaņuMijaLocīšanai(stem);
+					mija = 125;
 					break;
 				// patskaņu mijas verbiem
 				case 160: // patskaņu mija 2. konjugācijas supīnam, vēlējuma izteiksmei un pagātnes divdabim
@@ -982,25 +1006,29 @@ public abstract class Mijas {
 					celms = ltgPatskaņuMijaLocīšanai(stem);
 					mija = 116;
 					break;
-				case 162: // patskaņu mija 3. konjugācijas cietās standarta grupas tagadnei bez līdzskaņu mijas
+				case 162: // patskaņu mija 3. konjugācijas standarta -eit tagadnei bez līdzskaņu mijas
 					celms = ltgPatskaņuMijaLocīšanai(stem);
 					mija = 119;
 					break;
-				case 163: // patskaņu mija 3. konjugācijas cietās standarta bez līdzskaņu mijas grupas tagadnes divdabja pārākajai un vispārākajai pakāpei
+				case 163: // patskaņu mija 3. konjugācijas standarta -eit bez līdzskaņu mijas grupas tagadnes divdabja pārākajai un vispārākajai pakāpei
 					celms = ltgPatskaņuMijaLocīšanai(stem);
 					mija = 120;
 					break;
-				case 164: // patskaņu mija 3. konjugācijas cietās standarta grupas tagadnei ar līdzskaņu miju
+				case 164: // patskaņu mija 3. konjugācijas standarta -eit grupas tagadnei ar līdzskaņu miju
 					celms = ltgPatskaņuMijaLocīšanai(stem);
 					mija = 122;
 					break;
-				case 165: // patskaņu mija 3. konjugācijas cietās standarta līdzskaņu mijas grupas tagadnes divdabja pārākajai un vispārākajai pakāpei
+				case 165: // patskaņu mija 3. konjugācijas standarta -eit līdzskaņu mijas grupas tagadnes divdabja pārākajai un vispārākajai pakāpei
 					celms = ltgPatskaņuMijaLocīšanai(stem);
 					mija = 123;
 					break;
-				case 166: // patskaņu mija 3. konjugācijas mīkstās standarta grupas 1. pers. tagadnei bez līdzskaņu mijas
+				case 166: // patskaņu mija 3. konjugācijas standarta -ēt 1. pers. tagadnei bez līdzskaņu mijas
 					celms = ltgPatskaņuMijaLocīšanai(stem);
 					mija = 124;
+					break;
+				case 167: // patskaņu mija 3. konjugācijas standarta -ēt bez līdzskaņu mijas grupas tagadnes divdabja pārākajai un vispārākajai pakāpei
+					celms = ltgPatskaņuMijaLocīšanai(stem);
+					mija = 126;
 					break;
 				default:
 					celms = stem;
@@ -1613,12 +1641,12 @@ public abstract class Mijas {
 						}
 					}
 					break;
-				case 119: // 3. konjugācija, cietā standarta grupa, tagadne un pagātne (līdzskaņu mijas nekad nav)
+				case 119: // 3. konjugācija, standarta -eit, tagadne un pagātne (līdzskaņu mijas nekad nav)
 					if (celms.endsWith("ei")) {
 						varianti.add(new Variants(celms.substring(0, celms.length() - 2)));
 					}
 					break;
-				case 120: // 3. konjugācija, cietā standarta grupa bez līdskaņu mijas, divdabju formu vispārākā pakāpe + tagadnes un pagātnes mija (119.)
+				case 120: // 3. konjugācija, standarta -eit bez līdskaņu mijas, divdabju formu vispārākā pakāpe + tagadnes un pagātnes mija (119.)
 					if (celms.endsWith("ei")) {
 						String atvCelms = celms.substring(0, celms.length() - 2);
 						varianti.add(new Variants(atvCelms, ltgDegreeFlags(AttributeNames.v_Comparative)));
@@ -1635,7 +1663,7 @@ public abstract class Mijas {
 						varianti.add(new Variants("vysu" + celms, ltgDegreeFlags(AttributeNames.v_Superlative)));
 					}
 					break;
-				case 122: // 3. konjugācija, cietā standarta grupa, tagadne ar līdzskaņu miju
+				case 122: // 3. konjugācija, standarta -eit, tagadne ar līdzskaņu miju
 					if (celms.endsWith("ļdei")) {
 						varianti.add(new Variants(celms.substring(0, celms.length() - 4) + "ld"));
 					} else if (celms.endsWith("ņdei")) {
@@ -1650,7 +1678,7 @@ public abstract class Mijas {
 						varianti.add(new Variants(celms.substring(0, celms.length() - 3) + "ņ"));
 					}
 					break;
-				case 123: // 3. konjugācija, cietā standarta grupa ar līdskaņu miju, divdabju formu vispārākā pakāpe + tagadnes mija (122.)
+				case 123: // 3. konjugācija, standarta -eit ar līdskaņu miju, divdabju formu vispārākā pakāpe + tagadnes mija (122.)
 					String atvCelms = celms;
 					if (celms.endsWith("ļdei")) {
 						atvCelms = celms.substring(0, celms.length() - 4) + "ld";
@@ -1672,14 +1700,24 @@ public abstract class Mijas {
 						varianti.add(new Variants("vysu" + atvCelms, ltgDegreeFlags(AttributeNames.v_Superlative)));
 					}
 					break;
-				case 124: // 3. konjugācija, mīkstā standarta grupa, tagadne un pagātne bez līdzskaņu mijas
+				case 124: // 3. konjugācija, standarta -ēt, tagadne un pagātne bez līdzskaņu mijas
 					if (celms.endsWith("ē")) {
 						varianti.add(new Variants(celms.substring(0, celms.length() - 1)));
 					}
 					break;
-				case 125: // 3. konjugācija, mīkstā standarta grupa, tagadne bez līdzskaņu mijas ar inverso burtu miju
+				case 125: // 3. konjugācija, standarta -ēt, tagadne bez līdzskaņu mijas ar inverso burtu miju
 					if (celms.endsWith("ē")) {
 						varianti.add(new Variants(ltgBurtuMijaAtpakaļViennoz(celms.substring(0, celms.length() - 1))));
+					}
+					break;
+				case 126: // 3. konjugācija, standarta -ēt bez līdskaņu mijas, divdabju formu vispārākā pakāpe + tagadnes un pagātnes mija (119.)
+					if (celms.endsWith("ē")) {
+						atvCelms = celms.substring(0, celms.length() - 1);
+						varianti.add(new Variants(atvCelms, ltgDegreeFlags(AttributeNames.v_Comparative)));
+						if (pieliktVisPārākoPak) {
+							varianti.add(new Variants("vys" + atvCelms, ltgDegreeFlags(AttributeNames.v_Superlative)));
+							varianti.add(new Variants("vysu" + atvCelms, ltgDegreeFlags(AttributeNames.v_Superlative)));
+						}
 					}
 					break;
 				default:
