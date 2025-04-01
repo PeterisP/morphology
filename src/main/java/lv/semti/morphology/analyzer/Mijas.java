@@ -1734,7 +1734,7 @@ public abstract class Mijas {
 
 	protected static String ltgPatskaņuMijaLocīšanai(String celms)
 	{
-		Pattern p = Pattern.compile("(.*?)(ai|ei|ui|oi|ie|[aeēi])([bcčdfgģhjkķlļmnņprŗsštvzž]+[aāeēiīyoōuū]*)$");
+		Pattern p = Pattern.compile("(.*?)(ai|ei|ui|oi|ie|[aāeēiīouūy])([bcčdfgģhjkķlļmnņprŗsštvzž]+[aāeēiīyoōuū]*)$");
 		Matcher m = p.matcher(celms);
 		if (m.matches()) {
 			switch (m.group(2)) {
@@ -1755,7 +1755,7 @@ public abstract class Mijas {
 
 	protected static String ltgPatkaņuMijaAtpakaļlocīšanai (String celms)
 	{
-		Pattern p = Pattern.compile("(.*?)(uo|[aāoy]|)([bcčdfgģhjkķlļmnņprŗsštvzž]+[aāeēiīyoōuū]*)$");
+		Pattern p = Pattern.compile("(.*?)(uo|[aāeēiīouūy]|)([bcčdfgģhjkķlļmnņprŗsštvzž]+[aāeēiīyoōuū]*)$");
 		Matcher m = p.matcher(celms);
 		if (m.matches()) {
 			switch (m.group(2)) {

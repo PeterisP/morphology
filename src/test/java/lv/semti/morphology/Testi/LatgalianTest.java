@@ -1141,6 +1141,7 @@ public class LatgalianTest {
 	@Test
 	public void verbNeg() {
 		List<Wordform> dūmuot = analyzer.generateInflectionsFromParadigm("dūmuot", 44);
+		List<Wordform> gulēt = analyzer.generateInflectionsFromParadigm("gulēt", 50);
 
 		AttributeValues testParams = new AttributeValues();
 		testParams.addAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb);
@@ -1154,6 +1155,10 @@ public class LatgalianTest {
 			assertNotEquals(wf.getToken(), "nedūmuot");
 		}
 		assertInflectionMultipleWeak(dūmuot, testParams, new HashSet<String>(){{ add("nadūmuoju"); add("nadūmovu");}});
+		for (Wordform wf : gulēt) {
+			assertNotEquals(wf.getToken(), "vysnaugulamuokuos");
+			assertNotEquals(wf.getToken(), "vysnauguļamuokuos");
+		}
 	}
 
 	@Test
