@@ -1048,16 +1048,16 @@ public class Analyzer extends Lexicon {
 				boolean vispārākāPak = ending.isMatchingStrong(AttributeNames.i_Definiteness, AttributeNames.v_Definite) ||
 						                ending.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adverb);
 				boolean properName = lexeme.isMatchingStrong(AttributeNames.i_NounType, AttributeNames.v_ProperNoun);
-				
-		    	ArrayList<Variants> celmi = Mijas.MijasLocīšanai(lexeme.getStem(ending.stemID-1), ending.getMija(), trešāSakne, vispārākāPak, properName);
+
+				String pirmsmijascelms = lexeme.getStem(ending.stemID-1);
+				if (noliegums) {
+					pirmsmijascelms = this.NEGATION_PREFIX + pirmsmijascelms;
+				}
+
+		    	ArrayList<Variants> celmi = Mijas.MijasLocīšanai(pirmsmijascelms, ending.getMija(), trešāSakne, vispārākāPak, properName);
 
 		    	for (Variants celms : celmi){
 		    		vārds = celms.celms + ending.getEnding();
-					if (noliegums) {
-						if (vārds.startsWith(this.SUPERLATIVE_PREFIX) && celms.isMatchingStrong(AttributeNames.i_Degree, AttributeNames.v_Superlative)) {
-							vārds = this.SUPERLATIVE_PREFIX + this.NEGATION_PREFIX + vārds.substring(this.SUPERLATIVE_PREFIX.length());
-						} else vārds = this.NEGATION_PREFIX + vārds;
-					}
 		    		vārds = recapitalize(vārds, lemma);
 
 		    		Wordform locījums = new Wordform(vārds, lexeme, ending);
