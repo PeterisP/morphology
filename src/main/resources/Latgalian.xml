@@ -7866,7 +7866,7 @@
 		</Ending>
 	</Paradigm>
 
-	<Paradigm Stems="1" ID="50" Name="verb-3c-ltg" LemmaEnding="2660" Description="Darbības vārdi, 3. konjugācija, -ēt bez patskaņu, līdzskaņu mijas (varēt, gulēt, minēt)" DescriptionEN="Verbs, 3nd conjugation, -ēt without vowel, consonant change (varēt, gulēt)" AllowedGuessEndings="ē">
+	<Paradigm Stems="1" ID="50" Name="verb-3c-ltg" LemmaEnding="2660" Description="Darbības vārdi, 3. konjugācija, -ēt bez patskaņu, līdzskaņu mijas (varēt, gulēt, minēt)" DescriptionEN="Verbs, 3nd conjugation, -ēt without vowel, consonant change (varēt, gulēt, minēt)" AllowedGuessEndings="ē">
 		<Attributes Vārdšķira="Darbības vārds" Konjugācija="3" Atgriezeniskums="Nē" Noliegums="Nē" Darbības_vārda_tips="Patstāvīgs darbības vārds" Morfotabulas_tips="Darbības vārds"/>
 		<Ending ID="2660" StemChange="0" Ending="t" StemID="1" LemmaEnding="2660">
 			<Attributes Skaitlis="Nepiemīt" Izteiksme="Nenoteiksme" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
@@ -9238,7 +9238,7 @@
 			<Attributes Vārdšķira="Lietvārds" Deklinācija="4" Lietvārda_tips="Sugas vārds" Skaitlis="Daudzskaitlis" Dzimte="Sieviešu" Locījums="Vokatīvs" Sistemātisks_atvasinājums="Jā"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="51" Name="verb-3d-ltg" LemmaEnding="3260" Description="Darbības vārdi, 3. konjugācija, -ēt ar patskaņu miju bez līdzskaņu mijas (ticēt, redzēt, svinēt)" DescriptionEN="Verbs, 3nd conjugation, -ēt with vowel changewithout consonant change (ticēt, redzēt, svinēt)" AllowedGuessEndings="ē">
+	<Paradigm Stems="1" ID="51" Name="verb-3d-ltg" LemmaEnding="3260" Description="Darbības vārdi, 3. konjugācija, -ēt ar patskaņu miju bez līdzskaņu mijas (ticēt, redzēt, svinēt)" DescriptionEN="Verbs, 3nd conjugation, -ēt with vowel change without consonant change (ticēt, redzēt, svinēt)" AllowedGuessEndings="ē">
 		<Attributes Vārdšķira="Darbības vārds" Konjugācija="3" Atgriezeniskums="Nē" Noliegums="Nē" Darbības_vārda_tips="Patstāvīgs darbības vārds" Morfotabulas_tips="Darbības vārds"/>
 		<Ending ID="3260" StemChange="0" Ending="t" StemID="1" LemmaEnding="3260">
 			<Attributes Skaitlis="Nepiemīt" Izteiksme="Nenoteiksme" Persona="Nepiemīt" Laiks="Nepiemīt" Kārta="Nepiemīt"/>
