@@ -60,6 +60,7 @@
 {"lexeme_id": 17373, "entry_id": 14322, "human_id": "īkuorta:1", "paradigm_name": "noun-4fa-ltg", "lemma": "īkuorta"}
 {"lexeme_id": 8206, "entry_id": 6012, "human_id": "pyrma:1", "paradigm_name": "prep-ltg", "lemma": "pyrma", "attributes": {"Vārdšķira": "Prievārds"}}
 {"lexeme_id": 8400, "entry_id": 6138, "human_id": "saimisteiba:1", "paradigm_name": "noun-4fa-ltg", "lemma": "saimisteiba"}
+{"lexeme_id": 4952, "entry_id": 3612, "human_id": "abida:1", "paradigm_name": "noun-4fa-ltg", "lemma": "abīda", "attributes": {"Lietojums": "Novecojis"}}
 {"lexeme_id": 16812, "entry_id": 13905, "human_id": "volejbols:1", "paradigm_name": "noun-1a-ltg", "lemma": "volejbols"}
 {"lexeme_id": 13731, "entry_id": 10823, "human_id": "medejums:1", "paradigm_name": "noun-1a-ltg", "lemma": "medejums"}
 {"lexeme_id": 15844, "entry_id": 12936, "human_id": "sleiciejs:1", "paradigm_name": "noun-1a-ltg", "lemma": "sleiciejs"}
@@ -178,7 +179,6 @@
 {"lexeme_id": 16241, "entry_id": 13333, "human_id": "talāns:1", "paradigm_name": "noun-1a-ltg", "lemma": "talāns"}
 {"lexeme_id": 11197, "entry_id": 8289, "human_id": "bezdeleigacteņa:1", "paradigm_name": "noun-4fb-ltg", "lemma": "bezdeleigacteņa", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 16244, "entry_id": 13336, "human_id": "tys:1", "paradigm_name": "pron-ltg", "lemma": "tys", "attributes": {"Dzimte": "Vīriešu", "Persona": 3, "UD vārdšķira": "DET", "Vietniekvārda tips": "Norādāmais", "Locīšanas īpatnības": "Paralēlās formas"}}
-{"lexeme_id": 16269, "entry_id": 13336, "human_id": "tys:1", "paradigm_name": "pron-ltg", "lemma": "tei", "attributes": {"Dzimte": "Sieviešu", "Persona": 3, "Vārdšķira": "Vietniekvārds", "UD vārdšķira": "DET", "Vietniekvārda tips": "Norādāmais", "Locīšanas īpatnības": "Paralēlās formas"}}
 {"lexeme_id": 12657, "entry_id": 9749, "human_id": "iznosuot:1", "paradigm_name": "verb-2a-ltg", "lemma": "iznosuot"}
 {"lexeme_id": 12665, "entry_id": 9757, "human_id": "izplanavuot:1", "paradigm_name": "verb-2a-ltg", "lemma": "izplanavuot"}
 {"lexeme_id": 17331, "entry_id": 8456, "human_id": "buļbe:1", "paradigm_name": "noun-4fa-ltg", "lemma": "buļba"}
@@ -191,10 +191,22 @@
 {"lexeme_id": 17427, "entry_id": 14341, "human_id": "abādys:1", "paradigm_name": "noun-4fa-ltg", "lemma": "abādys", "attributes": {"Morfotabulas attēlošana": "Nerādīt vienskaitli", "Leksēmas pamatformas īpatnības": "Daudzskaitlis"}}
 {"lexeme_id": 17428, "entry_id": 14341, "human_id": "abādys:1", "paradigm_name": "noun-1a-ltg", "lemma": "abādi", "attributes": {"Morfotabulas attēlošana": "Nerādīt vienskaitli", "Leksēmas pamatformas īpatnības": "Daudzskaitlis"}}
 {"lexeme_id": 17452, "entry_id": 14355, "human_id": "drupača:1", "paradigm_name": "noun-4fa-ltg", "lemma": "drupača"}
+{"lexeme_id": 17493, "entry_id": 8929, "human_id": "dvīļs:1", "paradigm_name": "noun-2a-ltg", "lemma": "dvīleits", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 17462, "entry_id": 7167, "human_id": "žvyrs:1", "paradigm_name": "noun-4fb-ltg", "lemma": "žvireņa", "attributes": {"Morfotabulas attēlošana": "Nerādīt daudzskaitli"}}
 {"lexeme_id": 17461, "entry_id": 4198, "human_id": "čyuļs:1", "paradigm_name": "noun-2a-ltg", "lemma": "čyuleits", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 17406, "entry_id": 4198, "human_id": "čyuļs:1", "paradigm_name": "noun-2a-ltg", "lemma": "čiuleits", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 17460, "entry_id": 4197, "human_id": "Čyuleja:1", "paradigm_name": "noun-4fa-ltg", "lemma": "Čyulīna", "attributes": {"Lietvārda tips": "Īpašvārds", "Īpašvārda veids": "Vietvārds", "Morfotabulas attēlošana": "Nerādīt daudzskaitli"}}
+{"lexeme_id": 16269, "entry_id": 13336, "human_id": "tys:1", "paradigm_name": "pron-ltg", "lemma": "tei", "attributes": {"Dzimte": "Sieviešu", "Persona": 3, "Vārdšķira": "Vietniekvārds", "UD vārdšķira": "DET", "Vietniekvārda tips": "Norādāmais", "Locīšanas īpatnības": "Paralēlās formas"}}
+{"lexeme_id": 17523, "entry_id": 14385, "human_id": "tacs:1", "paradigm_name": "noun-2a-ltg", "lemma": "tacs"}
+{"lexeme_id": 17549, "entry_id": 7335, "human_id": "kumeļš:1", "paradigm_name": "noun-1e-ltg", "lemma": "kumeļs"}
+{"lexeme_id": 17522, "entry_id": 14385, "human_id": "tacs:1", "paradigm_name": "noun-6b-ltg", "lemma": "tacs", "attributes": {"Joma": "Zvejniecība", "Lietojums": "Novecojis"}}
+{"lexeme_id": 17526, "entry_id": 14386, "human_id": "zuodžs:1", "paradigm_name": "noun-2b-ltg", "lemma": "zuogis"}
+{"lexeme_id": 17550, "entry_id": 14398, "human_id": "dzynuļs:1", "paradigm_name": "noun-2a-ltg", "lemma": "dzynuļs"}
+{"lexeme_id": 17554, "entry_id": 6745, "human_id": "tiemēt:1", "paradigm_name": "verb-2b-ltg", "lemma": "tēmēt", "attributes": {"Darbības vārda tips": "Patstāvīgs darbības vārds"}}
+{"lexeme_id": 7099, "entry_id": 5167, "human_id": "laseit:1", "paradigm_name": "verb-3a-ltg", "lemma": "laseit"}
+{"lexeme_id": 17588, "entry_id": 14414, "human_id": "tricēt:1", "paradigm_name": "verb-3d-ltg", "lemma": "tricēt"}
+{"lexeme_id": 5435, "entry_id": 3953, "human_id": "bļaduns:1", "paradigm_name": "noun-1a-ltg", "lemma": "bļaduns"}
+{"lexeme_id": 5532, "entry_id": 4018, "human_id": "būde:1", "paradigm_name": "noun-5fc-ltg", "lemma": "būde"}
 {"lexeme_id": 12280, "entry_id": 9372, "human_id": "īdzeivuotuojs:1", "paradigm_name": "noun-1a-ltg", "lemma": "īdzeivuotuojs"}
 {"lexeme_id": 15875, "entry_id": 12967, "human_id": "slynkums:1", "paradigm_name": "noun-1a-ltg", "lemma": "slynkums"}
 {"lexeme_id": 16990, "entry_id": 14083, "human_id": "zūms:1", "paradigm_name": "noun-1a-ltg", "lemma": "zūms"}
@@ -202,6 +214,7 @@
 {"lexeme_id": 17411, "entry_id": 7899, "human_id": "apovi:1", "paradigm_name": "noun-1a-ltg", "lemma": "apovi", "attributes": {"Leksēmas pamatformas īpatnības": "Daudzskaitlis"}}
 {"lexeme_id": 17431, "entry_id": 14343, "human_id": "abiedeņa:1", "paradigm_name": "noun-1c-ltg", "lemma": "abēdeņš", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 12021, "entry_id": 9113, "human_id": "gadeņš:1", "paradigm_name": "noun-1c-ltg", "lemma": "gadeņš", "attributes": {"Deminutīvs": "Jā"}}
+{"lexeme_id": 17573, "entry_id": 14407, "human_id": "badeit:1", "paradigm_name": "verb-3a-ltg", "lemma": "badeit"}
 {"lexeme_id": 16576, "entry_id": 13669, "human_id": "vacuoki:1", "paradigm_name": "noun-1a-ltg", "lemma": "vacuoks"}
 {"lexeme_id": 12026, "entry_id": 9118, "human_id": "Gaiļazars:1", "paradigm_name": "noun-1a-ltg", "lemma": "Gaiļazars", "attributes": {"Lietvārda tips": "Īpašvārds", "Īpašvārda veids": "Vietvārds"}}
 {"lexeme_id": 14269, "entry_id": 11361, "human_id": "nūgurums:1", "paradigm_name": "noun-1a-ltg", "lemma": "nūgurums"}
@@ -213,6 +226,14 @@
 {"lexeme_id": 12712, "entry_id": 9804, "human_id": "izstreipuot:1", "paradigm_name": "verb-2a-ltg", "lemma": "izstreipuot"}
 {"lexeme_id": 17332, "entry_id": 8456, "human_id": "buļbe:1", "paradigm_name": "noun-5fc-ltg", "lemma": "buļve"}
 {"lexeme_id": 17333, "entry_id": 8456, "human_id": "buļbe:1", "paradigm_name": "noun-2a-ltg", "lemma": "buļvs", "attributes": {"Izloksne": "Kalupes"}}
+{"lexeme_id": 17494, "entry_id": 6094, "human_id": "rūcinīks:1", "paradigm_name": "noun-1c-ltg", "lemma": "rūcinīceņš", "attributes": {"Deminutīvs": "Jā"}}
+{"lexeme_id": 17495, "entry_id": 3615, "human_id": "abryuss:1", "paradigm_name": "noun-1c-ltg", "lemma": "abryuseņš", "attributes": {"Deminutīvs": "Jā"}}
+{"lexeme_id": 17527, "entry_id": 14386, "human_id": "zuodžs:1", "paradigm_name": "noun-2b-ltg", "lemma": "zōgis"}
+{"lexeme_id": 17589, "entry_id": 14415, "human_id": "darēt:1", "paradigm_name": "verb-3c-ltg", "lemma": "darēt"}
+{"lexeme_id": 17590, "entry_id": 10902, "human_id": "minēt:1", "paradigm_name": "verb-3d-ltg", "lemma": "minēt"}
+{"lexeme_id": 5578, "entry_id": 4048, "human_id": "butons:1", "paradigm_name": "noun-1a-ltg", "lemma": "butons"}
+{"lexeme_id": 17528, "entry_id": 14386, "human_id": "zuodžs:1", "paradigm_name": "noun-2a-ltg", "lemma": "zōdžs"}
+{"lexeme_id": 17551, "entry_id": 14399, "human_id": "dzeišonuos:1", "paradigm_name": "noun-r1-ltg", "lemma": "dzeišonuos"}
 {"lexeme_id": 12292, "entry_id": 9384, "human_id": "ierzeļs:1", "paradigm_name": "noun-2a-ltg", "lemma": "ierzeļs"}
 {"lexeme_id": 16451, "entry_id": 13544, "human_id": "tviters:1", "paradigm_name": "noun-2a-ltg", "lemma": "tviters"}
 {"lexeme_id": 14215, "entry_id": 11307, "human_id": "nivīns:1", "paradigm_name": "noun-1a-ltg", "lemma": "nivīns", "attributes": {"Persona": "Nepiemīt", "Vārdšķira": "Vietniekvārds", "UD vārdšķira": "DET", "Vietniekvārda tips": "Nenoteiktais", "Noliegums": "Jā"}}
@@ -227,8 +248,15 @@
 {"lexeme_id": 17441, "entry_id": 14350, "human_id": "žvyrains:1", "paradigm_name": "adj-1a-ltg", "lemma": "žvyrains"}
 {"lexeme_id": 17454, "entry_id": 14356, "human_id": "drupeite:1", "paradigm_name": "noun-5fa-ltg", "lemma": "drupeite", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 17469, "entry_id": 4321, "human_id": "drupeit:1", "paradigm_name": "adverb-1-ltg", "lemma": "drupeiti"}
-{"lexeme_id": 17470, "entry_id": 4321, "human_id": "drupeit:1", "paradigm_name": "adverb-1-ltg", "lemma": "drupu", "attributes": {"Lietojums": "Novecojis"}}
 {"lexeme_id": 17471, "entry_id": 4321, "human_id": "drupeit:1", "paradigm_name": "adverb-1-ltg", "lemma": "drupeņ/u/", "attributes": {"Deminutīvs": "Jā"}}
+{"lexeme_id": 17496, "entry_id": 6097, "human_id": "rūčinīks:1", "paradigm_name": "noun-1c-ltg", "lemma": "rūčinīceņš", "attributes": {"Deminutīvs": "Jā"}}
+{"lexeme_id": 17497, "entry_id": 3613, "human_id": "abļa:1", "paradigm_name": "noun-4fb-ltg", "lemma": "abļauceņa", "attributes": {"Deminutīvs": "Jā"}}
+{"lexeme_id": 17470, "entry_id": 4321, "human_id": "drupeit:1", "paradigm_name": "adverb-1-ltg", "lemma": "drupu", "attributes": {"Izloksne": "Izvaltas|Kalupes", "Lietojums": "Novecojis"}}
+{"lexeme_id": 9678, "entry_id": 14375, "human_id": "zababons:1", "paradigm_name": "noun-1a-ltg", "lemma": "zababons"}
+{"lexeme_id": 17529, "entry_id": 14386, "human_id": "zuodžs:1", "paradigm_name": "noun-2a-ltg", "lemma": "zuodžeits", "attributes": {"Deminutīvs": "Jā"}}
+{"lexeme_id": 17574, "entry_id": 14408, "human_id": "uordeit:1", "paradigm_name": "verb-3a-ltg", "lemma": "uordeit"}
+{"lexeme_id": 17530, "entry_id": 14386, "human_id": "zuodžs:1", "paradigm_name": "noun-2a-ltg", "lemma": "zuogeits", "attributes": {"Deminutīvs": "Jā"}}
+{"lexeme_id": 5608, "entry_id": 4073, "human_id": "casnāgs:1", "paradigm_name": "noun-1a-ltg", "lemma": "casnāgs"}
 {"lexeme_id": 5540, "entry_id": 8453, "human_id": "bulavka:1", "paradigm_name": "noun-4fa-ltg", "lemma": "bulauka"}
 {"lexeme_id": 8337, "entry_id": 6094, "human_id": "rūcinīks:1", "paradigm_name": "noun-1a-ltg", "lemma": "rūcinīks"}
 {"lexeme_id": 17433, "entry_id": 6097, "human_id": "rūčinīks:1", "paradigm_name": "noun-1a-ltg", "lemma": "ručinīks"}
@@ -247,6 +275,16 @@
 {"lexeme_id": 17375, "entry_id": 7206, "human_id": "ierškūga:1", "paradigm_name": "noun-4fa-ltg", "lemma": "ērškūga"}
 {"lexeme_id": 17376, "entry_id": 7206, "human_id": "ierškūga:1", "paradigm_name": "noun-4fb-ltg", "lemma": "ērškūdzeņa"}
 {"lexeme_id": 12997, "entry_id": 10089, "human_id": "kartupeļs:1", "paradigm_name": "noun-2a-ltg", "lemma": "kartupeļs", "attributes": {"Vārdšķira": "Lietvārds"}}
+{"lexeme_id": 17473, "entry_id": 14367, "human_id": "drusku:1", "paradigm_name": "adverb-1-ltg", "lemma": "drusku"}
+{"lexeme_id": 17531, "entry_id": 14388, "human_id": "cīšs:1", "paradigm_name": "adj-1a-ltg", "lemma": "cīšs"}
+{"lexeme_id": 17472, "entry_id": 14366, "human_id": "žeperēt:1", "paradigm_name": "verb-2b-ltg", "lemma": "žeperēt"}
+{"lexeme_id": 17587, "entry_id": 14386, "human_id": "zuodžs:1", "paradigm_name": "noun-2a-ltg", "lemma": "zōdžeits"}
+{"lexeme_id": 17558, "entry_id": 8724, "human_id": "dasavāruojs:1", "paradigm_name": "noun-1a-ltg", "lemma": "dasavieriejs"}
+{"lexeme_id": 17575, "entry_id": 14409, "human_id": "saudeit:1", "paradigm_name": "verb-3a-ltg", "lemma": "saudeit"}
+{"lexeme_id": 8264, "entry_id": 6051, "human_id": "raudzeit:1", "paradigm_name": "verb-3b-ltg", "lemma": "raudzeit"}
+{"lexeme_id": 8774, "entry_id": 6424, "human_id": "stateit:1", "paradigm_name": "verb-3a-ltg", "lemma": "stateit"}
+{"lexeme_id": 17592, "entry_id": 14417, "human_id": "boa:1", "paradigm_name": "noun-0-ltg", "lemma": "boa"}
+{"lexeme_id": 5619, "entry_id": 4080, "human_id": "cegls:1", "paradigm_name": "noun-1b-ltg", "lemma": "ceglys"}
 {"lexeme_id": 16483, "entry_id": 13576, "human_id": "Uldis:1", "paradigm_name": "noun-2b-ltg", "lemma": "Uldis", "attributes": {"Lietvārda tips": "Īpašvārds", "Īpašvārda veids": "Personvārds"}}
 {"lexeme_id": 12085, "entry_id": 9177, "human_id": "gieļs:1", "paradigm_name": "noun-2a-ltg", "lemma": "gieļs"}
 {"lexeme_id": 12091, "entry_id": 9183, "human_id": "Girts:1", "paradigm_name": "noun-1a-ltg", "lemma": "Girts", "attributes": {"Lietvārda tips": "Īpašvārds", "Īpašvārda veids": "Personvārds"}}
@@ -264,6 +302,10 @@
 {"lexeme_id": 17443, "entry_id": 7474, "human_id": "agrys:1", "paradigm_name": "adj-1a-ltg", "lemma": "agrs"}
 {"lexeme_id": 8341, "entry_id": 6097, "human_id": "rūčinīks:1", "paradigm_name": "noun-1a-ltg", "lemma": "rūčenīks"}
 {"lexeme_id": 8340, "entry_id": 6097, "human_id": "rūčinīks:1", "paradigm_name": "noun-1a-ltg", "lemma": "ručnīks", "attributes": {"Izloksne": "Kalupes|Izvaltas"}}
+{"lexeme_id": 5658, "entry_id": 4108, "human_id": "cīši:1", "paradigm_name": "adverb-2a-ltg", "lemma": "cīši", "attributes": {"Izloksne": "Izvaltas|Kalupes|Viļānu"}}
+{"lexeme_id": 17474, "entry_id": 14367, "human_id": "drusku:1", "paradigm_name": "adverb-1-ltg", "lemma": "drusceņ"}
+{"lexeme_id": 17576, "entry_id": 14410, "human_id": "laupeit:1", "paradigm_name": "verb-3a-ltg", "lemma": "laupeit"}
+{"lexeme_id": 5595, "entry_id": 4063, "human_id": "cacka:1", "paradigm_name": "noun-4fa-ltg", "lemma": "cacka"}
 {"lexeme_id": 13887, "entry_id": 10979, "human_id": "mūks:1", "paradigm_name": "noun-1a-ltg", "lemma": "mūks"}
 {"lexeme_id": 16319, "entry_id": 13412, "human_id": "tikū:1", "paradigm_name": "adverb-1-ltg", "lemma": "tikkū"}
 {"lexeme_id": 17329, "entry_id": 13412, "human_id": "tikū:1", "paradigm_name": "adverb-1-ltg", "lemma": "tikū"}
@@ -275,7 +317,7 @@
 {"lexeme_id": 9642, "entry_id": 7039, "human_id": "vydabolss:1", "paradigm_name": "noun-1a-ltg", "lemma": "vydabolss"}
 {"lexeme_id": 17447, "entry_id": 14331, "human_id": "apava:1", "paradigm_name": "noun-5fc-ltg", "lemma": "apave", "attributes": {"Morfotabulas attēlošana": "Nerādīt daudzskaitli", "Skaitlis 2": "Vienskaitlinieks"}}
 {"lexeme_id": 17448, "entry_id": 14353, "human_id": "kadaks:1", "paradigm_name": "noun-1a-ltg", "lemma": "kadaks"}
-{"lexeme_id": 17457, "entry_id": 14359, "human_id": "žmyks:1", "paradigm_name": "noun-1a-ltg", "lemma": "žmyks", "attributes": {"Izloksne": "Nautrēnu", "Morfotabulas attēlošana": "Nerādīt daudzskaitli"}}
+{"lexeme_id": 17475, "entry_id": 14367, "human_id": "drusku:1", "paradigm_name": "adverb-1-ltg", "lemma": "drusciņ"}
 {"lexeme_id": 10689, "entry_id": 7781, "human_id": "Aļberts:1", "paradigm_name": "noun-1a-ltg", "lemma": "Aļberts", "attributes": {"Lietvārda tips": "Īpašvārds", "Īpašvārda veids": "Personvārds"}}
 {"lexeme_id": 13919, "entry_id": 11011, "human_id": "Murs:1", "paradigm_name": "noun-2a-ltg", "lemma": "Murs", "attributes": {"Lietvārda tips": "Īpašvārds", "Īpašvārda veids": "Personvārds"}}
 {"lexeme_id": 16078, "entry_id": 13170, "human_id": "strumpaunīks:1", "paradigm_name": "noun-1a-ltg", "lemma": "strumpaunīks"}
@@ -286,12 +328,21 @@
 {"lexeme_id": 11694, "entry_id": 8786, "human_id": "deviejs:1", "paradigm_name": "noun-1a-ltg", "lemma": "deviejs"}
 {"lexeme_id": 11700, "entry_id": 8792, "human_id": "dieleits:1", "paradigm_name": "noun-2a-ltg", "lemma": "dieleits", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 17343, "entry_id": 8343, "human_id": "bļauka:1", "paradigm_name": "noun-4ma-ltg", "lemma": "bļauka", "attributes": {"Dzimte": "Vīriešu", "Locīšanas īpatnības": "Kopdzimte"}}
+{"lexeme_id": 17565, "entry_id": 13949, "human_id": "vuorti:1", "paradigm_name": "noun-1c-ltg", "lemma": "vōrteni", "attributes": {"Leksēmas pamatformas īpatnības": "Daudzskaitlis", "Skaitlis 2": "Daudzskaitlinieks"}}
+{"lexeme_id": 17564, "entry_id": 13949, "human_id": "vuorti:1", "paradigm_name": "noun-1a-ltg", "lemma": "vōrti", "attributes": {"Leksēmas pamatformas īpatnības": "Daudzskaitlis", "Skaitlis 2": "Daudzskaitlinieks"}}
 {"lexeme_id": 10086, "entry_id": 5851, "human_id": "pļakša:1", "paradigm_name": "noun-4ma-ltg", "lemma": "plekša", "attributes": {"Dzimte": "Vīriešu"}}
 {"lexeme_id": 17378, "entry_id": 7291, "human_id": "pļuopa:1", "paradigm_name": "noun-4fa-ltg", "lemma": "pļōpa", "attributes": {"Dzimte": "Sieviešu", "Locīšanas īpatnības": "Kopdzimte"}}
 {"lexeme_id": 15272, "entry_id": 12364, "human_id": "ražuot:1", "paradigm_name": "verb-2a-ltg", "lemma": "ražuot"}
+{"lexeme_id": 17578, "entry_id": 14412, "human_id": "buorsteit:1", "paradigm_name": "verb-3a-ltg", "lemma": "buorsteit"}
+{"lexeme_id": 12561, "entry_id": 9653, "human_id": "izbuorsteit:1", "paradigm_name": "verb-3a-ltg", "lemma": "izbuorsteit", "attributes": {"Vārdšķira": "Darbības vārds", "Darbības vārda tips": "Patstāvīgs darbības vārds"}}
 {"lexeme_id": 17419, "entry_id": 14335, "human_id": "čyuliski:1", "paradigm_name": "adverb-1-ltg", "lemma": "čyuliskai"}
 {"lexeme_id": 17417, "entry_id": 14335, "human_id": "čyuliski:1", "paradigm_name": "adverb-1-ltg", "lemma": "čiuliski"}
 {"lexeme_id": 17418, "entry_id": 14335, "human_id": "čyuliski:1", "paradigm_name": "adverb-1-ltg", "lemma": "čyuliski"}
+{"lexeme_id": 17579, "entry_id": 10714, "human_id": "luopeit:1", "paradigm_name": "verb-3a-ltg", "lemma": "luopeit"}
+{"lexeme_id": 5771, "entry_id": 4181, "human_id": "čūksts:1", "paradigm_name": "noun-1a-ltg", "lemma": "ūksts"}
+{"lexeme_id": 17476, "entry_id": 14367, "human_id": "drusku:1", "paradigm_name": "adverb-1-ltg", "lemma": "drusceitiņ"}
+{"lexeme_id": 5772, "entry_id": 4182, "human_id": "čukurs:1", "paradigm_name": "noun-1a-ltg", "lemma": "čukurs"}
+{"lexeme_id": 17563, "entry_id": 13949, "human_id": "vuorti:1", "paradigm_name": "noun-1c-ltg", "lemma": "vuorteni", "attributes": {"Deminutīvs": "Jā", "Leksēmas pamatformas īpatnības": "Daudzskaitlis", "Skaitlis 2": "Daudzskaitlinieks"}}
 {"lexeme_id": 16393, "entry_id": 13486, "human_id": "trūksnis:1", "paradigm_name": "noun-2b-ltg", "lemma": "trūksnis"}
 {"lexeme_id": 15813, "entry_id": 12905, "human_id": "skrīmslis:1", "paradigm_name": "noun-2b-ltg", "lemma": "skrīmslis"}
 {"lexeme_id": 14399, "entry_id": 11491, "human_id": "nūsyuciejs:1", "paradigm_name": "noun-1a-ltg", "lemma": "nūsyuciejs"}
@@ -301,29 +352,46 @@
 {"lexeme_id": 11223, "entry_id": 8315, "human_id": "Bierži:1", "paradigm_name": "noun-2a-ltg", "lemma": "Bierži", "attributes": {"Lietvārda tips": "Īpašvārds", "Īpašvārda veids": "Vietvārds", "Leksēmas pamatformas īpatnības": "Daudzskaitlis", "Skaitlis 2": "Daudzskaitlinieks"}}
 {"lexeme_id": 6193, "entry_id": 4475, "human_id": "gasteit:1", "paradigm_name": "verb-2a-ltg", "lemma": "gasteit", "attributes": {"Transitivitāte": "Intransitīvs", "Darbības vārda tips": "Patstāvīgs darbības vārds"}}
 {"lexeme_id": 15507, "entry_id": 12599, "human_id": "samīļuot:1", "paradigm_name": "verb-2a-ltg", "lemma": "samīļuot"}
+{"lexeme_id": 17477, "entry_id": 14367, "human_id": "drusku:1", "paradigm_name": "adverb-1-ltg", "lemma": "drusceit"}
+{"lexeme_id": 17580, "entry_id": 10211, "human_id": "klusēt:1", "paradigm_name": "verb-3c-ltg", "lemma": "klusēt"}
 {"lexeme_id": 16667, "entry_id": 13760, "human_id": "veikals:1", "paradigm_name": "noun-1a-ltg", "lemma": "veikals"}
 {"lexeme_id": 12839, "entry_id": 9931, "human_id": "Juoņs:1", "paradigm_name": "noun-2a-ltg", "lemma": "Juoņs", "attributes": {"Lietvārda tips": "Īpašvārds", "Īpašvārda veids": "Personvārds"}}
 {"lexeme_id": 12843, "entry_id": 9935, "human_id": "Juoneits:1", "paradigm_name": "noun-2a-ltg", "lemma": "Juoneits", "attributes": {"Deminutīvs": "Jā", "Lietvārda tips": "Īpašvārds", "Īpašvārda veids": "Personvārds"}}
 {"lexeme_id": 12844, "entry_id": 9936, "human_id": "Juoni:1", "paradigm_name": "noun-2a-ltg", "lemma": "Juoni", "attributes": {"Leksēmas pamatformas īpatnības": "Daudzskaitlis", "Skaitlis 2": "Daudzskaitlinieks"}}
 {"lexeme_id": 14894, "entry_id": 11986, "human_id": "pīss:1", "paradigm_name": "noun-2a-ltg", "lemma": "pīss"}
+{"lexeme_id": 17478, "entry_id": 7158, "human_id": "žuburs:1", "paradigm_name": "noun-1c-ltg", "lemma": "žubureņš"}
+{"lexeme_id": 17507, "entry_id": 3612, "human_id": "abida:1", "paradigm_name": "noun-4fa-ltg", "lemma": "abida", "attributes": {"Lietojums": "Novecojis"}}
+{"lexeme_id": 9150, "entry_id": 6695, "human_id": "taca:1", "paradigm_name": "noun-4fa-ltg", "lemma": "taca", "attributes": {"Izloksne": "Līksnas"}}
+{"lexeme_id": 17536, "entry_id": 14392, "human_id": "uoliņdžs:1", "paradigm_name": "noun-2b-ltg", "lemma": "uoliņgis"}
+{"lexeme_id": 17537, "entry_id": 14392, "human_id": "uoliņdžs:1", "paradigm_name": "noun-2a-ltg", "lemma": "uoliņdžeits", "attributes": {"Deminutīvs": "Jā"}}
+{"lexeme_id": 17535, "entry_id": 14392, "human_id": "uoliņdžs:1", "paradigm_name": "noun-2a-ltg", "lemma": "uoliņdžs"}
+{"lexeme_id": 17538, "entry_id": 14392, "human_id": "uoliņdžs:1", "paradigm_name": "noun-2a-ltg", "lemma": "uoliņgeits", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 13174, "entry_id": 10266, "human_id": "komplekts:1", "paradigm_name": "noun-1a-ltg", "lemma": "komplekts"}
 {"lexeme_id": 13175, "entry_id": 10267, "human_id": "kompliments:1", "paradigm_name": "noun-1a-ltg", "lemma": "kompliments"}
 {"lexeme_id": 14898, "entry_id": 11990, "human_id": "pīskuorīņs:1", "paradigm_name": "noun-2a-ltg", "lemma": "pīskuorīņs"}
 {"lexeme_id": 17383, "entry_id": 14325, "human_id": "leikumains:1", "paradigm_name": "adj-4-ltg", "lemma": "leikumains"}
 {"lexeme_id": 17382, "entry_id": 14325, "human_id": "leikumains:1", "paradigm_name": "adj-1a-ltg", "lemma": "leikumaiņs"}
 {"lexeme_id": 17384, "entry_id": 14326, "human_id": "leikumuot:1", "paradigm_name": "verb-2a-ltg", "lemma": "leikumuot", "attributes": {"Darbības vārda tips": "Patstāvīgs darbības vārds"}}
+{"lexeme_id": 17508, "entry_id": 14382, "human_id": "zadynuošona:1", "paradigm_name": "noun-4fa-ltg", "lemma": "zadynuošona"}
 {"lexeme_id": 10650, "entry_id": 7742, "human_id": "aizpruots:1", "paradigm_name": "noun-1a-ltg", "lemma": "aizpruots"}
 {"lexeme_id": 15718, "entry_id": 12810, "human_id": "sieņuotuojs:1", "paradigm_name": "noun-1a-ltg", "lemma": "sieņuotuojs"}
 {"lexeme_id": 15642, "entry_id": 12734, "human_id": "saucīņs:1", "paradigm_name": "noun-2a-ltg", "lemma": "saucīņs"}
 {"lexeme_id": 17425, "entry_id": 14339, "human_id": "žvūrgzdineņš:1", "paradigm_name": "noun-1c-ltg", "lemma": "žvūrgzdineņš"}
-{"lexeme_id": 13978, "entry_id": 11311, "human_id": "nogs:1", "paradigm_name": "noun-1c-ltg", "lemma": "nadzeņš", "attributes": {"Deminutīvs": "Jā"}}
+{"lexeme_id": 17483, "entry_id": 14096, "human_id": "žurnalists:1", "paradigm_name": "noun-5fc-ltg", "lemma": "žurnaliste"}
+{"lexeme_id": 17509, "entry_id": 14382, "human_id": "zadynuošona:1", "paradigm_name": "noun-r1-ltg", "lemma": "zadynuošonuos"}
+{"lexeme_id": 17511, "entry_id": 7108, "human_id": "zirklis:1", "paradigm_name": "noun-5fa-ltg", "lemma": "zirkleitis", "attributes": {"Deminutīvs": "Jā", "Morfotabulas attēlošana": "Nerādīt vienskaitli", "Leksēmas pamatformas īpatnības": "Daudzskaitlis", "Skaitlis 2": "Daudzskaitlinieks"}}
+{"lexeme_id": 17510, "entry_id": 7108, "human_id": "zirklis:1", "paradigm_name": "noun-5fa-ltg", "lemma": "zirkles", "attributes": {"Morfotabulas attēlošana": "Nerādīt vienskaitli", "Leksēmas pamatformas īpatnības": "Daudzskaitlis", "Skaitlis 2": "Daudzskaitlinieks"}}
+{"lexeme_id": 17570, "entry_id": 14343, "human_id": "abiedeņa:1", "paradigm_name": "noun-4fb-ltg", "lemma": "abēdeņa"}
+{"lexeme_id": 17540, "entry_id": 4037, "human_id": "buorzda:1", "paradigm_name": "noun-4fa-ltg", "lemma": "bōrda"}
 {"lexeme_id": 11800, "entry_id": 8892, "human_id": "dukalons:1", "paradigm_name": "noun-1a-ltg", "lemma": "dukalons"}
 {"lexeme_id": 11801, "entry_id": 8893, "human_id": "Dukats:1", "paradigm_name": "noun-1a-ltg", "lemma": "Dukats", "attributes": {"Lietvārda tips": "Īpašvārds", "Īpašvārda veids": "Personvārds"}}
 {"lexeme_id": 11831, "entry_id": 8923, "human_id": "dušlaks:1", "paradigm_name": "noun-1a-ltg", "lemma": "dušlaks"}
 {"lexeme_id": 11839, "entry_id": 8931, "human_id": "dynduorzs:1", "paradigm_name": "noun-1a-ltg", "lemma": "dynduorzs"}
 {"lexeme_id": 11841, "entry_id": 8933, "human_id": "dyumi:1", "paradigm_name": "noun-1a-ltg", "lemma": "dyumi", "attributes": {"Leksēmas pamatformas īpatnības": "Daudzskaitlis", "Skaitlis 2": "Daudzskaitlinieks"}}
 {"lexeme_id": 15510, "entry_id": 12602, "human_id": "šampanīts:1", "paradigm_name": "noun-2a-ltg", "lemma": "šampanīts"}
+{"lexeme_id": 17512, "entry_id": 8988, "human_id": "dzirklis:1", "paradigm_name": "noun-5fa-ltg", "lemma": "dzirkles", "attributes": {"Morfotabulas attēlošana": "Nerādīt vienskaitli", "Leksēmas pamatformas īpatnības": "Daudzskaitlis", "Skaitlis 2": "Daudzskaitlinieks"}}
 {"lexeme_id": 9089, "entry_id": 6655, "human_id": "špaleri:1", "paradigm_name": "noun-1a-ltg", "lemma": "špaleri", "attributes": {"Morfotabulas attēlošana": "Nerādīt vienskaitli", "Leksēmas pamatformas īpatnības": "Daudzskaitlis", "Skaitlis 2": "Daudzskaitlinieks"}}
+{"lexeme_id": 13978, "entry_id": 11311, "human_id": "nogs:1", "paradigm_name": "noun-1c-ltg", "lemma": "nadzeņš", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 17387, "entry_id": 14328, "human_id": "leikumuots:2", "paradigm_name": "adj-1a-ltg", "lemma": "leikumuots", "attributes": {"StructuralRestrictions": {"Value": {"Flags": {"Divdabja veids": "Lokāmais ciešamās kārtas pagātnes divdabis (-ts, -ta)"}}, "Restriction": "Formā/atvasinājumā"}, "Vārdšķira": "Darbības vārds", "Darbības vārda tips": "Patstāvīgs darbības vārds"}}
 {"lexeme_id": 17390, "entry_id": 10588, "human_id": "leikums:1", "paradigm_name": "noun-1c-ltg", "lemma": "leikumeņš", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 17426, "entry_id": 14340, "human_id": "tapetis:1", "paradigm_name": "noun-5fa-ltg", "lemma": "tapetis", "attributes": {"Morfotabulas attēlošana": "Nerādīt vienskaitli", "Leksēmas pamatformas īpatnības": "Daudzskaitlis"}}
@@ -331,17 +399,27 @@
 {"lexeme_id": 17394, "entry_id": 14329, "human_id": "leikumuojums:1", "paradigm_name": "noun-1a-ltg", "lemma": "leikumōjums"}
 {"lexeme_id": 9418, "entry_id": 6886, "human_id": "vaicuot:1", "paradigm_name": "verb-2a-ltg", "lemma": "vaicuot", "attributes": {"Darbības vārda tips": "Patstāvīgs darbības vārds"}}
 {"lexeme_id": 17389, "entry_id": 14329, "human_id": "leikumuojums:1", "paradigm_name": "noun-1a-ltg", "lemma": "leikumuojums"}
+{"lexeme_id": 17513, "entry_id": 8988, "human_id": "dzirklis:1", "paradigm_name": "noun-5fa-ltg", "lemma": "dzirkleitis", "attributes": {"Deminutīvs": "Jā", "Morfotabulas attēlošana": "Nerādīt vienskaitli", "Leksēmas pamatformas īpatnības": "Daudzskaitlis"}}
 {"lexeme_id": 17336, "entry_id": 12817, "human_id": "iļkss:1", "paradigm_name": "noun-6a-ltg", "lemma": "iļkss"}
+{"lexeme_id": 17514, "entry_id": 8988, "human_id": "dzirklis:1", "paradigm_name": "noun-5fa-ltg", "lemma": "dzirkleites", "attributes": {"Deminutīvs": "Jā", "Morfotabulas attēlošana": "Nerādīt vienskaitli", "Leksēmas pamatformas īpatnības": "Daudzskaitlis"}}
 {"lexeme_id": 17337, "entry_id": 8456, "human_id": "buļbe:1", "paradigm_name": "noun-4fb-ltg", "lemma": "buļva"}
+{"lexeme_id": 17515, "entry_id": 7108, "human_id": "zirklis:1", "paradigm_name": "noun-5fa-ltg", "lemma": "zirkleites", "attributes": {"Deminutīvs": "Jā", "Morfotabulas attēlošana": "Nerādīt vienskaitli", "Leksēmas pamatformas īpatnības": "Daudzskaitlis", "Skaitlis 2": "Daudzskaitlinieks"}}
+{"lexeme_id": 9742, "entry_id": 7108, "human_id": "zirklis:1", "paradigm_name": "noun-5fa-ltg", "lemma": "zirglis", "attributes": {"Morfotabulas attēlošana": "Nerādīt vienskaitli", "Leksēmas pamatformas īpatnības": "Daudzskaitlis", "Skaitlis 2": "Daudzskaitlinieks"}}
 {"lexeme_id": 17338, "entry_id": 10089, "human_id": "kartupeļs:1", "paradigm_name": "noun-2a-ltg", "lemma": "kartupeleits"}
+{"lexeme_id": 17517, "entry_id": 14383, "human_id": "ziernyuklis:1", "paradigm_name": "noun-2a-ltg", "lemma": "ziernyukleits", "attributes": {"Deminutīvs": "Jā"}}
+{"lexeme_id": 17516, "entry_id": 14383, "human_id": "ziernyuklis:1", "paradigm_name": "noun-2b-ltg", "lemma": "ziernyuklis"}
+{"lexeme_id": 17608, "entry_id": 14432, "human_id": "pīdziniejs:1", "paradigm_name": "noun-1a-ltg", "lemma": "pīdziniejs"}
 {"lexeme_id": 13939, "entry_id": 11031, "human_id": "mylti:1", "paradigm_name": "noun-1a-ltg", "lemma": "mylti", "attributes": {"Leksēmas pamatformas īpatnības": "Daudzskaitlis", "Skaitlis 2": "Daudzskaitlinieks"}}
 {"lexeme_id": 16624, "entry_id": 13717, "human_id": "vanadzs:1", "paradigm_name": "noun-2a-ltg", "lemma": "vanadzs"}
 {"lexeme_id": 16958, "entry_id": 14051, "human_id": "Žīguri:1", "paradigm_name": "noun-2a-ltg", "lemma": "Žīguri", "attributes": {"Lietvārda tips": "Īpašvārds", "Īpašvārda veids": "Vietvārds", "Leksēmas pamatformas īpatnības": "Daudzskaitlis", "Skaitlis 2": "Daudzskaitlinieks"}}
+{"lexeme_id": 17518, "entry_id": 14383, "human_id": "ziernyuklis:1", "paradigm_name": "noun-2b-ltg", "lemma": "zērnyuklis"}
+{"lexeme_id": 17519, "entry_id": 14383, "human_id": "ziernyuklis:1", "paradigm_name": "noun-2a-ltg", "lemma": "zērnyukleits"}
 {"lexeme_id": 10700, "entry_id": 7792, "human_id": "amatnīks:1", "paradigm_name": "noun-1a-ltg", "lemma": "amatnīks"}
 {"lexeme_id": 10704, "entry_id": 7796, "human_id": "amerikaņs:1", "paradigm_name": "noun-2a-ltg", "lemma": "amerikaņs"}
 {"lexeme_id": 10709, "entry_id": 7801, "human_id": "Anatolejs:1", "paradigm_name": "noun-1a-ltg", "lemma": "Anatolejs", "attributes": {"Lietvārda tips": "Īpašvārds", "Īpašvārda veids": "Personvārds"}}
 {"lexeme_id": 10710, "entry_id": 7802, "human_id": "Aņdeni:1", "paradigm_name": "noun-2a-ltg", "lemma": "Aņdeni", "attributes": {"Lietvārda tips": "Īpašvārds", "Īpašvārda veids": "Vietvārds", "Leksēmas pamatformas īpatnības": "Daudzskaitlis", "Skaitlis 2": "Daudzskaitlinieks"}}
 {"lexeme_id": 10711, "entry_id": 7803, "human_id": "Andi:1", "paradigm_name": "noun-1a-ltg", "lemma": "Andi", "attributes": {"Lietvārda tips": "Īpašvārds", "Īpašvārda veids": "Vietvārds", "Leksēmas pamatformas īpatnības": "Daudzskaitlis", "Skaitlis 2": "Daudzskaitlinieks"}}
+{"lexeme_id": 17521, "entry_id": 14384, "human_id": "abidnai:1", "paradigm_name": "adverb-1-ltg", "lemma": "abidnai"}
 {"lexeme_id": 15677, "entry_id": 12769, "human_id": "Seili:1", "paradigm_name": "noun-2a-ltg", "lemma": "Seili", "stem1": "Seil", "attributes": {"Lietvārda tips": "Īpašvārds", "Īpašvārda veids": "Vietvārds", "Leksēmas pamatformas īpatnības": "Daudzskaitlis", "Skaitlis 2": "Daudzskaitlinieks"}}
 {"lexeme_id": 16630, "entry_id": 13723, "human_id": "Varakļuoni:1", "paradigm_name": "noun-1a-ltg", "lemma": "Varakļuoni", "stem1": "Varakļuon", "attributes": {"Lietvārda tips": "Īpašvārds", "Īpašvārda veids": "Vietvārds", "Leksēmas pamatformas īpatnības": "Daudzskaitlis", "Skaitlis 2": "Daudzskaitlinieks"}}
 {"lexeme_id": 13988, "entry_id": 11080, "human_id": "Nagli:1", "paradigm_name": "noun-2b-ltg", "lemma": "Nagli", "stem1": "Nagl", "attributes": {"Lietvārda tips": "Īpašvārds", "Īpašvārda veids": "Vietvārds", "Leksēmas pamatformas īpatnības": "Daudzskaitlis", "Skaitlis 2": "Daudzskaitlinieks"}}
@@ -371,9 +449,9 @@
 {"lexeme_id": 10271, "entry_id": 7445, "human_id": "mēle:1", "paradigm_name": "noun-5fa-ltg", "lemma": "mēleite", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 10096, "entry_id": 7295, "human_id": "klouga:1", "paradigm_name": "noun-4ma-ltg", "lemma": "klouga", "attributes": {"Dzimte": "Vīriešu", "Locīšanas īpatnības": "Kopdzimte"}}
 {"lexeme_id": 10100, "entry_id": 7297, "human_id": "murza:1", "paradigm_name": "noun-4ma-ltg", "lemma": "murza", "attributes": {"Dzimte": "Vīriešu", "Locīšanas īpatnības": "Kopdzimte"}}
+{"lexeme_id": 10130, "entry_id": 7316, "human_id": "brīsme:1", "paradigm_name": "noun-5fa-ltg", "lemma": "brīsme", "attributes": {"Piezīmes": "Lietvārds, kas latviešu literārājā valodā ir daudzskaitlinieks, latgaliešu valodā ir vienskaitlinieks (Vasals 2003, 23.lpp)."}}
 {"lexeme_id": 12582, "entry_id": 9674, "human_id": "izduovynuot:1", "paradigm_name": "verb-2a-ltg", "lemma": "izduovynuot"}
 {"lexeme_id": 12583, "entry_id": 9675, "human_id": "izdzeivuot:1", "paradigm_name": "verb-2a-ltg", "lemma": "izdzeivuot"}
-{"lexeme_id": 10130, "entry_id": 7316, "human_id": "brīsme:1", "paradigm_name": "noun-5fa-ltg", "lemma": "brīsme", "attributes": {"Piezīmes": "Lietvārds, kas latviešu literārājā valodā ir daudzskaitlinieks, latgaliešu valodā ir vienskaitlinieks (Vasals 2003, 23.lpp)."}}
 {"lexeme_id": 10120, "entry_id": 7311, "human_id": "cylpa:1", "paradigm_name": "noun-1a-ltg", "lemma": "cylps"}
 {"lexeme_id": 10122, "entry_id": 7312, "human_id": "atslāga:1", "paradigm_name": "noun-1a-ltg", "lemma": "atslāgs"}
 {"lexeme_id": 10124, "entry_id": 7313, "human_id": "skaņa:1", "paradigm_name": "noun-1a-ltg", "lemma": "skons"}
@@ -383,7 +461,6 @@
 {"lexeme_id": 10195, "entry_id": 7377, "human_id": "začs:1", "paradigm_name": "noun-2b-ltg", "lemma": "zakis"}
 {"lexeme_id": 10141, "entry_id": 7326, "human_id": "kolns:1", "paradigm_name": "noun-1a-ltg", "lemma": "kolns"}
 {"lexeme_id": 10142, "entry_id": 7327, "human_id": "kūks:1", "paradigm_name": "noun-1a-ltg", "lemma": "kūks"}
-{"lexeme_id": 10197, "entry_id": 7378, "human_id": "zuodžs:1", "paradigm_name": "noun-2b-ltg", "lemma": "zuogis"}
 {"lexeme_id": 10198, "entry_id": 4763, "human_id": "kačs:2", "paradigm_name": "noun-2b-ltg", "lemma": "kakis"}
 {"lexeme_id": 10260, "entry_id": 7439, "human_id": "čeče:1", "paradigm_name": "noun-5fa-ltg", "lemma": "keke"}
 {"lexeme_id": 10266, "entry_id": 7441, "human_id": "bite:1", "paradigm_name": "noun-5fa-ltg", "lemma": "biteite", "attributes": {"Deminutīvs": "Jā"}}
@@ -407,6 +484,7 @@
 {"lexeme_id": 10102, "entry_id": 7298, "human_id": "napraška:1", "paradigm_name": "noun-4ma-ltg", "lemma": "napraška", "attributes": {"Dzimte": "Vīriešu", "Locīšanas īpatnības": "Kopdzimte"}}
 {"lexeme_id": 10359, "entry_id": 5382, "human_id": "monts:1", "paradigm_name": "noun-4fa-ltg", "lemma": "monta"}
 {"lexeme_id": 10129, "entry_id": 3871, "human_id": "baime:1", "paradigm_name": "noun-5fa-ltg", "lemma": "baile", "attributes": {"Piezīmes": "Lietvārds, kas latviešu literārājā valodā ir daudzskaitlinieks, latgaliešu valodā ir vienskaitlinieks (Vasals 2003, 23.lpp)."}}
+{"lexeme_id": 12599, "entry_id": 9691, "human_id": "izguļdeit:1", "paradigm_name": "verb-3b-ltg", "lemma": "izguļdeit", "attributes": {"Vārdšķira": "Darbības vārds", "Darbības vārda tips": "Patstāvīgs darbības vārds"}}
 {"lexeme_id": 5952, "entry_id": 4311, "human_id": "driči:1", "paradigm_name": "noun-2a-ltg", "lemma": "dričs", "stem1": "drič"}
 {"lexeme_id": 10365, "entry_id": 7509, "human_id": "uors:1", "paradigm_name": "noun-1d-ltg", "lemma": "ōrs"}
 {"lexeme_id": 10193, "entry_id": 7376, "human_id": "skruodži:1", "paradigm_name": "noun-2b-ltg", "lemma": "skruogi", "stem1": "skruog", "attributes": {"Morfotabulas attēlošana": "Nerādīt vienskaitli", "Leksēmas pamatformas īpatnības": "Daudzskaitlis"}}
@@ -491,6 +569,7 @@
 {"lexeme_id": 11553, "entry_id": 8644, "human_id": "cytaiž:1", "paradigm_name": "adverb-2a-ltg", "lemma": "cytaiži"}
 {"lexeme_id": 11506, "entry_id": 4111, "human_id": "cioce:1", "paradigm_name": "noun-5fa-ltg", "lemma": "cioceite", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 11561, "entry_id": 8653, "human_id": "čyuliskums:1", "paradigm_name": "noun-1a-ltg", "lemma": "čyuliskums"}
+{"lexeme_id": 5995, "entry_id": 4339, "human_id": "dunduks:1", "paradigm_name": "noun-1a-ltg", "lemma": "dunduks"}
 {"lexeme_id": 5978, "entry_id": 4328, "human_id": "dūbe:1", "paradigm_name": "noun-5fa-ltg", "lemma": "dūbe"}
 {"lexeme_id": 5976, "entry_id": 4326, "human_id": "dryuksts:1", "paradigm_name": "noun-6b-ltg", "lemma": "dryuksts"}
 {"lexeme_id": 17148, "entry_id": 10556, "human_id": "lauma:1", "paradigm_name": "noun-4fa-ltg", "lemma": "lauma"}
@@ -511,9 +590,12 @@
 {"lexeme_id": 11722, "entry_id": 8814, "human_id": "direktors:1", "paradigm_name": "noun-1a-ltg", "lemma": "direktors"}
 {"lexeme_id": 11790, "entry_id": 4311, "human_id": "driči:1", "paradigm_name": "noun-2a-ltg", "lemma": "dryčs"}
 {"lexeme_id": 11782, "entry_id": 8876, "human_id": "drupona:1", "paradigm_name": "noun-4fb-ltg", "lemma": "drupaneņa", "attributes": {"Deminutīvs": "Jā"}}
+{"lexeme_id": 11770, "entry_id": 8866, "human_id": "dreiži:1", "paradigm_name": "adverb-2a-ltg", "lemma": "dreiz", "attributes": {"Valodas normēšana": "Nevēlams"}}
 {"lexeme_id": 11771, "entry_id": 8866, "human_id": "dreiži:1", "paradigm_name": "adverb-2a-ltg", "lemma": "dreiž"}
-{"lexeme_id": 11770, "entry_id": 8866, "human_id": "dreiži:1", "paradigm_name": "adverb-2a-ltg", "lemma": "dreiz"}
+{"lexeme_id": 11765, "entry_id": 8857, "human_id": "drebēt:1", "paradigm_name": "verb-3c-ltg", "lemma": "drebēt", "attributes": {"Vārdšķira": "Darbības vārds", "Darbības vārda tips": "Patstāvīgs darbības vārds"}}
 {"lexeme_id": 11794, "entry_id": 4328, "human_id": "dūbe:1", "paradigm_name": "noun-5fa-ltg", "lemma": "dūbeite", "attributes": {"Deminutīvs": "Jā"}}
+{"lexeme_id": 6068, "entry_id": 4384, "human_id": "dziernyukšs:1", "paradigm_name": "noun-1a-ltg", "lemma": "dziernyukšs"}
+{"lexeme_id": 6069, "entry_id": 4384, "human_id": "dziernyukšs:1", "paradigm_name": "noun-1a-ltg", "lemma": "dzirnyukšs"}
 {"lexeme_id": 11899, "entry_id": 4392, "human_id": "dzjadze:1", "paradigm_name": "noun-5ma-ltg", "lemma": "dzjadzeite", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 11897, "entry_id": 4391, "human_id": "dzīsna:1", "paradigm_name": "noun-4fb-ltg", "lemma": "dzīsneņa", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 11913, "entry_id": 7272, "human_id": "egle:1", "paradigm_name": "noun-5fa-ltg", "lemma": "egleite", "attributes": {"Deminutīvs": "Jā"}}
@@ -552,6 +634,7 @@
 {"lexeme_id": 12387, "entry_id": 9478, "human_id": "Īreja:1", "paradigm_name": "noun-4fb-ltg", "lemma": "Ireja", "attributes": {"Lietvārda tips": "Īpašvārds", "Īpašvārda veids": "Vietvārds", "Valodas normēšana": "Nevēlams"}}
 {"lexeme_id": 8667, "entry_id": 13020, "human_id": "snuotine:1", "paradigm_name": "noun-4fb-ltg", "lemma": "snuotiņa", "attributes": {"Valodas normēšana": "Nevēlams"}}
 {"lexeme_id": 12767, "entry_id": 9866, "human_id": "Jaunaisgods:1", "paradigm_name": "noun-1a-ltg", "lemma": "Jaunsgods", "attributes": {"Lietvārda tips": "Īpašvārds"}}
+{"lexeme_id": 6162, "entry_id": 4454, "human_id": "gaļdeit:1", "paradigm_name": "verb-3b-ltg", "lemma": "gaļdeit"}
 {"lexeme_id": 12795, "entry_id": 9890, "human_id": "jiurnīks:1", "paradigm_name": "noun-1a-ltg", "lemma": "jiurinīks"}
 {"lexeme_id": 12786, "entry_id": 9875, "human_id": "jeja:1", "paradigm_name": "excl-ltg", "lemma": "jeta"}
 {"lexeme_id": 12784, "entry_id": 9875, "human_id": "jeja:1", "paradigm_name": "excl-ltg", "lemma": "jeju"}
@@ -617,19 +700,21 @@
 {"lexeme_id": 13624, "entry_id": 10719, "human_id": "lupota:1", "paradigm_name": "noun-4fb-ltg", "lemma": "lupateņa", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 13642, "entry_id": 10733, "human_id": "Madaļa:1", "paradigm_name": "noun-5fa-ltg", "lemma": "Madaleite", "attributes": {"Deminutīvs": "Jā", "Lietvārda tips": "Īpašvārds", "Īpašvārda veids": "Personvārds"}}
 {"lexeme_id": 13607, "entry_id": 10701, "human_id": "lūgs:1", "paradigm_name": "noun-1c-ltg", "lemma": "lūdzeņš", "attributes": {"Deminutīvs": "Jā"}}
-{"lexeme_id": 13656, "entry_id": 10748, "human_id": "maisejums:1", "paradigm_name": "noun-1a-ltg", "lemma": "maisejums"}
 {"lexeme_id": 13657, "entry_id": 10747, "human_id": "maiss:1", "paradigm_name": "noun-1c-ltg", "lemma": "maiseņš"}
+{"lexeme_id": 13656, "entry_id": 10748, "human_id": "maisejums:1", "paradigm_name": "noun-1a-ltg", "lemma": "maisejums"}
 {"lexeme_id": 13647, "entry_id": 10739, "human_id": "magnetiskys:1", "paradigm_name": "adj-2a-ltg", "lemma": "magnetiskys"}
 {"lexeme_id": 13672, "entry_id": 7412, "human_id": "mola:1", "paradigm_name": "noun-4fb-ltg", "lemma": "maleņa", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 13680, "entry_id": 5298, "human_id": "mama:1", "paradigm_name": "noun-4fb-ltg", "lemma": "mameņa", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 13688, "entry_id": 5382, "human_id": "monts:1", "paradigm_name": "noun-4fb-ltg", "lemma": "maņteņa", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 13696, "entry_id": 10787, "human_id": "Mare:1", "paradigm_name": "noun-5fa-ltg", "lemma": "Mareite", "attributes": {"Deminutīvs": "Jā", "Lietvārda tips": "Īpašvārds", "Īpašvārda veids": "Personvārds"}}
 {"lexeme_id": 13676, "entry_id": 10767, "human_id": "malnbolts:1", "paradigm_name": "adj-1a-ltg", "lemma": "malnibolts"}
+{"lexeme_id": 6488, "entry_id": 4715, "human_id": "jauničs:1", "paradigm_name": "noun-1a-ltg", "lemma": "jauničs"}
 {"lexeme_id": 13753, "entry_id": 10844, "human_id": "meitine:1", "paradigm_name": "noun-5fa-ltg", "lemma": "meitineite"}
 {"lexeme_id": 13762, "entry_id": 5347, "human_id": "mente:1", "paradigm_name": "noun-5fa-ltg", "lemma": "meņteite", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 13764, "entry_id": 10855, "human_id": "mērce:1", "paradigm_name": "noun-5fa-ltg", "lemma": "mērceite", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 13802, "entry_id": 10894, "human_id": "miksers:1", "paradigm_name": "noun-2a-ltg", "lemma": "miksers"}
 {"lexeme_id": 13814, "entry_id": 10906, "human_id": "minots:1", "paradigm_name": "noun-1a-ltg", "lemma": "minots"}
+{"lexeme_id": 13810, "entry_id": 10902, "human_id": "minēt:1", "paradigm_name": "verb-3c-ltg", "lemma": "minēt", "attributes": {"Vārdšķira": "Darbības vārds", "Darbības vārda tips": "Patstāvīgs darbības vārds"}}
 {"lexeme_id": 17198, "entry_id": 14217, "human_id": "trešais:1", "paradigm_name": "ord-def-ltg", "lemma": "trešais"}
 {"lexeme_id": 13804, "entry_id": 10839, "human_id": "meileigi:1", "paradigm_name": "adverb-2a-ltg", "lemma": "mīleigi"}
 {"lexeme_id": 6519, "entry_id": 4737, "human_id": "juļs:1", "paradigm_name": "noun-2a-ltg", "lemma": "juļs"}
@@ -651,8 +736,8 @@
 {"lexeme_id": 12538, "entry_id": 9630, "human_id": "izasorguot:1", "paradigm_name": "verb-2a-ltg", "lemma": "izasorguot"}
 {"lexeme_id": 10790, "entry_id": 7882, "human_id": "apmaiņa:1", "paradigm_name": "noun-4fb-ltg", "lemma": "apmaiņa"}
 {"lexeme_id": 14097, "entry_id": 11188, "human_id": "narcise:1", "paradigm_name": "noun-5fa-ltg", "lemma": "narciseite", "attributes": {"Deminutīvs": "Jā"}}
-{"lexeme_id": 6559, "entry_id": 4765, "human_id": "kadaki:1", "paradigm_name": "noun-1a-ltg", "lemma": "kadaki", "stem1": "kadak", "attributes": {"Leksēmas pamatformas īpatnības": "Daudzskaitlis"}}
-{"lexeme_id": 6560, "entry_id": 4765, "human_id": "kadaki:1", "paradigm_name": "noun-1a-ltg", "lemma": "kadāki", "attributes": {"Leksēmas pamatformas īpatnības": "Daudzskaitlis"}}
+{"lexeme_id": 6560, "entry_id": 4765, "human_id": "kadaki:1", "paradigm_name": "noun-1a-ltg", "lemma": "kadāki", "stem1": "kadāk"}
+{"lexeme_id": 6559, "entry_id": 4765, "human_id": "kadaki:1", "paradigm_name": "noun-1a-ltg", "lemma": "kadaki", "stem1": "kadak"}
 {"lexeme_id": 14171, "entry_id": 11264, "human_id": "naulečka:1", "paradigm_name": "noun-4fa-ltg", "lemma": "naulačka"}
 {"lexeme_id": 14188, "entry_id": 5471, "human_id": "nazs:1", "paradigm_name": "noun-2a-ltg", "lemma": "nazs"}
 {"lexeme_id": 14189, "entry_id": 5471, "human_id": "nazs:1", "paradigm_name": "noun-2a-ltg", "lemma": "nazeits", "attributes": {"Deminutīvs": "Jā"}}
@@ -661,8 +746,8 @@
 {"lexeme_id": 14584, "entry_id": 11681, "human_id": "pamazeņom:1", "paradigm_name": "adverb-1-ltg", "lemma": "pamazeņom"}
 {"lexeme_id": 14583, "entry_id": 11681, "human_id": "pamazeņom:1", "paradigm_name": "adverb-1-ltg", "lemma": "pamazeņam"}
 {"lexeme_id": 6557, "entry_id": 4763, "human_id": "kačs:2", "paradigm_name": "noun-2a-ltg", "lemma": "kačs"}
-{"lexeme_id": 14621, "entry_id": 11712, "human_id": "pārkiuņs:1", "paradigm_name": "noun-2a-ltg", "lemma": "pārkyuņs"}
 {"lexeme_id": 14640, "entry_id": 5682, "human_id": "pasadzelkys:1", "paradigm_name": "noun-4fa-ltg", "lemma": "pasadzelka"}
+{"lexeme_id": 14621, "entry_id": 11712, "human_id": "pārkiuņs:1", "paradigm_name": "noun-2a-ltg", "lemma": "pārkyuņs"}
 {"lexeme_id": 14609, "entry_id": 5649, "human_id": "papive:1", "paradigm_name": "noun-5fa-ltg", "lemma": "papuveite", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 14658, "entry_id": 11750, "human_id": "pasatruopeit:1", "paradigm_name": "verb-2a-ltg", "lemma": "pasatruopeit"}
 {"lexeme_id": 14710, "entry_id": 11802, "human_id": "patrulēt:1", "paradigm_name": "verb-2a-ltg", "lemma": "patrulēt"}
@@ -708,6 +793,7 @@
 {"lexeme_id": 17321, "entry_id": 5488, "human_id": "niule:1", "paradigm_name": "adverb-1-ltg", "lemma": "niuļa"}
 {"lexeme_id": 6401, "entry_id": 4648, "human_id": "iuzys:1", "paradigm_name": "noun-4fa-ltg", "lemma": "juizys", "attributes": {"Leksēmas pamatformas īpatnības": "Daudzskaitlis", "Skaitlis 2": "Daudzskaitlinieks"}}
 {"lexeme_id": 15720, "entry_id": 12812, "human_id": "sierps:1", "paradigm_name": "noun-2a-ltg", "lemma": "sierps"}
+{"lexeme_id": 15722, "entry_id": 12814, "human_id": "siļdeit:1", "paradigm_name": "verb-3b-ltg", "lemma": "siļdeit", "attributes": {"Vārdšķira": "Darbības vārds", "Darbības vārda tips": "Patstāvīgs darbības vārds"}}
 {"lexeme_id": 15749, "entry_id": 12840, "human_id": "sīva:1", "paradigm_name": "noun-4fb-ltg", "lemma": "sīveņa", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 15755, "entry_id": 12848, "human_id": "skaida:1", "paradigm_name": "noun-4fb-ltg", "lemma": "skaideņa", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 15767, "entry_id": 6255, "human_id": "skaline:1", "paradigm_name": "noun-5fa-ltg", "lemma": "skalineite", "attributes": {"Deminutīvs": "Jā"}}
@@ -761,11 +847,14 @@
 {"lexeme_id": 16074, "entry_id": 13167, "human_id": "streipe:1", "paradigm_name": "noun-5fa-ltg", "lemma": "streipeite", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 9, "entry_id": 8, "human_id": "muote:1", "paradigm_name": "noun-5fa-ltg", "lemma": "muote"}
 {"lexeme_id": 4955, "entry_id": 3614, "human_id": "abļavuot:1", "paradigm_name": "verb-2a-ltg", "lemma": "abļavuot", "attributes": {"Lietojums": "Novecojis", "Transitivitāte": "Transitīvs", "Darbības vārda tips": "Patstāvīgs darbības vārds"}}
+{"lexeme_id": 55, "entry_id": 37, "human_id": "babuleite:1", "paradigm_name": "noun-5fa-ltg", "lemma": "babuleite"}
 {"lexeme_id": 16097, "entry_id": 13191, "human_id": "stuods:1", "paradigm_name": "noun-1c-ltg", "lemma": "stuodeņš", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 16079, "entry_id": 13171, "human_id": "struna:1", "paradigm_name": "noun-4fa-ltg", "lemma": "struna"}
+{"lexeme_id": 4964, "entry_id": 3619, "human_id": "acine:1", "paradigm_name": "noun-5fa-ltg", "lemma": "acine", "attributes": {"Joma": "Zvejniecība"}}
 {"lexeme_id": 16128, "entry_id": 13220, "human_id": "sūleņš:1", "paradigm_name": "noun-1c-ltg", "lemma": "sūleņš", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 16130, "entry_id": 13222, "human_id": "sūls:1", "paradigm_name": "noun-1a-ltg", "lemma": "sūls"}
 {"lexeme_id": 16129, "entry_id": 13221, "human_id": "sūļuot:1", "paradigm_name": "verb-2a-ltg", "lemma": "sūļuot"}
+{"lexeme_id": 4965, "entry_id": 3619, "human_id": "acine:1", "paradigm_name": "noun-2a-ltg", "lemma": "aciņs", "attributes": {"Joma": "Zvejniecība"}}
 {"lexeme_id": 16162, "entry_id": 13254, "human_id": "svaigs:1", "paradigm_name": "adj-1a-ltg", "lemma": "svaigs"}
 {"lexeme_id": 16170, "entry_id": 13262, "human_id": "svāts:1", "paradigm_name": "adj-1a-ltg", "lemma": "svāts"}
 {"lexeme_id": 4972, "entry_id": 3625, "human_id": "agreims:1", "paradigm_name": "adj-1a-ltg", "lemma": "agreims"}
@@ -862,32 +951,192 @@
 {"lexeme_id": 17031, "entry_id": 14124, "human_id": "Zyrguplis:1", "paradigm_name": "noun-2b-ltg", "lemma": "Zyrguplis", "attributes": {"Lietvārda tips": "Īpašvārds", "Īpašvārda veids": "Vietvārds"}}
 {"lexeme_id": 17000, "entry_id": 14093, "human_id": "zupa:1", "paradigm_name": "noun-4fa-ltg", "lemma": "zupa"}
 {"lexeme_id": 5179, "entry_id": 3783, "human_id": "ass:1", "paradigm_name": "noun-6b-ltg", "lemma": "ass"}
+{"lexeme_id": 5292, "entry_id": 3859, "human_id": "babaunīks:1", "paradigm_name": "noun-1a-ltg", "lemma": "babaunīks"}
+{"lexeme_id": 5293, "entry_id": 3859, "human_id": "babaunīks:1", "paradigm_name": "noun-1a-ltg", "lemma": "babanīks"}
+{"lexeme_id": 5294, "entry_id": 3860, "human_id": "babrs:1", "paradigm_name": "noun-1a-ltg", "lemma": "babrs"}
+{"lexeme_id": 5295, "entry_id": 3861, "human_id": "bacjans:1", "paradigm_name": "noun-1a-ltg", "lemma": "bacjans"}
+{"lexeme_id": 5296, "entry_id": 3861, "human_id": "bacjans:1", "paradigm_name": "noun-1a-ltg", "lemma": "batjans"}
 {"lexeme_id": 6316, "entry_id": 4574, "human_id": "guņs:1", "paradigm_name": "noun-6a-ltg", "lemma": "guņs"}
+{"lexeme_id": 5300, "entry_id": 3865, "human_id": "bagadzeļņa:1", "paradigm_name": "noun-4fb-ltg", "lemma": "bagadzeļņa"}
+{"lexeme_id": 5301, "entry_id": 3865, "human_id": "bagadzeļņa:1", "paradigm_name": "noun-4fb-ltg", "lemma": "bagadeļna"}
+{"lexeme_id": 5309, "entry_id": 3869, "human_id": "bāguļs:1", "paradigm_name": "noun-2a-ltg", "lemma": "bāguļs"}
+{"lexeme_id": 5317, "entry_id": 3874, "human_id": "baklaška:1", "paradigm_name": "noun-4fa-ltg", "lemma": "baklaška"}
+{"lexeme_id": 5320, "entry_id": 3877, "human_id": "balavnīks:1", "paradigm_name": "noun-1a-ltg", "lemma": "balavnīks"}
+{"lexeme_id": 5321, "entry_id": 3878, "human_id": "bals:1", "paradigm_name": "noun-1a-ltg", "lemma": "bals"}
+{"lexeme_id": 5322, "entry_id": 3879, "human_id": "balvans:1", "paradigm_name": "noun-1a-ltg", "lemma": "balvans"}
+{"lexeme_id": 5323, "entry_id": 3879, "human_id": "balvans:1", "paradigm_name": "noun-1a-ltg", "lemma": "bolvans"}
+{"lexeme_id": 5334, "entry_id": 3885, "human_id": "barabans:1", "paradigm_name": "noun-1a-ltg", "lemma": "barabans"}
+{"lexeme_id": 5335, "entry_id": 3885, "human_id": "barabans:1", "paradigm_name": "noun-1a-ltg", "lemma": "barybans"}
+{"lexeme_id": 5337, "entry_id": 3887, "human_id": "barišnīks:1", "paradigm_name": "noun-1a-ltg", "lemma": "barišnīks"}
+{"lexeme_id": 5344, "entry_id": 3892, "human_id": "bārzuojs:1", "paradigm_name": "noun-1a-ltg", "lemma": "bārzuojs"}
+{"lexeme_id": 5343, "entry_id": 3891, "human_id": "barūkle:1", "paradigm_name": "noun-5fa-ltg", "lemma": "barūkle"}
+{"lexeme_id": 5352, "entry_id": 3897, "human_id": "baška:1", "paradigm_name": "noun-4fa-ltg", "lemma": "baška"}
+{"lexeme_id": 5319, "entry_id": 3876, "human_id": "balagurs:1", "paradigm_name": "noun-1a-ltg", "lemma": "balagurs"}
 {"lexeme_id": 5369, "entry_id": 3909, "human_id": "bedneiba:1", "paradigm_name": "noun-4fa-ltg", "lemma": "bedneiba"}
+{"lexeme_id": 5357, "entry_id": 3900, "human_id": "batraks:1", "paradigm_name": "noun-1a-ltg", "lemma": "batraks"}
+{"lexeme_id": 5360, "entry_id": 3902, "human_id": "bausleiba:1", "paradigm_name": "noun-4fa-ltg", "lemma": "bausleiba"}
+{"lexeme_id": 5362, "entry_id": 3904, "human_id": "bazdols:1", "paradigm_name": "noun-1a-ltg", "lemma": "bazdols"}
+{"lexeme_id": 5363, "entry_id": 3905, "human_id": "bazmyns:1", "paradigm_name": "noun-1a-ltg", "lemma": "bazmyns"}
+{"lexeme_id": 5364, "entry_id": 3905, "human_id": "bazmyns:1", "paradigm_name": "noun-1a-ltg", "lemma": "bazvyns"}
 {"lexeme_id": 5371, "entry_id": 3910, "human_id": "bednys:1", "paradigm_name": "adj-1a-ltg", "lemma": "bedns"}
+{"lexeme_id": 5365, "entry_id": 3905, "human_id": "bazmyns:1", "paradigm_name": "noun-1a-ltg", "lemma": "bazmāns"}
+{"lexeme_id": 5377, "entry_id": 3915, "human_id": "benčiks:1", "paradigm_name": "noun-1a-ltg", "lemma": "benčiks"}
+{"lexeme_id": 5373, "entry_id": 3912, "human_id": "bejušeiba:1", "paradigm_name": "noun-4fa-ltg", "lemma": "bejušeiba"}
+{"lexeme_id": 5378, "entry_id": 3915, "human_id": "benčiks:1", "paradigm_name": "noun-1a-ltg", "lemma": "beņčiks"}
+{"lexeme_id": 5379, "entry_id": 3916, "human_id": "benčs:1", "paradigm_name": "noun-2a-ltg", "lemma": "benčs"}
+{"lexeme_id": 5391, "entry_id": 3924, "human_id": "bičers:1", "paradigm_name": "noun-2a-ltg", "lemma": "bičers"}
+{"lexeme_id": 5392, "entry_id": 3925, "human_id": "bīdākls:1", "paradigm_name": "noun-1a-ltg", "lemma": "bīdākls"}
+{"lexeme_id": 5393, "entry_id": 3925, "human_id": "bīdākls:1", "paradigm_name": "noun-1a-ltg", "lemma": "bīdakls"}
+{"lexeme_id": 5404, "entry_id": 3932, "human_id": "bimbiks:1", "paradigm_name": "noun-1a-ltg", "lemma": "bimbiks"}
+{"lexeme_id": 5405, "entry_id": 3933, "human_id": "bindzjuks:1", "paradigm_name": "noun-1a-ltg", "lemma": "bindzjuks"}
+{"lexeme_id": 5406, "entry_id": 3933, "human_id": "bindzjuks:1", "paradigm_name": "noun-1a-ltg", "lemma": "pindžaks"}
+{"lexeme_id": 5407, "entry_id": 3933, "human_id": "bindzjuks:1", "paradigm_name": "noun-1a-ltg", "lemma": "dziņdzuks"}
+{"lexeme_id": 5408, "entry_id": 3933, "human_id": "bindzjuks:1", "paradigm_name": "noun-1a-ltg", "lemma": "dziņdzjuks"}
+{"lexeme_id": 5413, "entry_id": 3938, "human_id": "bitlouka:1", "paradigm_name": "noun-4fa-ltg", "lemma": "bitlouka"}
+{"lexeme_id": 5414, "entry_id": 3939, "human_id": "bīzinīks:1", "paradigm_name": "noun-1a-ltg", "lemma": "bīzinīks"}
+{"lexeme_id": 5415, "entry_id": 3939, "human_id": "bīzinīks:1", "paradigm_name": "noun-1a-ltg", "lemma": "bīznīks"}
+{"lexeme_id": 5416, "entry_id": 3939, "human_id": "bīzinīks:1", "paradigm_name": "noun-4fa-ltg", "lemma": "bīzineica"}
+{"lexeme_id": 5428, "entry_id": 3949, "human_id": "bluogzna:1", "paradigm_name": "noun-4fa-ltg", "lemma": "bluogzna"}
+{"lexeme_id": 5433, "entry_id": 3952, "human_id": "bļadovka:1", "paradigm_name": "noun-4fa-ltg", "lemma": "bļadovka"}
+{"lexeme_id": 5434, "entry_id": 3952, "human_id": "bļadovka:1", "paradigm_name": "noun-4fa-ltg", "lemma": "bļadouka"}
+{"lexeme_id": 5436, "entry_id": 3954, "human_id": "bļaha:1", "paradigm_name": "noun-4fa-ltg", "lemma": "bļaha"}
+{"lexeme_id": 5437, "entry_id": 3955, "human_id": "bļombāns:1", "paradigm_name": "noun-1a-ltg", "lemma": "bļombāns"}
+{"lexeme_id": 5438, "entry_id": 3955, "human_id": "bļombāns:1", "paradigm_name": "noun-1a-ltg", "lemma": "bļombiks"}
+{"lexeme_id": 5470, "entry_id": 3974, "human_id": "božneica:1", "paradigm_name": "noun-4fa-ltg", "lemma": "božneica"}
+{"lexeme_id": 5471, "entry_id": 3974, "human_id": "božneica:1", "paradigm_name": "noun-4fa-ltg", "lemma": "bozneica"}
+{"lexeme_id": 5472, "entry_id": 3975, "human_id": "bradiņs:1", "paradigm_name": "noun-2a-ltg", "lemma": "bradiņs"}
+{"lexeme_id": 5473, "entry_id": 3976, "human_id": "brama:1", "paradigm_name": "noun-4fa-ltg", "lemma": "brama"}
+{"lexeme_id": 5475, "entry_id": 3978, "human_id": "bramaņs:1", "paradigm_name": "noun-2a-ltg", "lemma": "bramaņs"}
+{"lexeme_id": 5476, "entry_id": 3979, "human_id": "brandiņs:1", "paradigm_name": "noun-2a-ltg", "lemma": "brandiņs"}
+{"lexeme_id": 5479, "entry_id": 3980, "human_id": "branža:1", "paradigm_name": "noun-4fa-ltg", "lemma": "branža"}
+{"lexeme_id": 5480, "entry_id": 3981, "human_id": "brašans:1", "paradigm_name": "noun-1a-ltg", "lemma": "brašans"}
+{"lexeme_id": 5481, "entry_id": 3982, "human_id": "braščuks:1", "paradigm_name": "noun-1a-ltg", "lemma": "braščuks"}
+{"lexeme_id": 5482, "entry_id": 3983, "human_id": "braška:1", "paradigm_name": "noun-4fa-ltg", "lemma": "braška"}
+{"lexeme_id": 5500, "entry_id": 3994, "human_id": "briga:1", "paradigm_name": "noun-4fa-ltg", "lemma": "briga"}
+{"lexeme_id": 5501, "entry_id": 3994, "human_id": "briga:1", "paradigm_name": "noun-4fa-ltg", "lemma": "bryga"}
+{"lexeme_id": 5502, "entry_id": 3995, "human_id": "brile:1", "paradigm_name": "noun-5fa-ltg", "lemma": "brile"}
 {"lexeme_id": 5457, "entry_id": 3968, "human_id": "bondars:1", "paradigm_name": "noun-1a-ltg", "lemma": "bondars"}
 {"lexeme_id": 5545, "entry_id": 4027, "human_id": "buļvinīks:1", "paradigm_name": "noun-1a-ltg", "lemma": "buļbinīks"}
+{"lexeme_id": 5557, "entry_id": 4037, "human_id": "buorzda:1", "paradigm_name": "noun-4fa-ltg", "lemma": "buorzda"}
 {"lexeme_id": 5543, "entry_id": 4026, "human_id": "buļvaine:1", "paradigm_name": "noun-5fa-ltg", "lemma": "buļbaine"}
 {"lexeme_id": 5544, "entry_id": 4027, "human_id": "buļvinīks:1", "paradigm_name": "noun-1a-ltg", "lemma": "buļvinīks"}
 {"lexeme_id": 5497, "entry_id": 3993, "human_id": "brīdakls:1", "paradigm_name": "noun-1a-ltg", "lemma": "brīdakls"}
+{"lexeme_id": 5582, "entry_id": 4052, "human_id": "bykaunīks:1", "paradigm_name": "noun-1a-ltg", "lemma": "bykaunīks"}
+{"lexeme_id": 5558, "entry_id": 4037, "human_id": "buorzda:1", "paradigm_name": "noun-4fa-ltg", "lemma": "buorda"}
+{"lexeme_id": 5586, "entry_id": 4055, "human_id": "byrga:1", "paradigm_name": "noun-4fa-ltg", "lemma": "byrga"}
+{"lexeme_id": 5592, "entry_id": 4060, "human_id": "byzuļs:1", "paradigm_name": "noun-2a-ltg", "lemma": "byzuļs"}
 {"lexeme_id": 5537, "entry_id": 4022, "human_id": "būgons:1", "paradigm_name": "noun-1a-ltg", "lemma": "būgons"}
 {"lexeme_id": 5542, "entry_id": 4026, "human_id": "buļvaine:1", "paradigm_name": "noun-5fa-ltg", "lemma": "buļvaine"}
+{"lexeme_id": 5509, "entry_id": 3998, "human_id": "britvāns:1", "paradigm_name": "noun-1a-ltg", "lemma": "britvāns"}
+{"lexeme_id": 5510, "entry_id": 3998, "human_id": "britvāns:1", "paradigm_name": "noun-1a-ltg", "lemma": "britvans"}
+{"lexeme_id": 5526, "entry_id": 4014, "human_id": "bubyns:1", "paradigm_name": "noun-1a-ltg", "lemma": "bubyns"}
+{"lexeme_id": 5527, "entry_id": 4014, "human_id": "bubyns:1", "paradigm_name": "noun-1a-ltg", "lemma": "bubns"}
+{"lexeme_id": 5525, "entry_id": 4013, "human_id": "bublička:1", "paradigm_name": "noun-4fa-ltg", "lemma": "bublička"}
+{"lexeme_id": 5519, "entry_id": 4007, "human_id": "bruolinīks:1", "paradigm_name": "noun-1a-ltg", "lemma": "bruolinīks"}
+{"lexeme_id": 5520, "entry_id": 4008, "human_id": "bruoliste:1", "paradigm_name": "noun-5fc-ltg", "lemma": "bruoliste"}
+{"lexeme_id": 5522, "entry_id": 4010, "human_id": "bruss:1", "paradigm_name": "noun-1a-ltg", "lemma": "bruss"}
+{"lexeme_id": 5528, "entry_id": 4015, "human_id": "buca:1", "paradigm_name": "noun-4fa-ltg", "lemma": "buca"}
+{"lexeme_id": 5530, "entry_id": 4017, "human_id": "budaunīks:1", "paradigm_name": "noun-1a-ltg", "lemma": "budaunīks"}
+{"lexeme_id": 5529, "entry_id": 4016, "human_id": "bučkeņa:1", "paradigm_name": "noun-4fb-ltg", "lemma": "bučkeņa"}
+{"lexeme_id": 5531, "entry_id": 4017, "human_id": "budaunīks:1", "paradigm_name": "noun-1a-ltg", "lemma": "budounīks"}
+{"lexeme_id": 5534, "entry_id": 4020, "human_id": "budonka:1", "paradigm_name": "noun-4fa-ltg", "lemma": "budonka"}
+{"lexeme_id": 5535, "entry_id": 4020, "human_id": "budonka:1", "paradigm_name": "noun-4fa-ltg", "lemma": "budunka"}
+{"lexeme_id": 5546, "entry_id": 4028, "human_id": "bumažnīks:1", "paradigm_name": "noun-1a-ltg", "lemma": "bumažnīks"}
+{"lexeme_id": 5548, "entry_id": 4030, "human_id": "būneja:1", "paradigm_name": "noun-4fb-ltg", "lemma": "būneja"}
+{"lexeme_id": 5549, "entry_id": 4031, "human_id": "buoba:1", "paradigm_name": "noun-4fa-ltg", "lemma": "buoba"}
+{"lexeme_id": 5551, "entry_id": 4032, "human_id": "buobine:1", "paradigm_name": "noun-5fa-ltg", "lemma": "buobine"}
+{"lexeme_id": 5552, "entry_id": 4033, "human_id": "buolyudine:1", "paradigm_name": "noun-5fa-ltg", "lemma": "buolyudine"}
+{"lexeme_id": 5559, "entry_id": 4038, "human_id": "buoška:1", "paradigm_name": "noun-4fa-ltg", "lemma": "buoška"}
+{"lexeme_id": 5568, "entry_id": 4043, "human_id": "būrte:1", "paradigm_name": "noun-5fc-ltg", "lemma": "būrte"}
+{"lexeme_id": 5569, "entry_id": 4044, "human_id": "burtnīceiba:1", "paradigm_name": "noun-4fa-ltg", "lemma": "burtnīceiba"}
+{"lexeme_id": 5570, "entry_id": 4044, "human_id": "burtnīceiba:1", "paradigm_name": "noun-4fa-ltg", "lemma": "būrtnīceiba"}
+{"lexeme_id": 5571, "entry_id": 4045, "human_id": "burtnīks:1", "paradigm_name": "noun-1a-ltg", "lemma": "burtnīks"}
+{"lexeme_id": 5572, "entry_id": 4045, "human_id": "burtnīks:1", "paradigm_name": "noun-1a-ltg", "lemma": "būrtnīks"}
+{"lexeme_id": 5579, "entry_id": 4049, "human_id": "buza:1", "paradigm_name": "noun-4fa-ltg", "lemma": "buza"}
+{"lexeme_id": 5584, "entry_id": 4054, "human_id": "byndūss:1", "paradigm_name": "noun-1a-ltg", "lemma": "byndūss"}
+{"lexeme_id": 5585, "entry_id": 4054, "human_id": "byndūss:1", "paradigm_name": "noun-1a-ltg", "lemma": "bynduss"}
+{"lexeme_id": 5597, "entry_id": 4065, "human_id": "cagyns:1", "paradigm_name": "noun-1a-ltg", "lemma": "cagyns"}
 {"lexeme_id": 6346, "entry_id": 4601, "human_id": "ierklis:1", "paradigm_name": "noun-2b-ltg", "lemma": "ierklis"}
 {"lexeme_id": 5587, "entry_id": 4056, "human_id": "byuds:1", "paradigm_name": "noun-1a-ltg", "lemma": "byuds"}
+{"lexeme_id": 5598, "entry_id": 4065, "human_id": "cagyns:1", "paradigm_name": "noun-1a-ltg", "lemma": "cagans"}
+{"lexeme_id": 5599, "entry_id": 4066, "human_id": "cakuls:1", "paradigm_name": "noun-1a-ltg", "lemma": "cakuls"}
+{"lexeme_id": 5600, "entry_id": 4067, "human_id": "calaine:1", "paradigm_name": "noun-5fa-ltg", "lemma": "calaine"}
+{"lexeme_id": 5602, "entry_id": 4069, "human_id": "capeļnīks:1", "paradigm_name": "noun-1a-ltg", "lemma": "capeļnīks"}
+{"lexeme_id": 5603, "entry_id": 4069, "human_id": "capeļnīks:1", "paradigm_name": "noun-1a-ltg", "lemma": "capeitnīks"}
+{"lexeme_id": 5605, "entry_id": 4071, "human_id": "cārmyuška:1", "paradigm_name": "noun-4fa-ltg", "lemma": "cārmyuška"}
+{"lexeme_id": 5606, "entry_id": 4071, "human_id": "cārmyuška:1", "paradigm_name": "noun-4fa-ltg", "lemma": "cārmūška"}
+{"lexeme_id": 5607, "entry_id": 4072, "human_id": "carūklis:1", "paradigm_name": "noun-2b-ltg", "lemma": "carūklis"}
+{"lexeme_id": 5609, "entry_id": 4073, "human_id": "casnāgs:1", "paradigm_name": "noun-1a-ltg", "lemma": "casnuogs"}
+{"lexeme_id": 5613, "entry_id": 4077, "human_id": "caurmārs:1", "paradigm_name": "noun-1a-ltg", "lemma": "caurmārs"}
+{"lexeme_id": 5614, "entry_id": 4078, "human_id": "cebeļs:1", "paradigm_name": "noun-2a-ltg", "lemma": "cebeļs"}
+{"lexeme_id": 5615, "entry_id": 4079, "human_id": "cegeļņa:1", "paradigm_name": "noun-4fb-ltg", "lemma": "cegeļņa"}
+{"lexeme_id": 5616, "entry_id": 4079, "human_id": "cegeļņa:1", "paradigm_name": "noun-4fb-ltg", "lemma": "tiģeļņa"}
+{"lexeme_id": 5617, "entry_id": 4079, "human_id": "cegeļņa:1", "paradigm_name": "noun-4fa-ltg", "lemma": "ceglineica"}
+{"lexeme_id": 5618, "entry_id": 4080, "human_id": "cegls:1", "paradigm_name": "noun-1a-ltg", "lemma": "cegls"}
+{"lexeme_id": 5622, "entry_id": 4083, "human_id": "ceinakls:1", "paradigm_name": "noun-1a-ltg", "lemma": "ceinakls"}
+{"lexeme_id": 5623, "entry_id": 4083, "human_id": "ceinakls:1", "paradigm_name": "noun-1b-ltg", "lemma": "ceinaklys"}
 {"lexeme_id": 16900, "entry_id": 13995, "human_id": "žālai:1", "paradigm_name": "adverb-1-ltg", "lemma": "žāļ"}
 {"lexeme_id": 16899, "entry_id": 13995, "human_id": "žālai:1", "paradigm_name": "adverb-2a-ltg", "lemma": "žāl"}
+{"lexeme_id": 5626, "entry_id": 4086, "human_id": "ceps:1", "paradigm_name": "noun-1a-ltg", "lemma": "ceps"}
+{"lexeme_id": 5630, "entry_id": 4089, "human_id": "cibinīks:1", "paradigm_name": "noun-1a-ltg", "lemma": "cibinīks"}
 {"lexeme_id": 5601, "entry_id": 4068, "human_id": "cāls:1", "paradigm_name": "adj-1a-ltg", "lemma": "cāls"}
 {"lexeme_id": 6759, "entry_id": 4915, "human_id": "klāvs:1", "paradigm_name": "noun-1a-ltg", "lemma": "klāvs"}
+{"lexeme_id": 5631, "entry_id": 4089, "human_id": "cibinīks:1", "paradigm_name": "noun-2a-ltg", "lemma": "cibuļs"}
+{"lexeme_id": 5634, "entry_id": 4091, "human_id": "cierciņs:1", "paradigm_name": "noun-2a-ltg", "lemma": "cierciņs"}
+{"lexeme_id": 5635, "entry_id": 4092, "human_id": "cierciņuošona:1", "paradigm_name": "noun-4fa-ltg", "lemma": "cierciņuošona"}
+{"lexeme_id": 5639, "entry_id": 4094, "human_id": "ciermuļs:1", "paradigm_name": "noun-2a-ltg", "lemma": "ciermuļs"}
+{"lexeme_id": 5641, "entry_id": 4096, "human_id": "ciertums:1", "paradigm_name": "noun-1a-ltg", "lemma": "ciertums"}
+{"lexeme_id": 5688, "entry_id": 4126, "human_id": "cylyns:1", "paradigm_name": "noun-1a-ltg", "lemma": "cylyns"}
+{"lexeme_id": 5689, "entry_id": 4127, "human_id": "cymuss:1", "paradigm_name": "noun-1a-ltg", "lemma": "cymuss"}
+{"lexeme_id": 5672, "entry_id": 4116, "human_id": "cukerka:1", "paradigm_name": "noun-4fa-ltg", "lemma": "cukerka"}
+{"lexeme_id": 5654, "entry_id": 4107, "human_id": "cisinīks:1", "paradigm_name": "noun-1a-ltg", "lemma": "cisinīks"}
 {"lexeme_id": 5625, "entry_id": 4085, "human_id": "ceplis:1", "paradigm_name": "noun-2b-ltg", "lemma": "ceplis"}
+{"lexeme_id": 5655, "entry_id": 4107, "human_id": "cisinīks:1", "paradigm_name": "noun-1a-ltg", "lemma": "cysinīks"}
 {"lexeme_id": 5650, "entry_id": 4104, "human_id": "ciļts:1", "paradigm_name": "noun-6a-ltg", "lemma": "ciļts"}
+{"lexeme_id": 5673, "entry_id": 4117, "human_id": "cukernīks:1", "paradigm_name": "noun-1a-ltg", "lemma": "cukernīks"}
+{"lexeme_id": 5674, "entry_id": 4117, "human_id": "cukernīks:1", "paradigm_name": "noun-1a-ltg", "lemma": "cukrinīks"}
+{"lexeme_id": 5675, "entry_id": 4117, "human_id": "cukernīks:1", "paradigm_name": "noun-5fa-ltg", "lemma": "cukrine"}
+{"lexeme_id": 5676, "entry_id": 4117, "human_id": "cukernīks:1", "paradigm_name": "noun-4fa-ltg", "lemma": "cukerneica"}
 {"lexeme_id": 15512, "entry_id": 12605, "human_id": "samtine:1", "paradigm_name": "noun-5fa-ltg", "lemma": "samtineite", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 13221, "entry_id": 4997, "human_id": "kozurs:1", "paradigm_name": "noun-2a-ltg", "lemma": "kozurs"}
+{"lexeme_id": 5691, "entry_id": 4129, "human_id": "cypka:1", "paradigm_name": "noun-4fa-ltg", "lemma": "cypka"}
+{"lexeme_id": 5692, "entry_id": 4129, "human_id": "cypka:1", "paradigm_name": "noun-4fa-ltg", "lemma": "cipka"}
+{"lexeme_id": 5694, "entry_id": 4131, "human_id": "cyrulnīks:1", "paradigm_name": "noun-1a-ltg", "lemma": "cyrulnīks"}
+{"lexeme_id": 5716, "entry_id": 4145, "human_id": "čāpāslys:1", "paradigm_name": "noun-1a-ltg", "lemma": "čapasls"}
+{"lexeme_id": 5715, "entry_id": 4145, "human_id": "čāpāslys:1", "paradigm_name": "noun-1b-ltg", "lemma": "čāpāslys"}
+{"lexeme_id": 5717, "entry_id": 4145, "human_id": "čāpāslys:1", "paradigm_name": "noun-1a-ltg", "lemma": "čapasts"}
+{"lexeme_id": 5721, "entry_id": 4149, "human_id": "čarpaks:1", "paradigm_name": "noun-1a-ltg", "lemma": "čarpaks"}
 {"lexeme_id": 12819, "entry_id": 9912, "human_id": "jumprova:1", "paradigm_name": "noun-4fb-ltg", "lemma": "jumpraveņa", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 16518, "entry_id": 7466, "human_id": "upe:1", "paradigm_name": "noun-5fa-ltg", "lemma": "upeite"}
 {"lexeme_id": 16700, "entry_id": 13792, "human_id": "Vere:1", "paradigm_name": "noun-5fa-ltg", "lemma": "Vereite", "attributes": {"Deminutīvs": "Jā", "Lietvārda tips": "Īpašvārds", "Īpašvārda veids": "Personvārds"}}
 {"lexeme_id": 12524, "entry_id": 9616, "human_id": "izalečēt:1", "paradigm_name": "verb-2a-ltg", "lemma": "izalečēt"}
 {"lexeme_id": 5791, "entry_id": 4198, "human_id": "čyuļs:1", "paradigm_name": "noun-2a-ltg", "lemma": "čyuļs"}
+{"lexeme_id": 5801, "entry_id": 4207, "human_id": "dagutneica:1", "paradigm_name": "noun-4fa-ltg", "lemma": "dagutneica"}
 {"lexeme_id": 17090, "entry_id": 4876, "human_id": "kerza:1", "paradigm_name": "noun-5fa-ltg", "lemma": "kerzeite", "attributes": {"Deminutīvs": "Jā"}}
+{"lexeme_id": 5724, "entry_id": 4151, "human_id": "čeiseļs:1", "paradigm_name": "noun-2a-ltg", "lemma": "čeiseļs"}
+{"lexeme_id": 5750, "entry_id": 4166, "human_id": "čipierkstneits:1", "paradigm_name": "noun-2a-ltg", "lemma": "čipierkstneits"}
+{"lexeme_id": 5729, "entry_id": 4155, "human_id": "čepka:1", "paradigm_name": "noun-4fa-ltg", "lemma": "čepka"}
+{"lexeme_id": 5730, "entry_id": 4155, "human_id": "čepka:1", "paradigm_name": "noun-1a-ltg", "lemma": "čepčiks"}
+{"lexeme_id": 5731, "entry_id": 4156, "human_id": "česarka:1", "paradigm_name": "noun-4fa-ltg", "lemma": "česarka"}
+{"lexeme_id": 5732, "entry_id": 4157, "human_id": "četrskrituļs:1", "paradigm_name": "noun-2a-ltg", "lemma": "četrskrituļs"}
+{"lexeme_id": 5733, "entry_id": 4158, "human_id": "četveriks:1", "paradigm_name": "noun-1a-ltg", "lemma": "četveriks"}
+{"lexeme_id": 5734, "entry_id": 4159, "human_id": "četverts:1", "paradigm_name": "noun-1a-ltg", "lemma": "četverts"}
+{"lexeme_id": 5743, "entry_id": 4163, "human_id": "činavnīks:1", "paradigm_name": "noun-1a-ltg", "lemma": "činavnīks"}
+{"lexeme_id": 5744, "entry_id": 4163, "human_id": "činavnīks:1", "paradigm_name": "noun-1a-ltg", "lemma": "činaunīks"}
+{"lexeme_id": 5749, "entry_id": 4165, "human_id": "činčiks:1", "paradigm_name": "noun-1a-ltg", "lemma": "činčiks"}
+{"lexeme_id": 5752, "entry_id": 4168, "human_id": "čīslinīks:1", "paradigm_name": "noun-1a-ltg", "lemma": "čīslinīks"}
+{"lexeme_id": 5753, "entry_id": 4168, "human_id": "čīslinīks:1", "paradigm_name": "noun-1a-ltg", "lemma": "čislinīks"}
+{"lexeme_id": 5789, "entry_id": 4196, "human_id": "čyukstiešona:1", "paradigm_name": "noun-4fa-ltg", "lemma": "čyukstiešona"}
+{"lexeme_id": 5762, "entry_id": 4175, "human_id": "Čorts:1", "paradigm_name": "noun-1a-ltg", "lemma": "Čorts"}
+{"lexeme_id": 5763, "entry_id": 4175, "human_id": "Čorts:1", "paradigm_name": "noun-1a-ltg", "lemma": "Čjorts"}
+{"lexeme_id": 5765, "entry_id": 4177, "human_id": "čudaks:1", "paradigm_name": "noun-1a-ltg", "lemma": "čudaks"}
+{"lexeme_id": 5766, "entry_id": 4177, "human_id": "čudaks:1", "paradigm_name": "noun-1a-ltg", "lemma": "čudiks"}
+{"lexeme_id": 5770, "entry_id": 4181, "human_id": "čūksts:1", "paradigm_name": "noun-1a-ltg", "lemma": "čūksts"}
+{"lexeme_id": 5773, "entry_id": 4183, "human_id": "čulans:1", "paradigm_name": "noun-1a-ltg", "lemma": "čulans"}
+{"lexeme_id": 5775, "entry_id": 4185, "human_id": "čumola:1", "paradigm_name": "noun-4fa-ltg", "lemma": "čumola"}
+{"lexeme_id": 5777, "entry_id": 4187, "human_id": "čupčiks:1", "paradigm_name": "noun-1a-ltg", "lemma": "čupčiks"}
+{"lexeme_id": 5778, "entry_id": 4187, "human_id": "čupčiks:1", "paradigm_name": "noun-1a-ltg", "lemma": "čubčiks"}
+{"lexeme_id": 5780, "entry_id": 4189, "human_id": "čura:1", "paradigm_name": "noun-4fa-ltg", "lemma": "čura"}
 {"lexeme_id": 13751, "entry_id": 10842, "human_id": "meita:1", "paradigm_name": "noun-4fb-ltg", "lemma": "meiteņa", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 13436, "entry_id": 10527, "human_id": "lampa:1", "paradigm_name": "noun-4fb-ltg", "lemma": "lampeņa", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 17121, "entry_id": 5649, "human_id": "papive:1", "paradigm_name": "noun-5fc-ltg", "lemma": "papuve"}
@@ -920,6 +1169,7 @@
 {"lexeme_id": 10725, "entry_id": 7817, "human_id": "Anna:1", "paradigm_name": "noun-4fa-ltg", "lemma": "Anna", "attributes": {"Lietvārda tips": "Īpašvārds", "Īpašvārda veids": "Personvārds"}}
 {"lexeme_id": 10726, "entry_id": 7818, "human_id": "Anneite:1", "paradigm_name": "noun-5fa-ltg", "lemma": "Anneite", "attributes": {"Lietvārda tips": "Īpašvārds", "Īpašvārda veids": "Personvārds"}}
 {"lexeme_id": 7782, "entry_id": 5688, "human_id": "pasauka:1", "paradigm_name": "noun-4fa-ltg", "lemma": "pasauka"}
+{"lexeme_id": 7786, "entry_id": 5692, "human_id": "pasavierīņs:1", "paradigm_name": "noun-2a-ltg", "lemma": "pasavierīņs"}
 {"lexeme_id": 7928, "entry_id": 5791, "human_id": "pipss:1", "paradigm_name": "noun-2a-ltg", "lemma": "pipss"}
 {"lexeme_id": 7989, "entry_id": 5840, "human_id": "ploskons:1", "paradigm_name": "adj-1a-ltg", "lemma": "ploskons"}
 {"lexeme_id": 8193, "entry_id": 6004, "human_id": "pykts:1", "paradigm_name": "adj-1a-ltg", "lemma": "pykts"}
@@ -944,6 +1194,7 @@
 {"lexeme_id": 9075, "entry_id": 6649, "human_id": "šņūre:1", "paradigm_name": "noun-5fa-ltg", "lemma": "šņūre"}
 {"lexeme_id": 9066, "entry_id": 6642, "human_id": "šmaugs:1", "paradigm_name": "adj-1a-ltg", "lemma": "šmaugs"}
 {"lexeme_id": 17054, "entry_id": 6138, "human_id": "saimisteiba:1", "paradigm_name": "noun-4fa-ltg", "lemma": "saimesteiba"}
+{"lexeme_id": 9218, "entry_id": 6745, "human_id": "tiemēt:1", "paradigm_name": "verb-2a-ltg", "lemma": "tiemēt", "attributes": {"Darbības vārda tips": "Patstāvīgs darbības vārds"}}
 {"lexeme_id": 9270, "entry_id": 6779, "human_id": "treis:1", "paradigm_name": "card-i-ltg", "lemma": "treis"}
 {"lexeme_id": 41, "entry_id": 26, "human_id": "pasauļs:1", "paradigm_name": "noun-2a-ltg", "lemma": "pasauļs"}
 {"lexeme_id": 9476, "entry_id": 6927, "human_id": "vasars:1", "paradigm_name": "noun-2a-ltg", "lemma": "vasars"}
@@ -955,6 +1206,7 @@
 {"lexeme_id": 9628, "entry_id": 7028, "human_id": "vuotele:1", "paradigm_name": "noun-5fc-ltg", "lemma": "vuotele"}
 {"lexeme_id": 9630, "entry_id": 7028, "human_id": "vuotele:1", "paradigm_name": "noun-4fa-ltg", "lemma": "vuota"}
 {"lexeme_id": 9643, "entry_id": 7040, "human_id": "vyds:1", "paradigm_name": "noun-1d-ltg", "lemma": "vyds"}
+{"lexeme_id": 9690, "entry_id": 7073, "human_id": "zadynuot:1", "paradigm_name": "verb-2a-ltg", "lemma": "zadynuot", "attributes": {"Darbības vārda tips": "Patstāvīgs darbības vārds"}}
 {"lexeme_id": 9736, "entry_id": 7104, "human_id": "zibsnis:1", "paradigm_name": "noun-2b-ltg", "lemma": "zipsnis"}
 {"lexeme_id": 9809, "entry_id": 7164, "human_id": "žvūrgzdyns:1", "paradigm_name": "noun-1a-ltg", "lemma": "žvūrgzdyns"}
 {"lexeme_id": 9819, "entry_id": 4523, "human_id": "gosts:1", "paradigm_name": "noun-1c-ltg", "lemma": "gasteņš"}
@@ -964,6 +1216,8 @@
 {"lexeme_id": 5798, "entry_id": 4204, "human_id": "dāds:1", "paradigm_name": "noun-1a-ltg", "lemma": "dāds", "attributes": {"Lietojums": "Novecojis"}}
 {"lexeme_id": 12558, "entry_id": 9650, "human_id": "izbreineit:1", "paradigm_name": "verb-2a-ltg", "lemma": "izbreineit"}
 {"lexeme_id": 9812, "entry_id": 7167, "human_id": "žvyrs:1", "paradigm_name": "noun-1a-ltg", "lemma": "žvyrs", "attributes": {"Izloksne": "Izvaltas", "Morfotabulas attēlošana": "Nerādīt daudzskaitli"}}
+{"lexeme_id": 9789, "entry_id": 7147, "human_id": "žepers:1", "paradigm_name": "noun-1a-ltg", "lemma": "žepers"}
+{"lexeme_id": 9801, "entry_id": 7158, "human_id": "žuburs:1", "paradigm_name": "noun-1a-ltg", "lemma": "žuburs"}
 {"lexeme_id": 410, "entry_id": 11, "human_id": "baba:1", "paradigm_name": "noun-4fb-ltg", "lemma": "babuņa", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 9825, "entry_id": 26, "human_id": "pasauļs:1", "paradigm_name": "noun-5fa-ltg", "lemma": "pasauleite", "attributes": {"Dzimte": "Sieviešu"}}
 {"lexeme_id": 6049, "entry_id": 25, "human_id": "dzeds:1", "paradigm_name": "noun-1c-ltg", "lemma": "dzedeņš", "attributes": {"Deminutīvs": "Jā"}}
@@ -1192,7 +1446,6 @@
 {"lexeme_id": 10146, "entry_id": 7331, "human_id": "lads:1", "paradigm_name": "noun-1d-ltg", "lemma": "lads"}
 {"lexeme_id": 10199, "entry_id": 7379, "human_id": "leics:1", "paradigm_name": "noun-2a-ltg", "lemma": "leics"}
 {"lexeme_id": 10194, "entry_id": 7377, "human_id": "začs:1", "paradigm_name": "noun-2a-ltg", "lemma": "začs"}
-{"lexeme_id": 10196, "entry_id": 7378, "human_id": "zuodžs:1", "paradigm_name": "noun-2a-ltg", "lemma": "zuodžs"}
 {"lexeme_id": 10200, "entry_id": 7380, "human_id": "spreids:1", "paradigm_name": "noun-2a-ltg", "lemma": "spreids"}
 {"lexeme_id": 8806, "entry_id": 6453, "human_id": "streičs:1", "paradigm_name": "noun-2a-ltg", "lemma": "streičs"}
 {"lexeme_id": 10201, "entry_id": 7381, "human_id": "truss:1", "paradigm_name": "noun-2a-ltg", "lemma": "truss"}
@@ -1223,6 +1476,7 @@
 {"lexeme_id": 10231, "entry_id": 7411, "human_id": "lozda:1", "paradigm_name": "noun-4fa-ltg", "lemma": "lozda"}
 {"lexeme_id": 12592, "entry_id": 9684, "human_id": "izglobuot:1", "paradigm_name": "verb-2a-ltg", "lemma": "izglobuot"}
 {"lexeme_id": 10222, "entry_id": 7402, "human_id": "ziņa:1", "paradigm_name": "noun-4fb-ltg", "lemma": "ziņa"}
+{"lexeme_id": 10196, "entry_id": 14386, "human_id": "zuodžs:1", "paradigm_name": "noun-2a-ltg", "lemma": "zuodžs"}
 {"lexeme_id": 10232, "entry_id": 7412, "human_id": "mola:1", "paradigm_name": "noun-4fa-ltg", "lemma": "mola"}
 {"lexeme_id": 10233, "entry_id": 7413, "human_id": "molka:1", "paradigm_name": "noun-4fa-ltg", "lemma": "molka"}
 {"lexeme_id": 10234, "entry_id": 7414, "human_id": "odota:1", "paradigm_name": "noun-4fa-ltg", "lemma": "odota"}
@@ -1244,6 +1498,7 @@
 {"lexeme_id": 10250, "entry_id": 7430, "human_id": "mozguošona:1", "paradigm_name": "noun-4fa-ltg", "lemma": "mozguošona"}
 {"lexeme_id": 10251, "entry_id": 7431, "human_id": "dasavieršona:1", "paradigm_name": "noun-4fa-ltg", "lemma": "dasavieršona"}
 {"lexeme_id": 10252, "entry_id": 7432, "human_id": "sasatikšona:1", "paradigm_name": "noun-4fa-ltg", "lemma": "sasatikšona"}
+{"lexeme_id": 9741, "entry_id": 7108, "human_id": "zirklis:1", "paradigm_name": "noun-5fa-ltg", "lemma": "zirklis", "attributes": {"Morfotabulas attēlošana": "Nerādīt vienskaitli", "Leksēmas pamatformas īpatnības": "Daudzskaitlis", "Skaitlis 2": "Daudzskaitlinieks"}}
 {"lexeme_id": 6579, "entry_id": 4778, "human_id": "kakažys:1", "paradigm_name": "noun-4fa-ltg", "lemma": "kakažys", "attributes": {"Morfotabulas attēlošana": "Nerādīt vienskaitli", "Leksēmas pamatformas īpatnības": "Daudzskaitlis"}}
 {"lexeme_id": 5193, "entry_id": 3794, "human_id": "atlaidys:1", "paradigm_name": "noun-4fa-ltg", "lemma": "atlaidys", "attributes": {"Morfotabulas attēlošana": "Nerādīt vienskaitli", "Leksēmas pamatformas īpatnības": "Daudzskaitlis"}}
 {"lexeme_id": 10254, "entry_id": 7434, "human_id": "patalkys:1", "paradigm_name": "noun-4fa-ltg", "lemma": "patalkys", "attributes": {"Morfotabulas attēlošana": "Nerādīt vienskaitli", "Leksēmas pamatformas īpatnības": "Daudzskaitlis"}}
@@ -1273,7 +1528,6 @@
 {"lexeme_id": 10293, "entry_id": 7457, "human_id": "stuņde:1", "paradigm_name": "noun-5fa-ltg", "lemma": "stuņde"}
 {"lexeme_id": 10294, "entry_id": 7458, "human_id": "vaine:1", "paradigm_name": "noun-5fa-ltg", "lemma": "vaine"}
 {"lexeme_id": 7363, "entry_id": 5364, "human_id": "mīlis:1", "paradigm_name": "noun-5fa-ltg", "lemma": "mīlis", "attributes": {"Morfotabulas attēlošana": "Nerādīt vienskaitli", "Leksēmas pamatformas īpatnības": "Daudzskaitlis"}}
-{"lexeme_id": 9741, "entry_id": 7108, "human_id": "zirklis:1", "paradigm_name": "noun-5fa-ltg", "lemma": "zirklis", "attributes": {"Morfotabulas attēlošana": "Nerādīt vienskaitli", "Leksēmas pamatformas īpatnības": "Daudzskaitlis"}}
 {"lexeme_id": 10356, "entry_id": 7466, "human_id": "upe:1", "paradigm_name": "noun-6b-ltg", "lemma": "ups"}
 {"lexeme_id": 10357, "entry_id": 7506, "human_id": "slapnis:1", "paradigm_name": "adj-2b-ltg", "lemma": "slapnis"}
 {"lexeme_id": 10318, "entry_id": 4375, "human_id": "dzeivuotuojs:1", "paradigm_name": "noun-4fb-ltg", "lemma": "dzeivuotuoja"}
@@ -1374,6 +1628,7 @@
 {"lexeme_id": 10582, "entry_id": 7674, "human_id": "aizakuosēt:1", "paradigm_name": "verb-2a-ltg", "lemma": "aizakuosēt"}
 {"lexeme_id": 10530, "entry_id": 7622, "human_id": "ā:1", "paradigm_name": "excl-ltg", "lemma": "ā"}
 {"lexeme_id": 10532, "entry_id": 7624, "human_id": "absoluts:1", "paradigm_name": "adj-1a-ltg", "lemma": "absoluts"}
+{"lexeme_id": 10536, "entry_id": 7628, "human_id": "adeit:1", "paradigm_name": "verb-3a-ltg", "lemma": "adeit", "attributes": {"Vārdšķira": "Darbības vārds", "Darbības vārda tips": "Patstāvīgs darbības vārds"}}
 {"lexeme_id": 10537, "entry_id": 7629, "human_id": "adeklis:1", "paradigm_name": "noun-2b-ltg", "lemma": "adeklis"}
 {"lexeme_id": 10539, "entry_id": 7631, "human_id": "āduojs:1", "paradigm_name": "noun-1a-ltg", "lemma": "āduojs"}
 {"lexeme_id": 10490, "entry_id": 5470, "human_id": "nazkur:1", "paradigm_name": "adverb-1-ltg", "lemma": "naz kur", "attributes": {"Valodas normēšana": "Nevēlams"}}
@@ -1503,6 +1758,7 @@
 {"lexeme_id": 10793, "entry_id": 7885, "human_id": "apmāram:1", "paradigm_name": "adverb-1-ltg", "lemma": "apmāram"}
 {"lexeme_id": 10771, "entry_id": 7863, "human_id": "apjiemeigi:1", "paradigm_name": "adverb-2a-ltg", "lemma": "apjiemeigi"}
 {"lexeme_id": 10772, "entry_id": 7864, "human_id": "apjūmeigs:1", "paradigm_name": "adj-1a-ltg", "lemma": "apjūmeigs"}
+{"lexeme_id": 10779, "entry_id": 7871, "human_id": "aplaupeit:1", "paradigm_name": "verb-3a-ltg", "lemma": "aplaupeit", "attributes": {"Vārdšķira": "Darbības vārds", "Darbības vārda tips": "Patstāvīgs darbības vārds"}}
 {"lexeme_id": 10792, "entry_id": 7884, "human_id": "apmaklātuojs:1", "paradigm_name": "noun-1a-ltg", "lemma": "apmaklātuojs"}
 {"lexeme_id": 10798, "entry_id": 7890, "human_id": "apmekliejums:1", "paradigm_name": "noun-1a-ltg", "lemma": "apmekliejums"}
 {"lexeme_id": 10804, "entry_id": 7896, "human_id": "Apolons:1", "paradigm_name": "noun-1a-ltg", "lemma": "Apolons", "attributes": {"Lietvārda tips": "Īpašvārds", "Īpašvārda veids": "Personvārds"}}
@@ -1889,6 +2145,7 @@
 {"lexeme_id": 11408, "entry_id": 8500, "human_id": "bužynuot:1", "paradigm_name": "verb-2a-ltg", "lemma": "bužynuot"}
 {"lexeme_id": 11364, "entry_id": 8456, "human_id": "buļbe:1", "paradigm_name": "noun-5fc-ltg", "lemma": "buļbe"}
 {"lexeme_id": 11444, "entry_id": 8536, "human_id": "catūrts:1", "paradigm_name": "ord-indef-ltg", "lemma": "catūrts"}
+{"lexeme_id": 11431, "entry_id": 4145, "human_id": "čāpāslys:1", "paradigm_name": "noun-1a-ltg", "lemma": "čapāsls"}
 {"lexeme_id": 11441, "entry_id": 8533, "human_id": "častai:1", "paradigm_name": "adverb-2a-ltg", "lemma": "častai", "attributes": {"Lietojums": "Žargonisms"}}
 {"lexeme_id": 11450, "entry_id": 8542, "human_id": "caur:1", "paradigm_name": "prep-ltg", "lemma": "caur"}
 {"lexeme_id": 11415, "entry_id": 8507, "human_id": "c-s-s-s:1", "paradigm_name": "excl-ltg", "lemma": "c-s-s-s"}
@@ -1915,7 +2172,6 @@
 {"lexeme_id": 11495, "entry_id": 8587, "human_id": "cikūs:1", "paradigm_name": "adverb-1-ltg", "lemma": "cikūs"}
 {"lexeme_id": 11426, "entry_id": 8518, "human_id": "cāluojs:1", "paradigm_name": "noun-1a-ltg", "lemma": "cāluojs"}
 {"lexeme_id": 11427, "entry_id": 8519, "human_id": "čangaļs:1", "paradigm_name": "noun-2a-ltg", "lemma": "čangaļs", "attributes": {"Lietojums": "Sarunvaloda"}}
-{"lexeme_id": 11431, "entry_id": 4145, "human_id": "čāpāslys:1", "paradigm_name": "noun-1a-ltg", "lemma": "čapāsls"}
 {"lexeme_id": 11438, "entry_id": 8530, "human_id": "čardaks:1", "paradigm_name": "noun-1a-ltg", "lemma": "čardaks"}
 {"lexeme_id": 11442, "entry_id": 8534, "human_id": "čats:1", "paradigm_name": "noun-1a-ltg", "lemma": "čats"}
 {"lexeme_id": 11443, "entry_id": 8535, "human_id": "catūrksnis:1", "paradigm_name": "noun-2b-ltg", "lemma": "catūrksnis"}
@@ -1997,6 +2253,7 @@
 {"lexeme_id": 11536, "entry_id": 8628, "human_id": "čut:1", "paradigm_name": "adverb-1-ltg", "lemma": "čut"}
 {"lexeme_id": 11551, "entry_id": 8643, "human_id": "cytaids:1", "paradigm_name": "adj-1a-ltg", "lemma": "cytaids"}
 {"lexeme_id": 11610, "entry_id": 8702, "human_id": "daperēt:1", "paradigm_name": "verb-2a-ltg", "lemma": "daperēt"}
+{"lexeme_id": 11599, "entry_id": 8691, "human_id": "daleit:1", "paradigm_name": "verb-3a-ltg", "lemma": "daleit", "attributes": {"Vārdšķira": "Darbības vārds", "Darbības vārda tips": "Patstāvīgs darbības vārds"}}
 {"lexeme_id": 11595, "entry_id": 8687, "human_id": "dāls:1", "paradigm_name": "noun-1a-ltg", "lemma": "dāls"}
 {"lexeme_id": 11559, "entry_id": 8651, "human_id": "cytur:1", "paradigm_name": "adverb-1-ltg", "lemma": "cytur"}
 {"lexeme_id": 11560, "entry_id": 8652, "human_id": "cytureiz:1", "paradigm_name": "adverb-1-ltg", "lemma": "cytureiz"}
@@ -2043,6 +2300,7 @@
 {"lexeme_id": 11640, "entry_id": 8732, "human_id": "dativs:1", "paradigm_name": "noun-1a-ltg", "lemma": "dativs"}
 {"lexeme_id": 11651, "entry_id": 8743, "human_id": "daudzi:1", "paradigm_name": "adj-1a-ltg", "lemma": "daudzi", "attributes": {"Pamatforma morforīkiem": "daudzi", "Morfotabulas attēlošana": "Nerādīt vienskaitli", "Leksēmas pamatformas īpatnības": "Daudzskaitlis", "Skaitlis 2": "Daudzskaitlinieks"}}
 {"lexeme_id": 11655, "entry_id": 8747, "human_id": "daudzveideigs:1", "paradigm_name": "adj-1a-ltg", "lemma": "daudzveideigs"}
+{"lexeme_id": 11618, "entry_id": 8710, "human_id": "dareit:1", "paradigm_name": "verb-3a-ltg", "lemma": "dareit", "attributes": {"Vārdšķira": "Darbības vārds", "Darbības vārda tips": "Patstāvīgs darbības vārds"}}
 {"lexeme_id": 11697, "entry_id": 8789, "human_id": "dialogs:1", "paradigm_name": "noun-1a-ltg", "lemma": "dialogs"}
 {"lexeme_id": 11699, "entry_id": 8791, "human_id": "dieļs:1", "paradigm_name": "noun-2a-ltg", "lemma": "dieļs"}
 {"lexeme_id": 11706, "entry_id": 8798, "human_id": "digitals:1", "paradigm_name": "adj-1a-ltg", "lemma": "digitals"}
@@ -2086,7 +2344,9 @@
 {"lexeme_id": 11675, "entry_id": 8767, "human_id": "delikats:1", "paradigm_name": "adj-1a-ltg", "lemma": "delikats"}
 {"lexeme_id": 11742, "entry_id": 8834, "human_id": "doktereit:1", "paradigm_name": "verb-2a-ltg", "lemma": "doktereit"}
 {"lexeme_id": 11736, "entry_id": 8828, "human_id": "divpadsmit:1", "paradigm_name": "card-infl-ltg", "lemma": "divpadsmit"}
+{"lexeme_id": 11758, "entry_id": 8850, "human_id": "draudēt:1", "paradigm_name": "verb-3c-ltg", "lemma": "draudēt", "attributes": {"Vārdšķira": "Darbības vārds", "Darbības vārda tips": "Patstāvīgs darbības vārds"}}
 {"lexeme_id": 11729, "entry_id": 8821, "human_id": "divdesmit:1", "paradigm_name": "card-infl-ltg", "lemma": "divdesmit"}
+{"lexeme_id": 11686, "entry_id": 8778, "human_id": "derēt:1", "paradigm_name": "verb-3c-ltg", "lemma": "derēt", "attributes": {"Vārdšķira": "Darbības vārds", "Darbības vārda tips": "Patstāvīgs darbības vārds"}}
 {"lexeme_id": 11738, "entry_id": 8830, "human_id": "dīz:1", "paradigm_name": "particle-ltg", "lemma": "dīz"}
 {"lexeme_id": 11730, "entry_id": 8822, "human_id": "dīveiba:1", "paradigm_name": "noun-4fa-ltg", "lemma": "dīveiba"}
 {"lexeme_id": 11709, "entry_id": 8801, "human_id": "dīn:1", "paradigm_name": "adverb-1-ltg", "lemma": "dīn"}
@@ -2122,6 +2382,7 @@
 {"lexeme_id": 11743, "entry_id": 8835, "human_id": "dokumentals:1", "paradigm_name": "adj-1a-ltg", "lemma": "dokumentals"}
 {"lexeme_id": 11788, "entry_id": 8880, "human_id": "drūši:1", "paradigm_name": "adverb-2a-ltg", "lemma": "drūši"}
 {"lexeme_id": 11776, "entry_id": 8868, "human_id": "dresēt:1", "paradigm_name": "verb-2a-ltg", "lemma": "dresēt"}
+{"lexeme_id": 11768, "entry_id": 8860, "human_id": "dreikstēt:1", "paradigm_name": "verb-3c-ltg", "lemma": "dreikstēt", "attributes": {"Vārdšķira": "Darbības vārds", "Darbības vārda tips": "Patstāvīgs darbības vārds"}}
 {"lexeme_id": 11786, "entry_id": 8878, "human_id": "drūsai:1", "paradigm_name": "adverb-2a-ltg", "lemma": "drūsai"}
 {"lexeme_id": 11774, "entry_id": 8866, "human_id": "dreiži:1", "paradigm_name": "adverb-2a-ltg", "lemma": "dreiži"}
 {"lexeme_id": 11791, "entry_id": 8883, "human_id": "drystyns:1", "paradigm_name": "noun-1a-ltg", "lemma": "drystyns"}
@@ -2330,7 +2591,10 @@
 {"lexeme_id": 12046, "entry_id": 9138, "human_id": "garai:1", "paradigm_name": "adverb-2a-ltg", "lemma": "garai"}
 {"lexeme_id": 12053, "entry_id": 9145, "human_id": "garlaiceigi:1", "paradigm_name": "adverb-2a-ltg", "lemma": "garlaiceigi"}
 {"lexeme_id": 12049, "entry_id": 9141, "human_id": "garantēt:1", "paradigm_name": "verb-2a-ltg", "lemma": "garantēt"}
+{"lexeme_id": 12031, "entry_id": 9122, "human_id": "gaišums:1", "paradigm_name": "noun-1c-ltg", "lemma": "gaišumeņš", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 12055, "entry_id": 9147, "human_id": "garom:1", "paradigm_name": "adverb-1-ltg", "lemma": "garom"}
+{"lexeme_id": 12024, "entry_id": 9116, "human_id": "gaideit:1", "paradigm_name": "verb-3a-ltg", "lemma": "gaideit", "attributes": {"Vārdšķira": "Darbības vārds", "Darbības vārda tips": "Patstāvīgs darbības vārds"}}
+{"lexeme_id": 12043, "entry_id": 9135, "human_id": "ganeit:1", "paradigm_name": "verb-3a-ltg", "lemma": "ganeit", "attributes": {"Vārdšķira": "Darbības vārds", "Darbības vārda tips": "Patstāvīgs darbības vārds"}}
 {"lexeme_id": 12035, "entry_id": 9127, "human_id": "galeigi:1", "paradigm_name": "adverb-2a-ltg", "lemma": "galeigi"}
 {"lexeme_id": 12033, "entry_id": 9125, "human_id": "galants:1", "paradigm_name": "adj-1a-ltg", "lemma": "galants"}
 {"lexeme_id": 12045, "entry_id": 9137, "human_id": "gars:1", "paradigm_name": "adj-1a-ltg", "lemma": "gars"}
@@ -2365,7 +2629,6 @@
 {"lexeme_id": 17157, "entry_id": 8169, "human_id": "aukla:1", "paradigm_name": "noun-4fa-ltg", "lemma": "aukla"}
 {"lexeme_id": 12151, "entry_id": 9243, "human_id": "gradzyns:1", "paradigm_name": "noun-1a-ltg", "lemma": "gradzyns"}
 {"lexeme_id": 12030, "entry_id": 9122, "human_id": "gaišums:1", "paradigm_name": "noun-1a-ltg", "lemma": "gaišums"}
-{"lexeme_id": 12031, "entry_id": 9122, "human_id": "gaišums:1", "paradigm_name": "noun-1c-ltg", "lemma": "gaišumeņš", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 12037, "entry_id": 9129, "human_id": "galeņš:1", "paradigm_name": "noun-1c-ltg", "lemma": "galeņš", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 12034, "entry_id": 9126, "human_id": "gaļdeņš:1", "paradigm_name": "noun-1c-ltg", "lemma": "gaļdeņš", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 12039, "entry_id": 9131, "human_id": "galstuks:1", "paradigm_name": "noun-1a-ltg", "lemma": "galstuks"}
@@ -2428,6 +2691,9 @@
 {"lexeme_id": 12096, "entry_id": 9188, "human_id": "glaimuot:1", "paradigm_name": "verb-2a-ltg", "lemma": "glaimuot"}
 {"lexeme_id": 12106, "entry_id": 9198, "human_id": "gleznuot:1", "paradigm_name": "verb-2a-ltg", "lemma": "gleznuot"}
 {"lexeme_id": 12110, "entry_id": 9202, "human_id": "globuot:1", "paradigm_name": "verb-2a-ltg", "lemma": "globuot"}
+{"lexeme_id": 12181, "entry_id": 9272, "human_id": "gruovs:1", "paradigm_name": "noun-2a-ltg", "lemma": "gruoveits", "attributes": {"Deminutīvs": "Jā"}}
+{"lexeme_id": 12184, "entry_id": 9276, "human_id": "grūzeit:1", "paradigm_name": "verb-3a-ltg", "lemma": "grūzeit", "attributes": {"Vārdšķira": "Darbības vārds", "Darbības vārda tips": "Patstāvīgs darbības vārds"}}
+{"lexeme_id": 12214, "entry_id": 9306, "human_id": "gulēt:1", "paradigm_name": "verb-3c-ltg", "lemma": "gulēt"}
 {"lexeme_id": 12122, "entry_id": 9214, "human_id": "gobona:1", "paradigm_name": "noun-4fa-ltg", "lemma": "gobona"}
 {"lexeme_id": 12126, "entry_id": 9218, "human_id": "godsdaļa:1", "paradigm_name": "noun-4fb-ltg", "lemma": "godsdaļa"}
 {"lexeme_id": 12131, "entry_id": 9223, "human_id": "golvyspiļsāta:1", "paradigm_name": "noun-4fa-ltg", "lemma": "golvyspiļsāta"}
@@ -2457,12 +2723,12 @@
 {"lexeme_id": 12142, "entry_id": 9234, "human_id": "gore:1", "paradigm_name": "noun-5fc-ltg", "lemma": "gore"}
 {"lexeme_id": 12119, "entry_id": 9211, "human_id": "glupuosts:1", "paradigm_name": "noun-6b-ltg", "lemma": "glupuosts"}
 {"lexeme_id": 11119, "entry_id": 8211, "human_id": "bailis:1", "paradigm_name": "noun-5fa-ltg", "lemma": "bailis", "attributes": {"Leksēmas pamatformas īpatnības": "Daudzskaitlis", "Skaitlis 2": "Daudzskaitlinieks"}}
+{"lexeme_id": 12164, "entry_id": 9256, "human_id": "gribēt:1", "paradigm_name": "verb-3c-ltg", "lemma": "gribēt", "attributes": {"Vārdšķira": "Darbības vārds", "Darbības vārda tips": "Patstāvīgs darbības vārds"}}
 {"lexeme_id": 12203, "entry_id": 9295, "human_id": "gūdeigai:1", "paradigm_name": "adverb-2a-ltg", "lemma": "gūdeigai"}
 {"lexeme_id": 12171, "entry_id": 9263, "human_id": "grubuļuots:1", "paradigm_name": "adj-1a-ltg", "lemma": "grubuļuots"}
 {"lexeme_id": 12205, "entry_id": 9297, "human_id": "gūdeigs:1", "paradigm_name": "adj-1a-ltg", "lemma": "gūdeigs"}
 {"lexeme_id": 12159, "entry_id": 9251, "human_id": "grass:1", "paradigm_name": "noun-2a-ltg", "lemma": "grass"}
 {"lexeme_id": 12180, "entry_id": 9272, "human_id": "gruovs:1", "paradigm_name": "noun-2a-ltg", "lemma": "gruovs"}
-{"lexeme_id": 12181, "entry_id": 9272, "human_id": "gruovs:1", "paradigm_name": "noun-2a-ltg", "lemma": "gruoveits", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 12182, "entry_id": 9274, "human_id": "gruovmaļs:1", "paradigm_name": "noun-2a-ltg", "lemma": "gruovmaļs"}
 {"lexeme_id": 12190, "entry_id": 9282, "human_id": "griči:1", "paradigm_name": "noun-2a-ltg", "lemma": "gričs"}
 {"lexeme_id": 12196, "entry_id": 9288, "human_id": "gryutums:1", "paradigm_name": "noun-1a-ltg", "lemma": "gryutums"}
@@ -2488,6 +2754,7 @@
 {"lexeme_id": 12200, "entry_id": 9292, "human_id": "guculka:1", "paradigm_name": "noun-4fa-ltg", "lemma": "guculka"}
 {"lexeme_id": 12209, "entry_id": 9301, "human_id": "gudreiba:1", "paradigm_name": "noun-4fa-ltg", "lemma": "gudreiba"}
 {"lexeme_id": 12186, "entry_id": 9278, "human_id": "Gruzeja:1", "paradigm_name": "noun-4fb-ltg", "lemma": "Gruzeja", "attributes": {"Lietvārda tips": "Īpašvārds", "Īpašvārda veids": "Vietvārds"}}
+{"lexeme_id": 12227, "entry_id": 4573, "human_id": "gunkurs:1", "paradigm_name": "noun-1a-ltg", "lemma": "guņkurs"}
 {"lexeme_id": 12219, "entry_id": 9311, "human_id": "guļbyuveite:1", "paradigm_name": "noun-5fa-ltg", "lemma": "guļbyuveite"}
 {"lexeme_id": 11972, "entry_id": 9064, "human_id": "fakts:1", "paradigm_name": "noun-1a-ltg", "lemma": "fakts"}
 {"lexeme_id": 14822, "entry_id": 11914, "human_id": "pīkabe:1", "paradigm_name": "noun-5fc-ltg", "lemma": "pīkabe"}
@@ -2513,7 +2780,6 @@
 {"lexeme_id": 12266, "entry_id": 9358, "human_id": "īcere:1", "paradigm_name": "noun-5fc-ltg", "lemma": "īcere"}
 {"lexeme_id": 12254, "entry_id": 9346, "human_id": "humors:1", "paradigm_name": "noun-1a-ltg", "lemma": "humors"}
 {"lexeme_id": 12240, "entry_id": 9332, "human_id": "harmoneja:1", "paradigm_name": "noun-4fb-ltg", "lemma": "harmoneja"}
-{"lexeme_id": 12227, "entry_id": 4573, "human_id": "gunkurs:1", "paradigm_name": "noun-1a-ltg", "lemma": "guņkurs"}
 {"lexeme_id": 12229, "entry_id": 9321, "human_id": "guņsdziesiejs:1", "paradigm_name": "noun-1a-ltg", "lemma": "guņsdziesiejs"}
 {"lexeme_id": 12231, "entry_id": 9323, "human_id": "guojiejs:1", "paradigm_name": "noun-1a-ltg", "lemma": "guojiejs"}
 {"lexeme_id": 12235, "entry_id": 9327, "human_id": "hakers:1", "paradigm_name": "noun-2a-ltg", "lemma": "hakers"}
@@ -2562,7 +2828,6 @@
 {"lexeme_id": 12340, "entry_id": 9432, "human_id": "īmontēt:1", "paradigm_name": "verb-2a-ltg", "lemma": "īmontēt"}
 {"lexeme_id": 12353, "entry_id": 9445, "human_id": "informaceja:1", "paradigm_name": "noun-4fb-ltg", "lemma": "informaceja"}
 {"lexeme_id": 12364, "entry_id": 9456, "human_id": "interesēt:1", "paradigm_name": "verb-2a-ltg", "lemma": "interesēt"}
-{"lexeme_id": 12365, "entry_id": 9456, "human_id": "interesēt:1", "paradigm_name": "verb-2a-ltg", "lemma": "iņteresēt"}
 {"lexeme_id": 12370, "entry_id": 9462, "human_id": "intrigēt:1", "paradigm_name": "verb-2a-ltg", "lemma": "intrigēt"}
 {"lexeme_id": 12332, "entry_id": 9424, "human_id": "ilustraceja:1", "paradigm_name": "noun-4fb-ltg", "lemma": "ilustraceja"}
 {"lexeme_id": 12354, "entry_id": 9446, "human_id": "Inga:1", "paradigm_name": "noun-4fa-ltg", "lemma": "Inga", "attributes": {"Lietvārda tips": "Īpašvārds", "Īpašvārda veids": "Personvārds"}}
@@ -2584,6 +2849,7 @@
 {"lexeme_id": 12359, "entry_id": 9451, "human_id": "instituts:1", "paradigm_name": "noun-1a-ltg", "lemma": "instituts"}
 {"lexeme_id": 12345, "entry_id": 9437, "human_id": "īnaidnīks:1", "paradigm_name": "noun-1a-ltg", "lemma": "īnaidnīks"}
 {"lexeme_id": 12361, "entry_id": 9453, "human_id": "intelekts:1", "paradigm_name": "noun-1a-ltg", "lemma": "intelekts"}
+{"lexeme_id": 12365, "entry_id": 9456, "human_id": "interesēt:1", "paradigm_name": "verb-2a-ltg", "lemma": "iņteresēt"}
 {"lexeme_id": 12380, "entry_id": 9472, "human_id": "īpruova:1", "paradigm_name": "noun-4fa-ltg", "lemma": "īpruova"}
 {"lexeme_id": 12341, "entry_id": 9433, "human_id": "imports:1", "paradigm_name": "noun-1a-ltg", "lemma": "imports"}
 {"lexeme_id": 12360, "entry_id": 9452, "human_id": "instruments:1", "paradigm_name": "noun-1a-ltg", "lemma": "instruments"}
@@ -2700,7 +2966,6 @@
 {"lexeme_id": 12696, "entry_id": 9788, "human_id": "izskots:1", "paradigm_name": "noun-1a-ltg", "lemma": "izskots"}
 {"lexeme_id": 12386, "entry_id": 9478, "human_id": "Īreja:1", "paradigm_name": "noun-4fb-ltg", "lemma": "Īreja", "attributes": {"Lietvārda tips": "Īpašvārds", "Īpašvārda veids": "Vietvārds"}}
 {"lexeme_id": 12727, "entry_id": 9819, "human_id": "izteireit:1", "paradigm_name": "verb-2a-ltg", "lemma": "izteireit"}
-{"lexeme_id": 12734, "entry_id": 9826, "human_id": "izuordeit:1", "paradigm_name": "verb-2a-ltg", "lemma": "izuordeit"}
 {"lexeme_id": 12729, "entry_id": 9821, "human_id": "iztikšona:1", "paradigm_name": "noun-4fa-ltg", "lemma": "iztikšona"}
 {"lexeme_id": 12731, "entry_id": 9823, "human_id": "iztureiba:1", "paradigm_name": "noun-4fa-ltg", "lemma": "iztureiba"}
 {"lexeme_id": 12740, "entry_id": 9832, "human_id": "izveide:1", "paradigm_name": "noun-5fa-ltg", "lemma": "izveide"}
@@ -2729,6 +2994,7 @@
 {"lexeme_id": 17168, "entry_id": 14201, "human_id": "auts:1", "paradigm_name": "noun-1a-ltg", "lemma": "auts"}
 {"lexeme_id": 17169, "entry_id": 14202, "human_id": "kasinka:1", "paradigm_name": "noun-4fa-ltg", "lemma": "kasinka"}
 {"lexeme_id": 12747, "entry_id": 9839, "human_id": "izvuoreit:1", "paradigm_name": "verb-2a-ltg", "lemma": "izvuoreit"}
+{"lexeme_id": 12734, "entry_id": 9826, "human_id": "izuordeit:1", "paradigm_name": "verb-3a-ltg", "lemma": "izuordeit"}
 {"lexeme_id": 12757, "entry_id": 9849, "human_id": "Jaņcs:1", "paradigm_name": "noun-2a-ltg", "lemma": "Jaņcs", "attributes": {"Lietvārda tips": "Īpašvārds", "Īpašvārda veids": "Personvārds"}}
 {"lexeme_id": 12760, "entry_id": 9852, "human_id": "japaņs:1", "paradigm_name": "noun-2a-ltg", "lemma": "japaņs"}
 {"lexeme_id": 12754, "entry_id": 9846, "human_id": "Jākubs:1", "paradigm_name": "noun-1a-ltg", "lemma": "Jākubs", "attributes": {"Lietvārda tips": "Īpašvārds", "Īpašvārda veids": "Personvārds"}}
@@ -2769,9 +3035,12 @@
 {"lexeme_id": 12800, "entry_id": 9892, "human_id": "jiusejs:1", "paradigm_name": "adj-1b-ltg", "lemma": "jiusejs"}
 {"lexeme_id": 12828, "entry_id": 9920, "human_id": "izskaitļuot:1", "paradigm_name": "verb-2a-ltg", "lemma": "izskaitļuot"}
 {"lexeme_id": 12781, "entry_id": 9873, "human_id": "jebkaids:1", "paradigm_name": "noun-1a-ltg", "lemma": "jebkaids", "attributes": {"Persona": "Nepiemīt", "Vārdšķira": "Vietniekvārds", "UD vārdšķira": "DET", "Vietniekvārda tips": "Nenoteiktais"}}
+{"lexeme_id": 12835, "entry_id": 9927, "human_id": "laksteit:1", "paradigm_name": "verb-3a-ltg", "lemma": "laksteit", "attributes": {"Vārdšķira": "Darbības vārds", "Darbības vārda tips": "Patstāvīgs darbības vārds"}}
 {"lexeme_id": 12857, "entry_id": 9949, "human_id": "pameklēt:1", "paradigm_name": "verb-2a-ltg", "lemma": "pameklēt"}
 {"lexeme_id": 12861, "entry_id": 9953, "human_id": "patierēt:1", "paradigm_name": "verb-2a-ltg", "lemma": "patierēt"}
 {"lexeme_id": 12865, "entry_id": 9957, "human_id": "programmēt:1", "paradigm_name": "verb-2a-ltg", "lemma": "programmēt"}
+{"lexeme_id": 12874, "entry_id": 9966, "human_id": "redzēt:1", "paradigm_name": "verb-3d-ltg", "lemma": "redzēt"}
+{"lexeme_id": 12836, "entry_id": 9928, "human_id": "maineit:1", "paradigm_name": "verb-3a-ltg", "lemma": "maineit", "attributes": {"Vārdšķira": "Darbības vārds", "Darbības vārda tips": "Patstāvīgs darbības vārds"}}
 {"lexeme_id": 12838, "entry_id": 9930, "human_id": "moksuot:1", "paradigm_name": "verb-2a-ltg", "lemma": "moksuot"}
 {"lexeme_id": 12849, "entry_id": 9941, "human_id": "nūstyprynuot:1", "paradigm_name": "verb-2a-ltg", "lemma": "nūstyprynuot"}
 {"lexeme_id": 12852, "entry_id": 9944, "human_id": "pabaruot:1", "paradigm_name": "verb-2a-ltg", "lemma": "pabaruot"}
@@ -2784,7 +3053,10 @@
 {"lexeme_id": 17165, "entry_id": 12387, "human_id": "reima:1", "paradigm_name": "noun-4ma-ltg", "lemma": "reima", "attributes": {"Dzimte": "Vīriešu", "Locīšanas īpatnības": "Kopdzimte"}}
 {"lexeme_id": 12908, "entry_id": 10000, "human_id": "vuoreit:1", "paradigm_name": "verb-2a-ltg", "lemma": "vuoreit"}
 {"lexeme_id": 17171, "entry_id": 10343, "human_id": "krīvyski:1", "paradigm_name": "adverb-2a-ltg", "lemma": "krīvyski"}
+{"lexeme_id": 12891, "entry_id": 9983, "human_id": "saceit:1", "paradigm_name": "verb-3b-ltg", "lemma": "saceit"}
+{"lexeme_id": 12900, "entry_id": 9992, "human_id": "taiseit:1", "paradigm_name": "verb-3a-ltg", "lemma": "taiseit", "attributes": {"Vārdšķira": "Darbības vārds", "Darbības vārda tips": "Patstāvīgs darbības vārds"}}
 {"lexeme_id": 12903, "entry_id": 9995, "human_id": "teireit:1", "paradigm_name": "verb-2a-ltg", "lemma": "teireit"}
+{"lexeme_id": 12896, "entry_id": 9988, "human_id": "stuosteit:1", "paradigm_name": "verb-3a-ltg", "lemma": "stuosteit", "attributes": {"Vārdšķira": "Darbības vārds", "Darbības vārda tips": "Patstāvīgs darbības vārds"}}
 {"lexeme_id": 12892, "entry_id": 9984, "human_id": "juošona:1", "paradigm_name": "noun-4fa-ltg", "lemma": "juošona"}
 {"lexeme_id": 12914, "entry_id": 10006, "human_id": "jusšona:1", "paradigm_name": "noun-4fa-ltg", "lemma": "jusšona"}
 {"lexeme_id": 12915, "entry_id": 10007, "human_id": "jūsta:1", "paradigm_name": "noun-4fa-ltg", "lemma": "jūsta"}
@@ -2796,7 +3068,10 @@
 {"lexeme_id": 12917, "entry_id": 10009, "human_id": "ka:1", "paradigm_name": "conj-ltg", "lemma": "ka"}
 {"lexeme_id": 12918, "entry_id": 10010, "human_id": "kabacs:1", "paradigm_name": "noun-2a-ltg", "lemma": "kabacs"}
 {"lexeme_id": 12922, "entry_id": 10014, "human_id": "kabinets:1", "paradigm_name": "noun-1a-ltg", "lemma": "kabinets"}
+{"lexeme_id": 12905, "entry_id": 9997, "human_id": "turēt:1", "paradigm_name": "verb-3c-ltg", "lemma": "turēt", "attributes": {"Vārdšķira": "Darbības vārds", "Darbības vārda tips": "Patstāvīgs darbības vārds"}}
 {"lexeme_id": 12970, "entry_id": 10062, "human_id": "kantri:1", "paradigm_name": "noun-0-ltg", "lemma": "kantri"}
+{"lexeme_id": 12897, "entry_id": 9989, "human_id": "stuovēt:1", "paradigm_name": "verb-3c-ltg", "lemma": "stuovēt", "attributes": {"Vārdšķira": "Darbības vārds", "Darbības vārda tips": "Patstāvīgs darbības vārds"}}
+{"lexeme_id": 12899, "entry_id": 9991, "human_id": "svinēt:1", "paradigm_name": "verb-3d-ltg", "lemma": "svinēt"}
 {"lexeme_id": 17166, "entry_id": 12492, "human_id": "sābrovka:1", "paradigm_name": "noun-4fa-ltg", "lemma": "sābrovka"}
 {"lexeme_id": 6389, "entry_id": 4639, "human_id": "itūšaļt:1", "paradigm_name": "adverb-1-ltg", "lemma": "itūšaļt"}
 {"lexeme_id": 12920, "entry_id": 10012, "human_id": "kabatlokots:1", "paradigm_name": "noun-1a-ltg", "lemma": "kabatlokots"}
@@ -2883,12 +3158,12 @@
 {"lexeme_id": 13039, "entry_id": 10131, "human_id": "kazyn:1", "paradigm_name": "particle-ltg", "lemma": "kazyn"}
 {"lexeme_id": 13062, "entry_id": 10154, "human_id": "kikinēt:1", "paradigm_name": "verb-2a-ltg", "lemma": "kikinēt"}
 {"lexeme_id": 13065, "entry_id": 10157, "human_id": "kurš:1", "paradigm_name": "noun-1c-ltg", "lemma": "kurš", "attributes": {"Persona": "Nepiemīt", "Vārdšķira": "Vietniekvārds", "UD vārdšķira": "DET", "Vietniekvārda tips": "Attieksmes"}}
+{"lexeme_id": 13048, "entry_id": 10139, "human_id": "keizars:1", "paradigm_name": "noun-1c-ltg", "lemma": "keizereņš", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 13073, "entry_id": 10165, "human_id": "kirdik:1", "paradigm_name": "noun-0-ltg", "lemma": "kirdik", "attributes": {"Lietojums": "Žargonisms"}}
 {"lexeme_id": 13040, "entry_id": 10132, "human_id": "kebenimat:1", "paradigm_name": "excl-ltg", "lemma": "kebenimat", "attributes": {"Lietojums": "Lamuvārds"}}
 {"lexeme_id": 13071, "entry_id": 10163, "human_id": "kioskys:1", "paradigm_name": "noun-1b-ltg", "lemma": "kioskys"}
 {"lexeme_id": 13032, "entry_id": 10124, "human_id": "kautuve:1", "paradigm_name": "noun-5fc-ltg", "lemma": "kautuve"}
 {"lexeme_id": 13047, "entry_id": 10139, "human_id": "keizars:1", "paradigm_name": "noun-1a-ltg", "lemma": "keizars"}
-{"lexeme_id": 13048, "entry_id": 10139, "human_id": "keizars:1", "paradigm_name": "noun-1c-ltg", "lemma": "keizereņš", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 13052, "entry_id": 10144, "human_id": "keramikis:1", "paradigm_name": "noun-2b-ltg", "lemma": "keramikis"}
 {"lexeme_id": 13058, "entry_id": 10150, "human_id": "kiborgs:1", "paradigm_name": "noun-1a-ltg", "lemma": "kiborgs"}
 {"lexeme_id": 13059, "entry_id": 10151, "human_id": "kieneņš:1", "paradigm_name": "noun-1c-ltg", "lemma": "kieneņš"}
@@ -2928,6 +3203,7 @@
 {"lexeme_id": 13126, "entry_id": 10218, "human_id": "klusums:1", "paradigm_name": "noun-1a-ltg", "lemma": "klusums"}
 {"lexeme_id": 13131, "entry_id": 10223, "human_id": "knifs:1", "paradigm_name": "noun-1a-ltg", "lemma": "knifs"}
 {"lexeme_id": 13148, "entry_id": 10240, "human_id": "kolekcionēt:1", "paradigm_name": "verb-2a-ltg", "lemma": "kolekcionēt"}
+{"lexeme_id": 13098, "entry_id": 10190, "human_id": "klauseit:1", "paradigm_name": "verb-3a-ltg", "lemma": "klauseit", "attributes": {"Vārdšķira": "Darbības vārds", "Darbības vārda tips": "Patstāvīgs darbības vārds"}}
 {"lexeme_id": 13120, "entry_id": 10212, "human_id": "klusai:1", "paradigm_name": "adverb-2a-ltg", "lemma": "klusai"}
 {"lexeme_id": 13087, "entry_id": 10179, "human_id": "kivere:1", "paradigm_name": "noun-5fc-ltg", "lemma": "kivere"}
 {"lexeme_id": 13092, "entry_id": 10184, "human_id": "klade:1", "paradigm_name": "noun-5fa-ltg", "lemma": "klade"}
@@ -2966,6 +3242,7 @@
 {"lexeme_id": 13167, "entry_id": 10259, "human_id": "komiseja:1", "paradigm_name": "noun-4fb-ltg", "lemma": "komiseja"}
 {"lexeme_id": 13216, "entry_id": 10308, "human_id": "kotrys:1", "paradigm_name": "noun-1b-ltg", "lemma": "kotrys", "attributes": {"Dzimte": "Vīriešu", "Persona": "Nepiemīt", "Vārdšķira": "Vietniekvārds", "UD vārdšķira": "DET", "Vietniekvārda tips": "Noteiktais"}}
 {"lexeme_id": 13215, "entry_id": 10307, "human_id": "kotra:1", "paradigm_name": "noun-4fa-ltg", "lemma": "kotra", "attributes": {"Dzimte": "Sieviešu", "Persona": "Nepiemīt", "Vārdšķira": "Vietniekvārds", "UD vārdšķira": "DET", "Vietniekvārda tips": "Noteiktais"}}
+{"lexeme_id": 13224, "entry_id": 10316, "human_id": "krateit:1", "paradigm_name": "verb-3a-ltg", "lemma": "krateit", "attributes": {"Vārdšķira": "Darbības vārds", "Darbības vārda tips": "Patstāvīgs darbības vārds"}}
 {"lexeme_id": 13165, "entry_id": 10257, "human_id": "komer:1", "paradigm_name": "conj-ltg", "lemma": "komer", "attributes": {"Valodas normēšana": "Nevēlams", "Saikļa sintaktiskā funkcija": "Pakārtojuma"}}
 {"lexeme_id": 13136, "entry_id": 10228, "human_id": "kod:1", "paradigm_name": "adverb-1-ltg", "lemma": "kod"}
 {"lexeme_id": 13169, "entry_id": 10261, "human_id": "komismys:1", "paradigm_name": "noun-1b-ltg", "lemma": "komismys"}
@@ -3216,6 +3493,7 @@
 {"lexeme_id": 13497, "entry_id": 10589, "human_id": "leimēt:1", "paradigm_name": "verb-2a-ltg", "lemma": "leimēt"}
 {"lexeme_id": 13529, "entry_id": 10621, "human_id": "liceņcēt:1", "paradigm_name": "verb-2a-ltg", "lemma": "liceņcēt"}
 {"lexeme_id": 13534, "entry_id": 10626, "human_id": "lidinēt:1", "paradigm_name": "verb-2a-ltg", "lemma": "lidinēt"}
+{"lexeme_id": 13553, "entry_id": 10646, "human_id": "liktiņs:1", "paradigm_name": "noun-2a-ltg", "lemma": "likteņs", "attributes": {"Valodas normēšana": "Nevēlams"}}
 {"lexeme_id": 13498, "entry_id": 10590, "human_id": "leimiņs:1", "paradigm_name": "noun-2a-ltg", "lemma": "leimiņs"}
 {"lexeme_id": 13503, "entry_id": 10595, "human_id": "leiteņš:1", "paradigm_name": "noun-1c-ltg", "lemma": "leiteņš", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 13514, "entry_id": 10606, "human_id": "lelceļš:1", "paradigm_name": "noun-1c-ltg", "lemma": "lelceļš"}
@@ -3243,7 +3521,6 @@
 {"lexeme_id": 13581, "entry_id": 10673, "human_id": "lobums:1", "paradigm_name": "noun-1a-ltg", "lemma": "lobums"}
 {"lexeme_id": 13582, "entry_id": 10674, "human_id": "lobuojums:1", "paradigm_name": "noun-1a-ltg", "lemma": "lobuojums"}
 {"lexeme_id": 13586, "entry_id": 10678, "human_id": "loksts:1", "paradigm_name": "noun-1a-ltg", "lemma": "loksts"}
-{"lexeme_id": 13553, "entry_id": 10646, "human_id": "liktiņs:1", "paradigm_name": "noun-2a-ltg", "lemma": "likteņs", "attributes": {"Valodas normēšana": "Nevēlams"}}
 {"lexeme_id": 13473, "entry_id": 10565, "human_id": "Lazdāni:1", "paradigm_name": "noun-1a-ltg", "lemma": "Lazdāni", "stem1": "Lazdān", "attributes": {"Lietvārda tips": "Īpašvārds", "Īpašvārda veids": "Vietvārds", "Leksēmas pamatformas īpatnības": "Daudzskaitlis"}}
 {"lexeme_id": 13501, "entry_id": 10593, "human_id": "leits:1", "paradigm_name": "noun-1a-ltg", "lemma": "leits"}
 {"lexeme_id": 13502, "entry_id": 10594, "human_id": "leitasorgs:1", "paradigm_name": "noun-1a-ltg", "lemma": "leitasorgs"}
@@ -3265,7 +3542,7 @@
 {"lexeme_id": 13596, "entry_id": 10688, "human_id": "ļūbēt:1", "paradigm_name": "verb-2a-ltg", "lemma": "ļūbēt"}
 {"lexeme_id": 13545, "entry_id": 10637, "human_id": "lieni:1", "paradigm_name": "adverb-2b-ltg", "lemma": "lieni"}
 {"lexeme_id": 13550, "entry_id": 10642, "human_id": "līks:1", "paradigm_name": "adj-1a-ltg", "lemma": "līks"}
-{"lexeme_id": 13622, "entry_id": 10714, "human_id": "luopeit:1", "paradigm_name": "verb-2a-ltg", "lemma": "luopeit"}
+{"lexeme_id": 13625, "entry_id": 10718, "human_id": "lūps:1", "paradigm_name": "noun-1c-ltg", "lemma": "lūpeņš", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 13552, "entry_id": 10644, "human_id": "līkšona:1", "paradigm_name": "noun-4fa-ltg", "lemma": "līkšona"}
 {"lexeme_id": 13555, "entry_id": 10647, "human_id": "lykumsakareiba:1", "paradigm_name": "noun-4fa-ltg", "lemma": "lykumsakareiba"}
 {"lexeme_id": 13558, "entry_id": 10650, "human_id": "lileja:1", "paradigm_name": "noun-4fb-ltg", "lemma": "lileja"}
@@ -3290,11 +3567,12 @@
 {"lexeme_id": 13551, "entry_id": 10643, "human_id": "likers:1", "paradigm_name": "noun-2a-ltg", "lemma": "likers"}
 {"lexeme_id": 13556, "entry_id": 10648, "human_id": "līleigs:1", "paradigm_name": "adj-1a-ltg", "lemma": "līleigs"}
 {"lexeme_id": 17190, "entry_id": 13623, "human_id": "ūtrys:1", "paradigm_name": "ord-indef-ltg", "lemma": "ūtrs"}
+{"lexeme_id": 13600, "entry_id": 10692, "human_id": "lūceit:1", "paradigm_name": "verb-3b-ltg", "lemma": "lūceit", "attributes": {"Vārdšķira": "Darbības vārds", "Darbības vārda tips": "Patstāvīgs darbības vārds"}}
 {"lexeme_id": 13626, "entry_id": 10718, "human_id": "lūps:1", "paradigm_name": "noun-1a-ltg", "lemma": "lūps"}
+{"lexeme_id": 13622, "entry_id": 10714, "human_id": "luopeit:1", "paradigm_name": "verb-2a-ltg", "lemma": "luopeit"}
 {"lexeme_id": 13629, "entry_id": 10721, "human_id": "ļusteigi:1", "paradigm_name": "adverb-2a-ltg", "lemma": "ļusteigi"}
 {"lexeme_id": 13611, "entry_id": 10703, "human_id": "lūkons:1", "paradigm_name": "adj-1a-ltg", "lemma": "lūkons"}
 {"lexeme_id": 13681, "entry_id": 10773, "human_id": "māms:1", "paradigm_name": "adj-1a-ltg", "lemma": "māms"}
-{"lexeme_id": 13625, "entry_id": 10718, "human_id": "lūps:1", "paradigm_name": "noun-1c-ltg", "lemma": "lūpeņš", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 13630, "entry_id": 10722, "human_id": "ļutars:1", "paradigm_name": "noun-2a-ltg", "lemma": "ļutars"}
 {"lexeme_id": 13633, "entry_id": 10725, "human_id": "lyni:1", "paradigm_name": "noun-1a-ltg", "lemma": "lyns"}
 {"lexeme_id": 13573, "entry_id": 10665, "human_id": "litrs:1", "paradigm_name": "noun-2a-ltg", "lemma": "litrs"}
@@ -3326,8 +3604,8 @@
 {"lexeme_id": 13609, "entry_id": 10701, "human_id": "lūgs:1", "paradigm_name": "noun-1a-ltg", "lemma": "lūgs"}
 {"lexeme_id": 13605, "entry_id": 10697, "human_id": "Ludza:1", "paradigm_name": "noun-4fa-ltg", "lemma": "Ludza", "attributes": {"Īpašvārda veids": "Vietvārds"}}
 {"lexeme_id": 13632, "entry_id": 10724, "human_id": "lykums:1", "paradigm_name": "noun-1a-ltg", "lemma": "lykums"}
-{"lexeme_id": 13660, "entry_id": 5293, "human_id": "maize:1", "paradigm_name": "noun-5fa-ltg", "lemma": "maizeite", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 13693, "entry_id": 10785, "human_id": "maraseit:1", "paradigm_name": "verb-2a-ltg", "lemma": "maraseit"}
+{"lexeme_id": 13660, "entry_id": 5293, "human_id": "maize:1", "paradigm_name": "noun-5fa-ltg", "lemma": "maizeite", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 17192, "entry_id": 14212, "human_id": "ūtrais:1", "paradigm_name": "ord-def-ltg", "lemma": "ūtrymais", "attributes": {"Lietojums": "Apvidvārds"}}
 {"lexeme_id": 13661, "entry_id": 10753, "human_id": "majs:1", "paradigm_name": "noun-1a-ltg", "lemma": "majs"}
 {"lexeme_id": 13683, "entry_id": 10775, "human_id": "maneigai:1", "paradigm_name": "adverb-2a-ltg", "lemma": "maneigai"}
@@ -3405,6 +3683,9 @@
 {"lexeme_id": 13727, "entry_id": 10819, "human_id": "maudynuot:1", "paradigm_name": "verb-2a-ltg", "lemma": "maudynuot", "attributes": {"Vārdšķira": "Darbības vārds", "Darbības vārda tips": "Patstāvīgs darbības vārds"}}
 {"lexeme_id": 17196, "entry_id": 14215, "human_id": "pīktais:1", "paradigm_name": "ord-def-ltg", "lemma": "pīktais"}
 {"lexeme_id": 13748, "entry_id": 10840, "human_id": "meiļuot:1", "paradigm_name": "verb-2a-ltg", "lemma": "meiļuot"}
+{"lexeme_id": 13774, "entry_id": 10863, "human_id": "mežs:1", "paradigm_name": "noun-1c-ltg", "lemma": "mežeņš", "attributes": {"Deminutīvs": "Jā"}}
+{"lexeme_id": 13793, "entry_id": 10886, "human_id": "mieteļs:1", "paradigm_name": "noun-2a-ltg", "lemma": "mieteleits", "attributes": {"Deminutīvs": "Jā"}}
+{"lexeme_id": 13818, "entry_id": 10910, "human_id": "mirdzēt:1", "paradigm_name": "verb-3c-ltg", "lemma": "mirdzēt", "attributes": {"Vārdšķira": "Darbības vārds", "Darbības vārda tips": "Patstāvīgs darbības vārds"}}
 {"lexeme_id": 13773, "entry_id": 10865, "human_id": "mežains:1", "paradigm_name": "adj-1a-ltg", "lemma": "mežains"}
 {"lexeme_id": 13789, "entry_id": 10881, "human_id": "mierktīceigs:1", "paradigm_name": "adj-1a-ltg", "lemma": "mierktīceigs"}
 {"lexeme_id": 13752, "entry_id": 10844, "human_id": "meitine:1", "paradigm_name": "noun-5fa-ltg", "lemma": "meitine"}
@@ -3432,7 +3713,6 @@
 {"lexeme_id": 13813, "entry_id": 10905, "human_id": "ministreja:1", "paradigm_name": "noun-4fb-ltg", "lemma": "ministreja"}
 {"lexeme_id": 13816, "entry_id": 10908, "human_id": "minuta:1", "paradigm_name": "noun-4fa-ltg", "lemma": "minuta"}
 {"lexeme_id": 13769, "entry_id": 10861, "human_id": "metrs:1", "paradigm_name": "noun-1a-ltg", "lemma": "metrs"}
-{"lexeme_id": 13774, "entry_id": 10863, "human_id": "mežs:1", "paradigm_name": "noun-1c-ltg", "lemma": "mežeņš", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 13778, "entry_id": 10870, "human_id": "mīdzīņs:1", "paradigm_name": "noun-2a-ltg", "lemma": "mīdzīņs"}
 {"lexeme_id": 13779, "entry_id": 10871, "human_id": "midziņs:1", "paradigm_name": "noun-2a-ltg", "lemma": "midziņs"}
 {"lexeme_id": 13783, "entry_id": 10875, "human_id": "mienesnīks:1", "paradigm_name": "noun-1a-ltg", "lemma": "mienesnīks"}
@@ -3440,7 +3720,6 @@
 {"lexeme_id": 13786, "entry_id": 10878, "human_id": "mierkis:1", "paradigm_name": "noun-2b-ltg", "lemma": "mierkis"}
 {"lexeme_id": 13787, "entry_id": 10879, "human_id": "mierkačs:1", "paradigm_name": "noun-2a-ltg", "lemma": "mierkačs"}
 {"lexeme_id": 13788, "entry_id": 10880, "human_id": "mierkačāns:1", "paradigm_name": "noun-1a-ltg", "lemma": "mierkačāns"}
-{"lexeme_id": 13793, "entry_id": 10886, "human_id": "mieteļs:1", "paradigm_name": "noun-2a-ltg", "lemma": "mieteleits", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 13800, "entry_id": 10892, "human_id": "mikrocepleits:1", "paradigm_name": "noun-2a-ltg", "lemma": "mikrocepleits", "attributes": {"Lietojums": "Okazionālisms"}}
 {"lexeme_id": 13798, "entry_id": 10890, "human_id": "mikeleits:1", "paradigm_name": "noun-2a-ltg", "lemma": "mikeleits"}
 {"lexeme_id": 13799, "entry_id": 10891, "human_id": "Mikeļs:1", "paradigm_name": "noun-2a-ltg", "lemma": "Mikeļs", "attributes": {"Lietvārda tips": "Īpašvārds", "Īpašvārda veids": "Personvārds"}}
@@ -3479,6 +3758,7 @@
 {"lexeme_id": 13857, "entry_id": 10949, "human_id": "motka:1", "paradigm_name": "noun-4fa-ltg", "lemma": "motka"}
 {"lexeme_id": 13868, "entry_id": 10960, "human_id": "mozpiļsāta:1", "paradigm_name": "noun-4fa-ltg", "lemma": "mozpiļsāta"}
 {"lexeme_id": 13870, "entry_id": 10962, "human_id": "mozūtne:1", "paradigm_name": "noun-5fa-ltg", "lemma": "mozūtne"}
+{"lexeme_id": 13896, "entry_id": 10988, "human_id": "muoceit:1", "paradigm_name": "verb-3a-ltg", "lemma": "muoceit"}
 {"lexeme_id": 13874, "entry_id": 10966, "human_id": "mūde:1", "paradigm_name": "noun-5fa-ltg", "lemma": "mūde"}
 {"lexeme_id": 13873, "entry_id": 10965, "human_id": "muca:1", "paradigm_name": "noun-4fb-ltg", "lemma": "muceņa", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 13869, "entry_id": 10961, "human_id": "mozums:1", "paradigm_name": "noun-1a-ltg", "lemma": "mozums"}
@@ -3578,6 +3858,7 @@
 {"lexeme_id": 13991, "entry_id": 11083, "human_id": "nagribiešona:1", "paradigm_name": "noun-4fa-ltg", "lemma": "nagribiešona"}
 {"lexeme_id": 10022, "entry_id": 3993, "human_id": "brīdakls:1", "paradigm_name": "noun-1b-ltg", "lemma": "brīdāklys"}
 {"lexeme_id": 14030, "entry_id": 11122, "human_id": "marudzeit:1", "paradigm_name": "verb-2a-ltg", "lemma": "marudzeit"}
+{"lexeme_id": 14016, "entry_id": 11108, "human_id": "kustēt:1", "paradigm_name": "verb-3c-ltg", "lemma": "kustēt", "attributes": {"Vārdšķira": "Darbības vārds", "Darbības vārda tips": "Patstāvīgs darbības vārds"}}
 {"lexeme_id": 14020, "entry_id": 11112, "human_id": "nalaikā:1", "paradigm_name": "adverb-1-ltg", "lemma": "nalaikā"}
 {"lexeme_id": 14747, "entry_id": 11839, "human_id": "peišona:1", "paradigm_name": "noun-4fa-ltg", "lemma": "peišona"}
 {"lexeme_id": 13989, "entry_id": 11081, "human_id": "nagļuonīts:1", "paradigm_name": "noun-2a-ltg", "lemma": "nagļuonīts"}
@@ -3632,6 +3913,8 @@
 {"lexeme_id": 14093, "entry_id": 11185, "human_id": "napylns:1", "paradigm_name": "adj-1a-ltg", "lemma": "napylns"}
 {"lexeme_id": 17200, "entry_id": 14219, "human_id": "catūrtais:1", "paradigm_name": "ord-def-ltg", "lemma": "catūrtais"}
 {"lexeme_id": 14091, "entry_id": 11183, "human_id": "pūguot:1", "paradigm_name": "verb-2a-ltg", "lemma": "pūguot"}
+{"lexeme_id": 14090, "entry_id": 11182, "human_id": "praseit:1", "paradigm_name": "verb-3a-ltg", "lemma": "praseit", "attributes": {"Vārdšķira": "Darbības vārds", "Darbības vārda tips": "Patstāvīgs darbības vārds"}}
+{"lexeme_id": 14103, "entry_id": 11195, "human_id": "ruodeit:1", "paradigm_name": "verb-3a-ltg", "lemma": "ruodeit", "attributes": {"Vārdšķira": "Darbības vārds", "Darbības vārda tips": "Patstāvīgs darbības vārds"}}
 {"lexeme_id": 14138, "entry_id": 11230, "human_id": "slavēt:1", "paradigm_name": "verb-2a-ltg", "lemma": "slavēt"}
 {"lexeme_id": 14142, "entry_id": 11234, "human_id": "smuodēt:1", "paradigm_name": "verb-2a-ltg", "lemma": "smuodēt"}
 {"lexeme_id": 14164, "entry_id": 11256, "human_id": "traucēt:1", "paradigm_name": "verb-2a-ltg", "lemma": "traucēt"}
@@ -3654,7 +3937,6 @@
 {"lexeme_id": 14202, "entry_id": 11294, "human_id": "nesšona:1", "paradigm_name": "noun-4fa-ltg", "lemma": "nesšona"}
 {"lexeme_id": 14162, "entry_id": 11254, "human_id": "naticeigi:1", "paradigm_name": "adverb-2a-ltg", "lemma": "naticeigi"}
 {"lexeme_id": 14161, "entry_id": 11253, "human_id": "naticeigai:1", "paradigm_name": "adverb-2a-ltg", "lemma": "naticeigai"}
-{"lexeme_id": 14153, "entry_id": 11245, "human_id": "sūleit:1", "paradigm_name": "verb-2a-ltg", "lemma": "sūleit"}
 {"lexeme_id": 14191, "entry_id": 11283, "human_id": "nažieleigi:1", "paradigm_name": "adverb-2a-ltg", "lemma": "nažieleigi"}
 {"lexeme_id": 14195, "entry_id": 11287, "human_id": "nazy:1", "paradigm_name": "particle-ltg", "lemma": "nazy"}
 {"lexeme_id": 14163, "entry_id": 11255, "human_id": "natiklis:1", "paradigm_name": "noun-2b-ltg", "lemma": "natiklis"}
@@ -3668,6 +3950,10 @@
 {"lexeme_id": 17201, "entry_id": 12534, "human_id": "saimnīkuot:1", "paradigm_name": "verb-2a-ltg", "lemma": "saiminīkuot"}
 {"lexeme_id": 14204, "entry_id": 11296, "human_id": "ni:1", "paradigm_name": "conj-ltg", "lemma": "ni", "attributes": {"Saikļa sintaktiskā funkcija": "Sakārtojuma"}}
 {"lexeme_id": 14136, "entry_id": 11228, "human_id": "skubynuot:1", "paradigm_name": "verb-2a-ltg", "lemma": "skubynuot"}
+{"lexeme_id": 14135, "entry_id": 11227, "human_id": "škaļdeit:1", "paradigm_name": "verb-3b-ltg", "lemma": "škaļdeit"}
+{"lexeme_id": 14153, "entry_id": 11245, "human_id": "sūleit:1", "paradigm_name": "verb-3a-ltg", "lemma": "sūleit"}
+{"lexeme_id": 14177, "entry_id": 11269, "human_id": "varēt:1", "paradigm_name": "verb-3c-ltg", "lemma": "varēt", "attributes": {"Vārdšķira": "Darbības vārds", "Darbības vārda tips": "Patstāvīgs darbības vārds"}}
+{"lexeme_id": 14160, "entry_id": 11252, "human_id": "ticēt:1", "paradigm_name": "verb-3d-ltg", "lemma": "ticēt"}
 {"lexeme_id": 14157, "entry_id": 11249, "human_id": "nateirs:1", "paradigm_name": "adj-1a-ltg", "lemma": "nateirs", "attributes": {"Noliegums": "Jā"}}
 {"lexeme_id": 14178, "entry_id": 11270, "human_id": "navasals:1", "paradigm_name": "adj-1a-ltg", "lemma": "navasals"}
 {"lexeme_id": 14180, "entry_id": 11272, "human_id": "naviereigs:1", "paradigm_name": "adj-1a-ltg", "lemma": "naviereigs"}
@@ -4001,6 +4287,7 @@
 {"lexeme_id": 14760, "entry_id": 11852, "human_id": "perēt:1", "paradigm_name": "verb-2a-ltg", "lemma": "perēt"}
 {"lexeme_id": 14763, "entry_id": 11855, "human_id": "perfekts:1", "paradigm_name": "adj-1a-ltg", "lemma": "perfekts"}
 {"lexeme_id": 14787, "entry_id": 11879, "human_id": "pīcdesmit:1", "paradigm_name": "card-infl-ltg", "lemma": "pīcdesmit"}
+{"lexeme_id": 14762, "entry_id": 11853, "human_id": "pereklis:1", "paradigm_name": "noun-2a-ltg", "lemma": "perekleits", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 14788, "entry_id": 11880, "human_id": "pīcpadsmit:1", "paradigm_name": "card-infl-ltg", "lemma": "pīcpadsmit"}
 {"lexeme_id": 14789, "entry_id": 11881, "human_id": "pīcpadsmitais:1", "paradigm_name": "ord-def-ltg", "lemma": "pīcpadsmitais"}
 {"lexeme_id": 14806, "entry_id": 11898, "human_id": "piec:1", "paradigm_name": "prep-ltg", "lemma": "piec"}
@@ -4022,7 +4309,6 @@
 {"lexeme_id": 14798, "entry_id": 11890, "human_id": "pīduovuojums:1", "paradigm_name": "noun-1a-ltg", "lemma": "pīduovuojums"}
 {"lexeme_id": 14802, "entry_id": 11894, "human_id": "pīdzīduojums:1", "paradigm_name": "noun-1a-ltg", "lemma": "pīdzīduojums"}
 {"lexeme_id": 14830, "entry_id": 11922, "human_id": "pīktdiņ:1", "paradigm_name": "adverb-1-ltg", "lemma": "pīktdiņ"}
-{"lexeme_id": 14762, "entry_id": 11853, "human_id": "pereklis:1", "paradigm_name": "noun-2a-ltg", "lemma": "perekleits", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 14769, "entry_id": 11861, "human_id": "pernīks:1", "paradigm_name": "noun-1a-ltg", "lemma": "pernīks"}
 {"lexeme_id": 14770, "entry_id": 11862, "human_id": "perons:1", "paradigm_name": "noun-1a-ltg", "lemma": "perons"}
 {"lexeme_id": 14773, "entry_id": 11865, "human_id": "personažs:1", "paradigm_name": "noun-1a-ltg", "lemma": "personažs"}
@@ -4071,6 +4357,7 @@
 {"lexeme_id": 17229, "entry_id": 14238, "human_id": "šaubys:1", "paradigm_name": "noun-4fa-ltg", "lemma": "šaubys", "attributes": {"Morfotabulas attēlošana": "Nerādīt vienskaitli", "Leksēmas pamatformas īpatnības": "Daudzskaitlis"}}
 {"lexeme_id": 14885, "entry_id": 11977, "human_id": "pīsaplidēt:1", "paradigm_name": "verb-2a-ltg", "lemma": "pīsaplidēt"}
 {"lexeme_id": 14900, "entry_id": 11992, "human_id": "pīsmadzēt:1", "paradigm_name": "verb-2a-ltg", "lemma": "pīsmadzēt"}
+{"lexeme_id": 14909, "entry_id": 12000, "human_id": "Pīters:1", "paradigm_name": "noun-2a-ltg", "lemma": "Pītereits", "attributes": {"Deminutīvs": "Jā", "Lietvārda tips": "Īpašvārds", "Īpašvārda veids": "Personvārds"}}
 {"lexeme_id": 14862, "entry_id": 11954, "human_id": "piparkūka:1", "paradigm_name": "noun-4fa-ltg", "lemma": "piparkūka"}
 {"lexeme_id": 14865, "entry_id": 11957, "human_id": "pīpine:1", "paradigm_name": "noun-5fa-ltg", "lemma": "pīpine", "attributes": {"Lietojums": "Okazionālisms"}}
 {"lexeme_id": 14871, "entry_id": 11963, "human_id": "pīredze:1", "paradigm_name": "noun-5fa-ltg", "lemma": "pīredze"}
@@ -4086,7 +4373,6 @@
 {"lexeme_id": 14879, "entry_id": 11971, "human_id": "pīsacejums:1", "paradigm_name": "noun-1a-ltg", "lemma": "pīsacejums"}
 {"lexeme_id": 14941, "entry_id": 12033, "human_id": "pleiseigs:1", "paradigm_name": "adj-1a-ltg", "lemma": "pleiseigs"}
 {"lexeme_id": 14899, "entry_id": 11991, "human_id": "pīslāgums:1", "paradigm_name": "noun-1a-ltg", "lemma": "pīslāgums"}
-{"lexeme_id": 14909, "entry_id": 12000, "human_id": "Pīters:1", "paradigm_name": "noun-2a-ltg", "lemma": "Pītereits", "attributes": {"Deminutīvs": "Jā", "Lietvārda tips": "Īpašvārds", "Īpašvārda veids": "Personvārds"}}
 {"lexeme_id": 14911, "entry_id": 12003, "human_id": "pitons:1", "paradigm_name": "noun-1a-ltg", "lemma": "pitons"}
 {"lexeme_id": 14915, "entry_id": 12007, "human_id": "pīvadums:1", "paradigm_name": "noun-1a-ltg", "lemma": "pīvadums"}
 {"lexeme_id": 14923, "entry_id": 12015, "human_id": "plakats:1", "paradigm_name": "noun-1a-ltg", "lemma": "plakats"}
@@ -4256,6 +4542,8 @@
 {"lexeme_id": 15113, "entry_id": 12205, "human_id": "puordzeivuot:1", "paradigm_name": "verb-2a-ltg", "lemma": "puordzeivuot"}
 {"lexeme_id": 15129, "entry_id": 12221, "human_id": "puorlīcynuot:1", "paradigm_name": "verb-2a-ltg", "lemma": "puorlīcynuot"}
 {"lexeme_id": 15134, "entry_id": 12226, "human_id": "puormozguot:1", "paradigm_name": "verb-2a-ltg", "lemma": "puormozguot"}
+{"lexeme_id": 15192, "entry_id": 12287, "human_id": "puškis:1", "paradigm_name": "noun-2a-ltg", "lemma": "puškeits", "attributes": {"Deminutīvs": "Jā"}}
+{"lexeme_id": 15200, "entry_id": 12291, "human_id": "pusnakts:1", "paradigm_name": "noun-6a-ltg", "lemma": "pušnakts"}
 {"lexeme_id": 15120, "entry_id": 12212, "human_id": "puori:1", "paradigm_name": "adverb-1-ltg", "lemma": "puori"}
 {"lexeme_id": 14707, "entry_id": 11799, "human_id": "pateikami:1", "paradigm_name": "adverb-2a-ltg", "lemma": "pateikami"}
 {"lexeme_id": 13966, "entry_id": 11058, "human_id": "nacenzāts:1", "paradigm_name": "adj-1a-ltg", "lemma": "nacenzāts", "attributes": {"Vārdšķira": "Darbības vārds", "Pamatforma morforīkiem": "cenzēt", "Noliegums": "Jā", "Izteiksme": "Divdabis", "Lokāmība": "Lokāms", "Kārta": "Ciešamā", "Laiks": "Pagātne", "Darbības vārda tips": "Patstāvīgs darbības vārds"}}
@@ -4272,8 +4560,6 @@
 {"lexeme_id": 15168, "entry_id": 12260, "human_id": "puoruok:1", "paradigm_name": "adverb-1-ltg", "lemma": "puoruok"}
 {"lexeme_id": 15196, "entry_id": 12288, "human_id": "puskaļts:1", "paradigm_name": "adj-1a-ltg", "lemma": "puskaļts"}
 {"lexeme_id": 15226, "entry_id": 12318, "human_id": "pyrmūdīne:1", "paradigm_name": "noun-5fa-ltg", "lemma": "pyrmūdīne"}
-{"lexeme_id": 15192, "entry_id": 12287, "human_id": "puškis:1", "paradigm_name": "noun-2a-ltg", "lemma": "puškeits", "attributes": {"Deminutīvs": "Jā"}}
-{"lexeme_id": 15200, "entry_id": 12291, "human_id": "pusnakts:1", "paradigm_name": "noun-6a-ltg", "lemma": "pušnakts"}
 {"lexeme_id": 15201, "entry_id": 12293, "human_id": "puspasauļs:1", "paradigm_name": "noun-2a-ltg", "lemma": "puspasauļs"}
 {"lexeme_id": 15137, "entry_id": 12229, "human_id": "puorprotums:1", "paradigm_name": "noun-1a-ltg", "lemma": "puorprotums"}
 {"lexeme_id": 15186, "entry_id": 12278, "human_id": "pus:1", "paradigm_name": "adverb-1-ltg", "lemma": "pus"}
@@ -4282,6 +4568,7 @@
 {"lexeme_id": 15172, "entry_id": 12264, "human_id": "puorvoduot:1", "paradigm_name": "verb-2a-ltg", "lemma": "puorvoduot"}
 {"lexeme_id": 15207, "entry_id": 12299, "human_id": "pūsts:2", "paradigm_name": "adj-1a-ltg", "lemma": "pūsts"}
 {"lexeme_id": 15240, "entry_id": 12332, "human_id": "radaveit:1", "paradigm_name": "verb-2a-ltg", "lemma": "radaveit"}
+{"lexeme_id": 15241, "entry_id": 12333, "human_id": "radeit:1", "paradigm_name": "verb-3a-ltg", "lemma": "radeit", "attributes": {"Vārdšķira": "Darbības vārds", "Darbības vārda tips": "Patstāvīgs darbības vārds"}}
 {"lexeme_id": 16777, "entry_id": 13870, "human_id": "vīnsāta:1", "paradigm_name": "noun-4fa-ltg", "lemma": "vīnsāta"}
 {"lexeme_id": 15203, "entry_id": 12295, "human_id": "pussāta:1", "paradigm_name": "noun-4fa-ltg", "lemma": "pussāta"}
 {"lexeme_id": 15204, "entry_id": 12296, "human_id": "pusslūdze:1", "paradigm_name": "noun-5fa-ltg", "lemma": "pusslūdze"}
@@ -4645,6 +4932,7 @@
 {"lexeme_id": 15731, "entry_id": 12823, "human_id": "symts:1", "paradigm_name": "card-i-ltg", "lemma": "symts"}
 {"lexeme_id": 15810, "entry_id": 12902, "human_id": "skraidelēt:1", "paradigm_name": "verb-2a-ltg", "lemma": "skraidelēt"}
 {"lexeme_id": 15770, "entry_id": 12862, "human_id": "skali:1", "paradigm_name": "adverb-2b-ltg", "lemma": "skali"}
+{"lexeme_id": 15771, "entry_id": 12863, "human_id": "skanēt:1", "paradigm_name": "verb-3c-ltg", "lemma": "skanēt", "attributes": {"Vārdšķira": "Darbības vārds", "Darbības vārda tips": "Patstāvīgs darbības vārds"}}
 {"lexeme_id": 15733, "entry_id": 12825, "human_id": "sīna:1", "paradigm_name": "noun-4fa-ltg", "lemma": "sīna"}
 {"lexeme_id": 15739, "entry_id": 12831, "human_id": "sirena:1", "paradigm_name": "noun-4fa-ltg", "lemma": "sirena"}
 {"lexeme_id": 15741, "entry_id": 12833, "human_id": "sirsneiba:1", "paradigm_name": "noun-4fa-ltg", "lemma": "sirsneiba"}
@@ -4714,14 +5002,15 @@
 {"lexeme_id": 15848, "entry_id": 12940, "human_id": "slidinēt:1", "paradigm_name": "verb-2a-ltg", "lemma": "slidinēt"}
 {"lexeme_id": 15862, "entry_id": 12954, "human_id": "šliup:1", "paradigm_name": "excl-ltg", "lemma": "šliup"}
 {"lexeme_id": 12837, "entry_id": 9929, "human_id": "meklēt:1", "paradigm_name": "verb-2b-ltg", "lemma": "meklēt", "attributes": {"Vārdšķira": "Darbības vārds", "Darbības vārda tips": "Patstāvīgs darbības vārds"}}
+{"lexeme_id": 15832, "entry_id": 6300, "human_id": "skusts:1", "paradigm_name": "noun-1c-ltg", "lemma": "skusteņš", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 15869, "entry_id": 12961, "human_id": "slydons:1", "paradigm_name": "adj-1a-ltg", "lemma": "slydons"}
+{"lexeme_id": 15841, "entry_id": 12933, "human_id": "slauceit:1", "paradigm_name": "verb-3b-ltg", "lemma": "slauceit", "attributes": {"Vārdšķira": "Darbības vārds", "Darbības vārda tips": "Patstāvīgs darbības vārds"}}
 {"lexeme_id": 15870, "entry_id": 12962, "human_id": "slyda:1", "paradigm_name": "noun-4fa-ltg", "lemma": "slyda"}
 {"lexeme_id": 15871, "entry_id": 12963, "human_id": "slykts:1", "paradigm_name": "adj-1a-ltg", "lemma": "slykts"}
 {"lexeme_id": 15872, "entry_id": 12964, "human_id": "slyms:1", "paradigm_name": "adj-1a-ltg", "lemma": "slyms"}
 {"lexeme_id": 15863, "entry_id": 12955, "human_id": "šļopancys:1", "paradigm_name": "noun-4fa-ltg", "lemma": "šļopanca", "attributes": {"Lietojums": "Žargonisms"}}
 {"lexeme_id": 15865, "entry_id": 12957, "human_id": "sludynuojums:1", "paradigm_name": "noun-1a-ltg", "lemma": "sludynuojums"}
 {"lexeme_id": 15834, "entry_id": 12926, "human_id": "slaists:1", "paradigm_name": "noun-1a-ltg", "lemma": "slaists"}
-{"lexeme_id": 15832, "entry_id": 6300, "human_id": "skusts:1", "paradigm_name": "noun-1c-ltg", "lemma": "skusteņš", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 15836, "entry_id": 12928, "human_id": "šlakbaums:1", "paradigm_name": "noun-1a-ltg", "lemma": "šlakbaums"}
 {"lexeme_id": 15839, "entry_id": 12931, "human_id": "slapņums:1", "paradigm_name": "noun-1a-ltg", "lemma": "slapņums"}
 {"lexeme_id": 15852, "entry_id": 12944, "human_id": "šlīkačs:1", "paradigm_name": "noun-2a-ltg", "lemma": "šlīkačs"}
@@ -4745,6 +5034,7 @@
 {"lexeme_id": 15895, "entry_id": 12987, "human_id": "smīkleigs:1", "paradigm_name": "adj-1a-ltg", "lemma": "smīkleigs"}
 {"lexeme_id": 15961, "entry_id": 13053, "human_id": "sovs:1", "paradigm_name": "noun-1a-ltg", "lemma": "sovs", "attributes": {"Persona": "Nepiemīt", "Vārdšķira": "Vietniekvārds", "UD vārdšķira": "DET", "Vietniekvārda tips": "Piederības"}}
 {"lexeme_id": 15899, "entry_id": 12991, "human_id": "smirdeigs:1", "paradigm_name": "adj-1a-ltg", "lemma": "smirdeigs"}
+{"lexeme_id": 15881, "entry_id": 12971, "human_id": "smaids:1", "paradigm_name": "noun-1c-ltg", "lemma": "smaideņš", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 15901, "entry_id": 12993, "human_id": "smogums:1", "paradigm_name": "noun-1a-ltg", "lemma": "smogums"}
 {"lexeme_id": 15903, "entry_id": 12995, "human_id": "smolks:1", "paradigm_name": "adj-1a-ltg", "lemma": "smolks"}
 {"lexeme_id": 15904, "entry_id": 12996, "human_id": "smolkums:1", "paradigm_name": "noun-1a-ltg", "lemma": "smolkums"}
@@ -4775,7 +5065,6 @@
 {"lexeme_id": 15916, "entry_id": 13008, "human_id": "šņabs:1", "paradigm_name": "noun-2a-ltg", "lemma": "šņabs"}
 {"lexeme_id": 15932, "entry_id": 13024, "human_id": "šod:1", "paradigm_name": "adverb-1-ltg", "lemma": "šod"}
 {"lexeme_id": 14629, "entry_id": 11721, "human_id": "partū:1", "paradigm_name": "adverb-1-ltg", "lemma": "partū"}
-{"lexeme_id": 15881, "entry_id": 12971, "human_id": "smaids:1", "paradigm_name": "noun-1c-ltg", "lemma": "smaideņš", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 15962, "entry_id": 13054, "human_id": "šovs:1", "paradigm_name": "noun-1a-ltg", "lemma": "šovs"}
 {"lexeme_id": 15876, "entry_id": 12968, "human_id": "slynkuot:1", "paradigm_name": "verb-2a-ltg", "lemma": "slynkuot"}
 {"lexeme_id": 15886, "entry_id": 12978, "human_id": "smaržuot:1", "paradigm_name": "verb-2a-ltg", "lemma": "smaržuot"}
@@ -4958,7 +5247,9 @@
 {"lexeme_id": 16145, "entry_id": 13237, "human_id": "suopeigs:1", "paradigm_name": "adj-1a-ltg", "lemma": "suopeigs"}
 {"lexeme_id": 16146, "entry_id": 13238, "human_id": "suorts:1", "paradigm_name": "adj-1a-ltg", "lemma": "suorts"}
 {"lexeme_id": 16203, "entry_id": 13295, "human_id": "šys:1", "paradigm_name": "pron-ltg", "lemma": "šys", "attributes": {"Persona": 3, "UD vārdšķira": "DET", "Vietniekvārda tips": "Norādāmais", "Locīšanas īpatnības": "Paralēlās formas"}}
+{"lexeme_id": 16216, "entry_id": 13308, "human_id": "syuteit:1", "paradigm_name": "verb-3a-ltg", "lemma": "syuteit", "attributes": {"Vārdšķira": "Darbības vārds", "Darbības vārda tips": "Patstāvīgs darbības vārds"}}
 {"lexeme_id": 16227, "entry_id": 13319, "human_id": "taipoš:1", "paradigm_name": "adverb-1-ltg", "lemma": "taipoš"}
+{"lexeme_id": 16208, "entry_id": 13300, "human_id": "syudzēt:1", "paradigm_name": "verb-3c-ltg", "lemma": "syudzēt", "attributes": {"Vārdšķira": "Darbības vārds", "Darbības vārda tips": "Patstāvīgs darbības vārds"}}
 {"lexeme_id": 16224, "entry_id": 13316, "human_id": "tagad:1", "paradigm_name": "adverb-1-ltg", "lemma": "tagad"}
 {"lexeme_id": 16204, "entry_id": 13296, "human_id": "šytai:1", "paradigm_name": "adverb-1-ltg", "lemma": "šytai"}
 {"lexeme_id": 16190, "entry_id": 13282, "human_id": "švoki:1", "paradigm_name": "adverb-2a-ltg", "lemma": "švoki"}
@@ -5234,11 +5525,11 @@
 {"lexeme_id": 16542, "entry_id": 13635, "human_id": "uzdinīks:1", "paradigm_name": "noun-1a-ltg", "lemma": "uzdinīks"}
 {"lexeme_id": 16505, "entry_id": 13598, "human_id": "uorejs:1", "paradigm_name": "adj-1b-ltg", "lemma": "uorejs"}
 {"lexeme_id": 16543, "entry_id": 13636, "human_id": "uzgleznuot:1", "paradigm_name": "verb-2a-ltg", "lemma": "uzgleznuot"}
+{"lexeme_id": 16613, "entry_id": 13706, "human_id": "vēlēt:1", "paradigm_name": "verb-2b-ltg", "lemma": "vēlēt"}
 {"lexeme_id": 16562, "entry_id": 13655, "human_id": "uzvarātuojs:1", "paradigm_name": "noun-1a-ltg", "lemma": "uzvarātuojs"}
 {"lexeme_id": 16564, "entry_id": 13657, "human_id": "uzvuords:1", "paradigm_name": "noun-1a-ltg", "lemma": "uzvuords"}
 {"lexeme_id": 16568, "entry_id": 13661, "human_id": "vaciks:1", "paradigm_name": "noun-1a-ltg", "lemma": "vaciks"}
 {"lexeme_id": 16566, "entry_id": 13659, "human_id": "vacs:1", "paradigm_name": "adj-1a-ltg", "lemma": "vacs"}
-{"lexeme_id": 16613, "entry_id": 13706, "human_id": "vēlēt:1", "paradigm_name": "verb-2b-ltg", "lemma": "vēlēt"}
 {"lexeme_id": 16580, "entry_id": 13673, "human_id": "vādars:1", "paradigm_name": "noun-1a-ltg", "lemma": "vādars"}
 {"lexeme_id": 16574, "entry_id": 13667, "human_id": "vacums:1", "paradigm_name": "noun-1a-ltg", "lemma": "vacums"}
 {"lexeme_id": 16577, "entry_id": 13670, "human_id": "Vacvuorkova:1", "paradigm_name": "noun-4fa-ltg", "lemma": "Vacvuorkova", "attributes": {"Lietvārda tips": "Īpašvārds", "Īpašvārda veids": "Vietvārds"}}
@@ -5301,7 +5592,6 @@
 {"lexeme_id": 16675, "entry_id": 13768, "human_id": "veirīts:1", "paradigm_name": "noun-2a-ltg", "lemma": "veirīts"}
 {"lexeme_id": 16685, "entry_id": 13778, "human_id": "velēt:1", "paradigm_name": "verb-2a-ltg", "lemma": "velēt"}
 {"lexeme_id": 16668, "entry_id": 13761, "human_id": "veiksmeigi:1", "paradigm_name": "adverb-2a-ltg", "lemma": "veiksmeigi"}
-{"lexeme_id": 16718, "entry_id": 13706, "human_id": "vēlēt:1", "paradigm_name": "verb-2b-ltg", "lemma": "vielēt"}
 {"lexeme_id": 16665, "entry_id": 13758, "human_id": "veiduošona:1", "paradigm_name": "noun-4fa-ltg", "lemma": "veiduošona"}
 {"lexeme_id": 16639, "entry_id": 13732, "human_id": "varmuoceigi:1", "paradigm_name": "adverb-2a-ltg", "lemma": "varmuoceigi"}
 {"lexeme_id": 16666, "entry_id": 13759, "human_id": "veigrīška:1", "paradigm_name": "noun-4fa-ltg", "lemma": "veigrīška"}
@@ -5321,6 +5611,7 @@
 {"lexeme_id": 16641, "entry_id": 13734, "human_id": "vārts:1", "paradigm_name": "adj-1a-ltg", "lemma": "vārts"}
 {"lexeme_id": 16680, "entry_id": 13773, "human_id": "veituls:1", "paradigm_name": "noun-1a-ltg", "lemma": "veituls"}
 {"lexeme_id": 16687, "entry_id": 13780, "human_id": "velosipeds:1", "paradigm_name": "noun-1a-ltg", "lemma": "velosipeds"}
+{"lexeme_id": 16718, "entry_id": 13706, "human_id": "vēlēt:1", "paradigm_name": "verb-2b-ltg", "lemma": "vielēt"}
 {"lexeme_id": 16722, "entry_id": 13815, "human_id": "viereigs:1", "paradigm_name": "adj-1a-ltg", "lemma": "viereigs"}
 {"lexeme_id": 16723, "entry_id": 13816, "human_id": "viers:1", "paradigm_name": "prep-ltg", "lemma": "viers"}
 {"lexeme_id": 16732, "entry_id": 13825, "human_id": "vierteigs:1", "paradigm_name": "adj-1a-ltg", "lemma": "vierteigs"}
@@ -5411,7 +5702,9 @@
 {"lexeme_id": 16819, "entry_id": 13912, "human_id": "vosor:1", "paradigm_name": "adverb-1-ltg", "lemma": "vosor"}
 {"lexeme_id": 16817, "entry_id": 13910, "human_id": "vonogs:1", "paradigm_name": "noun-1a-ltg", "lemma": "vonogs"}
 {"lexeme_id": 17315, "entry_id": 14306, "human_id": "mērcēt:1", "paradigm_name": "verb-2b-ltg", "lemma": "mērcēt"}
+{"lexeme_id": 16818, "entry_id": 7324, "human_id": "voskys:1", "paradigm_name": "noun-1a-ltg", "lemma": "vosks"}
 {"lexeme_id": 16838, "entry_id": 13931, "human_id": "vuoks:1", "paradigm_name": "noun-1a-ltg", "lemma": "vuoks"}
+{"lexeme_id": 16825, "entry_id": 7007, "human_id": "vucyns:1", "paradigm_name": "noun-1c-ltg", "lemma": "vucineņš", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 16840, "entry_id": 13933, "human_id": "vuokums:1", "paradigm_name": "noun-1a-ltg", "lemma": "vuokums"}
 {"lexeme_id": 16800, "entry_id": 13893, "human_id": "vo:1", "paradigm_name": "excl-ltg", "lemma": "vo"}
 {"lexeme_id": 16836, "entry_id": 13929, "human_id": "vuojpruoteigs:1", "paradigm_name": "adj-1a-ltg", "lemma": "vuojpruoteigs"}
@@ -5431,9 +5724,7 @@
 {"lexeme_id": 16802, "entry_id": 13895, "human_id": "vodlineja:1", "paradigm_name": "noun-4fb-ltg", "lemma": "vodlineja"}
 {"lexeme_id": 16809, "entry_id": 13902, "human_id": "vokorkleita:1", "paradigm_name": "noun-4fa-ltg", "lemma": "vokorkleita"}
 {"lexeme_id": 16814, "entry_id": 13907, "human_id": "Volga:1", "paradigm_name": "noun-4fa-ltg", "lemma": "Volga", "attributes": {"Lietvārda tips": "Īpašvārds", "Īpašvārda veids": "Vietvārds"}}
-{"lexeme_id": 16818, "entry_id": 7324, "human_id": "voskys:1", "paradigm_name": "noun-1a-ltg", "lemma": "vosks"}
 {"lexeme_id": 16821, "entry_id": 13914, "human_id": "vosoruojs:1", "paradigm_name": "noun-1a-ltg", "lemma": "vosoruojs"}
-{"lexeme_id": 16825, "entry_id": 7007, "human_id": "vucyns:1", "paradigm_name": "noun-1c-ltg", "lemma": "vucineņš", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 16823, "entry_id": 13916, "human_id": "Vosoryssvātki:1", "paradigm_name": "noun-1a-ltg", "lemma": "Vosoryssvātki", "stem1": "Vosoryssvātk", "attributes": {"Leksēmas pamatformas īpatnības": "Daudzskaitlis", "Skaitlis 2": "Daudzskaitlinieks"}}
 {"lexeme_id": 16801, "entry_id": 13894, "human_id": "vods:1", "paradigm_name": "noun-1a-ltg", "lemma": "vods"}
 {"lexeme_id": 16806, "entry_id": 13899, "human_id": "voilaks:1", "paradigm_name": "noun-1a-ltg", "lemma": "voilaks"}
@@ -5518,12 +5809,14 @@
 {"lexeme_id": 16909, "entry_id": 14002, "human_id": "zams:1", "paradigm_name": "adj-1a-ltg", "lemma": "zams"}
 {"lexeme_id": 16926, "entry_id": 14019, "human_id": "zeimiejums:1", "paradigm_name": "noun-1a-ltg", "lemma": "zeimiejums"}
 {"lexeme_id": 16913, "entry_id": 14006, "human_id": "zapts:1", "paradigm_name": "noun-6a-ltg", "lemma": "zapts"}
-{"lexeme_id": 16995, "entry_id": 14088, "human_id": "zuodžēt:1", "paradigm_name": "verb-2a-ltg", "lemma": "zuodžēt"}
+{"lexeme_id": 16955, "entry_id": 14383, "human_id": "ziernyuklis:1", "paradigm_name": "noun-2b-ltg", "lemma": "ziernūklis"}
 {"lexeme_id": 16980, "entry_id": 14073, "human_id": "žogors:1", "paradigm_name": "noun-1a-ltg", "lemma": "žogors"}
 {"lexeme_id": 16960, "entry_id": 14053, "human_id": "zīm:1", "paradigm_name": "adverb-1-ltg", "lemma": "zīm"}
 {"lexeme_id": 16952, "entry_id": 14045, "human_id": "žieleigi:1", "paradigm_name": "adverb-2a-ltg", "lemma": "žieleigi"}
+{"lexeme_id": 16956, "entry_id": 14383, "human_id": "ziernyuklis:1", "paradigm_name": "noun-2a-ltg", "lemma": "ziernūkleits", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 16951, "entry_id": 14044, "human_id": "žieleigs:1", "paradigm_name": "adj-1a-ltg", "lemma": "žieleigs"}
 {"lexeme_id": 16969, "entry_id": 14062, "human_id": "ziņkuoreigs:1", "paradigm_name": "adj-1a-ltg", "lemma": "ziņkuoreigs"}
+{"lexeme_id": 16995, "entry_id": 14391, "human_id": "zuodžēt:1", "paradigm_name": "verb-2a-ltg", "lemma": "zuodžēt"}
 {"lexeme_id": 16982, "entry_id": 14075, "human_id": "zontiks:1", "paradigm_name": "noun-1a-ltg", "lemma": "zontiks"}
 {"lexeme_id": 16991, "entry_id": 14084, "human_id": "zumiešona:1", "paradigm_name": "noun-4fa-ltg", "lemma": "zumiešona"}
 {"lexeme_id": 16974, "entry_id": 14067, "human_id": "zivsaimnīceiba:1", "paradigm_name": "noun-4fa-ltg", "lemma": "zivsaimnīceiba"}
@@ -5543,8 +5836,6 @@
 {"lexeme_id": 16962, "entry_id": 14055, "human_id": "Zīmeļs:1", "paradigm_name": "noun-2a-ltg", "lemma": "Zīmeļs"}
 {"lexeme_id": 16963, "entry_id": 14056, "human_id": "zīmeļkuovi:1", "paradigm_name": "noun-1a-ltg", "lemma": "zīmeļkuovi", "attributes": {"Leksēmas pamatformas īpatnības": "Daudzskaitlis", "Skaitlis 2": "Daudzskaitlinieks"}}
 {"lexeme_id": 16965, "entry_id": 14058, "human_id": "zīmeļnīks:1", "paradigm_name": "noun-1a-ltg", "lemma": "zīmeļnīks"}
-{"lexeme_id": 16955, "entry_id": 14048, "human_id": "ziernūklis:1", "paradigm_name": "noun-2b-ltg", "lemma": "ziernūklis"}
-{"lexeme_id": 16956, "entry_id": 14049, "human_id": "ziernūkleits:1", "paradigm_name": "noun-2a-ltg", "lemma": "ziernūkleits", "attributes": {"Deminutīvs": "Jā"}}
 {"lexeme_id": 16948, "entry_id": 14041, "human_id": "zīdputeksnis:1", "paradigm_name": "noun-2b-ltg", "lemma": "zīdputeksnis"}
 {"lexeme_id": 16949, "entry_id": 14042, "human_id": "zīduojums:1", "paradigm_name": "noun-1a-ltg", "lemma": "zīduojums"}
 {"lexeme_id": 16993, "entry_id": 14086, "human_id": "zuobaceņš:1", "paradigm_name": "noun-1c-ltg", "lemma": "zuobaceņš", "attributes": {"Deminutīvs": "Jā"}}
@@ -5733,7 +6024,6 @@
 {"lexeme_id": 12256, "entry_id": 9348, "human_id": "humpalys:1", "paradigm_name": "noun-4fa-ltg", "lemma": "humpala"}
 {"lexeme_id": 11945, "entry_id": 9037, "human_id": "Embūtis:1", "paradigm_name": "noun-5fa-ltg", "lemma": "Embūtis", "attributes": {"Lietvārda tips": "Īpašvārds", "Īpašvārda veids": "Vietvārds", "Leksēmas pamatformas īpatnības": "Daudzskaitlis", "Skaitlis 2": "Daudzskaitlinieks"}}
 {"lexeme_id": 14372, "entry_id": 11464, "human_id": "nūskaiteišona:1", "paradigm_name": "noun-4fa-ltg", "lemma": "nūskaiteišona"}
-{"lexeme_id": 11896, "entry_id": 8988, "human_id": "dzirklis:1", "paradigm_name": "noun-5fa-ltg", "lemma": "dzirklis", "attributes": {"Leksēmas pamatformas īpatnības": "Daudzskaitlis", "Skaitlis 2": "Daudzskaitlinieks"}}
 {"lexeme_id": 14470, "entry_id": 11562, "human_id": "osoka:1", "paradigm_name": "noun-4fa-ltg", "lemma": "osoka"}
 {"lexeme_id": 17111, "entry_id": 8960, "human_id": "dzelys:1", "paradigm_name": "noun-4fa-ltg", "lemma": "dzela"}
 {"lexeme_id": 14419, "entry_id": 11511, "human_id": "nūžāluošona:1", "paradigm_name": "noun-4fa-ltg", "lemma": "nūžāluošona"}
@@ -5760,7 +6050,11 @@
 {"lexeme_id": 5790, "entry_id": 4197, "human_id": "Čyuleja:1", "paradigm_name": "noun-4fb-ltg", "lemma": "Čyuleja", "attributes": {"Lietvārda tips": "Īpašvārds", "Īpašvārda veids": "Vietvārds", "Morfotabulas attēlošana": "Nerādīt daudzskaitli"}}
 {"lexeme_id": 17130, "entry_id": 8495, "human_id": "būrzgola:1", "paradigm_name": "noun-4fa-ltg", "lemma": "būržgola"}
 {"lexeme_id": 17131, "entry_id": 8478, "human_id": "buorksts:1", "paradigm_name": "noun-6a-ltg", "lemma": "buorksts"}
+{"lexeme_id": 11896, "entry_id": 8988, "human_id": "dzirklis:1", "paradigm_name": "noun-5fa-ltg", "lemma": "dzirklis", "attributes": {"Leksēmas pamatformas īpatnības": "Daudzskaitlis", "Skaitlis 2": "Daudzskaitlinieks"}}
+{"lexeme_id": 5550, "entry_id": 4031, "human_id": "buoba:1", "paradigm_name": "noun-4fa-ltg", "lemma": "buobuška"}
 {"lexeme_id": 9939, "entry_id": 7221, "human_id": "pyrmolūts:1", "paradigm_name": "noun-1a-ltg", "lemma": "pyrmolūts"}
+{"lexeme_id": 5665, "entry_id": 4111, "human_id": "cioce:1", "paradigm_name": "noun-5fc-ltg", "lemma": "cioce"}
+{"lexeme_id": 5664, "entry_id": 4111, "human_id": "cioce:1", "paradigm_name": "noun-5fc-ltg", "lemma": "cjoce"}
 {"lexeme_id": 6507, "entry_id": 4730, "human_id": "jis:1", "paradigm_name": "hardcoded", "lemma": "jis", "stem1": "jīm", "attributes": {"Dzimte": "Vīriešu", "Persona": 3, "Skaitlis": "Divskaitlis", "Noliegums": "Nē", "Vārdšķira": "Vietniekvārds", "Morfotabulas tips": "Lietvārds", "Paradigmas īpatnības": "Nelieto lemmas galotni, bet tikai pielasītās izņēmumformas", "Locījums": "Datīvs", "Valodas normēšana": "Nevēlams", "Papildforma": "Jā", "Vietniekvārda tips": "Personas"}}
 {"lexeme_id": 9982, "entry_id": 4730, "human_id": "jis:1", "paradigm_name": "hardcoded", "lemma": "jei", "stem1": "jymā", "attributes": {"Dzimte": "Sieviešu", "Persona": 3, "Skaitlis": "Vienskaitlis", "Noliegums": "Nē", "Vārdšķira": "Vietniekvārds", "Morfotabulas tips": "Lietvārds", "Paradigmas īpatnības": "Nelieto lemmas galotni, bet tikai pielasītās izņēmumformas", "Locījums": "Lokatīvs", "Valodas normēšana": "Nevēlams", "Papildforma": "Jā", "Vietniekvārda tips": "Personas"}}
 {"lexeme_id": 6507, "entry_id": 4730, "human_id": "jis:1", "paradigm_name": "hardcoded", "lemma": "jis", "stem1": "jymā", "attributes": {"Dzimte": "Vīriešu", "Persona": 3, "Skaitlis": "Vienskaitlis", "Noliegums": "Nē", "Vārdšķira": "Vietniekvārds", "Morfotabulas tips": "Lietvārds", "Paradigmas īpatnības": "Nelieto lemmas galotni, bet tikai pielasītās izņēmumformas", "Locījums": "Lokatīvs", "Valodas normēšana": "Nevēlams", "Papildforma": "Jā", "Vietniekvārda tips": "Personas"}}
@@ -5798,17 +6092,17 @@
 {"lexeme_id": 12958, "entry_id": 10050, "human_id": "kas:1", "paradigm_name": "hardcoded", "lemma": "kas", "stem1": "kam", "attributes": {"Dzimte": "Nepiemīt", "Persona": "Nepiemīt", "Skaitlis": "Vienskaitlis", "Noliegums": "Nē", "Vārdšķira": "Vietniekvārds", "Morfotabulas tips": "Lietvārds", "Paradigmas īpatnības": "Nelieto lemmas galotni, bet tikai pielasītās izņēmumformas", "Morfotabulas attēlošana": "Nerādīt daudzskaitli", "Locījums": "Datīvs", "Papildforma": "Jā"}}
 {"lexeme_id": 12958, "entry_id": 10050, "human_id": "kas:1", "paradigm_name": "hardcoded", "lemma": "kas", "stem1": "kuo", "attributes": {"Dzimte": "Nepiemīt", "Persona": "Nepiemīt", "Skaitlis": "Vienskaitlis", "Noliegums": "Nē", "Vārdšķira": "Vietniekvārds", "Morfotabulas tips": "Lietvārds", "Paradigmas īpatnības": "Nelieto lemmas galotni, bet tikai pielasītās izņēmumformas", "Morfotabulas attēlošana": "Nerādīt daudzskaitli", "Locījums": "Ģenitīvs", "Papildforma": "Jā"}}
 {"lexeme_id": 10050, "entry_id": 7276, "human_id": "zivs:1", "paradigm_name": "hardcoded", "lemma": "zivs", "stem1": "zyvu", "attributes": {"Dzimte": "Sieviešu", "Deklinācija": "6", "Vārdšķira": "Lietvārds", "Morfotabulas tips": "Lietvārds", "Skaitlis": "Daudzskaitlis", "Locījums": "Ģenitīvs"}}
+{"lexeme_id": 16203, "entry_id": 13295, "human_id": "šys:1", "paradigm_name": "hardcoded", "lemma": "šys", "stem1": "šys", "attributes": {"Dzimte": "Nepiemīt", "Persona": 3, "Skaitlis": "Vienskaitlis", "Noliegums": "Nē", "Vārdšķira": "Vietniekvārds", "Morfotabulas tips": "Lietvārds", "Paradigmas īpatnības": "Nelieto lemmas galotni, bet tikai pielasītās izņēmumformas", "UD vārdšķira": "DET", "Vietniekvārda tips": "Norādāmais", "Locīšanas īpatnības": "Paralēlās formas", "Locījums": "Nominatīvs", "Papildforma": "Jā"}}
+{"lexeme_id": 16203, "entry_id": 13295, "human_id": "šys:1", "paradigm_name": "hardcoded", "lemma": "šys", "stem1": "šim", "attributes": {"Dzimte": "Nepiemīt", "Persona": 3, "Skaitlis": "Daudzskaitlis", "Noliegums": "Nē", "Vārdšķira": "Vietniekvārds", "Morfotabulas tips": "Lietvārds", "Paradigmas īpatnības": "Nelieto lemmas galotni, bet tikai pielasītās izņēmumformas", "UD vārdšķira": "DET", "Vietniekvārda tips": "Norādāmais", "Locīšanas īpatnības": "Paralēlās formas", "Locījums": "Datīvs", "Papildforma": "Jā"}}
+{"lexeme_id": 16203, "entry_id": 13295, "human_id": "šys:1", "paradigm_name": "hardcoded", "lemma": "šys", "stem1": "šuo", "attributes": {"Dzimte": "Nepiemīt", "Persona": 3, "Skaitlis": "Vienskaitlis", "Noliegums": "Nē", "Vārdšķira": "Vietniekvārds", "Morfotabulas tips": "Lietvārds", "Paradigmas īpatnības": "Nelieto lemmas galotni, bet tikai pielasītās izņēmumformas", "UD vārdšķira": "DET", "Vietniekvārda tips": "Norādāmais", "Locīšanas īpatnības": "Paralēlās formas", "Locījums": "Ģenitīvs", "Valodas normēšana": "Ieteicams", "Papildforma": "Jā"}}
+{"lexeme_id": 16203, "entry_id": 13295, "human_id": "šys:1", "paradigm_name": "hardcoded", "lemma": "šys", "stem1": "šymūs", "attributes": {"Dzimte": "Nepiemīt", "Persona": 3, "Skaitlis": "Daudzskaitlis", "Noliegums": "Nē", "Vārdšķira": "Vietniekvārds", "Morfotabulas tips": "Lietvārds", "Paradigmas īpatnības": "Nelieto lemmas galotni, bet tikai pielasītās izņēmumformas", "UD vārdšķira": "DET", "Vietniekvārda tips": "Norādāmais", "Locīšanas īpatnības": "Paralēlās formas", "Locījums": "Lokatīvs", "Valodas normēšana": "Ieteicams", "Papildforma": "Jā"}}
+{"lexeme_id": 16203, "entry_id": 13295, "human_id": "šys:1", "paradigm_name": "hardcoded", "lemma": "šys", "stem1": "šū", "attributes": {"Dzimte": "Nepiemīt", "Persona": 3, "Skaitlis": "Vienskaitlis", "Noliegums": "Nē", "Vārdšķira": "Vietniekvārds", "Morfotabulas tips": "Lietvārds", "Paradigmas īpatnības": "Nelieto lemmas galotni, bet tikai pielasītās izņēmumformas", "UD vārdšķira": "DET", "Vietniekvārda tips": "Norādāmais", "Locīšanas īpatnības": "Paralēlās formas", "Locījums": "Akuzatīvs", "Papildforma": "Jā"}}
+{"lexeme_id": 16203, "entry_id": 13295, "human_id": "šys:1", "paradigm_name": "hardcoded", "lemma": "šys", "stem1": "šymā", "attributes": {"Dzimte": "Nepiemīt", "Persona": 3, "Skaitlis": "Vienskaitlis", "Noliegums": "Nē", "Vārdšķira": "Vietniekvārds", "Morfotabulas tips": "Lietvārds", "Paradigmas īpatnības": "Nelieto lemmas galotni, bet tikai pielasītās izņēmumformas", "UD vārdšķira": "DET", "Vietniekvārda tips": "Norādāmais", "Locīšanas īpatnības": "Paralēlās formas", "Locījums": "Lokatīvs", "Papildforma": "Jā"}}
 {"lexeme_id": 16203, "entry_id": 13295, "human_id": "šys:1", "paradigm_name": "hardcoded", "lemma": "šys", "stem1": "šū", "attributes": {"Dzimte": "Nepiemīt", "Persona": 3, "Skaitlis": "Vienskaitlis", "Noliegums": "Nē", "Vārdšķira": "Vietniekvārds", "Morfotabulas tips": "Lietvārds", "Paradigmas īpatnības": "Nelieto lemmas galotni, bet tikai pielasītās izņēmumformas", "UD vārdšķira": "DET", "Vietniekvārda tips": "Norādāmais", "Locīšanas īpatnības": "Paralēlās formas", "Lietojums": "Apvidvārds", "Locījums": "Ģenitīvs", "Papildforma": "Jā"}}
 {"lexeme_id": 16203, "entry_id": 13295, "human_id": "šys:1", "paradigm_name": "hardcoded", "lemma": "šys", "stem1": "šamūs", "attributes": {"Dzimte": "Nepiemīt", "Persona": 3, "Skaitlis": "Daudzskaitlis", "Noliegums": "Nē", "Vārdšķira": "Vietniekvārds", "Morfotabulas tips": "Lietvārds", "Paradigmas īpatnības": "Nelieto lemmas galotni, bet tikai pielasītās izņēmumformas", "UD vārdšķira": "DET", "Vietniekvārda tips": "Norādāmais", "Locīšanas īpatnības": "Paralēlās formas", "Lietojums": "Apvidvārds", "Locījums": "Lokatīvs", "Papildforma": "Jā"}}
 {"lexeme_id": 16203, "entry_id": 13295, "human_id": "šys:1", "paradigm_name": "hardcoded", "lemma": "šys", "stem1": "šūs", "attributes": {"Dzimte": "Nepiemīt", "Persona": 3, "Skaitlis": "Daudzskaitlis", "Noliegums": "Nē", "Vārdšķira": "Vietniekvārds", "Morfotabulas tips": "Lietvārds", "Paradigmas īpatnības": "Nelieto lemmas galotni, bet tikai pielasītās izņēmumformas", "UD vārdšķira": "DET", "Vietniekvārda tips": "Norādāmais", "Locīšanas īpatnības": "Paralēlās formas", "Locījums": "Ģenitīvs", "Papildforma": "Jā"}}
-{"lexeme_id": 16203, "entry_id": 13295, "human_id": "šys:1", "paradigm_name": "hardcoded", "lemma": "šys", "stem1": "šymā", "attributes": {"Dzimte": "Nepiemīt", "Persona": 3, "Skaitlis": "Vienskaitlis", "Noliegums": "Nē", "Vārdšķira": "Vietniekvārds", "Morfotabulas tips": "Lietvārds", "Paradigmas īpatnības": "Nelieto lemmas galotni, bet tikai pielasītās izņēmumformas", "UD vārdšķira": "DET", "Vietniekvārda tips": "Norādāmais", "Locīšanas īpatnības": "Paralēlās formas", "Locījums": "Datīvs", "Papildforma": "Jā"}}
-{"lexeme_id": 16203, "entry_id": 13295, "human_id": "šys:1", "paradigm_name": "hardcoded", "lemma": "šys", "stem1": "šys", "attributes": {"Dzimte": "Nepiemīt", "Persona": 3, "Skaitlis": "Vienskaitlis", "Noliegums": "Nē", "Vārdšķira": "Vietniekvārds", "Morfotabulas tips": "Lietvārds", "Paradigmas īpatnības": "Nelieto lemmas galotni, bet tikai pielasītās izņēmumformas", "UD vārdšķira": "DET", "Vietniekvārda tips": "Norādāmais", "Locīšanas īpatnības": "Paralēlās formas", "Locījums": "Nominatīvs", "Papildforma": "Jā"}}
-{"lexeme_id": 16203, "entry_id": 13295, "human_id": "šys:1", "paradigm_name": "hardcoded", "lemma": "šys", "stem1": "šymūs", "attributes": {"Dzimte": "Nepiemīt", "Persona": 3, "Skaitlis": "Daudzskaitlis", "Noliegums": "Nē", "Vārdšķira": "Vietniekvārds", "Morfotabulas tips": "Lietvārds", "Paradigmas īpatnības": "Nelieto lemmas galotni, bet tikai pielasītās izņēmumformas", "UD vārdšķira": "DET", "Vietniekvārda tips": "Norādāmais", "Locīšanas īpatnības": "Paralēlās formas", "Locījums": "Lokatīvs", "Papildforma": "Jā"}}
-{"lexeme_id": 16203, "entry_id": 13295, "human_id": "šys:1", "paradigm_name": "hardcoded", "lemma": "šys", "stem1": "šim", "attributes": {"Dzimte": "Nepiemīt", "Persona": 3, "Skaitlis": "Daudzskaitlis", "Noliegums": "Nē", "Vārdšķira": "Vietniekvārds", "Morfotabulas tips": "Lietvārds", "Paradigmas īpatnības": "Nelieto lemmas galotni, bet tikai pielasītās izņēmumformas", "UD vārdšķira": "DET", "Vietniekvārda tips": "Norādāmais", "Locīšanas īpatnības": "Paralēlās formas", "Locījums": "Datīvs", "Papildforma": "Jā"}}
 {"lexeme_id": 16203, "entry_id": 13295, "human_id": "šys:1", "paradigm_name": "hardcoded", "lemma": "šys", "stem1": "šī", "attributes": {"Dzimte": "Nepiemīt", "Persona": 3, "Skaitlis": "Daudzskaitlis", "Noliegums": "Nē", "Vārdšķira": "Vietniekvārds", "Morfotabulas tips": "Lietvārds", "Paradigmas īpatnības": "Nelieto lemmas galotni, bet tikai pielasītās izņēmumformas", "UD vārdšķira": "DET", "Vietniekvārda tips": "Norādāmais", "Locīšanas īpatnības": "Paralēlās formas", "Locījums": "Nominatīvs", "Papildforma": "Jā"}}
-{"lexeme_id": 16203, "entry_id": 13295, "human_id": "šys:1", "paradigm_name": "hardcoded", "lemma": "šys", "stem1": "šū", "attributes": {"Dzimte": "Nepiemīt", "Persona": 3, "Skaitlis": "Vienskaitlis", "Noliegums": "Nē", "Vārdšķira": "Vietniekvārds", "Morfotabulas tips": "Lietvārds", "Paradigmas īpatnības": "Nelieto lemmas galotni, bet tikai pielasītās izņēmumformas", "UD vārdšķira": "DET", "Vietniekvārda tips": "Norādāmais", "Locīšanas īpatnības": "Paralēlās formas", "Locījums": "Akuzatīvs", "Papildforma": "Jā"}}
 {"lexeme_id": 16203, "entry_id": 13295, "human_id": "šys:1", "paradigm_name": "hardcoded", "lemma": "šys", "stem1": "šam", "attributes": {"Dzimte": "Nepiemīt", "Persona": 3, "Skaitlis": "Vienskaitlis", "Noliegums": "Nē", "Vārdšķira": "Vietniekvārds", "Morfotabulas tips": "Lietvārds", "Paradigmas īpatnības": "Nelieto lemmas galotni, bet tikai pielasītās izņēmumformas", "UD vārdšķira": "DET", "Vietniekvārda tips": "Norādāmais", "Locīšanas īpatnības": "Paralēlās formas", "Locījums": "Datīvs", "Papildforma": "Jā"}}
-{"lexeme_id": 16203, "entry_id": 13295, "human_id": "šys:1", "paradigm_name": "hardcoded", "lemma": "šys", "stem1": "šuo", "attributes": {"Dzimte": "Nepiemīt", "Persona": 3, "Skaitlis": "Vienskaitlis", "Noliegums": "Nē", "Vārdšķira": "Vietniekvārds", "Morfotabulas tips": "Lietvārds", "Paradigmas īpatnības": "Nelieto lemmas galotni, bet tikai pielasītās izņēmumformas", "UD vārdšķira": "DET", "Vietniekvārda tips": "Norādāmais", "Locīšanas īpatnības": "Paralēlās formas", "Locījums": "Ģenitīvs", "Papildforma": "Jā"}}
 {"lexeme_id": 16203, "entry_id": 13295, "human_id": "šys:1", "paradigm_name": "hardcoded", "lemma": "šys", "stem1": "šūs", "attributes": {"Dzimte": "Nepiemīt", "Persona": 3, "Skaitlis": "Daudzskaitlis", "Noliegums": "Nē", "Vārdšķira": "Vietniekvārds", "Morfotabulas tips": "Lietvārds", "Paradigmas īpatnības": "Nelieto lemmas galotni, bet tikai pielasītās izņēmumformas", "UD vārdšķira": "DET", "Vietniekvārda tips": "Norādāmais", "Locīšanas īpatnības": "Paralēlās formas", "Locījums": "Akuzatīvs", "Papildforma": "Jā"}}
 {"lexeme_id": 16534, "entry_id": 13627, "human_id": "uzacs:1", "paradigm_name": "hardcoded", "lemma": "uzacs", "stem1": "uzocu", "attributes": {"Dzimte": "Sieviešu", "Deklinācija": "6", "Vārdšķira": "Lietvārds", "Morfotabulas tips": "Lietvārds", "Skaitlis": "Daudzskaitlis", "Locījums": "Ģenitīvs", "Papildforma": "Jā"}}
 {"lexeme_id": 10416, "entry_id": 7543, "human_id": "es:1", "paradigm_name": "hardcoded", "lemma": "es", "stem1": "manie", "attributes": {"Dzimte": "Nepiemīt", "Persona": "Nepiemīt", "Skaitlis": "Vienskaitlis", "Noliegums": "Nē", "Vārdšķira": "Vietniekvārds", "Morfotabulas tips": "Lietvārds", "Paradigmas īpatnības": "Nelieto lemmas galotni, bet tikai pielasītās izņēmumformas", "Vietniekvārda tips": "Personas", "Morfotabulas attēlošana": "Nerādīt daudzskaitli", "Locījums": "Lokatīvs", "Valodas normēšana": "Nevēlams", "Papildforma": "Jā"}}
