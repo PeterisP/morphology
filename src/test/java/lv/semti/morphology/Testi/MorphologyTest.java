@@ -4338,5 +4338,15 @@ public class MorphologyTest {
         assertTrue(jāsargās.isRecognized());
     }
 
+    @Test
+    public void nepildīšana() {
+        // 2025-04-28 Baiba sūdzās, ka korpusā "nepildīšana" lemma ir pildīšana.
+
+        Word nepildīšana = locītājs.analyze("nepildīšana");
+        assertTrue(nepildīšana.isRecognized());
+        Wordform forma = nepildīšana.getBestWordform();
+        assertEquals("nepildīšana", forma.getValue(AttributeNames.i_Lemma));
+    }
+
 
 }
