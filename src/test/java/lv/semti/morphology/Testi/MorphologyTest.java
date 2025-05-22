@@ -4340,13 +4340,17 @@ public class MorphologyTest {
 
     @Test
     public void nepildīšana() {
-        // 2025-04-28 Baiba sūdzās, ka korpusā "nepildīšana" lemma ir pildīšana.
+        // 2025-04-28 Baiba sūdzās, ka korpusā "nepildīšana" lemma ir pildīšana; verbu formām tas ir likts tīšām (nepildīju -> pildīt) bet lietvārdam tā nav ok
 
         Word nepildīšana = locītājs.analyze("nepildīšana");
         assertTrue(nepildīšana.isRecognized());
         Wordform forma = nepildīšana.getBestWordform();
         assertEquals("nepildīšana", forma.getValue(AttributeNames.i_Lemma));
-    }
 
+        Word nepildīdams = locītājs.analyze("nepildīdams");
+        assertTrue(nepildīdams.isRecognized());
+        forma = nepildīdams.getBestWordform();
+        assertEquals("pildīt", forma.getValue(AttributeNames.i_Lemma));
+    }
 
 }

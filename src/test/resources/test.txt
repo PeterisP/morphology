@@ -954,7 +954,7 @@ pasmaidīja	vmnisi330an	pasmaidīt	m-d1291-Mazais-princis-p34s1w6
 <g />
 :	zo	:	m-d1291-Mazais-princis-p34s1w7
 -	zd	-	m-d1291-Mazais-princis-p34s1w8
-Vai	cc	vai	m-d1291-Mazais-princis-p34s1w9
+Vai	q	vai	m-d1291-Mazais-princis-p34s1w9
 tad	q	tad	m-d1291-Mazais-princis-p34s1w10
 tu	pp20snn	tu	m-d1291-Mazais-princis-p34s1w11
 neredzi	vmnipt32say	redzēt	m-d1291-Mazais-princis-p34s1w12
@@ -1106,7 +1106,7 @@ tev	pp20sdn	tu	m-d1291-Mazais-princis-p41s1w2
 šķiet	vmnipi130an	šķist	m-d1291-Mazais-princis-p41s1w3
 <g />
 ,	zc	,	m-d1291-Mazais-princis-p41s1w4
-vai	cs	vai	m-d1291-Mazais-princis-p41s1w5
+vai	q	vai	m-d1291-Mazais-princis-p41s1w5
 šim	pd3msdn	šis	m-d1291-Mazais-princis-p41s1w6
 jēriņam	ncmsd1	jēriņš	m-d1291-Mazais-princis-p41s1w7
 vajadzēs	vmnift330an	vajadzēt	m-d1291-Mazais-princis-p41s1w8
@@ -10867,7 +10867,7 @@ novērsti	vmnpdmpnpsnpn	novērst	m-p3733-p5s1w28
 Jautāts	vmnpdmsnpsnpn	jautāt	m-p3733-p6s1w1
 <g />
 ,	zc	,	m-p3733-p6s1w2
-vai	q	vai	m-p3733-p6s1w3
+vai	cs	vai	m-p3733-p6s1w3
 atbildīgajām	affpdyp	atbildīgs	m-p3733-p6s1w4
 amatpersonām	ncfpd4	amatpersona	m-p3733-p6s1w5
 būtu	vcnc0ii00an	būt	m-p3733-p6s1w6
@@ -17778,7 +17778,7 @@ Un	cc	un	m-p3753-p17s1w1
 ja	cs	ja	m-p3753-p17s1w3
 mobilam	afmsdnp	mobils	m-p3753-p17s1w4
 telefonam	ncmsd1	telefons	m-p3753-p17s1w5
-vai	cs	vai	m-p3753-p17s1w6
+vai	cc	vai	m-p3753-p17s1w6
 citai	pi0fsdn	cita	m-p3753-p17s1w7
 ierīcei	ncfsd5	ierīce	m-p3753-p17s1w8
 ir	vcnipii30an	būt	m-p3753-p17s1w9
@@ -18009,7 +18009,7 @@ zināmi	vmnpdmpnppnpn	zināt	m-p3753-p20s2w3
 <s>
 Risku	ncmpg1	risks	m-p3753-p20s3w1
 novēršanai	ncfsd4	novēršana	m-p3753-p20s3w2
-vai	cs	vai	m-p3753-p20s3w3
+vai	cc	vai	m-p3753-p20s3w3
 risku	ncmpg1	risks	m-p3753-p20s3w4
 iespējamības	ncfsg4	iespējamība	m-p3753-p20s3w5
 mazināšanai	ncfsd4	mazināšana	m-p3753-p20s3w6
@@ -18406,7 +18406,7 @@ klientiem	ncmpd1	klients	m-p3753-p26s1w10
 ,	zc	,	m-p3753-p26s1w11
 tādēļ	r0n	tādēļ	m-p3753-p26s1w12
 IMS	yn	IMS	m-p3753-p26s1w13
-vai	cs	vai	m-p3753-p26s1w14
+vai	cc	vai	m-p3753-p26s1w14
 cita	pi0fsnn	cita	m-p3753-p26s1w15
 burtu	ncmpg1	burts	m-p3753-p26s1w16
 kopa	ncfsn4	kopa	m-p3753-p26s1w17
@@ -18564,7 +18564,7 @@ kādi	pi0mpnn	kāds	m-p3753-p29s2w12
 ?	zs	?	m-p3753-p29s2w14
 </s>
 <s>
-Vai	cs	vai	m-p3753-p29s3w1
+Vai	q	vai	m-p3753-p29s3w1
 pieslēgšanās	ncfsgr	pieslēgšanās	m-p3753-p29s3w2
 temps	ncmsn1	temps	m-p3753-p29s3w3
 nav	vcnipii30ay	būt	m-p3753-p29s3w4
@@ -19023,7 +19023,7 @@ ar	sppd	ar	m-p3753-p34s9w10
 1	xn	1	m-p3753-p34s9w11
 Gbps	yn	Gbps	m-p3753-p34s9w12
 Rēzeknē	npfsl5	Rēzekne	m-p3753-p34s9w13
-vai	cs	vai	m-p3753-p34s9w14
+vai	cc	vai	m-p3753-p34s9w14
 jebkurā	pi0fsln	jebkura	m-p3753-p34s9w15
 citā	pi0fsln	cita	m-p3753-p34s9w16
 vietā	ncfsl4	vieta	m-p3753-p34s9w17
@@ -19075,7 +19075,7 @@ ir	vmnipii30an	būt	m-p3753-p35s1w3
 klienti	ncmpn1	klients	m-p3753-p35s1w4
 ar	sppd	ar	m-p3753-p35s1w5
 šādu	pd0msan	šāds	m-p3753-p35s1w6
-vai	cs	vai	m-p3753-p35s1w7
+vai	cc	vai	m-p3753-p35s1w7
 lielāku	afmsanc	liels	m-p3753-p35s1w8
 ātrumu	ncmsa1	ātrums	m-p3753-p35s1w9
 <g />
@@ -19120,7 +19120,7 @@ kāpa	vmnisi130an	kāpt	m-p3753-p36s1w14
 stabos	ncmpl1	stabs	m-p3753-p36s1w15
 un	cc	un	m-p3753-p36s1w16
 savienoja	vmnist230an	savienot	m-p3753-p36s1w17
-vai	cs	vai	m-p3753-p36s1w18
+vai	cc	vai	m-p3753-p36s1w18
 remontēja	vmnist230an	remontēt	m-p3753-p36s1w19
 vadus	ncmpa1	vads	m-p3753-p36s1w20
 <g />
@@ -19799,7 +19799,7 @@ skaitītājus	ncmpa1	skaitītājs	m-p3753-p44s5w5
 kaut	q	kaut	m-p3753-p44s5w6
 kur	r0n	kur	m-p3753-p44s5w7
 pagrabos	ncmpl1	pagrabs	m-p3753-p44s5w8
-vai	cs	vai	m-p3753-p44s5w9
+vai	cc	vai	m-p3753-p44s5w9
 pie	sppd	pie	m-p3753-p44s5w10
 klienta	ncmsg1	klients	m-p3753-p44s5w11
 dzīvoklī	ncmsl2	dzīvoklis	m-p3753-p44s5w12
@@ -19876,7 +19876,7 @@ būtu	vcnc0ii00an	būt	m-p3753-p45s2w27
 redzami	vmnpdmpnppnpn	redzēt	m-p3753-p45s2w28
 jau	r0n	jau	m-p3753-p45s2w29
 vakardienas	ncfsg4	vakardiena	m-p3753-p45s2w30
-vai	cs	vai	m-p3753-p45s2w31
+vai	cc	vai	m-p3753-p45s2w31
 nakts	ncfsg6	nakts	m-p3753-p45s2w32
 rādītāji	ncmpn1	rādītājs	m-p3753-p45s2w33
 <g />
@@ -35474,7 +35474,7 @@ rakstot	vmnpu0000000n	rakstīt	m-p3758-p12s1w6
 <g />
 :	zo	:	m-p3758-p12s1w7
 aija.freija@hkstrategies.com	xx	aija.freija@hkstrategies.com	m-p3758-p12s1w8
-vai	cs	vai	m-p3758-p12s1w9
+vai	cc	vai	m-p3758-p12s1w9
 zvanot	vmnpu0000000n	zvanīt	m-p3758-p12s1w10
 <g />
 :	zo	:	m-p3758-p12s1w11
@@ -45900,7 +45900,7 @@ Jautājums	ncmsn1	jautājums	m-p135-p6s2w1
 ir	vmnipii30an	būt	m-p135-p6s2w2
 <g />
 ,	zc	,	m-p135-p6s2w3
-vai	q	vai	m-p135-p6s2w4
+vai	cs	vai	m-p135-p6s2w4
 <g />
 ,	zc	,	m-p135-p6s2w5
 nosakot	vmnpu0000000n	nosacīt	m-p135-p6s2w6

@@ -498,7 +498,7 @@ public class Analyzer extends Lexicon {
 						variants.setToken(word);
 						variants.addAttribute(AttributeNames.i_Source,"priedēkļu atvasināšana");
 						variants.addAttribute(AttributeNames.i_Prefix, priedēklis);
-						if (!priedēklis.equals(this.NEGATION_PREFIX)) {
+						if (!priedēklis.equals(this.NEGATION_PREFIX) || !variants.isMatchingWeak(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb)) {
 							variants.addAttribute(AttributeNames.i_SourceLemma, variants.getValue(AttributeNames.i_Lemma));
 							variants.addAttribute(AttributeNames.i_Lemma,priedēklis+variants.getValue(AttributeNames.i_Lemma));
 						}
