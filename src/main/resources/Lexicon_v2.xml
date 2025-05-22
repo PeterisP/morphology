@@ -480,7 +480,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="13" Name="adj-1" LemmaEnding="135" Description="Īpašības vārdi ar galotni -s (balts)" DescriptionEN="Adjectives ending -s (balts)" AllowedGuessEndings="bcdfgjklmnprstvzķņšž">
-		<Attributes Vārdšķira="Īpašības vārds" Morfotabulas_tips="Īpašības vārds"/>
+		<Attributes Vārdšķira="Īpašības vārds" Morfotabulas_tips="Īpašības vārds" Atgriezeniskums="Nē" Noliegums="Nē" />
 		<Ending ID="135" StemChange="3" Ending="s" StemID="1" LemmaEnding="135">
 			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Nominatīvs"/>
 		</Ending>
@@ -621,7 +621,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="14" Name="adj-2" LemmaEnding="180" Description="Īpašības vārdi ar galotni -š (zaļš)" DescriptionEN="Adjectives ending -š (zaļš)" AllowedGuessEndings="djmrļņ">
-		<Attributes Vārdšķira="Īpašības vārds" Morfotabulas_tips="Īpašības vārds"/>
+		<Attributes Vārdšķira="Īpašības vārds" Morfotabulas_tips="Īpašības vārds" Atgriezeniskums="Nē" Noliegums="Nē" />
 		<Ending ID="180" StemChange="0" Ending="š" StemID="1" LemmaEnding="180">
 			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Nominatīvs" Pakāpe="Pamata"/>
 		</Ending>
@@ -5082,7 +5082,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="30" Name="adjdef-m" LemmaEnding="2019" Description="Patstāvīgas divdabju noteiktās formas un īpašības vārdi bez nenoteiktajām formām vīriešu dzimtē (jaundzimušais, pēdējais)" DescriptionEN="Standalone masculine participles and adjectives without indefinite forms (jaundzimušais, pēdējais)" AllowedGuessEndings="!">
-		<Attributes Vārdšķira="Īpašības vārds" Noteiktība="Noteiktā" Dzimte="Vīriešu" Pakāpe="Pamata" Morfotabulas_tips="Lietvārds"/>
+		<Attributes Vārdšķira="Īpašības vārds" Noteiktība="Noteiktā" Dzimte="Vīriešu" Pakāpe="Pamata" Morfotabulas_tips="Lietvārds" Atgriezeniskums="Nē" Noliegums="Nē" />
 		<Ending ID="2019" Ending="ais" LemmaEnding="2019">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
 		</Ending>
@@ -5301,7 +5301,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="40" Name="adjdef-f1" LemmaEnding="2031" Description="Patstāvīgas divdabju (izņemot -is/-usi divdabjus) noteiktās formas un īpašības vārdi bez nenoteiktājām formām sieviešu dzimtē (mēnessērdzīgā, apsūdzētā, aiznākošā)"  DescriptionEN="Standalone feminine participles (except -is/-usi participles) and adjectives without indefinite forms (mēnessērdzīgā, apsūdzētā, aiznākošā)" AllowedGuessEndings="!">
-		<Attributes Vārdšķira="Īpašības vārds" Noteiktība="Noteiktā" Dzimte="Sieviešu" Pakāpe="Pamata" Morfotabulas_tips="Lietvārds"/>
+		<Attributes Vārdšķira="Īpašības vārds" Noteiktība="Noteiktā" Dzimte="Sieviešu" Pakāpe="Pamata" Morfotabulas_tips="Lietvārds" Atgriezeniskums="Nē" Noliegums="Nē" />
 		<Ending ID="2031" Ending="ā" LemmaEnding="2031">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
 		</Ending>
@@ -5337,7 +5337,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="41" Name="adjdef-f2" LemmaEnding="2095" Description="Patstāvīgas -is/-usi divdabju noteiktās formas sieviešu dzimtē (cietusī)"  DescriptionEN="Standalone feminine -is/-usi participles without indefinite forms (cietusī)" AllowedGuessEndings="!">
-		<Attributes Vārdšķira="Īpašības vārds" Noteiktība="Noteiktā" Dzimte="Sieviešu" Pakāpe="Pamata" Morfotabulas_tips="Lietvārds"/>
+		<Attributes Vārdšķira="Īpašības vārds" Noteiktība="Noteiktā" Dzimte="Sieviešu" Pakāpe="Pamata" Morfotabulas_tips="Lietvārds" Atgriezeniskums="Nē" Noliegums="Nē" />
 		<Ending ID="2095" StemChange="22" Ending="ī" LemmaEnding="2095">
 			<Attributes Skaitlis="Vienskaitlis" Dzimte="Sieviešu" Locījums="Nominatīvs"/>
 		</Ending>
@@ -5373,7 +5373,7 @@
 		</Ending>
 	</Paradigm>	
 	<Paradigm Stems="1" ID="42" Name="part-1" LemmaEnding="2128" Description="Patstāvīgi -is/-usi divdabji (pusjucis)"  DescriptionEN="Standalone -is/usi participles (pusjucis)" AllowedGuessEndings="!">
-		<Attributes Vārdšķira="Īpašības vārds" Morfotabulas_tips="Īpašības vārds"/> 
+		<Attributes Vārdšķira="Īpašības vārds" Morfotabulas_tips="Īpašības vārds" Atgriezeniskums="Nē" Noliegums="Nē" /> 
 		<Ending ID="2128" StemChange="14" Ending="is" StemID="1" LemmaEnding="2128">
 			<Attributes Noteiktība="Nenoteiktā" Skaitlis="Vienskaitlis" Locījums="Nominatīvs" Dzimte="Vīriešu"/>
 		</Ending>
@@ -5497,7 +5497,7 @@
 		</Ending>		
 	</Paradigm>
 	<Paradigm Stems="1" ID="43" Name="part-2" LemmaEnding="2106" Description="Patstāvīgi -ies/-usies divdabji (pusapģērbies)" DescriptionEN="Standalone -ies/-usies participles (pusapģērbies)" AllowedGuessEndings="!">
-		<Attributes Vārdšķira="Īpašības vārds" Noteiktība="Nenoteiktā" Morfotabulas_tips="Skaitļa vārds"/> 
+		<Attributes Vārdšķira="Īpašības vārds" Noteiktība="Nenoteiktā" Morfotabulas_tips="Skaitļa vārds" Atgriezeniskums="Jā" Noliegums="Nē" /> 
 		<Ending ID="2106" StemChange="14" Ending="ies" StemID="1" LemmaEnding="2106">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs" Dzimte="Vīriešu"/>
 		</Ending>
@@ -8287,7 +8287,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="52" Name="part-3" LemmaEnding="2908" Description="Patstāvīgi -dams/-dama divdabji (pusjokodams)" DescriptionEN="Standalone -dams/-dama participles (pusjokodams)" AllowedGuessEndings="!">
-		<Attributes Vārdšķira="Īpašības vārds" Īpašības_vārda_tips="Attieksmes" Noteiktība="Nenoteiktā" Pakāpe="Pamata" Morfotabulas_tips="Skaitļa vārds"/>
+		<Attributes Vārdšķira="Īpašības vārds" Īpašības_vārda_tips="Attieksmes" Noteiktība="Nenoteiktā" Pakāpe="Pamata" Morfotabulas_tips="Skaitļa vārds" Atgriezeniskums="Nē" Noliegums="Nē" />
 		<Ending ID="2908" StemChange="0" Ending="dams" StemID="1" LemmaEnding="2908">
 			<Attributes Skaitlis="Vienskaitlis" Dzimte="Vīriešu" Locījums="Nominatīvs"/>
 		</Ending>
@@ -8314,7 +8314,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="53" Name="part-4" LemmaEnding="2916" Description="Patstāvīgi -damies/-damās divdabji (pusjokodamies)" DescriptionEN="Standalone -dams/-dama participles (pusjokodamās)" AllowedGuessEndings="!">
-		<Attributes Vārdšķira="Īpašības vārds" Īpašības_vārda_tips="Attieksmes" Noteiktība="Nenoteiktā" Pakāpe="Pamata" Locījums="Nominatīvs" Morfotabulas_tips="Skaitļa vārds"/>
+		<Attributes Vārdšķira="Īpašības vārds" Īpašības_vārda_tips="Attieksmes" Noteiktība="Nenoteiktā" Pakāpe="Pamata" Locījums="Nominatīvs" Morfotabulas_tips="Skaitļa vārds" Atgriezeniskums="Jā" Noliegums="Nē" />
 		<Ending ID="2916" StemChange="0" Ending="damies" StemID="1" LemmaEnding="2916">
 			<Attributes Dzimte="Vīriešu" Skaitlis="Vienskaitlis"/>
 		</Ending>

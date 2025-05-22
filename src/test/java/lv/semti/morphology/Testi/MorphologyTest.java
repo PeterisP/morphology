@@ -4353,4 +4353,18 @@ public class MorphologyTest {
         assertEquals("pildīt", forma.getValue(AttributeNames.i_Lemma));
     }
 
+    @Test
+    public void ticket149() {
+        // 2025 05 22 - daļai (bet ne visiem!) divdabjiem tagā pazūd 13. pazīme
+        Word viļņotais = locītājs.analyze("viļņotais");
+        assertTrue(viļņotais.isRecognized());
+        Wordform forma = viļņotais.getBestWordform();
+        assertEquals("vmnpdmsnpsypn", forma.getTag());
+
+        Word neviltotais = locītājs.analyze("neviltotais");
+        assertTrue(neviltotais.isRecognized());
+        forma = neviltotais.getBestWordform();
+        assertEquals("vmnpdmsnpsypy", forma.getTag());
+    }
+
 }
