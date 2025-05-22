@@ -4351,6 +4351,11 @@ public class MorphologyTest {
         assertTrue(nepildīdams.isRecognized());
         forma = nepildīdams.getBestWordform();
         assertEquals("pildīt", forma.getValue(AttributeNames.i_Lemma));
+
+        Word nevēlēšanās = locītājs.analyze("nevēlēšanās");
+        assertTrue(nevēlēšanās.isRecognized());
+        forma = nevēlēšanās.getBestWordform();
+        assertEquals("nevēlēšanās", forma.getValue(AttributeNames.i_Lemma));
     }
 
     @Test
@@ -4367,4 +4372,12 @@ public class MorphologyTest {
         assertEquals("vmnpdmsnpsypy", forma.getTag());
     }
 
+    @Test
+    public void ticket129() {
+//        locītājs.enableGuessing = true;
+        Word vispārīgākajiem = locītājs.analyze("vispārīgākajiem");
+        assertTrue(vispārīgākajiem.isRecognized());
+        Wordform forma = vispārīgākajiem.getBestWordform();
+        assertEquals("vispārīgs", forma.getValue(AttributeNames.i_Lemma));
+    }
 }
