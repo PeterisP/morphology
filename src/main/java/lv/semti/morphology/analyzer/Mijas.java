@@ -195,17 +195,17 @@ public abstract class Mijas {
 						}
 					}
 					else if (celms.endsWith("j")) {
-						if (celms.endsWith("pj") || celms.endsWith("bj") || celms.endsWith("mj") || celms.endsWith("vj"))
-						//						 ... nj <> n ??
-						{varianti.add(new Variants(celms.substring(0,celms.length()-1),"Mija","p->pj (u.c.)"));}
-						else if (celms.endsWith("fj")) { // žirafju -> žirafe; žirafu->žirafe
+						if (celms.endsWith("pj") || celms.endsWith("bj") || celms.endsWith("mj") || celms.endsWith("vj")
+								|| celms.endsWith("fj")) { 	//	 ... nj <> n ??
 							varianti.add(new Variants(celms.substring(0,celms.length()-1),"Mija","p->pj (u.c.)"));
-							varianti.add(new Variants(celms));
+						/*} else if (celms.endsWith("fj")) { // žirafju -> žirafe; žirafu->žirafe
+							varianti.add(new Variants(celms.substring(0,celms.length()-1),"Mija","p->pj (u.c.)"));
+							varianti.add(new Variants(celms));*/
 						} else varianti.add(new Variants(celms));
 					}
 					else if (!(celms.endsWith("p") || celms.endsWith("b") || celms.endsWith("m") || celms.endsWith("v") ||
 							celms.endsWith("t") || celms.endsWith("d") || celms.endsWith("c") || celms.endsWith("z") ||
-							celms.endsWith("s") || celms.endsWith("n") || celms.endsWith("l") ) )
+							celms.endsWith("s") || celms.endsWith("n") || celms.endsWith("l") || celms.endsWith("f")) )
 						varianti.add(new Variants(celms));
 					break;
 				case 2: //  dv. 3. konjugācijas (bezmiju!) formas, kas noņem celma pēdējo burtu
@@ -1051,14 +1051,17 @@ public abstract class Mijas {
 
 				case 1: // lietvārdu līdzskaņu mija
 					// Personvārdu mijas - Valdis-Valda; Gatis-Gata. Eglīts - Eglīša.  Vēl ir literatūrā minēts izņēmums -skis -ckis (Čaikovskis, Visockis), taču tiem tāpat viss šķiet ok.
-					if (properName && celms.endsWith("t") && !celms.endsWith("īt")) {
-						varianti.add(new Variants(celms));
-						if (syllables(celms) > 1) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"š","Mija","t -> š"));
+					// 2025-06-02: Gatis un Valdis jau sen iet paradigmā pie tēta un viesa,
+					//             Eglīts un Ķezbers iet paradigmā pie suņa.
+					if (properName && celms.endsWith("t")) {// && !celms.endsWith("īt")) {
+						//varianti.add(new Variants(celms));
+						//if (syllables(celms) > 1)
+						varianti.add(new Variants(celms.substring(0,celms.length()-1)+"š","Mija","t -> š"));
 					}
 					else if (properName && celms.endsWith("d") ) {
-						if (syllables(celms) > 1)
-							varianti.add(new Variants(celms.substring(0,celms.length()-1)+"ž","Mija","d -> ž"));
-						else varianti.add(new Variants(celms));
+						//if (syllables(celms) > 1)
+						varianti.add(new Variants(celms.substring(0,celms.length()-1)+"ž","Mija","d -> ž"));
+						//else varianti.add(new Variants(celms));
 					}
 					else if (celms.endsWith("s") || celms.endsWith("t")) {
 						if (celms.endsWith("kst")) {
@@ -1095,18 +1098,20 @@ public abstract class Mijas {
 							varianti.add(new Variants(celms.substring(0,celms.length()-1)+"ņ","Mija", "n -> ņ"));
 						}
 					}
-					else if (celms.endsWith("p") || celms.endsWith("b") || celms.endsWith("m") || celms.endsWith("v")) {
+					else if (celms.endsWith("p") || celms.endsWith("b") || celms.endsWith("m") || celms.endsWith("v") || celms.endsWith("f")) {
 						varianti.add(new Variants(celms+"j","Mija","p->pj (u.c.)"));
 					}
+					/*
+					// Tēzaurā valodnieki liek 2 leksēmas no laika gala.
 					else if (celms.endsWith("f")) { // Žirafu -> žirafju, žirafu
 						Variants v = new Variants(celms+"j","Mija","p->pj (u.c.)");
 						v.addAttribute(AttributeNames.i_Recommended, AttributeNames.v_Yes);
 						varianti.add(v);
 						varianti.add(new Variants(celms));
-					}
+					}*/
 					else if (!(celms.endsWith("p") || celms.endsWith("b") || celms.endsWith("m") || celms.endsWith("v") ||
 							celms.endsWith("t") || celms.endsWith("d") || celms.endsWith("c") || celms.endsWith("z") ||
-							celms.endsWith("s") || celms.endsWith("n") || celms.endsWith("l") ) )
+							celms.endsWith("s") || celms.endsWith("n") || celms.endsWith("l") || celms.endsWith("f")) )
 						varianti.add(new Variants(celms));
 					break;
 				case 2: //  dv. 3. konjugācijas tagadne, kas noņem celma pēdējo burtu
