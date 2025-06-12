@@ -289,7 +289,7 @@
 		<Ending ID="79" StemChange="0" Ending="ā" StemID="1" LemmaEnding="75">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Lokatīvs"/>
 		</Ending>
-		<Ending ID="80" StemChange="18" Ending="a" StemID="1" LemmaEnding="75">
+		<Ending ID="80" StemChange="0" Ending="a" StemID="1" LemmaEnding="75">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 		<Ending ID="1160" StemChange="17" Ending="" StemID="1" LemmaEnding="75">
@@ -370,7 +370,7 @@
 		<Ending ID="91" StemChange="0" Ending="ē" StemID="1" LemmaEnding="87">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Lokatīvs"/>
 		</Ending>
-		<Ending ID="92" StemChange="18" Ending="e" StemID="1" LemmaEnding="87">
+		<Ending ID="92" StemChange="0" Ending="e" StemID="1" LemmaEnding="87">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 		<Ending ID="1175" StemChange="17" Ending="" StemID="1" LemmaEnding="87">
@@ -5582,7 +5582,7 @@
 		<Ending ID="1769" StemChange="0" Ending="ē" StemID="1" LemmaEnding="1765">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Lokatīvs"/>
 		</Ending>
-		<Ending ID="1770" StemChange="18" Ending="e" StemID="1" LemmaEnding="1765">
+		<Ending ID="1770" StemChange="0" Ending="e" StemID="1" LemmaEnding="1765">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Vokatīvs"/>
 		</Ending>
 		<Ending ID="1771" StemChange="17" Ending="" StemID="1" LemmaEnding="1765">

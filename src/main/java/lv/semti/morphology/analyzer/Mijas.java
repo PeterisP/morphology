@@ -327,12 +327,16 @@ public abstract class Mijas {
 					if (syllables(celms) >= 2 || celms.endsWith("iņ") || celms.endsWith("īt"))
 						varianti.add(new Variants(celms));
 					break;
+				/*
+				// 2025-06-12 Baiba izskaidro, ka pēc mūsdienu latviešu valodas
+				// normām visiem 4. un 5. deklinācijas vārdiem pienākas viens
+				// vienskaitļa vokatīvs, kas sakrīt vienskaitļa nominatīvu
 				case 18: // garā sieviešu dzimtes vokatīva forma "laura!" "margrieta!"
 					if (syllables(celms) <= 2 && !celms.endsWith("iņ") && !celms.endsWith("īt"))
 						varianti.add(new Variants(celms));
 					if (syllables(celms) > 1 && (celms.endsWith("kāj") || celms.endsWith("māj")))
 						varianti.add(new Variants(celms));
-					break;
+					break;*/
 				case 20: //  dv. 3. konjugācijas tagadnes mija 1. personas tagadnei, -ot divdabim un vajadzībai - atšķiras no 26. mijas 'gulēt' un 'tecēt'
 					if (celms.endsWith("guļ") || celms.endsWith("gul")) // FIXME - dēļ 'gulošs' pieļaujam formu 'es gulu' ????  FIXME - Varbūt jāņem ārā, jo tagad ir divas paradigmas
 						varianti.add(new Variants(celms.substring(0,celms.length()-1)+"lē")); //gulēt -> guļošs un arī gulošs
@@ -1205,13 +1209,17 @@ public abstract class Mijas {
 							!(celms.endsWith("kāj") || celms.endsWith("māj")) )
 						varianti.add(new Variants(celms));
 					break;
+				/*
+				// 2025-06-12 Baiba izskaidro, ka pēc mūsdienu latviešu valodas
+				// normām visiem 4. un 5. deklinācijas vārdiem pienākas viens
+				// vienskaitļa vokatīvs, kas sakrīt vienskaitļa nominatīvu
 				case 18: // garā sieviešu dzimtes vokatīva forma "laura!" "margrieta!"
 					if (syllables(celms) < 2 || // NB! te ir < 2 bet pie atpazīšanas <= 2 - ar 2 zilbēm pagaidām atpazīst abus un ģenerē vienu
 							!(celms.endsWith("ij") || celms.endsWith("īn") || celms.endsWith("īt") || celms.endsWith("ān") || celms.endsWith("iņ") || celms.endsWith("ēn") || celms.endsWith("niec") || celms.endsWith("āj")) )
 						varianti.add(new Variants(celms));
 					if (syllables(celms) > 1 && (celms.endsWith("kāj") || celms.endsWith("māj")))
 						varianti.add(new Variants(celms));
-					break;
+					break;*/
 				case 20: //  dv. 3. konjugācijas tagadnes mija 1. personas tagadnei, -ot divdabim un vajadzībai - atšķiras no 26. mijas 'gulēt' un 'tecēt'
 					if (celms.endsWith("gulē")) {
 						varianti.add(new Variants(celms.substring(0,celms.length()-2)+"ļ")); //gulēt -> guļu
