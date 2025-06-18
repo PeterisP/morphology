@@ -3031,16 +3031,16 @@ public class MorphologyTest {
 
         List<Wordform> formas = locītājs.generateInflections("es");
         for (Wordform forma : formas) {
-            if (forma.getToken().equalsIgnoreCase("manīm"))
-                describe(new LinkedList<Wordform>(Arrays.asList(forma)));
+//            if (forma.getToken().equalsIgnoreCase("manīm"))
+//                describe(new LinkedList<Wordform>(Arrays.asList(forma)));
 //            assertNotEquals("manīm", forma.getToken()); // šo formu nedrīkst ģenerēt
 // 2024. - pārdomājām, ģenerēsim ar norādi "Reti"
         }
 
         formas = locītājs.generateInflections("tu");
         for (Wordform forma : formas) {
-            if (forma.getToken().equalsIgnoreCase("tevīm"))
-                describe(new LinkedList<Wordform>(Collections.singletonList(forma)));
+//            if (forma.getToken().equalsIgnoreCase("tevīm"))
+//                describe(new LinkedList<Wordform>(Collections.singletonList(forma)));
 //            assertNotEquals("tevīm", forma.getToken()); // šo formu nedrīkst ģenerēt
 // 2024. - pārdomājām, ģenerēsim ar norādi "Reti"
         }
@@ -3087,7 +3087,7 @@ public class MorphologyTest {
         // Jābūt gan variantam kā saitiņai, gan patstāvīgajā nozīmē 'man nav mājas'
         Word nav = locītājs.analyze("nav");
         assertTrue(nav.isRecognized());
-        nav.describe(System.out);
+//        nav.describe(System.out);
         boolean found_m = false;
         boolean found_c = false;
         boolean found_tag = false;
@@ -3536,7 +3536,6 @@ public class MorphologyTest {
         assertInflection(formas, testset, "šitajam");
 
         formas = locītājs.generateInflections("šitas");
-        describe(formas);
         assertInflection(formas, testset, "šitam");
     }
 
@@ -3553,7 +3552,6 @@ public class MorphologyTest {
 
         List<Wordform> formas = locītājs.generateInflectionsFromParadigm("trīs", 29);
         assertNotEquals(0, formas.size());
-        describe(formas);
     }
 
     // Ticket #59
@@ -3646,7 +3644,7 @@ public class MorphologyTest {
 
         options = locītājs.suitableParadigms("mazpokemoni");
         for (Paradigm p : options) {
-            System.out.printf("%d : %s\n", p.getID(), p.getName());
+//            System.out.printf("%d : %s\n", p.getID(), p.getName());
         }
     }
 
@@ -4319,7 +4317,6 @@ public class MorphologyTest {
         AttributeValues av = new AttributeValues();
         av.addAttribute(AttributeNames.i_Gender, AttributeNames.v_Feminine);
         List<Wordform> formas = locītājs.generateInflectionsFromParadigm("tūkstoša", 23, av);
-        describe(formas);
         assertNoForm(formas, "tūkstošs");
 
         Word w = locītājs.analyze("tūkstošām");
@@ -4331,7 +4328,6 @@ public class MorphologyTest {
         locītājs.enableVocative = true;
         Word onkul = locītājs.analyze("onkul");
         assertTrue(onkul.isRecognized());
-        onkul.describe(System.out);
 
         List<Wordform> formas = locītājs.generateInflectionsFromParadigm("onkulis", 3);
 //        describe(formas);

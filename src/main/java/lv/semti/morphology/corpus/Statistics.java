@@ -32,6 +32,7 @@ import lv.semti.morphology.attributes.AttributeNames;
 import lv.semti.morphology.attributes.AttributeValues;
 
 import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
@@ -93,13 +94,13 @@ public class Statistics {
 		}
 		stream.write("/>\n");
 
-		stream.write("<Leksēmu_biežums\n");
-		for (Entry<Integer,Integer> tuple : lexemeFrequency.entrySet()) {
-			if (tuple.getValue()>1) {
-				stream.write(" Leksēma_" + tuple.getKey().toString() + "=\"" + tuple.getValue().toString() + "\"");
+		stream.write("<Leksēmu_biežums>\n");
+		for (Entry<Integer, Integer> tuple : lexemeFrequency.entrySet()) {
+			if (tuple.getValue() > 1) {
+				stream.write("  <Leksēma id=\"" + tuple.getKey() + "\" count=\"" + tuple.getValue() + "\"/>\n");
 			}
 		}
-		stream.write("/>\n");
+		stream.write("</Leksēmu_biežums>\n");
 		stream.write("</Statistika>\n");
 		stream.flush();
 	}
@@ -164,13 +165,18 @@ public class Statistics {
 					int count = Integer.parseInt(n.getTextContent());
 					endingFrequency.put(endingId, count);
 				}
-			if (nodes.item(i).getNodeName().equals("Leksēmu_biežums"))
-				for (int j = 0; j < nodes.item(i).getAttributes().getLength(); j++) {
-					Node n = nodes.item(i).getAttributes().item(j);
-					int lexemeId = Integer.parseInt(n.getNodeName().substring(n.getNodeName().indexOf('_')+1));
-					int count = Integer.parseInt(n.getTextContent());
-					lexemeFrequency.put(lexemeId, count);
+			if (nodes.item(i).getNodeName().equals("Leksēmu_biežums")) {
+				NodeList children = nodes.item(i).getChildNodes();
+				for (int j = 0; j < children.getLength(); j++) {
+					Node child = children.item(j);
+					if (child.getNodeType() == Node.ELEMENT_NODE && child.getNodeName().equals("Leksēma")) {
+						Element el = (Element) child;
+						int lexemeId = Integer.parseInt(el.getAttribute("id"));
+						int count = Integer.parseInt(el.getAttribute("count"));
+						lexemeFrequency.put(lexemeId, count);
+					}
 				}
+			}
 		}
 	}
 

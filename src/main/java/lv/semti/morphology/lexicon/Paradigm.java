@@ -214,7 +214,6 @@ public class Paradigm extends AttributeValues {
 			lexeme.addAttribute(AttributeNames.i_Lemma, lexeme.getStem(getLemmaEnding().stemID-1) + getLemmaEnding().getEnding());
 
 		if (this.isMatchingStrong(AttributeNames.i_ParadigmProperties, AttributeNames.v_HardcodedWordforms)) { // Hardcoded un vietniekvārdu paradigma
-			lexeme.describe();
 			this.lexicon.hardcodedForms.put(lexeme.getID(), lexeme);
 		}
 
