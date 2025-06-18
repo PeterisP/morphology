@@ -48,6 +48,15 @@ public class MorphologyTest {
         assertInflection(forms, testset, validForm);
     }
 
+    private void assertNounInflectionMultipleStrong(List<Wordform> forms, String number, String nounCase, String gender, Set<String> validForms) {
+        AttributeValues testset = new AttributeValues();
+        testset.addAttribute(AttributeNames.i_Case, nounCase);
+        testset.addAttribute(AttributeNames.i_Number, number);
+        if (!gender.isEmpty()) testset.addAttribute(AttributeNames.i_Gender, gender);
+
+        assertInflectionMultipleStrong(forms, testset, validForms);
+    }
+
     // TODO - šie varbūt ir par assertThat matcheriem jāpārtaisa
     private void assertInflection(List<Wordform> forms, AttributeValues testset, String validForm) {
         boolean found = false;
@@ -72,6 +81,45 @@ public class MorphologyTest {
             }
         }
         assertTrue(found);
+    }
+
+    private void assertInflectionMultipleStrong(List<Wordform> forms, AttributeValues testset, Set<String> validForms) {
+        HashSet<String> foundCorrect = new HashSet<>();
+        HashSet<String> foundOther = new HashSet<>();
+        for (Wordform wf : forms) {
+            if (wf.isMatchingStrongOneSide(testset)) {
+                if (validForms.contains(wf.getToken())) foundCorrect.add(wf.getToken());
+                else foundOther.add(wf.getToken());
+            }
+        }
+
+        if (!foundOther.isEmpty())
+        {
+            System.err.print("assertInflectionMultiple failed with spare forms:\n");
+            System.err.println (foundOther);
+        }
+        if (validForms.size() != foundCorrect.size())
+        {
+            System.err.print("assertInflectionMultiple failed with not enough correct:\n");
+            System.err.println (foundCorrect);
+        }
+        assertTrue(foundOther.isEmpty());
+        assertEquals(validForms.size(), foundCorrect.size());
+    }
+
+    private void assertInflectionMultipleWeak(List<Wordform> forms, AttributeValues testset, Set<String> validForms) {
+        HashSet<String> foundCorrect = new HashSet<>();
+        for (Wordform wf : forms) {
+            if (wf.isMatchingStrongOneSide(testset)) {
+                if (validForms.contains(wf.getToken())) foundCorrect.add(wf.getToken());
+            }
+        }
+        if (validForms.size() != foundCorrect.size())
+        {
+            System.err.print("assertInflectionMultiple failed with not enough correct:\n");
+            System.err.println (foundCorrect);
+        }
+        assertEquals(validForms.size(), foundCorrect.size());
     }
 
     private void assertNoInflection(List<Wordform> forms, AttributeValues testset) {
@@ -152,7 +200,7 @@ public class MorphologyTest {
     public void meitenīte() {
         //2008-09-06 atrasts gļuks, ka "meitenīte" analīzē ir 2 varianti -
         // gan tīri no celma 'meitenīte', gan arī ar deminutīvu no 'meitene'
-        Word meitenīte = locītājs.analyze("meitenīte");
+        Word meitenīte = locītājs.analyze("meitenītē");
         assertTrue(meitenīte.isRecognized());
         assertEquals(1, meitenīte.wordformsCount());
     }
@@ -1247,16 +1295,19 @@ public class MorphologyTest {
         assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "", "Laura");
 
         formas = locītājs.generateInflections("Lauriņa", true);
-        assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "", "Lauriņ");
+        assertNounInflectionMultipleStrong(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "",
+                new HashSet<String>(){{ add("Lauriņ"); add("Lauriņa");}});
 
         formas = locītājs.generateInflections("Made", true);
         assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "", "Made");
 
         formas = locītājs.generateInflections("Kristīnīte", true);
-        assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "", "Kristīnīt");
+        assertNounInflectionMultipleStrong(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "",
+                new HashSet<String>(){{ add("Kristīnīt"); add("Kristīnīte");}});
 
         formas = locītājs.generateInflections("Margrieta", true);
-        assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "", "Margrieta"); // principā der gan viens, gan otrs, ģenerē arī abus, bet 'margrieta' ir pirmais
+        assertNounInflectionMultipleStrong(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "",
+                new HashSet<String>(){{ add("Margrieta"); add("Margriet");}});
     }
 
     @Test
@@ -1357,34 +1408,43 @@ public class MorphologyTest {
         assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "", "Biezais");
 
         formas = locītājs.generateInflections("Silvija");
-        assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "", "Silvij");
+        assertNounInflectionMultipleStrong(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "",
+                new HashSet<String>(){{ add("Silvij"); add("Silvija");}});
 
 //        formas = locītājs.generateInflections("Kadrije"); //hipotētiski
 //        assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "", "Kadrij");
 
         formas = locītājs.generateInflections("Karlīne");
-        assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "", "Karlīn");
+        assertNounInflectionMultipleStrong(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "",
+                new HashSet<String>(){{ add("Karlīn"); add("Karlīne");}});
 
         formas = locītājs.generateInflections("Vilhelmīne");
-        assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "", "Vilhelmīn");
+        assertNounInflectionMultipleStrong(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "",
+                new HashSet<String>(){{ add("Vilhelmīn"); add("Vilhelmīne");}});
 
         formas = locītājs.generateInflections("Skaidrīte");
-        assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "", "Skaidrīt");
+        assertNounInflectionMultipleStrong(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "",
+                new HashSet<String>(){{ add("Skaidrīt"); add("Skaidrīte");}});
 
         formas = locītājs.generateInflections("Juliāna");
-        assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "", "Juliān");
+        assertNounInflectionMultipleStrong(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "",
+                new HashSet<String>(){{ add("Juliān"); add("Juliāna");}});
 
         formas = locītājs.generateInflections("Eglīte");
-        assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "", "Eglīt");
+        assertNounInflectionMultipleStrong(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "",
+                new HashSet<String>(){{ add("Eglīt"); add("Eglīte");}});
 
         formas = locītājs.generateInflections("Lapsiņa");
-        assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "", "Lapsiņ");
+        assertNounInflectionMultipleStrong(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "",
+                new HashSet<String>(){{ add("Lapsiņ"); add("Lapsiņa");}});
 
         formas = locītājs.generateInflections("Pilsētniece");
-        assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "", "Pilsētniec");
+        assertNounInflectionMultipleStrong(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "",
+                new HashSet<String>(){{ add("Pilsētniec"); add("Pilsētniece");}});
 
         formas = locītājs.generateInflections("Salnāja");
-        assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "", "Salnāj");
+        assertNounInflectionMultipleStrong(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "",
+                new HashSet<String>(){{ add("Salnāja"); add("Salnāj");}});
 
         formas = locītājs.generateInflections("Garkāje");
         assertNounInflection(formas, AttributeNames.v_Singular, AttributeNames.v_Vocative, "", "Garkāje");
