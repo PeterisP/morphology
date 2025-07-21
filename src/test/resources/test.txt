@@ -1172,7 +1172,7 @@ maziņš	afmsnnp	maziņš	m-d1291-Mazais-princis-p45s1w11
 …	zs	...	m-d1291-Mazais-princis-p45s1w12
 </s>
 <s>
-Paskat	i	paskatīties	m-d1291-Mazais-princis-p46s1w1
+Paskat	i	paskat	m-d1291-Mazais-princis-p46s1w1
 <g />
 !	zs	!	m-d1291-Mazais-princis-p46s1w2
 </s>
@@ -12396,7 +12396,7 @@ numuru	ncmsa1	numurs	m-p11541-p2s1w47
 </s>
 <s>
 Pirmo	mosmsa	pirmais	m-p11541-p2s2w1
-trīs	mcsmpg	trīs	m-p11541-p2s2w2
+trīs	mcs0p0	trīs	m-p11541-p2s2w2
 mēnešu	ncmpg2	mēnesis	m-p11541-p2s2w3
 laikā	ncmsl1	laiks	m-p11541-p2s2w4
 mobilo	afmsayp	mobils	m-p11541-p2s2w5
@@ -20200,7 +20200,7 @@ veselības	ncfsg4	veselība	m-p11752-p1s10w22
 veicināšanas	ncfsg4	veicināšana	m-p11752-p1s10w23
 jautājumu	ncmpg1	jautājums	m-p11752-p1s10w24
 risināšanā	ncfsl4	risināšana	m-p11752-p1s10w25
-lokāli	r0n	lokāli	m-p11752-p1s10w26
+lokāli	rpn	lokāli	m-p11752-p1s10w26
 <g />
 ,	zc	,	m-p11752-p1s10w27
 paaugstināt	vmnn0t3000n	paaugstināt	m-p11752-p1s10w28
@@ -21137,7 +21137,7 @@ fondu	ncmsa1	fonds	m-p6582-p3s1w5
 uzņēmums	ncmsn1	uzņēmums	m-p6582-p3s1w6
 «	zq	"	m-p6582-p3s1w7
 <g />
-Lido	np0000	Lido	m-p6582-p3s1w8
+Lido	npm000	Lido	m-p6582-p3s1w8
 <g />
 »	zq	"	m-p6582-p3s1w9
 draudzējas	vmyipi230an	draudzēties	m-p6582-p3s1w10
@@ -22576,7 +22576,7 @@ ir	vcnipii30an	būt	m-p15007-p7s1w25
 netiešs	afmsnnp	netiešs	m-p15007-p7s1w26
 un	cc	un	m-p15007-p7s1w27
 tas	pd3msnn	tas	m-p15007-p7s1w28
-trīs	mcsmpg	trīs	m-p15007-p7s1w29
+trīs	mcs0p0	trīs	m-p15007-p7s1w29
 mēnešu	ncmpg2	mēnesis	m-p15007-p7s1w30
 laikā	ncmsl1	laiks	m-p15007-p7s1w31
 pēc	spsg	pēc	m-p15007-p7s1w32
@@ -27595,7 +27595,7 @@ un	cc	un	m-d60-p130s4w49
 skatās	vmyipt330an	skatīties	m-d60-p130s4w50
 kādas	pi0fpan	kāda	m-d60-p130s4w51
 minūtes	ncfpa5	minūte	m-d60-p130s4w52
-trīs	mcsfpa	trīs	m-d60-p130s4w53
+trīs	mcs0p0	trīs	m-d60-p130s4w53
 vai	cc	vai	m-d60-p130s4w54
 piecas	mcsfpa	pieci	m-d60-p130s4w55
 <g />
@@ -29756,7 +29756,7 @@ aizliegums	ncmsn1	aizliegums	m-p9678-p6s1w3
 pārvadāt	vmnn0t2000n	pārvadāt	m-p9678-p6s1w4
 bērnus	ncmpa1	bērns	m-p9678-p6s1w5
 līdz	spsd	līdz	m-p9678-p6s1w6
-trīs	mcsmpg	trīs	m-p9678-p6s1w7
+trīs	mcs0p0	trīs	m-p9678-p6s1w7
 gadu	ncmpg1	gads	m-p9678-p6s1w8
 vecumam	ncmsd1	vecums	m-p9678-p6s1w9
 automobilī	ncmsl2	automobilis	m-p9678-p6s1w10
@@ -30492,7 +30492,7 @@ parādīju	vmnist31san	parādīt	m-d1291-Mazais-princis-p11s1w2
 savu	ps0msan	savs	m-d1291-Mazais-princis-p11s1w3
 mākslas	ncfsg4	māksla	m-d1291-Mazais-princis-p11s1w4
 darbu	ncmsa1	darbs	m-d1291-Mazais-princis-p11s1w5
-pieaugušajiem	afmpdyp	pieaugušais	m-d1291-Mazais-princis-p11s1w6
+pieaugušajiem	vmnpdmpdasypn	pieaugt	m-d1291-Mazais-princis-p11s1w6
 un	cc	un	m-d1291-Mazais-princis-p11s1w7
 jautāju	vmnipt21san	jautāt	m-d1291-Mazais-princis-p11s1w8
 <g />
@@ -32384,7 +32384,7 @@ būvi	ncfsa5	būve	m-p15313-p10s1w18
 Kaļiņingradā	npfsl4	Kaļiņingrada	m-p15313-p10s1w19
 un	cc	un	m-p15313-p10s1w20
 tās	pd3fsgn	tā	m-p15313-p10s1w21
-sekām	ncfpd4	seka	m-p15313-p10s1w22
+sekām	ncfdd4	sekas	m-p15313-p10s1w22
 Lietuvai	npfsd4	Lietuva	m-p15313-p10s1w23
 <g />
 .	zs	.	m-p15313-p10s1w24
@@ -33877,7 +33877,7 @@ skaldīšana	ncfsn4	skaldīšana	m-p9453-p3s2w6
 un	cc	un	m-p9453-p3s2w7
 braukšana	ncfsn4	braukšana	m-p9453-p3s2w8
 ar	sppd	ar	m-p9453-p3s2w9
-radžotām	vmnpdfpdpsnpn	radžot	m-p9453-p3s2w10
+radžotām	affpdnp	radžots	m-p9453-p3s2w10
 auto	ncm000	auto	m-p9453-p3s2w11
 riepām	ncfpd4	riepa	m-p9453-p3s2w12
 <g />
@@ -36399,7 +36399,7 @@ ka	cs	ka	m-p3759-p4s1w4
 investīcijas	ncfpa4	investīcija	m-p3759-p4s1w5
 plānots	vmnpdmsnpsnpn	plānot	m-p3759-p4s1w6
 atpelnīt	vmnn0t3000n	atpelnīt	m-p3759-p4s1w7
-trīs	mcsmpg	trīs	m-p3759-p4s1w8
+trīs	mcs0p0	trīs	m-p3759-p4s1w8
 līdz	cs	līdz	m-p3759-p4s1w9
 septiņu	mcsmpg	septiņi	m-p3759-p4s1w10
 gadu	ncmpg1	gads	m-p3759-p4s1w11
@@ -40221,7 +40221,7 @@ pamatskolā	ncfsl4	pamatskola	m-z96-p69s3w7
 <g />
 pirmsskola	ncfsn4	pirmsskola	m-z96-p69s3w9
 un	cc	un	m-z96-p69s3w10
-trīs	mcsmpn	trīs	m-z96-p69s3w11
+trīs	mcsfpn	trīs	m-z96-p69s3w11
 pirmās	mosfpn	pirmais	m-z96-p69s3w12
 klases	ncfpn5	klase	m-z96-p69s3w13
 <g />

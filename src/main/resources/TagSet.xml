@@ -258,7 +258,7 @@
 	<Value LV="Nominatīvs" EN="Nominative" GF="Nom" Tag="n"/>
 	<Value LV="Ģenitīvs" EN="Genitive" GF="Gen" Tag="g"/>
 	<Value LV="Datīvs" EN="Dative" GF="Dat" Tag="d"/>
-	<Value LV="Akuzatīvs" EN="Accusative" GF="Acc"Tag="a"/>
+	<Value LV="Akuzatīvs" EN="Accusative" GF="Acc" Tag="a"/>
 	<Value LV="Lokatīvs" EN="Locative" GF="Loc" Tag="l"/>
 </Attribute>
 <Attribute LV="Noliegums" EN="Negation" GF="Polarity" PartOfSpeech="Vietniekvārds" MarkupPos="6"> <!-- GF: ParamX.gf -->

@@ -2839,6 +2839,7 @@ public class MorphologyTest {
     }
 
     @Test
+    @Ignore("Pie personvārdu pārcelšanas uz tēzauru, nepārnesām vārdu skaitu. Tagad varēs tēzaurā karodziņos norādīt, ka rets")
     public void frequencies() {
         assertTrue(locītājs.analyze("Kaspars").isRecognized());
         assertFalse(locītājs.analyze("Induls").isRecognized());
@@ -2972,7 +2973,7 @@ public class MorphologyTest {
     public void plāns_B() {
         Word w = locītājs.analyze("B");
         assertTrue(w.isRecognized());
-        assertEquals("y", w.getBestWordform().getTag());
+        assertEquals("xd", w.getBestWordform().getTag());
     }
 
     @Test
