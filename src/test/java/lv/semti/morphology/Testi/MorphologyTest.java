@@ -4437,4 +4437,18 @@ public class MorphologyTest {
         Wordform forma = vispārīgākajiem.getBestWordform();
         assertEquals("vispārīgs", forma.getValue(AttributeNames.i_Lemma));
     }
+
+    @Test
+    public void ticket152() {
+        Word negribētu = locītājs.analyze("negribētu");
+        assertTrue(negribētu.isRecognized());
+        describe(negribētu.wordforms);
+        boolean found = false;
+        for (Wordform wf :  negribētu.wordforms) {
+            if (wf.isMatchingStrong(AttributeNames.i_Mood, AttributeNames.v_Conditional))
+                found = true;
+        }
+        assertTrue(found);
+
+    }
 }

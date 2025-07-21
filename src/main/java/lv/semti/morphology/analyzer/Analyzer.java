@@ -290,7 +290,8 @@ public class Analyzer extends Lexicon {
 		
 		if (enablePrefixes) {
 			if (!result.isRecognized()
-					|| (word.startsWith(this.NEGATION_PREFIX) && !result.hasAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb))) {
+					|| (word.startsWith(this.NEGATION_PREFIX) &&
+					(!result.hasAttribute(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb)) || result.hasAttribute(AttributeNames.i_Mood, AttributeNames.v_Participle))) {
 				for (Wordform wf : guessByPrefix(word).wordforms) {
 					result.addWordform(wf);
 				}
