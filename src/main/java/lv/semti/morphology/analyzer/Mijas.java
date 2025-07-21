@@ -249,8 +249,11 @@ public abstract class Mijas {
 						else varianti.add(new Variants(celms.substring(0,celms.length()-1)+"ž"));  // kožu -> kod
 					}
 					else if (celms.endsWith("l")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"ļ"));
-					else if (celms.endsWith("s")) varianti.add(new Variants(celms.substring(0,celms.length()-1)+"š")); // elšu -> elsis
-					else if (!celms.endsWith("ņem") && (celms.endsWith("m") || celms.endsWith("b") || celms.endsWith("p")))	varianti.add(new Variants(celms+"j")); //stumju -> stum
+					else if (!celms.endsWith("ņem") && (celms.endsWith("m") || celms.endsWith("b")))	varianti.add(new Variants(celms+"j")); //stumju -> stum
+					else if (celms.endsWith("p")) {
+						varianti.add(new Variants(celms)); // cep -> cep
+						varianti.add(new Variants(celms+"j")); // cepj -> cep
+					}
 					else if (celms.endsWith("c")) {
 						varianti.add(new Variants(celms.substring(0,celms.length()-1)+"k"));  // raku -> racis
 						varianti.add(new Variants(celms.substring(0,celms.length()-1)+"c"));  // veicu -> veicis

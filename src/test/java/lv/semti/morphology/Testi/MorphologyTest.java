@@ -4442,10 +4442,23 @@ public class MorphologyTest {
     public void ticket152() {
         Word negribētu = locītājs.analyze("negribētu");
         assertTrue(negribētu.isRecognized());
-        describe(negribētu.wordforms);
         boolean found = false;
         for (Wordform wf :  negribētu.wordforms) {
             if (wf.isMatchingStrong(AttributeNames.i_Mood, AttributeNames.v_Conditional))
+                found = true;
+        }
+        assertTrue(found);
+    }
+
+    @Test
+    // bubuļfailā konstatēja, ka ir tikai 3. personas forma bet ne 2. un pavēles
+    public void cep() {
+        Word cep = locītājs.analyze("cep");
+        assertTrue(cep.isRecognized());
+        describe(cep.wordforms);
+        boolean found = false;
+        for (Wordform wf :  cep.wordforms) {
+            if (wf.isMatchingStrong(AttributeNames.i_Mood, AttributeNames.v_Imperative))
                 found = true;
         }
         assertTrue(found);

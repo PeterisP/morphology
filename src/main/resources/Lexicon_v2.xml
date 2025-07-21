@@ -5163,7 +5163,7 @@
 		</Ending>
 	</Paradigm>
 	<Paradigm Stems="1" ID="32" Name="noun-r1" LemmaEnding="2057" Description="Atgriezeniskie lietvārdi ar galotnēm -ājies, -ējies (klausītājies, pakaļdzinējies)" DescriptionEN="Reflexive nouns ending -ājies, -ējies (klausītājies, pakaļdzinējies)" AllowedGuessEndings="!">
-		<Attributes Vārdšķira="Lietvārds" Deklinācija="Nepiemīt" Morfotabulas_tips="Lietvārds"/>
+		<Attributes Vārdšķira="Lietvārds" Deklinācija="Atgriezenisks" Morfotabulas_tips="Lietvārds"/>
 		<Ending ID="2057" StemChange="0" Ending="jies" StemID="1">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs" Dzimte="Vīriešu"/>
 		</Ending>
@@ -5202,7 +5202,7 @@
 		</Ending>
 	</Paradigm>	
 	<Paradigm Stems="1" ID="33" Name="noun-r2" LemmaEnding="2069" Description="Atgriezeniskie lietvārdi ar galotni -umies (vēlējumies)" DescriptionEN="Reflexive nouns ending -umies (vēlējumies)" AllowedGuessEndings="!">
-		<Attributes Vārdšķira="Lietvārds" Deklinācija="Nepiemīt" Dzimte="Vīriešu" Morfotabulas_tips="Lietvārds"/>
+		<Attributes Vārdšķira="Lietvārds" Deklinācija="Atgriezenisks" Dzimte="Vīriešu" Morfotabulas_tips="Lietvārds"/>
 		<Ending ID="2069" StemChange="0" Ending="umies" StemID="1">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
 		</Ending>
@@ -5217,7 +5217,7 @@
 		</Ending>
 	</Paradigm>	
 	<Paradigm Stems="1" ID="34" Name="noun-r3" LemmaEnding="2073" Description="Atgriezeniskie lietvārdi ar galotni -šanās (acīsskatīšanās)" DescriptionEN="Reflexive nouns ending -šanās (acīsskatīšanās)" AllowedGuessEndings="!">
-		<Attributes Vārdšķira="Lietvārds" Deklinācija="Nepiemīt" Dzimte="Sieviešu" Morfotabulas_tips="Lietvārds"/>
+		<Attributes Vārdšķira="Lietvārds" Deklinācija="Atgriezenisks" Dzimte="Sieviešu" Morfotabulas_tips="Lietvārds"/>
 		<Ending ID="2073" StemChange="0" Ending="šanās" StemID="1">
 			<Attributes Skaitlis="Vienskaitlis" Locījums="Nominatīvs"/>
 		</Ending>
