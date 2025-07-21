@@ -4455,13 +4455,41 @@ public class MorphologyTest {
     public void cep() {
         Word cep = locītājs.analyze("cep");
         assertTrue(cep.isRecognized());
-        describe(cep.wordforms);
         boolean found = false;
         for (Wordform wf :  cep.wordforms) {
             if (wf.isMatchingStrong(AttributeNames.i_Mood, AttributeNames.v_Imperative))
                 found = true;
         }
         assertTrue(found);
-
     }
+
+    @Test
+    // bubuļfailā konstatēja, ka neatpazīst normālo no 'dzīt', tikai kaut kādu saīsinājumu
+    public void dzīs() {
+        Word dzīs = locītājs.analyze("dzīs");
+        assertTrue(dzīs.isRecognized());
+        describe(dzīs.wordforms);
+        boolean found = false;
+        for (Wordform wf :  dzīs.wordforms) {
+            if (wf.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Verb))
+                found = true;
+        }
+        assertTrue(found);
+    }
+
+
+    @Test
+    // bubuļfailā konstatēja, ka nav 3. pers forma no plīvot bet tikai no plīvēt
+    public void plīv() {
+        Word plīv = locītājs.analyze("plīv");
+        assertTrue(plīv.isRecognized());
+        describe(plīv.wordforms);
+        boolean found = false;
+        for (Wordform wf :  plīv.wordforms) {
+            if (wf.isMatchingStrong(AttributeNames.i_Lemma, "plīvot"))
+                found = true;
+        }
+        assertTrue(found);
+    }
+
 }

@@ -222,7 +222,11 @@ public abstract class Mijas {
 					break;
 				case 6: // 1. konjugācijas nākotne
 					if (celms.endsWith("dī") || celms.endsWith("tī") || celms.endsWith("sī")) varianti.add(new Variants(celms.substring(0,celms.length()-2)+"s"));
-					else if (celms.endsWith("zī") || celms.endsWith("šī")) varianti.add(new Variants(celms.substring(0,celms.length()-1))); // lūzt, griezt
+					else if (celms.endsWith("šī")) varianti.add(new Variants(celms.substring(0,celms.length()-1))); // lūzt, griezt
+					else if (celms.endsWith("zī")) {
+						varianti.add(new Variants(celms.substring(0,celms.length()-1))); // lūzt, griezt
+						varianti.add(new Variants(celms)); // atzīšos
+					}
 					else if (!celms.endsWith("d") && !celms.endsWith("t") && !celms.endsWith("s") && !celms.endsWith("z")) varianti.add(new Variants(celms));
 					break;
 				case 7: // 1. konjugācijas 2. personas tagadne
@@ -244,7 +248,7 @@ public abstract class Mijas {
 					}
 					else if (celms.endsWith("d")) {
 						//tikai attiecīgajiem vārdiem, pārējiem visiem 2. personas tagadnei jābūt galā -i, piem. 'pazūdi', 'atrodi'
-						if (celms.endsWith("dod") || celms.endsWith("ved") || celms.endsWith("ēd"))
+						if (celms.endsWith("dod") || celms.endsWith("ved") || (celms.endsWith("ēd") && !celms.endsWith("sēd")) )
 							varianti.add(new Variants(celms));
 						else varianti.add(new Variants(celms.substring(0,celms.length()-1)+"ž"));  // kožu -> kod
 					}
@@ -280,6 +284,7 @@ public abstract class Mijas {
 					else {
 						varianti.add(new Variants(celms+"ē")); // if (celms.endsWith("i")) varianti.add(celms.substring(0,celms.length()-1)+"ē");
 						varianti.add(new Variants(celms+"ā"));
+						varianti.add(new Variants(celms+"o")); // plīvot -> plīv
 					}
 					break;
 				case 10: // īpašības vārds -āk- un vis-, -i apstākļa formai
