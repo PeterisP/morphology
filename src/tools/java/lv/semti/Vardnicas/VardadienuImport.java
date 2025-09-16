@@ -86,7 +86,7 @@ public class VardadienuImport {
 								
 				if (w.wordforms.size() == 0) {					
 					if (vārds.endsWith("o") || vārds.endsWith("ē") || vārds.endsWith("ū") || vārds.endsWith("ī") || vārds.endsWith("i") || vārds.endsWith("u")) {
-						Lexeme jaunais = analizators.createLexeme(vārds, 111, source); // Nelokāmie lietvārdi
+						Lexeme jaunais = analizators.createLexeme(vārds, analizators.endingByID( 111), source); // Nelokāmie lietvārdi
 						jaunais.addAttribute(AttributeNames.i_NounType, AttributeNames.v_ProperNoun);
 						jaunais.addAttribute("Īpašvārda veids", "Priekšvārds");
 						jaunais.addAttribute(AttributeNames.i_Lemma, vārds);
@@ -97,7 +97,7 @@ public class VardadienuImport {
 						izeja.println("Neuzminējās varianti '" + w.getToken() +"'!");					
 					}
 				} else if (w.wordforms.size() == 1) {					
-					Lexeme jaunais = analizators.createLexeme(vārds, w.wordforms.get(0).getEnding().getID(),source);
+					Lexeme jaunais = analizators.createLexeme(vārds, w.wordforms.get(0).getEnding(),source);
 					jaunais.addAttribute(AttributeNames.i_NounType, AttributeNames.v_ProperNoun);
 					jaunais.addAttribute("Īpašvārda veids", "Priekšvārds");
 					jaunais.addAttribute(AttributeNames.i_Lemma, vārds);

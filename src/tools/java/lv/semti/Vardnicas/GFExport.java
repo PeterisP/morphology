@@ -138,10 +138,10 @@ public class GFExport {
 		
 		String verbForm = null;
 		if (vārdšķira.equalsIgnoreCase(AttributeNames.v_Verb)) {
-			String izteiksme = ending.getValue(AttributeNames.i_Izteiksme);
+			String izteiksme = ending.getValue(AttributeNames.i_Mood);
 			if (izteiksme == null) return null;
-			if (izteiksme.equalsIgnoreCase(AttributeNames.v_Nenoteiksme)) verbForm = "\t\t\tInfinitive";
-			if (izteiksme.equalsIgnoreCase(AttributeNames.v_Iisteniibas)) {												
+			if (izteiksme.equalsIgnoreCase(AttributeNames.v_Infinitive)) verbForm = "\t\t\tInfinitive";
+			if (izteiksme.equalsIgnoreCase(AttributeNames.v_Indicative)) {
 				verbForm = "\t\t\tIndicative ";
 				if (ending.isMatchingStrong(AttributeNames.i_Person, "1")) verbForm += "P1";
 				if (ending.isMatchingStrong(AttributeNames.i_Person, "2")) verbForm += "P2";
@@ -151,20 +151,20 @@ public class GFExport {
 				if (ending.isMatchingStrong(AttributeNames.i_Number, AttributeNames.v_Singular)) verbForm += "Sg";
 				if (ending.isMatchingStrong(AttributeNames.i_Number, AttributeNames.v_NA)) verbForm += "_";
 				verbForm += " ";
-				if (ending.isMatchingStrong(AttributeNames.i_Laiks, AttributeNames.v_Tagadne)) verbForm += "Pres";
-				if (ending.isMatchingStrong(AttributeNames.i_Laiks, AttributeNames.v_Naakotne)) verbForm += "Fut";
-				if (ending.isMatchingStrong(AttributeNames.i_Laiks, AttributeNames.v_Pagaatne)) verbForm += "Past";
+				if (ending.isMatchingStrong(AttributeNames.i_Tense, AttributeNames.v_Present)) verbForm += "Pres";
+				if (ending.isMatchingStrong(AttributeNames.i_Tense, AttributeNames.v_Future)) verbForm += "Fut";
+				if (ending.isMatchingStrong(AttributeNames.i_Tense, AttributeNames.v_Past)) verbForm += "Past";
 			}
-			if (izteiksme.equalsIgnoreCase(AttributeNames.v_Atstaastiijuma)) {												
+			if (izteiksme.equalsIgnoreCase(AttributeNames.v_Quotative)) {
 				verbForm = "\t\t\tRelative ";
-				if (ending.isMatchingStrong(AttributeNames.i_Laiks, AttributeNames.v_Tagadne)) verbForm += "Pres";
-				if (ending.isMatchingStrong(AttributeNames.i_Laiks, AttributeNames.v_Naakotne)) verbForm += "Fut";
-				if (ending.isMatchingStrong(AttributeNames.i_Laiks, AttributeNames.v_Pagaatne)) verbForm += "Past";
+				if (ending.isMatchingStrong(AttributeNames.i_Tense, AttributeNames.v_Present)) verbForm += "Pres";
+				if (ending.isMatchingStrong(AttributeNames.i_Tense, AttributeNames.v_Future)) verbForm += "Fut";
+				if (ending.isMatchingStrong(AttributeNames.i_Tense, AttributeNames.v_Past)) verbForm += "Past";
 			}
-			if (izteiksme.equalsIgnoreCase(AttributeNames.v_Veeleejuma)) {												
+			if (izteiksme.equalsIgnoreCase(AttributeNames.v_Conditional)) {
 				verbForm = "\t\t\tIndicative _ _ Cond ";
 			}
-			if (izteiksme.equalsIgnoreCase(AttributeNames.v_Vajadziibas)) {
+			if (izteiksme.equalsIgnoreCase(AttributeNames.v_Debitive)) {
 				if (ending.getEnding().endsWith("ot") || ending.getEnding().endsWith("oties"))
 					verbForm = "\t\t\tDebitiveRelative ";
 				else verbForm = "\t\t\tDebitive ";
@@ -172,7 +172,7 @@ public class GFExport {
 			if (izteiksme.equalsIgnoreCase(AttributeNames.v_Participle)) {
 				if (!ending.isMatchingStrong(AttributeNames.i_Voice, AttributeNames.v_Active)) return null; //TODO - ciešamā kārta citur vajadzīga būs 
 				if (!ending.isMatchingStrong(AttributeNames.i_Lokaamiiba, AttributeNames.v_Lokaams)) return null; //TODO - nelokāmie citur vajadzīgi būs
-				if (!ending.isMatchingStrong(AttributeNames.i_Laiks, AttributeNames.v_Pagaatne)) return null; //TODO - citi citur vajadzīgi būs
+				if (!ending.isMatchingStrong(AttributeNames.i_Tense, AttributeNames.v_Past)) return null; //TODO - citi citur vajadzīgi būs
 				if (!ending.isMatchingStrong(AttributeNames.i_Definiteness, AttributeNames.v_Indefinite)) return null; //TODO - citi citur vajadzīgi būs
 				
 				verbForm = "\t\t\tParticiple ";

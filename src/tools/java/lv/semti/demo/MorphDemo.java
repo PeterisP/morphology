@@ -117,7 +117,8 @@ public class MorphDemo {
 				if (duplicates == null || duplicates.size() == 0) {
 					Lexeme new_lexeme = morph.createLexeme(
 						lemma.toLowerCase(), 									// Base form
-						morph.paradigmByID(group_id).getLemmaEnding().getID(),	// ID of the ending in the inflectional paradigm
+						//morph.paradigmByID(group_id).getLemmaEnding().getID(),	// ID of the ending in the inflectional paradigm
+						morph.paradigmByID(group_id).getLemmaEnding(),	// ID of the ending in the inflectional paradigm
 						"Demo (" + new Date() + ")"								// Source
 					);
 					// P.S. A java.lang.Error is thrown, if the provided group_id does not match with any of the suggested word groups.
