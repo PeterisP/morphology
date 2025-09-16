@@ -1,6 +1,6 @@
 /*******************************************************************************
- * Copyright 2008, 2009, 2014 Institute of Mathematics and Computer Science, University of Latvia
- * Author: Pēteris Paikens
+ * Copyright 2008, 2009, 2014, 2025 Institute of Mathematics and Computer Science, University of Latvia
+ * Author: Pēteris Paikens, Lauma Pretkalniņa
  * 
  *     This program is free software: you can redistribute it and/or modify
  *     it under the terms of the GNU General Public License as published by
@@ -19,7 +19,6 @@ package lv.semti.morphology.attributes;
 
 import java.io.IOException;
 import java.io.Writer;
-import java.util.LinkedList;
 import java.util.List;
 
 import org.w3c.dom.Node;
@@ -27,6 +26,7 @@ import org.w3c.dom.Node;
 abstract class Attribute {
 	String attributeLV = "";
 	String attributeEN = "";
+	String attributeGF = "";
 	String description = "";
 	
 	protected abstract String xmlTagName(); 
@@ -41,27 +41,33 @@ abstract class Attribute {
 		n = node.getAttributes().getNamedItem("EN");
 		if (n != null)
 			this.attributeEN = n.getTextContent();
+
+		n = node.getAttributes().getNamedItem("GF");
+		if (n != null)
+			this.attributeGF = n.getTextContent();
 		
 		n = node.getAttributes().getNamedItem("Description");
 		if (n != null)
 			this.description = n.getTextContent();
 	}
 	
-	public void toXML (Writer straume) throws IOException {
-		straume.write("<"+xmlTagName());
+	public void toXML (Writer outputStream) throws IOException {
+		outputStream.write("<"+xmlTagName());
 		if (!attributeLV.equals(""))
-			straume.write(" LV=\"" + this.attributeLV + "\"");
+			outputStream.write(" LV=\"" + this.attributeLV + "\"");
 		if (!attributeEN.equals(""))
-			straume.write(" EN=\"" + this.attributeEN + "\"");
+			outputStream.write(" EN=\"" + this.attributeEN + "\"");
+		if (!attributeGF.equals(""))
+			outputStream.write(" GF=\"" + this.attributeGF + "\"");
 		if (!this.description.equals(""))
-			straume.write(" Description=\"" + this.description + "\"");
-		straume.write(">\n");
+			outputStream.write(" Description=\"" + this.description + "\"");
+		outputStream.write(">\n");
 		// FIXME - netiek noseivoti tagu pozīcijas atribūti
-		toXMLData(straume);
-		straume.write("</" + xmlTagName() + ">\n");
+		toXMLData(outputStream);
+		outputStream.write("</" + xmlTagName() + ">\n");
 	}
 
-	protected abstract void toXMLData(Writer straume) throws IOException;
+	protected abstract void toXMLData(Writer outputStream) throws IOException;
 	public abstract boolean isAllowed(String value);
 
 	public abstract List<String> getAllowedValues(String language);

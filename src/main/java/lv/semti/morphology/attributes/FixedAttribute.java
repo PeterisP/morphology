@@ -55,9 +55,9 @@ class FixedAttribute extends Attribute {
 		}
 	}
 	
-	protected void toXMLData(Writer straume) throws IOException {
+	protected void toXMLData(Writer outputStream) throws IOException {
 		for (AttributeValue vērtība : allowedValues) {
-			straume.write(vērtība.getXml()); 
+			outputStream.write(vērtība.getXml());
 		}
 	}	
 	
@@ -98,6 +98,8 @@ class FixedAttribute extends Attribute {
 				values.addAttribute(this.attributeLV, tagValue.valueLV);
 			if (language.equalsIgnoreCase("EN"))
 				values.addAttribute(this.attributeEN, tagValue.valueEN);
+			if (language.equalsIgnoreCase("GF"))
+				values.addAttribute(this.attributeGF, tagValue.valueEN);
 		}
 	}
 

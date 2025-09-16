@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright 2008, 2009, 2014 Institute of Mathematics and Computer Science, University of Latvia
+ * Copyright 2008, 2009, 2014, 2025 Institute of Mathematics and Computer Science, University of Latvia
  * Author: Pēteris Paikens
  * 
  *     This program is free software: you can redistribute it and/or modify

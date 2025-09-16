@@ -112,7 +112,8 @@ public class TagSet {
 			String attributeName2 = null;
 			if (language.equals("LV")) attributeName2 = attribute.attributeLV;
 			if (language.equals("EN")) attributeName2 = attribute.attributeEN;
-			
+			if (language.equals("GF")) attributeName2 = attribute.attributeGF;
+
 			if (attributeName.equals(attributeName2)) result.add(attribute);
 		}
 		return result;
@@ -165,6 +166,7 @@ public class TagSet {
 		for (Attribute attribute : attributes) {
 			if (language.equals("LV")) result.add(attribute.attributeLV);
 			if (language.equals("EN")) result.add(attribute.attributeEN);			
+			if (language.equals("GF")) result.add(attribute.attributeGF);
 		}
 		
 		return result;

@@ -38,7 +38,7 @@ class FreeAttribute extends Attribute {
 	}
 
 	@Override
-	protected void toXMLData(Writer straume) throws IOException {
+	protected void toXMLData(Writer outputStream) throws IOException {
 		// nothing to do here		
 	}
 
