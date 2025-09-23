@@ -254,6 +254,24 @@ public class Paradigm extends AttributeValues {
 		lexicon.invalidateAllEndings();
 	}
 
+	/**
+	 * Return a list of endings matching given search criterion - an attribute
+	 * value pair.
+	 * @param attribute	LV name of the attribute to search by
+	 * @param value		LV name of the attribute value to search by
+	 * @return			list of all found Ending objects (empty, if none found)
+	 */
+	public ArrayList<Ending> getEndingsByAttribute (String attribute, String value)
+	{
+		ArrayList<Ending> result = new ArrayList<>();
+		for (Ending e : this.endings)
+		{
+			if (e.isMatchingStrong(attribute, value))
+				result.add(e);
+		}
+		return result;
+	}
+
 	public int getID() {
 		return id;
 	}
