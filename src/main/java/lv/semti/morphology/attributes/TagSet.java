@@ -23,6 +23,7 @@ import java.io.Writer;
 import java.io.InputStream;
 import java.util.AbstractCollection;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Map.Entry;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -119,6 +120,21 @@ public class TagSet {
 		return result;
 	}
 
+	public LinkedList<Attribute> getAttribute(String attributeName, String partOfSpeech, String language){
+		LinkedList<Attribute> result = new LinkedList<>();
+		for (Attribute attribute : attributes) {
+			String attributeName2 = null;
+			if (language.equals("LV")) attributeName2 = attribute.attributeLV;
+			if (language.equals("EN")) attributeName2 = attribute.attributeEN;
+			if (language.equals("GF")) attributeName2 = attribute.attributeGF;
+
+			if (attributeName.equals(attributeName2)
+					&& (partOfSpeech == null || partOfSpeech.isEmpty() || partOfSpeech.equals(attribute.partOfSpeech)))
+				result.add(attribute);
+		}
+		return result;
+	}
+
 	public String validate(AttributeValues attributesToBeChecked, String language) {
 		for (Entry<String,String> pāris : attributesToBeChecked.entrySet()) {
 			LinkedList<Attribute> attrs = getAttribute(pāris.getKey(), language);
@@ -150,7 +166,7 @@ public class TagSet {
 		pipe.flush();
 	}
 
-	public Object[] getAllowedValues(String attributeName, String language) {
+	public List<String> getAllowedValues(String attributeName, String language) {
 		LinkedList<String> result = new LinkedList<String>();
 		LinkedList<Attribute> attrs = getAttribute(attributeName, language); 
 		for (Attribute a : attrs) {
@@ -158,7 +174,7 @@ public class TagSet {
 				if (!result.contains(av)) result.add(av);
 			}
 		}
-		return result.toArray();
+		return result;
 	}
 	
 	public AbstractCollection<String> allowedAttributes(String language) {
