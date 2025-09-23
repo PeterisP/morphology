@@ -23,12 +23,13 @@ import java.util.List;
 
 import org.w3c.dom.Node;
 
-abstract class Attribute {
-	String attributeLV = "";
-	String attributeEN = "";
-	String attributeGF = "";
+public abstract class Attribute {
+	public String attributeLV = "";
+	public String attributeEN = "";
+	public String attributeGF = "";
 	String description = "";
-	
+	String partOfSpeech;
+
 	protected abstract String xmlTagName(); 
 
 	Attribute (Node node) {
@@ -49,6 +50,10 @@ abstract class Attribute {
 		n = node.getAttributes().getNamedItem("Description");
 		if (n != null)
 			this.description = n.getTextContent();
+
+		n = node.getAttributes().getNamedItem("PartOfSpeech");
+		if (n != null)
+			this.partOfSpeech = n.getTextContent();
 	}
 	
 	public void toXML (Writer outputStream) throws IOException {
@@ -59,6 +64,8 @@ abstract class Attribute {
 			outputStream.write(" EN=\"" + this.attributeEN + "\"");
 		if (!attributeGF.equals(""))
 			outputStream.write(" GF=\"" + this.attributeGF + "\"");
+		if (partOfSpeech!= null && !partOfSpeech.equals(""))
+			outputStream.write(" PartOfSpeech=\"" + this.partOfSpeech + "\"");
 		if (!this.description.equals(""))
 			outputStream.write(" Description=\"" + this.description + "\"");
 		outputStream.write(">\n");

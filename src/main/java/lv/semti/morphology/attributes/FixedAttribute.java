@@ -30,17 +30,20 @@ import org.w3c.dom.NodeList;
  * Atribūti, kam atļauts tikai fiksēts saraksts ar vērtībām
  *
  */
-class FixedAttribute extends Attribute {
+public class FixedAttribute extends Attribute {
 	LinkedList<AttributeValue> allowedValues = new LinkedList<AttributeValue>();
-	String partOfSpeech;
+	//String partOfSpeech;
 	int markupPos = -1;
 	
 	FixedAttribute (Node node) {
 		super(node);
-		
-		Node n = node.getAttributes().getNamedItem("PartOfSpeech");
+
+		Node n;
+		/* // Pārcelts uz virsklasi
+		n = node.getAttributes().getNamedItem("PartOfSpeech");
 		if (n != null)
 			this.partOfSpeech = n.getTextContent();
+		 */
 		n = node.getAttributes().getNamedItem("MarkupPos");
 		if (n != null)
 			this.markupPos = Integer.parseInt(n.getTextContent());
@@ -75,6 +78,8 @@ class FixedAttribute extends Attribute {
 				result.add(av.valueLV);
 			if (language.equalsIgnoreCase("EN"))
 				result.add(av.valueEN);
+			if (language.equalsIgnoreCase("GF"))
+				result.add(av.valueGF);
 		}
 		return result;
 	}
@@ -99,7 +104,7 @@ class FixedAttribute extends Attribute {
 			if (language.equalsIgnoreCase("EN"))
 				values.addAttribute(this.attributeEN, tagValue.valueEN);
 			if (language.equalsIgnoreCase("GF"))
-				values.addAttribute(this.attributeGF, tagValue.valueEN);
+				values.addAttribute(this.attributeGF, tagValue.valueGF);
 		}
 	}
 
@@ -144,11 +149,24 @@ class FixedAttribute extends Attribute {
 				return option.valueEN;
 		return null;
 	}
+
+	/**
+	 * Finds the appropriate english translation of a LV value for this attribute
+	 * @param valueLV
+	 * @return The translation, or null if it's not found
+	 */
+	public String toGF(String valueLV) {
+		for (AttributeValue option : allowedValues)
+			if (option.valueLV.equalsIgnoreCase(valueLV))
+				return option.valueGF;
+		return null;
+	}
 }
 
 class AttributeValue {
-	String valueLV="_missing_";
-	String valueEN="_missing_";
+	String valueLV="";
+	String valueEN="";
+	String valueGF="";
 	char markupTag=' ';
 	String defaultTags = null;
 	
@@ -161,6 +179,10 @@ class AttributeValue {
 		if (en != null) 
 			this.valueEN = en.getTextContent();
 
+		Node gf = value.getAttributes().getNamedItem("GF");
+		if (gf != null)
+			this.valueGF = gf.getTextContent();
+
 		Node tag = value.getAttributes().getNamedItem("Tag");
 		if (tag != null)
 			this.markupTag = tag.getTextContent().charAt(0);
@@ -172,8 +194,10 @@ class AttributeValue {
 	
 	protected String getXml() {
 		StringBuilder sb = new StringBuilder("<Value LV=\"" + valueLV + "\"");
-		if (!valueEN.equalsIgnoreCase("_missing"))
+		if (!valueEN.isEmpty())
 			sb.append(" EN=\"" + valueEN + "\"");
+		if (!valueGF.isEmpty())
+			sb.append(" GF=\"" + valueGF + "\"");
 		if (markupTag != ' ')
 			sb.append(" Tag=\"" + markupTag + "\"");
 		if (defaultTags != null)
