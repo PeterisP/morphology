@@ -272,6 +272,23 @@ public class Paradigm extends AttributeValues {
 		return result;
 	}
 
+	/**
+	 * Return a list of endings matching given search criterion - an attribute
+	 * value pair.
+	 * @param filterSet	set of attributes + values to filter by
+	 * @return			list of all found Ending objects (empty, if none found)
+	 */
+	public ArrayList<Ending> getEndingsByAttributes (AttributeValues filterSet)
+	{
+		ArrayList<Ending> result = new ArrayList<>();
+		for (Ending e : this.endings)
+		{
+			if (e.isMatchingStrongOneSide(filterSet))
+				result.add(e);
+		}
+		return result;
+	}
+
 	public int getID() {
 		return id;
 	}

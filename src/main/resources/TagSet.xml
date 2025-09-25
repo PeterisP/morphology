@@ -20,7 +20,7 @@
 	<Value LV="Īpašvārds" EN="Proper noun" Tag="p"/>
 	<Value LV="Sugas vārds" EN="Common noun" Tag="c"/>
 </Attribute>
-<Attribute LV="Dzimte" EN="Gender" GF="Gender" PartOfSpeech="Lietvārds" MarkupPos="2"> <!-- GF: ResLav.gf -->
+<Attribute LV="Dzimte" EN="Gender" GF="gend" PartOfSpeech="Lietvārds" MarkupPos="2"> <!-- GF: ResLav.gf -->
 	<Value LV="Vīriešu" EN="Masculine" GF="Masc" Tag="m"/>
 	<Value LV="Sieviešu" EN="Feminine" GF="Fem" Tag="f"/>
 	<Value LV="Nepiemīt" EN="Not applicable" Tag="0"/>

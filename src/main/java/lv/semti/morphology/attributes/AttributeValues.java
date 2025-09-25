@@ -117,7 +117,7 @@ public class AttributeValues implements FeatureStructure, Cloneable {
 	}
 
 	/**
-	 * Returns true either if all attributes in provided test set are strongly
+	 * Returns true if all attributes in provided test set are strongly
 	 * matching on this, and if all attributes in this are strongly matching on
 	 * attributes provided in test set.
 	 */
@@ -135,7 +135,7 @@ public class AttributeValues implements FeatureStructure, Cloneable {
 	}
 
 	/**
-	 * Returns true either if all attributes in provided test set are strongly
+	 * Returns true if all attributes in provided test set are strongly
 	 * matching on this, i.e. they must exist and match.
 	 */
 	public boolean isMatchingStrongOneSide(AttributeValues testSet) {
