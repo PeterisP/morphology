@@ -1120,7 +1120,7 @@
 			<Attributes Vārdšķira="Apstākļa vārds"/>
 		</Ending>
 	</Paradigm>
-	<Paradigm Stems="1" ID="45" Name="adj-1b-ltg" LemmaEnding="1139" Description="Īpašības vārdi, galotne -s, siev. dz. ģen. galotne -is (parnejs)" AllowedGuessEndings="j">
+	<Paradigm Stems="1" ID="45" Name="adj-1b-ltg" LemmaEnding="1139" Description="Īpašības vārdi, galotne -s, siev. dz. ģen. galotne -is (pārnejs)" AllowedGuessEndings="j">
 		<Attributes Vārdšķira="Īpašības vārds" Morfotabulas_tips="Īpašības vārds"/>
 		<Ending ID="1139" StemChange="103" Ending="s" StemID="1" LemmaEnding="1139">
 			<Attributes Skaitlis="Vienskaitlis" Noteiktība="Nenoteiktā" Dzimte="Vīriešu" Locījums="Nominatīvs"/>
