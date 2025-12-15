@@ -1,17 +1,14 @@
 package lv.semti.Vardnicas;
 
 import lv.semti.morphology.analyzer.Analyzer;
-import lv.semti.morphology.analyzer.Word;
 import lv.semti.morphology.analyzer.Wordform;
 import lv.semti.morphology.attributes.AttributeNames;
-import org.checkerframework.checker.units.qual.A;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.util.HashSet;
-import java.util.LinkedList;
 import java.util.Set;
 
 public class IpasibasvarduLemmas {
