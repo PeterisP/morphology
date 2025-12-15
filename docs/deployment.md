@@ -44,6 +44,12 @@ Palaižam `PmlCorporaTools/preparePOSTagData.sh`, kam vajadzētu sakopēt jaunā
 
 Versijas atjaunināšana
 -----
+
+Izlaiž testus un paskatās vai rezultātos viss labi:
+- MorphologyTest
+- LatgalianTest
+- MorphoEvaluate
+
 pom.xml jāatjaunina laidiena versija, un ar `mvn clean deploy` tas varētu nonākt maven central, ja ir visi priekšnosacījumi
 - pareizi piekļuves kredenciāļi ~/.m2/settings.xml
 - nokonfigurēta gpg atslēga pakas parakstīšanai
