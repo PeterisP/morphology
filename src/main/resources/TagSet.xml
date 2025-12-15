@@ -758,6 +758,12 @@
 	<Value LV="Rādīt vokatīvu" EN="Show vocative"/>
 </Attribute>
 
+<Attribute LV="Morfotabulas tips" EN="Inflection table type">
+	<Value LV="Lietvārds" EN="Noun"/>
+	<Value LV="Darbības vārds" EN="Verb"/>
+	<Value LV="Īpašības vārds" EN="Adjective"/>
+	<Value LV="Skaitļa vārds" EN="Numeral"/>
+</Attribute>
 
 <Attribute LV="UD vārdšķira" EN="UD POS">
 	<Value LV="ADJ" EN="ADJ"/>
