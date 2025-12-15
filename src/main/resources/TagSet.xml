@@ -475,6 +475,18 @@
 	<Value LV="Sirsnīga emocionālā nokrāsa" EN="Hearty"/>
 	<Value LV="Mīlinājuma nokrāsa" EN="Affective"/>
 	<Value LV="Pārnestā nozīmē" EN="Figurative"/>
+	<Value LV="Sarunvaloda" EN="Colloquial"/>
+	<Value LV="Vienkāršruna"/>
+	<Value LV="Vulgārisms" EN="Vulgar"/>
+</Attribute>
+
+<Attribute LV="Personvārda veids" EN="Person name type">
+	<Value LV="Priekšvārds" EN="Given name"/>
+	<Value LV="Uzvārds" EN="Surname"/>
+</Attribute>
+
+<Attribute LV="Sociālais lietojums" EN="Social usage">
+	<Value LV="Profesionālisms" EN="Professional slang"/>
 </Attribute>
 
 <Attribute LV="Joma" EN="Domain">
@@ -581,7 +593,15 @@
 	<Value LV="Vēsturisks vietvārds" EN="Historical toponym"/>
 	<Value LV="Vēsturisks personvārds" EN="Historical person name"/>
 	<Value LV="Attiecas uz kapitālistisko iekārtu, kapitālistisko sabiedrību" EN="Capitalism"/>
+
+	<Value LV="Dārzkopība" EN="Gardening"/>
+	<Value LV="Transports" EN="Transport"/>
+	<Value LV="Okeanoloģija" EN="Oceanography"/>
+	<Value LV="Hidroloģija" EN="Hidrology"/>
+	<Value LV="Sports" EN="Sport"/>
+
 </Attribute>
+
 
 <FreeAttribute LV="Vārdgrupas nr" EN="Paradigm ID"/>
 <FreeAttribute LV="Leksēmas nr" EN="Lexeme ID"/>
@@ -596,6 +616,7 @@
 <FreeAttribute LV="Locīšana" EN="Inflection"/> 
 <FreeAttribute LV="Valoda" EN="Language"/> 
 <FreeAttribute LV="Skaits" EN="Frequency"/> 
+<FreeAttribute LV="DepTree" EN="DepTree"/>
 
 <!-- tezaurs.lv datu īpatnības -->
 <FreeAttribute LV="FreeText" EN="FreeText"/> 
@@ -605,7 +626,7 @@
 <FreeAttribute LV="Šķirkļa ID" EN="Entry ID"/>
 <FreeAttribute LV="Šķirkļa cilvēklasāmais ID" EN="Entry name"/>
 <FreeAttribute LV="Priedēklis" EN="Prefix"/> 
-<FreeAttribute LV="pronunciations" EN="Pronunciations"/> 
+<FreeAttribute LV="pronunciations" EN="Pronunciations"/>
 
 <!--
 <Attribute LV="Gramatiskās formas ierobežojumi" EN="Grammatical form restrictions">
@@ -749,6 +770,11 @@
 <Attribute LV="Paradigmas īpatnības" EN="Paradigm specialty">
 	<Value LV="Nelieto lemmas galotni, bet tikai pielasītās izņēmumformas" EN="Skip lemma ending, use only extra exception forms"/>
 	<Value LV="Satur pielasāmās izņēmumformas" EN="Contains the extra exception forms"/>
+</Attribute>
+
+<Attribute LV="Nelokāms vārds" EN="Indeclinable word">
+	<Value LV="Jā" EN="Yes"/>
+	<Value LV="Nē" EN="No"/>
 </Attribute>
 
 <Attribute LV="Morfotabulas attēlošana" EN="Inflection table">
