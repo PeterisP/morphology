@@ -3,7 +3,7 @@
 ***********************************************
 
  A Java library for analyzing morphology and part of speech information for Latvian words.
- Accurate analysis is based on an included lexicon of some 50.000 lexemes, for rarer words there is some ambiguity.
+ Accurate analysis is based on lexeme data periodically updated from Tezaurs.lv database.
  Also includes generation of all inflections of a word, and crude statistical disambiguation for analysis.
  
 BASIC USAGE
@@ -27,10 +27,13 @@ BASIC USAGE
 INSTALLATION
   
 Use maven to build and deploy.
+The published releases should be available at Maven Central https://central.sonatype.com/artifact/lv.ailab.morphology/morphology
+
+Packaging instructions at docs/deployment.md
 
 LICENCE
 
-(c) Institute of Mathematics and Computer Science, University of Latvia, 2005-2012
+(c) Institute of Mathematics and Computer Science, University of Latvia, 2005-2025
 
 This software is licenced under GNU General Public Licence.
 Commercial licencing is available if neccessary, contact us at peteris@ailab.lv.
