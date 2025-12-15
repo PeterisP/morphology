@@ -45,7 +45,8 @@ Palaižam `PmlCorporaTools/preparePOSTagData.sh`, kam vajadzētu sakopēt jaunā
 Versijas atjaunināšana
 -----
 
-Izlaiž testus un paskatās vai rezultātos viss labi:
+Izlaiž testus un paskatās vai `MorphoEvaluate` rezultātos nav būtisku procentu kritumu un rupju kļūdu:
+- TagSetTest
 - MorphologyTest
 - LatgalianTest
 - MorphoEvaluate
