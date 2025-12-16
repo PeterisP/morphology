@@ -434,27 +434,30 @@
 <!--	<Value LV="Neaktuāls" EN="Obsolete"/> -->
 </Attribute>
 
-<Attribute LV="Valodas normēšana" EN="Normative">
-	<Value LV="Nevēlams" EN="Undesirable"/>
+<Attribute LV="Lietojuma biežums" EN="Usage frequency">
+	<!-- Speciāls karogs (ne no tēzaura) ar iekšēju tehnisku nozīmi bibliotēkā.
+	     Lieto vārdiem irt un art, lai novērstu to pārmērīgu homoformēšanos ar
+	     `ir` un `ar`. -->
+   <Value LV="Reti" EN="Rare"/>
 </Attribute>
 
 <Attribute LV="Valodas normēšana" EN="Normative">
-	<Value LV="Nevēlams" EN="Undesirable"/>
+   <Value LV="Vēlams" EN="Preffered"/>
+   <Value LV="Nevēlams" EN="Undesirable"/>
 </Attribute>
-
 
 <Attribute LV="Lietojums" EN="Usage">
-	<Value LV="Novecojis" EN="Dated"/>
-	<Value LV="Sens, reti lietots vārds" EN="Old, rarely used"/>
-	<Value LV="Apvidvārds" EN="Regional"/>
-	<Value LV="Neaktuāls" EN="Obsolete"/>
-	<Value LV="Vēsturisks" EN="Historical"/>
-	<Value LV="Sarunvaloda" EN="Colloquial"/>
-	<Value LV="Nevēlams" EN="Undesirable"/>
+   <Value LV="Novecojis" EN="Dated"/>
+   <Value LV="Sens, reti lietots vārds" EN="Old, rarely used"/>
+   <Value LV="Apvidvārds" EN="Regional"/>
+   <Value LV="Neaktuāls" EN="Obsolete"/>
+   <Value LV="Vēsturisks" EN="Historical"/>
+   <Value LV="Sarunvaloda" EN="Colloquial"/>
+   <Value LV="Nevēlams" EN="Undesirable"/> <!-- Obsolete -->
 	<Value LV="Neliterārs" EN="Colloquial"/>
-	<Value LV="Žargonisms" EN="Slang"/>
-	<Value LV="Slengs" EN="Slang"/>
-	<Value LV="Vulgārisms" EN="Vulgar"/>
+	<Value LV="Žargonisms" EN="Slang"/> <!-- To be obsolete -->
+	<Value LV="Slengs" EN="Slang"/> <!-- To be obsolete -->
+	<Value LV="Vulgārisms" EN="Vulgar"/> <!-- To be obsolete -->
 	<Value LV="Barbarisms" EN="Barbaric"/>
 	<Value LV="Biblisms" EN="Bible"/>
 	<Value LV="Jaunvārds" EN="Neologism"/>
@@ -462,6 +465,7 @@
 	<Value LV="Bērnu valoda" EN="Children"/>
 	<Value LV="Eifēmisms" EN="Euphemism"/>
 	<Value LV="Dialektisms" EN="Dialect"/>
+	<Value LV="Okazionālisms" EN="Nonce"/>
 </Attribute>
 
 <Attribute LV="Stils" EN="Style">
@@ -476,8 +480,8 @@
 	<Value LV="Mīlinājuma nokrāsa" EN="Affective"/>
 	<Value LV="Pārnestā nozīmē" EN="Figurative"/>
 	<Value LV="Sarunvaloda" EN="Colloquial"/>
-	<Value LV="Vienkāršruna"/>
-	<Value LV="Vulgārisms" EN="Vulgar"/>
+	<Value LV="Vienkāršruna" EN="Low colloquial"/>
+	<Value LV="Vulgārisms" EN="Vulgarism"/>
 </Attribute>
 
 <Attribute LV="Personvārda veids" EN="Person name type">
@@ -599,6 +603,7 @@
 	<Value LV="Okeanoloģija" EN="Oceanography"/>
 	<Value LV="Hidroloģija" EN="Hidrology"/>
 	<Value LV="Sports" EN="Sport"/>
+	<Value LV="Izglītība" EN="Education"/>
 
 </Attribute>
 
