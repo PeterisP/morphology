@@ -442,7 +442,7 @@
 </Attribute>
 
 <Attribute LV="Valodas normēšana" EN="Normative">
-   <Value LV="Vēlams" EN="Preffered"/>
+   <Value LV="Ieteicams" EN="Preffered"/>
    <Value LV="Nevēlams" EN="Undesirable"/>
 </Attribute>
 
