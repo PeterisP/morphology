@@ -40,9 +40,9 @@ public class LexemeModel extends AbstractTableModel {
     	String[] columnNames1 = {"Nr","Sakne"};
     	String[] columnNames3 = {"Nr","Sakne1","Sakne2","Sakne3"};
     	if (vārdgrupa != null) {
-    		if (vārdgrupa.getStems() >= 3) return columnNames3[col].toString();
+    		if (vārdgrupa.getStems().size() >= 3) return columnNames3[col];
     	}
-        return columnNames1[col].toString();
+        return columnNames1[col];
     }
 
     public int getRowCount() {
@@ -52,7 +52,7 @@ public class LexemeModel extends AbstractTableModel {
     }
     public int getColumnCount() {
     	if (vārdgrupa != null) {
-    		if (vārdgrupa.getStems() >= 3) return 4;
+    		if (vārdgrupa.getStems().size() >= 3) return 4;
     	}
 
     	return 2;
@@ -61,13 +61,13 @@ public class LexemeModel extends AbstractTableModel {
     public Object getValueAt(int row, int col) {
     	if (vārdgrupa == null) return null;
     	if (row < 0 || row >= vārdgrupa.lexemes.size()) return null;
-    	if (col > vārdgrupa.getStems()) return null;
+    	if (col > vārdgrupa.getStems().size()) return null;
 
     	switch (col) {
     	case 0 : return vārdgrupa.lexemes.get(row).getID();
-    	case 1 : return vārdgrupa.lexemes.get(row).getStem(0);
-    	case 2 : return vārdgrupa.lexemes.get(row).getStem(1);
-    	case 3 : return vārdgrupa.lexemes.get(row).getStem(2);
+    	case 1 : return vārdgrupa.lexemes.get(row).getStem(StemType.STEM1);
+    	case 2 : return vārdgrupa.lexemes.get(row).getStem(StemType.STEM2);
+    	case 3 : return vārdgrupa.lexemes.get(row).getStem(StemType.STEM3);
     	default: return null;
     	}
     }
@@ -79,13 +79,13 @@ public class LexemeModel extends AbstractTableModel {
 	public void setValueAt(Object value, int row, int col) {
     	if (vārdgrupa == null) return;
     	if (row >= vārdgrupa.lexemes.size()) return;
-    	if (col > vārdgrupa.getStems()) return;
+    	if (col > vārdgrupa.getStems().size()) return;
     	try {
 			switch (col) {
 			case 0 : vārdgrupa.lexemes.get(row).setID(Integer.parseInt(value.toString())); break;
-			case 1 : vārdgrupa.lexemes.get(row).setStem(0, value.toString()); break;
-			case 2 : vārdgrupa.lexemes.get(row).setStem(1, value.toString()); break;
-			case 3 : vārdgrupa.lexemes.get(row).setStem(2, value.toString()); break;
+			case 1 : vārdgrupa.lexemes.get(row).setStem(StemType.STEM1, value.toString()); break;
+			case 2 : vārdgrupa.lexemes.get(row).setStem(StemType.STEM2, value.toString()); break;
+			case 3 : vārdgrupa.lexemes.get(row).setStem(StemType.STEM3, value.toString()); break;
 			}
     	} catch (NumberFormatException E) {
     		JOptionPane.showMessageDialog(null, String.format("Kolonnā %d ielikts '%s' - neder!",col,value));
@@ -103,7 +103,7 @@ public class LexemeModel extends AbstractTableModel {
 
     public void addRow() {
     	if (vārdgrupa == null) return;
-    	vārdgrupa.addLexeme(new Lexeme(""));
+    	vārdgrupa.addLexeme(new Lexeme());
     	fireTableDataChanged();
     	//FIXME - hvz vai un kā pēc šitā noapdeitojas leksēmīpašību tabula.
     }

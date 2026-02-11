@@ -24,6 +24,7 @@ import lv.semti.morphology.analyzer.Variants;
 import lv.semti.morphology.attributes.AttributeNames;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 import java.util.regex.Pattern;
 import com.google.common.collect.ArrayListMultimap;
@@ -41,11 +42,11 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 /**
- * Satur leksikona datus - leksēmu sarakstu un to locīšanas informāciju
- * Piedāvā funkcijas tos pārveidot uz/no XML, un papildināt/izdzēst ierakstus.
+ * Contains lexicon data -- lexeme list and information about the inflection of
+ * the given lexemes. Provides functionality to read from / write to XML, JSON
+ * as well as functionality to add and remove lexemes.
  *
  * @author Pēteris Paikens
- *
  */
 public class Lexicon {
 	public final static String DEFAULT_LEXICON_FILE = "Lexicon_v2.xml";
@@ -66,7 +67,7 @@ public class Lexicon {
 	public ArrayList<Paradigm> paradigms; //TODO - nebūtu jābūt publiskam, vajag tikai read-only iterēt
 	private AllEndings allEndings = null;
 	protected ArrayList<String> prefixes;
-	private ArrayList<String> corpusFileNames = new ArrayList<String>();
+	private ArrayList<String> corpusFileNames = new ArrayList<>();
 
 	// Vārdu lielo/mazo burtu nošķiršana
 	protected static Pattern p_firstcap = Pattern.compile("\\p{Lu}.*");
@@ -77,9 +78,9 @@ public class Lexicon {
 	public Trie automats = new Trie();
 
 	public boolean guessAllParadigms = false; // Attempt guessing words even in paradigms where AllowedGuessEndings are marked with !
+
 	/**
-	 * Creates a lexicon object from the default location in JAR resources
-	 *
+	 * Creates a lexicon object from the default location in JAR resources.
 	 * @throws Exception	parsing errors
 	 */
 	public Lexicon() throws Exception {
@@ -99,21 +100,18 @@ public class Lexicon {
 	}
 	
 	/**
-	 * Izveido leksikona objektu no XML faila
-	 *
-	 * @param filename	faila vārds, kurā meklēt leksikonu
-	 * @throws Exception	parsēšanas kļūdas
+	 * Creates lexicon object from XML file.
 	 */
 	public Lexicon(String filename) throws Exception {
 		init(filename, true);
 	}
 	
 	/**
-	 * Izveido leksikona objektu no XML faila
+	 * Crates Lexicon object from XML file.
 	 *
-	 * @param lexiconFileName	faila vārds, kurā meklēt leksikonu
-	 * @param useAuxiliaryLexicons vai lietot papildvārdnīces 
-	 * @throws Exception	parsēšanas kļūdas
+	 * @param lexiconFileName		file name for main lexicon
+	 * @param useAuxiliaryLexicons	should additional lexicons be loaded as well?
+	 * @throws Exception			parsing errors
 	 */
 	public Lexicon(String lexiconFileName, boolean useAuxiliaryLexicons) throws Exception {
 		init(lexiconFileName, useAuxiliaryLexicons);
@@ -132,7 +130,7 @@ public class Lexicon {
 
 	protected AllEndings getAllEndings(){
 		if (allEndings == null) {
-			ArrayList<Ending> endings = new ArrayList<Ending>();
+			ArrayList<Ending> endings = new ArrayList<>();
 			for (Paradigm paradigm : paradigms) {
 				if (!paradigm.isMatchingStrong(AttributeNames.i_ParadigmProperties, AttributeNames.v_OnlyHardcodedWordforms))
 					endings.addAll(paradigm.endings);
@@ -159,6 +157,7 @@ public class Lexicon {
 
 		init_main(doc, new File(fileName).getParent(), useAuxiliaryLexicons);
 	}
+
 	private void init(String fileName, ArrayList<String> blacklist) throws Exception {
 		System.err.println("Loading " + fileName);
 		this.filename = fileName;
@@ -172,11 +171,11 @@ public class Lexicon {
 		init_main(doc, new File(fileName).getParent(), blacklist);
 	}	
 
-	private void init(InputStream plusma, boolean useAuxiliaryLexicons) throws Exception {
+	private void init(InputStream input, boolean useAuxiliaryLexicons) throws Exception {
 		System.err.println("Loading the lexicon from an input stream...");
 		
 		DocumentBuilder docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-		Document doc = docBuilder.parse(plusma);
+		Document doc = docBuilder.parse(input);
 
 		init_main(doc, null, useAuxiliaryLexicons);
 	}
@@ -203,8 +202,8 @@ public class Lexicon {
 
 		NodeList nodes = node.getChildNodes();
 
-		prefixes = new ArrayList<String>();
-		paradigms = new ArrayList<Paradigm>();
+		prefixes = new ArrayList<>();
+		paradigms = new ArrayList<>();
 
 		for (int i = 0; i < nodes.getLength(); i++) {
 			if (nodes.item(i).getNodeName().equals("Paradigm"))
@@ -268,8 +267,9 @@ public class Lexicon {
 		}
 	}
 
-	private void load_sublexicon_json(InputStream stream) throws ParseException, UnsupportedEncodingException {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(stream, "UTF-8"));
+	private void load_sublexicon_json(InputStream input)
+			throws ParseException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(input, StandardCharsets.UTF_8));
         JSONParser parser = new JSONParser();
         String json_row;
         try {
@@ -308,30 +308,29 @@ public class Lexicon {
 	}
 	
 	/**
-	 * Saglabā visus leksikona datus, vārdgrupas un galotnes ieskaitot, XML formātā.
-	 * Teksta kodējums tiek likts UTF-8, un pietiek ar XML 1.0, ja XML parseris ir korekts,
-	 * lai var būt latviešu burti atribūtos.
+	 * Stores all lexicon data (paradigms and endings including) in an XML format.
+	 * Text encoding is UTF-8, and it is enough to use XML 1.0 to be able to use
+	 * Latvian diacritics in XML attributes if the parser is correct.
 	 *
-	 * @param failaVārds 	Faila vārds, kurā saglabāt.
-	 * @throws IOException
+	 * @param fileName 	file, where to store the lexicon
 	 */
-	public void toXML(String failaVārds) throws IOException {
+	public void toXML(String fileName) throws IOException {
 	//TODO - būtu nevis faila vārds jāņem, bet outputstream.
 		System.out.println("Warning! XML saving possibly obsolete after multuple-lexicon changes");
 		
-		File file = new File(failaVārds);
-		File newfile = new File(failaVārds + ".new");
-		File backupfile = new File(failaVārds + ".bak");
+		File file = new File(fileName);
+		File newfile = new File(fileName + ".new");
+		File backupfile = new File(fileName + ".bak");
 		
-		Writer straume = new BufferedWriter(new OutputStreamWriter(
-				new FileOutputStream(newfile), "UTF-8"));
-		straume.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
-		straume.write("<Lexicon revision=\"" + (revision != null ? revision : "") + "\" licence=\"" + (licence != null ? licence : "") + "\">\n");
+		Writer output = new BufferedWriter(new OutputStreamWriter(
+				new FileOutputStream(newfile), StandardCharsets.UTF_8));
+		output.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
+		output.write("<Lexicon revision=\"" + (revision != null ? revision : "") + "\" licence=\"" + (licence != null ? licence : "") + "\">\n");
 		for (Paradigm paradigm : paradigms) {
-			paradigm.toXML(straume);
+			paradigm.toXML(output);
 		}
-		straume.write("</Lexicon>");
-		straume.close();
+		output.write("</Lexicon>");
+		output.close();
 		
 		// remove old backup file
 		if (backupfile.exists())
@@ -346,18 +345,19 @@ public class Lexicon {
 	
 	
 	/**
-	 * Saglabā XML formātā apakšleksikona leksēmas - tikai taas, kuraam source sakriit ar noraadiito
+	 * Stores sublexicon lexemes in XML. Only lexemes whose source matches with
+	 * the given source are stored.
 	 *
-	 * @param failaVārds 	Faila vārds, kurā saglabāt.
-	 * @throws IOException
+	 * @param fileName 	file, where to store the sublexicon
+	 * @param source	fublexicon identifier
 	 */
-	public void toXML_sub(String failaVārds, String source) throws IOException {
-		File file = new File(failaVārds);
-		File newfile = new File(failaVārds + ".new");
-		File backupfile = new File(failaVārds + ".bak");
+	public void toXML_sub(String fileName, String source) throws IOException {
+		File file = new File(fileName);
+		File newfile = new File(fileName + ".new");
+		File backupfile = new File(fileName + ".bak");
 		
 		Writer straume = new BufferedWriter(new OutputStreamWriter(
-				new FileOutputStream(newfile), "UTF-8"));
+				new FileOutputStream(newfile), StandardCharsets.UTF_8));
 		straume.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
 		straume.write("<Lexicon revision=\"" + (revision != null ? revision : "") + "\" licence=\"" + (licence != null ? licence : "") + "\">\n");
 		for (Paradigm paradigm : paradigms) {
@@ -378,90 +378,85 @@ public class Lexicon {
 	}
 	
 	/**
-	 * Saglabā visus leksikona datus, vārdgrupas un galotnes ieskaitot, XML formātā.
-	 * Teksta kodējums tiek likts UTF-8, un pietiek ar XML 1.0, ja XML parseris ir korekts,
-	 * lai var būt latviešu burti atribūtos.
-	 *
-	 * @param plusma 	Faila vārds, kurā saglabāt.
-	 * @throws IOException
+	 * Stores all lexicon data (paradigms and endings including) in an XML format.
+	 * Text encoding is UTF-8, and it is enough to use XML 1.0 to be able to use
+	 * Latvian diacritics in XML attributes if the parser is correct.
 	 */
-	public void toXML(OutputStream plusma) throws IOException {
+	public void toXML(OutputStream output) throws IOException {
 		System.out.println("Warning! XML saving possibly obsolete after multuple-lexicon changes");
 		
-		Writer straume = new BufferedWriter(new OutputStreamWriter(plusma, "UTF-8"));
-		straume.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
-		straume.write("<Lexicon revision=\"" + (revision != null ? revision : "") + "\" licence=\"" + (licence != null ? licence : "") + "\">\n");
+		Writer writer = new BufferedWriter(new OutputStreamWriter(output, StandardCharsets.UTF_8));
+		writer.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
+		writer.write("<Lexicon revision=\"" + (revision != null ? revision : "") + "\" licence=\"" + (licence != null ? licence : "") + "\">\n");
 		for (Paradigm paradigm : paradigms) {
-			paradigm.toXML(straume);
+			paradigm.toXML(writer);
 		}
-		straume.write("</Lexicon>");
-		straume.close();
+		writer.write("</Lexicon>");
+		writer.close();
 	}
 
 	
 	/**
-	 * Sameklē leksikonā vārdgrupu ar norādīto numuru.
+	 * Searches lexicon for a paradigm matching given numerical ID.
 	 *
-	 * @param nr	vārdgrupas numurs.
-	 * @return		atrastā vārdgrupa, vai arī null, ja nav atrasts.
+	 * @param id	paradigm ID.
+	 * @return		paradigm or null if no such paradigm exists.
 	 */
-	public Paradigm paradigmByID(int nr) {
+	public Paradigm paradigmByID(int id) {
 		//FIXME - vispār vajadzētu likvidēt to atsauci uz numuriem pēc iespējas.
-		Paradigm rezults = null;
-		for (Paradigm vārdgrupa : paradigms) {
-			if (vārdgrupa.getID() == nr)
-				rezults = vārdgrupa;
+		Paradigm result = null;
+		for (Paradigm p : paradigms) {
+			if (p.getID() == id)
+				result = p;
 		}
-		return rezults;
+		return result;
 	}
 
 	/**
-	 * Sameklē leksikonā vārdgrupu ar norādīto numuru.
+	 * Searches lexicon a paradigm matching given string ID.
 	 *
-	 * @param name	vārdgrupas vārdiskais identifikators
-	 * @return		atrastā vārdgrupa, vai arī null, ja nav atrasts.
+	 * @param name	paradigm ID
+	 * @return		paradigm or null if no such paradigm exists
 	 */
 	public Paradigm paradigmByName(String name) {
-		Paradigm rezults = null;
-		for (Paradigm vārdgrupa : paradigms) {
-			if (vārdgrupa.getName().equalsIgnoreCase(name))
-				rezults = vārdgrupa;
+		Paradigm result = null;
+		for (Paradigm p : paradigms) {
+			if (p.getName().equalsIgnoreCase(name))
+				result = p;
 		}
-		return rezults;
+		return result;
 	}
 
 	/**
-	 * Sameklē leksikonā galotni ar norādīto numuru.
+	 * Searches lexicon for an ending matching given numerical ID.
 	 *
-	 * @param nr	galotnes numurs.
-	 * @return		atrastā galotne, vai arī null, ja nav atrasts.
+	 * @param id	ending ID
+	 * @return		ending or null if no such ending exists
 	 */
-	public Ending endingByID(int nr) {
-		return getAllEndings().endingByID(nr);
+	public Ending endingByID(int id) {
+		return getAllEndings().endingByID(id);
 	}
 
 	/**
-	 * Sameklē leksikonā leksēmu ar norādīto numuru.
-	 * Ja nu ir vairākas gadījušās ar vienādu numuru, tad atrod vienu no tām.
+	 * Searches lexicon for an ending matching given numerical ID. In case of
+	 * multiple found, return only one.
 	 *
-	 * @param nr	leksēmas numurs.
-	 * @return		atrastā leksēma, vai arī null, ja nav atrasts.
+	 * @param id	lexeme id.
+	 * @return		lexeme or null if no such lexeme exists
 	 */
-	public Lexeme lexemeByID(int nr) {
-		Lexeme rezults = null;
+	public Lexeme lexemeByID(int id) {
+		Lexeme result = null;
 		for (Paradigm paradigm : paradigms) {
-			if (paradigm.lexemesByID.get(nr) != null) {
+			if (paradigm.lexemesByID.get(id) != null) {
 				// TODO - hmm, nepamanīs ja ir vienādi ID dažādās paradigmās
-				rezults = paradigm.lexemesByID.get(nr);
+				result = paradigm.lexemesByID.get(id);
 			}
 		}
-		return rezults;
+		return result;
 	}
 
 	/**
-	 * Iedod jaunu unikālu leksēmas numuru
-	 *
-	 * @return	jauns leksēmas numurs
+	 * Get new, unique, unused lexeme ID.
 	 */
 	private int lexeme_id_counter = 1100000;
 	int newLexemeID() {
@@ -477,7 +472,7 @@ public class Lexicon {
 	 *
 	 * @param word		full wordform of the word to be added
 	 * @param ending	ending object of the word's lemma
-	 * @param source	Description field of the lexeme source
+	 * @param source	description field of the lexeme source
 	 * @return			The created lexeme or NULL if it couldn't be created
 	 */
 	public Lexeme createLexeme(String word, Ending ending, String source) {
@@ -486,29 +481,29 @@ public class Lexicon {
 			stem = ending.stem(word.toLowerCase());
 			int mija = ending.getMija();
 			if (mija != 0 && mija != 3) { // don't try to apply comparative and superlative forms
-				ArrayList<Variants> celmi = Mijas.mijuVarianti(stem, mija, word.matches("\\p{Lu}.*"));
-				if (celmi.size() == 0) return null; // acīmredzot neder ar miju
+				ArrayList<Variants> stems = Mijas.mijuVarianti(stem, mija, word.matches("\\p{Lu}.*"));
+				if (stems.isEmpty()) return null; // acīmredzot neder ar miju
 				// FIXME ! Nevajadzētu te būt iespējai uz null!
-				stem = celmi.get(0).celms;
+				stem = stems.get(0).celms;
 				// FIXME - vai te ir ok naivi ņemt pirmo variantu ?
 			}
 		} catch (Exception e) {
             System.err.print(word + Integer.toString(ending.getID()) + source);
-			System.err.print(e.getStackTrace());
+			e.printStackTrace(System.err);
 			return null;
 		}
 
-		Lexeme rezults = new Lexeme();
-		rezults.setStemCount(ending.getParadigm().getStems());
-		rezults.setStem(ending.stemID-1, stem); 
-		ending.getParadigm().addLexeme(rezults); // At this moment the actual lemma is generated
-		String lemma = rezults.getValue(AttributeNames.i_Lemma);
+		Lexeme result = new Lexeme();
+		result.setAllowedStems(ending.getParadigm().getStems());
+		result.setStem(ending.stemType, stem);
+		ending.getParadigm().addLexeme(result); // At this moment the actual lemma is generated
+		String lemma = result.getValue(AttributeNames.i_Lemma);
 		lemma = recapitalize(lemma, word);
-		rezults.addAttribute(AttributeNames.i_Lemma, lemma);
+		result.addAttribute(AttributeNames.i_Lemma, lemma);
 
-		rezults.addAttribute(AttributeNames.i_Source, source);
+		result.addAttribute(AttributeNames.i_Source, source);
 		clearCache();
-		return rezults;
+		return result;
 	}
 	
 	/**
@@ -545,16 +540,14 @@ public class Lexicon {
 	}
 
 	/**
-	 * Pieliek norādīto vārdgrupu leksikonam.
-	 * Ja vārdgrupai numurs ir 0, tad arī uzģenerē tai jaunu numuru.
-	 *
-	 * @param paradigm	vārdgrupa, kuru pielikt
+	 * Adds the given paradigm to the lexicon. If paradigm ID is 0, generates
+	 * new ID.
 	 */
 	public void addParadigm (Paradigm paradigm) {
 		if (paradigm.getID() == 0) {
 			int maxnr = 0;
-			for (Paradigm vārdgrupa : paradigms) {
-				if (vārdgrupa.getID() > maxnr) maxnr = vārdgrupa.getID();
+			for (Paradigm p : paradigms) {
+				if (p.getID() > maxnr) maxnr = p.getID();
 			}
 			paradigm.setID (maxnr + 1);
 		}
@@ -563,18 +556,16 @@ public class Lexicon {
 	}
 
 	/**
-	 * Izņem norādīto vārdgrupu no leksikona datiem.
-	 *
-	 * @param paradigm
+	 * Removes the given paradigm from lexicon.
 	 */
 	public void removeParadigm (Paradigm paradigm) {
 		paradigms.remove(paradigm);
 	}
 
 	/**
-	 * Atrod leksikonā lielāko šobrīd esošo galotnes numuru
+	 * Finds in the lexicon the biggest currently used ending ID.
 	 *
-	 * @return	lielākais galotnes numurs, vai 0, ja nav nevienas leksēmas.
+	 * @return	biggest ending ID used or 0 if there are no endings in lexicon
 	 */
     int maxEndingID() {
 		int result = 0;
@@ -593,13 +584,15 @@ public class Lexicon {
 
 	public static String recapitalize(String word, String originalWord) {
 		if (p_firstcap.matcher(originalWord).matches())
-			word = word.substring(0, 1).toUpperCase() + word.substring(1,word.length());
+			word = word.substring(0, 1).toUpperCase() + word.substring(1);
 		if (p_allcaps.matcher(originalWord).matches())
 			word = word.toUpperCase();
 		if (p_doublesurname.matcher(originalWord).matches()) {
-			int otrslielais = word.indexOf("-")+1;
-			if (otrslielais > -1) // nočekojam gadījumam ja nu originalWord'ā ir '-' bet lemmā nav
-				word = word.substring(0, otrslielais) + word.substring(otrslielais, otrslielais+1).toUpperCase() + word.substring(otrslielais+1,word.length());
+			int dash = word.indexOf("-");
+			if (dash > -1 && word.length() > dash + 1) // nočekojam gadījumam ja nu originalWord'ā ir '-' bet lemmā nav
+				word = word.substring(0, dash + 1)
+						+ word.substring(dash + 1, dash + 2).toUpperCase()
+						+ word.substring(dash + 2);
 		}
 		return word;
 	}

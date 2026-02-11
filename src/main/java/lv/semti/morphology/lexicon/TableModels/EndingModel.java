@@ -55,7 +55,7 @@ public class EndingModel extends AbstractTableModel {
     	case 0 : return vārdgrupa.endings.get(row).getID();
     	case 1 : return vārdgrupa.endings.get(row).getEnding();
     	case 2 : return vārdgrupa.endings.get(row).getMija();
-    	case 3 : return vārdgrupa.endings.get(row).stemID;
+    	case 3 : return vārdgrupa.endings.get(row).stemType;
     	case 4 : return (vārdgrupa.endings.get(row).getLemmaEnding() == null) ? 0 : vārdgrupa.endings.get(row).getLemmaEnding().getID();
     	}
 		return null;
@@ -74,7 +74,7 @@ public class EndingModel extends AbstractTableModel {
 //			case 0 : vārdgrupa.galotnes.get(row).setNr(Integer.parseInt(value.toString())); break;
 			case 1 : vārdgrupa.endings.get(row).setEnding(value.toString()); break;
 			case 2 : vārdgrupa.endings.get(row).setMija(Integer.parseInt(value.toString())); break;
-			case 3 : vārdgrupa.endings.get(row).stemID = Integer.parseInt(value.toString()); break;
+			case 3 : vārdgrupa.endings.get(row).stemType = StemType.getFromXmlId(value.toString()); break;
 			case 4 : vārdgrupa.endings.get(row).setLemmaEnding(Integer.parseInt(value.toString())); break;
 			}
     	} catch (NumberFormatException E) {

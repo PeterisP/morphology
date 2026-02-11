@@ -38,8 +38,7 @@ public class Ending extends AttributeValues {
 	private int mija;		  // kura mija jāpielieto saknei, lai šo galotni tai pieliktu
 							  // FIXME - varbūt kādu sasaisti ar miju objektu šeit?
 
-	public int stemID = 1; // kurai no (potenciāli 3) leksēmas saknēm galotne atbilst - darbībasvārdiem tas ir aktuāli
-	//FIXME - stemNr vietām numurējas no 1 vietām no 0 - ļoti bīstami!
+	public StemType stemType = StemType.STEM1;
 	private Paradigm paradigm;
 	private Ending lemmaEnding = null;
 
@@ -51,7 +50,8 @@ public class Ending extends AttributeValues {
 		super(node);
 		this.paradigm = paradigm;
 
-		if (!node.getNodeName().equalsIgnoreCase("Ending")) throw new Error("Node '" + node.getNodeName() + "' but Ending expected.");
+		if (!node.getNodeName().equalsIgnoreCase("Ending"))
+			throw new Error("Node '" + node.getNodeName() + "' but Ending expected.");
 
 		Node n = node.getAttributes().getNamedItem("ID");
 		if (n != null)
@@ -67,17 +67,14 @@ public class Ending extends AttributeValues {
 
 		n = node.getAttributes().getNamedItem("StemID");
 		if (n != null)
-			this.stemID = Integer.parseInt(n.getTextContent());
+			this.stemType = StemType.getFromXmlId(Integer.parseInt(n.getTextContent()));
 
 		n = node.getAttributes().getNamedItem("LemmaEnding");
 		if (n != null)
 			try {
 				setLemmaEnding(Integer.parseInt(n.getTextContent()));
 				//FIXME - nestrādās, ja pamatformas galotne tiks ielasīta pēc šīs galotnes, nevis pirms..
-			} catch (NumberFormatException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (DOMException e) {
+			} catch (NumberFormatException | DOMException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			} catch (Exception e) {
@@ -107,18 +104,18 @@ public class Ending extends AttributeValues {
 
 
 	@Override
-	public void toXML (Writer pipe) throws IOException {
-		pipe.write("<Ending");
-		pipe.write(" ID=\""+String.valueOf(id)+"\"");
-		pipe.write(" StemChange=\""+String.valueOf(mija)+"\"");
-		pipe.write(" Ending=\""+ending+"\"");
-		pipe.write(" StemID=\""+String.valueOf(stemID)+"\"");
+	public void toXML (Writer outpu) throws IOException {
+		outpu.write("<Ending");
+		outpu.write(" ID=\""+ id +"\"");
+		outpu.write(" StemChange=\""+ mija +"\"");
+		outpu.write(" Ending=\""+ending+"\"");
+		outpu.write(" StemID=\""+ stemType.id +"\"");
 		if (lemmaEnding != null)
-			pipe.write(" LemmaEnding=\""+String.valueOf(lemmaEnding.id)+"\"");
-		pipe.write(">");
+			outpu.write(" LemmaEnding=\""+ lemmaEnding.id +"\"");
+		outpu.write(">");
 
-		super.toXML(pipe); // Īpašības UzXML
-		pipe.write("</Ending>\n");
+		super.toXML(outpu); // Īpašības UzXML
+		outpu.write("</Ending>\n");
 	}
 
 	public int getID() {
@@ -145,12 +142,16 @@ public class Ending extends AttributeValues {
 		this.ending = ending;
 	}
 
-	public class WrongEndingException extends Exception {
+	public static class WrongEndingException extends Exception {
 		public WrongEndingException(String message) {
 			super(message);
 		}
 	}
-	// tiek pieņemts, ka izsaucošā funkcija nodrošina, ka vārds tiešām beidzas ar šo galotni.
+
+	/**
+	 * It is assumed that caller function will ensure that word actually ends
+	 * with the necessery ending.
+ 	 */
 	public String stem (String word) throws WrongEndingException {
 		if (!word.endsWith(ending))
 			throw new WrongEndingException("Gļuks - vārds (" + word + ") nebeidzas ar norādīto galotni (" + ending + ")");
@@ -183,6 +184,6 @@ public class Ending extends AttributeValues {
 	 * Not cloned due to performance and memory usage concerns.
 	 */
 	public ArrayList<Lexeme> getEndingLexemes(String celms) {
-		return paradigm.getLexemesByStem().get(stemID-1).get(celms);
+		return paradigm.getLexemesByStem(stemType).get(celms);
 	}
 }

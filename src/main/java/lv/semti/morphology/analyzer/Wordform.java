@@ -61,7 +61,7 @@ public class Wordform extends AttributeValues implements Serializable{
 		removeAttribute(AttributeNames.i_ParadigmProperties);
 		removeAttribute(AttributeNames.i_ParadigmSupportedDerivations);
 		
-		Boolean fixed_stem; 
+		boolean fixed_stem;
 		if (lexeme != null) {
 			addAttributes(lexeme);
 			addAttribute(AttributeNames.i_LexemeID, Integer.toString(lexeme.getID()));
@@ -85,11 +85,15 @@ public class Wordform extends AttributeValues implements Serializable{
 				paradigm.getName().equalsIgnoreCase("punct"))
 				&& !fixed_stem) {
 			String thirdStem = null;
-			if (paradigm.getStems() == 3) thirdStem = lexeme.getStem(2);
-			String stem = lexeme.getStem(lemmaEnding.stemID-1);
-			ArrayList<Variants> celmi = Mijas.MijasLocīšanai(stem, lemmaEnding.getMija(), thirdStem, false, this.isMatchingStrong(AttributeNames.i_NounType, AttributeNames.v_ProperNoun));
+			//if (paradigm.getStems() == 3) thirdStem = lexeme.getStem(2);
+			if (paradigm.getStems().contains(StemType.STEM3))
+				thirdStem = lexeme.getStem(StemType.STEM3);
+			String stem = lexeme.getStem(lemmaEnding.stemType);
+			ArrayList<Variants> stemsWithChanges = Mijas.MijasLocīšanai(
+					stem, lemmaEnding.getMija(), thirdStem, false,
+					this.isMatchingStrong(AttributeNames.i_NounType, AttributeNames.v_ProperNoun));
 			
-			if (celmi.size()>0) stem = celmi.get(0).celms; // FIXME - nav objektīva pamata ņemt tieši pirmo, netīri
+			if (!stemsWithChanges.isEmpty()) stem = stemsWithChanges.get(0).celms; // FIXME - nav objektīva pamata ņemt tieši pirmo, netīri
 			
 			String lemma = stem + lemmaEnding.getEnding();
 			if (lexeme.isMatchingStrong(AttributeNames.i_NounType, AttributeNames.v_ProperNoun)) {
@@ -127,39 +131,33 @@ public class Wordform extends AttributeValues implements Serializable{
 		token = node.getAttributes().getNamedItem("vārds").getTextContent();
 	}
 
-
-	//getLocījumuDemo
-/*	public String getDemo() {
-		return this.getValue("LocījumuDemo");
-		// TODO : apskatīt kur lieto un vai vajag
-	} //*/
-
-	public void shortDescription(PrintWriter stream) {
-		stream.printf("%s :\t%s : %s  #%d\n", token, getTag(), getValue(AttributeNames.i_Lemma),lexeme.getID());
+	public void shortDescription(PrintWriter output) {
+		output.printf("%s :\t%s : %s  #%d\n",
+				token, getTag(), getValue(AttributeNames.i_Lemma),lexeme.getID());
 		//FIXME - nečeko, vai leksēma nav null
 	}
 	
 	/**
 	 * For debugging purposes only.
 	 */
-	public void longDescription(PrintStream out)
+	public void longDescription(PrintStream output)
 	{
-		out.println(this.token + ":");
+		output.println(this.token + ":");
 		for (String s : this.attributes.keySet())
 		{
-			out.println(s + "\t" + attributes.get(s));
+			output.println(s + "\t" + attributes.get(s));
 		}
 	}
 
 	@Override
 	public Object clone() {
-		Wordform kopija;
+		Wordform clone;
 		try {
-			kopija = (Wordform)super.clone();
-			kopija.token = this.token;
-			kopija.lexeme = this.lexeme;
-			kopija.ending = this.ending;
-			return kopija;
+			clone = (Wordform)super.clone();
+			clone.token = this.token;
+			clone.lexeme = this.lexeme;
+			clone.ending = this.ending;
+			return clone;
 		} catch (CloneNotSupportedException e) {
 			e.printStackTrace();
 			return null;
@@ -167,11 +165,11 @@ public class Wordform extends AttributeValues implements Serializable{
 	}
 
 	@Override
-	public void toXML (Writer stream) throws IOException {
-		stream.write("<Vārdforma");
-		stream.write(" vārds=\""+token.replace("\"", "&quot;")+"\">\n");
-		super.toXML(stream); // īpašības UzXML
-		stream.write("</Vārdforma>\n");
+	public void toXML (Writer output) throws IOException {
+		output.write("<Vārdforma");
+		output.write(" vārds=\""+token.replace("\"", "&quot;")+"\">\n");
+		super.toXML(output); // īpašības UzXML
+		output.write("</Vārdforma>\n");
 	}
 
 	public Ending getEnding() {
@@ -193,7 +191,7 @@ public class Wordform extends AttributeValues implements Serializable{
 
     @Override
     public boolean equals(Object other) {
-        if (other == null || !(other instanceof Wordform)) {
+        if (!(other instanceof Wordform)) {
             return false;
         }
         Wordform that = (Wordform) other;
@@ -213,12 +211,9 @@ public class Wordform extends AttributeValues implements Serializable{
             return false;
 
         if (this.lexeme == null) {
-            if (that.lexeme != null) return false;
-        } else if (!this.lexeme.equals(that.lexeme))
-            return false;
-
-        return true;
-    }
+			return that.lexeme == null;
+        } else return this.lexeme.equals(that.lexeme);
+	}
 
     @Override
     public int hashCode() {

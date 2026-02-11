@@ -57,7 +57,7 @@ public class MorphoEvaluate {
 		locītājs.enablePrefixes = false;
 		locītājs.enableGuessing = false;
 		locītājs.enableAllGuesses = false;
-		locītājs.meklētsalikteņus = false;
+		locītājs.searchCompoundWords = false;
     }	
 	
 	@Test

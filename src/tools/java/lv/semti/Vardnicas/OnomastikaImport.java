@@ -48,7 +48,7 @@ public class OnomastikaImport {
 		analizators.enableDiminutive = false;
 		analizators.enablePrefixes = false;
 		analizators.enableGuessing = false;
-		analizators.meklētsalikteņus = false;
+		analizators.searchCompoundWords = false;
 		analizators.guessInflexibleNouns = true;
 		analizators.setCacheSize(0);
 

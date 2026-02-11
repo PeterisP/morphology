@@ -75,7 +75,7 @@ public class CelmuBeigas {
 			
 			Paradigm p = analizators.paradigmByID(pid);
 			for (Lexeme l : p.lexemes) {
-				String beigas = l.getStem(0).substring(l.getStem(0).length()-1);
+				String beigas = l.getStem(StemType.STEM1).substring(l.getStem(StemType.STEM1).length()-1);
 				if (beigas.equals("g"))
 					l.describe(izeja);
 				counts.add(beigas);

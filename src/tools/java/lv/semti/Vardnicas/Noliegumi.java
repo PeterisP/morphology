@@ -28,6 +28,7 @@ import lv.semti.morphology.analyzer.*;
 import lv.semti.morphology.attributes.AttributeNames;
 import lv.semti.morphology.lexicon.Lexeme;
 import lv.semti.morphology.lexicon.Paradigm;
+import lv.semti.morphology.lexicon.StemType;
 
 public class Noliegumi {
 
@@ -41,7 +42,7 @@ public class Noliegumi {
 		analizators.enableDiminutive = false;
 		analizators.enablePrefixes = false;
 		analizators.enableGuessing = false;
-		analizators.meklētsalikteņus = false;
+		analizators.searchCompoundWords = false;
 		
 		PrintWriter izeja = new PrintWriter(new PrintStream(System.out, true, "windows-1257"));
 		BufferedReader ieeja = new BufferedReader(
@@ -59,16 +60,16 @@ public class Noliegumi {
 
 		for (Paradigm vārdgrupa : analizators.paradigms) {
 			for (Lexeme leksēma : vārdgrupa.lexemes) {
-				if (leksēma.getStem(0).startsWith("ne") && !vārdgrupa.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adjective) &&
+				if (leksēma.getStem(StemType.STEM1).startsWith("ne") && !vārdgrupa.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Adjective) &&
 						!vārdgrupa.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Noun)) {
 					for (String elements : noliegtie) {
-						if (leksēma.getStem(0).equalsIgnoreCase(elements)) {
+						if (leksēma.getStem(StemType.STEM1).equalsIgnoreCase(elements)) {
 							izeja.printf("Haa, noliedzam! ");		
 							leksēma.addAttribute(AttributeNames.i_Noliegums, AttributeNames.v_Yes);
 						}
 					}
 					izeja.printf("%s\n"//"Leksēmai '%s' noliegums :%s\n"
-							,leksēma.getStem(0), leksēma.getValue(AttributeNames.i_Noliegums));					
+							,leksēma.getStem(StemType.STEM1), leksēma.getValue(AttributeNames.i_Noliegums));
 				}
 			}
 		}

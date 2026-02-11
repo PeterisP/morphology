@@ -21,6 +21,10 @@ import java.io.IOException;
 import java.io.Writer;
 import java.util.HashMap;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -31,60 +35,63 @@ public class Paradigm extends AttributeValues {
 	private Lexicon lexicon;
 	private int id = 0;  // numurs pēc kārtas - ID
 	public String name = ""; // vārdiskais ID
-	private ArrayList < HashMap < String, ArrayList<Lexeme> > > lexemesByStem
-		= new ArrayList <HashMap <String, ArrayList<Lexeme>>>();
+	private HashMap <StemType, HashMap<String, ArrayList<Lexeme>>> lexemesByStem
+		= new HashMap<>();
 		// 1-3 hashmapi, kuros pēc saknes var atrast tai atbilstošās leksēmas
 		// vajadzētu to (un to apstaigājošās funkcijas) iznest kā klasi)
-	public HashMap <Integer, Lexeme> lexemesByID = new HashMap <Integer, Lexeme>(); //FIXME - nevajag iisti buut public, vajag tikai read-only iterēt
-	public ArrayList <Lexeme> lexemes = new ArrayList <Lexeme>();  //FIXME - nevajag iisti buut public, vajag tikai read-only iterēt
-	public ArrayList <Ending> endings = new ArrayList <Ending>();  //FIXME - nevajag iisti buut public, vajag tikai read-only iterēt
+	public HashMap <Integer, Lexeme> lexemesByID = new HashMap<>(); //FIXME - nevajag iisti buut public, vajag tikai read-only iterēt
+	public ArrayList <Lexeme> lexemes = new ArrayList<>();  //FIXME - nevajag iisti buut public, vajag tikai read-only iterēt
+	public ArrayList <Ending> endings = new ArrayList<>();  //FIXME - nevajag iisti buut public, vajag tikai read-only iterēt
 	private Ending lemmaEnding = null;  // kura no galotnēm uzskatāma par pamatformu
-	private int stems = 1;      // cik saknes ir šai vārdgrupai (tipiski 1; darbībasvārdiem 3)
+	private HashSet<StemType> stems = Stream.of(StemType.STEM1)
+			.collect(Collectors.toCollection(HashSet::new));      // kuras saknes ir šai vārdgrupai (tipiski 1; darbībasvārdiem 3)
 	private String allowedGuessEndings = "";
 	public String description = "";
 
 	public Paradigm (Lexicon lexicon) {
 		this.lexicon = lexicon;
-		lexemesByStem.add(new HashMap<String,ArrayList<Lexeme>>());
+		lexemesByStem.put(StemType.STEM1, new HashMap<>());
 	}
 
 	@Override
-	public void toXML (Writer straume) throws IOException {
-		straume.write("<Paradigm");
-		straume.write(" Stems=\""+String.valueOf(stems)+"\"");
-		straume.write(" ID=\""+String.valueOf(id)+"\"");
-		straume.write(" ID=\""+String.valueOf(name)+"\"");
+	public void toXML (Writer output) throws IOException {
+		output.write("<Paradigm");
+		output.write(" Stems=\""+ stems.size() +"\"");
+		output.write(" ID=\""+ id +"\"");
+		output.write(" ID=\""+ name +"\"");
 		if (lemmaEnding != null)
-			straume.write(" LemmaEnding=\""+String.valueOf(lemmaEnding.getID())+"\"");
-		straume.write(" Description=\""+description+"\"");
-		straume.write(">\n");
-		super.toXML(straume); // īpašības UzXML
+			output.write(" LemmaEnding=\""+ lemmaEnding.getID() +"\"");
+		output.write(" Description=\""+description+"\"");
+		output.write(">\n");
+		super.toXML(output); // īpašības UzXML
 
 		for (Ending ending : endings)
-			ending.toXML(straume);
+			ending.toXML(output);
 		for (Lexeme leksēma : lexemes)
-			leksēma.toXML(straume);
+			leksēma.toXML(output);
 
-		straume.write("</Paradigm>\n");
+		output.write("</Paradigm>\n");
 	}
 
-	/* saglabaa apakshleksikonaa tikai taas lekseemas, kuraam source sakriit ar noraadiito */
-	public void toXML_sub(Writer straume, String source) throws IOException {
-		straume.write("<Paradigm");
-		straume.write(" Stems=\""+String.valueOf(stems)+"\"");
-		straume.write(" ID=\""+String.valueOf(id)+"\"");
+	/**
+	 * Stores in sublexicon only lexemes with the given source.
+	 */
+	public void toXML_sub(Writer output, String source) throws IOException {
+		output.write("<Paradigm");
+		output.write(" Stems=\""+ stems.size() +"\"");
+		output.write(" ID=\""+ id +"\"");
 		if (lemmaEnding != null)
-			straume.write(" LemmaEnding=\""+String.valueOf(lemmaEnding.getID())+"\"");
-		straume.write(" Description=\""+description+"\"");
-		straume.write(">\n");
-		super.toXML(straume); // īpašības UzXML
+			output.write(" LemmaEnding=\""+ lemmaEnding.getID() +"\"");
+		output.write(" Description=\""+description+"\"");
+		output.write(">\n");
+		super.toXML(output); // īpašības UzXML
 
-		for (Lexeme leksēma : lexemes) {
-			if (leksēma.isMatchingStrong(AttributeNames.i_Source, source))
-				leksēma.toXML(straume);			
+		for (Lexeme lexeme : lexemes) {
+			if (lexeme.isMatchingStrong(AttributeNames.i_Source, source))
+				lexeme.toXML(output);
 		}
 
-		straume.write("</Paradigm>\n");		
+		output.write("</Paradigm>\n");
 	}
 
 	public Paradigm(Lexicon lexicon, Node node) {
@@ -130,9 +137,8 @@ public class Paradigm extends AttributeValues {
 		}
 	}
 
-	/***
+	/**
 	 * Takes an XML-sublexicon node of type 'Paradigm', and takes the Lexeme elements from there
-	 * @param node
 	 */
 	public void addLexemesFromXML(Node node) {
 		if (!node.getNodeName().equalsIgnoreCase("Paradigm")) throw new Error("Node '" + node.getNodeName() + "' but Paradigm expected.");
@@ -141,12 +147,10 @@ public class Paradigm extends AttributeValues {
 		for (int i = 0; i < nodes.getLength(); i++) {
 			if (nodes.item(i).getNodeName().equals("Lexeme")) {
                 Lexeme l = new Lexeme(this, nodes.item(i));
-                if (l != null) {
-                    String frequency = l.getValue("Skaits"); // FIXME - hardcoded value
-                    if (frequency == null || Integer.parseInt(frequency) > Lexicon.proper_name_frequency_floor)
-                        addLexeme(l);
-                }
-            }
+				String frequency = l.getValue("Skaits"); // FIXME - hardcoded value
+				if (frequency == null || Integer.parseInt(frequency) > Lexicon.proper_name_frequency_floor)
+					addLexeme(l);
+			}
 		}
 	}
 	
@@ -154,14 +158,14 @@ public class Paradigm extends AttributeValues {
 	@SuppressWarnings("unchecked")
 	public Object clone() {
 		// uztaisa paradigmas kopiju, kurai var mainīt īpašības, nenočakarējot sākotnējo leksēmu DB.
-		Paradigm kopija;
+		Paradigm clone;
 		try {
-			kopija = (Paradigm) super.clone();
-			kopija.lexemesByStem = (ArrayList <HashMap <String, ArrayList<Lexeme>>>)lexemesByStem.clone();
-			kopija.lexemes = (ArrayList <Lexeme>)lexemes.clone();
-			kopija.endings = (ArrayList <Ending>)endings.clone();
-			kopija.id = id;
-	        return kopija;
+			clone = (Paradigm) super.clone();
+			clone.lexemesByStem = (HashMap<StemType, HashMap<String, ArrayList<Lexeme>>>)lexemesByStem.clone();
+			clone.lexemes = (ArrayList <Lexeme>)lexemes.clone();
+			clone.endings = (ArrayList <Ending>)endings.clone();
+			clone.id = id;
+	        return clone;
 		} catch (CloneNotSupportedException e) {
 			e.printStackTrace();
 			return null;
@@ -186,7 +190,7 @@ public class Paradigm extends AttributeValues {
 
 		if (lexeme.getID() == 0) {
 			lexeme.setID( lexicon.newLexemeID());
-		} else {
+		} //else {
 // TODO - principā jau šī pārbaude ir OK
 //			Lexeme duplicatetest = lexemesByID.get(lexeme.getID());
 //			if (duplicatetest != null) {
@@ -194,34 +198,34 @@ public class Paradigm extends AttributeValues {
 //				duplicatetest.describe(new PrintWriter(System.err));
 //				lexeme.describe(new PrintWriter(System.err));
 //			}
-		}
+		//}
 		lexemesByID.put(lexeme.getID(), lexeme);
 
-		lexeme.setStemCount(stems);
+		lexeme.setAllowedStems(stems);
 
-		for (int i = 0; i < stems; i++) {
-			// pieliekam leksēmas 1-3 saknes vārdgrupas masīvos
-			ArrayList<Lexeme> esošās = lexemesByStem.get(i).get(lexeme.getStem(i));
-			if (esošās == null) {
-				esošās = new ArrayList<Lexeme>();
-				lexemesByStem.get(i).put(lexeme.getStem(i), esošās);
-			}
-			esošās.add(lexeme);
+		for (StemType stemType : stems)
+		{
+			ArrayList<Lexeme> existing = lexemesByStem.get(stemType)
+					.computeIfAbsent(lexeme.getStem(stemType), k -> new ArrayList<>());
+			existing.add(lexeme);
 		}
 		lexemes.add(lexeme);
 
 		if (lexeme.getValue(AttributeNames.i_Lemma) == null && getLemmaEnding() != null)
-			lexeme.addAttribute(AttributeNames.i_Lemma, lexeme.getStem(getLemmaEnding().stemID-1) + getLemmaEnding().getEnding());
+			lexeme.addAttribute(
+					AttributeNames.i_Lemma,
+					lexeme.getStem(getLemmaEnding().stemType) + getLemmaEnding().getEnding());
 
-		if (this.isMatchingStrong(AttributeNames.i_ParadigmProperties, AttributeNames.v_HardcodedWordforms)) { // Hardcoded un vietniekvārdu paradigma
+		if (this.isMatchingStrong(
+				AttributeNames.i_ParadigmProperties,
+				AttributeNames.v_HardcodedWordforms)) { // Hardcoded un vietniekvārdu paradigma
 			this.lexicon.hardcodedForms.put(lexeme.getID(), lexeme);
 		}
 
-		String pamatforma = lexeme.getValue(AttributeNames.i_Lemma);
-        if (pamatforma.matches(".*[ ./'\\d]+.*") && pamatforma.length() > 1 && !pamatforma.matches("\\.+")
-//                || (this.isMatchingStrong(AttributeNames.i_PartOfSpeech, AttributeNames.v_Punctuation) && pamatforma.length() > 1)
-            ) {
-		    this.lexicon.automats.addException(pamatforma);
+		String lemma = lexeme.getValue(AttributeNames.i_Lemma);
+        if (lemma.matches(".*[ ./'\\d]+.*") && lemma.length() > 1
+				&& !lemma.matches("\\.+")) {
+		    this.lexicon.automats.addException(lemma);
         }
 	}
 
@@ -229,11 +233,13 @@ public class Paradigm extends AttributeValues {
 		// ja nebūs tādas leksēmas, tad nekas arī nenotiks
 		lexemes.remove(lexeme);
 		lexemesByID.remove(lexeme.getID());
-		for (int i = 0; i < stems; i++) {
-			ArrayList<Lexeme> matchingstems = lexemesByStem.get(i).get(lexeme.getStem(i));
+		for (StemType stemType : stems)
+		{
+			ArrayList<Lexeme> matchingstems = lexemesByStem.get(stemType).get(lexeme.getStem(stemType));
 			if (matchingstems != null) {
 				matchingstems.remove(lexeme);
-				if (matchingstems.size()==0) lexemesByStem.get(i).remove(lexeme.getStem(i));
+				if (matchingstems.isEmpty())
+					lexemesByStem.get(stemType).remove(lexeme.getStem(stemType));
 			}
 		}
 		this.lexicon.hardcodedForms.remove(lexeme.getID(), lexeme);
@@ -303,15 +309,19 @@ public class Paradigm extends AttributeValues {
 			System.err.printf("Error when loading paradigm %d - cannot find lemma ending %d\n", this.id, lemmaEnding);
 	}
 
-	public int getStems() {
+	public Set<StemType> getStems() {
 		return stems;
 	}
 
-	public void setStems(int stems) {
-		this.stems = stems;
+	public void setStems(int stemCount) {
+		stems = new HashSet<>();
+		for (int i = 1; i <= stemCount; i++)
+			stems.add(StemType.getFromXmlId(i));
 
-		while (lexemesByStem.size() > stems) lexemesByStem.remove(lexemesByStem.size()-1);
-		while (lexemesByStem.size() < stems) lexemesByStem.add(new HashMap<String, ArrayList<Lexeme>>());
+		for (StemType stemType : stems)
+			if (!lexemesByStem.containsKey(stemType)) lexemesByStem.put(stemType, new HashMap<>());
+		for (StemType stemType : lexemesByStem.keySet())
+			if (!stems.contains(stemType)) lexemesByStem.remove(stemType);
 
 		//FIXME - tā, a ko ar leksēmu sakņu skaitiem ta darīt tagad??
 	}
@@ -331,12 +341,15 @@ public class Paradigm extends AttributeValues {
 		return null;
 	}
 
-	public ArrayList<HashMap<String, ArrayList<Lexeme>>> getLexemesByStem() {
+	public HashMap<String, ArrayList<Lexeme>> getLexemesByStem(StemType stemType) {
 		//TODO - jāprotektē
-		return lexemesByStem;
+		return lexemesByStem.get(stemType);
 	}
 
-	// Verifies if this stem is a valid stem for this paradigm, based on the last letter(s?) of that stem 
+	/**
+	 * 	Verifies if this stem is a valid stem for this paradigm, based on the
+	 * 	last letter(s?) of that stem.
+ 	 */
 	public boolean allowedGuess(String stem) {
 		if (allowedGuessEndings.isEmpty()) return true; // FIXME - workaround until all paradigms have this data filled
 		if ((allowedGuessEndings.indexOf('!') >= 0) && !this.lexicon.guessAllParadigms) return false;

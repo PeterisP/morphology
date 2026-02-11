@@ -238,7 +238,7 @@ public class Word extends Observable implements Cloneable{
 	}
 
 	public Wordform getBestWordform() {
-		if (wordforms.size() == 0) return null;
+		if (wordforms.isEmpty()) return null;
 		Wordform maxwf = wordforms.get(0);
 		double maxticamība = -1;
 		for (Wordform wf : wordforms) {  // Paskatamies visus atrastos variantus un ņemam statistiski ticamāko

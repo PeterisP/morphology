@@ -71,7 +71,7 @@ public class JSONLexiconTest {
                     }
 
 //                    System.out.println(String.format("Word '%s' in %s but not in %s", lemma, name1, name2));
-                    System.out.println(lemma);
+                    //System.out.println(lemma);
                     not_found ++;
                 }
             }

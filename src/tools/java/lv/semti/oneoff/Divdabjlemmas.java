@@ -32,7 +32,7 @@ public class Divdabjlemmas {
 		Analyzer locītājs = new Analyzer();
 		locītājs.paradigmByID(13).lexemes.clear();
 		locītājs.paradigmByID(13).lexemesByID.clear();
-		locītājs.paradigmByID(13).getLexemesByStem().get(0).clear();
+		locītājs.paradigmByID(13).getLexemesByStem(StemType.STEM1).clear();
 		locītājs.enableGuessing = true;
 		locītājs.removeRareWords = false;
 		locītājs.removeRegionalWords = false;

@@ -24,12 +24,14 @@ import lv.semti.morphology.attributes.AttributeValues;
 import lv.semti.morphology.lexicon.Ending;
 import lv.semti.morphology.lexicon.Lexeme;
 import lv.semti.morphology.lexicon.Paradigm;
+import lv.semti.morphology.lexicon.StemType;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Ignore;
 import org.junit.Test;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 import java.util.Map.Entry;
 
@@ -146,18 +148,13 @@ public class MorphologyTest {
     @SuppressWarnings("unused")
     private void describe(List<Wordform> formas) {
         PrintWriter izeja;
-        try {
-            izeja = new PrintWriter(new OutputStreamWriter(System.out, "UTF-8"));
-            for (Wordform forma : formas) {
-                forma.describe(izeja);
-                izeja.println();
-            }
-            izeja.flush();
-        } catch (UnsupportedEncodingException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-    }
+		izeja = new PrintWriter(new OutputStreamWriter(System.out, StandardCharsets.UTF_8));
+		for (Wordform forma : formas) {
+			forma.describe(izeja);
+			izeja.println();
+		}
+		izeja.flush();
+	}
 
     @BeforeClass
     public static void setUpBeforeClass() {
@@ -400,7 +397,9 @@ public class MorphologyTest {
                 if (leksēmuNr.get(leksēma.getID()) != null) {
                     leksēma.describe(new PrintWriter(System.err));
                     leksēmuNr.get(leksēma.getID()).describe(new PrintWriter(System.err));
-                    fail(String.format("Atkārtojas leksēmas nr %d : '%s' un '%s'", leksēma.getID(), leksēma.getStem(0), leksēmuNr.get(leksēma.getID()).getStem(0)));
+                    fail(String.format("Atkārtojas leksēmas nr %d : '%s' un '%s'",
+                            leksēma.getID(), leksēma.getStem(StemType.STEM1),
+                            leksēmuNr.get(leksēma.getID()).getStem(StemType.STEM1)));
                 }
                 leksēmuNr.put(leksēma.getID(), leksēma);
             }
@@ -433,7 +432,7 @@ public class MorphologyTest {
         locītājs.enableDiminutive = true;
         locītājs.enablePrefixes = false;
         locītājs.enableAllGuesses = true;
-        locītājs.meklētsalikteņus = false;
+        locītājs.searchCompoundWords = false;
 
         int skaits = 0;
         for (int i = 1; i < 100; i++) {
@@ -459,18 +458,18 @@ public class MorphologyTest {
     @Test
     public void dubultLeksēmas() throws UnsupportedEncodingException {
         PrintWriter izeja;
-        izeja = new PrintWriter(new OutputStreamWriter(System.out, "UTF-8"));
+        izeja = new PrintWriter(new OutputStreamWriter(System.out, StandardCharsets.UTF_8));
 
         for (Paradigm vārdgrupa : locītājs.paradigms) {
-            for (ArrayList<Lexeme> leksēmas : vārdgrupa.getLexemesByStem().get(0).values()) {
+            for (ArrayList<Lexeme> leksēmas : vārdgrupa.getLexemesByStem(StemType.STEM1).values()) {
                 for (int i = 0; i < leksēmas.size(); i++) {
                     for (int j = i + 1; j < leksēmas.size(); j++) {
                         Lexeme l1 = leksēmas.get(i);
                         Lexeme l2 = leksēmas.get(j);
 
                         boolean sakrīt = true;
-                        for (int s = 0; s < vārdgrupa.getStems(); s++)
-                            if (!l1.getStem(s).equals(l2.getStem(s))) sakrīt = false;
+                        for (StemType st : vārdgrupa.getStems())
+                            if (!l1.getStem(st).equals(l2.getStem(st))) sakrīt = false;
 
                         for (Entry<String, String> pāris : l1.entrySet()) {
                             if (pāris.getKey().equals("Leksēmas nr")) continue;
@@ -897,7 +896,7 @@ public class MorphologyTest {
         locītājs.enablePrefixes = true;
         locītājs.enableGuessing = true;
         locītājs.enableAllGuesses = true;
-        locītājs.meklētsalikteņus = true;
+        locītājs.searchCompoundWords = true;
 
         tokens = Splitting.tokenize(locītājs, text);
         wordtokens = new StringBuilder();
@@ -1032,7 +1031,7 @@ public class MorphologyTest {
         locītājs.enablePrefixes = true;
         locītājs.enableGuessing = true;
         locītājs.enableAllGuesses = true;
-        locītājs.meklētsalikteņus = true;
+        locītājs.searchCompoundWords = true;
 
         Word m = locītājs.analyze("M.");
         assertTrue(m.isRecognized());
@@ -1045,7 +1044,7 @@ public class MorphologyTest {
         locītājs.enablePrefixes = true;
         locītājs.enableGuessing = true;
         locītājs.enableAllGuesses = true;
-        locītājs.meklētsalikteņus = true;
+        locītājs.searchCompoundWords = true;
 
         //Atsevišķus burtus nevajadzētu minēt kā reālus vārdus
 
@@ -1145,7 +1144,7 @@ public class MorphologyTest {
         locītājs.enablePrefixes = true;
         locītājs.enableGuessing = true;
         locītājs.enableAllGuesses = true;
-        locītājs.meklētsalikteņus = true;
+        locītājs.searchCompoundWords = true;
         locītājs.guessInflexibleNouns = true;
 
         Word vārds = locītājs.analyze("TrrT");
@@ -1823,12 +1822,12 @@ public class MorphologyTest {
         leksēmas.addAll(otrā.lexemes);
         leksēmas.addAll(trešā.lexemes);
         for (Lexeme lex : leksēmas) {
-            LinkedList<Lexeme> alternatīvas = new LinkedList<Lexeme>();
-            ArrayList<Lexeme> xx = pirmā.getLexemesByStem().get(0).get(lex.getStem(0));
+            LinkedList<Lexeme> alternatīvas = new LinkedList<>();
+            ArrayList<Lexeme> xx = pirmā.getLexemesByStem(StemType.STEM1).get(lex.getStem(StemType.STEM1));
             if (xx != null) alternatīvas.addAll(xx);
-            xx = otrā.getLexemesByStem().get(0).get(lex.getStem(0));
+            xx = otrā.getLexemesByStem(StemType.STEM1).get(lex.getStem(StemType.STEM1));
             if (xx != null) alternatīvas.addAll(xx);
-            xx = trešā.getLexemesByStem().get(0).get(lex.getStem(0));
+            xx = trešā.getLexemesByStem(StemType.STEM1).get(lex.getStem(StemType.STEM1));
             if (xx != null) alternatīvas.addAll(xx);
             /*
             for (Lexeme alternatīva : alternatīvas) {
@@ -1993,7 +1992,7 @@ public class MorphologyTest {
     @Test
     public void lemmageneration1() {
         Word possibilities = locītājs.analyze("Biezā");
-        locītājs.filterInflectionPossibilities(true, new AttributeValues(), possibilities.wordforms);
+        locītājs.filterInflectionOptions(true, new AttributeValues(), possibilities.wordforms);
         assertEquals(2, possibilities.wordformsCount()); // masc genitive, fem nominative
         ArrayList<Wordform> result = locītājs.generateInflections_TryLemmas("Biezā", possibilities);
         for (Wordform wf : result) {
@@ -2150,7 +2149,7 @@ public class MorphologyTest {
             BufferedReader ieeja;
             String rinda;
             ieeja = new BufferedReader(
-                    new InputStreamReader(getClass().getClassLoader().getResourceAsStream("mandatory.txt"), "UTF-8"));
+                    new InputStreamReader(getClass().getClassLoader().getResourceAsStream("mandatory.txt"), StandardCharsets.UTF_8));
 
             int not_recognized = 0;
             while ((rinda = ieeja.readLine()) != null) {
@@ -4118,14 +4117,14 @@ public class MorphologyTest {
     @Ignore
     public void ticket_89() throws UnsupportedEncodingException {
         PrintWriter izeja;
-        izeja = new PrintWriter(new OutputStreamWriter(System.out, "UTF-8"));
+        izeja = new PrintWriter(new OutputStreamWriter(System.out, StandardCharsets.UTF_8));
 
         Paradigm p15 = locītājs.paradigmByID(15);
 
-        for (ArrayList<Lexeme> lexemes : p15.getLexemesByStem().get(0).values()) {
+        for (ArrayList<Lexeme> lexemes : p15.getLexemesByStem(StemType.STEM1).values()) {
             for (int i = 0; i < lexemes.size(); i++) {
                 Lexeme l = lexemes.get(i);
-                String lemma = l.getStem(0) + "t";
+                String lemma = l.getStem(StemType.STEM1) + "t";
                 ArrayList<Wordform> wordforms = locītājs.generateInflections(l, lemma);
                 for (Wordform wf : wordforms) {
                     if (wf.getEnding().getID() == 790 && !wf.isMatchingStrong(AttributeNames.i_Noliegums, AttributeNames.v_Yes)) {
@@ -4396,23 +4395,26 @@ public class MorphologyTest {
     }
 
     @Test
-    public void nepildīšana() {
+    public void negativeLemmas() {
         // 2025-04-28 Baiba sūdzās, ka korpusā "nepildīšana" lemma ir pildīšana; verbu formām tas ir likts tīšām (nepildīju -> pildīt) bet lietvārdam tā nav ok
 
         Word nepildīšana = locītājs.analyze("nepildīšana");
         assertTrue(nepildīšana.isRecognized());
-        Wordform forma = nepildīšana.getBestWordform();
-        assertEquals("nepildīšana", forma.getValue(AttributeNames.i_Lemma));
+        Wordform form = nepildīšana.getBestWordform();
+        assertEquals("nepildīšana", form.getValue(AttributeNames.i_Lemma));
 
         Word nepildīdams = locītājs.analyze("nepildīdams");
         assertTrue(nepildīdams.isRecognized());
-        forma = nepildīdams.getBestWordform();
-        assertEquals("pildīt", forma.getValue(AttributeNames.i_Lemma));
+        form = nepildīdams.getBestWordform();
+        assertEquals("pildīt", form.getValue(AttributeNames.i_Lemma));
 
         Word nevēlēšanās = locītājs.analyze("nevēlēšanās");
+        nevēlēšanās.describe(System.out);
         assertTrue(nevēlēšanās.isRecognized());
-        forma = nevēlēšanās.getBestWordform();
-        assertEquals("nevēlēšanās", forma.getValue(AttributeNames.i_Lemma));
+        nevēlēšanās.filterByAttributes(
+                new AttributeValues(){{addAttribute(AttributeNames.i_Case, AttributeNames.v_Nominative);}});
+        form = nevēlēšanās.getBestWordform();
+        assertEquals("nevēlēšanās", form.getValue(AttributeNames.i_Lemma));
     }
 
     @Test

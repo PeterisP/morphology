@@ -30,6 +30,7 @@ import java.util.LinkedList;
 import lv.semti.morphology.analyzer.Analyzer;
 import lv.semti.morphology.attributes.AttributeNames;
 import lv.semti.morphology.lexicon.Ending;
+import lv.semti.morphology.lexicon.StemType;
 
 public class GFExport {	
 	
@@ -131,7 +132,7 @@ public class GFExport {
 		case 14: stem = "mija14 stem"; break;
 		}
 		if (stem == null) return null; // Mijas nesapratām
-		if (ending.stemID != 1) stem = stem+ending.stemID;
+		if (ending.stemType != StemType.STEM2) stem = stem+ending.stemType; // FIXME vai šis ir pareizais celma tips?
 		
 		String vārdšķira = ending.getValue(AttributeNames.i_PartOfSpeech);
 		if (vārdšķira == null) return null;

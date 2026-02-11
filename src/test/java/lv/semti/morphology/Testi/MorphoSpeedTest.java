@@ -27,7 +27,6 @@ import java.util.List;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.junit.Ignore;
 
 import lv.semti.morphology.analyzer.*;
 
@@ -46,7 +45,7 @@ public class MorphoSpeedTest {
 		locītājs.enablePrefixes = false;
 		locītājs.enableGuessing = false;
 		locītājs.enableAllGuesses = false;
-		locītājs.meklētsalikteņus = false;
+		locītājs.searchCompoundWords = false;
     }	
 	
 	@Test
@@ -58,7 +57,7 @@ public class MorphoSpeedTest {
 		locītājs.enablePrefixes = false;
 		locītājs.enableGuessing = false;
 		locītājs.enableAllGuesses = false;
-		locītājs.meklētsalikteņus = false;
+		locītājs.searchCompoundWords = false;
 		locītājs.setCacheSize(1);
 		
 		locītājs.analyze("cirvis");
@@ -95,7 +94,7 @@ public class MorphoSpeedTest {
 		locītājs.enablePrefixes = true;
 		locītājs.enableGuessing = true;
 		locītājs.enableAllGuesses = true;
-		locītājs.meklētsalikteņus = true; 
+		locītājs.searchCompoundWords = true;
 		locītājs.setCacheSize(1);
 		
 		int skaits = 0;

@@ -30,7 +30,6 @@ import lv.semti.morphology.analyzer.Analyzer;
 import lv.semti.morphology.analyzer.Word;
 import lv.semti.morphology.analyzer.Wordform;
 import lv.semti.morphology.attributes.AttributeNames;
-import lv.semti.morphology.attributes.AttributeValues;
 import lv.semti.morphology.lexicon.Lexeme;
 import lv.semti.morphology.lexicon.Paradigm;
 
@@ -51,7 +50,7 @@ public class VardadienuImport {
 		analizators.enableDiminutive = false;
 		analizators.enablePrefixes = false;
 		analizators.enableGuessing = false;
-		analizators.meklētsalikteņus = false;
+		analizators.searchCompoundWords = false;
 		analizators.guessInflexibleNouns = true;
 		analizators.setCacheSize(0);
 

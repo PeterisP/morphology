@@ -8,6 +8,7 @@ import lv.semti.morphology.analyzer.Wordform;
 import lv.semti.morphology.attributes.AttributeNames;
 import lv.semti.morphology.lexicon.Lexeme;
 import lv.semti.morphology.lexicon.Paradigm;
+import lv.semti.morphology.lexicon.StemType;
 
 public class MorphDemo {
 
@@ -112,9 +113,9 @@ public class MorphDemo {
 				// TODO: In the case of nouns, the attribute NounType should be taken into account as well.
 				String ending = morph.paradigmByID(group_id).getLemmaEnding().getEnding();
 				String stem = lemma.toLowerCase().substring(0, lemma.length() - ending.length());
-				ArrayList<Lexeme> duplicates = morph.paradigmByID(group_id).getLexemesByStem().get(0).get(stem);
+				ArrayList<Lexeme> duplicates = morph.paradigmByID(group_id).getLexemesByStem(StemType.STEM1).get(stem);
 
-				if (duplicates == null || duplicates.size() == 0) {
+				if (duplicates == null || duplicates.isEmpty()) {
 					Lexeme new_lexeme = morph.createLexeme(
 						lemma.toLowerCase(), 									// Base form
 						//morph.paradigmByID(group_id).getLemmaEnding().getID(),	// ID of the ending in the inflectional paradigm
