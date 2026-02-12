@@ -1,3 +1,9 @@
+N.B. Starting 2026-02 development of the morphology library has been moved to https://github.com/LUMII-AILab/Morphology/
+
+
+
+
+
 ***********************************************
 * Morphological Analyzer for Latvian Language *
 ***********************************************
@@ -42,3 +48,5 @@ REFERENCES
  Current usage is described at http://www.ep.liu.se/ecp_article/index.en.aspx?issue=085;article=024
  The initial core algorithm is published at http://www.semti-kamols.lv/doc_upl/Kamols-Kaunas-paper-3.pdf
  
+
+
